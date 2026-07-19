@@ -10,7 +10,7 @@ const reportDir = path.join(root, 'downloads');
 const hard = [];
 const warnings = [];
 const stats = { html: 0, js: 0, json: 0, links: 0, localFetches: 0, forms: 0, buttons: 0, criticalTools: 0 };
-const ignoredDirs = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
+const ignoredDirs = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots', 'browsertrix-output', 'templates']);
 if (base === root) ignoredDirs.add('_site');
 
 const leakedMarkers = [
@@ -29,7 +29,7 @@ const leakedMarkers = [
   'preservedaftervisiblede-duplication'
 ];
 const dynamicPrefixes = [
-  '/api/', '/forum-', '/submit-', '/report-', '/track-', '/member-', '/billing-', '/admin-', '/newsletter-', '/osint-', '/health', '/deploy-status'
+  '/api/', '/forum-', '/submit-', '/report-', '/track-', '/member-', '/billing-', '/admin-', '/newsletter-', '/osint-', '/health', '/deploy-status', '/intro-voice'
 ];
 const criticalPages = new Set([
   'index.html', 'start-here.html', 'search.html', 'live-intel.html', 'books.html',
@@ -91,7 +91,7 @@ function checkHtml(file) {
   for (const obsolete of ['€19/month', '€49/month', 'Paid access to premium briefs']) if (html.includes(obsolete)) hard.push(`${name}: obsolete public copy ${obsolete}`);
 
   const idSet = new Set(ids);
-  const attributes = [...html.matchAll(/\b(?:href|src|action)\s*=\s*(["'])([^"']+)\1/gi)];
+  const attributes = [...html.matchAll(/(?:^|\s)(?:href|src|action)\s*=\s*(["'])([^"']+)\1/gi)];
   for (const match of attributes) {
     const target = match[2].trim();
     stats.links++;

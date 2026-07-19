@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-17T06:29:57.362Z
+Updated: 2026-07-19T06:13:00.128Z
 Items: 12
 
 - 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
@@ -86,11 +86,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
 - 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
   - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
   - Evidence: Seven-day public-record lead
@@ -110,6 +105,11 @@ Items: 12
   - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-25 — South Africa boosts Smart ID adoption through expanded bank network - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -136,11 +136,11 @@ Items: 12
 - Google News / declassified files: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com — https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-- Google News / control structure: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News — https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 - Google News / declassified files: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 — https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
 - Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
 - Google News / Epstein timeline and files: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News — https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
 - Google News / Epstein timeline and files: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
+- Google News / control structure: South Africa boosts Smart ID adoption through expanded bank network - Biometric Update — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5
 
 ## Book Routes
 

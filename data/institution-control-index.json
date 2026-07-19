@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T19:32:02.649Z",
+  "updated": "2026-07-19T06:13:18.387Z",
   "title": "Institution Control Tracker",
   "boundary": "Institution profiles describe public-record routes, partnerships and missing documents.",
   "profiles": [
@@ -110,65 +110,36 @@
         },
         {
           "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         }
       ],
       "relationship_candidates": [
-        {
-          "id": "object-object__people-s-republic-of-bangladesh",
-          "from": "People's Republic of Bangladesh",
-          "to": "[object Object]",
-          "count": 3,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2",
-            "world-bank-projects-p180283-4",
-            "world-bank-projects-p180439-6"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 27,
-          "grade": "candidate",
-          "relationship_type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
         {
           "id": "federal-procurement-policy-office__management-and-budget-office",
           "from": "Management and Budget Office",
@@ -278,33 +249,6 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "id": "object-object__republic-of-rwanda",
-          "from": "Republic of Rwanda",
-          "to": "[object Object]",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p505244-1"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
           "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
           "from": "Chattogram Water Supply and Sewerage Authority",
           "to": "People's Republic of Bangladesh",
@@ -332,9 +276,9 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "id": "chattogram-water-supply-and-sewerage-authority__object-object",
-          "from": "Chattogram Water Supply and Sewerage Authority",
-          "to": "[object Object]",
+          "id": "kingdom-of-morocco__ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+          "from": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "to": "Kingdom of Morocco",
           "count": 1,
           "lanes": [
             "world-bank-projects"
@@ -346,7 +290,61 @@
             "documented association"
           ],
           "source_events": [
-            "world-bank-projects-p176429-2"
+            "world-bank-projects-p181587-3"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "ministry-of-health-and-family-welfare__people-s-republic-of-bangladesh",
+          "from": "Ministry of Health and Family Welfare",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p180283-4"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "finance-division-ministry-of-finance__people-s-republic-of-bangladesh",
+          "from": "Finance Division, Ministry of Finance",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p180439-6"
           ],
           "control_layers": [
             "development_finance",

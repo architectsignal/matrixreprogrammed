@@ -1,7 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:53.899Z",
-  "changed": [],
+  "generatedAt": "2026-07-19T06:15:29.706Z",
+  "changed": [
+    "src/worker-forum-persistence.js"
+  ],
   "failures": [],
   "policy": "Cloudflare D1 is authoritative. Workers KV compatibility and per-event analytics writes are disabled in production unless explicitly re-enabled."
 }

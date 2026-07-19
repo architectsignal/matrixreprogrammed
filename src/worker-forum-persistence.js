@@ -1,4 +1,5 @@
 import legacyWorker from './worker.js';
+import { memberSessionContext } from './worker-member-experience.js';
 
 const headers = {
   'Content-Type': 'application/json; charset=utf-8',
@@ -91,6 +92,9 @@ async function body(request) {
 function hasD1(env) {
   return Boolean(env?.MEMBERS_DB && typeof env.MEMBERS_DB.prepare === 'function');
 }
+function kvMirrorEnabled(env) {
+  return String(env?.ENABLE_KV_COMPATIBILITY_MIRROR || 'false').toLowerCase() === 'true' && Boolean(env?.FORUM_POSTS);
+}
 
 async function ensureSchema(env) {
   if (!hasD1(env)) throw new Error('MEMBERS_DB D1 binding is unavailable');
@@ -99,6 +103,7 @@ async function ensureSchema(env) {
       const statements = [
         `CREATE TABLE IF NOT EXISTS forum_posts (
           id TEXT PRIMARY KEY,
+          member_id TEXT NOT NULL DEFAULT '',
           board TEXT NOT NULL,
           title TEXT NOT NULL,
           body TEXT NOT NULL,
@@ -129,6 +134,8 @@ async function ensureSchema(env) {
         )`
       ];
       for (const sql of statements) await env.MEMBERS_DB.prepare(sql).run();
+      await env.MEMBERS_DB.prepare("ALTER TABLE forum_posts ADD COLUMN member_id TEXT NOT NULL DEFAULT ''").run().catch(() => null);
+      await env.MEMBERS_DB.prepare('CREATE INDEX IF NOT EXISTS idx_forum_posts_member_created ON forum_posts(member_id, created_at DESC)').run();
       return true;
     })().catch(error => {
       schemaPromise = null;
@@ -138,14 +145,14 @@ async function ensureSchema(env) {
   return schemaPromise;
 }
 
-async function insertPost(env, post, origin = 'd1') {
+async function insertPost(env, post, origin = 'd1', memberId = '') {
   const p = safePost(post);
   const now = new Date().toISOString();
   await env.MEMBERS_DB.prepare(
     `INSERT OR IGNORE INTO forum_posts
-      (id, board, title, body, category, display_name, source_url, created_at, approved_at, status, storage_origin, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-  ).bind(p.id, p.board, p.title, p.body, p.category, p.name, p.sourceUrl, p.createdAt, p.approvedAt, p.status, origin, now).run();
+      (id, member_id, board, title, body, category, display_name, source_url, created_at, approved_at, status, storage_origin, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  ).bind(p.id, clean(memberId, 160), p.board, p.title, p.body, p.category, p.name, p.sourceUrl, p.createdAt, p.approvedAt, p.status, origin, now).run();
   return p;
 }
 async function metaValue(env, key) {
@@ -166,7 +173,7 @@ async function setMeta(env, key, value) {
 
 async function migrateKvPosts(env) {
   await ensureSchema(env);
-  if (!env.FORUM_POSTS) return { migrated: 0, source: 'no-kv-binding' };
+  if (!kvMirrorEnabled(env)) return { migrated: 0, source: 'kv-compatibility-disabled' };
   if (await metaValue(env, 'kv_forum_migration_v1')) return { migrated: 0, source: 'already-complete' };
   if (!migrationPromise) {
     migrationPromise = (async () => {
@@ -226,7 +233,7 @@ async function counts(env) {
   return output;
 }
 async function syncKvMirror(env) {
-  if (!env.FORUM_POSTS || !hasD1(env)) return;
+  if (!kvMirrorEnabled(env) || !hasD1(env)) return;
   const posts = await loadPosts(env, 'all', 300);
   await env.FORUM_POSTS.put('posts:index', JSON.stringify(posts), {
     metadata: {
@@ -237,7 +244,7 @@ async function syncKvMirror(env) {
   });
 }
 async function mirrorPost(env, post) {
-  if (!env.FORUM_POSTS) return;
+  if (!kvMirrorEnabled(env)) return;
   await env.FORUM_POSTS.put(`post:${post.id}`, JSON.stringify(post), {
     metadata: { board: post.board, status: post.status, createdAt: post.createdAt, storage: 'D1 authoritative mirror' }
   });
@@ -251,7 +258,7 @@ async function forumData(env, board) {
     persistent: true,
     'persistent: true': true,
     authoritativeStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts',
-    compatibilityMirror: Boolean(env.FORUM_POSTS),
+    compatibilityMirror: kvMirrorEnabled(env),
     source: 'Cloudflare D1 forum_posts',
     generatedAt: new Date().toISOString(),
     board: selected,
@@ -281,12 +288,14 @@ async function handle(route, request, env, ctx) {
       d1Connected: true,
       schemaReady: true,
       authoritativeStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts',
-      kvBinding: env.FORUM_POSTS ? 'connected compatibility mirror' : 'missing',
+      kvBinding: kvMirrorEnabled(env) ? 'connected opt-in compatibility mirror' : 'disabled in production',
       storedPostCount: Number(countRow?.count || 0),
       boardCounts: await counts(env),
       kvMigration: migration ? JSON.parse(migration) : null,
       persistent: true,
-      indexSelfHealing: 'D1 authoritative; KV mirror rebuilt from D1',
+      postingAccess: 'verified-free-member-session',
+      readingAccess: 'public',
+      indexSelfHealing: 'D1 authoritative; KV compatibility mirror disabled by default',
       deployedFrom: 'GitHub main',
       checkedAt: new Date().toISOString()
     });
@@ -303,6 +312,18 @@ async function handle(route, request, env, ctx) {
     });
   }
   if (route.action === 'submit') {
+    const auth = await memberSessionContext(request, env);
+    if (!auth || !auth.member || !auth.member.email_verified_at) {
+      return response({
+        ok: false,
+        authenticated: false,
+        saved: false,
+        persistent: true,
+        error: 'A verified free member account is required to post.',
+        loginUrl: '/member-login.html',
+        signupUrl: '/membership.html'
+      }, 401);
+    }
     const input = await body(request);
     if (input.website) return response({ ok: false, error: 'Spam trap triggered' }, 400);
     const post = safePost({
@@ -311,20 +332,24 @@ async function handle(route, request, env, ctx) {
       title: input.title || 'Reader Signal',
       body: input.body || input.message || 'Reader submitted a source lead for review.',
       category: input.category || 'Signal',
-      name: input.name || 'Anonymous',
+      name: input.name || auth.member.display_name || 'Matrix Member',
       sourceUrl: input.sourceUrl || input.source || '',
       status: 'live'
     });
-    await insertPost(env, post, 'd1-submit');
+    await insertPost(env, post, 'd1-member-submit', auth.member.id);
+    await env.MEMBERS_DB.prepare('INSERT INTO audit_log (id,actor_id,action,target_type,target_id,metadata_json,created_at) VALUES (?,?,?,?,?,?,?)')
+      .bind(makeId('audit'), auth.member.id, 'forum.post.created', 'forum_post', post.id, JSON.stringify({ board: post.board, sourceUrl: post.sourceUrl || '' }), new Date().toISOString()).run().catch(() => null);
     if (ctx?.waitUntil) ctx.waitUntil(Promise.allSettled([mirrorPost(env, post), syncKvMirror(env)]));
     return response({
       ok: true,
+      authenticated: true,
       persistent: true,
       saved: true,
       storage: 'Cloudflare D1 MEMBERS_DB.forum_posts',
-      mirroredToKv: Boolean(env.FORUM_POSTS),
+      mirroredToKv: kvMirrorEnabled(env),
       board: post.board,
       boardLabel: boardLabels[post.board],
+      memberTier: auth.entitlement?.effective_tier || 'registered',
       post
     }, 201);
   }
@@ -339,7 +364,7 @@ async function handle(route, request, env, ctx) {
     };
     await env.MEMBERS_DB.prepare(`INSERT INTO forum_reports (id, board, post_id, reason, created_at, status) VALUES (?, ?, ?, ?, ?, 'open')`)
       .bind(report.id, report.board, report.postId, report.reason, report.createdAt).run();
-    if (ctx?.waitUntil && env.FORUM_POSTS) ctx.waitUntil(env.FORUM_POSTS.put(`report:${report.id}`, JSON.stringify(report)).catch(() => null));
+    if (ctx?.waitUntil && kvMirrorEnabled(env)) ctx.waitUntil(env.FORUM_POSTS.put(`report:${report.id}`, JSON.stringify(report)).catch(() => null));
     return response({ ok: true, persistent: true, storage: 'Cloudflare D1 MEMBERS_DB.forum_reports', reportId: report.id, board: report.board });
   }
   return response({ ok: false, error: 'Unsupported forum action' }, 404);

@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-16T05:59:55.634Z
+Generated: 2026-07-19T06:13:24.846Z
 
 ## Official Boundary
 
@@ -79,6 +79,16 @@ Warren Buffett cuts off donations to Gates Foundation following Epstein revelati
 
 Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
 
+### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe thestandard.com.hk
+
 ### Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
 - Type: debunk/fake-media-risk
 - Status: unverified-claim
@@ -88,23 +98,3 @@ Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New 
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
-
-### Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
-
-### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Trump administration hindering investigation into Epstein’s ranch Nine.com.au

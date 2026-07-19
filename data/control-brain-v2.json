@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:19:43.081Z",
+  "updated": "2026-07-19T06:13:59.703Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 130,
+    "nodes": 129,
     "edges": 163,
     "topNodes": 25
   },
@@ -1741,7 +1741,7 @@
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "object-object",
+      "to": "0",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1874,7 +1874,7 @@
     },
     {
       "from": "health-data-and-emergency-systems",
-      "to": "object-object",
+      "to": "0",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"

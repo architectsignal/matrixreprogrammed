@@ -1,1 +1,125 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Membership | Matrix Reprogrammed</title><meta name="description" content="Paid access to premium briefs, ledgers, decks, reports and research tools."/><link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="reader-experience.css"/><style>.money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.money-card{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}.price{font-size:2rem;color:#d8b56a;font-weight:900}.mini{font-size:.84rem;color:#c8b98c}.email-capture{display:flex;gap:.5rem;flex-wrap:wrap}.email-capture input{min-width:240px;flex:1;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.75rem}</style></head><body><canvas id="matrix"></canvas><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="start-here.html">Start Here</a><a href="daily-command-brief.html">Daily Brief</a><a href="search.html">Search</a><a href="deck-expansion-hub.html">Decks</a><a href="review-dashboard.html">Review</a><a href="store.html">Store</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav></header><main class="wrap section"><div class="eyebrow">Mission + Money Engine</div><h1>MEMBERSHIP.</h1><p class="lead">Paid access to premium briefs, ledgers, decks, reports and research tools.</p><p><strong>Mission:</strong> Matrix Reprogrammed is a public-record intelligence machine mapping people, institutions, money, policy, jurisdictions, families, societies, think tanks, legal systems, narratives and missing records.</p><p><strong>Evidence boundary:</strong> Inclusion means public-record research relevance. Claims must be checked against sources, limits, context and missing records.</p><section class="section money-card"><h2>Get the free Daily Control Brief first</h2><p>Enter your email to receive this free brief/download when the email provider is connected.</p><form class="email-capture" data-capture="Get the free Daily Control Brief first"><input type="email" placeholder="you@example.com" aria-label="Email address"/><button class="btn" type="button">Join / Download</button></form><p class="mini">Email capture placeholder: connect provider and payment stack before taking live payments.</p></section><section class="section"><h2>Membership Tiers</h2><div class="money-grid"><article class="money-card" id="join-supporter"><h3>Supporter</h3><div class="price">€9/month</div><ul><li>weekly member brief</li><li>member newsletter</li><li>sample premium reports</li><li>member-only source drops</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article><article class="money-card" id="join-intelligence-member"><h3>Intelligence Member</h3><div class="price">€19/month</div><ul><li>premium daily brief</li><li>full card intelligence</li><li>full source ledger</li><li>deeper dossiers</li><li>downloadable card decks</li><li>weekly control map</li><li>missing-record queue</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article><article class="money-card" id="join-research-pro"><h3>Research Pro</h3><div class="price">€49/month</div><ul><li>advanced search</li><li>full dossier exports</li><li>monthly PDF intelligence report</li><li>source route maps</li><li>policy tracker</li><li>jurisdiction tracker</li><li>card score movement reports</li><li>priority source requests</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article></div></section></main><footer class="footer wrap"><p><strong>Boundary:</strong> Inclusion means public-record research relevance. Claims must be checked against sources, limits, context and missing records.</p></footer></div><script src="matrix.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Membership | Matrix Reprogrammed</title>
+  <meta name="description" content="Matrix Reprogrammed membership: the same underlying public-source evidence for Free Members, with optional €3, €6 and €9 monthly donations for curation, tools and project support.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style>
+  <style>
+    .money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem}.money-card{border:1px solid rgba(216,181,106,.3);border-radius:22px;padding:1.2rem;background:linear-gradient(150deg,rgba(14,8,2,.97),rgba(0,0,0,.96));box-shadow:0 18px 55px rgba(0,0,0,.28)}.membership-tier{display:flex;flex-direction:column;min-height:100%}.membership-tier h3{font-size:1.55rem;margin:.7rem 0 .2rem}.membership-tier h4{margin:1rem 0 .45rem;color:#d8b56a}.price{display:flex;align-items:baseline;gap:.35rem;color:#d8b56a;font-weight:900;flex-wrap:wrap}.price span{font-size:2.7rem}.price small{font-size:.9rem;color:#c8b98c}.tier-top{display:flex;justify-content:space-between;gap:.6rem;align-items:center;flex-wrap:wrap}.tier-code{font-size:.78rem;color:#c8b98c}.tier-includes{border-left:3px solid #d8b56a;padding:.55rem .75rem;background:rgba(216,181,106,.07)}.tier-benefits{padding-left:1.25rem;display:grid;gap:.45rem}.tier-access{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}.tier-access span{border:1px solid rgba(216,181,106,.28);border-radius:999px;padding:.3rem .58rem;font-size:.75rem;color:#eadcae}.tier-boundary{font-size:.84rem;color:#c8b98c;border-left:3px solid rgba(216,181,106,.55);padding-left:.75rem}.membership-status{border:1px solid rgba(216,181,106,.38);background:rgba(216,181,106,.08);border-radius:14px;padding:1rem;margin:1rem 0}.membership-status.good{border-color:#376b37;color:#b7ecb7}.membership-status.warning{border-color:#8a6a22;color:#ead49e}.membership-status.danger{border-color:#844;color:#ffb0a8}.membership-table-wrap{overflow:auto;border:1px solid rgba(216,181,106,.25);border-radius:16px}.membership-comparison table{border-collapse:collapse;width:100%;min-width:840px;background:rgba(5,5,5,.78)}.membership-comparison th,.membership-comparison td{padding:.8rem;border-bottom:1px solid rgba(216,181,106,.16);text-align:center}.membership-comparison th:first-child{text-align:left}.membership-comparison thead th{color:#d8b56a;background:#0d0a05;position:sticky;top:0}.email-capture{display:flex;gap:.5rem;flex-wrap:wrap}.email-capture input:not([type="checkbox"]){min-width:220px;flex:1;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.75rem}.newsletter-preferences{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.55rem;width:100%;padding:.8rem;border:1px solid rgba(216,181,106,.24);border-radius:12px;background:rgba(0,0,0,.28)}.newsletter-preferences strong{grid-column:1/-1;color:#d8b56a}.newsletter-preferences label{display:flex;align-items:center;gap:.45rem;font-size:.88rem;color:#eadcae}.newsletter-preferences input[type="checkbox"]{width:1rem;height:1rem;min-width:1rem;flex:0 0 auto;accent-color:#d8b56a}.form-status{width:100%;font-size:.82rem;color:#c8b98c}.paypal-slot{min-height:44px;margin-top:auto;padding-top:12px}.free-tier-action{margin-top:auto;padding-top:12px}.login-required{margin-top:8px}.evidence-promise{border:1px solid rgba(216,181,106,.45);background:linear-gradient(145deg,rgba(216,181,106,.12),rgba(0,0,0,.78));border-radius:20px;padding:1.25rem}.evidence-promise strong{color:#f0d893}.evidence-promise ul{display:grid;gap:.5rem}@media(max-width:700px){.money-grid{grid-template-columns:1fr}.price span{font-size:2.3rem}}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a>
+      <nav class="nav" aria-label="Primary navigation"><a href="start-here.html">Start Here</a><a href="live-intel.html">Live Intel</a><a href="search.html">Search</a><a href="membership.html" aria-current="page">Membership</a><a href="member-dashboard.html">Dashboard</a><a href="billing-dashboard.html">Billing</a><a href="books.html">Books</a></nav>
+    </header>
+    <main class="wrap section">
+      <div class="eyebrow">Free evidence access · optional member support</div>
+      <h1>MEMBERSHIP.</h1>
+      <p class="lead"><strong>The underlying public-source evidence is available to Free Members.</strong> Paid tiers are optional monthly donations for people who want added curation, delivery, monitoring, exports, research tools and member services.</p>
+      <p><strong>Evidence boundary:</strong> public records, source documents and evidence routes remain open to examination. Membership does not turn allegations into facts, guarantee that requested records exist, or promise a particular conclusion.</p>
+
+      <section class="section evidence-promise" aria-labelledby="evidence-access-promise">
+        <div class="eyebrow">Evidence access promise</div>
+        <h2 id="evidence-access-promise">THE EVIDENCE IS FREE. DONATIONS FUND THE MACHINE.</h2>
+        <p><strong>Free Member access includes the same underlying public-source evidence used by Supporter, Intelligence Member and Research Pro.</strong></p>
+        <p>Higher levels do not purchase a superior version of the truth or unlock hidden evidence. They provide added convenience: curated briefings, more frequent delivery, watchlists, source-change monitoring, downloadable formats, advanced filters, research workflow tools and member support.</p>
+      </section>
+
+      <section class="section money-card" aria-labelledby="free-brief-heading">
+        <h2 id="free-brief-heading">Get the free Daily Control Brief first</h2>
+        <p>Join the free list for public briefings and release notices. You can also create a permanent Free Member account below.</p>
+        <form id="newsletter-form" data-newsletter-form data-source="membership-daily-control-brief" data-default-daily="true" data-default-release="true" class="email-capture">
+          <input name="name" autocomplete="name" placeholder="Name (optional)" aria-label="Name">
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Email address" required>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+          <div class="newsletter-preferences" role="group" aria-labelledby="free-brief-preferences-label">
+            <strong id="free-brief-preferences-label">Choose your free emails</strong>
+            <label><input type="checkbox" name="public_daily_brief" value="true" checked data-default-checked="true"> Daily Control Brief</label>
+            <label><input type="checkbox" name="release_notices" value="true" checked data-default-checked="true"> Release notices</label>
+            <label><input type="checkbox" name="public_weekly_digest" value="true"> Weekly Signal Drop</label>
+          </div>
+          <button class="btn" type="submit">Join Free Brief</button>
+          <p class="form-status newsletter-status" aria-live="polite">Daily Control Brief and release notices are preselected. Verify your email to activate them; the Weekly Signal Drop is optional.</p>
+        </form>
+      </section>
+
+      <section class="section membership-tier-section" aria-labelledby="membership-tier-heading">
+        <div class="eyebrow">Four cumulative service levels · free membership never requires PayPal</div>
+        <h2 id="membership-tier-heading">MEMBERSHIP TIERS.</h2>
+        <p class="lead">Every level can examine the same underlying evidence. Each paid level adds service, organisation and research functionality. Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.</p>
+        <div id="paypal-membership-status" class="membership-status">Checking PayPal checkout readiness…</div>
+        <p data-paypal-login class="login-required" hidden><a class="btn" href="member-login.html?return=%2Fmembership.html">Log in to choose a paid tier</a></p>
+
+        <div class="money-grid membership-grid">
+          <article class="money-card membership-tier" id="join-free-member" data-tier-price="0">
+            <div class="tier-top"><span class="label">Permanent account</span><span class="tier-code">€0 / forever</span></div>
+            <h3>Free Member</h3><div class="price"><span>€0</span><small>no card required</small></div>
+            <p>Create a passwordless account and keep your personal Matrix Reprogrammed workspace.</p>
+            <h4>Benefits</h4><ul class="tier-benefits"><li>Access to the same underlying public-source evidence used across all tiers</li><li>Free member dashboard</li><li>Passwordless login and session controls</li><li>Save public reports and cards</li><li>Follow public topics</li><li>Public weekly archive</li><li>Newsletter and release preferences</li><li>Public download history</li></ul>
+            <h4>Access included</h4><div class="tier-access"><span>Public evidence</span><span>Free dashboard</span><span>Saved content</span><span>Topic follows</span><span>Public archive</span><span>Preferences</span></div>
+            <p class="tier-boundary"><strong>Billing boundary:</strong> Free Member access never creates a PayPal subscription and never requires payment details.</p>
+            <div class="free-tier-action"><a class="btn" href="member-login.html?return=%2Fmember-dashboard.html">Create or access free account</a></div>
+          </article>
+
+          <article class="money-card membership-tier" id="join-supporter" data-tier-price="3">
+            <div class="tier-top"><span class="label">Monthly donation</span><span class="tier-code">€3 donation / month</span></div>
+            <h3>Supporter</h3><div class="price"><span>€3</span><small>donation / month</small></div>
+            <p>A low-cost way to support the project and receive the core weekly member service layer.</p><p class="tier-includes"><strong>Everything in Free Member</strong></p>
+            <h4>Benefits</h4><ul class="tier-benefits"><li>Weekly member intelligence brief</li><li>Member newsletter and editorial notes</li><li>Curated public-source drops and source collections</li><li>Selected supporter downloads and convenient formats</li><li>Weekly brief archive</li><li>Supporter announcements and surveys</li></ul>
+            <h4>Access included</h4><div class="tier-access"><span>Everything in Free</span><span>Weekly curation</span><span>Member newsletter</span><span>Source collections</span><span>Supporter downloads</span></div>
+            <p class="tier-boundary"><strong>Evidence promise:</strong> the donation supports the project and added member services; the underlying public-source evidence remains available through Free Member access.</p>
+            <div id="paypal-button-supporter" class="paypal-slot" aria-label="Supporter PayPal checkout"></div>
+          </article>
+
+          <article class="money-card membership-tier" id="join-intelligence-member" data-tier-price="6">
+            <div class="tier-top"><span class="label">Monthly donation</span><span class="tier-code">€6 donation / month</span></div>
+            <h3>Intelligence Member</h3><div class="price"><span>€6</span><small>donation / month</small></div>
+            <p>The day-to-day intelligence service layer for readers who want evidence organised, monitored and delivered more frequently.</p><p class="tier-includes"><strong>Everything in Supporter and Free Member</strong></p>
+            <h4>Benefits</h4><ul class="tier-benefits"><li>Premium daily intelligence brief</li><li>Full card context and evidence notes</li><li>Deeper evidence-bounded dossiers and organised research routes</li><li>Entity and institution following</li><li>Watchlists and source-change tracking</li><li>Downloadable PDF and CSV releases</li></ul>
+            <h4>Access included</h4><div class="tier-access"><span>Everything in Supporter</span><span>Premium daily delivery</span><span>Entity follows</span><span>Watchlists</span><span>Intelligence downloads</span></div>
+            <p class="tier-boundary"><strong>Evidence promise:</strong> this level adds monitoring, organisation, analysis and delivery tools—not exclusive ownership of evidence.</p>
+            <div id="paypal-button-intelligence" class="paypal-slot" aria-label="Intelligence Member PayPal checkout"></div>
+          </article>
+
+          <article class="money-card membership-tier" id="join-research-pro" data-tier-price="9">
+            <div class="tier-top"><span class="label">Monthly donation</span><span class="tier-code">€9 donation / month</span></div>
+            <h3>Research Pro</h3><div class="price"><span>€9</span><small>donation / month</small></div>
+            <p>The advanced workspace layer for investigators, writers and serious public-record researchers who want stronger filters, exports and workflow tools.</p><p class="tier-includes"><strong>Everything in Intelligence Member, Supporter and Free Member</strong></p>
+            <h4>Benefits</h4><ul class="tier-benefits"><li>Advanced watchlist criteria</li><li>Full dossier and evidence-path exports</li><li>Monthly PDF intelligence report</li><li>Policy and jurisdiction trackers</li><li>Citation and bibliography exports</li><li>Research queue and priority source requests</li><li>PDF, CSV and JSON research bundles</li></ul>
+            <h4>Access included</h4><div class="tier-access"><span>Everything in Intelligence</span><span>Advanced watchlists</span><span>Research downloads</span><span>Citation exports</span><span>Evidence-path exports</span></div>
+            <p class="tier-boundary"><strong>Evidence promise:</strong> Research Pro provides advanced organisation and research functions. Free Members still receive access to the same underlying public-source evidence.</p>
+            <p class="tier-boundary"><strong>Request boundary:</strong> priority requests enter a review queue. They do not guarantee that a record exists, can be lawfully obtained, or will support a requested conclusion.</p>
+            <div id="paypal-button-research_pro" class="paypal-slot" aria-label="Research Pro PayPal checkout"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section membership-comparison" aria-labelledby="membership-comparison-heading">
+        <div class="eyebrow">Evidence and service comparison</div><h2 id="membership-comparison-heading">SAME EVIDENCE. DIFFERENT SERVICE LAYERS.</h2>
+        <div class="membership-table-wrap"><table><thead><tr><th scope="col">Access or service</th><th scope="col">Free Member<br><small>€0</small></th><th scope="col">Supporter<br><small>€3 donation</small></th><th scope="col">Intelligence<br><small>€6 donation</small></th><th scope="col">Research Pro<br><small>€9 donation</small></th></tr></thead><tbody>
+          <tr><th scope="row">Underlying public-source evidence</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Public reports, cards and source routes</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Passwordless account and dashboard</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Save public content and follow public topics</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Weekly curated member brief and source collections</th><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Premium daily delivery and source-change monitoring</th><td>—</td><td>—</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Entity follows and watchlists</th><td>—</td><td>—</td><td>✓</td><td>✓</td></tr><tr><th scope="row">Advanced filters, exports and research workflow tools</th><td>—</td><td>—</td><td>—</td><td>✓</td></tr><tr><th scope="row">Research queue and citation exports</th><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+        </tbody></table></div>
+        <p class="tier-boundary"><strong>Billing boundary:</strong> Free Member access never touches PayPal. For paid tiers, checkout approval alone does not grant access; the server grants or removes access only from verified PayPal billing state.</p>
+      </section>
+
+      <section class="section evidence-promise" aria-labelledby="donation-boundary-heading">
+        <div class="eyebrow">Where the support goes</div>
+        <h2 id="donation-boundary-heading">YOUR DONATION SUPPORTS THE INFRASTRUCTURE.</h2>
+        <ul><li>Website, database and document hosting</li><li>Source preservation, verification and monitoring</li><li>Research, evidence-card and dossier production</li><li>Automated watchlists and source-change systems</li><li>PDF, CSV and JSON generation</li><li>Continued development of the public research platform</li></ul>
+        <p><strong>Donation wording boundary:</strong> paid plans are recurring membership payments that support Matrix Reprogrammed and include member services. They are not charitable donations and should not be treated as tax-deductible unless separately confirmed under applicable law.</p>
+      </section>
+    <script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">{"status":"compatibility-routes-preserved-with-clean-public-copy","checked":"2026-07-19","routes":["downloads/forum-posts.json","downloads/forum-posts.md","feed-center.html","share-center.html","launch-room.html","offer-center.html","source-document-vault.html","evidence-vault.html","black-file.html"]}</script></main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — public records, evidence boundaries and clearly labelled analysis.</p></footer>
+  </div>
+  <script src="matrix.js"></script><script src="newsletter.js"></script><script src="paypal-membership.js"></script><script src="analytics.js"></script>
+  <script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":[],"labels":[]}</script>
+</body>
+</html>

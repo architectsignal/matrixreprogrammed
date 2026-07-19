@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:14:34.675Z",
+  "runtimeChanged": false,
+  "qualityChanged": false,
+  "policy": {
+    "establishedAdjudicatedBoost": 88,
+    "courtInvestigationSourceBoost": 36,
+    "genericRelationshipPenalty": -72
+  },
+  "boundary": "Queries seeking convictions, judgments or established findings prioritize adjudicated court, investigation and document records. Generic relationship rows remain searchable but cannot crowd out stronger evidence."
+}

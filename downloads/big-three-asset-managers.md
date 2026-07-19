@@ -1,6 +1,6 @@
 # Big Three Asset Manager Tracker
 
-Generated: 2026-07-18T07:19:42.977Z
+Generated: 2026-07-19T06:13:59.603Z
 
 Boundary: This tracker maps influence routes, public records and missing records. It does not treat ownership, index inclusion, custody, association or voting power as wrongdoing by itself.
 

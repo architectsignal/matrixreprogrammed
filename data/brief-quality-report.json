@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T19:32:02.649Z",
+  "updated": "2026-07-19T06:13:18.387Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
@@ -9,7 +9,7 @@
       "score": 100,
       "level": "elite priority",
       "source_strength": 75,
-      "relationship_depth": 80,
+      "relationship_depth": 60,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },
@@ -174,16 +174,6 @@
       "reader_friendliness": 85
     },
     {
-      "id": "chattogram-water-supply-and-sewerage-authority",
-      "name": "Chattogram Water Supply and Sewerage Authority",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
       "id": "court-of-appeals-for-the-second-circuit",
       "name": "Court of Appeals for the Second Circuit",
       "score": 67,
@@ -204,16 +194,6 @@
       "reader_friendliness": 85
     },
     {
-      "id": "finance-division-ministry-of-finance",
-      "name": "Finance Division, Ministry of Finance",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
       "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
       "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "score": 67,
@@ -224,38 +204,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "kingdom-of-morocco",
-      "name": "Kingdom of Morocco",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
       "id": "matter-of-pagliughi",
       "name": "Matter of Pagliughi",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
-      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "ministry-of-health-and-family-welfare",
-      "name": "Ministry of Health and Family Welfare",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -384,6 +334,26 @@
       "reader_friendliness": 85
     },
     {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "name": "Finance Division, Ministry of Finance",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "googl",
       "name": "GOOGL",
       "score": 55,
@@ -394,8 +364,38 @@
       "reader_friendliness": 85
     },
     {
+      "id": "kingdom-of-morocco",
+      "name": "Kingdom of Morocco",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "microsoft-corp",
       "name": "MICROSOFT CORP",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "name": "Ministry of Health and Family Welfare",
       "score": 55,
       "level": "active watch",
       "source_strength": 25,
@@ -434,28 +434,28 @@
       "reader_friendliness": 85
     },
     {
-      "id": "republic-of-india",
-      "name": "Republic of India",
-      "score": 55,
+      "id": "nuclear-regulatory-commission",
+      "name": "Nuclear Regulatory Commission",
+      "score": 43,
       "level": "active watch",
       "source_strength": 25,
-      "relationship_depth": 20,
+      "relationship_depth": 0,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "score": 43,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 0,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },
     {
       "id": "republic-of-rwanda",
       "name": "Republic of Rwanda",
-      "score": 55,
-      "level": "active watch",
-      "source_strength": 25,
-      "relationship_depth": 20,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
       "score": 43,
       "level": "active watch",
       "source_strength": 25,

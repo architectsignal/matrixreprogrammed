@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "2e0fe4791fb1178f938abefc10b705b370f82a7e",
-  "buildShortSha": "2e0fe4791fb1",
-  "generatedAt": "2026-07-16T06:00:02.360Z",
+  "buildSha": "20deaf5dca66498de00aa0c304ec7711c756631d",
+  "buildShortSha": "20deaf5dca66",
+  "generatedAt": "2026-07-19T06:13:31.543Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -342,10 +342,10 @@
     {
       "name": "Homepage",
       "file": "index.html",
-      "marker": "FOLLOW THE FILES.",
+      "marker": "MAP THE STRUCTURE.",
       "exists": true,
       "markerPresent": true,
-      "hash": "4ee0c0493b39124f"
+      "hash": "272be7f78f9c8186"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "caa5824fe378cf2a"
+      "hash": "127b8ab1196835e9"
     },
     {
       "name": "Epstein Command Center",
@@ -361,7 +361,7 @@
       "marker": "Evidence Boundary",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein People Tracker",
@@ -369,7 +369,7 @@
       "marker": "People / Entity Tracker",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein Timeline Map",
@@ -377,7 +377,7 @@
       "marker": "Timeline + Cross-Reference Map",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein Evidence Ladder",
@@ -385,7 +385,7 @@
       "marker": "Evidence Strength Ladder",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Actual Files Cockpit",
@@ -393,7 +393,7 @@
       "marker": "Actual Files Cockpit",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Network Architecture Matrix",
@@ -401,7 +401,7 @@
       "marker": "Network Architecture Matrix",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Main Signal Board",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "b75e171588674a53"
+      "hash": "c46d7b4438206e4c"
     },
     {
       "name": "Dark Speculation Board",
@@ -433,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "d91a098057d60a37"
+      "hash": "f0e68b6ab34e59d6"
     },
     {
       "name": "Hard Board Routes",
@@ -441,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "d91a098057d60a37"
+      "hash": "f0e68b6ab34e59d6"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -449,14 +449,15 @@
       "marker": "_site",
       "exists": true,
       "markerPresent": true,
-      "hash": "2173a490ca7e986d"
+      "hash": "368a5f10be56cd4e"
     }
   ],
   "hashes": {
-    "worker": "d91a098057d60a37",
-    "package": "49a97283737f80c0",
-    "epsteinFiles": "5e348d09a92645b2",
-    "liveIntel": "caa5824fe378cf2a"
+    "worker": "f0e68b6ab34e59d6",
+    "package": "963dc418a2d87fac",
+    "epsteinFiles": "fedfe990abb51cfa",
+    "liveIntel": "127b8ab1196835e9",
+    "homepage": "272be7f78f9c8186"
   },
   "pressureTests": {
     "packageIncludesBuild": true,
@@ -465,12 +466,12 @@
     "epsteinWatchTest": true
   },
   "liveProof": {
-    "homepageExpectedMarker": "FOLLOW THE FILES.",
+    "homepageExpectedMarker": "MAP THE STRUCTURE. READ THE SIGNALS.",
     "epsteinExpectedMarker": "THE EPSTEIN FILES COMMAND CENTER / Evidence Boundary layer",
     "forumHealthEndpoint": "/forum-health",
     "mainBoardFeed": "/forum-feed-main",
     "speculationBoardFeed": "/forum-feed-speculation",
     "epsteinSightingBoardFeed": "/forum-feed-epstein-alive",
-    "cacheNote": "If this page shows the latest build but the homepage looks old, purge Cloudflare cache."
+    "cacheNote": "The deployed commit must match this build SHA before live verification is accepted."
   }
 }

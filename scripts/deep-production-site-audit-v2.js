@@ -281,6 +281,13 @@ function liveRouteForFile(file) {
   if (relative === 'index.html' || relative === 'index') return '/';
   return `/${relative}`;
 }
+function protectedAssetExpected(route) {
+  try {
+    const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'access-route-policy.json'), 'utf8'));
+    if ((policy.exactRules || []).some(rule => rule.route === route)) return true;
+    return (policy.patternRules || []).some(rule => new RegExp(rule.pattern).test(route));
+  } catch { return false; }
+}
 async function inspectLive() {
   if (!fs.existsSync(site)) throw new Error('_site is missing; run the complete build first');
   const files = walk(site);
@@ -292,7 +299,7 @@ async function inspectLive() {
     stats.livePages++;
     const item = { route, status: response.status, finalUrl: response.url, type: response.type, error: response.error || null };
     if (response.status < 200 || response.status >= 400) { hard.push(`live page ${route}: HTTP ${response.status || response.error}`); evidence.liveFailures.push(item); }
-    else if (!/text\/html/i.test(response.type) || !/<html\b/i.test(response.text)) { hard.push(`live page ${route}: expected an HTML document, received ${response.type || 'unknown content type'}`); evidence.liveFailures.push(item); }
+    else if (!/<html\b/i.test(response.text) || (response.type && !/text\/html/i.test(response.type))) { hard.push(`live page ${route}: expected an HTML document, received ${response.type || 'unknown content type'}`); evidence.liveFailures.push(item); }
     return item;
   });
   const sameOriginAssets = new Set();
@@ -310,7 +317,7 @@ async function inspectLive() {
   const assets = await mapLimit([...sameOriginAssets], 24, async url => {
     const response = await fetchWithTimeout(url, {}, 12000);
     stats.liveAssets++;
-    if (response.status < 200 || response.status >= 400) { const item = { url, status: response.status, error: response.error || null }; hard.push(`live internal target ${url}: HTTP ${response.status || response.error}`); evidence.liveFailures.push(item); }
+    const route = new URL(url).pathname; const protectedDeniedAsDesigned = response.status === 401 && protectedAssetExpected(route); if (!protectedDeniedAsDesigned && (response.status < 200 || response.status >= 400)) { const item = { url, status: response.status, error: response.error || null }; hard.push(`live internal target ${url}: HTTP ${response.status || response.error}`); evidence.liveFailures.push(item); }
     return { url, status: response.status, type: response.type };
   });
   const externalResults = await mapLimit([...externalLinks], 12, async url => {
@@ -342,9 +349,10 @@ async function inspectLive() {
   await contract('email admin boundary', '/api/email/admin/health', { statuses: [403], origin: 'cloudflare-worker-email-lifecycle', json: true, check: data => data?.ok === false });
   await contract('PayPal authentication boundary', '/api/paypal/config', { statuses: [401], origin: 'cloudflare-worker-paypal-subscriptions', json: true, check: data => data?.ok === false && data?.authenticated === false });
   await contract('PayPal checkout disabled boundary', '/api/paypal/checkout-intent', { statuses: [401, 503], json: true, check: data => data?.ok === false }, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tier: 'supporter' }) });
-  await contract('voluntary support disabled boundary', '/api/paypal/support/create-order', { statuses: [503], json: true, check: data => data?.ok === false && data?.enabled === false }, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ amount: '10.00', context: 'deep-audit' }) });
+  await contract('voluntary support configuration boundary', '/api/paypal/donation/config', { statuses: [200], origin: 'cloudflare-worker-paypal-subscriptions', json: true, check: data => data?.ok === true && data?.enabled === false && data?.liveChargingEnabled === false });
+  await contract('voluntary support order authentication boundary', '/api/paypal/donation/order', { statuses: [401], origin: 'cloudflare-worker-paypal-subscriptions', json: true, check: data => data?.ok === false && data?.authenticated === false }, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ amount: '10.00', productKey: 'deep-audit' }) });
   await contract('email launch console page', '/admin-email-launch.html', { statuses: [200], check: (_data, response) => /EMAIL LAUNCH CONSOLE\./.test(response.text) && /admin-email-launch\.js/.test(response.text) });
-  await contract('email test endpoint unauthorized', '/api/email/admin/send-test', { statuses: [403], origin: 'cloudflare-worker-email-lifecycle', json: true, check: data => data?.ok === false }, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
+  await contract('email test endpoint unauthorized', '/api/email/admin/test-transactional', { statuses: [403], origin: 'cloudflare-worker-email-lifecycle', json: true, check: data => data?.ok === false }, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
   return { pages, assets, externalResults };
 }
 

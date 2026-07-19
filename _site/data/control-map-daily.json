@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-16T06:00:16.815Z",
+  "updated": "2026-07-19T06:14:03.565Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -163,6 +163,12 @@
           "type": "asset manager route"
         },
         {
+          "name": "Elon Musk",
+          "score": 100,
+          "route": "billionaire-briefs/elon-musk.html",
+          "type": "profile route"
+        },
+        {
           "name": "Blackwater / Xe / Academi / Constellis lineage",
           "score": 100,
           "route": "contractor-briefs/blackwater-constellis-lineage.html",
@@ -196,12 +202,6 @@
           "name": "G4S / Allied Universal security lineage",
           "score": 100,
           "route": "contractor-briefs/g4s-allied-security-lineage.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "SAIC / Leidos lineage",
-          "score": 100,
-          "route": "contractor-briefs/leidos-saic-lineage.html",
           "type": "contractor route"
         }
       ]
@@ -249,7 +249,7 @@
         {
           "name": "Most important missing record",
           "score": 80,
-          "route": "entity-briefs/health-and-human-services-department.html",
+          "route": "entity-briefs/people-s-republic-of-bangladesh.html",
           "type": "daily conclusion"
         },
         {

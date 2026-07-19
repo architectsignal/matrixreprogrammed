@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:52.492Z",
-  "mode": "phase6-restore-protected-template",
+  "generatedAt": "2026-07-19T06:15:29.677Z",
+  "mode": "phase6-restore-protected-template-plus-explicit-email-preferences",
   "template": "templates/phase6-membership.template",
   "freeTier": true,
   "evidenceAccess": "same-underlying-public-source-evidence",
@@ -12,6 +12,17 @@
     9
   ],
   "checkoutDefault": "disabled-until-runtime-and-d1-gates-pass",
+  "briefingPreferences": {
+    "publicDailyBrief": true,
+    "releaseNotices": true,
+    "publicWeeklyDigest": "optional",
+    "patch": {
+      "ran": true,
+      "status": 0,
+      "stdout": "Membership Daily Control Brief preference form patched: already current; newsletter runtime verified.\n",
+      "stderr": ""
+    }
+  },
   "tiers": [
     {
       "id": "supporter",
@@ -31,6 +42,12 @@
       "price": 9,
       "priceLabel": "€9 donation / month"
     }
+  ],
+  "synchronized": [
+    "membership.html",
+    "_site/membership.html",
+    "_site/membership",
+    "_site/newsletter.js"
   ],
   "failures": []
 }

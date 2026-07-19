@@ -47,3 +47,6 @@ id = "99996d87016d4285a833707cbda5232f"
 binding = "MEMBERS_DB"
 database_name = "matrix-members"
 database_id = "c6e465d3-4e36-4a00-b8f8-309447240c52"
+
+[vars]
+ENABLE_KV_COMPATIBILITY_MIRROR = "false"

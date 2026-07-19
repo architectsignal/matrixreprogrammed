@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:14:29.911Z",
+  "changed": true,
+  "version": "daily-control-brief-v3",
+  "subjectStrategy": "Strongest current development, then named actor, then evidence-bounded fallback.",
+  "auditVersionRecorded": true,
+  "repeatSafe": true,
+  "improvements": [
+    "Uses the Daily Brain Brief, Daily Command Brief, speculative synthesis, public drops and Live Intel instead of flattening one generic array.",
+    "Names people and institutions only when a documented role exists.",
+    "Explains why each named actor or institution matters.",
+    "Adds current developments with evidence status and lane.",
+    "Turns speculation into testable scenarios with strengthening and weakening evidence.",
+    "Adds records to pull, watch-next triggers, source routes and a full evidence boundary.",
+    "Builds a useful subject line from the strongest current development.",
+    "Records the Daily Control Brief renderer version in campaign audit metadata."
+  ]
+}

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-16T05:59:30.664Z
+Updated: 2026-07-19T06:13:00.128Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -56,21 +56,11 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
-  - Next: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
 - 2026-06-16 — Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Evidence: News/source-watch item
@@ -101,15 +91,25 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-15 — PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-15 — Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5
+- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -130,17 +130,17 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- European Commission AI Act page, last updated 2026-07-07: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - Google News / declassified files: Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
-- Google News / Epstein timeline and files: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic — https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au — https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
 - Google News / Epstein sighting and alive claims: Lawmakers once saw Bill Gates as a benevolent innovator. After Epstein, they aren’t sure. - Politico — https://news.google.com/rss/articles/CBMijAFBVV95cUxQZHdweW9BMjNMa3JIOWZPZWxsVGtwUGFMYkhXbWthZjFNWVBUa0dsdVN4UVNxZ211TWxWbkFhM05TSUhIS3FVTVNXRDRXQmhkRmttbTZWR3BhLXVSWjZMOHJxM2ZzRWlVSVpmLW9HY0xqTGlkd19sVElDRTVqbENEbXRqZTJfbGlBUDFPMQ?oc=5
-- Google News / war machine: PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov) — https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
-- Google News / declassified files: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News — https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5
+- Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Google News / declassified files: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 — https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+- Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+- Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
 
 ## Book Routes
 

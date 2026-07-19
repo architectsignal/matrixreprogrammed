@@ -1,19 +1,21 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-18T07:20:18.132Z
+Updated: 2026-07-19T06:14:16.458Z
 
-Files scanned: 4215
+Files scanned: 4058
 
-High issues: 2524
+High issues: 2353
 
 Review issues: 8
 
-Intake areas: 2130
+Intake areas: 2311
 
 Weak intake areas: 0
 
 ## High Issues
 - SITE_BUILD_STATUS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- SITE_RECOVERY_MASTER.md: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
+- SITE_RECOVERY_MASTER.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/SITE_BUILD_STATUS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/about.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/agenda-2030.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -249,8 +251,6 @@ Weak intake areas: 0
 - _site/crime-dossiers.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/crime-hub.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/cross-reference-map.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/daily-brain-brief.html: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/daily-brain-brief.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-brief-master.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-command-brief.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-drop.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -297,7 +297,6 @@ Weak intake areas: 0
 - _site/data/control-map-daily.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/convergence-control-lenses.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/cross-reference-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/daily-brain-brief.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-brain-brief.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-brief-master.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-command-brief.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
@@ -322,7 +321,6 @@ Weak intake areas: 0
 - _site/data/entity-daily-briefs.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/entity-exposure-index.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/entity-exposure-index.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/entity-observations.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/entity-observations.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/entity-registry.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/entity-relationship-scores.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
@@ -510,6 +508,8 @@ Weak intake areas: 0
 - _site/downloads/card-download-manifest.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/card-intelligence-feed.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/claim-classifier.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/claim-classifier.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/clock-wall.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 None

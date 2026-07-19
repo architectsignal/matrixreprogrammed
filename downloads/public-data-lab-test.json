@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:24.463Z",
+  "generatedAt": "2026-07-19T06:14:46.480Z",
   "datasets": 4,
   "presets": 9,
   "checks": [
@@ -95,6 +95,11 @@
       "detail": ""
     },
     {
+      "name": "DuckDB package version exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "public page generated",
       "ok": true,
       "detail": ""
@@ -125,7 +130,17 @@
       "detail": ""
     },
     {
-      "name": "module runtime wired",
+      "name": "module runtime wired with cache version",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime has no fatal top-level CDN import",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime has two DuckDB CDN providers",
       "ok": true,
       "detail": ""
     },
@@ -155,12 +170,22 @@
       "detail": ""
     },
     {
-      "name": "runtime enforces timeout",
+      "name": "runtime enforces startup and query timeouts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime verifies and buffers datasets",
       "ok": true,
       "detail": ""
     },
     {
       "name": "runtime retains accessible fallback",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime exposes startup failures",
       "ok": true,
       "detail": ""
     },

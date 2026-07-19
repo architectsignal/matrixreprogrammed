@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-18T07:12:59.850Z",
+  "generatedAt": "2026-07-19T06:15:29.380Z",
   "repairs": [
     "built-investigation-pages",
     "rebuilt-search-v2",
@@ -29,7 +29,8 @@
     "search-route:data/contradictions.json",
     "search-route:data/main-player-profiles.json",
     "search-route:data/entity-timelines.json",
-    "verified-investigation-search"
+    "verified-investigation-search",
+    "prepared-search-v3-deploy-size"
   ],
   "mode": "Search V2 plus investigation evidence runtime repair",
   "version": "search-runtime-hardening-2026-07-11-investigation"

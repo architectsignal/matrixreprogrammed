@@ -1,15 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:36.907Z",
+  "generatedAt": "2026-07-19T06:15:06.137Z",
   "checks": {
     "oneConsentCheckbox": true,
     "requiredConsent": true,
     "truthfulStorageCopy": true,
     "runtimeConsentGate": true,
     "truthfulPayload": true,
+    "explicitPreferenceGate": true,
     "dailyVerificationMessage": true,
-    "noUniversalWeeklyDefault": true
+    "noUniversalWeeklyDefault": true,
+    "serverErrorsVisible": true
   },
   "storage": "Cloudflare D1 MEMBERS_DB",
-  "consentVersion": "newsletter-explicit-consent-v3"
+  "consentVersion": "newsletter-explicit-consent-v3",
+  "sharedRuntime": "daily-weekly-release-preferences-v3"
 }

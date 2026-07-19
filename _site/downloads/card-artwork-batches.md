@@ -1,6 +1,6 @@
 # Card Artwork Batches
 
-Updated: 2026-07-16T06:00:17.909Z
+Updated: 2026-07-19T06:14:04.659Z
 
 Total missing: 468
 
@@ -19,297 +19,297 @@ Card ID: jeff-bezos
 
 BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jeff Bezos. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 2. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 3. Warren Buffett
-Deck: Top 52 Persons of Interest
-Card ID: warren-buffett
-
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Warren Buffett. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 3. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
-
-### 4. World Health Organization
+### 3. World Health Organization
 Deck: Top 52 Persons of Interest
 Card ID: world-health-organization
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for World Health Organization. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for World Health Organization. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 3. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 5. Federal Reserve
+### 4. Federal Reserve
 Deck: Top 52 Persons of Interest
 Card ID: federal-reserve
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Federal Reserve. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Federal Reserve. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 6. CACI International
+### 5. CACI International
 Deck: Top 52 Persons of Interest
 Card ID: caci-international
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for CACI International. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for CACI International. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 7. Booz Allen Hamilton
+### 6. Booz Allen Hamilton
 Deck: Top 52 Persons of Interest
 Card ID: booz-allen-hamilton
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Booz Allen Hamilton. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Booz Allen Hamilton. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 8. Larry Fink
+### 7. Larry Fink
 Deck: Top 52 Persons of Interest
 Card ID: larry-fink
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Larry Fink. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Larry Fink. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 9. Klaus Schwab
+### 8. Klaus Schwab
 Deck: Top 52 Persons of Interest
 Card ID: klaus-schwab
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Klaus Schwab. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Klaus Schwab. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 10. Emmanuel Macron
+### 9. Emmanuel Macron
 Deck: Top 52 Persons of Interest
 Card ID: emmanuel-macron
 
-BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Emmanuel Macron. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Emmanuel Macron. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-## batch-002
-### 1. Tony Blair
+### 10. Tony Blair
 Deck: Top 52 Persons of Interest
 Card ID: tony-blair
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tony Blair. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tony Blair. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 2. Jamie Dimon
+## batch-002
+### 1. Jamie Dimon
 Deck: Top 52 Persons of Interest
 Card ID: jamie-dimon
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jamie Dimon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 12. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jamie Dimon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 3. Jerome Powell
+### 2. Jerome Powell
 Deck: Top 52 Persons of Interest
 Card ID: jerome-powell
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jerome Powell. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 13. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jerome Powell. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 12. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 4. Jensen Huang
+### 3. Jensen Huang
 Deck: Top 52 Persons of Interest
 Card ID: jensen-huang
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jensen Huang. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jensen Huang. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 13. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 5. Christine Lagarde
+### 4. Christine Lagarde
 Deck: Top 52 Persons of Interest
 Card ID: christine-lagarde
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Christine Lagarde. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Christine Lagarde. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 6. Pope Francis
+### 5. Pope Francis
 Deck: Top 52 Persons of Interest
 Card ID: pope-francis
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Pope Francis. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Pope Francis. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 7. King Charles III
+### 6. King Charles III
 Deck: Top 52 Persons of Interest
 Card ID: king-charles-iii
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for King Charles III. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for King Charles III. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 8. Erik Prince
+### 7. Erik Prince
 Deck: Top 52 Persons of Interest
 Card ID: erik-prince
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Erik Prince. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Erik Prince. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 9. Bill Gates
+### 8. Bill Gates
 Deck: Top 52 Persons of Interest
 Card ID: bill-gates
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bill Gates. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bill Gates. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 10. Sam Altman
+### 9. Sam Altman
 Deck: Top 52 Persons of Interest
 Card ID: sam-altman
 
-BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Sam Altman. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Sam Altman. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-## batch-003
-### 1. Sundar Pichai
+### 10. Sundar Pichai
 Deck: Top 52 Persons of Interest
 Card ID: sundar-pichai
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Sundar Pichai. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Sundar Pichai. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 2. Satya Nadella
+## batch-003
+### 1. Satya Nadella
 Deck: Top 52 Persons of Interest
 Card ID: satya-nadella
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Satya Nadella. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 22. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Satya Nadella. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 3. Tim Cook
+### 2. Tim Cook
 Deck: Top 52 Persons of Interest
 Card ID: tim-cook
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tim Cook. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 23. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tim Cook. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 22. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 4. George Soros
+### 3. George Soros
 Deck: Top 52 Persons of Interest
 Card ID: george-soros
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for George Soros. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for George Soros. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 23. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 5. Mukesh Ambani
+### 4. Mukesh Ambani
 Deck: Top 52 Persons of Interest
 Card ID: mukesh-ambani
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mukesh Ambani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mukesh Ambani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 6. Xi Jinping
+### 5. Xi Jinping
 Deck: Top 52 Persons of Interest
 Card ID: xi-jinping
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Xi Jinping. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Xi Jinping. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 7. Narendra Modi
+### 6. Narendra Modi
 Deck: Top 52 Persons of Interest
 Card ID: narendra-modi
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Narendra Modi. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Narendra Modi. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 8. Vladimir Putin
+### 7. Vladimir Putin
 Deck: Top 52 Persons of Interest
 Card ID: vladimir-putin
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Vladimir Putin. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Vladimir Putin. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 9. Benjamin Netanyahu
+### 8. Benjamin Netanyahu
 Deck: Top 52 Persons of Interest
 Card ID: benjamin-netanyahu
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Benjamin Netanyahu. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Benjamin Netanyahu. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 10. Volodymyr Zelenskyy
+### 9. Volodymyr Zelenskyy
 Deck: Top 52 Persons of Interest
 Card ID: volodymyr-zelenskyy
 
-BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Volodymyr Zelenskyy. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Volodymyr Zelenskyy. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-## batch-004
-### 1. Giorgia Meloni
+### 10. Giorgia Meloni
 Deck: Top 52 Persons of Interest
 Card ID: giorgia-meloni
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Giorgia Meloni. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Giorgia Meloni. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 2. Gautam Adani
+## batch-004
+### 1. Gautam Adani
 Deck: Top 52 Persons of Interest
 Card ID: gautam-adani
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gautam Adani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 32. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gautam Adani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 3. Ray Dalio
+### 2. Ray Dalio
 Deck: Top 52 Persons of Interest
 Card ID: ray-dalio
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ray Dalio. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 33. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ray Dalio. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 32. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 4. Brian Moynihan
+### 3. Brian Moynihan
 Deck: Top 52 Persons of Interest
 Card ID: brian-moynihan
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Brian Moynihan. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Brian Moynihan. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 33. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 5. David Solomon
+### 4. David Solomon
 Deck: Top 52 Persons of Interest
 Card ID: david-solomon
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for David Solomon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for David Solomon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 6. Jane Fraser
+### 5. Jane Fraser
 Deck: Top 52 Persons of Interest
 Card ID: jane-fraser
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jane Fraser. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jane Fraser. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 7. Ajay Banga
+### 6. Ajay Banga
 Deck: Top 52 Persons of Interest
 Card ID: ajay-banga
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ajay Banga. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ajay Banga. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 8. Kristalina Georgieva
+### 7. Kristalina Georgieva
 Deck: Top 52 Persons of Interest
 Card ID: kristalina-georgieva
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Kristalina Georgieva. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Kristalina Georgieva. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 9. Tedros Adhanom Ghebreyesus
+### 8. Tedros Adhanom Ghebreyesus
 Deck: Top 52 Persons of Interest
 Card ID: tedros-adhanom-ghebreyesus
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tedros Adhanom Ghebreyesus. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tedros Adhanom Ghebreyesus. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 10. António Guterres
+### 9. António Guterres
 Deck: Top 52 Persons of Interest
 Card ID: ant-nio-guterres
 
-BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for António Guterres. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for António Guterres. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-## batch-005
-### 1. Mark Rutte
+### 10. Mark Rutte
 Deck: Top 52 Persons of Interest
 Card ID: mark-rutte
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mark Rutte. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mark Rutte. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 2. Jens Stoltenberg
+## batch-005
+### 1. Jens Stoltenberg
 Deck: Top 52 Persons of Interest
 Card ID: jens-stoltenberg
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jens Stoltenberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 42. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jens Stoltenberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 3. Alex Karp
+### 2. Alex Karp
 Deck: Top 52 Persons of Interest
 Card ID: alex-karp
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Alex Karp. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 43. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Alex Karp. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 42. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 4. Miriam Adelson
+### 3. Miriam Adelson
 Deck: Top 52 Persons of Interest
 Card ID: miriam-adelson
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Miriam Adelson. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Miriam Adelson. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 43. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 5. Rupert Murdoch
+### 4. Rupert Murdoch
 Deck: Top 52 Persons of Interest
 Card ID: rupert-murdoch
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rupert Murdoch. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rupert Murdoch. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 6. Laurene Powell Jobs
+### 5. Laurene Powell Jobs
 Deck: Top 52 Persons of Interest
 Card ID: laurene-powell-jobs
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Laurene Powell Jobs. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Laurene Powell Jobs. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 7. Mark Zuckerberg
+### 6. Mark Zuckerberg
 Deck: Top 52 Persons of Interest
 Card ID: mark-zuckerberg
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mark Zuckerberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mark Zuckerberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 8. Larry Ellison
+### 7. Larry Ellison
 Deck: Top 52 Persons of Interest
 Card ID: larry-ellison
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Larry Ellison. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Larry Ellison. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 9. Peter Thiel
+### 8. Peter Thiel
 Deck: Top 52 Persons of Interest
 Card ID: peter-thiel
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Peter Thiel. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Peter Thiel. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
-### 10. Michael Bloomberg
+### 9. Michael Bloomberg
 Deck: Top 52 Persons of Interest
 Card ID: michael-bloomberg
 
-BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Michael Bloomberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Michael Bloomberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
+
+### 10. Warren Buffett
+Deck: Top 52 Persons of Interest
+Card ID: warren-buffett
+
+BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Warren Buffett. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover.
 
 ## batch-006
 ### 1. MacKenzie Scott

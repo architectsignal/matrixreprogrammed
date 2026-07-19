@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:19:46.429Z",
+  "updated": "2026-07-19T06:14:02.860Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
   "nodeCount": 137,
@@ -817,17 +817,6 @@
       "score": 54
     },
     {
-      "id": "chattogram-water-supply-and-sewerage-authority",
-      "layer": "evidence-and-records",
-      "name": "Chattogram Water Supply and Sewerage Authority",
-      "type": "missing record",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "court-of-appeals-for-the-second-circuit",
       "layer": "evidence-and-records",
       "name": "Court of Appeals for the Second Circuit",
@@ -844,17 +833,6 @@
       "name": "Court of Appeals of North Carolina",
       "type": "missing record",
       "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "finance-division-ministry-of-finance",
-      "layer": "evidence-and-records",
-      "name": "Finance Division, Ministry of Finance",
-      "type": "missing record",
-      "route": "entity-briefs/finance-division-ministry-of-finance.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -883,44 +861,11 @@
       "score": 54
     },
     {
-      "id": "kingdom-of-morocco",
-      "layer": "evidence-and-records",
-      "name": "Kingdom of Morocco",
-      "type": "missing record",
-      "route": "entity-briefs/kingdom-of-morocco.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "matter-of-pagliughi",
       "layer": "evidence-and-records",
       "name": "Matter of Pagliughi",
       "type": "missing record",
       "route": "entity-briefs/matter-of-pagliughi.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
-      "layer": "evidence-and-records",
-      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-      "type": "missing record",
-      "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "ministry-of-health-and-family-welfare",
-      "layer": "evidence-and-records",
-      "name": "Ministry of Health and Family Welfare",
-      "type": "missing record",
-      "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1048,6 +993,28 @@
       "score": 54
     },
     {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "layer": "evidence-and-records",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "type": "missing record",
+      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "layer": "evidence-and-records",
+      "name": "Finance Division, Ministry of Finance",
+      "type": "missing record",
+      "route": "entity-briefs/finance-division-ministry-of-finance.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "googl",
       "layer": "evidence-and-records",
       "name": "GOOGL",
@@ -1059,11 +1026,44 @@
       "score": 54
     },
     {
+      "id": "kingdom-of-morocco",
+      "layer": "evidence-and-records",
+      "name": "Kingdom of Morocco",
+      "type": "missing record",
+      "route": "entity-briefs/kingdom-of-morocco.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "microsoft-corp",
       "layer": "evidence-and-records",
       "name": "MICROSOFT CORP",
       "type": "missing record",
       "route": "entity-briefs/microsoft-corp.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "layer": "evidence-and-records",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "type": "missing record",
+      "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "layer": "evidence-and-records",
+      "name": "Ministry of Health and Family Welfare",
+      "type": "missing record",
+      "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1408,18 +1408,6 @@
       "score": 43
     },
     {
-      "id": "feed-chattogram-water-supply-and-sewerage-authority-confirm-the-p",
-      "layer": "evidence-and-records",
-      "name": "Chattogram Water Supply and Sewerage Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-court-of-appeals-for-the-second-circuit-confirm-the-primary-",
       "layer": "evidence-and-records",
       "name": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1437,6 +1425,18 @@
       "name": "Court of Appeals of North Carolina — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-galbin-fernandez-in-his-capacity-as-the-administrator-of-the",
+      "layer": "evidence-and-records",
+      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "notes": [
         "missing record",
         "Score 85"

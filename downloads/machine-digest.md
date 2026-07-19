@@ -1,6 +1,6 @@
 # Machine Digest
 
-Updated: 2026-07-17T19:31:45.514Z
+Updated: 2026-07-19T06:13:03.530Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
@@ -37,7 +37,7 @@ Entity observations: 47
 
 ## Entity Observations
 
-- [object Object]: 6 mention(s), lanes: world-bank-projects
+- 0: 6 mention(s), lanes: world-bank-projects
 - People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Homeland Security Department: 2 mention(s), lanes: federal-register-policy
 - Health and Human Services Department: 2 mention(s), lanes: federal-register-policy

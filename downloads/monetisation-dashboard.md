@@ -1,10 +1,10 @@
 # Monetisation Dashboard
 
-Updated: 2026-07-18T07:20:02.680Z
+Updated: 2026-07-19T06:14:04.666Z
 
 Logic: Traffic → email capture → free brief/download → membership/report/deck/book/custom research.
 
-Email capture points: 29
+Email capture points: 28
 
 Report products: 11
 

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "bb9e8c40774ea5c1deb6c94598caddb28f74db83",
-  "buildShortSha": "bb9e8c40774e",
-  "generatedAt": "2026-07-17T06:30:29.560Z",
+  "buildSha": "20deaf5dca66498de00aa0c304ec7711c756631d",
+  "buildShortSha": "20deaf5dca66",
+  "generatedAt": "2026-07-19T06:13:31.543Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -342,10 +342,10 @@
     {
       "name": "Homepage",
       "file": "index.html",
-      "marker": "FOLLOW THE FILES.",
+      "marker": "MAP THE STRUCTURE.",
       "exists": true,
       "markerPresent": true,
-      "hash": "1c453b2c3766c34e"
+      "hash": "272be7f78f9c8186"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "773b1e407a96151f"
+      "hash": "127b8ab1196835e9"
     },
     {
       "name": "Epstein Command Center",
@@ -361,7 +361,7 @@
       "marker": "Evidence Boundary",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein People Tracker",
@@ -369,7 +369,7 @@
       "marker": "People / Entity Tracker",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein Timeline Map",
@@ -377,7 +377,7 @@
       "marker": "Timeline + Cross-Reference Map",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Epstein Evidence Ladder",
@@ -385,7 +385,7 @@
       "marker": "Evidence Strength Ladder",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Actual Files Cockpit",
@@ -393,7 +393,7 @@
       "marker": "Actual Files Cockpit",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Network Architecture Matrix",
@@ -401,7 +401,7 @@
       "marker": "Network Architecture Matrix",
       "exists": true,
       "markerPresent": true,
-      "hash": "5e348d09a92645b2"
+      "hash": "fedfe990abb51cfa"
     },
     {
       "name": "Main Signal Board",
@@ -449,14 +449,15 @@
       "marker": "_site",
       "exists": true,
       "markerPresent": true,
-      "hash": "9fa9833fb894a22e"
+      "hash": "368a5f10be56cd4e"
     }
   ],
   "hashes": {
     "worker": "f0e68b6ab34e59d6",
     "package": "963dc418a2d87fac",
-    "epsteinFiles": "5e348d09a92645b2",
-    "liveIntel": "773b1e407a96151f"
+    "epsteinFiles": "fedfe990abb51cfa",
+    "liveIntel": "127b8ab1196835e9",
+    "homepage": "272be7f78f9c8186"
   },
   "pressureTests": {
     "packageIncludesBuild": true,
@@ -465,12 +466,12 @@
     "epsteinWatchTest": true
   },
   "liveProof": {
-    "homepageExpectedMarker": "FOLLOW THE FILES.",
+    "homepageExpectedMarker": "MAP THE STRUCTURE. READ THE SIGNALS.",
     "epsteinExpectedMarker": "THE EPSTEIN FILES COMMAND CENTER / Evidence Boundary layer",
     "forumHealthEndpoint": "/forum-health",
     "mainBoardFeed": "/forum-feed-main",
     "speculationBoardFeed": "/forum-feed-speculation",
     "epsteinSightingBoardFeed": "/forum-feed-epstein-alive",
-    "cacheNote": "If this page shows the latest build but the homepage looks old, purge Cloudflare cache."
+    "cacheNote": "The deployed commit must match this build SHA before live verification is accepted."
   }
 }

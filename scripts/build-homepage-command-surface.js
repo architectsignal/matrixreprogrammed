@@ -3,6 +3,16 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
+function ensureHomepageShell(file){
+  if(!fs.existsSync(file))return false;
+  let html=fs.readFileSync(file,'utf8');
+  if(/<main\b/i.test(html))return false;
+  const closeBody=/<\/body>/i;
+  const shell='<main id="main-content" class="wrap"></main>';
+  html=closeBody.test(html)?html.replace(closeBody,shell+'</body>'):html+shell;
+  fs.writeFileSync(file,html);
+  return true;
+}
 const file = value => path.join(root, value);
 const readJson = (relative, fallback = {}) => { try { return JSON.parse(fs.readFileSync(file(relative), 'utf8')); } catch { return fallback; } };
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[character]);
@@ -28,6 +38,7 @@ if (process.env.MATRIX_CURRENT_INTELLIGENCE_ACTIVE !== '1') {
 require('./build-clock-wall.js');
 const synthesis = require('./build-speculative-intelligence-synthesis.js');
 const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');
+ensureHomepageShell(indexPath);
 const wall=readJson('data/clock-wall.json',{clocks:[]});
 const daily=readJson('data/daily-power-conclusions.json',{conclusions:[]});
 const master=readJson('data/daily-brief-master.json',{});

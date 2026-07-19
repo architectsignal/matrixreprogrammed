@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:14:30.057Z",
+  "changed": true,
+  "routes": [
+    "/api/paypal/donation/config",
+    "/api/paypal/donation/order",
+    "/api/paypal/donation/capture"
+  ],
+  "amount": {
+    "currency": "EUR",
+    "minimum": "1.00",
+    "maximum": "5000.00",
+    "userChosen": true
+  },
+  "requiresMemberLogin": true,
+  "evidenceAccessRemainsFree": true,
+  "legalBoundary": "Voluntary support payment; not charitable or tax-deductible; no influence over evidence or conclusions.",
+  "activationBoundary": "Sandbox or fully confirmed live PayPal environment plus PAYPAL_DONATIONS_ENABLED."
+}

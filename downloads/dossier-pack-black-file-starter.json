@@ -7,8 +7,8 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-17T06:29:57.362Z",
-  "latestDropsUpdated": "2026-07-08T09:00:00.000Z",
+  "liveIntelUpdated": "2026-07-19T06:13:00.128Z",
+  "latestDropsUpdated": "2026-07-18T07:20:09.012Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Black File Starter Pack",
   "label": "Orientation pack",
@@ -76,7 +76,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=black-file-starter",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=black-file-starter",
   "liveIntelWindow": {
-    "updated": "2026-07-17T06:29:57.362Z",
+    "updated": "2026-07-19T06:13:00.128Z",
     "itemCount": 12,
     "items": [
       {
@@ -180,6 +180,29 @@
         "archiveReason": "expired-after-7-day-window",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
+      },
+      {
+        "id": "epstein-files-2026-07-17-0",
+        "lane": "epstein-files",
+        "laneTitle": "Epstein Files, Timeline And Court Records",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5",
+        "published": "2026-07-17T22:44:14.000Z",
+        "summary": "Leon Black walked out of an Epstein House committee interview. Here's what we know PBS",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "timerLinks": [],
+        "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source.",
+        "sourceType": "latest-public-drop",
+        "freshness": "active weekly drop"
       },
       {
         "id": "epstein-files-2026-06-26-billionaire-leon-black-subpoenaed-to-return-to-house-epstein-committee",
@@ -453,40 +476,6 @@
         "archiveReason": "not-current-feed-item",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
-      },
-      {
-        "id": "epstein-files-2026-06-26-house-committee-subpoenas-leon-black-in-the-middle-of-closed-door-inte",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5",
-        "published": "2026-06-26T18:33:00.000Z",
-        "fetchedAt": "2026-07-04T06:34:45.472Z",
-        "summary": "House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein Business Insider",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "House committee subpoenas Leon Black in the middle of closed-door interv",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "archived-intel-vault",
-        "archivedAt": "2026-07-04T06:34:45.472Z",
-        "archiveReason": "not-current-feed-item",
-        "sourceType": "intel-vault",
-        "freshness": "archived historical lead"
       }
     ]
   },
@@ -577,6 +566,11 @@
       "kind": "Google News / Epstein timeline and files"
     },
     {
+      "title": "Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS",
+      "route": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
       "title": "Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News",
       "route": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sOXdTelVIRHM3Njl2OEtLbl9UWXBrM3JaRmNTU0VyNVY5Skc1a2NmMm1KUEZqUlY2OExJS0ZPMnZJTjVsYzdtTENGT0pudUJ5Y0N1VW0wQlJZVFA2RHliNzB6ajgtVkhscW03UlhJTFdUS0Via1ZWd3dHWXhDZmM?oc=5",
       "kind": "Google News / Epstein timeline and files"
@@ -614,11 +608,6 @@
     {
       "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
       "route": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider",
-      "route": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5",
       "kind": "Google News / Epstein timeline and files"
     }
   ],

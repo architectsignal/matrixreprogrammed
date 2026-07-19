@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T07:20:08.686Z",
+  "updated": "2026-07-19T06:15:10.644Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -694,65 +694,36 @@
         },
         {
           "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         },
         {
           "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://search.worldbank.org/api/v2/projects",
+          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
           "grade": "documented association"
         }
       ],
       "relationship_candidates": [
-        {
-          "id": "object-object__people-s-republic-of-bangladesh",
-          "from": "People's Republic of Bangladesh",
-          "to": "[object Object]",
-          "count": 3,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2",
-            "world-bank-projects-p180283-4",
-            "world-bank-projects-p180439-6"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 27,
-          "grade": "candidate",
-          "relationship_type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
         {
           "id": "federal-procurement-policy-office__management-and-budget-office",
           "from": "Management and Budget Office",
@@ -862,33 +833,6 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "id": "object-object__republic-of-rwanda",
-          "from": "Republic of Rwanda",
-          "to": "[object Object]",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p505244-1"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
           "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
           "from": "Chattogram Water Supply and Sewerage Authority",
           "to": "People's Republic of Bangladesh",
@@ -916,9 +860,9 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "id": "chattogram-water-supply-and-sewerage-authority__object-object",
-          "from": "Chattogram Water Supply and Sewerage Authority",
-          "to": "[object Object]",
+          "id": "kingdom-of-morocco__ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+          "from": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "to": "Kingdom of Morocco",
           "count": 1,
           "lanes": [
             "world-bank-projects"
@@ -930,7 +874,61 @@
             "documented association"
           ],
           "source_events": [
-            "world-bank-projects-p176429-2"
+            "world-bank-projects-p181587-3"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "ministry-of-health-and-family-welfare__people-s-republic-of-bangladesh",
+          "from": "Ministry of Health and Family Welfare",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p180283-4"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "finance-division-ministry-of-finance__people-s-republic-of-bangladesh",
+          "from": "Finance Division, Ministry of Finance",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p180439-6"
           ],
           "control_layers": [
             "development_finance",
@@ -1381,12 +1379,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "Chattogram Water Supply and Sewerage Authority",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
@@ -1396,6 +1388,12 @@
       "entity": "Court of Appeals of North Carolina",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "type": "entity brief"
     }
   ],
@@ -1464,6 +1462,42 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
+      "name": "Corporate-state convergence",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "corporate ownership and capital",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 55,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Information and narrative control",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "media and information access",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
       "name": "ATT MOBILITY LLC — Department of Defense",
       "documentedRole": "Contract",
       "roleGroup": "public authority and regulation",
@@ -1475,6 +1509,24 @@
       "records": 38,
       "sources": [
         "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Identity, surveillance and access",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "technology, identity, data and platforms",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 37,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
       ],
       "summaries": [],
       "specificity": 9,
@@ -1498,6 +1550,58 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
+      "name": "Global governance convergence",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 28,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Skip to main content",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 20,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Consolidated Sanctions List (Non-SDN Lists)",
+      "documentedRole": "Finding",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Finding",
+      "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 20,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
       "name": "operated or published by",
       "documentedRole": "operatedBy",
       "roleGroup": "documented person or institution",
@@ -1515,49 +1619,15 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "Skip to main content",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 16,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Consolidated Sanctions List (Non-SDN Lists)",
-      "documentedRole": "Finding",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Finding",
-      "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 16,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Corporate-state convergence",
+      "name": "Money, currency and access",
       "documentedRole": "Documented in the linked public record",
-      "roleGroup": "corporate ownership and capital",
+      "roleGroup": "money, banking and payment infrastructure",
       "authority": "",
       "instrument": "",
       "action": "Documented in the linked public record",
-      "whyItMatters": "This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "whyItMatters": "This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 14,
+      "records": 17,
       "sources": [
         "data/clock-wall.json",
         "data/global-risk-clocks.json"
@@ -1567,17 +1637,35 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "Default Judgment",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
+      "name": "4 - Keenova Therapeutics plc (0001567892) (Issuer)",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
       "authority": "",
       "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "action": "Contract",
+      "whyItMatters": "This record places 4 - Keenova Therapeutics plc (0001567892) (Issuer) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 13,
+      "records": 16,
       "sources": [
         "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Security and emergency power",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "security, intelligence and emergency power",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 16,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
       ],
       "summaries": [],
       "specificity": 9,
@@ -1592,7 +1680,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1609,7 +1697,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1626,7 +1714,24 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Default Judgment",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1643,7 +1748,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1660,7 +1765,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1677,7 +1782,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1694,7 +1799,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1711,7 +1816,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Federal Bureau of Prisons (BOP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1728,7 +1833,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1745,7 +1850,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Florida inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1762,7 +1867,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1779,7 +1884,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1796,7 +1901,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Maxwell Proffer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1813,7 +1918,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Memoranda and Correspondence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1830,112 +1935,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 12,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Identity, surveillance and access",
-      "documentedRole": "Documented in the linked public record",
-      "roleGroup": "technology, identity, data and platforms",
-      "authority": "",
-      "instrument": "",
-      "action": "Documented in the linked public record",
-      "whyItMatters": "This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 12,
-      "sources": [
-        "data/clock-wall.json",
-        "data/global-risk-clocks.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Global governance convergence",
-      "documentedRole": "Documented in the linked public record",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Documented in the linked public record",
-      "whyItMatters": "This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 12,
-      "sources": [
-        "data/clock-wall.json",
-        "data/global-risk-clocks.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Information and narrative control",
-      "documentedRole": "Documented in the linked public record",
-      "roleGroup": "media and information access",
-      "authority": "",
-      "instrument": "",
-      "action": "Documented in the linked public record",
-      "whyItMatters": "This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 10,
-      "sources": [
-        "data/clock-wall.json",
-        "data/global-risk-clocks.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Bongiorno",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 9,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Chad J. Miller",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 9,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Jeffrey Puzzullo",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Final Judgment - Jeffrey Puzzullo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 9,
+      "records": 15,
       "sources": [
         "data/entity-registry.json"
       ],

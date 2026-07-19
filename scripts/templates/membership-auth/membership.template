@@ -89,9 +89,10 @@
       });
       const data = await response.json();
       if (!response.ok || !data.saved) throw new Error(data.error || data.message || 'Account could not be created.');
-      signupStatus.className = 'status ok';
-      signupStatus.textContent = data.emailSent ? 'Check your email for your verification link.' : 'Your account was saved, but the verification email could not be sent. Please try again later.';
-      if (data.emailSent) signupForm.reset();
+      const emailSent = Boolean(data.emailSent || (data.verification && data.verification.sent));
+      signupStatus.className = emailSent ? 'status ok' : 'status pending';
+      signupStatus.textContent = emailSent ? 'Check your email for your verification link.' : 'Your account was saved. Verification delivery is queued and will retry when email delivery is available.';
+      if (emailSent) signupForm.reset();
     } catch (error) {
       signupStatus.className = 'status error';
       signupStatus.textContent = error.message || 'Account could not be created.';
@@ -167,7 +168,13 @@
       if (!response.ok || !config.configured || !config.clientId) {
         systemStatus.className = 'status pending';
         systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';
-        setAllPlanMessages('Coming soon. No payment can be taken yet.');
+        setAllPlanMessages('Checkout is not configured. No payment can be taken.');
+        return;
+      }
+      if (!config.checkoutEnabled) {
+        systemStatus.className = 'status pending';
+        systemStatus.textContent = 'PayPal is installed but checkout remains disabled behind the server activation gates. No payment can be taken.';
+        setAllPlanMessages('Checkout disabled. Free Member access remains available.');
         return;
       }
       await loadSdk(config.clientId);

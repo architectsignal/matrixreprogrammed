@@ -13,10 +13,14 @@ const maxDeployableSearchBytes = 24 * 1024 * 1024;
 const targetSearchBytes = 20 * 1024 * 1024;
 
 const compactionProfiles = [
-  { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96 },
-  { id: 'compact', title: 160, description: 120, listItems: 6, listChars: 48, scalar: 80 },
-  { id: 'tight', title: 144, description: 96, listItems: 5, listChars: 40, scalar: 72 },
-  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 }
+  { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96, sourceUrl: 700 },
+  { id: 'compact', title: 160, description: 120, listItems: 8, listChars: 48, scalar: 80, sourceUrl: 500 },
+  { id: 'tight', title: 144, description: 96, listItems: 7, listChars: 40, scalar: 72, sourceUrl: 360 },
+  { id: 'minimum-safe', title: 128, description: 72, listItems: 6, listChars: 32, scalar: 64, sourceUrl: 260, sparseDefaults: true, mergeTerms: true, termItems: 10 },
+  { id: 'ultra-safe', title: 116, description: 48, listItems: 6, listChars: 28, scalar: 52, sourceUrl: 200, sparseDefaults: true, mergeTerms: true, termItems: 8 },
+  { id: 'minimum-route-safe', title: 104, description: 24, listItems: 5, listChars: 24, scalar: 44, sourceUrl: 150, sparseDefaults: true, mergeTerms: true, termItems: 6 },
+  { id: 'emergency-route-safe', title: 90, description: 0, listItems: 4, listChars: 20, scalar: 34, sourceUrl: 120, sparseDefaults: true, mergeTerms: true, termItems: 5 },
+  { id: 'deployment-safe', title: 84, description: 0, listItems: 3, listChars: 18, scalar: 30, sourceUrl: 100, sparseDefaults: true, mergeTerms: true, termItems: 4 }
 ];
 
 function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
@@ -47,14 +51,20 @@ function compactList(value, profile) {
 function compactRecord(record, profile) {
   const url = String(record?.url || '').trim();
   if (!url) return null;
+  const sparse = profile.sparseDefaults === true;
+  const preserveNormalizedMetadata = true;
+  const primarySource = record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true';
+  const sourceType = bounded(record.sourceType || 'route', profile.scalar);
+  const resultKind = bounded(record.resultKind || 'route', profile.scalar);
+  const statusClass = bounded(record.statusClass || 'context', profile.scalar);
   const output = {
     searchVersion: 3,
     title: bounded(record.title || url, profile.title),
     url,
-    sourceType: bounded(record.sourceType || 'route', profile.scalar),
-    resultKind: bounded(record.resultKind || 'route', profile.scalar),
-    statusClass: bounded(record.statusClass || 'context', profile.scalar),
-    primarySource: record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true'
+    sourceType,
+    resultKind,
+    statusClass,
+    primarySource
   };
   const scalarFields = [
     'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',
@@ -66,24 +76,80 @@ function compactRecord(record, profile) {
   }
   const description = bounded(record.description, profile.description);
   if (description) output.description = description;
-  for (const field of ['keywords', 'aliases', 'identifiers', 'exactTerms']) {
-    const values = compactList(record[field], profile);
-    if (values.length) output[field] = values;
+  const listFields = ['keywords', 'aliases', 'identifiers', 'exactTerms'];
+  if (profile.mergeTerms === true) {
+    const mergedTerms = [];
+    for (const field of listFields) mergedTerms.push(...listValues(record[field]));
+    const values = compactList(mergedTerms, { ...profile, listItems: Number(profile.termItems || profile.listItems || 4) });
+    if (values.length) output.exactTerms = values;
+  } else {
+    for (const field of listFields) {
+      const values = compactList(record[field], profile);
+      if (values.length) output[field] = values;
+    }
   }
-  for (const field of ['date', 'publicationDate', 'retrievalDate']) {
-    const value = bounded(record[field], 40);
-    if (value) output[field] = value;
+  if (sparse) {
+    const bestDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);
+    if (bestDate) output.date = bestDate;
+  } else {
+    for (const field of ['date', 'publicationDate', 'retrievalDate']) {
+      const value = bounded(record[field], 40);
+      if (value) output[field] = value;
+    }
   }
   const sourceUrl = String(record.sourceUrl || '').trim();
-  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);
+  const authority = String(record.sourceAuthority || '').toLowerCase();
+  const evidenceGrade = String(record.evidenceGrade || '').toUpperCase();
+  const keepSourceUrl = !sparse || primarySource || /primary|official|court|government|regulator/.test(authority) || evidenceGrade === 'A' || evidenceGrade === 'B';
+  if (keepSourceUrl && /^https?:/i.test(sourceUrl) && sourceUrl !== url) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));
   const priority = Number(record.priority || 0);
   if (Number.isFinite(priority) && priority) output.priority = priority;
   return output;
 }
+function searchRecordQuality(record) {
+  const status = clean(record?.statusClass).toLowerCase();
+  const kind = clean(record?.resultKind).toLowerCase();
+  const authority = clean(record?.sourceAuthority).toLowerCase();
+  let score = Number(record?.priority || 0) || 0;
+  if (record?.primarySource === true || record?.primarySource === 1 || record?.primarySource === 'true') score += 500;
+  if (/court|judgment|conviction|enforcement|investigation|official/.test(status + ' ' + kind)) score += 220;
+  if (/primary|official|court|government/.test(authority)) score += 120;
+  score += Math.min(clean(record?.description).length, 240) / 12;
+  return score;
+}
+function consolidateRecordsByUrl(records) {
+  const groups = new Map();
+  const listFields = ['keywords', 'aliases', 'identifiers', 'exactTerms'];
+  for (const record of records) {
+    const url = String(record?.url || '').trim();
+    if (!url) continue;
+    const prior = groups.get(url);
+    if (!prior) {
+      groups.set(url, { ...record, url });
+      continue;
+    }
+    const preferred = searchRecordQuality(record) > searchRecordQuality(prior) ? record : prior;
+    const secondary = preferred === record ? prior : record;
+    const merged = { ...secondary, ...preferred, url };
+    merged.primarySource = Boolean(prior.primarySource || record.primarySource);
+    merged.priority = Math.max(Number(prior.priority || 0) || 0, Number(record.priority || 0) || 0);
+    const descriptions = [clean(prior.description), clean(record.description)].filter(Boolean).sort((a, b) => b.length - a.length);
+    if (descriptions.length) merged.description = descriptions[0];
+    for (const field of listFields) merged[field] = [...listValues(prior[field]), ...listValues(record[field])];
+    merged.exactTerms = [
+      ...listValues(merged.exactTerms),
+      prior.title, record.title, prior.entity, record.entity,
+      prior.category, record.category, prior.jurisdiction, record.jurisdiction
+    ].filter(Boolean);
+    groups.set(url, merged);
+  }
+  return [...groups.values()];
+}
 function serializeWithProfile(records, profile) {
-  const compacted = records.map(record => compactRecord(record, profile)).filter(Boolean);
+  const consolidated = consolidateRecordsByUrl(records);
+  const compacted = consolidated.map(record => compactRecord(record, profile)).filter(Boolean);
   const serialized = JSON.stringify(compacted);
-  return { compacted, serialized, bytes: Buffer.byteLength(serialized), profile };
+  return { compacted, serialized, bytes: Buffer.byteLength(serialized), profile, consolidatedBefore: records.length, consolidatedAfter: consolidated.length };
 }
 function compactSearchIndex() {
   let records = [];
@@ -127,7 +193,8 @@ function compactSearchIndex() {
   return {
     before,
     after: selected.compacted.length,
-    removedDuplicateMarketRelationships: 0,
+    duplicateRecordsConsolidated: Math.max(0, before - selected.compacted.length),
+    removedDuplicateMarketRelationships: Math.max(0, before - selected.compacted.length),
     invalidRecordsRemoved: before - selected.compacted.length,
     originalUniqueUrls: originalUrls.size,
     preservedUniqueUrls: compactedUrls.size,

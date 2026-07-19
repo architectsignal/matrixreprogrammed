@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-17T19:32:02.567Z
+Updated: 2026-07-19T06:13:18.292Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -172,19 +172,9 @@ Highest evidence: charged / sued
 
 Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## [object Object]
-
-Score: 169
-
-Level: critical public-record exposure
-
-Highest evidence: documented association
-
-Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## People's Republic of Bangladesh
 
-Score: 149
+Score: 135
 
 Level: critical public-record exposure
 
@@ -272,56 +262,6 @@ Highest evidence: documented association
 
 Reading: National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Chattogram Water Supply and Sewerage Authority
-
-Score: 50
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Chattogram Water Supply and Sewerage Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Finance Division, Ministry of Finance
-
-Score: 50
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Finance Division, Ministry of Finance deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Kingdom of Morocco
-
-Score: 50
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Kingdom of Morocco deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)
-
-Score: 50
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Ministry of Health and Family Welfare
-
-Score: 50
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Ministry of Health and Family Welfare deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## AAPL
 
 Score: 45
@@ -392,6 +332,26 @@ Highest evidence: documented association
 
 Reading: Broadcom Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Chattogram Water Supply and Sewerage Authority
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Chattogram Water Supply and Sewerage Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Finance Division, Ministry of Finance
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Finance Division, Ministry of Finance deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## GOOGL
 
 Score: 45
@@ -402,6 +362,16 @@ Highest evidence: documented association
 
 Reading: GOOGL deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Kingdom of Morocco
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Kingdom of Morocco deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## MICROSOFT CORP
 
 Score: 45
@@ -411,6 +381,26 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: MICROSOFT CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Ministry of Health and Family Welfare
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Ministry of Health and Family Welfare deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## MSFT
 
@@ -442,26 +432,6 @@ Highest evidence: documented association
 
 Reading: NVIDIA CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Republic of India
-
-Score: 45
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Republic of India deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Republic of Rwanda
-
-Score: 45
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Republic of Rwanda deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## Nuclear Regulatory Commission
 
 Score: 40
@@ -471,3 +441,24 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Republic of India
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Republic of India deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Republic of Rwanda
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Republic of Rwanda deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+

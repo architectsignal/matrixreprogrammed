@@ -1703,27 +1703,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-19",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-18T07:12:31.532Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-3a612824bd2383e3b7554062",
@@ -1761,27 +1741,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-20",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-18T07:12:31.532Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-18d7736864f2c8ac625f018d",
@@ -1819,27 +1779,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-21",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-def94e0a086f2eac4c5ad91a",
@@ -1877,27 +1817,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-22",
-        "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/enforcement-litigation/litigation-releases",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-41238c8b70e678402d643e26",
@@ -1935,27 +1855,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-23",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-a42c91c655cd066504ed6515",
@@ -1993,27 +1893,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-24",
-        "title": "content changed: U.S. Treasury OFAC — Recent Actions",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://ofac.treasury.gov/recent-actions",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Treasury OFAC — Recent Actions; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://ofac.treasury.gov/recent-actions",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-7dcf4ef18ea1f86d01068773",
@@ -2051,27 +1931,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-25",
-        "title": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://oversight.house.gov/release/",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. House Committee on Oversight and Government Reform — Releases; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://oversight.house.gov/release/",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     },
     {
       "id": "source-change-a5e5d4ec4df4352ea242ea3f",
@@ -2109,27 +1969,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-26",
-        "title": "content changed: European Public Prosecutor's Office — News",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.eppo.europa.eu/media/news_en",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-17T23:07:55.795Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.eppo.europa.eu/media/news_en",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
+      ]
     }
   ],
   "changedSources": [

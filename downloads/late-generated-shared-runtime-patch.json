@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:15:43.564Z",
+  "changed": [
+    "entity-registry.html",
+    "relationship-registry.html",
+    "site-population-audit.html",
+    "source-changes.html",
+    "_site/entity-registry.html",
+    "_site/entity-registry",
+    "_site/relationship-registry.html",
+    "_site/relationship-registry",
+    "_site/site-population-audit.html",
+    "_site/site-population-audit",
+    "_site/source-changes.html",
+    "_site/source-changes"
+  ],
+  "checked": [
+    {
+      "file": "deploy-health.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "entity-registry.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "relationship-registry.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "site-population-audit.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "source-changes.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/deploy-health.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/deploy-health",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/entity-registry.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/entity-registry",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/relationship-registry.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/relationship-registry",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/site-population-audit.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/site-population-audit",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/source-changes.html",
+      "matrixRuntime": true
+    },
+    {
+      "file": "_site/source-changes",
+      "matrixRuntime": true
+    }
+  ],
+  "boundary": "Restores the shared matrix.js runtime only on the five late-generated pages previously identified by the link audit. Page content and data are unchanged."
+}

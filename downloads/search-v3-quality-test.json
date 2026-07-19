@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T09:19:16.959Z",
+  "generatedAt": "2026-07-19T06:15:03.818Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 24208,
-    "primarySources": 22146,
-    "relationships": 9905
+    "results": 27448,
+    "primarySources": 25274,
+    "relationships": 11454
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "24208 results"
+      "detail": "27448 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "24208/24208"
+      "detail": "27448/27448"
     },
     {
       "name": "normalised field sourceType",
@@ -97,57 +97,57 @@
     {
       "name": "query corruption bribery fraud",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-e21fdfc24c60fc957461, relationship-registry.html?relationship=relationship-0d250d227ab34046eead, relationship-registry.html?relationship=relationship-f58ab490534da7183aa1, relationship-registry.html?relationship=relationship-a241e6bc1eefa5fb3e51, entity-registry.html#entity-finding-4b029edada29a1fb092f318c"
+      "detail": "relationship-registry.html?relationship=relationship-d20e324e609a2e7ccdeb, relationship-registry.html?relationship=relationship-e21fdfc24c60fc957461, relationship-registry.html?relationship=relationship-0d250d227ab34046eead, relationship-registry.html?relationship=relationship-f58ab490534da7183aa1, relationship-registry.html?relationship=relationship-a241e6bc1eefa5fb3e51"
     },
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=b0a8e3e13bfa4afda4e9affa, daily-investigation-conclusions.html?finding=8a08b2edcd21455b8a39f6f7, daily-investigation-conclusions.html?finding=3cd0cc6ceb7b17f7b4a18d82, daily-investigation-conclusions.html?finding=3369f7cbbbd92ca2343c48c2, relationship-registry.html?relationship=relationship-908e0b51b56322bb91cf"
+      "detail": "entity-registry.html#entity-finding-36368ac35557b25819b21310, entity-registry.html#entity-finding-b0a8e3e13bfa4afda4e9affa, entity-registry.html#entity-finding-8a08b2edcd21455b8a39f6f7, entity-registry.html#entity-finding-3cd0cc6ceb7b17f7b4a18d82, entity-registry.html#entity-finding-3369f7cbbbd92ca2343c48c2"
     },
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-c0acd15b674f58073aca, relationship-registry.html?relationship=relationship-6b45d87ce2f8c1a355bc, relationship-registry.html?relationship=relationship-abc97a28d6fe671506a2, relationship-registry.html?relationship=relationship-9a89feea7a952a1de418, daily-investigation-conclusions.html?finding=7622700a105563f3c4370c5e"
+      "detail": "relationship-registry.html?relationship=relationship-c0acd15b674f58073aca, relationship-registry.html?relationship=relationship-6b45d87ce2f8c1a355bc, relationship-registry.html?relationship=relationship-0efefba765e516b97482, relationship-registry.html?relationship=relationship-abc97a28d6fe671506a2, relationship-registry.html?relationship=relationship-9a89feea7a952a1de418"
     },
     {
       "name": "query government contracts",
       "ok": true,
-      "detail": "entity-registry.html#entity-entity-governmentagency-ab0599a7439c479856f3, entity-registry.html#entity-entity-governmentagency-fdf8c47e8a4a1f0558f3, entity-registry.html#entity-entity-governmentagency-880bbdeda82eafd6a083, relationship-registry.html?relationship=relationship-e8b34ce47a9fb3ccb9ed, relationship-registry.html?relationship=relationship-3f9afdf0157cd8d0c8e4"
+      "detail": "entity-registry.html#entity-entity-governmentagency-ab0599a7439c479856f3, entity-registry.html#entity-entity-governmentagency-880bbdeda82eafd6a083, entity-registry.html#entity-entity-governmentagency-fdf8c47e8a4a1f0558f3, entity-registry.html#entity-source-gao-reports, entity-registry.html#entity-contract-2fe7d0294e23b11342d6"
     },
     {
       "name": "query SEC enforcement",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-b97d3ed5bcf489d4837b, relationship-registry.html?relationship=relationship-375e4211cce160f76fc5, relationship-registry.html?relationship=relationship-998f44268c02659d2112, relationship-registry.html?relationship=relationship-b708538ad582867e75c8, daily-investigation-conclusions.html?finding=c5ffd848d0a56fa5613755eb"
+      "detail": "relationship-registry.html?relationship=relationship-da510865773808b14d3a, relationship-registry.html?relationship=relationship-296404762b9857f3f263, entity-registry.html#entity-entity-person-2742f885d656a0bee20b, relationship-registry.html?relationship=relationship-2cc67cfc2a89382d7746, relationship-registry.html?relationship=relationship-d68c7322a20eb1e6933c"
     },
     {
       "name": "query public corruption conviction",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-05305ec072cbbc4b8c29, relationship-registry.html?relationship=relationship-17757b33cc4f2e33ba8e, relationship-registry.html?relationship=relationship-28da55eff6f3f940f79a, relationship-registry.html?relationship=relationship-a501333db2700612b8d4, relationship-registry.html?relationship=relationship-6c141d744140ab0224c5"
+      "detail": "daily-investigation-conclusions.html?finding=7aef79648bfaeff29154f59a, daily-investigation-conclusions.html?finding=1135f23dfb6d479f02ffb375, daily-investigation-conclusions.html?finding=b0752a5b5c6b0c9e38ca00c0, daily-investigation-conclusions.html?finding=96b05c92e631496231657f3b, daily-investigation-conclusions.html?finding=cc7a2ab57cf3f3463f348f8b"
     },
     {
       "name": "query inspector-general misconduct",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-95c347a07f74148b9a3e, relationship-registry.html?relationship=relationship-44393d78430f99738092, relationship-registry.html?relationship=relationship-5ad3ce2a85079e004196, relationship-registry.html?relationship=relationship-44db76a814a22c8649f2, daily-investigation-conclusions.html?finding=02dec539d52ba4f37e7b213a"
+      "detail": "source-changes.html?change=9d13cbe9989a1430580de2ff, source-changes.html?change=f4b44414c2c9ee4fd9b0ea74, relationship-registry.html?relationship=relationship-e5b9226f8eae7fb5596b, relationship-registry.html?relationship=relationship-e8b0062e2d23f05b7fe3, relationship-registry.html?relationship=relationship-462e1d1b50b8723d3dbc"
     },
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-682f4471ab4ad7c70981, relationship-registry.html?relationship=relationship-70c1a0cd6cf2d7ed977c, entity-registry.html#entity-finding-04e5f2089cb1a356206012cd, relationship-registry.html?relationship=relationship-cdfb58c39f9290c6dcae, relationship-registry.html?relationship=relationship-fa93fbbe09c977548172"
+      "detail": "entity-registry.html#entity-contract-682f4471ab4ad7c70981, relationship-registry.html?relationship=relationship-70c1a0cd6cf2d7ed977c, entity-registry.html#entity-finding-04e5f2089cb1a356206012cd, daily-investigation-conclusions.html?finding=04e5f2089cb1a356206012cd, relationship-registry.html?relationship=relationship-cdfb58c39f9290c6dcae"
     },
     {
       "name": "query missing record redaction log",
       "ok": true,
-      "detail": "source-changes.html?change=b7e4a66335a706ef5097117f, source-changes.html?change=bdd7e454126ebfa6319a594c, source-changes.html?change=b20bf5953df956897ee110a3, source-changes.html?change=9d13cbe9989a1430580de2ff, source-changes.html?change=f4b44414c2c9ee4fd9b0ea74"
+      "detail": "source-changes.html?change=a5e5d4ec4df4352ea242ea3f, source-changes.html?change=b7e4a66335a706ef5097117f, source-changes.html?change=bdd7e454126ebfa6319a594c, source-changes.html?change=3a612824bd2383e3b7554062, source-changes.html?change=41238c8b70e678402d643e26"
     },
     {
       "name": "exact primary SEC record outranks general commentary",
       "ok": true,
-      "detail": "P:relationship-registry.html?relationship=relationship-b97d3ed5bcf489d4837b, P:relationship-registry.html?relationship=relationship-375e4211cce160f76fc5, P:relationship-registry.html?relationship=relationship-998f44268c02659d2112, P:relationship-registry.html?relationship=relationship-b708538ad582867e75c8, P:daily-investigation-conclusions.html?finding=c5ffd848d0a56fa5613755eb, P:daily-investigation-conclusions.html?finding=4f773345f4e17e11531dad67, P:entity-registry.html#entity-market-company-blackstone-secd-lending-fd-7c8c44ba88f63986, P:entity-registry.html#entity-market-company-cheesecake-factory-inc-5a6e8cf979e388cd"
+      "detail": "P:relationship-registry.html?relationship=relationship-da510865773808b14d3a, P:relationship-registry.html?relationship=relationship-296404762b9857f3f263, P:entity-registry.html#entity-entity-person-2742f885d656a0bee20b, P:relationship-registry.html?relationship=relationship-2cc67cfc2a89382d7746, P:relationship-registry.html?relationship=relationship-d68c7322a20eb1e6933c, P:relationship-registry.html?relationship=relationship-9b68dac9873af4f9c4b6, P:relationship-registry.html?relationship=relationship-2a9c49d79a10387ccd50, P:relationship-registry.html?relationship=relationship-b2f13476ecdfe39c0f40"
     },
     {
       "name": "dedicated source-change result ranks for missing-record intent",
       "ok": true,
-      "detail": "source-change:source-changes.html?change=b7e4a66335a706ef5097117f, source-change:source-changes.html?change=bdd7e454126ebfa6319a594c, source-change:source-changes.html?change=b20bf5953df956897ee110a3, source-change:source-changes.html?change=9d13cbe9989a1430580de2ff, source-change:source-changes.html?change=f4b44414c2c9ee4fd9b0ea74, source-change:source-changes.html?change=7f5b91c14c671bd24b8bbd81, source-change:source-changes.html?change=360e80c162081c85d2c680ef, source-change:source-changes.html?change=5a6e7289054e52bb115d24a8, source-change:source-changes.html?change=0a84f04558f5013c0790203c, source-change:source-changes.html?change=3074e1c1bea52f04ac59408f"
+      "detail": "source-change:source-changes.html?change=a5e5d4ec4df4352ea242ea3f, source-change:source-changes.html?change=b7e4a66335a706ef5097117f, source-change:source-changes.html?change=bdd7e454126ebfa6319a594c, source-change:source-changes.html?change=3a612824bd2383e3b7554062, source-change:source-changes.html?change=41238c8b70e678402d643e26, source-change:source-changes.html?change=b20bf5953df956897ee110a3, source-change:source-changes.html?change=9d13cbe9989a1430580de2ff, source-change:source-changes.html?change=f4b44414c2c9ee4fd9b0ea74, source-change:source-changes.html?change=7dcf4ef18ea1f86d01068773, source-change:source-changes.html?change=7f5b91c14c671bd24b8bbd81"
     },
     {
       "name": "Grade B filter returns results",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "24208 vs 24208"
+      "detail": "27448 vs 27448"
     },
     {
       "name": "facet evidenceGrade",

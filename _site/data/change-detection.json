@@ -1,20 +1,456 @@
 {
-  "updated": "2026-07-16T05:59:49.159Z",
+  "updated": "2026-07-19T06:13:18.175Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-16T03:35:48.340Z",
+  "previousUpdated": "2026-07-17T19:32:02.483Z",
   "currentRecordCount": 24,
   "previousRecordCount": 24,
   "newRecords": [],
   "removedRecords": [],
-  "changedRecords": [],
+  "changedRecords": [
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001045810-1",
+        "hash": "1a8e8abcc28ae93c",
+        "summary": "NVIDIA CORP (NVDA)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "NVIDIA CORP",
+          "NVDA"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001045810-1",
+        "hash": "6ae5bb626746346a",
+        "summary": "NVIDIA CORP (NVDA)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "NVIDIA CORP",
+          "NVDA"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0000320193-2",
+        "hash": "07e33579c165b3bc",
+        "summary": "Apple Inc. (AAPL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "Apple Inc.",
+          "AAPL"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0000320193-2",
+        "hash": "c681ed7bbf27b46f",
+        "summary": "Apple Inc. (AAPL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "Apple Inc.",
+          "AAPL"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001652044-3",
+        "hash": "12a81df55bf78625",
+        "summary": "Alphabet Inc. (GOOGL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "Alphabet Inc.",
+          "GOOGL"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001652044-3",
+        "hash": "b0549f7f9072d861",
+        "summary": "Alphabet Inc. (GOOGL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "Alphabet Inc.",
+          "GOOGL"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0000789019-4",
+        "hash": "54e80ef428d44d0c",
+        "summary": "MICROSOFT CORP (MSFT)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "MICROSOFT CORP",
+          "MSFT"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0000789019-4",
+        "hash": "ed978d8b4db7eaea",
+        "summary": "MICROSOFT CORP (MSFT)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "MICROSOFT CORP",
+          "MSFT"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001018724-5",
+        "hash": "567623cb1c58e9ca",
+        "summary": "AMAZON COM INC (AMZN)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "AMAZON COM INC",
+          "AMZN"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001018724-5",
+        "hash": "bb43cc42c779b02a",
+        "summary": "AMAZON COM INC (AMZN)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "AMAZON COM INC",
+          "AMZN"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001730168-6",
+        "hash": "9b25ac7107c84bd2",
+        "summary": "Broadcom Inc. (AVGO)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-17",
+        "names": [
+          "Broadcom Inc.",
+          "AVGO"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001730168-6",
+        "hash": "6dfa4818cbebc177",
+        "summary": "Broadcom Inc. (AVGO)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-19",
+        "names": [
+          "Broadcom Inc.",
+          "AVGO"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p505244-1",
+        "hash": "fd9accf9765e887b",
+        "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-20T00:00:00Z",
+        "names": [
+          "Republic of Rwanda",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p505244-1",
+        "hash": "40dd33fd92e864fa",
+        "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-20T00:00:00Z",
+        "names": [
+          "Republic of Rwanda"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p176429-2",
+        "hash": "554cae7bd48fae3d",
+        "summary": "Chattogram Water Supply Improvement Project",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Chattogram Water Supply and Sewerage Authority",
+          "People's Republic of Bangladesh",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p176429-2",
+        "hash": "110d2a32b361d558",
+        "summary": "Chattogram Water Supply Improvement Project",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Chattogram Water Supply and Sewerage Authority",
+          "People's Republic of Bangladesh"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p181587-3",
+        "hash": "776acfe97c9d46dc",
+        "summary": "Transforming Agri-food Systems in Morocco",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "Kingdom of Morocco",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p181587-3",
+        "hash": "e0e55648b7c0ee79",
+        "summary": "Transforming Agri-food Systems in Morocco",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "Kingdom of Morocco"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p180283-4",
+        "hash": "0eeff5b6e3a99d48",
+        "summary": "Health, Nutrition and Population Sector Development Program",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Ministry of Health and Family Welfare",
+          "People's Republic of Bangladesh",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p180283-4",
+        "hash": "c966398078ca40d6",
+        "summary": "Health, Nutrition and Population Sector Development Program",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Ministry of Health and Family Welfare",
+          "People's Republic of Bangladesh"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p507508-5",
+        "hash": "595b384fbd52b527",
+        "summary": "Amaravati Integrated Urban Development Program",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Republic of India",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p507508-5",
+        "hash": "9b75a40e0b88bb83",
+        "summary": "Amaravati Integrated Urban Development Program",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Republic of India"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "world-bank-projects-p180439-6",
+        "hash": "53c92c6d27b169bb",
+        "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Finance Division, Ministry of Finance",
+          "People's Republic of Bangladesh",
+          ""
+        ]
+      },
+      "after": {
+        "key": "world-bank-projects-p180439-6",
+        "hash": "1793fed5fdbc4287",
+        "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+        "source_lane": "world-bank-projects",
+        "evidence_grade": "documented association",
+        "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
+        "date": "2024-12-19T00:00:00Z",
+        "names": [
+          "Finance Division, Ministry of Finance",
+          "People's Republic of Bangladesh"
+        ]
+      }
+    }
+  ],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
+  "clockTriggers": [
+    {
+      "id": "sec-edgar-filings-cik0001045810-1",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-2",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001652044-3",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000789019-4",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "MICROSOFT CORP (MSFT)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001018724-5",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "AMAZON COM INC (AMZN)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001730168-6",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Broadcom Inc. (AVGO)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "world-bank-projects-p505244-1",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    },
+    {
+      "id": "world-bank-projects-p176429-2",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Chattogram Water Supply Improvement Project",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    },
+    {
+      "id": "world-bank-projects-p181587-3",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Transforming Agri-food Systems in Morocco",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    },
+    {
+      "id": "world-bank-projects-p180283-4",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Health, Nutrition and Population Sector Development Program",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    },
+    {
+      "id": "world-bank-projects-p507508-5",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Amaravati Integrated Urban Development Program",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    },
+    {
+      "id": "world-bank-projects-p180439-6",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search"
+    }
+  ],
   "repeatedEntities": [
     {
-      "id": "object-object",
-      "name": "[object Object]",
+      "id": "0",
+      "name": "0",
       "count": 6,
       "lanes": [
         "world-bank-projects"
@@ -34,26 +470,6 @@
         "world-bank-projects-p180439-6"
       ],
       "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 3,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-13656-1",
-        "federal-register-policy-2026-13602-2",
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
     },
     {
       "id": "people-s-republic-of-bangladesh",
@@ -76,6 +492,44 @@
       "last_seen": "2024-12-19T00:00:00Z"
     },
     {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-14439-1",
+        "federal-register-policy-2026-13057-4"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13656-2",
+        "federal-register-policy-2026-13602-3"
+      ],
+      "last_seen": "2026-07-06"
+    },
+    {
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
       "count": 2,
@@ -89,29 +543,10 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-1",
-        "federal-register-policy-2026-13602-2"
+        "federal-register-policy-2026-13656-2",
+        "federal-register-policy-2026-13602-3"
       ],
       "last_seen": "2026-07-06"
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-5",
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
     },
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",

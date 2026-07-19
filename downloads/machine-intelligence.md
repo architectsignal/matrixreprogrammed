@@ -1,19 +1,18 @@
 # Machine Intelligence
 
-Updated: 2026-07-17T19:32:02.483Z
+Updated: 2026-07-19T06:13:18.175Z
 
 Current records: 24
 Previous records: 24
 New records: 0
-Changed records: 0
-Relationship candidates: 47
+Changed records: 12
+Relationship candidates: 39
 
 ## New Records
 
 
 ## Relationship Candidates
 
-- Score 27: People's Republic of Bangladesh ↔ [object Object] — repeated public-record co-occurrence
 - Score 18: Health and Human Services Department ↔ Centers for Medicare & Medicaid Services — public-record co-occurrence
 - Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ Supreme Court of Rhode Island — public-record co-occurrence
 - Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ 2025-0045-Appeal. — public-record co-occurrence
@@ -43,3 +42,5 @@ Relationship candidates: 47
 - Score 9: Defense Department ↔ General Services Administration — weak co-occurrence signal
 - Score 9: Defense Department ↔ National Aeronautics and Space Administration — weak co-occurrence signal
 - Score 9: General Services Administration ↔ National Aeronautics and Space Administration — weak co-occurrence signal
+- Score 9: NVIDIA CORP ↔ NVDA — weak co-occurrence signal
+

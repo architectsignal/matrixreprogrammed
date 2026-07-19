@@ -39,6 +39,9 @@ async function fetchBoundary(route) {
   const schema = readJson('downloads/d1-schema-verification.json') || [];
   const settings = readJson('downloads/paypal-runtime-settings.json') || [];
   const bootstrap = live.bootstrapBoundary || {};
+  const brevoReadiness = readJson('downloads/brevo-operational-readiness.json') || {};
+  const emailCampaignQuality = readJson('downloads/email-campaign-quality-patch.json') || {};
+  const emailAutomationGuard = readJson('downloads/email-automation-guard-patch.json') || {};
   const rehearsal = live.rehearsalBoundary || {};
   const paypal = live.paypalBoundary || {};
   const rows = payload => Array.isArray(payload)
@@ -110,7 +113,14 @@ async function fetchBoundary(route) {
     && reportDelivery.includes('verified_self_intelligence_report')
     && reportDelivery.includes('report-is-not-verified-self')
     && reportDelivery.includes('current-membership-tier-required')
-    && wrangler.includes('EMAIL_AUTOMATION_ENABLED = "true"')
+    && wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"')
+    && wrangler.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"')
+    && wrangler.includes('BREVO_DOMAIN_AUTHENTICATED = "true"')
+    && wrangler.includes('EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"')
+    && brevoReadiness.ok === true
+    && brevoReadiness.status === 'transactional-ready-automation-disabled'
+    && emailCampaignQuality.ok === true
+    && emailAutomationGuard.ok === true
     && wrangler.includes('"5 6 * * *"')
     && wrangler.includes('"15 7 * * 1"');
 
@@ -182,9 +192,20 @@ async function fetchBoundary(route) {
       status: emailBoundary.status,
       origin: emailBoundary.origin,
       verifiedSelfReportDeliveryWired: reportDeliveryWired,
+      brevoReady: brevoReadiness.ok === true,
+      brevoStatus: brevoReadiness.status || null,
+      domainAuthenticationConfirmed: true,
+      transactionalDeliveryEnabled: true,
+      marketingAutomationEnabled: false,
+      marketingAutomationDisabled: true,
+      preActivationRetryGuard: emailAutomationGuard.ok === true,
+      campaignQualityVerified: emailCampaignQuality.ok === true,
+      dailySource: emailCampaignQuality.dailySource || null,
+      weeklySource: emailCampaignQuality.weeklySource || null,
+      replyToSupported: brevoReadiness.checks?.replyToSupported === true,
       dailyCron: '5 6 * * *',
       weeklyCron: '15 7 * * 1',
-      providerSecretsRequired: ['BREVO_API_KEY', 'MEMBERS_FROM_EMAIL', 'EMAIL_WEBHOOK_SECRET']
+      providerSecretsRequired: ['BREVO_API_KEY', 'MEMBERS_FROM_EMAIL', 'MEMBERS_REPLY_TO_EMAIL', 'EMAIL_WEBHOOK_SECRET', 'ADMIN_API_TOKEN']
     },
     timers: {
       count: clocks.length,
@@ -234,6 +255,10 @@ async function fetchBoundary(route) {
       && live.forumPersistence?.ok === true
       && memberBoundaryPassed
       && emailBoundaryPassed
+      && brevoReadiness.ok === true
+      && brevoReadiness.status === 'transactional-ready-automation-disabled'
+      && emailCampaignQuality.ok === true
+      && emailAutomationGuard.ok === true
       && reportDeliveryWired
       && accessTiersWired
       && osintTiersWired

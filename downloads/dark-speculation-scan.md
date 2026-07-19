@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-17T06:30:23.130Z
+Updated: 2026-07-19T06:13:24.788Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -107,7 +107,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Elite / Ritual / Child-Harm
 - Label: unsupported extreme allegation
-- Matches: 5
+- Matches: 4
 - Boundary: Do not treat rumour, symbol, or association as evidence of child harm.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -173,7 +173,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 1
+- Matches: 0
 - Boundary: A ritual reference is not proof of literal worship or crime.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -184,7 +184,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 1
+- Matches: 0
 - Boundary: Do not convert ancient-name symbolism into factual accusation.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -360,7 +360,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 2
+- Matches: 1
 - Boundary: Track as a classic narrative unless direct documents are found.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -371,7 +371,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 1
+- Matches: 2
 - Boundary: Do not present as planned event without primary evidence.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -437,7 +437,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Modern Slavery
 - Label: case-specific evidence required
-- Matches: 3
+- Matches: 4
 - Boundary: Needs case-level sources and careful language.
 - Research brief: Use case-level records: court files, police reports, labour inspections, NGO investigations, sanctions, company statements and victim-protection boundaries.
 - Support standard: Would need a court file, official report, dated record, investigative finding, authenticated exhibit, or multiple independent sources.
@@ -470,7 +470,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Medical / Bio
 - Label: case-specific evidence required
-- Matches: 5
+- Matches: 6
 - Boundary: Requires very high evidentiary standard.
 - Research brief: Use court records, regulator files, official datasets, peer-reviewed material, contracts and whistleblower records; avoid medical certainty without evidence.
 - Support standard: Would need a court file, official report, dated record, investigative finding, authenticated exhibit, or multiple independent sources.
@@ -514,7 +514,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Hidden History
 - Label: internet mythology
-- Matches: 0
+- Matches: 1
 - Boundary: Requires verifiable archaeology, not screenshots or recycled images.
 - Research brief: Use primary documents, archaeology, archive references, provenance, dating methods and expert disagreement; screenshots are not enough.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.

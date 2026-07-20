@@ -24,7 +24,7 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = '473fde63b886b383d96734b6564f5168efdc6a95';
+            const releaseBase = '492338ea3c618cfe0ac2cfca6b8ae20a34992083';
 
             const response = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
             const target = response.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');

@@ -1,0 +1,64 @@
+name: Money Deployment Diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/money-deploy-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Inspect recent workflow runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data
+          gh api "/repos/$GITHUB_REPOSITORY/actions/runs?per_page=50" > /tmp/runs.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const source=JSON.parse(fs.readFileSync('/tmp/runs.json','utf8'));
+          const names=new Set([
+            'Money Intelligence Pages',
+            'Matrix Reprogrammed Controlled Production Deploy',
+            'Money Intelligence Production Proof',
+            'Money Deployment Diagnostic'
+          ]);
+          const runs=(source.workflow_runs||[])
+            .filter(run=>names.has(run.name))
+            .map(run=>({
+              id:run.id,
+              name:run.name,
+              event:run.event,
+              status:run.status,
+              conclusion:run.conclusion,
+              headSha:run.head_sha,
+              runNumber:run.run_number,
+              attempt:run.run_attempt,
+              createdAt:run.created_at,
+              updatedAt:run.updated_at,
+              url:run.html_url
+            }));
+          fs.writeFileSync('data/money-deploy-diagnostic.json',JSON.stringify({
+            checkedAt:new Date().toISOString(),
+            repository:process.env.GITHUB_REPOSITORY,
+            runs
+          },null,2)+'\n');
+          NODE
+      - name: Commit diagnostic
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/money-deploy-diagnostic.json
+          git commit -m "Record money deployment diagnostic" || exit 0
+          git push

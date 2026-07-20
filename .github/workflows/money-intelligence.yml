@@ -13,12 +13,15 @@ on:
       - 'money-*.css'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
+      - 'data/detailed-wealth-guides.json'
       - 'data/money-intelligence-registry.json'
       - 'data/money-search-index.json'
       - 'data/money-intelligence-brief-feed.json'
       - 'data/wealth-methods.json'
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-money-intelligence-expansion.js'
+      - 'scripts/build-detailed-wealth-guides.js'
+      - 'scripts/detailed-wealth-guides-test.js'
       - 'scripts/money-intelligence-expansion-test.js'
       - 'scripts/build-all-branded-download-pdfs.js'
       - 'scripts/build-deep-pdf-intelligence.mjs'
@@ -53,6 +56,8 @@ jobs:
         run: |
           node --check scripts/build-money-intelligence-system.js
           node --check scripts/build-money-intelligence-expansion.js
+          node --check scripts/build-detailed-wealth-guides.js
+          node --check scripts/detailed-wealth-guides-test.js
           node scripts/build-money-intelligence-system.js
           node scripts/build-all-branded-download-pdfs.js
           node scripts/build-black-file-pdf.js
@@ -60,6 +65,8 @@ jobs:
           node scripts/deep-pdf-intelligence-test.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
+          node scripts/build-detailed-wealth-guides.js
+          node scripts/detailed-wealth-guides-test.js
 
       - name: Upload validation diagnostics
         if: always()
@@ -69,7 +76,9 @@ jobs:
           path: |
             downloads/deep-pdf-intelligence-test.json
             downloads/deep-pdf-intelligence-test-failure.json
+            downloads/detailed-wealth-guides-test.json
             downloads/wealth-guides/index.json
+            data/detailed-wealth-guides.json
             data/money-intelligence-brief-feed.json
           if-no-files-found: warn
           retention-days: 14

@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T08:51:35.808Z
+Collection completed: 2026-07-20T09:02:44.144Z
 Latest source publication: 2026-07-19T12:00:00.000Z
 Collection status: current-window-refreshed-no-new-items
 New items this collection: 0

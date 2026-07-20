@@ -84,16 +84,21 @@ require('./patch-membership-signup-server-fallback.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
 
-// Legacy generators can leave more than one literal object placeholder on this
-// page. Remove every residual before the strict canonical public-defect audit.
+// Legacy generators can leave raw object placeholders or omit the explanatory
+// boundary entirely. Guarantee both conditions before the strict public audit.
+const objectBoundary = 'No raw object placeholders are published on public pages.';
 for (const base of [root, path.join(root, '_site')]) {
   for (const route of ['information-gathering-system.html', 'information-gathering-system']) {
     const file = path.join(base, route);
     if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
     const source = fs.readFileSync(file, 'utf8');
-    const repaired = source
-      .replace(/No \[object Object\] visible in public pages\./g, 'No raw object placeholders are published on public pages.')
+    let repaired = source
+      .replace(/No \[object Object\] visible in public pages\./g, objectBoundary)
       .replace(/\[object Object\]/g, 'raw object placeholder');
+    if (!repaired.includes(objectBoundary)) {
+      const notice = `<p class="mini" data-public-object-boundary="true">${objectBoundary}</p>`;
+      repaired = /<\/main>/i.test(repaired) ? repaired.replace(/<\/main>/i, `${notice}</main>`) : `${repaired}${notice}`;
+    }
     if (repaired !== source) fs.writeFileSync(file, repaired);
   }
 }

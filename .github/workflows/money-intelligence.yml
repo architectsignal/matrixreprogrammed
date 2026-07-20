@@ -16,6 +16,8 @@ on:
       - 'scripts/money-intelligence-live-test.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/ensure-evidence-badge-routes.js'
+      - 'scripts/repair-final-evidence-badge-duplicates.js'
+      - 'scripts/final-release-sanitize.js'
       - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
   push:
@@ -34,6 +36,8 @@ on:
       - 'scripts/money-intelligence-live-test.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/ensure-evidence-badge-routes.js'
+      - 'scripts/repair-final-evidence-badge-duplicates.js'
+      - 'scripts/final-release-sanitize.js'
       - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
 

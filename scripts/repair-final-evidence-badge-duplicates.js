@@ -21,10 +21,10 @@ function fail(message) {
 }
 function countId(html, id) {
   const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return (String(html).match(new RegExp(`\\bid=["']${escaped}["']`, 'gi')) || []).length;
+  return (String(html).match(new RegExp(`(?:^|\\s)id=["']${escaped}["']`, 'gi')) || []).length;
 }
 function duplicateIds(html) {
-  const ids = [...String(html).matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+  const ids = [...String(html).matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 }
 function copy(rel) {

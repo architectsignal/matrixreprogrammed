@@ -31,12 +31,13 @@ function repairEmailWorker(source) {
   source = replaceOnce(source, consentAnchor, consentSafe, 'Verified repeat-signup fast path');
 
   const scheduledBefore = "async function scheduledHandler(event,env,ctx){if(!hasD1(env))return;const request=new Request('https://matrixreprogrammed.com/api/email/admin/run-automation');const job=async()=>{await ensureSchema(env);if(!automationEnabled(env))return;if(event?.cron==='15 7 * * 1')await automatedCampaign(request,env,'weekly');else if(event?.cron==='5 6 * * *')await automatedCampaign(request,env,'daily');await processOutbox(env,{limit:250})};if(ctx?.waitUntil)ctx.waitUntil(job());else await job()}";
-  const scheduledAfter = "async function scheduledHandler(event,env,ctx){if(!hasD1(env))return;const request=new Request('https://matrixreprogrammed.com/api/email/admin/run-automation');const job=async()=>{await ensureSchema(env);if(!automationEnabled(env))return;const cron=String(event?.cron||'');const stamp=now(env);const minuteOfDay=stamp.getUTCHours()*60+stamp.getUTCMinutes();if(cron==='15 7 * * 1')await automatedCampaign(request,env,'weekly');else if(cron==='5 6 * * *')await automatedCampaign(request,env,'daily');else if(cron==='35 * * * *'){if(minuteOfDay>=365)await automatedCampaign(request,env,'daily');if(stamp.getUTCDay()===1&&minuteOfDay>=435)await automatedCampaign(request,env,'weekly')}await processOutbox(env,{limit:250})};if(ctx?.waitUntil)ctx.waitUntil(job());else await job()}";
-  source = replaceOnce(source, scheduledBefore, scheduledAfter, 'Missed campaign catch-up schedule');
+  const scheduledAfter = "async function repairVerifiedPendingSubscribers(env){const stamp=iso(env);const restored=await env.MEMBERS_DB.prepare(`UPDATE members SET marketing_status='subscribed',updated_at=? WHERE status='active' AND email_verified_at IS NOT NULL AND marketing_status='pending' AND COALESCE((SELECT ec.granted FROM email_consents ec WHERE ec.member_id=members.id AND ec.consent_type='marketing_email' ORDER BY ec.created_at DESC LIMIT 1),0)=1 AND NOT EXISTS (SELECT 1 FROM email_suppressions es WHERE es.member_id=members.id AND es.active=1 AND es.scope='all_marketing')`).bind(stamp).run();const members=await all(env.MEMBERS_DB.prepare(`SELECT id FROM members WHERE updated_at=? AND status='active' AND marketing_status='subscribed' AND email_verified_at IS NOT NULL`).bind(stamp));for(const row of members){const member=await memberById(env,row.id);if(member)await syncSegments(env,member)}return{restored:Number(restored?.meta?.changes||0),segmentsResynced:members.length}}\nasync function scheduledHandler(event,env,ctx){if(!hasD1(env))return;const request=new Request('https://matrixreprogrammed.com/api/email/admin/run-automation');const job=async()=>{await ensureSchema(env);if(!automationEnabled(env))return;await repairVerifiedPendingSubscribers(env);const cron=String(event?.cron||'');const stamp=now(env);const minuteOfDay=stamp.getUTCHours()*60+stamp.getUTCMinutes();if(cron==='15 7 * * 1')await automatedCampaign(request,env,'weekly');else if(cron==='5 6 * * *')await automatedCampaign(request,env,'daily');else if(cron==='35 * * * *'){if(minuteOfDay>=365)await automatedCampaign(request,env,'daily');if(stamp.getUTCDay()===1&&minuteOfDay>=435)await automatedCampaign(request,env,'weekly')}await processOutbox(env,{limit:250})};if(ctx?.waitUntil)ctx.waitUntil(job());else await job()}";
+  source = replaceOnce(source, scheduledBefore, scheduledAfter, 'Missed campaign catch-up and verified subscriber recovery');
 
   for (const marker of [
     'existingBeforeSignup',
-    "email.signup.verified_preferences_refreshed",
+    'email.signup.verified_preferences_refreshed',
+    'repairVerifiedPendingSubscribers',
     "event?.cron||''",
     "cron==='35 * * * *'",
     "members.email_verified_at IS NOT NULL AND members.marketing_status='subscribed'"
@@ -81,6 +82,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   safeguards: {
     verifiedRepeatSignupPreserved: true,
     pendingVerifiedRecoverySupported: true,
+    runtimeRecoveryBeforeCampaign: true,
     explicitUnsubscribeAndSuppressionsPreserved: true,
     hourlyIdempotentCatchUp: true,
     dailyCron: '5 6 * * *',

@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T06:35:12.000Z
-Live Intel source window: 2026-07-20T06:35:02.861Z
+Generated: 2026-07-20T06:44:40.953Z
+Live Intel source window: 2026-07-20T06:44:39.932Z
 Tracked cards: 774
 Cards with current matched records: 111
 Cards with no new verified record: 663
@@ -779,13 +779,13 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## BOOZ ALLEN HAMILTON
-- Route: main-players/booz-allen-hamilton.html
+- Route: contractor-briefs/booz-allen-intelligence-contractor.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
 ## BOOZ ALLEN HAMILTON
-- Route: contractor-briefs/booz-allen-intelligence-contractor.html
+- Route: main-players/booz-allen-hamilton.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -902,13 +902,13 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## CACI INTERNATIONAL
-- Route: main-players/caci-international.html
+- Route: contractor-briefs/caci-intelligence-contractor.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
 ## CACI INTERNATIONAL
-- Route: contractor-briefs/caci-intelligence-contractor.html
+- Route: main-players/caci-international.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

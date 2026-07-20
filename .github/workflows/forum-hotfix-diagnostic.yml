@@ -1,0 +1,59 @@
+name: Forum Hotfix Diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/forum-hotfix-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Run forum repair commands with full diagnostics
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads
+          : > downloads/forum-hotfix-diagnostic.log
+          commands=(
+            "node scripts/install-forum-page-consistency-owner.js"
+            "node scripts/repair-forum-member-posting.js"
+            "node scripts/repair-forum-page-consistency.js"
+            "node scripts/forum-member-posting-test.js"
+            "node --check forum.js"
+            "node --check src/worker.js"
+            "node --check src/worker-member-experience.js"
+            "node --check src/worker-forum-persistence.js"
+            "node --check src/worker-production.js"
+          )
+          overall=0
+          for command in "${commands[@]}"; do
+            echo "===== $command =====" | tee -a downloads/forum-hotfix-diagnostic.log
+            bash -lc "$command" >> downloads/forum-hotfix-diagnostic.log 2>&1
+            status=$?
+            echo "EXIT $status" | tee -a downloads/forum-hotfix-diagnostic.log
+            if [ "$status" -ne 0 ]; then overall=$status; break; fi
+          done
+          echo "OVERALL_EXIT=$overall" | tee -a downloads/forum-hotfix-diagnostic.log
+          exit 0
+      - name: Commit diagnostic and any generated reports
+        run: |
+          git config user.name 'forum-hotfix-diagnostic-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add downloads/forum-hotfix-diagnostic.log downloads/forum-*.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record exact forum hotfix failure'
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((attempt * 2))
+          done
+          exit 1

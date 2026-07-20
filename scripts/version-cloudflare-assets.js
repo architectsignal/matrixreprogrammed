@@ -9,13 +9,20 @@ const reportPath = path.join(root, 'downloads', 'cloudflare-asset-versioning.jso
 
 if (!fs.existsSync(site)) throw new Error('_site is missing; build Cloudflare output before asset versioning');
 
-// Asset fingerprinting and cache policy are one release contract. A late legacy
-// header generator must never leave unversioned JS/CSS under immutable caching.
-execFileSync(process.execPath, [path.join(root, 'scripts', 'enforce-production-cache-policy.js')], {
-  cwd: root,
-  stdio: 'inherit',
-  env: process.env
-});
+function run(script) {
+  execFileSync(process.execPath, [path.join(root, script)], {
+    cwd: root,
+    stdio: 'inherit',
+    env: process.env
+  });
+}
+
+// Cache policy, runtime optimization, performance budgets and asset fingerprinting
+// are one final Cloudflare contract. Standard CI and production therefore test the
+// same deployable bundle rather than relying on production-only reconciliation.
+run('scripts/enforce-production-cache-policy.js');
+run('scripts/apply-runtime-performance-optimizations.js');
+run('scripts/runtime-performance-budget-test.js');
 
 function posix(value) { return String(value || '').replace(/\\/g, '/'); }
 function walk(dir, files = []) {
@@ -139,8 +146,10 @@ const report = {
   unversioned: unversioned.slice(0, 200),
   unsafeImmutable,
   cachePolicyOwner: 'scripts/enforce-production-cache-policy.js',
+  performanceOwner: 'scripts/apply-runtime-performance-optimizations.js',
+  performanceBudget: 'scripts/runtime-performance-budget-test.js',
   cacheBlocksChecked: [...headerBlocks.keys()],
-  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. Unversioned scripts and styles use short revalidation headers rather than year-long immutable caching.'
+  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. The exact optimized bundle passes performance budgets before fingerprinting, while unversioned scripts and styles use revalidation rather than year-long immutable caching.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
@@ -150,4 +159,4 @@ if (!report.ok) {
   unversioned.slice(0, 20).forEach(item => console.error(`Unversioned asset reference: ${item.page} -> ${item.reference}`));
   process.exit(1);
 }
-console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted under the authoritative optimized cache policy.`);
+console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted after the optimized bundle passed its performance budget.`);

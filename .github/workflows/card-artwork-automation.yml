@@ -4,9 +4,18 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '45 5 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - .github/card-artwork-refresh.trigger
 
 permissions:
   contents: write
+
+concurrency:
+  group: matrix-card-artwork-automation
+  cancel-in-progress: false
 
 jobs:
   artwork:
@@ -20,7 +29,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
@@ -31,23 +40,32 @@ jobs:
       - name: Install pending card artwork
         run: node scripts/install-card-artwork-inbox.js
 
-      - name: Build next artwork queue
-        run: node scripts/build-card-artwork-queue.js
-
-      - name: Refresh card manifest and dossier depth
+      - name: Refresh card manifest and artwork production queues
         run: |
           node scripts/build-card-download-manifest.js
+          node scripts/build-card-artwork-batches.js
+          node scripts/build-card-artwork-queue.js
           node scripts/patch-card-dossier-depth.js
           node scripts/site-public-copy-intake-audit.js
 
       - name: Commit artwork automation output
         run: |
+          set -euo pipefail
           git config user.name "matrix-artwork-bot"
           git config user.email "actions@users.noreply.github.com"
           git add .
           if git diff --cached --quiet; then
             echo "No artwork changes to commit."
-          else
-            git commit -m "Automated card artwork install and queue refresh"
-            git push
+            exit 0
           fi
+          git commit -m "Automated card artwork install and queue refresh"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during artwork refresh; retrying from latest main."
+          done
+          echo "Unable to publish artwork automation output after three attempts."
+          exit 1

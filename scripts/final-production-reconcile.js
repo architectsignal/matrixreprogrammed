@@ -81,7 +81,9 @@ run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 run('scripts/patch-paypal-server-redirect.js');
 
-// Final owners of search and conclusion surfaces.
+// Final owners of member posting, search and conclusion surfaces.
+run('scripts/repair-forum-member-posting.js');
+run('scripts/forum-member-posting-test.js');
 run('scripts/repair-search-system.js');
 run('scripts/build-search-v3-index.js');
 run('scripts/build-search-v3-runtime.js');
@@ -91,7 +93,8 @@ run('scripts/build-production-health.js');
 
 const critical = [
   'index.html','homepage-mask-intro.css','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
-  'start-here.html','membership.html','paypal-membership.js','member-dashboard.html','member-dashboard-app.js',
+  'start-here.html','membership.html','paypal-membership.js','member-login.html','member-dashboard.html','member-dashboard-app.js',
+  'forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js',
   'billing-dashboard.html','billing-dashboard.js','admin-payment-dashboard.html','admin-payment-dashboard.js',
   'admin-paypal-rehearsal.html','admin-paypal-rehearsal.js','live-intel.html','daily-power-conclusions.html',
   'daily-investigation-conclusions.html','weekly-investigation-report.html','daily-brain-brief.html','outcome-briefings.html','security-privacy.html',
@@ -125,6 +128,18 @@ requireMarker('membership.html', 'Paid checkout remains disabled until the sandb
 rejectMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
+requireMarker('member-login.html', 'https://matrixreprogrammed.com/api/auth/request-link');
+requireMarker('forum.html', 'forum.js?v=20260720-forum-member-posting-v3');
+requireMarker('dark-speculation-forum.html', 'forum.js?v=20260720-forum-member-posting-v3');
+requireMarker('epstein-alive-board.html', 'forum.js?v=20260720-forum-member-posting-v3');
+requireMarker('forum.js', "credentials:'include'");
+requireMarker('forum.js', 'Persistent posting is unlocked.');
+requireMarker('forum.js', "data.saved !== true");
+requireMarker('src/worker.js', 'matrix_session_v2=');
+requireMarker('src/worker.js', 'Domain=matrixreprogrammed.com');
+requireMarker('src/worker-member-experience.js', "cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')");
+requireMarker('src/worker-forum-persistence.js', 'D1 forum read-after-write confirmation failed');
+rejectMarker('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts');
 requireMarker('paypal-membership.js', '/api/paypal/subscription/create');
 requireMarker('paypal-membership.js', 'Continue securely to PayPal');
 requireMarker('paypal-membership.js', 'location.assign');
@@ -174,4 +189,4 @@ requireMarker('deploy-health.json', '"paymentStatus": "runtime-gated-dashboard-m
 requireMarker('deploy-health.json', '"checkoutDefault": "runtime-d1-gated"');
 
 persistReport();
-console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, final deploy bundle sanitized and audited.`);
+console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, member forum posting repaired, final deploy bundle sanitized and audited.`);

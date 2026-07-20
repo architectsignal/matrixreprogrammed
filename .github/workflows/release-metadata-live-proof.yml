@@ -39,6 +39,8 @@ jobs:
         run: |
           mkdir -p _site
           node scripts/patch-homepage-mask-intro.js
+          node scripts/patch-membership-auth-ui.js
+          node scripts/patch-membership-access-copy.js
           node scripts/patch-release-metadata-routing.js
 
       - name: Generate commit-bound release metadata and versioned aliases
@@ -72,7 +74,9 @@ jobs:
           assert(fs.readFileSync('_site/runtime/deploy-manifest-current.json', 'utf8') === manifest, 'manifest alias is not an exact copy');
           assert(fs.readFileSync('_site/runtime/deploy-health-current.json', 'utf8') === health, 'health alias is not an exact copy');
           const parsedManifest = JSON.parse(manifest);
+          const parsedHealth = JSON.parse(health);
           assert(parsedManifest.proofMode === 'metadata-only', 'metadata proof manifest mode missing');
+          assert(parsedHealth.ok === true, 'production health proof is not ready');
           for (const marker of ['/daily-epstein-update', '/data/daily-epstein-update.json', '/data/live-machine-status.json', '/controlled-opposition/andrew-tate.html']) {
             assert(verifier.includes(marker), `live verifier marker missing: ${marker}`);
           }

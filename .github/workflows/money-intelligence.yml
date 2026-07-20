@@ -85,6 +85,16 @@ jobs:
         run: node scripts/money-intelligence-system-test.js
       - name: Validate deep PDF intelligence reports
         run: node scripts/deep-pdf-intelligence-test.js
+      - name: Upload deep PDF validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deep-pdf-validation-${{ github.run_id }}
+          path: |
+            downloads/deep-pdf-intelligence-test.json
+            downloads/deep-pdf-intelligence-test-failure.json
+          if-no-files-found: warn
+          retention-days: 14
       - name: Commit generated outputs on main
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |

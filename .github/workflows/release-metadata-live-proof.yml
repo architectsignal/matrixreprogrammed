@@ -9,6 +9,7 @@ on:
       - 'scripts/patch-release-metadata-routing.js'
       - 'scripts/patch-live-verifier-intelligence-routes.js'
       - 'scripts/publish-release-metadata-assets.js'
+      - 'scripts/build-deploy-manifest.js'
       - 'scripts/final-release-sanitize.js'
       - 'scripts/verify-live-production.js'
       - 'data/production-freshness-policy.json'
@@ -45,6 +46,7 @@ jobs:
           DEPLOY_COMMIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_RUN_ID: ${{ github.run_id }}
+          RELEASE_METADATA_PROOF: 'true'
         run: |
           node scripts/build-deploy-manifest.js
           node scripts/build-production-health.js
@@ -69,6 +71,8 @@ jobs:
           assert(worker.includes('isReleaseMetadataRoute(path)'), 'release metadata route gate missing');
           assert(fs.readFileSync('_site/runtime/deploy-manifest-current.json', 'utf8') === manifest, 'manifest alias is not an exact copy');
           assert(fs.readFileSync('_site/runtime/deploy-health-current.json', 'utf8') === health, 'health alias is not an exact copy');
+          const parsedManifest = JSON.parse(manifest);
+          assert(parsedManifest.proofMode === 'metadata-only', 'metadata proof manifest mode missing');
           for (const marker of ['/daily-epstein-update', '/data/daily-epstein-update.json', '/data/live-machine-status.json', '/controlled-opposition/andrew-tate.html']) {
             assert(verifier.includes(marker), `live verifier marker missing: ${marker}`);
           }

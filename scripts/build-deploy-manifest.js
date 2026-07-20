@@ -5,8 +5,11 @@ const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
+const builtSiteEntry = path.join(site, 'index.html');
 const moneyFinalizer = path.join(root, 'scripts', 'finalize-money-intelligence-release.js');
-if (fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
+// Metadata-only proof workflows create an empty _site directory before building
+// release aliases. Run the full Money finalizer only when a real site bundle exists.
+if (fs.existsSync(builtSiteEntry) && fs.existsSync(moneyFinalizer)) {
   execFileSync(process.execPath, [moneyFinalizer], { cwd: root, stdio: 'inherit', env: process.env });
 }
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }

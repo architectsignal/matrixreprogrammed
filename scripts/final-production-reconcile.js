@@ -42,7 +42,7 @@ function copy(rel) {
   }
 }
 function duplicateIds(html) {
-  const ids = [...String(html).matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+  const ids = [...String(html).matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 }
 function requireMarker(rel, marker) {
@@ -89,6 +89,9 @@ run('scripts/build-search-v3-index.js');
 run('scripts/build-search-v3-runtime.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/build-deploy-manifest.js');
+// The deploy-manifest money finalizer rebuilds investigation pages while rebuilding search.
+// Reapply the integrity cards after that last page generator and before health hashes/copies.
+run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/build-production-health.js');
 
 const critical = [

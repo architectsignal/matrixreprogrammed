@@ -66,6 +66,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh workflow run "Matrix Reprogrammed Production Deploy" \
+          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
             --repo "$GITHUB_REPOSITORY" \
-            --ref main
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

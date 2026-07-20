@@ -1,10 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-// Apply the final same-origin login and legacy-session compatibility repairs
-// before testing the complete member journey.
+// Apply the final same-origin login, legacy-session compatibility and page
+// consistency owners before testing the complete member journey. This file is
+// executed by final-production-reconcile.js immediately before deployable
+// forum pages are copied, so late generators cannot restore legacy controls.
 require('./repair-forum-login-canonical.js');
 require('./repair-forum-session-compatibility.js');
+require('./repair-forum-page-consistency.js');
 
 const root = process.cwd();
 const failures = [];
@@ -16,6 +19,7 @@ const member = read('src/worker-member-experience.js');
 const forumWorker = read('src/worker-forum-persistence.js');
 const client = read('forum.js');
 const login = read('member-login.html');
+const speculation = read('dark-speculation-forum.html');
 
 check('new shared session cookie is not issued', legacy.includes('matrix_session_v2=') && legacy.includes('Domain=matrixreprogrammed.com'));
 check('legacy cookie fallback is missing', legacy.includes('values.matrix_session_v2||values.matrix_session'));
@@ -33,10 +37,15 @@ check('member login does not canonicalize www before authentication', login.incl
 check('member login request is not same-origin', login.includes("fetch('/api/auth/request-link', {"));
 check('member login request does not carry credentials', login.includes("credentials:'include'"));
 check('member login still contains a cross-origin API request', !login.includes("fetch('https://matrixreprogrammed.com/api/auth/request-link'"));
+check('obsolete paid Signal Pass remains on speculation board', !speculation.includes('paypal.me/njmgroup/1') && !speculation.includes('unlock-signal-pass'));
+check('speculation board does not expose verified member status', speculation.includes('id="forum-member-status"') && speculation.includes('Verified Member Posting'));
+check('speculation board does not use the verified free member lock', speculation.includes('Posting requires a verified free member account.'));
 
 for (const relative of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html']) {
   const html = read(relative);
   check(`${relative} still uses an unversioned forum client`, html.includes('forum.js?v=20260720-forum-member-posting-v3'));
+  check(`${relative} has no member session status`, html.includes('id="forum-member-status"'));
+  check(`${relative} has no posting form`, html.includes('id="signal-board-form"'));
 }
 
 const report = {
@@ -48,7 +57,8 @@ const report = {
   logoutModel: 'D1 session revoked and both v2 plus legacy cookies cleared.',
   postingModel: 'Verified member session -> D1 insert -> exact D1 read-back -> success response.',
   persistenceModel: 'Cloudflare D1 MEMBERS_DB.forum_posts remains authoritative across all three boards.',
-  boundary: 'The regression fails if login can hit CORS, the browser omits credentials, an existing session is discarded, logout leaves a cookie active, D1 silently ignores a write, or a page can show success without read-after-write confirmation.'
+  pageModel: 'Main, speculation and Epstein boards share one free verified-member posting contract; the obsolete paid Signal Pass is removed before every production copy.',
+  boundary: 'The regression fails if login can hit CORS, the browser omits credentials, an existing session is discarded, logout leaves a cookie active, D1 silently ignores a write, a page can show success without read-after-write confirmation, or a legacy paid posting control returns.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-member-posting-test.json'), JSON.stringify(report, null, 2));

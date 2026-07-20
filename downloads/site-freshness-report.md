@@ -6,12 +6,12 @@ Report version: site-freshness-v2
 Source rules: 8
 Scanned pages: 2656
 Flagged pages: 2185
-High priority pages: 874
-Medium priority pages: 1305
-Pages with missing rules: 210
+High priority pages: 873
+Medium priority pages: 1306
+Pages with missing rules: 211
 Auto-update eligible figures: 2
 Manual-review figures: 94
-Missing-rule figures: 694
+Missing-rule figures: 696
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.

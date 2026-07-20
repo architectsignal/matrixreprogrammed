@@ -1,0 +1,1 @@
+The public pages must not present estimates as exact balances, scenarios as forecasts, or legal tax planning as evasion. Refresh dates and evidence labels must remain visible after every generator run.

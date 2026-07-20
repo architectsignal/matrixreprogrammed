@@ -19,7 +19,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Dispatch revision 2: deep PDF flagship generator and final audit fixes are now on main.
+          # Dispatch revision 3: current main includes the idempotent shared-session and all-board forum repairs.
           gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
             --repo "$GITHUB_REPOSITORY" \
             --ref main \

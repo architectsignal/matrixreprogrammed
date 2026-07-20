@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-20T07:04:26.957Z",
+  "checkedAt": "2026-07-20T08:20:03.016Z",
   "selectedSources": 12,
   "fetchedSources": 12,
   "skippedSources": 0,
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "213dcc830fda263414f35ca34d53bde74c19a3bed5eec30b62a06cb9b83cab35",
+      "bytes": 2195,
+      "bodyHash": "d15d9b0e2cf04ef1ec5b3f604411b10cffd2ac89c5dac6872f558db7a0358667",
       "itemCount": 1,
       "error": ""
     },
@@ -45,7 +45,7 @@
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62559,
-      "bodyHash": "3b7a62d7de2cda50ed0cb722a88aabd82dc438b3f63a804be8f754811e8b51a6",
+      "bodyHash": "e3b30410dc4c556fdc1d4de84402bb0e2efa4a494777f5f823fdc4b07b27d61e",
       "itemCount": 14,
       "error": ""
     },
@@ -58,7 +58,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22658,
-      "bodyHash": "ddcf907948d83b953bbb2dfeff56164fb0af0fa42f695f8ac015c48913241c09",
+      "bodyHash": "7cda45c8ef43b5622a697ca8ed1dda352a921b4ae2563602bf4fdcfdf3f61919",
       "itemCount": 40,
       "error": ""
     },
@@ -109,8 +109,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43145,
-      "bodyHash": "b24c45d5785f8915c692c9720344e5494e5c97e5a3d57cc38e531f238951200f",
+      "bytes": 43144,
+      "bodyHash": "86a13cf18096ca288215429c115c2e515057b180f35a18bff73a3a70c809cb67",
       "itemCount": 18,
       "error": ""
     },
@@ -149,7 +149,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "71593f50760ebd725fadb594e2475a90c26ff328897c333225c5f56dec578474",
+      "bodyHash": "21abe6b37b7d1fb0c407cb3649c8e058e494b8415dc559154b0b734582f485c8",
       "itemCount": 15,
       "error": ""
     },

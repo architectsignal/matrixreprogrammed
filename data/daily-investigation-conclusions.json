@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-07-20T07:04:26.957Z",
+  "generatedAt": "2026-07-20T08:20:03.016Z",
   "period": {
-    "start": "2026-07-18T07:04:37.287Z",
-    "end": "2026-07-20T07:04:26.957Z",
+    "start": "2026-07-18T08:20:13.607Z",
+    "end": "2026-07-20T08:20:03.016Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -21,60 +21,60 @@
     "sourcesScheduled": 12,
     "sourcesFetched": 12,
     "sourceFailures": 0,
-    "changedSources": 6,
-    "findingsInWindow": 955,
+    "changedSources": 5,
+    "findingsInWindow": 699,
     "establishedWrongdoingFindings": 18,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0,
-    "meaningfulSourceChanges": 6
+    "meaningfulSourceChanges": 5
   },
   "topConclusion": "The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.",
   "patterns": {
     "byLane": {
-      "government-enforcement": 222,
-      "international-corruption": 149,
-      "oversight-audit": 139,
+      "government-enforcement": 148,
+      "international-corruption": 107,
+      "oversight-audit": 122,
       "money-contracts": 76,
-      "epstein-disclosure": 240,
-      "declassified-leaks": 129
+      "epstein-disclosure": 160,
+      "declassified-leaks": 86
     },
     "byStatus": {
-      "established-wrongdoing": 192,
-      "official-enforcement": 60,
-      "official-audit-finding": 34,
-      "wrongdoing-lead": 68,
-      "document-release": 61,
-      "leak-or-document-lead": 129,
-      "record-update": 411
+      "established-wrongdoing": 128,
+      "official-enforcement": 41,
+      "official-audit-finding": 23,
+      "wrongdoing-lead": 46,
+      "document-release": 42,
+      "leak-or-document-lead": 86,
+      "record-update": 333
     },
     "topWrongdoingIndicators": [
       {
         "term": "fraud",
-        "count": 72
+        "count": 48
       },
       {
         "term": "sanction",
-        "count": 60
+        "count": 41
       },
       {
         "term": "corruption",
-        "count": 5
+        "count": 4
       },
       {
         "term": "convicted",
-        "count": 3
+        "count": 2
       },
       {
         "term": "misconduct",
-        "count": 3
+        "count": 2
       },
       {
         "term": "bribery",
-        "count": 3
+        "count": 2
       },
       {
         "term": "money laundering",
-        "count": 3
+        "count": 2
       }
     ]
   },
@@ -90,9 +90,9 @@
       "authority": "primary-official",
       "title": "Revised Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -111,7 +111,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "b8f838e066ac3dd598223940",
@@ -124,9 +124,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -145,7 +145,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "00fce66aada2d54c8b935d4e",
@@ -158,9 +158,9 @@
       "authority": "primary-official",
       "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -179,7 +179,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "1025650139ddf552540061de",
@@ -192,9 +192,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -213,7 +213,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "29e8abfc960a7b9af1d116d3",
@@ -226,9 +226,9 @@
       "authority": "primary-official",
       "title": "Proposed Final Judgment - Shaukat Shamim",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -247,7 +247,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "223d16c4e49d8ce92899a1ad",
@@ -260,9 +260,9 @@
       "authority": "primary-official",
       "title": "Proposed Final Judgment - YouPlus, Inc.",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -281,7 +281,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "75688d6120ae8f928bd09910",
@@ -294,9 +294,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Steve Bajic",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -315,7 +315,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "0bc5720e6a3ef2c9dddad15c",
@@ -328,9 +328,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Christopher McKnight",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -349,7 +349,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "4600d97487e4eae1ce2ff866",
@@ -362,9 +362,9 @@
       "authority": "primary-official",
       "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -383,7 +383,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "006694102331fe38bdea5ea6",
@@ -396,9 +396,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Robert Yedid",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -417,7 +417,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "fa5ee48bc44be3a60ebfaea7",
@@ -430,9 +430,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Andrew Kaufman",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -451,7 +451,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "e7ff89c63a9ca98dd66470de",
@@ -464,9 +464,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Mark Jacobs",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -485,7 +485,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "3841ea7c4af831493a355e49",
@@ -498,9 +498,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -519,7 +519,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "c696af917da3ba77183bf984",
@@ -532,9 +532,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -553,7 +553,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "69f4d536df92ce86fa382d5c",
@@ -566,9 +566,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -587,7 +587,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "f0229baf124c42e981d0db95",
@@ -600,9 +600,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Michael Bowen",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -621,7 +621,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "525f1484061106c2e5ba6485",
@@ -634,9 +634,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -655,7 +655,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "9aca021d91000fcd4cb9fbff",
@@ -668,9 +668,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -689,7 +689,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     }
   ],
   "officialActions": [],
@@ -706,9 +706,9 @@
       "authority": "primary-official",
       "title": "Revised Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -727,7 +727,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-1",
         "title": "Revised Final Judgment",
@@ -737,7 +737,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -760,9 +760,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -781,7 +781,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-2",
         "title": "Final Judgment",
@@ -791,7 +791,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -814,9 +814,9 @@
       "authority": "primary-official",
       "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -835,7 +835,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-3",
         "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment",
@@ -845,7 +845,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -868,9 +868,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -889,7 +889,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-4",
         "title": "Final Judgment",
@@ -899,7 +899,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -922,9 +922,9 @@
       "authority": "primary-official",
       "title": "Proposed Final Judgment - Shaukat Shamim",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -943,7 +943,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-5",
         "title": "Proposed Final Judgment - Shaukat Shamim",
@@ -953,7 +953,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -976,9 +976,9 @@
       "authority": "primary-official",
       "title": "Proposed Final Judgment - YouPlus, Inc.",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -997,7 +997,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-6",
         "title": "Proposed Final Judgment - YouPlus, Inc.",
@@ -1007,7 +1007,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1030,9 +1030,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Steve Bajic",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1051,7 +1051,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-7",
         "title": "Final Judgment -Steve Bajic",
@@ -1061,7 +1061,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1084,9 +1084,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Christopher McKnight",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1105,7 +1105,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-8",
         "title": "Final Judgment -Christopher McKnight",
@@ -1115,7 +1115,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1138,9 +1138,9 @@
       "authority": "primary-official",
       "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1159,7 +1159,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-9",
         "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
@@ -1169,7 +1169,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1192,9 +1192,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Robert Yedid",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1213,7 +1213,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-10",
         "title": "Final Judgment - Robert Yedid",
@@ -1223,7 +1223,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1246,9 +1246,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Andrew Kaufman",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1267,7 +1267,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-11",
         "title": "Final Judgment - Andrew Kaufman",
@@ -1277,7 +1277,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1300,9 +1300,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Mark Jacobs",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1321,7 +1321,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-12",
         "title": "Final Judgment - Mark Jacobs",
@@ -1331,7 +1331,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1354,9 +1354,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1375,7 +1375,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-13",
         "title": "Final Judgment",
@@ -1385,7 +1385,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1408,9 +1408,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1429,7 +1429,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-14",
         "title": "Final Judgment",
@@ -1439,7 +1439,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1462,9 +1462,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1483,7 +1483,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-15",
         "title": "Final Judgment",
@@ -1493,7 +1493,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1516,9 +1516,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Michael Bowen",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1537,7 +1537,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-16",
         "title": "Final Judgment - Michael Bowen",
@@ -1547,7 +1547,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1570,9 +1570,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1591,7 +1591,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-17",
         "title": "Final Judgment",
@@ -1601,7 +1601,7 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
@@ -1624,9 +1624,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-20T07:04:26.957Z",
+      "published": "2026-07-20T08:20:03.016Z",
       "firstSeen": "2026-07-20T07:04:26.957Z",
-      "lastSeen": "2026-07-20T07:04:26.957Z",
+      "lastSeen": "2026-07-20T08:20:03.016Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1645,7 +1645,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1,
+      "occurrences": 2,
       "integrity": {
         "id": "daily-18",
         "title": "Final Judgment",
@@ -1655,12 +1655,70 @@
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-07-20T07:04:26.957Z",
+        "freshness": "2026-07-20T08:20:03.016Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
         "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sources": [
           "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "source-change-4f6142409f6345aa4038244f",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-20T08:20:14.211Z",
+      "firstSeen": "2026-07-20T08:20:14.211Z",
+      "lastSeen": "2026-07-20T08:20:14.211Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "daily-19",
+        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-07-20T08:20:14.211Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
@@ -1705,7 +1763,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "daily-19",
+        "id": "daily-20",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -1763,7 +1821,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "daily-20",
+        "id": "daily-21",
         "title": "content changed: USAspending.gov — Recent Contract Awards",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
@@ -1821,7 +1879,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "daily-21",
+        "id": "daily-22",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -1879,7 +1937,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "daily-22",
+        "id": "daily-23",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -1898,122 +1956,6 @@
           "data/investigation-ledger.json"
         ]
       }
-    },
-    {
-      "id": "source-change-bbf3afbd918f5c8ef1d82250",
-      "sourceId": "sec-current-filings",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "lane": "money-contracts",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-18T07:12:31.532Z",
-      "firstSeen": "2026-07-18T07:12:31.532Z",
-      "lastSeen": "2026-07-18T07:12:31.532Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ],
-      "integrity": {
-        "id": "daily-23",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-18T07:12:31.532Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "source-change-3a612824bd2383e3b7554062",
-      "sourceId": "federal-register-latest",
-      "sourceLabel": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "itemUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "lane": "oversight-audit",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: Federal Register — Latest Documents",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-18T07:12:31.532Z",
-      "firstSeen": "2026-07-18T07:12:31.532Z",
-      "lastSeen": "2026-07-18T07:12:31.532Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ],
-      "integrity": {
-        "id": "daily-24",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-18T07:12:31.532Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
     }
   ],
   "changedSources": [
@@ -2027,15 +1969,15 @@
         "daily",
         "weekly"
       ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
+      "lastAttempt": "2026-07-20T08:20:03.016Z",
+      "lastSuccess": "2026-07-20T08:20:03.016Z",
       "status": "fetched",
       "statusCode": 200,
       "error": "",
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "213dcc830fda263414f35ca34d53bde74c19a3bed5eec30b62a06cb9b83cab35",
+      "bytes": 2195,
+      "bodyHash": "d15d9b0e2cf04ef1ec5b3f604411b10cffd2ac89c5dac6872f558db7a0358667",
       "changed": true,
       "firstSnapshot": false,
       "itemCount": 1,
@@ -2053,15 +1995,15 @@
         "daily",
         "weekly"
       ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
+      "lastAttempt": "2026-07-20T08:20:03.016Z",
+      "lastSuccess": "2026-07-20T08:20:03.016Z",
       "status": "fetched",
       "statusCode": 200,
       "error": "",
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62559,
-      "bodyHash": "3b7a62d7de2cda50ed0cb722a88aabd82dc438b3f63a804be8f754811e8b51a6",
+      "bodyHash": "e3b30410dc4c556fdc1d4de84402bb0e2efa4a494777f5f823fdc4b07b27d61e",
       "changed": true,
       "firstSnapshot": false,
       "itemCount": 14,
@@ -2092,15 +2034,15 @@
         "daily",
         "weekly"
       ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
+      "lastAttempt": "2026-07-20T08:20:03.016Z",
+      "lastSuccess": "2026-07-20T08:20:03.016Z",
       "status": "fetched",
       "statusCode": 200,
       "error": "",
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22658,
-      "bodyHash": "ddcf907948d83b953bbb2dfeff56164fb0af0fa42f695f8ac015c48913241c09",
+      "bodyHash": "7cda45c8ef43b5622a697ca8ed1dda352a921b4ae2563602bf4fdcfdf3f61919",
       "changed": true,
       "firstSnapshot": false,
       "itemCount": 40,
@@ -2148,30 +2090,6 @@
       ]
     },
     {
-      "sourceId": "usaspending-recent-contracts",
-      "label": "USAspending.gov — Recent Contract Awards",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "frequency": [
-        "daily",
-        "weekly"
-      ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "error": "",
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "contentType": "application/json",
-      "bytes": 482,
-      "bodyHash": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a",
-      "changed": true,
-      "firstSnapshot": false,
-      "itemCount": 0,
-      "itemIds": []
-    },
-    {
       "sourceId": "treasury-ofac-recent-actions",
       "label": "U.S. Treasury OFAC — Recent Actions",
       "lane": "international-corruption",
@@ -2181,15 +2099,15 @@
         "daily",
         "weekly"
       ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
+      "lastAttempt": "2026-07-20T08:20:03.016Z",
+      "lastSuccess": "2026-07-20T08:20:03.016Z",
       "status": "fetched",
       "statusCode": 200,
       "error": "",
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43145,
-      "bodyHash": "b24c45d5785f8915c692c9720344e5494e5c97e5a3d57cc38e531f238951200f",
+      "bytes": 43144,
+      "bodyHash": "86a13cf18096ca288215429c115c2e515057b180f35a18bff73a3a70c809cb67",
       "changed": true,
       "firstSnapshot": false,
       "itemCount": 18,
@@ -2224,15 +2142,15 @@
         "daily",
         "weekly"
       ],
-      "lastAttempt": "2026-07-20T07:04:26.957Z",
-      "lastSuccess": "2026-07-20T07:04:26.957Z",
+      "lastAttempt": "2026-07-20T08:20:03.016Z",
+      "lastSuccess": "2026-07-20T08:20:03.016Z",
       "status": "fetched",
       "statusCode": 200,
       "error": "",
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "71593f50760ebd725fadb594e2475a90c26ff328897c333225c5f56dec578474",
+      "bodyHash": "21abe6b37b7d1fb0c407cb3649c8e058e494b8415dc559154b0b734582f485c8",
       "changed": true,
       "firstSnapshot": false,
       "itemCount": 15,
@@ -2459,6 +2377,48 @@
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
   "sourceChanges": [
     {
+      "id": "4f6142409f6345aa4038244f",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-20T08:20:14.211Z",
+      "detectedAt": "2026-07-20T08:20:14.211Z",
+      "changeType": "content-changed",
+      "previousHash": "888ad7e4e2ee65fe10171abf0bd4c72ec101e4c8b29eae72baf95c62f37ccac4",
+      "currentHash": "8ab23c387e944478aa65f53e7f9f9f37c78a7fdb0c8b5ffc16e961b2043bb023",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 20 Jul 2026 04:20:14 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T04:20:14-04:00 4 - Langlois Sophia J."
+      ],
+      "removals": [
+        "Latest Filings - Mon, 20 Jul 2026 03:04:37 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T03:04:37-04:00 4 - Langlois Sophia J."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
       "id": "12211ad7f5ffc796baa3c75a",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
       "sourceId": "sec-current-filings",
@@ -2625,119 +2585,8 @@
       "evidenceGrade": "B",
       "factualStatus": "source-change-observation",
       "status": "source-change"
-    },
-    {
-      "id": "bbf3afbd918f5c8ef1d82250",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceId": "sec-current-filings",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-18T07:12:31.532Z",
-      "detectedAt": "2026-07-18T07:12:31.532Z",
-      "changeType": "content-changed",
-      "previousHash": "b135b162b5eac9b2ac8defd92d24915301857629c467d6d9a1387ac69454226a",
-      "currentHash": "65418e322b5ef9e53ed7f46d77e70b1949f148d74912d75e3d48cdd669f17429",
-      "httpStatus": 200,
-      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "additions": [
-        "Latest Filings - Sat, 18 Jul 2026 03:12:31 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-18T03:12:31-04:00 4 - Langlois Sophia J.",
-        "(0001903130) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Yoskowitz Marc J (0001617306) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Hirsch Scott (0002024619) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Zinman Jon (0002001886) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Efron Paul (0002024711) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Dorton Katina (0001617541) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4 - Bisaro Paul (0001237253) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4/A - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4/A - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4 - Jaffe Jennifer Anne (0002070626) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - Kowalski Thomas Michael (0002070708) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BREITMEYER JAMES B (0001244823) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - Vaxart, Inc.",
-        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - HERON ELAINE J (0001235471) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Vaxart, Inc.",
-        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Watson W.",
-        "Mark (0001612372) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Vaxart, Inc.",
-        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Wheadon David E.",
-        "(0001789507) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Vaxart, Inc.",
-        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Prentiss Christopher B (0001717583) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - Marasco Dominic (0002053897) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MapLight Therapeutics, Inc.",
-        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - Kroeger Christopher A.",
-        "(0001658918) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - MapLight Therapeutics, Inc.",
-        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Lillie James Woodruff (0001728746) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Tross Stuart A (0001589641) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134"
-      ],
-      "removals": [
-        "Latest Filings - Fri, 17 Jul 2026 19:07:55 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-17T19:07:55-04:00 SCHEDULE 13G - INVERSIONES ATLANTIDA S.A.",
-        "(0002142636) (Filed by) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308074 <b>Size:</b> 19 KB 2026-07-17T19:03:11-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308074 SCHEDULE 13G - USCB FINANCIAL HOLDINGS, INC.",
-        "(0001901637) (Subject) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308074 <b>Size:</b> 19 KB 2026-07-17T19:03:11-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308074 4 - Cloudflare, Inc.",
-        "(0001477333) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001473289-26-000018 <b>Size:</b> 36 KB 2026-07-17T19:01:56-04:00 urn:tag:sec.gov,2008:accession-number=0001473289-26-000018 4 - SEIFERT THOMAS J (0001473289) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001473289-26-000018 <b>Size:</b> 36 KB 2026-07-17T19:01:56-04:00 urn:tag:sec.gov,2008:accession-number=0001473289-26-000018 4 - Septerna, Inc.",
-        "(0001984086) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308073 <b>Size:</b> 8 KB 2026-07-17T19:00:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308073 4 - Bhatt Elizabeth (0001748622) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308073 <b>Size:</b> 8 KB 2026-07-17T19:00:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308073 4 - ALLEN SCOTT R.",
-        "(0001652149) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001652149-26-000004 <b>Size:</b> 6 KB 2026-07-17T18:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001652149-26-000004 4 - MICRON TECHNOLOGY INC (0000723125) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001652149-26-000004 <b>Size:</b> 6 KB 2026-07-17T18:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001652149-26-000004 4 - Hasan Zain Syed (0002102674) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079326 <b>Size:</b> 5 KB 2026-07-17T18:52:44-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079326 4 - Health In Tech, Inc.",
-        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079326 <b>Size:</b> 5 KB 2026-07-17T18:52:44-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079326 4 - Health In Tech, Inc.",
-        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079324 <b>Size:</b> 5 KB 2026-07-17T18:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079324 4 - Johnson Tim Donald (0001993657) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079324 <b>Size:</b> 5 KB 2026-07-17T18:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079324 4 - Health In Tech, Inc.",
-        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079323 <b>Size:</b> 5 KB 2026-07-17T18:52:17-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079323 4 - Qian LinLin (0001849454) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079323 <b>Size:</b> 5 KB 2026-07-17T18:52:17-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079323 4 - Ramaswamy Sridhar (0001715472) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001715472-26-000008 <b>Size:</b> 6 KB 2026-07-17T18:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001715472-26-000008 4 - Snowflake Inc.",
-        "(0001640147) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001715472-26-000008 <b>Size:</b> 6 KB 2026-07-17T18:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001715472-26-000008 4 - DERECHIN ADAM M (0001181440) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308068 <b>Size:</b> 5 KB 2026-07-17T18:45:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308068 4 - COHEN & STEERS QUALITY INCOME REALTY FUND INC (0001157842) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308068 <b>Size:</b> 5 KB 2026-07-17T18:45:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308068 4 - WILSON JAMES N (0001236387) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308061 <b>Size:</b> 12 KB 2026-07-17T18:38:28-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308061 4 - CORCEPT THERAPEUTICS INC (0001088856) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308061 <b>Size:</b> 12 KB 2026-07-17T18:38:28-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308061 4 - Oey Peter Henry (0001976718) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001976718-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001976718-26-000009 4 - Grab Holdings Ltd (0001855612) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001976718-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001976718-26-000009 4/A - Strahley John (0001875425) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001493152-26-033814 <b>Size:</b> 6 KB 2026-07-17T18:33:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-033814 4/A - Aspira Women's Health Inc.",
-        "(0000926617) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001493152-26-033814 <b>Size:</b> 6 KB 2026-07-17T18:33:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-033814 4 - Mendoza Marie (0001660112) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001660112-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:31:42-04:00 urn:tag:sec.gov,2008:accession-number=0001660112-26-000009 4 - KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
-        "(0001069258) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001660112-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:31:42-04:00 urn:tag:sec.gov,2008:accession-number=0001660112-26-000009 4 - Mokari Atabak (0001678419) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308058 <b>Size:</b> 18 KB 2026-07-17T18:31:34-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308058 4 - CORCEPT THERAPEUTICS INC (0001088856) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308058 <b>Size:</b> 18 KB 2026-07-17T18:31:34-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308058 4 - Sauvage Philippe (0002039891) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002039891-26-000008 <b>Size:</b> 11 KB 2026-07-17T18:27:20-04:00 urn:tag:sec.gov,2008:accession-number=0002039891-26-000008 4 - Nuvation Bio Inc.",
-        "(0001811063) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002039891-26-000008 <b>Size:</b> 11 KB 2026-07-17T18:27:20-04:00 urn:tag:sec.gov,2008:accession-number=0002039891-26-000008 4 - BlackRock, Inc.",
-        "(0002012383) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002012383-26-001977 <b>Size:</b> 4 KB 2026-07-17T18:26:44-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-001977 4 - FINK LAURENCE (0001059245) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002012383-26-001977 <b>Size:</b> 4 KB 2026-07-17T18:26:44-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-001977 4 - Calabria Carlo (0001863192) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000148 <b>Size:</b> 8 KB 2026-07-17T18:23:33-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000148 4 - Arqit Quantum Inc.",
-        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000148 <b>Size:</b> 8 KB 2026-07-17T18:23:33-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000148 4 - Carrai Phillip D (0001509409) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001509409-26-000009 <b>Size:</b> 14 KB 2026-07-17T18:23:00-04:00 urn:tag:sec.gov,2008:accession-number=0001509409-26-000009 4 - KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
-        "(0001069258) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001509409-26-000009 <b>Size:</b> 14 KB 2026-07-17T18:23:00-04:00 urn:tag:sec.gov,2008:accession-number=0001509409-26-000009 4 - Arqit Quantum Inc.",
-        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000147 <b>Size:</b> 8 KB 2026-07-17T18:22:11-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000147 4 - Ritchie Garth (0001840684) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000147 <b>Size:</b> 8 KB 2026-07-17T18:22:11-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000147 4 - Arqit Quantum Inc.",
-        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000146 <b>Size:</b> 9 KB 2026-07-17T18:21:03-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000146 4 - Lefebvre d'Ovidio Manfredi (0001840678) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000146 <b>Size:</b> 9 KB 2026-07-17T18:21:03-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000146"
-      ],
-      "additionCount": 11,
-      "removalCount": 18,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
-    },
-    {
-      "id": "3a612824bd2383e3b7554062",
-      "title": "content changed: Federal Register — Latest Documents",
-      "sourceId": "federal-register-latest",
-      "sourceLabel": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "lane": "oversight-audit",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-18T07:12:31.532Z",
-      "detectedAt": "2026-07-18T07:12:31.532Z",
-      "changeType": "content-changed",
-      "previousHash": "86b3dc25525bd2232653143353b5a8b7c5b90afb53b364faecd79b861e664a95",
-      "currentHash": "e05251257865a2d3bc4023df38aeb6f921dd425729bbcdebef8a7702f8a87024",
-      "httpStatus": 200,
-      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "additions": [
-        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ1MDUiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
-      ],
-      "removals": [
-        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ0MTMiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
-      ],
-      "additionCount": 1,
-      "removalCount": 1,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
     }
   ],
-  "sourceChangeConclusion": "6 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
+  "sourceChangeConclusion": "5 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
   "integrityVersion": 1
 }

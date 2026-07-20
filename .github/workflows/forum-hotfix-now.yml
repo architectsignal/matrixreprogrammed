@@ -1,0 +1,82 @@
+name: Forum Hotfix Now
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/forum-hotfix-now.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: forum-hotfix-now
+  cancel-in-progress: false
+
+jobs:
+  repair-commit-dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply every permanent forum owner
+        run: |
+          node scripts/install-forum-page-consistency-owner.js
+          node scripts/repair-forum-member-posting.js
+          node scripts/repair-forum-page-consistency.js
+          node scripts/forum-member-posting-test.js
+          node --check forum.js
+          node --check src/worker.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-forum-persistence.js
+          node --check src/worker-production.js
+
+      - name: Commit unified forum source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'matrix-forum-hotfix-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            forum.js \
+            forum.html \
+            dark-speculation-forum.html \
+            epstein-alive-board.html \
+            member-login.html \
+            src/worker.js \
+            src/worker-member-experience.js \
+            src/worker-forum-persistence.js \
+            scripts/repair-forum-member-posting.js \
+            scripts/repair-forum-page-consistency.js \
+            scripts/install-forum-page-consistency-owner.js \
+            scripts/forum-member-posting-test.js \
+            scripts/final-production-reconcile.js \
+            scripts/production-sync-test.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Unify all forums on verified member D1 posting'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Cancel production runs that began before unified forum source
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh run cancel 29734687470 --repo "$GITHUB_REPOSITORY" || true
+          gh run cancel 29736429465 --repo "$GITHUB_REPOSITORY" || true
+
+      - name: Dispatch one clean guarded release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run 'Matrix Reprogrammed Controlled Production Deploy' \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

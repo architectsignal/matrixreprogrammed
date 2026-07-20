@@ -65,10 +65,13 @@
     panel = document.createElement('section');
     panel.id = 'epstein-investigator-lane';
     panel.className = 'section wrap';
-    panel.innerHTML = `<div class="eyebrow">Dedicated DOJ Epstein / EFTA lane</div>
-      <h2>EPSTEIN FILE INVESTIGATOR STATUS</h2>
-      <div id="epstein-investigator-status" class="spec-metrics" aria-live="polite"><div class="spec-metric"><strong>…</strong><span>Loading lane status</span></div></div>
-      <p id="epstein-investigator-boundary" class="spec-boundary">The lane publishes only evidence-bounded system-level hypotheses. File appearance or association never establishes guilt.</p>`;
+    panel.innerHTML = `<div class="eyebrow">Dedicated Epstein public-record investigation lane</div>
+      <h2>AI DETECTIVE — EPSTEIN FILES</h2>
+      <p class="lead">The machine rebuilds a bounded investigation docket from the current Daily Epstein public-record window. It tests disclosure, custody, oversight and institutional-mechanism hypotheses without turning association into guilt.</p>
+      <div id="epstein-investigator-status" class="spec-metrics" aria-live="polite"><div class="spec-metric"><strong>…</strong><span>Loading investigator status</span></div></div>
+      <p id="epstein-investigator-boundary" class="spec-boundary">The lane publishes only evidence-bounded system-level hypotheses. File appearance or association never establishes guilt.</p>
+      <div class="cta-row"><a class="btn alt" href="daily-epstein-update.html">Open Current Record Window</a><a class="btn alt" href="epstein-files.html">Verified Epstein File Hub</a></div>
+      <div id="epstein-investigator-docket" class="spec-grid" aria-live="polite"></div>`;
     const feedSection = metrics?.closest('section');
     if (feedSection?.parentNode) feedSection.parentNode.insertBefore(panel, feedSection);
     return panel;
@@ -78,16 +81,19 @@
     ensureEpsteinPanel();
     const target = document.getElementById('epstein-investigator-status');
     const boundary = document.getElementById('epstein-investigator-boundary');
+    const docketTarget = document.getElementById('epstein-investigator-docket');
     if (!target) return;
     const n = value => Number.isFinite(Number(value)) ? Number(value) : 0;
     target.innerHTML = `
-      <div class="spec-metric"><strong>${esc(data.status || 'unknown')}</strong><span>Lane status</span></div>
-      <div class="spec-metric"><strong>${n(data.corpusDocuments)}</strong><span>Restricted EFTA documents indexed</span></div>
-      <div class="spec-metric"><strong>${n(data.eligiblePassages)}</strong><span>Extractable passages eligible for analysis</span></div>
-      <div class="spec-metric"><strong>${n(data.completedMissions)}</strong><span>Epstein missions completed</span></div>
-      <div class="spec-metric"><strong>${n(data.publishedConclusions)}</strong><span>Public-safe conclusions published</span></div>
-      <div class="spec-metric"><strong>${n(data.reviewDrafts)}</strong><span>Review items auto-route to labelled speculation</span></div>`;
-    if (boundary) boundary.innerHTML = `<strong>Last cycle:</strong> ${esc(data.updated || 'not run')} · <strong>Dataset lane:</strong> ${esc(data.currentDataset || 'pending')} · <strong>Last result:</strong> ${esc(data.lastMissionStatus || 'pending')}. ${esc(data.boundary || 'System-level hypotheses only. No guilt by association.')}`;
+      <div class="spec-metric"><strong>${esc(data.status || 'unknown')}</strong><span>Investigator status</span></div>
+      <div class="spec-metric"><strong>${n(data.corpusDocuments)}</strong><span>Current public-record leads indexed</span></div>
+      <div class="spec-metric"><strong>${n(data.eligiblePassages)}</strong><span>Source-linked leads eligible for analysis</span></div>
+      <div class="spec-metric"><strong>${n(data.completedMissions)}</strong><span>Bounded hypotheses generated</span></div>
+      <div class="spec-metric"><strong>${n(data.publishedConclusions)}</strong><span>Public-safe docket items published</span></div>
+      <div class="spec-metric"><strong>${n(data.reviewDrafts)}</strong><span>Held for human review</span></div>`;
+    if (boundary) boundary.innerHTML = `<strong>Last cycle:</strong> ${esc(data.updated || 'not run')} · <strong>Dataset:</strong> ${esc(data.currentDataset || 'pending')} · <strong>Last result:</strong> ${esc(data.lastMissionStatus || 'pending')}. ${esc(data.boundary || 'System-level hypotheses only. No guilt by association.')}`;
+    const docket = Array.isArray(data.docket) ? data.docket : [];
+    if (docketTarget) docketTarget.innerHTML = docket.length ? docket.map(card).join('') : '<div class="spec-empty">No Epstein hypotheses were published because the current source window did not meet the minimum input and evidence-boundary requirements.</div>';
   }
 
   function render(data, filter = 'all') {
@@ -96,13 +102,13 @@
     const counts = items.reduce((out, item) => { out[item.status] = (out[item.status] || 0) + 1; return out; }, {});
     const autoPublished = items.filter(item => item.publicationState === 'auto-published-from-review-queue').length;
     metrics.innerHTML = `
-      <div class="spec-metric"><strong>${items.length}</strong><span>Total hypotheses</span></div>
+      <div class="spec-metric"><strong>${items.length}</strong><span>General hypotheses</span></div>
       <div class="spec-metric"><strong>${autoPublished}</strong><span>Auto-published review items</span></div>
       <div class="spec-metric"><strong>${counts.unverified || 0}</strong><span>Unverified speculation</span></div>
       <div class="spec-metric"><strong>${counts['evidence-supported'] || 0}</strong><span>Evidence-supported hypotheses</span></div>
       <div class="spec-metric"><strong>${(counts.weakened || 0) + (counts.rejected || 0)}</strong><span>Weakened or rejected</span></div>`;
     const queueRule = data.reviewQueueAutoPublication?.enabled ? ` · review queue auto-publication enabled: ${autoPublished} imported` : '';
-    status.textContent = `Feed updated ${data.updated || 'unknown'} · ${visible.length} item(s) shown · scope: ${data.automaticPublicationScope || 'speculation page only'}${queueRule}`;
+    status.textContent = `General feed updated ${data.updated || 'unknown'} · ${visible.length} item(s) shown · scope: ${data.automaticPublicationScope || 'speculation page only'}${queueRule}`;
     grid.innerHTML = visible.length ? visible.map(card).join('') : '<div class="spec-empty">No conclusions match this filter.</div>';
   }
 
@@ -110,7 +116,7 @@
   fetch(EPSTEIN_STATUS_URL, { cache: 'no-store' })
     .then(response => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
     .then(renderEpsteinStatus)
-    .catch(error => renderEpsteinStatus({ status: 'status unavailable', lastMissionStatus: error.message, boundary: 'The page will not invent processing counts or conclusions when the status feed is unavailable.' }));
+    .catch(error => renderEpsteinStatus({ status: 'status unavailable', lastMissionStatus: error.message, boundary: 'The page will not invent processing counts or conclusions when the status feed is unavailable.', docket: [] }));
 
   fetch(DATA_URL, { cache: 'no-store' })
     .then(response => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })

@@ -82,7 +82,14 @@ for (const marker of [
   'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',
   "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'"
 ]) needText('src/worker-production.js', marker, `strict Worker marker ${marker}`);
-for (const marker of ['Cloudflare D1 MEMBERS_DB.forum_posts','INSERT OR IGNORE INTO forum_posts','kv_forum_migration_v1','D1 authoritative; KV compatibility mirror']) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
+for (const marker of [
+  'Cloudflare D1 MEMBERS_DB.forum_posts',
+  'INSERT INTO forum_posts',
+  'D1 did not confirm the forum insert',
+  'D1 forum read-after-write confirmation failed',
+  'kv_forum_migration_v1',
+  'D1 authoritative; KV compatibility mirror'
+]) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/checkout-intent','/api/paypal/subscription/create','/api/paypal/subscription/return','/api/paypal/subscription/confirm','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
 needText('src/worker.js', 'env.ASSETS.fetch', 'legacy asset fetch behind strict boundary');
 

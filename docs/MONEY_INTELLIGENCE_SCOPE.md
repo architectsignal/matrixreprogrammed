@@ -1,0 +1,1 @@
+Public scope: Top 100 wealth map, Making Money guide, generated profiles, branded PDFs, calculators, France tax references, legal structures and future capital scenarios. Excludes personalised advice, hidden-asset claims and guaranteed returns.

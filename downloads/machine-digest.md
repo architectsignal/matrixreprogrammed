@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-19T19:31:18.848Z
+Updated: 2026-07-20T04:03:05.575Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 3
-Normalized events: 12
-Entity observations: 21
+Feeds reached: 4
+Normalized events: 18
+Entity observations: 38
 
 ## Latest Events
 
@@ -22,12 +22,19 @@ Entity observations: 21
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
+- charged / sued: Sawas v. Elzanaty — courtlistener-court-records — https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/
+- charged / sued: People v. Brim — courtlistener-court-records — https://www.courtlistener.com/opinion/10919846/people-v-brim/
+- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
+- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
+- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
 
 ## Entity Observations
 
 - Homeland Security Department: 2 mention(s), lanes: federal-register-policy
 - Health and Human Services Department: 2 mention(s), lanes: federal-register-policy
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
+- Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
 - Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
 - Management and Budget Office: 1 mention(s), lanes: federal-register-policy
 - Federal Procurement Policy Office: 1 mention(s), lanes: federal-register-policy
@@ -46,3 +53,11 @@ Entity observations: 21
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
+- Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority: 1 mention(s), lanes: courtlistener-court-records
+- Supreme Court of Rhode Island: 1 mention(s), lanes: courtlistener-court-records
+- 2025-0045-Appeal.: 1 mention(s), lanes: courtlistener-court-records
+- Sawas v. Elzanaty: 1 mention(s), lanes: courtlistener-court-records
+- 2021-00294: 1 mention(s), lanes: courtlistener-court-records
+- People v. Brim: 1 mention(s), lanes: courtlistener-court-records
+- California Court of Appeal: 1 mention(s), lanes: courtlistener-court-records
+- A170747M: 1 mention(s), lanes: courtlistener-court-records

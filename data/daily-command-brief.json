@@ -1,9 +1,99 @@
 {
-  "updated": "2026-07-19T19:31:39.202Z",
+  "updated": "2026-07-20T04:03:22.755Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "courtlistener-court-records-10928510-1",
+      "hash": "8fecafeb799b260d",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+      "date": "2026-07-15",
+      "names": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Supreme Court of Rhode Island",
+        "2025-0045-Appeal."
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10919908-2",
+      "hash": "81e0bf4c2be8a6fd",
+      "summary": "Sawas v. Elzanaty",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+      "date": "2026-07-08",
+      "names": [
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10919846-3",
+      "hash": "49b2b26e8c22195c",
+      "summary": "People v. Brim",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+      "date": "2026-07-08",
+      "names": [
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10917016-4",
+      "hash": "8721abb56410f277",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
+      "date": "2026-07-07",
+      "names": [
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Court of Appeals for the Second Circuit",
+        "25-113"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883674-5",
+      "hash": "f95a37eb5eb447bc",
+      "summary": "Matter of Pagliughi",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "date": "2026-07-01",
+      "names": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883331-6",
+      "hash": "b39adcd19b344458",
+      "summary": "Biddle v. Biddle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "date": "2026-07-01",
+      "names": [
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ]
+    }
+  ],
   "topEntityChanges": [
+    {
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+    },
     {
       "name": "Centers for Medicare & Medicaid Services",
       "judgement": "Worth watching because records and relationship signals both exist.",
@@ -40,19 +130,14 @@
       "route": "entity-briefs/national-aeronautics-and-space-administration.html"
     },
     {
-      "name": "Homeland Security Department",
-      "judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "route": "entity-briefs/homeland-security-department.html"
+      "name": "2021-00294",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/2021-00294.html"
     },
     {
-      "name": "AAPL",
+      "name": "2024-07773",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/aapl.html"
-    },
-    {
-      "name": "Alphabet Inc.",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/alphabet-inc.html"
+      "route": "entity-briefs/2024-07773.html"
     }
   ],
   "topContractors": [
@@ -1139,6 +1224,12 @@
   ],
   "missingRecords": [
     {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
@@ -1181,81 +1272,75 @@
       "type": "entity brief"
     },
     {
+      "entity": "2021-00294",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2021-00294.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2024-07773",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2024-07773.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2025-0045-Appeal.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2025-0045-appeal.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "25-113",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/25-113.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "25-581",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/25-581.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "A170747M",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/a170747m.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Biddle v. Biddle",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/biddle-v-biddle.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "California Court of Appeal",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/california-court-of-appeal.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Second Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals of North Carolina",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/homeland-security-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AAPL",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/aapl.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Alphabet Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/alphabet-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AMAZON COM INC",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/amazon-com-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AMZN",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/amzn.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Apple Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/apple-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AVGO",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/avgo.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Broadcom Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/broadcom-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "GOOGL",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/googl.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "MICROSOFT CORP",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/microsoft-corp.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "MSFT",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/msft.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "NVDA",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/nvda.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "NVIDIA CORP",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/nvidia-corp.html",
       "type": "entity brief"
     }
   ],

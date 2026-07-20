@@ -66,7 +66,7 @@ function sourcesFor(record) {
   return routes;
 }
 
-function normalise(record, generatedAt) {
+function normalise(record, generatedAt, previous) {
   const generated = record.generated || {};
   const speculation = generated.speculativeConclusion || {};
   const counter = generated.counterAndMissing || {};
@@ -131,8 +131,8 @@ function normalise(record, generatedAt) {
     criminalConductEstablished: false,
     humanReviewed: false,
     autoPublished: true,
-    generatedAt: generatedAt || new Date().toISOString(),
-    autoPublishedAt: new Date().toISOString(),
+    generatedAt: generatedAt || previous?.generatedAt || '1970-01-01T00:00:00.000Z',
+    autoPublishedAt: previous?.autoPublishedAt || generatedAt || '1970-01-01T00:00:00.000Z',
     lastReviewedAt: null,
     boundary: 'AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt.'
   };
@@ -141,6 +141,7 @@ function normalise(record, generatedAt) {
 buildQueue();
 const feed = readJson(feedPath);
 const queue = readJson(queuePath);
+const previousImported = new Map(array(feed.items).filter(item => item.publicationState === 'auto-published-from-review-queue').map(item => [item.id, item]));
 const retained = array(feed.items).filter(item => item.publicationState !== 'auto-published-from-review-queue');
 const rejected = [];
 const imported = [];
@@ -149,12 +150,13 @@ for (const record of array(queue.records)) {
     rejected.push({ id: record.id, title: record.title, reason: 'prohibited private/sensitive-content pattern' });
     continue;
   }
-  imported.push(normalise(record, queue.generatedAt));
+  const generated = normalise(record, queue.generatedAt, null);
+  imported.push(normalise(record, queue.generatedAt, previousImported.get(generated.id)));
 }
 const byId = new Map();
 for (const item of [...retained, ...imported]) byId.set(item.id, item);
 feed.version = '3.0';
-feed.updated = new Date().toISOString();
+feed.updated = queue.generatedAt || feed.updated;
 feed.automaticPublicationScope = 'speculation_page_only';
 feed.automaticPublicationApproved = true;
 feed.verifiedEvidencePagesAffected = false;
@@ -178,7 +180,7 @@ writeJson(feedPath, feed);
 if (fs.existsSync(path.dirname(outputCopy))) writeJson(outputCopy, feed);
 writeJson(reportPath, {
   ok: true,
-  generatedAt: new Date().toISOString(),
+  generatedAt: queue.generatedAt || feed.updated,
   queueRecords: array(queue.records).length,
   imported: imported.length,
   retainedCuratedItems: retained.length,

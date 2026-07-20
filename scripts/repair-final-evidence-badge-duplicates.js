@@ -37,6 +37,18 @@ function copy(rel) {
   if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
   report.repaired.push(rel);
 }
+function repairAuditIdParser() {
+  const auditFile = path.join(root, 'scripts', 'full-site-function-tool-audit.js');
+  if (!fs.existsSync(auditFile)) fail('Full-site audit script is missing');
+  const flawed = `  return [...html.matchAll(/\\bid\\s*=\\s*(["'])([^"']+)\\1/gi)].map(match => match[2]);`;
+  const corrected = `  return [...html.matchAll(/(?:^|\\s)id\\s*=\\s*(["'])([^"']+)\\1/gi)].map(match => match[2]);`;
+  const before = fs.readFileSync(auditFile, 'utf8');
+  let after = before;
+  if (before.includes(flawed)) after = before.replace(flawed, corrected);
+  if (!after.includes(corrected)) fail('Could not verify the standalone HTML ID parser in full-site audit');
+  if (after !== before) fs.writeFileSync(auditFile, after);
+  report.auditIdParser = after === before ? 'already-correct' : 'patched-before-final-audit';
+}
 
 const canonical = spawnSync(process.execPath, [path.join(root, 'scripts', 'ensure-evidence-badge-routes.js')], {
   cwd: root,
@@ -64,5 +76,6 @@ for (const rel of targets) {
   }
 }
 
+repairAuditIdParser();
 persist();
-console.log(`Final evidence badge duplicate repair passed across ${targets.length} source and Cloudflare routes.`);
+console.log(`Final evidence badge duplicate repair passed across ${targets.length} source and Cloudflare routes; audit ID parser ${report.auditIdParser}.`);

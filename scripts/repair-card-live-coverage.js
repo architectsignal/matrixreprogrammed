@@ -6,6 +6,11 @@ function read(file, fallback = '') { try { return fs.readFileSync(path.join(root
 function readJson(file, fallback = {}) { try { return JSON.parse(read(file)); } catch { return fallback; } }
 function write(file, value) { const full = path.join(root, file); fs.mkdirSync(path.dirname(full), { recursive: true }); fs.writeFileSync(full, value); }
 function clean(value = '') { return String(value).replace(/<[^>]+>/g, ' ').replace(/&(?:#039|quot|amp|lt|gt);/g, ' ').replace(/\s+/g, ' ').trim(); }
+function runtimePath(route) {
+  const directory = path.posix.dirname(String(route || '').replace(/\\/g, '/'));
+  const depth = directory === '.' ? 0 : directory.split('/').filter(Boolean).length;
+  return `${'../'.repeat(depth)}investigation-pulse.js`;
+}
 
 const feedPath = 'data/card-live-updates.json';
 const feed = readJson(feedPath, { cards: [], byRoute: {}, andrewTateRoutes: [] });
@@ -70,28 +75,32 @@ for (const card of feed.cards) {
   if (!route || route.includes('?') || route.includes('#') || !route.endsWith('.html')) continue;
   const full = path.join(root, route);
   if (!fs.existsSync(full)) { missing.push(route); continue; }
-  let html = read(route);
-  if (html.includes('investigation-pulse.js')) continue;
-  if (html.includes('</body>')) html = html.replace('</body>', '<script src="/investigation-pulse.js"></script></body>');
-  else html += '<script src="/investigation-pulse.js"></script>';
-  write(route, html);
-  touched.push(route);
+  const before = read(route);
+  const src = runtimePath(route);
+  const tag = `<script src="${src}"></script>`;
+  let html = before.replace(/<script\b[^>]*\bsrc=["'][^"']*investigation-pulse\.js["'][^>]*>\s*<\/script>/gi, '');
+  if (html.includes('</body>')) html = html.replace('</body>', `${tag}</body>`);
+  else html += tag;
+  if (html !== before) {
+    write(route, html);
+    touched.push(route);
+  }
 }
 
 const report = {
   ok: feed.cards.length > 0 && feed.andrewTateRoutes.length > 0 && missing.length === 0,
   generatedAt: new Date().toISOString(),
   trackedCards: feed.cards.length,
-  runtimeInjected: touched.length,
+  runtimeInjectedOrCorrected: touched.length,
   andrewTateRoutes: feed.andrewTateRoutes,
   missingRoutes: missing,
-  boundary: 'This repair adds the shared live intelligence runtime only. It does not modify approved card artwork or promote unverified claims.'
+  boundary: 'This repair adds the shared live intelligence runtime with a depth-correct relative path. It does not modify approved card artwork or promote unverified claims.'
 };
 write('downloads/card-live-coverage-repair.json', `${JSON.stringify(report, null, 2)}\n`);
-write('downloads/card-live-coverage-repair.md', `# Card Live Coverage Repair\n\nGenerated: ${report.generatedAt}\n\n- Result: ${report.ok ? 'PASS' : 'FAIL'}\n- Tracked cards: ${report.trackedCards}\n- Runtime injected: ${report.runtimeInjected}\n- Andrew Tate routes: ${report.andrewTateRoutes.join(', ') || 'none'}\n- Missing routes: ${report.missingRoutes.join(', ') || 'none'}\n\n${report.boundary}\n`);
+write('downloads/card-live-coverage-repair.md', `# Card Live Coverage Repair\n\nGenerated: ${report.generatedAt}\n\n- Result: ${report.ok ? 'PASS' : 'FAIL'}\n- Tracked cards: ${report.trackedCards}\n- Runtime injected or corrected: ${report.runtimeInjectedOrCorrected}\n- Andrew Tate routes: ${report.andrewTateRoutes.join(', ') || 'none'}\n- Missing routes: ${report.missingRoutes.join(', ') || 'none'}\n\n${report.boundary}\n`);
 
 if (!report.ok) {
   console.error(`Card live coverage failed: Andrew Tate routes ${report.andrewTateRoutes.length}; missing routes ${missing.length}.`);
   process.exit(1);
 }
-console.log(`Card live coverage repaired for ${feed.cards.length} card(s); runtime injected into ${touched.length}; Andrew Tate route(s): ${feed.andrewTateRoutes.join(', ')}.`);
+console.log(`Card live coverage repaired for ${feed.cards.length} card(s); runtime corrected on ${touched.length}; Andrew Tate route(s): ${feed.andrewTateRoutes.join(', ')}.`);

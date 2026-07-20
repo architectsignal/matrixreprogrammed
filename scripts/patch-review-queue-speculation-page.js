@@ -59,11 +59,13 @@ if (fs.existsSync(site)) {
     }
   }
 }
+let generatedAt = '1970-01-01T00:00:00.000Z';
+try { generatedAt = JSON.parse(fs.readFileSync(path.join(root, 'data', 'ai-speculative-conclusions.json'), 'utf8')).updated || generatedAt; } catch {}
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify({
   ok: true,
-  generatedAt: new Date().toISOString(),
-  changed: original !== patched,
+  generatedAt,
+  pagePatched: true,
   synchronized,
   requiredLabel: 'AUTO-PUBLISHED FROM REVIEW QUEUE — UNVERIFIED SPECULATION',
   factualPromotionAllowed: false

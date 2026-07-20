@@ -104,6 +104,18 @@ function collectPdfs(dir, out = []) {
   }
   return out;
 }
+function collectManifestOutputs(dir, out = new Set()) {
+  if (!fs.existsSync(dir)) return out;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) collectManifestOutputs(full, out);
+    else if (entry.isFile() && entry.name.endsWith('.json')) {
+      const manifest = json(full);
+      if (manifest && manifest.output) out.add(String(manifest.output).replace(/\\/g, '/').replace(/^\.\//, ''));
+    }
+  }
+  return out;
+}
 function labelFor(file) {
   return titleCase(path.relative(downloads, file).replace(/\\/g, '/'));
 }
@@ -113,8 +125,18 @@ function card(item, tag) {
 
 if (!fs.existsSync(downloads)) throw new Error('downloads directory is missing');
 const rebuilt = requiredPremium.map(rebuildPremium);
+const manifestOutputs = collectManifestOutputs(path.join(root, 'data', 'report-manifests'));
 const allPdfs = collectPdfs(downloads)
-  .map(file => ({ file: `downloads/${path.relative(downloads, file).replace(/\\/g, '/')}`, title: labelFor(file), kind: file.includes(`${path.sep}wealth-guides${path.sep}`) ? 'wealth-guide' : 'deep-intelligence-report' }))
+  .map(file => {
+    const relative = `downloads/${path.relative(downloads, file).replace(/\\/g, '/')}`;
+    const generated = manifestOutputs.has(relative);
+    return {
+      file: relative,
+      title: labelFor(file),
+      kind: generated ? (file.includes(`${path.sep}wealth-guides${path.sep}`) ? 'wealth-guide' : 'deep-intelligence-report') : 'preserved-custom',
+      reused: !generated
+    };
+  })
   .sort((a, b) => a.file.localeCompare(b.file));
 const map = new Map(allPdfs.map(item => [item.file, item]));
 const flagships = flagshipOrder
@@ -139,12 +161,12 @@ const index = {
   pdfs: allPdfs
 };
 fs.writeFileSync(path.join(downloads, 'branded-download-index.json'), `${JSON.stringify(index, null, 2)}\n`);
-fs.writeFileSync(path.join(downloads, 'branded-download-index.md'), `# Branded Download PDF Index\n\nUpdated: ${index.updated}\n\nThe library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.\n\n## Flagship PDFs\n\n${flagships.map(item => `- ${item.label}: ${item.file}`).join('\n')}\n\n## Subject Intelligence PDFs\n\n${subjectPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n\n## Full PDF Index\n\n${allPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n`);
+fs.writeFileSync(path.join(downloads, 'branded-download-index.md'), `# Branded Download PDF Index\n\nUpdated: ${index.updated}\n\nThe library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.\n\n## Flagship PDFs\n\n${flagships.map(item => `- ${item.label}: ${item.file}`).join('\n')}\n\n## Subject Intelligence PDFs\n\n${subjectPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n\n## Full PDF Index\n\n${allPdfs.map(item => `- ${item.title}: ${item.file}${item.reused ? ' (preserved custom PDF)' : ''}`).join('\n')}\n`);
 
 const center = path.join(root, 'download-center.html');
 if (fs.existsSync(center)) {
   let html = read(center);
-  const section = `<section id="branded-pdf-download-index" class="section wrap"><h2>Branded PDF Mini Books</h2><p class="lead">The library combines deep forensic intelligence reports with premium public-record mini books, source routes, claim boundaries, main players, related books and reader actions.</p><div class="terminal">BRANDED PDF ENGINE\n&gt; Deep intelligence reports: active\n&gt; Premium cover pages: active\n&gt; Table of contents: active\n&gt; Evidence and speculation boundaries: active\n&gt; Flagship PDFs: ${flagships.length}\n&gt; Total indexed PDFs: ${allPdfs.length}</div><h2>Flagship PDF Collection</h2><div class="grid">${flagships.map(item => card(item, 'Flagship PDF')).join('')}</div><h2>Wealth Creation PDF Library</h2><div class="grid">${wealthPdfs.slice(0, 16).map(item => card(item, 'Wealth Guide')).join('')}</div><h2>Full Deep Intelligence PDF Index</h2><div class="grid">${allPdfs.slice(0, 24).map(item => card(item, 'Deep Intelligence PDF')).join('')}</div><div class="cta-row"><a class="btn" href="downloads/branded-download-index.json">PDF Index JSON</a><a class="btn alt" href="downloads/branded-download-index.md">PDF Index Markdown</a><a class="btn alt" href="downloads/subject-pdf-index.json">Subject PDF Index</a></div></section>`;
+  const section = `<section id="branded-pdf-download-index" class="section wrap"><h2>Branded PDF Mini Books</h2><p class="lead">The library combines deep forensic intelligence reports with premium public-record mini books, source routes, claim boundaries, main players, related books and reader actions.</p><div class="terminal">BRANDED PDF ENGINE\n&gt; Deep intelligence reports: active\n&gt; Premium cover pages: active\n&gt; Table of contents: active\n&gt; Evidence and speculation boundaries: active\n&gt; Flagship PDFs: ${flagships.length}\n&gt; Total indexed PDFs: ${allPdfs.length}</div><h2>Flagship PDF Collection</h2><div class="grid">${flagships.map(item => card(item, 'Flagship PDF')).join('')}</div><h2>Wealth Creation PDF Library</h2><div class="grid">${wealthPdfs.slice(0, 16).map(item => card(item, 'Wealth Guide')).join('')}</div><h2>Full Deep Intelligence PDF Index</h2><div class="grid">${allPdfs.slice(0, 24).map(item => card(item, item.reused ? 'Preserved Custom PDF' : 'Deep Intelligence PDF')).join('')}</div><div class="cta-row"><a class="btn" href="downloads/branded-download-index.json">PDF Index JSON</a><a class="btn alt" href="downloads/branded-download-index.md">PDF Index Markdown</a><a class="btn alt" href="downloads/subject-pdf-index.json">Subject PDF Index</a></div></section>`;
   if (html.includes('id="branded-pdf-download-index"')) html = html.replace(/<section id="branded-pdf-download-index"[\s\S]*?<\/section>/, section);
   else html = html.replace('</main>', `${section}</main>`);
   fs.writeFileSync(center, html);
@@ -167,4 +189,4 @@ for (const file of rebuilt) {
 }
 if (flagships.length < 4) throw new Error(`Expected at least four flagship PDFs; found ${flagships.length}`);
 if (allPdfs.length < 20) throw new Error(`Expected at least twenty PDFs; found ${allPdfs.length}`);
-console.log(`Premium flagship compatibility restored: ${rebuilt.length} flagship PDFs rebuilt, ${flagships.length} flagships indexed, ${allPdfs.length} PDFs catalogued with deep engine metadata preserved.`);
+console.log(`Premium flagship compatibility restored: ${rebuilt.length} flagship PDFs rebuilt, ${flagships.length} flagships indexed, ${allPdfs.length} PDFs catalogued; ${allPdfs.filter(item => item.reused).length} custom PDFs preserved.`);

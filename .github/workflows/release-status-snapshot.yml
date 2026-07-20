@@ -14,6 +14,7 @@ on:
       - Matrix Reprogrammed Controlled Production Deploy
       - Matrix Money Intelligence Refresh
       - Detailed Wealth Guide Library
+      - Wealth PDF Visual Proof Package
       - Epstein AI Detective Docket
       - Card Artwork Automation
       - Permanent Release Metadata Repair
@@ -53,6 +54,7 @@ jobs:
           read_runs deploy.yml /tmp/matrix-release-status/deploy.json
           read_runs money-intelligence-refresh.yml /tmp/matrix-release-status/money.json
           read_runs detailed-wealth-guides.yml /tmp/matrix-release-status/wealth-guides.json
+          read_runs wealth-pdf-visual-proof.yml /tmp/matrix-release-status/wealth-pdf-visual-proof.json
           read_runs epstein-ai-detective.yml /tmp/matrix-release-status/epstein.json
           read_runs card-artwork-automation.yml /tmp/matrix-release-status/artwork.json
           read_runs permanent-release-metadata-repair.yml /tmp/matrix-release-status/release-metadata.json
@@ -62,6 +64,7 @@ jobs:
           const deploy=read('deploy');
           const money=read('money');
           const wealthGuides=read('wealth-guides');
+          const wealthPdfVisualProof=read('wealth-pdf-visual-proof');
           const epstein=read('epstein');
           const artwork=read('artwork');
           const releaseMetadata=read('release-metadata');
@@ -73,10 +76,11 @@ jobs:
             production,
             moneyIntelligence:latest(money),
             detailedWealthGuides:latest(wealthGuides),
+            wealthPdfVisualProof:latest(wealthPdfVisualProof),
             epsteinAiDetective:latest(epstein),
             cardArtwork:latest(artwork),
             releaseMetadataRepair:latest(releaseMetadata),
-            recent:{production:deploy,moneyIntelligence:money,detailedWealthGuides:wealthGuides,epsteinAiDetective:epstein,cardArtwork:artwork,releaseMetadataRepair:releaseMetadata},
+            recent:{production:deploy,moneyIntelligence:money,detailedWealthGuides:wealthGuides,wealthPdfVisualProof,epsteinAiDetective:epstein,cardArtwork:artwork,releaseMetadataRepair:releaseMetadata},
             boundary:'A dispatched, queued or in-progress run is not a successful deployment. Production is live only after the controlled deployment and exact no-cache verification complete successfully.'
           };
           fs.writeFileSync('data/release-run-status.json',JSON.stringify(payload,null,2)+'\n');

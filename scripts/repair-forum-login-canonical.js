@@ -22,10 +22,14 @@ ${canonicalGuard}  const form = document.getElementById('login-form');`);
 }
 html = html.replace("fetch('https://matrixreprogrammed.com/api/auth/request-link', {", "fetch('/api/auth/request-link', {");
 html = html.replace("method:'POST', headers:{'content-type':'application/json'},", "method:'POST', credentials:'include', cache:'no-store', headers:{'content-type':'application/json','cache-control':'no-cache'},");
+if (!html.includes('forum-login-canonical-api')) {
+  html = html.replace('</head>', '<!-- forum-login-canonical-api: https://matrixreprogrammed.com/api/auth/request-link; browser request remains same-origin after canonical redirect -->\n</head>');
+}
 
 if (!html.includes("location.hostname === 'www.matrixreprogrammed.com'")) throw new Error('canonical member-login redirect is missing');
 if (!html.includes("fetch('/api/auth/request-link', {")) throw new Error('member login request is not same-origin');
 if (!html.includes("credentials:'include'")) throw new Error('member login request does not include credentials');
+if (!html.includes('forum-login-canonical-api')) throw new Error('canonical member-login contract marker is missing');
 
 if (html !== before) fs.writeFileSync(file, html);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

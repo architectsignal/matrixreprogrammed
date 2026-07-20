@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./repair-email-subscription-delivery.js');
 const workerPath = path.join(root, 'src', 'worker-email-lifecycle.js');
 const tomlPath = path.join(root, 'wrangler.toml');
 const jsoncPath = path.join(root, 'wrangler.jsonc');

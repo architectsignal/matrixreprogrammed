@@ -1,33 +1,32 @@
-name: Weekly Newsletter Send
+name: Weekly Newsletter Manual Fallback
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 8 * * 1"
 
 permissions:
   contents: read
 
 concurrency:
-  group: weekly-newsletter-send
+  group: weekly-newsletter-manual-fallback
   cancel-in-progress: false
 
 jobs:
   send-newsletter:
-    name: Send Matrix weekly signal to subscribers
+    name: Run current weekly campaign through the live email lifecycle
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Send weekly newsletter through live Worker
+      - name: Send weekly campaign through current live Worker
         env:
-          NEWSLETTER_ADMIN_TOKEN: ${{ secrets.NEWSLETTER_ADMIN_TOKEN }}
+          ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN }}
         run: |
-          if [ -z "$NEWSLETTER_ADMIN_TOKEN" ]; then
-            echo "::error::NEWSLETTER_ADMIN_TOKEN GitHub secret is missing. Add the same value to GitHub Actions and Cloudflare Worker secrets."
+          set -euo pipefail
+          if [ -z "$ADMIN_API_TOKEN" ]; then
+            echo "::error::ADMIN_API_TOKEN GitHub secret is missing. The production Cloudflare cron remains the authoritative scheduled sender."
             exit 1
           fi
-          curl --fail-with-body -X POST "https://www.matrixreprogrammed.com/send-weekly-newsletter" \
-            -H "x-newsletter-admin-token: $NEWSLETTER_ADMIN_TOKEN" \
+          curl --fail-with-body -X POST "https://matrixreprogrammed.com/api/email/admin/run-automation" \
+            -H "x-admin-token: $ADMIN_API_TOKEN" \
             -H "accept: application/json" \
             -H "content-type: application/json" \
-            --data '{"source":"github-weekly-newsletter-send"}'
+            --data '{"kind":"weekly","source":"github-manual-fallback"}'

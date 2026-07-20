@@ -26,11 +26,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Apply every permanent forum owner
+      - name: Apply forum page consistency
+        run: node scripts/repair-forum-page-consistency.js
+
+      - name: Prove authenticated D1 member posting
         run: |
-          node scripts/install-forum-page-consistency-owner.js
-          node scripts/repair-forum-member-posting.js
-          node scripts/repair-forum-page-consistency.js
           node scripts/forum-member-posting-test.js
           node --check forum.js
           node --check src/worker.js
@@ -53,25 +53,29 @@ jobs:
             src/worker.js \
             src/worker-member-experience.js \
             src/worker-forum-persistence.js \
-            scripts/repair-forum-member-posting.js \
             scripts/repair-forum-page-consistency.js \
-            scripts/install-forum-page-consistency-owner.js \
             scripts/forum-member-posting-test.js \
-            scripts/final-production-reconcile.js \
-            scripts/production-sync-test.js
+            scripts/final-production-reconcile.js
           if ! git diff --cached --quiet; then
             git commit -m 'Unify all forums on verified member D1 posting'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
 
-      - name: Cancel production runs that began before unified forum source
+      - name: Cancel every active controlled production run
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
-          gh run cancel 29734687470 --repo "$GITHUB_REPOSITORY" || true
-          gh run cancel 29736429465 --repo "$GITHUB_REPOSITORY" || true
-          gh run cancel 29737142866 --repo "$GITHUB_REPOSITORY" || true
+          set -euo pipefail
+          gh run list --workflow deploy.yml --limit 100 --json databaseId,status \
+            --repo "$GITHUB_REPOSITORY" \
+            --jq '.[] | select(.status != "completed") | .databaseId' > /tmp/active-deploys.txt
+          while read -r run_id; do
+            [ -n "$run_id" ] || continue
+            gh run cancel "$run_id" --repo "$GITHUB_REPOSITORY" || true
+          done < /tmp/active-deploys.txt
+          sleep 8
 
       - name: Dispatch one clean guarded release
         env:

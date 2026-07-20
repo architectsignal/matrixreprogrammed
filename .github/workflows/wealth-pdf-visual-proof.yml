@@ -1,0 +1,47 @@
+name: Wealth PDF Visual Proof Package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/wealth-pdf-visual-proof.trigger
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wealth-pdf-visual-proof
+  cancel-in-progress: true
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Confirm representative PDFs and metrics
+        run: |
+          set -euo pipefail
+          test -s downloads/wealth-guides/start-from-zero.pdf
+          test -s downloads/wealth-guides/france-wealth-tax.pdf
+          test -s downloads/wealth-guides/opportunity-radar.pdf
+          node -e "const r=require('./downloads/detailed-wealth-guides-test.json'); if(!r.ok||r.guideCount!==16||r.totalPages<200) process.exit(1); console.log(r)"
+
+      - name: Upload representative visual-proof files
+        uses: actions/upload-artifact@v4
+        with:
+          name: wealth-pdf-visual-proof-${{ github.run_id }}
+          path: |
+            downloads/wealth-guides/start-from-zero.pdf
+            downloads/wealth-guides/france-wealth-tax.pdf
+            downloads/wealth-guides/opportunity-radar.pdf
+            downloads/detailed-wealth-guides-test.json
+            downloads/wealth-guides/index.json
+          if-no-files-found: error
+          retention-days: 30

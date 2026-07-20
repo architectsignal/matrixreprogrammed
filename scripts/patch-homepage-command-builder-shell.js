@@ -106,5 +106,6 @@ require('./patch-deep-audit-member-posting-contract.js');
 require('./repair-deep-audit-public-defects.js');
 require('./repair-release-regressions.js');
 require('./reconcile-release-with-forum-contract.js');
+require('./remove-internal-report-manifests.js');
 require('./finalize-release-regressions.js');
 console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; stable audit v2, current deploy mission, €1–€5,000 voluntary support, authenticated transactional email, guarded daily and weekly campaigns, membership signup fallback, operational audit, safe production receipt and public repairs applied.`);

@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T07:13:09.022Z
-Live Intel source window: 2026-07-20T07:13:03.453Z
+Generated: 2026-07-20T07:32:43.835Z
+Live Intel source window: 2026-07-20T07:32:39.501Z
 Tracked cards: 774
 Cards with current matched records: 108
 Cards with no new verified record: 666

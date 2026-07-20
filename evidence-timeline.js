@@ -23,7 +23,6 @@
     type: document.querySelector('#timeline-type'),
     year: document.querySelector('#timeline-year')
   };
-
   if (Object.values(elements).some(element => !element)) return;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
@@ -54,7 +53,6 @@
   function loadScript() {
     if (window.vis?.Timeline && window.vis?.DataSet) return Promise.resolve(window.vis);
     if (visLoading) return visLoading;
-
     visLoading = new Promise((resolve, reject) => {
       const existing = document.querySelector(`script[src="${VIS_JS}"]`);
       if (existing) {
@@ -70,7 +68,6 @@
       script.onerror = () => reject(new Error('vis-timeline module could not be loaded'));
       document.head.appendChild(script);
     });
-
     return visLoading;
   }
 
@@ -117,7 +114,6 @@
     elements.list.innerHTML = visible.length
       ? visible.map(event => `<button type="button" class="timeline-event card" data-event-id="${escapeHtml(event.id)}"><span class="label">${escapeHtml(event.date || 'Undated')} · GRADE ${escapeHtml(event.evidenceGrade || '—')}</span><strong>${escapeHtml(event.title || 'Untitled event')}</strong><br/><small>${escapeHtml(event.type || 'Record')} · ${escapeHtml(event.source || 'Public record')}</small></button>`).join('')
       : '<p>No events match the current filters.</p>';
-
     if (filtered.length > visible.length) {
       elements.list.insertAdjacentHTML('beforeend', `<p class="figure-caption">Showing the first ${visible.length} list entries. Refine the filters to reach the remaining ${filtered.length - visible.length} events.</p>`);
     }
@@ -138,15 +134,13 @@
 
   function renderTimeline() {
     if (!window.vis?.Timeline || !window.vis?.DataSet) {
-      elements.stage.innerHTML = '<p>The interactive timeline is unavailable. The searchable event list remains fully usable.</p>';
+      elements.stage.innerHTML = '<p>The interactive timeline is unavailable. The accessible event list remains fully usable.</p>';
       return;
     }
-
     const items = timelineItems();
     if (!dataset) dataset = new window.vis.DataSet();
     dataset.clear();
     if (items.length) dataset.add(items);
-
     if (!timeline) {
       timeline = new window.vis.Timeline(elements.stage, dataset, {
         stack: false,
@@ -168,9 +162,8 @@
     } else {
       timeline.setItems(dataset);
     }
-
     if (items.length) timeline.fit({ animation: false });
-    else elements.stage.innerHTML = '<p>No dated events match the current filters.</p>';
+    else elements.stage.innerHTML = '<p>No dated events match the current filters. The accessible event list remains available.</p>';
   }
 
   function updateStatus() {
@@ -186,7 +179,7 @@
     updateStatus();
     renderList();
     if (window.vis?.Timeline) renderTimeline();
-    else elements.stage.innerHTML = '<p>Interactive timeline preparing. The searchable event list is ready now.</p>';
+    else elements.stage.innerHTML = '<p>Interactive timeline preparing. The accessible event list is ready now.</p>';
     if (options.updateUrl !== false) applyUrl();
     if (filtered.length) showDetail(filtered[0]);
   }
@@ -202,7 +195,6 @@
     const years = [...new Set(events.map(event => String(event.date || '').slice(0, 4)).filter(Boolean))].sort().reverse();
     elements.type.innerHTML = '<option value="">All event types</option>' + types.map(type => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`).join('');
     elements.year.innerHTML = '<option value="">All years</option>' + years.map(year => `<option value="${escapeHtml(year)}">${escapeHtml(year)}</option>`).join('');
-
     const params = new URLSearchParams(location.search);
     elements.q.value = params.get('q') || '';
     elements.grade.value = params.get('grade') || '';
@@ -232,7 +224,6 @@
       if (!Array.isArray(payload.events)) payload.events = [];
       populateFilters();
       applyFilters({ updateUrl: false });
-
       scheduleIdle(async () => {
         loadCss();
         try {
@@ -241,13 +232,13 @@
           updateStatus();
         } catch (error) {
           console.warn(error);
-          elements.stage.innerHTML = '<p>The interactive timeline library could not be loaded. The searchable event list remains fully usable.</p>';
+          elements.stage.innerHTML = '<p>The interactive timeline library could not be loaded. The accessible event list remains fully usable.</p>';
         }
       });
     } catch (error) {
       const message = error.name === 'AbortError' ? 'request timed out' : error.message;
       elements.status.textContent = `Timeline data unavailable: ${message}`;
-      elements.stage.innerHTML = '<p>No public timeline data could be loaded. Use the Evidence Vault or Search while this feed recovers.</p>';
+      elements.stage.innerHTML = '<p>No public timeline data could be loaded. The accessible event list remains available when cached data returns. Use the Evidence Vault or Search while this feed recovers.</p>';
     }
   }
 
@@ -264,7 +255,6 @@
 
   elements.q.addEventListener('input', queueFilters);
   [elements.grade, elements.type, elements.year].forEach(control => control.addEventListener('change', () => applyFilters()));
-
   window.addEventListener('pagehide', () => {
     window.clearTimeout(filterTimer);
     if (timeline) timeline.destroy();

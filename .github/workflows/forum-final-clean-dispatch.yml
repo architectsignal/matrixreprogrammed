@@ -9,12 +9,17 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
 
 jobs:
   cancel-old-and-dispatch-one:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Cancel every older active controlled production run
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -39,3 +44,24 @@ jobs:
             --repo "$GITHUB_REPOSITORY" \
             --ref main \
             -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          sleep 8
+          mkdir -p downloads
+          gh run list --workflow deploy.yml --limit 5 \
+            --repo "$GITHUB_REPOSITORY" \
+            --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,displayTitle \
+            > downloads/final-forum-controlled-deploy.json
+
+      - name: Commit exact dispatch receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'forum-final-dispatch-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add downloads/final-forum-controlled-deploy.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record final forum production dispatch'
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((attempt * 2))
+          done
+          exit 1

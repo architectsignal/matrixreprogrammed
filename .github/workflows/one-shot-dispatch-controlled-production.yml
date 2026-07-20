@@ -18,51 +18,43 @@ jobs:
   dispatch-controlled-production:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch required refresh or controlled production once
+      - name: Refresh if needed and deploy only until live proof matches
         uses: actions/github-script@v7
         with:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = 'd5b7e4706085cf3ae085a82da2566690b7b6f757';
-            const response = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const decodeContent = response => {
+              const encoded = response.data && response.data.content;
+              return encoded ? Buffer.from(encoded.replace(/\n/g, ''), 'base64').toString('utf8') : '';
+            };
+            const repoJson = async path => JSON.parse(decodeContent(await github.rest.repos.getContent({ owner, repo, path, ref: 'main' })));
 
-            const moneyTarget = response.data.workflows.find(
-              workflow => workflow.name === 'Matrix Money Intelligence Refresh'
-            );
+            const moneyTarget = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Money Intelligence Refresh');
             if (!moneyTarget) {
               core.setFailed('Money intelligence refresh workflow was not found.');
               return;
             }
 
-            let moneyReady = false;
+            let registry = null;
+            let methods = null;
             try {
-              const registryResponse = await github.rest.repos.getContent({
-                owner,
-                repo,
-                path: 'data/money-intelligence-registry.json',
-                ref: 'main'
-              });
-              const encoded = registryResponse.data && registryResponse.data.content;
-              const registry = encoded
-                ? JSON.parse(Buffer.from(encoded.replace(/\n/g, ''), 'base64').toString('utf8'))
-                : null;
-              const records = Array.isArray(registry && registry.records) ? registry.records : [];
-              const companies = records.filter(row => row.category === 'companies').length;
-              const vehicles = records.filter(row => row.category === 'investment-vehicles').length;
-              moneyReady = companies >= 100 && vehicles >= 100;
-              core.info(`Money registry coverage: companies=${companies}, investmentVehicles=${vehicles}.`);
+              registry = await repoJson('data/money-intelligence-registry.json');
+              methods = await repoJson('data/wealth-methods.json');
             } catch (error) {
-              core.info(`Money registry is not ready: ${error.message}`);
+              core.info(`Canonical money data is not ready: ${error.message}`);
             }
+            const records = Array.isArray(registry?.records) ? registry.records : [];
+            const companies = records.filter(row => row.category === 'companies').length;
+            const vehicles = records.filter(row => row.category === 'investment-vehicles').length;
+            const guideCount = Array.isArray(methods?.methods) ? methods.methods.length : 0;
+            const moneyReady = companies >= 100 && vehicles >= 100 && guideCount === 50;
+            core.info(`Repository money coverage: companies=${companies}, investmentVehicles=${vehicles}, guides=${guideCount}.`);
 
             if (!moneyReady) {
               const moneyRuns = await github.rest.actions.listWorkflowRuns({
-                owner,
-                repo,
-                workflow_id: moneyTarget.id,
-                branch: 'main',
-                per_page: 10
+                owner, repo, workflow_id: moneyTarget.id, branch: 'main', per_page: 10
               });
               const active = moneyRuns.data.workflow_runs.find(run =>
                 ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status)
@@ -80,59 +72,62 @@ jobs:
                 core.warning(`Recent money refresh failure requires repair before retry: ${recentFailure.html_url}`);
                 return;
               }
-              await github.rest.actions.createWorkflowDispatch({
-                owner,
-                repo,
-                workflow_id: moneyTarget.id,
-                ref: 'main'
-              });
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: moneyTarget.id, ref: 'main' });
               core.info(`Dispatched money intelligence refresh ${moneyTarget.id}.`);
               return;
             }
 
-            const target = response.data.workflows.find(
-              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
-            );
+            let liveMatches = false;
+            try {
+              const nonce = Date.now();
+              const headers = { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixMoneyReleaseGuard/2.0' };
+              const [liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse] = await Promise.all([
+                fetch(`https://matrixreprogrammed.com/data/money-intelligence-registry.json?release_guard=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/downloads/wealth-guides/index.json?release_guard=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/?release_guard=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/follow-the-money.html?release_guard=${nonce}`, { headers })
+              ]);
+              if ([liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse].every(response => response.ok)) {
+                const liveRegistry = await liveRegistryResponse.json();
+                const liveGuides = await liveGuidesResponse.json();
+                const liveHome = await liveHomeResponse.text();
+                const liveHub = await liveHubResponse.text();
+                const liveRecords = Array.isArray(liveRegistry.records) ? liveRegistry.records : [];
+                const liveCompanies = liveRecords.filter(row => row.category === 'companies').length;
+                const liveVehicles = liveRecords.filter(row => row.category === 'investment-vehicles').length;
+                liveMatches = liveRegistry.updated === registry.updated
+                  && liveCompanies >= 100
+                  && liveVehicles >= 100
+                  && Number(liveGuides.count) === 50
+                  && liveHome.includes('OPEN AI DETECTIVE')
+                  && liveHome.includes('ai-speculative-conclusions.html')
+                  && liveHub.includes('money-command-center')
+                  && liveHub.includes('money-search.html');
+                core.info(`Live proof: registry=${liveRegistry.updated}, companies=${liveCompanies}, vehicles=${liveVehicles}, guides=${liveGuides.count}, detective=${liveHome.includes('OPEN AI DETECTIVE')}, commandCenter=${liveHub.includes('money-command-center')}.`);
+              }
+            } catch (error) {
+              core.info(`Live proof is not complete yet: ${error.message}`);
+            }
+            if (liveMatches) {
+              core.info('The exact tested money system and AI Detective homepage are live. No deployment needed.');
+              return;
+            }
+
+            const target = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
             if (!target) {
               core.setFailed('Controlled production workflow was not found.');
               return;
             }
-
-            const runs = await github.rest.actions.listWorkflowRuns({
-              owner,
-              repo,
-              workflow_id: target.id,
-              branch: 'main',
-              per_page: 20
-            });
-            for (const run of runs.data.workflow_runs) {
-              const active = ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status);
-              if (active) {
-                core.info(`A controlled production run is active or queued; migration and deployment will not be interrupted: ${run.html_url}`);
-                return;
-              }
-              if (run.status !== 'completed' || run.conclusion !== 'success') continue;
-              try {
-                const comparison = await github.rest.repos.compareCommits({
-                  owner,
-                  repo,
-                  base: releaseBase,
-                  head: run.head_sha
-                });
-                if (comparison.data.status === 'identical' || comparison.data.status === 'ahead') {
-                  core.info(`A successful controlled production run covers this release: ${run.html_url}`);
-                  return;
-                }
-              } catch (error) {
-                core.warning(`Could not compare release base with run ${run.id}: ${error.message}`);
-              }
+            const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', per_page: 20 });
+            const active = runs.data.workflow_runs.find(run =>
+              ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status)
+            );
+            if (active) {
+              core.info(`A controlled production run is active or queued; migration and deployment will not be interrupted: ${active.html_url}`);
+              return;
             }
 
             await github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
-              workflow_id: target.id,
-              ref: 'main',
-              inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+              owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
             });
-            core.info(`Dispatched controlled production workflow ${target.id} on main.`);
+            core.info(`Dispatched controlled production workflow ${target.id} because the exact live proof does not yet match main.`);

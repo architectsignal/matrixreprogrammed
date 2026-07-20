@@ -41,11 +41,19 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p data /tmp/matrix-release-status
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml --limit 12 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/deploy.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow money-intelligence-refresh.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/money.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow epstein-ai-detective.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/epstein.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow card-artwork-automation.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/artwork.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow permanent-release-metadata-repair.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/release-metadata.json
+          read_runs() {
+            local workflow="$1"
+            local output="$2"
+            if gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --limit 12 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > "$output"; then
+              return 0
+            fi
+            echo '[]' > "$output"
+          }
+          read_runs deploy.yml /tmp/matrix-release-status/deploy.json
+          read_runs money-intelligence-refresh.yml /tmp/matrix-release-status/money.json
+          read_runs epstein-ai-detective.yml /tmp/matrix-release-status/epstein.json
+          read_runs card-artwork-automation.yml /tmp/matrix-release-status/artwork.json
+          read_runs permanent-release-metadata-repair.yml /tmp/matrix-release-status/release-metadata.json
           node - <<'NODE'
           const fs=require('fs');
           const read=name=>JSON.parse(fs.readFileSync(`/tmp/matrix-release-status/${name}.json`,'utf8'));

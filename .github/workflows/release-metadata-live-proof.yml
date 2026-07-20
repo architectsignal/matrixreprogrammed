@@ -1,0 +1,98 @@
+name: Release Metadata and Intelligence Live Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/release-metadata-live-proof.yml'
+      - 'src/worker-release-metadata.js'
+      - 'src/worker-production.js'
+      - 'scripts/patch-release-metadata-routing.js'
+      - 'scripts/patch-live-verifier-intelligence-routes.js'
+      - 'scripts/publish-release-metadata-assets.js'
+      - 'scripts/final-release-sanitize.js'
+      - 'scripts/verify-live-production.js'
+      - 'data/production-freshness-policy.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove current metadata routes and intelligence gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout proposed change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Generate commit-bound release metadata
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          node scripts/build-deploy-manifest.js
+          node scripts/build-production-health.js
+
+      - name: Patch strict Worker and publish versioned aliases
+        run: |
+          mkdir -p _site
+          node scripts/patch-release-metadata-routing.js
+          node scripts/publish-release-metadata-assets.js
+          mkdir -p _site/runtime
+          cp runtime/deploy-manifest-current.json _site/runtime/deploy-manifest-current.json
+          cp runtime/deploy-health-current.json _site/runtime/deploy-health-current.json
+
+      - name: Verify exact metadata ownership and intelligence gates
+        run: |
+          node --check src/worker-release-metadata.js
+          node --check src/worker-production.js
+          node --check scripts/verify-live-production.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const assert = (ok, message) => { if (!ok) throw new Error(message); };
+          const worker = fs.readFileSync('src/worker-production.js', 'utf8');
+          const verifier = fs.readFileSync('scripts/verify-live-production.js', 'utf8');
+          const manifest = fs.readFileSync('deploy-manifest.json', 'utf8');
+          const health = fs.readFileSync('deploy-health.json', 'utf8');
+          assert(worker.includes("worker-release-metadata.js"), 'release metadata module import missing');
+          assert(worker.includes('isReleaseMetadataRoute(path)'), 'release metadata route gate missing');
+          assert(fs.readFileSync('_site/runtime/deploy-manifest-current.json', 'utf8') === manifest, 'manifest alias is not an exact copy');
+          assert(fs.readFileSync('_site/runtime/deploy-health-current.json', 'utf8') === health, 'health alias is not an exact copy');
+          for (const marker of ['/daily-epstein-update', '/data/daily-epstein-update.json', '/data/live-machine-status.json', '/controlled-opposition/andrew-tate.html']) {
+            assert(verifier.includes(marker), `live verifier marker missing: ${marker}`);
+          }
+          const policy = JSON.parse(fs.readFileSync('data/production-freshness-policy.json', 'utf8'));
+          for (const id of ['daily-epstein-update', 'card-live-updates', 'live-machine-status']) {
+            assert(policy.datasets.some(row => row.id === id), `freshness dataset missing: ${id}`);
+          }
+          NODE
+
+      - name: Bundle strict Cloudflare Worker without deploying
+        run: npx --yes wrangler@latest deploy --dry-run --outdir .wrangler/release-metadata-proof
+
+      - name: Upload proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-metadata-live-proof-${{ github.sha }}
+          path: |
+            deploy-manifest.json
+            deploy-health.json
+            runtime/deploy-manifest-current.json
+            runtime/deploy-health-current.json
+            downloads/release-metadata-routing-patch.json
+            downloads/live-verifier-intelligence-routes-patch.json
+            downloads/release-metadata-assets.json
+            .wrangler/release-metadata-proof
+          if-no-files-found: error
+          retention-days: 21

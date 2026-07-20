@@ -88,4 +88,5 @@ patchMigrationNews();
 ensureEpsteinTimeline();
 patchQueryOnlyLinks();
 require('./sanitize-timer-source-links.js');
-console.log('Final mission surfaces reconciled: compact timers, migration summary, Epstein timeline, query-only links and timer source routes.');
+require('./ensure-entity-brief-evidence-safeguards.js');
+console.log('Final mission surfaces reconciled: compact timers, migration summary, Epstein timeline, query-only links, timer source routes and visible entity evidence gaps.');

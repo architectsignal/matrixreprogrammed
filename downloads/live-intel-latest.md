@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T01:39:17.929Z
+Collection completed: 2026-07-20T01:50:10.443Z
 Latest source publication: 2026-07-19T12:00:00.000Z
-Collection status: fresh-items-added
-New items this collection: 35
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-35 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.

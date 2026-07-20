@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "observedAt": "2026-07-20T23:22:43.249Z",
+  "observedAt": "2026-07-20T23:29:17.113Z",
   "production": {
     "conclusion": "success",
     "createdAt": "2026-07-20T22:53:46Z",
@@ -23,13 +23,13 @@
   },
   "detailedWealthGuides": {
     "conclusion": "failure",
-    "createdAt": "2026-07-20T23:21:16Z",
-    "databaseId": 29786932840,
+    "createdAt": "2026-07-20T23:25:08Z",
+    "databaseId": 29787142269,
     "event": "push",
-    "headSha": "36d3ef085a76c6e1fe33020d001c094ee21aa4e2",
+    "headSha": "9f5cc0328011193585e9fb748930da67d8dd10cc",
     "status": "completed",
-    "updatedAt": "2026-07-20T23:21:54Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29786932840"
+    "updatedAt": "2026-07-20T23:27:42Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29787142269"
   },
   "wealthPdfVisualProof": {
     "conclusion": "success",
@@ -84,13 +84,13 @@
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29785452400"
       },
       {
-        "conclusion": "",
+        "conclusion": "success",
         "createdAt": "2026-07-20T22:09:25Z",
         "databaseId": 29782914918,
         "event": "workflow_dispatch",
         "headSha": "fac618e034018f61eb6b7161ad4d3056da790490",
-        "status": "in_progress",
-        "updatedAt": "2026-07-20T23:10:00Z",
+        "status": "completed",
+        "updatedAt": "2026-07-20T23:25:44Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29782914918"
       },
       {
@@ -227,6 +227,16 @@
       }
     ],
     "detailedWealthGuides": [
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-20T23:25:08Z",
+        "databaseId": 29787142269,
+        "event": "push",
+        "headSha": "9f5cc0328011193585e9fb748930da67d8dd10cc",
+        "status": "completed",
+        "updatedAt": "2026-07-20T23:27:42Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29787142269"
+      },
       {
         "conclusion": "failure",
         "createdAt": "2026-07-20T23:21:16Z",

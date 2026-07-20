@@ -13,15 +13,16 @@ const flagshipOrder = [
   'share-kit-black-file-starter'
 ];
 const flagshipSection = 'Flagship PDF Collection';
+const run = script => execFileSync(process.execPath, [path.join(__dirname, script)], {
+  cwd: process.cwd(),
+  stdio: 'inherit'
+});
 
-execFileSync(process.execPath, [path.join(__dirname, 'build-deep-pdf-intelligence.mjs')], {
-  cwd: process.cwd(),
-  stdio: 'inherit'
-});
-execFileSync(process.execPath, [path.join(__dirname, 'relocate-pdf-report-manifests.js')], {
-  cwd: process.cwd(),
-  stdio: 'inherit'
-});
+// Migrate any legacy public manifests and switch the deep builder to its internal state directory before generation.
+run('relocate-pdf-report-manifests.js');
+run('build-deep-pdf-intelligence.mjs');
+// Safety pass: no internal build manifest may remain under the public downloads tree.
+run('relocate-pdf-report-manifests.js');
 execFileSync(process.execPath, [path.join(__dirname, 'restore-branded-pdf-flagship-contract.js')], {
   cwd: process.cwd(),
   stdio: 'inherit',

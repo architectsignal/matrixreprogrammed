@@ -27,10 +27,14 @@ if (health.data.workerScript !== 'src/worker-production.js') {
 }
 
 const outputs = {
-  'runtime/deploy-manifest-current.json': manifest.raw.endsWith('\n') ? manifest.raw : `${manifest.raw}\n`,
-  'runtime/deploy-health-current.json': health.raw.endsWith('\n') ? health.raw : `${health.raw}\n`
+  'runtime/deploy-manifest-current.json': manifest.raw,
+  'runtime/deploy-health-current.json': health.raw
 };
 for (const [rel, value] of Object.entries(outputs)) fs.writeFileSync(path.join(root, rel), value);
+
+const exactCopies = fs.readFileSync(path.join(root, 'runtime', 'deploy-manifest-current.json'), 'utf8') === manifest.raw
+  && fs.readFileSync(path.join(root, 'runtime', 'deploy-health-current.json'), 'utf8') === health.raw;
+if (!exactCopies) throw new Error('Versioned release metadata aliases are not exact byte-for-byte copies');
 
 const report = {
   ok: true,
@@ -38,8 +42,8 @@ const report = {
   commitSha: manifest.data.commitSha,
   manifestAsset: 'runtime/deploy-manifest-current.json',
   healthAsset: 'runtime/deploy-health-current.json',
-  exactCopies: true,
-  boundary: 'Versioned release metadata aliases are generated after the final health owner and are served through explicit no-store Worker routes.'
+  exactCopies,
+  boundary: 'Versioned release metadata aliases preserve the exact final manifest and health bytes and are served through explicit no-store Worker routes.'
 };
 fs.writeFileSync(path.join(downloadsDir, 'release-metadata-assets.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Versioned release metadata assets published for ${manifest.data.commitSha.slice(0, 12)}.`);
+console.log(`Exact release metadata assets published for ${manifest.data.commitSha.slice(0, 12)}.`);

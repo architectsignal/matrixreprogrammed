@@ -1,0 +1,91 @@
+name: Forum Member Posting Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/forum-member-posting-proof.yml'
+      - 'scripts/repair-forum-member-posting.js'
+      - 'scripts/repair-forum-login-canonical.js'
+      - 'scripts/repair-forum-session-compatibility.js'
+      - 'scripts/forum-member-posting-test.js'
+      - 'scripts/final-production-reconcile.js'
+      - 'src/worker.js'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-forum-persistence.js'
+      - 'forum.js'
+      - 'forum.html'
+      - 'dark-speculation-forum.html'
+      - 'epstein-alive-board.html'
+      - 'member-login.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  prove:
+    name: Prove authenticated D1 forum posting contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Apply final forum owners
+        run: |
+          node scripts/repair-forum-member-posting.js
+          node scripts/forum-member-posting-test.js
+
+      - name: Syntax-check forum and authentication Workers
+        run: |
+          node --check src/worker.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-forum-persistence.js
+          node --check src/worker-production.js
+          node --check forum.js
+
+      - name: Verify exact deployable forum assets
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const assert = (ok, message) => { if (!ok) throw new Error(message); };
+          const legacy = fs.readFileSync('src/worker.js', 'utf8');
+          const member = fs.readFileSync('src/worker-member-experience.js', 'utf8');
+          const forum = fs.readFileSync('src/worker-forum-persistence.js', 'utf8');
+          const client = fs.readFileSync('forum.js', 'utf8');
+          assert(legacy.includes('matrix_session_v2='), 'shared v2 cookie missing');
+          assert(legacy.includes('authClearCookies()'), 'dual-cookie logout missing');
+          assert(member.includes("cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')"), 'member session fallback missing');
+          assert(forum.includes('D1 forum read-after-write confirmation failed'), 'D1 read-after-write gate missing');
+          assert(!forum.includes('INSERT OR IGNORE INTO forum_posts'), 'silent forum insert remains');
+          assert((client.match(/credentials:'include'/g) || []).length >= 4, 'credentialed forum requests missing');
+          assert(client.includes("data.saved !== true"), 'client accepts unconfirmed save');
+          for (const page of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html']) {
+            assert(fs.readFileSync(page, 'utf8').includes('forum.js?v=20260720-forum-member-posting-v3'), `${page} is not cache-busted`);
+          }
+          NODE
+
+      - name: Bundle strict Cloudflare Worker without deploying
+        run: npx --yes wrangler@latest deploy --dry-run --outdir .wrangler/forum-member-posting-proof
+
+      - name: Upload focused proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forum-member-posting-proof-${{ github.sha }}
+          path: |
+            downloads/forum-member-posting-repair.json
+            downloads/forum-login-canonical-repair.json
+            downloads/forum-session-compatibility-repair.json
+            downloads/forum-member-posting-test.json
+            .wrangler/forum-member-posting-proof
+          if-no-files-found: error
+          retention-days: 30

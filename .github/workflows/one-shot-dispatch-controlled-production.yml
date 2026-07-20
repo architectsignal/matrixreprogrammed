@@ -24,7 +24,7 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = 'c738ef55057d9928329c9927a040e2f6c6bf207d';
+            const releaseBase = '1827406fc752c3f219597fc7f20c02376f66781b';
 
             const response = await github.rest.actions.listRepoWorkflows({
               owner,
@@ -48,7 +48,9 @@ jobs:
             });
 
             for (const run of runs.data.workflow_runs) {
-              if (!['queued', 'in_progress', 'completed', 'waiting', 'pending'].includes(run.status)) continue;
+              const active = ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status);
+              const successful = run.status === 'completed' && run.conclusion === 'success';
+              if (!active && !successful) continue;
               try {
                 const comparison = await github.rest.repos.compareCommits({
                   owner,
@@ -57,7 +59,7 @@ jobs:
                   head: run.head_sha
                 });
                 if (comparison.data.status === 'identical' || comparison.data.status === 'ahead') {
-                  core.info(`A controlled production run already covers this release: ${run.html_url}`);
+                  core.info(`An active or successful controlled production run covers this repaired release: ${run.html_url}`);
                   return;
                 }
               } catch (error) {

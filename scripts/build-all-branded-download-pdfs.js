@@ -18,6 +18,10 @@ execFileSync(process.execPath, [path.join(__dirname, 'build-deep-pdf-intelligenc
   cwd: process.cwd(),
   stdio: 'inherit'
 });
+execFileSync(process.execPath, [path.join(__dirname, 'relocate-pdf-report-manifests.js')], {
+  cwd: process.cwd(),
+  stdio: 'inherit'
+});
 execFileSync(process.execPath, [path.join(__dirname, 'restore-branded-pdf-flagship-contract.js')], {
   cwd: process.cwd(),
   stdio: 'inherit',

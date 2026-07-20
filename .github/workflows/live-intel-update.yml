@@ -25,7 +25,7 @@ jobs:
   update-live-intel:
     name: Collect, validate, publish, and preserve current intelligence
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - name: Checkout current production branch
         uses: actions/checkout@v4
@@ -44,13 +44,26 @@ jobs:
       - name: Build truthful Live Intel surfaces
         run: node scripts/build-live-intel-machine.js
 
+      - name: Build current Daily Epstein update
+        run: |
+          node scripts/build-daily-epstein-update.js
+          node scripts/build-epstein-sighting-watch.js
+
+      - name: Refresh intelligence state for every tracked card
+        run: |
+          node scripts/build-card-live-updates.js
+          node scripts/repair-card-live-coverage.js
+
       - name: Scan public pages for figure freshness
         run: node scripts/update-site-freshness-report.js
 
-      - name: Enforce current-window and source-date truth
-        run: node scripts/live-intel-pressure-test.js
+      - name: Enforce current-window, Epstein, card, and source-date truth
+        run: |
+          node scripts/live-intel-pressure-test.js
+          node scripts/live-machine-dependants-test.js
+          node --check investigation-pulse.js
 
-      - name: Commit only validated Live Intel outputs
+      - name: Commit only validated Live Intel and dependant outputs
         id: publish
         shell: bash
         run: |
@@ -61,14 +74,30 @@ jobs:
             data/live-intel.json \
             data/intel-vault.json \
             data/site-freshness-report.json \
+            data/daily-epstein-update.json \
+            data/epstein-sighting-scan.json \
+            data/card-live-updates.json \
+            data/live-machine-status.json \
             downloads/seven-day-intel.json \
             downloads/intel-vault.json \
             downloads/intel-vault.md \
             downloads/live-intel-latest.json \
             downloads/live-intel-latest.md \
             downloads/site-freshness-report.md \
+            downloads/daily-epstein-update.md \
+            downloads/epstein-sighting-watch.json \
+            downloads/epstein-sighting-watch.md \
+            downloads/card-live-updates.md \
+            downloads/card-live-coverage-repair.json \
+            downloads/card-live-coverage-repair.md \
+            downloads/live-machine-status.md \
+            downloads/live-machine-dependants-test.json \
+            downloads/live-machine-dependants-test.md \
             site-freshness-report.html \
             live-intel.html \
+            daily-epstein-update.html \
+            epstein-sighting-watch.html \
+            epstein-sighting-submit.html \
             index.html \
             news.html \
             evidence-vault.html \
@@ -78,25 +107,34 @@ jobs:
             search-index.json \
             sitemap.xml \
             llms.txt
+          node - <<'NODE'
+          const fs = require('fs');
+          const { execFileSync } = require('child_process');
+          const feed = JSON.parse(fs.readFileSync('data/card-live-updates.json', 'utf8'));
+          for (const card of feed.cards || []) {
+            const route = String(card.route || '').replace(/^\//, '').split(/[?#]/)[0];
+            if (route.endsWith('.html') && fs.existsSync(route)) execFileSync('git', ['add', '--', route], { stdio: 'inherit' });
+          }
+          NODE
           if git diff --cached --quiet; then
-            echo "Collection completed and validated; no tracked source or freshness output changed."
+            echo "Collection completed and every dependant was validated; no tracked source or card output changed."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "Refresh current Live Intel sources $(date -u +%FT%H:%MZ) [deploy]"
+          git commit -m "Refresh Live Intel, Epstein and card intelligence $(date -u +%FT%H:%MZ) [deploy]"
           for attempt in 1 2 3; do
             if git push; then
               echo "changed=true" >> "$GITHUB_OUTPUT"
               echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            echo "Push failed on attempt $attempt; rebasing current-source outputs."
+            echo "Push failed on attempt $attempt; rebasing validated intelligence outputs."
             git fetch origin main
             git pull --rebase --autostash origin main || { git rebase --abort || true; exit 1; }
             sleep 3
           done
-          echo "Validated Live Intel output could not be pushed after three attempts."
+          echo "Validated intelligence output could not be pushed after three attempts."
           exit 1
 
       - name: Dispatch guarded production deployment
@@ -111,7 +149,7 @@ jobs:
             -f confirmation='DEPLOY MATRIX REPROGRAMMED'
           echo "Controlled production deployment dispatched for main commit ${{ steps.publish.outputs.commit_sha }}."
 
-      - name: Upload collection proof
+      - name: Upload collection and dependant proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -119,9 +157,19 @@ jobs:
           path: |
             data/live-intel.json
             data/intel-vault.json
+            data/daily-epstein-update.json
+            data/epstein-sighting-scan.json
+            data/card-live-updates.json
+            data/live-machine-status.json
             downloads/live-intel-latest.json
             downloads/live-intel-latest.md
+            downloads/daily-epstein-update.md
+            downloads/card-live-updates.md
+            downloads/card-live-coverage-repair.json
+            downloads/live-machine-dependants-test.json
             downloads/site-freshness-report.md
             live-intel.html
+            daily-epstein-update.html
+            epstein-sighting-watch.html
           if-no-files-found: error
           retention-days: 21

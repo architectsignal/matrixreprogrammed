@@ -1,0 +1,73 @@
+name: Live Machine Dependants Assurance
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/live-intel-update.yml'
+      - '.github/workflows/live-machine-dependants-assurance.yml'
+      - 'scripts/build-daily-epstein-update.js'
+      - 'scripts/build-card-live-updates.js'
+      - 'scripts/repair-card-live-coverage.js'
+      - 'scripts/live-machine-dependants-test.js'
+      - 'investigation-pulse.js'
+      - 'data/live-intel.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove Epstein, cards, and machine stay synchronized
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout proposed change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build daily Epstein update from current Live Intel
+        run: |
+          node scripts/build-daily-epstein-update.js
+          node scripts/build-epstein-sighting-watch.js
+
+      - name: Build current intelligence for every tracked card
+        run: |
+          node scripts/build-card-live-updates.js
+          node scripts/repair-card-live-coverage.js
+
+      - name: Enforce synchronized machine dependants
+        run: node scripts/live-machine-dependants-test.js
+
+      - name: Syntax-check shared card runtime
+        run: node --check investigation-pulse.js
+
+      - name: Upload synchronization proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-machine-dependants-${{ github.sha }}
+          path: |
+            data/daily-epstein-update.json
+            data/epstein-sighting-scan.json
+            data/card-live-updates.json
+            data/live-machine-status.json
+            downloads/daily-epstein-update.md
+            downloads/epstein-sighting-watch.json
+            downloads/card-live-updates.md
+            downloads/card-live-coverage-repair.json
+            downloads/card-live-coverage-repair.md
+            downloads/live-machine-status.md
+            downloads/live-machine-dependants-test.json
+            downloads/live-machine-dependants-test.md
+            daily-epstein-update.html
+            epstein-sighting-watch.html
+          if-no-files-found: error
+          retention-days: 21

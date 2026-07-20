@@ -12,7 +12,7 @@ on:
 
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 concurrency:
   group: live-intel-current-window
@@ -51,7 +51,10 @@ jobs:
         run: node scripts/live-intel-pressure-test.js
 
       - name: Commit only validated Live Intel outputs
+        id: publish
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "matrix-live-intel-bot"
           git config user.email "actions@users.noreply.github.com"
           git add \
@@ -77,11 +80,17 @@ jobs:
             llms.txt
           if git diff --cached --quiet; then
             echo "Collection completed and validated; no tracked source or freshness output changed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "Refresh current Live Intel sources $(date -u +%FT%H:%MZ) [deploy]"
           for attempt in 1 2 3; do
-            git push && exit 0
+            if git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
             echo "Push failed on attempt $attempt; rebasing current-source outputs."
             git fetch origin main
             git pull --rebase --autostash origin main || { git rebase --abort || true; exit 1; }
@@ -89,6 +98,18 @@ jobs:
           done
           echo "Validated Live Intel output could not be pushed after three attempts."
           exit 1
+
+      - name: Dispatch guarded production deployment
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run deploy.yml \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          echo "Controlled production deployment dispatched for main commit ${{ steps.publish.outputs.commit_sha }}."
 
       - name: Upload collection proof
         if: always()

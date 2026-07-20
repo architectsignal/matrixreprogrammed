@@ -1,0 +1,101 @@
+name: Detailed Wealth Guide Library
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/detailed-wealth-guides.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detailed-wealth-guide-library
+  cancel-in-progress: false
+
+jobs:
+  build-test-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Build detailed subject library
+        id: build
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads
+          {
+            echo '=== NODE SYNTAX CHECK ==='
+            node --check scripts/build-detailed-wealth-guides.js
+            SYNTAX_STATUS=$?
+            echo "syntax_status=$SYNTAX_STATUS"
+            if [ "$SYNTAX_STATUS" -ne 0 ]; then exit "$SYNTAX_STATUS"; fi
+            echo '=== BUILD 16 DETAILED GUIDES ==='
+            node scripts/build-detailed-wealth-guides.js
+            BUILD_STATUS=$?
+            echo "build_status=$BUILD_STATUS"
+            if [ "$BUILD_STATUS" -ne 0 ]; then exit "$BUILD_STATUS"; fi
+            echo '=== STRICT QUALITY TEST ==='
+            node scripts/detailed-wealth-guides-test.js
+            TEST_STATUS=$?
+            echo "test_status=$TEST_STATUS"
+            exit "$TEST_STATUS"
+          } 2>&1 | tee downloads/detailed-wealth-guides-build.log
+          STATUS=${PIPESTATUS[0]}
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          exit "$STATUS"
+
+      - name: Upload complete diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: detailed-wealth-guide-proof-${{ github.run_id }}
+          path: |
+            downloads/detailed-wealth-guides-build.log
+            downloads/detailed-wealth-guides-test.json
+            downloads/wealth-guides/index.json
+            data/detailed-wealth-guides.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Commit exact tested library
+        if: steps.build.outputs.status == '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            downloads/wealth-guides \
+            downloads/detailed-wealth-guides-test.json \
+            data/making-money-core.json \
+            data/detailed-wealth-guides.json \
+            making-money.js making-money.html \
+            scripts/build-deep-pdf-intelligence.mjs \
+            scripts/build-all-branded-download-pdfs.js
+          if git diff --cached --quiet; then
+            echo "Detailed wealth guide library already matches the tested source."
+            exit 0
+          fi
+          git commit -m "Publish detailed subject-specific wealth PDF library [deploy]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during guide publication; retrying."
+          done
+          exit 1

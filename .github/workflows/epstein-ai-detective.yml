@@ -1,0 +1,143 @@
+name: Epstein AI Detective Docket
+
+on:
+  schedule:
+    - cron: '47 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/daily-epstein-update.json'
+      - 'scripts/build-epstein-ai-detective-docket.js'
+      - 'scripts/patch-homepage-ai-detective-button.js'
+      - 'ai-speculative-conclusions.js'
+      - 'ai-speculative-conclusions.html'
+      - 'scripts/final-release-sanitize.js'
+      - '.github/workflows/epstein-ai-detective.yml'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: epstein-ai-detective-main
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  rebuild-validate-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Rebuild active Epstein investigation docket
+        run: |
+          node scripts/build-epstein-ai-detective-docket.js
+          node scripts/patch-homepage-ai-detective-button.js
+
+      - name: Validate investigator truth and evidence boundaries
+        run: |
+          node --check scripts/build-epstein-ai-detective-docket.js
+          node --check scripts/patch-homepage-ai-detective-button.js
+          node --check ai-speculative-conclusions.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const assert = require('assert/strict');
+          const source = JSON.parse(fs.readFileSync('data/daily-epstein-update.json', 'utf8'));
+          const status = JSON.parse(fs.readFileSync('data/epstein-investigator-status.json', 'utf8'));
+          const homepage = fs.readFileSync('index.html', 'utf8');
+          const client = fs.readFileSync('ai-speculative-conclusions.js', 'utf8');
+          const sourceCount = Array.isArray(source.items) ? source.items.length : 0;
+          const docket = Array.isArray(status.docket) ? status.docket : [];
+          assert.equal(status.currentDataset, 'data/daily-epstein-update.json');
+          assert.equal(status.corpusDocuments, sourceCount);
+          assert.equal(status.publishedConclusions, sourceCount > 0 ? 4 : 0);
+          assert.equal(docket.length, sourceCount > 0 ? 4 : 0);
+          if (sourceCount > 0) assert.equal(status.status, 'active public-record analysis');
+          for (const item of docket) {
+            assert.equal(item.topic, 'epstein');
+            assert.equal(item.criminalConductEstablished, false);
+            assert.ok(Array.isArray(item.sources) && item.sources.length >= 3, `${item.id} source routes missing`);
+            assert.ok(Array.isArray(item.contraryEvidence) && item.contraryEvidence.length >= 2, `${item.id} contrary evidence missing`);
+            assert.ok(Array.isArray(item.missingRecords) && item.missingRecords.length >= 3, `${item.id} missing-proof tests missing`);
+            assert.ok(Array.isArray(item.falsificationTests) && item.falsificationTests.length >= 3, `${item.id} falsification tests missing`);
+            assert.match(item.boundary, /not|does not|no guilt|not evidence|not proof/i, `${item.id} boundary is too weak`);
+          }
+          assert.ok(homepage.includes('OPEN THE AI DETECTIVE — EPSTEIN FILES'));
+          assert.ok(homepage.includes('ai-speculative-conclusions.html#epstein-investigator-lane'));
+          assert.ok(client.includes('epstein-investigator-docket'));
+          assert.ok(client.includes('Current public-record leads indexed'));
+          console.log(`Epstein AI Detective validation passed: ${sourceCount} current leads, ${docket.length} bounded hypotheses.`);
+          NODE
+
+      - name: Publish newest validated docket on latest main
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "epstein-ai-detective-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          rebuild_latest() {
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/build-epstein-ai-detective-docket.js
+            node scripts/patch-homepage-ai-detective-button.js
+            git add data/epstein-investigator-status.json index.html
+          }
+
+          for attempt in 1 2 3; do
+            rebuild_latest
+            if git diff --cached --quiet; then
+              echo "The latest main already contains the current Epstein AI Detective docket."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git commit -m "Refresh Epstein AI detective docket $(date -u +%FT%H:%MZ) [deploy]"
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Main advanced during docket publication attempt $attempt; rebuilding on latest main."
+          done
+          echo "Validated Epstein AI Detective docket could not be published after three attempts."
+          exit 1
+
+      - name: Dispatch guarded production deployment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          echo "Controlled production deployment dispatched for ${{ steps.publish.outputs.commit_sha }}."
+
+      - name: Upload investigator proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: epstein-ai-detective-${{ github.run_id }}
+          path: |
+            data/daily-epstein-update.json
+            data/epstein-investigator-status.json
+            ai-speculative-conclusions.html
+            ai-speculative-conclusions.js
+            index.html
+          if-no-files-found: error
+          retention-days: 21

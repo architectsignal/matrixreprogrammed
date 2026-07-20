@@ -47,8 +47,19 @@ jobs:
             ENRICH_STATUS=$?
             echo "enrich_status=$ENRICH_STATUS"
             if [ "$ENRICH_STATUS" -ne 0 ]; then exit "$ENRICH_STATUS"; fi
+            echo '=== WRAPPING AND PAGINATION REPAIR ==='
+            node scripts/repair-detailed-wealth-guide-layout.js
+            LAYOUT_REPAIR_STATUS=$?
+            echo "layout_repair_status=$LAYOUT_REPAIR_STATUS"
+            if [ "$LAYOUT_REPAIR_STATUS" -ne 0 ]; then exit "$LAYOUT_REPAIR_STATUS"; fi
+            echo '=== WIRE LAYOUT REGRESSION INTO COMPLETE PIPELINE ==='
+            node scripts/wire-wealth-pdf-layout-test.js
+            WIRING_STATUS=$?
+            echo "wiring_status=$WIRING_STATUS"
+            if [ "$WIRING_STATUS" -ne 0 ]; then exit "$WIRING_STATUS"; fi
             echo '=== NODE SYNTAX CHECK ==='
             node --check scripts/build-detailed-wealth-guides.js
+            node --check scripts/wealth-pdf-layout-test.js
             SYNTAX_STATUS=$?
             echo "syntax_status=$SYNTAX_STATUS"
             if [ "$SYNTAX_STATUS" -ne 0 ]; then exit "$SYNTAX_STATUS"; fi
@@ -57,11 +68,16 @@ jobs:
             BUILD_STATUS=$?
             echo "build_status=$BUILD_STATUS"
             if [ "$BUILD_STATUS" -ne 0 ]; then exit "$BUILD_STATUS"; fi
-            echo '=== STRICT QUALITY TEST ==='
+            echo '=== STRICT CONTENT QUALITY TEST ==='
             node scripts/detailed-wealth-guides-test.js
-            TEST_STATUS=$?
-            echo "test_status=$TEST_STATUS"
-            exit "$TEST_STATUS"
+            CONTENT_STATUS=$?
+            echo "content_status=$CONTENT_STATUS"
+            if [ "$CONTENT_STATUS" -ne 0 ]; then exit "$CONTENT_STATUS"; fi
+            echo '=== STRUCTURAL LAYOUT REGRESSION TEST ==='
+            node scripts/wealth-pdf-layout-test.js
+            LAYOUT_STATUS=$?
+            echo "layout_status=$LAYOUT_STATUS"
+            exit "$LAYOUT_STATUS"
           } 2>&1 | tee downloads/detailed-wealth-guides-build.log
           STATUS=${PIPESTATUS[0]}
           echo "status=$STATUS" >> "$GITHUB_OUTPUT"
@@ -76,7 +92,10 @@ jobs:
             downloads/detailed-wealth-guides-build.log
             downloads/detailed-wealth-guide-builder-repair.json
             downloads/detailed-wealth-guide-enrichment.json
+            downloads/detailed-wealth-guide-layout-repair.json
+            downloads/wealth-pdf-layout-wiring.json
             downloads/detailed-wealth-guides-test.json
+            downloads/wealth-pdf-layout-test.json
             downloads/wealth-guides/index.json
             data/detailed-wealth-guides.json
           if-no-files-found: warn
@@ -91,20 +110,23 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             scripts/build-detailed-wealth-guides.js \
+            scripts/build-all-branded-download-pdfs.js \
             downloads/wealth-guides \
             downloads/detailed-wealth-guide-builder-repair.json \
             downloads/detailed-wealth-guide-enrichment.json \
+            downloads/detailed-wealth-guide-layout-repair.json \
+            downloads/wealth-pdf-layout-wiring.json \
             downloads/detailed-wealth-guides-test.json \
+            downloads/wealth-pdf-layout-test.json \
             data/making-money-core.json \
             data/detailed-wealth-guides.json \
             making-money.js making-money.html \
-            scripts/build-deep-pdf-intelligence.mjs \
-            scripts/build-all-branded-download-pdfs.js
+            scripts/build-deep-pdf-intelligence.mjs
           if git diff --cached --quiet; then
             echo "Detailed wealth guide library already matches the tested source."
             exit 0
           fi
-          git commit -m "Publish detailed subject-specific wealth PDF library [deploy]"
+          git commit -m "Repair and republish wealth PDF visual layout [deploy]"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

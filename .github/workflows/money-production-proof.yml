@@ -1,0 +1,49 @@
+name: Money Intelligence Production Proof
+
+on:
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Controlled Production Deploy
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  record-production-result:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Record production result
+        env:
+          RESULT: ${{ github.event.workflow_run.conclusion }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          COMPLETED_AT: ${{ github.event.workflow_run.updated_at }}
+        run: |
+          mkdir -p data
+          node - <<'NODE'
+          const fs=require('fs');
+          const payload={
+            ok:process.env.RESULT==='success',
+            workflow:'Matrix Reprogrammed Controlled Production Deploy',
+            conclusion:process.env.RESULT,
+            runId:process.env.RUN_ID,
+            runUrl:process.env.RUN_URL,
+            deployedHeadSha:process.env.HEAD_SHA,
+            completedAt:process.env.COMPLETED_AT,
+            checkedRoutes:['/follow-the-money','/making-money','/follow-the-money/people/elon-musk','/downloads/wealth-guides/start-from-zero.pdf']
+          };
+          fs.writeFileSync('data/money-production-proof.json',JSON.stringify(payload,null,2)+'\n');
+          NODE
+      - name: Commit production receipt
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/money-production-proof.json
+          git commit -m "Record money intelligence production result" || exit 0
+          git push

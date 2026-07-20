@@ -12,6 +12,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   searchFiles: [],
   evidenceFiles: [],
+  authContractFiles: [],
   removedEvidenceAliasIds: 0,
   removedRepeatedEvidenceIds: 0
 };
@@ -81,9 +82,27 @@ function repairEvidenceIds(file) {
   report.evidenceFiles.push({ file: path.relative(root, file).replace(/\\/g, '/'), changed: after !== before });
 }
 
+function repairAuthTestContract(file) {
+  if (!fs.existsSync(file)) return;
+  const before = read(file);
+  const after = before.split('/matrix_session=/.test(').join('/matrix_session_v2=/.test(');
+  const currentChecks = (after.match(/\/matrix_session_v2=\/\.test\(/g) || []).length;
+  if (after.includes('/matrix_session=/.test(') || currentChecks < 2) {
+    throw new Error(`${path.relative(root, file)} does not test the current matrix_session_v2 cookie contract`);
+  }
+  if (after !== before) write(file, after);
+  report.authContractFiles.push({
+    file: path.relative(root, file).replace(/\\/g, '/'),
+    changed: after !== before,
+    sessionCookie: 'matrix_session_v2',
+    secureFlagsStillRequired: ['HttpOnly', 'Secure', 'SameSite=Lax']
+  });
+}
+
 repairSearchRuntime(path.join(root, 'scripts', 'search-v3-runtime-template.js'));
 repairSearchRuntime(path.join(root, 'search.js'));
 if (fs.existsSync(site)) write(path.join(site, 'search.js'), read(path.join(root, 'search.js')));
+repairAuthTestContract(path.join(root, 'scripts', 'membership-auth-test.js'));
 
 const evidenceTargets = [
   'index.html', 'daily-drop.html', 'epstein-files.html', 'network-search.html', 'live-intel.html',
@@ -97,4 +116,4 @@ for (const relative of evidenceTargets) {
 
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Final release regressions repaired: ${report.searchFiles.length} Search V3 runtime(s), ${report.evidenceFiles.length} evidence route(s), ${report.removedEvidenceAliasIds} generated alias ID(s), ${report.removedRepeatedEvidenceIds} repeated canonical ID(s).`);
+console.log(`Final release regressions repaired: ${report.searchFiles.length} Search V3 runtime(s), ${report.evidenceFiles.length} evidence route(s), ${report.authContractFiles.length} current auth test contract(s), ${report.removedEvidenceAliasIds} generated alias ID(s), ${report.removedRepeatedEvidenceIds} repeated canonical ID(s).`);

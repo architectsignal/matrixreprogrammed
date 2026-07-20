@@ -1,4 +1,6 @@
 (() => {
+  'use strict';
+
   const gate = document.querySelector('[data-signal-gate]');
   if (!gate) return;
 
@@ -10,9 +12,9 @@
   const voicePreferenceKey = 'matrix-reprogrammed-signal-gate-voice';
   const introLines = [
     '> WELCOME TO MATRIX REPROGRAMMED',
-    '> Reality is edited.',
-    '> The headline is not the machine.',
-    '> Symbols. Files. War. Intelligence. Crime. Psychology. Source.',
+    '> Power leaves a paper trail.',
+    '> Follow the money. Check the record.',
+    '> The machine watches what changes.',
     '> The truth is not hidden. It is encoded.'
   ];
   const introSpeechText = introLines
@@ -154,7 +156,33 @@
     actions.appendChild(voiceButton);
   }
 
+  function mountHomepageCommandRail() {
+    if (document.querySelector('[data-home-command-rail]')) return;
+    const anchor = document.querySelector('.cinematic-command') || document.querySelector('.topbar');
+    if (!anchor || !anchor.parentNode) return;
+
+    const section = document.createElement('section');
+    section.className = 'home-signal-rail wrap';
+    section.dataset.homeCommandRail = 'true';
+    section.setAttribute('aria-label', 'Money, investigation and briefing command links');
+    section.innerHTML = `
+      <div class="home-signal-copy">
+        <span class="eyebrow">Live Intelligence Command Rail</span>
+        <h2>FOLLOW THE MONEY. FOLLOW THE MACHINE.</h2>
+        <p>See who holds the assets, study how wealth is built, and open the evidence-bounded conclusions published by the investigation system.</p>
+      </div>
+      <nav class="home-signal-grid" aria-label="Featured intelligence routes">
+        <a class="home-signal-card" href="follow-the-money.html"><span>01</span><strong>Follow the Money</strong><small>World Top 100 wealth holders</small></a>
+        <a class="home-signal-card" href="making-money.html"><span>02</span><strong>How to Make Money</strong><small>Evidence-led wealth building guide</small></a>
+        <a class="home-signal-card" href="investigation-machine.html"><span>03</span><strong>AI Investigation Bot</strong><small>Open the live investigation machine</small></a>
+        <a class="home-signal-card" href="daily-investigation-conclusions.html"><span>04</span><strong>Published Conclusions</strong><small>What the machine concluded today</small></a>
+        <a class="home-signal-card" href="daily-command-brief.html"><span>05</span><strong>Emails & Briefs</strong><small>Daily command brief and report routes</small></a>
+      </nav>`;
+    anchor.insertAdjacentElement('afterend', section);
+  }
+
   addVoiceButton();
+  mountHomepageCommandRail();
 
   if (localStorage.getItem(storageKey) === 'true') {
     hideGate(false);

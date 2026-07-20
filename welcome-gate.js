@@ -175,7 +175,7 @@
         <a class="home-signal-card" href="follow-the-money.html"><span>01</span><strong>Follow the Money</strong><small>World Top 100 wealth holders</small></a>
         <a class="home-signal-card" href="making-money.html"><span>02</span><strong>How to Make Money</strong><small>Evidence-led wealth building guide</small></a>
         <a class="home-signal-card" href="investigation-machine.html"><span>03</span><strong>AI Investigation Bot</strong><small>Open the live investigation machine</small></a>
-        <a class="home-signal-card" href="daily-investigation-conclusions.html"><span>04</span><strong>Published Conclusions</strong><small>What the machine concluded today</small></a>
+        <a class="home-signal-card" href="ai-speculative-conclusions.html"><span>04</span><strong>AI Detective · Epstein</strong><small>Active hypotheses, counter-evidence and missing proof</small></a><a class="home-signal-card" href="daily-investigation-conclusions.html"><span>05</span><strong>Published Conclusions</strong><small>What the machine concluded today</small></a>
         <a class="home-signal-card" href="daily-command-brief.html"><span>05</span><strong>Emails & Briefs</strong><small>Daily command brief and report routes</small></a>
       </nav>`;
     anchor.insertAdjacentElement('afterend', section);

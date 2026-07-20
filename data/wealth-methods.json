@@ -1,0 +1,1357 @@
+{
+  "version": 2,
+  "updated": "2026-07-20T20:07:16.009Z",
+  "disclaimer": "Educational information only. Not personalised financial, investment, legal or tax advice.",
+  "methods": [
+    {
+      "id": "increase-earned-income",
+      "title": "Increase Earned Income",
+      "archetype": "employment",
+      "capital": "0-500",
+      "firstIncome": "14-60 days",
+      "risk": "Low",
+      "complexity": "Low",
+      "offer": "A higher-paid role or expanded responsibilities",
+      "customer": "Employers with measurable skill gaps",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "OECD Employment",
+          "https://www.oecd.org/employment/"
+        ],
+        [
+          "Eurostat labour data",
+          "https://ec.europa.eu/eurostat/"
+        ]
+      ]
+    },
+    {
+      "id": "service-business",
+      "title": "Build a Service Business",
+      "archetype": "service",
+      "capital": "0-2000",
+      "firstIncome": "1-21 days",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "A defined result delivered for a fixed price",
+      "customer": "Local consumers or small firms",
+      "economics": {
+        "price": 250,
+        "variableCost": 40,
+        "fixedMonthly": 120,
+        "monthlySales": 12
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "Bpifrance Création",
+          "https://bpifrance-creation.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "local-business",
+      "title": "Start a Local Business",
+      "archetype": "local",
+      "capital": "500-10000",
+      "firstIncome": "7-45 days",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "A reliable local service with repeat demand",
+      "customer": "Households, gyms, clubs and local firms",
+      "economics": {
+        "price": 60,
+        "variableCost": 15,
+        "fixedMonthly": 600,
+        "monthlySales": 80
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "DGCCRF",
+          "https://www.economie.gouv.fr/dgccrf"
+        ]
+      ]
+    },
+    {
+      "id": "online-business",
+      "title": "Start an Online Business",
+      "archetype": "digital",
+      "capital": "100-3000",
+      "firstIncome": "14-90 days",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "A focused online offer with clear distribution",
+      "customer": "A narrow online audience",
+      "economics": {
+        "price": 79,
+        "variableCost": 8,
+        "fixedMonthly": 300,
+        "monthlySales": 30
+      },
+      "sources": [
+        [
+          "EU digital business rules",
+          "https://europa.eu/youreurope/business/running-business/digitalising/"
+        ],
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "freelancing",
+      "title": "Freelancing",
+      "archetype": "service",
+      "capital": "0-1000",
+      "firstIncome": "1-30 days",
+      "risk": "Moderate",
+      "complexity": "Low",
+      "offer": "A packaged professional deliverable",
+      "customer": "Agencies, founders and local firms",
+      "economics": {
+        "price": 450,
+        "variableCost": 30,
+        "fixedMonthly": 80,
+        "monthlySales": 8
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "Bpifrance Création",
+          "https://bpifrance-creation.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "consulting",
+      "title": "Consulting",
+      "archetype": "service",
+      "capital": "0-2000",
+      "firstIncome": "14-60 days",
+      "risk": "Moderate",
+      "complexity": "High",
+      "offer": "A diagnosis and implementation plan",
+      "customer": "Organisations facing an expensive problem",
+      "economics": {
+        "price": 1500,
+        "variableCost": 120,
+        "fixedMonthly": 350,
+        "monthlySales": 4
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "Bpifrance Création",
+          "https://bpifrance-creation.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "reselling",
+      "title": "Buying and Selling Products",
+      "archetype": "commerce",
+      "capital": "200-5000",
+      "firstIncome": "1-21 days",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "Verified products bought below realistic resale value",
+      "customer": "Marketplace and local buyers",
+      "economics": {
+        "price": 80,
+        "variableCost": 48,
+        "fixedMonthly": 250,
+        "monthlySales": 80
+      },
+      "sources": [
+        [
+          "EU Access2Markets",
+          "https://trade.ec.europa.eu/access-to-markets/"
+        ],
+        [
+          "DGCCRF",
+          "https://www.economie.gouv.fr/dgccrf"
+        ]
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "title": "E-commerce",
+      "archetype": "commerce",
+      "capital": "500-10000",
+      "firstIncome": "21-120 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "A narrow product line with proven demand",
+      "customer": "Search, marketplace or social buyers",
+      "economics": {
+        "price": 55,
+        "variableCost": 24,
+        "fixedMonthly": 1200,
+        "monthlySales": 140
+      },
+      "sources": [
+        [
+          "EU Access2Markets",
+          "https://trade.ec.europa.eu/access-to-markets/"
+        ],
+        [
+          "DGCCRF",
+          "https://www.economie.gouv.fr/dgccrf"
+        ]
+      ]
+    },
+    {
+      "id": "digital-products",
+      "title": "Digital Products",
+      "archetype": "digital",
+      "capital": "0-2000",
+      "firstIncome": "14-90 days",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "A template, course, toolkit or data product",
+      "customer": "People solving a repeatable problem",
+      "economics": {
+        "price": 49,
+        "variableCost": 3,
+        "fixedMonthly": 250,
+        "monthlySales": 50
+      },
+      "sources": [
+        [
+          "EU digital business rules",
+          "https://europa.eu/youreurope/business/running-business/digitalising/"
+        ],
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "publishing-books",
+      "title": "Publishing Books",
+      "archetype": "digital",
+      "capital": "0-3000",
+      "firstIncome": "30-180 days",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "Books that solve or explain a defined reader problem",
+      "customer": "Search-led and series readers",
+      "economics": {
+        "price": 9,
+        "variableCost": 3,
+        "fixedMonthly": 250,
+        "monthlySales": 180
+      },
+      "sources": [
+        [
+          "EU digital business rules",
+          "https://europa.eu/youreurope/business/running-business/digitalising/"
+        ],
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "content-business",
+      "title": "Content Business",
+      "archetype": "digital",
+      "capital": "0-3000",
+      "firstIncome": "60-365 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "Useful media that drives sponsorship, products or memberships",
+      "customer": "A defined recurring audience",
+      "economics": {
+        "price": 12,
+        "variableCost": 2,
+        "fixedMonthly": 500,
+        "monthlySales": 250
+      },
+      "sources": [
+        [
+          "EU digital business rules",
+          "https://europa.eu/youreurope/business/running-business/digitalising/"
+        ],
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "subscription-business",
+      "title": "Subscription Business",
+      "archetype": "subscription",
+      "capital": "500-10000",
+      "firstIncome": "30-180 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "Recurring access to information, tools or service",
+      "customer": "Users with an ongoing need",
+      "economics": {
+        "price": 15,
+        "variableCost": 3,
+        "fixedMonthly": 1000,
+        "monthlySales": 300
+      },
+      "sources": [
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ],
+        [
+          "EU consumer rules",
+          "https://europa.eu/youreurope/business/dealing-with-customers/consumer-contracts-guarantees/"
+        ]
+      ]
+    },
+    {
+      "id": "micro-saas",
+      "title": "Software and Micro-SaaS",
+      "archetype": "subscription",
+      "capital": "500-15000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "A narrow workflow tool with recurring billing",
+      "customer": "Small teams with a measurable workflow cost",
+      "economics": {
+        "price": 39,
+        "variableCost": 8,
+        "fixedMonthly": 1800,
+        "monthlySales": 120
+      },
+      "sources": [
+        [
+          "CNIL",
+          "https://www.cnil.fr/"
+        ],
+        [
+          "EU consumer rules",
+          "https://europa.eu/youreurope/business/dealing-with-customers/consumer-contracts-guarantees/"
+        ]
+      ]
+    },
+    {
+      "id": "property-investing",
+      "title": "Property Investing",
+      "archetype": "property",
+      "capital": "25000+",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Rental income plus long-term asset exposure",
+      "customer": "Tenants in a verified local market",
+      "economics": {
+        "price": 950,
+        "variableCost": 420,
+        "fixedMonthly": 300,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "ANIL",
+          "https://www.anil.org/"
+        ],
+        [
+          "Service-Public housing",
+          "https://www.service-public.fr/particuliers/vosdroits/N19808"
+        ]
+      ]
+    },
+    {
+      "id": "property-renovation",
+      "title": "Property Renovation",
+      "archetype": "property",
+      "capital": "10000-100000",
+      "firstIncome": "90-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Purchase, improve and refinance or sell",
+      "customer": "Owner-occupiers or investors",
+      "economics": {
+        "price": 35000,
+        "variableCost": 25000,
+        "fixedMonthly": 3000,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "ANIL",
+          "https://www.anil.org/"
+        ],
+        [
+          "Service-Public housing",
+          "https://www.service-public.fr/particuliers/vosdroits/N19808"
+        ]
+      ]
+    },
+    {
+      "id": "vendor-finance",
+      "title": "Vendor Finance Property or Business",
+      "archetype": "acquisition",
+      "capital": "5000-50000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Seller-financed acquisition supported by cash flow",
+      "customer": "Owners seeking succession or a structured exit",
+      "economics": {
+        "price": 2500,
+        "variableCost": 900,
+        "fixedMonthly": 500,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "renting-property",
+      "title": "Renting Property",
+      "archetype": "property",
+      "capital": "10000-100000",
+      "firstIncome": "60-240 days",
+      "risk": "Very high",
+      "complexity": "High",
+      "offer": "A compliant rental unit with positive cash flow",
+      "customer": "Long-term or permitted short-stay tenants",
+      "economics": {
+        "price": 850,
+        "variableCost": 300,
+        "fixedMonthly": 250,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "ANIL",
+          "https://www.anil.org/"
+        ],
+        [
+          "Service-Public housing",
+          "https://www.service-public.fr/particuliers/vosdroits/N19808"
+        ]
+      ]
+    },
+    {
+      "id": "buy-small-business",
+      "title": "Buy a Small Existing Business",
+      "archetype": "acquisition",
+      "capital": "10000-250000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Acquire verified cash flow, customers and systems",
+      "customer": "An existing owner planning to exit",
+      "economics": {
+        "price": 18000,
+        "variableCost": 9000,
+        "fixedMonthly": 3500,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "franchise",
+      "title": "Franchises",
+      "archetype": "acquisition",
+      "capital": "10000-250000",
+      "firstIncome": "90-365 days",
+      "risk": "Very high",
+      "complexity": "High",
+      "offer": "A licensed operating model with local execution",
+      "customer": "Local consumers in a validated territory",
+      "economics": {
+        "price": 22000,
+        "variableCost": 13000,
+        "fixedMonthly": 5000,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "small-farm",
+      "title": "Agriculture and Small Farms",
+      "archetype": "production",
+      "capital": "5000-100000",
+      "firstIncome": "90-730 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "A high-value crop, livestock or direct-sale farm product",
+      "customer": "Local consumers, restaurants or cooperatives",
+      "economics": {
+        "price": 12,
+        "variableCost": 5,
+        "fixedMonthly": 2200,
+        "monthlySales": 900
+      },
+      "sources": [
+        [
+          "INPI",
+          "https://www.inpi.fr/"
+        ],
+        [
+          "France industry portal",
+          "https://www.entreprises.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "shares",
+      "title": "Investing in Shares",
+      "archetype": "investment",
+      "capital": "100+",
+      "firstIncome": "Immediate to years",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "Ownership in productive public companies",
+      "customer": "Public markets",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "index-funds",
+      "title": "Index Funds and ETFs",
+      "archetype": "investment",
+      "capital": "50+",
+      "firstIncome": "Immediate to years",
+      "risk": "Moderate",
+      "complexity": "Low",
+      "offer": "Diversified market exposure at controlled cost",
+      "customer": "Public markets",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "bonds",
+      "title": "Bonds",
+      "archetype": "investment",
+      "capital": "100+",
+      "firstIncome": "Immediate to years",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "Contractual interest and principal subject to credit risk",
+      "customer": "Governments and companies",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "cash-management",
+      "title": "Savings and Cash Management",
+      "archetype": "finance",
+      "capital": "0+",
+      "firstIncome": "Immediate",
+      "risk": "Low",
+      "complexity": "Low",
+      "offer": "Liquidity, deposit interest and controlled cash allocation",
+      "customer": "Regulated banks and savings providers",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Banque de France",
+          "https://www.banque-france.fr/"
+        ],
+        [
+          "impots.gouv.fr",
+          "https://www.impots.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "retirement-accounts",
+      "title": "Retirement Accounts",
+      "archetype": "investment",
+      "capital": "0+",
+      "firstIncome": "Years",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "Tax-advantaged long-term investment within local rules",
+      "customer": "Regulated pension or retirement providers",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "business-ownership",
+      "title": "Business Ownership",
+      "archetype": "acquisition",
+      "capital": "500+",
+      "firstIncome": "30-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Equity in a cash-generating enterprise",
+      "customer": "Customers of the owned business",
+      "economics": {
+        "price": 5000,
+        "variableCost": 2500,
+        "fixedMonthly": 1200,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "dividends",
+      "title": "Dividend Investing",
+      "archetype": "investment",
+      "capital": "100+",
+      "firstIncome": "Months to years",
+      "risk": "High",
+      "complexity": "Moderate",
+      "offer": "Company distributions from available profits",
+      "customer": "Public markets",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "compounding",
+      "title": "Compounding",
+      "archetype": "investment",
+      "capital": "1+",
+      "firstIncome": "Years",
+      "risk": "Moderate",
+      "complexity": "Low",
+      "offer": "Repeated reinvestment of returns and contributions",
+      "customer": "Productive assets",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "tax-efficient-structures",
+      "title": "Tax-Efficient Structures",
+      "archetype": "finance",
+      "capital": "500+",
+      "firstIncome": "30-180 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "Lawful wrappers and entities matched to a real purpose",
+      "customer": "Tax and legal systems",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 800,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Banque de France",
+          "https://www.banque-france.fr/"
+        ],
+        [
+          "impots.gouv.fr",
+          "https://www.impots.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "debt-reduction",
+      "title": "Debt Reduction",
+      "archetype": "finance",
+      "capital": "0+",
+      "firstIncome": "Immediate",
+      "risk": "Low",
+      "complexity": "Low",
+      "offer": "Guaranteed interest avoided when debt is repaid",
+      "customer": "Your existing creditors",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Banque de France",
+          "https://www.banque-france.fr/"
+        ],
+        [
+          "impots.gouv.fr",
+          "https://www.impots.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "emergency-funds",
+      "title": "Emergency Funds",
+      "archetype": "finance",
+      "capital": "0+",
+      "firstIncome": "Immediate",
+      "risk": "Low",
+      "complexity": "Low",
+      "offer": "Liquidity that prevents forced borrowing or asset sales",
+      "customer": "Regulated cash accounts",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Banque de France",
+          "https://www.banque-france.fr/"
+        ],
+        [
+          "impots.gouv.fr",
+          "https://www.impots.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "credit-building",
+      "title": "Credit Building",
+      "archetype": "finance",
+      "capital": "0-500",
+      "firstIncome": "30-365 days",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "Reliable repayment history and lower financing friction",
+      "customer": "Regulated lenders and credit bureaus",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 20,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Banque de France",
+          "https://www.banque-france.fr/"
+        ],
+        [
+          "impots.gouv.fr",
+          "https://www.impots.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "salary-negotiation",
+      "title": "Negotiating Salary",
+      "archetype": "employment",
+      "capital": "0-500",
+      "firstIncome": "7-60 days",
+      "risk": "Low",
+      "complexity": "Moderate",
+      "offer": "A documented case for higher compensation",
+      "customer": "Current or prospective employers",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "OECD Employment",
+          "https://www.oecd.org/employment/"
+        ],
+        [
+          "Eurostat labour data",
+          "https://ec.europa.eu/eurostat/"
+        ]
+      ]
+    },
+    {
+      "id": "high-value-skills",
+      "title": "Develop High-Value Skills",
+      "archetype": "employment",
+      "capital": "0-5000",
+      "firstIncome": "30-365 days",
+      "risk": "Moderate",
+      "complexity": "Moderate",
+      "offer": "A scarce skill tied to revenue, risk or essential operations",
+      "customer": "Employers and clients",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 150,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "OECD Employment",
+          "https://www.oecd.org/employment/"
+        ],
+        [
+          "Eurostat labour data",
+          "https://ec.europa.eu/eurostat/"
+        ]
+      ]
+    },
+    {
+      "id": "ip-licensing",
+      "title": "Licensing Intellectual Property",
+      "archetype": "ip",
+      "capital": "500-10000",
+      "firstIncome": "60-365 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "Permission to use protected designs, brands, software or methods",
+      "customer": "Companies that can commercialise the asset",
+      "economics": {
+        "price": 5000,
+        "variableCost": 500,
+        "fixedMonthly": 1200,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "WIPO",
+          "https://www.wipo.int/"
+        ],
+        [
+          "INPI",
+          "https://www.inpi.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "royalties",
+      "title": "Royalties",
+      "archetype": "ip",
+      "capital": "0-10000",
+      "firstIncome": "60-730 days",
+      "risk": "High",
+      "complexity": "High",
+      "offer": "Recurring payments from licensed creative or technical assets",
+      "customer": "Publishers, platforms and licensees",
+      "economics": {
+        "price": 500,
+        "variableCost": 40,
+        "fixedMonthly": 300,
+        "monthlySales": 10
+      },
+      "sources": [
+        [
+          "WIPO",
+          "https://www.wipo.int/"
+        ],
+        [
+          "INPI",
+          "https://www.inpi.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "partnerships",
+      "title": "Business Partnerships",
+      "archetype": "service",
+      "capital": "500-10000",
+      "firstIncome": "30-180 days",
+      "risk": "Very high",
+      "complexity": "High",
+      "offer": "Complementary distribution, skills or capital under a written agreement",
+      "customer": "Partners and shared customers",
+      "economics": {
+        "price": 4000,
+        "variableCost": 1200,
+        "fixedMonthly": 800,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "Bpifrance Création",
+          "https://bpifrance-creation.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "government-contracts",
+      "title": "Government Contracts",
+      "archetype": "b2b",
+      "capital": "500-20000",
+      "firstIncome": "60-365 days",
+      "risk": "High",
+      "complexity": "Very high",
+      "offer": "Compliant delivery against a public procurement requirement",
+      "customer": "Public agencies and prime contractors",
+      "economics": {
+        "price": 12000,
+        "variableCost": 6500,
+        "fixedMonthly": 1800,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "BOAMP",
+          "https://www.boamp.fr/"
+        ],
+        [
+          "TED Europe",
+          "https://ted.europa.eu/"
+        ]
+      ]
+    },
+    {
+      "id": "b2b-sales",
+      "title": "Business-to-Business Sales",
+      "archetype": "b2b",
+      "capital": "0-5000",
+      "firstIncome": "14-90 days",
+      "risk": "Moderate",
+      "complexity": "High",
+      "offer": "A measurable revenue, cost or risk outcome",
+      "customer": "Decision-makers in a defined industry",
+      "economics": {
+        "price": 5000,
+        "variableCost": 800,
+        "fixedMonthly": 900,
+        "monthlySales": 4
+      },
+      "sources": [
+        [
+          "BOAMP",
+          "https://www.boamp.fr/"
+        ],
+        [
+          "TED Europe",
+          "https://ted.europa.eu/"
+        ]
+      ]
+    },
+    {
+      "id": "exporting",
+      "title": "Exporting",
+      "archetype": "trade",
+      "capital": "2000-50000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Sell a proven product into a compliant foreign market",
+      "customer": "Importers, distributors and foreign buyers",
+      "economics": {
+        "price": 25000,
+        "variableCost": 17000,
+        "fixedMonthly": 3000,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "EU Access2Markets",
+          "https://trade.ec.europa.eu/access-to-markets/"
+        ],
+        [
+          "French Customs",
+          "https://www.douane.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "importing",
+      "title": "Importing",
+      "archetype": "trade",
+      "capital": "2000-50000",
+      "firstIncome": "45-240 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Source compliant goods with landed-cost margin",
+      "customer": "Local retailers, businesses or consumers",
+      "economics": {
+        "price": 70,
+        "variableCost": 42,
+        "fixedMonthly": 2500,
+        "monthlySales": 500
+      },
+      "sources": [
+        [
+          "EU Access2Markets",
+          "https://trade.ec.europa.eu/access-to-markets/"
+        ],
+        [
+          "French Customs",
+          "https://www.douane.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing",
+      "archetype": "production",
+      "capital": "10000-250000",
+      "firstIncome": "90-730 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Produce repeatable goods at controlled quality and throughput",
+      "customer": "Distributors, manufacturers or consumers",
+      "economics": {
+        "price": 40,
+        "variableCost": 18,
+        "fixedMonthly": 12000,
+        "monthlySales": 1500
+      },
+      "sources": [
+        [
+          "INPI",
+          "https://www.inpi.fr/"
+        ],
+        [
+          "France industry portal",
+          "https://www.entreprises.gouv.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "property-management",
+      "title": "Property Management",
+      "archetype": "service",
+      "capital": "1000-10000",
+      "firstIncome": "14-90 days",
+      "risk": "Moderate",
+      "complexity": "High",
+      "offer": "Manage units, tenants, compliance and maintenance for a fee",
+      "customer": "Landlords and property investors",
+      "economics": {
+        "price": 120,
+        "variableCost": 30,
+        "fixedMonthly": 900,
+        "monthlySales": 60
+      },
+      "sources": [
+        [
+          "France business creation",
+          "https://entreprendre.service-public.fr/"
+        ],
+        [
+          "Bpifrance Création",
+          "https://bpifrance-creation.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "distressed-assets",
+      "title": "Buying Distressed Assets",
+      "archetype": "acquisition",
+      "capital": "5000-250000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Acquire assets below recoverable value after due diligence",
+      "customer": "Future buyers, tenants or operating users",
+      "economics": {
+        "price": 25000,
+        "variableCost": 14000,
+        "fixedMonthly": 2500,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "acquire-websites",
+      "title": "Acquire Websites",
+      "archetype": "acquisition",
+      "capital": "1000-100000",
+      "firstIncome": "30-180 days",
+      "risk": "Very high",
+      "complexity": "High",
+      "offer": "Buy verified traffic, revenue and digital assets",
+      "customer": "Advertisers, subscribers or product buyers",
+      "economics": {
+        "price": 3000,
+        "variableCost": 1200,
+        "fixedMonthly": 500,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "acquire-newsletters",
+      "title": "Acquire Newsletters",
+      "archetype": "acquisition",
+      "capital": "1000-100000",
+      "firstIncome": "30-180 days",
+      "risk": "Very high",
+      "complexity": "High",
+      "offer": "Buy a permission-based audience with measurable engagement",
+      "customer": "Sponsors, members and product buyers",
+      "economics": {
+        "price": 2500,
+        "variableCost": 700,
+        "fixedMonthly": 450,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "acquire-ip",
+      "title": "Acquire Intellectual Property",
+      "archetype": "ip",
+      "capital": "1000-100000",
+      "firstIncome": "60-365 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Buy rights that can be licensed or commercialised",
+      "customer": "Publishers, manufacturers and platforms",
+      "economics": {
+        "price": 5000,
+        "variableCost": 800,
+        "fixedMonthly": 1000,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "WIPO",
+          "https://www.wipo.int/"
+        ],
+        [
+          "INPI",
+          "https://www.inpi.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "private-companies",
+      "title": "Investing in Private Companies",
+      "archetype": "investment",
+      "capital": "1000+",
+      "firstIncome": "Years",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Illiquid equity in a private enterprise",
+      "customer": "Private capital markets",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "angel-investing",
+      "title": "Angel Investing",
+      "archetype": "investment",
+      "capital": "5000+",
+      "firstIncome": "Years",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Early-stage equity with a high probability of loss",
+      "customer": "Startup founders",
+      "economics": {
+        "price": 0,
+        "variableCost": 0,
+        "fixedMonthly": 0,
+        "monthlySales": 1
+      },
+      "sources": [
+        [
+          "AMF",
+          "https://www.amf-france.org/"
+        ],
+        [
+          "SEC Investor.gov",
+          "https://www.investor.gov/"
+        ]
+      ]
+    },
+    {
+      "id": "holding-company",
+      "title": "Build a Holding Company",
+      "archetype": "acquisition",
+      "capital": "10000+",
+      "firstIncome": "90-730 days",
+      "risk": "Very high",
+      "complexity": "Very high",
+      "offer": "Own multiple operating or investment assets under governed capital allocation",
+      "customer": "Customers of subsidiaries and investment markets",
+      "economics": {
+        "price": 15000,
+        "variableCost": 7000,
+        "fixedMonthly": 3000,
+        "monthlySales": 2
+      },
+      "sources": [
+        [
+          "Bpifrance transmission",
+          "https://reprise-entreprise.bpifrance.fr/"
+        ],
+        [
+          "France business transfer",
+          "https://entreprendre.service-public.fr/"
+        ]
+      ]
+    }
+  ]
+}

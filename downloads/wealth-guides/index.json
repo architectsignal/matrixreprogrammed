@@ -1,85 +1,456 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-20T20:07:16.009Z",
+  "count": 50,
   "guides": [
     {
-      "slug": "start-from-zero",
-      "title": "Start From Zero — 30-Day Wealth Creation Sprint",
-      "url": "downloads/wealth-guides/start-from-zero.pdf"
+      "slug": "increase-earned-income",
+      "title": "Increase Earned Income",
+      "url": "downloads/wealth-guides/increase-earned-income.pdf",
+      "html": "making-money/guides/increase-earned-income.html",
+      "capital": "0-500",
+      "risk": "Low",
+      "firstIncome": "14-60 days"
     },
     {
-      "slug": "wealth-roadmap",
-      "title": "The 12-Stage Wealth Creation Roadmap",
-      "url": "downloads/wealth-guides/wealth-roadmap.pdf"
+      "slug": "service-business",
+      "title": "Build a Service Business",
+      "url": "downloads/wealth-guides/service-business.pdf",
+      "html": "making-money/guides/service-business.html",
+      "capital": "0-2000",
+      "risk": "Moderate",
+      "firstIncome": "1-21 days"
     },
     {
-      "slug": "where-money-is-going",
-      "title": "Where the Money Is Going — Capital Flow Field Guide",
-      "url": "downloads/wealth-guides/where-money-is-going.pdf"
+      "slug": "local-business",
+      "title": "Start a Local Business",
+      "url": "downloads/wealth-guides/local-business.pdf",
+      "html": "making-money/guides/local-business.html",
+      "capital": "500-10000",
+      "risk": "Moderate",
+      "firstIncome": "7-45 days"
     },
     {
-      "slug": "opportunity-radar",
-      "title": "Opportunity Radar — Research Before You Invest",
-      "url": "downloads/wealth-guides/opportunity-radar.pdf"
+      "slug": "online-business",
+      "title": "Start an Online Business",
+      "url": "downloads/wealth-guides/online-business.pdf",
+      "html": "making-money/guides/online-business.html",
+      "capital": "100-3000",
+      "risk": "High",
+      "firstIncome": "14-90 days"
     },
     {
-      "slug": "investing-basics",
-      "title": "How to Invest — Beginner Evidence Guide",
-      "url": "downloads/wealth-guides/investing-basics.pdf"
+      "slug": "freelancing",
+      "title": "Freelancing",
+      "url": "downloads/wealth-guides/freelancing.pdf",
+      "html": "making-money/guides/freelancing.html",
+      "capital": "0-1000",
+      "risk": "Moderate",
+      "firstIncome": "1-30 days"
     },
     {
-      "slug": "copy-the-rich",
-      "title": "Copy the Rich — Principles You Can Adapt",
-      "url": "downloads/wealth-guides/copy-the-rich.pdf"
+      "slug": "consulting",
+      "title": "Consulting",
+      "url": "downloads/wealth-guides/consulting.pdf",
+      "html": "making-money/guides/consulting.html",
+      "capital": "0-2000",
+      "risk": "Moderate",
+      "firstIncome": "14-60 days"
     },
     {
-      "slug": "income-creation",
-      "title": "Income Creation Playbook",
-      "url": "downloads/wealth-guides/income-creation.pdf"
+      "slug": "reselling",
+      "title": "Buying and Selling Products",
+      "url": "downloads/wealth-guides/reselling.pdf",
+      "html": "making-money/guides/reselling.html",
+      "capital": "200-5000",
+      "risk": "High",
+      "firstIncome": "1-21 days"
     },
     {
-      "slug": "business-builder",
-      "title": "Business Creation Engine",
-      "url": "downloads/wealth-guides/business-builder.pdf"
+      "slug": "ecommerce",
+      "title": "E-commerce",
+      "url": "downloads/wealth-guides/ecommerce.pdf",
+      "html": "making-money/guides/ecommerce.html",
+      "capital": "500-10000",
+      "risk": "High",
+      "firstIncome": "21-120 days"
     },
     {
-      "slug": "legal-tax-efficiency",
-      "title": "Keep More Legally — Tax Efficiency Checklist",
-      "url": "downloads/wealth-guides/legal-tax-efficiency.pdf"
+      "slug": "digital-products",
+      "title": "Digital Products",
+      "url": "downloads/wealth-guides/digital-products.pdf",
+      "html": "making-money/guides/digital-products.html",
+      "capital": "0-2000",
+      "risk": "High",
+      "firstIncome": "14-90 days"
     },
     {
-      "slug": "financial-leakage",
-      "title": "Money Leakage Audit",
-      "url": "downloads/wealth-guides/financial-leakage.pdf"
+      "slug": "publishing-books",
+      "title": "Publishing Books",
+      "url": "downloads/wealth-guides/publishing-books.pdf",
+      "html": "making-money/guides/publishing-books.html",
+      "capital": "0-3000",
+      "risk": "High",
+      "firstIncome": "30-180 days"
     },
     {
-      "slug": "wealth-structures",
-      "title": "Companies, Holdings, Trusts and Wealth Structures",
-      "url": "downloads/wealth-guides/wealth-structures.pdf"
+      "slug": "content-business",
+      "title": "Content Business",
+      "url": "downloads/wealth-guides/content-business.pdf",
+      "html": "making-money/guides/content-business.html",
+      "capital": "0-3000",
+      "risk": "High",
+      "firstIncome": "60-365 days"
     },
     {
-      "slug": "start-today",
-      "title": "What To Do Today — Quick Start Guide",
-      "url": "downloads/wealth-guides/start-today.pdf"
+      "slug": "subscription-business",
+      "title": "Subscription Business",
+      "url": "downloads/wealth-guides/subscription-business.pdf",
+      "html": "making-money/guides/subscription-business.html",
+      "capital": "500-10000",
+      "risk": "High",
+      "firstIncome": "30-180 days"
     },
     {
-      "slug": "future-of-money",
-      "title": "The Future of Making Money — Scenario Map",
-      "url": "downloads/wealth-guides/future-of-money.pdf"
+      "slug": "micro-saas",
+      "title": "Software and Micro-SaaS",
+      "url": "downloads/wealth-guides/micro-saas.pdf",
+      "html": "making-money/guides/micro-saas.html",
+      "capital": "500-15000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
     },
     {
-      "slug": "scam-protection",
-      "title": "Investment Scam Protection Checklist",
-      "url": "downloads/wealth-guides/scam-protection.pdf"
+      "slug": "property-investing",
+      "title": "Property Investing",
+      "url": "downloads/wealth-guides/property-investing.pdf",
+      "html": "making-money/guides/property-investing.html",
+      "capital": "25000+",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
     },
     {
-      "slug": "france-wealth-tax",
-      "title": "France 2026 Wealth and Tax Primer",
-      "url": "downloads/wealth-guides/france-wealth-tax.pdf"
+      "slug": "property-renovation",
+      "title": "Property Renovation",
+      "url": "downloads/wealth-guides/property-renovation.pdf",
+      "html": "making-money/guides/property-renovation.html",
+      "capital": "10000-100000",
+      "risk": "Very high",
+      "firstIncome": "90-365 days"
     },
     {
-      "slug": "calculators-checklist",
-      "title": "Wealth Calculators and Annual Review Checklist",
-      "url": "downloads/wealth-guides/calculators-checklist.pdf"
+      "slug": "vendor-finance",
+      "title": "Vendor Finance Property or Business",
+      "url": "downloads/wealth-guides/vendor-finance.pdf",
+      "html": "making-money/guides/vendor-finance.html",
+      "capital": "5000-50000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "renting-property",
+      "title": "Renting Property",
+      "url": "downloads/wealth-guides/renting-property.pdf",
+      "html": "making-money/guides/renting-property.html",
+      "capital": "10000-100000",
+      "risk": "Very high",
+      "firstIncome": "60-240 days"
+    },
+    {
+      "slug": "buy-small-business",
+      "title": "Buy a Small Existing Business",
+      "url": "downloads/wealth-guides/buy-small-business.pdf",
+      "html": "making-money/guides/buy-small-business.html",
+      "capital": "10000-250000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "franchise",
+      "title": "Franchises",
+      "url": "downloads/wealth-guides/franchise.pdf",
+      "html": "making-money/guides/franchise.html",
+      "capital": "10000-250000",
+      "risk": "Very high",
+      "firstIncome": "90-365 days"
+    },
+    {
+      "slug": "small-farm",
+      "title": "Agriculture and Small Farms",
+      "url": "downloads/wealth-guides/small-farm.pdf",
+      "html": "making-money/guides/small-farm.html",
+      "capital": "5000-100000",
+      "risk": "Very high",
+      "firstIncome": "90-730 days"
+    },
+    {
+      "slug": "shares",
+      "title": "Investing in Shares",
+      "url": "downloads/wealth-guides/shares.pdf",
+      "html": "making-money/guides/shares.html",
+      "capital": "100+",
+      "risk": "High",
+      "firstIncome": "Immediate to years"
+    },
+    {
+      "slug": "index-funds",
+      "title": "Index Funds and ETFs",
+      "url": "downloads/wealth-guides/index-funds.pdf",
+      "html": "making-money/guides/index-funds.html",
+      "capital": "50+",
+      "risk": "Moderate",
+      "firstIncome": "Immediate to years"
+    },
+    {
+      "slug": "bonds",
+      "title": "Bonds",
+      "url": "downloads/wealth-guides/bonds.pdf",
+      "html": "making-money/guides/bonds.html",
+      "capital": "100+",
+      "risk": "Moderate",
+      "firstIncome": "Immediate to years"
+    },
+    {
+      "slug": "cash-management",
+      "title": "Savings and Cash Management",
+      "url": "downloads/wealth-guides/cash-management.pdf",
+      "html": "making-money/guides/cash-management.html",
+      "capital": "0+",
+      "risk": "Low",
+      "firstIncome": "Immediate"
+    },
+    {
+      "slug": "retirement-accounts",
+      "title": "Retirement Accounts",
+      "url": "downloads/wealth-guides/retirement-accounts.pdf",
+      "html": "making-money/guides/retirement-accounts.html",
+      "capital": "0+",
+      "risk": "Moderate",
+      "firstIncome": "Years"
+    },
+    {
+      "slug": "business-ownership",
+      "title": "Business Ownership",
+      "url": "downloads/wealth-guides/business-ownership.pdf",
+      "html": "making-money/guides/business-ownership.html",
+      "capital": "500+",
+      "risk": "Very high",
+      "firstIncome": "30-365 days"
+    },
+    {
+      "slug": "dividends",
+      "title": "Dividend Investing",
+      "url": "downloads/wealth-guides/dividends.pdf",
+      "html": "making-money/guides/dividends.html",
+      "capital": "100+",
+      "risk": "High",
+      "firstIncome": "Months to years"
+    },
+    {
+      "slug": "compounding",
+      "title": "Compounding",
+      "url": "downloads/wealth-guides/compounding.pdf",
+      "html": "making-money/guides/compounding.html",
+      "capital": "1+",
+      "risk": "Moderate",
+      "firstIncome": "Years"
+    },
+    {
+      "slug": "tax-efficient-structures",
+      "title": "Tax-Efficient Structures",
+      "url": "downloads/wealth-guides/tax-efficient-structures.pdf",
+      "html": "making-money/guides/tax-efficient-structures.html",
+      "capital": "500+",
+      "risk": "High",
+      "firstIncome": "30-180 days"
+    },
+    {
+      "slug": "debt-reduction",
+      "title": "Debt Reduction",
+      "url": "downloads/wealth-guides/debt-reduction.pdf",
+      "html": "making-money/guides/debt-reduction.html",
+      "capital": "0+",
+      "risk": "Low",
+      "firstIncome": "Immediate"
+    },
+    {
+      "slug": "emergency-funds",
+      "title": "Emergency Funds",
+      "url": "downloads/wealth-guides/emergency-funds.pdf",
+      "html": "making-money/guides/emergency-funds.html",
+      "capital": "0+",
+      "risk": "Low",
+      "firstIncome": "Immediate"
+    },
+    {
+      "slug": "credit-building",
+      "title": "Credit Building",
+      "url": "downloads/wealth-guides/credit-building.pdf",
+      "html": "making-money/guides/credit-building.html",
+      "capital": "0-500",
+      "risk": "Moderate",
+      "firstIncome": "30-365 days"
+    },
+    {
+      "slug": "salary-negotiation",
+      "title": "Negotiating Salary",
+      "url": "downloads/wealth-guides/salary-negotiation.pdf",
+      "html": "making-money/guides/salary-negotiation.html",
+      "capital": "0-500",
+      "risk": "Low",
+      "firstIncome": "7-60 days"
+    },
+    {
+      "slug": "high-value-skills",
+      "title": "Develop High-Value Skills",
+      "url": "downloads/wealth-guides/high-value-skills.pdf",
+      "html": "making-money/guides/high-value-skills.html",
+      "capital": "0-5000",
+      "risk": "Moderate",
+      "firstIncome": "30-365 days"
+    },
+    {
+      "slug": "ip-licensing",
+      "title": "Licensing Intellectual Property",
+      "url": "downloads/wealth-guides/ip-licensing.pdf",
+      "html": "making-money/guides/ip-licensing.html",
+      "capital": "500-10000",
+      "risk": "High",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "royalties",
+      "title": "Royalties",
+      "url": "downloads/wealth-guides/royalties.pdf",
+      "html": "making-money/guides/royalties.html",
+      "capital": "0-10000",
+      "risk": "High",
+      "firstIncome": "60-730 days"
+    },
+    {
+      "slug": "partnerships",
+      "title": "Business Partnerships",
+      "url": "downloads/wealth-guides/partnerships.pdf",
+      "html": "making-money/guides/partnerships.html",
+      "capital": "500-10000",
+      "risk": "Very high",
+      "firstIncome": "30-180 days"
+    },
+    {
+      "slug": "government-contracts",
+      "title": "Government Contracts",
+      "url": "downloads/wealth-guides/government-contracts.pdf",
+      "html": "making-money/guides/government-contracts.html",
+      "capital": "500-20000",
+      "risk": "High",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "b2b-sales",
+      "title": "Business-to-Business Sales",
+      "url": "downloads/wealth-guides/b2b-sales.pdf",
+      "html": "making-money/guides/b2b-sales.html",
+      "capital": "0-5000",
+      "risk": "Moderate",
+      "firstIncome": "14-90 days"
+    },
+    {
+      "slug": "exporting",
+      "title": "Exporting",
+      "url": "downloads/wealth-guides/exporting.pdf",
+      "html": "making-money/guides/exporting.html",
+      "capital": "2000-50000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "importing",
+      "title": "Importing",
+      "url": "downloads/wealth-guides/importing.pdf",
+      "html": "making-money/guides/importing.html",
+      "capital": "2000-50000",
+      "risk": "Very high",
+      "firstIncome": "45-240 days"
+    },
+    {
+      "slug": "manufacturing",
+      "title": "Manufacturing",
+      "url": "downloads/wealth-guides/manufacturing.pdf",
+      "html": "making-money/guides/manufacturing.html",
+      "capital": "10000-250000",
+      "risk": "Very high",
+      "firstIncome": "90-730 days"
+    },
+    {
+      "slug": "property-management",
+      "title": "Property Management",
+      "url": "downloads/wealth-guides/property-management.pdf",
+      "html": "making-money/guides/property-management.html",
+      "capital": "1000-10000",
+      "risk": "Moderate",
+      "firstIncome": "14-90 days"
+    },
+    {
+      "slug": "distressed-assets",
+      "title": "Buying Distressed Assets",
+      "url": "downloads/wealth-guides/distressed-assets.pdf",
+      "html": "making-money/guides/distressed-assets.html",
+      "capital": "5000-250000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "acquire-websites",
+      "title": "Acquire Websites",
+      "url": "downloads/wealth-guides/acquire-websites.pdf",
+      "html": "making-money/guides/acquire-websites.html",
+      "capital": "1000-100000",
+      "risk": "Very high",
+      "firstIncome": "30-180 days"
+    },
+    {
+      "slug": "acquire-newsletters",
+      "title": "Acquire Newsletters",
+      "url": "downloads/wealth-guides/acquire-newsletters.pdf",
+      "html": "making-money/guides/acquire-newsletters.html",
+      "capital": "1000-100000",
+      "risk": "Very high",
+      "firstIncome": "30-180 days"
+    },
+    {
+      "slug": "acquire-ip",
+      "title": "Acquire Intellectual Property",
+      "url": "downloads/wealth-guides/acquire-ip.pdf",
+      "html": "making-money/guides/acquire-ip.html",
+      "capital": "1000-100000",
+      "risk": "Very high",
+      "firstIncome": "60-365 days"
+    },
+    {
+      "slug": "private-companies",
+      "title": "Investing in Private Companies",
+      "url": "downloads/wealth-guides/private-companies.pdf",
+      "html": "making-money/guides/private-companies.html",
+      "capital": "1000+",
+      "risk": "Very high",
+      "firstIncome": "Years"
+    },
+    {
+      "slug": "angel-investing",
+      "title": "Angel Investing",
+      "url": "downloads/wealth-guides/angel-investing.pdf",
+      "html": "making-money/guides/angel-investing.html",
+      "capital": "5000+",
+      "risk": "Very high",
+      "firstIncome": "Years"
+    },
+    {
+      "slug": "holding-company",
+      "title": "Build a Holding Company",
+      "url": "downloads/wealth-guides/holding-company.pdf",
+      "html": "making-money/guides/holding-company.html",
+      "capital": "10000+",
+      "risk": "Very high",
+      "firstIncome": "90-730 days"
     }
   ]
 }

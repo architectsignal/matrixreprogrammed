@@ -1,0 +1,73 @@
+name: Production Performance and Tool Proof
+
+on:
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Controlled Production Deploy
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: production-performance-and-tool-proof
+  cancel-in-progress: false
+
+jobs:
+  prove-live-performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Verify live routes, optimized headers and runtime markers
+        if: github.event.workflow_run.conclusion == 'success'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+          DEPLOY_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: node scripts/live-performance-and-tool-proof.js
+      - name: Record failed deployment boundary
+        if: github.event.workflow_run.conclusion != 'success'
+        env:
+          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+          DEPLOY_RUN_ID: ${{ github.event.workflow_run.id }}
+          DEPLOY_RESULT: ${{ github.event.workflow_run.conclusion }}
+        run: |
+          mkdir -p data
+          node - <<'NODE'
+          const fs=require('fs');
+          fs.writeFileSync('data/performance-production-proof.json',JSON.stringify({
+            ok:false,
+            checkedAt:new Date().toISOString(),
+            deployedSha:process.env.DEPLOYED_SHA,
+            deploymentRunId:process.env.DEPLOY_RUN_ID,
+            deploymentConclusion:process.env.DEPLOY_RESULT,
+            error:'Controlled production deployment did not succeed; live performance proof was not run.'
+          },null,2)+'\n');
+          NODE
+      - name: Commit live performance receipt safely
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/performance-production-proof.json
+          if git diff --cached --quiet; then
+            echo "Performance receipt unchanged"
+            exit 0
+          fi
+          git commit -m "Record production performance and tool proof"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Performance receipt push attempt $attempt failed because main advanced; retrying."
+          done
+          exit 1

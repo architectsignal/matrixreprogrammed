@@ -1,0 +1,85 @@
+name: Observe Current Production Run
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-run-observer.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: observe-current-production-run
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Locate latest controlled production run
+        id: locate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          run_json="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "Matrix Reprogrammed Controlled Production Deploy" --limit 1 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url)"
+          node - "$run_json" <<'NODE'
+          const fs=require('fs');
+          const rows=JSON.parse(process.argv[2]||'[]');
+          if(!rows.length) throw new Error('No controlled production run found');
+          const run=rows[0];
+          fs.mkdirSync('data',{recursive:true});
+          fs.writeFileSync('data/current-production-run.json',JSON.stringify({ok:true,observedAt:new Date().toISOString(),...run},null,2)+'\n');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`run_id=${run.databaseId}\n`);
+          NODE
+      - name: Commit located run receipt
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/current-production-run.json
+          git commit -m "Record current controlled production run" || true
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Wait for controlled production completion
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ steps.locate.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 90); do
+            status="$(gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --json status --jq .status)"
+            echo "Production run $RUN_ID status: $status"
+            if [ "$status" = "completed" ]; then
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "Production run did not complete within observer window"
+          exit 1
+      - name: Record completed production run
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ steps.locate.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          run_json="$(gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url)"
+          node - "$run_json" <<'NODE'
+          const fs=require('fs');
+          const run=JSON.parse(process.argv[2]);
+          fs.mkdirSync('data',{recursive:true});
+          fs.writeFileSync('data/current-production-run.json',JSON.stringify({ok:run.status==='completed'&&run.conclusion==='success',observedAt:new Date().toISOString(),...run},null,2)+'\n');
+          NODE
+          git fetch origin main
+          git reset --soft origin/main
+          git add data/current-production-run.json
+          git commit -m "Record completed controlled production run" || exit 0
+          git push origin HEAD:main

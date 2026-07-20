@@ -1,0 +1,54 @@
+name: Performance Release Handoff
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'matrix.js'
+      - 'investigation-pulse.js'
+      - '_headers'
+      - 'scripts/apply-runtime-performance-optimizations.js'
+      - 'scripts/enforce-production-cache-policy.js'
+      - 'scripts/runtime-performance-budget-test.js'
+      - 'scripts/version-cloudflare-assets.js'
+      - 'scripts/final-release-sanitize.js'
+      - 'scripts/live-performance-and-tool-proof.js'
+      - '.github/workflows/performance-production-proof.yml'
+      - '.github/workflows/performance-deploy-handoff.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: performance-release-handoff
+  cancel-in-progress: false
+
+jobs:
+  dispatch-guarded-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Validate performance release source
+        run: |
+          node --check matrix.js
+          node --check investigation-pulse.js
+          node --check scripts/apply-runtime-performance-optimizations.js
+          node --check scripts/enforce-production-cache-policy.js
+          node --check scripts/runtime-performance-budget-test.js
+          node --check scripts/version-cloudflare-assets.js
+          node --check scripts/live-performance-and-tool-proof.js
+          node scripts/forum-persistence-d1-test.js
+          node scripts/money-intelligence-system-test.js
+      - name: Dispatch guarded production deployment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

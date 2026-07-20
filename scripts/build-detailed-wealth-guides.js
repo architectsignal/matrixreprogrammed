@@ -106,6 +106,53 @@ const commonSections = guide => [
     'Seek accounting advice when turnover, VAT, payroll, inventory, multiple activities or company-group transactions become material.',
     'Use a defined written question. Paying for broad reassurance without documents or calculations rarely produces a useful answer.'
   ]),
+  S('Subject focus map', [
+    'Use the following subject anchors as named checkpoints. For each checkpoint, record the fact, source, date, assumption, decision and next review date.',
+    ...guide.markers.map(subjectMarker => `${subjectMarker}: define what this checkpoint means for this guide, what evidence supports it, and what result would cause you to change course.`),
+    'Do not mark a checkpoint complete because an action was taken. Mark it complete only when the result and supporting evidence have been recorded.',
+    'Where a checkpoint depends on another person, institution, platform or contract, record that dependency and a fallback route.',
+    'Rank checkpoints by potential harm if ignored, not by how interesting or easy they appear.',
+    'At the end of each review, choose one checkpoint to advance and one risk to reduce before adding a new objective.'
+  ]),
+  S('Worked decision case', [
+    'Write a real decision from your own situation at the top of a blank page. Examples include changing work, launching an offer, choosing an account, buying an asset, restructuring a business or rejecting a proposal.',
+    'Baseline: state the current cash, income, liabilities, commitments, ownership, legal position and time available. Use documents rather than memory where possible.',
+    'Desired result: describe the measurable outcome, deadline and reason. Remove vague language such as more, better, passive, safe or guaranteed.',
+    'Options: include the proposed action, a smaller reversible test, a diversified alternative, delaying the action and doing nothing.',
+    'Evidence: attach at least three independent sources. Identify which evidence is official, contractual, audited, estimated, promotional or missing.',
+    'Economics: show setup cost, recurring cost, cash timing, fees, tax reserve, downside loss, opportunity cost and the point at which the decision becomes worthwhile.',
+    'Risk: identify concentration, liquidity, legal, operational, fraud, health, relationship and behavioural risks. Name the risk that could create irreversible harm.',
+    'Professional review: write the exact question that requires an accountant, lawyer, regulated adviser, lender, insurer or technical specialist.',
+    'Decision: state proceed, test, delay or reject. Record the maximum commitment and the evidence required before any further commitment.',
+    'Review: set a dated checkpoint. Write the result that would confirm the decision, the result that would require adjustment and the result that would trigger an immediate stop.'
+  ]),
+  S('90-day implementation workbook', [
+    'Week 1 - Establish the baseline. Reconcile the relevant accounts, contracts, statements, fees, tax records, responsibilities and deadlines.',
+    'Week 2 - Define the result. Choose one measurable outcome and remove actions that do not directly support it or protect an essential risk.',
+    'Week 3 - Gather primary evidence. Use official registers, filings, signed terms, current quotations and dated institutional data.',
+    'Week 4 - Compare alternatives. Include a lower-cost option, a lower-risk option, a reversible test and the option to wait.',
+    'Week 5 - Model the economics. Build downside, base and upside cases while treating every uncertain input as an assumption.',
+    'Week 6 - Verify identity and authority. Confirm who owns, controls, advises, holds money, signs contracts and bears liability.',
+    'Week 7 - Run the smallest useful test. Limit money, time and legal commitment while collecting evidence about real demand or performance.',
+    'Week 8 - Reconcile actual results. Compare promised, expected and actual cost, time, cash flow, quality, risk and customer or counterparty behaviour.',
+    'Week 9 - Repair the constraint. Improve the single factor currently limiting income, retention, safety, liquidity, delivery or evidence quality.',
+    'Week 10 - Install controls. Add calendar reminders, approval limits, account separation, written procedures, backups and review ownership.',
+    'Week 11 - Decide whether to scale. Increase commitment only when the test produced measurable value and the downside remains affordable.',
+    'Week 12 - Complete the evidence file. Store the decision record, sources, calculations, contracts, results, lessons and next review date.',
+    'Day 90 - Write a one-page conclusion: what was established, what remains uncertain, what changed, what will continue and what will stop.'
+  ]),
+  S('Review, escalation and stop rules', [
+    'Review monthly when the decision affects recurring cash, debt, customer commitments, investment contributions or essential protection.',
+    'Review immediately after a material legal change, tax notice, contract change, security incident, missed payment, large loss, health event or relationship change.',
+    'Escalate to a qualified professional when the facts cross jurisdictions, involve regulated products, create personal guarantees, affect beneficiaries or cannot be reversed cheaply.',
+    'Pause when required documents are missing, identities cannot be independently verified, costs are unclear or the counterparty resists reasonable due diligence.',
+    'Stop when the action requires deception, undeclared income, false invoices, hidden beneficial ownership, unaffordable leverage or essential-living money.',
+    'Stop when actual cash use, delivery time or loss exceeds the written limit.',
+    'Stop when the central evidence is corrected, withdrawn, contradicted by a stronger source or no longer current.',
+    'Do not move a stop limit merely because money, pride or time has already been committed. Sunk cost is not evidence that continuing is rational.',
+    'Record every exception to the plan, who approved it and why. Repeated exceptions indicate the plan or control is not working.',
+    'A stopped action can still be a successful decision when it prevents a larger loss and preserves the ability to act later.'
+  ]),
   S('Evidence and legal boundary', [
     'This is educational information, not personalised financial, investment, legal, accounting or tax advice.',
     'Investments can fall in value. Businesses can fail. Debt, leverage, illiquidity, tax and legal obligations can create losses greater than the expected benefit.',
@@ -643,39 +690,39 @@ const guides = [
       S('Employment and skill premium', [
         'Document measurable outcomes rather than duties.', 'Benchmark target roles using several current sources.',
         'Build a visible work sample for the next responsibility level.', 'Negotiate scope, compensation, flexibility and review date together.',
-        'Use employer-paid training where it creates transferable value.', 'Avoid resigning before understanding replacement-income probability and runway.')
+        'Use employer-paid training where it creates transferable value.', 'Avoid resigning before understanding replacement-income probability and runway.'
       ]),
       S('Service income', [
         'Choose a buyer with a costly, frequent and visible problem.', 'Define a fixed result, scope, price and delivery time.',
         'Sell a small paid test before buying equipment or premises.', 'Track travel, administration, rework, payment delay and tax reserve.',
-        'Turn successful delivery into a checklist and referral request.', 'Raise price after evidence of demand and quality, not before.')
+        'Turn successful delivery into a checklist and referral request.', 'Raise price after evidence of demand and quality, not before.'
       ]),
       S('Recurring income', [
         'Recurring revenue requires a recurring customer problem, not simply monthly billing.',
         'Define activation, ongoing value, service limit, renewal and cancellation.',
         'Track retention, churn, support cost, payment failure and customer concentration.',
-        'Test the service manually before automating.', 'Do not lock customers into an offer that no longer delivers value.')
+        'Test the service manually before automating.', 'Do not lock customers into an offer that no longer delivers value.'
       ]),
       S('Product and intellectual-property income', [
         'Create from verified demand, not from personal enthusiasm alone.', 'Clarify ownership, licences, third-party material and platform terms.',
         'Model refunds, support, fulfilment, royalties, tax and piracy.', 'Use a minimum version to test willingness to pay.',
-        'Build direct customer contact so one platform does not control the entire asset.')
+        'Build direct customer contact so one platform does not control the entire asset.'
       ]),
       S('Pricing floor', [
         'Pricing floor = direct materials + direct labour + travel + platform fees + expected rework + tax reserve + required contribution.',
         'Separate price from payment terms; a profitable invoice can still create a cash crisis when paid late.',
         'Offer tiers only when each tier has a clear customer and delivery difference.',
-        'Discount in exchange for a real economic benefit such as prepayment, volume or reduced scope - not discomfort.')
+        'Discount in exchange for a real economic benefit such as prepayment, volume or reduced scope - not discomfort.'
       ]),
       S('Sales pipeline', [
         'Define stages: named prospect, contacted, replied, qualified, discovery, proposal, won, delivered, collected, referred.',
         'Track conversion rate and average days in each stage.', 'Qualify authority, need, budget and timing before writing complex proposals.',
-        'Follow up with useful information and a clear close-the-file option.', 'Measure cash collected, not only contracts signed.')
+        'Follow up with useful information and a clear close-the-file option.', 'Measure cash collected, not only contracts signed.'
       ]),
       S('Capacity map', [
         'Calculate available delivery hours after sales, administration and recovery time.', 'Identify tasks that require the owner and tasks that can be templated or delegated.',
         'Set a quality-protection limit before accepting more work.', 'Do not add fixed payroll or premises until recurring demand supports it under stress.',
-        'Track backlog, lead time, defect rate and customer satisfaction.')
+        'Track backlog, lead time, defect rate and customer satisfaction.'
       ]),
       S('90-day income plan', [
         'Days 1-7: choose one route, one buyer and one offer.', 'Days 8-30: complete 50 qualified contacts and at least one paid test.',
@@ -884,12 +931,12 @@ const guides = [
       S('Tax and penalty leakage', [
         'Record late fees, missed allowances, poor records, incorrect regimes and unclaimed legitimate expenses.',
         'Calendar filing, payment, renewal and evidence deadlines.', 'Fund tax cash separately.',
-        'Do not use aggressive schemes to recover ordinary administrative leakage.')
+        'Do not use aggressive schemes to recover ordinary administrative leakage.'
       ]),
       S('Housing, energy and transport leakage', [
         'Compare finance, insurance, maintenance, energy, tax and opportunity cost - not one monthly payment.',
         'Measure underused space, avoidable journeys, vehicle downtime and contract mismatch.',
-        'Prioritise safety and reliability before lowest cost.', 'Model switching cost and disruption before changing essential services.')
+        'Prioritise safety and reliability before lowest cost.', 'Model switching cost and disruption before changing essential services.'
       ]),
       S('Business operating leakage', [
         'Measure unbilled work, scope creep, late payment, defects, returns, stock loss, unused software and idle equipment.',
@@ -899,7 +946,7 @@ const guides = [
       S('Fraud and control leakage', [
         'Use multi-factor authentication, payment verification and separation of duties where possible.',
         'Independently verify changed bank details.', 'Review account access and former staff permissions.',
-        'Treat unexpected urgency and secrecy as risk indicators.', 'Report suspected fraud promptly through the relevant bank, platform and authorities.')
+        'Treat unexpected urgency and secrecy as risk indicators.', 'Report suspected fraud promptly through the relevant bank, platform and authorities.'
       ]),
       S('30-day recovery plan', [
         'Week 1: build register and stop unknown or clearly unused costs.', 'Week 2: negotiate debt, insurance, banking and supplier terms.',
@@ -1406,7 +1453,7 @@ function buildPdf(guide, sections) {
 
   let current = [];
   let used = 0;
-  const capacity = 31;
+  const capacity = 24;
   const flush = () => { if (current.length) { pushPage(current); current = []; used = 0; } };
   for (const [sectionIndex, section] of sections.entries()) {
     const heading = { kind: 'heading', text: `${sectionIndex + 1}. ${section.title}` };

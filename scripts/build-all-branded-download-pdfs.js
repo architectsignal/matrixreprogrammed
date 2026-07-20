@@ -23,6 +23,7 @@ run('relocate-pdf-report-manifests.js');
 run('build-deep-pdf-intelligence.mjs');
 // Safety pass: no internal build manifest may remain under the public downloads tree.
 run('relocate-pdf-report-manifests.js');
+run('build-detailed-wealth-guides.js');
 execFileSync(process.execPath, [path.join(__dirname, 'restore-branded-pdf-flagship-contract.js')], {
   cwd: process.cwd(),
   stdio: 'inherit',

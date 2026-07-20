@@ -10,7 +10,13 @@ on:
       - 'money-intelligence.css'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
+      - 'data/subject-intelligence-profiles.json'
       - 'scripts/build-money-intelligence-system.js'
+      - 'scripts/build-all-branded-download-pdfs.js'
+      - 'scripts/build-deep-pdf-intelligence.mjs'
+      - 'src/worker-intelligence-analysis.js'
+      - 'scripts/build-black-file-pdf.js'
+      - 'scripts/deep-pdf-intelligence-test.js'
       - 'scripts/money-intelligence-system-test.js'
       - 'scripts/finalize-money-intelligence-release.js'
       - 'scripts/money-intelligence-live-test.js'
@@ -30,7 +36,13 @@ on:
       - 'money-intelligence.css'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
+      - 'data/subject-intelligence-profiles.json'
       - 'scripts/build-money-intelligence-system.js'
+      - 'scripts/build-all-branded-download-pdfs.js'
+      - 'scripts/build-deep-pdf-intelligence.mjs'
+      - 'src/worker-intelligence-analysis.js'
+      - 'scripts/build-black-file-pdf.js'
+      - 'scripts/deep-pdf-intelligence-test.js'
       - 'scripts/money-intelligence-system-test.js'
       - 'scripts/finalize-money-intelligence-release.js'
       - 'scripts/money-intelligence-live-test.js'
@@ -59,21 +71,28 @@ jobs:
           node-version: 20
       - name: Build profiles and guides
         run: node scripts/build-money-intelligence-system.js
+      - name: Upgrade generated PDFs to deep intelligence reports
+        run: |
+          node scripts/build-all-branded-download-pdfs.js
+          node scripts/build-black-file-pdf.js
       - name: Validate money intelligence system
         run: node scripts/money-intelligence-system-test.js
+      - name: Validate deep PDF intelligence reports
+        run: node scripts/deep-pdf-intelligence-test.js
       - name: Commit generated outputs on main
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add follow-the-money/people follow-the-money/making-money.html downloads/wealth-guides
+          git add downloads/report-manifests downloads/branded-download-index.json downloads/branded-download-index.md downloads/subject-pdf-index.json downloads/subject-pdf-index.md downloads/subject-*.pdf downloads/the-black-file-matrix-reprogrammed.pdf downloads/deep-pdf-intelligence-test.json
           for f in index.html start-here.html books.html power-atlas.html evidence-vault.html live-intel.html search.html billionaire-watch.html daily-command-brief.html download-center.html member-dashboard.html dashboard.html members.html account.html; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "Generate money intelligence profiles and guides [deploy]"
+            git commit -m "Generate deep money intelligence reports [deploy]"
             git push
           fi
       - name: Dispatch guarded production deployment

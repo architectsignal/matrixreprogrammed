@@ -33,7 +33,8 @@ const policy=readJson('data/phase4-email-lifecycle-policy.json');
 if(policy.mode!=='audit-only')throw new Error('Phase 4 inventory requires audit-only policy.');
 const files=walk(root).sort();
 const contents=new Map(files.map(file=>[file,read(file)]));
-const combined=[...contents.values()].join('\n');
+function contentIncludes(value){for(const content of contents.values())if(content.includes(value))return true;return false;}
+function contentMatches(pattern){for(const content of contents.values()){pattern.lastIndex=0;if(pattern.test(content))return true;}return false;}
 const routes=unique(files.flatMap(file=>routeStrings(contents.get(file)))).sort();
 const tables=unique(files.flatMap(file=>tableNames(contents.get(file)))).sort();
 const envBindings=unique(files.flatMap(file=>envNames(contents.get(file)))).sort();
@@ -53,13 +54,13 @@ const stages=[
   stage('provider_contact_sync',[/api\.brevo\.com\/v3\/contacts|\/v3\/contacts/i],[/BREVO_API_KEY|api\.brevo\.com/i]),
   stage('verification_token_issue',[/INSERT INTO magic_links|token_hash|verify_email/i],[/verification token|verification link/i]),
   stage('verification_delivery',[/authSendEmail|Verify your Matrix Reprogrammed membership/i],[/BREVO_API_KEY|smtp\/email/i]),
-  stage('verification_completion',[/email_verified_at|marketing_status=.*subscribed|purpose===['"]verify_email/i],[/verified=1|email verified/i]),
-  stage('welcome_delivery',[/welcome_email|welcome delivery|Welcome to Matrix Reprogrammed|purpose===['"]welcome/i],[/welcome/i]),
+  stage('verification_completion',[/email_verified_at|marketing_status=.*subscribed|purpose===["']verify_email/i],[/verified=1|email verified/i]),
+  stage('welcome_delivery',[/welcome_email|welcome delivery|Welcome to Matrix Reprogrammed|purpose===["']welcome/i],[/welcome/i]),
   stage('preference_read',[/SELECT[^;\n]*email_preferences|handleEmailPreferences|\/api\/email\/preferences/i],[/newsletter preferences|preference centre|preference center/i]),
   stage('preference_update',[/UPDATE[^;\n]*email_preferences|INSERT INTO email_preferences/i],[/preference update|notification preferences/i]),
-  stage('unsubscribe',[/marketing_status=['"]unsubscribed|\/api\/email\/unsubscribe|unsubscribe_token|email_suppressions/i],[/unsubscribe/i]),
+  stage('unsubscribe',[/marketing_status=["']unsubscribed|\/api\/email\/unsubscribe|unsubscribe_token|email_suppressions/i],[/unsubscribe/i]),
   stage('resubscribe',[/\/api\/email\/resubscribe|resubscribe_token|explicit new consent/i],[/resubscribe/i]),
-  stage('suppression_and_bounce_handling',[/hard_bounce|soft_bounce|complaint|email_suppressions|marketing_status=['"]suppressed/i],[/bounce|suppression|complaint/i]),
+  stage('suppression_and_bounce_handling',[/hard_bounce|soft_bounce|complaint|email_suppressions|marketing_status=["']suppressed/i],[/bounce|suppression|complaint/i]),
   stage('segment_assignment',[/email_segments|email_segment_memberships|segment_id|public_daily_brief/i],[/tier|marketing_status|segment/i]),
   stage('daily_campaign_build',[/email_campaigns|daily_campaign|public_daily_brief|intelligence_daily_member_brief/i],[/daily brief|daily control brief/i]),
   stage('weekly_campaign_build',[/weekly_campaign|public_weekly_digest|supporter_weekly_member_brief/i],[/weekly signal drop|weekly brief|weekly digest/i]),
@@ -72,8 +73,8 @@ const stages=[
   stage('audit_and_reconciliation',[/email_provider_contacts|reconciliation|audit_log|email_webhook_receipts/i],[/membershipSchemaStatus|audit/i])
 ];
 
-const requiredRoutes=policy.requiredRoutes.map(route=>({route,present:routes.includes(route)||combined.includes(`'${route}'`)||combined.includes(`"${route}"`),evidence:evidence(files,[new RegExp(route.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i')]).slice(0,10)}));
-const requiredObjects=policy.requiredDataObjects.map(object=>({object,present:tables.includes(object.toLowerCase())||new RegExp(`\\b${object}\\b`,'i').test(combined),tableDetected:tables.includes(object.toLowerCase()),evidence:evidence(files,[new RegExp(`\\b${object}\\b`,'i')]).slice(0,10)}));
+const requiredRoutes=policy.requiredRoutes.map(route=>({route,present:routes.includes(route)||contentIncludes(`'${route}'`)||contentIncludes(`"${route}"`),evidence:evidence(files,[new RegExp(route.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i')]).slice(0,10)}));
+const requiredObjects=policy.requiredDataObjects.map(object=>{const pattern=new RegExp(`\\b${object}\\b`,'i');return{object,present:tables.includes(object.toLowerCase())||contentMatches(pattern),tableDetected:tables.includes(object.toLowerCase()),evidence:evidence(files,[pattern]).slice(0,10)};});
 const requiredSurfaces=policy.requiredSurfaces.map(surface=>{const patterns={newsletter_signup:/newsletter|membership/i,confirmation_result:/confirm|verified/i,preference_center:/preference/i,unsubscribe_result:/unsubscribe/i,subscriber_dashboard:/member-dashboard|subscriber-dashboard/i,admin_campaign_dashboard:/admin.*campaign|campaign.*admin/i};const pattern=patterns[surface]||new RegExp(surface.replaceAll('_','[-_ ]'),'i');const matches=emailPages.filter(file=>pattern.test(`${file} ${contents.get(file).slice(0,4000)}`));return{surface,present:matches.length>0,files:matches};});
 
 const staleCopy=[];

@@ -68,6 +68,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -84,6 +86,7 @@ jobs:
       - name: Commit generated outputs on main
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
+          set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add follow-the-money/people follow-the-money/making-money.html downloads/wealth-guides
@@ -95,7 +98,16 @@ jobs:
             echo "No generated changes"
           else
             git commit -m "Generate deep money intelligence reports [deploy]"
-            git push
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Push attempt $attempt failed because main advanced; rebasing and retrying."
+            done
+            echo "Unable to publish generated outputs after three rebased attempts."
+            exit 1
           fi
       - name: Dispatch guarded production deployment
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

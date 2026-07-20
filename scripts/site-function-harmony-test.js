@@ -49,7 +49,9 @@ for (const [file, text, label] of [
   ['src/worker-production.js', "origin !== 'cloudflare-worker-paypal-subscriptions'", 'PayPal authoritative origin check'],
   ['src/worker-forum-persistence.js', "import legacyWorker from './worker.js'", 'application Worker delegation'],
   ['src/worker-forum-persistence.js', '/forum-health', 'D1 forum health route'],
-  ['src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'authoritative D1 post insert'],
+  ['src/worker-forum-persistence.js', 'INSERT INTO forum_posts', 'strict authoritative D1 post insert'],
+  ['src/worker-forum-persistence.js', 'D1 did not confirm the forum insert', 'D1 insert change confirmation'],
+  ['src/worker-forum-persistence.js', 'D1 forum read-after-write confirmation failed', 'D1 read-after-write confirmation'],
   ['src/worker-forum-persistence.js', 'Cloudflare D1 MEMBERS_DB.forum_posts', 'D1 persistence wording'],
   ['src/worker-forum-persistence.js', 'D1 authoritative; KV compatibility mirror', 'KV recovery boundary'],
   ['src/worker-paypal-subscriptions.js', '/api/paypal/checkout-intent', 'PayPal checkout intent'],
@@ -66,6 +68,7 @@ for (const [file, text, label] of [
   ['wrangler.toml', 'keep_vars = true', 'Cloudflare dashboard variable preservation'],
   ['wrangler.jsonc', '"keep_vars": true', 'JSONC dashboard variable preservation']
 ]) needText(file, text, label);
+forbidText('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'silent duplicate-ignoring D1 post insert');
 if (/^\s*PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) hard.push('wrangler.toml contains active PayPal override');
 if (/^\s*"PAYPAL_[A-Z0-9_]+"\s*:/m.test(read('wrangler.jsonc'))) hard.push('wrangler.jsonc contains active PayPal override');
 forbidSoftText('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin');
@@ -83,7 +86,7 @@ for (const [text, label] of [
   ['/forum-feed-epstein-alive', 'frontend Epstein feed'], ['/submit-main-post', 'frontend main submit'],
   ['/submit-speculation-post', 'frontend speculation submit'], ['/submit-epstein-alive-post', 'frontend Epstein submit'],
   ['/report-main-post', 'frontend main report route'], ['persistent !== true', 'frontend refuses non-persistent save'],
-  ['Signal posted live and saved persistently', 'persistent success message'], ["cache:'no-store'", 'forum no-store fetches']
+  ['D1 persistence was confirmed by read-after-write.', 'strict persistent success message'], ["credentials:'include'", 'forum credentialed fetches'], ["cache:'no-store'", 'forum no-store fetches']
 ]) needText('forum.js', text, label);
 for (const [text, label] of [
   ['saveLocalPosts', 'browser-only post persistence'], ['syncPendingLocalPosts', 'local retry sync'],
@@ -117,6 +120,7 @@ if (deployStatus) {
 needText('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'canonical health ownership');
 forbidText('scripts/repair-generated-site-artifacts.js', "write('deploy-health.json'", 'legacy production-health write');
 needText('scripts/final-production-reconcile.js', 'build-production-health.js', 'final production health generation');
+needText('scripts/final-production-reconcile.js', 'repair-forum-page-consistency.js', 'final forum page consistency owner');
 needText('scripts/final-production-reconcile.js', 'Payments: RUNTIME GATED / DASHBOARD MANAGED', 'final runtime-gated health assertion');
 needText('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
 needText('scripts/build-production-health.js', "paymentStatus: 'runtime-gated-dashboard-managed'", 'runtime-gated payment health status');
@@ -151,7 +155,7 @@ const report = {
   hardIssues: hard,
   softIssues: soft,
   workerStack: 'strict production boundary -> email/member/PayPal workers -> D1 forum -> static application',
-  forumStorage: 'Cloudflare D1 authoritative; KV compatibility and recovery only.',
+  forumStorage: 'Cloudflare D1 authoritative; strict insert plus exact read-after-write; KV compatibility and recovery only.',
   paymentStatus: 'PayPal runtime-gated and Cloudflare-dashboard-managed; checkout requires credentials, matching environment switch, D1 activation, live confirmation and three active plans.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   boundary: 'Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, repository payment overrides, unverified PayPal responses or unguarded checkout activation.'
@@ -166,4 +170,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log(`Checked search, strict Worker routing, D1 forums, runtime-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);
+console.log(`Checked search, strict Worker routing, authenticated D1 forums, runtime-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);

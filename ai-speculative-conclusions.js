@@ -1,5 +1,6 @@
 (() => {
   const DATA_URL = 'data/ai-speculative-conclusions.json';
+  const EPSTEIN_STATUS_URL = 'data/epstein-investigator-status.json';
   const grid = document.getElementById('spec-grid');
   const status = document.getElementById('spec-status');
   const metrics = document.getElementById('spec-metrics');
@@ -55,6 +56,41 @@
     </article>`;
   };
 
+  function ensureEpsteinPanel() {
+    let panel = document.getElementById('epstein-investigator-lane');
+    if (panel) return panel;
+    panel = document.createElement('section');
+    panel.id = 'epstein-investigator-lane';
+    panel.className = 'section wrap';
+    panel.innerHTML = `<div class="eyebrow">Dedicated DOJ Epstein / EFTA lane</div>
+      <h2>EPSTEIN FILE INVESTIGATOR STATUS</h2>
+      <div id="epstein-investigator-status" class="spec-metrics" aria-live="polite">
+        <div class="spec-metric"><strong>…</strong><span>Loading lane status</span></div>
+      </div>
+      <p id="epstein-investigator-boundary" class="spec-boundary">The lane publishes only evidence-bounded system-level hypotheses. File appearance or association never establishes guilt.</p>`;
+    const feedSection = metrics?.closest('section');
+    if (feedSection?.parentNode) feedSection.parentNode.insertBefore(panel, feedSection);
+    return panel;
+  }
+
+  function renderEpsteinStatus(data) {
+    ensureEpsteinPanel();
+    const target = document.getElementById('epstein-investigator-status');
+    const boundary = document.getElementById('epstein-investigator-boundary');
+    if (!target) return;
+    const n = value => Number.isFinite(Number(value)) ? Number(value) : 0;
+    target.innerHTML = `
+      <div class="spec-metric"><strong>${esc(data.status || 'unknown')}</strong><span>Lane status</span></div>
+      <div class="spec-metric"><strong>${n(data.corpusDocuments)}</strong><span>Restricted EFTA documents indexed</span></div>
+      <div class="spec-metric"><strong>${n(data.eligiblePassages)}</strong><span>Extractable passages eligible for analysis</span></div>
+      <div class="spec-metric"><strong>${n(data.completedMissions)}</strong><span>Epstein missions completed</span></div>
+      <div class="spec-metric"><strong>${n(data.publishedConclusions)}</strong><span>Public-safe conclusions published</span></div>
+      <div class="spec-metric"><strong>${n(data.reviewDrafts)}</strong><span>Held for human review</span></div>`;
+    if (boundary) {
+      boundary.innerHTML = `<strong>Last cycle:</strong> ${esc(data.updated || 'not run')} · <strong>Dataset lane:</strong> ${esc(data.currentDataset || 'pending')} · <strong>Last result:</strong> ${esc(data.lastMissionStatus || 'pending')}. ${esc(data.boundary || 'System-level hypotheses only. No guilt by association.')}`;
+    }
+  }
+
   function render(data, filter = 'all') {
     const items = Array.isArray(data.items) ? data.items : [];
     const visible = filter === 'all' ? items : items.filter(item => item.status === filter);
@@ -70,6 +106,19 @@
     status.textContent = `Feed updated ${data.updated || 'unknown'} · ${visible.length} item(s) shown · automatic publication scope: ${data.automaticPublicationScope || 'speculation page only'}`;
     grid.innerHTML = visible.length ? visible.map(card).join('') : '<div class="spec-empty">No conclusions match this filter.</div>';
   }
+
+  ensureEpsteinPanel();
+  fetch(EPSTEIN_STATUS_URL, { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(renderEpsteinStatus)
+    .catch(error => renderEpsteinStatus({
+      status: 'status unavailable',
+      lastMissionStatus: error.message,
+      boundary: 'The page will not invent processing counts or conclusions when the status feed is unavailable.'
+    }));
 
   fetch(DATA_URL, { cache: 'no-store' })
     .then(response => {

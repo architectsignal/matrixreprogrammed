@@ -2,15 +2,20 @@ name: Controlled Release Status Snapshot
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
   push:
     branches: [main]
     paths:
       - '.github/workflows/release-status-snapshot.yml'
+      - '.github/release-status-snapshot.trigger'
   workflow_run:
     workflows:
       - Matrix Reprogrammed Controlled Production Deploy
-      - Money Intelligence Pages
+      - Matrix Money Intelligence Refresh
       - Epstein AI Detective Docket
+      - Card Artwork Automation
+      - Permanent Release Metadata Repair
     types: [completed]
 
 permissions:
@@ -34,30 +39,39 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           mkdir -p data /tmp/matrix-release-status
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/deploy.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow money-intelligence.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/money.json
-          gh run list --repo "$GITHUB_REPOSITORY" --workflow epstein-ai-detective.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/epstein.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml --limit 12 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/deploy.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow money-intelligence-refresh.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/money.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow epstein-ai-detective.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/epstein.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow card-artwork-automation.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/artwork.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow permanent-release-metadata-repair.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event,attempt > /tmp/matrix-release-status/release-metadata.json
           node - <<'NODE'
           const fs=require('fs');
           const read=name=>JSON.parse(fs.readFileSync(`/tmp/matrix-release-status/${name}.json`,'utf8'));
           const deploy=read('deploy');
           const money=read('money');
           const epstein=read('epstein');
+          const artwork=read('artwork');
+          const releaseMetadata=read('release-metadata');
           const latest=runs=>runs[0]||null;
+          const production=latest(deploy);
           const payload={
-            ok:true,
+            ok:Boolean(production&&production.status==='completed'&&production.conclusion==='success'),
             observedAt:new Date().toISOString(),
-            production:latest(deploy),
+            production,
             moneyIntelligence:latest(money),
             epsteinAiDetective:latest(epstein),
-            recent:{production:deploy,moneyIntelligence:money,epsteinAiDetective:epstein},
-            boundary:'A dispatched or in-progress run is not a successful deployment. Production is considered live only after the controlled deployment and its live verification complete successfully.'
+            cardArtwork:latest(artwork),
+            releaseMetadataRepair:latest(releaseMetadata),
+            recent:{production:deploy,moneyIntelligence:money,epsteinAiDetective:epstein,cardArtwork:artwork,releaseMetadataRepair:releaseMetadata},
+            boundary:'A dispatched, queued or in-progress run is not a successful deployment. Production is live only after the controlled deployment and exact no-cache verification complete successfully.'
           };
           fs.writeFileSync('data/release-run-status.json',JSON.stringify(payload,null,2)+'\n');
           NODE
       - name: Commit status only when changed
         run: |
+          set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/release-run-status.json
@@ -65,7 +79,7 @@ jobs:
             echo "Release status unchanged"
             exit 0
           fi
-          git commit -m "Record controlled release workflow status"
+          git commit -m "Record current release workflow status"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

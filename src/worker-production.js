@@ -12,6 +12,7 @@ import {
   queuePendingVerifiedSelfReports,
   queueVerifiedSelfReport
 } from './worker-report-delivery.js';
+import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';
 import {
   enforceProtectedAssetAccess,
   protectedAssetTier
@@ -217,6 +218,8 @@ async function validateRehearsalResponse(response) {
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);
 
     const minimumTier = protectedAssetTier(path);
     if (minimumTier) {

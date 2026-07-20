@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Follow the Money Top 100","type":"object","required":["baselineDate","methodology","sources","peopleFields","people"],"properties":{"baselineDate":{"type":"string","format":"date"},"people":{"type":"array","minItems":100,"maxItems":100},"sources":{"type":"array","minItems":3}}}

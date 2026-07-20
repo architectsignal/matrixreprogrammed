@@ -1,5 +1,5 @@
 BUILD DETAILED WEALTH GUIDE LIBRARY
-Requested: 2026-07-21T01:25:00+02:00
-Target: latest main after syntax repair and substantive workbook enrichment
-Required result: 16 unique subject-specific PDFs, each at least 8 pages, 14 sections, 1,100 source words, four official research routes, worksheets and subject markers.
-Purpose: replace all generic placeholder PDFs without lowering any quality threshold.
+Requested: 2026-07-21T02:18:00+02:00
+Target: latest main after visual preflight exposed heading overlap and cover clipping
+Required result: 16 unique subject-specific PDFs, strict content metrics, wrapped covers, non-overlapping headings, continued-section labels and footer clearance across every page.
+Purpose: preserve the detailed content while fixing the PDF reading layout without lowering any quality threshold.

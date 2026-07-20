@@ -14,6 +14,7 @@ on:
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-all-branded-download-pdfs.js'
       - 'scripts/build-deep-pdf-intelligence.mjs'
+      - 'scripts/relocate-pdf-report-manifests.js'
       - 'src/worker-intelligence-analysis.js'
       - 'scripts/build-black-file-pdf.js'
       - 'scripts/deep-pdf-intelligence-test.js'
@@ -41,6 +42,7 @@ on:
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-all-branded-download-pdfs.js'
       - 'scripts/build-deep-pdf-intelligence.mjs'
+      - 'scripts/relocate-pdf-report-manifests.js'
       - 'src/worker-intelligence-analysis.js'
       - 'scripts/build-black-file-pdf.js'
       - 'scripts/deep-pdf-intelligence-test.js'
@@ -61,7 +63,7 @@ permissions:
 
 concurrency:
   group: money-intelligence-pages-${{ github.event_name }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build-and-commit:
@@ -90,6 +92,7 @@ jobs:
           name: deep-pdf-validation-${{ github.run_id }}
           path: |
             downloads/deep-pdf-intelligence-test.json
+            downloads/deep-pdf-intelligence-test-failure.json
             downloads/branded-download-index.json
           if-no-files-found: warn
           retention-days: 14
@@ -100,7 +103,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add follow-the-money/people follow-the-money/making-money.html downloads/wealth-guides
-          git add downloads/report-manifests downloads/branded-download-index.json downloads/branded-download-index.md downloads/subject-pdf-index.json downloads/subject-pdf-index.md downloads/subject-*.pdf downloads/the-black-file-matrix-reprogrammed.pdf downloads/deep-pdf-intelligence-test.json
+          git add data/report-manifests downloads/branded-download-index.json downloads/branded-download-index.md downloads/subject-pdf-index.json downloads/subject-pdf-index.md downloads/subject-*.pdf downloads/the-black-file-matrix-reprogrammed.pdf downloads/deep-pdf-intelligence-test.json
           for f in index.html start-here.html books.html power-atlas.html evidence-vault.html live-intel.html search.html billionaire-watch.html daily-command-brief.html download-center.html member-dashboard.html dashboard.html members.html account.html; do
             if [ -f "$f" ]; then git add "$f"; fi
           done

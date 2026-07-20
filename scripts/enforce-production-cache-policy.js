@@ -13,14 +13,71 @@ const headers = `/*
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /*.js
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/search-index.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+
+/data/evidence-network-map.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 /data/*.json
-  Cache-Control: no-cache, max-age=0, must-revalidate
   Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+
+/data/live-intel.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-epstein-update.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/live-machine-status.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-power-conclusions.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-investigation-conclusions.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-brain-brief.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/outcome-briefings.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
 
 /deploy-manifest.json
   Cache-Control: no-store, max-age=0
@@ -55,6 +112,9 @@ const headers = `/*
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /live-intel
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/daily-epstein-update
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /daily-power-conclusions
@@ -95,21 +155,27 @@ const headers = `/*
 /downloads/*.json
   Content-Disposition: attachment
   Content-Type: application/json
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /downloads/*.md
   Content-Disposition: attachment
   Content-Type: text/markdown
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
+
+/downloads/*.txt
+  Content-Disposition: attachment
+  Content-Type: text/plain
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /feeds/*.xml
   Content-Type: application/xml
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /feeds/*.json
   Content-Type: application/feed+json
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 `;
+
 fs.writeFileSync(path.join(root, '_headers'), headers);
 const site = path.join(root, '_site');
 if (fs.existsSync(site)) fs.writeFileSync(path.join(site, '_headers'), headers);
@@ -117,11 +183,15 @@ fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-cache-policy.json'), JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
-  criticalHtml: 'no-cache',
-  liveJson: 'no-cache',
+  criticalHtml: 'revalidate every request',
+  criticalLiveJson: 'revalidate every request',
+  searchIndex: '10-minute browser/edge cache with one-day stale-while-revalidate',
+  evidenceNetwork: 'one-hour browser/edge cache with one-day stale-while-revalidate',
+  javascriptAndCss: 'one-day cache with seven-day stale-while-revalidate; HTML references are content-hash versioned',
+  immutableMedia: 'images and fonts only',
   deployManifest: 'no-store',
   deployHealth: 'no-store',
-  membership: 'no-cache with checkout disabled',
-  unversionedAssets: '5-minute revalidation'
+  membership: 'no-cache with runtime-gated checkout',
+  boundary: 'Fresh intelligence, health and account surfaces always revalidate. Large static indexes and fingerprinted assets are cached to reduce startup latency without hiding new releases.'
 }, null, 2));
-console.log('Final production cache policy enforced after legacy generators, including uncached health proof.');
+console.log('Optimized production cache policy enforced: current intelligence revalidates, fingerprinted assets cache safely, and health proof remains no-store.');

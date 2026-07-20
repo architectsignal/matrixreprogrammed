@@ -1,0 +1,11 @@
+- [x] Follow the Money page
+- [x] Making Money page
+- [x] Top 100 dataset
+- [x] Search/filter/compare runtime
+- [x] Zero-money starter path
+- [x] Legal structure warnings
+- [x] France 2026 official-source tax section
+- [x] Calculators
+- [x] Future capital scenarios
+- [x] 16 generated PDF guides
+- [x] CI generation and test workflow

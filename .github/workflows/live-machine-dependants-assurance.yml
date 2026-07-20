@@ -1,0 +1,63 @@
+name: Live Machine Dependants Assurance
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/live-intel-update.yml'
+      - '.github/workflows/live-machine-dependants-assurance.yml'
+      - 'scripts/build-daily-epstein-update.js'
+      - 'scripts/build-card-live-updates.js'
+      - 'scripts/live-machine-dependants-test.js'
+      - 'investigation-pulse.js'
+      - 'data/live-intel.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove Epstein, cards, and machine stay synchronized
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build daily Epstein update from current Live Intel
+        run: node scripts/build-daily-epstein-update.js
+
+      - name: Build current intelligence for every tracked card
+        run: node scripts/build-card-live-updates.js
+
+      - name: Enforce synchronized machine dependants
+        run: node scripts/live-machine-dependants-test.js
+
+      - name: Syntax-check shared card runtime
+        run: node --check investigation-pulse.js
+
+      - name: Upload synchronization proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-machine-dependants-${{ github.sha }}
+          path: |
+            data/daily-epstein-update.json
+            data/card-live-updates.json
+            data/live-machine-status.json
+            downloads/daily-epstein-update.md
+            downloads/card-live-updates.md
+            downloads/live-machine-status.md
+            downloads/live-machine-dependants-test.json
+            downloads/live-machine-dependants-test.md
+            daily-epstein-update.html
+          if-no-files-found: error
+          retention-days: 21

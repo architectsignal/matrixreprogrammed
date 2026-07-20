@@ -64,6 +64,19 @@ function withVersion(reference, version) {
   const queryText = params.toString();
   return `${pathname}${queryText ? `?${queryText}` : ''}${fragment}`;
 }
+function parseHeaderBlocks(text) {
+  const blocks = new Map();
+  let route = '';
+  for (const line of String(text || '').split(/\r?\n/)) {
+    if (/^\//.test(line.trim())) {
+      route = line.trim();
+      if (!blocks.has(route)) blocks.set(route, []);
+      continue;
+    }
+    if (route) blocks.get(route).push(line);
+  }
+  return blocks;
+}
 
 const files = walk(site);
 const assets = new Map();
@@ -111,7 +124,10 @@ for (const file of files.filter(isHtmlLike)) {
 }
 
 const headers = fs.existsSync(path.join(site, '_headers')) ? fs.readFileSync(path.join(site, '_headers'), 'utf8') : '';
-const unsafeImmutable = /\/\*\.(?:js|css)[\s\S]*?max-age=31536000[^\n]*immutable/i.test(headers);
+const headerBlocks = parseHeaderBlocks(headers);
+const unsafeImmutable = [...headerBlocks.entries()].some(([route, lines]) =>
+  /^\/\*\.(?:js|css)$/i.test(route) && /max-age=31536000[^\n]*immutable/i.test(lines.join('\n'))
+);
 const report = {
   ok: unresolved.length === 0 && unversioned.length === 0 && !unsafeImmutable,
   generatedAt: new Date().toISOString(),
@@ -123,12 +139,13 @@ const report = {
   unversioned: unversioned.slice(0, 200),
   unsafeImmutable,
   cachePolicyOwner: 'scripts/enforce-production-cache-policy.js',
+  cacheBlocksChecked: [...headerBlocks.keys()],
   boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. Unversioned scripts and styles use short revalidation headers rather than year-long immutable caching.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) {
-  if (unsafeImmutable) console.error('Cloudflare asset versioning failed: _headers still applies year-long immutable caching to JavaScript or CSS.');
+  if (unsafeImmutable) console.error('Cloudflare asset versioning failed: the JavaScript or CSS header block itself applies year-long immutable caching.');
   unresolved.slice(0, 20).forEach(item => console.error(`Unresolved asset reference: ${item.page} -> ${item.reference} (${item.target})`));
   unversioned.slice(0, 20).forEach(item => console.error(`Unversioned asset reference: ${item.page} -> ${item.reference}`));
   process.exit(1);

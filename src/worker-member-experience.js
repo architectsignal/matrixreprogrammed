@@ -67,7 +67,7 @@ async function enforceSessionLimit(env,memberId,currentSessionId){
 }
 async function authContext(request,env){
   if(!hasD1(env))return null;
-  const rawToken=cookieValue(request,'matrix_session');
+  const rawToken=cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session');
   if(!rawToken)return null;
   const sessionHash=await hash(rawToken);
   const current=nowIso();

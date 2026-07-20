@@ -11,7 +11,8 @@
     .login-card{max-width:680px;margin:2rem auto;border:1px solid rgba(216,181,106,.3);border-radius:22px;padding:1.2rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}
     .login-form{display:grid;gap:.8rem}.login-form input{width:100%;box-sizing:border-box;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.85rem}.status{min-height:1.4rem;font-weight:700}.status.ok{color:#9ddd9d}.status.error{color:#ff9b8f}
   </style>
-<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style><!-- forum-login-canonical-api: https://matrixreprogrammed.com/api/auth/request-link; browser request remains same-origin after canonical redirect -->
+</head>
 <body>
 <canvas id="matrix"></canvas>
 <div class="page">
@@ -34,6 +35,11 @@
 <script src="matrix.js"></script>
 <script>
 (() => {
+  const MEMBER_CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';
+  if (location.hostname === 'www.matrixreprogrammed.com') {
+    location.replace(MEMBER_CANONICAL_ORIGIN + location.pathname + location.search + location.hash);
+    return;
+  }
   const form = document.getElementById('login-form');
   const status = document.getElementById('login-status');
   const error = new URLSearchParams(location.search).get('error');
@@ -47,7 +53,7 @@
     status.textContent = 'Requesting a secure link…';
     try {
       const response = await fetch('/api/auth/request-link', {
-        method:'POST', headers:{'content-type':'application/json'},
+        method:'POST', credentials:'include', cache:'no-store', headers:{'content-type':'application/json','cache-control':'no-cache'},
         body:JSON.stringify({email:document.getElementById('login-email').value.trim()})
       });
       const data = await response.json();

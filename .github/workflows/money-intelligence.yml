@@ -46,7 +46,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: money-intelligence-pages
+  group: money-intelligence-pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:

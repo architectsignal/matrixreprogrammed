@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-20T08:29:05.704Z
+Generated: 2026-07-20T21:29:47.577Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-20T08:29:05.704Z
 - 85 — Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/sawas-v-elzanaty.html
 - 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
 - 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
+- 72 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela — live-intel.html
+- 72 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — live-intel.html
+- 72 — Moon Day focuses growing concerns around space junk — live-intel.html
 - 72 — Haiti: Signs of hope despite gang violence and political uncertainty — live-intel.html
 - 72 — Ukraine: UN condemns overnight attack on Kyiv — live-intel.html
-- 72 — A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job — live-intel.html
-- 72 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News — live-intel.html
-- 72 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — live-intel.html

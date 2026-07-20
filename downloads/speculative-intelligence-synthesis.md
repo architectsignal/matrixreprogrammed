@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-07-20T08:30:06.367Z
+Updated: 2026-07-20T21:30:40.868Z
 
 ## Evidence-led conclusion
 
@@ -14,11 +14,10 @@ Analytic confidence: **73/100 — substantial analytic support**
 
 - **SEC Complaint** — Documented in the linked public record; law, filing or instrument: Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas. Why it matters: This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Exercise or conversion of derivative security** — reportedTransaction. Why it matters: This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **ATT MOBILITY LLC — Department of Defense** — Contract. Why it matters: This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Grant, award or other acquisition** — reportedTransaction. Why it matters: This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Skip to main content** — CourtCase. Why it matters: This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consolidated Sanctions List (Non-SDN Lists)** — Finding. Why it matters: This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **operated or published by** — operatedBy. Why it matters: This record places operated or published by inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **ATT MOBILITY LLC — Department of Defense** — Contract. Why it matters: This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Attorney Review Protocol for Epstein Files** — CourtCase. Why it matters: This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **BOP Video Footage** — CourtCase. Why it matters: This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Customs and Border Protection (CBP)** — CourtCase. Why it matters: This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
@@ -32,6 +31,7 @@ Analytic confidence: **73/100 — substantial analytic support**
 - **House Disclosures** — CourtCase. Why it matters: This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **LinkedIn** — CourtCase. Why it matters: This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Maxwell Proffer** — CourtCase. Why it matters: This record places Maxwell Proffer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Memoranda and Correspondence** — CourtCase. Why it matters: This record places Memoranda and Correspondence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

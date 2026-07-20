@@ -1,6 +1,6 @@
 # Master Evidence Source Registry
 
-Generated: 2026-07-20T08:29:16.215Z
+Generated: 2026-07-20T21:29:56.737Z
 
 Boundary: This registry lists priority public-record and document lanes. It is not a claim that every source has already been ingested. Each lane is a route for verification, contradiction checks and missing-record upgrades.
 

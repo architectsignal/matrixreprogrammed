@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T19:55:58.505Z
+Collection completed: 2026-07-20T21:30:51.430Z
 Latest source publication: 2026-07-20T12:00:00.000Z
-Collection status: fresh-items-added
-New items this collection: 1
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -38,11 +38,23 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-20 — Middle East: Civilians again under fire as US-Iran strikes continue
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167979
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Middle East: Civilians again under fire as US-Iran strikes continue
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — Moon Day focuses growing concerns around space junk
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167976
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Moon Day focuses growing concerns around space junk
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-20 — Ukraine: Deadly Russian attacks severely damage aid warehouses
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167980
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Ukraine: Deadly Russian attacks severely damage aid warehouses
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-19 — Haiti: Signs of hope despite gang violence and political uncertainty
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167963
@@ -78,8 +90,8 @@ New items this collection: 1
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: The surveillance networks cities do not have to buy - Biometric Update
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+  - Video hook: New public-source drop in the Elite Control Structure lane: The surveillance networks cities do not have to buy - Biometric Update. Source first, claim second.
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
   - Source class: primary-or-official

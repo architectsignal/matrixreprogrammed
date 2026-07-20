@@ -1,6 +1,6 @@
 # Secret Societies and Orders Tracker
 
-Generated: 2026-07-20T08:29:01.317Z
+Generated: 2026-07-20T21:29:43.359Z
 
 Boundary: This tracker maps public records, official lists, historical sources, memberships where documented, institutional overlap and missing records. Association is not accusation.
 

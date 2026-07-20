@@ -1,46 +1,33 @@
 {
-  "checkedAt": "2026-07-20T11:04:04.337Z",
+  "checkedAt": "2026-07-20T11:15:42.350Z",
   "repository": "architectsignal/matrixreprogrammed",
-  "diagnosticVersion": 11,
+  "diagnosticVersion": 13,
   "runs": [
     {
-      "id": 29737192413,
+      "id": 29737905840,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "queued",
+      "conclusion": null,
+      "headSha": "c5054091f668b04a3fc03c0fd1f225e5afed9ffc",
+      "runNumber": 1186,
+      "attempt": 1,
+      "createdAt": "2026-07-20T11:15:16Z",
+      "updatedAt": "2026-07-20T11:15:24Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29737905840"
+    },
+    {
+      "id": 29737864279,
       "name": "Money Deployment Diagnostic",
       "event": "push",
       "status": "in_progress",
       "conclusion": null,
-      "headSha": "23f7e891ba1b5092debfef105eb05f7e6dec4bc8",
-      "runNumber": 11,
+      "headSha": "2df4fbc5868fc6aaefc3f7586f4475cb470e4e81",
+      "runNumber": 13,
       "attempt": 1,
-      "createdAt": "2026-07-20T11:03:40Z",
-      "updatedAt": "2026-07-20T11:03:46Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29737192413"
-    },
-    {
-      "id": 29737142866,
-      "name": "Matrix Reprogrammed Controlled Production Deploy",
-      "event": "workflow_dispatch",
-      "status": "pending",
-      "conclusion": null,
-      "headSha": "3ce7969459eab0a44e31e6e546f7f5d2b7d6f04d",
-      "runNumber": 1184,
-      "attempt": 1,
-      "createdAt": "2026-07-20T11:02:49Z",
-      "updatedAt": "2026-07-20T11:02:52Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29737142866"
-    },
-    {
-      "id": 29737136623,
-      "name": "Money Release Dispatch Now",
-      "event": "push",
-      "status": "completed",
-      "conclusion": "success",
-      "headSha": "3ce7969459eab0a44e31e6e546f7f5d2b7d6f04d",
-      "runNumber": 2,
-      "attempt": 1,
-      "createdAt": "2026-07-20T11:02:43Z",
-      "updatedAt": "2026-07-20T11:02:52Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29737136623"
+      "createdAt": "2026-07-20T11:14:35Z",
+      "updatedAt": "2026-07-20T11:15:21Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29737864279"
     }
   ]
 }

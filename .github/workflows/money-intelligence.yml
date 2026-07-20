@@ -1,0 +1,58 @@
+name: Money Intelligence Pages
+
+on:
+  pull_request:
+    paths:
+      - 'follow-the-money.html'
+      - 'making-money.html'
+      - 'follow-the-money.js'
+      - 'making-money.js'
+      - 'money-intelligence.css'
+      - 'data/follow-the-money-top-100.json'
+      - 'data/making-money-core.json'
+      - 'scripts/build-money-intelligence-system.js'
+      - 'scripts/money-intelligence-system-test.js'
+      - '.github/workflows/money-intelligence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'follow-the-money.html'
+      - 'making-money.html'
+      - 'follow-the-money.js'
+      - 'making-money.js'
+      - 'money-intelligence.css'
+      - 'data/follow-the-money-top-100.json'
+      - 'data/making-money-core.json'
+      - 'scripts/build-money-intelligence-system.js'
+      - '.github/workflows/money-intelligence.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build profiles and guides
+        run: node scripts/build-money-intelligence-system.js
+      - name: Validate money intelligence system
+        run: node scripts/money-intelligence-system-test.js
+      - name: Commit generated outputs on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add follow-the-money/people follow-the-money/making-money.html downloads/wealth-guides
+          for f in index.html start-here.html books.html power-atlas.html evidence-vault.html live-intel.html search.html billionaire-watch.html daily-command-brief.html download-center.html member-dashboard.html dashboard.html members.html account.html; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Generate money intelligence profiles and guides [deploy]"
+            git push
+          fi

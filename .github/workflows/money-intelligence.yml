@@ -18,6 +18,7 @@ on:
       - 'scripts/ensure-evidence-badge-routes.js'
       - 'scripts/repair-final-evidence-badge-duplicates.js'
       - 'scripts/final-release-sanitize.js'
+      - 'scripts/full-site-function-tool-audit.js'
       - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
   push:
@@ -38,6 +39,7 @@ on:
       - 'scripts/ensure-evidence-badge-routes.js'
       - 'scripts/repair-final-evidence-badge-duplicates.js'
       - 'scripts/final-release-sanitize.js'
+      - 'scripts/full-site-function-tool-audit.js'
       - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
 

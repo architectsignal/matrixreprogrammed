@@ -37,6 +37,11 @@ jobs:
           set +e
           mkdir -p downloads
           {
+            echo '=== PRECISE SOURCE REPAIR ==='
+            node scripts/repair-detailed-wealth-guide-builder.js
+            REPAIR_STATUS=$?
+            echo "repair_status=$REPAIR_STATUS"
+            if [ "$REPAIR_STATUS" -ne 0 ]; then exit "$REPAIR_STATUS"; fi
             echo '=== NODE SYNTAX CHECK ==='
             node --check scripts/build-detailed-wealth-guides.js
             SYNTAX_STATUS=$?
@@ -64,6 +69,7 @@ jobs:
           name: detailed-wealth-guide-proof-${{ github.run_id }}
           path: |
             downloads/detailed-wealth-guides-build.log
+            downloads/detailed-wealth-guide-builder-repair.json
             downloads/detailed-wealth-guides-test.json
             downloads/wealth-guides/index.json
             data/detailed-wealth-guides.json
@@ -78,7 +84,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
+            scripts/build-detailed-wealth-guides.js \
             downloads/wealth-guides \
+            downloads/detailed-wealth-guide-builder-repair.json \
             downloads/detailed-wealth-guides-test.json \
             data/making-money-core.json \
             data/detailed-wealth-guides.json \

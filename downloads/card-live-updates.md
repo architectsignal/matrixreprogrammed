@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T06:44:40.953Z
-Live Intel source window: 2026-07-20T06:44:39.932Z
+Generated: 2026-07-20T07:13:09.022Z
+Live Intel source window: 2026-07-20T07:13:03.453Z
 Tracked cards: 774
-Cards with current matched records: 111
-Cards with no new verified record: 663
+Cards with current matched records: 108
+Cards with no new verified record: 666
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -779,13 +779,13 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## BOOZ ALLEN HAMILTON
-- Route: contractor-briefs/booz-allen-intelligence-contractor.html
+- Route: main-players/booz-allen-hamilton.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
 ## BOOZ ALLEN HAMILTON
-- Route: main-players/booz-allen-hamilton.html
+- Route: contractor-briefs/booz-allen-intelligence-contractor.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -902,13 +902,13 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## CACI INTERNATIONAL
-- Route: contractor-briefs/caci-intelligence-contractor.html
+- Route: main-players/caci-international.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
 ## CACI INTERNATIONAL
-- Route: main-players/caci-international.html
+- Route: contractor-briefs/caci-intelligence-contractor.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3759,10 +3759,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Reuters
 - Route: institutions/reuters.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-15T17:32:31.000Z
 - 2026-07-15T17:32:31.000Z — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
 - 2026-07-13T14:49:05.000Z — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters — https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
 
 ## REVIEW DASHBOARD.
@@ -4563,24 +4562,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Warren Buffett
 - Route: top-52/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WARREN BUFFETT
 - Route: billionaire-briefs/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WARREN BUFFETT
 - Route: main-players/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html

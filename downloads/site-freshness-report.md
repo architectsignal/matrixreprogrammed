@@ -6,8 +6,8 @@ Report version: site-freshness-v2
 Source rules: 8
 Scanned pages: 2656
 Flagged pages: 2185
-High priority pages: 875
-Medium priority pages: 1304
+High priority pages: 874
+Medium priority pages: 1305
 Pages with missing rules: 210
 Auto-update eligible figures: 2
 Manual-review figures: 94

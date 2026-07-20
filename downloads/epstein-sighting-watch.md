@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-20T06:44:40.621Z
+Generated: 2026-07-20T07:13:08.972Z
 
 ## Official Boundary
 
@@ -88,13 +88,3 @@ Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New 
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
-
-### Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters

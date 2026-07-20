@@ -4994,27 +4994,6 @@
     "sourceType": "mission-route"
   },
   {
-    "title": "Dark Speculation Lab",
-    "category": "Speculation Review",
-    "layer": "speculation-review",
-    "url": "dark-speculation-lab.html",
-    "description": "Source-chain review route for dark claims and counter-sources.",
-    "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
-    ],
-    "priority": 95,
-    "sourceType": "mission-route"
-  },
-  {
     "title": "Record Intake Queue",
     "category": "Disclosure / Black Files",
     "layer": "disclosure-black-files",
@@ -5972,25 +5951,23 @@
     "sourceType": "mission-route"
   },
   {
-    "title": "Newsletter",
-    "category": "Free Brief",
+    "title": "Weekly Black File",
+    "category": "Newsletter",
     "layer": "information-narrative",
     "url": "newsletter.html",
-    "description": "Free briefing and newsletter route.",
+    "description": "Weekly Black File email capture for Epstein updates, source records, power trackers, live intel and free briefs.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files",
       "newsletter",
+      "weekly signal",
+      "black file",
+      "email",
       "free brief"
     ],
     "priority": 77,
-    "sourceType": "mission-route"
+    "sourceType": "mission-route",
+    "key": "weekly-black-file",
+    "subtitle": "Email capture and weekly signal drop",
+    "series": "Conversion"
   },
   {
     "url": "data/billionaire-control-index.json",
@@ -8559,25 +8536,23 @@
     "sourceType": "html"
   },
   {
-    "title": "Aviation Evidence Policy | Matrix Reprogrammed",
-    "category": "Information / Narrative",
+    "title": "Aviation Evidence Policy",
+    "category": "Evidence Policy",
     "layer": "information-narrative",
     "url": "aviation-evidence-policy.html",
-    "description": "Safe historical aviation and transport evidence policy for Matrix Reprogrammed public-record research.",
+    "description": "Safe public-record policy for historical aviation and transport evidence, court exhibits, registries, privacy boundaries and transport card fields.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
+      "aviation evidence",
+      "flight logs",
+      "transport records",
+      "court exhibits",
+      "public records"
     ],
     "priority": 10,
-    "sourceType": "html"
+    "sourceType": "html",
+    "key": "aviation-evidence-policy",
+    "subtitle": "Historical transport records only",
+    "series": "Power Atlas"
   },
   {
     "title": "Bahamas | Jurisdictions of Power Deck",
@@ -13356,27 +13331,6 @@
     "layer": "information-narrative",
     "url": "dark-psychology.html",
     "description": "The Matrix Reprogrammed Dark Psychology shelf: Manipulation Immunity, Mind Control in Seven Days, How to Analyze Anyone in 60 Seconds, behavioural psychology, i",
-    "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks"
-    ],
-    "priority": 10,
-    "sourceType": "html"
-  },
-  {
-    "title": "Dark Speculation Forum | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
-    "url": "dark-speculation-forum.html",
-    "description": "Reader drop box for dark speculation links, photo links, counter-sources, source trails, and claim classification.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
@@ -18944,25 +18898,26 @@
     "sourceType": "html"
   },
   {
-    "title": "Institution Tracker | Matrix Reprogrammed",
-    "category": "Information / Narrative",
+    "title": "Institution Tracker",
+    "category": "Institution Tracker",
     "layer": "information-narrative",
     "url": "institution-tracker.html",
-    "description": "Evidence-safe tracker framework for institutions, money lanes, filings, oversight and public records.",
+    "description": "Usable tracker cards for institutions by sector, record type, public action, money lane, source route and boundary.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
+      "institutions",
+      "banks",
+      "foundations",
+      "universities",
+      "media",
+      "tech",
+      "law",
+      "politics"
     ],
     "priority": 10,
-    "sourceType": "html"
+    "sourceType": "html",
+    "key": "institution-tracker",
+    "subtitle": "Banks, foundations, universities, media, tech, law and politics",
+    "series": "Power Atlas"
   },
   {
     "title": "Institutional Capture Theory | Matrix Reprogrammed",
@@ -26243,25 +26198,22 @@
     "sourceType": "html"
   },
   {
-    "title": "Power Research Method | Matrix Reprogrammed",
-    "category": "Elite Networks",
+    "title": "Power Research Method",
+    "category": "Research Method",
     "layer": "elite-networks",
     "url": "power-research-method.html",
-    "description": "Source-first method for people, institutions, money and historical transport evidence.",
+    "description": "Evidence-safe method for people, institutions, money, filings and historical transport records with usable money route cards.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
+      "power tracker",
+      "institution tracker",
+      "money tracker",
+      "public records"
     ],
     "priority": 10,
-    "sourceType": "html"
+    "sourceType": "html",
+    "key": "power-research-method",
+    "subtitle": "Track evidence, not fake claims",
+    "series": "Power Atlas"
   },
   {
     "title": "Prediction Engine | Matrix Reprogrammed",
@@ -30740,25 +30692,27 @@
     "sourceType": "html"
   },
   {
-    "title": "Tracker Dashboard | Matrix Reprogrammed",
-    "category": "Information / Narrative",
+    "title": "Tracker Dashboard",
+    "category": "Tracker Hub",
     "layer": "information-narrative",
     "url": "tracker-dashboard.html",
-    "description": "Central control room for Matrix Reprogrammed trackers: Epstein files, billionaires, institutions, money, source vault, speculation and aviation evidence policy.",
+    "description": "Central control room for Matrix Reprogrammed trackers with priority people/wealth starter cards, institution sectors, money routes, source routes, Epstein files, billionaires, speculation and aviation evidence policy.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
+      "tracker dashboard",
+      "people tracker",
+      "money tracker",
+      "institution tracker",
+      "Epstein",
+      "billionaires",
+      "power map",
+      "wealth nodes",
+      "source routes"
     ],
     "priority": 10,
-    "sourceType": "html"
+    "sourceType": "html",
+    "key": "tracker-dashboard",
+    "subtitle": "People, money, institutions, files and power",
+    "series": "Power Atlas"
   },
   {
     "title": "Tracking Feed | Matrix Reprogrammed",
@@ -33341,5 +33295,52 @@
     ],
     "priority": 10,
     "sourceType": "html"
+  },
+  {
+    "key": "latest-public-drops",
+    "title": "Latest Public Drops",
+    "subtitle": "Curated current source leads",
+    "series": "Live Intel",
+    "category": "Source Watch",
+    "url": "downloads/latest-public-drops.json",
+    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
+    "keywords": [
+      "latest drops",
+      "Epstein",
+      "digital euro",
+      "digital ID",
+      "AI cyber",
+      "timers"
+    ]
+  },
+  {
+    "url": "data/big-three-asset-managers.json",
+    "title": "Big Three Asset Manager JSON",
+    "category": "Machine Data",
+    "description": "Machine-readable Big Three tracker data.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "machine data"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/big-three-asset-managers.md",
+    "title": "Big Three Asset Manager Download",
+    "category": "Downloads",
+    "description": "Downloadable Big Three tracker report.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "download"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
   }
 ]

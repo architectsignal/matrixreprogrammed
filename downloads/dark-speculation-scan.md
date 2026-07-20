@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-20T06:34:17.311Z
+Updated: 2026-07-20T07:43:11.137Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -360,7 +360,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 3
+- Matches: 2
 - Boundary: Track as a classic narrative unless direct documents are found.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.

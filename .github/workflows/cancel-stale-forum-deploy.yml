@@ -1,0 +1,24 @@
+name: Cancel Stale Pre-Forum Production Run
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cancel-stale-forum-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel-stale-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel the production run that checked out before the permanent forum repair
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh run cancel 29734687470 --repo "$GITHUB_REPOSITORY" || true
+          echo 'Cancelled stale production run 29734687470; later queued runs check out current main.'

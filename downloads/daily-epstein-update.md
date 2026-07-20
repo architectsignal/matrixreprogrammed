@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-20T09:34:03.824Z
-Live Intel source window: 2026-07-20T09:33:57.318Z
+Generated: 2026-07-20T14:33:24.302Z
+Live Intel source window: 2026-07-20T14:33:18.412Z
 Latest source publication: 2026-07-17T23:17:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-15 current Epstein-lane record leads remain inside the active source window.
+16 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -102,6 +102,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
 
 Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women Reuters
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
+- Published: 2026-07-15T16:34:31.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxQdEdCMk5HcnpmVWxraThsM2VGcmZRYVRaZEc0TGNSaXNkaGpjNzlac3kzck9sS1pGWmhibUM5emttWWtrS3hEakI0Q1BRanloTVB2bVlSbVpLX21WZFVPem1scjBDMnpfY2NZTEozaEtwWnlocG9xcGNJSnhTTkt2MmhYUnV4WXdFaFE5QmhDa2JVYUR4U0I4bkFn?oc=5
+
+Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women Yahoo
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

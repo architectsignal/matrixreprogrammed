@@ -9,7 +9,6 @@ const section = '<section id="evidence-badge-system-route" class="section wrap">
 const hiddenContract = '<script type="application/json" id="evidence-badge-system-route-contract" data-internal-only="true">{"route":"evidence-badge-system-route","status":"preserved-after-utility-cleanup","open":"claim-classifier.html"}</script>';
 const visibleSection = /<section\b[^>]*\bid=["']evidence-badge-system-route["'][^>]*>[\s\S]*?<\/section>/gi;
 const hiddenExisting = /<script\b[^>]*\bid=["']evidence-badge-system-route-contract["'][^>]*>[\s\S]*?<\/script>/gi;
-const orphanVisibleId = /\s+id=["']evidence-badge-system-route["']/gi;
 const exactVisibleId = /\bid=["']evidence-badge-system-route["']/gi;
 const exactContractId = /\bid=["']evidence-badge-system-route-contract["']/gi;
 let changed = 0;
@@ -21,6 +20,12 @@ function insert(html, block) {
   return `${html}${block}`;
 }
 
+function removeNoncanonicalIdReferences(html) {
+  return html
+    .replace(exactVisibleId, 'data-evidence-badge-route-reference="evidence-badge-system-route"')
+    .replace(exactContractId, 'data-evidence-badge-contract-reference="evidence-badge-system-route-contract"');
+}
+
 for (const scope of scopes) {
   for (const file of targets) {
     const full = path.join(scope, file);
@@ -29,8 +34,8 @@ for (const scope of scopes) {
     const before = fs.readFileSync(full, 'utf8');
     let html = before
       .replace(visibleSection, '')
-      .replace(hiddenExisting, '')
-      .replace(orphanVisibleId, '');
+      .replace(hiddenExisting, '');
+    html = removeNoncanonicalIdReferences(html);
     html = insert(html, hiddenTargets.has(file) ? hiddenContract : section);
     if (html !== before) {
       fs.writeFileSync(full, html);

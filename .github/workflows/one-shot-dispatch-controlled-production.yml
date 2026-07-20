@@ -18,30 +18,106 @@ jobs:
   dispatch-controlled-production:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch existing controlled production workflow once
+      - name: Dispatch required refresh or controlled production once
         uses: actions/github-script@v7
         with:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = '492338ea3c618cfe0ac2cfca6b8ae20a34992083';
-
+            const releaseBase = 'f3ba27d1c92927f4c4589ba74309297900619077';
             const response = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
-            const target = response.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+
+            const moneyTarget = response.data.workflows.find(
+              workflow => workflow.name === 'Matrix Money Intelligence Refresh'
+            );
+            if (!moneyTarget) {
+              core.setFailed('Money intelligence refresh workflow was not found.');
+              return;
+            }
+
+            let moneyReady = false;
+            try {
+              const registryResponse = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: 'data/money-intelligence-registry.json',
+                ref: 'main'
+              });
+              const encoded = registryResponse.data && registryResponse.data.content;
+              const registry = encoded
+                ? JSON.parse(Buffer.from(encoded.replace(/\n/g, ''), 'base64').toString('utf8'))
+                : null;
+              const records = Array.isArray(registry && registry.records) ? registry.records : [];
+              const companies = records.filter(row => row.category === 'companies').length;
+              const vehicles = records.filter(row => row.category === 'investment-vehicles').length;
+              moneyReady = companies >= 100 && vehicles >= 100;
+              core.info(`Money registry coverage: companies=${companies}, investmentVehicles=${vehicles}.`);
+            } catch (error) {
+              core.info(`Money registry is not ready: ${error.message}`);
+            }
+
+            if (!moneyReady) {
+              const moneyRuns = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: moneyTarget.id,
+                branch: 'main',
+                per_page: 10
+              });
+              const active = moneyRuns.data.workflow_runs.find(run =>
+                ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status)
+              );
+              if (active) {
+                core.info(`Money intelligence refresh is already active: ${active.html_url}`);
+                return;
+              }
+              const recentFailure = moneyRuns.data.workflow_runs.find(run => {
+                if (run.status !== 'completed' || run.conclusion !== 'failure') return false;
+                const age = Date.now() - Date.parse(run.updated_at || run.created_at || 0);
+                return age >= 0 && age < 60 * 60 * 1000;
+              });
+              if (recentFailure) {
+                core.warning(`Recent money refresh failure requires repair before retry: ${recentFailure.html_url}`);
+                return;
+              }
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: moneyTarget.id,
+                ref: 'main'
+              });
+              core.info(`Dispatched money intelligence refresh ${moneyTarget.id}.`);
+              return;
+            }
+
+            const target = response.data.workflows.find(
+              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
+            );
             if (!target) {
               core.setFailed('Controlled production workflow was not found.');
               return;
             }
 
-            const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', per_page: 20 });
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: target.id,
+              branch: 'main',
+              per_page: 20
+            });
             for (const run of runs.data.workflow_runs) {
               const active = ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status);
               const successful = run.status === 'completed' && run.conclusion === 'success';
               if (!active && !successful) continue;
               try {
-                const comparison = await github.rest.repos.compareCommits({ owner, repo, base: releaseBase, head: run.head_sha });
+                const comparison = await github.rest.repos.compareCommits({
+                  owner,
+                  repo,
+                  base: releaseBase,
+                  head: run.head_sha
+                });
                 if (comparison.data.status === 'identical' || comparison.data.status === 'ahead') {
-                  core.info(`An active or successful controlled production run covers this repaired release: ${run.html_url}`);
+                  core.info(`An active or successful controlled production run covers this release: ${run.html_url}`);
                   return;
                 }
               } catch (error) {

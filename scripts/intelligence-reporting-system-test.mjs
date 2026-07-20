@@ -8,9 +8,11 @@ const modulePath = path.join(root, 'src', 'worker-intelligence-reports.js');
 const productionPath = path.join(root, 'src', 'worker-production.js');
 const emailPath = path.join(root, 'src', 'worker-email-lifecycle.js');
 const wranglerPath = path.join(root, 'wrangler.jsonc');
+const repairPath = path.join(root, 'scripts', 'repair-email-subscription-delivery.js');
 const reportPath = path.join(root, 'downloads', 'intelligence-reporting-system-test.json');
 
-for (const required of [modulePath, productionPath, emailPath, wranglerPath]) assert.ok(fs.existsSync(required), `Required file missing: ${path.relative(root, required)}`);
+for (const required of [modulePath, productionPath, emailPath, wranglerPath, repairPath]) assert.ok(fs.existsSync(required), `Required file missing: ${path.relative(root, required)}`);
+await import(`${pathToFileURL(repairPath).href}?repair=${Date.now()}`);
 const reporting = await import(`${pathToFileURL(modulePath).href}?test=${Date.now()}`);
 assert.equal(typeof reporting.__test?.buildReportDraft, 'function');
 assert.equal(typeof reporting.__test?.buildPdf, 'function');
@@ -41,15 +43,16 @@ assert.ok(pdf instanceof Uint8Array);assert.ok(pdf.length>1200,'Generated PDF sh
 
 const production=fs.readFileSync(productionPath,'utf8'),email=fs.readFileSync(emailPath,'utf8'),wrangler=fs.readFileSync(wranglerPath,'utf8');
 for(const marker of ["import intelligenceReportWorker, { isIntelligenceReportRoute }",'validateIntelligenceReportResponse','intelligence-report-worker-exception'])assert.ok(production.includes(marker),`Production integration marker missing: ${marker}`);
-for(const marker of ['buildWelcomeIntelligenceEmail','sendDetailedFirstDailyBrief','queuePersonalizedAutomatedCampaign','/api/email/admin/report-system-health','email_outbox','email_suppressions','sendProviderEmail'])assert.ok(email.includes(marker),`Email integration marker missing: ${marker}`);
+for(const marker of ['buildWelcomeIntelligenceEmail','sendDetailedFirstDailyBrief','queuePersonalizedAutomatedCampaign','/api/email/admin/report-system-health','email_outbox','email_suppressions','sendProviderEmail','existingBeforeSignup','email.signup.verified_preferences_refreshed',"cron==='35 * * * *'"])assert.ok(email.includes(marker),`Email integration marker missing: ${marker}`);
 assert.match(wrangler,/"EMAIL_AUTOMATION_ENABLED"\s*:\s*"true"/,'Validated daily and weekly report automation must be enabled');
 assert.match(wrangler,/"EMAIL_TRANSACTIONAL_ENABLED"\s*:\s*"true"/,'Transactional welcome and verification delivery must remain enabled');
 assert.match(wrangler,/"INTELLIGENCE_REPORT_BATCH_LIMIT"\s*:\s*"100"/,'Personalized report generation must retain a bounded batch limit');
+assert.match(wrangler,/"35 \* \* \* \*"/,'Hourly idempotent catch-up cron must remain configured');
 assert.ok(production.includes("import paypalWorker"),'PayPal worker import must remain intact');
 assert.ok(production.includes('isPayPalRoute(path)'),'PayPal route boundary must remain intact');
 assert.ok(email.includes("'/api/email/unsubscribe'"),'Unsubscribe route must remain intact');
 assert.ok(email.includes('activeSuppression'),'Suppression checks must remain intact');
-assert.ok(email.includes("event?.cron==='15 7 * * 1'"),'Weekly scheduled report path must remain wired');
-assert.ok(email.includes("event?.cron==='5 6 * * *'"),'Daily scheduled report path must remain wired');
-const result={ok:true,testedAt:new Date().toISOString(),sample:{tracker:tracker.label,relevantRecords:draft.trackerSections[0].records.length,currentRecords:draft.trackerSections[0].currentCount,contradictions:draft.contradictions.length,connections:draft.connections.length,evidenceCount:draft.metrics.evidenceCount,primarySourceCount:draft.metrics.primarySourceCount,pdfBytes:pdf.length},safeguards:{unrelatedRecordExcluded:true,evidenceLabelsValidated:true,eventAndPublicationDatesSeparated:true,coverageFailuresDisclosed:true,nativePdfGenerated:true,automationEnabled:true,batchLimit:100,transactionalEmailStillEnabled:true,paypalBoundaryPreserved:true,unsubscribeAndSuppressionPreserved:true,dailyAndWeeklySchedulesWired:true}};
-fs.mkdirSync(path.dirname(reportPath),{recursive:true});fs.writeFileSync(reportPath,`${JSON.stringify(result,null,2)}\n`);console.log(`Intelligence reporting system test passed: ${result.sample.relevantRecords} relevant records, ${result.sample.pdfBytes} PDF bytes, automation enabled with bounded batches.`);
+assert.ok(email.includes("event?.cron==='15 7 * * 1'")||email.includes("cron==='15 7 * * 1'"),'Weekly scheduled report path must remain wired');
+assert.ok(email.includes("event?.cron==='5 6 * * *'")||email.includes("cron==='5 6 * * *'"),'Daily scheduled report path must remain wired');
+const result={ok:true,testedAt:new Date().toISOString(),sample:{tracker:tracker.label,relevantRecords:draft.trackerSections[0].records.length,currentRecords:draft.trackerSections[0].currentCount,contradictions:draft.contradictions.length,connections:draft.connections.length,evidenceCount:draft.metrics.evidenceCount,primarySourceCount:draft.metrics.primarySourceCount,pdfBytes:pdf.length},safeguards:{unrelatedRecordExcluded:true,evidenceLabelsValidated:true,eventAndPublicationDatesSeparated:true,coverageFailuresDisclosed:true,nativePdfGenerated:true,automationEnabled:true,batchLimit:100,transactionalEmailStillEnabled:true,paypalBoundaryPreserved:true,unsubscribeAndSuppressionPreserved:true,dailyAndWeeklySchedulesWired:true,verifiedRepeatSignupPreserved:true,idempotentCatchUpCron:true}};
+fs.mkdirSync(path.dirname(reportPath),{recursive:true});fs.writeFileSync(reportPath,`${JSON.stringify(result,null,2)}\n`);console.log(`Intelligence reporting system test passed: ${result.sample.relevantRecords} relevant records, ${result.sample.pdfBytes} PDF bytes, verified repeat signup preserved, and idempotent catch-up enabled.`);

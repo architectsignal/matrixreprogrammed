@@ -66,11 +66,14 @@ run('scripts/patch-email-campaign-quality.js');
 run('scripts/patch-membership-signup-server-fallback.js');
 run('scripts/brevo-operational-readiness-audit.js');
 run('scripts/patch-production-receipt-email-safety.js');
+run('scripts/repair-release-page-contracts.js');
 run('scripts/repair-deep-audit-public-defects.js');
 run('scripts/repair-deep-audit-accessibility-metadata.js');
 run('scripts/repair-canonical-external-sources.js');
 run('scripts/enforce-phase1-cloudflare-config.js');
 run('scripts/restore-homepage-navigation.js');
+run('scripts/repair-release-page-contracts.js');
+run('scripts/repair-missing-generated-entity-briefs.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 
@@ -91,6 +94,10 @@ const report = {
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
     'scripts/build-production-deploy-receipt.js',
     'scripts/restore-homepage-navigation.js',
+    'scripts/repair-release-page-contracts.js',
+    'scripts/repair-missing-generated-entity-briefs.js',
+    'downloads/missing-generated-entity-brief-repair.json',
+    'downloads/release-page-contract-repair.json',
     'downloads/homepage-navigation-repair.json',
     'downloads/paypal-subscription-create-state-repair.json',
     'downloads/deep-audit-accessibility-metadata-repair.json',
@@ -101,7 +108,7 @@ const report = {
     'downloads/membership-signup-server-fallback.json',
     'downloads/brevo-operational-readiness.json', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery or oversized search assets.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs or oversized search assets.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);

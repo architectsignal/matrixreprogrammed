@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./repair-email-subscription-delivery.js');
 const workerPath = path.join(root, 'src', 'worker-email-lifecycle.js');
 const tomlPath = path.join(root, 'wrangler.toml');
 const jsoncPath = path.join(root, 'wrangler.jsonc');
@@ -35,7 +36,10 @@ const codeChecks = {
   listUnsubscribeHeaders: worker.includes("'List-Unsubscribe'") && worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"),
   reusableMarketingActionLinks: worker.includes("const reusable=['preferences','unsubscribe'].includes(purpose)"),
   zeroRecipientCampaignCompletion: worker.includes("const status=recipients.length?'sending':'sent'"),
-  scheduledDailyAndWeekly: worker.includes("event?.cron==='15 7 * * 1'") && worker.includes("event?.cron==='5 6 * * *'"),
+  scheduledDailyAndWeekly: (worker.includes("event?.cron==='15 7 * * 1'") || worker.includes("cron==='15 7 * * 1'")) && (worker.includes("event?.cron==='5 6 * * *'") || worker.includes("cron==='5 6 * * *'")),
+  catchUpSchedulerPresent: worker.includes("cron==='35 * * * *'") && worker.includes('minuteOfDay>=365') && worker.includes('minuteOfDay>=435'),
+  verifiedPendingRecoveryPresent: worker.includes('repairVerifiedPendingSubscribers') && worker.includes("marketing_status='pending'") && worker.includes("marketing_status='subscribed'"),
+  repeatSignupPreservesVerification: worker.includes('existingBeforeSignup') && worker.includes('email.signup.verified_preferences_refreshed'),
   suppressionCheckedBeforeSend: worker.includes('activeSuppression') && worker.includes('marketingStatus')
 };
 
@@ -50,7 +54,8 @@ const configurationChecks = {
   replyToEmailConfigured: both(/^MEMBERS_REPLY_TO_EMAIL\s*=\s*"njmgroupfrance@gmail\.com"\s*$/m, /"MEMBERS_REPLY_TO_EMAIL"\s*:\s*"njmgroupfrance@gmail\.com"/),
   replyToNameConfigured: both(/^MEMBERS_REPLY_TO_NAME\s*=\s*"Matrix Reprogrammed Support"\s*$/m, /"MEMBERS_REPLY_TO_NAME"\s*:\s*"Matrix Reprogrammed Support"/),
   dailyCronConfigured: both(/"5 6 \* \* \*"/, /"5 6 \* \* \*"/),
-  weeklyCronConfigured: both(/"15 7 \* \* 1"/, /"15 7 \* \* 1"/)
+  weeklyCronConfigured: both(/"15 7 \* \* 1"/, /"15 7 \* \* 1"/),
+  catchUpCronConfigured: both(/"35 \* \* \* \*"/, /"35 \* \* \* \*"/)
 };
 
 const codeReady = Object.values(codeChecks).every(Boolean);
@@ -75,6 +80,8 @@ const report = {
     retryQuarantineBefore: configurationChecks.retryQuarantineCutoffConfigured ? '2026-07-18T00:00:00.000Z' : null,
     manualRetryQuarantineAvailable: codeChecks.manualRetryQuarantineProtected,
     automaticRetryQuarantineAvailable: codeChecks.automaticRetryQuarantineConfigured,
+    verifiedSubscriberRecovery: codeChecks.verifiedPendingRecoveryPresent,
+    repeatSignupPreservation: codeChecks.repeatSignupPreservesVerification,
     dailyCampaignSource: codeChecks.dailyCampaignSourceReady ? '/data/daily-brain-brief.json' : null,
     weeklyCampaignSource: codeChecks.weeklyCampaignSourceReady ? '/data/weekly-investigation-conclusions.json' : null,
     perRecipientUnsubscribe: codeChecks.perRecipientPreferenceAndUnsubscribe && codeChecks.listUnsubscribeHeaders
@@ -83,6 +90,7 @@ const report = {
     enabled: configurationChecks.marketingAutomationOn,
     dailyUtc: '06:05',
     weeklyUtc: 'Monday 07:15',
+    catchUpUtc: 'hourly at minute 35 after the normal delivery boundary',
     franceSummer: { daily: '08:05', weekly: 'Monday 09:15' },
     franceWinter: { daily: '07:05', weekly: 'Monday 08:15' }
   },
@@ -92,6 +100,7 @@ const report = {
     'Preserve explicit consent, per-recipient preferences, unsubscribe and suppression controls.',
     'Use D1 outbox idempotency and retry quarantine for every delivery.',
     'Keep personalized report generation bounded to 100 recipients per scheduled execution.',
+    'Recover verified pending records only when latest consent is granted and no active suppression exists.',
     'Withhold unsupported claims when source bundles contain no usable evidence.'
   ],
   boundary: 'Daily and weekly report automation is enabled only through the verified D1 membership, preference, suppression, idempotency and evidence-bound delivery path. Transactional account email remains independently enabled.'

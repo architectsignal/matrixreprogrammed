@@ -59,11 +59,14 @@ function repairWrongdoing(html) {
 }
 function repairDeployStatus(html) { return html.replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.'); }
 function repairPowerMap(html) {
-  return html
-    .replace(/\[object Object\]/g, 'Entity index')
-    .replace(/object-object\.html/g, 'entities.html')
-    .replace(/\/?entity-exposure\/entities\.html/g, '/entities.html')
-    .replace(/\/?reports\/entities\.html/g, '/entities.html');
+  return html.replace(/\[object Object\]/g, 'Entity index').replace(/object-object\.html/g, 'entities.html').replace(/\/?entity-exposure\/entities\.html/g, '/entities.html').replace(/\/?reports\/entities\.html/g, '/entities.html');
+}
+function repairHomepage(html) { return html.replace(/Site Brain Router/g, 'Research Navigation'); }
+function repairInformationGathering(html) { return html.replace(/No \[object Object\] visible in public pages\./g, 'No raw object placeholders are published on public pages.'); }
+function repairSignalPass(html) {
+  if (!html.includes('id="unlock-signal-pass"') || html.includes('id="signal-pass-unlock-runtime"')) return html;
+  const runtime = `<script id="signal-pass-unlock-runtime">(()=>{const button=document.getElementById('unlock-signal-pass');const section=document.getElementById('submit-signal');const status=document.getElementById('signal-pass-status');if(!button||!section)return;const key='matrix-signal-pass-unlocked-v1';const unlock=()=>{section.classList.remove('signal-locked');section.setAttribute('data-signal-pass-unlocked','true');if(status)status.textContent='Posting unlocked on this device. Every submission remains an unverified reader signal until reviewed.';try{sessionStorage.setItem(key,'1')}catch{}};button.addEventListener('click',unlock);try{if(sessionStorage.getItem(key)==='1')unlock()}catch{}})();</script>`;
+  return /<\/body>/i.test(html) ? html.replace(/<\/body>/i, `${runtime}</body>`) : `${html}${runtime}`;
 }
 function repairWarnings(relative, html) {
   let next = html;
@@ -74,17 +77,16 @@ function repairWarnings(relative, html) {
   return next;
 }
 function repairUnstableEntityReferences(text) {
-  return text
-    .replace(/\/?reports\/entity-chattogram-water-supply-and-sewerage-authority(?:\.html)?/g, '/entity-briefs/chattogram-water-supply-and-sewerage-authority.html')
-    .replace(/\/?reports\/entity-finance-division-ministry-of-finance(?:\.html)?/g, '/entity-briefs/finance-division-ministry-of-finance.html')
-    .replace(/\/?entity-exposure\/object-object(?:\.html)?/g, '/entities.html')
-    .replace(/\/?reports\/entity-object-object(?:\.html)?/g, '/entities.html');
+  return text.replace(/\/?reports\/entity-chattogram-water-supply-and-sewerage-authority(?:\.html)?/g, '/entity-briefs/chattogram-water-supply-and-sewerage-authority.html').replace(/\/?reports\/entity-finance-division-ministry-of-finance(?:\.html)?/g, '/entity-briefs/finance-division-ministry-of-finance.html').replace(/\/?entity-exposure\/object-object(?:\.html)?/g, '/entities.html').replace(/\/?reports\/entity-object-object(?:\.html)?/g, '/entities.html');
 }
 
 const trackerPages = ['case-status-dashboard.html', 'epstein-billionaire-tracker.html', 'tracker-core.html', 'wrongdoing-tracker.html'];
 const unstableFiles = ['reports/entity-object-object.html','reports/entity-object-object','entity-exposure/object-object.html','entity-exposure/object-object','reports/entity-chattogram-water-supply-and-sewerage-authority.html','reports/entity-chattogram-water-supply-and-sewerage-authority','reports/entity-finance-division-ministry-of-finance.html','reports/entity-finance-division-ministry-of-finance'];
 for (const base of bases) {
   patchAliases(base, 'epstein-upload-check.html', repairEpstein);
+  patchAliases(base, 'epstein-sighting-submit.html', repairSignalPass);
+  patchAliases(base, 'information-gathering-system.html', repairInformationGathering);
+  patchAliases(base, 'index.html', repairHomepage);
   for (const route of trackerPages) patchAliases(base, route, route === 'wrongdoing-tracker.html' ? repairWrongdoing : repairTrackerJavaScript);
   patchAliases(base, 'deploy-status.html', repairDeployStatus);
   patchAliases(base, 'power-structure-map.html', repairPowerMap);
@@ -116,6 +118,23 @@ for (const base of bases) {
     const html = fs.readFileSync(file, 'utf8');
     checks.push({ file: display(file), ok: !html.includes('FOLLOW THE FILES') && html.includes('MAP THE STRUCTURE. READ THE SIGNALS.') });
   }
+  for (const route of ['epstein-sighting-submit.html','epstein-sighting-submit']) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    checks.push({ file: display(file), ok: html.includes('id="signal-pass-unlock-runtime"') && html.includes("button.addEventListener('click',unlock)") });
+  }
+  for (const route of ['information-gathering-system.html','information-gathering-system']) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    checks.push({ file: display(file), ok: !html.includes('[object Object]') && html.includes('No raw object placeholders are published on public pages.') });
+  }
+  for (const route of ['index.html','index']) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    checks.push({ file: display(file), ok: !fs.readFileSync(file, 'utf8').includes('Site Brain Router') });
+  }
   for (const relative of unstableFiles) checks.push({ file: display(path.join(base, relative)), ok: !fs.existsSync(path.join(base, relative)) });
   const powerMap = ['power-structure-map.html','power-structure-map'].map(route => path.join(base, route)).find(file => fs.existsSync(file));
   if (powerMap) checks.push({ file: display(powerMap), ok: !/object-object(?:\.html)?|entity-exposure\/object-object|\[object Object\]/i.test(fs.readFileSync(powerMap, 'utf8')) });
@@ -127,7 +146,7 @@ for (const base of bases) for (const file of walkAuditedText(base)) {
 }
 checks.push({ file: 'audited HTML/JSON route references', ok: residual.length === 0, residual: residual.slice(0, 40) });
 const ok = checks.length > 0 && checks.every(item => item.ok);
-const report = { ok, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], removed: [...new Set(removed)], checks, boundary: 'Reviewed intake, tracker JavaScript, canonical entity routes, public control metadata and exact deployed aliases are repaired after every generator. Unstable report routes and malformed object pages are removed without deleting valid map nodes.' };
+const report = { ok, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], removed: [...new Set(removed)], checks, boundary: 'Reviewed intake, signal-pass controls, tracker JavaScript, canonical entity routes, public copy, exact deployed aliases and homepage labels are repaired after every generator. Unstable report routes and malformed object pages are removed without deleting valid map nodes.' };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-public-defect-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!ok) throw new Error(`Deep audit public defect repair failed: ${JSON.stringify(checks.filter(item => !item.ok))}`);

@@ -1,0 +1,87 @@
+name: Review Queue Speculation Publisher
+
+on:
+  workflow_run:
+    workflows:
+      - Daily Investigation Machine
+      - Weekly Investigation Machine
+      - Automatic Site Update Orchestrator
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - 'data/conclusion-engine-policy.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'data/ai-speculative-conclusions.json'
+      - 'data/ai-speculative-conclusions.schema.json'
+      - 'scripts/conclusion-engine/**'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'scripts/build-phase2-conclusion-engine-preview.js'
+      - 'scripts/publish-review-queue-as-speculation.js'
+      - 'scripts/patch-review-queue-speculation-page.js'
+      - 'scripts/review-queue-speculation-publication-test.js'
+      - 'ai-speculative-conclusions.html'
+      - 'ai-speculative-conclusions.js'
+      - 'downloads/ai-speculative-conclusions-policy.md'
+      - '.github/workflows/review-queue-speculation-publish.yml'
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: review-queue-speculation-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish-labelled-speculation:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build, publish and verify review-queue speculation
+        id: publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          published=false
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/publish-review-queue-as-speculation.js
+            node scripts/patch-review-queue-speculation-page.js
+            node scripts/review-queue-speculation-publication-test.js
+            git add data/ai-speculative-conclusions.json ai-speculative-conclusions.html ai-speculative-conclusions.js data/ai-speculative-conclusions.schema.json downloads/ai-speculative-conclusions-policy.md downloads/review-queue-speculation-publication.json downloads/review-queue-speculation-page-patch.json
+            if git diff --cached --quiet; then
+              echo "No review-queue publication changes"
+              break
+            fi
+            git commit -m "Publish review queue as unverified speculation [deploy]"
+            if git push origin HEAD:main; then
+              published=true
+              break
+            fi
+            echo "Main advanced during publication; rebuilding from the newest main (attempt $attempt)."
+          done
+          echo "published=$published" >> "$GITHUB_OUTPUT"
+      - name: Dispatch guarded production deployment
+        if: steps.publish.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

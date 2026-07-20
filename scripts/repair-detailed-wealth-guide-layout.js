@@ -5,13 +5,7 @@ const root = process.cwd();
 const file = path.join(root, 'scripts', 'build-detailed-wealth-guides.js');
 if (!fs.existsSync(file)) throw new Error('scripts/build-detailed-wealth-guides.js is missing');
 
-let source = fs.readFileSync(file, 'utf8');
-const before = source;
-const start = source.indexOf('function buildPdf(guide, sections) {');
-const end = source.indexOf('\nfunction patchPublicCards(core) {', start);
-if (start < 0 || end < 0) throw new Error('buildPdf replacement anchors were not found');
-
-const replacement = String.raw`function buildPdf(guide, sections) {
+function replacementBuildPdf(guide, sections) {
   // layout-v2: every printable line is wrapped and advances the text cursor
   // after rendering. Section starts reserve enough room for the heading and
   // first body line so headings can never sit on top of previous text.
@@ -144,8 +138,13 @@ const replacement = String.raw`function buildPdf(guide, sections) {
   output += `trailer\n<< /Size ${objects.length + 1} /Root ${catalog} 0 R /Info ${info} 0 R >>\nstartxref\n${xref}\n%%EOF`;
   return { bytes: Buffer.from(output, 'binary'), pageCount: pages.length };
 }
-`;
 
+let source = fs.readFileSync(file, 'utf8');
+const before = source;
+const start = source.indexOf('function buildPdf(guide, sections) {');
+const end = source.indexOf('\nfunction patchPublicCards(core) {', start);
+if (start < 0 || end < 0) throw new Error('buildPdf replacement anchors were not found');
+const replacement = replacementBuildPdf.toString().replace(/^function replacementBuildPdf/, 'function buildPdf');
 source = `${source.slice(0, start)}${replacement}${source.slice(end)}`;
 fs.writeFileSync(file, source);
 

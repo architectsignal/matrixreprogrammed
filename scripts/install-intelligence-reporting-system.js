@@ -132,3 +132,6 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   }
 }, null, 2)}\n`);
 console.log(`Intelligence reporting system ${productionAfter !== productionBefore || emailAfter !== emailBefore || dashboardChanged ? 'installed' : 'already current'}.`);
+
+delete require.cache[require.resolve('./restore-forum-release-contracts.js')];
+require('./restore-forum-release-contracts.js');

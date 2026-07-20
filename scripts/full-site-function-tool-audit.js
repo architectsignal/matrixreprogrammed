@@ -63,7 +63,7 @@ function localPathExists(target, fromFile) {
   return candidates.some(candidate => fs.existsSync(candidate));
 }
 function idsIn(html) {
-  return [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+  return [...html.matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
 }
 function checkJsSyntax(file) {
   const source = read(file);

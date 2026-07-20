@@ -24,7 +24,7 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = '1827406fc752c3f219597fc7f20c02376f66781b';
+            const releaseBase = 'd3759a721e73891d83bc5c52f4e938e9248e4efc';
 
             const response = await github.rest.actions.listRepoWorkflows({
               owner,

@@ -42,6 +42,11 @@ jobs:
             REPAIR_STATUS=$?
             echo "repair_status=$REPAIR_STATUS"
             if [ "$REPAIR_STATUS" -ne 0 ]; then exit "$REPAIR_STATUS"; fi
+            echo '=== SUBSTANTIVE GUIDE ENRICHMENT ==='
+            node scripts/enrich-detailed-wealth-guide-builder.js
+            ENRICH_STATUS=$?
+            echo "enrich_status=$ENRICH_STATUS"
+            if [ "$ENRICH_STATUS" -ne 0 ]; then exit "$ENRICH_STATUS"; fi
             echo '=== NODE SYNTAX CHECK ==='
             node --check scripts/build-detailed-wealth-guides.js
             SYNTAX_STATUS=$?
@@ -70,6 +75,7 @@ jobs:
           path: |
             downloads/detailed-wealth-guides-build.log
             downloads/detailed-wealth-guide-builder-repair.json
+            downloads/detailed-wealth-guide-enrichment.json
             downloads/detailed-wealth-guides-test.json
             downloads/wealth-guides/index.json
             data/detailed-wealth-guides.json
@@ -87,6 +93,7 @@ jobs:
             scripts/build-detailed-wealth-guides.js \
             downloads/wealth-guides \
             downloads/detailed-wealth-guide-builder-repair.json \
+            downloads/detailed-wealth-guide-enrichment.json \
             downloads/detailed-wealth-guides-test.json \
             data/making-money-core.json \
             data/detailed-wealth-guides.json \

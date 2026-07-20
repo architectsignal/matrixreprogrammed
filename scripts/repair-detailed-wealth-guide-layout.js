@@ -1,0 +1,170 @@
+const fs = require('fs');
+const path = require('path');
+
+const root = process.cwd();
+const file = path.join(root, 'scripts', 'build-detailed-wealth-guides.js');
+if (!fs.existsSync(file)) throw new Error('scripts/build-detailed-wealth-guides.js is missing');
+
+let source = fs.readFileSync(file, 'utf8');
+const before = source;
+const start = source.indexOf('function buildPdf(guide, sections) {');
+const end = source.indexOf('\nfunction patchPublicCards(core) {', start);
+if (start < 0 || end < 0) throw new Error('buildPdf replacement anchors were not found');
+
+const replacement = String.raw`function buildPdf(guide, sections) {
+  // layout-v2: every printable line is wrapped and advances the text cursor
+  // after rendering. Section starts reserve enough room for the heading and
+  // first body line so headings can never sit on top of previous text.
+  const pages = [];
+  const pushPage = items => pages.push(items);
+  const styles = {
+    'cover-title': { font: 'F2', size: 22, advance: 30 },
+    'cover-subtitle': { font: 'F1', size: 12, advance: 19 },
+    'cover-rule': { font: 'F1', size: 4, advance: 16 },
+    'cover-label': { font: 'F2', size: 10, advance: 20 },
+    'cover-body': { font: 'F1', size: 10, advance: 17 },
+    'cover-boundary': { font: 'F2', size: 9, advance: 16 },
+    'page-title': { font: 'F2', size: 18, advance: 28 },
+    'toc': { font: 'F1', size: 10, advance: 18 },
+    'heading': { font: 'F2', size: 12, advance: 21 },
+    'continued': { font: 'F2', size: 10, advance: 18 },
+    'checkbox': { font: 'F1', size: 9, advance: 15 },
+    'numbered': { font: 'F1', size: 9, advance: 15 },
+    'body': { font: 'F1', size: 9, advance: 14 },
+    'space': { font: 'F1', size: 6, advance: 9 }
+  };
+  const itemsFor = (kind, text, width, prefixContinuation = '') => wrap(text, width).map((line, index) => ({
+    kind,
+    text: index && prefixContinuation ? `${prefixContinuation}${line}` : line
+  }));
+
+  const cover = [
+    ...itemsFor('cover-title', guide.title, 42),
+    ...itemsFor('cover-subtitle', guide.subtitle, 72),
+    { kind: 'cover-rule', text: '' },
+    { kind: 'cover-label', text: 'MATRIX REPROGRAMMED - DETAILED WEALTH GUIDE' },
+    ...itemsFor('cover-body', `Reader outcome: ${guide.outcome}`, 78),
+    ...itemsFor('cover-body', `Best for: ${guide.audience}`, 78),
+    ...itemsFor('cover-body', `Edition checked: ${today}`, 78),
+    ...itemsFor('cover-boundary', 'Educational information only. No personalised financial, investment, legal or tax advice. No guaranteed outcomes.', 82)
+  ];
+  pushPage(cover);
+
+  const toc = [{ kind: 'page-title', text: 'CONTENTS' }];
+  sections.forEach((section, index) => {
+    toc.push(...itemsFor('toc', `${index + 1}. ${section.title}`, 76, '   '));
+  });
+  pushPage(toc);
+
+  let current = [];
+  let used = 0;
+  const capacity = 630;
+  const cost = item => styles[item.kind]?.advance || 14;
+  const flush = () => {
+    if (!current.length) return;
+    pushPage(current);
+    current = [];
+    used = 0;
+  };
+  const addItem = item => {
+    const itemCost = cost(item);
+    if (current.length && used + itemCost > capacity) flush();
+    current.push(item);
+    used += itemCost;
+  };
+
+  for (const [sectionIndex, section] of sections.entries()) {
+    const headingText = `${sectionIndex + 1}. ${section.title}`;
+    const headingItems = itemsFor('heading', headingText, 66, '   ');
+    const bodyItems = [];
+    for (const original of section.lines || []) {
+      const checkbox = /^\[ \]/.test(original);
+      const numbered = /^\d+\./.test(original);
+      const kind = checkbox ? 'checkbox' : numbered ? 'numbered' : 'body';
+      bodyItems.push(...itemsFor(kind, original, checkbox ? 78 : 84, '  '));
+    }
+    const reservedStart = headingItems.reduce((sum, item) => sum + cost(item), 0) + (bodyItems[0] ? cost(bodyItems[0]) : 0);
+    if (current.length && used + reservedStart > capacity) flush();
+    headingItems.forEach(addItem);
+
+    for (const item of bodyItems) {
+      if (current.length && used + cost(item) > capacity) {
+        flush();
+        itemsFor('continued', `${sectionIndex + 1}. ${section.title} (continued)`, 68, '   ').forEach(addItem);
+      }
+      addItem(item);
+    }
+    if (used + cost({ kind: 'space' }) <= capacity) addItem({ kind: 'space', text: '' });
+    else flush();
+  }
+  flush();
+
+  const objects = [];
+  const add = value => (objects.push(value), objects.length);
+  const font = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>');
+  const bold = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>');
+  const pageIds = [];
+  const contentIds = [];
+
+  pages.forEach((items, pageIndex) => {
+    let stream = 'q\n0.025 0.03 0.04 rg\n0 758 595 84 re f\nQ\n';
+    stream += 'q\n0.77 0.58 0.18 rg\n38 750 519 3 re f\nQ\n';
+    stream += 'BT\n0.08 0.08 0.08 rg\n42 720 Td\n';
+    for (const item of items) {
+      const style = styles[item.kind] || styles.body;
+      stream += `/${style.font} ${style.size} Tf\n`;
+      if (item.kind !== 'space' && item.kind !== 'cover-rule') {
+        stream += `(${pdfEscape(item.text).slice(0, 140)}) Tj\n`;
+      }
+      stream += `0 -${style.advance} Td\n`;
+    }
+    stream += 'ET\n';
+    stream += 'q\n0.94 0.94 0.94 rg\n0 0 595 34 re f\nQ\n';
+    stream += `BT\n0.2 0.2 0.2 rg\n/F1 8 Tf\n42 13 Td\n(Matrix Reprogrammed | ${pdfEscape(guide.slug)} | ${today} | page ${pageIndex + 1} of ${pages.length}) Tj\nET`;
+    contentIds.push(add(`<< /Length ${Buffer.byteLength(stream)} >>\nstream\n${stream}\nendstream`));
+    pageIds.push(null);
+  });
+
+  const pagesId = add('');
+  for (let i = 0; i < pages.length; i++) {
+    pageIds[i] = add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${font} 0 R /F2 ${bold} 0 R >> >> /Contents ${contentIds[i]} 0 R >>`);
+  }
+  objects[pagesId - 1] = `<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] >>`;
+  const info = add(`<< /Title (${pdfEscape(guide.title)}) /Author (Matrix Reprogrammed) /Subject (${pdfEscape(guide.subtitle)}) /Keywords (wealth education evidence checklist) /CreationDate (D:${today.replace(/-/g, '')}) >>`);
+  const catalog = add(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
+  let output = '%PDF-1.4\n';
+  const offsets = [0];
+  objects.forEach((object, index) => {
+    offsets.push(Buffer.byteLength(output));
+    output += `${index + 1} 0 obj\n${object}\nendobj\n`;
+  });
+  const xref = Buffer.byteLength(output);
+  output += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
+  output += offsets.slice(1).map(offset => `${String(offset).padStart(10, '0')} 00000 n \n`).join('');
+  output += `trailer\n<< /Size ${objects.length + 1} /Root ${catalog} 0 R /Info ${info} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  return { bytes: Buffer.from(output, 'binary'), pageCount: pages.length };
+}
+`;
+
+source = `${source.slice(0, start)}${replacement}${source.slice(end)}`;
+fs.writeFileSync(file, source);
+
+const report = {
+  ok: source.includes('layout-v2: every printable line is wrapped')
+    && source.includes("'heading': { font: 'F2', size: 12, advance: 21 }")
+    && source.includes('const capacity = 630;')
+    && !source.includes("'heading': ['/F2 12 Tf\\n', 0]"),
+  generatedAt: new Date().toISOString(),
+  changed: source !== before,
+  fixes: [
+    'Wraps cover title, subtitle, outcome, audience and boundary text.',
+    'Advances the cursor after every rendered line instead of moving zero points before headings.',
+    'Reserves heading plus first body line at section starts.',
+    'Repeats a continued heading when a long section crosses a page.',
+    'Keeps main text above the footer with a point-based page budget.'
+  ]
+};
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'detailed-wealth-guide-layout-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
+if (!report.ok) throw new Error('Detailed wealth guide layout repair did not apply');
+console.log(`Detailed wealth guide layout repair ${report.changed ? 'applied' : 'already current'}.`);

@@ -12,6 +12,10 @@ on:
       - 'data/making-money-core.json'
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/money-intelligence-system-test.js'
+      - 'scripts/finalize-money-intelligence-release.js'
+      - 'scripts/money-intelligence-live-test.js'
+      - 'scripts/build-deploy-manifest.js'
+      - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
   push:
     branches: [main]
@@ -24,6 +28,11 @@ on:
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
       - 'scripts/build-money-intelligence-system.js'
+      - 'scripts/money-intelligence-system-test.js'
+      - 'scripts/finalize-money-intelligence-release.js'
+      - 'scripts/money-intelligence-live-test.js'
+      - 'scripts/build-deploy-manifest.js'
+      - '.github/workflows/money-production-proof.yml'
       - '.github/workflows/money-intelligence.yml'
 
 permissions:

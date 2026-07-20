@@ -102,6 +102,7 @@ for (const base of [root, path.join(root, '_site')]) {
     if (repaired !== source) fs.writeFileSync(file, repaired);
   }
 }
+require('./patch-deep-audit-member-posting-contract.js');
 require('./repair-deep-audit-public-defects.js');
 require('./repair-release-regressions.js');
 require('./finalize-release-regressions.js');

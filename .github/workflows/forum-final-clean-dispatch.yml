@@ -1,0 +1,41 @@
+name: Forum Final Clean Dispatch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/forum-final-clean-dispatch.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel-old-and-dispatch-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel every older active controlled production run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run list --workflow deploy.yml --limit 100 --json databaseId,status,createdAt \
+            --repo "$GITHUB_REPOSITORY" \
+            --jq '.[] | select(.status != "completed") | .databaseId' > /tmp/active-deploy-runs.txt
+          while read -r run_id; do
+            [ -n "$run_id" ] || continue
+            echo "Cancelling pre-final production run $run_id"
+            gh run cancel "$run_id" --repo "$GITHUB_REPOSITORY" || true
+          done < /tmp/active-deploy-runs.txt
+          sleep 8
+
+      - name: Dispatch exactly one release from repaired main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run 'Matrix Reprogrammed Controlled Production Deploy' \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

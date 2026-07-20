@@ -1,0 +1,93 @@
+name: Matrix Money Intelligence Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 0'
+  push:
+    branches:
+      - main
+    paths:
+      - .github/money-intelligence-refresh.trigger
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: matrix-money-intelligence-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Refresh and build money intelligence
+        env:
+          MATRIX_MONEY_REFRESH: '1'
+          MATRIX_MONEY_REQUIRE_LIVE: '1'
+        run: |
+          node --check scripts/build-money-intelligence-expansion.js
+          node scripts/build-money-intelligence-expansion.js
+          node scripts/money-intelligence-expansion-test.js
+
+      - name: Commit generated public system
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/money-intelligence-registry.json \
+            data/money-search-index.json \
+            data/money-intelligence-brief-feed.json \
+            data/wealth-methods.json \
+            data/history/money-intelligence \
+            follow-the-money \
+            making-money/guides \
+            downloads/wealth-guides \
+            money-expansion.css money-category.js making-money-methods.js \
+            money-search.html money-search.js money-graph.html money-graph.js \
+            follow-the-money.html making-money.html index.html welcome-gate.js \
+            daily-command-brief.html daily-brain-brief.html download-center.html \
+            newsletter.html optin-center.html src/worker-intelligence-reports.js
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "Refresh money intelligence, practical guides and AI detective homepage [deploy]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Dispatch controlled production deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const response = await github.rest.actions.listRepoWorkflows({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              per_page: 100
+            });
+            const target = response.data.workflows.find(
+              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
+            );
+            if (!target) {
+              core.setFailed('Controlled production workflow was not found.');
+              return;
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: target.id,
+              ref: 'main',
+              inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+            });
+            core.info(`Dispatched controlled production workflow ${target.id}.`);

@@ -9,7 +9,10 @@ try{
   const replacement=marker+"\ndb.exec(fs.readFileSync(path.join(root,'migrations/phase5_member_experience_timestamp_fix.sql'),'utf8'));";
   const source=fs.readFileSync(testPath,'utf8');
   if(!source.includes(marker))throw new Error('Phase 5 fixture migration marker is missing');
-  const patched=source.replace(marker,replacement);
+  const patched=source
+    .replace(marker,replacement)
+    .replace(/matrix_session=/g,'matrix_session_v2=');
+  if(!patched.includes('matrix_session_v2='))throw new Error('Phase 5 current session-cookie contract was not applied');
   await import(`data:text/javascript;base64,${Buffer.from(patched).toString('base64')}`);
 }catch(error){
   const failure={

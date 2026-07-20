@@ -1,0 +1,1 @@
+On merge to main, the Money Intelligence Pages workflow builds the permanent profiles and PDFs, validates them, commits generated outputs with `[deploy]`, and triggers the repository's existing production publication path.

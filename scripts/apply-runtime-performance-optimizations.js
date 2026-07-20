@@ -22,6 +22,11 @@ function write(file, value) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, value);
 }
+function addAttribute(tag, attribute) {
+  return /\/\s*>$/.test(tag)
+    ? tag.replace(/\s*\/\s*>$/, ` ${attribute} />`)
+    : tag.replace(/\s*>$/, ` ${attribute}>`);
+}
 
 const oldPopulate = "function populate(select,items,fieldName){if(!select)return;const current=select.value;const counts=new Map();items.forEach(function(item){const value=field(item,fieldName);if(value)counts.set(value,(counts.get(value)||0)+1);});[...counts.entries()].sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);}).slice(0,200).forEach(function(pair){const option=document.createElement('option');option.value=pair[0];option.textContent=label(pair[0])+' ('+pair[1]+')';select.appendChild(option);});if([...select.options].some(function(option){return option.value===current;}))select.value=current;}";
 const newPopulate = "function populate(select,items,fieldName){if(!select)return;const current=select.value;while(select.options.length>1)select.remove(1);const counts=new Map();items.forEach(function(item){const value=field(item,fieldName);if(value)counts.set(value,(counts.get(value)||0)+1);});[...counts.entries()].sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);}).slice(0,200).forEach(function(pair){const option=document.createElement('option');option.value=pair[0];option.textContent=label(pair[0])+' ('+pair[1]+')';select.appendChild(option);});if([...select.options].some(function(option){return option.value===current;}))select.value=current;}";
@@ -96,26 +101,26 @@ function patchHtml(file) {
   let html = read(file);
   let imageIndex = 0;
   let changed = false;
-  html = html.replace(/<img\\b[^>]*>/gi, tag => {
+  html = html.replace(/<img\b[^>]*>/gi, tag => {
     imageIndex += 1;
     let next = tag;
-    if (!/\\bdecoding\\s*=/i.test(next)) { next = next.replace(/>$/, ' decoding="async">'); report.asyncImages += 1; }
-    if (imageIndex > 2 && !/\\bloading\\s*=/i.test(next) && !/\\bfetchpriority\\s*=\\s*["']high/i.test(next) && !/\\bdata-eager\\b/i.test(next)) {
-      next = next.replace(/>$/, ' loading="lazy">');
+    if (!/\bdecoding\s*=/i.test(next)) { next = addAttribute(next, 'decoding="async"'); report.asyncImages += 1; }
+    if (imageIndex > 2 && !/\bloading\s*=/i.test(next) && !/\bfetchpriority\s*=\s*["']high/i.test(next) && !/\bdata-eager\b/i.test(next)) {
+      next = addAttribute(next, 'loading="lazy"');
       report.lazyImages += 1;
     }
     if (next !== tag) changed = true;
     return next;
   });
-  html = html.replace(/<iframe\\b[^>]*>/gi, tag => {
-    if (/\\bloading\\s*=/i.test(tag)) return tag;
+  html = html.replace(/<iframe\b[^>]*>/gi, tag => {
+    if (/\bloading\s*=/i.test(tag)) return tag;
     changed = true; report.lazyFrames += 1;
-    return tag.replace(/>$/, ' loading="lazy">');
+    return addAttribute(tag, 'loading="lazy"');
   });
-  html = html.replace(/<video\\b[^>]*>/gi, tag => {
-    if (/\\bpreload\\s*=/i.test(tag) || /\\bautoplay\\b/i.test(tag)) return tag;
+  html = html.replace(/<video\b[^>]*>/gi, tag => {
+    if (/\bpreload\s*=/i.test(tag) || /\bautoplay\b/i.test(tag)) return tag;
     changed = true; report.metadataVideos += 1;
-    return tag.replace(/>$/, ' preload="metadata">');
+    return addAttribute(tag, 'preload="metadata"');
   });
   if (changed) write(file, html);
   report.htmlFiles += 1;

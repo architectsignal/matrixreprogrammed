@@ -26,12 +26,36 @@ function patchProduction(source) {
     'Production reporting import'
   );
 
-  const validatorAnchor = `async function validateEmailResponse(response) {\n  const origin = response.headers.get('x-matrix-origin');\n  if (origin !== 'cloudflare-worker-email-lifecycle') {\n    return unavailable('non-authoritative-email-response-blocked', \`Origin was \${origin || 'missing'}\`, 'email');\n  }\n  return response;\n}`;
-  const validator = `${validatorAnchor}\n\nasync function validateIntelligenceReportResponse(response) {\n  const responseOrigin = response.headers.get('x-matrix-origin');\n  if (responseOrigin !== 'cloudflare-worker-intelligence-reports') {\n    return unavailable('non-authoritative-intelligence-report-response-blocked', \`Origin was \${responseOrigin || 'missing'}\`, 'member');\n  }\n  return response;\n}`;
+  const validatorAnchor = `async function validateEmailResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-email-lifecycle') {
+    return unavailable('non-authoritative-email-response-blocked', \`Origin was \${origin || 'missing'}\`, 'email');
+  }
+  return response;
+}`;
+  const validator = `${validatorAnchor}
+
+async function validateIntelligenceReportResponse(response) {
+  const responseOrigin = response.headers.get('x-matrix-origin');
+  if (responseOrigin !== 'cloudflare-worker-intelligence-reports') {
+    return unavailable('non-authoritative-intelligence-report-response-blocked', \`Origin was \${responseOrigin || 'missing'}\`, 'member');
+  }
+  return response;
+}`;
   source = replaceOnce(source, validatorAnchor, validator, 'Production reporting validator');
 
-  const routeAnchor = `    if (emailRoutes.has(path)) {\n      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');`;
-  const routeBlock = `    if (isIntelligenceReportRoute(path)) {\n      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');\n      try {\n        return validateIntelligenceReportResponse(await intelligenceReportWorker.fetch(request, env, ctx));\n      } catch (error) {\n        return unavailable('intelligence-report-worker-exception', error?.message || error, 'member');\n      }\n    }\n\n${routeAnchor}`;
+  const routeAnchor = `    if (emailRoutes.has(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');`;
+  const routeBlock = `    if (isIntelligenceReportRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateIntelligenceReportResponse(await intelligenceReportWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('intelligence-report-worker-exception', error?.message || error, 'member');
+      }
+    }
+
+${routeAnchor}`;
   source = replaceOnce(source, routeAnchor, routeBlock, 'Production reporting route');
 
   for (const marker of [
@@ -95,7 +119,14 @@ function patchEmail(source) {
 function patchDashboard(source) {
   const marker = 'data-intelligence-report-system="v1"';
   if (source.includes(marker)) return source;
-  const card = `\n<section class="member-panel intelligence-report-card" ${marker}>\n  <p class="eyebrow">PERSONAL INTELLIGENCE WORKSPACE</p>\n  <h2>Detailed reports and living PDF dossiers</h2>\n  <p>Review daily and weekly reports built from your followed subjects and watchlists. Every report preserves evidence labels, source dates, contradictions, limitations and version history.</p>\n  <p><a class="button" href="/intelligence-reports.html">Open intelligence reports</a></p>\n</section>\n`;
+  const card = `
+<section class="member-panel intelligence-report-card" ${marker}>
+  <p class="eyebrow">PERSONAL INTELLIGENCE WORKSPACE</p>
+  <h2>Detailed reports and living PDF dossiers</h2>
+  <p>Review daily and weekly reports built from your followed subjects and watchlists. Every report preserves evidence labels, source dates, contradictions, limitations and version history.</p>
+  <p><a class="button" href="/intelligence-reports.html">Open intelligence reports</a></p>
+</section>
+`;
   if (source.includes('</main>')) return source.replace('</main>', `${card}</main>`);
   if (source.includes('</body>')) return source.replace('</body>', `${card}</body>`);
   throw new Error('Member dashboard insertion anchor missing');
@@ -132,3 +163,6 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   }
 }, null, 2)}\n`);
 console.log(`Intelligence reporting system ${productionAfter !== productionBefore || emailAfter !== emailBefore || dashboardChanged ? 'installed' : 'already current'}.`);
+
+require('./build-money-intelligence-expansion.js');
+require('./money-intelligence-expansion-test.js');

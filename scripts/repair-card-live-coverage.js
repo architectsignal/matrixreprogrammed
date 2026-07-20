@@ -54,6 +54,17 @@ feed.quietCardCount = feed.cards.filter(card => Number(card.currentRecordCount |
 feed.currentRecordCardCount = feed.cards.filter(card => Number(card.currentRecordCount || 0) > 0).length;
 write(feedPath, `${JSON.stringify(feed, null, 2)}\n`);
 
+const machine = readJson('data/live-machine-status.json', {});
+machine.updated = new Date().toISOString();
+machine.cardFeedUpdated = feed.updated || machine.updated;
+machine.trackedCards = feed.cardCount;
+machine.currentRecordCards = feed.currentRecordCardCount;
+machine.quietCards = feed.quietCardCount;
+machine.andrewTateTracked = feed.andrewTateRoutes.length > 0;
+machine.status = feed.cardCount > 0 && feed.sourceWindowUpdated ? 'machine-dependants-generated' : 'machine-dependants-incomplete';
+write('data/live-machine-status.json', `${JSON.stringify(machine, null, 2)}\n`);
+write('downloads/live-machine-status.md', `# Live Machine Status\n\nGenerated: ${machine.updated}\n\n- Live Intel updated: ${machine.liveIntelUpdated || feed.sourceWindowUpdated || 'unavailable'}\n- Live Intel items: ${machine.liveIntelItemCount || 0}\n- Tracked cards: ${machine.trackedCards}\n- Cards with current records: ${machine.currentRecordCards}\n- Cards with no new verified record: ${machine.quietCards}\n- Andrew Tate tracked: ${machine.andrewTateTracked}\n- Status: ${machine.status}\n`);
+
 for (const card of feed.cards) {
   const route = String(card.route || '').replace(/^\//, '');
   if (!route || route.includes('?') || route.includes('#') || !route.endsWith('.html')) continue;

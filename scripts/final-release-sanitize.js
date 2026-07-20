@@ -75,18 +75,6 @@ run('scripts/restore-homepage-navigation.js');
 run('scripts/repair-release-page-contracts.js');
 run('scripts/repair-missing-generated-entity-briefs.js');
 
-// Final forum owner: reapply the shared authenticated session, explicit browser
-// credentials and D1 read-after-write guarantee after every legacy sanitizer.
-run('scripts/repair-forum-member-posting.js');
-run('scripts/forum-member-posting-test.js');
-for (const relative of [
-  'member-login.html',
-  'forum.html',
-  'dark-speculation-forum.html',
-  'epstein-alive-board.html',
-  'forum.js'
-]) copy(relative);
-
 // The deployment manifest and production health are generated immediately before
 // this final sanitizer. Publish exact versioned copies and give the strict Worker
 // ownership of their public routes so legacy asset keys cannot return stale proof.
@@ -112,12 +100,6 @@ const report = {
     'power-dossier-runtime.js', '_site/search-index.json', 'store.html',
     'card-deck-store.html', 'premium-reports.html', 'paypal-voluntary-support.js',
     'paypal-membership.js', '_site/paypal-membership.js',
-    'member-login.html', '_site/member-login.html',
-    'forum.html', '_site/forum.html',
-    'dark-speculation-forum.html', '_site/dark-speculation-forum.html',
-    'epstein-alive-board.html', '_site/epstein-alive-board.html',
-    'forum.js', '_site/forum.js',
-    'src/worker.js', 'src/worker-member-experience.js', 'src/worker-forum-persistence.js',
     'epstein-upload-check.html', 'wrongdoing-tracker.html', 'intake-fallback.js',
     'admin-email-launch.html', 'admin-email-launch.js',
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
@@ -128,10 +110,6 @@ const report = {
     'scripts/restore-homepage-navigation.js',
     'scripts/repair-release-page-contracts.js',
     'scripts/repair-missing-generated-entity-briefs.js',
-    'scripts/repair-forum-member-posting.js',
-    'scripts/forum-member-posting-test.js',
-    'downloads/forum-member-posting-repair.json',
-    'downloads/forum-member-posting-test.json',
     'downloads/missing-generated-entity-brief-repair.json',
     'downloads/release-page-contract-repair.json',
     'downloads/homepage-navigation-repair.json',
@@ -148,9 +126,8 @@ const report = {
     'downloads/release-metadata-assets.json',
     'wrangler.toml', 'wrangler.jsonc'
   ],
-  forumBoundary: 'Verified domain-wide member session -> D1 insert -> exact D1 read-back -> public feed. No browser-only success is accepted.',
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore split-domain member sessions, credential-free forum calls, silently ignored forum inserts, browser-only posting success, malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, oversized search assets or stale deployment metadata.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, oversized search assets or stale deployment metadata.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for persistent authenticated forum posting, the deployable bundle, current release metadata routes, protected homepage navigation, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');
+console.log('Final release sanitation passed for the deployable bundle, current release metadata routes, protected homepage navigation, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');

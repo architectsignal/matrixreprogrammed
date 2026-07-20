@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-07-20T06:37:19.818Z",
+  "updated": "2026-07-20T08:30:06.367Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 44761,
+    "recordsInspected": 45378,
     "criticalClocks": [
       {
         "slug": "surveillance-state",
@@ -347,7 +347,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-20T06:37:15.283Z",
+        "generatedAt": "2026-07-20T08:30:01.668Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -366,9 +366,8 @@
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 11938,
+        "signalCount": 11873,
         "actors": [
-          "Information and narrative control",
           "Search Full Library"
         ]
       },
@@ -376,7 +375,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 11781,
+        "signalCount": 10800,
         "actors": [
           "ATT MOBILITY LLC — Department of Defense",
           "4 - Keenova Therapeutics plc (0001567892) (Issuer)"
@@ -386,61 +385,53 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 9759,
-        "actors": [
-          "Money, currency and access"
-        ]
+        "signalCount": 10534,
+        "actors": []
       },
       {
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 4681,
+        "signalCount": 5952,
         "actors": [
           "Exercise or conversion of derivative security",
-          "Identity, surveillance and access",
-          "Customs and Border Protection (CBP)",
-          "Security and emergency power"
+          "Customs and Border Protection (CBP)"
         ]
       },
       {
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 3842,
+        "signalCount": 4021,
         "actors": [
           "ATT MOBILITY LLC — Department of Defense",
-          "Global governance convergence",
           "Skip to main content",
           "Attorney Review Protocol for Epstein Files",
           "BOP Video Footage",
-          "Customs and Border Protection (CBP)"
+          "Customs and Border Protection (CBP)",
+          "DOJ Disclosures"
         ]
       },
       {
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 2475,
+        "signalCount": 3045,
         "actors": []
       },
       {
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2070,
-        "actors": [
-          "Identity, surveillance and access"
-        ]
+        "signalCount": 2534,
+        "actors": []
       },
       {
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 772,
-        "actors": [
-          "Identity, surveillance and access"
-        ]
+        "signalCount": 1002,
+        "actors": []
       }
     ],
     "implementationChain": [
@@ -511,60 +502,6 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Corporate-state convergence",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "corporate ownership and capital",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 55,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Information and narrative control",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "media and information access",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 43,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Identity, surveillance and access",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "technology, identity, data and platforms",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 37,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
         "name": "ATT MOBILITY LLC — Department of Defense",
         "documentedRole": "Contract",
         "roleGroup": "public authority and regulation",
@@ -593,24 +530,6 @@
         "records": 34,
         "sources": [
           "data/relationship-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Global governance convergence",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "documented person or institution",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 28,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
         ],
         "summaries": [],
         "specificity": 9,
@@ -940,24 +859,6 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Money, currency and access",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "money, banking and payment infrastructure",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 17,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
         "name": "4 - Keenova Therapeutics plc (0001567892) (Issuer)",
         "documentedRole": "Contract",
         "roleGroup": "documented person or institution",
@@ -975,15 +876,15 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Security and emergency power",
+        "name": "Corporate-state convergence",
         "documentedRole": "Documented in the linked public record",
-        "roleGroup": "security, intelligence and emergency power",
+        "roleGroup": "corporate ownership and capital",
         "authority": "",
         "instrument": "",
         "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "whyItMatters": "This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 16,
+        "records": 14,
         "sources": [
           "data/clock-wall.json",
           "data/global-risk-clocks.json"
@@ -1323,6 +1224,91 @@
         "instrument": "",
         "action": "CourtCase",
         "whyItMatters": "This record places Final Judgment - Estate of Richard Myre inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 12,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Flagg",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "authority": "",
+        "instrument": "",
+        "action": "CourtCase",
+        "whyItMatters": "This record places Final Judgment - Flagg inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 12,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Geoffrey Allen Wall",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "authority": "",
+        "instrument": "",
+        "action": "CourtCase",
+        "whyItMatters": "This record places Final Judgment - Geoffrey Allen Wall inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 12,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Henry Abdo",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "authority": "",
+        "instrument": "",
+        "action": "CourtCase",
+        "whyItMatters": "This record places Final Judgment - Henry Abdo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 12,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Jeffrey De Laveaga",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "authority": "",
+        "instrument": "",
+        "action": "CourtCase",
+        "whyItMatters": "This record places Final Judgment - Jeffrey De Laveaga inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 12,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Lloyd",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "authority": "",
+        "instrument": "",
+        "action": "CourtCase",
+        "whyItMatters": "This record places Final Judgment - Lloyd inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 12,
         "sources": [

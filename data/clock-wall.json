@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updated": "2026-07-20T06:37:18.677Z",
+  "updated": "2026-07-20T08:30:17.796Z",
   "title": "Matrix Reprogrammed Mission Timers",
   "purpose": "Visual synthesis of the site’s evidence, conclusions, policy convergence, source changes and missing records.",
   "sitePurpose": "Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.",
@@ -8,7 +8,7 @@
   "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
   "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
   "sourceFileCount": 115,
-  "candidateSignalCount": 3577,
+  "candidateSignalCount": 3634,
   "clocks": [
     {
       "slug": "wwiii-escalation",
@@ -255,7 +255,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "wwiii-escalation",
       "name": "WWIII Escalation Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -504,7 +504,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "ai-breakout",
       "name": "AI Breakout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -834,7 +834,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "surveillance-state",
       "name": "Surveillance State Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1041,6 +1041,16 @@
           "matchScore": 8
         },
         {
+          "title": "Influence should be mapped through infrastructure, filings and contracts.",
+          "summary": "The largest influence lanes will remain AI/cloud infrastructure, payments, energy, data centers, defense/security, media platforms, philanthropy and public-private digital systems.",
+          "route": "billionaire-watch.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/outcome-briefings.json",
+          "matchScore": 8
+        },
+        {
           "title": "Epstein settlement and NDA lane moves into oversight focus",
           "summary": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt.",
           "route": "https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6",
@@ -1048,6 +1058,16 @@
           "evidenceLevel": "Reported oversight / settlement-document lane",
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Gold is a custody map as much as a tonnage table.",
+          "summary": "During debt stress, sanctions risk, reserve diversification and currency stress, gold custody transparency becomes a more valuable geopolitical signal.",
+          "route": "gold-reserve-tracker.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium-high",
+          "sourceFile": "data/outcome-briefings.json",
           "matchScore": 7
         },
         {
@@ -1069,26 +1089,6 @@
           "confidence": "",
           "sourceFile": "data/probability-signal-feed-004.json",
           "matchScore": 6
-        },
-        {
-          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-          "summary": "",
-          "route": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
-          "published": "2026-07-20T06:34:10.904Z",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/entity-timelines.json",
-          "matchScore": 5
-        },
-        {
-          "title": "Conditional-access systems may become increasingly interconnected",
-          "summary": "Digital identity, payment, health, mobility and platform-status systems may become sufficiently linked that a decision in one domain affects access in another.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "[object Object]",
-          "sourceFile": "data/ai-speculative-conclusions.json",
-          "matchScore": 5
         }
       ],
       "sourceRoutes": [
@@ -1103,8 +1103,9 @@
         "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
         "live-intel.html",
         "answer-engine.html",
+        "billionaire-watch.html",
         "https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6",
-        "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+        "gold-reserve-tracker.html",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1120,7 +1121,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "financial-reset",
       "name": "Financial Reset Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1404,7 +1405,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "cbdc-rollout",
       "name": "CBDC Rollout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1598,6 +1599,26 @@
           "matchScore": 8
         },
         {
+          "title": "The strongest public pattern is convergence across access systems.",
+          "summary": "More interoperability, more public-private infrastructure, more compliance-linked access points, and more disputes over privacy, consent, exclusion and resilience.",
+          "route": "policy-watch.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/outcome-briefings.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Influence should be mapped through infrastructure, filings and contracts.",
+          "summary": "The largest influence lanes will remain AI/cloud infrastructure, payments, energy, data centers, defense/security, media platforms, philanthropy and public-private digital systems.",
+          "route": "billionaire-watch.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/outcome-briefings.json",
+          "matchScore": 7
+        },
+        {
           "title": "Digital ID systems now critical infrastructure requiring sovereign cyber defence - Biometric Update",
           "summary": "Digital ID systems now critical infrastructure requiring sovereign cyber defence Biometric Update",
           "route": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSzNJYjNoWnJOQVJPbVRPeGdiYmxXY2tpSlBieUtBQWd0dkQwOFNWUjVjbFE4ZWtmNTRwMmg3YWdBMzRiUnVHT2M3LURRdDU5T2lPdVlVaHlKaERUekhkQXFQaGxQWERNOG9TZnJFaWJsNC0xdExfb3c0bG5fZ01LbU8xNU5pcVFsMmdTS29BWjIzLUNOUTF5SjlncUlmSUFGdkQ2RHRUWlBuamg4eGhjVWpzTlpNOUxzd0s0?oc=5",
@@ -1616,26 +1637,6 @@
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
           "matchScore": 5
-        },
-        {
-          "title": "The International Conference on the EU Cyber Security and Resilience Acts - Biometric Update",
-          "summary": "The International Conference on the EU Cyber Security and Resilience Acts Biometric Update",
-          "route": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONUg4RndYVmVnSW9Rb2Y1RHJ3UnhTckI1TXFSYUNxdnRRelV0dHRPR0N3c0FlV3JpcUxJWW40UDJibXExNi1aN0otT21GeTZuM25XaWxtNHkwSjcyZ0RVNWZqektjVWN2RzBsblYzMGh6eUM5NzJQTFktUWZfQ2VhcnR0dUlXRHVSR1ZPc29oVG05N0VPNmh0N1NtaGNHczl1NzFpMjdvdFJ0bUswX2pqdFVB?oc=5",
-          "published": "2026-01-20T00:12:15.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "Public Infrastructure and Private Surveillance in India’s Aadhaar System - Tech Policy Press",
-          "summary": "Public Infrastructure and Private Surveillance in India’s Aadhaar System Tech Policy Press",
-          "route": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeUlPSVpzQkFxb3Z0V0ZRRWRaMUtid1FzZVVSZXd4OXhmcjFwdFFuX1dZcGRYTGxseFdkVUdwS0ZuSjFlM3lvRzJXLTY2SXZXVlpvbFJQeTBCQzlJMWh1UXM5TEI1bV9zdzI2TG1pakU3SEk2aGlrd2UwVXZKNWI4TU8ySW4tYkc3MXRTb21NM3FXcnZudWN4VG5HZHQ?oc=5",
-          "published": "2025-08-18T07:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
         }
       ],
       "sourceRoutes": [
@@ -1646,9 +1647,9 @@
         "surveillance-hub.html",
         "black-file.html",
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "policy-watch.html",
+        "billionaire-watch.html",
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSzNJYjNoWnJOQVJPbVRPeGdiYmxXY2tpSlBieUtBQWd0dkQwOFNWUjVjbFE4ZWtmNTRwMmg3YWdBMzRiUnVHT2M3LURRdDU5T2lPdVlVaHlKaERUekhkQXFQaGxQWERNOG9TZnJFaWJsNC0xdExfb3c0bG5fZ01LbU8xNU5pcVFsMmdTS29BWjIzLUNOUTF5SjlncUlmSUFGdkQ2RHRUWlBuamg4eGhjVWpzTlpNOUxzd0s0?oc=5",
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxONUg4RndYVmVnSW9Rb2Y1RHJ3UnhTckI1TXFSYUNxdnRRelV0dHRPR0N3c0FlV3JpcUxJWW40UDJibXExNi1aN0otT21GeTZuM25XaWxtNHkwSjcyZ0RVNWZqektjVWN2RzBsblYzMGh6eUM5NzJQTFktUWZfQ2VhcnR0dUlXRHVSR1ZPc29oVG05N0VPNmh0N1NtaGNHczl1NzFpMjdvdFJ0bUswX2pqdFVB?oc=5",
-        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeUlPSVpzQkFxb3Z0V0ZRRWRaMUtid1FzZVVSZXd4OXhmcjFwdFFuX1dZcGRYTGxseFdkVUdwS0ZuSjFlM3lvRzJXLTY2SXZXVlpvbFJQeTBCQzlJMWh1UXM5TEI1bV9zdzI2TG1pakU3SEk2aGlrd2UwVXZKNWI4TU8ySW4tYkc3MXRTb21NM3FXcnZudWN4VG5HZHQ?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1662,7 +1663,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "cyber-blackout",
       "name": "Cyber Blackout Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1895,7 +1896,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "alien-disclosure",
       "name": "Alien Disclosure Clock",
       "bandMeaning": "Some relevant signals exist, but the mechanism is weak, early or contested.",
@@ -2161,7 +2162,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "pandemic-biosecurity",
       "name": "Pandemic / Biosecurity Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -2320,6 +2321,26 @@
           "matchScore": 4
         },
         {
+          "title": "Daily brain conclusion 2",
+          "summary": "Policy-system convergence remains the strongest system-level pattern; the key test is whether access becomes mandatory, centralized or vendor-controlled.",
+          "route": "daily-brain-brief.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/daily-brain-brief.json",
+          "matchScore": 4
+        },
+        {
+          "title": "Influence should be mapped through infrastructure, filings and contracts.",
+          "summary": "The largest influence lanes will remain AI/cloud infrastructure, payments, energy, data centers, defense/security, media platforms, philanthropy and public-private digital systems.",
+          "route": "billionaire-watch.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/outcome-briefings.json",
+          "matchScore": 4
+        },
+        {
           "title": "Security Council LIVE: International Criminal Court briefs on Darfur",
           "summary": "On Wednesday, the Security Council heard an update on the International Criminal Court s work in Sudan s Darfur region, referred to the Court back in 2005. Focus has recently turned to atrocities in the ongoing war between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). The briefing was held as the ICC faces mounting pressure: this week, US Secretary of State Marco Rubio launched a campaign to “dismantle” the Court, which prosecutes individuals for genocide, war crimes, crimes against humanity and the crime of aggression. Follow full live coverage below.",
           "route": "https://news.un.org/feed/view/en/story/2026/07/1167945",
@@ -2388,26 +2409,6 @@
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 3
-        },
-        {
-          "title": "Conditional-access systems may become increasingly interconnected",
-          "summary": "Digital identity, payment, health, mobility and platform-status systems may become sufficiently linked that a decision in one domain affects access in another.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "[object Object]",
-          "sourceFile": "data/ai-speculative-conclusions.json",
-          "matchScore": 3
-        },
-        {
-          "title": "Competing digital blocs may be more plausible than one unified global system",
-          "summary": "Rival geopolitical and commercial blocs may build incompatible identity, payment, AI, security and information regimes instead of converging into one global authority.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "[object Object]",
-          "sourceFile": "data/ai-speculative-conclusions.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -2419,6 +2420,8 @@
         "surveillance-hub.html",
         "black-file.html",
         "answer-engine.html",
+        "daily-brain-brief.html",
+        "billionaire-watch.html",
         "https://news.un.org/feed/view/en/story/2026/07/1167945",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "https://news.google.com/rss/articles/CBMigAFBVV95cUxNalhVZlYtbFZ1a1Q2MDJKU0E3UUhzSHAzTUNXQW5VbW9jVUdtQjNDZWZjLTlSbWU2NGRXalNjRHNtQnJIRDI0Z0wzM1RfT3dYXzhWVHducXliZ0FPVVB1Q2ZEMWhkc2dWcGNndGluYkpWXzFpWlFvUHljZjMzTFRWbg?oc=5",
@@ -2440,7 +2443,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "civil-unrest",
       "name": "Civil Unrest Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -2635,6 +2638,16 @@
           "matchScore": 4
         },
         {
+          "title": "Daily brain conclusion 2",
+          "summary": "Policy-system convergence remains the strongest system-level pattern; the key test is whether access becomes mandatory, centralized or vendor-controlled.",
+          "route": "daily-brain-brief.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/daily-brain-brief.json",
+          "matchScore": 4
+        },
+        {
           "title": "Human Cost Sources",
           "summary": "Conflict deaths, displacement, migration categories, missing migrants, food insecurity, compensation totals, and public-health data boundaries.",
           "route": "",
@@ -2663,16 +2676,6 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 3
-        },
-        {
-          "title": "DOJ watchdog compliance review remains a core source lane",
-          "summary": "AP reported earlier in 2026 that the Justice Department inspector general is reviewing compliance with the law requiring Epstein-file disclosures, including collection, redaction, and disclosure processes. This stays on the watch list because process errors can reshape what the public record actually shows.",
-          "route": "evidence-vault.html",
-          "published": "2026-06-25",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -2690,6 +2693,7 @@
         "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5",
         "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5",
         "entity-timelines/chattogram-water-supply-and-sewerage-authority.html",
+        "daily-brain-brief.html",
         "https://news.un.org/feed/view/en/story/2026/07/1167963",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "evidence-vault.html",
@@ -2706,7 +2710,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "food-system-stress",
       "name": "Food System Stress Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -2841,6 +2845,16 @@
           "matchScore": 5
         },
         {
+          "title": "Influence should be mapped through infrastructure, filings and contracts.",
+          "summary": "The largest influence lanes will remain AI/cloud infrastructure, payments, energy, data centers, defense/security, media platforms, philanthropy and public-private digital systems.",
+          "route": "billionaire-watch.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/outcome-briefings.json",
+          "matchScore": 5
+        },
+        {
           "title": "Consolidated Sanctions List (Non-SDN Lists)",
           "summary": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
           "route": "daily-command-brief.html",
@@ -2858,6 +2872,16 @@
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/deep-intel-feed-matrix.json",
+          "matchScore": 4
+        },
+        {
+          "title": "Gold is a custody map as much as a tonnage table.",
+          "summary": "During debt stress, sanctions risk, reserve diversification and currency stress, gold custody transparency becomes a more valuable geopolitical signal.",
+          "route": "gold-reserve-tracker.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium-high",
+          "sourceFile": "data/outcome-briefings.json",
           "matchScore": 4
         },
         {
@@ -2919,26 +2943,6 @@
           "confidence": "",
           "sourceFile": "data/epstein-evidence-watch.json",
           "matchScore": 3
-        },
-        {
-          "title": "Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Midas’ Case - Organized Crime and Corruption Reporting Project | OCCRP",
-          "summary": "Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Midas’ Case Organized Crime and Corruption Reporting Project | OCCRP",
-          "route": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcllHS2JXUlJad09SaWF2SUZMdVVIckNBUTF3ZmF2OVZpb1dFQXlOeVpKNlV6NnhtUHBtbVduZGd0MFdGVjNCV2lCUVloWVlrbjAzWGVLenJJUnpYMDZIQ25jcF9nUEg4eGdSLTJDeW9uaEFReldMYkFZV0l5LXdsUHRuRDBMbkFjbnV2NzRCdm8xVEYwY0JELXFuVVF3dFIzNTR0V3hLOE9iX19WZG1J?oc=5",
-          "published": "2026-02-17T13:44:42.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 3
-        },
-        {
-          "title": "ENERGY DEPARTMENT",
-          "summary": "",
-          "route": "entity-timelines/energy-department.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "no-new-verified-record-in-current-window",
-          "sourceFile": "data/card-live-updates.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -2950,12 +2954,12 @@
         "black-file.html",
         "surveillance-hub.html",
         "answer-engine.html",
+        "billionaire-watch.html",
         "daily-command-brief.html",
         "timers.html",
+        "gold-reserve-tracker.html",
         "https://news.un.org/feed/view/en/story/2026/07/1167939",
         "evidence-vault.html",
-        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcllHS2JXUlJad09SaWF2SUZMdVVIckNBUTF3ZmF2OVZpb1dFQXlOeVpKNlV6NnhtUHBtbVduZGd0MFdGVjNCV2lCUVloWVlrbjAzWGVLenJJUnpYMDZIQ25jcF9nUEg4eGdSLTJDeW9uaEFReldMYkFZV0l5LXdsUHRuRDBMbkFjbnV2NzRCdm8xVEYwY0JELXFuVVF3dFIzNTR0V3hLOE9iX19WZG1J?oc=5",
-        "entity-timelines/energy-department.html",
         "search.html"
       ],
       "missingEvidence": [
@@ -2969,7 +2973,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "energy-shock",
       "name": "Energy Shock Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -3322,7 +3326,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "id": "machine-convergence",
       "name": "Machine Convergence",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -3522,7 +3526,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 58,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -3836,7 +3840,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 67,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4036,7 +4040,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 54,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4178,7 +4182,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 63,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4320,7 +4324,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 64,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4488,7 +4492,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 52,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4620,17 +4624,17 @@
           "published": "2026-07-20T06:35:50.778Z",
           "evidenceLevel": "",
           "confidence": "high",
-          "sourceFile": "data/probability-snapshot.json",
+          "sourceFile": "data/daily-brain-brief.json",
           "matchScore": 6
         },
         {
           "title": "Missing records become the main investigation map",
           "summary": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]",
           "route": "",
-          "published": "2026-07-19T06:45:46.029Z",
+          "published": "2026-07-20T06:35:50.778Z",
           "evidenceLevel": "",
           "confidence": "high",
-          "sourceFile": "data/daily-brain-brief.json",
+          "sourceFile": "data/probability-snapshot.json",
           "matchScore": 6
         },
         {
@@ -4749,8 +4753,8 @@
           "route": "https://www.cia.gov/readingroom/",
           "published": "",
           "evidenceLevel": "",
-          "confidence": "failed",
-          "sourceFile": "data/daily-investigation-conclusions.json",
+          "confidence": "",
+          "sourceFile": "data/investigation-source-registry.json",
           "matchScore": 4
         },
         {
@@ -4759,8 +4763,8 @@
           "route": "https://www.cia.gov/readingroom/",
           "published": "",
           "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/investigation-source-registry.json",
+          "confidence": "failed",
+          "sourceFile": "data/investigation-source-state.json",
           "matchScore": 4
         }
       ],
@@ -4785,7 +4789,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 65,
       "automaticScoreMovement": 1,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 3 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4901,171 +4905,185 @@
       ],
       "evidenceInputs": [
         {
-          "title": "Epstein Files And Institutional Accountability",
-          "summary": "Official disclosures, court records, oversight releases, inventories, redactions, removals, restored files, institutional decision chains and missing records.",
-          "route": "epstein-files.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "matchScore": 6
-        },
-        {
-          "title": "Government Enforcement And Public Corruption",
-          "summary": "Official charges, convictions, sanctions, settlements, inspector-general findings and public-integrity cases.",
-          "route": "investigation-machine.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "matchScore": 6
-        },
-        {
           "title": "Revised Final Judgment",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
           "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
+          "matchScore": 6
         },
         {
           "title": "Final Judgment",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
           "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
+          "matchScore": 6
         },
         {
           "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/system/files/filefield_paths/order26587.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
           "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Proposed Final Judgment - Shaukat Shamim",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Proposed Final Judgment - YouPlus, Inc.",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment -Steve Bajic",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment -Christopher McKnight",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment - Robert Yedid",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment - Andrew Kaufman",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment - Mark Jacobs",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Final Judgment - Michael Bowen",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Revised Final Judgment",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/weekly-investigation-conclusions.json",
-          "matchScore": 4
+          "matchScore": 6
         },
         {
           "title": "Final Judgment",
-          "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-          "route": "",
-          "published": "2026-07-19T08:57:13.971Z",
-          "evidenceLevel": "A",
-          "confidence": "established-wrongdoing",
-          "sourceFile": "data/weekly-investigation-conclusions.json",
-          "matchScore": 4
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Proposed Final Judgment - Shaukat Shamim",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Proposed Final Judgment - YouPlus, Inc.",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment -Steve Bajic",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26583-bajic.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment -Christopher McKnight",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26583-mcknight.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment - Robert Yedid",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment - Andrew Kaufman",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-andrew-kaufman.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment - Mark Jacobs",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
+        },
+        {
+          "title": "Final Judgment - Michael Bowen",
+          "summary": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+          "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
         "daily-investigation-conclusions.html",
         "evidence-vault.html",
-        "epstein-files.html",
-        "investigation-machine.html",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+        "https://www.sec.gov/system/files/filefield_paths/order26587.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26583-bajic.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26583-mcknight.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-andrew-kaufman.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
         "search.html"
       ],
       "missingEvidence": [
@@ -5077,7 +5095,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 51,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 14 fresh records, 14 primary/official, 14 implementation signals, 0 counter-signals, 14 case records and 14 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5297,7 +5315,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5461,7 +5479,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5608,7 +5626,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 55,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5755,7 +5773,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5902,7 +5920,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 45,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6094,7 +6112,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 51,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6272,7 +6290,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 47,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6408,7 +6426,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 59,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6555,7 +6573,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 62,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6724,7 +6742,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6872,7 +6890,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7019,7 +7037,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 53,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7223,7 +7241,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 30,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -7374,7 +7392,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -7570,7 +7588,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 30,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -7815,7 +7833,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -7966,7 +7984,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 30,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8117,7 +8135,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 30,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8268,7 +8286,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8419,7 +8437,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8571,7 +8589,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8704,7 +8722,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8836,7 +8854,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -8968,7 +8986,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9100,7 +9118,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9233,7 +9251,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9365,7 +9383,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 22,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9497,7 +9515,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9629,7 +9647,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9761,7 +9779,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -9893,7 +9911,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10026,7 +10044,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10158,7 +10176,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10290,7 +10308,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10422,7 +10440,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10554,7 +10572,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10686,7 +10704,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10818,7 +10836,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -10955,7 +10973,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11092,7 +11110,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11230,7 +11248,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11368,7 +11386,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11506,7 +11524,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11644,7 +11662,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11776,7 +11794,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -11908,7 +11926,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12040,7 +12058,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12172,7 +12190,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12304,7 +12322,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12436,7 +12454,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12568,7 +12586,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12700,7 +12718,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 22,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12838,7 +12856,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -12976,7 +12994,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 22,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13114,7 +13132,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 22,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13252,7 +13270,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13390,7 +13408,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13522,7 +13540,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13654,7 +13672,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13786,7 +13804,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -13918,7 +13936,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-20T06:37:15.283Z",
+      "generatedAt": "2026-07-20T08:30:01.668Z",
       "previousAutomaticScore": 16,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",

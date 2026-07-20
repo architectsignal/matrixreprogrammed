@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-20T06:06:49.641Z",
+  "liveIntelUpdated": "2026-07-20T06:06:46.726Z",
+  "dailyEpsteinUpdated": "2026-07-20T06:06:47.165Z",
+  "cardFeedUpdated": "2026-07-20T06:06:47.302Z",
+  "trackedCards": 792,
+  "andrewTateRoutes": [
+    "controlled-opposition/andrew-tate.html",
+    "card-artwork-batches/batch-006.html",
+    "card-artwork-batches.html",
+    "controlled-opposition-deck.html"
+  ],
+  "checks": [
+    {
+      "name": "Live Intel has a valid source-window timestamp",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Daily Epstein update was generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Daily Epstein update uses the current Live Intel window",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Daily Epstein output is not older than Live Intel",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Daily Epstein items stay inside the Epstein lane contract",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Card update feed was generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Card feed uses the current Live Intel window",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Every card has an explicit current state",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Every matched card preserves an evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Andrew Tate card is tracked",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Machine status reports generated dependants",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

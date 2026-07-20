@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T01:50:10.443Z
+Collection completed: 2026-07-20T06:06:46.726Z
 Latest source publication: 2026-07-19T12:00:00.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection status: fresh-items-added
+New items this collection: 1
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -265,6 +265,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-14 — Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167937

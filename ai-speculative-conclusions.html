@@ -31,7 +31,7 @@
     .spec-empty{padding:1rem;border:1px dashed rgba(216,181,106,.25);border-radius:14px}
     .spec-boundary{font-size:.9rem;color:#c6b98f}
     .spec-error{border:1px solid #be3737;padding:1rem;border-radius:14px;background:rgba(120,0,0,.2)}
-  </style>
+  .spec-card[data-status="unverified"]{border:2px solid #e6a23c;background:linear-gradient(145deg,rgba(106,58,0,.25),rgba(0,0,0,.96))}.spec-auto-warning{display:grid;gap:.25rem;border:2px solid #e6a23c;background:#2c1700;color:#ffe5ae;border-radius:12px;padding:.8rem;margin-bottom:.85rem}.spec-auto-warning strong{letter-spacing:.04em}.spec-badge-alert{border-color:#e6a23c;color:#ffd17a}.spec-auto-published h3{color:#ffd17a}/* review-queue-auto-publication-v1 */</style>
 <link rel="stylesheet" href="reader-experience.css" /><style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
 <body>
   <canvas id="matrix"></canvas>
@@ -47,9 +47,9 @@
       <section class="hero wrap spec-hero">
         <div class="eyebrow">AI Speculative Conclusions</div>
         <h1>HYPOTHESES.<br />NOT VERDICTS.</h1>
-        <p class="lead">This page publishes machine-generated hypotheses separately from verified intelligence. Every conclusion must show its document link, contrary evidence, missing proof, confidence band and falsification conditions.</p>
+        <p class="lead">This page publishes machine-generated hypotheses separately from verified intelligence. Items entering the editorial review queue are published here automatically as UNVERIFIED SPECULATION, with failed gates, contrary evidence, missing proof and falsification conditions visible.</p>
         <div class="spec-warning">
-          <strong>Hard boundary:</strong> These are not established facts, accusations or findings of wrongdoing. Association is not guilt. A person appearing in a file, address book, flight log, email, photograph, court filing or institutional record does not by itself establish misconduct.
+          <strong>Hard boundary:</strong> These are not established facts, accusations or findings of wrongdoing. Association is not guilt. A person appearing in a file, address book, flight log, email, photograph, court filing or institutional record does not by itself establish misconduct.<br><br><strong>Review queue publication rule:</strong> anything held for review is published only on this quarantined page and must carry the visible label <em>AUTO-PUBLISHED FROM REVIEW QUEUE — UNVERIFIED SPECULATION</em>.
         </div>
         <div class="cta-row">
           <a  class="btn machine-data-link internal-only" href="data/ai-speculative-conclusions.json">Machine-readable data</a>
@@ -63,7 +63,7 @@
         <div class="spec-controls" aria-label="Filter speculative conclusions">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="evidence-supported">Evidence-supported</button>
-          <button type="button" data-filter="developing">Developing</button>
+          <button type="button" data-filter="developing">Developing</button><button type="button" data-filter="unverified">Unverified review queue</button>
           <button type="button" data-filter="weakened">Weakened</button>
           <button type="button" data-filter="rejected">Rejected</button>
         </div>
@@ -74,7 +74,7 @@
       <section class="section wrap split">
         <article class="card redline">
           <h2>Automatic publication scope</h2>
-          <p>The AI may publish only to this labelled page when the record passes the structured schema and contains public source routes, explicit uncertainty, counter-evidence, missing records and the statement that criminal conduct is not established.</p>
+          <p>The AI publishes every editorial-review item to this labelled page as unverified speculation. It may not promote those items to verified evidence, accusation, alarm ranking or confirmed conclusion. Private and sensitive material remains blocked.</p>
         </article>
         <aside class="card">
           <h2>What never belongs here</h2>

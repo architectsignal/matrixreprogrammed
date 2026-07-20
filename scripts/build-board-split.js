@@ -25,6 +25,15 @@ function ensureFeed(html, heading, lead){
   const section = `<section id="board-feed" class="section wrap"><h2>${esc(heading)}</h2><p class="lead">${esc(lead)}</p><div class="grid" id="signal-board-feed"><article class="card"><h3>Loading signals...</h3><p>The board is checking for posts.</p></article></div></section>`;
   return html.includes('</main>') ? html.replace('</main>', `${section}</main>`) : `${html}${section}`;
 }
+function ensureVerifiedMemberPosting(html, route, asideTitle, asideText){
+  const loginUrl = `https://matrixreprogrammed.com/member-login.html?return=${encodeURIComponent(route)}`;
+  const section = `<section id="signal-pass" class="section wrap split"><div class="card redline"><h2>Verified Member Posting</h2><p>The board is free to read. A verified Free Member account unlocks posting across devices and gives you session controls.</p><p id="forum-member-status" class="form-status pending">Checking your member session…</p><div class="cta-row small"><a class="btn" href="${loginUrl}">Sign In</a><a class="btn alt" href="membership.html">Create Free Account</a></div></div><aside class="card"><h2>${esc(asideTitle)}</h2><p>${esc(asideText)}</p></aside></section>`;
+  html = html.replace(/<section id="signal-pass" class="section wrap split">[\s\S]*?<\/section>/i, section);
+  html = html.replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.');
+  html = html.replace(/<script src="forum\.js(?:\?[^\"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+  if (!html.includes('forum.js?v=20260720-forum-member-posting-v3')) html = html.replace('</body>', '<script src="forum.js?v=20260720-forum-member-posting-v3"></script></body>');
+  return html;
+}
 function patchPage(name, board, heading, lead){
   if (!exists(name)) return false;
   let html = read(name);
@@ -37,15 +46,26 @@ function patchPage(name, board, heading, lead){
 }
 patchPage('forum.html', 'main', 'Main Signal Board', 'Main-board posts only. Dark speculation and Epstein sighting claims are separated into their own boards.');
 patchPage('dark-speculation-forum.html', 'speculation', 'Dark Speculation Board', 'Speculation links, claim motifs, counter-sources, and source trails live here instead of the main board.');
-patchPage('epstein-sighting-submit.html', 'epstein-alive', 'Epstein Sighting Board', 'Epstein alive, sighting, lookalike, fake-media, and debunk claims live here instead of the main board.');
-if (exists('epstein-sighting-submit.html')) {
-  let html = read('epstein-sighting-submit.html');
-  html = html
+
+// The old sighting-submit page is a legacy source and still contains the retired
+// browser-only Signal Pass. Never overwrite the canonical verified-member board
+// from that template once the canonical page exists.
+if (!exists('epstein-alive-board.html') && exists('epstein-sighting-submit.html')) {
+  let html = read('epstein-sighting-submit.html')
     .replace(/<title>Submit Epstein Sighting Claim \| Matrix Reprogrammed<\/title>/, '<title>Epstein Sighting Board | Matrix Reprogrammed</title>')
     .replace(/Submit A Sighting Claim/g, 'Epstein Sighting Board')
     .replace(/Post To Sighting Watch/g, 'Post To Epstein Sighting Board');
+  html = ensureVerifiedMemberPosting(html, '/epstein-alive-board.html', 'Reader Promise', 'Membership does not buy agreement or ideological approval. The hard floor remains: no threats, doxxing, private victim names, spam or illegal content.');
   write('epstein-alive-board.html', html);
 }
+patchPage('epstein-alive-board.html', 'epstein-alive', 'Epstein Sighting Board', 'Epstein alive, sighting, lookalike, fake-media, and debunk claims live here instead of the main board.');
+if (exists('epstein-alive-board.html')) {
+  let html = ensureVerifiedMemberPosting(read('epstein-alive-board.html'), '/epstein-alive-board.html', 'Reader Promise', 'Membership does not buy agreement or ideological approval. The hard floor remains: no threats, doxxing, private victim names, spam or illegal content.');
+  if (!html.includes('id="forum-member-status"')) throw new Error('Canonical Epstein board lost verified-member status');
+  if (!html.includes('class="signal-lock-message"')) throw new Error('Canonical Epstein board lost authenticated posting lock');
+  write('epstein-alive-board.html', html);
+}
+
 if (exists('epstein-sighting-watch.html')) {
   let html = read('epstein-sighting-watch.html').replace(/epstein-sighting-submit\.html/g, 'epstein-alive-board.html');
   write('epstein-sighting-watch.html', html);
@@ -87,4 +107,4 @@ write('data/forum-board-split.json', JSON.stringify({ updated: new Date().toISOS
   { id:'speculation', title:'Dark Speculation Board', route:'dark-speculation-forum.html', feed:'/forum-feed-speculation', submit:'/submit-speculation-post', report:'/report-speculation-post' },
   { id:'epstein-alive', title:'Epstein Sighting Board', route:'epstein-alive-board.html', feed:'/forum-feed-epstein-alive', submit:'/submit-epstein-alive-post', report:'/report-epstein-alive-post' }
 ]}, null, 2));
-console.log('Built three-board Signal Board split: main, speculation, epstein-alive.');
+console.log('Built three-board Signal Board split: main, speculation, epstein-alive, with verified-member posting preserved.');

@@ -1,12 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
 const reportPath = path.join(root, 'downloads', 'cloudflare-asset-versioning.json');
 
 if (!fs.existsSync(site)) throw new Error('_site is missing; build Cloudflare output before asset versioning');
+
+// Asset fingerprinting and cache policy are one release contract. A late legacy
+// header generator must never leave unversioned JS/CSS under immutable caching.
+execFileSync(process.execPath, [path.join(root, 'scripts', 'enforce-production-cache-policy.js')], {
+  cwd: root,
+  stdio: 'inherit',
+  env: process.env
+});
 
 function posix(value) { return String(value || '').replace(/\\/g, '/'); }
 function walk(dir, files = []) {
@@ -113,6 +122,7 @@ const report = {
   unresolved: unresolved.slice(0, 200),
   unversioned: unversioned.slice(0, 200),
   unsafeImmutable,
+  cachePolicyOwner: 'scripts/enforce-production-cache-policy.js',
   boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. Unversioned scripts and styles use short revalidation headers rather than year-long immutable caching.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -123,4 +133,4 @@ if (!report.ok) {
   unversioned.slice(0, 20).forEach(item => console.error(`Unversioned asset reference: ${item.page} -> ${item.reference}`));
   process.exit(1);
 }
-console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted.`);
+console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted under the authoritative optimized cache policy.`);

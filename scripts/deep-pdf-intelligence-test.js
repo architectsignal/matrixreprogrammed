@@ -3,8 +3,11 @@ const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
 const downloads=path.join(root,'downloads');
+const manifests=path.join(root,'data','report-manifests');
 const indexPath=path.join(downloads,'branded-download-index.json');
 assert.ok(fs.existsSync(indexPath),'Deep PDF index missing');
+assert.ok(fs.existsSync(manifests),'Internal deep PDF manifest directory missing');
+assert.ok(!fs.existsSync(path.join(downloads,'report-manifests')),'Internal report manifests must not be exposed as public downloads');
 const index=JSON.parse(fs.readFileSync(indexPath,'utf8'));
 assert.equal(index.engineVersion,'deep-intelligence-v2');
 for(const required of ['evidence-based conclusions','analytical inferences','speculative conclusions','alternative explanations','source register'])assert.ok(index.requiredSections.includes(required),`Required deep section missing: ${required}`);
@@ -18,8 +21,8 @@ for(const item of index.pdfs){
   assert.equal(bytes.subarray(0,8).toString(),'%PDF-1.4',`Invalid PDF header: ${item.file}`);
   assert.ok(bytes.length>10000,`PDF remains too thin: ${item.file}`);
   const base=item.file.replace(/^downloads\//,'').replace(/\.pdf$/,'').replace(/[\\/]/g,'--');
-  const manifestPath=path.join(downloads,'report-manifests',`${base}.json`);
-  assert.ok(fs.existsSync(manifestPath),`Report manifest missing: ${item.file}`);
+  const manifestPath=path.join(manifests,`${base}.json`);
+  assert.ok(fs.existsSync(manifestPath),`Internal report manifest missing: ${item.file}`);
   const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
   for(const key of ['evidenceBasedConclusions','analyticalInferences','speculativeConclusions'])assert.ok(Array.isArray(manifest.report?.[key])&&manifest.report[key].length,`${key} missing from ${item.file}`);
   assert.match(JSON.stringify(manifest.report.speculativeConclusions),/not established|hypothesis|speculat/i,`Speculation boundary missing: ${item.file}`);
@@ -27,6 +30,6 @@ for(const item of index.pdfs){
 }
 const epstein=index.pdfs.find(item=>item.file==='downloads/subject-epstein-black-file.pdf');
 if(epstein)assert.ok(!epstein.reused,'Epstein subject report must be rebuilt by the deep engine');
-const result={ok:true,testedAt:new Date().toISOString(),engineVersion:index.engineVersion,indexed:index.count,validatedGeneratedPdfs:checked,subjectReports:index.subjectProfileCount||0,wealthGuides:index.wealthGuideCount||0,safeguards:{fiveEvidenceLayers:true,evidenceBasedConclusions:true,analysisSeparated:true,speculationClearlyLabelled:true,alternativeExplanations:true,sourceRegister:true,thinLinkSheetsRejected:true,unchangedPdfsPreserved:true}};
+const result={ok:true,testedAt:new Date().toISOString(),engineVersion:index.engineVersion,indexed:index.count,validatedGeneratedPdfs:checked,subjectReports:index.subjectProfileCount||0,wealthGuides:index.wealthGuideCount||0,manifestDirectory:'data/report-manifests',safeguards:{fiveEvidenceLayers:true,evidenceBasedConclusions:true,analysisSeparated:true,speculationClearlyLabelled:true,alternativeExplanations:true,sourceRegister:true,thinLinkSheetsRejected:true,unchangedPdfsPreserved:true,internalManifestsNotPublicDownloads:true}};
 fs.writeFileSync(path.join(downloads,'deep-pdf-intelligence-test.json'),`${JSON.stringify(result,null,2)}\n`);
-console.log(`Deep PDF intelligence test passed: ${checked} generated reports validated.`);
+console.log(`Deep PDF intelligence test passed: ${checked} generated reports validated with internal manifests.`);

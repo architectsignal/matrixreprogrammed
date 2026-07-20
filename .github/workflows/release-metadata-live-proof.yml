@@ -34,7 +34,13 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Generate commit-bound release metadata
+      - name: Apply final owners before generating production health
+        run: |
+          mkdir -p _site
+          node scripts/patch-homepage-mask-intro.js
+          node scripts/patch-release-metadata-routing.js
+
+      - name: Generate commit-bound release metadata and versioned aliases
         env:
           DEPLOY_COMMIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -42,11 +48,6 @@ jobs:
         run: |
           node scripts/build-deploy-manifest.js
           node scripts/build-production-health.js
-
-      - name: Patch strict Worker and publish versioned aliases
-        run: |
-          mkdir -p _site
-          node scripts/patch-release-metadata-routing.js
           node scripts/publish-release-metadata-assets.js
           mkdir -p _site/runtime
           cp runtime/deploy-manifest-current.json _site/runtime/deploy-manifest-current.json

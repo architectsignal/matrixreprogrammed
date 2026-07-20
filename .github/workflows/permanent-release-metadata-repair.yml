@@ -1,0 +1,64 @@
+name: Permanent Release Metadata Repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/permanent-release-metadata-repair.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: matrix-release-metadata-repair
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Apply permanent release metadata routing
+        run: |
+          set -euo pipefail
+          node scripts/patch-release-metadata-routing.js
+          node --check src/worker-production.js
+          node --check src/worker-release-metadata.js
+          grep -F "import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';" src/worker-production.js
+          grep -F "if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);" src/worker-production.js
+          grep -F "'/deploy-manifest.json', '/runtime/deploy-manifest-current.json'" src/worker-release-metadata.js
+          grep -F "'/deploy-health.json', '/runtime/deploy-health-current.json'" src/worker-release-metadata.js
+
+      - name: Commit permanent repair
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/worker-production.js scripts/verify-live-production.js downloads/release-metadata-routing-patch.json downloads/live-verifier-intelligence-routes-patch.json
+          if git diff --cached --quiet; then
+            echo "Permanent release metadata routing is already committed."
+            exit 0
+          fi
+          git commit -m "Make release proof routing permanent [deploy]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during release metadata repair; retrying."
+          done
+          echo "Unable to publish permanent release metadata repair."
+          exit 1

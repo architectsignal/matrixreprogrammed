@@ -81,8 +81,12 @@ run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 run('scripts/patch-paypal-server-redirect.js');
 
-// Final owners of member posting, search and conclusion surfaces.
+// Final owners of member posting, search and conclusion surfaces. These run
+// after every broad generator and immediately before the deployable copy.
 run('scripts/repair-forum-member-posting.js');
+run('scripts/repair-forum-login-canonical.js');
+run('scripts/repair-forum-session-compatibility.js');
+run('scripts/repair-forum-page-consistency.js');
 run('scripts/forum-member-posting-test.js');
 run('scripts/repair-search-system.js');
 run('scripts/build-search-v3-index.js');
@@ -135,6 +139,12 @@ requireMarker('member-login.html', 'https://matrixreprogrammed.com/api/auth/requ
 requireMarker('forum.html', 'forum.js?v=20260720-forum-member-posting-v3');
 requireMarker('dark-speculation-forum.html', 'forum.js?v=20260720-forum-member-posting-v3');
 requireMarker('epstein-alive-board.html', 'forum.js?v=20260720-forum-member-posting-v3');
+requireMarker('forum.html', 'id="forum-member-status"');
+requireMarker('dark-speculation-forum.html', 'id="forum-member-status"');
+requireMarker('epstein-alive-board.html', 'id="forum-member-status"');
+requireMarker('dark-speculation-forum.html', 'Verified Member Posting');
+rejectMarker('dark-speculation-forum.html', 'paypal.me/njmgroup/1');
+rejectMarker('dark-speculation-forum.html', 'unlock-signal-pass');
 requireMarker('forum.js', "credentials:'include'");
 requireMarker('forum.js', 'Persistent posting is unlocked.');
 requireMarker('forum.js', "data.saved !== true");

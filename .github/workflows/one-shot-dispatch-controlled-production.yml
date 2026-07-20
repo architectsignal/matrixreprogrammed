@@ -98,10 +98,6 @@ jobs:
               return;
             }
 
-            const releaseCommit = await github.rest.repos.getCommit({ owner, repo, ref: releaseBase });
-            const releaseTime = Date.parse(
-              releaseCommit.data.commit.committer?.date || releaseCommit.data.commit.author?.date || 0
-            );
             const runs = await github.rest.actions.listWorkflowRuns({
               owner,
               repo,
@@ -112,13 +108,7 @@ jobs:
             for (const run of runs.data.workflow_runs) {
               const active = ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status);
               if (active) {
-                const runTime = Date.parse(run.run_started_at || run.created_at || 0);
-                if (run.status === 'in_progress' && runTime && releaseTime && runTime < releaseTime) {
-                  await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: run.id });
-                  core.info(`Cancelled obsolete pre-release production run before migration/deploy: ${run.html_url}`);
-                  return;
-                }
-                core.info(`A current controlled production run is active; no concurrent deployment will be created: ${run.html_url}`);
+                core.info(`A controlled production run is active or queued; migration and deployment will not be interrupted: ${run.html_url}`);
                 return;
               }
               if (run.status !== 'completed' || run.conclusion !== 'success') continue;

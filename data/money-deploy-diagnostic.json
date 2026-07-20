@@ -1,85 +1,46 @@
 {
-  "checkedAt": "2026-07-20T10:22:26.206Z",
+  "checkedAt": "2026-07-20T10:34:48.039Z",
   "repository": "architectsignal/matrixreprogrammed",
-  "diagnosticVersion": 6,
+  "diagnosticVersion": 8,
   "runs": [
     {
-      "id": 29734815637,
-      "name": "Matrix Reprogrammed Controlled Production Deploy",
-      "event": "workflow_dispatch",
-      "status": "completed",
-      "conclusion": "cancelled",
-      "headSha": "a59d96ac613794f9a412daaf59cdd023d927615b",
-      "runNumber": 1182,
-      "attempt": 1,
-      "createdAt": "2026-07-20T10:22:05Z",
-      "updatedAt": "2026-07-20T10:22:22Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734815637"
-    },
-    {
-      "id": 29734712370,
+      "id": 29735523406,
       "name": "Money Deployment Diagnostic",
       "event": "push",
       "status": "in_progress",
       "conclusion": null,
-      "headSha": "a59d96ac613794f9a412daaf59cdd023d927615b",
-      "runNumber": 6,
+      "headSha": "4b19f07a67f43ef763b51339c62050d2e0bf74c9",
+      "runNumber": 8,
       "attempt": 1,
-      "createdAt": "2026-07-20T10:20:17Z",
-      "updatedAt": "2026-07-20T10:22:09Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734712370"
+      "createdAt": "2026-07-20T10:34:26Z",
+      "updatedAt": "2026-07-20T10:34:31Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29735523406"
     },
     {
-      "id": 29734687470,
-      "name": "Matrix Reprogrammed Controlled Production Deploy",
-      "event": "workflow_dispatch",
-      "status": "in_progress",
-      "conclusion": null,
-      "headSha": "55f8c85c49887b75b7856406a7f12ac5a0c6c97b",
-      "runNumber": 1181,
-      "attempt": 1,
-      "createdAt": "2026-07-20T10:19:52Z",
-      "updatedAt": "2026-07-20T10:22:15Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734687470"
-    },
-    {
-      "id": 29734642231,
-      "name": "Money Intelligence Pages",
+      "id": 29735436358,
+      "name": "Money Deployment Diagnostic",
       "event": "push",
       "status": "completed",
-      "conclusion": "success",
-      "headSha": "55f8c85c49887b75b7856406a7f12ac5a0c6c97b",
-      "runNumber": 21,
+      "conclusion": "failure",
+      "headSha": "7cf6e3f78b2793da6f1a0f570614d984f04e683e",
+      "runNumber": 7,
       "attempt": 1,
-      "createdAt": "2026-07-20T10:19:04Z",
-      "updatedAt": "2026-07-20T10:22:08Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734642231"
+      "createdAt": "2026-07-20T10:32:54Z",
+      "updatedAt": "2026-07-20T10:34:31Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29735436358"
     },
     {
-      "id": 29734618255,
+      "id": 29735335002,
       "name": "Money Intelligence Pages",
       "event": "push",
-      "status": "completed",
-      "conclusion": "success",
-      "headSha": "b695ec95a4a923a83160f3270536f1dfd5e24a1f",
-      "runNumber": 20,
-      "attempt": 1,
-      "createdAt": "2026-07-20T10:18:39Z",
-      "updatedAt": "2026-07-20T10:19:57Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734618255"
-    },
-    {
-      "id": 29734480521,
-      "name": "Money Intelligence Pages",
-      "event": "pull_request",
       "status": "in_progress",
       "conclusion": null,
-      "headSha": "d30f9cc848d3c104a7f8e228d8d19077a75c4a53",
-      "runNumber": 19,
+      "headSha": "38f9dc464c3f485edf63fcd8bcf568b417dff0bc",
+      "runNumber": 23,
       "attempt": 1,
-      "createdAt": "2026-07-20T10:16:14Z",
-      "updatedAt": "2026-07-20T10:18:04Z",
-      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29734480521"
+      "createdAt": "2026-07-20T10:31:07Z",
+      "updatedAt": "2026-07-20T10:33:51Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29735335002"
     }
   ]
 }

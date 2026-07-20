@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T14:33:18.412Z
+Collection completed: 2026-07-20T19:55:58.505Z
 Latest source publication: 2026-07-20T12:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 3
+New items this collection: 1
 
 ## Freshness truth
-3 new source item(s) entered the seven-day window during this collection.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 3
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
   - Source class: primary-or-official
@@ -433,10 +439,4 @@ New items this collection: 3
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Gaston Means Part 17 (Final)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

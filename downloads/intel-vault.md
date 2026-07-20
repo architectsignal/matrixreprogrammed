@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-20T14:33:18.412Z
+Updated: 2026-07-20T19:55:58.505Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+- Published: 2026-07-13T14:49:05.000Z
+- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+- Source class: primary-or-official
 
 ### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
 - Published: 2026-06-29T05:00:00.000Z

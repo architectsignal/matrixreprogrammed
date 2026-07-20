@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-20T14:33:24.302Z
-Live Intel source window: 2026-07-20T14:33:18.412Z
+Generated: 2026-07-20T19:56:08.728Z
+Live Intel source window: 2026-07-20T19:55:58.505Z
 Latest source publication: 2026-07-17T23:17:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-16 current Epstein-lane record leads remain inside the active source window.
+15 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -162,16 +162,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
 
 Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-- Published: 2026-07-13T14:49:05.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
-
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

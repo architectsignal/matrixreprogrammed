@@ -85,6 +85,10 @@ for (const relative of [
   'runtime/deploy-health-current.json'
 ]) copy(relative);
 
+// This is the last HTML mutation before the audits. Reassert exactly one canonical
+// Evidence Badge route in source, .html output and extensionless Cloudflare output.
+run('scripts/repair-final-evidence-badge-duplicates.js');
+
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 
@@ -110,6 +114,8 @@ const report = {
     'scripts/restore-homepage-navigation.js',
     'scripts/repair-release-page-contracts.js',
     'scripts/repair-missing-generated-entity-briefs.js',
+    'scripts/repair-final-evidence-badge-duplicates.js',
+    'downloads/final-evidence-badge-dedupe.json',
     'downloads/missing-generated-entity-brief-repair.json',
     'downloads/release-page-contract-repair.json',
     'downloads/homepage-navigation-repair.json',
@@ -126,7 +132,7 @@ const report = {
     'downloads/release-metadata-assets.json',
     'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, oversized search assets or stale deployment metadata.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, duplicate evidence-route IDs, oversized search assets or stale deployment metadata.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);

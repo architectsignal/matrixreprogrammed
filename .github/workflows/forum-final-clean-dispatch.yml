@@ -40,6 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Revision 3: strict D1 forum write audit now matches the production Worker.
           gh workflow run 'Matrix Reprogrammed Controlled Production Deploy' \
             --repo "$GITHUB_REPOSITORY" \
             --ref main \

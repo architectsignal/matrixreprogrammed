@@ -1,77 +1,75 @@
+const assert=require('assert/strict');
 const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
 const downloads=path.join(root,'downloads');
+const manifests=path.join(root,'data','report-manifests');
 const indexPath=path.join(downloads,'branded-download-index.json');
-const failures=[];
-const checks=[];
+const normalise=value=>String(value||'').replace(/\\/g,'/').replace(/^\.\//,'');
+const successPath=path.join(downloads,'deep-pdf-intelligence-test.json');
+const failurePath=path.join(downloads,'deep-pdf-intelligence-test-failure.json');
+const diagnostic={ok:false,testedAt:new Date().toISOString(),indexPath:path.relative(root,indexPath),manifestDirectory:path.relative(root,manifests),publicManifestDirectoryExists:fs.existsSync(path.join(downloads,'report-manifests')),manifestFiles:[],indexedOutputs:[],missingManifests:[],thinPdfs:[],invalidPdfs:[]};
 
-function check(ok,message,context={}){
-  checks.push({ok:Boolean(ok),message,...context});
-  if(!ok)failures.push({message,...context});
-}
-function readJson(file,label){
-  try{return JSON.parse(fs.readFileSync(file,'utf8'))}
-  catch(error){failures.push({message:`${label} is missing or invalid`,file:path.relative(root,file).replace(/\\/g,'/'),error:error.message});return null}
-}
+try{
+  assert.ok(fs.existsSync(indexPath),'Deep PDF index missing');
+  assert.ok(fs.existsSync(manifests),'Internal deep PDF manifest directory missing');
+  assert.ok(!diagnostic.publicManifestDirectoryExists,'Internal report manifests must not be exposed as public downloads');
 
-check(fs.existsSync(indexPath),'Deep PDF index missing',{file:'downloads/branded-download-index.json'});
-const index=fs.existsSync(indexPath)?readJson(indexPath,'Deep PDF index'):null;
-if(index){
-  check(index.engineVersion==='deep-intelligence-v2','Deep PDF engine version mismatch',{actual:index.engineVersion});
-  for(const required of ['evidence-based conclusions','analytical inferences','speculative conclusions','alternative explanations','source register']){
-    check(Array.isArray(index.requiredSections)&&index.requiredSections.includes(required),`Required deep section missing: ${required}`);
+  const manifestFiles=[];
+  (function walk(directory){
+    for(const entry of fs.readdirSync(directory,{withFileTypes:true})){
+      const full=path.join(directory,entry.name);
+      if(entry.isDirectory())walk(full);
+      else if(entry.isFile()&&entry.name.endsWith('.json'))manifestFiles.push(full);
+    }
+  })(manifests);
+  diagnostic.manifestFiles=manifestFiles.map(file=>path.relative(root,file).replace(/\\/g,'/'));
+
+  const manifestsByOutput=new Map();
+  for(const manifestFile of manifestFiles){
+    const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
+    const output=normalise(manifest.output);
+    if(output)manifestsByOutput.set(output,{manifest,manifestFile});
   }
-  check(Number(index.count)>0,'No PDFs indexed',{count:index.count});
-}
 
-let checked=0;
-for(const item of Array.isArray(index?.pdfs)?index.pdfs:[]){
-  if(item.reused===true)continue;
-  const file=path.join(root,item.file||'');
-  const fileExists=Boolean(item.file&&fs.existsSync(file));
-  check(fileExists,`Generated PDF missing: ${item.file||'(missing file field)'}`,{item});
-  if(!fileExists)continue;
-  const bytes=fs.readFileSync(file);
-  check(bytes.subarray(0,8).toString()==='%PDF-1.4',`Invalid PDF header: ${item.file}`,{header:bytes.subarray(0,8).toString()});
-  check(bytes.length>10000,`PDF remains too thin: ${item.file}`,{bytes:bytes.length});
-  const base=item.file.replace(/^downloads\//,'').replace(/\.pdf$/,'').replace(/[\\/]/g,'--');
-  const manifestPath=path.join(downloads,'report-manifests',`${base}.json`);
-  const manifestExists=fs.existsSync(manifestPath);
-  check(manifestExists,`Report manifest missing: ${item.file}`,{manifest:`downloads/report-manifests/${base}.json`,unchanged:item.unchanged,reused:item.reused});
-  if(!manifestExists)continue;
-  const manifest=readJson(manifestPath,`Report manifest for ${item.file}`);
-  if(!manifest)continue;
-  for(const key of ['evidenceBasedConclusions','analyticalInferences','speculativeConclusions']){
-    const value=manifest.report?.[key];
-    check(Array.isArray(value)&&value.length>0,`${key} missing from ${item.file}`,{manifest:`downloads/report-manifests/${base}.json`,actualType:Array.isArray(value)?'array':typeof value,length:Array.isArray(value)?value.length:null});
+  const index=JSON.parse(fs.readFileSync(indexPath,'utf8'));
+  diagnostic.engineVersion=index.engineVersion;
+  diagnostic.indexed=index.count;
+  diagnostic.indexedOutputs=(index.pdfs||[]).map(item=>normalise(item.file));
+  assert.equal(index.engineVersion,'deep-intelligence-v2');
+  for(const required of ['evidence-based conclusions','analytical inferences','speculative conclusions','alternative explanations','source register'])assert.ok(index.requiredSections.includes(required),`Required deep section missing: ${required}`);
+  assert.ok(index.count>0,'No PDFs indexed');
+
+  let checked=0;
+  for(const item of index.pdfs){
+    if(item.reused)continue;
+    const output=normalise(item.file);
+    const file=path.join(root,output);
+    if(!fs.existsSync(file)){diagnostic.invalidPdfs.push({output,reason:'missing'});continue;}
+    const bytes=fs.readFileSync(file);
+    if(bytes.subarray(0,8).toString()!=='%PDF-1.4')diagnostic.invalidPdfs.push({output,reason:'invalid-header',header:bytes.subarray(0,8).toString()});
+    if(bytes.length<=10000)diagnostic.thinPdfs.push({output,bytes:bytes.length});
+    const located=manifestsByOutput.get(output);
+    if(!located){diagnostic.missingManifests.push(output);continue;}
+    const manifest=located.manifest;
+    for(const key of ['evidenceBasedConclusions','analyticalInferences','speculativeConclusions'])assert.ok(Array.isArray(manifest.report?.[key])&&manifest.report[key].length,`${key} missing from ${item.file}`);
+    assert.match(JSON.stringify(manifest.report.speculativeConclusions),/not established|hypothesis|speculat/i,`Speculation boundary missing: ${item.file}`);
+    checked++;
   }
-  const speculation=JSON.stringify(manifest.report?.speculativeConclusions||[]);
-  check(/not established|hypothesis|speculat/i.test(speculation),`Speculation boundary missing: ${item.file}`,{manifest:`downloads/report-manifests/${base}.json`,preview:speculation.slice(0,500)});
-  checked++;
-}
+  assert.deepEqual(diagnostic.invalidPdfs,[],`Generated PDF failures: ${JSON.stringify(diagnostic.invalidPdfs.slice(0,20))}`);
+  assert.deepEqual(diagnostic.thinPdfs,[],`PDFs remain too thin: ${JSON.stringify(diagnostic.thinPdfs.slice(0,20))}`);
+  assert.deepEqual(diagnostic.missingManifests,[],`Internal report manifests missing for: ${diagnostic.missingManifests.slice(0,20).join(', ')}${diagnostic.missingManifests.length>20?' …':''}`);
 
-const epstein=Array.isArray(index?.pdfs)?index.pdfs.find(item=>item.file==='downloads/subject-epstein-black-file.pdf'):null;
-if(epstein)check(epstein.reused!==true,'Epstein subject report must be rebuilt by the deep engine',{item:epstein});
-
-const result={
-  ok:failures.length===0,
-  testedAt:new Date().toISOString(),
-  engineVersion:index?.engineVersion||null,
-  indexed:index?.count||0,
-  validatedGeneratedPdfs:checked,
-  subjectReports:index?.subjectProfileCount||0,
-  wealthGuides:index?.wealthGuideCount||0,
-  failures,
-  checkCount:checks.length,
-  safeguards:{fiveEvidenceLayers:true,evidenceBasedConclusions:true,analysisSeparated:true,speculationClearlyLabelled:true,alternativeExplanations:true,sourceRegister:true,thinLinkSheetsRejected:true,unchangedPdfsPreserved:true}
-};
-fs.mkdirSync(downloads,{recursive:true});
-fs.writeFileSync(path.join(downloads,'deep-pdf-intelligence-test.json'),`${JSON.stringify(result,null,2)}\n`);
-if(failures.length){
-  console.error(`Deep PDF intelligence test failed with ${failures.length} issue(s):`);
-  for(const failure of failures.slice(0,100))console.error(`- ${failure.message}${failure.manifest?` · ${failure.manifest}`:''}`);
-  process.exitCode=1;
-}else{
-  console.log(`Deep PDF intelligence test passed: ${checked} generated reports validated.`);
+  const epstein=index.pdfs.find(item=>normalise(item.file)==='downloads/subject-epstein-black-file.pdf');
+  if(epstein)assert.ok(!epstein.reused,'Epstein subject report must be rebuilt by the deep engine');
+  const result={ok:true,testedAt:new Date().toISOString(),engineVersion:index.engineVersion,indexed:index.count,validatedGeneratedPdfs:checked,internalManifestCount:manifestFiles.length,subjectReports:index.subjectProfileCount||0,wealthGuides:index.wealthGuideCount||0,manifestDirectory:'data/report-manifests',safeguards:{fiveEvidenceLayers:true,evidenceBasedConclusions:true,analysisSeparated:true,speculationClearlyLabelled:true,alternativeExplanations:true,sourceRegister:true,thinLinkSheetsRejected:true,unchangedPdfsPreserved:true,internalManifestsNotPublicDownloads:true,manifestOutputVerified:true}};
+  fs.writeFileSync(successPath,`${JSON.stringify(result,null,2)}\n`);
+  if(fs.existsSync(failurePath))fs.rmSync(failurePath,{force:true});
+  console.log(`Deep PDF intelligence test passed: ${checked} generated reports validated against ${manifestFiles.length} internal manifests.`);
+}catch(error){
+  diagnostic.error={name:error.name,message:error.message,stack:String(error.stack||'').split('\n').slice(0,12)};
+  fs.mkdirSync(downloads,{recursive:true});
+  fs.writeFileSync(failurePath,`${JSON.stringify(diagnostic,null,2)}\n`);
+  console.error(`DEEP_PDF_TEST_FAILURE ${JSON.stringify({message:error.message,publicManifestDirectoryExists:diagnostic.publicManifestDirectoryExists,manifestFiles:diagnostic.manifestFiles.length,indexedOutputs:diagnostic.indexedOutputs.length,missingManifests:diagnostic.missingManifests.slice(0,10),thinPdfs:diagnostic.thinPdfs.slice(0,10),invalidPdfs:diagnostic.invalidPdfs.slice(0,10)})}`);
+  throw error;
 }

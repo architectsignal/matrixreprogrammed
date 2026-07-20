@@ -164,16 +164,25 @@ async function verifyEmailAutomationBoundary() {
   const deployLog = fs.existsSync(deployLogPath) ? fs.readFileSync(deployLogPath, 'utf8') : '';
   const deployedFalse = /env\.EMAIL_AUTOMATION_ENABLED \("false"\)/.test(deployLog);
   const deployedTrue = /env\.EMAIL_AUTOMATION_ENABLED \("true"\)/.test(deployLog);
+  const wranglerConfig = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
+  const dailyCronConfigured = wranglerConfig.includes('5 6 * * *');
+  const weeklyCronConfigured = wranglerConfig.includes('15 7 * * 1');
   const response = await fetchText('/api/email/admin/health');
   const data = parseJson(response.text);
   const adminHealthProtected = [401, 403, 404].includes(response.status);
   return {
-    ok: deployedFalse && !deployedTrue && adminHealthProtected,
+    ok: deployedTrue && !deployedFalse && dailyCronConfigured && weeklyCronConfigured && adminHealthProtected,
     deployedFalse,
     deployedTrue,
+    dailyCronConfigured,
+    weeklyCronConfigured,
     deploymentLogPresent: Boolean(deployLog),
     adminHealth: { status: response.status, origin: response.headers['x-matrix-origin'] || null, data },
-    requiredRuntimeValue: false
+    requiredRuntimeValue: true,
+    requiredSchedules: {
+      daily: '06:05 UTC',
+      weekly: 'Monday 07:15 UTC'
+    }
   };
 }
 
@@ -231,7 +240,7 @@ async function verifyOnce() {
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
       const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
-      console.log(`Live production, runtime-gated PayPal boundaries, Phase 1 email automation safety and authenticated D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
+      console.log(`Live production, runtime-gated PayPal boundaries, consent-controlled daily/weekly email automation and authenticated D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

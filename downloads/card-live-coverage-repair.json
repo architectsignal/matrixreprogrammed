@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T06:06:48.499Z",
+  "generatedAt": "2026-07-20T06:20:03.046Z",
   "trackedCards": 792,
-  "runtimeInjected": 680,
+  "runtimeInjectedOrCorrected": 710,
   "andrewTateRoutes": [
     "controlled-opposition/andrew-tate.html",
     "card-artwork-batches/batch-006.html",
@@ -10,5 +10,5 @@
     "controlled-opposition-deck.html"
   ],
   "missingRoutes": [],
-  "boundary": "This repair adds the shared live intelligence runtime only. It does not modify approved card artwork or promote unverified claims."
+  "boundary": "This repair adds the shared live intelligence runtime with a depth-correct relative path. It does not modify approved card artwork or promote unverified claims."
 }

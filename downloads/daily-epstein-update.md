@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-20T06:06:47.165Z
-Live Intel source window: 2026-07-20T06:06:46.726Z
+Generated: 2026-07-20T06:20:01.780Z
+Live Intel source window: 2026-07-20T06:20:00.505Z
 Latest source publication: 2026-07-17T23:17:00.000Z
 Status: current-seven-day-record-window
 

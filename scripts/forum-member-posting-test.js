@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Apply the final same-origin login repair before testing the complete member journey.
+// Apply the final same-origin login and legacy-session compatibility repairs
+// before testing the complete member journey.
 require('./repair-forum-login-canonical.js');
+require('./repair-forum-session-compatibility.js');
 
 const root = process.cwd();
 const failures = [];
@@ -19,12 +21,13 @@ check('new shared session cookie is not issued', legacy.includes('matrix_session
 check('legacy cookie fallback is missing', legacy.includes('values.matrix_session_v2||values.matrix_session'));
 check('member API does not read the shared session first', member.includes("cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')"));
 check('auth does not use the canonical production origin', legacy.includes("function authOrigin(request){return 'https://matrixreprogrammed.com'}"));
+check('logout does not clear both cookie generations', legacy.includes('authClearCookies()') && legacy.includes("logoutHeaders.append('Set-Cookie',cookie)"));
 check('forum insert is still silently ignored', !forumWorker.includes('INSERT OR IGNORE INTO forum_posts'));
 check('forum insert does not require one D1 change', forumWorker.includes('D1 did not confirm the forum insert'));
 check('forum write lacks D1 read-after-write confirmation', forumWorker.includes('D1 forum read-after-write confirmation failed'));
 check('forum client does not carry cookies', (client.match(/credentials:'include'/g) || []).length >= 4);
 check('forum client accepts unconfirmed success', client.includes("data.saved !== true") && client.includes("data.storage !== 'Cloudflare D1 MEMBERS_DB.forum_posts'"));
-check('forum client does not canonicalize www', client.includes("location.hostname === 'www.matrixreprogrammed.com'"));
+check('forum client discards an existing www-only legacy session', !client.includes("location.replace(CANONICAL_ORIGIN + location.pathname"));
 check('forum client does not require verified email', client.includes('member && member.emailVerifiedAt'));
 check('member login does not canonicalize www before authentication', login.includes('MEMBER_CANONICAL_ORIGIN') && login.includes("location.hostname === 'www.matrixreprogrammed.com'"));
 check('member login request is not same-origin', login.includes("fetch('/api/auth/request-link', {"));
@@ -40,11 +43,12 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  sessionModel: 'Domain-wide v2 HttpOnly session with temporary legacy-cookie read fallback.',
+  sessionModel: 'Domain-wide v2 HttpOnly session with temporary legacy-cookie read fallback; existing host-only sessions remain valid on their current host.',
   loginModel: 'www canonicalizes to the apex before a same-origin credentialed magic-link request.',
+  logoutModel: 'D1 session revoked and both v2 plus legacy cookies cleared.',
   postingModel: 'Verified member session -> D1 insert -> exact D1 read-back -> success response.',
   persistenceModel: 'Cloudflare D1 MEMBERS_DB.forum_posts remains authoritative across all three boards.',
-  boundary: 'The regression fails if login can hit CORS, the browser omits credentials, the domains split sessions, D1 silently ignores a write, or a page can show success without read-after-write confirmation.'
+  boundary: 'The regression fails if login can hit CORS, the browser omits credentials, an existing session is discarded, logout leaves a cookie active, D1 silently ignores a write, or a page can show success without read-after-write confirmation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-member-posting-test.json'), JSON.stringify(report, null, 2));

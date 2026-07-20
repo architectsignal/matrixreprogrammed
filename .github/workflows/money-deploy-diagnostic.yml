@@ -52,7 +52,7 @@ jobs:
           fs.writeFileSync('data/money-deploy-diagnostic.json',JSON.stringify({
             checkedAt:new Date().toISOString(),
             repository:process.env.GITHUB_REPOSITORY,
-            diagnosticVersion:7,
+            diagnosticVersion:8,
             runs
           },null,2)+'\n');
           NODE

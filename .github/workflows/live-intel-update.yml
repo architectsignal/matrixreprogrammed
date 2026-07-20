@@ -2,45 +2,105 @@ name: Live Intel Update
 
 on:
   schedule:
-    # Weekly automatic scan: Sunday 05:17 UTC. Commits only when live intel or figure-freshness data meaningfully changes.
-    - cron: '17 5 * * 0'
+    # Focused current-source collection every six hours.
+    - cron: '17 */6 * * *'
   workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/update-triggers/live-intel.txt'
 
 permissions:
   contents: write
+  actions: read
+
+concurrency:
+  group: live-intel-current-window
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   update-live-intel:
+    name: Collect, validate, publish, and preserve current intelligence
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-      - name: Checkout
+      - name: Checkout current production branch
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
-      - name: Update live intelligence data
-        run: node scripts/update-live-intel.js
+      - name: Collect current RSS, Atom, official, and discovery records
+        run: node scripts/update-seven-day-intel.js
 
-      - name: Build live intelligence hub
+      - name: Build truthful Live Intel surfaces
         run: node scripts/build-live-intel-machine.js
 
       - name: Scan public pages for figure freshness
         run: node scripts/update-site-freshness-report.js
 
-      - name: Validate live intelligence machine
+      - name: Enforce current-window and source-date truth
         run: node scripts/live-intel-pressure-test.js
 
-      - name: Commit updated intelligence data
+      - name: Commit only validated Live Intel outputs
         run: |
-          git config user.name "matrix-intel-bot"
+          git config user.name "matrix-live-intel-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/live-intel.json data/site-freshness-report.json downloads/site-freshness-report.md site-freshness-report.html
+          git add \
+            data/live-intel.json \
+            data/intel-vault.json \
+            data/site-freshness-report.json \
+            downloads/seven-day-intel.json \
+            downloads/intel-vault.json \
+            downloads/intel-vault.md \
+            downloads/live-intel-latest.json \
+            downloads/live-intel-latest.md \
+            downloads/site-freshness-report.md \
+            site-freshness-report.html \
+            live-intel.html \
+            index.html \
+            news.html \
+            evidence-vault.html \
+            epstein-files.html \
+            videos.html \
+            books.html \
+            search-index.json \
+            sitemap.xml \
+            llms.txt
           if git diff --cached --quiet; then
-            echo "No weekly intelligence or freshness changes to commit."
-          else
-            git commit -m "Update weekly live intelligence and freshness report"
-            git push
+            echo "Collection completed and validated; no tracked source or freshness output changed."
+            exit 0
           fi
+          git commit -m "Refresh current Live Intel sources $(date -u +%FT%H:%MZ) [deploy]"
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "Push failed on attempt $attempt; rebasing current-source outputs."
+            git fetch origin main
+            git pull --rebase --autostash origin main || { git rebase --abort || true; exit 1; }
+            sleep 3
+          done
+          echo "Validated Live Intel output could not be pushed after three attempts."
+          exit 1
+
+      - name: Upload collection proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-intel-current-window-${{ github.sha }}
+          path: |
+            data/live-intel.json
+            data/intel-vault.json
+            downloads/live-intel-latest.json
+            downloads/live-intel-latest.md
+            downloads/site-freshness-report.md
+            live-intel.html
+          if-no-files-found: error
+          retention-days: 21

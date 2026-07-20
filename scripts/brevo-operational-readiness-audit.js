@@ -24,6 +24,7 @@ const codeChecks = {
   temporaryBrevoDomainDetected: worker.includes('temporaryBrevoDomain'),
   domainAuthenticationGate: worker.includes('BREVO_DOMAIN_AUTHENTICATED') && worker.includes('Brevo sender domain authentication has not been confirmed'),
   transactionalActivationGate: worker.includes('EMAIL_TRANSACTIONAL_ENABLED') && worker.includes('Transactional email delivery is disabled until Phase 2 readiness is approved'),
+  automationActivationGate: worker.includes('EMAIL_AUTOMATION_ENABLED') && worker.includes('automationEnabled(env)'),
   adminHealthProtected: worker.includes("if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403)"),
   manualRetryQuarantineProtected: worker.includes('/api/email/admin/quarantine-retries') && worker.includes('QUARANTINE_PREACTIVATION_RETRIES') && worker.includes('email.outbox.legacy_retries_quarantined'),
   automaticRetryQuarantineConfigured: worker.includes('async function quarantineConfiguredRetries') && worker.includes('EMAIL_RETRY_QUARANTINE_BEFORE') && worker.includes('email.outbox.configured_retries_quarantined'),
@@ -33,14 +34,17 @@ const codeChecks = {
   perRecipientPreferenceAndUnsubscribe: worker.includes('subscriber-dashboard.html?token=') && worker.includes('/api/email/unsubscribe?token='),
   listUnsubscribeHeaders: worker.includes("'List-Unsubscribe'") && worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"),
   reusableMarketingActionLinks: worker.includes("const reusable=['preferences','unsubscribe'].includes(purpose)"),
-  zeroRecipientCampaignCompletion: worker.includes("const status=recipients.length?'sending':'sent'")
+  zeroRecipientCampaignCompletion: worker.includes("const status=recipients.length?'sending':'sent'"),
+  scheduledDailyAndWeekly: worker.includes("event?.cron==='15 7 * * 1'") && worker.includes("event?.cron==='5 6 * * *'"),
+  suppressionCheckedBeforeSend: worker.includes('activeSuppression') && worker.includes('marketingStatus')
 };
 
 const configurationChecks = {
-  marketingAutomationOff: both(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"false"\s*$/m, /"EMAIL_AUTOMATION_ENABLED"\s*:\s*"false"/),
+  marketingAutomationOn: both(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"true"\s*$/m, /"EMAIL_AUTOMATION_ENABLED"\s*:\s*"true"/),
   transactionalDeliveryOn: both(/^EMAIL_TRANSACTIONAL_ENABLED\s*=\s*"true"\s*$/m, /"EMAIL_TRANSACTIONAL_ENABLED"\s*:\s*"true"/),
   domainAuthenticationConfirmed: both(/^BREVO_DOMAIN_AUTHENTICATED\s*=\s*"true"\s*$/m, /"BREVO_DOMAIN_AUTHENTICATED"\s*:\s*"true"/),
   retryQuarantineCutoffConfigured: both(/^EMAIL_RETRY_QUARANTINE_BEFORE\s*=\s*"2026-07-18T00:00:00\.000Z"\s*$/m, /"EMAIL_RETRY_QUARANTINE_BEFORE"\s*:\s*"2026-07-18T00:00:00\.000Z"/),
+  boundedPersonalizedBatch: both(/^INTELLIGENCE_REPORT_BATCH_LIMIT\s*=\s*"100"\s*$/m, /"INTELLIGENCE_REPORT_BATCH_LIMIT"\s*:\s*"100"/),
   senderEmailConfigured: both(/^MEMBERS_FROM_EMAIL\s*=\s*"members@matrixreprogrammed\.com"\s*$/m, /"MEMBERS_FROM_EMAIL"\s*:\s*"members@matrixreprogrammed\.com"/),
   senderNameConfigured: both(/^MEMBERS_FROM_NAME\s*=\s*"Matrix Reprogrammed"\s*$/m, /"MEMBERS_FROM_NAME"\s*:\s*"Matrix Reprogrammed"/),
   replyToEmailConfigured: both(/^MEMBERS_REPLY_TO_EMAIL\s*=\s*"njmgroupfrance@gmail\.com"\s*$/m, /"MEMBERS_REPLY_TO_EMAIL"\s*:\s*"njmgroupfrance@gmail\.com"/),
@@ -50,23 +54,20 @@ const configurationChecks = {
 };
 
 const codeReady = Object.values(codeChecks).every(Boolean);
-const safeConfigurationReady = Object.values(configurationChecks).every(Boolean);
+const configurationReady = Object.values(configurationChecks).every(Boolean);
 const checks = { ...codeChecks, ...configurationChecks };
-const status = !codeReady
-  ? 'code-not-ready'
-  : safeConfigurationReady
-    ? 'transactional-ready-automation-disabled'
-    : 'configuration-inconsistent';
+const status = !codeReady ? 'code-not-ready' : configurationReady ? 'automation-and-transactional-ready' : 'configuration-inconsistent';
 
 const report = {
-  ok: codeReady && safeConfigurationReady,
+  ok: codeReady && configurationReady,
   generatedAt: new Date().toISOString(),
-  phase: 1,
+  phase: 'controlled-automation-live',
   status,
   checks,
   currentSafetyState: {
-    marketingAutomation: false,
-    marketingAutomationLockedOff: configurationChecks.marketingAutomationOff,
+    marketingAutomation: configurationChecks.marketingAutomationOn,
+    marketingAutomationConsentBound: codeChecks.explicitConsentRequired && codeChecks.perRecipientPreferenceAndUnsubscribe && codeChecks.suppressionCheckedBeforeSend,
+    personalizedBatchLimit: configurationChecks.boundedPersonalizedBatch ? 100 : null,
     transactionalDelivery: configurationChecks.transactionalDeliveryOn,
     domainAuthenticationConfirmed: configurationChecks.domainAuthenticationConfirmed,
     senderEmail: configurationChecks.senderEmailConfigured ? 'members@matrixreprogrammed.com' : null,
@@ -79,7 +80,7 @@ const report = {
     perRecipientUnsubscribe: codeChecks.perRecipientPreferenceAndUnsubscribe && codeChecks.listUnsubscribeHeaders
   },
   schedules: {
-    configuredButBlocked: true,
+    enabled: configurationChecks.marketingAutomationOn,
     dailyUtc: '06:05',
     weeklyUtc: 'Monday 07:15',
     franceSummer: { daily: '08:05', weekly: 'Monday 09:15' },
@@ -87,11 +88,13 @@ const report = {
   },
   requiredRuntimeSecrets: ['BREVO_API_KEY','EMAIL_WEBHOOK_SECRET','ADMIN_API_TOKEN'],
   activationRequirements: [
-    'Keep automated daily and weekly campaigns blocked until the owner separately authorizes marketing automation.',
-    'Preserve explicit consent, verified preferences, unsubscribe and suppression controls.',
-    'Confirm evidence-bounded content and retry quarantine before any future campaign activation.'
+    'Send only to active verified members whose selected preference and tier make them eligible.',
+    'Preserve explicit consent, per-recipient preferences, unsubscribe and suppression controls.',
+    'Use D1 outbox idempotency and retry quarantine for every delivery.',
+    'Keep personalized report generation bounded to 100 recipients per scheduled execution.',
+    'Withhold unsupported claims when source bundles contain no usable evidence.'
   ],
-  boundary: 'Transactional account and verification email may operate when authenticated and configured. Scheduled or bulk marketing automation remains disabled even though campaign code and cron schedules are installed.'
+  boundary: 'Daily and weekly report automation is enabled only through the verified D1 membership, preference, suppression, idempotency and evidence-bound delivery path. Transactional account email remains independently enabled.'
 };
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);

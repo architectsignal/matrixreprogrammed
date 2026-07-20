@@ -20,7 +20,7 @@ const report = {
   architecture: {
     workerStack: 'src/worker-production.js -> strict email/member/PayPal boundaries -> D1 forum persistence -> legacy static application',
     forumStorage: 'Cloudflare D1 authoritative; KV excluded from public forum runtime',
-    paymentStatus: 'sandbox-ready; checkout disabled until Cloudflare, verified plans and D1 activation agree',
+    paymentStatus: 'runtime-gated and Cloudflare-dashboard-managed; checkout requires credentials, environment agreement, D1 activation, live confirmation and three active plans',
     deploymentModel: 'one automatic canonical Cloudflare deploy plus one manual fallback'
   }
 };
@@ -151,7 +151,7 @@ const checks = [
   ['D1 forum persistence', 'src/worker-forum-persistence.js', 'Cloudflare D1 MEMBERS_DB.forum_posts'],
   ['D1-only public runtime', 'src/worker-production.js', 'FORUM_POSTS: undefined'],
   ['Commit-bound health Worker', 'deploy-health.json', 'src/worker-production.js'],
-  ['Commit-bound PayPal health', 'deploy-health.json', '"paymentStatus": "sandbox-ready-disabled"'],
+  ['Commit-bound PayPal health', 'deploy-health.json', '"paymentStatus": "runtime-gated-dashboard-managed"'],
   ['Ask Matrix', 'search.html', 'SEARCH THE MACHINE'],
   ['Ask Matrix local index', 'search.js', 'search-index.json'],
   ['Live Intel', 'live-intel.html', 'LIVE INTEL'],
@@ -169,7 +169,7 @@ for (const [name, file, marker] of checks) addSystem(name, needText(file, marker
 forbidText('membership.html', 'Coming soon — no payment taken', 'obsolete deferred membership page');
 forbidText('membership.html', '€19/month', 'legacy €19 tier');
 forbidText('membership.html', '€49/month', 'legacy €49 tier');
-forbidText('_site/membership.html', 'Coming soon — no payment taken', 'built obsolete deferred membership page');
+forbidText('_site/membership.html', 'Coming soon — no payment taken', 'built obsolete membership page');
 
 for (const file of [
   'deploy-manifest.json', 'deploy-health.json', 'deploy-health.html', 'downloads/deploy-health.json',

@@ -8,57 +8,51 @@ if (!fs.existsSync(receiptPath)) throw new Error('scripts/build-production-deplo
 
 let source = fs.readFileSync(receiptPath, 'utf8');
 let changed = false;
+function replaceAll(oldValue, newValue) {
+  if (!source.includes(oldValue)) return;
+  source = source.split(oldValue).join(newValue);
+  changed = true;
+}
+function insertAfter(anchor, addition, marker) {
+  if (source.includes(marker)) return;
+  if (!source.includes(anchor)) throw new Error(`Production receipt activation anchor missing: ${anchor}`);
+  source = source.replace(anchor, `${anchor}${addition}`);
+  changed = true;
+}
+
+replaceAll('EMAIL_AUTOMATION_ENABLED = "false"', 'EMAIL_AUTOMATION_ENABLED = "true"');
+replaceAll('transactional-ready-automation-disabled', 'automation-and-transactional-ready');
+replaceAll('marketingAutomationEnabled: false', 'marketingAutomationEnabled: true');
+replaceAll('marketingAutomationDisabled: true', 'marketingAutomationConsentBound: true');
+
+insertAfter(
+  "    && wranglerToml.includes('EMAIL_RETRY_QUARANTINE_BEFORE = \"2026-07-18T00:00:00.000Z\"')",
+  "\n    && wranglerToml.includes('INTELLIGENCE_REPORT_BATCH_LIMIT = \"100\"')",
+  "wranglerToml.includes('INTELLIGENCE_REPORT_BATCH_LIMIT = \"100\"')"
+);
+insertAfter(
+  '      marketingAutomationConsentBound: true,',
+  '\n      personalizedBatchLimit: 100,',
+  'personalizedBatchLimit: 100'
+);
+
 const requiredMarkers = [
   'brevo-operational-readiness.json',
   'email-campaign-quality-patch.json',
   'email-automation-guard-patch.json',
-  'EMAIL_AUTOMATION_ENABLED = "false"',
+  'EMAIL_AUTOMATION_ENABLED = "true"',
   'EMAIL_TRANSACTIONAL_ENABLED = "true"',
   'BREVO_DOMAIN_AUTHENTICATED = "true"',
   'EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"',
-  "brevoReadiness.status === 'transactional-ready-automation-disabled'",
-  'marketingAutomationEnabled: false',
-  'marketingAutomationDisabled: true',
+  'INTELLIGENCE_REPORT_BATCH_LIMIT = "100"',
+  "brevoReadiness.status === 'automation-and-transactional-ready'",
+  'marketingAutomationEnabled: true',
+  'marketingAutomationConsentBound: true',
+  'personalizedBatchLimit: 100',
   'campaignQualityVerified',
   'preActivationRetryGuard'
 ];
-
-function hasCurrentContract() {
-  return requiredMarkers.every(marker => source.includes(marker));
-}
-function replaceLegacy(oldValue, newValue, label) {
-  if (source.includes(newValue)) return;
-  if (!source.includes(oldValue)) throw new Error(`${label} target not found and current contract is incomplete`);
-  source = source.replace(oldValue, newValue);
-  changed = true;
-}
-
-if (!hasCurrentContract()) {
-  replaceLegacy(
-    "  const bootstrap = live.bootstrapBoundary || {};",
-    "  const bootstrap = live.bootstrapBoundary || {};\n  const brevoReadiness = readJson('downloads/brevo-operational-readiness.json') || {};\n  const emailCampaignQuality = readJson('downloads/email-campaign-quality-patch.json') || {};\n  const emailAutomationGuard = readJson('downloads/email-automation-guard-patch.json') || {};",
-    'Email readiness receipt imports'
-  );
-  replaceLegacy(
-    "    && wrangler.includes('EMAIL_AUTOMATION_ENABLED = \"true\"')\n    && wrangler.includes('\"5 6 * * *\"')",
-    "    && wrangler.includes('EMAIL_AUTOMATION_ENABLED = \"false\"')\n    && wrangler.includes('EMAIL_TRANSACTIONAL_ENABLED = \"true\"')\n    && wrangler.includes('BREVO_DOMAIN_AUTHENTICATED = \"true\"')\n    && wrangler.includes('EMAIL_RETRY_QUARANTINE_BEFORE = \"2026-07-18T00:00:00.000Z\"')\n    && brevoReadiness.ok === true\n    && brevoReadiness.status === 'transactional-ready-automation-disabled'\n    && emailCampaignQuality.ok === true\n    && emailAutomationGuard.ok === true\n    && wrangler.includes('\"5 6 * * *\"')",
-    'Email production receipt state'
-  );
-  replaceLegacy(
-    "      verifiedSelfReportDeliveryWired: reportDeliveryWired,\n      dailyCron: '5 6 * * *',\n      weeklyCron: '15 7 * * 1',\n      providerSecretsRequired: ['BREVO_API_KEY', 'MEMBERS_FROM_EMAIL', 'EMAIL_WEBHOOK_SECRET']",
-    "      verifiedSelfReportDeliveryWired: reportDeliveryWired,\n      brevoReady: brevoReadiness.ok === true,\n      brevoStatus: brevoReadiness.status || null,\n      domainAuthenticationConfirmed: true,\n      transactionalDeliveryEnabled: true,\n      marketingAutomationEnabled: false,\n      marketingAutomationDisabled: true,\n      preActivationRetryGuard: emailAutomationGuard.ok === true,\n      campaignQualityVerified: emailCampaignQuality.ok === true,\n      dailySource: emailCampaignQuality.dailySource || null,\n      weeklySource: emailCampaignQuality.weeklySource || null,\n      replyToSupported: brevoReadiness.checks?.replyToSupported === true,\n      dailyCron: '5 6 * * *',\n      weeklyCron: '15 7 * * 1',\n      providerSecretsRequired: ['BREVO_API_KEY', 'MEMBERS_FROM_EMAIL', 'MEMBERS_REPLY_TO_EMAIL', 'EMAIL_WEBHOOK_SECRET', 'ADMIN_API_TOKEN']",
-    'Email receipt details'
-  );
-  replaceLegacy(
-    "      && emailBoundaryPassed\n      && reportDeliveryWired",
-    "      && emailBoundaryPassed\n      && brevoReadiness.ok === true\n      && brevoReadiness.status === 'transactional-ready-automation-disabled'\n      && emailCampaignQuality.ok === true\n      && emailAutomationGuard.ok === true\n      && reportDeliveryWired",
-    'Email receipt acceptance gate'
-  );
-}
-
-for (const marker of requiredMarkers) {
-  if (!source.includes(marker)) throw new Error(`Production receipt email marker missing: ${marker}`);
-}
+for (const marker of requiredMarkers) if (!source.includes(marker)) throw new Error(`Production receipt email marker missing: ${marker}`);
 
 if (changed) fs.writeFileSync(receiptPath, source);
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -70,7 +64,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   receiptSchema: source.includes('schemaVersion: 5') ? 5 : null,
   runtimePaymentModelPreserved: source.includes("runtimeModel: 'Cloudflare-dashboard-managed and D1-gated'"),
   requiredState: {
-    marketingAutomation: false,
+    marketingAutomation: true,
+    marketingAutomationConsentBound: true,
+    personalizedBatchLimit: 100,
     transactionalEmail: true,
     brevoDomainAuthenticated: true,
     preActivationRetryGuard: true,
@@ -78,6 +74,6 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   },
   dailyCron: '5 6 * * *',
   weeklyCron: '15 7 * * 1',
-  boundary: 'A production receipt passes when authenticated transactional delivery is ready, scheduled marketing remains disabled, legacy retries are quarantined, evidence-bounded campaign code and unsubscribe controls are present, and no bulk campaign can send without separate activation.'
+  boundary: 'A production receipt passes only when daily and weekly automation uses verified members, explicit preferences, suppression checks, per-recipient unsubscribe links, D1 idempotency, retry quarantine, evidence-bounded content and a maximum batch of 100. Transactional email remains independently gated, and PayPal activation remains separate.'
 }, null, 2)}\n`);
-console.log(`Production receipt email safety ${changed ? 'updated' : 'already current'}.`);
+console.log(`Production receipt email activation ${changed ? 'updated' : 'already current'}: consent-bound daily and weekly automation certified.`);

@@ -6,28 +6,31 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /*.html
-  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=3600
 
 /*.css
-  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=3600
 
 /*.js
-  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=3600
+
+/*.wasm
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /*.png
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /*.jpg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /*.webp
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /*.svg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate, stale-while-revalidate=86400
 
 /downloads/*.pdf
   Content-Disposition: attachment

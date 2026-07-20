@@ -30,6 +30,8 @@ jobs:
               return encoded ? Buffer.from(encoded.replace(/\n/g, ''), 'base64').toString('utf8') : '';
             };
             const repoJson = async path => JSON.parse(decodeContent(await github.rest.repos.getContent({ owner, repo, path, ref: 'main' })));
+            const activeStatuses = ['queued', 'in_progress', 'waiting', 'pending', 'requested'];
+            const activeRun = runs => runs.data.workflow_runs.find(run => activeStatuses.includes(run.status));
 
             const moneyTarget = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Money Intelligence Refresh');
             if (!moneyTarget) {
@@ -56,9 +58,7 @@ jobs:
               const moneyRuns = await github.rest.actions.listWorkflowRuns({
                 owner, repo, workflow_id: moneyTarget.id, branch: 'main', per_page: 10
               });
-              const active = moneyRuns.data.workflow_runs.find(run =>
-                ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status)
-              );
+              const active = activeRun(moneyRuns);
               if (active) {
                 core.info(`Money intelligence refresh is already active: ${active.html_url}`);
                 return;
@@ -77,24 +77,61 @@ jobs:
               return;
             }
 
+            const artworkTarget = workflows.data.workflows.find(workflow => workflow.name === 'Card Artwork Automation');
+            if (!artworkTarget) {
+              core.setFailed('Card artwork automation workflow was not found.');
+              return;
+            }
+            let artPlan = null;
+            try {
+              artPlan = await repoJson('data/card-artwork-batches.json');
+            } catch (error) {
+              core.info(`Canonical artwork batch plan is not ready: ${error.message}`);
+            }
+            const artText = JSON.stringify(artPlan?.batches || []);
+            const artQueueReady = Boolean(artPlan?.ok)
+              && Number.isFinite(Number(artPlan?.totalMissing))
+              && !artText.includes('Card ID: undefined');
+            core.info(`Repository artwork queue: missing=${artPlan?.totalMissing}, validCardIds=${artQueueReady}.`);
+
+            if (!artQueueReady) {
+              const artworkRuns = await github.rest.actions.listWorkflowRuns({
+                owner, repo, workflow_id: artworkTarget.id, branch: 'main', per_page: 10
+              });
+              const active = activeRun(artworkRuns);
+              if (active) {
+                core.info(`Card artwork refresh is already active: ${active.html_url}`);
+                return;
+              }
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: artworkTarget.id, ref: 'main' });
+              core.info(`Dispatched card artwork queue repair ${artworkTarget.id}.`);
+              return;
+            }
+
             let liveMatches = false;
             try {
               const nonce = Date.now();
-              const headers = { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixMoneyReleaseGuard/2.0' };
-              const [liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse] = await Promise.all([
+              const headers = { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixMoneyReleaseGuard/3.0' };
+              const [liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse, liveArtResponse] = await Promise.all([
                 fetch(`https://matrixreprogrammed.com/data/money-intelligence-registry.json?release_guard=${nonce}`, { headers }),
                 fetch(`https://matrixreprogrammed.com/downloads/wealth-guides/index.json?release_guard=${nonce}`, { headers }),
                 fetch(`https://matrixreprogrammed.com/?release_guard=${nonce}`, { headers }),
-                fetch(`https://matrixreprogrammed.com/follow-the-money.html?release_guard=${nonce}`, { headers })
+                fetch(`https://matrixreprogrammed.com/follow-the-money.html?release_guard=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/data/card-artwork-batches.json?release_guard=${nonce}`, { headers })
               ]);
-              if ([liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse].every(response => response.ok)) {
+              if ([liveRegistryResponse, liveGuidesResponse, liveHomeResponse, liveHubResponse, liveArtResponse].every(response => response.ok)) {
                 const liveRegistry = await liveRegistryResponse.json();
                 const liveGuides = await liveGuidesResponse.json();
                 const liveHome = await liveHomeResponse.text();
                 const liveHub = await liveHubResponse.text();
+                const liveArt = await liveArtResponse.json();
                 const liveRecords = Array.isArray(liveRegistry.records) ? liveRegistry.records : [];
                 const liveCompanies = liveRecords.filter(row => row.category === 'companies').length;
                 const liveVehicles = liveRecords.filter(row => row.category === 'investment-vehicles').length;
+                const liveArtText = JSON.stringify(liveArt?.batches || []);
+                const artMatches = liveArt.updated === artPlan.updated
+                  && Number(liveArt.totalMissing) === Number(artPlan.totalMissing)
+                  && !liveArtText.includes('Card ID: undefined');
                 liveMatches = liveRegistry.updated === registry.updated
                   && liveCompanies >= 100
                   && liveVehicles >= 100
@@ -102,14 +139,15 @@ jobs:
                   && liveHome.includes('OPEN AI DETECTIVE')
                   && liveHome.includes('ai-speculative-conclusions.html')
                   && liveHub.includes('money-command-center')
-                  && liveHub.includes('money-search.html');
-                core.info(`Live proof: registry=${liveRegistry.updated}, companies=${liveCompanies}, vehicles=${liveVehicles}, guides=${liveGuides.count}, detective=${liveHome.includes('OPEN AI DETECTIVE')}, commandCenter=${liveHub.includes('money-command-center')}.`);
+                  && liveHub.includes('money-search.html')
+                  && artMatches;
+                core.info(`Live proof: registry=${liveRegistry.updated}, companies=${liveCompanies}, vehicles=${liveVehicles}, guides=${liveGuides.count}, detective=${liveHome.includes('OPEN AI DETECTIVE')}, commandCenter=${liveHub.includes('money-command-center')}, artworkQueue=${artMatches}.`);
               }
             } catch (error) {
               core.info(`Live proof is not complete yet: ${error.message}`);
             }
             if (liveMatches) {
-              core.info('The exact tested money system and AI Detective homepage are live. No deployment needed.');
+              core.info('The exact tested money system, AI Detective homepage and corrected artwork queue are live. No deployment needed.');
               return;
             }
 
@@ -119,9 +157,7 @@ jobs:
               return;
             }
             const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', per_page: 20 });
-            const active = runs.data.workflow_runs.find(run =>
-              ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status)
-            );
+            const active = activeRun(runs);
             if (active) {
               core.info(`A controlled production run is active or queued; migration and deployment will not be interrupted: ${active.html_url}`);
               return;

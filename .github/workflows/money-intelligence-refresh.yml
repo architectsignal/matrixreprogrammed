@@ -12,14 +12,13 @@ on:
 
 permissions:
   contents: write
-  actions: write
 
 concurrency:
   group: matrix-money-intelligence-refresh
   cancel-in-progress: false
 
 jobs:
-  refresh-build-test-deploy:
+  refresh-build-test-commit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -43,6 +42,7 @@ jobs:
 
       - name: Commit generated public system
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
@@ -61,33 +61,19 @@ jobs:
             newsletter.html optin-center.html src/worker-intelligence-reports.js
           if git diff --cached --quiet; then
             echo "No generated changes."
-          else
-            git commit -m "Refresh money intelligence, practical guides and AI detective homepage [deploy]"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            exit 0
           fi
+          git commit -m "Refresh money intelligence, practical guides and AI detective homepage [deploy]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during money refresh; retrying from the latest branch."
+          done
+          echo "Unable to publish refreshed money outputs after three attempts."
+          exit 1
 
-      - name: Dispatch controlled production deployment
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const response = await github.rest.actions.listRepoWorkflows({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              per_page: 100
-            });
-            const target = response.data.workflows.find(
-              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
-            );
-            if (!target) {
-              core.setFailed('Controlled production workflow was not found.');
-              return;
-            }
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: target.id,
-              ref: 'main',
-              inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
-            });
-            core.info(`Dispatched controlled production workflow ${target.id}.`);
+      - name: Release handoff
+        run: echo "The scheduled guarded dispatcher will deploy the latest tested main exactly once."

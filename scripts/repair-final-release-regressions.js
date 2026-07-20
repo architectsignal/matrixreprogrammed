@@ -73,7 +73,7 @@ function repairEvidenceIds(file) {
   const ids = [...after.matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   const duplicateFamilyIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index && /^evidence-badge-system-route/i.test(id)))];
   if (duplicateFamilyIds.length) throw new Error(`${path.relative(root, file)} retains duplicate evidence badge IDs: ${duplicateFamilyIds.join(', ')}`);
-  if (/id\s*=\s*(["'])evidence-badge-system-route--duplicate-\d+\1/i.test(after)) {
+  if (/(?:^|\s)id\s*=\s*(["'])evidence-badge-system-route--duplicate-\d+\1/i.test(after)) {
     throw new Error(`${path.relative(root, file)} retains generated evidence badge alias IDs`);
   }
 

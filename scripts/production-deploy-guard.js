@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+
+// Reassert the final release-metadata owner and deployable aliases at the last
+// mutation boundary before Wrangler uploads the Worker and _site assets.
+require('./patch-release-metadata-routing.js');
+require('./publish-release-metadata-assets.js');
+
 const site = path.join(root, '_site');
 const hard = [];
 const soft = [];
@@ -37,9 +43,11 @@ const requiredSource = [
   'daily-power-conclusions.html','daily-investigation-conclusions.html','daily-brain-brief.html','outcome-briefings.html',
   'security-privacy.html','dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','search.html',
   'deploy-manifest.json','deploy-health.html','deploy-health.json','data/production-freshness-policy.json',
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js',
+  'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-release-metadata.js',
   'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql',
   'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/repair-generated-site-artifacts.js','scripts/cloudflare-focused-pressure-wrapper.js',
+  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js',
   '.github/workflows/deploy.yml','.github/workflows/deploy-production.yml','wrangler.toml','wrangler.jsonc'
 ];
 const requiredBuilt = [
@@ -50,7 +58,8 @@ const requiredBuilt = [
   'daily-brain-brief.html','daily-brain-brief','outcome-briefings.html','outcome-briefings',
   'security-privacy.html','security-privacy','dark-web-safety.html','dark-web-safety',
   'geographic-power-atlas.html','geographic-power-atlas','data-lab.html','data-lab','evidence-archive.html','evidence-archive','search.html','search',
-  'deploy-manifest.json','deploy-manifest','deploy-health.html','deploy-health','deploy-health.json','downloads/deploy-health.json'
+  'deploy-manifest.json','deploy-manifest','deploy-health.html','deploy-health','deploy-health.json','downloads/deploy-health.json',
+  'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json'
 ];
 requiredSource.forEach(need);
 requiredBuilt.forEach(needSite);
@@ -90,12 +99,20 @@ requireText('deploy-health.html', 'Payments: RUNTIME GATED / DASHBOARD MANAGED',
 const expectedSha = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const manifest = exists('deploy-manifest.json') ? parse('deploy-manifest.json') : null;
 const builtManifest = siteExists('deploy-manifest.json') ? parse('deploy-manifest.json', true) : null;
+const runtimeManifest = exists('runtime/deploy-manifest-current.json') ? parse('runtime/deploy-manifest-current.json') : null;
+const builtRuntimeManifest = siteExists('runtime/deploy-manifest-current.json') ? parse('runtime/deploy-manifest-current.json', true) : null;
 const health = exists('deploy-health.json') ? parse('deploy-health.json') : null;
 const builtHealth = siteExists('deploy-health.json') ? parse('deploy-health.json', true) : null;
+const runtimeHealth = exists('runtime/deploy-health-current.json') ? parse('runtime/deploy-health-current.json') : null;
+const builtRuntimeHealth = siteExists('runtime/deploy-health-current.json') ? parse('runtime/deploy-health-current.json', true) : null;
 if (manifest && expectedSha && manifest.commitSha !== expectedSha) hard.push(`source deploy manifest SHA ${manifest.commitSha} does not match expected ${expectedSha}`);
 if (builtManifest && expectedSha && builtManifest.commitSha !== expectedSha) hard.push(`built deploy manifest SHA ${builtManifest.commitSha} does not match expected ${expectedSha}`);
+if (runtimeManifest && expectedSha && runtimeManifest.commitSha !== expectedSha) hard.push(`runtime deploy manifest SHA ${runtimeManifest.commitSha} does not match expected ${expectedSha}`);
+if (builtRuntimeManifest && expectedSha && builtRuntimeManifest.commitSha !== expectedSha) hard.push(`built runtime deploy manifest SHA ${builtRuntimeManifest.commitSha} does not match expected ${expectedSha}`);
 if (manifest && builtManifest && manifest.commitSha !== builtManifest.commitSha) hard.push('source and built deploy manifests disagree');
-for (const [label, item] of [['source', health], ['built', builtHealth]]) {
+if (manifest && runtimeManifest && manifest.commitSha !== runtimeManifest.commitSha) hard.push('source and runtime deploy manifests disagree');
+if (manifest && builtRuntimeManifest && manifest.commitSha !== builtRuntimeManifest.commitSha) hard.push('source and deployable runtime manifests disagree');
+for (const [label, item] of [['source', health], ['built', builtHealth], ['runtime', runtimeHealth], ['built runtime', builtRuntimeHealth]]) {
   if (!item) continue;
   if (!item.ok) hard.push(`${label} production health reports not ready`);
   if (expectedSha && item.buildSha !== expectedSha) hard.push(`${label} production health SHA ${item.buildSha} does not match expected ${expectedSha}`);
@@ -110,8 +127,11 @@ const freshnessReport = exists('downloads/production-freshness-guard.json') ? pa
 if (!freshnessReport) hard.push('production freshness report missing');
 else if (!freshnessReport.ok) hard.push(`production freshness guard reports ${freshnessReport.hardIssues?.length || 1} issue(s)`);
 
-for (const text of ["import forumWorker from './worker-forum-persistence.js'","import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'",'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',"origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)']) {
+for (const text of ["import forumWorker from './worker-forum-persistence.js'","import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'","import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';",'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',"origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);']) {
   if (!read('src/worker-production.js').includes(text)) hard.push(`strict production Worker missing ${text}`);
+}
+for (const text of ["['/deploy-manifest.json', '/runtime/deploy-manifest-current.json']","['/deploy-health.json', '/runtime/deploy-health-current.json']",'cloudflare-worker-release-metadata','no-store, max-age=0']) {
+  if (!read('src/worker-release-metadata.js').includes(text)) hard.push(`release metadata Worker missing ${text}`);
 }
 for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/subscription/create','/api/paypal/subscription/return','/v1/billing/subscriptions','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) {
   if (!read('src/worker-paypal-subscriptions.js').includes(text)) hard.push(`PayPal Worker missing ${text}`);
@@ -154,23 +174,28 @@ const report = {
   expectedSha,
   manifestSha: manifest?.commitSha || null,
   builtManifestSha: builtManifest?.commitSha || null,
+  runtimeManifestSha: runtimeManifest?.commitSha || null,
+  builtRuntimeManifestSha: builtRuntimeManifest?.commitSha || null,
   healthSha: health?.buildSha || null,
   builtHealthSha: builtHealth?.buildSha || null,
+  runtimeHealthSha: runtimeHealth?.buildSha || null,
+  builtRuntimeHealthSha: builtRuntimeHealth?.buildSha || null,
   hardIssues: hard,
   softIssues: soft,
   deploymentModel: 'One manually confirmed canonical release and one manual fallback using the same non-interrupting production queue and strict fail-closed gates.',
   rollbackModel: 'Validated Cloudflare D1 Time Travel bookmark captured before migrations with an exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
+  releaseMetadataOwner: 'src/worker-release-metadata.js with exact runtime aliases republished at the final pre-Wrangler guard.',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; the Worker creates subscriptions and redirects to the official approval URL while checkout still requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
-  boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction or unguarded payment activation.'
+  boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nRelease metadata: ${report.releaseMetadataOwner}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with manual confirmation, a non-interrupting migration queue, Time Travel rollback, strict D1 forums and SDK-free runtime-gated PayPal.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with final release metadata aliases, manual confirmation, a non-interrupting migration queue, Time Travel rollback, strict D1 forums and SDK-free runtime-gated PayPal.`);

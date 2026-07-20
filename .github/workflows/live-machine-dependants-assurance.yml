@@ -7,6 +7,7 @@ on:
       - '.github/workflows/live-machine-dependants-assurance.yml'
       - 'scripts/build-daily-epstein-update.js'
       - 'scripts/build-card-live-updates.js'
+      - 'scripts/repair-card-live-coverage.js'
       - 'scripts/live-machine-dependants-test.js'
       - 'investigation-pulse.js'
       - 'data/live-intel.json'
@@ -22,7 +23,7 @@ jobs:
   verify:
     name: Prove Epstein, cards, and machine stay synchronized
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout proposed change
         uses: actions/checkout@v4
@@ -33,10 +34,14 @@ jobs:
           node-version: '24'
 
       - name: Build daily Epstein update from current Live Intel
-        run: node scripts/build-daily-epstein-update.js
+        run: |
+          node scripts/build-daily-epstein-update.js
+          node scripts/build-epstein-sighting-watch.js
 
       - name: Build current intelligence for every tracked card
-        run: node scripts/build-card-live-updates.js
+        run: |
+          node scripts/build-card-live-updates.js
+          node scripts/repair-card-live-coverage.js
 
       - name: Enforce synchronized machine dependants
         run: node scripts/live-machine-dependants-test.js
@@ -51,13 +56,18 @@ jobs:
           name: live-machine-dependants-${{ github.sha }}
           path: |
             data/daily-epstein-update.json
+            data/epstein-sighting-scan.json
             data/card-live-updates.json
             data/live-machine-status.json
             downloads/daily-epstein-update.md
+            downloads/epstein-sighting-watch.json
             downloads/card-live-updates.md
+            downloads/card-live-coverage-repair.json
+            downloads/card-live-coverage-repair.md
             downloads/live-machine-status.md
             downloads/live-machine-dependants-test.json
             downloads/live-machine-dependants-test.md
             daily-epstein-update.html
+            epstein-sighting-watch.html
           if-no-files-found: error
           retention-days: 21

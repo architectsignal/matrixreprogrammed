@@ -35,7 +35,9 @@ if (!failures.length) {
 
   check('wrapper does not delegate non-forum traffic', wrapper.includes('return legacyWorker.fetch(request, env, ctx)'));
   check('wrapper missing D1 schema bootstrap', wrapper.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
-  check('wrapper missing authoritative D1 insert', wrapper.includes('INSERT OR IGNORE INTO forum_posts'));
+  check('wrapper missing strict authoritative D1 insert', wrapper.includes('INSERT INTO forum_posts') && !wrapper.includes('INSERT OR IGNORE INTO forum_posts'));
+  check('wrapper missing D1 insert confirmation', wrapper.includes("Number(result?.meta?.changes || 0) !== 1") && wrapper.includes('D1 did not confirm the forum insert'));
+  check('wrapper missing D1 read-after-write confirmation', wrapper.includes('FROM forum_posts WHERE id=? AND member_id=? LIMIT 1') && wrapper.includes('D1 forum read-after-write confirmation failed'));
   check('wrapper missing authoritative D1 feed query', wrapper.includes("FROM forum_posts WHERE status='live'"));
   check('wrapper missing D1 report persistence', wrapper.includes('INSERT INTO forum_reports'));
   check('wrapper missing optional KV migration path', wrapper.includes('kv_forum_migration_v1') && wrapper.includes("prefix: 'post:'"));
@@ -61,8 +63,8 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; KV compatibility is disabled by default and normal traffic cannot create KV operations.',
-  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, success without authoritative D1 writes, analytics KV writes and unnecessary KV exposure to normal traffic.'
+  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; every accepted post requires one confirmed insert and a read-after-write match. KV compatibility is disabled by default and normal traffic cannot create KV operations.',
+  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, ignored or duplicate inserts, missing read-after-write confirmation, analytics KV writes and unnecessary KV exposure to normal traffic.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-persistence-d1-test.json'), JSON.stringify(report, null, 2));
@@ -72,4 +74,4 @@ if (failures.length) {
   process.exit(1);
 }
 console.log('FORUM D1 PERSISTENCE TEST PASSED');
-console.log('Verified strict D1 failure semantics, authoritative forum writes and reads, KV-safe normal routing, disabled analytics KV writes and optional recovery compatibility only.');
+console.log('Verified strict D1 insert confirmation, read-after-write persistence, fail-closed forum routing, KV-safe normal traffic and optional recovery compatibility only.');

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "generatedFor": "Matrix Reprogrammed production deployment",
   "defaultMaxFutureMinutes": 15,
   "datasets": [
@@ -10,6 +10,28 @@
       "maxAgeHours": 26,
       "minimumArray": "feedResults",
       "minimumCount": 1
+    },
+    {
+      "id": "daily-epstein-update",
+      "file": "data/daily-epstein-update.json",
+      "timestampFields": ["updated", "sourceWindowUpdated"],
+      "maxAgeHours": 26,
+      "minimumArray": "items",
+      "minimumCount": 0
+    },
+    {
+      "id": "card-live-updates",
+      "file": "data/card-live-updates.json",
+      "timestampFields": ["updated", "sourceWindowUpdated"],
+      "maxAgeHours": 26,
+      "minimumArray": "cards",
+      "minimumCount": 1
+    },
+    {
+      "id": "live-machine-status",
+      "file": "data/live-machine-status.json",
+      "timestampFields": ["updated", "liveIntelUpdated"],
+      "maxAgeHours": 26
     },
     {
       "id": "daily-investigation",

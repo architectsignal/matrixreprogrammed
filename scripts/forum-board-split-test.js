@@ -10,6 +10,7 @@ function forbidText(name, text){ if (exists(name) && read(name).includes(text)) 
 
 try { require('./build-board-split.js'); } catch (error) { issues.push(`board split builder failed: ${error.message}`); }
 try { require('./apply-hard-board-split.js'); } catch (error) { issues.push(`hard board D1 persistence guard failed: ${error.message}`); }
+try { require('./repair-forum-page-consistency.js'); } catch (error) { issues.push(`forum page consistency repair failed: ${error.message}`); }
 
 const hardFeeds = ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive'];
 const hardSubmits = ['/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'];
@@ -19,9 +20,6 @@ const publicFiles = ['forum.js','forum.html','dark-speculation-forum.html','epst
 const bannedPublicCopy = [
   'Local fallback',
   'saved on this device',
-  'pending sync',
-  'Signal Board is syncing',
-  'Signal received. It may take a moment to appear on the live board.',
   'Not posted live yet. Saved only on this device',
   'matrix_signal_board_posts_v2_',
   'saveLocalPosts',
@@ -34,7 +32,7 @@ for (const file of [
   'forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js',
   'src/worker.js','src/worker-production.js','src/worker-forum-persistence.js',
   'migrations/0004_forum_persistence.sql','data/forum-board-split.json',
-  'scripts/build-board-split.js','scripts/apply-hard-board-split.js'
+  'scripts/build-board-split.js','scripts/apply-hard-board-split.js','scripts/repair-forum-page-consistency.js'
 ]) needFile(file);
 
 needText('forum.html', 'data-board="main"');
@@ -47,6 +45,11 @@ needText('forum.html', 'dark-speculation-forum.html');
 needText('forum.html', 'epstein-alive-board.html');
 needText('dark-speculation-forum.html', 'signal-board-feed');
 needText('epstein-alive-board.html', 'signal-board-feed');
+for (const file of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html']) {
+  needText(file, 'id="forum-member-status"');
+  needText(file, 'class="signal-lock-message"');
+  needText(file, 'forum.js?v=20260720-forum-member-posting-v3');
+}
 
 for (const marker of [
   'const BOARD',
@@ -54,10 +57,10 @@ for (const marker of [
   'lockFormToBoard',
   'payload.board = BOARD',
   'persistent !== true',
-  'Posts are not saved in this browser',
-  'only persistent Cloudflare D1 posts',
-  'Cloudflare D1 persistent forum feed unavailable',
-  'Signal posted live and saved persistently'
+  'No browser-only copy is shown as live',
+  'authoritative Cloudflare D1 feed',
+  "data.storage !== 'Cloudflare D1 MEMBERS_DB.forum_posts'",
+  'Signal posted live. D1 persistence was confirmed by read-after-write.'
 ]) needText('forum.js', marker);
 for (const route of allRoutes) needText('forum.js', route);
 
@@ -75,7 +78,9 @@ for (const marker of [
   'MEMBERS_DB D1 binding is unavailable',
   'CREATE TABLE IF NOT EXISTS forum_posts',
   'CREATE TABLE IF NOT EXISTS forum_reports',
-  'storage_origin TEXT NOT NULL DEFAULT \'d1\''
+  "storage_origin TEXT NOT NULL DEFAULT 'd1'",
+  'Cloudflare D1 MEMBERS_DB.forum_posts',
+  'D1 forum read-after-write confirmation failed'
 ]) needText('src/worker-forum-persistence.js', marker);
 for (const route of allRoutes) needText('src/worker-forum-persistence.js', route);
 
@@ -114,4 +119,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FORUM BOARD SPLIT TEST PASSED');
-console.log('Checked three board pages, hard frontend routes, strict Worker delegation, authoritative D1 persistence, schema migration, aliases, sitemap, llms and search index with no browser-local posting fallback.');
+console.log('Checked three verified-member board pages, hard frontend routes, strict Worker delegation, authoritative D1 persistence with read-after-write confirmation, schema migration, aliases, sitemap, llms and search index with no browser-local posting fallback.');

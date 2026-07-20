@@ -5,6 +5,10 @@ const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
+const moneyFinalizer = path.join(root, 'scripts', 'finalize-money-intelligence-release.js');
+if (fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
+  execFileSync(process.execPath, [moneyFinalizer], { cwd: root, stdio: 'inherit', env: process.env });
+}
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }
 function json(rel, fallback = {}) { try { return JSON.parse(read(rel)); } catch { return fallback; } }
 function hash(rel) { const file = path.join(root, rel); return fs.existsSync(file) ? crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex') : null; }
@@ -21,6 +25,9 @@ const criticalFiles = [
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
+  'follow-the-money.html', 'making-money.html', 'follow-the-money.js', 'making-money.js', 'money-intelligence.css',
+  'follow-the-money/people/elon-musk.html', 'downloads/wealth-guides/start-from-zero.pdf',
+  'data/follow-the-money-top-100.json', 'data/making-money-core.json',
   'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json',
   'data/outcome-briefings.json'
@@ -43,8 +50,15 @@ const manifest = {
     outcomes: timestamp('data/outcome-briefings.json', ['updated'])
   },
   criticalFiles: Object.fromEntries(criticalFiles.map(rel => [rel, hash(rel)])),
-  verificationRoutes: ['/', '/start-here', '/live-intel', '/daily-power-conclusions', '/daily-investigation-conclusions', '/security-privacy', '/dark-web-safety', '/geographic-power-atlas', '/data-lab', '/evidence-archive']
+  verificationRoutes: [
+    '/', '/start-here', '/live-intel', '/daily-power-conclusions', '/daily-investigation-conclusions',
+    '/security-privacy', '/dark-web-safety', '/geographic-power-atlas', '/data-lab', '/evidence-archive',
+    '/follow-the-money', '/making-money', '/follow-the-money/people/elon-musk',
+    '/downloads/wealth-guides/start-from-zero.pdf'
+  ]
 };
+const missingCritical = Object.entries(manifest.criticalFiles).filter(([, value]) => !value).map(([rel]) => rel);
+if (missingCritical.length) throw new Error(`Deployment manifest missing critical money or production files: ${missingCritical.join(', ')}`);
 const text = JSON.stringify(manifest, null, 2);
 fs.writeFileSync(path.join(root, 'deploy-manifest.json'), text);
 if (fs.existsSync(site)) {

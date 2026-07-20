@@ -27,7 +27,12 @@ on:
       - '.github/workflows/money-intelligence.yml'
 
 permissions:
+  actions: write
   contents: write
+
+concurrency:
+  group: money-intelligence-pages
+  cancel-in-progress: false
 
 jobs:
   build-and-commit:
@@ -56,3 +61,11 @@ jobs:
             git commit -m "Generate money intelligence profiles and guides [deploy]"
             git push
           fi
+      - name: Dispatch guarded production deployment
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main

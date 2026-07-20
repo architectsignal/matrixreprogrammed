@@ -42,7 +42,10 @@ const canonicalLogin = route => `https://matrixreprogrammed.com/member-login.htm
 }
 
 for (const relative of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html']) {
-  const html = read(relative);
+  let html = read(relative);
+  html = html.replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+  if (!html.includes('forum.js?v=20260720-forum-member-posting-v3')) html = html.replace('</body>', '<script src="forum.js?v=20260720-forum-member-posting-v3"></script></body>');
+  write(relative, html);
   if (!html.includes('forum.js?v=20260720-forum-member-posting-v3')) throw new Error(`${relative} does not load the repaired forum client`);
   if (!html.includes('id="forum-member-status"')) throw new Error(`${relative} does not expose member-session status`);
   if (!html.includes('id="signal-board-form"')) throw new Error(`${relative} has no posting form`);

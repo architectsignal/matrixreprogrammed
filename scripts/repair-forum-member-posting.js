@@ -25,6 +25,7 @@ function write(relative, content) {
 }
 function replaceOrFail(source, before, after, label) {
   if (source.includes(after)) return source;
+  if (label === 'domain-wide session clear cookie' && source.includes("function authClearCookies(){return ['matrix_session_v2=; Domain=matrixreprogrammed.com; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax','matrix_session=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax']}")) return source;
   if (!source.includes(before)) throw new Error(`${label} anchor is missing`);
   return source.replace(before, after);
 }

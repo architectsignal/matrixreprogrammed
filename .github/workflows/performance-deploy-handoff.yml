@@ -84,3 +84,5 @@ jobs:
             git rebase --abort 2>/dev/null || true
           done
           exit 1
+
+# Release handoff nonce: strict-reconciled-release-20260720T2116-Europe-Paris

@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 2656
-Flagged pages: 2185
-High priority pages: 873
-Medium priority pages: 1306
-Pages with missing rules: 211
+Scanned pages: 2713
+Flagged pages: 2272
+High priority pages: 875
+Medium priority pages: 1324
+Pages with missing rules: 310
 Auto-update eligible figures: 2
 Manual-review figures: 94
-Missing-rule figures: 696
+Missing-rule figures: 745
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -23,11 +23,10 @@ Missing-rule figures: 696
 - _site/timers.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - document-library.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - market-activity.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
-- premium-reports.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
-- store.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - timers.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/machine-digest.html: 19 figure/stat markers; 19 missing rules. Add figure-source rules before automatic replacement.
 - machine-digest.html: 19 figure/stat markers; 19 missing rules. Add figure-source rules before automatic replacement.
+- premium-reports.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
@@ -44,6 +43,7 @@ Missing-rule figures: 696
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
+- _site/source-changes.html: 32 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -55,11 +55,10 @@ Missing-rule figures: 696
 - _site/timers.html: 20 figure(s) need source rules.
 - document-library.html: 20 figure(s) need source rules.
 - market-activity.html: 20 figure(s) need source rules.
-- premium-reports.html: 20 figure(s) need source rules.
-- store.html: 20 figure(s) need source rules.
 - timers.html: 20 figure(s) need source rules.
 - _site/machine-digest.html: 19 figure(s) need source rules.
 - machine-digest.html: 19 figure(s) need source rules.
+- premium-reports.html: 12 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
@@ -86,6 +85,7 @@ Missing-rule figures: 696
 - _site/big-three/vanguard.html: 2 figure(s) need source rules.
 - _site/card-dossier-standard.html: 2 figure(s) need source rules.
 - _site/conclusion-engine.html: 2 figure(s) need source rules.
+- _site/intel-vault.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

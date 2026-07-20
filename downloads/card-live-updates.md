@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T07:54:05.246Z
-Live Intel source window: 2026-07-20T07:53:59.492Z
-Tracked cards: 775
+Generated: 2026-07-20T08:51:40.608Z
+Live Intel source window: 2026-07-20T08:51:35.808Z
+Tracked cards: 774
 Cards with current matched records: 108
-Cards with no new verified record: 667
+Cards with no new verified record: 666
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -2172,12 +2172,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Hermetic Order of the Golden Dawn
 - Route: secret-societies/hermetic-order-of-the-golden-dawn.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## HISTORICAL TRANSPORT RECORDS ONLY.
-- Route: aviation-evidence-policy.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

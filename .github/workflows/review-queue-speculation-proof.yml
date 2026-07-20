@@ -1,0 +1,55 @@
+name: Review Queue Speculation Proof
+
+on:
+  workflow_run:
+    workflows:
+      - Review Queue Speculation Publisher
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  record-result:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Record publisher result
+        env:
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          UPDATED_AT: ${{ github.event.workflow_run.updated_at }}
+        run: |
+          mkdir -p data
+          node - <<'NODE'
+          const fs=require('fs');
+          const payload={
+            ok:process.env.CONCLUSION==='success',
+            workflow:'Review Queue Speculation Publisher',
+            conclusion:process.env.CONCLUSION,
+            runId:process.env.RUN_ID,
+            runUrl:process.env.RUN_URL,
+            sourceSha:process.env.HEAD_SHA,
+            completedAt:process.env.UPDATED_AT,
+            rule:'Review-queue records publish only as labelled unverified speculation; factual promotion is prohibited.'
+          };
+          fs.writeFileSync('data/review-queue-speculation-proof.json',JSON.stringify(payload,null,2)+'\n');
+          NODE
+      - name: Commit receipt safely
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          for attempt in 1 2 3; do
+            git add data/review-queue-speculation-proof.json
+            git commit -m "Record review queue speculation result" || true
+            if git push origin HEAD:main; then exit 0; fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          exit 1

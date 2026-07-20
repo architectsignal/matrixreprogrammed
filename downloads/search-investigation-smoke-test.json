@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T06:37:27.702Z",
+  "generatedAt": "2026-07-20T07:05:15.173Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1459 entries"
+      "detail": "1461 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1459 unique routes"
+      "detail": "1461 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -125,7 +125,7 @@
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=usaspending-recent-contracts, investigation-source-ledger.html?source=gao-reports, investigation-machine.html"
+      "detail": "source-changes.html?change=553ca36157c97552aafe2abb, investigation-source-ledger.html?source=usaspending-recent-contracts, investigation-source-ledger.html?source=gao-reports"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=023dcc20a52e1c6c4aa643eb, source-changes.html?change=cac4acf03dae66ffc38d1dab"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=12211ad7f5ffc796baa3c75a, source-changes.html?change=023dcc20a52e1c6c4aa643eb"
     }
   ],
   "failures": []

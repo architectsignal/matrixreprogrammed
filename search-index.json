@@ -72,6 +72,10 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files",
       "source change",
@@ -919,6 +923,71 @@
       "information",
       "technology",
       "innovation"
+    ],
+    "priority": 103,
+    "sourceType": "source-change"
+  },
+  {
+    "url": "source-changes.html?change=12211ad7f5ffc796baa3c75a",
+    "title": "U.S. Securities and Exchange Commission — Current EDGAR Filings — content changed",
+    "category": "Source Change · Grade B",
+    "layer": "money-contracts",
+    "description": "The normalized content returned by the registered source differs from the previously preserved version. The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change. Latest Filings - Mon, 20 Jul 2026 03:04:37 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T03:04:37-04:00 4 - Langlois Sophia J. Latest Filings - Sun, 19 Jul 2026 04:57:26 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-19T04:57:26-04:00 4 - Langlois Sophia J.",
+    "keywords": [
+      "securities",
+      "and",
+      "exchange",
+      "commission",
+      "current",
+      "edgar",
+      "filings",
+      "sec",
+      "content",
+      "changed",
+      "source",
+      "change",
+      "the",
+      "normalized",
+      "returned",
+      "registered",
+      "differs",
+      "from",
+      "previously",
+      "preserved",
+      "version",
+      "alone",
+      "does",
+      "not",
+      "establish",
+      "wrongdoing",
+      "deliberate",
+      "concealment",
+      "authenticity",
+      "every",
+      "statement",
+      "reason",
+      "for",
+      "latest",
+      "mon",
+      "jul",
+      "2026",
+      "edt",
+      "https",
+      "www",
+      "gov",
+      "cgi",
+      "bin",
+      "browse",
+      "action",
+      "getcurrent",
+      "webmaster",
+      "20t03",
+      "langlois",
+      "sophia",
+      "sun",
+      "19t04",
+      "2efe10dca768aaca58d47724288c8ef0417c2bec541952ea0df4482c706089a9",
+      "888ad7e4e2ee65fe10171abf0bd4c72ec101e4c8b29eae72baf95c62f37ccac4"
     ],
     "priority": 103,
     "sourceType": "source-change"
@@ -1891,6 +1960,55 @@
     "sourceType": "source-change"
   },
   {
+    "url": "source-changes.html?change=553ca36157c97552aafe2abb",
+    "title": "USAspending.gov — Recent Contract Awards — content changed",
+    "category": "Source Change · Grade B",
+    "layer": "money-contracts",
+    "description": "The normalized content returned by the registered source differs from the previously preserved version. The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change. \" ], \"page_metadata\": {}, \"results\": [], \"spending_level\": \"awards\" } \" ], \"page_metadata\": {}, \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, ",
+    "keywords": [
+      "usaspending",
+      "gov",
+      "recent",
+      "contract",
+      "awards",
+      "contracts",
+      "content",
+      "changed",
+      "source",
+      "change",
+      "the",
+      "normalized",
+      "returned",
+      "registered",
+      "differs",
+      "from",
+      "previously",
+      "preserved",
+      "version",
+      "alone",
+      "does",
+      "not",
+      "establish",
+      "wrongdoing",
+      "deliberate",
+      "concealment",
+      "authenticity",
+      "every",
+      "statement",
+      "reason",
+      "for",
+      "page",
+      "metadata",
+      "results",
+      "spending",
+      "level",
+      "f809258b500247dfea12ce229f0f321223a565e34ef714a20bbb70782e1c6ea7",
+      "6330cc14020272b6368be6022ad7137cb59274a2537dccafa45d028c006f3c64"
+    ],
+    "priority": 103,
+    "sourceType": "source-change"
+  },
+  {
     "url": "data/source-change-public.json",
     "title": "Public Source Change Data JSON",
     "category": "Machine Data",
@@ -1926,7 +2044,7 @@
     "sourceType": "json-feed"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=ac86c9d45ea29269bdaf0e41",
+    "url": "daily-investigation-conclusions.html?finding=00fce66aada2d54c8b935d4e",
     "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -1990,7 +2108,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=3aa886abbd5c84e7b0c8a8d6",
+    "url": "daily-investigation-conclusions.html?finding=4600d97487e4eae1ce2ff866",
     "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2054,7 +2172,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=134d1ae526832e11b824bb30",
+    "url": "daily-investigation-conclusions.html?finding=e96ad16ef0373ccd3f98ea2c",
     "title": "Consent Motion for Entry of Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2115,7 +2233,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=fa66c3541394b27a3d32b910",
+    "url": "daily-investigation-conclusions.html?finding=8ab0f0bca0b4072cecb14786",
     "title": "Consent of and Final Judgment as to Gautam Adani",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2175,7 +2293,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=8ad558e8a53b5698d2139e80",
+    "url": "daily-investigation-conclusions.html?finding=8b78ada347ef0d3c17cdb2ff",
     "title": "Consent of and Final Judgment as to Sagar Adani",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2272,7 +2390,7 @@
     "sourceType": "json-feed"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=278e616757157f4c17848930",
+    "url": "daily-investigation-conclusions.html?finding=b8f838e066ac3dd598223940",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2329,7 +2447,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=bebd9bd3cbfd4c7c983d810b",
+    "url": "daily-investigation-conclusions.html?finding=1025650139ddf552540061de",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2386,7 +2504,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=96cb0c3faea1321dc1ca6035",
+    "url": "daily-investigation-conclusions.html?finding=3841ea7c4af831493a355e49",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2443,7 +2561,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=3b4be2bdf0fa306e7b33e375",
+    "url": "daily-investigation-conclusions.html?finding=c696af917da3ba77183bf984",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2500,7 +2618,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=5c67186b73bf2a3e61b97c7e",
+    "url": "daily-investigation-conclusions.html?finding=69f4d536df92ce86fa382d5c",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2557,7 +2675,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=16fe75357bbcc5c7465c9dad",
+    "url": "daily-investigation-conclusions.html?finding=525f1484061106c2e5ba6485",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2614,7 +2732,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=c8f307bc271e94609a8c77d4",
+    "url": "daily-investigation-conclusions.html?finding=9aca021d91000fcd4cb9fbff",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2671,7 +2789,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=6483cfcc34bd1027ea904d4c",
+    "url": "daily-investigation-conclusions.html?finding=fed12e88c4cf8ff23d79479a",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2728,7 +2846,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=7797c01d3d3d1f0f8819c4d1",
+    "url": "daily-investigation-conclusions.html?finding=f1b305888bd760fb9d4b95f6",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2785,7 +2903,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=aa0ba8dbbb419ac814bf938f",
+    "url": "daily-investigation-conclusions.html?finding=1dcc8a5793b40370828a1f29",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2842,7 +2960,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=d429a78da396e50927d74fda",
+    "url": "daily-investigation-conclusions.html?finding=de680698793c96680c652311",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2899,7 +3017,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=770f47371a34c1b829bf6874",
+    "url": "daily-investigation-conclusions.html?finding=89cc6581726a84d6a4739d27",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -2956,7 +3074,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=3d212e6c3bb6e016cfdb7dc0",
+    "url": "daily-investigation-conclusions.html?finding=370f2eeaa3d7c063b50f79bf",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3013,7 +3131,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=99e192b341510eac7586af92",
+    "url": "daily-investigation-conclusions.html?finding=b72925c219365d35c835746d",
     "title": "Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3070,7 +3188,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=441b9cd638c33b40de2dbce7",
+    "url": "daily-investigation-conclusions.html?finding=fa5ee48bc44be3a60ebfaea7",
     "title": "Final Judgment - Andrew Kaufman",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3129,7 +3247,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=a893806749f26a44d7685796",
+    "url": "daily-investigation-conclusions.html?finding=d5aa12e8ba85dd4cd808f7cf",
     "title": "Final Judgment - Arthur",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3187,7 +3305,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=997253b08a736c6a6f874e52",
+    "url": "daily-investigation-conclusions.html?finding=817dc9768cb9a7006ae7464a",
     "title": "Final Judgment - Bongiorno",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3245,7 +3363,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=edec04dc54df89f944d53ff9",
+    "url": "daily-investigation-conclusions.html?finding=903055d7588b506ca8d88c54",
     "title": "Final Judgment - DaveGlo Investment Group, Inc.",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3306,7 +3424,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=f2a542d6b4fd65cb1b10759f",
+    "url": "daily-investigation-conclusions.html?finding=7902956d3298d51c52667cbf",
     "title": "Final Judgment - David P. Ortiz",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3365,7 +3483,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=5336fae21d7fa5f22bf83807",
+    "url": "daily-investigation-conclusions.html?finding=2c5ebf9c76bba9380eb031e9",
     "title": "Final Judgment - Estate of Richard Myre",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3425,7 +3543,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=91bf788879cf1f588b8dae80",
+    "url": "daily-investigation-conclusions.html?finding=7db0d5529e9e0b488a6420f3",
     "title": "Final Judgment - Flagg",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3483,7 +3601,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=9fa3f7d4917883cea5738bd4",
+    "url": "daily-investigation-conclusions.html?finding=576e9277a2d886946f74afa7",
     "title": "Final Judgment - Lloyd",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3541,7 +3659,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=406588d8c898581fab4183b8",
+    "url": "daily-investigation-conclusions.html?finding=e7ff89c63a9ca98dd66470de",
     "title": "Final Judgment - Mark Jacobs",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3600,7 +3718,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=1cfd9fa56864ae9220e62fa6",
+    "url": "daily-investigation-conclusions.html?finding=f0229baf124c42e981d0db95",
     "title": "Final Judgment - Michael Bowen",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3659,7 +3777,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=16160941e5d8e874bbbda3af",
+    "url": "daily-investigation-conclusions.html?finding=5e26f8dadea0be3a8aac3adf",
     "title": "Final Judgment - Robert Newell",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3718,7 +3836,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=d67da078e712d79bcb928972",
+    "url": "daily-investigation-conclusions.html?finding=006694102331fe38bdea5ea6",
     "title": "Final Judgment - Robert Yedid",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3777,7 +3895,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=b629d39c709f071a61dc701a",
+    "url": "daily-investigation-conclusions.html?finding=6a52e9e3b6944a198dbec1a7",
     "title": "Final Judgment - Ross Gregory Erskine",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3837,7 +3955,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=861d4e8ae9d683b9d480528f",
+    "url": "daily-investigation-conclusions.html?finding=3eff9215911233f5f0f0bd41",
     "title": "Final Judgment - Treusch",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3895,7 +4013,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=c1e37c3b9e59913210da1deb",
+    "url": "daily-investigation-conclusions.html?finding=0bc5720e6a3ef2c9dddad15c",
     "title": "Final Judgment -Christopher McKnight",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -3954,7 +4072,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=1aa20f37e9a3766370dfba2a",
+    "url": "daily-investigation-conclusions.html?finding=75688d6120ae8f928bd09910",
     "title": "Final Judgment -Steve Bajic",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4013,7 +4131,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=6839ee3b5e62fee768985288",
+    "url": "daily-investigation-conclusions.html?finding=a826e4600b09be07aa60f99c",
     "title": "Final Judgment by Default",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4071,7 +4189,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=61f5bc6be9559bfba4fdd352",
+    "url": "daily-investigation-conclusions.html?finding=6142a2830eaffc05bdaaa386",
     "title": "Order and Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4129,7 +4247,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=ed464781e5a8657f69c7e5da",
+    "url": "daily-investigation-conclusions.html?finding=29e8abfc960a7b9af1d116d3",
     "title": "Proposed Final Judgment - Shaukat Shamim",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4189,7 +4307,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=699e50b32694d09359bc90fe",
+    "url": "daily-investigation-conclusions.html?finding=223d16c4e49d8ce92899a1ad",
     "title": "Proposed Final Judgment - YouPlus, Inc.",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4249,7 +4367,7 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=39bb00e5ed6e22161892cb23",
+    "url": "daily-investigation-conclusions.html?finding=c752acb68dd5784b4629a759",
     "title": "Revised Final Judgment",
     "category": "Investigation · Grade A",
     "layer": "government-enforcement",
@@ -4416,18 +4534,21 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=source-change-41238c8b70e678402d643e26",
-    "title": "content changed: Federal Register — Latest Documents",
+    "url": "daily-investigation-conclusions.html?finding=source-change-12211ad7f5ffc796baa3c75a",
+    "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
     "category": "Investigation · Grade B",
-    "layer": "oversight-audit",
+    "layer": "money-contracts",
     "description": "The normalized content returned by the registered source differs from the previously preserved version. The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes. The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
     "keywords": [
       "content",
       "changed",
-      "federal",
-      "register",
-      "latest",
-      "documents",
+      "securities",
+      "and",
+      "exchange",
+      "commission",
+      "current",
+      "edgar",
+      "filings",
       "the",
       "normalized",
       "returned",
@@ -4442,7 +4563,6 @@
       "retrieved",
       "canonicalised",
       "hashed",
-      "and",
       "compared",
       "with",
       "prior",
@@ -4755,18 +4875,19 @@
     "sourceType": "investigation-finding"
   },
   {
-    "url": "daily-investigation-conclusions.html?finding=source-change-a42c91c655cd066504ed6515",
-    "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+    "url": "daily-investigation-conclusions.html?finding=source-change-553ca36157c97552aafe2abb",
+    "title": "content changed: USAspending.gov — Recent Contract Awards",
     "category": "Investigation · Grade B",
-    "layer": "international-corruption",
+    "layer": "money-contracts",
     "description": "The normalized content returned by the registered source differs from the previously preserved version. The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes. The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
     "keywords": [
       "content",
       "changed",
-      "treasury",
-      "ofac",
+      "usaspending",
+      "gov",
       "recent",
-      "actions",
+      "contract",
+      "awards",
       "the",
       "normalized",
       "returned",
@@ -5872,6 +5993,420 @@
     "sourceType": "mission-route"
   },
   {
+    "url": "data/billionaire-control-index.json",
+    "title": "Billionaire Control JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable elite-network watch seed profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/brief-quality-report.json",
+    "title": "Brief Quality JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable brief quality scores.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/contradictions.json",
+    "title": "Contradictions JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable contradiction watch.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/daily-command-brief.json",
+    "title": "Daily Command Brief JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable daily command brief.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/elite-reports.json",
+    "title": "Elite Reports JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable index of reader reports.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/elite-reports.md",
+    "title": "Elite Reports Markdown",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Downloadable reader-report summary.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/entity-observations.json",
+    "title": "Entity Observations JSON",
+    "category": "Machine Data",
+    "layer": "elite-networks",
+    "description": "Entity candidates detected from public-record pulls.",
+    "keywords": [
+      "entity observations",
+      "people",
+      "institutions",
+      "companies"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/entity-timelines.json",
+    "title": "Entity Timelines JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable entity timelines.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/forum-posts.json",
+    "title": "Forum Posts Export JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable Signal Board export route.",
+    "keywords": [
+      "forum",
+      "signal board",
+      "export",
+      "posts",
+      "machine data"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/forum-posts.md",
+    "title": "Forum Posts Export Markdown",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Signal Board export download route.",
+    "keywords": [
+      "forum",
+      "signal board",
+      "download"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/institution-control-index.json",
+    "title": "Institution Control JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable institution profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/machine-digest.md",
+    "title": "Machine Digest Download",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Markdown digest of pulled records and entity observations.",
+    "keywords": [
+      "machine digest",
+      "download",
+      "record events"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/machine-feed-queue.json",
+    "title": "Machine Feed Queue JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Daily pull order for source-first intelligence feeds.",
+    "keywords": [
+      "feed queue",
+      "daily pull",
+      "machine brain",
+      "records"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/main-player-profiles.json",
+    "title": "Main Players JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable main player profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/master-brief-engine.json",
+    "title": "Master Brief Engine JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable output index for the master brief layer.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/missing-records.json",
+    "title": "Missing Records JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable missing-record queue.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/private-contractor-intelligence.md",
+    "title": "Private Contractor Intelligence Download",
+    "category": "Downloads",
+    "layer": "security-emergency",
+    "description": "Downloadable contractor intelligence brief.",
+    "keywords": [
+      "contractor intelligence",
+      "download",
+      "Blackwater",
+      "Constellis"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/private-contractor-intelligence.json",
+    "title": "Private Contractor Intelligence JSON",
+    "category": "Machine Data",
+    "layer": "security-emergency",
+    "description": "Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.",
+    "keywords": [
+      "private contractor intelligence",
+      "contractor profiles",
+      "main players",
+      "contractor score"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/public-record-intake.md",
+    "title": "Public Record Intake Download",
+    "category": "Downloads",
+    "layer": "disclosure-black-files",
+    "description": "Downloadable public-record intake manifest.",
+    "keywords": [
+      "download",
+      "public records",
+      "source routes"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/public-record-intake.json",
+    "title": "Public Record Intake JSON",
+    "category": "Machine Data",
+    "layer": "disclosure-black-files",
+    "description": "Machine-readable source intake manifest.",
+    "keywords": [
+      "public records",
+      "source manifest",
+      "API feeds",
+      "evidence ladder"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/record-events.json",
+    "title": "Record Events JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Normalized public-record events produced by the Machine Feed Runner.",
+    "keywords": [
+      "record events",
+      "machine feed",
+      "evidence grade",
+      "source pulls"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/source-pulls/source-pull-index.json",
+    "title": "Source Pull Index JSON",
+    "category": "Machine Data",
+    "layer": "disclosure-black-files",
+    "description": "Index of public-record feed pulls attempted by the Machine Feed Runner.",
+    "keywords": [
+      "source pulls",
+      "public APIs",
+      "feed runner"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/subject-briefs.json",
+    "title": "Subject Briefs JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable subject briefs.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
     "title": "Agenda 2030 Policy Watch",
     "category": "Identity / Access",
     "layer": "identity-access",
@@ -6069,8 +6604,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6084,16 +6617,16 @@
     "url": "entity-briefs/2021-00294.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for 2021-00294.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6105,14 +6638,10 @@
     "url": "entity-exposure/2021-00294.html",
     "description": "Evidence-graded exposure brief for 2021-00294.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6151,8 +6680,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6166,16 +6693,16 @@
     "url": "entity-briefs/2024-07773.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for 2024-07773.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6187,14 +6714,10 @@
     "url": "entity-exposure/2024-07773.html",
     "description": "Evidence-graded exposure brief for 2024-07773.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6212,8 +6735,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6227,16 +6748,16 @@
     "url": "entity-briefs/2025-0045-appeal.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for 2025-0045-Appeal..",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6248,14 +6769,10 @@
     "url": "entity-exposure/2025-0045-appeal.html",
     "description": "Evidence-graded exposure brief for 2025-0045-Appeal..",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6273,8 +6790,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6288,16 +6803,16 @@
     "url": "entity-briefs/25-113.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for 25-113.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6309,14 +6824,10 @@
     "url": "entity-exposure/25-113.html",
     "description": "Evidence-graded exposure brief for 25-113.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6353,8 +6864,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6368,16 +6877,16 @@
     "url": "entity-briefs/25-581.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for 25-581.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6389,14 +6898,10 @@
     "url": "entity-exposure/25-581.html",
     "description": "Evidence-graded exposure brief for 25-581.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6435,8 +6940,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6450,16 +6953,16 @@
     "url": "entity-briefs/a170747m.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for A170747M.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6471,14 +6974,10 @@
     "url": "entity-exposure/a170747m.html",
     "description": "Evidence-graded exposure brief for A170747M.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6496,8 +6995,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -6513,14 +7010,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -6532,14 +7029,10 @@
     "url": "entity-exposure/aapl.html",
     "description": "Evidence-graded exposure brief for AAPL.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7158,8 +7651,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7175,14 +7666,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -7194,14 +7685,10 @@
     "url": "entity-exposure/alphabet-inc.html",
     "description": "Evidence-graded exposure brief for Alphabet Inc..",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7240,8 +7727,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7257,14 +7742,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -7276,14 +7761,10 @@
     "url": "entity-exposure/amazon-com-inc.html",
     "description": "Evidence-graded exposure brief for AMAZON COM INC.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7385,8 +7866,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7402,14 +7881,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -7421,14 +7900,10 @@
     "url": "entity-exposure/amzn.html",
     "description": "Evidence-graded exposure brief for AMZN.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7614,8 +8089,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7624,21 +8097,21 @@
   },
   {
     "title": "Appellate Division of the Supreme Court of the State of New York Brief | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Appellate Division of the Supreme Court of the State of New York.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -7650,14 +8123,10 @@
     "url": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
     "description": "Evidence-graded exposure brief for Appellate Division of the Supreme Court of the State of New York.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7696,8 +8165,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -7713,14 +8180,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -7732,14 +8199,10 @@
     "url": "entity-exposure/apple-inc.html",
     "description": "Evidence-graded exposure brief for Apple Inc..",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -8051,8 +8514,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -8068,14 +8529,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -8087,14 +8548,10 @@
     "url": "entity-exposure/avgo.html",
     "description": "Evidence-graded exposure brief for AVGO.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -8970,22 +9427,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Bernard Arnault | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/bernard-arnault.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -9056,8 +9513,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -9071,16 +9526,16 @@
     "url": "entity-briefs/biddle-v-biddle.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Biddle v. Biddle.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -9092,14 +9547,10 @@
     "url": "entity-exposure/biddle-v-biddle.html",
     "description": "Evidence-graded exposure brief for Biddle v. Biddle.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -9253,29 +9704,29 @@
   },
   {
     "title": "Bill Gates | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "billionaire-briefs/bill-gates.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Bill Gates | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/bill-gates.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -9363,8 +9814,6 @@
     "url": "billionaire-control-tracker.html",
     "description": "Watchlist profiles for elite-network control layers, ecosystem routes, source gaps and public-record signals.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -9710,22 +10159,22 @@
     "sourceType": "html"
   },
   {
-    "title": "Blackwater / Xe / Academi / Constellis lineage | Matrix Reprogrammed",
+    "title": "Blackwater / Xe / Academi / Constellis lineage Contractor Brief | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "contractor-briefs/blackwater-constellis-lineage.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
+    "description": "Private contractor intelligence brief for Blackwater / Xe / Academi / Constellis lineage.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -9860,27 +10309,6 @@
     "title": "Booz Allen Hamilton | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
-    "url": "contractor-briefs/booz-allen-intelligence-contractor.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
-    "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks"
-    ],
-    "priority": 10,
-    "sourceType": "html"
-  },
-  {
-    "title": "Booz Allen Hamilton | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
     "url": "main-players/booz-allen-hamilton.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -9925,6 +10353,27 @@
     "layer": "information-narrative",
     "url": "top-52-art/batch-1/booz-allen-hamilton.html",
     "description": "Batch 1 art queue for the Top 52 Power Deck.",
+    "keywords": [
+      "money-reserves",
+      "Money / Reserves",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "title": "Booz Allen Hamilton Contractor Brief | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "contractor-briefs/booz-allen-intelligence-contractor.html",
+    "description": "Private contractor intelligence brief for Booz Allen Hamilton.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
@@ -10110,15 +10559,15 @@
   },
   {
     "title": "Brief Quality Report | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "brief-quality-report.html",
     "description": "Scores briefs by source strength, relationship depth, missing-record pressure and reader clarity.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
@@ -10159,8 +10608,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -10176,14 +10623,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -10195,14 +10642,10 @@
     "url": "entity-exposure/broadcom-inc.html",
     "description": "Evidence-graded exposure brief for Broadcom Inc..",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -10318,27 +10761,6 @@
     "title": "CACI International | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
-    "url": "contractor-briefs/caci-intelligence-contractor.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
-    "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks"
-    ],
-    "priority": 10,
-    "sourceType": "html"
-  },
-  {
-    "title": "CACI International | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
     "url": "main-players/caci-international.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -10399,6 +10821,27 @@
     "sourceType": "html"
   },
   {
+    "title": "CACI International Contractor Brief | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "contractor-briefs/caci-intelligence-contractor.html",
+    "description": "Private contractor intelligence brief for CACI International.",
+    "keywords": [
+      "money-reserves",
+      "Money / Reserves",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
     "title": "Caetani | Black Nobility &amp; Allied Dynasties Deck",
     "category": "Information / Narrative",
     "layer": "information-narrative",
@@ -10430,8 +10873,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -10440,21 +10881,21 @@
   },
   {
     "title": "California Court of Appeal Brief | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-briefs/california-court-of-appeal.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for California Court of Appeal.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -10466,14 +10907,10 @@
     "url": "entity-exposure/california-court-of-appeal.html",
     "description": "Evidence-graded exposure brief for California Court of Appeal.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -10985,8 +11422,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -11027,8 +11462,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -11832,16 +12265,12 @@
     "url": "contradiction-watch.html",
     "description": "Flags mixed grades, cross-lane conflicts and review prompts that need counter-sources or primary records.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -12128,8 +12557,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -12138,21 +12565,21 @@
   },
   {
     "title": "Court of Appeals for the Second Circuit Brief | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Court of Appeals for the Second Circuit.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -12164,14 +12591,10 @@
     "url": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
     "description": "Evidence-graded exposure brief for Court of Appeals for the Second Circuit.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -12189,8 +12612,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -12199,21 +12620,21 @@
   },
   {
     "title": "Court of Appeals of North Carolina Brief | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-briefs/court-of-appeals-of-north-carolina.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Court of Appeals of North Carolina.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -12225,14 +12646,10 @@
     "url": "entity-exposure/court-of-appeals-of-north-carolina.html",
     "description": "Evidence-graded exposure brief for Court of Appeals of North Carolina.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -12800,21 +13217,17 @@
   },
   {
     "title": "Daily Command Brief | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "daily-command-brief.html",
     "description": "Top movements, entity changes, contractor signals, billionaire and institution trackers, missing records, contradictions and watch-next triggers.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -12868,12 +13281,8 @@
     "url": "daily-epstein-update.html",
     "description": "Current Epstein public-record, court, oversight, released-file and dated reporting leads with strict evidence boundaries.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files",
       "speculation-review",
@@ -12889,8 +13298,6 @@
     "url": "daily-missing-records.html",
     "description": "A machine-readable watch queue of contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -12910,8 +13317,6 @@
     "url": "daily-power-conclusions.html",
     "description": "Plain-English conclusions generated from the graph, brain, clocks, trackers and missing-record queue.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -13187,8 +13592,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -13202,8 +13605,6 @@
     "url": "entity-briefs/defense-department.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Defense Department.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -13211,7 +13612,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -13223,14 +13626,10 @@
     "url": "entity-exposure/defense-department.html",
     "description": "Evidence-graded exposure brief for Defense Department.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -13582,14 +13981,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -13927,22 +14326,22 @@
     "sourceType": "html"
   },
   {
-    "title": "DynCorp / Amentum lineage | Matrix Reprogrammed",
+    "title": "DynCorp / Amentum lineage Contractor Brief | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "contractor-briefs/dyncorp-amentum-lineage.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
+    "description": "Private contractor intelligence brief for DynCorp / Amentum lineage.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -14269,22 +14668,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Elon Musk | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/elon-musk.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -14533,29 +14932,27 @@
   },
   {
     "title": "Entity Daily Briefs | Matrix Reprogrammed",
-    "category": "Security / Emergency Power",
-    "layer": "security-emergency",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-daily-briefs.html",
     "description": "User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Entity Exposure Index | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-exposure-index.html",
     "description": "Evidence-graded exposure index for tracked entities, corruption signals, legal records, sanctions, conflicts, contracts and missing records.",
     "keywords": [
@@ -14563,12 +14960,12 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -14615,13 +15012,11 @@
   },
   {
     "title": "Entity Timelines | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-timelines.html",
     "description": "Entity timelines generated from source routes, change records and brief events.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -15004,8 +15399,8 @@
   },
   {
     "title": "Epstein Sighting Watch | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Disclosure / Black Files",
+    "layer": "disclosure-black-files",
     "url": "epstein-sighting-watch.html",
     "description": "Tracks internet claims that Jeffrey Epstein is still alive as unverified sightings, lookalikes, fake-media risks, and claim traffic under an official-record bou",
     "keywords": [
@@ -15015,10 +15410,10 @@
       "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15427,10 +15822,10 @@
       "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15898,8 +16293,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -15913,8 +16306,6 @@
     "url": "entity-briefs/federal-procurement-policy-office.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Federal Procurement Policy Office.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -15922,7 +16313,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15969,21 +16362,19 @@
   },
   {
     "title": "Federal Reserve | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Money / Reserves",
+    "layer": "money-reserves",
     "url": "institution-briefs/federal-reserve.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -16310,14 +16701,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -16825,22 +17216,22 @@
     "sourceType": "html"
   },
   {
-    "title": "G4S / Allied Universal security lineage | Matrix Reprogrammed",
+    "title": "G4S / Allied Universal security lineage Contractor Brief | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "contractor-briefs/g4s-allied-security-lineage.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
+    "description": "Private contractor intelligence brief for G4S / Allied Universal security lineage.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -16877,8 +17268,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -16892,16 +17281,16 @@
     "url": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Trans",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -16913,14 +17302,10 @@
     "url": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
     "description": "Evidence-graded exposure brief for Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17085,8 +17470,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17100,8 +17483,6 @@
     "url": "entity-briefs/general-services-administration.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for General Services Administration.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -17109,7 +17490,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -17121,14 +17504,10 @@
     "url": "entity-exposure/general-services-administration.html",
     "description": "Evidence-graded exposure brief for General Services Administration.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17417,14 +17796,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -17461,8 +17840,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17478,14 +17855,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -17497,14 +17874,10 @@
     "url": "entity-exposure/googl.html",
     "description": "Evidence-graded exposure brief for GOOGL.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17751,8 +18124,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17793,8 +18164,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17982,8 +18351,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -17997,8 +18364,6 @@
     "url": "entity-briefs/homeland-security-department.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Homeland Security Department.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -18006,7 +18371,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -19190,14 +19557,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -19505,22 +19872,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Jeff Bezos | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/jeff-bezos.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -19652,22 +20019,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Jensen Huang | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/jensen-huang.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -20355,29 +20722,29 @@
   },
   {
     "title": "Larry Ellison | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "billionaire-briefs/larry-ellison.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Larry Ellison | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/larry-ellison.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -20732,24 +21099,25 @@
     "sourceType": "html"
   },
   {
-    "title": "Live Intel Machine",
-    "category": "Live Intel",
+    "title": "Live Intel | Matrix Reprogrammed",
+    "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "live-intel.html",
-    "description": "Dated source lanes with separate collection and publication times, official-source classification and evidence boundaries.",
+    "description": "Current dated public-source intelligence with truthful collection and publication timestamps.",
     "keywords": [
-      "live intel",
-      "source watch",
-      "declassified files",
-      "Epstein files",
-      "official records",
-      "current updates"
+      "money-reserves",
+      "Money / Reserves",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
-    "sourceType": "html",
-    "key": "live-intel-machine",
-    "subtitle": "Current source-watch updates",
-    "series": "Freedom Intelligence Engine"
+    "sourceType": "html"
   },
   {
     "title": "Lobbying Dossier | Matrix Reprogrammed",
@@ -20949,22 +21317,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
+      "identity-access",
+      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Elite Networks"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Machine Intelligence | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "machine-intelligence.html",
     "description": "Machine Intelligence: change detection, record movement, entity relationship scoring, evidence movement and clock triggers.",
     "keywords": [
@@ -21005,13 +21373,11 @@
   },
   {
     "title": "Main Player Profiles | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-player-profiles.html",
     "description": "Profiles for main players, founders, executives, billionaire watch seeds and company roles.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -21098,8 +21464,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -21113,8 +21477,6 @@
     "url": "entity-briefs/management-and-budget-office.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Management and Budget Office.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -21122,7 +21484,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -21134,14 +21498,10 @@
     "url": "entity-exposure/management-and-budget-office.html",
     "description": "Evidence-graded exposure brief for Management and Budget Office.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -21308,18 +21668,18 @@
       "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Mark Zuckerberg | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/mark-zuckerberg.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -22070,8 +22430,8 @@
   },
   {
     "title": "Matrix Reprogrammed | Live Intel, Books, Files",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "index.html",
     "description": "Matrix Reprogrammed is a source-led intelligence and book ecosystem: live public-record updates, Epstein files, declassified files, elite-control maps, Rumble/v",
     "keywords": [
@@ -22184,8 +22544,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -22199,16 +22557,16 @@
     "url": "entity-briefs/matter-of-pagliughi.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Matter of Pagliughi.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -22220,14 +22578,10 @@
     "url": "entity-exposure/matter-of-pagliughi.html",
     "description": "Evidence-graded exposure brief for Matter of Pagliughi.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -22705,22 +23059,22 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Michael Bloomberg | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/michael-bloomberg.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -22791,8 +23145,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -22808,14 +23160,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -22827,14 +23179,10 @@
     "url": "entity-exposure/microsoft-corp.html",
     "description": "Evidence-graded exposure brief for MICROSOFT CORP.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -23258,27 +23606,6 @@
     "sourceType": "html"
   },
   {
-    "title": "Monetisation Dashboard | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
-    "url": "monetisation-dashboard.html",
-    "description": "Tracks product pages, email capture, memberships, CTAs and revenue next actions.",
-    "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files"
-    ],
-    "priority": 10,
-    "sourceType": "html"
-  },
-  {
     "title": "Money Flows Dossier | Matrix Reprogrammed",
     "category": "Elite Networks",
     "layer": "elite-networks",
@@ -23415,8 +23742,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -23432,14 +23757,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -23451,14 +23776,10 @@
     "url": "entity-exposure/msft.html",
     "description": "Evidence-graded exposure brief for MSFT.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -23602,8 +23923,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -23617,8 +23936,6 @@
     "url": "entity-briefs/national-aeronautics-and-space-administration.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for National Aeronautics and Space Administration.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -23626,7 +23943,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -23638,14 +23957,10 @@
     "url": "entity-exposure/national-aeronautics-and-space-administration.html",
     "description": "Evidence-graded exposure brief for National Aeronautics and Space Administration.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -23787,14 +24102,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -24127,8 +24442,6 @@
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24142,8 +24455,6 @@
     "url": "entity-briefs/nuclear-regulatory-commission.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Nuclear Regulatory Commission.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
@@ -24151,7 +24462,9 @@
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -24163,14 +24476,10 @@
     "url": "entity-exposure/nuclear-regulatory-commission.html",
     "description": "Evidence-graded exposure brief for Nuclear Regulatory Commission.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24188,8 +24497,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24205,14 +24512,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -24224,14 +24531,10 @@
     "url": "entity-exposure/nvda.html",
     "description": "Evidence-graded exposure brief for NVDA.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24249,8 +24552,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24266,14 +24567,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -24285,14 +24586,10 @@
     "url": "entity-exposure/nvidia-corp.html",
     "description": "Evidence-graded exposure brief for NVIDIA CORP.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -24928,22 +25225,22 @@
     "sourceType": "html"
   },
   {
-    "title": "Palantir government platforms | Matrix Reprogrammed",
+    "title": "Palantir government platforms Contractor Brief | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "contractor-briefs/palantir-government-platforms.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
+    "description": "Private contractor intelligence brief for Palantir government platforms.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -25211,8 +25508,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -25226,16 +25521,16 @@
     "url": "entity-briefs/people-v-brim.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for People v. Brim.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -25247,14 +25542,10 @@
     "url": "entity-exposure/people-v-brim.html",
     "description": "Evidence-graded exposure brief for People v. Brim.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -25345,29 +25636,29 @@
   },
   {
     "title": "Peter Thiel | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "billionaire-briefs/peter-thiel.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Peter Thiel | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/peter-thiel.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -26108,14 +26399,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -26292,6 +26583,27 @@
     "layer": "information-narrative",
     "url": "public-record-intake.html",
     "description": "Matrix Reprogrammed public-record intake layer for policy feeds, filings, courts, contracts, lobbying, sanctions, procurement, registries and machine-readable s",
+    "keywords": [
+      "money-reserves",
+      "Money / Reserves",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "title": "Publishing Dashboard | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "monetisation-dashboard.html",
+    "description": "Tracks product pages, email capture, memberships, CTAs and revenue next actions.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
@@ -26568,6 +26880,27 @@
       "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "title": "Research Navigation | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "site-brain-router.html",
+    "description": "Source routing and evidence-bounded conclusion engine for Matrix Reprogrammed.",
+    "keywords": [
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -27117,22 +27450,22 @@
     "sourceType": "html"
   },
   {
-    "title": "SAIC / Leidos lineage | Matrix Reprogrammed",
+    "title": "SAIC / Leidos lineage Contractor Brief | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "contractor-briefs/leidos-saic-lineage.html",
-    "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
+    "description": "Private contractor intelligence brief for SAIC / Leidos lineage.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -27295,8 +27628,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -27310,16 +27641,16 @@
     "url": "entity-briefs/sawas-v-elzanaty.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Sawas v. Elzanaty.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -27331,14 +27662,10 @@
     "url": "entity-exposure/sawas-v-elzanaty.html",
     "description": "Evidence-graded exposure brief for Sawas v. Elzanaty.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -27497,7 +27824,7 @@
     "category": "Disclosure / Black Files",
     "layer": "disclosure-black-files",
     "url": "search.html",
-    "description": "Evidence-aware Matrix Reprogrammed search for the control structure, evidence routes, Daily Brain Brief, gold reserves, policy systems, disclosure files, specul",
+    "description": "Brain-aware Matrix Reprogrammed search for the control structure, evidence routes, Daily Brain Brief, gold reserves, policy systems, disclosure files, speculati",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
@@ -27848,27 +28175,6 @@
     "sourceType": "html"
   },
   {
-    "title": "Site Brain Router | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
-    "url": "site-brain-router.html",
-    "description": "Source routing and evidence-bounded conclusion engine for Matrix Reprogrammed.",
-    "keywords": [
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
-    ],
-    "priority": 10,
-    "sourceType": "html"
-  },
-  {
     "title": "Site Freshness Report | Matrix Reprogrammed",
     "category": "Information / Narrative",
     "layer": "information-narrative",
@@ -27877,14 +28183,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
+      "identity-access",
+      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks",
-      "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
+      "Elite Networks"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -28684,12 +28990,10 @@
     "url": "epstein-sighting-submit.html",
     "description": "Submit an unverified Epstein sighting, lookalike, fake-media, or debunk link to the Matrix Reprogrammed signal board.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
+      "identity-access",
+      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files",
       "speculation-review",
@@ -28793,8 +29097,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -28803,21 +29105,21 @@
   },
   {
     "title": "Supreme Court of Rhode Island Brief | Matrix Reprogrammed",
-    "category": "Disclosure / Black Files",
-    "layer": "disclosure-black-files",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "entity-briefs/supreme-court-of-rhode-island.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for Supreme Court of Rhode Island.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -28829,14 +29131,10 @@
     "url": "entity-exposure/supreme-court-of-rhode-island.html",
     "description": "Evidence-graded exposure brief for Supreme Court of Rhode Island.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -30026,8 +30324,6 @@
       "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -30041,16 +30337,16 @@
     "url": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
     "description": "User-friendly Matrix Reprogrammed entity brief for The New York and Presbyterian Hospital v. New York State Nurses Association.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -30062,14 +30358,10 @@
     "url": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
     "description": "Evidence-graded exposure brief for The New York and Presbyterian Hospital v. New York State Nurses Association.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
-      "elite-networks",
-      "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
@@ -31182,14 +31474,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -31801,29 +32093,29 @@
   },
   {
     "title": "Warren Buffett | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "billionaire-briefs/warren-buffett.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
   },
   {
     "title": "Warren Buffett | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "main-players/warren-buffett.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
@@ -32667,14 +32959,12 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -32749,14 +33039,12 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -32847,21 +33135,21 @@
   },
   {
     "title": "World Health Organization | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "institution-briefs/world-health-organization.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -33054,419 +33342,5 @@
     ],
     "priority": 10,
     "sourceType": "html"
-  },
-  {
-    "url": "downloads/forum-posts.json",
-    "title": "Forum Posts Export JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable Signal Board export route.",
-    "keywords": [
-      "forum",
-      "signal board",
-      "export",
-      "posts",
-      "machine data"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/forum-posts.md",
-    "title": "Forum Posts Export Markdown",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Signal Board export download route.",
-    "keywords": [
-      "forum",
-      "signal board",
-      "download"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/public-record-intake.json",
-    "title": "Public Record Intake JSON",
-    "category": "Machine Data",
-    "layer": "disclosure-black-files",
-    "description": "Machine-readable source intake manifest.",
-    "keywords": [
-      "public records",
-      "source manifest",
-      "API feeds",
-      "evidence ladder"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/machine-feed-queue.json",
-    "title": "Machine Feed Queue JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Daily pull order for source-first intelligence feeds.",
-    "keywords": [
-      "feed queue",
-      "daily pull",
-      "machine brain",
-      "records"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/public-record-intake.md",
-    "title": "Public Record Intake Download",
-    "category": "Downloads",
-    "layer": "disclosure-black-files",
-    "description": "Downloadable public-record intake manifest.",
-    "keywords": [
-      "download",
-      "public records",
-      "source routes"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/record-events.json",
-    "title": "Record Events JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Normalized public-record events produced by the Machine Feed Runner.",
-    "keywords": [
-      "record events",
-      "machine feed",
-      "evidence grade",
-      "source pulls"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/entity-observations.json",
-    "title": "Entity Observations JSON",
-    "category": "Machine Data",
-    "layer": "elite-networks",
-    "description": "Entity candidates detected from public-record pulls.",
-    "keywords": [
-      "entity observations",
-      "people",
-      "institutions",
-      "companies"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/source-pulls/source-pull-index.json",
-    "title": "Source Pull Index JSON",
-    "category": "Machine Data",
-    "layer": "disclosure-black-files",
-    "description": "Index of public-record feed pulls attempted by the Machine Feed Runner.",
-    "keywords": [
-      "source pulls",
-      "public APIs",
-      "feed runner"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/machine-digest.md",
-    "title": "Machine Digest Download",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Markdown digest of pulled records and entity observations.",
-    "keywords": [
-      "machine digest",
-      "download",
-      "record events"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/private-contractor-intelligence.json",
-    "title": "Private Contractor Intelligence JSON",
-    "category": "Machine Data",
-    "layer": "security-emergency",
-    "description": "Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.",
-    "keywords": [
-      "private contractor intelligence",
-      "contractor profiles",
-      "main players",
-      "contractor score"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/private-contractor-intelligence.md",
-    "title": "Private Contractor Intelligence Download",
-    "category": "Downloads",
-    "layer": "security-emergency",
-    "description": "Downloadable contractor intelligence brief.",
-    "keywords": [
-      "contractor intelligence",
-      "download",
-      "Blackwater",
-      "Constellis"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/elite-reports.json",
-    "title": "Elite Reports JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable index of reader reports.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/elite-reports.md",
-    "title": "Elite Reports Markdown",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Downloadable reader-report summary.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/master-brief-engine.json",
-    "title": "Master Brief Engine JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable output index for the master brief layer.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/daily-command-brief.json",
-    "title": "Daily Command Brief JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable daily command brief.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/brief-quality-report.json",
-    "title": "Brief Quality JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable brief quality scores.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/missing-records.json",
-    "title": "Missing Records JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable missing-record queue.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/billionaire-control-index.json",
-    "title": "Billionaire Control JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable elite-network watch seed profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/institution-control-index.json",
-    "title": "Institution Control JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable institution profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/subject-briefs.json",
-    "title": "Subject Briefs JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable subject briefs.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/contradictions.json",
-    "title": "Contradictions JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable contradiction watch.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/main-player-profiles.json",
-    "title": "Main Players JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable main player profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/entity-timelines.json",
-    "title": "Entity Timelines JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable entity timelines.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "sourceId": "usaspending-recent-contracts",
+  "sourceLabel": "USAspending.gov — Recent Contract Awards",
+  "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+  "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+  "retrievedAt": "2026-07-20T07:04:37.480Z",
+  "contentType": "application/json",
+  "bytes": 482,
+  "rawHash": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a",
+  "normalizedHash": "6330cc14020272b6368be6022ad7137cb59274a2537dccafa45d028c006f3c64",
+  "truncated": false,
+  "normalizedText": "{ \"limit\": 100, \"messages\": [ \"For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01. For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. \" ], \"page_metadata\": {}, \"results\": [], \"spending_level\": \"awards\" }"
+}

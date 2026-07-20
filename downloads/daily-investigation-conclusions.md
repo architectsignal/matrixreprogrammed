@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-07-19T08:57:13.971Z
+Generated: 2026-07-20T07:04:26.957Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -8,15 +8,15 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 
 ## Summary
 
-- sourcesScheduled: 20
-- sourcesFetched: 16
-- sourceFailures: 4
+- sourcesScheduled: 12
+- sourcesFetched: 12
+- sourceFailures: 0
 - changedSources: 6
-- findingsInWindow: 1036
+- findingsInWindow: 955
 - establishedWrongdoingFindings: 18
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
-- meaningfulSourceChanges: 4
+- meaningfulSourceChanges: 6
 
 ## Permanent Evidence Method
 
@@ -347,6 +347,42 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
 Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf
+
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+
+### content changed: USAspending.gov — Recent Contract Awards
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://api.usaspending.gov/api/v2/search/spending_by_award/
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 

@@ -1,0 +1,25 @@
+name: Money Release Dispatch Now
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/money-release-dispatch-now.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch latest guarded production release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

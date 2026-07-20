@@ -32,7 +32,8 @@ jobs:
             'Money Intelligence Pages',
             'Matrix Reprogrammed Controlled Production Deploy',
             'Money Intelligence Production Proof',
-            'Money Deployment Diagnostic'
+            'Money Deployment Diagnostic',
+            'Money Release Dispatch Now'
           ]);
           const runs=(source.workflow_runs||[])
             .filter(run=>names.has(run.name))
@@ -52,7 +53,7 @@ jobs:
           fs.writeFileSync('data/money-deploy-diagnostic.json',JSON.stringify({
             checkedAt:new Date().toISOString(),
             repository:process.env.GITHUB_REPOSITORY,
-            diagnosticVersion:9,
+            diagnosticVersion:10,
             runs
           },null,2)+'\n');
           NODE

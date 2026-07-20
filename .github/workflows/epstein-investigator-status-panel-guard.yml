@@ -1,0 +1,41 @@
+name: Epstein Investigator Status Panel Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ai-speculative-conclusions.js
+      - scripts/ensure-epstein-investigator-status-panel.js
+      - .github/workflows/epstein-investigator-status-panel-guard.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: epstein-investigator-status-panel-guard
+  cancel-in-progress: true
+
+jobs:
+  preserve-status-panel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Restore status panel when a generator removes it
+        run: node scripts/ensure-epstein-investigator-status-panel.js
+      - name: Commit repaired public script
+        run: |
+          if git diff --quiet -- ai-speculative-conclusions.js; then
+            echo "Status panel already present."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-speculative-conclusions.js
+          git commit -m "Restore Epstein Investigator status panel [deploy]"
+          git push origin main

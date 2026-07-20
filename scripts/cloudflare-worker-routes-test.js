@@ -12,19 +12,46 @@ const need = file => { if (!exists(file)) fail(`missing required file: ${file}`)
 const needText = (file, text, label = text) => { if (!exists(file) || !read(file).includes(text)) fail(`${file}: missing ${label}`); };
 const forbidText = (file, text, label = text) => { if (exists(file) && read(file).includes(text)) fail(`${file}: should not contain ${label}`); };
 
-const membershipPatch = spawnSync(process.execPath, [full('scripts/patch-membership-tiers.js')], {
-  cwd: root,
-  encoding: 'utf8',
-  stdio: 'pipe',
-  maxBuffer: 20 * 1024 * 1024,
-  env: process.env
-});
-if (membershipPatch.status !== 0) fail(`canonical membership restore failed: ${membershipPatch.stderr || membershipPatch.stdout}`);
+function runNodeRepair(script, label) {
+  const result = spawnSync(process.execPath, [full(script)], {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: 'pipe',
+    maxBuffer: 20 * 1024 * 1024,
+    env: process.env
+  });
+  if (result.status !== 0) fail(`${label} failed: ${result.stderr || result.stdout}`);
+  return result;
+}
+
+const membershipPatch = runNodeRepair('scripts/patch-membership-tiers.js', 'canonical membership restore');
 if (exists('membership.html') && exists('_site')) {
   fs.copyFileSync(full('membership.html'), full('_site/membership.html'));
   const extensionless = full('_site/membership');
   if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(full('membership.html'), extensionless);
   if (exists('paypal-membership.js')) fs.copyFileSync(full('paypal-membership.js'), full('_site/paypal-membership.js'));
+}
+
+// Late site generators can restore the legacy forum client and Signal Pass UI.
+// Reapply every canonical forum owner at this final in-build audit boundary,
+// then copy the exact repaired assets into the deployable Cloudflare directory.
+const forumRepairResults = [
+  ['scripts/repair-forum-member-posting.js', 'forum member-posting repair'],
+  ['scripts/repair-forum-login-canonical.js', 'same-origin member-login repair'],
+  ['scripts/repair-forum-session-compatibility.js', 'shared-session compatibility repair'],
+  ['scripts/repair-forum-page-consistency.js', 'forum page consistency repair'],
+  ['scripts/forum-member-posting-test.js', 'forum member-posting regression proof']
+].map(([script, label]) => ({ script, label, result: runNodeRepair(script, label) }));
+
+if (exists('_site')) {
+  for (const file of ['forum.js', 'forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html', 'member-login.html']) {
+    if (!exists(file)) continue;
+    fs.copyFileSync(full(file), full(`_site/${file}`));
+    if (file.endsWith('.html')) {
+      const extensionless = full(`_site/${file.replace(/\.html$/, '')}`);
+      if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(full(file), extensionless);
+    }
+  }
 }
 
 [
@@ -96,7 +123,7 @@ for (const marker of ['/api/paypal/subscription/create','Continue securely to Pa
 needText('billing-dashboard.html', 'billing-dashboard.js');
 needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 
-for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records']) needText('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
+for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records']) needText('migrations/phase6_paypal-subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
 needText('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot');
 
 for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = true','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
@@ -127,11 +154,17 @@ const report = {
     stdout: String(membershipPatch.stdout || '').slice(-1000),
     stderr: String(membershipPatch.stderr || '').slice(-1000)
   },
+  forumRepairResults: forumRepairResults.map(item => ({
+    script: item.script,
+    status: item.result.status,
+    stdout: String(item.result.stdout || '').slice(-1000),
+    stderr: String(item.result.stderr || '').slice(-1000)
+  })),
   workerEntrypoint: 'src/worker-production.js',
   forumStorage: 'Cloudflare D1 authoritative with strict insert and exact read-after-write confirmation; KV compatibility/recovery only',
   forumAccess: 'verified free member session across main, speculation and Epstein boards',
   paymentStatus: 'runtime-gated-dashboard-managed',
-  boundary: 'PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked. Forum success is impossible without authenticated D1 write/read proof.'
+  boundary: 'Late generators are repaired before this audit. PayPal remains runtime-gated and forum success is impossible without authenticated D1 write/read proof.'
 };
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
@@ -143,4 +176,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked strict routing, authenticated D1 forum write/read, all three forum pages, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');
+console.log('Repaired late generators, then checked strict routing, authenticated D1 forum write/read, all three forum pages, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');

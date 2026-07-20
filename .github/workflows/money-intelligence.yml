@@ -1,136 +1,75 @@
-name: Money Intelligence Pages
+name: Money Intelligence Compatibility Check
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - 'follow-the-money.html'
       - 'making-money.html'
-      - 'follow-the-money.js'
-      - 'making-money.js'
-      - 'money-intelligence.css'
+      - 'follow-the-money/**'
+      - 'making-money/**'
+      - 'money-*.js'
+      - 'money-*.html'
+      - 'money-*.css'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
-      - 'data/subject-intelligence-profiles.json'
+      - 'data/money-intelligence-registry.json'
+      - 'data/money-search-index.json'
+      - 'data/money-intelligence-brief-feed.json'
+      - 'data/wealth-methods.json'
       - 'scripts/build-money-intelligence-system.js'
+      - 'scripts/build-money-intelligence-expansion.js'
+      - 'scripts/money-intelligence-expansion-test.js'
       - 'scripts/build-all-branded-download-pdfs.js'
       - 'scripts/build-deep-pdf-intelligence.mjs'
-      - 'scripts/relocate-pdf-report-manifests.js'
-      - 'scripts/restore-branded-pdf-flagship-contract.js'
-      - 'src/worker-intelligence-analysis.js'
-      - 'scripts/build-black-file-pdf.js'
       - 'scripts/deep-pdf-intelligence-test.js'
       - 'scripts/money-intelligence-system-test.js'
-      - 'scripts/finalize-money-intelligence-release.js'
-      - 'scripts/money-intelligence-live-test.js'
-      - 'scripts/build-deploy-manifest.js'
-      - 'scripts/ensure-evidence-badge-routes.js'
-      - 'scripts/repair-final-evidence-badge-duplicates.js'
-      - 'scripts/final-release-sanitize.js'
-      - 'scripts/full-site-function-tool-audit.js'
-      - '.github/workflows/money-production-proof.yml'
+      - 'src/worker-intelligence-reports.js'
       - '.github/workflows/money-intelligence.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'follow-the-money.html'
-      - 'making-money.html'
-      - 'follow-the-money.js'
-      - 'making-money.js'
-      - 'money-intelligence.css'
-      - 'data/follow-the-money-top-100.json'
-      - 'data/making-money-core.json'
-      - 'data/subject-intelligence-profiles.json'
-      - 'scripts/build-money-intelligence-system.js'
-      - 'scripts/build-all-branded-download-pdfs.js'
-      - 'scripts/build-deep-pdf-intelligence.mjs'
-      - 'scripts/relocate-pdf-report-manifests.js'
-      - 'scripts/restore-branded-pdf-flagship-contract.js'
-      - 'src/worker-intelligence-analysis.js'
-      - 'scripts/build-black-file-pdf.js'
-      - 'scripts/deep-pdf-intelligence-test.js'
-      - 'scripts/money-intelligence-system-test.js'
-      - 'scripts/finalize-money-intelligence-release.js'
-      - 'scripts/money-intelligence-live-test.js'
-      - 'scripts/build-deploy-manifest.js'
-      - 'scripts/ensure-evidence-badge-routes.js'
-      - 'scripts/repair-final-evidence-badge-duplicates.js'
-      - 'scripts/final-release-sanitize.js'
-      - 'scripts/full-site-function-tool-audit.js'
-      - '.github/workflows/money-production-proof.yml'
-      - '.github/workflows/money-intelligence.yml'
+      - '.github/workflows/money-intelligence-refresh.yml'
 
 permissions:
-  actions: write
-  contents: write
+  contents: read
 
 concurrency:
-  group: money-intelligence-pages-${{ github.event_name }}-${{ github.ref }}
+  group: money-intelligence-compatibility-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build-and-commit:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Build profiles and guides
-        run: node scripts/build-money-intelligence-system.js
-      - name: Upgrade generated PDFs to deep intelligence reports
+          node-version: 24
+
+      - name: Validate legacy and current money generators
         run: |
+          node --check scripts/build-money-intelligence-system.js
+          node --check scripts/build-money-intelligence-expansion.js
+          node scripts/build-money-intelligence-system.js
           node scripts/build-all-branded-download-pdfs.js
           node scripts/build-black-file-pdf.js
-      - name: Validate money intelligence system
-        run: node scripts/money-intelligence-system-test.js
-      - name: Validate deep PDF intelligence reports
-        run: node scripts/deep-pdf-intelligence-test.js
-      - name: Upload deep PDF validation diagnostics
+          node scripts/money-intelligence-system-test.js
+          node scripts/deep-pdf-intelligence-test.js
+          node scripts/build-money-intelligence-expansion.js
+          node scripts/money-intelligence-expansion-test.js
+
+      - name: Upload validation diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: deep-pdf-validation-${{ github.run_id }}
+          name: money-intelligence-compatibility-${{ github.run_id }}
           path: |
             downloads/deep-pdf-intelligence-test.json
             downloads/deep-pdf-intelligence-test-failure.json
-            downloads/branded-download-index.json
+            downloads/wealth-guides/index.json
+            data/money-intelligence-brief-feed.json
           if-no-files-found: warn
           retention-days: 14
-      - name: Commit generated outputs on main
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          set -euo pipefail
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add follow-the-money/people follow-the-money/making-money.html downloads/wealth-guides
-          git add data/report-manifests downloads/branded-download-index.json downloads/branded-download-index.md downloads/subject-pdf-index.json downloads/subject-pdf-index.md downloads/subject-*.pdf downloads/the-black-file-matrix-reprogrammed.pdf downloads/deep-pdf-intelligence-test.json
-          git add -A downloads/report-manifests
-          for f in index.html start-here.html books.html power-atlas.html evidence-vault.html live-intel.html search.html billionaire-watch.html daily-command-brief.html download-center.html member-dashboard.html dashboard.html members.html account.html; do
-            if [ -f "$f" ]; then git add "$f"; fi
-          done
-          if git diff --cached --quiet; then
-            echo "No generated changes"
-          else
-            git commit -m "Generate deep money intelligence reports [deploy]"
-            for attempt in 1 2 3; do
-              git fetch origin main
-              git rebase origin/main
-              if git push origin HEAD:main; then
-                exit 0
-              fi
-              echo "Push attempt $attempt failed because main advanced; rebasing and retrying."
-            done
-            echo "Unable to publish generated outputs after three rebased attempts."
-            exit 1
-          fi
-      - name: Dispatch guarded production deployment
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main \
-            -f confirmation='DEPLOY MATRIX REPROGRAMMED'

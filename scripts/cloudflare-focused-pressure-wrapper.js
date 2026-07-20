@@ -43,7 +43,6 @@ function parseJson(value, fromSite = false) {
 fs.mkdirSync(fp('downloads'), { recursive: true });
 const deploySha = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '';
 
-/* Legacy generators may still run, but the canonical reconciliation always runs last. */
 for (const [label, file] of [
   ['deploy status', 'scripts/build-deploy-status.js'],
   ['generated content repair', 'scripts/repair-generated-site-artifacts.js'],
@@ -84,7 +83,7 @@ for (const marker of [
   "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'"
 ]) needText('src/worker-production.js', marker, `strict Worker marker ${marker}`);
 for (const marker of ['Cloudflare D1 MEMBERS_DB.forum_posts','INSERT OR IGNORE INTO forum_posts','kv_forum_migration_v1','D1 authoritative; KV compatibility mirror']) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
-for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/checkout-intent','/api/paypal/subscription/confirm','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
+for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/checkout-intent','/api/paypal/subscription/create','/api/paypal/subscription/return','/api/paypal/subscription/confirm','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
 needText('src/worker.js', 'env.ASSETS.fetch', 'legacy asset fetch behind strict boundary');
 
 for (const marker of ['Free Member','€0','€3','€6','€9','paypal-membership.js','paypal-membership-status','Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) {
@@ -93,10 +92,12 @@ for (const marker of ['Free Member','€0','€3','€6','€9','paypal-membersh
 }
 forbidText('membership.html', 'Coming soon — no payment taken', 'obsolete deferred membership page');
 forbidSiteText('membership.html', 'Coming soon — no payment taken', 'built obsolete deferred membership page');
-for (const marker of ['/api/paypal/checkout-intent','/api/paypal/subscription/confirm','Retry PayPal checkout']) {
-  needText('paypal-membership.js', marker, `PayPal membership runtime ${marker}`);
-  needSiteText('paypal-membership.js', marker, `built PayPal membership runtime ${marker}`);
+for (const marker of ['/api/paypal/subscription/create','Continue securely to PayPal','/api/paypal/config','location.assign']) {
+  needText('paypal-membership.js', marker, `PayPal server redirect runtime ${marker}`);
+  needSiteText('paypal-membership.js', marker, `built PayPal server redirect runtime ${marker}`);
 }
+forbidText('paypal-membership.js', 'paypal.com/sdk/js', 'obsolete browser-loaded PayPal SDK');
+forbidSiteText('paypal-membership.js', 'paypal.com/sdk/js', 'built obsolete browser-loaded PayPal SDK');
 needText('billing-dashboard.html', 'billing-dashboard.js', 'billing dashboard runtime');
 needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'payment admin runtime');
 
@@ -138,8 +139,8 @@ const report = {
   softIssues: soft,
   steps,
   forumStorage: 'Cloudflare D1 is authoritative behind the strict production Worker; KV is migration and compatibility only.',
-  paymentStatus: 'runtime-gated-dashboard-managed: Cloudflare owns credentials and switches, Wrangler preserves them, sandbox checkout remains closed outside rehearsal, and the Worker plus D1 enforce activation.',
-  boundary: 'This pressure gate blocks stale Worker entrypoints, false-success forum fallbacks, health/manifest drift, repository payment overrides, unguarded payment activation and legacy generator regression.'
+  paymentStatus: 'runtime-gated-dashboard-managed: the Worker creates server-side PayPal subscriptions, redirects to the official approval page, verifies returns, and preserves dashboard-managed credentials and switches plus D1 activation.',
+  boundary: 'This pressure gate blocks stale Worker entrypoints, false-success forum fallbacks, health/manifest drift, repository payment overrides, unguarded payment activation, obsolete browser SDK checkout and legacy generator regression.'
 };
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-wrapper.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-report.json'), JSON.stringify(report, null, 2));
@@ -150,4 +151,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE FOCUSED PRESSURE PASSED');
-console.log('Strict D1 forum and runtime-gated PayPal production are reconciled and commit-bound.');
+console.log('Strict D1 forum, consent-bound report automation and runtime-gated server-created PayPal subscriptions are reconciled and commit-bound.');

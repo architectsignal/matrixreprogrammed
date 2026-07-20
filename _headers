@@ -6,13 +6,13 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /*.html
-  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  Cache-Control: no-cache, max-age=0, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /*.js
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /*.png
   Cache-Control: public, max-age=31536000, immutable
@@ -28,6 +28,120 @@
 
 /*.svg
   Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/search-index.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=600, stale-while-revalidate=86400
+
+/data/evidence-network-map.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/data/*.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+
+/data/live-intel.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-epstein-update.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/live-machine-status.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-power-conclusions.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-investigation-conclusions.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/daily-brain-brief.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data/outcome-briefings.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/deploy-manifest.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+
+/deploy-manifest
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+
+/deploy-health.html
+  Cache-Control: no-store, max-age=0
+
+/deploy-health
+  Cache-Control: no-store, max-age=0
+
+/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+
+/downloads/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+  Content-Disposition: attachment
+
+/
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/start-here
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/membership
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/live-intel
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/daily-epstein-update
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/daily-power-conclusions
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/daily-investigation-conclusions
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/daily-brain-brief
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/outcome-briefings
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/security-privacy
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/dark-web-safety
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/geographic-power-atlas
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/data-lab
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/evidence-archive
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/search
+  Cache-Control: no-cache, max-age=0, must-revalidate
 
 /downloads/*.pdf
   Content-Disposition: attachment

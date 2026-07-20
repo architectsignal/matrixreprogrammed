@@ -101,4 +101,10 @@ const homepageTouched = patchHomepage();
 const nextStepTouched = patchNextSteps();
 const status = buildDeployHealth();
 patchIndexes();
+
+// Rebuild current-source dependants late so legacy generators cannot erase them.
+require('./build-daily-epstein-update.js');
+require('./build-card-live-updates.js');
+require('./repair-card-live-coverage.js');
+
 console.log(`Machine sharpening upgrade complete: homepage ${homepageTouched ? 'patched' : 'unchanged'}, ${nextStepTouched} conversion page(s) patched, deploy health ${status.ok ? 'ready' : 'check needed'}.`);

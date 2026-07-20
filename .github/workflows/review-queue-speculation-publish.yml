@@ -40,6 +40,7 @@ jobs:
   publish-labelled-speculation:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,8 +51,6 @@ jobs:
           node-version: 24
       - name: Build, publish and verify review-queue speculation
         id: publish
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
@@ -60,6 +59,9 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            node --check scripts/publish-review-queue-as-speculation.js
+            node --check scripts/patch-review-queue-speculation-page.js
+            node --check scripts/review-queue-speculation-publication-test.js
             node scripts/publish-review-queue-as-speculation.js
             node scripts/patch-review-queue-speculation-page.js
             node scripts/review-queue-speculation-publication-test.js

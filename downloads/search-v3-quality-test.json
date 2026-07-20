@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T06:36:45.161Z",
+  "generatedAt": "2026-07-20T10:23:32.337Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 28862,
-    "primarySources": 26481,
-    "relationships": 12133
+    "results": 29135,
+    "primarySources": 26496,
+    "relationships": 12292
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "28862 results"
+      "detail": "29135 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "28862/28862"
+      "detail": "29135/29135"
     },
     {
       "name": "normalised field sourceType",
@@ -102,7 +102,7 @@
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "entity-registry.html#entity-courtcase-258ceea3dbd6735ad84e, entity-registry.html#entity-courtcase-505fe3fcdd158280815f, entity-registry.html#entity-courtcase-1c529b83ece3723e011c, entity-registry.html#entity-courtcase-e9c2ae4138859f9bf476, entity-registry.html#entity-courtcase-e94b77b3e3c4f12a5614"
+      "detail": "entity-registry.html#entity-courtcase-c760d9345c737a912333, entity-registry.html#entity-courtcase-258ceea3dbd6735ad84e, entity-registry.html#entity-courtcase-505fe3fcdd158280815f, entity-registry.html#entity-courtcase-1c529b83ece3723e011c, entity-registry.html#entity-courtcase-e9c2ae4138859f9bf476"
     },
     {
       "name": "query WikiLeaks cables",
@@ -117,22 +117,22 @@
     {
       "name": "query SEC enforcement",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-3516b4fc53fd975bf128, relationship-registry.html?relationship=relationship-da510865773808b14d3a, relationship-registry.html?relationship=relationship-296404762b9857f3f263, entity-registry.html#entity-entity-person-2742f885d656a0bee20b, entity-registry.html#entity-market-company-blackstone-secd-lending-fd-7c8c44ba88f63986"
+      "detail": "relationship-registry.html?relationship=relationship-3516b4fc53fd975bf128, relationship-registry.html?relationship=relationship-da510865773808b14d3a, relationship-registry.html?relationship=relationship-e07a3042ec1800d48686, relationship-registry.html?relationship=relationship-296404762b9857f3f263, entity-registry.html#entity-entity-person-2742f885d656a0bee20b"
     },
     {
       "name": "query public corruption conviction",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=7aef79648bfaeff29154f59a, daily-investigation-conclusions.html?finding=1135f23dfb6d479f02ffb375, daily-investigation-conclusions.html?finding=b0752a5b5c6b0c9e38ca00c0, daily-investigation-conclusions.html?finding=96b05c92e631496231657f3b, daily-investigation-conclusions.html?finding=1ded9999bb43f93537a7cc9e"
+      "detail": "daily-investigation-conclusions.html?finding=7aef79648bfaeff29154f59a, daily-investigation-conclusions.html?finding=1135f23dfb6d479f02ffb375, daily-investigation-conclusions.html?finding=b0752a5b5c6b0c9e38ca00c0, daily-investigation-conclusions.html?finding=96b05c92e631496231657f3b, daily-investigation-conclusions.html?finding=af846974d1c737e62eb13ed9"
     },
     {
       "name": "query inspector-general misconduct",
       "ok": true,
-      "detail": "source-changes.html?change=9d13cbe9989a1430580de2ff, source-changes.html?change=f4b44414c2c9ee4fd9b0ea74, relationship-registry.html?relationship=relationship-e5b9226f8eae7fb5596b, relationship-registry.html?relationship=relationship-e8b0062e2d23f05b7fe3, relationship-registry.html?relationship=relationship-462e1d1b50b8723d3dbc"
+      "detail": "source-changes.html?change=9d13cbe9989a1430580de2ff, source-changes.html?change=f4b44414c2c9ee4fd9b0ea74, relationship-registry.html?relationship=relationship-0b19e0e4defac2df6b76, relationship-registry.html?relationship=relationship-e5b9226f8eae7fb5596b, relationship-registry.html?relationship=relationship-e8b0062e2d23f05b7fe3"
     },
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-fa93fbbe09c977548172, relationship-registry.html?relationship=relationship-d5a176afbe490dd97dec, relationship-registry.html?relationship=relationship-46c7a5f63412d417dc67, relationship-registry.html?relationship=relationship-acb1c1b3a9aa83a58f48, relationship-registry.html?relationship=relationship-b89a4227e890f30bb6a2"
+      "detail": "relationship-registry.html?relationship=relationship-fa93fbbe09c977548172, relationship-registry.html?relationship=relationship-46c7a5f63412d417dc67, relationship-registry.html?relationship=relationship-b89a4227e890f30bb6a2, entity-registry.html#entity-contract-326d29849b1c064c829d, relationship-registry.html?relationship=relationship-f15a4204f280717e144c"
     },
     {
       "name": "query missing record redaction log",
@@ -142,7 +142,7 @@
     {
       "name": "exact primary SEC record outranks general commentary",
       "ok": true,
-      "detail": "P:relationship-registry.html?relationship=relationship-3516b4fc53fd975bf128, P:relationship-registry.html?relationship=relationship-da510865773808b14d3a, P:relationship-registry.html?relationship=relationship-296404762b9857f3f263, P:entity-registry.html#entity-entity-person-2742f885d656a0bee20b, P:entity-registry.html#entity-market-company-blackstone-secd-lending-fd-7c8c44ba88f63986, P:entity-registry.html#entity-market-company-cheesecake-factory-inc-5a6e8cf979e388cd, P:entity-registry.html#entity-market-company-clear-secure-inc-7f314da7ec050c38, P:entity-registry.html#entity-market-company-first-trust-nasdaq-cybersecurity-etf-8bae028677d85364"
+      "detail": "P:relationship-registry.html?relationship=relationship-3516b4fc53fd975bf128, P:relationship-registry.html?relationship=relationship-da510865773808b14d3a, P:relationship-registry.html?relationship=relationship-e07a3042ec1800d48686, P:relationship-registry.html?relationship=relationship-296404762b9857f3f263, P:entity-registry.html#entity-entity-person-2742f885d656a0bee20b, P:entity-registry.html#entity-market-company-blackstone-secd-lending-fd-7c8c44ba88f63986, P:entity-registry.html#entity-market-company-cheesecake-factory-inc-5a6e8cf979e388cd, P:entity-registry.html#entity-market-company-clear-secure-inc-7f314da7ec050c38"
     },
     {
       "name": "dedicated source-change result ranks for missing-record intent",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "28862 vs 28862"
+      "detail": "29135 vs 29135"
     },
     {
       "name": "facet evidenceGrade",

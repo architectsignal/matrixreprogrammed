@@ -24,7 +24,7 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const releaseBase = 'f3ba27d1c92927f4c4589ba74309297900619077';
+            const releaseBase = 'd94e6223fa546e74d6ba5153383adfb6ca5c705d';
             const response = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
 
             const moneyTarget = response.data.workflows.find(
@@ -107,8 +107,11 @@ jobs:
             });
             for (const run of runs.data.workflow_runs) {
               const active = ['queued', 'in_progress', 'waiting', 'pending', 'requested'].includes(run.status);
-              const successful = run.status === 'completed' && run.conclusion === 'success';
-              if (!active && !successful) continue;
+              if (active) {
+                core.info(`A controlled production run is already active; no concurrent deployment will be created: ${run.html_url}`);
+                return;
+              }
+              if (run.status !== 'completed' || run.conclusion !== 'success') continue;
               try {
                 const comparison = await github.rest.repos.compareCommits({
                   owner,
@@ -117,7 +120,7 @@ jobs:
                   head: run.head_sha
                 });
                 if (comparison.data.status === 'identical' || comparison.data.status === 'ahead') {
-                  core.info(`An active or successful controlled production run covers this release: ${run.html_url}`);
+                  core.info(`A successful controlled production run covers this release: ${run.html_url}`);
                   return;
                 }
               } catch (error) {

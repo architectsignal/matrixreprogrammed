@@ -1,17 +1,305 @@
 {
-  "version": "1.0",
-  "updated": "2026-07-20T00:00:00Z",
-  "status": "awaiting local investigator cycle",
-  "source": "U.S. Department of Justice Epstein / EFTA public-record corpus",
-  "currentDataset": "pending",
-  "corpusDocuments": 0,
-  "corpusPassages": 0,
-  "eligiblePassages": 0,
+  "version": "2.0",
+  "updated": "2026-07-20T20:01:49.242Z",
+  "status": "active public-record analysis",
+  "source": "Matrix Reprogrammed Daily Epstein Update and linked public-record routes",
+  "currentDataset": "data/daily-epstein-update.json",
+  "sourceWindowUpdated": "2026-07-20T19:55:58.505Z",
+  "corpusDocuments": 15,
+  "corpusPassages": 15,
+  "eligiblePassages": 15,
   "queuedMissions": 0,
-  "completedMissions": 0,
-  "publishedConclusions": 0,
+  "completedMissions": 4,
+  "publishedConclusions": 4,
   "reviewDrafts": 0,
-  "lastMissionStatus": "Dedicated local lane not yet installed",
-  "automaticPublicationScope": "system-level speculation page only",
-  "boundary": "Only public-source, evidence-bounded system-level hypotheses may be published. Private victim data, minors, unsupported accusations, named-person guilt inferences and guilt by association remain prohibited."
+  "lastMissionStatus": "Rebuilt 4 bounded hypotheses from 15 current Epstein record leads.",
+  "automaticPublicationScope": "Epstein system-level speculation page only",
+  "engine": "deterministic public-record hypothesis builder",
+  "docket": [
+    {
+      "classification": "ai_speculative_conclusion",
+      "topic": "epstein",
+      "investigationLane": "epstein-public-record-docket",
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "generatedAt": "2026-07-20T20:01:49.242Z",
+      "lastReviewedAt": null,
+      "id": "EP-AI-001",
+      "title": "Fragmented custody and disclosure rules may be the main bottleneck in the Epstein files",
+      "status": "evidence-supported",
+      "confidence": {
+        "score": 66,
+        "band": "moderate analytic support",
+        "meaning": "Support for a records-management hypothesis, not proof of concealment or unlawful conduct."
+      },
+      "conclusion": "The most important obstacle to a complete public record may be fragmented custody, redaction rules, victim-protection duties, court restrictions and overlapping federal or state authority rather than one single unreleased master file.",
+      "documentedSupport": [
+        "15 current lead(s) refer to files, records, redaction, release, disclosure or Justice Department access.",
+        "The current source window distinguishes official records, oversight actions and discovery leads instead of treating all “Epstein files” as one evidentiary object."
+      ],
+      "sources": [
+        {
+          "label": "Current custody or disclosure lead",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5",
+          "locator": "House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News",
+          "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
+        },
+        {
+          "label": "Daily Epstein Update",
+          "url": "daily-epstein-update.html",
+          "locator": "15 current record leads",
+          "evidenceClass": "current public-record window"
+        },
+        {
+          "label": "Epstein Command Center",
+          "url": "epstein-files.html",
+          "locator": "evidence and file routes",
+          "evidenceClass": "public evidence hub"
+        },
+        {
+          "label": "Daily Epstein JSON",
+          "url": "data/daily-epstein-update.json",
+          "locator": "2026-07-20T19:56:08.728Z",
+          "evidenceClass": "machine-readable source window"
+        }
+      ],
+      "contraryEvidence": [
+        "A documented central index, unified evidence inventory or comprehensive release protocol could show that custody is less fragmented than the public record suggests.",
+        "Some non-disclosure may result from lawful victim protection, sealed proceedings, grand-jury rules or unrelated privacy obligations rather than institutional obstruction."
+      ],
+      "missingRecords": [
+        "A complete cross-agency evidence inventory",
+        "Chain-of-custody and transfer logs",
+        "Redaction and withholding schedules with legal authority",
+        "A reconciliation of federal, state, civil and congressional record holdings"
+      ],
+      "alternativeExplanations": [
+        "Lawful privacy and victim-protection restrictions",
+        "Ordinary inter-agency record fragmentation",
+        "Pending litigation or grand-jury secrecy",
+        "Duplicate or low-value material being described as separate “files”"
+      ],
+      "falsificationTests": [
+        "A verified unified inventory accounts for all major collections",
+        "Agencies publish consistent custody and withholding explanations",
+        "Court records show the disputed material does not exist or is duplicative",
+        "Independent audits find no material gaps between known collections"
+      ],
+      "boundary": "This hypothesis concerns record custody and disclosure mechanics. It does not establish deliberate suppression, a secret controller, or wrongdoing by any named person or institution."
+    },
+    {
+      "classification": "ai_speculative_conclusion",
+      "topic": "epstein",
+      "investigationLane": "epstein-public-record-docket",
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "generatedAt": "2026-07-20T20:01:49.242Z",
+      "lastReviewedAt": null,
+      "id": "EP-AI-002",
+      "title": "Oversight activity may increase records without producing a complete evidentiary picture",
+      "status": "evidence-supported",
+      "confidence": {
+        "score": 62,
+        "band": "moderate analytic support",
+        "meaning": "Support for an oversight-process pattern, not a forecast that any inquiry will prove misconduct."
+      },
+      "conclusion": "Congressional interviews, hearings and document requests may expand the public record while still leaving unresolved differences between testimony, documentary corroboration, legal privilege and evidence of actual conduct.",
+      "documentedSupport": [
+        "7 current lead(s) refer to congressional, committee, hearing, interview, testimony or oversight activity.",
+        "The Daily Epstein system already separates mention, testimony, subpoena, allegation, settlement, charge and conviction as different evidence classes."
+      ],
+      "sources": [
+        {
+          "label": "Current oversight lead",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5",
+          "locator": "House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News",
+          "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
+        },
+        {
+          "label": "Daily Epstein Update",
+          "url": "daily-epstein-update.html",
+          "locator": "15 current record leads",
+          "evidenceClass": "current public-record window"
+        },
+        {
+          "label": "Epstein Command Center",
+          "url": "epstein-files.html",
+          "locator": "evidence and file routes",
+          "evidenceClass": "public evidence hub"
+        },
+        {
+          "label": "Daily Epstein JSON",
+          "url": "data/daily-epstein-update.json",
+          "locator": "2026-07-20T19:56:08.728Z",
+          "evidenceClass": "machine-readable source window"
+        }
+      ],
+      "contraryEvidence": [
+        "An inquiry may obtain primary records that resolve key questions decisively.",
+        "Independent court or agency releases may provide stronger evidence than public hearing coverage."
+      ],
+      "missingRecords": [
+        "Full interview transcripts and exhibits",
+        "Document-production indexes",
+        "Privilege and refusal logs",
+        "Independent corroboration of material testimony"
+      ],
+      "alternativeExplanations": [
+        "Routine political oversight",
+        "Partisan or media incentives shaping the visible agenda",
+        "Witness caution based on legal advice",
+        "Duplicative questioning of already documented relationships"
+      ],
+      "falsificationTests": [
+        "Primary exhibits substantively resolve the disputed questions",
+        "Oversight reports map each conclusion to disclosed records",
+        "Contradictory testimony is reconciled through independent evidence",
+        "The inquiry closes identified custody gaps rather than only producing publicity"
+      ],
+      "boundary": "An interview, refusal, subpoena or committee appearance is not proof of guilt. This hypothesis evaluates the information value of oversight, not the culpability of witnesses."
+    },
+    {
+      "classification": "ai_speculative_conclusion",
+      "topic": "epstein",
+      "investigationLane": "epstein-public-record-docket",
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "generatedAt": "2026-07-20T20:01:49.242Z",
+      "lastReviewedAt": null,
+      "id": "EP-AI-003",
+      "title": "Professional and institutional intermediaries may be more informative than raw contact lists",
+      "status": "developing",
+      "confidence": {
+        "score": 55,
+        "band": "limited-to-moderate analytic support",
+        "meaning": "A prioritisation hypothesis for further document review, not an allegation against professionals or institutions."
+      },
+      "conclusion": "Records involving legal, financial, advisory, property, scheduling or institutional services may reveal how access and transactions were facilitated more clearly than a name appearing once in an address book, photograph or social record.",
+      "documentedSupport": [
+        "10 current lead(s) mention legal, financial, advisory, executive or professional roles.",
+        "The site’s evidence boundary rejects guilt by association and therefore requires transaction, service, authority or knowledge records before drawing stronger conclusions."
+      ],
+      "sources": [
+        {
+          "label": "Current professional-intermediary lead",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5",
+          "locator": "Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS",
+          "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
+        },
+        {
+          "label": "Daily Epstein Update",
+          "url": "daily-epstein-update.html",
+          "locator": "15 current record leads",
+          "evidenceClass": "current public-record window"
+        },
+        {
+          "label": "Epstein Command Center",
+          "url": "epstein-files.html",
+          "locator": "evidence and file routes",
+          "evidenceClass": "public evidence hub"
+        },
+        {
+          "label": "Daily Epstein JSON",
+          "url": "data/daily-epstein-update.json",
+          "locator": "2026-07-20T19:56:08.728Z",
+          "evidenceClass": "machine-readable source window"
+        }
+      ],
+      "contraryEvidence": [
+        "Many professional interactions may be routine, limited, lawful or performed without knowledge of abuse.",
+        "A service relationship can be documented without showing facilitation, intent or awareness."
+      ],
+      "missingRecords": [
+        "Engagement scopes and invoices",
+        "Transaction-level records with lawful provenance",
+        "Internal escalation or compliance records",
+        "Calendars, instructions and communications that establish purpose and knowledge"
+      ],
+      "alternativeExplanations": [
+        "Ordinary professional services",
+        "Client confidentiality or legal privilege",
+        "Institutional contact without operational involvement",
+        "Retrospective prominence caused by later publicity"
+      ],
+      "falsificationTests": [
+        "Primary records show only routine limited services",
+        "Compliance records demonstrate appropriate escalation and disengagement",
+        "No transaction, authority or knowledge link exists beyond social association",
+        "Independent evidence contradicts the proposed facilitation pathway"
+      ],
+      "boundary": "Professional contact is not evidence of participation in wrongdoing. Stronger inferences require records showing action, knowledge, authority, transaction or concealment."
+    },
+    {
+      "classification": "ai_speculative_conclusion",
+      "topic": "epstein",
+      "investigationLane": "epstein-public-record-docket",
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "generatedAt": "2026-07-20T20:01:49.242Z",
+      "lastReviewedAt": null,
+      "id": "EP-AI-004",
+      "title": "Unverified intelligence-service claims may spread faster than primary evidence",
+      "status": "developing",
+      "confidence": {
+        "score": 48,
+        "band": "limited analytic support",
+        "meaning": "Support for an information-quality risk, not support for the underlying intelligence-service allegation."
+      },
+      "conclusion": "Claims connecting Epstein to intelligence services may gain prominence through political statements and secondary reporting before documentary evidence is available, creating a high risk that repetition is mistaken for corroboration.",
+      "documentedSupport": [
+        "1 current lead(s) contain intelligence-service language or claims.",
+        "15 of 15 current lead(s) remain discovery or publisher leads requiring underlying-source review; 11 are labelled primary-or-official by the current collector."
+      ],
+      "sources": [
+        {
+          "label": "Current intelligence-claim lead",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5",
+          "locator": "Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au",
+          "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
+        },
+        {
+          "label": "Daily Epstein Update",
+          "url": "daily-epstein-update.html",
+          "locator": "15 current record leads",
+          "evidenceClass": "current public-record window"
+        },
+        {
+          "label": "Epstein Command Center",
+          "url": "epstein-files.html",
+          "locator": "evidence and file routes",
+          "evidenceClass": "public evidence hub"
+        },
+        {
+          "label": "Daily Epstein JSON",
+          "url": "data/daily-epstein-update.json",
+          "locator": "2026-07-20T19:56:08.728Z",
+          "evidenceClass": "machine-readable source window"
+        }
+      ],
+      "contraryEvidence": [
+        "Future declassified files, sworn evidence, authenticated communications or official findings could provide direct support.",
+        "Multiple genuinely independent primary sources could move the claim beyond repetition."
+      ],
+      "missingRecords": [
+        "Authenticated tasking, payment or reporting records",
+        "Declassified agency files with reliable provenance",
+        "Sworn testimony corroborated by documents",
+        "Evidence distinguishing intelligence contact from speculation, boasting or political rhetoric"
+      ],
+      "alternativeExplanations": [
+        "Political messaging",
+        "Secondary-source repetition",
+        "Confusion between social access and operational relationship",
+        "Unverified claims amplified by the subject’s secrecy and elite contacts"
+      ],
+      "falsificationTests": [
+        "Primary agency or court records directly establish or reject the relationship",
+        "Claim chains trace back only to circular secondary reporting",
+        "Named sources retract or cannot substantiate the allegation",
+        "Independent document authentication fails"
+      ],
+      "boundary": "The presence of an intelligence claim in current reporting does not establish an intelligence relationship. The docket keeps the claim unverified until primary evidence meets a substantially higher threshold."
+    }
+  ],
+  "boundary": "The automated docket publishes questions and system-level hypotheses only. It does not infer named-person guilt, convert association into wrongdoing, expose private victim data, or promote discovery leads to established fact."
 }

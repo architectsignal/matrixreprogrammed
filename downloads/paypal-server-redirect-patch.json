@@ -1,0 +1,100 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-20T06:36:18.628Z",
+  "changed": [
+    "src/worker-paypal-subscriptions.js",
+    "src/worker-production.js",
+    "scripts/cloudflare-worker-routes-test.js",
+    "scripts/site-function-harmony-test.js",
+    "scripts/phase7-paypal-sandbox-rehearsal-test.mjs",
+    "scripts/verify-live-production.js",
+    "scripts/build-production-deploy-receipt.js"
+  ],
+  "checked": [
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "/api/paypal/subscription/create",
+      "ok": true
+    },
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "/api/paypal/subscription/return",
+      "ok": true
+    },
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "async function createSubscriptionApproval",
+      "ok": true
+    },
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "async function subscriptionReturn",
+      "ok": true
+    },
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "'/v1/billing/subscriptions'",
+      "ok": true
+    },
+    {
+      "label": "src/worker-paypal-subscriptions.js",
+      "marker": "rel==='approve'",
+      "ok": true
+    },
+    {
+      "label": "src/worker-production.js",
+      "marker": "'/api/paypal/subscription/create'",
+      "ok": true
+    },
+    {
+      "label": "src/worker-production.js",
+      "marker": "enforceSandboxRehearsalGate",
+      "ok": true
+    },
+    {
+      "label": "paypal-membership.js",
+      "marker": "/api/paypal/subscription/create",
+      "ok": true
+    },
+    {
+      "label": "paypal-membership.js",
+      "marker": "Continue securely to PayPal",
+      "ok": true
+    },
+    {
+      "label": "paypal-membership.js",
+      "marker": "location.assign",
+      "ok": true
+    },
+    {
+      "label": "paypal-membership.js",
+      "marker": "credentials:'include'",
+      "ok": true
+    },
+    {
+      "label": "scripts/verify-live-production.js",
+      "marker": "/api/paypal/subscription/create",
+      "ok": true
+    },
+    {
+      "label": "scripts/verify-live-production.js",
+      "marker": "subscriptionCreate",
+      "ok": true
+    },
+    {
+      "label": "scripts/verify-live-production.js",
+      "marker": "anonymousChargePossible: false",
+      "ok": true
+    },
+    {
+      "label": "scripts/build-production-deploy-receipt.js",
+      "marker": "serverRedirectWired",
+      "ok": true
+    },
+    {
+      "label": "scripts/build-production-deploy-receipt.js",
+      "marker": "Continue securely to PayPal",
+      "ok": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:02.852Z",
+  "updated": "2026-07-20T06:35:17.027Z",
   "title": "Site Relationship Map",
   "boundary": "This is a public route map. It links records and trackers without treating association as a conclusion.",
   "layers": [
@@ -254,7 +254,7 @@
           "type": "institution route",
           "route": "institution-briefs/world-bank.html",
           "notes": [
-            "elite priority",
+            "high priority",
             "money",
             "foundations-ngos",
             "public-private-contracts"
@@ -872,16 +872,6 @@
       "id": "evidence-and-records",
       "nodes": [
         {
-          "id": "people-s-republic-of-bangladesh",
-          "layer": "evidence-and-records",
-          "name": "People's Republic of Bangladesh",
-          "type": "missing record",
-          "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-          "notes": [
-            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-          ]
-        },
-        {
           "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
           "layer": "evidence-and-records",
           "name": "Appellate Division of the Supreme Court of the State of New York",
@@ -1202,41 +1192,11 @@
           ]
         },
         {
-          "id": "chattogram-water-supply-and-sewerage-authority",
-          "layer": "evidence-and-records",
-          "name": "Chattogram Water Supply and Sewerage Authority",
-          "type": "missing record",
-          "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-          "notes": [
-            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-          ]
-        },
-        {
-          "id": "finance-division-ministry-of-finance",
-          "layer": "evidence-and-records",
-          "name": "Finance Division, Ministry of Finance",
-          "type": "missing record",
-          "route": "entity-briefs/finance-division-ministry-of-finance.html",
-          "notes": [
-            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-          ]
-        },
-        {
           "id": "googl",
           "layer": "evidence-and-records",
           "name": "GOOGL",
           "type": "missing record",
           "route": "entity-briefs/googl.html",
-          "notes": [
-            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-          ]
-        },
-        {
-          "id": "kingdom-of-morocco",
-          "layer": "evidence-and-records",
-          "name": "Kingdom of Morocco",
-          "type": "missing record",
-          "route": "entity-briefs/kingdom-of-morocco.html",
           "notes": [
             "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
           ]
@@ -1252,21 +1212,41 @@
           ]
         },
         {
-          "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+          "id": "msft",
           "layer": "evidence-and-records",
-          "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "name": "MSFT",
           "type": "missing record",
-          "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+          "route": "entity-briefs/msft.html",
           "notes": [
             "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
           ]
         },
         {
-          "id": "ministry-of-health-and-family-welfare",
+          "id": "nvda",
           "layer": "evidence-and-records",
-          "name": "Ministry of Health and Family Welfare",
+          "name": "NVDA",
           "type": "missing record",
-          "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
+          "route": "entity-briefs/nvda.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "nvidia-corp",
+          "layer": "evidence-and-records",
+          "name": "NVIDIA CORP",
+          "type": "missing record",
+          "route": "entity-briefs/nvidia-corp.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "nuclear-regulatory-commission",
+          "layer": "evidence-and-records",
+          "name": "Nuclear Regulatory Commission",
+          "type": "missing record",
+          "route": "entity-briefs/nuclear-regulatory-commission.html",
           "notes": [
             "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
           ]
@@ -1379,17 +1359,6 @@
           "notes": [
             "Recent public-source items already pulled into the site",
             "Priority 88"
-          ]
-        },
-        {
-          "id": "feed-people-s-republic-of-bangladesh-confirm-the-primary-record-p",
-          "layer": "evidence-and-records",
-          "name": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-          "type": "deep intel item",
-          "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-          "notes": [
-            "missing record",
-            "Score 85"
           ]
         },
         {
@@ -1596,6 +1565,17 @@
           "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
           "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+          "notes": [
+            "missing record",
+            "Score 85"
+          ]
+        },
+        {
+          "id": "feed-homeland-security-department-confirm-the-primary-record-page",
+          "layer": "evidence-and-records",
+          "name": "Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+          "type": "deep intel item",
+          "route": "entity-briefs/homeland-security-department.html",
           "notes": [
             "missing record",
             "Score 85"

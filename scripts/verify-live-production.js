@@ -133,24 +133,28 @@ async function verifyPayPalBoundary() {
   const configResponse = await fetchText('/api/paypal/config');
   const config = parseJson(configResponse.text);
   const checkoutResponse = await fetchText('/api/paypal/checkout-intent', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ tier: 'supporter' })
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tier: 'supporter' })
   });
   const checkout = parseJson(checkoutResponse.text);
+  const createResponse = await fetchText('/api/paypal/subscription/create', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tier: 'supporter' })
+  });
+  const create = parseJson(createResponse.text);
   const configProtected = configResponse.status === 401
     && configResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
-    && config?.ok === false
-    && config?.authenticated === false;
+    && config?.ok === false && config?.authenticated === false;
   const checkoutProtected = checkoutResponse.status === 401
     && checkoutResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
-    && checkout?.ok === false
-    && checkout?.authenticated === false;
+    && checkout?.ok === false && checkout?.authenticated === false;
+  const createProtected = createResponse.status === 401
+    && createResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
+    && create?.ok === false && create?.authenticated === false;
   return {
-    ok: configProtected && checkoutProtected,
-    runtimeModel: 'authenticated-member-only; Cloudflare-managed credentials and switches; D1 activation gate',
+    ok: configProtected && checkoutProtected && createProtected,
+    runtimeModel: 'authenticated-member-only server-created subscription; Cloudflare-managed credentials and switches; D1 activation gate',
     config: { status: configResponse.status, origin: configResponse.headers['x-matrix-origin'] || null, data: config },
     checkout: { status: checkoutResponse.status, origin: checkoutResponse.headers['x-matrix-origin'] || null, data: checkout },
+    subscriptionCreate: { status: createResponse.status, origin: createResponse.headers['x-matrix-origin'] || null, data: create },
     anonymousChargePossible: false
   };
 }

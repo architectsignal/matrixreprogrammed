@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-19T06:45:47.199Z",
+  "updated": "2026-07-20T06:35:51.895Z",
   "changed": [],
   "issues": [
     {
@@ -11,11 +11,6 @@
     {
       "file": "_site/information-gathering-system.html",
       "pattern": "/author note/i",
-      "severity": "review"
-    },
-    {
-      "file": "_site/information-gathering-system.html",
-      "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
     {
@@ -34,6 +29,6 @@
       "severity": "review"
     }
   ],
-  "filesScanned": 2534,
+  "filesScanned": 2536,
   "note": "Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues."
 }

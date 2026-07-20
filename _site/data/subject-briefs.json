@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T06:13:18.387Z",
+  "updated": "2026-07-20T06:34:11.022Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -332,167 +332,13 @@
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
         }
       ],
       "top_entities": [
         "Health and Human Services Department",
-        "Centers for Medicare & Medicaid Services",
-        "Republic of Rwanda",
-        "0",
-        "Chattogram Water Supply and Sewerage Authority",
-        "People's Republic of Bangladesh",
-        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-        "Kingdom of Morocco",
-        "Ministry of Health and Family Welfare",
-        "Republic of India",
-        "Finance Division, Ministry of Finance"
+        "Centers for Medicare & Medicaid Services"
       ],
-      "relationship_candidates": [
-        {
-          "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
-          "from": "Chattogram Water Supply and Sewerage Authority",
-          "to": "People's Republic of Bangladesh",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "kingdom-of-morocco__ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
-          "from": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-          "to": "Kingdom of Morocco",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p181587-3"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "ministry-of-health-and-family-welfare__people-s-republic-of-bangladesh",
-          "from": "Ministry of Health and Family Welfare",
-          "to": "People's Republic of Bangladesh",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p180283-4"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "finance-division-ministry-of-finance__people-s-republic-of-bangladesh",
-          "from": "Finance Division, Ministry of Finance",
-          "to": "People's Republic of Bangladesh",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p180439-6"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Primary record route",
         "Entity brief links",
@@ -551,12 +397,6 @@
           "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://projects.worldbank.org/en/projects-operations/project-search",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
         }
       ],
       "top_entities": [
@@ -568,10 +408,7 @@
         "Federal Procurement Policy Office",
         "Defense Department",
         "General Services Administration",
-        "National Aeronautics and Space Administration",
-        "Ministry of Health and Family Welfare",
-        "People's Republic of Bangladesh",
-        "0"
+        "National Aeronautics and Space Administration"
       ],
       "relationship_candidates": [
         {
@@ -600,33 +437,6 @@
           "score": 18,
           "grade": "candidate",
           "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "ministry-of-health-and-family-welfare__people-s-republic-of-bangladesh",
-          "from": "Ministry of Health and Family Welfare",
-          "to": "People's Republic of Bangladesh",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p180283-4"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],

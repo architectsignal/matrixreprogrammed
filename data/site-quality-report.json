@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-19T06:44:58.232Z",
+  "generatedAt": "2026-07-20T06:34:22.868Z",
   "policy": "Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.",
-  "scannedPages": 524,
-  "weakPages": 12,
+  "scannedPages": 526,
+  "weakPages": 11,
   "pages": [
     {
       "file": "newsletter.html",
@@ -25,8 +25,8 @@
       "file": "market-activity.html",
       "title": "MARKET ACTIVITY TRACKER.",
       "grade": 60,
-      "words": 46017,
-      "links": 1041,
+      "words": 46074,
+      "links": 1050,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i",
@@ -34,7 +34,7 @@
         "Dynamic figures need visible source panel: $1,246,437, $490,779, $226,588, $48,251, $147,600"
       ],
       "strengths": [
-        "Useful copy depth: 46017 words",
+        "Useful copy depth: 46074 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -55,26 +55,6 @@
         "$4,550,000"
       ],
       "jsonLinks": 1
-    },
-    {
-      "file": "site-population-audit.html",
-      "title": "Site Population Audit",
-      "grade": 60,
-      "words": 491,
-      "links": 2,
-      "issues": [
-        "Missing book/store route",
-        "Missing Rumble/video route",
-        "Missing free brief/opt-in route",
-        "Intel/evidence page missing Live Intel route",
-        "Weak navigation/link depth: 2 links"
-      ],
-      "strengths": [
-        "Useful copy depth: 491 words",
-        "Evidence route present"
-      ],
-      "figures": [],
-      "jsonLinks": 0
     },
     {
       "file": "claim-classifier.html",
@@ -99,7 +79,7 @@
       "file": "dark-speculation-lab.html",
       "title": "DARK SPECULATION LAB. CLASSIFIED, NOT CONFIRMED.",
       "grade": 68,
-      "words": 7052,
+      "words": 7040,
       "links": 186,
       "issues": [
         "Missing book/store route",
@@ -108,7 +88,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 7052 words",
+        "Useful copy depth: 7040 words",
         "Evidence route present"
       ],
       "figures": [],
@@ -137,7 +117,7 @@
       "file": "subject-dog-architect.html",
       "title": "D.O.G The Architect Initiation Map",
       "grade": 68,
-      "words": 1108,
+      "words": 992,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -146,7 +126,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1108 words",
+        "Useful copy depth: 992 words",
         "Evidence route present",
         "Book/store route present",
         "Opt-in route present"
@@ -158,7 +138,7 @@
       "file": "subject-epstein-black-file.html",
       "title": "Epstein / Black File Source Map",
       "grade": 68,
-      "words": 1137,
+      "words": 1126,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -167,7 +147,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1137 words",
+        "Useful copy depth: 1126 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -178,7 +158,7 @@
       "file": "subject-freemasonry-symbol-system.html",
       "title": "Freemasonry Symbol System Map",
       "grade": 68,
-      "words": 1109,
+      "words": 1191,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -187,7 +167,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1109 words",
+        "Useful copy depth: 1191 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -218,7 +198,7 @@
       "file": "subject-trust-evidence-method.html",
       "title": "Trust &amp; Evidence Method",
       "grade": 68,
-      "words": 1080,
+      "words": 1120,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -227,7 +207,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1080 words",
+        "Useful copy depth: 1120 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -277,14 +257,14 @@
       "file": "membership.html",
       "title": "MEMBERSHIP.",
       "grade": 76,
-      "words": 966,
+      "words": 704,
       "links": 39,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Dynamic figures need visible source panel: €0, €0, €3, €3, €6"
       ],
       "strengths": [
-        "Useful copy depth: 966 words",
+        "Useful copy depth: 704 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -329,7 +309,7 @@
       "file": "subject-crime-state-overlap.html",
       "title": "Crime-State Overlap Brief",
       "grade": 76,
-      "words": 1103,
+      "words": 1175,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -337,7 +317,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 1103 words",
+        "Useful copy depth: 1175 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -348,7 +328,7 @@
       "file": "subject-intelligence-network.html",
       "title": "Intelligence Network Starter File",
       "grade": 76,
-      "words": 1142,
+      "words": 1226,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -356,7 +336,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 1142 words",
+        "Useful copy depth: 1226 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -367,7 +347,7 @@
       "file": "subject-nasa-hidden-architecture.html",
       "title": "NASA Hidden Architecture File",
       "grade": 76,
-      "words": 1127,
+      "words": 894,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -375,7 +355,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 1127 words",
+        "Useful copy depth: 894 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -631,14 +611,14 @@
       "file": "data-lab.html",
       "title": "PUBLIC DATA LABORATORY.",
       "grade": 84,
-      "words": 974,
-      "links": 47,
+      "words": 1031,
+      "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 974 words",
+        "Useful copy depth: 1031 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -791,14 +771,14 @@
       "file": "dossier-pack-black-file-starter.html",
       "title": "Black File Starter Pack",
       "grade": 84,
-      "words": 2663,
+      "words": 2657,
       "links": 119,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2663 words",
+        "Useful copy depth: 2657 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -811,14 +791,14 @@
       "file": "dossier-pack-crime-state-overlap.html",
       "title": "Crime-State Overlap Pack",
       "grade": 84,
-      "words": 2563,
+      "words": 2583,
       "links": 122,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2563 words",
+        "Useful copy depth: 2583 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -831,14 +811,14 @@
       "file": "dossier-pack-intelligence-network.html",
       "title": "Intelligence Network Pack",
       "grade": 84,
-      "words": 2675,
+      "words": 2721,
       "links": 121,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2675 words",
+        "Useful copy depth: 2721 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -851,14 +831,14 @@
       "file": "dossier-pack-symbolic-power.html",
       "title": "Symbolic Power Pack",
       "grade": 84,
-      "words": 2694,
+      "words": 2707,
       "links": 123,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2694 words",
+        "Useful copy depth: 2707 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -871,14 +851,14 @@
       "file": "dossier-pack-trust-evidence.html",
       "title": "Trust And Evidence Pack",
       "grade": 84,
-      "words": 2516,
+      "words": 2555,
       "links": 121,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2516 words",
+        "Useful copy depth: 2555 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -895,14 +875,14 @@
       "file": "dossier-pack-war-machine.html",
       "title": "War Machine Pack",
       "grade": 84,
-      "words": 2554,
+      "words": 2678,
       "links": 121,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2554 words",
+        "Useful copy depth: 2678 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -915,14 +895,14 @@
       "file": "entity-registry.html",
       "title": "ENTITY REGISTRY",
       "grade": 84,
-      "words": 21178,
+      "words": 21215,
       "links": 568,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 21178 words",
+        "Useful copy depth: 21215 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1040,14 +1020,14 @@
       "file": "geographic-power-atlas.html",
       "title": "GEOGRAPHIC POWER ATLAS.",
       "grade": 84,
-      "words": 530,
-      "links": 42,
+      "words": 587,
+      "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 530 words",
+        "Useful copy depth: 587 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1060,14 +1040,14 @@
       "file": "index.html",
       "title": "Welcome To Matrix Reprogrammed",
       "grade": 84,
-      "words": 1366,
+      "words": 1374,
       "links": 117,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 1366 words",
+        "Useful copy depth: 1374 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1278,14 +1258,14 @@
       "file": "relationship-registry.html",
       "title": "RELATIONSHIP REGISTRY",
       "grade": 84,
-      "words": 53927,
+      "words": 53940,
       "links": 839,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 53927 words",
+        "Useful copy depth: 53940 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1357,19 +1337,22 @@
       "file": "source-cards.html",
       "title": "SOURCE CARDS.",
       "grade": 84,
-      "words": 1612,
-      "links": 45,
+      "words": 5204,
+      "links": 132,
       "issues": [
         "Missing Rumble/video route",
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1612 words",
+        "Useful copy depth: 5204 words",
         "Evidence route present",
         "Book/store route present",
         "Opt-in route present"
       ],
-      "figures": [],
+      "figures": [
+        "$4",
+        "$4"
+      ],
       "jsonLinks": 1
     },
     {
@@ -1456,14 +1439,14 @@
       "file": "top-52-power-deck.html",
       "title": "PEOPLE OF INTEREST.",
       "grade": 84,
-      "words": 1076,
+      "words": 1072,
       "links": 207,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 1076 words",
+        "Useful copy depth: 1072 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1633,13 +1616,13 @@
       "file": "ai-speculative-conclusions.html",
       "title": "HYPOTHESES. NOT VERDICTS.",
       "grade": 92,
-      "words": 1403,
+      "words": 1404,
       "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1403 words",
+        "Useful copy depth: 1404 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4857,13 +4840,13 @@
       "file": "control-brain.html",
       "title": "CONTROL BRAIN V2.",
       "grade": 92,
-      "words": 1949,
+      "words": 1946,
       "links": 74,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1949 words",
+        "Useful copy depth: 1946 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4876,13 +4859,13 @@
       "file": "control-map-daily.html",
       "title": "DAILY / WEEKLY VISUAL CONTROL MAP",
       "grade": 92,
-      "words": 666,
+      "words": 662,
       "links": 84,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 666 words",
+        "Useful copy depth: 662 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5091,13 +5074,13 @@
       "file": "daily-brief-master.html",
       "title": "DEEP DAILY CONTROL BRIEF",
       "grade": 92,
-      "words": 2007,
+      "words": 1993,
       "links": 69,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2007 words",
+        "Useful copy depth: 1993 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5148,13 +5131,13 @@
       "file": "daily-drop.html",
       "title": "WHAT CHANGED TODAY?",
       "grade": 92,
-      "words": 2150,
-      "links": 96,
+      "words": 2342,
+      "links": 108,
       "issues": [
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 2150 words",
+        "Useful copy depth: 2342 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5164,16 +5147,35 @@
       "jsonLinks": 3
     },
     {
+      "file": "daily-epstein-update.html",
+      "title": "DAILY EPSTEIN UPDATE.",
+      "grade": 92,
+      "words": 1566,
+      "links": 55,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1566 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 1
+    },
+    {
       "file": "daily-investigation-conclusions.html",
       "title": "DAILY INVESTIGATION CONCLUSIONS.",
       "grade": 92,
-      "words": 5714,
+      "words": 5718,
       "links": 114,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 5714 words",
+        "Useful copy depth: 5718 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5205,13 +5207,13 @@
       "file": "daily-power-conclusions.html",
       "title": "DAILY POWER CONCLUSIONS",
       "grade": 92,
-      "words": 1287,
-      "links": 88,
+      "words": 1165,
+      "links": 84,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1287 words",
+        "Useful copy depth: 1165 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5376,13 +5378,13 @@
       "file": "deep-intel-feed.html",
       "title": "DEEP INTEL FEED MATRIX.",
       "grade": 92,
-      "words": 1005,
+      "words": 1006,
       "links": 83,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1005 words",
+        "Useful copy depth: 1006 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5704,13 +5706,13 @@
       "file": "elite-reports.html",
       "title": "ELITE REPORTS.",
       "grade": 92,
-      "words": 1479,
+      "words": 1474,
       "links": 95,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1479 words",
+        "Useful copy depth: 1474 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5914,21 +5916,19 @@
       "file": "epstein-conclusions.html",
       "title": "EPSTEIN CONCLUSIONS.",
       "grade": 92,
-      "words": 1084,
-      "links": 44,
+      "words": 453,
+      "links": 37,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1084 words",
+        "Useful copy depth: 453 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
-      "figures": [
-        "3.5 million"
-      ],
+      "figures": [],
       "jsonLinks": 0
     },
     {
@@ -6146,13 +6146,13 @@
       "file": "epstein-sighting-watch.html",
       "title": "IS EPSTEIN STILL ALIVE?",
       "grade": 92,
-      "words": 761,
-      "links": 18,
+      "words": 976,
+      "links": 22,
       "issues": [
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 761 words",
+        "Useful copy depth: 976 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6412,13 +6412,13 @@
       "file": "evidence-reader.html",
       "title": "EVIDENCE READER.",
       "grade": 92,
-      "words": 428,
-      "links": 44,
+      "words": 485,
+      "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 428 words",
+        "Useful copy depth: 485 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6450,13 +6450,13 @@
       "file": "evidence-timeline.html",
       "title": "EVIDENCE TIMELINE.",
       "grade": 92,
-      "words": 287,
-      "links": 43,
+      "words": 344,
+      "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 287 words",
+        "Useful copy depth: 344 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6886,13 +6886,13 @@
       "file": "information-gathering-system.html",
       "title": "INFORMATION GATHERING SYSTEM.",
       "grade": 92,
-      "words": 658,
+      "words": 661,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 658 words",
+        "Useful copy depth: 661 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7023,13 +7023,13 @@
       "file": "intel-vault.html",
       "title": "INTEL VAULT.",
       "grade": 92,
-      "words": 28509,
-      "links": 940,
+      "words": 28566,
+      "links": 950,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 28509 words",
+        "Useful copy depth: 28566 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7080,16 +7080,34 @@
       "jsonLinks": 0
     },
     {
+      "file": "intelligence-reports.html",
+      "title": "Personal intelligence reports",
+      "grade": 92,
+      "words": 205,
+      "links": 9,
+      "issues": [
+        "Thin copy: 205 visible words"
+      ],
+      "strengths": [
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
       "file": "investigation-machine.html",
       "title": "INTELLIGENT INVESTIGATION MACHINE.",
       "grade": 92,
-      "words": 4765,
+      "words": 4756,
       "links": 107,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 4765 words",
+        "Useful copy depth: 4756 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7102,13 +7120,13 @@
       "file": "investigation-source-ledger.html",
       "title": "INVESTIGATION SOURCE LEDGER.",
       "grade": 92,
-      "words": 942,
+      "words": 954,
       "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 942 words",
+        "Useful copy depth: 954 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7216,19 +7234,26 @@
       "file": "live-intel.html",
       "title": "LIVE INTEL.",
       "grade": 92,
-      "words": 6187,
-      "links": 198,
+      "words": 19137,
+      "links": 540,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 6187 words",
+        "Useful copy depth: 19137 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
-      "figures": [],
+      "figures": [
+        "$4",
+        "$4",
+        "$4",
+        "$4",
+        "$4",
+        "$4"
+      ],
       "jsonLinks": 3
     },
     {
@@ -7881,13 +7906,13 @@
       "file": "optin-black-file-brief.html",
       "title": "The Black File Starter Brief",
       "grade": 92,
-      "words": 1416,
+      "words": 1400,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1416 words",
+        "Useful copy depth: 1400 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7919,13 +7944,13 @@
       "file": "optin-crime-network-brief.html",
       "title": "Crime Network Starter Brief",
       "grade": 92,
-      "words": 1345,
+      "words": 1329,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1345 words",
+        "Useful copy depth: 1329 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7938,13 +7963,13 @@
       "file": "optin-dog-architect-initiation.html",
       "title": "D.O.G Architect Initiation Brief",
       "grade": 92,
-      "words": 1362,
+      "words": 1346,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1362 words",
+        "Useful copy depth: 1346 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7957,13 +7982,13 @@
       "file": "optin-full-archive-map.html",
       "title": "Full Archive Map",
       "grade": 92,
-      "words": 1339,
+      "words": 1323,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1339 words",
+        "Useful copy depth: 1323 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7976,13 +8001,13 @@
       "file": "optin-intelligence-files-brief.html",
       "title": "Intelligence Files Starter Brief",
       "grade": 92,
-      "words": 1343,
+      "words": 1327,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1343 words",
+        "Useful copy depth: 1327 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7995,13 +8020,13 @@
       "file": "optin-trust-evidence-checklist.html",
       "title": "Trust And Evidence Checklist",
       "grade": 92,
-      "words": 1357,
+      "words": 1341,
       "links": 75,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1357 words",
+        "Useful copy depth: 1341 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8217,13 +8242,13 @@
       "file": "power-structure-map.html",
       "title": "POWER MAP.",
       "grade": 92,
-      "words": 1726,
+      "words": 1724,
       "links": 146,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1726 words",
+        "Useful copy depth: 1724 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8761,13 +8786,13 @@
       "file": "site-brain-router.html",
       "title": "SITE BRAIN ROUTER.",
       "grade": 92,
-      "words": 1504,
+      "words": 1505,
       "links": 40,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1504 words",
+        "Useful copy depth: 1505 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8799,13 +8824,13 @@
       "file": "site-intelligence-system-audit.html",
       "title": "SITE INTELLIGENCE SYSTEM.",
       "grade": 92,
-      "words": 1352,
-      "links": 37,
+      "words": 1409,
+      "links": 46,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1352 words",
+        "Useful copy depth: 1409 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8837,13 +8862,13 @@
       "file": "source-changes.html",
       "title": "SOURCE CHANGE LEDGER",
       "grade": 92,
-      "words": 18081,
-      "links": 85,
+      "words": 18501,
+      "links": 88,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 18081 words",
+        "Useful copy depth: 18501 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9173,13 +9198,13 @@
       "file": "speculative-conclusions.html",
       "title": "SPECULATIVE CONCLUSIONS.",
       "grade": 92,
-      "words": 1261,
-      "links": 61,
+      "words": 718,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1261 words",
+        "Useful copy depth: 718 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9889,13 +9914,13 @@
       "file": "videos.html",
       "title": "TURN THE FILES INTO TRANSMISSIONS.",
       "grade": 92,
-      "words": 598,
+      "words": 599,
       "links": 63,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 598 words",
+        "Useful copy depth: 599 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9927,13 +9952,13 @@
       "file": "weekly-investigation-report.html",
       "title": "WEEKLY INVESTIGATION REPORT.",
       "grade": 92,
-      "words": 9320,
+      "words": 9324,
       "links": 160,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 9320 words",
+        "Useful copy depth: 9324 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10001,11 +10026,11 @@
       "file": "admin-member-dashboard.html",
       "title": "MEMBER & ENTITLEMENT CONTROL.",
       "grade": 100,
-      "words": 425,
-      "links": 19,
+      "words": 429,
+      "links": 21,
       "issues": [],
       "strengths": [
-        "Useful copy depth: 425 words",
+        "Useful copy depth: 429 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10169,6 +10194,23 @@
       ],
       "figures": [],
       "jsonLinks": 10
+    },
+    {
+      "file": "site-population-audit.html",
+      "title": "Site Population Audit",
+      "grade": 100,
+      "words": 604,
+      "links": 8,
+      "issues": [],
+      "strengths": [
+        "Useful copy depth: 604 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:46:50.760Z",
+  "generatedAt": "2026-07-20T06:37:26.479Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
@@ -9,6 +9,6 @@
   },
   "workerEntrypoint": "src/worker-production.js",
   "forumStorage": "Cloudflare D1 authoritative with KV compatibility/recovery only",
-  "paymentStatus": "sandbox-ready-disabled",
-  "boundary": "PayPal routes and browser UI may be deployed, but checkout remains fail-closed until environment, credentials, verified plans and the D1 activation switch agree."
+  "paymentStatus": "runtime-gated-dashboard-managed",
+  "boundary": "PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked."
 }

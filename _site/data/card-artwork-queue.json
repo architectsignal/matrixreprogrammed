@@ -1,23 +1,11 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:04.648Z",
+  "updated": "2026-07-20T06:35:30.999Z",
   "title": "Next Card Artwork Queue",
   "queueSize": 10,
-  "totalRemaining": 468,
+  "totalRemaining": 466,
   "rule": "Generate these cards next, then add each finished image to data/card-artwork-inbox.json as pending with deckId, cardId, label, and sourceUrl or sourceDataUri.",
   "queue": [
-    {
-      "deckId": "people-of-interest",
-      "deckTitle": "Top 52 Persons of Interest",
-      "cardId": "elon-musk",
-      "name": "Elon Musk",
-      "rank": 1,
-      "suit": "Coins",
-      "score": 100,
-      "asset": "assets/top-52/cards/elon-musk.svg",
-      "profileRoute": "top-52/elon-musk.html",
-      "prompt": "Create a vertical 2:3 museum-grade Matrix Reprogrammed playing card for Elon Musk. Deck: Top 52 Persons of Interest. Suit: Coins. Rank: 1. Style: black and antique gold occult intelligence dossier card, copperplate engraving, ornate border, crown/coin/sword/mask symbolism where relevant, public-record evidence aesthetic, high detail, readable title, no messy overlays, no fake accusations. Include a clean central portrait/symbolic subject area and bottom label: PUBLIC-RECORD ROUTE · NOT ACCUSATION. Make it suitable for a playable downloadable card and deep dossier cover."
-    },
     {
       "deckId": "people-of-interest",
       "deckTitle": "Top 52 Persons of Interest",
@@ -125,6 +113,18 @@
       "asset": "assets/top-52/cards/tony-blair.svg",
       "profileRoute": "top-52/tony-blair.html",
       "prompt": "Create a vertical 2:3 museum-grade Matrix Reprogrammed playing card for Tony Blair. Deck: Top 52 Persons of Interest. Suit: Masks. Rank: 10. Style: black and antique gold occult intelligence dossier card, copperplate engraving, ornate border, crown/coin/sword/mask symbolism where relevant, public-record evidence aesthetic, high detail, readable title, no messy overlays, no fake accusations. Include a clean central portrait/symbolic subject area and bottom label: PUBLIC-RECORD ROUTE · NOT ACCUSATION. Make it suitable for a playable downloadable card and deep dossier cover."
+    },
+    {
+      "deckId": "people-of-interest",
+      "deckTitle": "Top 52 Persons of Interest",
+      "cardId": "jamie-dimon",
+      "name": "Jamie Dimon",
+      "rank": 11,
+      "suit": "Coins",
+      "score": 85,
+      "asset": "assets/top-52/cards/jamie-dimon.svg",
+      "profileRoute": "top-52/jamie-dimon.html",
+      "prompt": "Create a vertical 2:3 museum-grade Matrix Reprogrammed playing card for Jamie Dimon. Deck: Top 52 Persons of Interest. Suit: Coins. Rank: 11. Style: black and antique gold occult intelligence dossier card, copperplate engraving, ornate border, crown/coin/sword/mask symbolism where relevant, public-record evidence aesthetic, high detail, readable title, no messy overlays, no fake accusations. Include a clean central portrait/symbolic subject area and bottom label: PUBLIC-RECORD ROUTE · NOT ACCUSATION. Make it suitable for a playable downloadable card and deep dossier cover."
     }
   ]
 }

@@ -61,7 +61,7 @@ for (const file of ['templates/phase6-membership.template','membership.html','_s
   forbidText(file, '€19/month', 'legacy €19 tier');
   forbidText(file, '€49/month', 'legacy €49 tier');
 }
-for (const marker of ['/api/paypal/checkout-intent','/api/paypal/subscription/confirm','Retry PayPal checkout']) {
+for (const marker of ['/api/paypal/subscription/create','Continue securely to PayPal','/api/paypal/config']) {
   needText('paypal-membership.js', marker, `PayPal membership runtime ${marker}`);
   needText('_site/paypal-membership.js', marker, `built PayPal membership runtime ${marker}`);
 }

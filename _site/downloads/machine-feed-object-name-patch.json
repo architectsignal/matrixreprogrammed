@@ -1,19 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:13:03.499Z",
-  "runnerPatched": true,
+  "generatedAt": "2026-07-20T06:33:53.945Z",
+  "runnerPatched": false,
   "roots": [
     ".",
     "_site"
   ],
   "touched": [
-    "_site/data/entity-observations.json",
-    "data/daily-brain-brief.json",
-    "_site/data/daily-brain-brief.json",
-    "_site/machine-digest.html",
-    "_site/daily-brain-brief.html",
-    "downloads/machine-digest.md",
-    "_site/downloads/machine-digest.md"
+    "data/daily-brain-brief.json"
   ],
   "residual": [],
   "boundary": "Object-valued upstream fields are converted into meaningful labels when available. Unresolvable object placeholders are excluded rather than published as entity names."

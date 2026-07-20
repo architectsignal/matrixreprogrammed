@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:14:30.070Z",
-  "phase": 1,
-  "status": "transactional-ready-automation-disabled",
+  "generatedAt": "2026-07-20T06:36:12.995Z",
+  "phase": "controlled-automation-live",
+  "status": "automation-and-transactional-ready",
   "checks": {
     "emailLifecycleD1Authoritative": true,
     "explicitConsentRequired": true,
@@ -14,6 +14,7 @@
     "temporaryBrevoDomainDetected": true,
     "domainAuthenticationGate": true,
     "transactionalActivationGate": true,
+    "automationActivationGate": true,
     "adminHealthProtected": true,
     "manualRetryQuarantineProtected": true,
     "automaticRetryQuarantineConfigured": true,
@@ -24,10 +25,13 @@
     "listUnsubscribeHeaders": true,
     "reusableMarketingActionLinks": true,
     "zeroRecipientCampaignCompletion": true,
-    "marketingAutomationOff": true,
+    "scheduledDailyAndWeekly": true,
+    "suppressionCheckedBeforeSend": true,
+    "marketingAutomationOn": true,
     "transactionalDeliveryOn": true,
     "domainAuthenticationConfirmed": true,
     "retryQuarantineCutoffConfigured": true,
+    "boundedPersonalizedBatch": true,
     "senderEmailConfigured": true,
     "senderNameConfigured": true,
     "replyToEmailConfigured": true,
@@ -36,8 +40,9 @@
     "weeklyCronConfigured": true
   },
   "currentSafetyState": {
-    "marketingAutomation": false,
-    "marketingAutomationLockedOff": true,
+    "marketingAutomation": true,
+    "marketingAutomationConsentBound": true,
+    "personalizedBatchLimit": 100,
     "transactionalDelivery": true,
     "domainAuthenticationConfirmed": true,
     "senderEmail": "members@matrixreprogrammed.com",
@@ -50,7 +55,7 @@
     "perRecipientUnsubscribe": true
   },
   "schedules": {
-    "configuredButBlocked": true,
+    "enabled": true,
     "dailyUtc": "06:05",
     "weeklyUtc": "Monday 07:15",
     "franceSummer": {
@@ -68,9 +73,11 @@
     "ADMIN_API_TOKEN"
   ],
   "activationRequirements": [
-    "Keep automated daily and weekly campaigns blocked until the owner separately authorizes marketing automation.",
-    "Preserve explicit consent, verified preferences, unsubscribe and suppression controls.",
-    "Confirm evidence-bounded content and retry quarantine before any future campaign activation."
+    "Send only to active verified members whose selected preference and tier make them eligible.",
+    "Preserve explicit consent, per-recipient preferences, unsubscribe and suppression controls.",
+    "Use D1 outbox idempotency and retry quarantine for every delivery.",
+    "Keep personalized report generation bounded to 100 recipients per scheduled execution.",
+    "Withhold unsupported claims when source bundles contain no usable evidence."
   ],
-  "boundary": "Transactional account and verification email may operate when authenticated and configured. Scheduled or bulk marketing automation remains disabled even though campaign code and cron schedules are installed."
+  "boundary": "Daily and weekly report automation is enabled only through the verified D1 membership, preference, suppression, idempotency and evidence-bound delivery path. Transactional account email remains independently enabled."
 }

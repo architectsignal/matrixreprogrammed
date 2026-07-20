@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Mission Timers
 
-Updated: 2026-07-19T06:15:19.622Z
+Updated: 2026-07-20T06:37:15.283Z
 
 Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.
 
@@ -30,12 +30,12 @@ This clock is relevant to Security and emergency power, Corporate-state converge
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - Machine Convergence — black-file.html
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 - Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5
 - Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5
-- From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum — Seven-day public-record lead — https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
-- From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum — Seven-day public-record lead — https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
-- Inside Russia’s Shadow Military Sustaining the War - War on the Rocks — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5
-- Inside Russia’s Shadow Military Sustaining the War - War on the Rocks — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 
 ### What would raise it
 - Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.
@@ -326,12 +326,12 @@ This clock is relevant to Disclosure and record control, Information and narrati
 - DOJ watchdog compliance review remains a core source lane — evidence-vault.html
 - Judge orders DOJ to release more Epstein records or justify redactions by July 2 — Court-process / disclosure-order watch — https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
 - Major disclosure releases produce institution-level fallout before person-level clarity
-- NASA insider hints bigger UFO file release as declassification ramps up - Cybernews — https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
 - Probability Signal Feed 004 — Policy Watch And Epstein Disclosure
 - Surveillance State Clock — surveillance-hub.html
 - WWIII Escalation Clock — live-intel.html
 - Record intake queue includes official disclosure and court/source route work — task queue
 - Surveillance State Clock — surveillance-hub.html
+- Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — Seven-day public-record lead — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
 
 ### What would raise it
 - New dated evidence must meet the clock’s published trigger rule.
@@ -356,7 +356,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 64% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
 - Movement: Held at 64. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–24 months
 
 WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures. Policy convergence tracker lanes: Health Governance / Biosecurity / Emergency Health Powers.
@@ -421,9 +421,9 @@ This clock is relevant to Security and emergency power, Information and narrativ
 - CBDC Rollout Clock — surveillance-hub.html
 - Functional convergence without a single central state
 - AI Breakout Clock — answer-engine.html
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
-- Epstein Files: What US midterm elections could mean for investigation - Channel 4 News | Substack — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMigAFBVV95cUxNalhVZlYtbFZ1a1Q2MDJKU0E3UUhzSHAzTUNXQW5VbW9jVUdtQjNDZWZjLTlSbWU2NGRXalNjRHNtQnJIRDI0Z0wzM1RfT3dYXzhWVHducXliZ0FPVVB1Q2ZEMWhkc2dWcGNndGluYkpWXzFpWlFvUHljZjMzTFRWbg?oc=5
-- Idemia Public Security, Proof partner on single portable digital credential - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5
 
 ### What would raise it
 - Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.
@@ -454,7 +454,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 58% — Developing
 - Meaning: Multiple signals or early implementation exist. Pull missing records and track movement.
 - Movement: Held at 58. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 0 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 1–3 years
 
 Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.
@@ -470,11 +470,11 @@ This clock is relevant to Corporate-state convergence, Global governance converg
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - CBDC Rollout Clock — surveillance-hub.html
-- Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
-- Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
-- Chattogram Water Supply Improvement Project — https://search.worldbank.org/api/v2/projects
+- Food and Agriculture Organization — institutions/food-and-agriculture-organization.html
+- MINISTRY OF AGRICULTURE, MARITIME FISHERIES, RURAL DEVELOPMENT, WATER AND FORESTS (MAPMDREF) — entity-timelines/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
 - Hackers may have breached FBI wiretap network via supply chain - Malwarebytes — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiugFBVV95cUxPczJpTmZyYjRQdlpzdVRBd2VYSmtYM0huMlpVNkFnS0VRc1JMTVQ1OFNvUWNlLVNPSkpuZzBHU1hwSUR5dG40Z2RSS3I2TXhadlBON3dqR1JSSnlZaE1UVXNWT1ZyMFpVWUlCejdCdmpkREJPMU5SWVIxQTd5OXZaU21yUlpuaHZwZ0xmRVNZeTdOWldJT3FyWDNyeWxFcXliaTV4NWhZOGhSX2JKZm9XalI2Rk9XV0ZHMkE?oc=5
 - Pentagon Officially Notifies Anthropic It Is a ‘Supply Chain Risk’ - The New York Times — Seven-day public-record lead — https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5
+- What Hegseth’s “Supply Chain Risk” Designation of Anthropic Does and Doesn’t Mean - Just Security — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5
 
 ### What would raise it
 - Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.
@@ -721,8 +721,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - ICE amps up its surveillance powers, targeting immigrants and antifa - The Washington Post — Seven-day public-record lead — https://news.google.com/rss/articles/CBMikgFBVV95cUxNRUd4UWhiakFwa1VwejRQY2J5UlRVQzBqMmJBaVZqLU0zY0dJSTE4RlRQeTB2MzFYSFlpSnFqci10TXdIVTlCZDV5X3prMlg3VDdxc3BIa0szMmtDVzh5S1Z4bmdKR09yaFgxWFdtdl9WLXVPWElyVlJ4YXppNUZsbEF1V2tSZzhBRmJKbU5LRUVfQQ?oc=5
 - Current strongest public signal
 - Surveillance State Clock — timers.html#surveillance-state
-- American Oversight Seeks Emergency Court Order to Release Records About DOJ/FBI Review of Epstein Files - American Oversight — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMizwFBVV95cUxNcjFzYzR1aWxmU0pfdnpKQ1VLWnR2ZWRneGwyZTRFQXJycUwxTE5xSjdZbUFYQzFVbGs4RTR0UVpQQzQybEJsUXZURFRVdkxPSWZYbmZrNUxJUFNDaTM5SEQ0V01KcnlxX0lVQlBiNzdLMHctUEJ4Z1ItaTVUQXNrREItYV9Qc0dtTnZDNV9vTnFLV25IellsVTNkV21MM1pXOHd3Ul9sM25zdXB6WllINHczNDhsNmVWR1I2R2IxWWdNN3dyTGZCc3cxUFF5TFk?oc=5
-- Trump Seeks New Powers to Pressure ‘Underperforming’ Weapons Makers - The New York Times — Seven-day public-record lead — https://news.google.com/rss/articles/CBMikAFBVV95cUxNNGR5a3NvT1B0bXAwQjQ3Nms3cENvMlE1MlIxTlE3b0o3U3A5NzBUNUxpWWtSOXkxWnBXWDFiVkVKQnVCUUV2WTdwa3d5SHVYZ0VPVGRsVE9BLXIyVXhCV1preWFJRHFucXlZVndvY3FjeUtxbEZiM19zOXBvM0JXNjNlTVhQcndOdkVFWldqZEs?oc=5
+- Djibouti: Emergency alert spotlights sharp hunger spike — 3
+- Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 
 ### What would raise it
 - Raise on renewal without sunset, transfer into ordinary law, permanent emergency procurement or routine exceptional surveillance.
@@ -749,7 +749,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 63% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
 - Movement: Held at 63. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–24 months
 
 Tracks household pressure through food, rent, mortgage, energy, insurance, tax, real-wage, arrears, insolvency and benefit-access indicators.
@@ -769,7 +769,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Human Cost Sources
 - Risk clocks — timers.html
 - Surveillance State Clock — surveillance-hub.html
-- Bust Fake News With Bangalore Mirror: Is Jeffrey Epstein alive and living in Florida? Viral video sparks - Bangalore Mirror — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMiqgJBVV95cUxQRjgtRFNpT3JheTB4YWU2YXpVdnlvWGsybG9ONkJxVm9LeXBGWEg0a1pGZVhkZW83OXdJc0VqT3NudmpfYUVUQldfZWQteUtfSTBpemFrdmttMTFuMmpqUmN2SUJXMlBKSl91bG5kdXJROV9kRks4MzNFQl8yQkw4M1pwQ2VsTTFHR0RBZzZYb3loMGVfekk1a0FrMEJCSkRsYnV2TnVHS3djc1BUTTB2NVR4REdPZ0tDY3BOLWFLRTZ1b1ZPbTMzTm1qaFRNMXh6Q0tZU184VlVlc0I3VDM2V1pJdUxERm9ReUF3VVVHcnpEQ2FjU1l3d0lDQVZVdnVmRHVVMEdMNzdlRlBsN1RpRi1Edm5wSWRvYW40enZxMjhPenA4R2s0VHNB0gGvAkFVX3lxTE1wRmFlUTlMS0pYLVR2TTAyZmNWZGdYX2I2X3Vlem0yM1V
+- Haiti: Signs of hope despite gang violence and political uncertainty — Primary or official public-record lead — https://news.un.org/feed/view/en/story/2026/07/1167963
 
 ### What would raise it
 - Raise when official data shows worsening real incomes, essential-cost inflation, arrears, insolvency, disconnections or housing burden.
@@ -885,9 +885,9 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 
 ## Government Transparency and Missing Records Clock
 
-- Pressure index: 61% — Elevated
+- Pressure index: 66% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
-- Movement: Held at 61. No source-linked trigger justified a change in this build.
+- Movement: Held at 66. No source-linked trigger justified a change in this build.
 - Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
 - Window: 0–3 years
 
@@ -930,10 +930,10 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 
 ## Rule of Law and Institutional Accountability Clock
 
-- Pressure index: 49% — Developing
+- Pressure index: 51% — Developing
 - Meaning: Multiple signals or early implementation exist. Pull missing records and track movement.
-- Movement: Held at 49. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Movement: Held at 51. No source-linked trigger justified a change in this build.
+- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
 - Window: 0–5 years
 
 Tracks whether powerful institutions and office-holders are investigated, judged, sanctioned and compelled to comply with courts, regulators, audits and disclosure duties.
@@ -948,12 +948,12 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - AI Breakout Clock — answer-engine.html
 - Access infrastructure is a measurable power layer.
 - Access infrastructure is a measurable power layer.
+- U.S. Government Accountability Office — Reports And Testimonies — https://www.gao.gov/reports-testimonies
 - Surveillance State Clock — surveillance-hub.html
+- U.S. Government Accountability Office — Reports And Testimonies — https://www.gao.gov/reports-testimonies
 - Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal — Seven-day public-record lead — https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5
 - DOJ watchdog compliance review remains a core source lane — evidence-vault.html
 - DOJ watchdog compliance review remains a core source lane — evidence-vault.html
-- Have we seen the last of the Epstein files? Lawmakers and victims want more released - CNN — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMijgFBVV95cUxQbHBqZGZ4cjhHTmZtaFE0WUVuS1RGRi1MQjN1Zlh0ZWtyUVlBSVJBa2hzSEx1Mkh4NEQ1bmQyUGhVTEdKanhLZDY4THF4Qk5ZMmNrZ09jcWlrUVZkWEdCWFJjcmdBTEU0ZUZGSUpCRFhQMzROS0NCNVM0U1JtakhVdFRNam5VY1hTZWhxZW5n?oc=5
-- Epstein disclosure is an inventory and legal-basis problem.
 
 ### What would raise it
 - Raise when final judgments are ignored, enforcement is delayed, penalties are immaterial, repeat violations continue or oversight is obstructed. Lower when judgments are enforced, sanctions are proportionate and independent review produces corrective action.
@@ -1045,7 +1045,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Geopolitical stress increases demand for monitoring and resilience systems
 - King’s Speech Puts Cyber Resilience at Centre of UK Strategy - Cyber Magazine — Seven-day public-record lead — https://news.google.com/rss/articles/CBMihAFBVV95cUxQR1lsek9Rbk1NbVhqNjFCSTJNUHpMWkZlTXlMZmVVSzJpSDZLVGJDS2RQRVZsSld1eG1MNTVNUzlsM0s3M1o2emFzOHBJNC15SklPY211U0hHXzg3dkpESW5EWG83cmpKZ3pZNjVfNVlDRnZublNFUlJadFpNQzZOZi1RY1Y?oc=5
 - The International Conference on the EU Cyber Security and Resilience Acts - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMisgFBVV95cUxONUg4RndYVmVnSW9Rb2Y1RHJ3UnhTckI1TXFSYUNxdnRRelV0dHRPR0N3c0FlV3JpcUxJWW40UDJibXExNi1aN0otT21GeTZuM25XaWxtNHkwSjcyZ0RVNWZqektjVWN2RzBsblYzMGh6eUM5NzJQTFktUWZfQ2VhcnR0dUlXRHVSR1ZPc29oVG05N0VPNmh0N1NtaGNHczl1NzFpMjdvdFJ0bUswX2pqdFVB?oc=5
-- Surveillance State Clock — surveillance-hub.html
+- Cyber resilience legislation — policy/cyber-resilience-legislation.html
 
 ### What would raise it
 - Raise on sustained outages, falling reserve margins, repeated incidents, slow recovery, concentration or loss of offline fallback.
@@ -1092,7 +1092,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - CBDC Rollout Clock — surveillance-hub.html
 - Access infrastructure is a measurable power layer.
 - Access infrastructure is a measurable power layer.
-- WWIII Escalation Clock — live-intel.html
+- World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
 
 ### What would raise it
 - Raise when official shortage, waiting-time, workforce, capacity or affordability indicators worsen, or health access becomes identity- or payment-gated.
@@ -1133,12 +1133,12 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Machine Convergence — black-file.html
 - AI Breakout Clock — answer-engine.html
 - WWIII Escalation Clock — live-intel.html
+- World News in Brief: Gaza aid challenges persist, renewed push for clean energy, Sudan cholera update — https://news.un.org/feed/view/en/story/2026/07/1167939
 - Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Midas’ Case - Organized Crime and Corruption Reporting Project | OCCRP — Seven-day public-record lead — https://news.google.com/rss/articles/CBMirwFBVV95cUxPcllHS2JXUlJad09SaWF2SUZMdVVIckNBUTF3ZmF2OVZpb1dFQXlOeVpKNlV6NnhtUHBtbVduZGd0MFdGVjNCV2lCUVloWVlrbjAzWGVLenJJUnpYMDZIQ25jcF9nUEg4eGdSLTJDeW9uaEFReldMYkFZV0l5LXdsUHRuRDBMbkFjbnV2NzRCdm8xVEYwY0JELXFuVVF3dFIzNTR0V3hLOE9iX19WZG1J?oc=5
+- ENERGY DEPARTMENT — entity-timelines/energy-department.html
 - Current strongest public signal
 - Surveillance State Clock — surveillance-hub.html
 - CBDC Rollout Clock — surveillance-hub.html
-- Highest clock pressure — timers.html
-- Surveillance State Clock — timers.html#surveillance-state
 - Highest clock pressure — timers.html
 
 ### What would raise it
@@ -1181,12 +1181,12 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 - US bid for Dutch digital ID infrastructure company raises national security fears - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMivAFBVV95cUxQT1N6amx4M2JBaVF2dDVUN3AtU2NXZjZObXE3bVZuTDVZVjZOYUhMUU1mazJreHNrQ1lVM1JGSURtc0JST2F0X2lzZW5PbTRBWXVsZ3FCYWdxOW9iNzJIV2IwRG9MR2xTVWltNDF2MVhFWWJXMTE5a1doRS1xeG8zQi1PSWtaY1pPeDc0b29fcWYtZkZrSVZBN1MzNmxJZld5dmFZcGViZFdsY3ZERmF4SXZzY2hBZjc3SGRjRg?oc=5
 - Current strongest public signal
 - CBDC Rollout Clock — surveillance-hub.html
 - Highest clock pressure — timers.html
-- Exercise or conversion of derivative security — entity-daily-briefs.html
-- Security and emergency power — daily-command-brief.html
 
 ### What would raise it
 - Raise on restrictions, contamination, falling reserves, infrastructure failure, unaffordable pricing or concentrated control without safeguards.
@@ -1260,7 +1260,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 47% — Developing
 - Meaning: Multiple signals or early implementation exist. Pull missing records and track movement.
 - Movement: Held at 47. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
 - Window: 0–4 years
 
 Tracks election administration, campaign finance, foreign interference findings, districting, voter access, recounts, auditability, political violence and acceptance of lawful outcomes.
@@ -1274,13 +1274,13 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Surveillance State Clock — surveillance-hub.html
 - CBDC Rollout Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
+- WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
 - AI Breakout Clock — answer-engine.html
 - WWIII Escalation Clock — live-intel.html
 - Influence is strongest where money and implementation meet.
 - Surveillance State Clock — timers.html#surveillance-state
 - Risk clocks — timers.html
 - Risk clocks — timers.html
-- Machine Convergence — black-file.html
 
 ### What would raise it
 - Raise on authoritative findings of interference, unlawful administration, opaque financing, intimidation, non-auditable systems or refusal to comply with final lawful outcomes. Lower when independent audits, transparent procedures and peaceful legal resolution strengthen.
@@ -1832,15 +1832,15 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 ### Evidence inputs
 
 - WWIII Escalation Clock — live-intel.html
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - Risk clocks — timers.html
 - Probability weighting
 - Risk clocks — timers.html
-- CBDC Rollout Clock — surveillance-hub.html
-- AI Breakout Clock — answer-engine.html
-- Trust & Evidence Method
-- Hegseth says U.S. "just getting started" in Iran war as conflict intensifies and spreads - CBS News — Seven-day public-record lead — https://news.google.com/rss/articles/CBMipgFBVV95cUxPNXM5TFNKSmxnUUIyVlVNY1M5Sl9rdkxmSEZ0amVJM1BJQzVLQmNMeENQcDRfLU1TLVh3Ukw4YjRqUnVqM0JOYjV6U0NMVTRrSU8tT2hKOVFqMF82MDNXbjZMRjZvR19lSUFXVTIzQ3pmZTgwTG1PZU1mTVo5cU52TW5aOVJTM1h0QnMxbnFGZm0xdDVIX04xTC1DeGFFa25Oa3VyUWpR0gGrAUFVX3lxTFBUTkdEeHVMREJsUm9qN19tQS1QSllDTVFmdHNFX0I4M3ExQjBOLUxMdlVjQUc3OUJIbi13dzNVSURzX0VncFB0M3IzMmFNUW5hT3ZiZUItckV2cThXdl9yOGVVUUxZRkdyc1B5YWY0aV9GeTdmU2VwcWNTVmdVMXBUTVI0d1JPWkZacURHQ0ctNmhnNjExWlMyb2MxajNiVlhYTVpIWFVGLUtmTQ?
+- Djibouti: Emergency alert spotlights sharp hunger spike — 3
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “War and crisis as control-system accelerator”, not merely repeat its keywords.
@@ -1933,8 +1933,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Probability weighting
 - Risk clocks — timers.html
-- Thales and Ubiqu collaborate on RSE for secure EU digital ID, wallet infrastructure - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMivgFBVV95cUxQNFBrMkFpcHVjOWRGcVpKTFNWX3Iyek9SQ0RqVEZKVkQxUW9KaWY2M3lkS2pxZ3Z5MlBSRnVqS2dxTy1WZzV3RlVrSDktNFVFcDQtNXNDcXlzUzRab3AtcDZBdktKMkRTTzM0SzNJR1VKLWEtdUZTUWduemVYTmxzeUJLOG9iXzJpZm52VjdNV1pxREVUSlByc001VVZIWENSSFdRd2NncVRRQmlWVUVLUkRfZjhCSURaNEtFU1J3?oc=5
-- Public Infrastructure and Private Surveillance in India’s Aadhaar System - Tech Policy Press — Seven-day public-record lead — https://news.google.com/rss/articles/CBMinAFBVV95cUxNeUlPSVpzQkFxb3Z0V0ZRRWRaMUtid1FzZVVSZXd4OXhmcjFwdFFuX1dZcGRYTGxseFdkVUdwS0ZuSjFlM3lvRzJXLTY2SXZXVlpvbFJQeTBCQzlJMWh1UXM5TEI1bV9zdzI2TG1pakU3SEk2aGlrd2UwVXZKNWI4TU8ySW4tYkc3MXRTb21NM3FXcnZudWN4VG5HZHQ?oc=5
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Food, land and water as control infrastructure”, not merely repeat its keywords.
@@ -2096,7 +2096,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 16% — Background
 - Meaning: Little current implementation evidence. Keep on file; no urgent action.
 - Movement: Held at 16. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 0 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
 - Window: Open evidence watch
 
 Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Red shoes made from children's skin”. The score measures evidential pressure around the claim, not truth, guilt or event probability.
@@ -2108,15 +2108,15 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 ### Evidence inputs
 
 - content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — B
-- content changed: Federal Register — Latest Documents — B
 - content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — B
 - content changed: Federal Register — Latest Documents — B
+- content changed: Federal Register — Latest Documents — B
 - content changed: U.S. Securities and Exchange Commission — Litigation Releases — B
 - content changed: U.S. Treasury OFAC — Recent Actions — B
-- content changed: U.S. House Committee on Oversight and Government Reform — Releases — B
-- content changed: European Public Prosecutor's Office — News — B
-- content changed: U.S. Securities and Exchange Commission — Litigation Releases — B
-- content changed: U.S. Treasury OFAC — Recent Actions — B
+- WWIII Escalation Clock — live-intel.html
+- Risk clocks — timers.html
+- Risk clocks — timers.html
+- What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VbXJQZVZ1RWEyaG5uTDM2R01PcVNXamlkYkY1MlVySWMtVDhudE5wcFJnOU43WnpoTC1DeFN6b1pSQXNwU1J6NkJZekUzdkY5SFhrWGZmSzZuWGZkOTRfQkk2MFM5blc4?oc=5
 
 ### What would raise it
 - Raise only when Symbolism, resemblance and association cannot raise the score. Authenticated records establishing a concrete mechanism are required. The evidence must directly address the classified claim “Red shoes made from children's skin”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanati
@@ -2160,8 +2160,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Probability weighting
 - Okta and Palo Alto Networks integrate enterprise digital identity, cybersecurity tools - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc0luRU9wa05iVmoyRkRiY2tWUTF6RU5UaDAtZmFCMjdocm9QWldLeHNNbGh1VEVSZXpLbWo2RlNiaEhuTVVySW4xbzdWR0VlMHdMV2VlTWI1ellIYmJ1eG9ONldEeGRUT2RaRXFUd24ySDFqWTdUczNiLTlUR1NfZVN4U1gwYUhpQkdOR3ZPOXlnRUtwOUJDZGRhT3lMRHRoU001YW9JQXFNWlhKQlJjN3ZvS0hPbDhrYUF5Z0pNTDZkQQ?oc=5
-- Surveillance State Clock — surveillance-hub.html
-- CBDC Rollout Clock — surveillance-hub.html
+- British Virgin Islands — jurisdictions-of-power/british-virgin-islands.html
+- Cayman Islands — jurisdictions-of-power/cayman-islands.html
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Blackmail islands and elite compromise networks”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanation.
@@ -2333,15 +2333,15 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 ### Evidence inputs
 
 - China's new digital identity system boosts the government's control over citizens online - Le Monde.fr — Seven-day public-record lead — https://news.google.com/rss/articles/CBMihwJBVV95cUxNSmxkb0gyaTNDVGpTa2NHRU5wMnU5cDBrMUt6SFA5T0hCcUZJTkxlOWd4dDR2R0tESnFPYTlzbHM2TEdxeERvZUo1U1FHYndoNlNkTkx5a1RwVjZwVFlQSlFZbWVJQ1FUSl9SNjNGXy1ueUJlUEFUc3RVSEZYOGpIZDFXLWs4R3ZadllPVEtnVVJSWFAxQnA5NUxzVmt2dE11M0pIbG53OVFqcXJVLTREWEFmb3pHN1I3dFZVek9oaDA4MTdub25KNFN4ZE9IaUFoTDJ0dGVMY09QVGVCdUlrRVlnRG94M21aZHNQWmRoOXJZNGl5UTZmbHR5X1FaTFNqVmNlTHNjWQ?oc=5
+- CONTROL SYSTEM TRACKER. — control-system-tracker.html
 - WWIII Escalation Clock — live-intel.html
 - Risk clocks — timers.html
 - Risk clocks — timers.html
+- The Black File / Thirty-Three Systems — atlas-black-file.html
 - CBDC Rollout Clock — surveillance-hub.html
 - Epstein / Black File Source Map
 - Digital identity and payment rails become more linked to access control
 - Current strongest public signal
-- Best source intake priority
-- Highest clock pressure — timers.html
 
 ### What would raise it
 - Raise only when Mentions, reposts, screenshots and recycled images cannot raise the score. Automated increases are disabled pending authenticated physical or primary evidence. The evidence must directly address the classified claim “Saturn worship / black cube control system”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or
@@ -2366,7 +2366,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 7% — Background
 - Meaning: Little current implementation evidence. Keep on file; no urgent action.
 - Movement: Held at 7. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 0 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: Open evidence watch
 
 Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Demonic possession of elites”. The score measures evidential pressure around the claim, not truth, guilt or event probability.
@@ -2565,8 +2565,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Highest clock pressure — timers.html
 - Probability weighting
 - Highest clock pressure — timers.html
+- Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 - Five Eyes warns frontier AI cyber-attack capability could arrive within months — Intelligence-alliance warning / cyber-risk lane — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- Papua New Guinea returns to the FATF grey list - Global Initiative against Transnational Organized Crime (GI-TOC) — Seven-day public-record lead — https://news.google.com/rss/articles/CBMilgFBVV95cUxOc2RmWE53aGNJV1ZGTjhmTFVTZ0NDS1VpOThHSzJXdXduNGFibGlvbjFxMW1hbk1aSE9oWnppdzByazFfNFJseEQwWW5zenllQVpnY2dBc0NWOVFiS3ptQ0NBZnNUYkdhcU9DQlEwUmctQ18ydE5xSmhwN00xSW03dnB6VE1oSmFMYWxMbF95QWJ1YjZQMFE?oc=5
 
 ### What would raise it
 - Raise only when Public-record mentions cannot verify a metaphysical claim. Automated increases are disabled pending repeatable evidence or authenticated records. The evidence must directly address the classified claim “Grey aliens controlling governments”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innoc
@@ -2610,8 +2610,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Highest clock pressure — timers.html
 - Highest clock pressure — timers.html
 - Highest clock pressure — timers.html
+- World Cup football’s other goal: Helping young people talk about mental health — https://news.un.org/feed/view/en/story/2026/07/1167941
 - Maxwell habeas petition claims new Epstein-file evidence; prosecutors reject arguments — Court-process update / litigation claim and government response — https://www.reuters.com/legal/government/epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-conviction-us-2026-06-25/
-- The Secret Egyptian Air Base Behind Sudan’s Drone War - The New York Times — Seven-day public-record lead — https://news.google.com/rss/articles/CBMie0FVX3lxTE42Z1Z3X3Vfd2F2SlpsaUV2V0EzcF9zSTA0TGRsejB4SlpjS3VacnBPbmNNVTA2WDFyLU5XV2FFb1JmSzI4OG1qN29FVHlVSHpXdVpOb1JjOE1mLUROTXBQajhMbW5sVUlORFRsbzVVSHAyM3BwWjFpYllsTQ?oc=5
 
 ### What would raise it
 - Raise only when Mentions, reposts, screenshots and recycled images cannot raise the score. Automated increases are disabled pending authenticated physical or primary evidence. The evidence must directly address the classified claim “Dulce Base experiments”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger inno
@@ -2923,10 +2923,10 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Probability weighting
 - Risk clocks — timers.html
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 - Iran marries surveillance infrastructure, national ID to control population: report - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMivAFBVV95cUxQRDNhc19kVi0xNWRoMzdBRXNkT2gxXzRxbzdNNmlTbVZqYzRWUVBtSjVoU1k4YWxEN1RUV1FkSDkxRVgzdXRmT0U5MlVHdlV2blY3SUtiSzdNMTNfTG1QTlk5RGJoZ3d3WnlrZnhXTjlsRzJDMHZuLXZzS1Y5aXdlZ3pKTHRGZUVOVzhKM0J2ZkV0QUJrY01LVWJ5WGpHdF9EaHY3UGFLWW82b0JYLUlULWo4OU5VQ0JuOVBldA?oc=5
 - Surveillance State Clock — surveillance-hub.html
-- CBDC Rollout Clock — surveillance-hub.html
-- AI Breakout Clock — answer-engine.html
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Social media as behavioural control grid”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanation.
@@ -3147,11 +3147,11 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Current strongest public signal
 - Probability weighting
-- Chattogram Water Supply Improvement Project — https://search.worldbank.org/api/v2/projects
 - Jeffrey Epstein’s Possible Suicide Note Hidden From Public View - The New York Times — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMihAFBVV95cUxNOTYySmpiWHUxc0oyY254eFdlX2lFb2tsUXRBYlJ2dDhkT2JCbG03bFRlY0hhNGd4WWpzQ0lfdENOYkJlME1hWGFhZ3otb2l5Q29nd1V5UGZaY1ZnRHVESFNITmNRR0h4MzhZVGs4MWpmZXFuOW5XQlFxT1RHRGpCSzJuZFA?oc=5
 - Hackers may have breached FBI wiretap network via supply chain - Malwarebytes — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiugFBVV95cUxPczJpTmZyYjRQdlpzdVRBd2VYSmtYM0huMlpVNkFnS0VRc1JMTVQ1OFNvUWNlLVNPSkpuZzBHU1hwSUR5dG40Z2RSS3I2TXhadlBON3dqR1JSSnlZaE1UVXNWT1ZyMFpVWUlCejdCdmpkREJPMU5SWVIxQTd5OXZaU21yUlpuaHZwZ0xmRVNZeTdOWldJT3FyWDNyeWxFcXliaTV4NWhZOGhSX2JKZm9XalI2Rk9XV0ZHMkE?oc=5
 - Pentagon Officially Notifies Anthropic It Is a ‘Supply Chain Risk’ - The New York Times — Seven-day public-record lead — https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5
 - What Hegseth’s “Supply Chain Risk” Designation of Anthropic Does and Doesn’t Mean - Just Security — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5
+- Hegseth declares Anthropic a supply chain risk, restricting military contractors from doing business with AI giant - CBS News — Seven-day public-record lead — https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5
 
 ### What would raise it
 - Raise only when At least one named official, court, regulator, inspection, sanctions or audited record is required before an automatic increase. The evidence must directly address the classified claim “Modern slavery hidden in supply chains”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanatio
@@ -3191,12 +3191,12 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - WWIII Escalation Clock — live-intel.html
 - Risk clocks — timers.html
 - Risk clocks — timers.html
+- Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
+- Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 - Current strongest public signal
 - Highest clock pressure — timers.html
 - Highest clock pressure — timers.html
-- Human Cost Sources
-- Probability weighting
-- Highest clock pressure — timers.html
+- Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers — live-intel.html
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Human trafficking protected by corruption”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanation.
@@ -3375,7 +3375,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Highest clock pressure — timers.html
 - Probability weighting
 - Highest clock pressure — timers.html
-- Health, Nutrition and Population Sector Development Program — https://search.worldbank.org/api/v2/projects
+- Djibouti: Emergency alert spotlights sharp hunger spike — 3
 - Iran marries surveillance infrastructure, national ID to control population: report - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMivAFBVV95cUxQRDNhc19kVi0xNWRoMzdBRXNkT2gxXzRxbzdNNmlTbVZqYzRWUVBtSjVoU1k4YWxEN1RUV1FkSDkxRVgzdXRmT0U5MlVHdlV2blY3SUtiSzdNMTNfTG1QTlk5RGJoZ3d3WnlrZnhXTjlsRzJDMHZuLXZzS1Y5aXdlZ3pKTHRGZUVOVzhKM0J2ZkV0QUJrY01LVWJ5WGpHdF9EaHY3UGFLWW82b0JYLUlULWo4OU5VQ0JuOVBldA?oc=5
 
 ### What would raise it
@@ -3465,8 +3465,8 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Probability weighting
 - Source route cards define what records can and cannot prove — source route cards
 - Risk clocks — timers.html
-- Maxwell files new Epstein-documents challenge; prosecutors oppose — epstein-files.html#epstein-watch-enhanced
-- Files on Josef Mengele, Nazi doctor, to be released by Switzerland - The Jerusalem Post — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiV0FVX3lxTE5xYnV3LVRTTVQwN3Bkc2VoRDlZMnp6dkQ4akZJUDRFN2wwRU5URzFUNWhPeFB6NlZSTENSei1BT1FwNkgzbUFocHBYXzVhWDhiRGs3dXFfbw?oc=5
+- Djibouti: Emergency alert spotlights sharp hunger spike — 3
+- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 
 ### What would raise it
 - Raise only when A named court file, official report, authenticated exhibit, physical record or multiple independent case sources is required before an automatic increase. The evidence must directly address the classified claim “Bioweapons released as control events”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a str
@@ -3554,9 +3554,9 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Probability weighting
 - Risk clocks — timers.html
 - Surveillance State Clock — surveillance-hub.html
-- CBDC Rollout Clock — surveillance-hub.html
-- AI Breakout Clock — answer-engine.html
-- Smart city digital infrastructure strategies — Build from primary and public sources for Smart city digital infrastructure strategies: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Smart city digital infrastructure strategies — policy/smart-city-digital-infrastructure-strategies.html
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Smart cities as open-air prisons”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanation.
@@ -3596,12 +3596,12 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Risk clocks — timers.html
 - content changed: U.S. Treasury OFAC — Recent Actions — B
-- content changed: U.S. Treasury OFAC — Recent Actions — B
 - Current strongest public signal
 - Highest clock pressure — timers.html
 - Highest clock pressure — timers.html
 - Live intel drops — live-intel.html
 - Probability weighting
+- Highest clock pressure — timers.html
 
 ### What would raise it
 - Raise only when Mentions, reposts, screenshots and recycled images cannot raise the score. Automated increases are disabled pending authenticated physical or primary evidence. The evidence must directly address the classified claim “Tartaria / hidden recent reset”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stron
@@ -3646,7 +3646,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Probability weighting
 - Highest clock pressure — timers.html
 - content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — B
-- content changed: Federal Register — Latest Documents — B
+- content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — B
 
 ### What would raise it
 - Raise only when Mentions, reposts, screenshots and recycled images cannot raise the score. Automated increases are disabled pending authenticated physical or primary evidence. The evidence must directly address the classified claim “Giants hidden by institutions”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a strong
@@ -3690,7 +3690,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Highest clock pressure — timers.html
 - Probability weighting
 - Highest clock pressure — timers.html
-- Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — Seven-day public-record lead — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 
 ### What would raise it
@@ -3728,15 +3728,15 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 ### Evidence inputs
 
 - Jeffrey Epstein’s Possible Suicide Note Hidden From Public View - The New York Times — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMihAFBVV95cUxNOTYySmpiWHUxc0oyY254eFdlX2lFb2tsUXRBYlJ2dDhkT2JCbG03bFRlY0hhNGd4WWpzQ0lfdENOYkJlME1hWGFhZ3otb2l5Q29nd1V5UGZaY1ZnRHVESFNITmNRR0h4MzhZVGs4MWpmZXFuOW5XQlFxT1RHRGpCSzJuZFA?oc=5
-- content changed: European Public Prosecutor's Office — News — B
-- content changed: European Public Prosecutor's Office — News — B
 - Current strongest public signal
 - USAspending route added for public contract searches — route verified / search pending
 - Policy Watch created from uploaded video leads and public route questions — review lane
 - House Oversight testimony lane adds Epstein staff, scheduling, and logistics context — epstein-files.html#epstein-watch-enhanced
+- THE PUBLIC-RECORD MAP OF HIDDEN POWER. — power-atlas.html
 - Surveillance State Clock — surveillance-hub.html
 - CBDC Rollout Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
+- WWIII Escalation Clock — live-intel.html
 
 ### What would raise it
 - Raise only when Symbolism, resemblance and association cannot raise the score. Authenticated records establishing a concrete mechanism are required. The evidence must directly address the classified claim “Cataclysm cycle hidden from public”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanatio

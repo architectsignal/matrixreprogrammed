@@ -97,9 +97,9 @@ for (const file of ['membership.html','_site/membership.html']) {
   forbidText(file, '€49/month', 'legacy €49 tier');
 }
 for (const file of ['paypal-membership.js','_site/paypal-membership.js']) {
-  needText(file, '/api/paypal/checkout-intent', 'PayPal checkout intent runtime');
-  needText(file, '/api/paypal/subscription/confirm', 'PayPal confirmation runtime');
-  needText(file, 'Retry PayPal checkout', 'PayPal SDK retry action');
+  needText(file, '/api/paypal/subscription/create', 'server-created PayPal subscription runtime');
+  needText(file, 'Continue securely to PayPal', 'PayPal redirect checkout action');
+  forbidText(file, 'paypal.com/sdk/js', 'obsolete browser-loaded PayPal SDK');
 }
 needText('billing-dashboard.html', 'billing-dashboard.js', 'member billing dashboard');
 needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'admin payment dashboard');

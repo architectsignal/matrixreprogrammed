@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:05.114Z",
-  "filesScanned": 526,
+  "updated": "2026-07-20T06:35:31.463Z",
+  "filesScanned": 528,
   "highIssues": 0,
-  "reviewIssues": 11,
+  "reviewIssues": 12,
   "issues": [
     {
       "file": "access-denied.html",
@@ -42,6 +42,11 @@
     },
     {
       "file": "institution-profile.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "intelligence-reports.html",
       "severity": "review",
       "issue": "missing meta description"
     },

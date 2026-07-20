@@ -1,15 +1,9 @@
 {
-  "updated": "2026-07-19T06:13:18.387Z",
+  "updated": "2026-07-20T06:34:11.022Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
-    {
-      "entity": "People's Republic of Bangladesh",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "type": "entity brief"
-    },
     {
       "entity": "Appellate Division of the Supreme Court of the State of New York",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -203,45 +197,15 @@
       "type": "entity brief"
     },
     {
-      "entity": "Chattogram Water Supply and Sewerage Authority",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Finance Division, Ministry of Finance",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/finance-division-ministry-of-finance.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "GOOGL",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/googl.html",
       "type": "entity brief"
     },
     {
-      "entity": "Kingdom of Morocco",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/kingdom-of-morocco.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "MICROSOFT CORP",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/microsoft-corp.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Ministry of Health and Family Welfare",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
       "type": "entity brief"
     },
     {
@@ -266,18 +230,6 @@
       "entity": "Nuclear Regulatory Commission",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/nuclear-regulatory-commission.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Republic of India",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/republic-of-india.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Republic of Rwanda",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/republic-of-rwanda.html",
       "type": "entity brief"
     },
     {
@@ -383,12 +335,6 @@
       "type": "record review"
     },
     {
-      "entity": "People's Republic of Bangladesh",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/people-s-republic-of-bangladesh.html",
-      "type": "record review"
-    },
-    {
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/homeland-security-department.html",
@@ -479,45 +425,15 @@
       "type": "record review"
     },
     {
-      "entity": "Chattogram Water Supply and Sewerage Authority",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/chattogram-water-supply-and-sewerage-authority.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Finance Division, Ministry of Finance",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/finance-division-ministry-of-finance.html",
-      "type": "record review"
-    },
-    {
       "entity": "GOOGL",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/googl.html",
       "type": "record review"
     },
     {
-      "entity": "Kingdom of Morocco",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/kingdom-of-morocco.html",
-      "type": "record review"
-    },
-    {
       "entity": "MICROSOFT CORP",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/microsoft-corp.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Ministry of Health and Family Welfare",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/ministry-of-health-and-family-welfare.html",
       "type": "record review"
     },
     {
@@ -542,18 +458,6 @@
       "entity": "Nuclear Regulatory Commission",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/nuclear-regulatory-commission.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Republic of India",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/republic-of-india.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Republic of Rwanda",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/republic-of-rwanda.html",
       "type": "record review"
     },
     {

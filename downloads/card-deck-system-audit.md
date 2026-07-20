@@ -1,6 +1,6 @@
 # Card Deck System Audit
 
-Updated: 2026-07-19T07:49:53.923Z
+Updated: 2026-07-20T06:35:30.991Z
 
 Expected decks: 9
 
@@ -8,9 +8,11 @@ Manifest decks: 9
 
 Manifest cards: 468
 
-Feed decks: 9
+Real artwork: 2
 
-Feed cards: 468
+Placeholders: 466
+
+Art blockers: 0
 
 High issues: 0
 

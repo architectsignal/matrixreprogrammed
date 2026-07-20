@@ -1,5 +1,6 @@
 import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes, processOutbox } from './worker-email-lifecycle.js';
+import intelligenceReportWorker, { isIntelligenceReportRoute } from './worker-intelligence-reports.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
@@ -165,6 +166,14 @@ async function validateEmailResponse(response) {
   return response;
 }
 
+async function validateIntelligenceReportResponse(response) {
+  const responseOrigin = response.headers.get('x-matrix-origin');
+  if (responseOrigin !== 'cloudflare-worker-intelligence-reports') {
+    return unavailable('non-authoritative-intelligence-report-response-blocked', `Origin was ${responseOrigin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
 async function validateMemberResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-member-experience') {
@@ -219,6 +228,15 @@ export default {
       }
     }
 
+    if (isIntelligenceReportRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateIntelligenceReportResponse(await intelligenceReportWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('intelligence-report-worker-exception', error?.message || error, 'member');
+      }
+    }
+
     if (emailRoutes.has(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');
       try {
@@ -245,7 +263,7 @@ export default {
     }
     if (isPayPalRoute(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'paypal');
-      if (path === '/api/paypal/checkout-intent'
+      if (['/api/paypal/checkout-intent', '/api/paypal/subscription/create'].includes(path)
         && request.method === 'POST'
         && String(env?.PAYPAL_ENVIRONMENT || 'sandbox').toLowerCase() !== 'live') {
         try {

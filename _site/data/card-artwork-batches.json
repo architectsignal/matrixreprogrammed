@@ -1,27 +1,15 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:04.659Z",
+  "updated": "2026-07-20T06:35:31.008Z",
   "title": "Card Artwork Batch Plan",
   "batchSize": 10,
-  "totalMissing": 468,
+  "totalMissing": 466,
   "totalBatches": 47,
   "batches": [
     {
       "batchNo": 1,
       "id": "batch-001",
       "cards": [
-        {
-          "deckId": "people-of-interest",
-          "deckTitle": "Top 52 Persons of Interest",
-          "cardId": "elon-musk",
-          "name": "Elon Musk",
-          "rank": 1,
-          "suit": "Coins",
-          "score": 100,
-          "asset": "assets/top-52/cards/elon-musk.svg",
-          "profileRoute": "top-52/elon-musk.html",
-          "prompt": "BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Elon Musk. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 1. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -129,13 +117,7 @@
           "asset": "assets/top-52/cards/tony-blair.svg",
           "profileRoute": "top-52/tony-blair.html",
           "prompt": "BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tony Blair. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 2,
-      "id": "batch-002",
-      "cards": [
+        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -146,8 +128,14 @@
           "score": 85,
           "asset": "assets/top-52/cards/jamie-dimon.svg",
           "profileRoute": "top-52/jamie-dimon.html",
-          "prompt": "BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jamie Dimon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 01 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jamie Dimon. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 2,
+      "id": "batch-002",
+      "cards": [
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -255,13 +243,7 @@
           "asset": "assets/top-52/cards/sundar-pichai.svg",
           "profileRoute": "top-52/sundar-pichai.html",
           "prompt": "BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Sundar Pichai. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 3,
-      "id": "batch-003",
-      "cards": [
+        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -272,8 +254,14 @@
           "score": 78,
           "asset": "assets/top-52/cards/satya-nadella.svg",
           "profileRoute": "top-52/satya-nadella.html",
-          "prompt": "BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Satya Nadella. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 02 · Create a vertical 2:3 Matrix Reprogrammed playing card for Satya Nadella. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 3,
+      "id": "batch-003",
+      "cards": [
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -381,13 +369,7 @@
           "asset": "assets/top-52/cards/giorgia-meloni.svg",
           "profileRoute": "top-52/giorgia-meloni.html",
           "prompt": "BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Giorgia Meloni. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Crowns. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 4,
-      "id": "batch-004",
-      "cards": [
+        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -398,8 +380,14 @@
           "score": 67,
           "asset": "assets/top-52/cards/gautam-adani.svg",
           "profileRoute": "top-52/gautam-adani.html",
-          "prompt": "BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gautam Adani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 03 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gautam Adani. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 4,
+      "id": "batch-004",
+      "cards": [
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -507,13 +495,7 @@
           "asset": "assets/top-52/cards/mark-rutte.svg",
           "profileRoute": "top-52/mark-rutte.html",
           "prompt": "BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mark Rutte. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 5,
-      "id": "batch-005",
-      "cards": [
+        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -524,8 +506,14 @@
           "score": 63,
           "asset": "assets/top-52/cards/jens-stoltenberg.svg",
           "profileRoute": "top-52/jens-stoltenberg.html",
-          "prompt": "BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jens Stoltenberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 04 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jens Stoltenberg. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Swords. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 5,
+      "id": "batch-005",
+      "cards": [
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -633,13 +621,7 @@
           "asset": "assets/top-52/cards/warren-buffett.svg",
           "profileRoute": "top-52/warren-buffett.html",
           "prompt": "BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for Warren Buffett. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 6,
-      "id": "batch-006",
-      "cards": [
+        },
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -650,8 +632,14 @@
           "score": 60,
           "asset": "assets/top-52/cards/mackenzie-scott.svg",
           "profileRoute": "top-52/mackenzie-scott.html",
-          "prompt": "BATCH 06 · Create a vertical 2:3 Matrix Reprogrammed playing card for MacKenzie Scott. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 51. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 05 · Create a vertical 2:3 Matrix Reprogrammed playing card for MacKenzie Scott. Deck: Top 52 Persons of Interest. Card ID: undefined. Suit: Masks. Rank: 51. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 6,
+      "id": "batch-006",
+      "cards": [
         {
           "deckId": "people-of-interest",
           "deckTitle": "Top 52 Persons of Interest",
@@ -759,13 +747,7 @@
           "asset": "assets/controlled-opposition/cards/candace-owens.svg",
           "profileRoute": "controlled-opposition/candace-owens.html",
           "prompt": "BATCH 06 · Create a vertical 2:3 Matrix Reprogrammed playing card for Candace Owens. Deck: Controlled Opposition. Card ID: undefined. Suit: Crowns. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 7,
-      "id": "batch-007",
-      "cards": [
+        },
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -776,8 +758,14 @@
           "score": 85,
           "asset": "assets/controlled-opposition/cards/jordan-peterson.svg",
           "profileRoute": "controlled-opposition/jordan-peterson.html",
-          "prompt": "BATCH 07 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jordan Peterson. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 06 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jordan Peterson. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 7,
+      "id": "batch-007",
+      "cards": [
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -865,18 +853,6 @@
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
-          "cardId": "elon-musk",
-          "name": "Elon Musk",
-          "rank": 17,
-          "suit": "Coins",
-          "score": 100,
-          "asset": "assets/controlled-opposition/cards/elon-musk.svg",
-          "profileRoute": "controlled-opposition/elon-musk.html",
-          "prompt": "BATCH 07 · Create a vertical 2:3 Matrix Reprogrammed playing card for Elon Musk. Deck: Controlled Opposition. Card ID: undefined. Suit: Coins. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
-        {
-          "deckId": "controlled-opposition",
-          "deckTitle": "Controlled Opposition",
           "cardId": "kanye-west-ye",
           "name": "Kanye West / Ye",
           "rank": 18,
@@ -885,13 +861,7 @@
           "asset": "assets/controlled-opposition/cards/kanye-west-ye.svg",
           "profileRoute": "controlled-opposition/kanye-west-ye.html",
           "prompt": "BATCH 07 · Create a vertical 2:3 Matrix Reprogrammed playing card for Kanye West / Ye. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 8,
-      "id": "batch-008",
-      "cards": [
+        },
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -902,7 +872,7 @@
           "score": 89,
           "asset": "assets/controlled-opposition/cards/rfk-jr.svg",
           "profileRoute": "controlled-opposition/rfk-jr.html",
-          "prompt": "BATCH 08 · Create a vertical 2:3 Matrix Reprogrammed playing card for RFK Jr.. Deck: Controlled Opposition. Card ID: undefined. Suit: Crowns. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 07 · Create a vertical 2:3 Matrix Reprogrammed playing card for RFK Jr.. Deck: Controlled Opposition. Card ID: undefined. Suit: Crowns. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "controlled-opposition",
@@ -914,8 +884,14 @@
           "score": 81,
           "asset": "assets/controlled-opposition/cards/tulsi-gabbard.svg",
           "profileRoute": "controlled-opposition/tulsi-gabbard.html",
-          "prompt": "BATCH 08 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tulsi Gabbard. Deck: Controlled Opposition. Card ID: undefined. Suit: Crowns. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 07 · Create a vertical 2:3 Matrix Reprogrammed playing card for Tulsi Gabbard. Deck: Controlled Opposition. Card ID: undefined. Suit: Crowns. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 8,
+      "id": "batch-008",
+      "cards": [
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1011,13 +987,7 @@
           "asset": "assets/controlled-opposition/cards/milo-yiannopoulos.svg",
           "profileRoute": "controlled-opposition/milo-yiannopoulos.html",
           "prompt": "BATCH 08 · Create a vertical 2:3 Matrix Reprogrammed playing card for Milo Yiannopoulos. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 9,
-      "id": "batch-009",
-      "cards": [
+        },
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1028,7 +998,7 @@
           "score": 70,
           "asset": "assets/controlled-opposition/cards/nick-fuentes.svg",
           "profileRoute": "controlled-opposition/nick-fuentes.html",
-          "prompt": "BATCH 09 · Create a vertical 2:3 Matrix Reprogrammed playing card for Nick Fuentes. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 08 · Create a vertical 2:3 Matrix Reprogrammed playing card for Nick Fuentes. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "controlled-opposition",
@@ -1040,8 +1010,14 @@
           "score": 69,
           "asset": "assets/controlled-opposition/cards/gavin-mcinnes.svg",
           "profileRoute": "controlled-opposition/gavin-mcinnes.html",
-          "prompt": "BATCH 09 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gavin McInnes. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 08 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gavin McInnes. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 9,
+      "id": "batch-009",
+      "cards": [
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1137,13 +1113,7 @@
           "asset": "assets/controlled-opposition/cards/heather-heying.svg",
           "profileRoute": "controlled-opposition/heather-heying.html",
           "prompt": "BATCH 09 · Create a vertical 2:3 Matrix Reprogrammed playing card for Heather Heying. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 10,
-      "id": "batch-010",
-      "cards": [
+        },
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1154,7 +1124,7 @@
           "score": 74,
           "asset": "assets/controlled-opposition/cards/del-bigtree.svg",
           "profileRoute": "controlled-opposition/del-bigtree.html",
-          "prompt": "BATCH 10 · Create a vertical 2:3 Matrix Reprogrammed playing card for Del Bigtree. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 09 · Create a vertical 2:3 Matrix Reprogrammed playing card for Del Bigtree. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "controlled-opposition",
@@ -1166,8 +1136,14 @@
           "score": 79,
           "asset": "assets/controlled-opposition/cards/robert-malone.svg",
           "profileRoute": "controlled-opposition/robert-malone.html",
-          "prompt": "BATCH 10 · Create a vertical 2:3 Matrix Reprogrammed playing card for Robert Malone. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 09 · Create a vertical 2:3 Matrix Reprogrammed playing card for Robert Malone. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 10,
+      "id": "batch-010",
+      "cards": [
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1263,13 +1239,7 @@
           "asset": "assets/controlled-opposition/cards/glenn-greenwald.svg",
           "profileRoute": "controlled-opposition/glenn-greenwald.html",
           "prompt": "BATCH 10 · Create a vertical 2:3 Matrix Reprogrammed playing card for Glenn Greenwald. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 11,
-      "id": "batch-011",
-      "cards": [
+        },
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1280,7 +1250,7 @@
           "score": 74,
           "asset": "assets/controlled-opposition/cards/matt-taibbi.svg",
           "profileRoute": "controlled-opposition/matt-taibbi.html",
-          "prompt": "BATCH 11 · Create a vertical 2:3 Matrix Reprogrammed playing card for Matt Taibbi. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 10 · Create a vertical 2:3 Matrix Reprogrammed playing card for Matt Taibbi. Deck: Controlled Opposition. Card ID: undefined. Suit: Masks. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "controlled-opposition",
@@ -1292,8 +1262,14 @@
           "score": 90,
           "asset": "assets/controlled-opposition/cards/julian-assange.svg",
           "profileRoute": "controlled-opposition/julian-assange.html",
-          "prompt": "BATCH 11 · Create a vertical 2:3 Matrix Reprogrammed playing card for Julian Assange. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 10 · Create a vertical 2:3 Matrix Reprogrammed playing card for Julian Assange. Deck: Controlled Opposition. Card ID: undefined. Suit: Mirrors. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 11,
+      "id": "batch-011",
+      "cards": [
         {
           "deckId": "controlled-opposition",
           "deckTitle": "Controlled Opposition",
@@ -1389,13 +1365,7 @@
           "asset": "assets/institution/cards/vanguard.svg",
           "profileRoute": "institutions/vanguard.html",
           "prompt": "BATCH 11 · Create a vertical 2:3 Matrix Reprogrammed playing card for Vanguard. Deck: Institution Deck. Card ID: undefined. Suit: Coins. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 12,
-      "id": "batch-012",
-      "cards": [
+        },
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1406,7 +1376,7 @@
           "score": 94,
           "asset": "assets/institution/cards/state-street.svg",
           "profileRoute": "institutions/state-street.html",
-          "prompt": "BATCH 12 · Create a vertical 2:3 Matrix Reprogrammed playing card for State Street. Deck: Institution Deck. Card ID: undefined. Suit: Coins. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 11 · Create a vertical 2:3 Matrix Reprogrammed playing card for State Street. Deck: Institution Deck. Card ID: undefined. Suit: Coins. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "institutions",
@@ -1418,8 +1388,14 @@
           "score": 94,
           "asset": "assets/institution/cards/international-monetary-fund.svg",
           "profileRoute": "institutions/international-monetary-fund.html",
-          "prompt": "BATCH 12 · Create a vertical 2:3 Matrix Reprogrammed playing card for International Monetary Fund. Deck: Institution Deck. Card ID: undefined. Suit: Coins. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 11 · Create a vertical 2:3 Matrix Reprogrammed playing card for International Monetary Fund. Deck: Institution Deck. Card ID: undefined. Suit: Coins. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 12,
+      "id": "batch-012",
+      "cards": [
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1515,13 +1491,7 @@
           "asset": "assets/institution/cards/g7.svg",
           "profileRoute": "institutions/g7.html",
           "prompt": "BATCH 12 · Create a vertical 2:3 Matrix Reprogrammed playing card for G7. Deck: Institution Deck. Card ID: undefined. Suit: Crowns. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 13,
-      "id": "batch-013",
-      "cards": [
+        },
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1532,7 +1502,7 @@
           "score": 90,
           "asset": "assets/institution/cards/microsoft.svg",
           "profileRoute": "institutions/microsoft.html",
-          "prompt": "BATCH 13 · Create a vertical 2:3 Matrix Reprogrammed playing card for Microsoft. Deck: Institution Deck. Card ID: undefined. Suit: Keys. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 12 · Create a vertical 2:3 Matrix Reprogrammed playing card for Microsoft. Deck: Institution Deck. Card ID: undefined. Suit: Keys. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "institutions",
@@ -1544,8 +1514,14 @@
           "score": 90,
           "asset": "assets/institution/cards/google.svg",
           "profileRoute": "institutions/google.html",
-          "prompt": "BATCH 13 · Create a vertical 2:3 Matrix Reprogrammed playing card for Google. Deck: Institution Deck. Card ID: undefined. Suit: Keys. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 12 · Create a vertical 2:3 Matrix Reprogrammed playing card for Google. Deck: Institution Deck. Card ID: undefined. Suit: Keys. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 13,
+      "id": "batch-013",
+      "cards": [
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1641,13 +1617,7 @@
           "asset": "assets/institution/cards/national-security-agency.svg",
           "profileRoute": "institutions/national-security-agency.html",
           "prompt": "BATCH 13 · Create a vertical 2:3 Matrix Reprogrammed playing card for National Security Agency. Deck: Institution Deck. Card ID: undefined. Suit: Swords. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 14,
-      "id": "batch-014",
-      "cards": [
+        },
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1658,7 +1628,7 @@
           "score": 84,
           "asset": "assets/institution/cards/federal-bureau-of-investigation.svg",
           "profileRoute": "institutions/federal-bureau-of-investigation.html",
-          "prompt": "BATCH 14 · Create a vertical 2:3 Matrix Reprogrammed playing card for Federal Bureau of Investigation. Deck: Institution Deck. Card ID: undefined. Suit: Swords. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 13 · Create a vertical 2:3 Matrix Reprogrammed playing card for Federal Bureau of Investigation. Deck: Institution Deck. Card ID: undefined. Suit: Swords. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "institutions",
@@ -1670,8 +1640,14 @@
           "score": 84,
           "asset": "assets/institution/cards/gchq.svg",
           "profileRoute": "institutions/gchq.html",
-          "prompt": "BATCH 14 · Create a vertical 2:3 Matrix Reprogrammed playing card for GCHQ. Deck: Institution Deck. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 13 · Create a vertical 2:3 Matrix Reprogrammed playing card for GCHQ. Deck: Institution Deck. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 14,
+      "id": "batch-014",
+      "cards": [
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1767,13 +1743,7 @@
           "asset": "assets/institution/cards/brookings-institution.svg",
           "profileRoute": "institutions/brookings-institution.html",
           "prompt": "BATCH 14 · Create a vertical 2:3 Matrix Reprogrammed playing card for Brookings Institution. Deck: Institution Deck. Card ID: undefined. Suit: Masks. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 15,
-      "id": "batch-015",
-      "cards": [
+        },
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1784,7 +1754,7 @@
           "score": 86,
           "asset": "assets/institution/cards/gavi-the-vaccine-alliance.svg",
           "profileRoute": "institutions/gavi-the-vaccine-alliance.html",
-          "prompt": "BATCH 15 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gavi, the Vaccine Alliance. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 14 · Create a vertical 2:3 Matrix Reprogrammed playing card for Gavi, the Vaccine Alliance. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "institutions",
@@ -1796,8 +1766,14 @@
           "score": 84,
           "asset": "assets/institution/cards/coalition-for-epidemic-preparedness-innovations.svg",
           "profileRoute": "institutions/coalition-for-epidemic-preparedness-innovations.html",
-          "prompt": "BATCH 15 · Create a vertical 2:3 Matrix Reprogrammed playing card for Coalition for Epidemic Preparedness Innovations. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 14 · Create a vertical 2:3 Matrix Reprogrammed playing card for Coalition for Epidemic Preparedness Innovations. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 15,
+      "id": "batch-015",
+      "cards": [
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1893,13 +1869,7 @@
           "asset": "assets/institution/cards/open-society-foundations.svg",
           "profileRoute": "institutions/open-society-foundations.html",
           "prompt": "BATCH 15 · Create a vertical 2:3 Matrix Reprogrammed playing card for Open Society Foundations. Deck: Institution Deck. Card ID: undefined. Suit: Masks. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 16,
-      "id": "batch-016",
-      "cards": [
+        },
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -1910,7 +1880,7 @@
           "score": 84,
           "asset": "assets/institution/cards/rockefeller-foundation.svg",
           "profileRoute": "institutions/rockefeller-foundation.html",
-          "prompt": "BATCH 16 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rockefeller Foundation. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 15 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rockefeller Foundation. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "institutions",
@@ -1922,8 +1892,14 @@
           "score": 82,
           "asset": "assets/institution/cards/wellcome-trust.svg",
           "profileRoute": "institutions/wellcome-trust.html",
-          "prompt": "BATCH 16 · Create a vertical 2:3 Matrix Reprogrammed playing card for Wellcome Trust. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 15 · Create a vertical 2:3 Matrix Reprogrammed playing card for Wellcome Trust. Deck: Institution Deck. Card ID: undefined. Suit: Serpents. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 16,
+      "id": "batch-016",
+      "cards": [
         {
           "deckId": "institutions",
           "deckTitle": "Institution Deck",
@@ -2019,13 +1995,7 @@
           "asset": "assets/power-families/cards/al-nahyan-family.svg",
           "profileRoute": "power-families/al-nahyan-family.html",
           "prompt": "BATCH 16 · Create a vertical 2:3 Matrix Reprogrammed playing card for Al Nahyan family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 17,
-      "id": "batch-017",
-      "cards": [
+        },
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2036,7 +2006,7 @@
           "score": 90,
           "asset": "assets/power-families/cards/al-thani-family.svg",
           "profileRoute": "power-families/al-thani-family.html",
-          "prompt": "BATCH 17 · Create a vertical 2:3 Matrix Reprogrammed playing card for Al Thani family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 16 · Create a vertical 2:3 Matrix Reprogrammed playing card for Al Thani family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "power-families",
@@ -2048,8 +2018,14 @@
           "score": 89,
           "asset": "assets/power-families/cards/al-maktoum-family.svg",
           "profileRoute": "power-families/al-maktoum-family.html",
-          "prompt": "BATCH 17 · Create a vertical 2:3 Matrix Reprogrammed playing card for Al Maktoum family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 16 · Create a vertical 2:3 Matrix Reprogrammed playing card for Al Maktoum family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 17,
+      "id": "batch-017",
+      "cards": [
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2145,13 +2121,7 @@
           "asset": "assets/power-families/cards/bettencourt-meyers-family.svg",
           "profileRoute": "power-families/bettencourt-meyers-family.html",
           "prompt": "BATCH 17 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bettencourt Meyers family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 18,
-      "id": "batch-018",
-      "cards": [
+        },
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2162,7 +2132,7 @@
           "score": 90,
           "asset": "assets/power-families/cards/quandt-klatten-family.svg",
           "profileRoute": "power-families/quandt-klatten-family.html",
-          "prompt": "BATCH 18 · Create a vertical 2:3 Matrix Reprogrammed playing card for Quandt-Klatten family. Deck: Power Families Deck. Card ID: undefined. Suit: Swords. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 17 · Create a vertical 2:3 Matrix Reprogrammed playing card for Quandt-Klatten family. Deck: Power Families Deck. Card ID: undefined. Suit: Swords. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "power-families",
@@ -2174,8 +2144,14 @@
           "score": 89,
           "asset": "assets/power-families/cards/porsche-pi-ch-family.svg",
           "profileRoute": "power-families/porsche-pi-ch-family.html",
-          "prompt": "BATCH 18 · Create a vertical 2:3 Matrix Reprogrammed playing card for Porsche-Piëch family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 17 · Create a vertical 2:3 Matrix Reprogrammed playing card for Porsche-Piëch family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 18,
+      "id": "batch-018",
+      "cards": [
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2271,13 +2247,7 @@
           "asset": "assets/power-families/cards/johnson-sc-family.svg",
           "profileRoute": "power-families/johnson-sc-family.html",
           "prompt": "BATCH 18 · Create a vertical 2:3 Matrix Reprogrammed playing card for Johnson SC family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 19,
-      "id": "batch-019",
-      "cards": [
+        },
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2288,7 +2258,7 @@
           "score": 80,
           "asset": "assets/power-families/cards/mellon-family.svg",
           "profileRoute": "power-families/mellon-family.html",
-          "prompt": "BATCH 19 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mellon family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 18 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mellon family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "power-families",
@@ -2300,8 +2270,14 @@
           "score": 79,
           "asset": "assets/power-families/cards/oppenheimer-family.svg",
           "profileRoute": "power-families/oppenheimer-family.html",
-          "prompt": "BATCH 19 · Create a vertical 2:3 Matrix Reprogrammed playing card for Oppenheimer family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 18 · Create a vertical 2:3 Matrix Reprogrammed playing card for Oppenheimer family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 19,
+      "id": "batch-019",
+      "cards": [
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2397,13 +2373,7 @@
           "asset": "assets/power-families/cards/del-vecchio-family.svg",
           "profileRoute": "power-families/del-vecchio-family.html",
           "prompt": "BATCH 19 · Create a vertical 2:3 Matrix Reprogrammed playing card for Del Vecchio family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 20,
-      "id": "batch-020",
-      "cards": [
+        },
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2414,7 +2384,7 @@
           "score": 80,
           "asset": "assets/power-families/cards/benetton-family.svg",
           "profileRoute": "power-families/benetton-family.html",
-          "prompt": "BATCH 20 · Create a vertical 2:3 Matrix Reprogrammed playing card for Benetton family. Deck: Power Families Deck. Card ID: undefined. Suit: Swords. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 19 · Create a vertical 2:3 Matrix Reprogrammed playing card for Benetton family. Deck: Power Families Deck. Card ID: undefined. Suit: Swords. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "power-families",
@@ -2426,8 +2396,14 @@
           "score": 79,
           "asset": "assets/power-families/cards/newhouse-family.svg",
           "profileRoute": "power-families/newhouse-family.html",
-          "prompt": "BATCH 20 · Create a vertical 2:3 Matrix Reprogrammed playing card for Newhouse family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 19 · Create a vertical 2:3 Matrix Reprogrammed playing card for Newhouse family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 20,
+      "id": "batch-020",
+      "cards": [
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2523,13 +2499,7 @@
           "asset": "assets/power-families/cards/birla-family.svg",
           "profileRoute": "power-families/birla-family.html",
           "prompt": "BATCH 20 · Create a vertical 2:3 Matrix Reprogrammed playing card for Birla family. Deck: Power Families Deck. Card ID: undefined. Suit: Masks. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 21,
-      "id": "batch-021",
-      "cards": [
+        },
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2540,7 +2510,7 @@
           "score": 80,
           "asset": "assets/power-families/cards/soros-family.svg",
           "profileRoute": "power-families/soros-family.html",
-          "prompt": "BATCH 21 · Create a vertical 2:3 Matrix Reprogrammed playing card for Soros family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 20 · Create a vertical 2:3 Matrix Reprogrammed playing card for Soros family. Deck: Power Families Deck. Card ID: undefined. Suit: Crowns. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "power-families",
@@ -2552,8 +2522,14 @@
           "score": 79,
           "asset": "assets/power-families/cards/bloomberg-family.svg",
           "profileRoute": "power-families/bloomberg-family.html",
-          "prompt": "BATCH 21 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bloomberg family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 20 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bloomberg family. Deck: Power Families Deck. Card ID: undefined. Suit: Coins. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 21,
+      "id": "batch-021",
+      "cards": [
         {
           "deckId": "power-families",
           "deckTitle": "Power Families Deck",
@@ -2649,13 +2625,7 @@
           "asset": "assets/secret-societies/cards/scottish-rite-freemasonry.svg",
           "profileRoute": "secret-societies/scottish-rite-freemasonry.html",
           "prompt": "BATCH 21 · Create a vertical 2:3 Matrix Reprogrammed playing card for Scottish Rite Freemasonry. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 2. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 22,
-      "id": "batch-022",
-      "cards": [
+        },
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -2666,7 +2636,7 @@
           "score": 88,
           "asset": "assets/secret-societies/cards/york-rite-freemasonry.svg",
           "profileRoute": "secret-societies/york-rite-freemasonry.html",
-          "prompt": "BATCH 22 · Create a vertical 2:3 Matrix Reprogrammed playing card for York Rite Freemasonry. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 3. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 21 · Create a vertical 2:3 Matrix Reprogrammed playing card for York Rite Freemasonry. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 3. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "secret-societies",
@@ -2678,8 +2648,14 @@
           "score": 87,
           "asset": "assets/secret-societies/cards/shriners-international.svg",
           "profileRoute": "secret-societies/shriners-international.html",
-          "prompt": "BATCH 22 · Create a vertical 2:3 Matrix Reprogrammed playing card for Shriners International. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 21 · Create a vertical 2:3 Matrix Reprogrammed playing card for Shriners International. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 22,
+      "id": "batch-022",
+      "cards": [
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -2775,13 +2751,7 @@
           "asset": "assets/secret-societies/cards/ancient-order-of-hibernians.svg",
           "profileRoute": "secret-societies/ancient-order-of-hibernians.html",
           "prompt": "BATCH 22 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ancient Order of Hibernians. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 12. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 23,
-      "id": "batch-023",
-      "cards": [
+        },
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -2792,7 +2762,7 @@
           "score": 78,
           "asset": "assets/secret-societies/cards/rosicrucian-amorc.svg",
           "profileRoute": "secret-societies/rosicrucian-amorc.html",
-          "prompt": "BATCH 23 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rosicrucian AMORC. Deck: Secret Societies Deck. Card ID: undefined. Suit: Crowns. Rank: 13. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 22 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rosicrucian AMORC. Deck: Secret Societies Deck. Card ID: undefined. Suit: Crowns. Rank: 13. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "secret-societies",
@@ -2804,8 +2774,14 @@
           "score": 87,
           "asset": "assets/secret-societies/cards/societas-rosicruciana-in-anglia.svg",
           "profileRoute": "secret-societies/societas-rosicruciana-in-anglia.html",
-          "prompt": "BATCH 23 · Create a vertical 2:3 Matrix Reprogrammed playing card for Societas Rosicruciana in Anglia. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 22 · Create a vertical 2:3 Matrix Reprogrammed playing card for Societas Rosicruciana in Anglia. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 23,
+      "id": "batch-023",
+      "cards": [
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -2901,13 +2877,7 @@
           "asset": "assets/secret-societies/cards/propaganda-due-p2-historical-file.svg",
           "profileRoute": "secret-societies/propaganda-due-p2-historical-file.html",
           "prompt": "BATCH 23 · Create a vertical 2:3 Matrix Reprogrammed playing card for Propaganda Due P2 historical file. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 22. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 24,
-      "id": "batch-024",
-      "cards": [
+        },
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -2918,7 +2888,7 @@
           "score": 78,
           "asset": "assets/secret-societies/cards/skull-and-bones.svg",
           "profileRoute": "secret-societies/skull-and-bones.html",
-          "prompt": "BATCH 24 · Create a vertical 2:3 Matrix Reprogrammed playing card for Skull and Bones. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 23. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 23 · Create a vertical 2:3 Matrix Reprogrammed playing card for Skull and Bones. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 23. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "secret-societies",
@@ -2930,8 +2900,14 @@
           "score": 77,
           "asset": "assets/secret-societies/cards/scroll-and-key.svg",
           "profileRoute": "secret-societies/scroll-and-key.html",
-          "prompt": "BATCH 24 · Create a vertical 2:3 Matrix Reprogrammed playing card for Scroll and Key. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 23 · Create a vertical 2:3 Matrix Reprogrammed playing card for Scroll and Key. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 24,
+      "id": "batch-024",
+      "cards": [
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -3027,13 +3003,7 @@
           "asset": "assets/secret-societies/cards/le-cercle.svg",
           "profileRoute": "secret-societies/le-cercle.html",
           "prompt": "BATCH 24 · Create a vertical 2:3 Matrix Reprogrammed playing card for Le Cercle. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 32. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 25,
-      "id": "batch-025",
-      "cards": [
+        },
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -3044,7 +3014,7 @@
           "score": 78,
           "asset": "assets/secret-societies/cards/club-of-rome.svg",
           "profileRoute": "secret-societies/club-of-rome.html",
-          "prompt": "BATCH 25 · Create a vertical 2:3 Matrix Reprogrammed playing card for Club of Rome. Deck: Secret Societies Deck. Card ID: undefined. Suit: Crowns. Rank: 33. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 24 · Create a vertical 2:3 Matrix Reprogrammed playing card for Club of Rome. Deck: Secret Societies Deck. Card ID: undefined. Suit: Crowns. Rank: 33. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "secret-societies",
@@ -3056,8 +3026,14 @@
           "score": 77,
           "asset": "assets/secret-societies/cards/fabian-society.svg",
           "profileRoute": "secret-societies/fabian-society.html",
-          "prompt": "BATCH 25 · Create a vertical 2:3 Matrix Reprogrammed playing card for Fabian Society. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 24 · Create a vertical 2:3 Matrix Reprogrammed playing card for Fabian Society. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 25,
+      "id": "batch-025",
+      "cards": [
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -3153,13 +3129,7 @@
           "asset": "assets/secret-societies/cards/ditchley-foundation-network.svg",
           "profileRoute": "secret-societies/ditchley-foundation-network.html",
           "prompt": "BATCH 25 · Create a vertical 2:3 Matrix Reprogrammed playing card for Ditchley Foundation network. Deck: Secret Societies Deck. Card ID: undefined. Suit: Coins. Rank: 42. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 26,
-      "id": "batch-026",
-      "cards": [
+        },
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -3170,7 +3140,7 @@
           "score": 78,
           "asset": "assets/secret-societies/cards/rhodes-trust-network.svg",
           "profileRoute": "secret-societies/rhodes-trust-network.html",
-          "prompt": "BATCH 26 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rhodes Trust network. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 43. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 25 · Create a vertical 2:3 Matrix Reprogrammed playing card for Rhodes Trust network. Deck: Secret Societies Deck. Card ID: undefined. Suit: Swords. Rank: 43. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "secret-societies",
@@ -3182,8 +3152,14 @@
           "score": 77,
           "asset": "assets/secret-societies/cards/cecil-rhodes-legacy-route.svg",
           "profileRoute": "secret-societies/cecil-rhodes-legacy-route.html",
-          "prompt": "BATCH 26 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cecil Rhodes legacy route. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 25 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cecil Rhodes legacy route. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 26,
+      "id": "batch-026",
+      "cards": [
         {
           "deckId": "secret-societies",
           "deckTitle": "Secret Societies Deck",
@@ -3279,13 +3255,7 @@
           "asset": "assets/secret-societies/cards/ted-ted-fellows-network.svg",
           "profileRoute": "secret-societies/ted-ted-fellows-network.html",
           "prompt": "BATCH 26 · Create a vertical 2:3 Matrix Reprogrammed playing card for TED / TED Fellows network. Deck: Secret Societies Deck. Card ID: undefined. Suit: Masks. Rank: 52. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 27,
-      "id": "batch-027",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3296,7 +3266,7 @@
           "score": 96,
           "asset": "assets/policy/cards/un-sustainable-development-goals.svg",
           "profileRoute": "policy/un-sustainable-development-goals.html",
-          "prompt": "BATCH 27 · Create a vertical 2:3 Matrix Reprogrammed playing card for UN Sustainable Development Goals. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 1. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 26 · Create a vertical 2:3 Matrix Reprogrammed playing card for UN Sustainable Development Goals. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 1. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3308,8 +3278,14 @@
           "score": 95,
           "asset": "assets/policy/cards/un-pact-for-the-future.svg",
           "profileRoute": "policy/un-pact-for-the-future.html",
-          "prompt": "BATCH 27 · Create a vertical 2:3 Matrix Reprogrammed playing card for UN Pact for the Future. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 2. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 26 · Create a vertical 2:3 Matrix Reprogrammed playing card for UN Pact for the Future. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 2. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 27,
+      "id": "batch-027",
+      "cards": [
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3405,13 +3381,7 @@
           "asset": "assets/policy/cards/uk-online-safety-act.svg",
           "profileRoute": "policy/uk-online-safety-act.html",
           "prompt": "BATCH 27 · Create a vertical 2:3 Matrix Reprogrammed playing card for UK Online Safety Act. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 28,
-      "id": "batch-028",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3422,7 +3392,7 @@
           "score": 86,
           "asset": "assets/policy/cards/digital-euro-legislative-package.svg",
           "profileRoute": "policy/digital-euro-legislative-package.html",
-          "prompt": "BATCH 28 · Create a vertical 2:3 Matrix Reprogrammed playing card for Digital euro legislative package. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 27 · Create a vertical 2:3 Matrix Reprogrammed playing card for Digital euro legislative package. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 11. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3434,8 +3404,14 @@
           "score": 85,
           "asset": "assets/policy/cards/g20-cross-border-payments-roadmap.svg",
           "profileRoute": "policy/g20-cross-border-payments-roadmap.html",
-          "prompt": "BATCH 28 · Create a vertical 2:3 Matrix Reprogrammed playing card for G20 cross-border payments roadmap. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 12. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 27 · Create a vertical 2:3 Matrix Reprogrammed playing card for G20 cross-border payments roadmap. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 12. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 28,
+      "id": "batch-028",
+      "cards": [
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3531,13 +3507,7 @@
           "asset": "assets/policy/cards/eu-carbon-border-adjustment-mechanism.svg",
           "profileRoute": "policy/eu-carbon-border-adjustment-mechanism.html",
           "prompt": "BATCH 28 · Create a vertical 2:3 Matrix Reprogrammed playing card for EU Carbon Border Adjustment Mechanism. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 29,
-      "id": "batch-029",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3548,7 +3518,7 @@
           "score": 86,
           "asset": "assets/policy/cards/eu-emissions-trading-system-expansion.svg",
           "profileRoute": "policy/eu-emissions-trading-system-expansion.html",
-          "prompt": "BATCH 29 · Create a vertical 2:3 Matrix Reprogrammed playing card for EU Emissions Trading System expansion. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 28 · Create a vertical 2:3 Matrix Reprogrammed playing card for EU Emissions Trading System expansion. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 21. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3560,8 +3530,14 @@
           "score": 85,
           "asset": "assets/policy/cards/net-zero-national-commitments.svg",
           "profileRoute": "policy/net-zero-national-commitments.html",
-          "prompt": "BATCH 29 · Create a vertical 2:3 Matrix Reprogrammed playing card for Net Zero national commitments. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 22. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 28 · Create a vertical 2:3 Matrix Reprogrammed playing card for Net Zero national commitments. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 22. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 29,
+      "id": "batch-029",
+      "cards": [
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3657,13 +3633,7 @@
           "asset": "assets/policy/cards/etias-travel-authorisation.svg",
           "profileRoute": "policy/etias-travel-authorisation.html",
           "prompt": "BATCH 29 · Create a vertical 2:3 Matrix Reprogrammed playing card for ETIAS travel authorisation. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 30,
-      "id": "batch-030",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3674,7 +3644,7 @@
           "score": 86,
           "asset": "assets/policy/cards/icao-digital-travel-credential-standards.svg",
           "profileRoute": "policy/icao-digital-travel-credential-standards.html",
-          "prompt": "BATCH 30 · Create a vertical 2:3 Matrix Reprogrammed playing card for ICAO digital travel credential standards. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 29 · Create a vertical 2:3 Matrix Reprogrammed playing card for ICAO digital travel credential standards. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 31. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3686,8 +3656,14 @@
           "score": 85,
           "asset": "assets/policy/cards/biometric-border-systems.svg",
           "profileRoute": "policy/biometric-border-systems.html",
-          "prompt": "BATCH 30 · Create a vertical 2:3 Matrix Reprogrammed playing card for Biometric border systems. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 32. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 29 · Create a vertical 2:3 Matrix Reprogrammed playing card for Biometric border systems. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 32. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 30,
+      "id": "batch-030",
+      "cards": [
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3783,13 +3759,7 @@
           "asset": "assets/policy/cards/central-bank-instant-payment-systems.svg",
           "profileRoute": "policy/central-bank-instant-payment-systems.html",
           "prompt": "BATCH 30 · Create a vertical 2:3 Matrix Reprogrammed playing card for Central bank instant payment systems. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 31,
-      "id": "batch-031",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3800,7 +3770,7 @@
           "score": 86,
           "asset": "assets/policy/cards/age-verification-online-access-laws.svg",
           "profileRoute": "policy/age-verification-online-access-laws.html",
-          "prompt": "BATCH 31 · Create a vertical 2:3 Matrix Reprogrammed playing card for Age verification / online access laws. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 30 · Create a vertical 2:3 Matrix Reprogrammed playing card for Age verification / online access laws. Deck: Policy Deck. Card ID: undefined. Suit: Crowns. Rank: 41. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3812,8 +3782,14 @@
           "score": 85,
           "asset": "assets/policy/cards/platform-transparency-reporting-laws.svg",
           "profileRoute": "policy/platform-transparency-reporting-laws.html",
-          "prompt": "BATCH 31 · Create a vertical 2:3 Matrix Reprogrammed playing card for Platform transparency reporting laws. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 42. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 30 · Create a vertical 2:3 Matrix Reprogrammed playing card for Platform transparency reporting laws. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 42. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 31,
+      "id": "batch-031",
+      "cards": [
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3909,13 +3885,7 @@
           "asset": "assets/policy/cards/govtech-digital-service-mandates.svg",
           "profileRoute": "policy/govtech-digital-service-mandates.html",
           "prompt": "BATCH 31 · Create a vertical 2:3 Matrix Reprogrammed playing card for GovTech digital service mandates. Deck: Policy Deck. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 32,
-      "id": "batch-032",
-      "cards": [
+        },
         {
           "deckId": "policy",
           "deckTitle": "Policy Deck",
@@ -3926,7 +3896,7 @@
           "score": 76,
           "asset": "assets/policy/cards/cbdc-offline-wallet-design-rules.svg",
           "profileRoute": "policy/cbdc-offline-wallet-design-rules.html",
-          "prompt": "BATCH 32 · Create a vertical 2:3 Matrix Reprogrammed playing card for CBDC offline wallet design rules. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 51. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 31 · Create a vertical 2:3 Matrix Reprogrammed playing card for CBDC offline wallet design rules. Deck: Policy Deck. Card ID: undefined. Suit: Swords. Rank: 51. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "policy",
@@ -3938,8 +3908,14 @@
           "score": 75,
           "asset": "assets/policy/cards/programmable-compliance-in-payments.svg",
           "profileRoute": "policy/programmable-compliance-in-payments.html",
-          "prompt": "BATCH 32 · Create a vertical 2:3 Matrix Reprogrammed playing card for Programmable compliance in payments. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 52. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 31 · Create a vertical 2:3 Matrix Reprogrammed playing card for Programmable compliance in payments. Deck: Policy Deck. Card ID: undefined. Suit: Masks. Rank: 52. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 32,
+      "id": "batch-032",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4035,13 +4011,7 @@
           "asset": "assets/think-tanks/cards/heritage-foundation.svg",
           "profileRoute": "think-tanks/heritage-foundation.html",
           "prompt": "BATCH 32 · Create a vertical 2:3 Matrix Reprogrammed playing card for Heritage Foundation. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 33,
-      "id": "batch-033",
-      "cards": [
+        },
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4052,7 +4022,7 @@
           "score": 85,
           "asset": "assets/think-tanks/cards/american-enterprise-institute.svg",
           "profileRoute": "think-tanks/american-enterprise-institute.html",
-          "prompt": "BATCH 33 · Create a vertical 2:3 Matrix Reprogrammed playing card for American Enterprise Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 32 · Create a vertical 2:3 Matrix Reprogrammed playing card for American Enterprise Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 9. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "think-tanks",
@@ -4064,8 +4034,14 @@
           "score": 84,
           "asset": "assets/think-tanks/cards/cato-institute.svg",
           "profileRoute": "think-tanks/cato-institute.html",
-          "prompt": "BATCH 33 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cato Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 32 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cato Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 10. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 33,
+      "id": "batch-033",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4161,13 +4137,7 @@
           "asset": "assets/think-tanks/cards/center-for-american-progress.svg",
           "profileRoute": "think-tanks/center-for-american-progress.html",
           "prompt": "BATCH 33 · Create a vertical 2:3 Matrix Reprogrammed playing card for Center for American Progress. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 34,
-      "id": "batch-034",
-      "cards": [
+        },
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4178,7 +4148,7 @@
           "score": 85,
           "asset": "assets/think-tanks/cards/hudson-institute.svg",
           "profileRoute": "think-tanks/hudson-institute.html",
-          "prompt": "BATCH 34 · Create a vertical 2:3 Matrix Reprogrammed playing card for Hudson Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Swords. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 33 · Create a vertical 2:3 Matrix Reprogrammed playing card for Hudson Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Swords. Rank: 19. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "think-tanks",
@@ -4190,8 +4160,14 @@
           "score": 84,
           "asset": "assets/think-tanks/cards/manhattan-institute.svg",
           "profileRoute": "think-tanks/manhattan-institute.html",
-          "prompt": "BATCH 34 · Create a vertical 2:3 Matrix Reprogrammed playing card for Manhattan Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 33 · Create a vertical 2:3 Matrix Reprogrammed playing card for Manhattan Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 20. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 34,
+      "id": "batch-034",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4287,13 +4263,7 @@
           "asset": "assets/think-tanks/cards/sipri.svg",
           "profileRoute": "think-tanks/sipri.html",
           "prompt": "BATCH 34 · Create a vertical 2:3 Matrix Reprogrammed playing card for SIPRI. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 35,
-      "id": "batch-035",
-      "cards": [
+        },
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4304,7 +4274,7 @@
           "score": 85,
           "asset": "assets/think-tanks/cards/german-marshall-fund.svg",
           "profileRoute": "think-tanks/german-marshall-fund.html",
-          "prompt": "BATCH 35 · Create a vertical 2:3 Matrix Reprogrammed playing card for German Marshall Fund. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 34 · Create a vertical 2:3 Matrix Reprogrammed playing card for German Marshall Fund. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 29. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "think-tanks",
@@ -4316,8 +4286,14 @@
           "score": 84,
           "asset": "assets/think-tanks/cards/bruegel.svg",
           "profileRoute": "think-tanks/bruegel.html",
-          "prompt": "BATCH 35 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bruegel. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 34 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bruegel. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 30. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 35,
+      "id": "batch-035",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4413,13 +4389,7 @@
           "asset": "assets/think-tanks/cards/australian-strategic-policy-institute.svg",
           "profileRoute": "think-tanks/australian-strategic-policy-institute.html",
           "prompt": "BATCH 35 · Create a vertical 2:3 Matrix Reprogrammed playing card for Australian Strategic Policy Institute. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 36,
-      "id": "batch-036",
-      "cards": [
+        },
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4430,7 +4400,7 @@
           "score": 75,
           "asset": "assets/think-tanks/cards/observer-research-foundation.svg",
           "profileRoute": "think-tanks/observer-research-foundation.html",
-          "prompt": "BATCH 36 · Create a vertical 2:3 Matrix Reprogrammed playing card for Observer Research Foundation. Deck: Think Tanks Deck. Card ID: undefined. Suit: Swords. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 35 · Create a vertical 2:3 Matrix Reprogrammed playing card for Observer Research Foundation. Deck: Think Tanks Deck. Card ID: undefined. Suit: Swords. Rank: 39. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "think-tanks",
@@ -4442,8 +4412,14 @@
           "score": 84,
           "asset": "assets/think-tanks/cards/institute-for-defence-studies-and-analyses.svg",
           "profileRoute": "think-tanks/institute-for-defence-studies-and-analyses.html",
-          "prompt": "BATCH 36 · Create a vertical 2:3 Matrix Reprogrammed playing card for Institute for Defence Studies and Analyses. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 35 · Create a vertical 2:3 Matrix Reprogrammed playing card for Institute for Defence Studies and Analyses. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 40. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 36,
+      "id": "batch-036",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4539,13 +4515,7 @@
           "asset": "assets/think-tanks/cards/club-of-rome.svg",
           "profileRoute": "think-tanks/club-of-rome.html",
           "prompt": "BATCH 36 · Create a vertical 2:3 Matrix Reprogrammed playing card for Club of Rome. Deck: Think Tanks Deck. Card ID: undefined. Suit: Masks. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 37,
-      "id": "batch-037",
-      "cards": [
+        },
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4556,7 +4526,7 @@
           "score": 75,
           "asset": "assets/think-tanks/cards/world-economic-forum-policy-platform.svg",
           "profileRoute": "think-tanks/world-economic-forum-policy-platform.html",
-          "prompt": "BATCH 37 · Create a vertical 2:3 Matrix Reprogrammed playing card for World Economic Forum policy platform. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 36 · Create a vertical 2:3 Matrix Reprogrammed playing card for World Economic Forum policy platform. Deck: Think Tanks Deck. Card ID: undefined. Suit: Crowns. Rank: 49. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "think-tanks",
@@ -4568,8 +4538,14 @@
           "score": 74,
           "asset": "assets/think-tanks/cards/bis-research-route.svg",
           "profileRoute": "think-tanks/bis-research-route.html",
-          "prompt": "BATCH 37 · Create a vertical 2:3 Matrix Reprogrammed playing card for BIS research route. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 36 · Create a vertical 2:3 Matrix Reprogrammed playing card for BIS research route. Deck: Think Tanks Deck. Card ID: undefined. Suit: Coins. Rank: 50. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 37,
+      "id": "batch-037",
+      "cards": [
         {
           "deckId": "think-tanks",
           "deckTitle": "Think Tanks Deck",
@@ -4665,13 +4641,7 @@
           "asset": "assets/black-nobility/cards/aldobrandini.svg",
           "profileRoute": "black-nobility/aldobrandini.html",
           "prompt": "BATCH 37 · Create a vertical 2:3 Matrix Reprogrammed playing card for Aldobrandini. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Crowns. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 38,
-      "id": "batch-038",
-      "cards": [
+        },
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -4682,7 +4652,7 @@
           "score": 88,
           "asset": "assets/black-nobility/cards/pamphilj.svg",
           "profileRoute": "black-nobility/pamphilj.html",
-          "prompt": "BATCH 38 · Create a vertical 2:3 Matrix Reprogrammed playing card for Pamphilj. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Crowns. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 37 · Create a vertical 2:3 Matrix Reprogrammed playing card for Pamphilj. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Crowns. Rank: 7. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "black-nobility",
@@ -4694,8 +4664,14 @@
           "score": 87,
           "asset": "assets/black-nobility/cards/odescalchi.svg",
           "profileRoute": "black-nobility/odescalchi.html",
-          "prompt": "BATCH 38 · Create a vertical 2:3 Matrix Reprogrammed playing card for Odescalchi. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Crowns. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 37 · Create a vertical 2:3 Matrix Reprogrammed playing card for Odescalchi. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Crowns. Rank: 8. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 38,
+      "id": "batch-038",
+      "cards": [
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -4791,13 +4767,7 @@
           "asset": "assets/black-nobility/cards/giustiniani.svg",
           "profileRoute": "black-nobility/giustiniani.html",
           "prompt": "BATCH 38 · Create a vertical 2:3 Matrix Reprogrammed playing card for Giustiniani. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 39,
-      "id": "batch-039",
-      "cards": [
+        },
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -4808,7 +4778,7 @@
           "score": 85,
           "asset": "assets/black-nobility/cards/contarini.svg",
           "profileRoute": "black-nobility/contarini.html",
-          "prompt": "BATCH 39 · Create a vertical 2:3 Matrix Reprogrammed playing card for Contarini. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 38 · Create a vertical 2:3 Matrix Reprogrammed playing card for Contarini. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 17. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "black-nobility",
@@ -4820,8 +4790,14 @@
           "score": 84,
           "asset": "assets/black-nobility/cards/mocenigo.svg",
           "profileRoute": "black-nobility/mocenigo.html",
-          "prompt": "BATCH 39 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mocenigo. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 38 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mocenigo. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 18. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 39,
+      "id": "batch-039",
+      "cards": [
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -4917,13 +4893,7 @@
           "asset": "assets/black-nobility/cards/pisani.svg",
           "profileRoute": "black-nobility/pisani.html",
           "prompt": "BATCH 39 · Create a vertical 2:3 Matrix Reprogrammed playing card for Pisani. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Coins. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 40,
-      "id": "batch-040",
-      "cards": [
+        },
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -4934,7 +4904,7 @@
           "score": 84,
           "asset": "assets/black-nobility/cards/medici.svg",
           "profileRoute": "black-nobility/medici.html",
-          "prompt": "BATCH 40 · Create a vertical 2:3 Matrix Reprogrammed playing card for Medici. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 39 · Create a vertical 2:3 Matrix Reprogrammed playing card for Medici. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 27. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "black-nobility",
@@ -4946,8 +4916,14 @@
           "score": 83,
           "asset": "assets/black-nobility/cards/este.svg",
           "profileRoute": "black-nobility/este.html",
-          "prompt": "BATCH 40 · Create a vertical 2:3 Matrix Reprogrammed playing card for Este. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 39 · Create a vertical 2:3 Matrix Reprogrammed playing card for Este. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 28. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 40,
+      "id": "batch-040",
+      "cards": [
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -5043,13 +5019,7 @@
           "asset": "assets/black-nobility/cards/malaspina.svg",
           "profileRoute": "black-nobility/malaspina.html",
           "prompt": "BATCH 40 · Create a vertical 2:3 Matrix Reprogrammed playing card for Malaspina. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 41,
-      "id": "batch-041",
-      "cards": [
+        },
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -5060,7 +5030,7 @@
           "score": 74,
           "asset": "assets/black-nobility/cards/bentivoglio.svg",
           "profileRoute": "black-nobility/bentivoglio.html",
-          "prompt": "BATCH 41 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bentivoglio. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 40 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bentivoglio. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 37. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "black-nobility",
@@ -5072,8 +5042,14 @@
           "score": 73,
           "asset": "assets/black-nobility/cards/montefeltro.svg",
           "profileRoute": "black-nobility/montefeltro.html",
-          "prompt": "BATCH 41 · Create a vertical 2:3 Matrix Reprogrammed playing card for Montefeltro. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 40 · Create a vertical 2:3 Matrix Reprogrammed playing card for Montefeltro. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Swords. Rank: 38. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 41,
+      "id": "batch-041",
+      "cards": [
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -5169,13 +5145,7 @@
           "asset": "assets/black-nobility/cards/thurn-und-taxis.svg",
           "profileRoute": "black-nobility/thurn-und-taxis.html",
           "prompt": "BATCH 41 · Create a vertical 2:3 Matrix Reprogrammed playing card for Thurn und Taxis. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Masks. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 42,
-      "id": "batch-042",
-      "cards": [
+        },
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -5186,7 +5156,7 @@
           "score": 73,
           "asset": "assets/black-nobility/cards/braganza.svg",
           "profileRoute": "black-nobility/braganza.html",
-          "prompt": "BATCH 42 · Create a vertical 2:3 Matrix Reprogrammed playing card for Braganza. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Masks. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 41 · Create a vertical 2:3 Matrix Reprogrammed playing card for Braganza. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Masks. Rank: 47. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "black-nobility",
@@ -5198,8 +5168,14 @@
           "score": 72,
           "asset": "assets/black-nobility/cards/wittelsbach.svg",
           "profileRoute": "black-nobility/wittelsbach.html",
-          "prompt": "BATCH 42 · Create a vertical 2:3 Matrix Reprogrammed playing card for Wittelsbach. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Masks. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 41 · Create a vertical 2:3 Matrix Reprogrammed playing card for Wittelsbach. Deck: Black Nobility & Allied Dynasties Deck. Card ID: undefined. Suit: Masks. Rank: 48. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 42,
+      "id": "batch-042",
+      "cards": [
         {
           "deckId": "black-nobility",
           "deckTitle": "Black Nobility & Allied Dynasties Deck",
@@ -5295,13 +5271,7 @@
           "asset": "assets/jurisdictions-of-power/cards/brussels-eu-quarter.svg",
           "profileRoute": "jurisdictions-of-power/brussels-eu-quarter.html",
           "prompt": "BATCH 42 · Create a vertical 2:3 Matrix Reprogrammed playing card for Brussels / EU Quarter. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Crowns. Rank: 4. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 43,
-      "id": "batch-043",
-      "cards": [
+        },
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5312,7 +5282,7 @@
           "score": 94,
           "asset": "assets/jurisdictions-of-power/cards/geneva.svg",
           "profileRoute": "jurisdictions-of-power/geneva.html",
-          "prompt": "BATCH 43 · Create a vertical 2:3 Matrix Reprogrammed playing card for Geneva. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Crowns. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 42 · Create a vertical 2:3 Matrix Reprogrammed playing card for Geneva. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Crowns. Rank: 5. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "jurisdictions-of-power",
@@ -5324,8 +5294,14 @@
           "score": 93,
           "asset": "assets/jurisdictions-of-power/cards/new-york-city.svg",
           "profileRoute": "jurisdictions-of-power/new-york-city.html",
-          "prompt": "BATCH 43 · Create a vertical 2:3 Matrix Reprogrammed playing card for New York City. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Crowns. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 42 · Create a vertical 2:3 Matrix Reprogrammed playing card for New York City. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Crowns. Rank: 6. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 43,
+      "id": "batch-043",
+      "cards": [
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5421,13 +5397,7 @@
           "asset": "assets/jurisdictions-of-power/cards/cayman-islands.svg",
           "profileRoute": "jurisdictions-of-power/cayman-islands.html",
           "prompt": "BATCH 43 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cayman Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 14. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 44,
-      "id": "batch-044",
-      "cards": [
+        },
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5438,7 +5408,7 @@
           "score": 90,
           "asset": "assets/jurisdictions-of-power/cards/british-virgin-islands.svg",
           "profileRoute": "jurisdictions-of-power/british-virgin-islands.html",
-          "prompt": "BATCH 44 · Create a vertical 2:3 Matrix Reprogrammed playing card for British Virgin Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 43 · Create a vertical 2:3 Matrix Reprogrammed playing card for British Virgin Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 15. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "jurisdictions-of-power",
@@ -5450,8 +5420,14 @@
           "score": 89,
           "asset": "assets/jurisdictions-of-power/cards/bermuda.svg",
           "profileRoute": "jurisdictions-of-power/bermuda.html",
-          "prompt": "BATCH 44 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bermuda. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 43 · Create a vertical 2:3 Matrix Reprogrammed playing card for Bermuda. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 16. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 44,
+      "id": "batch-044",
+      "cards": [
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5547,13 +5523,7 @@
           "asset": "assets/jurisdictions-of-power/cards/jersey.svg",
           "profileRoute": "jurisdictions-of-power/jersey.html",
           "prompt": "BATCH 44 · Create a vertical 2:3 Matrix Reprogrammed playing card for Jersey. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 24. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 45,
-      "id": "batch-045",
-      "cards": [
+        },
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5564,7 +5534,7 @@
           "score": 80,
           "asset": "assets/jurisdictions-of-power/cards/guernsey.svg",
           "profileRoute": "jurisdictions-of-power/guernsey.html",
-          "prompt": "BATCH 45 · Create a vertical 2:3 Matrix Reprogrammed playing card for Guernsey. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 44 · Create a vertical 2:3 Matrix Reprogrammed playing card for Guernsey. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 25. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "jurisdictions-of-power",
@@ -5576,8 +5546,14 @@
           "score": 79,
           "asset": "assets/jurisdictions-of-power/cards/isle-of-man.svg",
           "profileRoute": "jurisdictions-of-power/isle-of-man.html",
-          "prompt": "BATCH 45 · Create a vertical 2:3 Matrix Reprogrammed playing card for Isle of Man. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 44 · Create a vertical 2:3 Matrix Reprogrammed playing card for Isle of Man. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Coins. Rank: 26. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 45,
+      "id": "batch-045",
+      "cards": [
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5673,13 +5649,7 @@
           "asset": "assets/jurisdictions-of-power/cards/cyprus.svg",
           "profileRoute": "jurisdictions-of-power/cyprus.html",
           "prompt": "BATCH 45 · Create a vertical 2:3 Matrix Reprogrammed playing card for Cyprus. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Courts. Rank: 34. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 46,
-      "id": "batch-046",
-      "cards": [
+        },
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5690,7 +5660,7 @@
           "score": 76,
           "asset": "assets/jurisdictions-of-power/cards/mauritius.svg",
           "profileRoute": "jurisdictions-of-power/mauritius.html",
-          "prompt": "BATCH 46 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mauritius. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Courts. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 45 · Create a vertical 2:3 Matrix Reprogrammed playing card for Mauritius. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Courts. Rank: 35. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "jurisdictions-of-power",
@@ -5702,8 +5672,14 @@
           "score": 75,
           "asset": "assets/jurisdictions-of-power/cards/seychelles.svg",
           "profileRoute": "jurisdictions-of-power/seychelles.html",
-          "prompt": "BATCH 46 · Create a vertical 2:3 Matrix Reprogrammed playing card for Seychelles. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Courts. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 45 · Create a vertical 2:3 Matrix Reprogrammed playing card for Seychelles. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Courts. Rank: 36. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 46,
+      "id": "batch-046",
+      "cards": [
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5799,13 +5775,7 @@
           "asset": "assets/jurisdictions-of-power/cards/marshall-islands.svg",
           "profileRoute": "jurisdictions-of-power/marshall-islands.html",
           "prompt": "BATCH 46 · Create a vertical 2:3 Matrix Reprogrammed playing card for Marshall Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Masks. Rank: 44. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        }
-      ]
-    },
-    {
-      "batchNo": 47,
-      "id": "batch-047",
-      "cards": [
+        },
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",
@@ -5816,7 +5786,7 @@
           "score": 73,
           "asset": "assets/jurisdictions-of-power/cards/st-kitts-and-nevis.svg",
           "profileRoute": "jurisdictions-of-power/st-kitts-and-nevis.html",
-          "prompt": "BATCH 47 · Create a vertical 2:3 Matrix Reprogrammed playing card for St Kitts and Nevis. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Masks. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+          "prompt": "BATCH 46 · Create a vertical 2:3 Matrix Reprogrammed playing card for St Kitts and Nevis. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Masks. Rank: 45. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
         },
         {
           "deckId": "jurisdictions-of-power",
@@ -5828,8 +5798,14 @@
           "score": 72,
           "asset": "assets/jurisdictions-of-power/cards/turks-and-caicos-islands.svg",
           "profileRoute": "jurisdictions-of-power/turks-and-caicos-islands.html",
-          "prompt": "BATCH 47 · Create a vertical 2:3 Matrix Reprogrammed playing card for Turks and Caicos Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Masks. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
-        },
+          "prompt": "BATCH 46 · Create a vertical 2:3 Matrix Reprogrammed playing card for Turks and Caicos Islands. Deck: Jurisdictions of Power Deck. Card ID: undefined. Suit: Masks. Rank: 46. Style: museum-grade black and antique-gold occult intelligence dossier card, copperplate engraving, ornate border, precise readable title, central portrait/symbolic subject area, no messy text overlays, no fake accusations, no defamatory visual claims. Include bottom line: PUBLIC RECORD ROUTE · NOT ACCUSATION. The artwork must work as a playable downloadable card and a dossier cover."
+        }
+      ]
+    },
+    {
+      "batchNo": 47,
+      "id": "batch-047",
+      "cards": [
         {
           "deckId": "jurisdictions-of-power",
           "deckTitle": "Jurisdictions of Power Deck",

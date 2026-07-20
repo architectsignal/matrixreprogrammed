@@ -1,68 +1,92 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:13:18.761Z",
+  "generatedAt": "2026-07-20T06:34:11.379Z",
   "roots": [
     ".",
     "_site"
   ],
-  "filesChanged": 14,
-  "fixes": 146,
+  "filesChanged": 20,
+  "fixes": 86,
   "changes": [
     {
       "file": "_site/brief-quality-report",
-      "fixes": 12
+      "fixes": 8
     },
     {
       "file": "_site/brief-quality-report.html",
-      "fixes": 12
+      "fixes": 8
+    },
+    {
+      "file": "_site/control-map-daily",
+      "fixes": 1
+    },
+    {
+      "file": "_site/control-map-daily.html",
+      "fixes": 1
     },
     {
       "file": "_site/daily-missing-records",
-      "fixes": 12
+      "fixes": 10
     },
     {
       "file": "_site/daily-missing-records.html",
-      "fixes": 12
+      "fixes": 10
+    },
+    {
+      "file": "_site/daily-power-conclusions",
+      "fixes": 2
+    },
+    {
+      "file": "_site/daily-power-conclusions.html",
+      "fixes": 2
     },
     {
       "file": "_site/deep-intel-feed",
-      "fixes": 9
+      "fixes": 1
     },
     {
       "file": "_site/deep-intel-feed.html",
-      "fixes": 9
+      "fixes": 1
     },
     {
       "file": "_site/elite-reports",
-      "fixes": 7
+      "fixes": 1
     },
     {
       "file": "_site/elite-reports.html",
-      "fixes": 7
+      "fixes": 1
     },
     {
       "file": "_site/entity-daily-briefs",
-      "fixes": 12
+      "fixes": 8
     },
     {
       "file": "_site/entity-daily-briefs.html",
-      "fixes": 12
+      "fixes": 8
     },
     {
       "file": "_site/entity-exposure-index",
-      "fixes": 12
+      "fixes": 8
     },
     {
       "file": "_site/entity-exposure-index.html",
-      "fixes": 12
+      "fixes": 8
     },
     {
       "file": "_site/power-structure-map",
-      "fixes": 9
+      "fixes": 1
     },
     {
       "file": "_site/power-structure-map.html",
-      "fixes": 9
+      "fixes": 1
+    },
+    {
+      "file": "_site/timers",
+      "fixes": 3
+    },
+    {
+      "file": "_site/timers.html",
+      "fixes": 3
     }
   ],
   "boundary": "Only links to generated entity briefs, exposure pages and elite reports are changed, and only when the current generated target does not exist. Missing entity routes fall back to the public search; missing report routes fall back to the reports hub. Both source pages and the exact Cloudflare output are repaired."

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-20T06:33:26.378Z",
+  "changed": [
+    "src/worker-paypal-subscriptions.js",
+    "paypal-membership.js",
+    "_site/paypal-membership.js"
+  ],
+  "checkoutState": "created until provider approval",
+  "failureState": "failed with failed_at and failure_reason",
+  "approvalLinkPolicy": "accept the official PayPal rel=approve link",
+  "providerFailurePolicy": "return a safe PayPal issue description, code and debug ID without exposing credentials",
+  "bookkeepingPolicy": "a nonessential D1 provider-ID update cannot block an already-created PayPal approval redirect",
+  "credentialPolicy": "trim hidden whitespace and remove accidental surrounding quotes before OAuth",
+  "sourceOwnership": "server create/return routes are restored before build and after late sanitation",
+  "schemaCompatibility": "uses only statuses allowed by phase6_paypal_subscriptions.sql"
+}

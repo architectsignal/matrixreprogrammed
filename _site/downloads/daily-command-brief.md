@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-19T06:13:18.387Z
+Updated: 2026-07-20T06:34:11.022Z
 
 ## Top Contractor Signals
 
@@ -14,7 +14,6 @@ Updated: 2026-07-19T06:13:18.387Z
 
 ## Missing Records
 
-- People's Republic of Bangladesh: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Defense Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -47,10 +46,11 @@ Updated: 2026-07-19T06:13:18.387Z
 - Apple Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AVGO: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Broadcom Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Chattogram Water Supply and Sewerage Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Finance Division, Ministry of Finance: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - GOOGL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Kingdom of Morocco: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - MICROSOFT CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF): Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Ministry of Health and Family Welfare: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- MSFT: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Nuclear Regulatory Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

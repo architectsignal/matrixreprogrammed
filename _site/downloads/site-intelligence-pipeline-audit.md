@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-19T06:14:29.763Z
+Updated: 2026-07-20T06:36:12.654Z
 Overall: working-with-gaps
 Green: 41 · Amber: 2 · Red: 0
 
@@ -12,7 +12,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Collect · collect-source-pulls:** Source-pull index exists.
 - **GREEN · Collect · freshness-curated-drops:** Curated source file age: 0 day(s). Fix: Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.
 - **GREEN · Collect · freshness-seven-day-feed:** Seven-day feed file age: 0 day(s). Fix: Run RSS/public-source intake every day and archive items automatically after seven days.
-- **GREEN · Collect · fresh-current-news:** 19 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
+- **GREEN · Collect · fresh-current-news:** 67 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
 - **GREEN · Classify · classification-system:** Information-gathering operating model exists.
 - **GREEN · Grade · interpretation-standard:** Reader score and evidence interpretation standard exists.
 - **GREEN · Grade · source-registry:** Master evidence source registry exists.
@@ -30,7 +30,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Conclude · daily-counterpoint:** Daily Command Brief contains its counterpoint. Fix: Generate counterpoint from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-practicalMeaning:** Daily Command Brief contains its practical meaning. Fix: Generate practical meaning from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-conclusionBoundary:** Daily Command Brief contains its claim boundary. Fix: Generate claim boundary from current evidence and canonical timers on every build.
-- **GREEN · Publish · brief-coverage:** 85 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
+- **GREEN · Publish · brief-coverage:** 77 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
 - **GREEN · Conclude · conclusion-engine-population:** 5 conclusion-engine item(s) exist. Fix: Do not publish an empty conclusion engine.
 - **GREEN · Clocks · clock-source:** Canonical risk-clock source exists.
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.
@@ -47,7 +47,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Automate · build-order-build-homepage-command-surface.js:** build-homepage-command-surface.js is included in the authoritative build path. Fix: Add build-homepage-command-surface.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-site-intelligence-pipeline-audit.js:** site-intelligence-pipeline-audit.js is included in the authoritative build path. Fix: Add site-intelligence-pipeline-audit.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-patch-login-email-delivery.js:** patch-login-email-delivery.js is included in the authoritative build path. Fix: Add patch-login-email-delivery.js after legacy generators and before Cloudflare output.
-- **GREEN · Automate · daily-automation:** 94 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
+- **GREEN · Automate · daily-automation:** 101 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
 - **GREEN · Automate · weekly-automation:** Workflow files were scanned for weekly synthesis scheduling. Fix: Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.
 
 ## New Clock Ideas

@@ -1,11 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:14:34.674Z",
+  "generatedAt": "2026-07-20T06:36:18.628Z",
   "changed": false,
   "verifier": "scripts/verify-live-production.js",
   "deploymentLogPath": "downloads/wrangler-deploy.log",
   "stableRouteMarkers": true,
   "canonicalDeployHealthRoute": "/deploy-health.json",
-  "commitRacePolicy": "Accept exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.",
-  "boundary": "Live verification proves the actual deployed email automation binding is false using the real Wrangler deployment log and commit-bound health JSON."
+  "commitRacePolicy": "Accept the exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.",
+  "paypalVerificationModel": "Runtime-gated, Cloudflare-dashboard-managed, anonymous checkout rejected.",
+  "boundary": "Live verification proves the deployed email automation binding is false, health JSON is commit-bound, and anonymous PayPal configuration and checkout routes remain closed."
 }

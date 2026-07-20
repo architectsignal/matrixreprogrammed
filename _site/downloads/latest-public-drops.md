@@ -1,9 +1,45 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-19T06:13:50.809Z
+Updated: 2026-07-20T06:35:03.015Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## Haiti: Signs of hope despite gang violence and political uncertainty
+
+- Date: 2026-07-19
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167963
+- Timers: none
+
+For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Ukraine: UN condemns overnight attack on Kyiv
+
+- Date: 2026-07-19
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167975
+- Timers: none
+
+United Nations agencies have deplored a fresh Russian assault on the Ukrainian capital Kyiv which left at least one person dead and a dozen injured.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
+
+- Date: 2026-07-18
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167974
+- Timers: none
+
+Jean Todt spent decades around the deadliest motorsport on Earth. He was a rally co‑driver, then ran Ferrari’s Formula One team, then became president of world motorsport’s governing body. In his early years, a driver dying at the track barely made news.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
 ## House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 
@@ -41,206 +77,218 @@ The surveillance networks cities do not have to buy Biometric Update
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
-## Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
+## Baristas behind bars: Thai prisoners brew a path back to daily life
 
-- Date: 2026-07-16
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
-- Timers: none
-
-Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-
-- Date: 2026-07-16
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-- Timers: none
-
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
-
-- Date: 2026-07-16
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-- Timers: none
-
-US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe thestandard.com.hk
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
-
-- Date: 2026-07-16
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-- Timers: none
-
-US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-
-- Date: 2026-07-16
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
-- Timers: none
-
-Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
-- Timers: none
-
-3 major takeaways from Todd Blanche's attorney general confirmation hearing PBS
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
-- Timers: none
-
-'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties Fox News
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-- Timers: none
-
-Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women Reuters
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxQdEdCMk5HcnpmVWxraThsM2VGcmZRYVRaZEc0TGNSaXNkaGpjNzlac3kzck9sS1pGWmhibUM5emttWWtrS3hEakI0Q1BRanloTVB2bVlSbVpLX21WZFVPem1scjBDMnpfY2NZTEozaEtwWnlocG9xcGNJSnhTTkt2MmhYUnV4WXdFaFE5QmhDa2JVYUR4U0I4bkFn?oc=5
-- Timers: none
-
-Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women Yahoo
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
-- Timers: none
-
-Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB Charlotte
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-- Timers: none
-
-Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUhhWGNhdF9Ucm1MaUp1WFpXNGJhczFhZms1WUJ4RE9qSHVwaFlERW5tQVdMd0ItNVZORHdhTHBOQTFHZklXaGZtcGtVVjE5eHpKRDZuZTFLQVphSkFLZGtsVXVyRm5OOEF1TkRpYUo3MU1RcFE2SjFqV21XRllpM0pOUmRIa0NWZWpFVGQ5TGYwMlU?oc=5
-- Timers: none
-
-Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women WKZO
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
-- Timers: none
-
-Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say The Guardian
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-
-- Date: 2026-07-15
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-- Timers: none
-
-Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
-
-- Date: 2026-07-15
+- Date: 2026-07-17
 - Lane: War Machine And Intelligence State
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167954
 - Timers: none
 
-Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo Tech Times
+It looks like a regular coffee shop, albeit set up in an old red bus. Stairs lead up to a serving hatch, with a menu of drink options. A selection of jaunty coffee-related messages like “My one and only love: Americano” and “Miss you a latte,” adorn the side of the bus.
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
-## Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+## Djibouti: Emergency alert spotlights sharp hunger spike
 
-- Date: 2026-07-14
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Date: 2026-07-17
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167971
 - Timers: none
 
-Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters
+More than 256,000 people in Djibouti – around 25 per cent of the population – are likely to face crisis or emergency level hunger over the coming months, a UN-backed global food monitoring network warned in a new report released Friday.
 
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
-## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+## Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers
 
-- Date: 2026-07-13
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+- Date: 2026-07-17
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167965
 - Timers: none
 
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
+UN Secretary-General António Guterres on Friday urged governments and technology companies to work together to ensure artificial intelligence (AI) benefits all countries.
 
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Hunger deepens for displaced families in Sudan’s El Obeid
+
+- Date: 2026-07-17
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167967
+- Timers: none
+
+UN humanitarians working in war-torn Sudan on Friday highlighted rapidly growing needs among the more than 100,000 displaced people now sheltering in camps in the city of El Obeid.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
+
+- Date: 2026-07-17
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167973
+- Timers: none
+
+The UN Secretary-General remains deeply concerned by the continuing deadly military escalation between Iran and the United States, his spokesperson said on Friday as attacks destroyed key civilian and military infrastructure across the Gulf region.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
+
+- Date: 2026-07-17
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167970
+- Timers: none
+
+The UN human rights chief, Volker Türk, has appealed for calm in Pakistan-Administered Kashmir amid unrest ahead of regional elections.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Henry Lucas
+
+- Date: 2026-07-17
+- Lane: Declassified Files And Public Archives
+- Evidence: Primary or official public-record lead
+- Source: https://vault.fbi.gov/henry-lucas
+- Timers: none
+
+Henry Lucas
+
+Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+
+## Henry Lucas Part 01
+
+- Date: 2026-07-17
+- Lane: Declassified Files And Public Archives
+- Evidence: Primary or official public-record lead
+- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
+- Timers: none
+
+Henry Lucas Part 01
+
+Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+
+## Henry Lucas Part 02 (Final)
+
+- Date: 2026-07-17
+- Lane: Declassified Files And Public Archives
+- Evidence: Primary or official public-record lead
+- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
+- Timers: none
+
+Henry Lucas Part 02 (Final)
+
+Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+
+## ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167955
+- Timers: none
+
+As Europe battles a deadly record-breaking heatwave, the World Health Organization (WHO) issued new guidance on Thursday to help countries face scorching temperatures now and in the future.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## As aid dries up, countries pledge to close the $4 trillion development gap
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167957
+- Timers: none
+
+UN Member States reaffirmed their commitment to the Sustainable Development Goals (SDGs) by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167956
+- Timers: none
+
+For Tanatswa Amanda Chikaura, mental health advocacy began with a personal loss: while studying psychology at the University of Zimbabwe, she learned that a fellow student had died by suicide.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Gaza farmers battle to rebuild as WFP warns of West Bank settler violence
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167960
+- Timers: none
+
+The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Haiti: Training the next generation to fight corruption
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167931
+- Timers: none
+
+How do you tackle corruption in a country grappling with insecurity, weak institutions and widespread impunity? In Haiti, the Government and the United Nations are betting on the country&#039;s youth.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## More than 500 people feared dead in double Myanmar shipwreck tragedy
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167951
+- Timers: none
+
+There is growing concern for at least 500 people believed to have been aboard two boats that reportedly capsized off Myanmar’s coast in recent days.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Peacekeepers step up support as families return to south Lebanon
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167961
+- Timers: none
+
+With violence in south Lebanon significantly decreased since mid-June, UN peacekeepers there have returned to core functions such as protecting humanitarian aid and restoring critical infrastructure as families continue to return home.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Venezuela: IOM warns of potential El Niño threat to families displaced by earthquake
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167964
+- Timers: none
+
+Thousands of people remain displaced three weeks after the devastating earthquakes in Venezuela and the possible formation of a strong El Niño climate pattern could worsen their already dire situation, the International Organization for Migration (IOM) warned on Thursday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone
+
+- Date: 2026-07-16
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167959
+- Timers: none
+
+The Ebola outbreak in the Democratic Republic of the Congo (DRC) has become the third largest on record and is spreading faster than any previous one during the first month of exposure, the head of the World Health Organization (WHO) warned on Thursday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

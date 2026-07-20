@@ -79,7 +79,7 @@ for (const marker of [
 
 check('production boundary imports rehearsal Worker', production.includes("from './worker-paypal-sandbox-rehearsal.js'"));
 check('production boundary checks rehearsal route origin', production.includes('non-authoritative-paypal-rehearsal-response-blocked'));
-check('production boundary gates checkout intent', production.includes("path === '/api/paypal/checkout-intent'") && production.includes('enforceSandboxRehearsalGate'));
+check('production boundary gates all subscription starts', production.includes("'/api/paypal/subscription/create'") && production.includes('enforceSandboxRehearsalGate'));
 check('production boundary schedules automatic closure', production.includes('rehearsalWorker.scheduled'));
 
 check('Wrangler preserves dashboard runtime variables', /^keep_vars\s*=\s*true\s*$/m.test(wranglerToml) && /"keep_vars"\s*:\s*true/.test(wranglerJsonc));

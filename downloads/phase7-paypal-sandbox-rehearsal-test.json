@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:46:52.228Z",
+  "generatedAt": "2026-07-20T06:37:27.813Z",
   "phase": 7,
   "name": "PayPal sandbox rehearsal",
   "checks": [
@@ -105,7 +105,7 @@
       "detail": ""
     },
     {
-      "name": "production boundary gates checkout intent",
+      "name": "production boundary gates all subscription starts",
       "ok": true,
       "detail": ""
     },
@@ -115,17 +115,17 @@
       "detail": ""
     },
     {
-      "name": "wrangler explicitly selects sandbox",
+      "name": "Wrangler preserves dashboard runtime variables",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "wrangler enables sandbox environment switch",
+      "name": "Wrangler has no active PayPal TOML overrides",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "wrangler keeps production disabled",
+      "name": "Wrangler has no active PayPal JSONC overrides",
       "ok": true,
       "detail": ""
     },
@@ -195,7 +195,7 @@
       "detail": ""
     },
     {
-      "name": "canonical deployment verifies checkout disabled after migration",
+      "name": "canonical deployment closes sandbox while preserving live state",
       "ok": true,
       "detail": ""
     },
@@ -207,7 +207,7 @@
     {
       "name": "sandbox gate opens only for active timed run",
       "ok": true,
-      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-19T07:01:52.227Z\"}}"
+      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-20T06:52:27.813Z\"}}"
     },
     {
       "name": "sandbox rehearsal gate does not control live routing",
@@ -216,5 +216,5 @@
     }
   ],
   "failures": [],
-  "safetyBoundary": "Sandbox checkout is allowed only during an active timed rehearsal; production remains disabled; expiry and abort close checkout."
+  "safetyBoundary": "Sandbox checkout is allowed only during an active timed rehearsal. Cloudflare owns the current environment and credentials; deployment keeps sandbox closed and preserves the independently authorized live D1 switch."
 }

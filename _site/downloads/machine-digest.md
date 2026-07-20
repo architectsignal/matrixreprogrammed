@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-19T06:13:03.530Z
+Updated: 2026-07-20T06:33:54.086Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
 Feeds reached: 4
-Normalized events: 24
-Entity observations: 47
+Normalized events: 18
+Entity observations: 38
 
 ## Latest Events
 
@@ -28,17 +28,9 @@ Entity observations: 47
 - charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
 - charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
 - charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
-- documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Health, Nutrition and Population Sector Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Amaravati Integrated Urban Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Second Bangladesh Green and Climate Resilient Development Credit — world-bank-projects — https://search.worldbank.org/api/v2/projects
 
 ## Entity Observations
 
-- 0: 6 mention(s), lanes: world-bank-projects
-- People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Homeland Security Department: 2 mention(s), lanes: federal-register-policy
 - Health and Human Services Department: 2 mention(s), lanes: federal-register-policy
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
@@ -67,3 +59,5 @@ Entity observations: 47
 - Sawas v. Elzanaty: 1 mention(s), lanes: courtlistener-court-records
 - 2021-00294: 1 mention(s), lanes: courtlistener-court-records
 - People v. Brim: 1 mention(s), lanes: courtlistener-court-records
+- California Court of Appeal: 1 mention(s), lanes: courtlistener-court-records
+- A170747M: 1 mention(s), lanes: courtlistener-court-records

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-19T06:13:22.626Z
+Updated: 2026-07-20T06:34:14.852Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -29,7 +29,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 
 ## Full PDF Index
 
-- Ai Speculative Conclusions Integrity: downloads/ai-speculative-conclusions-integrity.pdf
+- Ai Speculative Conclusions Integrity: downloads/ai-speculative-conclusions-integrity.pdf (custom PDF preserved)
 - AI Speculative Conclusions — Publication Policy: downloads/ai-speculative-conclusions-policy.pdf (custom PDF preserved)
 - Anchor Alias Repair Report: downloads/anchor-alias-repair-report.pdf (custom PDF preserved)
 - Atlas Lane Dossiers: downloads/atlas-lane-dossiers.pdf (custom PDF preserved)
@@ -42,8 +42,8 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Black File Exposé Engine: downloads/black-file-exposes.pdf (custom PDF preserved)
 - Black Files Series Hub: downloads/black-files-series.pdf (custom PDF preserved)
 - BlackRock Viral Video Claim Audit: downloads/blackrock-video-claim-audit.pdf (custom PDF preserved)
-- Brevo Operational Readiness: downloads/brevo-operational-readiness.pdf
-- Brevo Transactional Readiness Patch: downloads/brevo-transactional-readiness-patch.pdf
+- Brevo Operational Readiness: downloads/brevo-operational-readiness.pdf (custom PDF preserved)
+- Brevo Transactional Readiness Patch: downloads/brevo-transactional-readiness-patch.pdf (custom PDF preserved)
 - Black File Launch Campaign: downloads/campaign-black-file-launch.pdf (custom PDF preserved)
 - Crime-State Overlap Campaign: downloads/campaign-crime-state-overlap-push.pdf (custom PDF preserved)
 - Intelligence Dossiers Campaign: downloads/campaign-intelligence-dossiers-push.pdf (custom PDF preserved)
@@ -58,9 +58,13 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Card Dossier Intelligence Pack Audit: downloads/card-dossier-intelligence-pack-audit.pdf (custom PDF preserved)
 - Card Download Manifest: downloads/card-download-manifest.pdf (custom PDF preserved)
 - Card Intelligence Feed: downloads/card-intelligence-feed.pdf (custom PDF preserved)
+- Card Live Coverage Repair: downloads/card-live-coverage-repair.pdf
+- Card Live Intelligence Updates: downloads/card-live-updates.pdf
 - Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf (custom PDF preserved)
 - WWIII Escalation Clock: downloads/clock-wall.pdf (custom PDF preserved)
+- Cloudflare Investigation Graph Projection: downloads/cloudflare-investigation-graph-projection.pdf (custom PDF preserved)
+- Cloudflare Search Index Compaction: downloads/cloudflare-search-index-compaction.pdf (custom PDF preserved)
 - Cloudflare Worker Routes Test: downloads/cloudflare-worker-routes-test.pdf (custom PDF preserved)
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf (custom PDF preserved)
 - Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf (custom PDF preserved)
@@ -69,24 +73,27 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf (custom PDF preserved)
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf (custom PDF preserved)
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf (custom PDF preserved)
-- Current Intelligence Finalization: downloads/current-intelligence-finalization.pdf
+- Current Controlled Deploy Runs: downloads/current-controlled-deploy-runs.pdf
+- Current Intelligence Finalization: downloads/current-intelligence-finalization.pdf (custom PDF preserved)
+- Current Live Intel Runs: downloads/current-live-intel-runs.pdf
 - Cytoscape Network Map Report: downloads/cytoscape-network-map-report.pdf (custom PDF preserved)
 - Cytoscape Network Map Test: downloads/cytoscape-network-map-test.pdf (custom PDF preserved)
 - Daily Brain Brief: downloads/daily-brain-brief.pdf (custom PDF preserved)
 - Deep Daily Control Brief: downloads/daily-brief-master.pdf (custom PDF preserved)
 - Daily Command Brief: downloads/daily-command-brief.pdf (custom PDF preserved)
-- Daily Control Brief Delivery Patch: downloads/daily-control-brief-delivery-patch.pdf
-- Daily Control Brief Email Test: downloads/daily-control-brief-email-test.pdf
-- Daily Control Brief Email Upgrade: downloads/daily-control-brief-email-upgrade.pdf
+- Daily Control Brief Delivery Patch: downloads/daily-control-brief-delivery-patch.pdf (custom PDF preserved)
+- Daily Control Brief Email Test: downloads/daily-control-brief-email-test.pdf (custom PDF preserved)
+- Daily Control Brief Email Upgrade: downloads/daily-control-brief-email-upgrade.pdf (custom PDF preserved)
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf (custom PDF preserved)
+- Daily Epstein Update: downloads/daily-epstein-update.pdf
 - Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf (custom PDF preserved)
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf (custom PDF preserved)
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf (custom PDF preserved)
-- Deep Audit Public Defect Repair: downloads/deep-audit-public-defect-repair.pdf
+- Deep Audit Public Defect Repair: downloads/deep-audit-public-defect-repair.pdf (custom PDF preserved)
 - Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf (custom PDF preserved)
 - Deploy Health: downloads/deploy-health.pdf (custom PDF preserved)
 - Deploy Retry Marker: downloads/deploy-retry-marker.pdf (custom PDF preserved)
-- Deploy Status Current Mission Patch: downloads/deploy-status-current-mission-patch.pdf
+- Deploy Status Current Mission Patch: downloads/deploy-status-current-mission-patch.pdf (custom PDF preserved)
 - Deploy Status: downloads/deploy-status.pdf (custom PDF preserved)
 - Black File Starter Pack: downloads/dossier-pack-black-file-starter.pdf (custom PDF preserved)
 - Crime-State Overlap Pack: downloads/dossier-pack-crime-state-overlap.pdf (custom PDF preserved)
@@ -97,11 +104,11 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Matrix Reprogrammed Download Index: downloads/downloads-index.pdf (custom PDF preserved)
 - Elite Family Tracker: downloads/elite-family-tracker.pdf (custom PDF preserved)
 - Elite Reports: downloads/elite-reports.pdf (custom PDF preserved)
-- Email Automation Guard Patch: downloads/email-automation-guard-patch.pdf
-- Email Campaign Quality Patch: downloads/email-campaign-quality-patch.pdf
-- Email Campaign Source Anchor Repair: downloads/email-campaign-source-anchor-repair.pdf
-- Email Launch Console Patch: downloads/email-launch-console-patch.pdf
-- Empty Public Controls Output: downloads/empty-public-controls-output.pdf
+- Email Automation Guard Patch: downloads/email-automation-guard-patch.pdf (custom PDF preserved)
+- Email Campaign Quality Patch: downloads/email-campaign-quality-patch.pdf (custom PDF preserved)
+- Email Campaign Source Anchor Repair: downloads/email-campaign-source-anchor-repair.pdf (custom PDF preserved)
+- Email Launch Console Patch: downloads/email-launch-console-patch.pdf (custom PDF preserved)
+- Empty Public Controls Output: downloads/empty-public-controls-output.pdf (custom PDF preserved)
 - Empty Public Controls: downloads/empty-public-controls.pdf (custom PDF preserved)
 - Entity Daily Briefs: downloads/entity-daily-briefs.pdf (custom PDF preserved)
 - Entity Exposure Index: downloads/entity-exposure-index.pdf (custom PDF preserved)
@@ -122,27 +129,33 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Epstein Source Ledger: downloads/epstein-source-ledger.pdf (custom PDF preserved)
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
-- Evidence Badge Route Restore: downloads/evidence-badge-route-restore.pdf
+- Evidence Badge Route Restore: downloads/evidence-badge-route-restore.pdf (custom PDF preserved)
 - Evidence Network Map Build: downloads/evidence-network-map-build.pdf (custom PDF preserved)
 - Evidence Network Map Wiring: downloads/evidence-network-map-wiring.pdf (custom PDF preserved)
 - Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf (custom PDF preserved)
 - Evidence Task Engine: downloads/evidence-task-engine.pdf (custom PDF preserved)
 - Final Investigation Hardening: downloads/final-investigation-hardening.pdf (custom PDF preserved)
+- Final Live Audit And External Links: downloads/final-live-audit-and-external-links.pdf (custom PDF preserved)
 - Final Public Editorial Hardening: downloads/final-public-editorial-hardening.pdf (custom PDF preserved)
 - Final Public Route Cleanup: downloads/final-public-route-cleanup.pdf (custom PDF preserved)
 - Follow The Money Tracking Manual: downloads/follow-the-money-tracking-manual.pdf (custom PDF preserved)
 - Follow The Money Watch: downloads/follow-the-money-watch.pdf (custom PDF preserved)
+- Forum Health Member Policy Normalize: downloads/forum-health-member-policy-normalize.pdf (custom PDF preserved)
 - Forum Posts Export: downloads/forum-posts.pdf (custom PDF preserved)
-- Full Site Function and Tool Audit: downloads/full-site-function-tool-audit.pdf
-- Generated Machine Page Cleanup: downloads/generated-machine-page-cleanup.pdf
+- Full Site Audit Target Detection Patch: downloads/full-site-audit-target-detection-patch.pdf (custom PDF preserved)
+- Full Site Function and Tool Audit: downloads/full-site-function-tool-audit.pdf (custom PDF preserved)
+- Generated Machine Page Cleanup: downloads/generated-machine-page-cleanup.pdf (custom PDF preserved)
+- Generated Machine Pages Test: downloads/generated-machine-pages-test.pdf (custom PDF preserved)
 - Generated Site Repair Report: downloads/generated-site-repair-report.pdf (custom PDF preserved)
 - Geographic Power Atlas Runtime Test: downloads/geographic-power-atlas-runtime-test.pdf (custom PDF preserved)
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf (custom PDF preserved)
-- Homepage Command Builder Shell Patch: downloads/homepage-command-builder-shell-patch.pdf
+- Homepage Command Builder Shell Patch: downloads/homepage-command-builder-shell-patch.pdf (custom PDF preserved)
+- Homepage Mission Normalization: downloads/homepage-mission-normalization.pdf (custom PDF preserved)
 - Matrix Reprogrammed Intel Drop Vault: downloads/intel-drop-vault.pdf (custom PDF preserved)
 - Intel Vault: downloads/intel-vault.pdf (custom PDF preserved)
 - Investigation Machine Run Report: downloads/investigation-machine-run-report.pdf (custom PDF preserved)
 - Investigation Source Ledger: downloads/investigation-source-ledger.pdf (custom PDF preserved)
+- Late Generated Shared Runtime Patch: downloads/late-generated-shared-runtime-patch.pdf (custom PDF preserved)
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf (custom PDF preserved)
 - The Black File Starter Brief: downloads/lead-magnet-black-file-brief.pdf (custom PDF preserved)
 - Crime Network Starter Brief: downloads/lead-magnet-crime-network-brief.pdf (custom PDF preserved)
@@ -151,26 +164,32 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf (custom PDF preserved)
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf (custom PDF preserved)
 - Live Intel Machine: downloads/live-intel-latest.pdf (custom PDF preserved)
-- Live Intel Research Routes: downloads/live-intel-research-routes.pdf
-- Living Intelligence Regression Test: downloads/living-intelligence-regression-test.pdf
+- Live Intel Research Routes: downloads/live-intel-research-routes.pdf (custom PDF preserved)
+- Live Machine Dependants Test: downloads/live-machine-dependants-test.pdf
+- Live Machine Status: downloads/live-machine-status.pdf
+- Living Intelligence Regression Test: downloads/living-intelligence-regression-test.pdf (custom PDF preserved)
 - Login Email Resend Test: downloads/login-email-resend-test.pdf (custom PDF preserved)
 - Logo Symbolism Dossiers: downloads/logo-symbolism-dossiers.pdf (custom PDF preserved)
 - Machine Digest: downloads/machine-digest.pdf (custom PDF preserved)
-- Machine Entity Output Sanitizer Output: downloads/machine-entity-output-sanitizer-output.pdf
+- Machine Entity Output Sanitizer Output: downloads/machine-entity-output-sanitizer-output.pdf (custom PDF preserved)
 - Machine Entity Output Sanitizer: downloads/machine-entity-output-sanitizer.pdf (custom PDF preserved)
-- Machine Feed Object Name Patch: downloads/machine-feed-object-name-patch.pdf
+- Machine Feed Object Name Patch: downloads/machine-feed-object-name-patch.pdf (custom PDF preserved)
 - Machine Intelligence: downloads/machine-intelligence.pdf (custom PDF preserved)
+- Manual Deep Site Audit: downloads/manual-deep-site-audit.pdf
 - Market Activity Test: downloads/market-activity-test.pdf (custom PDF preserved)
 - Master Brief Engine: downloads/master-brief-engine.pdf (custom PDF preserved)
 - Master Evidence Source Registry: downloads/master-evidence-source-registry.pdf (custom PDF preserved)
+- Member Forum Integration Patch: downloads/member-forum-integration-patch.pdf (custom PDF preserved)
+- Member Forum Integration Test: downloads/member-forum-integration-test.pdf (custom PDF preserved)
 - Membership Access Copy Report: downloads/membership-access-copy-report.pdf (custom PDF preserved)
 - Membership Auth Patch Report: downloads/membership-auth-patch-report.pdf (custom PDF preserved)
 - Membership Auth Ui Patch: downloads/membership-auth-ui-patch.pdf (custom PDF preserved)
+- Membership Brief Preferences Patch: downloads/membership-brief-preferences-patch.pdf (custom PDF preserved)
 - Membership Foundation Patch Report: downloads/membership-foundation-patch-report.pdf (custom PDF preserved)
-- Membership Signup Server Fallback: downloads/membership-signup-server-fallback.pdf
+- Membership Signup Server Fallback: downloads/membership-signup-server-fallback.pdf (custom PDF preserved)
 - Membership Tiers Report: downloads/membership-tiers-report.pdf (custom PDF preserved)
 - Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf (custom PDF preserved)
-- Mission Acceptance Copy Alignment: downloads/mission-acceptance-copy-alignment.pdf
+- Mission Acceptance Copy Alignment: downloads/mission-acceptance-copy-alignment.pdf (custom PDF preserved)
 - Mission Health Audit: downloads/mission-health-audit.pdf (custom PDF preserved)
 - Mission Intelligence 10: downloads/mission-intelligence-10.pdf (custom PDF preserved)
 - Mission Source Priority Index: downloads/mission-source-priority-index.pdf (custom PDF preserved)
@@ -192,8 +211,10 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Outcome Briefings: downloads/outcome-briefings.pdf (custom PDF preserved)
 - Page Quality Audit: downloads/page-quality-audit.pdf (custom PDF preserved)
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf (custom PDF preserved)
-- Paypal Voluntary Support Patch: downloads/paypal-voluntary-support-patch.pdf
-- Phase1 Live Email Verifier Patch: downloads/phase1-live-email-verifier-patch.pdf
+- Paypal Server Redirect Patch: downloads/paypal-server-redirect-patch.pdf
+- Paypal Subscription Create State Repair: downloads/paypal-subscription-create-state-repair.pdf
+- Paypal Voluntary Support Patch: downloads/paypal-voluntary-support-patch.pdf (custom PDF preserved)
+- Phase1 Live Email Verifier Patch: downloads/phase1-live-email-verifier-patch.pdf (custom PDF preserved)
 - Phase6 Data Integration: downloads/phase6-data-integration.pdf (custom PDF preserved)
 - Phase6 Worker Patch: downloads/phase6-worker-patch.pdf (custom PDF preserved)
 - PayPal sandbox rehearsal: downloads/phase7-paypal-sandbox-rehearsal-test.pdf (custom PDF preserved)
@@ -203,27 +224,28 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
-- Power Dossier Runtime Report: downloads/power-dossier-runtime-report.pdf
+- Power Dossier Runtime Report: downloads/power-dossier-runtime-report.pdf (custom PDF preserved)
 - Premier Resource Route Restore: downloads/premier-resource-route-restore.pdf (custom PDF preserved)
 - Site Pressure Test Report: downloads/pressure-test-site-report.pdf (custom PDF preserved)
 - Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf (custom PDF preserved)
 - Probability Snapshot: downloads/probability-snapshot.pdf (custom PDF preserved)
 - Production Freshness Guard: downloads/production-freshness-guard.pdf (custom PDF preserved)
 - Production Kv Traffic Repair: downloads/production-kv-traffic-repair.pdf (custom PDF preserved)
-- Production Receipt Email Safety Patch: downloads/production-receipt-email-safety-patch.pdf
+- Production Receipt Email Safety Patch: downloads/production-receipt-email-safety-patch.pdf (custom PDF preserved)
 - Protected Build Template Report: downloads/protected-build-template-report.pdf (custom PDF preserved)
-- Public Control Target Audit: downloads/public-control-target-audit.pdf
+- Public Control Target Audit: downloads/public-control-target-audit.pdf (custom PDF preserved)
 - Public Copy Scrubber Report: downloads/public-copy-scrubber-report.pdf (custom PDF preserved)
 - Public Copy Visibility Test: downloads/public-copy-visibility-test.pdf (custom PDF preserved)
 - Public Data Lab Build: downloads/public-data-lab-build.pdf (custom PDF preserved)
 - Public Data Lab Test: downloads/public-data-lab-test.pdf (custom PDF preserved)
-- Public Editorial Audit Repair: downloads/public-editorial-audit-repair.pdf
+- Public Editorial Audit Repair: downloads/public-editorial-audit-repair.pdf (custom PDF preserved)
 - Public Network Map Test: downloads/public-network-map-test.pdf (custom PDF preserved)
+- Public Output Secret Audit: downloads/public-output-secret-audit.pdf (custom PDF preserved)
 - Public Record Intake Manifest: downloads/public-record-intake.pdf (custom PDF preserved)
-- Public Runtime Controls Output: downloads/public-runtime-controls-output.pdf
+- Public Runtime Controls Output: downloads/public-runtime-controls-output.pdf (custom PDF preserved)
 - Public Runtime Controls: downloads/public-runtime-controls.pdf (custom PDF preserved)
 - Public Site Error Repair: downloads/public-site-error-repair.pdf (custom PDF preserved)
-- Public Utility Dedupe Output: downloads/public-utility-dedupe-output.pdf
+- Public Utility Dedupe Output: downloads/public-utility-dedupe-output.pdf (custom PDF preserved)
 - Public Utility Dedupe: downloads/public-utility-dedupe.pdf (custom PDF preserved)
 - Public Visibility Report: downloads/public-visibility-report.pdf (custom PDF preserved)
 - Public Weekly Signup Report: downloads/public-weekly-signup-report.pdf (custom PDF preserved)
@@ -231,16 +253,17 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Reader Conclusions: downloads/reader-conclusions.pdf (custom PDF preserved)
 - Reader Experience Governor: downloads/reader-experience-governor-report.pdf (custom PDF preserved)
 - Reader Page Repair: downloads/reader-page-repair.pdf (custom PDF preserved)
+- Recovery Worker Api Contract Test: downloads/recovery-worker-api-contract-test.pdf (custom PDF preserved)
 - Research Tools Ui Patch: downloads/research-tools-ui-patch.pdf (custom PDF preserved)
 - Restore Public Core Routes: downloads/restore-public-core-routes.pdf (custom PDF preserved)
 - Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf (custom PDF preserved)
 - Search Investigation Smoke Test: downloads/search-investigation-smoke-test.pdf (custom PDF preserved)
 - Search Runtime Hardening Report: downloads/search-runtime-hardening-report.pdf (custom PDF preserved)
 - Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
-- Search V3 Adjudicated Ranking Patch: downloads/search-v3-adjudicated-ranking-patch.pdf
+- Search V3 Adjudicated Ranking Patch: downloads/search-v3-adjudicated-ranking-patch.pdf (custom PDF preserved)
 - Search V3 Build Report: downloads/search-v3-build-report.pdf (custom PDF preserved)
-- Search V3 Compaction Headroom Patch: downloads/search-v3-compaction-headroom-patch.pdf
-- Search V3 Deploy Size Repair: downloads/search-v3-deploy-size-repair.pdf
+- Search V3 Compaction Headroom Patch: downloads/search-v3-compaction-headroom-patch.pdf (custom PDF preserved)
+- Search V3 Deploy Size Repair: downloads/search-v3-deploy-size-repair.pdf (custom PDF preserved)
 - Search V3 Quality Test: downloads/search-v3-quality-test.pdf (custom PDF preserved)
 - Search V3 Runtime Report: downloads/search-v3-runtime-report.pdf (custom PDF preserved)
 - SEC Filing Feed: downloads/sec-filing-feed.pdf (custom PDF preserved)
@@ -268,13 +291,13 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf (custom PDF preserved)
 - Source Change Preservation Hardening Test: downloads/source-change-preservation-hardening-test.pdf (custom PDF preserved)
 - Source Change Preservation Test: downloads/source-change-preservation-test.pdf (custom PDF preserved)
-- Source Document Vault Route Restore: downloads/source-document-vault-route-restore.pdf
+- Source Document Vault Route Restore: downloads/source-document-vault-route-restore.pdf (custom PDF preserved)
 - Source Document Vault: downloads/source-document-vault.pdf (custom PDF preserved)
 - Speculation / Needs Review: downloads/speculation-needs-review-public.pdf (custom PDF preserved)
 - Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf (custom PDF preserved)
 - Speculative Conclusions: downloads/speculative-conclusions.pdf (custom PDF preserved)
 - Speculative Intelligence Synthesis: downloads/speculative-intelligence-synthesis.pdf (custom PDF preserved)
-- Stale Generated Brief Link Repair: downloads/stale-generated-brief-link-repair.pdf
+- Stale Generated Brief Link Repair: downloads/stale-generated-brief-link-repair.pdf (custom PDF preserved)
 - Structured Investigation Data Build: downloads/structured-investigation-data-build.pdf (custom PDF preserved)
 - Structured Investigation Data Test: downloads/structured-investigation-data-test.pdf (custom PDF preserved)
 - Crime-State Overlap Brief: downloads/subject-crime-state-overlap.pdf
@@ -300,7 +323,8 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
 - Update Cadence Report: downloads/update-cadence-report.pdf (custom PDF preserved)
 - Verified Record Cards: downloads/verified-record-cards.pdf (custom PDF preserved)
-- Voluntary Support Store Patch: downloads/voluntary-support-store-patch.pdf
+- Voluntary Support Store Patch: downloads/voluntary-support-store-patch.pdf (custom PDF preserved)
 - Weekly Investigation Report: downloads/weekly-investigation-report.pdf (custom PDF preserved)
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf (custom PDF preserved)
+- Worker Api Contract Hardening: downloads/worker-api-contract-hardening.pdf (custom PDF preserved)
 - Wrongdoing Tracker / Public-Record Case Engine: downloads/wrongdoing-tracker.pdf (custom PDF preserved)

@@ -346,7 +346,7 @@ async function handle(route, request, env, ctx) {
       persistent: true,
       saved: true,
       storage: 'Cloudflare D1 MEMBERS_DB.forum_posts',
-      mirroredToKv: Boolean(env.FORUM_POSTS),
+      mirroredToKv: kvMirrorEnabled(env),
       board: post.board,
       boardLabel: boardLabels[post.board],
       memberTier: auth.entitlement?.effective_tier || 'registered',

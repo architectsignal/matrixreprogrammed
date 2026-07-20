@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-19T06:13:25.670Z
+Generated: 2026-07-20T06:34:18.149Z
 
 ## Open Routes
 
@@ -11,103 +11,103 @@ Generated: 2026-07-19T06:13:25.670Z
 
 ## Latest Drops
 
-### Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-17T22:44:14.000Z
-- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T05:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-### Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T13:35:00.000Z
-- Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
-Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say The Guardian
-### Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T12:00:01.000Z
-- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
+### Haiti: Signs of hope despite gang violence and political uncertainty
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-19T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167963
+For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.
+### Ukraine: UN condemns overnight attack on Kyiv
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-19T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167975
+United Nations agencies have deplored a fresh Russian assault on the Ukrainian capital Kyiv which left at least one person dead and a dozen injured.
+### A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-18T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167974
+Jean Todt spent decades around the deadliest motorsport on Earth. He was a rally co‑driver, then ran Ferrari’s Formula One team, then became president of world motorsport’s governing body. In his early years, a driver dying at the track barely made news.
 ### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-17T23:17:00.000Z
 - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
 House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
-### Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
+### Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T06:24:40.000Z
-- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
-Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
-### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T17:32:31.000Z
-- Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women Reuters
-### 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T23:34:19.000Z
-- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
-3 major takeaways from Todd Blanche's attorney general confirmation hearing PBS
-### Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T16:25:19.000Z
-- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
-Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB Charlotte
-### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-13T14:49:05.000Z
-- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
-### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T04:11:50.000Z
-- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
-### Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-14T18:33:29.000Z
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
-Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters
-### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T14:26:50.000Z
-- Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUhhWGNhdF9Ucm1MaUp1WFpXNGJhczFhZms1WUJ4RE9qSHVwaFlERW5tQVdMd0ItNVZORHdhTHBOQTFHZklXaGZtcGtVVjE5eHpKRDZuZTFLQVphSkFLZGtsVXVyRm5OOEF1TkRpYUo3MU1RcFE2SjFqV21XRllpM0pOUmRIa0NWZWpFVGQ5TGYwMlU?oc=5
-Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women WKZO
-### 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T22:41:09.000Z
-- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
-'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties Fox News
-### Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T14:28:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
+- Date: 2026-07-17T22:44:14.000Z
+- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
+Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
 ### The surveillance networks cities do not have to buy - Biometric Update
 - Lane: Elite Control Structure
 - Date: 2026-07-17T17:38:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
 The surveillance networks cities do not have to buy Biometric Update
-### Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
+### Baristas behind bars: Thai prisoners brew a path back to daily life
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-15T11:16:21.000Z
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
-Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo Tech Times
-### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T04:11:50.000Z
-- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe thestandard.com.hk
-### Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T00:34:45.000Z
-- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
-Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
-### Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167954
+It looks like a regular coffee shop, albeit set up in an old red bus. Stairs lead up to a serving hatch, with a menu of drink options. A selection of jaunty coffee-related messages like “My one and only love: Americano” and “Miss you a latte,” adorn the side of the bus.
+### Djibouti: Emergency alert spotlights sharp hunger spike
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167971
+More than 256,000 people in Djibouti – around 25 per cent of the population – are likely to face crisis or emergency level hunger over the coming months, a UN-backed global food monitoring network warned in a new report released Friday.
+### Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167965
+UN Secretary-General António Guterres on Friday urged governments and technology companies to work together to ensure artificial intelligence (AI) benefits all countries.
+### Hunger deepens for displaced families in Sudan’s El Obeid
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167967
+UN humanitarians working in war-torn Sudan on Friday highlighted rapidly growing needs among the more than 100,000 displaced people now sheltering in camps in the city of El Obeid.
+### US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167973
+The UN Secretary-General remains deeply concerned by the continuing deadly military escalation between Iran and the United States, his spokesperson said on Friday as attacks destroyed key civilian and military infrastructure across the Gulf region.
+### World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-17T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167970
+The UN human rights chief, Volker Türk, has appealed for calm in Pakistan-Administered Kashmir amid unrest ahead of regional elections.
+### Henry Lucas
 - Lane: Declassified Files And Public Archives
-- Date: 2026-07-11T04:00:07.000Z
-- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
-Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com
+- Date: 2026-07-17T04:00:00.000Z
+- Source: https://vault.fbi.gov/henry-lucas
+Henry Lucas
+### Henry Lucas Part 01
+- Lane: Declassified Files And Public Archives
+- Date: 2026-07-17T04:00:00.000Z
+- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
+Henry Lucas Part 01
+### Henry Lucas Part 02 (Final)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-07-17T04:00:00.000Z
+- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
+Henry Lucas Part 02 (Final)
+### ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167955
+As Europe battles a deadly record-breaking heatwave, the World Health Organization (WHO) issued new guidance on Thursday to help countries face scorching temperatures now and in the future.
+### As aid dries up, countries pledge to close the $4 trillion development gap
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167957
+UN Member States reaffirmed their commitment to the Sustainable Development Goals (SDGs) by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap.
+### Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167956
+For Tanatswa Amanda Chikaura, mental health advocacy began with a personal loss: while studying psychology at the University of Zimbabwe, she learned that a fellow student had died by suicide.
+### Gaza farmers battle to rebuild as WFP warns of West Bank settler violence
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167960
+The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.
+### Haiti: Training the next generation to fight corruption
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167931
+How do you tackle corruption in a country grappling with insecurity, weak institutions and widespread impunity? In Haiti, the Government and the United Nations are betting on the country&#039;s youth.

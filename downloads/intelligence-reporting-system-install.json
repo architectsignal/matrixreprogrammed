@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-20T06:36:12.680Z",
+  "productionWorkerChanged": true,
+  "emailWorkerChanged": true,
+  "memberDashboardChanged": true,
+  "routes": [
+    "/api/member/intelligence-reports",
+    "/api/member/intelligence-reports/latest",
+    "/api/member/report-profile",
+    "/api/intelligence/admin/health",
+    "/api/intelligence/admin/generate",
+    "/api/email/admin/report-system-health"
+  ],
+  "safety": {
+    "failClosedOriginValidation": true,
+    "separateD1Tables": true,
+    "existingOutboxAndConsentReused": true,
+    "scheduledAutomationStatePreserved": true,
+    "paypalFilesModified": false
+  }
+}

@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-19T07:49:52.308Z
+Generated: 2026-07-20T06:35:17.027Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-19T07:49:52.308Z
 - 85 — Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/sawas-v-elzanaty.html
 - 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
 - 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
-- 72 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — live-intel.html
-- 72 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — live-intel.html
-- 72 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian — live-intel.html
-- 72 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC — live-intel.html
+- 72 — Haiti: Signs of hope despite gang violence and political uncertainty — live-intel.html
+- 72 — Ukraine: UN condemns overnight attack on Kyiv — live-intel.html
+- 72 — A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job — live-intel.html
 - 72 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News — live-intel.html
+- 72 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — live-intel.html

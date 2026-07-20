@@ -1,7 +1,8 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:45:59.295Z",
+  "generatedAt": "2026-07-20T06:36:12.983Z",
   "changed": true,
+  "routeRegistryPolicy": "order-independent; preserves server-created subscription routes",
   "routes": [
     "/api/paypal/donation/config",
     "/api/paypal/donation/order",

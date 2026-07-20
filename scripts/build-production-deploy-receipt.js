@@ -106,12 +106,13 @@ async function fetchBoundary(route) {
     && reportDelivery.includes('verified_self_intelligence_report')
     && reportDelivery.includes('report-is-not-verified-self')
     && reportDelivery.includes('current-membership-tier-required')
-    && wranglerToml.includes('EMAIL_AUTOMATION_ENABLED = "false"')
+    && wranglerToml.includes('EMAIL_AUTOMATION_ENABLED = "true"')
     && wranglerToml.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"')
     && wranglerToml.includes('BREVO_DOMAIN_AUTHENTICATED = "true"')
     && wranglerToml.includes('EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"')
+    && wranglerToml.includes('INTELLIGENCE_REPORT_BATCH_LIMIT = "100"')
     && brevoReadiness.ok === true
-    && brevoReadiness.status === 'transactional-ready-automation-disabled'
+    && brevoReadiness.status === 'automation-and-transactional-ready'
     && emailCampaignQuality.ok === true
     && emailAutomationGuard.ok === true
     && wranglerToml.includes('"5 6 * * *"')
@@ -156,9 +157,11 @@ async function fetchBoundary(route) {
     && paypalWorker.includes("String(input.phrase||'')!=='ACTIVATE MATRIX PAYPAL LIVE'")
     && paypalWorker.includes("error:'PayPal checkout is disabled until activation gates pass'");
 
-  const sdkFallbackWired = paypalClient.includes('Retry PayPal checkout')
-    && paypalClient.includes('PayPal SDK network request was blocked or rejected')
-    && paypalClient.includes('credentials:\'include\'');
+  const serverRedirectWired = paypalClient.includes('/api/paypal/subscription/create')
+    && paypalClient.includes('Continue securely to PayPal')
+    && paypalClient.includes("credentials:'include'")
+    && paypalWorker.includes("'/v1/billing/subscriptions'")
+    && paypalWorker.includes("rel==='approve'");
 
   const receipt = {
     schemaVersion: 5,
@@ -205,8 +208,9 @@ async function fetchBoundary(route) {
       brevoStatus: brevoReadiness.status || null,
       domainAuthenticationConfirmed: true,
       transactionalDeliveryEnabled: true,
-      marketingAutomationEnabled: false,
-      marketingAutomationDisabled: true,
+      marketingAutomationEnabled: true,
+      marketingAutomationConsentBound: true,
+      personalizedBatchLimit: 100,
       preActivationRetryGuard: emailAutomationGuard.ok === true,
       campaignQualityVerified: emailCampaignQuality.ok === true,
       dailySource: emailCampaignQuality.dailySource || null,
@@ -235,7 +239,7 @@ async function fetchBoundary(route) {
       anonymousChargePossible: paypalBoundary.anonymousChargePossible === false,
       boundaryOrigin: paypalBoundary.checkout?.origin || paypalBoundary.config?.origin || null,
       activationContractWired,
-      sdkFallbackWired,
+      serverRedirectWired,
       plansRequiredByWorker: true,
       webhookRequiredByWorker: true,
       liveConfirmationRequiredByWorker: true
@@ -262,12 +266,12 @@ async function fetchBoundary(route) {
       && paypalBoundary.anonymousChargePossible === false
       && runtimeVariablesPreserved
       && activationContractWired
-      && sdkFallbackWired
+      && serverRedirectWired
       && live.forumPersistence?.ok === true
       && memberBoundaryPassed
       && emailBoundaryPassed
       && brevoReadiness.ok === true
-      && brevoReadiness.status === 'transactional-ready-automation-disabled'
+      && brevoReadiness.status === 'automation-and-transactional-ready'
       && emailCampaignQuality.ok === true
       && emailAutomationGuard.ok === true
       && reportDeliveryWired

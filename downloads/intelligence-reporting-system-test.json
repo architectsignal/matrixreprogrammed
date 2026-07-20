@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "testedAt": "2026-07-20T06:36:12.721Z",
+  "sample": {
+    "tracker": "Donald Trump",
+    "relevantRecords": 4,
+    "currentRecords": 2,
+    "contradictions": 2,
+    "connections": 1,
+    "evidenceCount": 4,
+    "primarySourceCount": 4,
+    "pdfBytes": 4294
+  },
+  "safeguards": {
+    "unrelatedRecordExcluded": true,
+    "evidenceLabelsValidated": true,
+    "eventAndPublicationDatesSeparated": true,
+    "coverageFailuresDisclosed": true,
+    "nativePdfGenerated": true,
+    "automationEnabled": true,
+    "batchLimit": 100,
+    "transactionalEmailStillEnabled": true,
+    "paypalBoundaryPreserved": true,
+    "unsubscribeAndSuppressionPreserved": true,
+    "dailyAndWeeklySchedulesWired": true
+  }
+}

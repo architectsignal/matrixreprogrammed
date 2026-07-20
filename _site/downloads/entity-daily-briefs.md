@@ -1,18 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-19T06:13:18.231Z
+Updated: 2026-07-20T06:34:10.904Z
 
-Briefs generated: 46
-
-## People's Republic of Bangladesh
-
-At a glance: People's Republic of Bangladesh is currently tracked as observed entity with 3 recent record route(s), 3 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: High-interest tracked entity because it appears across records and relationship candidates.
-
-Evidence: documented public-record association
-
-Watch next: Watch People's Republic of Bangladesh across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+Briefs generated: 38
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -334,26 +324,6 @@ Evidence: documented public-record association
 
 Watch next: Watch Broadcom Inc. across sec-edgar-filings.; Check whether new sec-edgar-filings records repeat this name.
 
-## Chattogram Water Supply and Sewerage Authority
-
-At a glance: Chattogram Water Supply and Sewerage Authority is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
-## Finance Division, Ministry of Finance
-
-At a glance: Finance Division, Ministry of Finance is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Finance Division, Ministry of Finance across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
 ## GOOGL
 
 At a glance: GOOGL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
@@ -364,16 +334,6 @@ Evidence: documented public-record association
 
 Watch next: Watch GOOGL across sec-edgar-filings.; Check whether new sec-edgar-filings records repeat this name.
 
-## Kingdom of Morocco
-
-At a glance: Kingdom of Morocco is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Kingdom of Morocco across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
 ## MICROSOFT CORP
 
 At a glance: MICROSOFT CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
@@ -383,26 +343,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch MICROSOFT CORP across sec-edgar-filings.; Check whether new sec-edgar-filings records repeat this name.
-
-## Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)
-
-At a glance: Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
-## Ministry of Health and Family Welfare
-
-At a glance: Ministry of Health and Family Welfare is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Ministry of Health and Family Welfare across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
 ## MSFT
 
@@ -443,23 +383,3 @@ Judgement: A source route exists. More records are needed before drawing a stron
 Evidence: documented public-record association
 
 Watch next: Watch Nuclear Regulatory Commission across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Republic of India
-
-At a glance: Republic of India is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Watch Republic of India across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
-## Republic of Rwanda
-
-At a glance: Republic of Rwanda is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Watch Republic of Rwanda across world-bank-projects.; Check whether new world-bank-projects records repeat this name.

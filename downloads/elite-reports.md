@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-19T07:49:47.962Z
+Generated: 2026-07-20T06:35:13.565Z
 
 ## Daily Revelation Report
 
-House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+Haiti: Signs of hope despite gang violence and political uncertainty
 
 Source: daily-command-brief.html
 

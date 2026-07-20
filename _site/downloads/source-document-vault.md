@@ -1,6 +1,6 @@
 # Source Document Vault
 
-Updated: 2026-07-19T06:13:22.143Z
+Updated: 2026-07-20T06:34:14.437Z
 
 A document route is a starting point, not a conclusion. Readers should open the file, identify the record type, check the date, read the context, and classify what it supports before drawing a conclusion.
 
@@ -131,7 +131,7 @@ A document route is a starting point, not a conclusion. Readers should open the 
 - Lane: Epstein / elite-network actual-file door
 - Use: Search foreign-agent registration records, lobbying, representation, and influence disclosures.
 - Best for: Lobbying, foreign-agent, and influence-network context.
-- URL: https://efile.fara.gov/ords/fara/f?p=1381:1
+- URL: https://efile.fara.gov/ords/fara/f?p=1235%3A10
 - Evidence route: evidence-vault.html
 - Classifier: claim-classifier.html
 

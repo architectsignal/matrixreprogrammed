@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:47:07.144Z",
+  "changed": true,
+  "fixes": [
+    "Only real whitespace-delimited href, src and action attributes are treated as routes; data-action fields and JavaScript object properties are excluded.",
+    "The Worker-served /intro-voice route is recognized as dynamic.",
+    "Late-generated public pages are restored to the shared visual runtime before final audits."
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:02.860Z",
+  "updated": "2026-07-20T06:35:17.034Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
-  "nodeCount": 137,
+  "nodeCount": 135,
   "edgeCount": 172,
   "nodes": [
     {
@@ -41,7 +41,7 @@
       "type": "institution route",
       "route": "institution-briefs/world-bank.html",
       "notes": [
-        "elite priority",
+        "high priority",
         "money",
         "foundations-ngos",
         "public-private-contracts"
@@ -180,6 +180,21 @@
       "score": 100
     },
     {
+      "id": "jeff-bezos",
+      "layer": "capital-and-ownership",
+      "name": "Jeff Bezos",
+      "type": "profile route",
+      "route": "billionaire-briefs/jeff-bezos.html",
+      "notes": [
+        "elite priority",
+        "Amazon",
+        "AWS",
+        "Blue Origin",
+        "Washington Post"
+      ],
+      "score": 100
+    },
+    {
       "id": "blackwater-xe-academi-constellis-lineage",
       "layer": "execution-and-contracts",
       "name": "Blackwater / Xe / Academi / Constellis lineage",
@@ -283,21 +298,6 @@
         "public money"
       ],
       "score": 100
-    },
-    {
-      "id": "jeff-bezos",
-      "layer": "capital-and-ownership",
-      "name": "Jeff Bezos",
-      "type": "profile route",
-      "route": "billionaire-briefs/jeff-bezos.html",
-      "notes": [
-        "elite priority",
-        "Amazon",
-        "AWS",
-        "Blue Origin",
-        "Washington Post"
-      ],
-      "score": 70
     },
     {
       "id": "bill-gates",
@@ -628,17 +628,6 @@
         "defense and diplomacy"
       ],
       "score": 55
-    },
-    {
-      "id": "people-s-republic-of-bangladesh",
-      "layer": "evidence-and-records",
-      "name": "People's Republic of Bangladesh",
-      "type": "missing record",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
     },
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
@@ -993,44 +982,11 @@
       "score": 54
     },
     {
-      "id": "chattogram-water-supply-and-sewerage-authority",
-      "layer": "evidence-and-records",
-      "name": "Chattogram Water Supply and Sewerage Authority",
-      "type": "missing record",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "finance-division-ministry-of-finance",
-      "layer": "evidence-and-records",
-      "name": "Finance Division, Ministry of Finance",
-      "type": "missing record",
-      "route": "entity-briefs/finance-division-ministry-of-finance.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "googl",
       "layer": "evidence-and-records",
       "name": "GOOGL",
       "type": "missing record",
       "route": "entity-briefs/googl.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "kingdom-of-morocco",
-      "layer": "evidence-and-records",
-      "name": "Kingdom of Morocco",
-      "type": "missing record",
-      "route": "entity-briefs/kingdom-of-morocco.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1048,22 +1004,44 @@
       "score": 54
     },
     {
-      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "id": "msft",
       "layer": "evidence-and-records",
-      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "name": "MSFT",
       "type": "missing record",
-      "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+      "route": "entity-briefs/msft.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "ministry-of-health-and-family-welfare",
+      "id": "nvda",
       "layer": "evidence-and-records",
-      "name": "Ministry of Health and Family Welfare",
+      "name": "NVDA",
       "type": "missing record",
-      "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
+      "route": "entity-briefs/nvda.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "nvidia-corp",
+      "layer": "evidence-and-records",
+      "name": "NVIDIA CORP",
+      "type": "missing record",
+      "route": "entity-briefs/nvidia-corp.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "nuclear-regulatory-commission",
+      "layer": "evidence-and-records",
+      "name": "Nuclear Regulatory Commission",
+      "type": "missing record",
+      "route": "entity-briefs/nuclear-regulatory-commission.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1200,18 +1178,6 @@
       "notes": [
         "Recent public-source items already pulled into the site",
         "Priority 88"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-people-s-republic-of-bangladesh-confirm-the-primary-record-p",
-      "layer": "evidence-and-records",
-      "name": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "notes": [
-        "missing record",
-        "Score 85"
       ],
       "score": 43
     },
@@ -1444,6 +1410,18 @@
       "score": 43
     },
     {
+      "id": "feed-homeland-security-department-confirm-the-primary-record-page",
+      "layer": "evidence-and-records",
+      "name": "Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/homeland-security-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "money",
       "layer": "control-rails",
       "name": "money",
@@ -1513,6 +1491,28 @@
       "id": "migration",
       "layer": "control-rails",
       "name": "migration",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "energy",
+      "layer": "control-rails",
+      "name": "energy",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "food",
+      "layer": "control-rails",
+      "name": "food",
       "type": "control rail",
       "route": "control-structure.html",
       "notes": [

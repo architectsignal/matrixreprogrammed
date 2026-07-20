@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:13:59.508Z",
+  "updated": "2026-07-20T06:35:13.343Z",
   "title": "Conclusion Engine",
   "boundary": "Conclusions are evidence-bounded editorial outputs. They must not turn speculation, association or source proximity into proof.",
   "conclusions": [
@@ -22,7 +22,7 @@
     },
     {
       "title": "Best source intake priority",
-      "conclusion": "The highest-priority source drop is House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News.",
+      "conclusion": "The highest-priority source drop is Haiti: Signs of hope despite gang violence and political uncertainty.",
       "why": "Fresh dated source drops are the cleanest way to keep clocks, cards and briefs current.",
       "boundary": "A source drop is a lead until it has been classified, cross-checked and connected to a conclusion.",
       "confidence": "medium",
@@ -370,7 +370,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-19T06:13:51.033Z",
+      "generatedAt": "2026-07-20T06:35:03.259Z",
       "id": "surveillance-state",
       "name": "Surveillance State Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -619,7 +619,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-19T06:13:51.033Z",
+      "generatedAt": "2026-07-20T06:35:03.259Z",
       "id": "ai-breakout",
       "name": "AI Breakout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -846,6 +846,16 @@
           "matchScore": 7
         },
         {
+          "title": "CBDC offline wallet design rules",
+          "summary": "",
+          "route": "policy/cbdc-offline-wallet-design-rules.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "no-new-verified-record-in-current-window",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 7
+        },
+        {
           "title": "WWIII Escalation Clock",
           "summary": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
           "route": "live-intel.html",
@@ -864,16 +874,6 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
-        },
-        {
-          "title": "CBDC offline wallet design rules",
-          "summary": "",
-          "route": "Build from primary and public sources for CBDC offline wallet design rules: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/policy-deck.json",
-          "matchScore": 7
         }
       ],
       "sourceRoutes": [
@@ -886,6 +886,7 @@
         "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
         "deep-intel-feed.html",
         "https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/",
+        "policy/cbdc-offline-wallet-design-rules.html",
         "live-intel.html",
         "Build from primary and public sources for CBDC offline wallet design rules: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.",
         "evidence-vault.html",
@@ -903,7 +904,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-19T06:13:51.033Z",
+      "generatedAt": "2026-07-20T06:35:03.259Z",
       "id": "cbdc-rollout",
       "name": "CBDC Rollout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1256,7 +1257,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-19T06:13:51.033Z",
+      "generatedAt": "2026-07-20T06:35:03.259Z",
       "id": "machine-convergence",
       "name": "Machine Convergence",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1362,6 +1363,16 @@
           "matchScore": 12
         },
         {
+          "title": "Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war",
+          "summary": "UN Secretary-General António Guterres voiced deep concern on Wednesday over the continuing military escalation in the Middle East amid ongoing strikes by the United States and Iran over control of the Strait of Hormuz.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1167949",
+          "published": "2026-07-15T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 9
+        },
+        {
           "title": "Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News",
           "summary": "Ukraine war undermining Russia’s Arctic plans, US intelligence says Defense News",
           "route": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5",
@@ -1380,6 +1391,16 @@
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 8
+        },
+        {
+          "title": "Security Council LIVE: International Criminal Court briefs on Darfur",
+          "summary": "On Wednesday, the Security Council heard an update on the International Criminal Court s work in Sudan s Darfur region, referred to the Court back in 2005. Focus has recently turned to atrocities in the ongoing war between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). The briefing was held as the ICC faces mounting pressure: this week, US Secretary of State Marco Rubio launched a campaign to “dismantle” the Court, which prosecutes individuals for genocide, war crimes, crimes against humanity and the crime of aggression. Follow full live coverage below.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1167945",
+          "published": "2026-07-15T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 7
         },
         {
           "title": "From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum",
@@ -1460,26 +1481,6 @@
           "confidence": "",
           "sourceFile": "data/live-intel.json",
           "matchScore": 7
-        },
-        {
-          "title": "AI Breakout Clock",
-          "summary": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August",
-          "route": "answer-engine.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "High",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 6
-        },
-        {
-          "title": "Epstein File Scan Batch 001 — DOJ Library Structure And Court-Record Lanes",
-          "summary": "First defensive scan of the official DOJ Epstein Library and DOJ Disclosures page. This batch builds source-route records rather than allegations: DOJ library warnings, data set structure, court-record lanes, FOIA lanes, prior disclosures, the January 30 production statement, and three high-priority court-record pages.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "ingested",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -1488,11 +1489,12 @@
         "control-system-tracker.html#security-and-war-powers",
         "surveillance-hub.html",
         "black-file.html",
+        "https://news.un.org/feed/view/en/story/2026/07/1167949",
         "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5",
+        "https://news.un.org/feed/view/en/story/2026/07/1167945",
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5",
         "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5",
         "dashboard-conflict.html",
-        "answer-engine.html",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1506,7 +1508,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-19T06:13:51.033Z",
+      "generatedAt": "2026-07-20T06:35:03.259Z",
       "id": "wwiii-escalation",
       "name": "WWIII Escalation Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1514,6 +1516,69 @@
     }
   ],
   "topDrops": [
+    {
+      "id": "war-machine-2026-07-19-94d38766",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "sourceLabel": "UN News",
+      "title": "Haiti: Signs of hope despite gang violence and political uncertainty",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167963",
+      "published": "2026-07-19T12:00:00.000Z",
+      "summary": "For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.",
+      "evidenceLevel": "Primary or official public-record lead",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+      "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
+      "optinRoute": "optin-intelligence-files-brief.html",
+      "timerLinks": [],
+      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
+    },
+    {
+      "id": "war-machine-2026-07-19-aad16b71",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "sourceLabel": "UN News",
+      "title": "Ukraine: UN condemns overnight attack on Kyiv",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167975",
+      "published": "2026-07-19T12:00:00.000Z",
+      "summary": "United Nations agencies have deplored a fresh Russian assault on the Ukrainian capital Kyiv which left at least one person dead and a dozen injured.",
+      "evidenceLevel": "Primary or official public-record lead",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+      "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
+      "optinRoute": "optin-intelligence-files-brief.html",
+      "timerLinks": [],
+      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
+    },
+    {
+      "id": "war-machine-2026-07-18-a9d169de",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "sourceLabel": "UN News",
+      "title": "A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167974",
+      "published": "2026-07-18T12:00:00.000Z",
+      "summary": "Jean Todt spent decades around the deadliest motorsport on Earth. He was a rally co‑driver, then ran Ferrari’s Formula One team, then became president of world motorsport’s governing body. In his early years, a driver dying at the track barely made news.",
+      "evidenceLevel": "Primary or official public-record lead",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+      "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
+      "optinRoute": "optin-intelligence-files-brief.html",
+      "timerLinks": [],
+      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
+    },
     {
       "id": "epstein-files-2026-07-17-1",
       "lane": "epstein-files",
@@ -1574,69 +1639,6 @@
       "bookRoute": "book-elite-toolkit.html",
       "offerRoute": "offer-starter-library.html",
       "optinRoute": "optin-full-archive-map.html",
-      "timerLinks": [],
-      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
-    },
-    {
-      "id": "epstein-files-2026-07-16-3",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "sourceLabel": "Google News / Epstein timeline and files",
-      "title": "Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5",
-      "published": "2026-07-16T06:24:40.000Z",
-      "summary": "Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post",
-      "evidenceLevel": "Seven-day public-record lead",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
-      "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "videoRoute": "videos.html",
-      "bookRoute": "book-black-file.html",
-      "offerRoute": "offer-starter-library.html",
-      "optinRoute": "optin-black-file-brief.html",
-      "timerLinks": [],
-      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
-    },
-    {
-      "id": "epstein-files-2026-07-16-1",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "sourceLabel": "Google News / Epstein timeline and files",
-      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
-      "published": "2026-07-16T05:00:00.000Z",
-      "summary": "Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica",
-      "evidenceLevel": "Seven-day public-record lead",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
-      "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "videoRoute": "videos.html",
-      "bookRoute": "book-black-file.html",
-      "offerRoute": "offer-starter-library.html",
-      "optinRoute": "optin-black-file-brief.html",
-      "timerLinks": [],
-      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
-    },
-    {
-      "id": "epstein-files-2026-07-16-12",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "sourceLabel": "Google News / Epstein sighting and alive claims",
-      "title": "US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5",
-      "published": "2026-07-16T04:11:50.000Z",
-      "summary": "US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe thestandard.com.hk",
-      "evidenceLevel": "Seven-day public-record lead",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
-      "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "videoRoute": "videos.html",
-      "bookRoute": "book-black-file.html",
-      "offerRoute": "offer-starter-library.html",
-      "optinRoute": "optin-black-file-brief.html",
       "timerLinks": [],
       "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
     }

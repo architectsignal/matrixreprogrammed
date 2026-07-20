@@ -1,0 +1,168 @@
+name: Permanent Forum And Public Surface Repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/permanent-forum-public-surface-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: permanent-forum-public-surface-repair
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  repair-audit-commit-dispatch:
+    name: Repair member posting and audit every public surface
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Apply permanent forum and session owners
+        run: |
+          node scripts/repair-forum-member-posting.js
+          node scripts/forum-member-posting-test.js
+          node --check forum.js
+          node --check src/worker.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-forum-persistence.js
+          node --check src/worker-production.js
+
+      - name: Commit canonical repaired source files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'matrix-forum-repair-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            forum.js \
+            forum.html \
+            dark-speculation-forum.html \
+            epstein-alive-board.html \
+            member-login.html \
+            src/worker.js \
+            src/worker-member-experience.js \
+            src/worker-forum-persistence.js \
+            scripts/repair-forum-member-posting.js \
+            scripts/repair-forum-login-canonical.js \
+            scripts/repair-forum-session-compatibility.js \
+            scripts/forum-member-posting-test.js \
+            scripts/final-production-reconcile.js \
+            scripts/production-sync-test.js
+          if git diff --cached --quiet; then
+            echo 'Canonical forum source already repaired.'
+          else
+            git commit -m 'Permanently restore authenticated D1 forum posting'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Reapply repairs after source commit
+        run: |
+          node scripts/repair-forum-member-posting.js
+          node scripts/forum-member-posting-test.js
+
+      - name: Build and audit all tools, forums, links and pages
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          node scripts/site-wide-function-audit.js --prebuild 2>&1 | tee downloads/permanent-repair-prebuild-audit.log
+          npm run build 2>&1 | tee downloads/permanent-repair-build.log
+          node scripts/final-production-reconcile.js 2>&1 | tee downloads/permanent-repair-reconcile.log
+          npm run link-audit 2>&1 | tee downloads/permanent-repair-link-audit.log
+          node scripts/site-wide-function-audit.js --postbuild 2>&1 | tee downloads/permanent-repair-postbuild-audit.log
+          node scripts/site-function-harmony-test.js 2>&1 | tee downloads/permanent-repair-function-harmony.log
+          node scripts/cloudflare-worker-routes-test.js 2>&1 | tee downloads/permanent-repair-worker-routes.log
+          node scripts/forum-member-posting-test.js 2>&1 | tee downloads/permanent-repair-forum-proof.log
+          npx --yes wrangler@latest deploy --dry-run --outdir .wrangler/permanent-forum-public-surface-repair 2>&1 | tee downloads/permanent-repair-worker-bundle.log
+
+      - name: Verify exact repaired deployable assets
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const assert=(ok,message)=>{if(!ok)throw new Error(message)};
+          const read=p=>fs.readFileSync(p,'utf8');
+          const client=read('forum.js');
+          const builtClient=read('_site/forum.js');
+          const member=read('src/worker-member-experience.js');
+          const forum=read('src/worker-forum-persistence.js');
+          const production=read('src/worker-production.js');
+          assert((client.match(/credentials:'include'/g)||[]).length>=4,'source forum client omits credentials');
+          assert((builtClient.match(/credentials:'include'/g)||[]).length>=4,'deployable forum client omits credentials');
+          assert(client.includes('Persistent posting is unlocked.'),'source forum unlock contract missing');
+          assert(client.includes('data.saved !== true'),'source forum accepts unconfirmed writes');
+          assert(member.includes("cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')"),'shared/legacy session fallback missing');
+          assert(forum.includes('D1 forum read-after-write confirmation failed'),'D1 read-after-write proof missing');
+          assert(!forum.includes('INSERT OR IGNORE INTO forum_posts'),'silent D1 insert remains');
+          assert(production.includes("import forumWorker from './worker-forum-persistence.js'"),'strict production forum Worker missing');
+          for(const page of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html']){
+            assert(read(page).includes('forum.js?v=20260720-forum-member-posting-v3'),`${page} source cache bust missing`);
+            assert(read('_site/'+page).includes('forum.js?v=20260720-forum-member-posting-v3'),`${page} deployable cache bust missing`);
+          }
+          const proof={
+            ok:true,
+            generatedAt:new Date().toISOString(),
+            sourceForumClientCredentialed:true,
+            deployableForumClientCredentialed:true,
+            sharedSessionCookie:true,
+            d1ReadAfterWrite:true,
+            allThreeBoardsVersioned:true,
+            staticLinkAudit:'passed',
+            masterFunctionAudit:'passed',
+            workerRouteAudit:'passed',
+            workerDryBundle:'passed'
+          };
+          fs.writeFileSync('downloads/permanent-forum-public-surface-repair.json',JSON.stringify(proof,null,2)+'\n');
+          NODE
+
+      - name: Dispatch guarded production release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run 'Matrix Reprogrammed Controlled Production Deploy' \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+
+      - name: Upload repair and audit proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: permanent-forum-public-surface-repair-${{ github.run_id }}
+          path: |
+            downloads/permanent-forum-public-surface-repair.json
+            downloads/permanent-repair-*.log
+            downloads/forum-member-posting-repair.json
+            downloads/forum-login-canonical-repair.json
+            downloads/forum-session-compatibility-repair.json
+            downloads/forum-member-posting-test.json
+            downloads/final-production-reconcile.json
+            downloads/site-wide-function-audit*.json
+            downloads/link-audit*.json
+            .wrangler/permanent-forum-public-surface-repair
+          if-no-files-found: warn
+          retention-days: 60

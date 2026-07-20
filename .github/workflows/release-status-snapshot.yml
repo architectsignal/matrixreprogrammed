@@ -1,0 +1,76 @@
+name: Controlled Release Status Snapshot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-status-snapshot.yml'
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Controlled Production Deploy
+      - Money Intelligence Pages
+      - Epstein AI Detective Docket
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: controlled-release-status-snapshot
+  cancel-in-progress: true
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Read current workflow states
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data /tmp/matrix-release-status
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/deploy.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow money-intelligence.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/money.json
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow epstein-ai-detective.yml --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt,url,event > /tmp/matrix-release-status/epstein.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const read=name=>JSON.parse(fs.readFileSync(`/tmp/matrix-release-status/${name}.json`,'utf8'));
+          const deploy=read('deploy');
+          const money=read('money');
+          const epstein=read('epstein');
+          const latest=runs=>runs[0]||null;
+          const payload={
+            ok:true,
+            observedAt:new Date().toISOString(),
+            production:latest(deploy),
+            moneyIntelligence:latest(money),
+            epsteinAiDetective:latest(epstein),
+            recent:{production:deploy,moneyIntelligence:money,epsteinAiDetective:epstein},
+            boundary:'A dispatched or in-progress run is not a successful deployment. Production is considered live only after the controlled deployment and its live verification complete successfully.'
+          };
+          fs.writeFileSync('data/release-run-status.json',JSON.stringify(payload,null,2)+'\n');
+          NODE
+      - name: Commit status only when changed
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/release-run-status.json
+          if git diff --cached --quiet; then
+            echo "Release status unchanged"
+            exit 0
+          fi
+          git commit -m "Record controlled release workflow status"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1

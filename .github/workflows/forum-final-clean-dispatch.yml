@@ -40,7 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Revision 4: late generators are repaired inside the build audit and final reconciliation.
+          # Revision 5: global site harmony now enforces the strict D1 insert/read-back forum contract.
           gh workflow run 'Matrix Reprogrammed Controlled Production Deploy' \
             --repo "$GITHUB_REPOSITORY" \
             --ref main \

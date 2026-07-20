@@ -37,8 +37,12 @@ jobs:
           MATRIX_MONEY_REQUIRE_LIVE: '1'
         run: |
           node --check scripts/build-money-intelligence-expansion.js
+          node --check scripts/build-detailed-wealth-guides.js
+          node --check scripts/detailed-wealth-guides-test.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
+          node scripts/build-detailed-wealth-guides.js
+          node scripts/detailed-wealth-guides-test.js
 
       - name: Commit generated public system
         run: |
@@ -50,11 +54,16 @@ jobs:
             data/money-search-index.json \
             data/money-intelligence-brief-feed.json \
             data/wealth-methods.json \
+            data/making-money-core.json \
+            data/detailed-wealth-guides.json \
             data/history/money-intelligence \
             follow-the-money \
             making-money/guides \
             downloads/wealth-guides \
-            money-expansion.css money-category.js making-money-methods.js \
+            downloads/detailed-wealth-guides-test.json \
+            scripts/build-deep-pdf-intelligence.mjs \
+            scripts/build-all-branded-download-pdfs.js \
+            money-expansion.css money-category.js making-money-methods.js making-money.js \
             money-search.html money-search.js money-graph.html money-graph.js \
             follow-the-money.html making-money.html index.html welcome-gate.js \
             daily-command-brief.html daily-brain-brief.html download-center.html \
@@ -63,7 +72,7 @@ jobs:
             echo "No generated changes."
             exit 0
           fi
-          git commit -m "Refresh money intelligence, practical guides and AI detective homepage [deploy]"
+          git commit -m "Rebuild detailed subject-specific wealth guides [deploy]"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
@@ -74,6 +83,17 @@ jobs:
           done
           echo "Unable to publish refreshed money outputs after three attempts."
           exit 1
+
+      - name: Upload wealth guide proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: detailed-wealth-guides-${{ github.run_id }}
+          path: |
+            downloads/detailed-wealth-guides-test.json
+            downloads/wealth-guides/index.json
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Release handoff
         run: echo "The scheduled guarded dispatcher will deploy the latest tested main exactly once."

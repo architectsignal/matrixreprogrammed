@@ -72,7 +72,14 @@ check('forum persistence wrapper exists', exists('src/worker-forum-persistence.j
 check('strict production Worker exists', exists('src/worker-production.js'));
 check('strict Worker entrypoint active', read('wrangler.toml').includes('main = "src/worker-production.js"') && read('wrangler.jsonc').includes('"main": "src/worker-production.js"'));
 check('strict Worker blocks legacy success', read('src/worker-production.js').includes('non-authoritative-forum-response-blocked') && read('src/worker-production.js').includes('non-authoritative-paypal-response-blocked') && read('src/worker-production.js').includes('members-db-binding-unavailable'));
-check('forum D1 is authoritative', read('src/worker-forum-persistence.js').includes('Cloudflare D1 MEMBERS_DB.forum_posts') && read('src/worker-forum-persistence.js').includes('INSERT OR IGNORE INTO forum_posts'));
+const forumPersistenceWorker = read('src/worker-forum-persistence.js');
+check('forum D1 is authoritative',
+  forumPersistenceWorker.includes('Cloudflare D1 MEMBERS_DB.forum_posts') &&
+  forumPersistenceWorker.includes('INSERT INTO forum_posts') &&
+  !forumPersistenceWorker.includes('INSERT OR IGNORE INTO forum_posts') &&
+  forumPersistenceWorker.includes('D1 did not confirm the forum insert') &&
+  forumPersistenceWorker.includes('D1 forum read-after-write confirmation failed')
+);
 check('PayPal migration schema exists', read('migrations/phase6_paypal_subscriptions.sql').includes('paypal_runtime_settings') && read('migrations/phase6_paypal_subscriptions.sql').includes('paypal_subscription_transitions'));
 
 const report = {
@@ -82,7 +89,7 @@ const report = {
   deploymentModel: 'One manually confirmed canonical Cloudflare production release plus one manual fallback. Both share a non-interrupting production concurrency queue and the same fail-closed gates.',
   rollbackModel: 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
-  forumPersistence: 'D1 authoritative behind a strict fail-closed Worker with KV recovery mirror and live write/read proof.',
+  forumPersistence: 'D1 authoritative behind a strict fail-closed Worker; every accepted forum insert must change one row and the exact post must be read back before success.',
   paymentStatus: 'PayPal runtime values are Cloudflare-managed and preserved by Wrangler; the Worker creates subscriptions and returns an official PayPal approval URL while checkout remains controlled by credentials, matching environment switch, D1 state, live confirmation and three active plans.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -91,4 +98,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`FAILED: ${item}`));
   process.exit(1);
 }
-console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict forums and SDK-free runtime-gated PayPal.');
+console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict read-after-write forums and SDK-free runtime-gated PayPal.');

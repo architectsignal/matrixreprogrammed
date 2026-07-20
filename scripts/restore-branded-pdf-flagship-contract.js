@@ -31,6 +31,7 @@ const requiredPremium = [
   'share-kit-black-file-starter',
   'dossier-pack-trust-evidence'
 ];
+const requiredDeepSections = ['evidence-based conclusions', 'analytical inferences', 'speculative conclusions', 'alternative explanations', 'source register'];
 
 function read(file) { try { return fs.readFileSync(file, 'utf8'); } catch { return ''; } }
 function json(file) { try { return JSON.parse(read(file)); } catch { return null; } }
@@ -105,9 +106,21 @@ function card(item, tag) {
 }
 
 if (!fs.existsSync(downloads)) throw new Error('downloads directory is missing');
+const deepIndexPath = path.join(downloads, 'branded-download-index.json');
+const deepIndex = json(deepIndexPath) || {};
+const deepByFile = new Map((Array.isArray(deepIndex.pdfs) ? deepIndex.pdfs : []).map(item => [item.file, item]));
 const rebuilt = requiredPremium.map(rebuildPremium);
 const allPdfs = collectPdfs(downloads)
-  .map(file => ({ file: `downloads/${path.relative(downloads, file).replace(/\\/g, '/')}`, title: labelFor(file), kind: file.includes(`${path.sep}wealth-guides${path.sep}`) ? 'wealth-guide' : 'deep-intelligence-report' }))
+  .map(file => {
+    const route = `downloads/${path.relative(downloads, file).replace(/\\/g, '/')}`;
+    const prior = deepByFile.get(route) || {};
+    return {
+      ...prior,
+      file: route,
+      title: prior.title || labelFor(file),
+      kind: file.includes(`${path.sep}wealth-guides${path.sep}`) ? 'wealth-guide' : (prior.kind || 'deep-intelligence-report')
+    };
+  })
   .sort((a, b) => a.file.localeCompare(b.file));
 const map = new Map(allPdfs.map(item => [item.file, item]));
 const flagships = flagshipOrder
@@ -115,18 +128,23 @@ const flagships = flagshipOrder
   .map(([file, label]) => ({ file, title: map.get(file).title || label, label }));
 const subjectPdfs = allPdfs.filter(item => /\/subject-[^/]+\.pdf$/i.test(`/${item.file}`));
 const index = {
+  ...deepIndex,
   updated: new Date().toISOString(),
   purpose: 'Combined deep-intelligence and premium flagship PDF index. The deep engine builds forensic reports; the compatibility layer preserves premium mini-book covers, contents and established public download routes.',
   premiumStructure: ['cover page', 'table of contents', 'evidence/proof routes', 'main players/entities', 'speculation boundary', 'latest intelligence window', 'related books', 'reader actions'],
   engine: 'deep intelligence reports plus premium flagship compatibility',
+  engineVersion: deepIndex.engineVersion || 'deep-intelligence-v2',
+  requiredSections: Array.isArray(deepIndex.requiredSections) && deepIndex.requiredSections.length ? deepIndex.requiredSections : requiredDeepSections,
   flagshipCount: flagships.length,
   count: allPdfs.length,
+  subjectProfileCount: Number(deepIndex.subjectProfileCount || subjectPdfs.length),
+  wealthGuideCount: Number(deepIndex.wealthGuideCount || allPdfs.filter(item => item.kind === 'wealth-guide').length),
   flagships,
   subjectPdfs,
   pdfs: allPdfs
 };
-fs.writeFileSync(path.join(downloads, 'branded-download-index.json'), `${JSON.stringify(index, null, 2)}\n`);
-fs.writeFileSync(path.join(downloads, 'branded-download-index.md'), `# Branded Download PDF Index\n\nUpdated: ${index.updated}\n\nThe library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.\n\n## Flagship PDFs\n\n${flagships.map(item => `- ${item.label}: ${item.file}`).join('\n')}\n\n## Subject Intelligence PDFs\n\n${subjectPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n\n## Full PDF Index\n\n${allPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n`);
+fs.writeFileSync(deepIndexPath, `${JSON.stringify(index, null, 2)}\n`);
+fs.writeFileSync(path.join(downloads, 'branded-download-index.md'), `# Branded Download PDF Index\n\nUpdated: ${index.updated}\n\nThe library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.\n\nEngine: ${index.engineVersion}\nRequired deep sections: ${index.requiredSections.join(', ')}\n\n## Flagship PDFs\n\n${flagships.map(item => `- ${item.label}: ${item.file}`).join('\n')}\n\n## Subject Intelligence PDFs\n\n${subjectPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n\n## Full PDF Index\n\n${allPdfs.map(item => `- ${item.title}: ${item.file}`).join('\n')}\n`);
 
 const center = path.join(root, 'download-center.html');
 if (fs.existsSync(center)) {
@@ -152,6 +170,8 @@ for (const file of rebuilt) {
     if (!raw.includes(marker)) throw new Error(`${file} missing premium marker ${marker}`);
   }
 }
+if (index.engineVersion !== 'deep-intelligence-v2') throw new Error(`Deep PDF engine version was not preserved: ${index.engineVersion}`);
+for (const section of requiredDeepSections) if (!index.requiredSections.includes(section)) throw new Error(`Deep PDF required section was not preserved: ${section}`);
 if (flagships.length < 4) throw new Error(`Expected at least four flagship PDFs; found ${flagships.length}`);
 if (allPdfs.length < 20) throw new Error(`Expected at least twenty PDFs; found ${allPdfs.length}`);
-console.log(`Premium flagship compatibility restored: ${rebuilt.length} flagship PDFs rebuilt, ${flagships.length} flagships indexed, ${allPdfs.length} PDFs catalogued.`);
+console.log(`Premium flagship compatibility restored without dropping deep metadata: ${rebuilt.length} flagship PDFs rebuilt, ${flagships.length} flagships indexed, ${allPdfs.length} PDFs catalogued.`);

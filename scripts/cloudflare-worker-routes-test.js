@@ -30,12 +30,14 @@ if (exists('membership.html') && exists('_site')) {
 [
   'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js',
   'wrangler.toml','wrangler.jsonc','_headers','membership.html','paypal-membership.js','billing-dashboard.html','billing-dashboard.js',
-  'admin-payment-dashboard.html','admin-payment-dashboard.js','templates/phase6-membership.template','data/membership-tiers.json',
+  'admin-payment-dashboard.html','admin-payment-dashboard.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html',
+  'templates/phase6-membership.template','data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql',
   'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql',
   'scripts/build-cloudflare-output.js','scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/forum-persistence-d1-test.js',
-  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js',
-  '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum'
+  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js',
+  '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum',
+  '_site/forum.js','_site/dark-speculation-forum.html','_site/epstein-alive-board.html'
 ].forEach(need);
 
 if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with Worker assets');
@@ -47,7 +49,33 @@ for (const marker of [
   "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','status: 503'
 ]) needText('src/worker-production.js', marker, `strict production marker ${marker}`);
 
-for (const marker of ['Cloudflare D1 MEMBERS_DB.forum_posts','CREATE TABLE IF NOT EXISTS forum_posts','INSERT OR IGNORE INTO forum_posts','INSERT INTO forum_reports','kv_forum_migration_v1',"prefix: 'post:'",'D1 authoritative; KV compatibility mirror']) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
+for (const marker of [
+  'Cloudflare D1 MEMBERS_DB.forum_posts',
+  'CREATE TABLE IF NOT EXISTS forum_posts',
+  'INSERT INTO forum_posts',
+  'D1 did not confirm the forum insert',
+  'D1 forum read-after-write confirmation failed',
+  'INSERT INTO forum_reports',
+  'kv_forum_migration_v1',
+  "prefix: 'post:'",
+  'D1 authoritative; KV compatibility mirror'
+]) needText('src/worker-forum-persistence.js', marker, `strict D1 forum marker ${marker}`);
+forbidText('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'silent duplicate-ignoring forum write');
+
+needText('src/worker-member-experience.js', "cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')", 'shared v2 and legacy session reader');
+for (const marker of ["credentials:'include'",'member && member.emailVerifiedAt',"data.saved !== true","data.storage !== 'Cloudflare D1 MEMBERS_DB.forum_posts'",'Persistent posting is unlocked.']) {
+  needText('forum.js', marker, `authenticated forum client marker ${marker}`);
+  needText('_site/forum.js', marker, `deployable authenticated forum client marker ${marker}`);
+}
+for (const file of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html','_site/forum.html','_site/dark-speculation-forum.html','_site/epstein-alive-board.html']) {
+  needText(file, 'forum.js?v=20260720-forum-member-posting-v3', 'versioned repaired forum client');
+  needText(file, 'id="forum-member-status"', 'member session status');
+  needText(file, 'id="signal-board-form"', 'forum posting form');
+}
+forbidText('dark-speculation-forum.html', 'paypal.me/njmgroup/1', 'obsolete paid Signal Pass');
+forbidText('dark-speculation-forum.html', 'unlock-signal-pass', 'obsolete browser Signal Pass unlock');
+forbidText('_site/dark-speculation-forum.html', 'paypal.me/njmgroup/1', 'deployable obsolete paid Signal Pass');
+forbidText('_site/dark-speculation-forum.html', 'unlock-signal-pass', 'deployable obsolete browser Signal Pass unlock');
 
 for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/config','/api/paypal/checkout-intent','/api/paypal/subscription/confirm','/api/paypal/subscription/cancel','/api/paypal/webhook','/api/paypal/admin/activation','/v1/notifications/verify-webhook-signature','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
 
@@ -80,6 +108,7 @@ needText('_headers', 'Strict-Transport-Security', 'HSTS header');
 needText('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
 needText('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
 needText('scripts/final-production-reconcile.js', 'Payments: RUNTIME GATED / DASHBOARD MANAGED', 'final runtime-gated payment guard');
+needText('scripts/final-production-reconcile.js', 'repair-forum-page-consistency.js', 'final forum page consistency owner');
 needText('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
 needText('scripts/build-production-health.js', "paymentStatus: 'runtime-gated-dashboard-managed'", 'runtime-gated dashboard-managed health status');
 needText('scripts/build-production-health.js', "checkoutDefault: 'runtime-d1-gated'", 'D1-gated checkout health status');
@@ -99,9 +128,10 @@ const report = {
     stderr: String(membershipPatch.stderr || '').slice(-1000)
   },
   workerEntrypoint: 'src/worker-production.js',
-  forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
+  forumStorage: 'Cloudflare D1 authoritative with strict insert and exact read-after-write confirmation; KV compatibility/recovery only',
+  forumAccess: 'verified free member session across main, speculation and Epstein boards',
   paymentStatus: 'runtime-gated-dashboard-managed',
-  boundary: 'PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked.'
+  boundary: 'PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked. Forum success is impossible without authenticated D1 write/read proof.'
 };
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
@@ -113,4 +143,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked strict routing, D1 forums, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');
+console.log('Checked strict routing, authenticated D1 forum write/read, all three forum pages, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');

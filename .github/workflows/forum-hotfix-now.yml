@@ -71,6 +71,7 @@ jobs:
         run: |
           gh run cancel 29734687470 --repo "$GITHUB_REPOSITORY" || true
           gh run cancel 29736429465 --repo "$GITHUB_REPOSITORY" || true
+          gh run cancel 29737142866 --repo "$GITHUB_REPOSITORY" || true
 
       - name: Dispatch one clean guarded release
         env:

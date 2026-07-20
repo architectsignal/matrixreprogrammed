@@ -1,3 +1,3 @@
 REFRESH RELEASE STATUS
-Requested: 2026-07-21T00:52:00+02:00
-Purpose: capture the detailed wealth guide rebuild, current production deployment and supporting release chain.
+Requested: 2026-07-21T01:04:00+02:00
+Purpose: capture the isolated 16-guide build, current production deployment and supporting release chain.

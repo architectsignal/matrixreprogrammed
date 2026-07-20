@@ -1,0 +1,1 @@
+Builds two linked public systems: Follow the Money for the dated Top 100 wealth map and Making Money for evidence-led wealth creation. Generates 100 profiles and 16 branded PDF guides through a dedicated validated workflow.

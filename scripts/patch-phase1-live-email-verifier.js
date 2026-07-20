@@ -23,9 +23,35 @@ replaceIfPresent("'/daily-power-conclusions': '<!-- conclusion-integrity:start -
 replaceIfPresent("'/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->'", "'/daily-investigation-conclusions': 'DAILY INVESTIGATION CONCLUSIONS.'");
 replaceIfPresent("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'");
 
+// The reporting system is now deliberately live. Repair the old Phase 1 proof
+// that required scheduled email automation to remain disabled.
+replaceIfPresent(
+  "  const deployedTrue = /env\\.EMAIL_AUTOMATION_ENABLED \\\(\"true\"\\\)/.test(deployLog);\n  const response = await fetchText('/api/email/admin/health');",
+  "  const deployedTrue = /env\\.EMAIL_AUTOMATION_ENABLED \\\(\"true\"\\\)/.test(deployLog);\n  const wranglerConfig = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');\n  const dailyCronConfigured = wranglerConfig.includes('5 6 * * *');\n  const weeklyCronConfigured = wranglerConfig.includes('15 7 * * 1');\n  const response = await fetchText('/api/email/admin/health');"
+);
+replaceIfPresent(
+  '    ok: deployedFalse && !deployedTrue && adminHealthProtected,',
+  '    ok: deployedTrue && !deployedFalse && dailyCronConfigured && weeklyCronConfigured && adminHealthProtected,'
+);
+replaceIfPresent(
+  '    deployedTrue,\n    deploymentLogPresent: Boolean(deployLog),',
+  '    deployedTrue,\n    dailyCronConfigured,\n    weeklyCronConfigured,\n    deploymentLogPresent: Boolean(deployLog),'
+);
+replaceIfPresent(
+  '    requiredRuntimeValue: false',
+  "    requiredRuntimeValue: true,\n    requiredSchedules: { daily: '06:05 UTC', weekly: 'Monday 07:15 UTC' }"
+);
+replaceIfPresent(
+  'Phase 1 email automation safety and authenticated D1 forum persistence verified',
+  'consent-controlled daily/weekly email automation and authenticated D1 forum persistence verified'
+);
+
 const requiredMarkers = [
   "path.join(root, 'downloads', 'wrangler-deploy.log')",
-  'deployedFalse && !deployedTrue && adminHealthProtected',
+  'deployedTrue && !deployedFalse && dailyCronConfigured && weeklyCronConfigured && adminHealthProtected',
+  "wranglerConfig.includes('5 6 * * *')",
+  "wranglerConfig.includes('15 7 * * 1')",
+  'requiredRuntimeValue: true',
   "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'",
   "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'",
   'manifestMatchesCurrentMain',
@@ -52,8 +78,10 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   canonicalDeployHealthRoute: '/deploy-health.json',
   commitRacePolicy: 'Accept the exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.',
   paypalVerificationModel: 'Runtime-gated, Cloudflare-dashboard-managed, anonymous checkout rejected.',
-  boundary: 'Live verification proves the deployed email automation binding is false, health JSON is commit-bound, and anonymous PayPal configuration and checkout routes remain closed.'
+  emailAutomationModel: 'Consent-controlled daily and weekly delivery is enabled; admin health remains protected.',
+  requiredSchedules: { daily: '06:05 UTC', weekly: 'Monday 07:15 UTC' },
+  boundary: 'Live verification proves the deployed email automation binding is true, both report schedules are configured, health JSON is commit-bound, and anonymous PayPal configuration and checkout routes remain closed.'
 }, null, 2)}\n`);
 require('./patch-paypal-server-redirect.js');
 require('./patch-search-v3-compaction-headroom.js');
-console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; server-redirect PayPal and Search V3 compaction headroom verified.`);
+console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; enabled report schedules, server-redirect PayPal and Search V3 compaction headroom verified.`);

@@ -111,6 +111,7 @@ run('scripts/repair-final-evidence-badge-duplicates.js');
 // runtime and media optimizations after every generator, then test the exact
 // deployable bundle before Cloudflare receives it.
 run('scripts/apply-runtime-performance-optimizations.js');
+run('scripts/repair-final-release-regressions.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 run('scripts/runtime-performance-budget-test.js');
@@ -137,8 +138,10 @@ const report = {
     'weekly-investigation-report.html', 'daily-brain-brief.html', 'outcome-briefings.html',
     'matrix.js', 'investigation-pulse.js', 'search.js', 'evidence-network-map.js', 'fixes.css', '_headers',
     'scripts/apply-runtime-performance-optimizations.js',
+    'scripts/repair-final-release-regressions.js',
     'scripts/runtime-performance-budget-test.js',
     'downloads/runtime-performance-optimizations.json',
+    'downloads/final-release-regression-repair.json',
     'downloads/runtime-performance-budget-test.json',
     'scripts/build-production-deploy-receipt.js',
     'scripts/restore-homepage-navigation.js',
@@ -164,8 +167,8 @@ const report = {
     'downloads/release-metadata-assets.json',
     'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data or stale deployment metadata.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, duplicated Search V3 runtime declarations, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data or stale deployment metadata.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable bundle, current release metadata routes, protected homepage navigation, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, conclusion-integrity routes, runtime performance budgets, voluntary support pages, accessibility, metadata and Cloudflare configuration.');
+console.log(`Final release sanitizer complete: ${commands.length} mutation and audit step(s).`);

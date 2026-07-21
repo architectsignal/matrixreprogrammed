@@ -148,8 +148,8 @@ function bind(){
 }
 async function load(){
   let data=null;
-  try{const r=await fetch('data/money-overlap-graph.json',{cache:'no-store'});if(r.ok)data=await r.json()}catch{}
-  if(!data){const r=await fetch('data/money-intelligence-registry.json',{cache:'no-store'});if(!r.ok)throw new Error('Money registry unavailable');data=buildGraph(await r.json())}
+  try{const r=await fetch('../data/money-overlap-graph.json',{cache:'no-store'});if(r.ok)data=await r.json()}catch{}
+  if(!data){const r=await fetch('../data/money-intelligence-registry.json',{cache:'no-store'});if(!r.ok)throw new Error('Money registry unavailable');data=buildGraph(await r.json())}
   graph=data;renderSummary();fillFilters();renderMatrix();renderAll();bind();
 }
 load().catch(error=>{$('#overlap-app').innerHTML=`<section class="money-warning"><strong>Overlap map unavailable:</strong> ${esc(error.message)}</section>`});

@@ -4,6 +4,8 @@ const path = require('path');
 const root = process.cwd();
 const dataPath = path.join(root, 'data', 'epstein-relationship-intelligence.json');
 const pagePath = path.join(root, 'epstein-email-network.html');
+const profileIndexPath = path.join(root, 'data', 'epstein-relationship-profile-index.json');
+const profileDownloadPath = path.join(root, 'downloads', 'epstein-relationship-profile-index.json');
 
 if (!fs.existsSync(dataPath) || !fs.existsSync(pagePath)) {
   throw new Error('Epstein relationship data and generated page are required');
@@ -56,6 +58,21 @@ const client = `<script id="publication-lane-runtime">(function(){const laneData
 
 if (!html.includes('id="publication-lane-runtime"')) {
   html = html.replace('</body>', `${client}</body>`);
+}
+
+if (fs.existsSync(profileIndexPath)) {
+  const profileIndex = JSON.parse(fs.readFileSync(profileIndexPath, 'utf8'));
+  const relationshipById = new Map((data.relationships || []).map(item => [item.relationship_id, item]));
+  Object.values(profileIndex.profiles || {}).forEach(profile => {
+    (profile.connections || []).forEach(connection => {
+      const relationship = relationshipById.get(connection.relationship_id) || {};
+      connection.public_safe_summary = relationship.public_summary || relationship.public_safe_summary || connection.public_safe_summary || '';
+      connection.publication = relationship.publication || null;
+    });
+  });
+  fs.writeFileSync(profileIndexPath, JSON.stringify(profileIndex, null, 2));
+  fs.mkdirSync(path.dirname(profileDownloadPath), { recursive: true });
+  fs.writeFileSync(profileDownloadPath, JSON.stringify(profileIndex, null, 2));
 }
 
 fs.writeFileSync(pagePath, html);

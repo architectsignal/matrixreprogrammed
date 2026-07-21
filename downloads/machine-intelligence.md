@@ -1,21 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-07-21T14:20:46.022Z
+Updated: 2026-07-21T19:51:12.891Z
 
 Current records: 18
-Previous records: 12
-New records: 6
+Previous records: 18
+New records: 0
 Changed records: 0
 Relationship candidates: 25
 
 ## New Records
 
-- charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
-- charged / sued: Sawas v. Elzanaty — courtlistener-court-records — https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/
-- charged / sued: People v. Brim — courtlistener-court-records — https://www.courtlistener.com/opinion/10919846/people-v-brim/
-- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
-- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
 
 ## Relationship Candidates
 

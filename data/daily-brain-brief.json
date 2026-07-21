@@ -452,6 +452,7 @@
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -590,7 +591,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-21T14:20:29.227Z",
+    "updated": "2026-07-21T19:50:56.239Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -770,8 +771,8 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-21T14:20:46.022Z",
-    "newRecordCount": 6,
+    "updated": "2026-07-21T19:51:12.891Z",
+    "newRecordCount": 0,
     "changedRecordCount": 0,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 25,
@@ -781,46 +782,9 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Punxsutawney Hunting Club v. PGC",
-      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Sawas v. Elzanaty",
-      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "People v. Brim",
-      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
-    }
-  ],
+  "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-21T14:20:46.165Z",
+    "updated": "2026-07-21T19:51:13.042Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -854,7 +818,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-21T14:20:46.203Z",
+    "updated": "2026-07-21T19:51:13.070Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

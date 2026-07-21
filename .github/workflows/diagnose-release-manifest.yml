@@ -1,0 +1,48 @@
+name: Diagnose Release Manifest
+
+on:
+  push:
+    branches:
+      - agent/complete-capital-lists-clean-20260721
+    paths:
+      - .github/workflows/diagnose-release-manifest.yml
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/complete-capital-lists-clean-20260721
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Capture manifest command
+        shell: bash
+        run: |
+          set +e
+          mkdir -p _site downloads
+          node scripts/patch-homepage-mask-intro.js > downloads/release-manifest-diagnostic.log 2>&1
+          echo "patch_homepage_status=$?" >> downloads/release-manifest-diagnostic.log
+          node scripts/patch-release-metadata-routing.js >> downloads/release-manifest-diagnostic.log 2>&1
+          echo "patch_routing_status=$?" >> downloads/release-manifest-diagnostic.log
+          DEPLOY_COMMIT_SHA="$(git rev-parse HEAD)" node scripts/build-deploy-manifest.js >> downloads/release-manifest-diagnostic.log 2>&1
+          echo "manifest_status=$?" >> downloads/release-manifest-diagnostic.log
+          DEPLOY_COMMIT_SHA="$(git rev-parse HEAD)" node scripts/build-production-health.js >> downloads/release-manifest-diagnostic.log 2>&1
+          echo "health_status=$?" >> downloads/release-manifest-diagnostic.log
+          node scripts/publish-release-metadata-assets.js >> downloads/release-manifest-diagnostic.log 2>&1
+          echo "publish_status=$?" >> downloads/release-manifest-diagnostic.log
+          cat downloads/release-manifest-diagnostic.log
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-manifest-diagnostic-${{ github.run_id }}
+          path: |
+            downloads/release-manifest-diagnostic.log
+            deploy-manifest.json
+            deploy-health.json
+          if-no-files-found: warn
+          retention-days: 3

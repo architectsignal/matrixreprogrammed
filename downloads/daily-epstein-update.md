@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-21T14:21:30.972Z
-Live Intel source window: 2026-07-21T14:21:26.031Z
-Latest source publication: 2026-07-17T23:17:00.000Z
+Generated: 2026-07-21T19:51:29.472Z
+Live Intel source window: 2026-07-21T19:51:23.110Z
+Latest source publication: 2026-07-21T18:38:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,39 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-14 current Epstein-lane record leads remain inside the active source window.
+17 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+- Published: 2026-07-21T18:38:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+
+Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz New York Post
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
+- Published: 2026-07-21T18:15:32.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+
+President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+- Published: 2026-07-21T17:01:51.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
+
+External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 - Published: 2026-07-17T23:17:00.000Z

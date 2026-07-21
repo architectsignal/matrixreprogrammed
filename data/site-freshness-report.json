@@ -11,7 +11,7 @@
   "pagesWithMissingRules": 312,
   "autoUpdateEligibleFigures": 2,
   "manualReviewFigures": 94,
-  "missingRuleFigures": 753,
+  "missingRuleFigures": 765,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -428,6 +428,195 @@
         {
           "value": "2026",
           "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-21T07:59:21.899Z People dossier Conclusion: 5 source route(s) currently point to People dossier. Treat thi"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "live-intel.html",
+      "priority": "High",
+      "figureCount": 21,
+      "missingRuleCount": 21,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "$4",
+          "context": "State · UN News Primary / official source As aid dries up, countries pledge to close the $4 trillion development gap UN Member States reaffirmed their commitment to the Sustainable Development Goals (S",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$4",
+          "context": "by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap. Evidence Level Primary or official public-record lead Treat this as a public-reco",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$4",
+          "context": "VIDEO HOOK &gt; New public-record signal: As aid dries up, countries pledge to close the $4 trillion development gap &gt; Short: As aid dries up, countries pledge to close the $4 trillion development g",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$4",
+          "context": "he $4 trillion development gap &gt; Short: As aid dries up, countries pledge to close the $4 trillion development g &gt; Longform: War Machine And Intelligence State — As aid dries up, countries pledge",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$4",
+          "context": "form: War Machine And Intelligence State — As aid dries up, countries pledge to close the $4 trillion development gap Open Source Evidence Route Video Hook Free Brief Offer Books / Store Social thread /",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$4",
+          "context": "/ caption copy 1/ Fresh war-machine lead: As aid dries up, countries pledge to close the $4 trillion development gap 2/ Do not treat a headline as proof. First classify the source type and evidence lev",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [
+        {
+          "value": "967 deaths",
+          "context": "ken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries. Evidence Level Primary or official public-record lead Treat this as a public-record lead.",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "hine And Intelligence State · UN News Primary / official source UN refugee agency reports 144 migrants dead or missing off Mauritanian coast The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "grants dead or missing off Mauritanian coast The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to reach Europe are dead or missing due to a series of “tragic maritime incidents” off the coast o",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "drawing a conclusion. VIDEO HOOK &gt; New public-record signal: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast &gt; Short: UN refugee agency reports 144 migrants dead or missing off",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "144 migrants dead or missing off Mauritanian coast &gt; Short: UN refugee agency reports 144 migrants dead or missing off Mauritanian c &gt; Longform: War Machine And Intelligence State — UN refugee agency repor",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "uritanian c &gt; Longform: War Machine And Intelligence State — UN refugee agency reports 144 migrants dead or missing off Mauritanian coast Open Source Evidence Route Video Hook Free Brief Offer Books / Store So",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "/ Store Social thread / caption copy 1/ Fresh war-machine lead: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast 2/ Do not treat a headline as proof. First classify the source type and",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "01. Source",
+          "context": "w public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 01. Source first, claim second. &gt; Short: Henry Lucas Part 01 &gt; Longform: Declassified Files And Public Archives —",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "967 deaths",
+          "context": "ken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries. Evidence Level Primary or official public-record lead Treat this as a public-record lead.",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "hine And Intelligence State · UN News Primary / official source UN refugee agency reports 144 migrants dead or missing off Mauritanian coast The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "grants dead or missing off Mauritanian coast The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to reach Europe are dead or missing due to a series of “tragic maritime incidents” off the coast o",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "drawing a conclusion. VIDEO HOOK &gt; New public-record signal: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast &gt; Short: UN refugee agency reports 144 migrants dead or missing off",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "144 migrants dead or missing off Mauritanian coast &gt; Short: UN refugee agency reports 144 migrants dead or missing off Mauritanian c &gt; Longform: War Machine And Intelligence State — UN refugee agency repor",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "uritanian c &gt; Longform: War Machine And Intelligence State — UN refugee agency reports 144 migrants dead or missing off Mauritanian coast Open Source Evidence Route Video Hook Free Brief Offer Books / Store So",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "144 migrants",
+          "context": "/ Store Social thread / caption copy 1/ Fresh war-machine lead: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast 2/ Do not treat a headline as proof. First classify the source type and",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-21T19:51:23.110Z &gt; Latest source publication: 2026-07-21T18:38:00.000Z &gt; State: 6 new items this col"
+        },
+        {
+          "value": "2026",
+          "context": "TATUS &gt; Collection completed: 2026-07-21T19:51:23.110Z &gt; Latest source publication: 2026-07-21T18:38:00.000Z &gt; State: 6 new items this collection &gt; Current items: 55 &gt; Successful feeds: 7 /"
+        },
+        {
+          "value": "2026",
+          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-21 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-21 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-21 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-21 · War Machine And Intelligence State · UN News Primary / official source DR Congo: Ebola outbreak still"
         }
       ],
       "needsSourceRule": true,
@@ -2109,111 +2298,6 @@
         {
           "value": "2026",
           "context": "iers. Machine-readable data Manual Figures & Sources Figures on this page Checked: 1 July 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "live-intel.html",
-      "priority": "High",
-      "figureCount": 9,
-      "missingRuleCount": 9,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$4",
-          "context": "State · UN News Primary / official source As aid dries up, countries pledge to close the $4 trillion development gap UN Member States reaffirmed their commitment to the Sustainable Development Goals (S",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$4",
-          "context": "by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap. Evidence Level Primary or official public-record lead Treat this as a public-reco",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$4",
-          "context": "VIDEO HOOK &gt; New public-record signal: As aid dries up, countries pledge to close the $4 trillion development gap &gt; Short: As aid dries up, countries pledge to close the $4 trillion development g",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$4",
-          "context": "he $4 trillion development gap &gt; Short: As aid dries up, countries pledge to close the $4 trillion development g &gt; Longform: War Machine And Intelligence State — As aid dries up, countries pledge",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$4",
-          "context": "form: War Machine And Intelligence State — As aid dries up, countries pledge to close the $4 trillion development gap Open Source Evidence Route Video Hook Free Brief Offer Books / Store Social thread /",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$4",
-          "context": "/ caption copy 1/ Fresh war-machine lead: As aid dries up, countries pledge to close the $4 trillion development gap 2/ Do not treat a headline as proof. First classify the source type and evidence lev",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [
-        {
-          "value": "967 deaths",
-          "context": "ken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries. Evidence Level Primary or official public-record lead Treat this as a public-record lead.",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "01. Source",
-          "context": "w public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 01. Source first, claim second. &gt; Short: Henry Lucas Part 01 &gt; Longform: Declassified Files And Public Archives —",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "967 deaths",
-          "context": "ken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries. Evidence Level Primary or official public-record lead Treat this as a public-record lead.",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-21T14:21:26.031Z &gt; Latest source publication: 2026-07-21T12:00:00.000Z &gt; State: 1 new item this coll"
-        },
-        {
-          "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-07-21T14:21:26.031Z &gt; Latest source publication: 2026-07-21T12:00:00.000Z &gt; State: 1 new item this collection &gt; Current items: 49 &gt; Successful feeds: 7 /"
-        },
-        {
-          "value": "2026",
-          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-21 · War Machine And Intelligence State · UN News Primary / official source DR Congo: Ebola outbreak still"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-20 · War Machine And Intelligence State · UN News Primary / official source ‘I consider it a miracle’: Pre"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-20 · War Machine And Intelligence State · UN News Primary / official source From the General Assembly to H"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-20 · War Machine And Intelligence State · UN News Primary / official source Health response brings lifesav"
         }
       ],
       "needsSourceRule": true,
@@ -19193,27 +19277,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-21T14:21:30.972Z &gt; source window: 2026-07-21T14:21:26.031Z &gt; current leads: 14 &gt; latest publicati"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-21T19:51:29.472Z &gt; source window: 2026-07-21T19:51:23.110Z &gt; current leads: 17 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-21T14:21:30.972Z &gt; source window: 2026-07-21T14:21:26.031Z &gt; current leads: 14 &gt; latest publication: 2026-07-17T23:17:00.000Z Evidence Boundar"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-21T19:51:29.472Z &gt; source window: 2026-07-21T19:51:23.110Z &gt; current leads: 17 &gt; latest publication: 2026-07-21T18:38:00.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "; source window: 2026-07-21T14:21:26.031Z &gt; current leads: 14 &gt; latest publication: 2026-07-17T23:17:00.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-07-21T19:51:23.110Z &gt; current leads: 17 &gt; latest publication: 2026-07-21T18:38:00.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
-          "context": "g Epstein asked Leon Black about birthday book and their friendship - CBS News Published: 2026-07-17T23:17:00.000Z Source: Google News / Epstein timeline and files House panel probing Epstein asked Leon B"
+          "context": "el threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post Published: 2026-07-21T18:38:00.000Z Source: Google News / Epstein timeline and files Powerful House panel threatens to subpoe"
         },
         {
           "value": "2026",
-          "context": "ked out of an Epstein House committee interview. Here&#39;s what we know - PBS Published: 2026-07-17T22:44:14.000Z Source: Google News / Epstein timeline and files Leon Black walked out of an Epstein Hous"
+          "context": "her record President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag Published: 2026-07-21T18:15:32.000Z Source: Google News / Epstein timeline and files President Clinton’s ‘Body Man’s’ Epstein"
         },
         {
           "value": "2026",
-          "context": "frey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post Published: 2026-07-16T06:24:40.000Z Source: Google News / Epstein timeline and files Jeffrey Epstein is ubiquitous on a busy"
+          "context": "rnal review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera Published: 2026-07-21T17:01:51.000Z Source: Google News / Epstein timeline and files External review finds no wrongdoing in G"
         }
       ],
       "needsSourceRule": false,
@@ -23405,11 +23489,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-21T14:20:29.227Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-21T19:50:56.239Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-21T14:20:29.227Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-21T19:50:56.239Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -42872,7 +42956,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -42908,7 +42992,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -42944,7 +43028,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -42980,7 +43064,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -43004,7 +43088,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43024,7 +43108,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43044,7 +43128,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43064,7 +43148,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43084,7 +43168,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43104,7 +43188,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43124,7 +43208,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -43152,7 +43236,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43172,7 +43256,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43192,7 +43276,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43212,7 +43296,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43232,7 +43316,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -43260,7 +43344,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43280,7 +43364,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -43304,7 +43388,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43324,7 +43408,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -43352,7 +43436,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -43372,7 +43456,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -43396,7 +43480,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43416,7 +43500,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43436,7 +43520,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -43456,7 +43540,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43476,7 +43560,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43496,7 +43580,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43516,7 +43600,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -43540,7 +43624,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -43564,7 +43648,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -43584,7 +43668,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -43608,7 +43692,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -43632,7 +43716,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T14:20:46.059Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-21T19:51:12.959Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -43652,7 +43736,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-21T14:20:46.059Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
+          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-21T19:51:12.959Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
         },
         {
           "value": "2021",
@@ -43692,7 +43776,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-21T14:20:46.110Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-21T19:51:12.999Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         },
         {
           "value": "2021",
@@ -45744,7 +45828,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-21T14:20:46.022Z &gt; current records: 18 &gt; previous records: 12 &gt; new records: 6 &gt; changed recor"
+          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-21T19:51:12.891Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
         },
         {
           "value": "2023",
@@ -48320,7 +48404,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-21T14:20:46.165Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-21T19:51:13.042Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         }
       ],
       "needsSourceRule": false,

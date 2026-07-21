@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T07:10:32.683Z",
-  "registryUpdated": "2026-07-21T07:10:32.683Z",
+  "generatedAt": "2026-07-21T07:33:27.843Z",
+  "registryUpdated": "2026-07-21T07:33:27.843Z",
   "methodology": "Nodes are public-record registry entries. Category links show repeated appearance after conservative name normalisation. Existing sourced relationships remain separate from inferred overlap.",
   "boundary": "An overlap is a research route, not proof that entities coordinate, control one another or commit wrongdoing.",
   "summary": {
@@ -2354,10 +2354,10 @@
       ]
     },
     {
-      "id": "entity:invesco s and p 500 ucits etf",
+      "id": "entity:ishares core msci em imi ucits etf usd acc",
       "kind": "entity",
-      "label": "Invesco S&P 500 UCITS ETF",
-      "key": "invesco s and p 500 ucits etf",
+      "label": "iShares Core MSCI EM IMI UCITS ETF USD (Acc)",
+      "key": "ishares core msci em imi ucits etf usd acc",
       "categories": [
         "investment-vehicles"
       ],
@@ -2367,10 +2367,10 @@
       ]
     },
     {
-      "id": "entity:ishares core msci em imi ucits etf usd acc",
+      "id": "entity:invesco s and p 500 ucits etf",
       "kind": "entity",
-      "label": "iShares Core MSCI EM IMI UCITS ETF USD (Acc)",
-      "key": "ishares core msci em imi ucits etf usd acc",
+      "label": "Invesco S&P 500 UCITS ETF",
+      "key": "invesco s and p 500 ucits etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -5639,16 +5639,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:invesco s and p 500 ucits etf:investment-vehicles",
-      "source": "entity:invesco s and p 500 ucits etf",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/invesco-sp-500-ucits-etf/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:ishares core msci em imi ucits etf usd acc:investment-vehicles",
       "source": "entity:ishares core msci em imi ucits etf usd acc",
       "target": "category:investment-vehicles",
@@ -5656,6 +5646,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-em-imi-ucits-etf-usd-acc/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:invesco s and p 500 ucits etf:investment-vehicles",
+      "source": "entity:invesco s and p 500 ucits etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/invesco-sp-500-ucits-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -7968,23 +7968,23 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-invesco-s-p-500-ucits-etf-invesco",
-      "source": "entity:invesco s and p 500 ucits etf",
-      "target": "entity:invesco",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/invesco-sp-500-ucits-etf/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-ishares-core-msci-em-imi-ucits-etf-usd-acc-blackrock",
       "source": "entity:ishares core msci em imi ucits etf usd acc",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-em-imi-ucits-etf-usd-acc/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-invesco-s-p-500-ucits-etf-invesco",
+      "source": "entity:invesco s and p 500 ucits etf",
+      "target": "entity:invesco",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/invesco-sp-500-ucits-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -9168,7 +9168,7 @@
         {
           "id": "defence-security-ba-l",
           "category": "defence-security",
-          "rank": 11,
+          "rank": 10,
           "name": "BAE Systems",
           "status": "Verified public-market snapshot plus research lead",
           "evidenceClass": "Verified Market Data",
@@ -10696,7 +10696,7 @@
         {
           "id": "companies-klac",
           "category": "companies",
-          "rank": 61,
+          "rank": 60,
           "name": "KLA",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11443,7 +11443,7 @@
         {
           "id": "defence-security-noc",
           "category": "defence-security",
-          "rank": 10,
+          "rank": 11,
           "name": "Northrop Grumman",
           "status": "Verified public-market snapshot plus research lead",
           "evidenceClass": "Verified Market Data",
@@ -12481,7 +12481,7 @@
         {
           "id": "companies-td",
           "category": "companies",
-          "rank": 92,
+          "rank": 91,
           "name": "Toronto Dominion Bank",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12621,7 +12621,7 @@
         {
           "id": "companies-wfc",
           "category": "companies",
-          "rank": 64,
+          "rank": 63,
           "name": "Wells Fargo",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",

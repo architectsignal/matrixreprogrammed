@@ -9,8 +9,11 @@ on:
       - main
     paths:
       - .github/money-intelligence-refresh.trigger
+      - scripts/build-complete-capital-lists.js
+      - scripts/complete-capital-lists-test.js
       - scripts/build-money-overlap-map.js
       - scripts/money-overlap-map-test.js
+      - src/money-category-detailed.js
       - src/money-overlap-graph.html
       - src/money-overlap-graph.js
       - src/money-command-center.js
@@ -44,12 +47,16 @@ jobs:
           MATRIX_MONEY_REQUIRE_LIVE: '1'
         run: |
           node --check scripts/build-money-intelligence-expansion.js
+          node --check scripts/build-complete-capital-lists.js
+          node --check scripts/complete-capital-lists-test.js
           node --check scripts/build-money-overlap-map.js
           node --check scripts/money-overlap-map-test.js
           node --check scripts/build-detailed-wealth-guides.js
           node --check scripts/detailed-wealth-guides-test.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
+          node scripts/build-complete-capital-lists.js
+          node scripts/complete-capital-lists-test.js
           node scripts/build-money-overlap-map.js
           node scripts/money-overlap-map-test.js
           node scripts/build-detailed-wealth-guides.js
@@ -84,7 +91,7 @@ jobs:
             echo "No generated changes."
             exit 0
           fi
-          git commit -m "Refresh capital registry and overlap map [deploy]"
+          git commit -m "Complete all capital lists and rebuild overlap map [deploy]"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
@@ -100,11 +107,12 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: detailed-wealth-guides-${{ github.run_id }}
+          name: complete-capital-lists-${{ github.run_id }}
           path: |
             downloads/detailed-wealth-guides-test.json
             downloads/wealth-guides/index.json
             data/money-overlap-graph.json
+            data/money-intelligence-registry.json
           if-no-files-found: error
           retention-days: 30
 

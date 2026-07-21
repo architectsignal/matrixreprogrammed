@@ -14,6 +14,8 @@ on:
       - 'src/money-overlap-graph.html'
       - 'src/money-overlap-graph.js'
       - 'src/money-command-center.js'
+      - 'src/money-category-detailed.js'
+      - 'data/capital-research-universe/**'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
       - 'data/detailed-wealth-guides.json'
@@ -24,6 +26,10 @@ on:
       - 'data/wealth-methods.json'
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-money-intelligence-expansion.js'
+      - 'scripts/build-complete-capital-lists.js'
+      - 'scripts/refine-trust-structure-coverage.js'
+      - 'scripts/normalize-capital-record-details.js'
+      - 'scripts/complete-capital-lists-test.js'
       - 'scripts/build-money-overlap-map.js'
       - 'scripts/money-overlap-map-test.js'
       - 'scripts/install-intelligence-reporting-system.js'
@@ -60,14 +66,22 @@ jobs:
           node-version: 24
 
       - name: Validate legacy and current money generators
+        env:
+          MATRIX_MONEY_REFRESH: '1'
+          MATRIX_MONEY_REQUIRE_LIVE: '1'
         run: |
           node --check scripts/build-money-intelligence-system.js
           node --check scripts/build-money-intelligence-expansion.js
+          node --check scripts/build-complete-capital-lists.js
+          node --check scripts/refine-trust-structure-coverage.js
+          node --check scripts/normalize-capital-record-details.js
+          node --check scripts/complete-capital-lists-test.js
           node --check scripts/build-money-overlap-map.js
           node --check scripts/money-overlap-map-test.js
           node --check scripts/install-intelligence-reporting-system.js
           node --check src/money-overlap-graph.js
           node --check src/money-command-center.js
+          node --check src/money-category-detailed.js
           node --check money-graph.js
           node --check money-command-center.js
           node --check scripts/build-detailed-wealth-guides.js
@@ -79,6 +93,10 @@ jobs:
           node scripts/deep-pdf-intelligence-test.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
+          node scripts/build-complete-capital-lists.js
+          node scripts/refine-trust-structure-coverage.js
+          node scripts/normalize-capital-record-details.js
+          node scripts/complete-capital-lists-test.js
           node scripts/build-money-overlap-map.js
           node scripts/money-overlap-map-test.js
           node scripts/build-detailed-wealth-guides.js
@@ -93,9 +111,11 @@ jobs:
             downloads/deep-pdf-intelligence-test.json
             downloads/deep-pdf-intelligence-test-failure.json
             downloads/detailed-wealth-guides-test.json
+            downloads/capital-research-universe-normalization.json
             downloads/wealth-guides/index.json
             data/detailed-wealth-guides.json
             data/money-intelligence-brief-feed.json
             data/money-overlap-graph.json
+            data/money-intelligence-registry.json
           if-no-files-found: warn
           retention-days: 14

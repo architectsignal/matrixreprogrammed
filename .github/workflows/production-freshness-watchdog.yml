@@ -1,0 +1,103 @@
+name: Production Freshness Watchdog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/production-freshness-watchdog.trigger
+      - .github/workflows/production-freshness-watchdog.yml
+  schedule:
+    - cron: '10 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: matrix-production-freshness-watchdog
+  cancel-in-progress: true
+
+jobs:
+  verify-live-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch the controlled release only when the public site is stale
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const headers = {
+              'cache-control': 'no-cache',
+              pragma: 'no-cache',
+              'user-agent': 'MatrixProductionFreshnessWatchdog/1.0'
+            };
+            const nonce = Date.now();
+            const maxHealthAgeMs = 18 * 60 * 60 * 1000;
+            const maxMachineAgeMs = 18 * 60 * 60 * 1000;
+            const maxMissionAgeMs = 48 * 60 * 60 * 1000;
+            const age = value => {
+              const timestamp = Date.parse(value || '');
+              return Number.isFinite(timestamp) ? Date.now() - timestamp : Infinity;
+            };
+
+            let health = null;
+            let liveIntel = null;
+            let homepage = '';
+            try {
+              const [healthResponse, intelResponse, homeResponse] = await Promise.all([
+                fetch(`https://matrixreprogrammed.com/deploy-health.json?watchdog=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/downloads/live-intel-latest.json?watchdog=${nonce}`, { headers }),
+                fetch(`https://matrixreprogrammed.com/?watchdog=${nonce}`, { headers })
+              ]);
+              if (!healthResponse.ok || !intelResponse.ok || !homeResponse.ok) {
+                throw new Error(`public response status health=${healthResponse.status} intel=${intelResponse.status} home=${homeResponse.status}`);
+              }
+              health = await healthResponse.json();
+              liveIntel = await intelResponse.json();
+              homepage = await homeResponse.text();
+            } catch (error) {
+              core.warning(`Public freshness proof could not be completed: ${error.message}`);
+            }
+
+            const missionMatch = homepage.match(/Current Mission Conclusion\s*[·-]\s*(\d{4}-\d{2}-\d{2})/i);
+            const missionAge = missionMatch ? age(`${missionMatch[1]}T23:59:59Z`) : Infinity;
+            const healthAge = age(health?.generatedAt);
+            const machineAge = age(liveIntel?.collectionCompletedAt);
+            const staleReasons = [];
+            if (health?.ok !== true) staleReasons.push('deploy health is unavailable or not OK');
+            if (healthAge > maxHealthAgeMs) staleReasons.push(`deploy health is ${Math.round(healthAge / 3600000)} hours old`);
+            if (machineAge > maxMachineAgeMs) staleReasons.push(`Live Intel collection is ${Math.round(machineAge / 3600000)} hours old`);
+            if (missionAge > maxMissionAgeMs) staleReasons.push(`homepage mission conclusion is ${Math.round(missionAge / 3600000)} hours old`);
+
+            core.info(`Freshness proof: health=${health?.generatedAt || 'missing'}, liveIntel=${liveIntel?.collectionCompletedAt || 'missing'}, mission=${missionMatch?.[1] || 'missing'}.`);
+            if (!staleReasons.length) {
+              core.info('The public production surface is fresh. No deployment is needed.');
+              return;
+            }
+
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow was not found.');
+              return;
+            }
+            const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', per_page: 20 });
+            const activeStatuses = new Set(['queued', 'in_progress', 'waiting', 'pending', 'requested']);
+            const active = runs.data.workflow_runs.find(run => activeStatuses.has(run.status));
+            if (active) {
+              core.info(`Production repair is already active: ${active.html_url}`);
+              return;
+            }
+
+            core.warning(`Public production is stale: ${staleReasons.join('; ')}.`);
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: target.id,
+              ref: 'main',
+              inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+            });
+            core.info(`Dispatched controlled production repair workflow ${target.id}.`);

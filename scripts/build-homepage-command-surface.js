@@ -6,10 +6,17 @@ const root = process.cwd();
 function ensureHomepageShell(file){
   if(!fs.existsSync(file))return false;
   let html=fs.readFileSync(file,'utf8');
-  if(/<main\b/i.test(html))return false;
-  const closeBody=/<\/body>/i;
-  const shell='<main id="main-content" class="wrap"></main>';
-  html=closeBody.test(html)?html.replace(closeBody,shell+'</body>'):html+shell;
+  const before=html;
+  if(!/<main\b/i.test(html)){
+    const closeBody=/<\/body>/i;
+    const shell='<main id="main-content" class="wrap"></main>';
+    html=closeBody.test(html)?html.replace(closeBody,shell+'</body>'):html+shell;
+  }
+  if(!/id=["']main-archive["']/.test(html)){
+    const anchor='<span id="main-archive" tabindex="-1"></span>';
+    html=/<main\b/i.test(html)?html.replace(/<main\b/i,anchor+'<main'):anchor+html;
+  }
+  if(html===before)return false;
   fs.writeFileSync(file,html);
   return true;
 }

@@ -175,8 +175,8 @@ function ensureMemberPosting(html, name){
 {
   const relative = 'src/worker-forum-persistence.js';
   let source = read(relative);
-  source = source.replace('`INSERT INTO forum_posts\n', '`INSERT OR IGNORE INTO forum_posts\n');
-  requireMarkers(relative, source, ['INSERT OR IGNORE INTO forum_posts', 'D1 did not confirm the forum insert', 'D1 forum read-after-write confirmation failed']);
+  source = source.replace(/INSERT OR IGNORE INTO forum_posts/g, 'INSERT INTO forum_posts');
+  requireMarkers(relative, source, ['INSERT INTO forum_posts', 'D1 did not confirm the forum insert', 'D1 forum read-after-write confirmation failed']);
   write(relative, source);
 }
 
@@ -191,7 +191,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
     'verified-member Epstein board generator',
     'homepage main-archive anchor',
     'passwordless session cookie compatibility',
-    'D1 forum insertion marker'
+    'strict D1 forum insert and read-after-write marker'
   ],
   boundary: 'The repair preserves capped timeline rendering, secure passwordless sessions, strict D1 persistence and evidence boundaries; it does not re-enable browser-only posts or paid Signal Pass unlocking.'
 }, null, 2)}\n`);

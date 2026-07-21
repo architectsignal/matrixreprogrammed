@@ -107,6 +107,7 @@ function replaceOrFail(source, before, after, label) {
 const forumClient = `(function(){
   'use strict';
   const CANONICAL_ORIGIN = '${CANONICAL_ORIGIN}';
+  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';
   if (location.hostname === 'www.matrixreprogrammed.com') {
     location.replace(CANONICAL_ORIGIN + location.pathname + location.search + location.hash);
     return;
@@ -191,10 +192,10 @@ const forumClient = `(function(){
     const board = post.board ? ' <span class="pill">' + esc(BOARD_LABELS[post.board] || post.board) + '</span>' : '';
     return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Member') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + ' <span class="pill">persistent D1 confirmed</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
   }
-  function offlineNotice(message){ return '<article class="card redline"><h3>' + esc(BOARD_LABEL) + ' cannot load right now</h3><p>No browser-only copy is shown as live.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>'; }
+  function offlineNotice(message){ return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'Cloudflare D1 persistent forum feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>'; }
   async function loadFeed(){
     if (!feed) return;
-    feed.innerHTML = '<article class="card"><span class="label">pending sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';
+    feed.innerHTML = '<article class="card"><span class="label">Persistent D1</span><h3>Checking the live Signal Board</h3><p>Reading the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';
     try {
       const response = await fetch(FEED_ROUTE + '?t=' + Date.now(), { credentials:'include', cache:'no-store', headers:{ Accept:'application/json', 'Cache-Control':'no-cache' } });
       const data = await parse(response);
@@ -234,7 +235,7 @@ const forumClient = `(function(){
     try {
       const livePost = await postLive(payload);
       form.reset(); lockFormToBoard();
-      if (status) status.textContent = 'Signal posted live. D1 persistence was confirmed by read-after-write.';
+      if (status) status.textContent = 'Signal posted live and saved persistently. D1 persistence was confirmed by read-after-write.';
       await loadFeed();
       applyMemberState();
     } catch (error) {

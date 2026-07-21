@@ -7,7 +7,7 @@ const targets = ['index.html','daily-drop.html','epstein-files.html','network-se
 const hiddenTargets = new Set(['index.html', 'news.html']);
 const section = '<section id="evidence-badge-system-route" class="section wrap"><h2>Evidence Badge / Claim Classifier</h2><p class="lead">Every major claim should show what the record proves, what it does not prove, and what would strengthen it. Use the classifier before treating a source lead as a conclusion.</p><div class="cta-row"><a class="btn" href="claim-classifier.html">Open Claim Classifier</a><a class="btn alt" href="downloads/claim-classifier.json">Classifier JSON</a><a class="btn alt" href="evidence-vault.html">Evidence Vault</a></div></section>';
 const hiddenContract = '<script type="application/json" id="evidence-badge-system-route-contract" data-internal-only="true">{"route":"evidence-badge-system-route","status":"preserved-after-utility-cleanup","open":"claim-classifier.html"}</script>';
-const visibleSection = /<section\b[^>]*\sid=["']evidence-badge-system-route["'][^>]*>[\s\S]*?<\/section>/gi;
+const visibleSection = /<section\b[^>]*\sid=["']evidence-badge-system-route(?:--duplicate-[^"']+)?["'][^>]*>[\s\S]*?<\/section>/gi;
 const hiddenExisting = /<script\b[^>]*\sid=["']evidence-badge-system-route-contract["'][^>]*>[\s\S]*?<\/script>/gi;
 const exactVisibleId = /(^|\s)id=["']evidence-badge-system-route["']/gi;
 const exactContractId = /(^|\s)id=["']evidence-badge-system-route-contract["']/gi;

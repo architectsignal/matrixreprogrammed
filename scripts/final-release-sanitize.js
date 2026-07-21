@@ -117,6 +117,7 @@ for (const relative of [
   'data/epstein-investigator-status.json'
 ]) copy(relative);
 run('scripts/patch-homepage-ai-detective-button.js');
+run('scripts/final-runtime-integrity-repair.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 run('scripts/runtime-performance-budget-test.js');

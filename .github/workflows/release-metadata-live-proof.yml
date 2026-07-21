@@ -40,8 +40,8 @@ jobs:
         run: |
           mkdir -p _site
           node scripts/patch-homepage-mask-intro.js
-          node scripts/patch-membership-auth-ui.js
           node scripts/patch-membership-access-copy.js
+          node scripts/patch-membership-auth-ui.js
           node scripts/patch-release-metadata-routing.js
 
       - name: Generate commit-bound release metadata and versioned aliases

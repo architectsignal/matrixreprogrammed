@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Capital Relationship & Overlap Map | Matrix Reprogrammed</title>
+  <meta name="description" content="Map sourced capital relationships and cross-category overlaps across companies, funds, banks, trusts, foundations, contractors and political money.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <link rel="stylesheet" href="money-intelligence.css">
+  <link rel="stylesheet" href="money-expansion.css">
+  <link rel="stylesheet" href="money-overlap.css">
+</head>
+<body>
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div>
+<div class="page money-shell">
+<header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="follow-the-money.html">Money Command</a><a href="money-search.html">Money Search</a><a href="money-graph.html" aria-current="page">Overlap Map</a><a href="making-money.html">Build Wealth</a><a href="evidence-vault.html">Evidence</a></nav></header>
+<main id="overlap-app">
+<section class="hero wrap overlap-hero">
+  <div class="money-kicker">Evidence-bounded capital network</div>
+  <h1>RELATIONSHIP & OVERLAP MAP.</h1>
+  <p class="lead">See where the same entity appears across ownership, allocation, banking, contracts, property, media, technology, defence, political money and philanthropy. Sourced relationships stay separate from name-normalised overlap.</p>
+  <div id="overlap-summary" class="money-stat-grid"><div class="money-stat"><span>Loading</span><strong>Registry</strong></div></div>
+  <aside class="money-warning"><strong>Evidence boundary:</strong> <span id="overlap-boundary">An overlap is a research route, not proof of coordinated control or wrongdoing.</span></aside>
+</section>
+<section class="section wrap">
+  <div class="overlap-toolbar">
+    <label>Search<input id="overlap-search" type="search" placeholder="BlackRock, Palantir, foundation…"></label>
+    <label>Category<select id="overlap-category"><option value="">All categories</option></select></label>
+    <label>Minimum systems<select id="overlap-min"><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></label>
+    <button class="btn alt" id="overlap-reset" type="button">Reset</button>
+  </div>
+  <div class="overlap-view-tabs" role="tablist" aria-label="Overlap views">
+    <button class="btn active" data-overlap-view="map" type="button">Network Map</button>
+    <button class="btn alt" data-overlap-view="matrix" type="button">Category Matrix</button>
+    <button class="btn alt" data-overlap-view="list" type="button">Entity List</button>
+  </div>
+</section>
+<section id="overlap-map" class="section wrap overlap-view">
+  <div class="overlap-map-shell"><svg id="overlap-svg" role="img" aria-label="Capital relationship and category overlap map"></svg></div>
+  <p id="map-status" class="print-note"></p>
+  <div class="overlap-legend"><span><i class="legend-category"></i> Category system</span><span><i class="legend-entity"></i> Cross-category entity</span><span><i class="legend-edge"></i> Registry appearance</span></div>
+</section>
+<section id="overlap-matrix" class="section wrap overlap-view overlap-matrix" hidden></section>
+<section id="overlap-list" class="section wrap overlap-view money-grid" hidden></section>
+<p id="list-status" class="wrap print-note"></p>
+<section class="section wrap split">
+  <article class="money-card"><div class="money-kicker">What the map establishes</div><h2>Repeated public-record appearance</h2><p>The same conservatively normalised entity name appears in two or more registry systems, or a separate sourced relationship links two entities.</p></article>
+  <article class="money-card redline"><div class="money-kicker">What it does not establish</div><h2>No automatic control claim</h2><p>Shared managers, investors, trustees, contracts, donations or corporate groups do not by themselves prove beneficial ownership, coordination, corruption or operational control.</p></article>
+</section>
+<div id="overlap-detail" class="overlap-detail" role="dialog" aria-modal="true" aria-label="Overlap evidence details"></div>
+</main>
+<footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — relationship evidence, category overlap and analytical leads remain visibly separated.</p></footer>
+</div>
+<script src="matrix.js"></script><script src="money-graph.js"></script><script src="analytics.js"></script>
+</body></html>

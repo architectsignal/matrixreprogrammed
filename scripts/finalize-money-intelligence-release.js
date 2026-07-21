@@ -36,8 +36,14 @@ function copyFile(rel) {
   fs.copyFileSync(src, dest);
   report.copied.push(rel);
   if (rel.endsWith('.html')) {
-    const route = path.join(site, rel.replace(/\.html$/i, ''));
-    if (!(fs.existsSync(route) && fs.statSync(route).isDirectory())) fs.copyFileSync(src, route);
+    const routeRel = rel.replace(/\.html$/i, '');
+    const route = path.join(site, routeRel);
+    const sourceDirectory = path.join(root, routeRel);
+    // A route such as follow-the-money.html also owns a real directory containing
+    // people and category pages. Do not create an extensionless file where that
+    // directory must exist; the Worker can serve the .html route through aliases.
+    const conflictsWithSourceDirectory = fs.existsSync(sourceDirectory) && fs.statSync(sourceDirectory).isDirectory();
+    if (!conflictsWithSourceDirectory && !(fs.existsSync(route) && fs.statSync(route).isDirectory())) fs.copyFileSync(src, route);
   }
 }
 function copyTree(rel) {

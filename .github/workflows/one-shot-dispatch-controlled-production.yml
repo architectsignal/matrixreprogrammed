@@ -7,7 +7,7 @@ on:
     paths:
       - .github/one-shot-controlled-production.trigger
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '20 5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -34,6 +34,7 @@ jobs:
             const activeRun = runs => runs.data.workflow_runs.find(run => activeStatuses.includes(run.status));
             const mainBranch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
             const mainSha = mainBranch.data.commit.sha;
+            const automaticReleaseCooldownMs = 20 * 60 * 60 * 1000;
 
             const moneyTarget = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Money Intelligence Refresh');
             if (!moneyTarget) {
@@ -156,7 +157,7 @@ jobs:
             let liveMatches = false;
             try {
               const nonce = Date.now();
-              const headers = { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixReleaseGuard/4.0' };
+              const headers = { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixReleaseGuard/5.0' };
               const [liveRegistryResponse, liveGuidesResponse, liveContentTestResponse, liveLayoutTestResponse, liveHomeResponse, liveHubResponse, liveArtResponse] = await Promise.all([
                 fetch(`https://matrixreprogrammed.com/data/money-intelligence-registry.json?release_guard=${nonce}`, { headers }),
                 fetch(`https://matrixreprogrammed.com/downloads/wealth-guides/index.json?release_guard=${nonce}`, { headers }),
@@ -216,7 +217,18 @@ jobs:
               return;
             }
 
+            if (context.eventName === 'schedule') {
+              const lastSuccess = runs.data.workflow_runs.find(run => run.status === 'completed' && run.conclusion === 'success');
+              if (lastSuccess) {
+                const age = Date.now() - Date.parse(lastSuccess.updated_at || lastSuccess.created_at || 0);
+                if (age >= 0 && age < automaticReleaseCooldownMs) {
+                  core.info(`Monthly build budget guard: the last successful production release is only ${Math.round(age / 3600000)} hour(s) old. Automatic deployment skipped.`);
+                  return;
+                }
+              }
+            }
+
             await github.rest.actions.createWorkflowDispatch({
               owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
             });
-            core.info(`Dispatched controlled production workflow ${target.id} because the exact live proof does not yet match main.`);
+            core.info(`Dispatched controlled production workflow ${target.id}. Automatic releases are limited to one daily check with a 20-hour cooldown; manual trigger releases remain available.`);

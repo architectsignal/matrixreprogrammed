@@ -11,6 +11,8 @@ on:
       - 'scripts/publish-release-metadata-assets.js'
       - 'scripts/final-release-sanitize.js'
       - 'scripts/verify-live-production.js'
+      - 'scripts/build-deploy-manifest.js'
+      - 'scripts/finalize-money-intelligence-release.js'
       - 'data/production-freshness-policy.json'
   workflow_dispatch:
 
@@ -38,6 +40,8 @@ jobs:
         run: |
           mkdir -p _site
           node scripts/patch-homepage-mask-intro.js
+          node scripts/patch-membership-auth-ui.js
+          node scripts/patch-membership-access-copy.js
           node scripts/patch-release-metadata-routing.js
 
       - name: Generate commit-bound release metadata and versioned aliases

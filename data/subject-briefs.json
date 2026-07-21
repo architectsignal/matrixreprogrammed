@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T03:44:00.476Z",
+  "updated": "2026-07-21T08:44:01.556Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -12,6 +12,12 @@
         "public-private-contracts"
       ],
       "latest_records": [
+        {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
         {
           "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
           "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
@@ -41,24 +47,14 @@
           "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
+        "Securities and Exchange Commission",
         "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission",
-        "Management and Budget Office",
-        "Federal Procurement Policy Office",
-        "Defense Department",
-        "General Services Administration",
-        "National Aeronautics and Space Administration"
+        "Nuclear Regulatory Commission"
       ],
       "relationship_candidates": [],
       "missing_records": [
@@ -101,133 +97,13 @@
           "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
         "Homeland Security Department",
-        "Nuclear Regulatory Commission",
-        "Management and Budget Office",
-        "Federal Procurement Policy Office",
-        "Defense Department",
-        "General Services Administration",
-        "National Aeronautics and Space Administration"
+        "Nuclear Regulatory Commission"
       ],
-      "relationship_candidates": [
-        {
-          "id": "defense-department__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__general-services-administration",
-          "from": "Defense Department",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__national-aeronautics-and-space-administration",
-          "from": "Defense Department",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Primary record route",
         "Entity brief links",
@@ -284,8 +160,8 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-2",
-            "federal-register-policy-2026-13602-3"
+            "federal-register-policy-2026-13656-3",
+            "federal-register-policy-2026-13602-4"
           ],
           "control_layers": [
             "policy",
@@ -363,6 +239,12 @@
       ],
       "latest_records": [
         {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
           "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
           "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
           "grade": "documented association",
@@ -391,24 +273,14 @@
           "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
+        "Securities and Exchange Commission",
         "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission",
-        "Management and Budget Office",
-        "Federal Procurement Policy Office",
-        "Defense Department",
-        "General Services Administration",
-        "National Aeronautics and Space Administration"
+        "Nuclear Regulatory Commission"
       ],
       "relationship_candidates": [
         {
@@ -426,8 +298,8 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-2",
-            "federal-register-policy-2026-13602-3"
+            "federal-register-policy-2026-13656-3",
+            "federal-register-policy-2026-13602-4"
           ],
           "control_layers": [
             "policy",
@@ -461,63 +333,8 @@
         "disclosure-gaps",
         "courts-law"
       ],
-      "latest_records": [
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-          "url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        }
-      ],
-      "top_entities": [
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-        "Supreme Court of Rhode Island",
-        "2025-0045-Appeal.",
-        "Sawas v. Elzanaty",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2021-00294",
-        "People v. Brim",
-        "California Court of Appeal",
-        "A170747M",
-        "The New York and Presbyterian Hospital v. New York State Nurses Association",
-        "Court of Appeals for the Second Circuit",
-        "25-113",
-        "Matter of Pagliughi",
-        "2024-07773",
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ],
+      "latest_records": [],
+      "top_entities": [],
       "relationship_candidates": [],
       "missing_records": [
         "Primary record route",
@@ -542,6 +359,12 @@
         "health"
       ],
       "latest_records": [
+        {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
         {
           "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
           "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
@@ -571,24 +394,14 @@
           "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
+        "Securities and Exchange Commission",
         "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission",
-        "Management and Budget Office",
-        "Federal Procurement Policy Office",
-        "Defense Department",
-        "General Services Administration",
-        "National Aeronautics and Space Administration"
+        "Nuclear Regulatory Commission"
       ],
       "relationship_candidates": [
         {
@@ -606,8 +419,8 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-2",
-            "federal-register-policy-2026-13602-3"
+            "federal-register-policy-2026-13656-3",
+            "federal-register-policy-2026-13602-4"
           ],
           "control_layers": [
             "policy",
@@ -617,276 +430,6 @@
           "score": 18,
           "grade": "candidate",
           "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Federal Procurement Policy Office",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "general-services-administration__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "management-and-budget-office__national-aeronautics-and-space-administration",
-          "from": "Management and Budget Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__general-services-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__general-services-administration",
-          "from": "Defense Department",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__national-aeronautics-and-space-administration",
-          "from": "Defense Department",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "general-services-administration__national-aeronautics-and-space-administration",
-          "from": "General Services Administration",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],

@@ -1,176 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-21T03:44:00.340Z
-
-## Appellate Division of the Supreme Court of the State of New York
-
-Score: 368
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## California Court of Appeal
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Court of Appeals for the Second Circuit
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Court of Appeals of North Carolina
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Supreme Court of Rhode Island
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Supreme Court of Rhode Island deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 2021-00294
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 2024-07773
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 2025-0045-Appeal.
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 25-113
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 25-113 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 25-581
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## A170747M
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Biddle v. Biddle
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Matter of Pagliughi
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## People v. Brim
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Sawas v. Elzanaty
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Sawas v. Elzanaty deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## The New York and Presbyterian Hospital v. New York State Nurses Association
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Updated: 2026-07-21T08:44:01.479Z
 
 ## Homeland Security Department
 
@@ -201,56 +31,6 @@ Level: high public-record exposure
 Highest evidence: documented association
 
 Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Federal Procurement Policy Office
-
-Score: 79
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Federal Procurement Policy Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Defense Department
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## General Services Administration
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: General Services Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Management and Budget Office
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## National Aeronautics and Space Administration
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## AAPL
 
@@ -381,4 +161,14 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Securities and Exchange Commission
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Securities and Exchange Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 

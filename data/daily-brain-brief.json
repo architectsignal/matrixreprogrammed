@@ -450,6 +450,7 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -485,17 +486,6 @@
       ],
       "record_types": [
         "rule_or_notice"
-      ]
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
       ]
     },
     {
@@ -585,14 +575,25 @@
       "record_types": [
         "company_registry_snapshot"
       ]
+    },
+    {
+      "id": "microsoft-corp",
+      "name": "MICROSOFT CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-21T07:44:38.771Z",
-    "eventCount": 18,
+    "updated": "2026-07-21T08:43:43.069Z",
+    "eventCount": 12,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 34,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 17,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -768,11 +769,11 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-21T07:44:53.390Z",
+    "updated": "2026-07-21T08:44:01.408Z",
     "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 6,
-    "relationshipCandidateCount": 25,
+    "removedRecordCount": 12,
+    "relationshipCandidateCount": 7,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -818,7 +819,7 @@
     }
   ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-21T07:44:53.539Z",
+    "updated": "2026-07-21T08:44:01.524Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -852,7 +853,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-21T07:44:53.574Z",
+    "updated": "2026-07-21T08:44:01.556Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

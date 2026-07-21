@@ -1,11 +1,31 @@
 const fs=require('fs');
 const path=require('path');
+const {execFileSync}=require('child_process');
 const root=process.cwd();
 const file=p=>path.join(root,p);
 const read=p=>JSON.parse(fs.readFileSync(file(p),'utf8'));
 const text=p=>fs.readFileSync(file(p),'utf8');
 const assert=(ok,msg)=>{if(!ok)throw new Error(msg)};
 
+function refreshDerivedOverlapIfStale(){
+  let registry=null,graph=null;
+  try{registry=read('data/money-intelligence-registry.json')}catch{}
+  try{graph=read('data/money-overlap-graph.json')}catch{}
+  const stale=!registry
+    || Number(registry.version)<3
+    || !graph
+    || Number(graph?.summary?.records)!==Number(registry?.records?.length)
+    || Number(graph?.summary?.categories)!==Number(registry?.categories?.length);
+  if(!stale)return false;
+  execFileSync(process.execPath,[path.join(__dirname,'build-money-overlap-map.js')],{
+    cwd:root,
+    stdio:'inherit',
+    env:{...process.env,MATRIX_MONEY_REFRESH:'0'}
+  });
+  return true;
+}
+
+const rebuilt=refreshDerivedOverlapIfStale();
 const registry=read('data/money-intelligence-registry.json');
 const graph=read('data/money-overlap-graph.json');
 assert(registry.version>=3,'Money registry schema must be version 3 or newer');
@@ -37,4 +57,4 @@ for(const asset of assets){
 assert(!html.includes('../'),'Published money-graph.html must not escape the site root');
 assert(html===canonical.replace(/(["'])\.\.\//g,'$1'),'Published money-graph.html must be the path-translated canonical template');
 
-console.log(`Money overlap map verified: ${registry.records.length} records, ${graph.overlaps.length} overlap entities, ${graph.edges.length} graph edges and source-to-public path translation.`);
+console.log(`Money overlap map verified: ${registry.records.length} records, ${graph.overlaps.length} overlap entities, ${graph.edges.length} graph edges and source-to-public path translation${rebuilt?' after rebuilding stale derived data':''}.`);

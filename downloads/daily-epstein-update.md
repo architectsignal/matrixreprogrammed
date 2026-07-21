@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-20T19:56:08.728Z
-Live Intel source window: 2026-07-20T19:55:58.505Z
+Generated: 2026-07-21T03:44:27.861Z
+Live Intel source window: 2026-07-21T03:44:10.679Z
 Latest source publication: 2026-07-17T23:17:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-15 current Epstein-lane record leads remain inside the active source window.
+16 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -162,6 +162,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
 
 Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
+- Published: 2026-07-14T21:48:42.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxON0dEcXpTeGFia3pzUjlBUjlEMnprYmdiVGdnbXQ5R0d1R2RVNUNzejZqTDhBZmxLQVlVSTJWVmZlVlRkS05kdWhpSktOY09yQ0s0NTM4WmoyVnZWYmx5Y2xkTmlSclFIS0U3MWk3a1VqWjRzbkpFZURPNmhTY19zUm1qQk9rTVpSdF9jQ2poZjNiXzdrWllGRmkxQmswTkFSTmszTUtSUDgwY1hFSEhFQ2JtZ19mUmfSAbwBQVVfeXFMTXhkSWJPal80TXllZkNhdDJwOUw5NTJzUDVzcnBrbjhYaDlPeUppMk5MakNtQWpTX0FzR2Q5TWJmWVdSbS1RUkpMZHNlbmNYaVhvdEhxUWFqNU5Qd3RmeU1teDk5OEFRZzdDRERZM2RrT0toX1d2RnZtX2JMRlJVRDRLTWZLX2hNSVc3ckNIa2Jaa2ltR0xoUy1NMkVFbUYwakYwalFLNUN1eEx1OGx0NE45OTFfNU5DYmdSM2I?oc=5
+
+WATCH: Todd Blanche testifies in confirmation hearing for attorney general PBS
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

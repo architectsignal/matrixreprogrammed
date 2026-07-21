@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T19:56:09.453Z
-Live Intel source window: 2026-07-20T19:55:58.505Z
-Tracked cards: 874
+Generated: 2026-07-21T03:44:27.966Z
+Live Intel source window: 2026-07-21T03:44:10.679Z
+Tracked cards: 878
 Cards with current matched records: 108
-Cards with no new verified record: 766
+Cards with no new verified record: 770
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -4206,6 +4206,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## RELATIONSHIP & OVERLAP MAP.
+- Route: money-graph.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## RELATIONSHIP & OVERLAP MAP.
+- Route: src/money-overlap-graph.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## REPUBLIC OF INDIA
 - Route: entity-timelines/republic-of-india.html
 - Status: no-new-verified-record-in-current-window
@@ -4464,6 +4476,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Scroll and Key
 - Route: secret-societies/scroll-and-key.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## SEARCH THE MACHINE.
+- Route: search.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4824,6 +4842,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Tony Blair
 - Route: top-52/tony-blair.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## TOP 100 FAMILY OFFICES
+- Route: follow-the-money/family-offices.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

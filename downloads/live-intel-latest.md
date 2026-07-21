@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-20T21:30:51.430Z
+Collection completed: 2026-07-21T03:44:10.679Z
 Latest source publication: 2026-07-20T12:00:00.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection status: fresh-items-added
+New items this collection: 1
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -355,6 +355,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Murray Gell-Mann (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-14 — WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxON0dEcXpTeGFia3pzUjlBUjlEMnprYmdiVGdnbXQ5R0d1R2RVNUNzejZqTDhBZmxLQVlVSTJWVmZlVlRkS05kdWhpSktOY09yQ0s0NTM4WmoyVnZWYmx5Y2xkTmlSclFIS0U3MWk3a1VqWjRzbkpFZURPNmhTY19zUm1qQk9rTVpSdF9jQ2poZjNiXzdrWllGRmkxQmswTkFSTmszTUtSUDgwY1hFSEhFQ2JtZ19mUmfSAbwBQVVfeXFMTXhkSWJPal80TXllZkNhdDJwOUw5NTJzUDVzcnBrbjhYaDlPeUppMk5MakNtQWpTX0FzR2Q5TWJmWVdSbS1RUkpMZHNlbmNYaVhvdEhxUWFqNU5Qd3RmeU1teDk5OEFRZzdDRERZM2RrT0toX1d2RnZtX2JMRlJVRDRLTWZLX2hNSVc3ckNIa2Jaa2ltR0xoUy1NMkVFbUYwakYwalFLNUN1eEx1OGx0NE45OTFfNU5DYmdSM2I?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-14 — Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167937

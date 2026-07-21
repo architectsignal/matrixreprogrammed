@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 2713
-Flagged pages: 2232
-High priority pages: 787
-Medium priority pages: 1371
-Pages with missing rules: 309
+Scanned pages: 2786
+Flagged pages: 2283
+High priority pages: 794
+Medium priority pages: 1483
+Pages with missing rules: 312
 Auto-update eligible figures: 2
 Manual-review figures: 94
-Missing-rule figures: 745
+Missing-rule figures: 751
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -37,13 +37,13 @@ Missing-rule figures: 745
 - _site/power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- making-money.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - _site/source-changes.html: 32 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 - source-changes.html: 32 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
-- _site/news.html: 27 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -69,6 +69,7 @@ Missing-rule figures: 745
 - _site/power-atlas.html: 4 figure(s) need source rules.
 - _site/power-structure-map.html: 4 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
+- making-money.html: 4 figure(s) need source rules.
 - power-atlas.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
 - _site/admin-paypal-rehearsal.html: 3 figure(s) need source rules.
@@ -85,7 +86,6 @@ Missing-rule figures: 745
 - _site/conclusion-engine.html: 2 figure(s) need source rules.
 - _site/intel-vault.html: 2 figure(s) need source rules.
 - big-three/blackrock.html: 2 figure(s) need source rules.
-- big-three/vanguard.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

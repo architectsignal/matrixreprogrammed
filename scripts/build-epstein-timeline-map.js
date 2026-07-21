@@ -8,10 +8,12 @@ const downloadsDir = path.join(root, 'downloads');
 
 if (!fs.existsSync(dataFile)) {
   console.log('No Epstein timeline map data found. Skipping Phase 6.');
+  require('./build-epstein-relationship-intelligence.js');
   process.exit(0);
 }
 if (!fs.existsSync(pageFile)) {
   console.log('No epstein-files.html found. Skipping Phase 6.');
+  require('./build-epstein-relationship-intelligence.js');
   process.exit(0);
 }
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
@@ -45,7 +47,7 @@ const timelineCards = (data.items || []).map(item => `<article class="card redli
 const rules = (data.crossReferenceRules || []).map(rule => `<li>${esc(rule)}</li>`).join('');
 const daily = data.dailyUpdateIntegration || {};
 const searchTerms = (daily.requiredSearchTerms || []).map(term => `<span class="pill">${esc(term)}</span>`).join(' ');
-const section = `<section id="epstein-timeline-map" class="section wrap"><h2>Timeline + Cross-Reference Map</h2><p class="lead">This turns the Command Center into a chronological case board. Each entry shows the date, people/entities, evidence class, source door, what the record supports, and what remains open. The goal is sequence: who appears when, under what record type, and how the evidence connects across the people tracker, email map, actual files cockpit, evidence ladder, and network architecture matrix.</p><div class="cta-row"><a class="btn" href="${jsonOut}">Open timeline source file</a><a class="btn alt" href="${mdOut}">Timeline brief</a><a class="btn alt" href="${esc(daily.commandCenterRoute || 'epstein-files.html#epstein-timeline-map')}">Command Center timeline</a><a class="btn alt" href="downloads/epstein-evidence-ladder.json">Evidence ladder</a></div><h2>Chronological Case Board</h2><div class="grid">${timelineCards}</div><div class="card redline"><h3>Cross-Reference Rules</h3><ul>${rules}</ul><p><strong>Daily update lane:</strong> ${esc(daily.laneId || 'epstein-files')}</p><p><strong>Daily search terms:</strong> ${searchTerms}</p></div><div class="terminal">TIMELINE METHOD\n&gt; Date first\n&gt; Evidence class second\n&gt; People/entities third\n&gt; Source door fourth\n&gt; Record support fifth\n&gt; Open questions last\n&gt; Sequence is not a verdict</div></section>`;
+const section = `<section id="epstein-timeline-map" class="section wrap"><h2>Timeline + Cross-Reference Map</h2><p class="lead">This turns the Command Center into a chronological case board. Each entry shows the date, people/entities, evidence class, source door, what the record supports, and what remains open. The goal is sequence: who appears when, under what record type, and how the evidence connects across the people tracker, email map, actual files cockpit, evidence ladder, and network architecture matrix.</p><div class="cta-row"><a class="btn" href="${jsonOut}">Open timeline source file</a><a class="btn alt" href="${mdOut}">Timeline brief</a><a class="btn alt" href="${esc(daily.commandCenterRoute || 'epstein-files.html#epstein-timeline-map')}">Command Center timeline</a><a class="btn alt" href="downloads/epstein-evidence-ladder.json">Evidence ladder</a><a class="btn alt" href="epstein-email-network.html">Epstein Email Network</a></div><h2>Chronological Case Board</h2><div class="grid">${timelineCards}</div><div class="card redline"><h3>Cross-Reference Rules</h3><ul>${rules}</ul><p><strong>Daily update lane:</strong> ${esc(daily.laneId || 'epstein-files')}</p><p><strong>Daily search terms:</strong> ${searchTerms}</p></div><div class="terminal">TIMELINE METHOD\n&gt; Date first\n&gt; Evidence class second\n&gt; People/entities third\n&gt; Source door fourth\n&gt; Record support fifth\n&gt; Open questions last\n&gt; Sequence is not a verdict</div></section>`;
 
 let html = fs.readFileSync(pageFile, 'utf8');
 if (!html.includes('id="epstein-timeline-map"')) {
@@ -59,3 +61,4 @@ if (!html.includes('id="epstein-timeline-map"')) {
 }
 
 console.log(`Built Epstein Timeline + Cross-Reference Map with ${(data.items || []).length} timeline items and ${(data.crossReferenceRules || []).length} cross-reference rules.`);
+require('./build-epstein-relationship-intelligence.js');

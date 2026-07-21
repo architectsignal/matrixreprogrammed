@@ -2,6 +2,7 @@
 'use strict';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const DATA_BASE=location.pathname.includes('/src/')?'../data/':'data/';
 const CORPORATE=/\b(the|plc|incorporated|inc|corp|corporation|company|co|limited|ltd|llc|lp|sa|se|ag|nv|group|holdings?|partners?|management|investment|investments|capital|international|global)\b/g;
 const ALIASES=new Map(Object.entries({
   'alphabet google':'alphabet','google public sector':'alphabet','alphabet youtube':'alphabet','google':'alphabet',
@@ -148,8 +149,8 @@ function bind(){
 }
 async function load(){
   let data=null;
-  try{const r=await fetch('data/money-overlap-graph.json',{cache:'no-store'});if(r.ok)data=await r.json()}catch{}
-  if(!data){const r=await fetch('data/money-intelligence-registry.json',{cache:'no-store'});if(!r.ok)throw new Error('Money registry unavailable');data=buildGraph(await r.json())}
+  try{const r=await fetch(`${DATA_BASE}money-overlap-graph.json`,{cache:'no-store'});if(r.ok)data=await r.json()}catch{}
+  if(!data){const r=await fetch(`${DATA_BASE}money-intelligence-registry.json`,{cache:'no-store'});if(!r.ok)throw new Error('Money registry unavailable');data=buildGraph(await r.json())}
   graph=data;renderSummary();fillFilters();renderMatrix();renderAll();bind();
 }
 load().catch(error=>{$('#overlap-app').innerHTML=`<section class="money-warning"><strong>Overlap map unavailable:</strong> ${esc(error.message)}</section>`});

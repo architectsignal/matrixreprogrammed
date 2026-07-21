@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const productionPath = path.join(root, 'src', 'worker-production.js');
@@ -132,6 +133,17 @@ function patchDashboard(source) {
   throw new Error('Member dashboard insertion anchor missing');
 }
 
+function runStage(script) {
+  const scriptPath = path.join(root, 'scripts', script);
+  if (!fs.existsSync(scriptPath)) throw new Error(`Reporting build stage missing: ${script}`);
+  console.log(`Running reporting build stage: ${script}`);
+  execFileSync(process.execPath, [scriptPath], {
+    cwd: root,
+    env: process.env,
+    stdio: 'inherit'
+  });
+}
+
 const productionBefore = fs.readFileSync(productionPath, 'utf8');
 const emailBefore = fs.readFileSync(emailPath, 'utf8');
 const productionAfter = patchProduction(productionBefore);
@@ -164,7 +176,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
 }, null, 2)}\n`);
 console.log(`Intelligence reporting system ${productionAfter !== productionBefore || emailAfter !== emailBefore || dashboardChanged ? 'installed' : 'already current'}.`);
 
-require('./build-money-intelligence-expansion.js');
-require('./money-intelligence-expansion-test.js');
-require('./build-money-overlap-map.js');
-require('./money-overlap-map-test.js');
+for (const stage of [
+  'build-money-intelligence-expansion.js',
+  'money-intelligence-expansion-test.js',
+  'build-money-overlap-map.js',
+  'money-overlap-map-test.js'
+]) runStage(stage);

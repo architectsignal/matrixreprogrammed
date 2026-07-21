@@ -6,7 +6,11 @@ const { execFileSync } = require('child_process');
 const root = process.cwd();
 const site = path.join(root, '_site');
 const moneyFinalizer = path.join(root, 'scripts', 'finalize-money-intelligence-release.js');
-if (fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
+const builtHomepage = path.join(site, 'index.html');
+// A proof workflow may create an empty _site directory only to receive versioned
+// metadata aliases. Run the full money finalizer solely after a real Cloudflare
+// output exists; otherwise it would mistake an empty staging directory for a build.
+if (fs.existsSync(builtHomepage) && fs.statSync(builtHomepage).isFile() && fs.existsSync(moneyFinalizer)) {
   execFileSync(process.execPath, [moneyFinalizer], { cwd: root, stdio: 'inherit', env: process.env });
 }
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }

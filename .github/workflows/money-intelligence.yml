@@ -26,6 +26,7 @@ on:
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-money-intelligence-expansion.js'
       - 'scripts/build-complete-capital-lists.js'
+      - 'scripts/refine-trust-structure-coverage.js'
       - 'scripts/normalize-capital-record-details.js'
       - 'scripts/complete-capital-lists-test.js'
       - 'scripts/build-money-overlap-map.js'
@@ -71,6 +72,7 @@ jobs:
           node --check scripts/build-money-intelligence-system.js
           node --check scripts/build-money-intelligence-expansion.js
           node --check scripts/build-complete-capital-lists.js
+          node --check scripts/refine-trust-structure-coverage.js
           node --check scripts/normalize-capital-record-details.js
           node --check scripts/complete-capital-lists-test.js
           node --check scripts/build-money-overlap-map.js
@@ -91,6 +93,7 @@ jobs:
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
           node scripts/build-complete-capital-lists.js
+          node scripts/refine-trust-structure-coverage.js
           node scripts/normalize-capital-record-details.js
           node scripts/complete-capital-lists-test.js
           node scripts/build-money-overlap-map.js

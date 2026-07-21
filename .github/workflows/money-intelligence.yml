@@ -26,6 +26,7 @@ on:
       - 'scripts/build-money-intelligence-expansion.js'
       - 'scripts/build-money-overlap-map.js'
       - 'scripts/money-overlap-map-test.js'
+      - 'scripts/install-intelligence-reporting-system.js'
       - 'scripts/build-detailed-wealth-guides.js'
       - 'scripts/detailed-wealth-guides-test.js'
       - 'scripts/money-intelligence-expansion-test.js'
@@ -64,6 +65,11 @@ jobs:
           node --check scripts/build-money-intelligence-expansion.js
           node --check scripts/build-money-overlap-map.js
           node --check scripts/money-overlap-map-test.js
+          node --check scripts/install-intelligence-reporting-system.js
+          node --check src/money-overlap-graph.js
+          node --check src/money-command-center.js
+          node --check money-graph.js
+          node --check money-command-center.js
           node --check scripts/build-detailed-wealth-guides.js
           node --check scripts/detailed-wealth-guides-test.js
           node scripts/build-money-intelligence-system.js

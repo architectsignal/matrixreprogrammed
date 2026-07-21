@@ -9,6 +9,7 @@ const downloadsDir = path.join(root, 'downloads');
 function buildRelationshipPage() {
   require('./build-epstein-relationship-intelligence.js');
   require('./enhance-epstein-publication-lanes.js');
+  require('./repair-epstein-classified-language.js');
   require('./repair-epstein-relationship-runtime.js');
 }
 

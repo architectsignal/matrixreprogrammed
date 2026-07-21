@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T08:44:01.556Z",
+  "updated": "2026-07-21T14:20:46.203Z",
   "title": "Billionaire Control Tracker",
   "boundary": "Watchlist profiles track control-layer exposure and public records, not private intent.",
   "profiles": [
@@ -45,11 +45,71 @@
           "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association"
+        },
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued"
         }
       ],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [],
+      "relationship_candidates": [
+        {
+          "id": "punxsutawney-hunting-club-v-pgc__supreme-court-of-pennsylvania",
+          "from": "Punxsutawney Hunting Club v. PGC",
+          "to": "Supreme Court of Pennsylvania",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10933234-1"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "23-wap-2023__punxsutawney-hunting-club-v-pgc",
+          "from": "Punxsutawney Hunting Club v. PGC",
+          "to": "23 WAP 2023",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10933234-1"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",

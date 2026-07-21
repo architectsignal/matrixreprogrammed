@@ -53,6 +53,16 @@
 </main>
 <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — relationship evidence, category overlap and analytical leads remain visibly separated.</p></footer>
 </div>
-<script src="../matrix.js"></script><script src="../money-graph.js"></script><script src="../analytics.js"></script>
+<script src="../matrix.js"></script>
+<script>
+(()=>{
+  const nativeFetch=window.fetch.bind(window);
+  window.fetch=(input,init)=>{
+    if(typeof input==='string'&&input.startsWith('data/money-')) input='../'+input;
+    return nativeFetch(input,init);
+  };
+})();
+</script>
+<script src="../money-graph.js"></script><script src="../analytics.js"></script>
 <script src="../investigation-pulse.js"></script></body>
 </html>

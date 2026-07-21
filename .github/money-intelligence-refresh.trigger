@@ -1,5 +1,5 @@
 REFRESH MATRIX MONEY INTELLIGENCE
-Requested: 2026-07-20
+Requested: 2026-07-21
 Target: latest main
-Purpose: rebuild all 16 free wealth PDFs as detailed subject-specific guides, protect them from generic deep-report overwrites, verify minimum pages, sections, words, official source routes and unique subject markers, then publish the exact tested outputs.
-Nonce: 2026-07-21T00:48:00+02:00
+Purpose: complete every capital-system list to at least 100 named public-record entities, preserve ranks only where source-supported, add detailed evidence and capital-role fields, rebuild relationship overlap outputs, run acceptance tests, and publish the exact tested registry.
+Nonce: 2026-07-21T03:00:00+02:00

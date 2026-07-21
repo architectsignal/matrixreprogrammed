@@ -1436,42 +1436,102 @@ function addMissingGuides() {
 addMissingGuides();
 
 function buildPdf(guide, sections) {
+  // layout-v2: every printable line is wrapped and advances the text cursor
+  // after rendering. Section starts reserve enough room for the heading and
+  // first body line so headings cannot overlap preceding content.
   const pages = [];
   const pushPage = items => pages.push(items);
-  pushPage([
-    { kind: 'cover-title', text: guide.title },
-    { kind: 'cover-subtitle', text: guide.subtitle },
+  const styles = {
+    'cover-title': { font: 'F2', size: 22, advance: 30 },
+    'cover-subtitle': { font: 'F1', size: 12, advance: 19 },
+    'cover-rule': { font: 'F1', size: 4, advance: 16 },
+    'cover-label': { font: 'F2', size: 10, advance: 20 },
+    'cover-body': { font: 'F1', size: 10, advance: 17 },
+    'cover-boundary': { font: 'F2', size: 9, advance: 16 },
+    'page-title': { font: 'F2', size: 18, advance: 28 },
+    'toc': { font: 'F1', size: 10, advance: 18 },
+    'heading': { font: 'F2', size: 12, advance: 21 },
+    'continued': { font: 'F2', size: 10, advance: 18 },
+    'checkbox': { font: 'F1', size: 9, advance: 15 },
+    'numbered': { font: 'F1', size: 9, advance: 15 },
+    'body': { font: 'F1', size: 9, advance: 14 },
+    'space': { font: 'F1', size: 6, advance: 9 }
+  };
+  const hardWrap = (text, width) => {
+    const output = [];
+    for (const original of wrap(text, width)) {
+      let remaining = String(original);
+      while (remaining.length > width) {
+        output.push(remaining.slice(0, width));
+        remaining = remaining.slice(width);
+      }
+      output.push(remaining);
+    }
+    return output;
+  };
+  const itemsFor = (kind, text, width, prefixContinuation = '') => hardWrap(text, width).map((line, index) => ({
+    kind,
+    text: index && prefixContinuation ? prefixContinuation + line : line
+  }));
+
+  const cover = [
+    ...itemsFor('cover-title', guide.title, 42),
+    ...itemsFor('cover-subtitle', guide.subtitle, 72),
     { kind: 'cover-rule', text: '' },
     { kind: 'cover-label', text: 'MATRIX REPROGRAMMED - DETAILED WEALTH GUIDE' },
-    { kind: 'cover-body', text: `Reader outcome: ${guide.outcome}` },
-    { kind: 'cover-body', text: `Best for: ${guide.audience}` },
-    { kind: 'cover-body', text: `Edition checked: ${today}` },
-    { kind: 'cover-boundary', text: 'Educational information only. No personalised financial, investment, legal or tax advice. No guaranteed outcomes.' }
-  ]);
-  const toc = sections.map((section, index) => ({ kind: 'toc', text: `${index + 1}. ${section.title}` }));
-  pushPage([{ kind: 'page-title', text: 'CONTENTS' }, ...toc]);
+    ...itemsFor('cover-body', 'Reader outcome: ' + guide.outcome, 78),
+    ...itemsFor('cover-body', 'Best for: ' + guide.audience, 78),
+    ...itemsFor('cover-body', 'Edition checked: ' + today, 78),
+    ...itemsFor('cover-boundary', 'Educational information only. No personalised financial, investment, legal or tax advice. No guaranteed outcomes.', 82)
+  ];
+  pushPage(cover);
+
+  const toc = [{ kind: 'page-title', text: 'CONTENTS' }];
+  sections.forEach((section, index) => {
+    toc.push(...itemsFor('toc', (index + 1) + '. ' + section.title, 76, '   '));
+  });
+  pushPage(toc);
 
   let current = [];
   let used = 0;
-  const capacity = 24;
-  const flush = () => { if (current.length) { pushPage(current); current = []; used = 0; } };
+  const capacity = 630;
+  const cost = item => (styles[item.kind] || styles.body).advance;
+  const flush = () => {
+    if (!current.length) return;
+    pushPage(current);
+    current = [];
+    used = 0;
+  };
+  const addItem = item => {
+    const itemCost = cost(item);
+    if (current.length && used + itemCost > capacity) flush();
+    current.push(item);
+    used += itemCost;
+  };
+
   for (const [sectionIndex, section] of sections.entries()) {
-    const heading = { kind: 'heading', text: `${sectionIndex + 1}. ${section.title}` };
-    const headingCost = 3;
-    if (used + headingCost > capacity) flush();
-    current.push(heading); used += headingCost;
+    const headingText = (sectionIndex + 1) + '. ' + section.title;
+    const headingItems = itemsFor('heading', headingText, 66, '   ');
+    const bodyItems = [];
     for (const original of section.lines || []) {
       const checkbox = /^\[ \]/.test(original);
       const numbered = /^\d+\./.test(original);
-      const lines = wrap(original, checkbox ? 80 : 86);
-      for (const [lineIndex, line] of lines.entries()) {
-        const item = { kind: checkbox ? 'checkbox' : numbered ? 'numbered' : 'body', text: lineIndex ? `  ${line}` : line };
-        if (used + 1 > capacity) flush();
-        current.push(item); used += 1;
-      }
+      const kind = checkbox ? 'checkbox' : numbered ? 'numbered' : 'body';
+      bodyItems.push(...itemsFor(kind, original, checkbox ? 78 : 84, '  '));
     }
-    if (used + 1 > capacity) flush();
-    current.push({ kind: 'space', text: '' }); used += 1;
+    const reservedStart = headingItems.reduce((sum, item) => sum + cost(item), 0) + (bodyItems[0] ? cost(bodyItems[0]) : 0);
+    if (current.length && used + reservedStart > capacity) flush();
+    headingItems.forEach(addItem);
+
+    for (const item of bodyItems) {
+      if (current.length && used + cost(item) > capacity) {
+        flush();
+        itemsFor('continued', (sectionIndex + 1) + '. ' + section.title + ' (continued)', 68, '   ').forEach(addItem);
+      }
+      addItem(item);
+    }
+    if (used + cost({ kind: 'space' }) <= capacity) addItem({ kind: 'space', text: '' });
+    else flush();
   }
   flush();
 
@@ -1485,53 +1545,39 @@ function buildPdf(guide, sections) {
   pages.forEach((items, pageIndex) => {
     let stream = 'q\n0.025 0.03 0.04 rg\n0 758 595 84 re f\nQ\n';
     stream += 'q\n0.77 0.58 0.18 rg\n38 750 519 3 re f\nQ\n';
-    stream += 'BT\n0.08 0.08 0.08 rg\n/F1 9 Tf\n42 720 Td\n';
-    let first = true;
+    stream += 'BT\n0.08 0.08 0.08 rg\n42 720 Td\n';
     for (const item of items) {
-      const settings = {
-        'cover-title': ['/F2 22 Tf\n', 0],
-        'cover-subtitle': ['/F1 12 Tf\n', 34],
-        'cover-rule': ['/F1 4 Tf\n', 20],
-        'cover-label': ['/F2 10 Tf\n', 28],
-        'cover-body': ['/F1 10 Tf\n', 28],
-        'cover-boundary': ['/F2 9 Tf\n', 42],
-        'page-title': ['/F2 18 Tf\n', 0],
-        'toc': ['/F1 10 Tf\n', 21],
-        'heading': ['/F2 12 Tf\n', 0],
-        'checkbox': ['/F1 9 Tf\n', 16],
-        'numbered': ['/F1 9 Tf\n', 15],
-        'body': ['/F1 9 Tf\n', 14],
-        'space': ['/F1 6 Tf\n', 8]
-      }[item.kind] || ['/F1 9 Tf\n', 14];
-      if (!first) stream += `0 -${settings[1]} Td\n`;
-      first = false;
-      stream += settings[0];
-      if (item.kind !== 'space' && item.kind !== 'cover-rule') stream += `(${pdfEscape(item.text).slice(0, 150)}) Tj\n`;
+      const style = styles[item.kind] || styles.body;
+      stream += '/' + style.font + ' ' + style.size + ' Tf\n';
+      if (item.kind !== 'space' && item.kind !== 'cover-rule') {
+        stream += '(' + pdfEscape(item.text).slice(0, 140) + ') Tj\n';
+      }
+      stream += '0 -' + style.advance + ' Td\n';
     }
     stream += 'ET\n';
     stream += 'q\n0.94 0.94 0.94 rg\n0 0 595 34 re f\nQ\n';
-    stream += `BT\n0.2 0.2 0.2 rg\n/F1 8 Tf\n42 13 Td\n(Matrix Reprogrammed | ${pdfEscape(guide.slug)} | ${today} | page ${pageIndex + 1} of ${pages.length}) Tj\nET`;
-    contentIds.push(add(`<< /Length ${Buffer.byteLength(stream)} >>\nstream\n${stream}\nendstream`));
+    stream += 'BT\n0.2 0.2 0.2 rg\n/F1 8 Tf\n42 13 Td\n(Matrix Reprogrammed | ' + pdfEscape(guide.slug) + ' | ' + today + ' | page ' + (pageIndex + 1) + ' of ' + pages.length + ') Tj\nET';
+    contentIds.push(add('<< /Length ' + Buffer.byteLength(stream) + ' >>\nstream\n' + stream + '\nendstream'));
     pageIds.push(null);
   });
 
   const pagesId = add('');
   for (let i = 0; i < pages.length; i++) {
-    pageIds[i] = add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${font} 0 R /F2 ${bold} 0 R >> >> /Contents ${contentIds[i]} 0 R >>`);
+    pageIds[i] = add('<< /Type /Page /Parent ' + pagesId + ' 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ' + font + ' 0 R /F2 ' + bold + ' 0 R >> >> /Contents ' + contentIds[i] + ' 0 R >>');
   }
-  objects[pagesId - 1] = `<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] >>`;
-  const info = add(`<< /Title (${pdfEscape(guide.title)}) /Author (Matrix Reprogrammed) /Subject (${pdfEscape(guide.subtitle)}) /Keywords (wealth education evidence checklist) /CreationDate (D:${today.replace(/-/g, '')}) >>`);
-  const catalog = add(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
+  objects[pagesId - 1] = '<< /Type /Pages /Count ' + pageIds.length + ' /Kids [' + pageIds.map(id => id + ' 0 R').join(' ') + '] >>';
+  const info = add('<< /Title (' + pdfEscape(guide.title) + ') /Author (Matrix Reprogrammed) /Subject (' + pdfEscape(guide.subtitle) + ') /Keywords (wealth education evidence checklist) /CreationDate (D:' + today.replace(/-/g, '') + ') >>');
+  const catalog = add('<< /Type /Catalog /Pages ' + pagesId + ' 0 R >>');
   let output = '%PDF-1.4\n';
   const offsets = [0];
   objects.forEach((object, index) => {
     offsets.push(Buffer.byteLength(output));
-    output += `${index + 1} 0 obj\n${object}\nendobj\n`;
+    output += (index + 1) + ' 0 obj\n' + object + '\nendobj\n';
   });
   const xref = Buffer.byteLength(output);
-  output += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
-  output += offsets.slice(1).map(offset => `${String(offset).padStart(10, '0')} 00000 n \n`).join('');
-  output += `trailer\n<< /Size ${objects.length + 1} /Root ${catalog} 0 R /Info ${info} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  output += 'xref\n0 ' + (objects.length + 1) + '\n0000000000 65535 f \n';
+  output += offsets.slice(1).map(offset => String(offset).padStart(10, '0') + ' 00000 n \n').join('');
+  output += 'trailer\n<< /Size ' + (objects.length + 1) + ' /Root ' + catalog + ' 0 R /Info ' + info + ' 0 R >>\nstartxref\n' + xref + '\n%%EOF';
   return { bytes: Buffer.from(output, 'binary'), pageCount: pages.length };
 }
 

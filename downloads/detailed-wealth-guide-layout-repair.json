@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-21T06:45:46.960Z",
+  "changed": true,
+  "fixes": [
+    "Wraps cover title, subtitle, outcome, audience and boundary text.",
+    "Hard-wraps long URLs and tokens that contain no spaces.",
+    "Advances the cursor after every rendered line.",
+    "Reserves heading plus first body line at section starts.",
+    "Repeats a continued heading when a long section crosses a page.",
+    "Keeps main text above the footer with a point-based page budget."
+  ]
+}

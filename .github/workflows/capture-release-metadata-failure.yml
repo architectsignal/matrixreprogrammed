@@ -1,0 +1,50 @@
+name: Capture Release Metadata Failure
+
+on:
+  push:
+    branches:
+      - agent/complete-capital-lists-clean-20260721
+    paths:
+      - .github/workflows/capture-release-metadata-failure.yml
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/complete-capital-lists-clean-20260721
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Capture exact metadata failure and remove diagnostic workflow
+        shell: bash
+        run: |
+          set +e
+          mkdir -p _site downloads
+          : > downloads/release-metadata-exact-failure.log
+          for script in \
+            scripts/patch-homepage-mask-intro.js \
+            scripts/patch-membership-auth-ui.js \
+            scripts/patch-membership-access-copy.js \
+            scripts/patch-release-metadata-routing.js; do
+            echo "=== $script ===" >> downloads/release-metadata-exact-failure.log
+            node "$script" >> downloads/release-metadata-exact-failure.log 2>&1
+            echo "status=$?" >> downloads/release-metadata-exact-failure.log
+          done
+          echo "=== build-deploy-manifest ===" >> downloads/release-metadata-exact-failure.log
+          DEPLOY_COMMIT_SHA="$(git rev-parse HEAD)" GITHUB_REPOSITORY="${GITHUB_REPOSITORY}" GITHUB_RUN_ID="${GITHUB_RUN_ID}" node scripts/build-deploy-manifest.js >> downloads/release-metadata-exact-failure.log 2>&1
+          echo "status=$?" >> downloads/release-metadata-exact-failure.log
+          echo "=== build-production-health ===" >> downloads/release-metadata-exact-failure.log
+          DEPLOY_COMMIT_SHA="$(git rev-parse HEAD)" GITHUB_REPOSITORY="${GITHUB_REPOSITORY}" GITHUB_RUN_ID="${GITHUB_RUN_ID}" node scripts/build-production-health.js >> downloads/release-metadata-exact-failure.log 2>&1
+          echo "status=$?" >> downloads/release-metadata-exact-failure.log
+          rm -f .github/workflows/capture-release-metadata-failure.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add downloads/release-metadata-exact-failure.log .github/workflows/capture-release-metadata-failure.yml
+          git commit -m "Record exact release metadata failure"
+          git push origin HEAD:agent/complete-capital-lists-clean-20260721

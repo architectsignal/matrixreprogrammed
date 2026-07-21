@@ -7,6 +7,7 @@ const pageFile = path.join(root, 'epstein-files.html');
 const downloadsDir = path.join(root, 'downloads');
 
 function buildRelationshipPage() {
+  require('./namespace-epstein-public-record-fields.js');
   require('./build-epstein-relationship-intelligence.js');
   require('./enhance-epstein-publication-lanes.js');
   require('./repair-epstein-classified-language.js');

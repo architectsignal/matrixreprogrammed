@@ -17,9 +17,13 @@ for(const c of registry.categories){
     if(r.rank)assert(Number(r.sourceRank||r.rank)>0,`Rank without source rank for ${r.id}`);
   }
 }
-for(const id of ['asset-managers','sovereign-wealth-funds','pension-funds','foundations','trusts','private-equity','hedge-funds']){
+for(const id of ['asset-managers','sovereign-wealth-funds','pension-funds','foundations','private-equity','hedge-funds']){
   const c=registry.categories.find(x=>x.id===id);assert(c&&c.ranked>=90,`${id} should contain at least 90 source-ranked records`);
 }
+const trustRows=registry.records.filter(r=>r.category==='trusts');
+assert(trustRows.filter(r=>/Trust/.test(r.entityType)).length>=25,'Trust coverage needs at least 25 disclosed trust structures');
+assert(trustRows.filter(r=>r.entityType==='Endowment').length>=60,'Trust coverage needs at least 60 separately labelled endowments');
+assert(trustRows.every(r=>!r.rank),'Composite trust/endowment records must not claim one global category rank');
 assert(registry.categories.find(c=>c.id==='family-offices').coverage>=100,'Family-office coverage incomplete');
 assert(registry.categories.find(c=>c.id==='government-contractors').coverage>=100,'Contractor coverage incomplete');
 assert(registry.categories.find(c=>c.id==='political-money').coverage>=100,'Political-money coverage incomplete');

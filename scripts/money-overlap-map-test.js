@@ -25,15 +25,16 @@ const hub=text('follow-the-money.html');
 assert(html.includes('RELATIONSHIP &amp; OVERLAP MAP')&&html.includes('overlap-svg')&&html.includes('overlap-matrix'),'Interactive overlap map surface missing');
 assert(hub.includes('money-command-stats')&&hub.includes('money-command-grid')&&hub.includes('money-command-center.js'),'Dynamic command center wiring missing');
 
-const requiredRootUrls=[
-  '/styles.css','/fixes.css','/reader-experience.css','/money-intelligence.css','/money-expansion.css','/money-overlap.css',
-  '/index.html','/follow-the-money.html','/money-search.html','/money-graph.html','/making-money.html','/evidence-vault.html',
-  '/matrix.js','/money-graph.js','/analytics.js','/investigation-pulse.js'
+const assets=[
+  'styles.css','fixes.css','reader-experience.css','money-intelligence.css','money-expansion.css','money-overlap.css',
+  'index.html','follow-the-money.html','money-search.html','money-graph.html','making-money.html','evidence-vault.html',
+  'matrix.js','money-graph.js','analytics.js','investigation-pulse.js'
 ];
-for(const surface of [['public',html],['canonical',canonical]]){
-  for(const url of requiredRootUrls)assert(surface[1].includes(`"${url}"`),`${surface[0]} overlap map missing root-safe URL ${url}`);
-  assert(!surface[1].includes('../investigation-pulse.js'),`${surface[0]} overlap map still escapes the site root`);
+for(const asset of assets){
+  assert(canonical.includes(`"../${asset}"`),`Canonical overlap template missing source-relative URL ../${asset}`);
+  assert(html.includes(`"${asset}"`),`Published overlap map missing root-relative URL ${asset}`);
 }
-assert(html===canonical,'Generated money-graph.html must exactly match its canonical src template');
+assert(!html.includes('../'),'Published money-graph.html must not escape the site root');
+assert(html===canonical.replace(/(["'])\.\.\//g,'$1'),'Published money-graph.html must be the path-translated canonical template');
 
-console.log(`Money overlap map verified: ${registry.records.length} records, ${graph.overlaps.length} overlap entities, ${graph.edges.length} graph edges and root-safe links.`);
+console.log(`Money overlap map verified: ${registry.records.length} records, ${graph.overlaps.length} overlap entities, ${graph.edges.length} graph edges and source-to-public path translation.`);

@@ -1,11 +1,11 @@
 # Machine Intelligence
 
-Updated: 2026-07-20T14:33:08.736Z
+Updated: 2026-07-21T03:44:00.245Z
 
 Current records: 18
 Previous records: 18
 New records: 0
-Changed records: 0
+Changed records: 6
 Relationship candidates: 35
 
 ## New Records

@@ -6,14 +6,19 @@ const dataFile = path.join(root, 'data', 'epstein-timeline-map.json');
 const pageFile = path.join(root, 'epstein-files.html');
 const downloadsDir = path.join(root, 'downloads');
 
+function buildRelationshipPage() {
+  require('./build-epstein-relationship-intelligence.js');
+  require('./repair-epstein-relationship-runtime.js');
+}
+
 if (!fs.existsSync(dataFile)) {
   console.log('No Epstein timeline map data found. Skipping Phase 6.');
-  require('./build-epstein-relationship-intelligence.js');
+  buildRelationshipPage();
   process.exit(0);
 }
 if (!fs.existsSync(pageFile)) {
   console.log('No epstein-files.html found. Skipping Phase 6.');
-  require('./build-epstein-relationship-intelligence.js');
+  buildRelationshipPage();
   process.exit(0);
 }
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
@@ -61,4 +66,4 @@ if (!html.includes('id="epstein-timeline-map"')) {
 }
 
 console.log(`Built Epstein Timeline + Cross-Reference Map with ${(data.items || []).length} timeline items and ${(data.crossReferenceRules || []).length} cross-reference rules.`);
-require('./build-epstein-relationship-intelligence.js');
+buildRelationshipPage();

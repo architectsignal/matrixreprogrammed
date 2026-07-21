@@ -6,8 +6,10 @@ const { spawnSync } = require('child_process');
 
 const sourceRoot = path.resolve(__dirname, '..');
 const scripts = [
+  'namespace-epstein-public-record-fields.js',
   'build-epstein-relationship-intelligence.js',
   'enhance-epstein-publication-lanes.js',
+  'repair-epstein-classified-language.js',
   'repair-epstein-relationship-runtime.js',
 ];
 
@@ -59,7 +61,12 @@ function fixture() {
     editorial_review: [{
       review_id: 'JREV:1', item_type: 'relationship', item_id: 'JR:1',
       risk_level: 'medium', reason: 'Context requires review', review_status: 'pending_owner_review',
-      public_record_payload: { source_url: 'https://jmail.world/mail/1', statement: 'Public record under review' },
+      public_record_payload: {
+        source_url: 'https://jmail.world/mail/1',
+        sender_raw: 'Alice Example <alice@example.com>',
+        content_markdown: 'Full public body remains visible.',
+        bcc_recipients: ['public-bcc@example.com'],
+      },
       publication: publication('speculation', 'Speculation / research question', 'pending_owner_review'),
     }],
     counts: {
@@ -96,19 +103,27 @@ assert(html.includes('Editorial review published as speculation'));
 assert(html.includes('Speculation / research question'));
 assert(html.includes('Unresolved John'));
 assert(html.includes('Exact public email excerpt'));
+assert(html.includes('Full public body remains visible.'));
+assert(html.includes('public-bcc@example.com'));
+assert(html.includes('public_record_sender_raw'));
+assert(html.includes('public_record_content_markdown'));
+assert(html.includes('public_record_bcc_recipients'));
 assert(html.includes('https://jmail.world/mail/1'));
 assert(html.includes('Relationship strength is not a guilt score'));
 assert(html.includes('lane-filter'));
+assert(!html.includes('Approved investigator export'));
 const index = JSON.parse(fs.readFileSync(path.join(good.root, 'data', 'epstein-relationship-profile-index.json')));
 assert.strictEqual(index.profiles['JE:a'].connections.length, 1);
+assert.strictEqual(index.profiles['JE:a'].connections[0].publication.lane, 'documented_fact');
 const command = fs.readFileSync(path.join(good.root, 'epstein-files.html'), 'utf8');
 assert(command.includes('id="epstein-email-network-link"'));
+assert(command.includes('Classified public-record data'));
 
 const unsafeData = fixture();
 unsafeData.relationships[0].raw_json = 'private investigator database field';
 const unsafe = runWith(unsafeData);
-assert.notStrictEqual(unsafe.results[0].status, 0);
-assert(unsafe.results[0].stderr.includes('Private field'));
+assert.notStrictEqual(unsafe.results[1].status, 0);
+assert(unsafe.results[1].stderr.includes('Private field'));
 
 const proposal = fixture();
 proposal.financial_records = [{
@@ -122,4 +137,4 @@ const proposalHtml = fs.readFileSync(path.join(proposalRun.root, 'epstein-email-
 assert(proposalHtml.includes('proposed'));
 assert(!proposalHtml.includes('<span class="label">investment · completed</span>'));
 
-console.log('Epstein relationship public build tests passed: classified lanes, visible speculation, unresolved mentions, exact source excerpts, evidence links, private-field rejection and proposal-state preservation.');
+console.log('Epstein relationship public build tests passed: classified lanes, visible speculation, unresolved mentions, unmasked public-record values, exact evidence links, private-field rejection and proposal-state preservation.');

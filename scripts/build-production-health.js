@@ -22,9 +22,14 @@ function commitSha() {
 
 const buildSha = commitSha();
 const manifest = parse('deploy-manifest.json');
+const membershipRuntimeMarkers = [
+  'Free Member', '€3', '€6', '€9',
+  '/api/membership/signup', '/api/paypal/config', '/api/paypal/checkout-intent',
+  '/api/paypal/subscription/confirm', 'actions.subscription.create', 'config.checkoutEnabled'
+];
 const modules = [
   { name: 'Homepage eye-to-mask sequence', route: '/', file: 'index.html', markers: ['data-homepage-mask-intro', 'assets/intro-eye.svg', 'assets/intro-mask.svg'] },
-  { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status'] },
+  { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: membershipRuntimeMarkers },
   { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js'] },
   { name: 'Payment administration', route: '/admin-payment-dashboard', file: 'admin-payment-dashboard.html', markers: ['admin-payment-dashboard.js'] },
   { name: 'PayPal subscription Worker', route: '/api/paypal/config', file: 'src/worker-paypal-subscriptions.js', markers: ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', 'PAYPAL_PRODUCTION_ENABLED', 'paypal_runtime_settings'] },
@@ -48,8 +53,7 @@ const manifestMatches = Boolean(manifest && manifest.commitSha === buildSha);
 const membership = read('membership.html');
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-const paymentRuntimeReady = membership.includes('paypal-membership.js')
-  && membership.includes('paypal-membership-status')
+const paymentRuntimeReady = membershipRuntimeMarkers.every(marker => membership.includes(marker))
   && !membership.includes('Coming soon — no payment taken')
   && /^keep_vars\s*=\s*true\s*$/m.test(wranglerToml)
   && /"keep_vars"\s*:\s*true/.test(wranglerJsonc)
@@ -73,6 +77,7 @@ const health = {
   productionPaymentsEnabled: null,
   manifestSha: manifest?.commitSha || null,
   manifestMatches,
+  paymentRuntimeReady,
   routes: modules.map(item => item.route),
   modules
 };

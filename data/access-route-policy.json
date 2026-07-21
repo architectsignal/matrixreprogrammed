@@ -1,5 +1,5 @@
 {
-  "version": "2.3.0",
+  "version": "2.3.1",
   "updated": "2026-07-21",
   "status": "active-fail-closed",
   "purpose": "Classify every Matrix Reprogrammed page, download and PDF while keeping primary public evidence, corrections and claim boundaries open. Higher tiers add compiled analysis, archives, investigation tools and research exports.",
@@ -17,7 +17,8 @@
     {"route": "/downloads/intel-vault.json", "minimumTier": "registered", "reason": "Verified-account historical digest export."},
     {"route": "/downloads/intel-vault.md", "minimumTier": "registered", "reason": "Verified-account historical digest export."},
     {"route": "/downloads/timer-synthesis.md", "minimumTier": "supporter_3", "reason": "Compiled member synthesis; public timers and source routes remain open."},
-    {"route": "/downloads/probability-snapshot.md", "minimumTier": "intelligence_6", "reason": "Compiled intelligence forecast export; public methodology remains open."}
+    {"route": "/downloads/probability-snapshot.md", "minimumTier": "intelligence_6", "reason": "Compiled intelligence forecast export; public methodology remains open."},
+    {"route": "/downloads/wealth-guides/exporting.pdf", "minimumTier": "public", "reason": "Public practical wealth-education guide linked from the Making Money system."}
   ],
   "patternRules": [
     {"pattern": "^/downloads/wealth-guides/[^/]+\\.pdf$", "minimumTier": "public", "reason": "Public practical wealth-education guide linked from the Making Money system."},

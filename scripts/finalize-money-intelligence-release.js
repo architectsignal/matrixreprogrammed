@@ -40,10 +40,14 @@ function copyFile(rel) {
     const route = path.join(site, routeRel);
     const sourceDirectory = path.join(root, routeRel);
     // A route such as follow-the-money.html also owns a real directory containing
-    // people and category pages. Do not create an extensionless file where that
-    // directory must exist; the Worker can serve the .html route through aliases.
+    // people and category pages. Remove any stale extensionless file left by an
+    // older build so that the real directory can be copied safely.
     const conflictsWithSourceDirectory = fs.existsSync(sourceDirectory) && fs.statSync(sourceDirectory).isDirectory();
-    if (!conflictsWithSourceDirectory && !(fs.existsSync(route) && fs.statSync(route).isDirectory())) fs.copyFileSync(src, route);
+    if (conflictsWithSourceDirectory) {
+      if (fs.existsSync(route) && fs.statSync(route).isFile()) fs.unlinkSync(route);
+    } else if (!(fs.existsSync(route) && fs.statSync(route).isDirectory())) {
+      fs.copyFileSync(src, route);
+    }
   }
 }
 function copyTree(rel) {

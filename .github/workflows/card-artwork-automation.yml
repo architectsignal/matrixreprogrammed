@@ -2,8 +2,6 @@ name: Card Artwork Automation
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '45 5 * * *'
   push:
     branches:
       - main

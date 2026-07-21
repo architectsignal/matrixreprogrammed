@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-20T21:30:35.177Z",
+  "updated": "2026-07-21T07:59:22.605Z",
   "title": "Matrix Reprogrammed Review Dashboard",
   "mission": "Review unresolved source leads, missing records, card health, conclusion changes, score movement and submissions awaiting review.",
   "totals": {
@@ -13,7 +13,7 @@
     "primarySourceNeeded": 468,
     "submissionsAwaitingReview": 128,
     "artworkMissing": 466,
-    "publicHighIssues": 2561,
+    "publicHighIssues": 2572,
     "cardHighIssues": 0,
     "monetisationGaps": 5
   },
@@ -27,7 +27,7 @@
     "Think Tanks Deck: 52 card(s) need primary-source enrichment.",
     "Black Nobility & Allied Dynasties Deck: 52 card(s) need primary-source enrichment.",
     "Jurisdictions of Power Deck: 52 card(s) need primary-source enrichment.",
-    "Public copy audit has 2561 high issue(s)."
+    "Public copy audit has 2572 high issue(s)."
   ],
   "deckHealth": [
     {
@@ -38,7 +38,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 54,
+      "missingRecords": 53,
       "ok": true
     },
     {
@@ -60,7 +60,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 2446,
+      "missingRecords": 2447,
       "ok": true
     },
     {
@@ -93,7 +93,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 2445,
+      "missingRecords": 2446,
       "ok": true
     },
     {
@@ -104,7 +104,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 44,
+      "missingRecords": 43,
       "ok": true
     },
     {
@@ -295,6 +295,80 @@
         }
       ],
       "whatItShows": "Russian attacks and drone strikes killed at least two children and injured dozens more across Ukraine over recent days while severely damaging three critical aid warehouses, UN agencies reported on Monday.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "From the General Assembly to Harlem: Mandela’s call to action endures",
+      "origin": "latest-public-drops",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167981",
+      "confidence": "medium",
+      "lanes": [
+        "institution",
+        "policy",
+        "security"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "whatItShows": "Sixty-seven minutes. That is how long volunteers spent serving lunch to people experiencing food insecurity at Refettorio Harlem in New York City last week – one for every year Nelson Mandela gave to public service.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Health response brings lifesaving care closer to thousands in Yemen",
+      "origin": "latest-public-drops",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982",
+      "confidence": "medium",
+      "lanes": [
+        "institution",
+        "policy",
+        "money",
+        "biosecurity",
+        "security"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "whatItShows": "Thousands of people in some of Yemen&#039;s most conflict-affected communities are receiving lifesaving health care closer to home, thanks to funding from the UN aid coordination office (OCHA) through the Yemen Humanitarian Fund.",
       "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
@@ -882,92 +956,6 @@
         }
       ],
       "whatItShows": "UN Member States reaffirmed their commitment to the Sustainable Development Goals (SDGs) by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-      "origin": "latest-public-drops",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
-      "confidence": "medium",
-      "lanes": [
-        "people",
-        "institution",
-        "policy",
-        "thinktank",
-        "biosecurity",
-        "security"
-      ],
-      "destinations": [
-        {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
-        }
-      ],
-      "whatItShows": "For Tanatswa Amanda Chikaura, mental health advocacy began with a personal loss: while studying psychology at the University of Zimbabwe, she learned that a fellow student had died by suicide.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-      "origin": "latest-public-drops",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960",
-      "confidence": "medium",
-      "lanes": [
-        "institution",
-        "policy",
-        "biosecurity",
-        "security"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
-        }
-      ],
-      "whatItShows": "The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.",
       "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
@@ -2453,6 +2441,18 @@
         "confidence": "medium"
       },
       {
+        "title": "From the General Assembly to Harlem: Mandela’s call to action endures",
+        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167981",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Health response brings lifesaving care closer to thousands in Yemen",
+        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
         "title": "Haiti: Signs of hope despite gang violence and political uncertainty",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167963",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -2551,18 +2551,6 @@
       {
         "title": "As aid dries up, countries pledge to close the $4 trillion development gap",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167957",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
@@ -16154,13 +16142,13 @@
         "title": "Source 2289",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2290",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2291",
@@ -17078,16 +17066,22 @@
         "title": "Source 2443",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2444",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2445",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2446",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -17131,6 +17125,18 @@
         "confidence": "medium"
       },
       {
+        "title": "From the General Assembly to Harlem: Mandela’s call to action endures",
+        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167981",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Health response brings lifesaving care closer to thousands in Yemen",
+        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
         "title": "Haiti: Signs of hope despite gang violence and political uncertainty",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167963",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -17229,18 +17235,6 @@
       {
         "title": "As aid dries up, countries pledge to close the $4 trillion development gap",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167957",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
@@ -30832,13 +30826,13 @@
         "title": "Source 2289",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2290",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2291",
@@ -31756,16 +31750,22 @@
         "title": "Source 2443",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2444",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2445",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2446",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31787,12 +31787,6 @@
       {
         "title": "Djibouti: Emergency alert spotlights sharp hunger spike",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167971",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
@@ -32013,13 +32007,7 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 2312",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 2330",
+        "title": "Source 2313",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32031,7 +32019,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2443",
+        "title": "Source 2332",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2444",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
@@ -32059,12 +32053,6 @@
       {
         "title": "World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17",
         "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167970",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-        "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
@@ -32351,13 +32339,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2300",
+        "title": "Source 2301",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2417",
+        "title": "Source 2418",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32839,7 +32827,7 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2329",
+        "title": "Source 2330",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -33615,7 +33603,7 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2360",
+        "title": "Source 2361",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -35141,13 +35129,7 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2299",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 2421",
+        "title": "Source 2300",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -35195,7 +35177,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2433",
+        "title": "Source 2429",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2434",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -35933,7 +35921,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.459Z",
+      "updated": "2026-07-21T07:59:21.899Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -35948,7 +35936,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.899Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -35963,7 +35951,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.899Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -35978,12 +35966,40 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.899Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
-        "think-tanks",
+        "think-tanks"
+      ]
+    },
+    {
+      "category": "Financial/currency route",
+      "conclusion": "5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "boundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-07-21T07:59:21.899Z",
+      "relatedCardsOrPages": [
+        "institutions",
+        "policy",
         "people-of-interest"
+      ]
+    },
+    {
+      "category": "Health/biosecurity route",
+      "conclusion": "5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "boundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-07-21T07:59:21.899Z",
+      "relatedCardsOrPages": [
+        "institutions",
+        "policy"
       ]
     },
     {
@@ -35994,12 +36010,11 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "people-of-interest",
         "institutions",
-        "policy",
-        "think-tanks"
+        "policy"
       ]
     },
     {
@@ -36010,7 +36025,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy"
@@ -36024,42 +36039,11 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
         "secret-societies"
-      ]
-    },
-    {
-      "category": "Health/biosecurity route",
-      "conclusion": "5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "boundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
-      "relatedCardsOrPages": [
-        "institutions",
-        "policy",
-        "people-of-interest",
-        "think-tanks"
-      ]
-    },
-    {
-      "category": "Financial/currency route",
-      "conclusion": "5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "boundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
-      "relatedCardsOrPages": [
-        "people-of-interest",
-        "institutions",
-        "policy"
       ]
     },
     {
@@ -36070,7 +36054,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy"
@@ -36084,7 +36068,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -36099,7 +36083,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -36114,7 +36098,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "power-families",
@@ -36129,7 +36113,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z",
+      "updated": "2026-07-21T07:59:21.900Z",
       "relatedCardsOrPages": [
         "institutions",
         "power-families",
@@ -40375,6 +40359,24 @@
     },
     {
       "type": "source-lead",
+      "title": "From the General Assembly to Harlem: Mandela’s call to action endures",
+      "deckId": "institutions",
+      "cardId": "",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167981",
+      "status": "medium",
+      "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "type": "source-lead",
+      "title": "Health response brings lifesaving care closer to thousands in Yemen",
+      "deckId": "institutions",
+      "cardId": "",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982",
+      "status": "medium",
+      "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "type": "source-lead",
       "title": "Haiti: Signs of hope despite gang violence and political uncertainty",
       "deckId": "institutions",
       "cardId": "",
@@ -40523,24 +40525,6 @@
       "deckId": "institutions",
       "cardId": "",
       "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167957",
-      "status": "medium",
-      "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "type": "source-lead",
-      "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-      "deckId": "people-of-interest",
-      "cardId": "",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
-      "status": "medium",
-      "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "type": "source-lead",
-      "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-      "deckId": "institutions",
-      "cardId": "",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960",
       "status": "medium",
       "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
@@ -41341,7 +41325,7 @@
   "audits": {
     "cardAudit": {
       "ok": true,
-      "updated": "2026-07-20T21:30:33.888Z",
+      "updated": "2026-07-21T07:59:21.342Z",
       "expectedDecks": 9,
       "manifestDecks": 9,
       "manifestCards": 468,
@@ -41355,7 +41339,7 @@
     },
     "dossierAudit": {
       "ok": true,
-      "updated": "2026-07-20T21:29:56.511Z",
+      "updated": "2026-07-21T07:58:44.273Z",
       "checkedCards": 468,
       "patchedOrRefreshed": 468,
       "conclusionsInstalled": 468,
@@ -41364,11 +41348,11 @@
     "publicAudit": {
       "ok": false,
       "intakeOk": true,
-      "updated": "2026-07-20T21:30:25.100Z",
-      "filesScanned": 4488,
-      "highIssues": 2561,
+      "updated": "2026-07-21T07:59:13.507Z",
+      "filesScanned": 4509,
+      "highIssues": 2572,
       "reviewIssues": 9,
-      "intakeAreas": 2421,
+      "intakeAreas": 2422,
       "weakIntakeAreas": 0
     },
     "manifest": {
@@ -41383,7 +41367,7 @@
   },
   "moneyHealth": {
     "emailCapturePoints": 23,
-    "productPages": 511,
+    "productPages": 512,
     "membershipPages": 445,
     "cardDeckProducts": 9,
     "bookLinks": 456,

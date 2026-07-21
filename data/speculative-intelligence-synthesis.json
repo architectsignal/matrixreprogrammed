@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-07-20T21:30:40.868Z",
+  "updated": "2026-07-21T07:59:28.021Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 45543,
+    "recordsInspected": 45737,
     "criticalClocks": [
       {
         "slug": "surveillance-state",
@@ -283,6 +283,16 @@
             "matchScore": 12
           },
           {
+            "title": "Palantir government platforms → Surveillance: execution layer",
+            "summary": "Speculatively, the graph hint in “Palantir government platforms → Surveillance: execution layer — palantir-government-platforms.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "[object Object]",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 12
+          },
+          {
             "title": "WWIII Escalation Clock",
             "summary": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
             "route": "live-intel.html",
@@ -300,16 +310,6 @@
             "evidenceLevel": "",
             "confidence": "",
             "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 11
-          },
-          {
-            "title": "Access infrastructure is a measurable power layer.",
-            "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-            "route": "",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/conclusions-engine-batch-001.json",
             "matchScore": 11
           }
         ],
@@ -346,7 +346,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-20T21:30:36.254Z",
+        "generatedAt": "2026-07-21T07:59:23.696Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -365,7 +365,7 @@
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 12287,
+        "signalCount": 12290,
         "actors": [
           "Search Full Library"
         ]
@@ -374,14 +374,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 10051,
+        "signalCount": 10045,
         "actors": []
       },
       {
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 5605,
+        "signalCount": 5965,
         "actors": [
           "ATT MOBILITY LLC — Department of Defense",
           "4 - Keenova Therapeutics plc (0001567892) (Issuer)"
@@ -391,7 +391,7 @@
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 5587,
+        "signalCount": 5496,
         "actors": [
           "Exercise or conversion of derivative security",
           "Customs and Border Protection (CBP)"
@@ -401,7 +401,7 @@
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 3590,
+        "signalCount": 3664,
         "actors": [
           "Skip to main content",
           "ATT MOBILITY LLC — Department of Defense",
@@ -415,21 +415,21 @@
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 2817,
+        "signalCount": 2790,
         "actors": []
       },
       {
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2306,
+        "signalCount": 2259,
         "actors": []
       },
       {
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 964,
+        "signalCount": 945,
         "actors": []
       }
     ],

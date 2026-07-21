@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-21T03:44:10.679Z
+Collection completed: 2026-07-21T07:59:37.452Z
 Latest source publication: 2026-07-20T12:00:00.000Z
-Collection status: fresh-items-added
-New items this collection: 1
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -31,6 +31,18 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-20 — From the General Assembly to Harlem: Mandela’s call to action endures
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167981
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: From the General Assembly to Harlem: Mandela’s call to action endures
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-20 — Health response brings lifesaving care closer to thousands in Yemen
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167982
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Health response brings lifesaving care closer to thousands in Yemen
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
@@ -132,19 +144,19 @@ New items this collection: 1
   - Source: https://vault.fbi.gov/henry-lucas
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Henry Lucas
+  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas. Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — Henry Lucas Part 01
   - Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Henry Lucas Part 01
+  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 01. Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — Henry Lucas Part 02 (Final)
   - Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Henry Lucas Part 02 (Final)
+  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 02 (Final). Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-16 — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167955
@@ -218,24 +230,6 @@ New items this collection: 1
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-16 — Edwin Wilson and Frank Terpil Part 54
-  - Source: https://vault.fbi.gov/edwin-wilson-and-frank-terpil/edwin-wilson-and-frank-terpil-part-54/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Edwin Wilson and Frank Terpil Part 54
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-16 — Thomas Bilotti
-  - Source: https://vault.fbi.gov/thomas-bilotti
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Thomas Bilotti
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-16 — Thomas Bilotti (Final)
-  - Source: https://vault.fbi.gov/thomas-bilotti/thomas-bilotti-final/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Thomas Bilotti (Final)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-16 — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
   - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
   - Source class: discovery
@@ -272,35 +266,17 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-  - Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
   - Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-  - Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
   - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Childhood vaccination rate increases slightly, but millions remain unprotected
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167942
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Childhood vaccination rate increases slightly, but millions remain unprotected
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — Colombia: Pockets of insecurity challenge ‘vibrant democracy’, Security Council told
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167946
@@ -313,12 +289,6 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Looted gold and gum arabic are bankrolling Sudan&#039;s war, UN warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167944
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Looted gold and gum arabic are bankrolling Sudan&#039;s war, UN warns
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — New guidance offers hope for reducing the global toll of dementia
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167948
@@ -338,123 +308,9 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Matt Gaetz Part 05
-  - Source: https://vault.fbi.gov/matt-gaetz/matt-gaetz-part-05/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Matt Gaetz Part 05
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Murray Gell-Mann
-  - Source: https://vault.fbi.gov/murray-gell-mann
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Murray Gell-Mann
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Murray Gell-Mann (Final)
-  - Source: https://vault.fbi.gov/murray-gell-mann/murray-gell-mann-final/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Murray Gell-Mann (Final)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-14 — WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
   - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxON0dEcXpTeGFia3pzUjlBUjlEMnprYmdiVGdnbXQ5R0d1R2RVNUNzejZqTDhBZmxLQVlVSTJWVmZlVlRkS05kdWhpSktOY09yQ0s0NTM4WmoyVnZWYmx5Y2xkTmlSclFIS0U3MWk3a1VqWjRzbkpFZURPNmhTY19zUm1qQk9rTVpSdF9jQ2poZjNiXzdrWllGRmkxQmswTkFSTmszTUtSUDgwY1hFSEhFQ2JtZ19mUmfSAbwBQVVfeXFMTXhkSWJPal80TXllZkNhdDJwOUw5NTJzUDVzcnBrbjhYaDlPeUppMk5MakNtQWpTX0FzR2Q5TWJmWVdSbS1RUkpMZHNlbmNYaVhvdEhxUWFqNU5Qd3RmeU1teDk5OEFRZzdDRERZM2RrT0toX1d2RnZtX2JMRlJVRDRLTWZLX2hNSVc3ckNIa2Jaa2ltR0xoUy1NMkVFbUYwakYwalFLNUN1eEx1OGx0NE45OTFfNU5DYmdSM2I?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167937
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Skills for an uncertain future: How youth can navigate a changing job market
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167943
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Skills for an uncertain future: How youth can navigate a changing job market
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — West Africa and the Sahel: Terrorism is changing its face
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167940
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: West Africa and the Sahel: Terrorism is changing its face
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — World Cup football’s other goal: Helping young people talk about mental health
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167941
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: World Cup football’s other goal: Helping young people talk about mental health
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — World News in Brief: Gaza aid challenges persist, renewed push for clean energy, Sudan cholera update
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167939
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: World News in Brief: Gaza aid challenges persist, renewed push for clean energy, Sudan cholera update
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 02
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-02/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 02
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 03
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-03/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 03
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 04
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-04/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 04
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 05
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-05/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 05
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 06
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-06/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 06
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 07
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-07/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 07
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 08
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-08/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 08
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 09
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-09/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 09
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 10
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-10/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 10
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 11
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-11/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 11
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Gaston Means Part 17 (Final)
-  - Source: https://vault.fbi.gov/gaston-means/gaston-means-part-17-final/view
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaston Means Part 17 (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

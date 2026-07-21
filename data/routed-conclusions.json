@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-20T21:30:34.460Z",
+  "updated": "2026-07-21T07:59:21.900Z",
   "conclusions": [
     {
       "category": "Institution dossier",
@@ -52,7 +52,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.459Z"
+      "updated": "2026-07-21T07:59:21.899Z"
     },
     {
       "category": "Policy dossier and clock",
@@ -104,7 +104,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.899Z"
     },
     {
       "category": "War/security route",
@@ -156,7 +156,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.899Z"
     },
     {
       "category": "Think Tanks dossier",
@@ -185,14 +185,14 @@
           "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167971"
         },
         {
-          "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
+          "title": "Source 292",
+          "sourceType": "reliable report / needs source review",
+          "evidenceLevel": 2,
           "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956"
+          "sourceUrl": ""
         },
         {
-          "title": "Source 292",
+          "title": "Source 469",
           "sourceType": "reliable report / needs source review",
           "evidenceLevel": 2,
           "confidence": "medium",
@@ -205,11 +205,113 @@
       "relatedCardsOrPages": [
         "institutions",
         "policy",
-        "think-tanks",
+        "think-tanks"
+      ],
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-07-21T07:59:21.899Z"
+    },
+    {
+      "category": "Financial/currency route",
+      "conclusion": "5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "evidenceUsed": [
+        {
+          "title": "Health response brings lifesaving care closer to thousands in Yemen",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982"
+        },
+        {
+          "title": "Source 31",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 40",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 134",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 686",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        }
+      ],
+      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "relatedCardsOrPages": [
+        "institutions",
+        "policy",
         "people-of-interest"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.899Z"
+    },
+    {
+      "category": "Health/biosecurity route",
+      "conclusion": "5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "evidenceUsed": [
+        {
+          "title": "Health response brings lifesaving care closer to thousands in Yemen",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982"
+        },
+        {
+          "title": "‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167955"
+        },
+        {
+          "title": "Source 101",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 332",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 432",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        }
+      ],
+      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "relatedCardsOrPages": [
+        "institutions",
+        "policy"
+      ],
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-07-21T07:59:21.899Z"
     },
     {
       "category": "People dossier",
@@ -245,11 +347,11 @@
           "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167970"
         },
         {
-          "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956"
+          "title": "Source 30",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
         }
       ],
       "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
@@ -258,11 +360,10 @@
       "relatedCardsOrPages": [
         "people-of-interest",
         "institutions",
-        "policy",
-        "think-tanks"
+        "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Missing-record queue",
@@ -313,7 +414,7 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Digital ID / surveillance route",
@@ -365,112 +466,7 @@
         "secret-societies"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
-    },
-    {
-      "category": "Health/biosecurity route",
-      "conclusion": "5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "evidenceUsed": [
-        {
-          "title": "‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167955"
-        },
-        {
-          "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956"
-        },
-        {
-          "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960"
-        },
-        {
-          "title": "Source 101",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 332",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        }
-      ],
-      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "relatedCardsOrPages": [
-        "institutions",
-        "policy",
-        "people-of-interest",
-        "think-tanks"
-      ],
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
-    },
-    {
-      "category": "Financial/currency route",
-      "conclusion": "5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "evidenceUsed": [
-        {
-          "title": "Source 31",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 40",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 134",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 686",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 724",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        }
-      ],
-      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "relatedCardsOrPages": [
-        "people-of-interest",
-        "institutions",
-        "policy"
-      ],
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Correction / counter-evidence",
@@ -521,7 +517,7 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Secret Societies dossier",
@@ -573,7 +569,7 @@
         "secret-societies"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Controlled Opposition / media route",
@@ -625,7 +621,7 @@
         "controlled-opposition"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Power Families / Black Nobility",
@@ -677,7 +673,7 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     },
     {
       "category": "Jurisdictions of Power dossier",
@@ -730,7 +726,7 @@
         "jurisdictions-of-power"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-20T21:30:34.460Z"
+      "updated": "2026-07-21T07:59:21.900Z"
     }
   ]
 }

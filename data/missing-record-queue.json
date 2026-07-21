@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-20T21:30:34.460Z",
+  "updated": "2026-07-21T07:59:21.900Z",
   "queue": [
     {
       "title": "‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela",
@@ -118,6 +118,62 @@
           "lane": "thinktank",
           "label": "Think Tanks dossier",
           "deck": "think-tanks"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "title": "From the General Assembly to Harlem: Mandela’s call to action endures",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167981",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "title": "Health response brings lifesaving care closer to thousands in Yemen",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167982",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         },
         {
           "lane": "security",
@@ -559,72 +615,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
-        }
-      ],
-      "confidence": "medium"
-    },
-    {
-      "title": "Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167956",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
-        }
-      ],
-      "confidence": "medium"
-    },
-    {
-      "title": "Gaza farmers battle to rebuild as WFP warns of West Bank settler violence",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1167960",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
         },
         {
           "lane": "security",
@@ -45897,11 +45887,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "identity",
-          "label": "Digital ID / surveillance route",
-          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -45922,9 +45907,9 @@
           "deck": "policy"
         },
         {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
+          "lane": "identity",
+          "label": "Digital ID / surveillance route",
+          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -45943,6 +45928,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46015,14 +46005,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 2290",
@@ -46040,12 +46025,12 @@
           "deck": "policy"
         },
         {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
+          "lane": "security",
+          "label": "War/security route",
           "deck": "institutions"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 2291",
@@ -46061,6 +46046,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46169,11 +46159,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46192,12 +46177,35 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
     },
     {
       "title": "Source 2299",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2300",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -46220,7 +46228,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2300",
+      "title": "Source 2301",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -46243,7 +46251,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2301",
+      "title": "Source 2302",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -46266,7 +46274,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2302",
+      "title": "Source 2303",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -46284,24 +46292,6 @@
           "lane": "security",
           "label": "War/security route",
           "deck": "institutions"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 2303",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -46464,11 +46454,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -46487,6 +46472,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -46631,11 +46621,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46654,6 +46639,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46780,11 +46770,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -46805,9 +46790,9 @@
           "deck": "policy"
         },
         {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -46851,9 +46836,9 @@
           "deck": "policy"
         },
         {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -46872,6 +46857,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -46998,11 +46988,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -47021,6 +47006,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -47363,11 +47353,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "narrative",
-          "label": "Controlled Opposition / media route",
-          "deck": "controlled-opposition"
         }
       ],
       "confidence": "watch"
@@ -47386,6 +47371,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "narrative",
+          "label": "Controlled Opposition / media route",
+          "deck": "controlled-opposition"
         }
       ],
       "confidence": "watch"
@@ -48304,6 +48294,24 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2413",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "security",
@@ -48314,7 +48322,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2413",
+      "title": "Source 2414",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -48337,7 +48345,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2414",
+      "title": "Source 2415",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -48355,7 +48363,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2415",
+      "title": "Source 2416",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -48378,33 +48386,10 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2416",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
       "title": "Source 2417",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
-        {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -48423,6 +48408,11 @@
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
+        {
+          "lane": "people",
+          "label": "People dossier",
+          "deck": "people-of-interest"
+        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -48481,11 +48471,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -48560,11 +48545,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "correction",
-          "label": "Correction / counter-evidence",
-          "deck": null
         }
       ],
       "confidence": "watch"
@@ -48616,6 +48596,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "correction",
+          "label": "Correction / counter-evidence",
+          "deck": null
         }
       ],
       "confidence": "watch"
@@ -48675,6 +48660,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -48749,11 +48739,6 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -48770,6 +48755,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -48919,6 +48909,24 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2443",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "security",
@@ -48929,7 +48937,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2443",
+      "title": "Source 2444",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -48952,7 +48960,7 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 2444",
+      "title": "Source 2445",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -48975,7 +48983,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2445",
+      "title": "Source 2446",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [

@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-20T21:30:34.460Z
+Updated: 2026-07-21T07:59:21.900Z
 
-Inputs: 2445
+Inputs: 2446
 
-Routed sources: 2445
+Routed sources: 2446
 
 Conclusions: 14
 
-Missing-record queue: 2445
+Missing-record queue: 2446
 
 ## Conclusions
 ### Institution dossier
@@ -55,6 +55,28 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### Financial/currency route
+Conclusion: 5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### Health/biosecurity route
+Conclusion: 5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### People dossier
 Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -81,28 +103,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Digital ID / surveillance route. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Digital ID / surveillance route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Health/biosecurity route
-Conclusion: 5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Financial/currency route
-Conclusion: 5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

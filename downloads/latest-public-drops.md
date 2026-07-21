@@ -1,9 +1,69 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-20T08:30:16.787Z
+Updated: 2026-07-20T21:30:51.519Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167978
+- Timers: none
+
+When a 12-story apartment building pancaked in La Guaira, Venezuela, following two powerful earthquakes late last month, panic ensued to save people injured or trapped under the rubble.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167972
+- Timers: none
+
+After years of violence perpetrated by gangs, widespread insecurity and the displacement of almost 1.5 million people as well as growing humanitarian needs, Haitians are glimpsing signs of hope as a path to democratic elections begins to emerge. At UN Headquarters in New York, the 15-member Security Council discusses what next for Haiti. Full live coverage below.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Middle East: Civilians again under fire as US-Iran strikes continue
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167979
+- Timers: none
+
+As the United States and Iran trade deadly attacks for a second week, the UN continues to call for de-escalation while highlighting the devastation caused to civilians and critical infrastructure across the Middle East.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Moon Day focuses growing concerns around space junk
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167976
+- Timers: none
+
+Amid surging lunar exploration, the UN on Monday urged governments to ensure that humanity&#039;s return to the Moon does not come at the expense of planet Earth – or the long-term sustainability of space.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Ukraine: Deadly Russian attacks severely damage aid warehouses
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167980
+- Timers: none
+
+Russian attacks and drone strikes killed at least two children and injured dozens more across Ukraine over recent days while severely damaging three critical aid warehouses, UN agencies reported on Monday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
 ## Haiti: Signs of hope despite gang violence and political uncertainty
 
@@ -230,65 +290,5 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 - Timers: none
 
 The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Haiti: Training the next generation to fight corruption
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167931
-- Timers: none
-
-How do you tackle corruption in a country grappling with insecurity, weak institutions and widespread impunity? In Haiti, the Government and the United Nations are betting on the country&#039;s youth.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## More than 500 people feared dead in double Myanmar shipwreck tragedy
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167951
-- Timers: none
-
-There is growing concern for at least 500 people believed to have been aboard two boats that reportedly capsized off Myanmar’s coast in recent days.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Peacekeepers step up support as families return to south Lebanon
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167961
-- Timers: none
-
-With violence in south Lebanon significantly decreased since mid-June, UN peacekeepers there have returned to core functions such as protecting humanitarian aid and restoring critical infrastructure as families continue to return home.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Venezuela: IOM warns of potential El Niño threat to families displaced by earthquake
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167964
-- Timers: none
-
-Thousands of people remain displaced three weeks after the devastating earthquakes in Venezuela and the possible formation of a strong El Niño climate pattern could worsen their already dire situation, the International Organization for Migration (IOM) warned on Thursday.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167959
-- Timers: none
-
-The Ebola outbreak in the Democratic Republic of the Congo (DRC) has become the third largest on record and is spreading faster than any previous one during the first month of exposure, the head of the World Health Organization (WHO) warned on Thursday.
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

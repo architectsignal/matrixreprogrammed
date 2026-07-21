@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-20T21:30:59.245Z",
-    "filesScanned": 4488,
-    "highIssues": 2561,
+    "updated": "2026-07-21T07:59:45.213Z",
+    "filesScanned": 4509,
+    "highIssues": 2572,
     "reviewIssues": 9,
-    "intakeAreas": 2421,
+    "intakeAreas": 2422,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -18807,6 +18807,13 @@
     },
     {
       "file": "speculative-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "src/money-overlap-graph.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-20T21:29:47.577Z
+Generated: 2026-07-21T07:58:35.957Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -41,7 +41,7 @@ Generated: 2026-07-20T21:29:47.577Z
 - 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
 - 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
 - 72 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela — live-intel.html
+- 72 — From the General Assembly to Harlem: Mandela’s call to action endures — live-intel.html
+- 72 — Health response brings lifesaving care closer to thousands in Yemen — live-intel.html
 - 72 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — live-intel.html
-- 72 — Moon Day focuses growing concerns around space junk — live-intel.html
-- 72 — Haiti: Signs of hope despite gang violence and political uncertainty — live-intel.html
-- 72 — Ukraine: UN condemns overnight attack on Kyiv — live-intel.html
+- 72 — Middle East: Civilians again under fire as US-Iran strikes continue — live-intel.html

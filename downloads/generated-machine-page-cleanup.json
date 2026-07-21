@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T21:29:43.364Z",
+  "generatedAt": "2026-07-21T07:58:31.882Z",
   "actions": [
     {
       "action": "elite-reports",
@@ -1734,8 +1734,60 @@
         "reports/subject-health-data-and-emergency-systems.html",
         "reports/subject-private-contractor-power.html"
       ]
+    },
+    {
+      "action": "elite-reports",
+      "removedCount": 46,
+      "removed": [
+        "reports/billionaire-bernard-arnault.html",
+        "reports/billionaire-bill-gates.html",
+        "reports/billionaire-elon-musk.html",
+        "reports/billionaire-jeff-bezos.html",
+        "reports/billionaire-jensen-huang.html",
+        "reports/billionaire-larry-ellison.html",
+        "reports/billionaire-mark-zuckerberg.html",
+        "reports/billionaire-michael-bloomberg.html",
+        "reports/billionaire-peter-thiel.html",
+        "reports/billionaire-warren-buffett.html",
+        "reports/contractor-blackwater-xe-academi-constellis-lineage.html",
+        "reports/contractor-booz-allen-hamilton.html",
+        "reports/contractor-caci-international.html",
+        "reports/contractor-dyncorp-amentum-lineage.html",
+        "reports/contractor-g4s-allied-universal-security-lineage.html",
+        "reports/contractor-palantir-government-platforms.html",
+        "reports/contractor-saic-leidos-lineage.html",
+        "reports/contradiction-watch-report.html",
+        "reports/daily-revelation-report.html",
+        "reports/entity-2021-00294.html",
+        "reports/entity-2024-07773.html",
+        "reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+        "reports/entity-centers-for-medicare-and-medicaid-services.html",
+        "reports/entity-defense-department.html",
+        "reports/entity-federal-procurement-policy-office.html",
+        "reports/entity-general-services-administration.html",
+        "reports/entity-health-and-human-services-department.html",
+        "reports/entity-management-and-budget-office.html",
+        "reports/entity-national-aeronautics-and-space-administration.html",
+        "reports/institution-european-commission.html",
+        "reports/institution-federal-reserve.html",
+        "reports/institution-international-monetary-fund.html",
+        "reports/institution-nato.html",
+        "reports/institution-united-nations.html",
+        "reports/institution-world-bank.html",
+        "reports/institution-world-economic-forum.html",
+        "reports/institution-world-health-organization.html",
+        "reports/missing-records-report.html",
+        "reports/subject-ai-surveillance-and-data-systems.html",
+        "reports/subject-banking-and-payment-rails.html",
+        "reports/subject-digital-id-and-access-systems.html",
+        "reports/subject-disclosure-gaps-and-missing-files.html",
+        "reports/subject-foundation-and-ngo-policy-influence.html",
+        "reports/subject-gold-reserve-and-custody-systems.html",
+        "reports/subject-health-data-and-emergency-systems.html",
+        "reports/subject-private-contractor-power.html"
+      ]
     }
   ],
-  "totalRemoved": 1655,
+  "totalRemoved": 1701,
   "boundary": "Only machine-generated entity brief, entity exposure and elite report HTML/extensionless routes are removed. Hand-authored pages outside these generated namespaces are untouched."
 }

@@ -1,6 +1,6 @@
 {
-  "version": "2.2.0",
-  "updated": "2026-07-15",
+  "version": "2.3.0",
+  "updated": "2026-07-21",
   "status": "active-fail-closed",
   "purpose": "Classify every Matrix Reprogrammed page, download and PDF while keeping primary public evidence, corrections and claim boundaries open. Higher tiers add compiled analysis, archives, investigation tools and research exports.",
   "tierOrder": ["public", "registered", "supporter_3", "intelligence_6", "research_pro_9", "separate_product"],
@@ -20,6 +20,7 @@
     {"route": "/downloads/probability-snapshot.md", "minimumTier": "intelligence_6", "reason": "Compiled intelligence forecast export; public methodology remains open."}
   ],
   "patternRules": [
+    {"pattern": "^/downloads/wealth-guides/[^/]+\\.pdf$", "minimumTier": "public", "reason": "Public practical wealth-education guide linked from the Making Money system."},
     {"pattern": "^/downloads/(lead-magnet|public-weekly-signup|free-brief)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "registered", "reason": "Verified-account lead magnet or introductory report."},
     {"pattern": "^/downloads/(supporter|weekly-(brief|archive)|signal-drop|source-drop-bundle|share-kit|campaign)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "supporter_3", "reason": "Weekly member brief, archive, source-drop bundle or member sharing pack."},
     {"pattern": "^/downloads/(daily-(command|intel|intelligence|brain|brief)|intelligence-(brief|report)|in-depth-report|elite-report|member-report|intelligence-card-deck|dossier-pack|offer-(crime|intelligence)|dark-speculation|entity-daily|atlas-lane|logo-symbolism|private-contractor|subject-intelligence)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "intelligence_6", "reason": "Daily, dossier, compiled intelligence or thematic analysis product."},

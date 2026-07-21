@@ -166,3 +166,5 @@ console.log(`Intelligence reporting system ${productionAfter !== productionBefor
 
 require('./build-money-intelligence-expansion.js');
 require('./money-intelligence-expansion-test.js');
+require('./build-money-overlap-map.js');
+require('./money-overlap-map-test.js');

@@ -1,31 +1,31 @@
 {
   "searchVersion": 3,
-  "updated": "2026-07-20T10:24:14.500Z",
-  "totalResults": 29135,
+  "updated": "2026-07-21T09:36:11.149Z",
+  "totalResults": 29448,
   "evidenceBoundary": "Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.",
   "filters": {
     "evidenceGrade": [
       {
         "value": "A",
-        "count": 15138
+        "count": 14594
       },
       {
         "value": "B",
-        "count": 11484
+        "count": 12401
       },
       {
         "value": "C",
-        "count": 1022
+        "count": 886
       }
     ],
     "sourceType": [
       {
         "value": "structured-relationship",
-        "count": 12292
+        "count": 12461
       },
       {
         "value": "structured-entity",
-        "count": 8501
+        "count": 8562
       },
       {
         "value": "SEC filing",
@@ -37,7 +37,7 @@
       },
       {
         "value": "html",
-        "count": 1405
+        "count": 1481
       },
       {
         "value": "document-extraction",
@@ -49,7 +49,7 @@
       },
       {
         "value": "source-change",
-        "count": 28
+        "count": 35
       },
       {
         "value": "mission-route",
@@ -75,23 +75,19 @@
     "statusClass": [
       {
         "value": "source-record",
-        "count": 25672
+        "count": 26137
       },
       {
         "value": "context",
-        "count": 2079
+        "count": 2065
       },
       {
         "value": "enforcement",
-        "count": 1280
+        "count": 1131
       },
       {
         "value": "source-change",
-        "count": 92
-      },
-      {
-        "value": "allegation",
-        "count": 10
+        "count": 113
       },
       {
         "value": "unverified",
@@ -101,19 +97,19 @@
     "jurisdiction": [
       {
         "value": "United States",
-        "count": 25723
+        "count": 26215
       },
       {
         "value": "International",
-        "count": 1024
+        "count": 888
       },
       {
         "value": "United Kingdom",
-        "count": 452
+        "count": 383
       },
       {
         "value": "European Union",
-        "count": 313
+        "count": 266
       },
       {
         "value": "France",
@@ -123,7 +119,7 @@
     "entityType": [
       {
         "value": "Organization",
-        "count": 4086
+        "count": 4095
       },
       {
         "value": "Organization→Company",
@@ -131,7 +127,7 @@
       },
       {
         "value": "Company",
-        "count": 2697
+        "count": 2710
       },
       {
         "value": "Finding",
@@ -143,27 +139,35 @@
       },
       {
         "value": "Finding→GovernmentAgency",
-        "count": 1842
+        "count": 1880
       },
       {
         "value": "CourtCase",
-        "count": 1117
+        "count": 1031
       },
       {
         "value": "CourtCase→Finding",
-        "count": 1117
+        "count": 1031
       },
       {
         "value": "Investigation",
-        "count": 687
+        "count": 670
       },
       {
         "value": "Investigation→Finding",
-        "count": 687
+        "count": 670
       },
       {
         "value": "GovernmentAgency",
-        "count": 515
+        "count": 561
+      },
+      {
+        "value": "Contract",
+        "count": 405
+      },
+      {
+        "value": "Contract→Finding",
+        "count": 405
       },
       {
         "value": "Document→GovernmentAgency",
@@ -172,14 +176,6 @@
       {
         "value": "Person",
         "count": 319
-      },
-      {
-        "value": "Contract",
-        "count": 309
-      },
-      {
-        "value": "Contract→Finding",
-        "count": 309
       },
       {
         "value": "Document→LegalAuthority",
@@ -191,23 +187,27 @@
       },
       {
         "value": "Finding→LegalAuthority",
-        "count": 177
+        "count": 216
       },
       {
         "value": "LegalAuthority",
-        "count": 158
+        "count": 169
+      },
+      {
+        "value": "Finding→Organization",
+        "count": 153
       },
       {
         "value": "Sanction",
-        "count": 144
+        "count": 126
       },
       {
         "value": "Sanction→Finding",
-        "count": 144
+        "count": 126
       },
       {
         "value": "Finding→Company",
-        "count": 99
+        "count": 109
       },
       {
         "value": "Document→Company",
@@ -226,40 +226,36 @@
         "count": 76
       },
       {
+        "value": "Finding→Contractor",
+        "count": 67
+      },
+      {
         "value": "Document→Organization",
         "count": 59
       },
       {
-        "value": "Finding→Contractor",
-        "count": 58
-      },
-      {
-        "value": "Finding→Organization",
-        "count": 57
-      },
-      {
         "value": "Contractor",
-        "count": 35
+        "count": 40
       },
       {
         "value": "MissingRecord",
-        "count": 28
+        "count": 35
       },
       {
         "value": "MissingRecord→Source",
-        "count": 28
-      },
-      {
-        "value": "Finding→Payment",
-        "count": 27
-      },
-      {
-        "value": "Payment",
-        "count": 27
+        "count": 35
       },
       {
         "value": "Document→Person",
         "count": 23
+      },
+      {
+        "value": "Finding→Payment",
+        "count": 22
+      },
+      {
+        "value": "Payment",
+        "count": 22
       },
       {
         "value": "Source",
@@ -313,11 +309,11 @@
     "resultKind": [
       {
         "value": "relationship",
-        "count": 12293
+        "count": 12462
       },
       {
         "value": "entity",
-        "count": 8502
+        "count": 8563
       },
       {
         "value": "institutional position change",
@@ -329,7 +325,7 @@
       },
       {
         "value": "route",
-        "count": 1433
+        "count": 1509
       },
       {
         "value": "insider transaction",
@@ -341,7 +337,7 @@
       },
       {
         "value": "source-record",
-        "count": 48
+        "count": 55
       },
       {
         "value": "dataset",

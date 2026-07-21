@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-21T03:44:27.861Z
-Live Intel source window: 2026-07-21T03:44:10.679Z
+Generated: 2026-07-21T14:21:30.972Z
+Live Intel source window: 2026-07-21T14:21:26.031Z
 Latest source publication: 2026-07-17T23:17:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-16 current Epstein-lane record leads remain inside the active source window.
+14 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -125,16 +125,6 @@ Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB 
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-- Published: 2026-07-15T14:28:00.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-
-Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
 - Published: 2026-07-15T13:35:00.000Z
 - Source: Google News / Epstein timeline and files
@@ -142,16 +132,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
 
 Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say The Guardian
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-- Published: 2026-07-15T12:09:02.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
-
-Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

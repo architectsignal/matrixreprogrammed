@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-21T03:44:27.908Z
+Generated: 2026-07-21T14:21:31.014Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -68,23 +68,3 @@ US Justice Dept says it cannot provide unredacted Epstein files for New Mexico p
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
-
-### Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
-
-### Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-21T03:44:27.966Z
-Live Intel source window: 2026-07-21T03:44:10.679Z
-Tracked cards: 878
-Cards with current matched records: 108
-Cards with no new verified record: 770
+Generated: 2026-07-21T14:21:31.068Z
+Live Intel source window: 2026-07-21T14:21:26.031Z
+Tracked cards: 889
+Cards with current matched records: 100
+Cards with no new verified record: 789
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -71,6 +71,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 1
 - Latest record: none in current window
 - undated — 2025-0045-Appeal. — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-timelines/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-briefs/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-exposure/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
 
 ## 25-113
 - Route: entity-timelines/25-113.html
@@ -675,24 +696,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## BIDDLE V. BIDDLE
 - Route: entity-timelines/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
 
 ## BIDDLE V. BIDDLE
 - Route: entity-briefs/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
 
 ## BIDDLE V. BIDDLE
 - Route: entity-exposure/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
 
 ## Bilderberg Group
 - Route: institutions/bilderberg-group.html
@@ -1039,10 +1057,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## CARD DOSSIER STANDARD.
 - Route: card-dossier-standard.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-16T04:11:50.000Z
 - 2026-07-16T04:11:50.000Z — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK) — https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-- 2026-07-15T12:09:02.000Z — Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK) — https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
 
 ## CARD DOWNLOADS.
 - Route: card-downloads.html
@@ -1397,24 +1414,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-timelines/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-briefs/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-exposure/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
 
 ## Cox family
 - Route: power-families/cox-family.html
@@ -1490,24 +1504,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## DEFENSE DEPARTMENT
 - Route: entity-timelines/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Defense Department — Entity Observation
 
 ## DEFENSE DEPARTMENT
 - Route: entity-briefs/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Defense Department — Entity Observation
 
 ## DEFENSE DEPARTMENT
 - Route: entity-exposure/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Defense Department — Entity Observation
 
 ## Del Bigtree
 - Route: controlled-opposition/del-bigtree.html
@@ -1932,24 +1943,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-timelines/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-briefs/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-exposure/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
 
 ## Federal Reserve
 - Route: top-52/federal-reserve.html
@@ -2124,24 +2132,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GENERAL SERVICES ADMINISTRATION
 - Route: entity-timelines/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — General Services Administration — Entity Observation
 
 ## GENERAL SERVICES ADMINISTRATION
 - Route: entity-briefs/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — General Services Administration — Entity Observation
 
 ## GENERAL SERVICES ADMINISTRATION
 - Route: entity-exposure/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — General Services Administration — Entity Observation
 
 ## Geneva
 - Route: jurisdictions-of-power/geneva.html
@@ -3082,24 +3087,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MANAGEMENT AND BUDGET OFFICE
 - Route: entity-timelines/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
 
 ## MANAGEMENT AND BUDGET OFFICE
 - Route: entity-briefs/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
 
 ## MANAGEMENT AND BUDGET OFFICE
 - Route: entity-exposure/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
 
 ## Manhattan Institute
 - Route: think-tanks/manhattan-institute.html
@@ -3566,24 +3568,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
 - Route: entity-timelines/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
 
 ## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
 - Route: entity-briefs/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
 
 ## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
 - Route: entity-exposure/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
 
 ## National digital health records strategies
 - Route: policy/national-digital-health-records-strategies.html
@@ -3635,9 +3634,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## New York City
 - Route: jurisdictions-of-power/new-york-city.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-20T12:00:00.000Z
+- 2026-07-20T12:00:00.000Z — From the General Assembly to Harlem: Mandela’s call to action endures — https://news.un.org/feed/view/en/story/2026/07/1167981
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -4146,6 +4146,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-timelines/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-exposure/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
 ## Qatar Financial Centre
 - Route: jurisdictions-of-power/qatar-financial-centre.html
 - Status: no-new-verified-record-in-current-window
@@ -4206,13 +4227,13 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## RELATIONSHIP & OVERLAP MAP.
+## RELATIONSHIP OVERLAP MAP.
 - Route: money-graph.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
-## RELATIONSHIP & OVERLAP MAP.
+## RELATIONSHIP OVERLAP MAP.
 - Route: src/money-overlap-graph.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -4480,11 +4501,26 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## SEARCH THE MACHINE.
-- Route: search.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-timelines/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-briefs/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-exposure/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
 
 ## Sergey Brin
 - Route: follow-the-money/people/sergey-brin.html
@@ -4665,6 +4701,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-timelines/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-briefs/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-exposure/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-timelines/supreme-court-of-rhode-island.html
@@ -5315,7 +5372,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
@@ -5324,7 +5381,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
@@ -5333,7 +5390,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959

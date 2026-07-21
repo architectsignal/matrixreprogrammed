@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-21T07:59:37.452Z
-Latest source publication: 2026-07-20T12:00:00.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection completed: 2026-07-21T14:21:26.031Z
+Latest source publication: 2026-07-21T12:00:00.000Z
+Collection status: fresh-items-added
+New items this collection: 1
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ The collector completed successfully, but no newly published source item entered
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-21 — DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167983
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
   - Source class: primary-or-official

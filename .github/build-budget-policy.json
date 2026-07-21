@@ -1,0 +1,30 @@
+{
+  "policy": "Matrix Reprogrammed monthly build budget",
+  "status": "enforced",
+  "cloudflareWorkersBuildMinutes": {
+    "includedPerMonth": 6000,
+    "internalTargetMaximum": 4000,
+    "warningThreshold": 3000,
+    "emergencyReserve": 2000
+  },
+  "releaseRules": {
+    "automaticProductionChecksPerDay": 1,
+    "automaticProductionCooldownHours": 20,
+    "manualEmergencyDeploymentsAllowed": true,
+    "deployOnlyWhenLiveProofDiffers": true,
+    "neverInterruptD1MigrationOrActiveProductionDeploy": true
+  },
+  "automationRules": {
+    "moneyIntelligenceRefresh": "weekly",
+    "cardArtworkAutomation": "manual-or-explicit-trigger-only",
+    "detailedWealthGuideLibrary": "manual-or-repair-trigger-only",
+    "lightweightHealthChecks": "preferred-between-production-releases",
+    "generatedOutputCommits": "must-be-idempotent"
+  },
+  "cloudflareConfigurationRequired": {
+    "disconnectGitTriggeredWorkersBuilds": true,
+    "deploymentAuthority": "GitHub Actions controlled production workflow using Wrangler",
+    "reason": "Cloudflare Git integration builds on every push to the production branch, including automated data and status commits."
+  },
+  "operatingPrinciple": "Keep the site useful, current and fail-closed while remaining below the included monthly build-minute allowance."
+}

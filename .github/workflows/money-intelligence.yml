@@ -11,15 +11,21 @@ on:
       - 'money-*.js'
       - 'money-*.html'
       - 'money-*.css'
+      - 'src/money-overlap-graph.html'
+      - 'src/money-overlap-graph.js'
+      - 'src/money-command-center.js'
       - 'data/follow-the-money-top-100.json'
       - 'data/making-money-core.json'
       - 'data/detailed-wealth-guides.json'
       - 'data/money-intelligence-registry.json'
+      - 'data/money-overlap-graph.json'
       - 'data/money-search-index.json'
       - 'data/money-intelligence-brief-feed.json'
       - 'data/wealth-methods.json'
       - 'scripts/build-money-intelligence-system.js'
       - 'scripts/build-money-intelligence-expansion.js'
+      - 'scripts/build-money-overlap-map.js'
+      - 'scripts/money-overlap-map-test.js'
       - 'scripts/build-detailed-wealth-guides.js'
       - 'scripts/detailed-wealth-guides-test.js'
       - 'scripts/money-intelligence-expansion-test.js'
@@ -56,6 +62,8 @@ jobs:
         run: |
           node --check scripts/build-money-intelligence-system.js
           node --check scripts/build-money-intelligence-expansion.js
+          node --check scripts/build-money-overlap-map.js
+          node --check scripts/money-overlap-map-test.js
           node --check scripts/build-detailed-wealth-guides.js
           node --check scripts/detailed-wealth-guides-test.js
           node scripts/build-money-intelligence-system.js
@@ -65,6 +73,8 @@ jobs:
           node scripts/deep-pdf-intelligence-test.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
+          node scripts/build-money-overlap-map.js
+          node scripts/money-overlap-map-test.js
           node scripts/build-detailed-wealth-guides.js
           node scripts/detailed-wealth-guides-test.js
 
@@ -80,5 +90,6 @@ jobs:
             downloads/wealth-guides/index.json
             data/detailed-wealth-guides.json
             data/money-intelligence-brief-feed.json
+            data/money-overlap-graph.json
           if-no-files-found: warn
           retention-days: 14

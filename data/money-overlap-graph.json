@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T08:48:13.991Z",
-  "registryUpdated": "2026-07-21T08:48:13.991Z",
+  "generatedAt": "2026-07-21T18:30:13.698Z",
+  "registryUpdated": "2026-07-21T18:30:13.698Z",
   "methodology": "Nodes are public-record registry entries. Category links show repeated appearance after conservative name normalisation. Existing sourced relationships remain separate from inferred overlap.",
   "boundary": "An overlap is a research route, not proof that entities coordinate, control one another or commit wrongdoing.",
   "summary": {
     "records": 1160,
     "categories": 20,
     "jurisdictions": 50,
-    "overlapEntities": 122,
+    "overlapEntities": 121,
     "relationshipEdges": 94,
     "categoryPairs": 19
   },
@@ -720,20 +720,6 @@
       ]
     },
     {
-      "id": "entity:meta platforms facebook",
-      "kind": "entity",
-      "label": "Meta Platforms (Facebook)",
-      "key": "meta platforms facebook",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:spacex",
       "kind": "entity",
       "label": "SpaceX",
@@ -748,6 +734,20 @@
       "evidence": [
         "Verified Market Data",
         "Research Lead"
+      ]
+    },
+    {
+      "id": "entity:meta platforms facebook",
+      "kind": "entity",
+      "label": "Meta Platforms (Facebook)",
+      "key": "meta platforms facebook",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
       ]
     },
     {
@@ -807,10 +807,10 @@
       ]
     },
     {
-      "id": "entity:sk hynix",
+      "id": "entity:amd",
       "kind": "entity",
-      "label": "SK Hynix",
-      "key": "sk hynix",
+      "label": "AMD",
+      "key": "amd",
       "categories": [
         "companies",
         "technology-control"
@@ -821,10 +821,10 @@
       ]
     },
     {
-      "id": "entity:amd",
+      "id": "entity:sk hynix",
       "kind": "entity",
-      "label": "AMD",
-      "key": "amd",
+      "label": "SK Hynix",
+      "key": "sk hynix",
       "categories": [
         "companies",
         "technology-control"
@@ -891,6 +891,20 @@
       ]
     },
     {
+      "id": "entity:applied materials",
+      "kind": "entity",
+      "label": "Applied Materials",
+      "key": "applied materials",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
       "id": "entity:cisco",
       "kind": "entity",
       "label": "Cisco",
@@ -919,10 +933,10 @@
       ]
     },
     {
-      "id": "entity:applied materials",
+      "id": "entity:lam research",
       "kind": "entity",
-      "label": "Applied Materials",
-      "key": "applied materials",
+      "label": "Lam Research",
+      "key": "lam research",
       "categories": [
         "companies",
         "technology-control"
@@ -947,20 +961,6 @@
       ]
     },
     {
-      "id": "entity:lam research",
-      "kind": "entity",
-      "label": "Lam Research",
-      "key": "lam research",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:chevron",
       "kind": "entity",
       "label": "Chevron",
@@ -968,20 +968,6 @@
       "categories": [
         "companies",
         "energy-resources"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:general electric",
-      "kind": "entity",
-      "label": "General Electric",
-      "key": "general electric",
-      "categories": [
-        "companies",
-        "defence-security"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1005,13 +991,13 @@
       ]
     },
     {
-      "id": "entity:hsbc",
+      "id": "entity:general electric",
       "kind": "entity",
-      "label": "HSBC",
-      "key": "hsbc",
+      "label": "General Electric",
+      "key": "general electric",
       "categories": [
         "companies",
-        "banks"
+        "defence-security"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1019,10 +1005,10 @@
       ]
     },
     {
-      "id": "entity:agricultural bank of china",
+      "id": "entity:hsbc",
       "kind": "entity",
-      "label": "Agricultural Bank of China",
-      "key": "agricultural bank of china",
+      "label": "HSBC",
+      "key": "hsbc",
       "categories": [
         "companies",
         "banks"
@@ -1049,13 +1035,27 @@
       ]
     },
     {
-      "id": "entity:palantir",
+      "id": "entity:agricultural bank of china",
       "kind": "entity",
-      "label": "Palantir",
-      "key": "palantir",
+      "label": "Agricultural Bank of China",
+      "key": "agricultural bank of china",
       "categories": [
         "companies",
-        "technology-control"
+        "banks"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:goldman sachs",
+      "kind": "entity",
+      "label": "Goldman Sachs",
+      "key": "goldman sachs",
+      "categories": [
+        "companies",
+        "banks"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1077,13 +1077,27 @@
       ]
     },
     {
-      "id": "entity:goldman sachs",
+      "id": "entity:palantir",
       "kind": "entity",
-      "label": "Goldman Sachs",
-      "key": "goldman sachs",
+      "label": "Palantir",
+      "key": "palantir",
       "categories": [
         "companies",
-        "banks"
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:arm",
+      "kind": "entity",
+      "label": "Arm Holdings",
+      "key": "arm",
+      "categories": [
+        "companies",
+        "technology-control"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1119,38 +1133,24 @@
       ]
     },
     {
+      "id": "entity:kla",
+      "kind": "entity",
+      "label": "KLA",
+      "key": "kla",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
       "id": "entity:alibaba",
       "kind": "entity",
       "label": "Alibaba",
       "key": "alibaba",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:arm",
-      "kind": "entity",
-      "label": "Arm Holdings",
-      "key": "arm",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:palo alto networks",
-      "kind": "entity",
-      "label": "Palo Alto Networks",
-      "key": "palo alto networks",
       "categories": [
         "companies",
         "technology-control"
@@ -1189,13 +1189,41 @@
       ]
     },
     {
-      "id": "entity:kla",
+      "id": "entity:palo alto networks",
       "kind": "entity",
-      "label": "KLA",
-      "key": "kla",
+      "label": "Palo Alto Networks",
+      "key": "palo alto networks",
       "categories": [
         "companies",
         "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:texas instruments",
+      "kind": "entity",
+      "label": "Texas Instruments",
+      "key": "texas instruments",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:wells fargo",
+      "kind": "entity",
+      "label": "Wells Fargo",
+      "key": "wells fargo",
+      "categories": [
+        "companies",
+        "banks"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1216,34 +1244,6 @@
       "evidence": [
         "Verified Market Data",
         "Research Lead"
-      ]
-    },
-    {
-      "id": "entity:wells fargo",
-      "kind": "entity",
-      "label": "Wells Fargo",
-      "key": "wells fargo",
-      "categories": [
-        "companies",
-        "banks"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:texas instruments",
-      "kind": "entity",
-      "label": "Texas Instruments",
-      "key": "texas instruments",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
       ]
     },
     {
@@ -1282,6 +1282,20 @@
       "categories": [
         "companies",
         "energy-resources"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:sandisk",
+      "kind": "entity",
+      "label": "Sandisk",
+      "key": "sandisk",
+      "categories": [
+        "companies",
+        "technology-control"
       ],
       "recordCount": 2,
       "evidence": [
@@ -1331,20 +1345,6 @@
       ]
     },
     {
-      "id": "entity:sandisk",
-      "kind": "entity",
-      "label": "Sandisk",
-      "key": "sandisk",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:kioxia",
       "kind": "entity",
       "label": "KIOXIA Holdings Corporation",
@@ -1359,24 +1359,10 @@
       ]
     },
     {
-      "id": "entity:crowdstrike",
+      "id": "entity:seagate technology",
       "kind": "entity",
-      "label": "CrowdStrike",
-      "key": "crowdstrike",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:ibm",
-      "kind": "entity",
-      "label": "IBM",
-      "key": "ibm",
+      "label": "Seagate Technology",
+      "key": "seagate technology",
       "categories": [
         "companies",
         "technology-control"
@@ -1415,6 +1401,20 @@
       ]
     },
     {
+      "id": "entity:ibm",
+      "kind": "entity",
+      "label": "IBM",
+      "key": "ibm",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
       "id": "entity:santander",
       "kind": "entity",
       "label": "Santander",
@@ -1429,24 +1429,10 @@
       ]
     },
     {
-      "id": "entity:sap",
+      "id": "entity:crowdstrike",
       "kind": "entity",
-      "label": "SAP",
-      "key": "sap",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:tokyo electron",
-      "kind": "entity",
-      "label": "Tokyo Electron",
-      "key": "tokyo electron",
+      "label": "CrowdStrike",
+      "key": "crowdstrike",
       "categories": [
         "companies",
         "technology-control"
@@ -1600,10 +1586,10 @@
       ]
     },
     {
-      "id": "entity:ishares core s and p 500 ucits etf usd acc",
+      "id": "entity:ishares core msci emerging markets etf",
       "kind": "entity",
-      "label": "iShares Core S&P 500 UCITS ETF USD (Acc)",
-      "key": "ishares core s and p 500 ucits etf usd acc",
+      "label": "iShares Core MSCI Emerging Markets ETF",
+      "key": "ishares core msci emerging markets etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1613,10 +1599,10 @@
       ]
     },
     {
-      "id": "entity:ishares core msci emerging markets etf",
+      "id": "entity:ishares core s and p 500 ucits etf usd acc",
       "kind": "entity",
-      "label": "iShares Core MSCI Emerging Markets ETF",
-      "key": "ishares core msci emerging markets etf",
+      "label": "iShares Core S&P 500 UCITS ETF USD (Acc)",
+      "key": "ishares core s and p 500 ucits etf usd acc",
       "categories": [
         "investment-vehicles"
       ],
@@ -1639,19 +1625,6 @@
       ]
     },
     {
-      "id": "entity:ishares core msci world ucits etf usd acc",
-      "kind": "entity",
-      "label": "iShares Core MSCI World UCITS ETF USD (Acc)",
-      "key": "ishares core msci world ucits etf usd acc",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:spdr gold shares",
       "kind": "entity",
       "label": "SPDR Gold Shares",
@@ -1665,10 +1638,10 @@
       ]
     },
     {
-      "id": "entity:ishares core u s aggregate bond etf",
+      "id": "entity:ishares core msci world ucits etf usd acc",
       "kind": "entity",
-      "label": "iShares Core U.S. Aggregate Bond ETF",
-      "key": "ishares core u s aggregate bond etf",
+      "label": "iShares Core MSCI World UCITS ETF USD (Acc)",
+      "key": "ishares core msci world ucits etf usd acc",
       "categories": [
         "investment-vehicles"
       ],
@@ -1682,6 +1655,19 @@
       "kind": "entity",
       "label": "Vanguard Information Technology Index Fund ETF Shares",
       "key": "vanguard information technology index fund etf shares",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:ishares core u s aggregate bond etf",
+      "kind": "entity",
+      "label": "iShares Core U.S. Aggregate Bond ETF",
+      "key": "ishares core u s aggregate bond etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1730,10 +1716,10 @@
       ]
     },
     {
-      "id": "entity:vanguard dividend appreciation index fund etf shares",
+      "id": "entity:ishares core s and p small cap etf",
       "kind": "entity",
-      "label": "Vanguard Dividend Appreciation Index Fund ETF Shares",
-      "key": "vanguard dividend appreciation index fund etf shares",
+      "label": "iShares Core S&P Small-Cap ETF",
+      "key": "ishares core s and p small cap etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1743,10 +1729,10 @@
       ]
     },
     {
-      "id": "entity:ishares core s and p small cap etf",
+      "id": "entity:vanguard dividend appreciation index fund etf shares",
       "kind": "entity",
-      "label": "iShares Core S&P Small-Cap ETF",
-      "key": "ishares core s and p small cap etf",
+      "label": "Vanguard Dividend Appreciation Index Fund ETF Shares",
+      "key": "vanguard dividend appreciation index fund etf shares",
       "categories": [
         "investment-vehicles"
       ],
@@ -1782,10 +1768,10 @@
       ]
     },
     {
-      "id": "entity:ishares 0 3 month treasury bond etf",
+      "id": "entity:invesco nasdaq 100 etf",
       "kind": "entity",
-      "label": "iShares 0-3 Month Treasury Bond ETF",
-      "key": "ishares 0 3 month treasury bond etf",
+      "label": "Invesco NASDAQ 100 ETF",
+      "key": "invesco nasdaq 100 etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1795,10 +1781,10 @@
       ]
     },
     {
-      "id": "entity:invesco nasdaq 100 etf",
+      "id": "entity:ishares 0 3 month treasury bond etf",
       "kind": "entity",
-      "label": "Invesco NASDAQ 100 ETF",
-      "key": "invesco nasdaq 100 etf",
+      "label": "iShares 0-3 Month Treasury Bond ETF",
+      "key": "ishares 0 3 month treasury bond etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1834,10 +1820,10 @@
       ]
     },
     {
-      "id": "entity:ishares russell 1000 value etf",
+      "id": "entity:ishares russell 2000 etf",
       "kind": "entity",
-      "label": "iShares Russell 1000 Value ETF",
-      "key": "ishares russell 1000 value etf",
+      "label": "iShares Russell 2000 ETF",
+      "key": "ishares russell 2000 etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1847,10 +1833,10 @@
       ]
     },
     {
-      "id": "entity:ishares russell 2000 etf",
+      "id": "entity:ishares russell 1000 value etf",
       "kind": "entity",
-      "label": "iShares Russell 2000 ETF",
-      "key": "ishares russell 2000 etf",
+      "label": "iShares Russell 1000 Value ETF",
+      "key": "ishares russell 1000 value etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -1964,19 +1950,6 @@
       ]
     },
     {
-      "id": "entity:vanguard intermediate term corporate bond index fund etf shares",
-      "kind": "entity",
-      "label": "Vanguard Intermediate-Term Corporate Bond Index Fund ETF Shares",
-      "key": "vanguard intermediate term corporate bond index fund etf shares",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:schwab equity etf",
       "kind": "entity",
       "label": "Schwab International Equity ETF",
@@ -2003,10 +1976,10 @@
       ]
     },
     {
-      "id": "entity:schwab u s large cap growth etf",
+      "id": "entity:vanguard intermediate term corporate bond index fund etf shares",
       "kind": "entity",
-      "label": "Schwab U.S. Large-Cap Growth ETF",
-      "key": "schwab u s large cap growth etf",
+      "label": "Vanguard Intermediate-Term Corporate Bond Index Fund ETF Shares",
+      "key": "vanguard intermediate term corporate bond index fund etf shares",
       "categories": [
         "investment-vehicles"
       ],
@@ -2020,6 +1993,19 @@
       "kind": "entity",
       "label": "iShares Gold Trust",
       "key": "ishares gold trust",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:schwab u s large cap growth etf",
+      "kind": "entity",
+      "label": "Schwab U.S. Large-Cap Growth ETF",
+      "key": "schwab u s large cap growth etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -2107,6 +2093,19 @@
       ]
     },
     {
+      "id": "entity:ishares bitcoin trust etf",
+      "kind": "entity",
+      "label": "iShares Bitcoin Trust ETF",
+      "key": "ishares bitcoin trust etf",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
       "id": "entity:ishares russell 1000 etf",
       "kind": "entity",
       "label": "iShares Russell 1000 ETF",
@@ -2120,10 +2119,10 @@
       ]
     },
     {
-      "id": "entity:ishares bitcoin trust etf",
+      "id": "entity:ishares semiconductor etf",
       "kind": "entity",
-      "label": "iShares Bitcoin Trust ETF",
-      "key": "ishares bitcoin trust etf",
+      "label": "iShares Semiconductor ETF",
+      "key": "ishares semiconductor etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -2211,10 +2210,10 @@
       ]
     },
     {
-      "id": "entity:ishares semiconductor etf",
+      "id": "entity:jpmorgan equity premium income etf",
       "kind": "entity",
-      "label": "iShares Semiconductor ETF",
-      "key": "ishares semiconductor etf",
+      "label": "JPMorgan Equity Premium Income ETF",
+      "key": "jpmorgan equity premium income etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -2228,19 +2227,6 @@
       "kind": "entity",
       "label": "Vanguard Short-Term Bond Index Fund ETF Shares",
       "key": "vanguard short term bond index fund etf shares",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:jpmorgan equity premium income etf",
-      "kind": "entity",
-      "label": "JPMorgan Equity Premium Income ETF",
-      "key": "jpmorgan equity premium income etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -2276,19 +2262,6 @@
       ]
     },
     {
-      "id": "entity:vanguard short term corporate bond index fund etf shares",
-      "kind": "entity",
-      "label": "Vanguard Short-Term Corporate Bond Index Fund ETF Shares",
-      "key": "vanguard short term corporate bond index fund etf shares",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:vanguard russell 1000 growth index fund etf shares",
       "kind": "entity",
       "label": "Vanguard Russell 1000 Growth Index Fund ETF Shares",
@@ -2306,6 +2279,19 @@
       "kind": "entity",
       "label": "Schwab U.S. Broad Market ETF",
       "key": "schwab u s broad market etf",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:vanguard short term corporate bond index fund etf shares",
+      "kind": "entity",
+      "label": "Vanguard Short-Term Corporate Bond Index Fund ETF Shares",
+      "key": "vanguard short term corporate bond index fund etf shares",
       "categories": [
         "investment-vehicles"
       ],
@@ -2393,19 +2379,6 @@
       ]
     },
     {
-      "id": "entity:jpmorgan ultra short income etf",
-      "kind": "entity",
-      "label": "JPMorgan Ultra-Short Income ETF",
-      "key": "jpmorgan ultra short income etf",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
       "id": "entity:jpmorgan nasdaq equity premium income etf",
       "kind": "entity",
       "label": "JPMorgan Nasdaq Equity Premium Income ETF",
@@ -2423,6 +2396,19 @@
       "kind": "entity",
       "label": "SPDR Portfolio Developed World ex-US ETF",
       "key": "spdr portfolio developed world ex us etf",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
+      "id": "entity:jpmorgan ultra short income etf",
+      "kind": "entity",
+      "label": "JPMorgan Ultra-Short Income ETF",
+      "key": "jpmorgan ultra short income etf",
       "categories": [
         "investment-vehicles"
       ],
@@ -2497,6 +2483,19 @@
       ]
     },
     {
+      "id": "entity:proshares ultrapro qqq",
+      "kind": "entity",
+      "label": "ProShares UltraPro QQQ",
+      "key": "proshares ultrapro qqq",
+      "categories": [
+        "investment-vehicles"
+      ],
+      "recordCount": 1,
+      "evidence": [
+        "Verified Market Data"
+      ]
+    },
+    {
       "id": "entity:ishares iboxx grade corporate bond etf",
       "kind": "entity",
       "label": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
@@ -2527,19 +2526,6 @@
       "kind": "entity",
       "label": "iShares Physical Gold ETC",
       "key": "ishares physical gold etc",
-      "categories": [
-        "investment-vehicles"
-      ],
-      "recordCount": 1,
-      "evidence": [
-        "Verified Market Data"
-      ]
-    },
-    {
-      "id": "entity:proshares ultrapro qqq",
-      "kind": "entity",
-      "label": "ProShares UltraPro QQQ",
-      "key": "proshares ultrapro qqq",
       "categories": [
         "investment-vehicles"
       ],
@@ -3859,26 +3845,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:meta platforms facebook:companies",
-      "source": "entity:meta platforms facebook",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/meta-platforms/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:meta platforms facebook:technology-control",
-      "source": "entity:meta platforms facebook",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/meta-platforms/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:spacex:companies",
       "source": "entity:spacex",
       "target": "category:companies",
@@ -3916,6 +3882,26 @@
       "evidenceClass": "Registry overlap",
       "category": "defence-security",
       "sourceUrl": "https://companiesmarketcap.com/spacex/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:meta platforms facebook:companies",
+      "source": "entity:meta platforms facebook",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/meta-platforms/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:meta platforms facebook:technology-control",
+      "source": "entity:meta platforms facebook",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/meta-platforms/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -3999,26 +3985,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:sk hynix:companies",
-      "source": "entity:sk hynix",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/sk-hynix/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:sk hynix:technology-control",
-      "source": "entity:sk hynix",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/sk-hynix/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:amd:companies",
       "source": "entity:amd",
       "target": "category:companies",
@@ -4036,6 +4002,26 @@
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
       "sourceUrl": "https://companiesmarketcap.com/amd/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:sk hynix:companies",
+      "source": "entity:sk hynix",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/sk-hynix/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:sk hynix:technology-control",
+      "source": "entity:sk hynix",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/sk-hynix/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4119,6 +4105,26 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:applied materials:companies",
+      "source": "entity:applied materials",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/applied-materials/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:applied materials:technology-control",
+      "source": "entity:applied materials",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/applied-materials/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:cisco:companies",
       "source": "entity:cisco",
       "target": "category:companies",
@@ -4159,23 +4165,23 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:applied materials:companies",
-      "source": "entity:applied materials",
+      "id": "membership:lam research:companies",
+      "source": "entity:lam research",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/applied-materials/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/lam-research/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:applied materials:technology-control",
-      "source": "entity:applied materials",
+      "id": "membership:lam research:technology-control",
+      "source": "entity:lam research",
       "target": "category:technology-control",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/applied-materials/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/lam-research/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4199,26 +4205,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:lam research:companies",
-      "source": "entity:lam research",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/lam-research/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:lam research:technology-control",
-      "source": "entity:lam research",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/lam-research/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:chevron:companies",
       "source": "entity:chevron",
       "target": "category:companies",
@@ -4236,26 +4222,6 @@
       "evidenceClass": "Registry overlap",
       "category": "energy-resources",
       "sourceUrl": "https://companiesmarketcap.com/chevron/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:general electric:companies",
-      "source": "entity:general electric",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/general-electric/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:general electric:defence-security",
-      "source": "entity:general electric",
-      "target": "category:defence-security",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "defence-security",
-      "sourceUrl": "https://companiesmarketcap.com/general-electric/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4289,6 +4255,26 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:general electric:companies",
+      "source": "entity:general electric",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/general-electric/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:general electric:defence-security",
+      "source": "entity:general electric",
+      "target": "category:defence-security",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "defence-security",
+      "sourceUrl": "https://companiesmarketcap.com/general-electric/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:hsbc:companies",
       "source": "entity:hsbc",
       "target": "category:companies",
@@ -4306,26 +4292,6 @@
       "evidenceClass": "Registry overlap",
       "category": "banks",
       "sourceUrl": "https://companiesmarketcap.com/hsbc/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:agricultural bank of china:companies",
-      "source": "entity:agricultural bank of china",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/agricultural-bank-of-china/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:agricultural bank of china:banks",
-      "source": "entity:agricultural bank of china",
-      "target": "category:banks",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "banks",
-      "sourceUrl": "https://companiesmarketcap.com/agricultural-bank-of-china/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4359,23 +4325,43 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:palantir:companies",
-      "source": "entity:palantir",
+      "id": "membership:agricultural bank of china:companies",
+      "source": "entity:agricultural bank of china",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/palantir/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/agricultural-bank-of-china/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:palantir:technology-control",
-      "source": "entity:palantir",
-      "target": "category:technology-control",
+      "id": "membership:agricultural bank of china:banks",
+      "source": "entity:agricultural bank of china",
+      "target": "category:banks",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/palantir/marketcap/",
+      "category": "banks",
+      "sourceUrl": "https://companiesmarketcap.com/agricultural-bank-of-china/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:goldman sachs:companies",
+      "source": "entity:goldman sachs",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/goldman-sachs/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:goldman sachs:banks",
+      "source": "entity:goldman sachs",
+      "target": "category:banks",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "banks",
+      "sourceUrl": "https://companiesmarketcap.com/goldman-sachs/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4399,23 +4385,43 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:goldman sachs:companies",
-      "source": "entity:goldman sachs",
+      "id": "membership:palantir:companies",
+      "source": "entity:palantir",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/goldman-sachs/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/palantir/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:goldman sachs:banks",
-      "source": "entity:goldman sachs",
-      "target": "category:banks",
+      "id": "membership:palantir:technology-control",
+      "source": "entity:palantir",
+      "target": "category:technology-control",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
-      "category": "banks",
-      "sourceUrl": "https://companiesmarketcap.com/goldman-sachs/marketcap/",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/palantir/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:arm:companies",
+      "source": "entity:arm",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/arm-holdings/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:arm:technology-control",
+      "source": "entity:arm",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/arm-holdings/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4459,6 +4465,26 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:kla:companies",
+      "source": "entity:kla",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/kla/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:kla:technology-control",
+      "source": "entity:kla",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/kla/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:alibaba:companies",
       "source": "entity:alibaba",
       "target": "category:companies",
@@ -4476,46 +4502,6 @@
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
       "sourceUrl": "https://companiesmarketcap.com/alibaba/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:arm:companies",
-      "source": "entity:arm",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/arm-holdings/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:arm:technology-control",
-      "source": "entity:arm",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/arm-holdings/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:palo alto networks:companies",
-      "source": "entity:palo alto networks",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/palo-alto-networks/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:palo alto networks:technology-control",
-      "source": "entity:palo alto networks",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/palo-alto-networks/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4559,23 +4545,63 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:kla:companies",
-      "source": "entity:kla",
+      "id": "membership:palo alto networks:companies",
+      "source": "entity:palo alto networks",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/kla/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/palo-alto-networks/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:kla:technology-control",
-      "source": "entity:kla",
+      "id": "membership:palo alto networks:technology-control",
+      "source": "entity:palo alto networks",
       "target": "category:technology-control",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/kla/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/palo-alto-networks/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:texas instruments:companies",
+      "source": "entity:texas instruments",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/texas-instruments/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:texas instruments:technology-control",
+      "source": "entity:texas instruments",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/texas-instruments/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:wells fargo:companies",
+      "source": "entity:wells fargo",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/wells-fargo/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:wells fargo:banks",
+      "source": "entity:wells fargo",
+      "target": "category:banks",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "banks",
+      "sourceUrl": "https://companiesmarketcap.com/wells-fargo/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4606,46 +4632,6 @@
       "evidenceClass": "Registry overlap",
       "category": "defence-security",
       "sourceUrl": "https://companiesmarketcap.com/raytheon-technologies/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:wells fargo:companies",
-      "source": "entity:wells fargo",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/wells-fargo/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:wells fargo:banks",
-      "source": "entity:wells fargo",
-      "target": "category:banks",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "banks",
-      "sourceUrl": "https://companiesmarketcap.com/wells-fargo/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:texas instruments:companies",
-      "source": "entity:texas instruments",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/texas-instruments/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:texas instruments:technology-control",
-      "source": "entity:texas instruments",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/texas-instruments/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4709,6 +4695,26 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:sandisk:companies",
+      "source": "entity:sandisk",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/sandisk/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:sandisk:technology-control",
+      "source": "entity:sandisk",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/sandisk/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:petrochina:companies",
       "source": "entity:petrochina",
       "target": "category:companies",
@@ -4769,26 +4775,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:sandisk:companies",
-      "source": "entity:sandisk",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/sandisk/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:sandisk:technology-control",
-      "source": "entity:sandisk",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/sandisk/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:kioxia:companies",
       "source": "entity:kioxia",
       "target": "category:companies",
@@ -4809,43 +4795,23 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:crowdstrike:companies",
-      "source": "entity:crowdstrike",
+      "id": "membership:seagate technology:companies",
+      "source": "entity:seagate technology",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/crowdstrike/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/seagate/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:crowdstrike:technology-control",
-      "source": "entity:crowdstrike",
+      "id": "membership:seagate technology:technology-control",
+      "source": "entity:seagate technology",
       "target": "category:technology-control",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/crowdstrike/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:ibm:companies",
-      "source": "entity:ibm",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/ibm/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:ibm:technology-control",
-      "source": "entity:ibm",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/ibm/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/seagate/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -4889,6 +4855,26 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:ibm:companies",
+      "source": "entity:ibm",
+      "target": "category:companies",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "companies",
+      "sourceUrl": "https://companiesmarketcap.com/ibm/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:ibm:technology-control",
+      "source": "entity:ibm",
+      "target": "category:technology-control",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "technology-control",
+      "sourceUrl": "https://companiesmarketcap.com/ibm/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:santander:companies",
       "source": "entity:santander",
       "target": "category:companies",
@@ -4909,43 +4895,23 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:sap:companies",
-      "source": "entity:sap",
+      "id": "membership:crowdstrike:companies",
+      "source": "entity:crowdstrike",
       "target": "category:companies",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/sap/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/crowdstrike/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:sap:technology-control",
-      "source": "entity:sap",
+      "id": "membership:crowdstrike:technology-control",
+      "source": "entity:crowdstrike",
       "target": "category:technology-control",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/sap/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:tokyo electron:companies",
-      "source": "entity:tokyo electron",
-      "target": "category:companies",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "companies",
-      "sourceUrl": "https://companiesmarketcap.com/tokyo-electron/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:tokyo electron:technology-control",
-      "source": "entity:tokyo electron",
-      "target": "category:technology-control",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "technology-control",
-      "sourceUrl": "https://companiesmarketcap.com/tokyo-electron/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/crowdstrike/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5059,16 +5025,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares core s and p 500 ucits etf usd acc:investment-vehicles",
-      "source": "entity:ishares core s and p 500 ucits etf usd acc",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-500-ucits-etf-usd-acc/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:ishares core msci emerging markets etf:investment-vehicles",
       "source": "entity:ishares core msci emerging markets etf",
       "target": "category:investment-vehicles",
@@ -5076,6 +5032,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-emerging-markets-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:ishares core s and p 500 ucits etf usd acc:investment-vehicles",
+      "source": "entity:ishares core s and p 500 ucits etf usd acc",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-500-ucits-etf-usd-acc/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5089,16 +5055,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares core msci world ucits etf usd acc:investment-vehicles",
-      "source": "entity:ishares core msci world ucits etf usd acc",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-world-ucits-etf-usd-acc/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:spdr gold shares:investment-vehicles",
       "source": "entity:spdr gold shares",
       "target": "category:investment-vehicles",
@@ -5109,13 +5065,13 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares core u s aggregate bond etf:investment-vehicles",
-      "source": "entity:ishares core u s aggregate bond etf",
+      "id": "membership:ishares core msci world ucits etf usd acc:investment-vehicles",
+      "source": "entity:ishares core msci world ucits etf usd acc",
       "target": "category:investment-vehicles",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-us-aggregate-bond-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-world-ucits-etf-usd-acc/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5126,6 +5082,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/vanguard-information-technology-index-fund-etf-shares/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:ishares core u s aggregate bond etf:investment-vehicles",
+      "source": "entity:ishares core u s aggregate bond etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-us-aggregate-bond-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5159,16 +5125,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:vanguard dividend appreciation index fund etf shares:investment-vehicles",
-      "source": "entity:vanguard dividend appreciation index fund etf shares",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-dividend-appreciation-index-fund-etf-shares/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:ishares core s and p small cap etf:investment-vehicles",
       "source": "entity:ishares core s and p small cap etf",
       "target": "category:investment-vehicles",
@@ -5176,6 +5132,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-small-cap-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:vanguard dividend appreciation index fund etf shares:investment-vehicles",
+      "source": "entity:vanguard dividend appreciation index fund etf shares",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-dividend-appreciation-index-fund-etf-shares/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5199,16 +5165,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares 0 3 month treasury bond etf:investment-vehicles",
-      "source": "entity:ishares 0 3 month treasury bond etf",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-0-3-month-treasury-bond-etf/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:invesco nasdaq 100 etf:investment-vehicles",
       "source": "entity:invesco nasdaq 100 etf",
       "target": "category:investment-vehicles",
@@ -5216,6 +5172,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/invesco-nasdaq-100-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:ishares 0 3 month treasury bond etf:investment-vehicles",
+      "source": "entity:ishares 0 3 month treasury bond etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-0-3-month-treasury-bond-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5239,16 +5205,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares russell 1000 value etf:investment-vehicles",
-      "source": "entity:ishares russell 1000 value etf",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-russell-1000-value-etf/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:ishares russell 2000 etf:investment-vehicles",
       "source": "entity:ishares russell 2000 etf",
       "target": "category:investment-vehicles",
@@ -5256,6 +5212,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-russell-2000-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:ishares russell 1000 value etf:investment-vehicles",
+      "source": "entity:ishares russell 1000 value etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-russell-1000-value-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5339,16 +5305,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:vanguard intermediate term corporate bond index fund etf shares:investment-vehicles",
-      "source": "entity:vanguard intermediate term corporate bond index fund etf shares",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-intermediate-term-corporate-bond-index-fund-etf-shares/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:schwab equity etf:investment-vehicles",
       "source": "entity:schwab equity etf",
       "target": "category:investment-vehicles",
@@ -5369,13 +5325,13 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:schwab u s large cap growth etf:investment-vehicles",
-      "source": "entity:schwab u s large cap growth etf",
+      "id": "membership:vanguard intermediate term corporate bond index fund etf shares:investment-vehicles",
+      "source": "entity:vanguard intermediate term corporate bond index fund etf shares",
       "target": "category:investment-vehicles",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/schwab-us-large-cap-growth-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-intermediate-term-corporate-bond-index-fund-etf-shares/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5386,6 +5342,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-gold-trust/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:schwab u s large cap growth etf:investment-vehicles",
+      "source": "entity:schwab u s large cap growth etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/schwab-us-large-cap-growth-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5449,6 +5415,16 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:ishares bitcoin trust etf:investment-vehicles",
+      "source": "entity:ishares bitcoin trust etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-bitcoin-trust-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:ishares russell 1000 etf:investment-vehicles",
       "source": "entity:ishares russell 1000 etf",
       "target": "category:investment-vehicles",
@@ -5459,13 +5435,13 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares bitcoin trust etf:investment-vehicles",
-      "source": "entity:ishares bitcoin trust etf",
+      "id": "membership:ishares semiconductor etf:investment-vehicles",
+      "source": "entity:ishares semiconductor etf",
       "target": "category:investment-vehicles",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-bitcoin-trust-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-semiconductor-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5529,13 +5505,13 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:ishares semiconductor etf:investment-vehicles",
-      "source": "entity:ishares semiconductor etf",
+      "id": "membership:jpmorgan equity premium income etf:investment-vehicles",
+      "source": "entity:jpmorgan equity premium income etf",
       "target": "category:investment-vehicles",
       "type": "appears in category",
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-semiconductor-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-equity-premium-income-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5546,16 +5522,6 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-bond-index-fund-etf-shares/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:jpmorgan equity premium income etf:investment-vehicles",
-      "source": "entity:jpmorgan equity premium income etf",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-equity-premium-income-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5579,16 +5545,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:vanguard short term corporate bond index fund etf shares:investment-vehicles",
-      "source": "entity:vanguard short term corporate bond index fund etf shares",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-corporate-bond-index-fund-etf-shares/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:vanguard russell 1000 growth index fund etf shares:investment-vehicles",
       "source": "entity:vanguard russell 1000 growth index fund etf shares",
       "target": "category:investment-vehicles",
@@ -5606,6 +5562,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/schwab-u-s-broad-market-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:vanguard short term corporate bond index fund etf shares:investment-vehicles",
+      "source": "entity:vanguard short term corporate bond index fund etf shares",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-corporate-bond-index-fund-etf-shares/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5669,16 +5635,6 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
-      "id": "membership:jpmorgan ultra short income etf:investment-vehicles",
-      "source": "entity:jpmorgan ultra short income etf",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-ultra-short-income-etf/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
       "id": "membership:jpmorgan nasdaq equity premium income etf:investment-vehicles",
       "source": "entity:jpmorgan nasdaq equity premium income etf",
       "target": "category:investment-vehicles",
@@ -5696,6 +5652,16 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/spdr-portfolio-developed-world-ex-us-etf/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
+      "id": "membership:jpmorgan ultra short income etf:investment-vehicles",
+      "source": "entity:jpmorgan ultra short income etf",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-ultra-short-income-etf/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -5749,6 +5715,16 @@
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
+      "id": "membership:proshares ultrapro qqq:investment-vehicles",
+      "source": "entity:proshares ultrapro qqq",
+      "target": "category:investment-vehicles",
+      "type": "appears in category",
+      "evidenceClass": "Registry overlap",
+      "category": "investment-vehicles",
+      "sourceUrl": "https://companiesmarketcap.com/proshares-ultrapro-qqq/marketcap/",
+      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
+    },
+    {
       "id": "membership:ishares iboxx grade corporate bond etf:investment-vehicles",
       "source": "entity:ishares iboxx grade corporate bond etf",
       "target": "category:investment-vehicles",
@@ -5776,16 +5752,6 @@
       "evidenceClass": "Registry overlap",
       "category": "investment-vehicles",
       "sourceUrl": "https://companiesmarketcap.com/ishares-physical-gold-etc/marketcap/",
-      "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
-    },
-    {
-      "id": "membership:proshares ultrapro qqq:investment-vehicles",
-      "source": "entity:proshares ultrapro qqq",
-      "target": "category:investment-vehicles",
-      "type": "appears in category",
-      "evidenceClass": "Registry overlap",
-      "category": "investment-vehicles",
-      "sourceUrl": "https://companiesmarketcap.com/proshares-ultrapro-qqq/marketcap/",
       "notEstablished": "Repeated appearance across categories does not by itself establish common control, coordination or wrongdoing."
     },
     {
@@ -7330,23 +7296,23 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-core-s-p-500-ucits-etf-usd-acc-blackrock",
-      "source": "entity:ishares core s and p 500 ucits etf usd acc",
-      "target": "entity:blackrock",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-500-ucits-etf-usd-acc/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-ishares-core-msci-emerging-markets-etf-blackrock",
       "source": "entity:ishares core msci emerging markets etf",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-emerging-markets-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-ishares-core-s-p-500-ucits-etf-usd-acc-blackrock",
+      "source": "entity:ishares core s and p 500 ucits etf usd acc",
+      "target": "entity:blackrock",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-500-ucits-etf-usd-acc/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7363,17 +7329,6 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-core-msci-world-ucits-etf-usd-acc-blackrock",
-      "source": "entity:ishares core msci world ucits etf usd acc",
-      "target": "entity:blackrock",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-world-ucits-etf-usd-acc/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-spdr-gold-shares-state-street-global-advisors",
       "source": "entity:spdr gold shares",
       "target": "entity:state street advisors",
@@ -7385,12 +7340,12 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-core-u-s-aggregate-bond-etf-blackrock",
-      "source": "entity:ishares core u s aggregate bond etf",
+      "id": "rel-ishares-core-msci-world-ucits-etf-usd-acc-blackrock",
+      "source": "entity:ishares core msci world ucits etf usd acc",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-core-us-aggregate-bond-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-msci-world-ucits-etf-usd-acc/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7402,6 +7357,17 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/vanguard-information-technology-index-fund-etf-shares/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-ishares-core-u-s-aggregate-bond-etf-blackrock",
+      "source": "entity:ishares core u s aggregate bond etf",
+      "target": "entity:blackrock",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-core-us-aggregate-bond-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7440,23 +7406,23 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-vanguard-dividend-appreciation-index-fund-etf-shares-vanguard-group",
-      "source": "entity:vanguard dividend appreciation index fund etf shares",
-      "target": "entity:vanguard",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-dividend-appreciation-index-fund-etf-shares/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-ishares-core-s-p-small-cap-etf-blackrock",
       "source": "entity:ishares core s and p small cap etf",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-core-sp-small-cap-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-vanguard-dividend-appreciation-index-fund-etf-shares-vanguard-group",
+      "source": "entity:vanguard dividend appreciation index fund etf shares",
+      "target": "entity:vanguard",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-dividend-appreciation-index-fund-etf-shares/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7484,23 +7450,23 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-0-3-month-treasury-bond-etf-blackrock",
-      "source": "entity:ishares 0 3 month treasury bond etf",
-      "target": "entity:blackrock",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-0-3-month-treasury-bond-etf/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-invesco-nasdaq-100-etf-invesco",
       "source": "entity:invesco nasdaq 100 etf",
       "target": "entity:invesco",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/invesco-nasdaq-100-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-ishares-0-3-month-treasury-bond-etf-blackrock",
+      "source": "entity:ishares 0 3 month treasury bond etf",
+      "target": "entity:blackrock",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-0-3-month-treasury-bond-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7528,23 +7494,23 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-russell-1000-value-etf-blackrock",
-      "source": "entity:ishares russell 1000 value etf",
-      "target": "entity:blackrock",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-russell-1000-value-etf/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-ishares-russell-2000-etf-blackrock",
       "source": "entity:ishares russell 2000 etf",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-russell-2000-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-ishares-russell-1000-value-etf-blackrock",
+      "source": "entity:ishares russell 1000 value etf",
+      "target": "entity:blackrock",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-russell-1000-value-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7638,17 +7604,6 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-vanguard-intermediate-term-corporate-bond-index-fund-etf-shares-vanguard-group",
-      "source": "entity:vanguard intermediate term corporate bond index fund etf shares",
-      "target": "entity:vanguard",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-intermediate-term-corporate-bond-index-fund-etf-shares/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-schwab-international-equity-etf-charles-schwab-investment-management",
       "source": "entity:schwab equity etf",
       "target": "entity:charles schwab",
@@ -7671,12 +7626,12 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-schwab-u-s-large-cap-growth-etf-charles-schwab-investment-management",
-      "source": "entity:schwab u s large cap growth etf",
-      "target": "entity:charles schwab",
+      "id": "rel-vanguard-intermediate-term-corporate-bond-index-fund-etf-shares-vanguard-group",
+      "source": "entity:vanguard intermediate term corporate bond index fund etf shares",
+      "target": "entity:vanguard",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/schwab-us-large-cap-growth-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-intermediate-term-corporate-bond-index-fund-etf-shares/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7688,6 +7643,17 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-gold-trust/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-schwab-u-s-large-cap-growth-etf-charles-schwab-investment-management",
+      "source": "entity:schwab u s large cap growth etf",
+      "target": "entity:charles schwab",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/schwab-us-large-cap-growth-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7759,6 +7725,17 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
+      "id": "rel-ishares-bitcoin-trust-etf-blackrock",
+      "source": "entity:ishares bitcoin trust etf",
+      "target": "entity:blackrock",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-bitcoin-trust-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
       "id": "rel-ishares-russell-1000-etf-blackrock",
       "source": "entity:ishares russell 1000 etf",
       "target": "entity:blackrock",
@@ -7770,12 +7747,12 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-bitcoin-trust-etf-blackrock",
-      "source": "entity:ishares bitcoin trust etf",
+      "id": "rel-ishares-semiconductor-etf-blackrock",
+      "source": "entity:ishares semiconductor etf",
       "target": "entity:blackrock",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-bitcoin-trust-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/ishares-semiconductor-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7847,12 +7824,12 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-ishares-semiconductor-etf-blackrock",
-      "source": "entity:ishares semiconductor etf",
-      "target": "entity:blackrock",
+      "id": "rel-jpmorgan-equity-premium-income-etf-jpmorgan-asset-management",
+      "source": "entity:jpmorgan equity premium income etf",
+      "target": "entity:jpmorgan asset",
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/ishares-semiconductor-etf/marketcap/",
+      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-equity-premium-income-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7864,17 +7841,6 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-bond-index-fund-etf-shares/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
-      "id": "rel-jpmorgan-equity-premium-income-etf-jpmorgan-asset-management",
-      "source": "entity:jpmorgan equity premium income etf",
-      "target": "entity:jpmorgan asset",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-equity-premium-income-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -7902,17 +7868,6 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-vanguard-short-term-corporate-bond-index-fund-etf-shares-vanguard-group",
-      "source": "entity:vanguard short term corporate bond index fund etf shares",
-      "target": "entity:vanguard",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-corporate-bond-index-fund-etf-shares/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-vanguard-russell-1000-growth-index-fund-etf-shares-vanguard-group",
       "source": "entity:vanguard russell 1000 growth index fund etf shares",
       "target": "entity:vanguard",
@@ -7930,6 +7885,17 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/schwab-u-s-broad-market-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-vanguard-short-term-corporate-bond-index-fund-etf-shares-vanguard-group",
+      "source": "entity:vanguard short term corporate bond index fund etf shares",
+      "target": "entity:vanguard",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/vanguard-short-term-corporate-bond-index-fund-etf-shares/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -8001,17 +7967,6 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
-      "id": "rel-jpmorgan-ultra-short-income-etf-jpmorgan-asset-management",
-      "source": "entity:jpmorgan ultra short income etf",
-      "target": "entity:jpmorgan asset",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-ultra-short-income-etf/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
       "id": "rel-jpmorgan-nasdaq-equity-premium-income-etf-jpmorgan-asset-management",
       "source": "entity:jpmorgan nasdaq equity premium income etf",
       "target": "entity:jpmorgan asset",
@@ -8029,6 +7984,17 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/spdr-portfolio-developed-world-ex-us-etf/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
+      "id": "rel-jpmorgan-ultra-short-income-etf-jpmorgan-asset-management",
+      "source": "entity:jpmorgan ultra short income etf",
+      "target": "entity:jpmorgan asset",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/jpmorgan-ultra-short-income-etf/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -8089,6 +8055,17 @@
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
     },
     {
+      "id": "rel-proshares-ultrapro-qqq-proshares",
+      "source": "entity:proshares ultrapro qqq",
+      "target": "entity:proshares",
+      "type": "managed by",
+      "evidenceClass": "Institutional Disclosure",
+      "sourceUrl": "https://companiesmarketcap.com/proshares-ultrapro-qqq/marketcap/",
+      "sourceDate": "2026-07-21",
+      "established": "The vehicle brand identifies the investment manager or sponsor.",
+      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
+    },
+    {
       "id": "rel-ishares-iboxx-investment-grade-corporate-bond-etf-blackrock",
       "source": "entity:ishares iboxx grade corporate bond etf",
       "target": "entity:blackrock",
@@ -8117,17 +8094,6 @@
       "type": "managed by",
       "evidenceClass": "Institutional Disclosure",
       "sourceUrl": "https://companiesmarketcap.com/ishares-physical-gold-etc/marketcap/",
-      "sourceDate": "2026-07-21",
-      "established": "The vehicle brand identifies the investment manager or sponsor.",
-      "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
-    },
-    {
-      "id": "rel-proshares-ultrapro-qqq-proshares",
-      "source": "entity:proshares ultrapro qqq",
-      "target": "entity:proshares",
-      "type": "managed by",
-      "evidenceClass": "Institutional Disclosure",
-      "sourceUrl": "https://companiesmarketcap.com/proshares-ultrapro-qqq/marketcap/",
       "sourceDate": "2026-07-21",
       "established": "The vehicle brand identifies the investment manager or sponsor.",
       "notEstablished": "Management does not mean the manager owns all underlying assets or acts in coordination with issuers."
@@ -8258,7 +8224,7 @@
         {
           "id": "companies-spcx",
           "category": "companies",
-          "rank": 10,
+          "rank": 9,
           "name": "SpaceX",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8282,7 +8248,7 @@
         {
           "id": "technology-control-spcx",
           "category": "technology-control",
-          "rank": 9,
+          "rank": 8,
           "name": "SpaceX",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8510,7 +8476,7 @@
         {
           "id": "companies-ms",
           "category": "companies",
-          "rank": 44,
+          "rank": 42,
           "name": "Morgan Stanley",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8534,7 +8500,7 @@
         {
           "id": "banks-ms",
           "category": "banks",
-          "rank": 6,
+          "rank": 5,
           "name": "Morgan Stanley",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8558,7 +8524,7 @@
         {
           "id": "companies-orcl",
           "category": "companies",
-          "rank": 39,
+          "rank": 37,
           "name": "Oracle",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8606,7 +8572,7 @@
         {
           "id": "companies-rtx",
           "category": "companies",
-          "rank": 62,
+          "rank": 64,
           "name": "RTX",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8771,7 +8737,7 @@
         {
           "id": "companies-601288-ss",
           "category": "companies",
-          "rank": 42,
+          "rank": 43,
           "name": "Agricultural Bank of China",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8783,7 +8749,7 @@
         {
           "id": "banks-601288-ss",
           "category": "banks",
-          "rank": 5,
+          "rank": 6,
           "name": "Agricultural Bank of China",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8841,7 +8807,7 @@
         {
           "id": "companies-baba",
           "category": "companies",
-          "rank": 53,
+          "rank": 56,
           "name": "Alibaba",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8853,7 +8819,7 @@
         {
           "id": "technology-control-baba",
           "category": "technology-control",
-          "rank": 23,
+          "rank": 25,
           "name": "Alibaba",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8876,7 +8842,7 @@
         {
           "id": "companies-amd",
           "category": "companies",
-          "rank": 19,
+          "rank": 17,
           "name": "AMD",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8888,7 +8854,7 @@
         {
           "id": "technology-control-amd",
           "category": "technology-control",
-          "rank": 14,
+          "rank": 13,
           "name": "AMD",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8946,7 +8912,7 @@
         {
           "id": "companies-amat",
           "category": "companies",
-          "rank": 30,
+          "rank": 28,
           "name": "Applied Materials",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8958,7 +8924,7 @@
         {
           "id": "technology-control-amat",
           "category": "technology-control",
-          "rank": 19,
+          "rank": 18,
           "name": "Applied Materials",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -8993,7 +8959,7 @@
         {
           "id": "technology-control-anet",
           "category": "technology-control",
-          "rank": 30,
+          "rank": 31,
           "name": "Arista Networks",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9016,7 +8982,7 @@
         {
           "id": "companies-arm",
           "category": "companies",
-          "rank": 54,
+          "rank": 50,
           "name": "Arm Holdings",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9028,7 +8994,7 @@
         {
           "id": "technology-control-arm",
           "category": "technology-control",
-          "rank": 24,
+          "rank": 23,
           "name": "Arm Holdings",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9051,7 +9017,7 @@
         {
           "id": "companies-asml",
           "category": "companies",
-          "rank": 21,
+          "rank": 20,
           "name": "ASML",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9191,7 +9157,7 @@
         {
           "id": "companies-bac",
           "category": "companies",
-          "rank": 29,
+          "rank": 30,
           "name": "Bank of America",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9681,7 +9647,7 @@
         {
           "id": "companies-601939-ss",
           "category": "companies",
-          "rank": 33,
+          "rank": 34,
           "name": "China Construction Bank",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9751,7 +9717,7 @@
         {
           "id": "companies-csco",
           "category": "companies",
-          "rank": 28,
+          "rank": 29,
           "name": "Cisco",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9763,7 +9729,7 @@
         {
           "id": "technology-control-csco",
           "category": "technology-control",
-          "rank": 18,
+          "rank": 19,
           "name": "Cisco",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9786,7 +9752,7 @@
         {
           "id": "companies-c",
           "category": "companies",
-          "rank": 79,
+          "rank": 78,
           "name": "Citigroup",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9856,7 +9822,7 @@
         {
           "id": "companies-crwd",
           "category": "companies",
-          "rank": 86,
+          "rank": 94,
           "name": "CrowdStrike",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9868,7 +9834,7 @@
         {
           "id": "technology-control-crwd",
           "category": "technology-control",
-          "rank": 33,
+          "rank": 35,
           "name": "CrowdStrike",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9891,7 +9857,7 @@
         {
           "id": "companies-dell",
           "category": "companies",
-          "rank": 67,
+          "rank": 66,
           "name": "Dell",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9938,7 +9904,7 @@
         {
           "id": "energy-resources-eqt",
           "category": "energy-resources",
-          "rank": 86,
+          "rank": 84,
           "name": "EQT Corporation",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -9973,7 +9939,7 @@
         {
           "id": "technology-control-eqix",
           "category": "technology-control",
-          "rank": 60,
+          "rank": 58,
           "name": "Equinix",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10171,7 +10137,7 @@
         {
           "id": "companies-gev",
           "category": "companies",
-          "rank": 52,
+          "rank": 54,
           "name": "GE Vernova",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10241,7 +10207,7 @@
         {
           "id": "companies-ge",
           "category": "companies",
-          "rank": 37,
+          "rank": 38,
           "name": "General Electric",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10311,7 +10277,7 @@
         {
           "id": "companies-gs",
           "category": "companies",
-          "rank": 48,
+          "rank": 46,
           "name": "Goldman Sachs",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10323,7 +10289,7 @@
         {
           "id": "banks-gs",
           "category": "banks",
-          "rank": 8,
+          "rank": 7,
           "name": "Goldman Sachs",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10428,7 +10394,7 @@
         {
           "id": "defence-security-hon",
           "category": "defence-security",
-          "rank": 12,
+          "rank": 11,
           "name": "Honeywell",
           "status": "Verified public-market snapshot plus research lead",
           "evidenceClass": "Verified Market Data",
@@ -10451,7 +10417,7 @@
         {
           "id": "companies-hsbc",
           "category": "companies",
-          "rank": 41,
+          "rank": 40,
           "name": "HSBC",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10486,7 +10452,7 @@
         {
           "id": "companies-ibm",
           "category": "companies",
-          "rank": 88,
+          "rank": 91,
           "name": "IBM",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10533,7 +10499,7 @@
         {
           "id": "banks-1398-hk",
           "category": "banks",
-          "rank": 7,
+          "rank": 8,
           "name": "ICBC",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10661,7 +10627,7 @@
         {
           "id": "companies-285a-t",
           "category": "companies",
-          "rank": 84,
+          "rank": 85,
           "name": "KIOXIA Holdings Corporation",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10696,7 +10662,7 @@
         {
           "id": "companies-klac",
           "category": "companies",
-          "rank": 60,
+          "rank": 55,
           "name": "KLA",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10708,7 +10674,7 @@
         {
           "id": "technology-control-klac",
           "category": "technology-control",
-          "rank": 27,
+          "rank": 24,
           "name": "KLA",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -10836,7 +10802,7 @@
         {
           "id": "companies-lrcx",
           "category": "companies",
-          "rank": 34,
+          "rank": 33,
           "name": "Lam Research",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11046,7 +11012,7 @@
         {
           "id": "companies-meta",
           "category": "companies",
-          "rank": 9,
+          "rank": 10,
           "name": "Meta Platforms (Facebook)",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11058,7 +11024,7 @@
         {
           "id": "technology-control-meta",
           "category": "technology-control",
-          "rank": 8,
+          "rank": 9,
           "name": "Meta Platforms (Facebook)",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11081,7 +11047,7 @@
         {
           "id": "companies-mu",
           "category": "companies",
-          "rank": 15,
+          "rank": 13,
           "name": "Micron Technology",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11116,7 +11082,7 @@
         {
           "id": "companies-mufg",
           "category": "companies",
-          "rank": 69,
+          "rank": 68,
           "name": "Mitsubishi UFJ Financial",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11443,7 +11409,7 @@
         {
           "id": "defence-security-noc",
           "category": "defence-security",
-          "rank": 11,
+          "rank": 12,
           "name": "Northrop Grumman",
           "status": "Verified public-market snapshot plus research lead",
           "evidenceClass": "Verified Market Data",
@@ -11606,7 +11572,7 @@
         {
           "id": "companies-pltr",
           "category": "companies",
-          "rank": 46,
+          "rank": 48,
           "name": "Palantir",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11641,7 +11607,7 @@
         {
           "id": "companies-panw",
           "category": "companies",
-          "rank": 56,
+          "rank": 59,
           "name": "Palo Alto Networks",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11653,7 +11619,7 @@
         {
           "id": "technology-control-panw",
           "category": "technology-control",
-          "rank": 25,
+          "rank": 27,
           "name": "Palo Alto Networks",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11676,7 +11642,7 @@
         {
           "id": "companies-0857-hk",
           "category": "companies",
-          "rank": 75,
+          "rank": 76,
           "name": "PetroChina",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11886,7 +11852,7 @@
         {
           "id": "companies-ry",
           "category": "companies",
-          "rank": 51,
+          "rank": 53,
           "name": "Royal Bank Of Canada",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -11991,7 +11957,7 @@
         {
           "id": "companies-sndk",
           "category": "companies",
-          "rank": 83,
+          "rank": 74,
           "name": "Sandisk",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12003,7 +11969,7 @@
         {
           "id": "technology-control-sndk",
           "category": "technology-control",
-          "rank": 31,
+          "rank": 30,
           "name": "Sandisk",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12026,7 +11992,7 @@
         {
           "id": "companies-san",
           "category": "companies",
-          "rank": 95,
+          "rank": 93,
           "name": "Santander",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12045,41 +12011,6 @@
           "sourceUrl": "https://companiesmarketcap.com/santander/marketcap/",
           "sourceDate": "2026-07-21",
           "established": "The cited ranking identifies this publicly traded entity and its displayed market capitalisation at the source date.",
-          "notEstablished": "Market value does not establish revenue, assets, beneficial ownership, voting control, operational control, coordination or wrongdoing."
-        }
-      ]
-    },
-    {
-      "key": "sap",
-      "name": "SAP",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "records": [
-        {
-          "id": "companies-sap",
-          "category": "companies",
-          "rank": 99,
-          "name": "SAP",
-          "status": "Verified market snapshot",
-          "evidenceClass": "Verified Market Data",
-          "sourceUrl": "https://companiesmarketcap.com/sap/marketcap/",
-          "sourceDate": "2026-07-21",
-          "established": "The cited ranking reports the displayed market value at the source date.",
-          "notEstablished": "Market value is not cash, revenue, profit, personal wealth, voting control or proof of coordinated conduct."
-        },
-        {
-          "id": "technology-control-sap",
-          "category": "technology-control",
-          "rank": 35,
-          "name": "SAP",
-          "status": "Verified public-market snapshot",
-          "evidenceClass": "Verified Market Data",
-          "sourceUrl": "https://companiesmarketcap.com/sap/marketcap/",
-          "sourceDate": "2026-07-21",
-          "established": "The cited ranking identifies this publicly traded entity and its displayed market capitalisation proxy at the source date.",
           "notEstablished": "Market value does not establish revenue, assets, beneficial ownership, voting control, operational control, coordination or wrongdoing."
         }
       ]
@@ -12155,6 +12086,41 @@
       ]
     },
     {
+      "key": "seagate technology",
+      "name": "Seagate Technology",
+      "categories": [
+        "companies",
+        "technology-control"
+      ],
+      "recordCount": 2,
+      "records": [
+        {
+          "id": "companies-stx",
+          "category": "companies",
+          "rank": 88,
+          "name": "Seagate Technology",
+          "status": "Verified market snapshot",
+          "evidenceClass": "Verified Market Data",
+          "sourceUrl": "https://companiesmarketcap.com/seagate/marketcap/",
+          "sourceDate": "2026-07-21",
+          "established": "The cited ranking reports the displayed market value at the source date.",
+          "notEstablished": "Market value is not cash, revenue, profit, personal wealth, voting control or proof of coordinated conduct."
+        },
+        {
+          "id": "technology-control-stx",
+          "category": "technology-control",
+          "rank": 33,
+          "name": "Seagate Technology",
+          "status": "Verified public-market snapshot",
+          "evidenceClass": "Verified Market Data",
+          "sourceUrl": "https://companiesmarketcap.com/seagate/marketcap/",
+          "sourceDate": "2026-07-21",
+          "established": "The cited ranking identifies this publicly traded entity and its displayed market capitalisation proxy at the source date.",
+          "notEstablished": "Market value does not establish revenue, assets, beneficial ownership, voting control, operational control, coordination or wrongdoing."
+        }
+      ]
+    },
+    {
       "key": "shell",
       "name": "Shell",
       "categories": [
@@ -12166,7 +12132,7 @@
         {
           "id": "companies-shel",
           "category": "companies",
-          "rank": 71,
+          "rank": 70,
           "name": "Shell",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12213,7 +12179,7 @@
         {
           "id": "technology-control-000660-ks",
           "category": "technology-control",
-          "rank": 13,
+          "rank": 14,
           "name": "SK Hynix",
           "status": "Verified public-market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12376,7 +12342,7 @@
         {
           "id": "companies-txn",
           "category": "companies",
-          "rank": 65,
+          "rank": 61,
           "name": "Texas Instruments",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12435,41 +12401,6 @@
       ]
     },
     {
-      "key": "tokyo electron",
-      "name": "Tokyo Electron",
-      "categories": [
-        "companies",
-        "technology-control"
-      ],
-      "recordCount": 2,
-      "records": [
-        {
-          "id": "companies-8035-t",
-          "category": "companies",
-          "rank": 100,
-          "name": "Tokyo Electron",
-          "status": "Verified market snapshot",
-          "evidenceClass": "Verified Market Data",
-          "sourceUrl": "https://companiesmarketcap.com/tokyo-electron/marketcap/",
-          "sourceDate": "2026-07-21",
-          "established": "The cited ranking reports the displayed market value at the source date.",
-          "notEstablished": "Market value is not cash, revenue, profit, personal wealth, voting control or proof of coordinated conduct."
-        },
-        {
-          "id": "technology-control-8035-t",
-          "category": "technology-control",
-          "rank": 36,
-          "name": "Tokyo Electron",
-          "status": "Verified public-market snapshot",
-          "evidenceClass": "Verified Market Data",
-          "sourceUrl": "https://companiesmarketcap.com/tokyo-electron/marketcap/",
-          "sourceDate": "2026-07-21",
-          "established": "The cited ranking identifies this publicly traded entity and its displayed market capitalisation proxy at the source date.",
-          "notEstablished": "Market value does not establish revenue, assets, beneficial ownership, voting control, operational control, coordination or wrongdoing."
-        }
-      ]
-    },
-    {
       "key": "toronto dominion bank",
       "name": "Toronto Dominion Bank",
       "categories": [
@@ -12481,7 +12412,7 @@
         {
           "id": "companies-td",
           "category": "companies",
-          "rank": 91,
+          "rank": 90,
           "name": "Toronto Dominion Bank",
           "status": "Verified market snapshot",
           "evidenceClass": "Verified Market Data",
@@ -12649,7 +12580,7 @@
     {
       "from": "companies",
       "to": "technology-control",
-      "count": 36
+      "count": 35
     },
     {
       "from": "foundations",

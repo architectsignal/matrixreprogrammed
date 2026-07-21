@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "observedAt": "2026-07-21T07:30:29.575Z",
+  "observedAt": "2026-07-21T07:33:22.700Z",
   "production": {
     "conclusion": "",
     "createdAt": "2026-07-21T07:27:38Z",
@@ -12,14 +12,14 @@
     "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29810527916"
   },
   "moneyIntelligence": {
-    "conclusion": "failure",
-    "createdAt": "2026-07-21T07:29:39Z",
-    "databaseId": 29810649864,
+    "conclusion": "",
+    "createdAt": "2026-07-21T07:33:05Z",
+    "databaseId": 29810865511,
     "event": "push",
-    "headSha": "f8c8467a928f5d6c6b679788570f07f6c2aeeecd",
-    "status": "completed",
-    "updatedAt": "2026-07-21T07:30:03Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29810649864"
+    "headSha": "b1079c2927aebeecf759ba8d71bf575704a1cf0c",
+    "status": "in_progress",
+    "updatedAt": "2026-07-21T07:33:08Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29810865511"
   },
   "detailedWealthGuides": {
     "conclusion": "success",
@@ -196,6 +196,26 @@
     ],
     "moneyIntelligence": [
       {
+        "conclusion": "",
+        "createdAt": "2026-07-21T07:33:05Z",
+        "databaseId": 29810865511,
+        "event": "push",
+        "headSha": "b1079c2927aebeecf759ba8d71bf575704a1cf0c",
+        "status": "in_progress",
+        "updatedAt": "2026-07-21T07:33:08Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29810865511"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-21T07:32:32Z",
+        "databaseId": 29810830908,
+        "event": "push",
+        "headSha": "effce0cac921b869ef853e6ba23e6c2a2ce204b7",
+        "status": "completed",
+        "updatedAt": "2026-07-21T07:32:57Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29810830908"
+      },
+      {
         "conclusion": "failure",
         "createdAt": "2026-07-21T07:29:39Z",
         "databaseId": 29810649864,
@@ -294,16 +314,6 @@
         "status": "completed",
         "updatedAt": "2026-07-20T21:23:56Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29779990419"
-      },
-      {
-        "conclusion": "success",
-        "createdAt": "2026-07-20T20:06:07Z",
-        "databaseId": 29774711792,
-        "event": "push",
-        "headSha": "f3ba27d1c92927f4c4589ba74309297900619077",
-        "status": "completed",
-        "updatedAt": "2026-07-20T20:07:22Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29774711792"
       }
     ],
     "detailedWealthGuides": [

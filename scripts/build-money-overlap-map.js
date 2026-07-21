@@ -97,7 +97,11 @@ function patchHub(){
 }
 function copyAssets(){
   const pairs=[['src/money-overlap-graph.html','money-graph.html'],['src/money-overlap-graph.js','money-graph.js'],['src/money-command-center.js','money-command-center.js']];
-  for(const[src,dest]of pairs){const content=read(src);if(!content)throw new Error(`Missing canonical overlap asset ${src}`);write(dest,content)}
+  for(const[src,dest]of pairs){
+    let content=read(src);if(!content)throw new Error(`Missing canonical overlap asset ${src}`);
+    if(src.endsWith('.html'))content=content.replace(/(["'])\.\.\//g,'$1');
+    write(dest,content);
+  }
 }
 async function refreshPublicMarketCategories(registry){
   if(process.env.MATRIX_MONEY_REFRESH!=='1')return false;

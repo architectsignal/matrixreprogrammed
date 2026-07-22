@@ -1,41 +1,39 @@
-const fs = require('fs');
-const path = require('path');
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const skipped=new Set(['.git','node_modules','_site','.wrangler','.netlify']);
+let files=0;
+let links=0;
 
-const root = process.cwd();
-let files = 0;
-let links = 0;
-
-function walk(dir) {
-  if (!fs.existsSync(dir)) return [];
-  const out = [];
-  for (const name of fs.readdirSync(dir)) {
-    const full = path.join(dir, name);
-    const stat = fs.statSync(full);
-    if (stat.isDirectory()) out.push(...walk(full));
-    else if (name.endsWith('.html')) out.push(full);
-  }
-  return out;
+function walk(dir){
+ if(!fs.existsSync(dir))return[];
+ const out=[];
+ for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
+  if(entry.isDirectory()&&skipped.has(entry.name))continue;
+  const full=path.join(dir,entry.name);
+  if(entry.isDirectory())out.push(...walk(full));
+  else if(entry.name.endsWith('.html'))out.push(full);
+ }
+ return out;
 }
 
-function replacementFor(target) {
-  if (target.startsWith('../../top-52/')) return '../../top-52-power-deck.html';
-  if (target.startsWith('../top-52/')) return '../top-52-power-deck.html';
-  if (target.startsWith('top-52/')) return 'top-52-power-deck.html';
-  return target;
+function canonicalTarget(target){
+ const match=String(target).match(/(?:^|\/)(top-52)\/([^/?#]+?)(?:\.html)?(?:[?#].*)?$/i);
+ if(!match)return target;
+ const id=match[2].replace(/\.html$/i,'');
+ const dossier=path.join(root,'top-52',`${id}.html`);
+ if(!fs.existsSync(dossier))throw new Error(`Top 52 dossier target is missing: top-52/${id}.html`);
+ return `/top-52/${id}`;
 }
 
-for (const file of walk(root)) {
-  let html = fs.readFileSync(file, 'utf8');
-  const before = html;
-  html = html.replace(/href=(['"])(\.\.\/\.\.\/top-52\/[^'"]+|\.\.\/top-52\/[^'"]+|top-52\/[^'"]+)\1/g, (m, q, target) => {
-    const fixed = replacementFor(target);
-    if (fixed !== target) links += 1;
-    return `href=${q}${fixed}${q}`;
-  });
-  if (html !== before) {
-    fs.writeFileSync(file, html);
-    files += 1;
-  }
+for(const file of walk(root)){
+ const before=fs.readFileSync(file,'utf8');
+ const after=before.replace(/href=(['"])(\.\.\/\.\.\/top-52\/[^'"]+|\.\.\/top-52\/[^'"]+|top-52\/[^'"]+)\1/g,(match,quote,target)=>{
+  const next=canonicalTarget(target);
+  if(next!==target)links+=1;
+  return `href=${quote}${next}${quote}`;
+ });
+ if(after!==before){fs.writeFileSync(file,after);files+=1;}
 }
 
-console.log(`Top 52 art link repair complete: ${files} file(s), ${links} link(s) fixed.`);
+console.log(`Top 52 dossier link normalization complete: ${files} file(s), ${links} link(s) converted to direct extensionless dossiers.`);

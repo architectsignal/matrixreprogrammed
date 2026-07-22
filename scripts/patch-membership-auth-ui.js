@@ -5,6 +5,7 @@ const root = process.cwd();
 require('./harden-worker-api-contracts.js');
 require('./patch-cloudflare-canonical-member-origin.js');
 require('./patch-member-login-paypal-newsletter.js');
+require('./patch-paypal-checkout-gate-order.js');
 require('./patch-money-graph-root-data.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
@@ -103,6 +104,14 @@ for (const required of [
   }
 }
 
+const paypalSource = fs.readFileSync(path.join(root, 'src', 'worker-paypal-subscriptions.js'), 'utf8');
+const disabledIndex = paypalSource.indexOf("if(!state.checkoutEnabled)return json(");
+const duplicateIndex = paypalSource.indexOf("if(currentSubscription&&bool(currentSubscription.paid_access))");
+if (disabledIndex < 0 || duplicateIndex < 0 || disabledIndex > duplicateIndex) {
+  console.error('Cloudflare membership integration verification failed: checkout shutdown must precede duplicate-subscription handling');
+  process.exit(1);
+}
+
 const emailLifecycleSource = fs.readFileSync(path.join(root, 'src', 'worker-email-lifecycle.js'), 'utf8');
 if (emailLifecycleSource.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);')) {
   console.error('Cloudflare membership integration verification failed: the legacy executable first-daily-brief call remains');
@@ -117,7 +126,7 @@ const report = {
   pages: pages.map(page => page.name),
   paypalCheckout: true,
   canonicalOriginPolicy: 'All www requests receive a method-preserving 308 redirect to the apex Cloudflare Worker origin before authentication or asset routing',
-  paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only; a second checkout is blocked for current state-backed and legacy active/trialing entitlements',
+  paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only; global checkout shutdown is evaluated first, then a second checkout is blocked for current state-backed and legacy active/trialing entitlements',
   sessionCookiePolicy: 'PayPal, billing, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback',
   newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent; the server retains compatibility for marketingConsent',
   newsletterDeliveryPolicy: 'Welcome email and selected first daily brief are delivered through the D1 outbox and Brevo lifecycle; the detailed intelligence builder falls back safely',

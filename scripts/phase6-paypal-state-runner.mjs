@@ -1,6 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { createRequire } from 'node:module';
 
+const require=createRequire(import.meta.url);
+const {repairPayPalCheckoutGateOrder}=require('./patch-paypal-checkout-gate-order.js');
 const root=process.cwd();
 const outputDir=path.join(root,'downloads','phase6-paypal-state-test');
 fs.mkdirSync(outputDir,{recursive:true});
@@ -31,7 +34,7 @@ function canonicalPayPalSource(){
     "async function checkoutIntent(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const currentSubscription=await currentSubscriptionForMember(env,required.auth.member.id);if(currentSubscription&&bool(currentSubscription.paid_access))return json({ok:false,error:'An active PayPal membership already exists. Use the billing dashboard to manage or cancel it before starting another subscription.',currentSubscription,billingUrl:'/billing-dashboard.html'},409);const state=await activationState(env);if(!state.checkoutEnabled)return json({ok:false,configured:state.configured,environment:state.environment,error:'PayPal checkout is disabled until activation gates pass'},503);const input=await body(request);const tier=clean(input.tier,40);if(!tiers[tier])return json({ok:false,error:'Unknown membership tier'},400);const plan=state.plans.find(item=>item.tier===tier);if(!plan)return json({ok:false,error:'The selected PayPal plan is unavailable'},409);const current=new Date();const expiresAt=new Date(current.getTime()+30*60*1000).toISOString();await env.MEMBERS_DB.prepare('UPDATE paypal_checkout_intents SET used_at=? WHERE member_id=? AND used_at IS NULL').bind(current.toISOString(),required.auth.member.id).run();const intentId=id('paypal-intent');await env.MEMBERS_DB.prepare('INSERT INTO paypal_checkout_intents (id,member_id,tier,plan_id,expires_at,created_at) VALUES (?,?,?,?,?,?)').bind(intentId,required.auth.member.id,tier,plan.provider_plan_id,expiresAt,current.toISOString()).run();await env.MEMBERS_DB.prepare(\"INSERT INTO paypal_checkout_intent_state (checkout_intent_id,environment,status,updated_at,created_at) VALUES (?,?,'created',?,?)\").bind(intentId,state.environment,current.toISOString(),current.toISOString()).run();return json({ok:true,intentId,tier,planId:plan.provider_plan_id,customId:intentId,clientId:String(env.PAYPAL_CLIENT_ID),currency:'EUR',environment:state.environment,expiresAt})}",
     'checkout-intent allocator'
   );
-  return source;
+  return repairPayPalCheckoutGateOrder(source);
 }
 
 try{

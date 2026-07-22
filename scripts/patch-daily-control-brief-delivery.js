@@ -30,10 +30,17 @@ const replacementQueue = [
 ].join('\n');
 source = source.replace(queuePattern, replacementQueue);
 
+const firstBriefFunction = source.includes('async function sendDetailedFirstDailyBrief')
+  ? 'sendDetailedFirstDailyBrief'
+  : 'sendFirstDailyBrief';
 const oldVerifyTail = "await enqueue(env,member,{messageKind:'welcome',subject:'Welcome to Matrix Reprogrammed',...template,idempotencyKey:`welcome:${member.id}:${stamp.slice(0,10)}`});const delivery=await processOutbox(env,{memberId:member.id,limit:5});await audit(env,member.id,'email.verified','member',member.id,{purpose,providerSynced:providerSync.synced,welcomeSent:delivery.sent>0});if(testMode(env))return json({ok:true,verified:true,memberId:member.id,preferenceToken,unsubscribeToken,dashboardUrl,providerSync,welcomeSent:delivery.sent>0});return redirect(`${origin(request)}/email-status.html?verified=1&token=${encodeURIComponent(preferenceToken)}`)}";
-const newVerifyTail = "await enqueue(env,member,{messageKind:'welcome',subject:'Welcome to Matrix Reprogrammed',...template,idempotencyKey:`welcome:${member.id}:${stamp.slice(0,10)}`});const welcomeDelivery=await processOutbox(env,{memberId:member.id,limit:5});const firstBrief=await sendFirstDailyBrief(request,env,member);await audit(env,member.id,'email.verified','member',member.id,{purpose,providerSynced:providerSync.synced,welcomeSent:welcomeDelivery.sent>0,firstDailyBrief:firstBrief});if(testMode(env))return json({ok:true,verified:true,memberId:member.id,preferenceToken,unsubscribeToken,dashboardUrl,providerSync,welcomeSent:welcomeDelivery.sent>0,firstDailyBrief:firstBrief});const briefState=encodeURIComponent(firstBrief.state||'not-selected');return redirect(`${origin(request)}/email-status.html?verified=1&token=${encodeURIComponent(preferenceToken)}&dailyBrief=${briefState}`)}";
+const newVerifyTail = "await enqueue(env,member,{messageKind:'welcome',subject:'Welcome to Matrix Reprogrammed',...template,idempotencyKey:`welcome:${member.id}:${stamp.slice(0,10)}`});const welcomeDelivery=await processOutbox(env,{memberId:member.id,limit:5});const firstBrief=await sendFirstDailyBrief(request,env,member);await audit(env,member.id,'email.verified','member',member.id,{purpose,providerSynced:providerSync.synced,welcomeSent:welcomeDelivery.sent>0,firstDailyBrief:firstBrief});if(testMode(env))return json({ok:true,verified:true,memberId:member.id,preferenceToken,unsubscribeToken,dashboardUrl,providerSync,welcomeSent:welcomeDelivery.sent>0,firstDailyBrief:firstBrief});const briefState=encodeURIComponent(firstBrief.state||'not-selected');return redirect(`${origin(request)}/email-status.html?verified=1&token=${encodeURIComponent(preferenceToken)}&dailyBrief=${briefState}`)}".replace('sendFirstDailyBrief', firstBriefFunction);
+const acceptedVerifyCalls = [
+  'const firstBrief=await sendDetailedFirstDailyBrief(request,env,member)',
+  'const firstBrief=await sendFirstDailyBrief(request,env,member)'
+];
 if (source.includes(oldVerifyTail)) source = source.replace(oldVerifyTail, newVerifyTail);
-else if (!source.includes('const firstBrief=await sendFirstDailyBrief(request,env,member)')) throw new Error('handleVerify delivery tail not found');
+else if (!acceptedVerifyCalls.some(call => source.includes(call))) throw new Error('handleVerify delivery tail not found');
 
 source = source.replace("'/api/email/admin/campaigns','/api/email/admin/process-outbox','/api/email/admin/run-automation'", "'/api/email/admin/campaigns','/api/email/admin/process-outbox','/api/email/admin/run-automation','/api/email/admin/subscriber'");
 
@@ -49,7 +56,8 @@ if (!source.includes('async function handleAdminSubscriber')) {
 
 source = source.replace("if(request.method==='GET'&&path==='/api/email/admin/health')return handleAdminHealth(request,env);", "if(request.method==='GET'&&path==='/api/email/admin/health')return handleAdminHealth(request,env);if(request.method==='GET'&&path==='/api/email/admin/subscriber')return handleAdminSubscriber(request,env);");
 
-if (!source.includes(marker) || !source.includes('sendFirstDailyBrief(request,env,member)') || !source.includes('/api/email/admin/subscriber')) {
+const hasAcceptedBriefCall = acceptedVerifyCalls.some(call => source.includes(call));
+if (!source.includes(marker) || !hasAcceptedBriefCall || !source.includes('/api/email/admin/subscriber')) {
   throw new Error('Daily Control Brief delivery patch did not apply completely');
 }
 
@@ -59,8 +67,9 @@ fs.writeFileSync(path.join(root, 'downloads', 'daily-control-brief-delivery-patc
   ok: true,
   version: marker,
   immediateAfterVerification: true,
+  firstBriefBuilder: firstBriefFunction,
   sameDayIdempotency: 'daily-control-brief:{memberId}:{YYYY-MM-DD}',
   adminSubscriberDiagnostic: true,
   generatedAt: new Date().toISOString()
 }, null, 2));
-console.log('Daily Control Brief immediate delivery, same-day idempotency and protected subscriber diagnostics applied.');
+console.log(`Daily Control Brief immediate delivery, same-day idempotency and protected subscriber diagnostics applied with ${firstBriefFunction}.`);

@@ -69,8 +69,17 @@ jobs:
           set +e
           node scripts/build-behind-the-curtain.js > /tmp/behind-the-curtain-build.log 2>&1
           status=$?
+          cp /tmp/behind-the-curtain-build.log behind-the-curtain-build.log
           tail -n 120 /tmp/behind-the-curtain-build.log
           exit $status
+      - name: Upload focused failure diagnostic
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: behind-the-curtain-build-failure-${{ github.run_id }}
+          path: behind-the-curtain-build.log
+          if-no-files-found: error
+          retention-days: 7
       - name: Validate syntax and evidence contracts
         run: |
           node --check behind-the-curtain.js

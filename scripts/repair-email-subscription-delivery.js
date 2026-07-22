@@ -22,13 +22,16 @@ function repairEmailWorker(source) {
   const safeUpsert = "async function upsertSignupMember(env,input,{resubscribe=false}={}){const email=clean(input.email,254).toLowerCase();const name=clean(input.name,120);const stamp=iso(env);const requestedId='subscriber-'+(await hash(email)).slice(0,24);await env.MEMBERS_DB.prepare(`INSERT INTO members (id,email,display_name,role,tier,status,marketing_status,source,created_at,updated_at) VALUES (?,?,?,'member','free','pending','pending',?,?,?) ON CONFLICT(email) DO UPDATE SET display_name=CASE WHEN excluded.display_name<>'' THEN excluded.display_name ELSE members.display_name END,status=CASE WHEN members.status='deleted' THEN members.status ELSE members.status END,marketing_status=CASE WHEN ?=1 THEN 'pending' WHEN members.status='active' AND members.email_verified_at IS NOT NULL AND members.marketing_status='subscribed' THEN 'subscribed' WHEN members.marketing_status IN ('suppressed','bounced','complained','unsubscribed') THEN members.marketing_status ELSE 'pending' END,source=excluded.source,updated_at=excluded.updated_at`).bind(requestedId,email,name,clean(input.source||input.path||'newsletter-signup',180),stamp,stamp,resubscribe?1:0).run();return memberByEmail(env,email)}";
   source = replaceOnce(source, unsafeUpsert, safeUpsert, 'Verified subscriber state preservation');
 
-  const signupStartLegacy = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent,false))return json({ok:false,error:'Explicit email consent is required'},400);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
+  const legacyConsentCheck = "if(!bool(input.consent,false))return json({ok:false,error:'Explicit email consent is required'},400);";
+  const compatibleConsentCheck = "if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);";
+  if (source.includes(legacyConsentCheck)) source = source.replace(legacyConsentCheck, compatibleConsentCheck);
+  else if (!source.includes(compatibleConsentCheck)) throw new Error('Compatible email consent check not found');
+
   const signupStartCompatible = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
   const signupStartSafe = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);const existingBeforeSignup=await memberByEmail(env,email);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
   const existingSnapshotMarker = 'const existingBeforeSignup=await memberByEmail(env,email);';
   if (!source.includes(existingSnapshotMarker)) {
     if (source.includes(signupStartCompatible)) source = source.replace(signupStartCompatible, signupStartSafe);
-    else if (source.includes(signupStartLegacy)) source = source.replace(signupStartLegacy, signupStartSafe);
     else throw new Error('Existing subscriber snapshot anchor not found');
   }
 
@@ -90,6 +93,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   },
   safeguards: {
     canonicalConsentCompatible: true,
+    consentNormalizationIndependent: true,
     verifiedRepeatSignupPreserved: true,
     semanticExistingSubscriberSnapshot: true,
     pendingVerifiedRecoverySupported: true,

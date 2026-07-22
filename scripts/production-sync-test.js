@@ -14,32 +14,53 @@ const check = (name, ok) => { if (!ok) failures.push(name); };
 
 const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
+const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
 const liveVerifier = read('scripts/verify-live-production.js');
 const productionHealth = read('scripts/build-production-health.js');
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
+const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
+const d1MutationCommand = /\b(?:wrangler(?:@latest)?\s+)?d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
+const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
+const hardFreeze = [canonicalDeploy, fallbackDeploy, dispatchDeploy].every(explicitFreeze);
 
-check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js'));
-check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(canonicalDeploy));
-check('canonical deploy requires exact release confirmation', canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') && canonicalDeploy.includes('Production release refused: confirmation text did not match.'));
-check('canonical deploy queues rather than interrupts migrations', canonicalDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(canonicalDeploy));
-check('canonical deploy verifies live SHA', canonicalDeploy.includes('verify-live-production.js'));
-check('canonical deploy deploys strict Worker', canonicalDeploy.includes('strict D1 forum and PayPal Worker') && canonicalDeploy.includes('npx --yes wrangler@latest deploy'));
-check('canonical deploy captures D1 Time Travel rollback', canonicalDeploy.includes('d1 time-travel info matrix-members --json') && canonicalDeploy.includes('d1-rollback-proof.json') && canonicalDeploy.includes('restoreCommand') && !canonicalDeploy.includes('d1 export matrix-members --remote'));
-for (const migration of ['phase4_email_lifecycle.sql','phase4_email_lifecycle_portability.sql','phase5_member_experience.sql','phase5_member_experience_timestamp_fix.sql','phase6_paypal_subscriptions.sql','phase6_paypal_failure_counter_fix.sql']) {
-  check(`canonical deploy applies ${migration}`, canonicalDeploy.includes(migration));
+if (hardFreeze) {
+  check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(canonicalDeploy));
+  check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy));
+  check('automatic dispatcher has no automatic trigger', dispatchDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(dispatchDeploy));
+  for (const [label, workflow] of [['canonical', canonicalDeploy], ['fallback', fallbackDeploy], ['dispatcher', dispatchDeploy]]) {
+    check(`${label} production workflow is explicitly frozen`, explicitFreeze(workflow));
+    check(`${label} production workflow contains no executable Wrangler deploy`, !executableDeployCommand.test(workflow));
+    check(`${label} production workflow contains no D1 or checkout mutation`, !d1MutationCommand.test(workflow));
+    check(`${label} production workflow cannot silently activate PayPal`, !workflow.includes('PAYPAL_PRODUCTION_ENABLED=true') && !workflow.includes('ACTIVATE MATRIX PAYPAL LIVE'));
+  }
+  check('release readiness retains intelligence refresh scripts', exists('scripts/run-investigation-machine.js') && exists('scripts/update-live-intel.js'));
+  check('release readiness retains final reconciliation and live verification', exists('scripts/final-production-reconcile.js') && exists('scripts/verify-live-production.js'));
+  check('release readiness retains D1 migration chain', ['phase4_email_lifecycle.sql','phase4_email_lifecycle_portability.sql','phase5_member_experience.sql','phase5_member_experience_timestamp_fix.sql','phase6_paypal_subscriptions.sql','phase6_paypal_failure_counter_fix.sql','phase7_paypal_sandbox_rehearsal.sql'].every(name => exists(`migrations/${name}`)));
+  check('release readiness retains strict Worker and rollback guard', exists('src/worker-production.js') && exists('scripts/production-deploy-guard.js'));
+} else {
+  check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js'));
+  check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(canonicalDeploy));
+  check('canonical deploy requires exact release confirmation', canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') && canonicalDeploy.includes('Production release refused: confirmation text did not match.'));
+  check('canonical deploy queues rather than interrupts migrations', canonicalDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(canonicalDeploy));
+  check('canonical deploy verifies live SHA', canonicalDeploy.includes('verify-live-production.js'));
+  check('canonical deploy deploys strict Worker', canonicalDeploy.includes('strict D1 forum and PayPal Worker') && canonicalDeploy.includes('npx --yes wrangler@latest deploy'));
+  check('canonical deploy captures D1 Time Travel rollback', canonicalDeploy.includes('d1 time-travel info matrix-members --json') && canonicalDeploy.includes('d1-rollback-proof.json') && canonicalDeploy.includes('restoreCommand') && !canonicalDeploy.includes('d1 export matrix-members --remote'));
+  for (const migration of ['phase4_email_lifecycle.sql','phase4_email_lifecycle_portability.sql','phase5_member_experience.sql','phase5_member_experience_timestamp_fix.sql','phase6_paypal_subscriptions.sql','phase6_paypal_failure_counter_fix.sql']) {
+    check(`canonical deploy applies ${migration}`, canonicalDeploy.includes(migration));
+  }
+  check('canonical deploy verifies rollback before release', canonicalDeploy.includes("if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing')"));
+  check('canonical deploy preserves live payment state and closes sandbox', canonicalDeploy.includes('preserve payment switches') && canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && canonicalDeploy.includes('live checkout state preserved'));
+  check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
+
+  check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(fallbackDeploy));
+  check('fallback deploy shares production concurrency without interruption', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(fallbackDeploy));
+  check('fallback deploy uses final reconciliation', fallbackDeploy.includes('final-production-reconcile.js') && fallbackDeploy.includes('verify-live-production.js'));
+  check('fallback deploy captures D1 Time Travel rollback', fallbackDeploy.includes('d1 time-travel info matrix-members --json') && fallbackDeploy.includes('d1-rollback-proof.json') && fallbackDeploy.includes('restoreCommand') && !fallbackDeploy.includes('d1 export matrix-members --remote'));
+  check('fallback deploy cannot silently activate PayPal', !fallbackDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') && !fallbackDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE'));
 }
-check('canonical deploy verifies rollback before release', canonicalDeploy.includes("if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing')"));
-check('canonical deploy preserves live payment state and closes sandbox', canonicalDeploy.includes('preserve payment switches') && canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && canonicalDeploy.includes('live checkout state preserved'));
-check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
-
-check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(fallbackDeploy));
-check('fallback deploy shares production concurrency without interruption', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(fallbackDeploy));
-check('fallback deploy uses final reconciliation', fallbackDeploy.includes('final-production-reconcile.js') && fallbackDeploy.includes('verify-live-production.js'));
-check('fallback deploy captures D1 Time Travel rollback', fallbackDeploy.includes('d1 time-travel info matrix-members --json') && fallbackDeploy.includes('d1-rollback-proof.json') && fallbackDeploy.includes('restoreCommand') && !fallbackDeploy.includes('d1 export matrix-members --remote'));
-check('fallback deploy cannot silently activate PayPal', !fallbackDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') && !fallbackDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE'));
 
 check('legacy repair cannot publish health', legacyRepair.includes("productionHealthOwner: 'scripts/build-production-health.js'") && !legacyRepair.includes("workerScript: 'src/worker.js'") && !legacyRepair.includes("write('deploy-health.json'"));
 check('regression wrapper runs final reconciliation', regressionWrapper.includes('final-production-reconcile.js'));
@@ -86,8 +107,13 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  deploymentModel: 'One manually confirmed canonical Cloudflare production release plus one manual fallback. Both share a non-interrupting production concurrency queue and the same fail-closed gates.',
-  rollbackModel: 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
+  deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
+  deploymentModel: hardFreeze
+    ? 'Cloudflare production is hard frozen. Git intelligence updates continue, while canonical, fallback and dispatcher workflows are inert and mutation-free.'
+    : 'One manually confirmed canonical Cloudflare production release plus one manual fallback. Both share a non-interrupting production concurrency queue and the same fail-closed gates.',
+  rollbackModel: hardFreeze
+    ? 'No production migration may run while frozen. Migration files, strict Worker, reconciliation and guard assets remain preserved for a future explicitly restored release workflow.'
+    : 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'D1 authoritative behind a strict fail-closed Worker; every accepted forum insert must change one row and the exact post must be read back before success.',
   paymentStatus: 'PayPal runtime values are Cloudflare-managed and preserved by Wrangler; the Worker creates subscriptions and returns an official PayPal approval URL while checkout remains controlled by credentials, matching environment switch, D1 state, live confirmation and three active plans.'
@@ -98,4 +124,6 @@ if (failures.length) {
   failures.forEach(item => console.error(`FAILED: ${item}`));
   process.exit(1);
 }
-console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict read-after-write forums and SDK-free runtime-gated PayPal.');
+console.log(hardFreeze
+  ? 'Production synchronization assurance passed: all production workflows are hard frozen, mutation-free and deployment readiness remains preserved in Git.'
+  : 'Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict read-after-write forums and SDK-free runtime-gated PayPal.');

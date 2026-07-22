@@ -22,12 +22,27 @@ function patchFile(relativePath, transform) {
   return after;
 }
 
-const paypal = patchFile('src/worker-paypal-subscriptions.js', text => replaceRequired(
-  text,
-  "function cookie(request,name='matrix_session'){const raw=request.headers.get('cookie')||'';for(const part of raw.split(';')){const index=part.indexOf('=');if(index>0&&part.slice(0,index).trim()===name)return decodeURIComponent(part.slice(index+1).trim())}return''}",
-  "function cookie(request,name=''){const raw=request.headers.get('cookie')||'';const values={};for(const part of raw.split(';')){const index=part.indexOf('=');if(index<=0)continue;const key=part.slice(0,index).trim();if(key&&!Object.prototype.hasOwnProperty.call(values,key))values[key]=decodeURIComponent(part.slice(index+1).trim())}if(name)return values[name]||'';return values.matrix_session_v2||values.matrix_session||''}",
-  'the legacy PayPal session-cookie reader'
-));
+const paypal = patchFile('src/worker-paypal-subscriptions.js', text => {
+  let next = replaceRequired(
+    text,
+    "function cookie(request,name='matrix_session'){const raw=request.headers.get('cookie')||'';for(const part of raw.split(';')){const index=part.indexOf('=');if(index>0&&part.slice(0,index).trim()===name)return decodeURIComponent(part.slice(index+1).trim())}return''}",
+    "function cookie(request,name=''){const raw=request.headers.get('cookie')||'';const values={};for(const part of raw.split(';')){const index=part.indexOf('=');if(index<=0)continue;const key=part.slice(0,index).trim();if(key&&!Object.prototype.hasOwnProperty.call(values,key))values[key]=decodeURIComponent(part.slice(index+1).trim())}if(name)return values[name]||'';return values.matrix_session_v2||values.matrix_session||''}",
+    'the legacy PayPal session-cookie reader'
+  );
+  next = replaceRequired(
+    next,
+    "async function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
+    "async function currentSubscriptionForMember(env,memberId){return await first(env.MEMBERS_DB.prepare('SELECT tier,billing_state,entitlement_active,current_period_end,next_billing_at FROM paypal_current_subscription_status WHERE member_id=? ORDER BY state_updated_at DESC LIMIT 1').bind(memberId))}\nasync function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);const currentSubscription=await currentSubscriptionForMember(env,required.auth.member.id);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),paidAccess:bool(currentSubscription?.entitlement_active),currentSubscription:currentSubscription||null,effectiveTier:required.auth.entitlement.effective_tier,billingUrl:'/billing-dashboard.html',tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
+    'the PayPal member configuration response'
+  );
+  next = replaceRequired(
+    next,
+    "async function checkoutIntent(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);if(!state.checkoutEnabled)return json({ok:false,configured:state.configured,environment:state.environment,error:'PayPal checkout is disabled until activation gates pass'},503);const input=await body(request);const tier=clean(input.tier,40);if(!tiers[tier])return json({ok:false,error:'Unknown membership tier'},400);const plan=state.plans.find(item=>item.tier===tier);if(!plan)return json({ok:false,error:'The selected PayPal plan is unavailable'},409);const current=new Date();const expiresAt=new Date(current.getTime()+30*60*1000).toISOString();await env.MEMBERS_DB.prepare('UPDATE paypal_checkout_intents SET used_at=? WHERE member_id=? AND used_at IS NULL').bind(current.toISOString(),required.auth.member.id).run();const intentId=id('paypal-intent');await env.MEMBERS_DB.prepare('INSERT INTO paypal_checkout_intents (id,member_id,tier,plan_id,expires_at,created_at) VALUES (?,?,?,?,?,?)').bind(intentId,required.auth.member.id,tier,plan.provider_plan_id,expiresAt,current.toISOString()).run();await env.MEMBERS_DB.prepare(\"INSERT INTO paypal_checkout_intent_state (checkout_intent_id,environment,status,updated_at,created_at) VALUES (?,?,'created',?,?)\").bind(intentId,state.environment,current.toISOString(),current.toISOString()).run();return json({ok:true,intentId,tier,planId:plan.provider_plan_id,customId:intentId,clientId:String(env.PAYPAL_CLIENT_ID),currency:'EUR',environment:state.environment,expiresAt})}",
+    "async function checkoutIntent(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const currentSubscription=await currentSubscriptionForMember(env,required.auth.member.id);if(currentSubscription&&bool(currentSubscription.entitlement_active))return json({ok:false,error:'An active PayPal membership already exists. Use the billing dashboard to manage or cancel it before starting another subscription.',currentSubscription,billingUrl:'/billing-dashboard.html'},409);const state=await activationState(env);if(!state.checkoutEnabled)return json({ok:false,configured:state.configured,environment:state.environment,error:'PayPal checkout is disabled until activation gates pass'},503);const input=await body(request);const tier=clean(input.tier,40);if(!tiers[tier])return json({ok:false,error:'Unknown membership tier'},400);const plan=state.plans.find(item=>item.tier===tier);if(!plan)return json({ok:false,error:'The selected PayPal plan is unavailable'},409);const current=new Date();const expiresAt=new Date(current.getTime()+30*60*1000).toISOString();await env.MEMBERS_DB.prepare('UPDATE paypal_checkout_intents SET used_at=? WHERE member_id=? AND used_at IS NULL').bind(current.toISOString(),required.auth.member.id).run();const intentId=id('paypal-intent');await env.MEMBERS_DB.prepare('INSERT INTO paypal_checkout_intents (id,member_id,tier,plan_id,expires_at,created_at) VALUES (?,?,?,?,?,?)').bind(intentId,required.auth.member.id,tier,plan.provider_plan_id,expiresAt,current.toISOString()).run();await env.MEMBERS_DB.prepare(\"INSERT INTO paypal_checkout_intent_state (checkout_intent_id,environment,status,updated_at,created_at) VALUES (?,?,'created',?,?)\").bind(intentId,state.environment,current.toISOString(),current.toISOString()).run();return json({ok:true,intentId,tier,planId:plan.provider_plan_id,customId:intentId,clientId:String(env.PAYPAL_CLIENT_ID),currency:'EUR',environment:state.environment,expiresAt})}",
+    'the PayPal checkout-intent allocator'
+  );
+  return next;
+});
 
 const assetGate = patchFile('src/worker-access-gate.js', text => replaceRequired(
   text,
@@ -78,6 +93,12 @@ const membershipTemplate = patchFile('scripts/templates/membership-auth/membersh
     "const response = await fetch('/api/paypal/config', {credentials:'include',headers:{accept:'application/json'},cache:'no-store'});",
     'PayPal config credential forwarding'
   );
+  next = replaceRequired(
+    next,
+    "      if (!response.ok || !config.configured || !config.clientId) {",
+    "      if (config.paidAccess && config.currentSubscription) {\n        systemStatus.className = 'status ok';\n        systemStatus.textContent = 'Your paid membership is active. ';\n        const billingLink = document.createElement('a');\n        billingLink.href = config.billingUrl || 'billing-dashboard.html';\n        billingLink.textContent = 'Manage billing';\n        systemStatus.appendChild(billingLink);\n        setAllPlanMessages('Paid access is already active. Use the billing dashboard to manage or cancel it.');\n        return;\n      }\n      if (!response.ok || !config.configured || !config.clientId) {",
+    'the active-membership checkout guard'
+  );
   return next;
 });
 
@@ -87,6 +108,12 @@ const dashboard = patchFile('member-dashboard-app.js', text => {
     "fetch(path,{cache:'no-store',headers:",
     "fetch(path,{cache:'no-store',credentials:'include',headers:",
     'member dashboard credential forwarding'
+  );
+  next = replaceRequired(
+    next,
+    "const paid=member.paidAccess===true;$('paid-state').textContent=paid?'Active entitlement':'Free registered access';$('paid-state').className=paid?'good':'warning';$('admin-link').hidden=!member.isAdmin;",
+    "const paid=member.paidAccess===true;$('paid-state').textContent=paid?'Active entitlement':'Free registered access';$('paid-state').className=paid?'good':'warning';const membershipAction=$('membership-action');membershipAction.href=paid?'billing-dashboard.html':'membership.html';membershipAction.textContent=paid?'Manage billing':'Manage membership';$('admin-link').hidden=!member.isAdmin;",
+    'the dashboard membership action state'
   );
   next = replaceRequired(
     next,
@@ -106,8 +133,15 @@ const dashboard = patchFile('member-dashboard-app.js', text => {
 const dashboardHtml = patchFile('member-dashboard.html', text => replaceRequired(
   text,
   '<a id="admin-link" class="btn alt" href="admin-member-dashboard.html" hidden>Admin dashboard</a>\n        <a class="btn alt" href="index.html">Public site</a>',
-  '<a id="admin-link" class="btn alt" href="admin-member-dashboard.html" hidden>Admin dashboard</a>\n        <a class="btn" href="membership.html">Manage membership</a>\n        <a class="btn alt" href="index.html">Public site</a>',
+  '<a id="admin-link" class="btn alt" href="admin-member-dashboard.html" hidden>Admin dashboard</a>\n        <a id="membership-action" class="btn" href="membership.html">Manage membership</a>\n        <a class="btn alt" href="index.html">Public site</a>',
   'the dashboard membership-management action'
+));
+
+const billingDashboard = patchFile('billing-dashboard.js', text => replaceRequired(
+  text,
+  "fetch(path,{cache:'no-store',headers:",
+  "fetch(path,{cache:'no-store',credentials:'include',headers:",
+  'the billing-dashboard credential forwarding'
 ));
 
 const emailStatus = patchFile('email-status.html', text => {
@@ -135,15 +169,19 @@ const emailStatus = patchFile('email-status.html', text => {
 const checks = {
   cloudflareProductionWorker: fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8').includes('main = "src/worker-production.js"'),
   paypalReadsCurrentSession: paypal.includes('values.matrix_session_v2||values.matrix_session'),
+  duplicateSubscriptionsBlocked: paypal.includes('An active PayPal membership already exists') && paypal.includes('currentSubscriptionForMember'),
+  configReturnsBillingState: paypal.includes("billingUrl:'/billing-dashboard.html'") && paypal.includes('currentSubscription:currentSubscription||null'),
   protectedAssetsReadCurrentSession: assetGate.includes("cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"),
   emailAcceptsMembershipConsent: emailLifecycle.includes('input.consent??input.marketingConsent'),
   firstDailyBriefUsesDetailedBuilder: emailLifecycle.includes('const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);') && !emailLifecycle.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);'),
   signupSendsCanonicalConsent: membershipTemplate.includes('consent:marketingConsent,marketingConsent'),
   membershipFetchesIncludeCredentials: membershipTemplate.includes("credentials:'include'"),
+  activeMembershipShowsBilling: membershipTemplate.includes("billingLink.textContent = 'Manage billing'"),
   dashboardFetchIncludesCredentials: dashboard.includes("fetch(path,{cache:'no-store',credentials:'include'"),
   dashboardLogoutIncludesCredentials: dashboard.includes("method:'POST',credentials:'include',cache:'no-store'"),
   freeDashboardSkipsPaidWatchlistCall: dashboard.includes("capabilities.includes('member_watchlists')"),
-  dashboardHasMembershipAction: dashboardHtml.includes('Manage membership'),
+  dashboardHasMembershipAction: dashboardHtml.includes('id="membership-action"'),
+  billingDashboardIncludesCredentials: billingDashboard.includes("credentials:'include'"),
   verifiedEmailHasMemberLoginAction: emailStatus.includes('Open member login')
 };
 
@@ -162,7 +200,8 @@ fs.writeFileSync(
     checks,
     rootCause: 'Passwordless login writes matrix_session_v2 while the PayPal worker and protected-asset gate read only matrix_session.',
     newsletterRepair: 'Membership signup now sends canonical consent, the email lifecycle accepts the compatible alias, and the first selected daily brief uses the detailed intelligence builder with its safe fallback.',
-    dashboardRepair: 'Free members no longer trigger the Intelligence-only watchlist endpoint during initial loading, logout carries credentials explicitly, and membership management is directly reachable.',
+    dashboardRepair: 'Free members no longer trigger the Intelligence-only watchlist endpoint during initial loading, logout carries credentials explicitly, and membership or billing management is directly reachable.',
+    paymentSafetyRepair: 'The server blocks a second checkout while an active entitlement exists, and the member sees a Manage billing path instead of another subscribe button.',
     recoveryRepair: 'A verified email subscriber is given clear routes to email preferences and secure member login.'
   }, null, 2)
 );

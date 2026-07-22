@@ -5,6 +5,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const corePath = path.join(root, 'data', 'behind-the-curtain.json');
+const accessPath = path.join(root, 'data', 'behind-the-curtain-family-access.json');
 const intakePath = path.join(root, 'data', 'behind-the-curtain-source-intake.json');
 const optionalInputs = [
   'data/entity-registry.json',
@@ -78,6 +79,18 @@ function applyApprovedIntake(model, intake) {
   }
   return approved;
 }
+function runRequired(label, script) {
+  const result = spawnSync(process.execPath, [path.join(root, script)], { cwd: root, stdio: 'inherit', env: process.env });
+  if (result.status !== 0) throw new Error(`${label} failed`);
+}
+function validateAccessLayer() {
+  if (!fs.existsSync(accessPath)) throw new Error('Behind the Curtain Access Layer evidence model is missing');
+  const access = readJson('data/behind-the-curtain-family-access.json');
+  const total = Object.values(access.scoreDimensions || {}).reduce((sum, value) => sum + Number(value), 0);
+  if (total !== 100) throw new Error(`Access Layer score weights total ${total}, expected 100`);
+  if ((access.families || []).length < 9) throw new Error('Access Layer requires at least nine documented continuity-family structures');
+  if ((access.structureAccessMatrix || []).length !== 10) throw new Error('Access Layer must test all ten structural power centers');
+}
 
 if (!fs.existsSync(corePath)) {
   const seeded = spawnSync(process.execPath, [path.join(root, 'scripts', 'seed-behind-the-curtain-data.js')], { cwd: root, stdio: 'inherit' });
@@ -119,6 +132,9 @@ model.build = { inputHash, lastCalculatedAt, siteSignalFilesRead: filesRead, app
 
 fs.mkdirSync(path.dirname(corePath), { recursive: true });
 fs.writeFileSync(corePath, `${JSON.stringify(model, null, 2)}\n`);
+validateAccessLayer();
+runRequired('Behind the Curtain family access link', 'scripts/patch-behind-the-curtain-access-link.js');
+runRequired('Behind the Curtain Access Layer validation', 'scripts/behind-the-curtain-access-test.js');
 const patch = spawnSync(process.execPath, [path.join(root, 'scripts', 'patch-behind-the-curtain-links.js')], { cwd: root, stdio: 'inherit' });
 if (patch.status !== 0) process.exit(patch.status || 1);
-console.log(`Behind the Curtain rebuilt: ${model.powerCenters.length} power centers, ${model.relationships.length} relationships, ${model.sources.length} sources, ${approvedIntakeEntries} approved intake entries.`);
+console.log(`Behind the Curtain rebuilt: ${model.powerCenters.length} power centers, ${model.relationships.length} relationships, ${model.sources.length} sources, ${approvedIntakeEntries} approved intake entries; Access Layer validated.`);

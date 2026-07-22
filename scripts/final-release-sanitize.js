@@ -30,6 +30,21 @@ function copy(relative) {
     if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
   }
 }
+function repairHomepageAuthorFacingLabels() {
+  const files = [path.join(root, 'index.html'), path.join(site, 'index.html'), path.join(site, 'index')];
+  let changed = 0;
+  for (const file of files) {
+    if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = before.replace(/Site Brain Router/gi, 'Source Routing Map');
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      changed += 1;
+    }
+    if (/Site Brain Router/i.test(after)) throw new Error(`${path.relative(root, file)} still exposes the author-facing Site Brain Router label`);
+  }
+  console.log(`Homepage author-facing routing label repaired: ${changed} file(s) changed.`);
+}
 
 run('scripts/patch-geographic-power-atlas-runtime.js');
 for (const relative of [
@@ -117,6 +132,7 @@ for (const relative of [
   'data/epstein-investigator-status.json'
 ]) copy(relative);
 run('scripts/patch-homepage-ai-detective-button.js');
+repairHomepageAuthorFacingLabels();
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 run('scripts/runtime-performance-budget-test.js');
@@ -126,7 +142,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   commands,
   synchronized: [
-    'index.html', '_site/index.html',
+    'index.html', '_site/index.html', '_site/index',
     'ai-speculative-conclusions.html', '_site/ai-speculative-conclusions.html',
     'ai-speculative-conclusions.js', '_site/ai-speculative-conclusions.js',
     'data/epstein-investigator-status.json', '_site/data/epstein-investigator-status.json',
@@ -177,7 +193,7 @@ const report = {
     'downloads/internal-report-manifest-cleanup.json',
     'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data, public internal report manifests, an inactive or unsynchronised Epstein investigator docket, a missing homepage AI Detective route or stale deployment metadata.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, author-facing build labels, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data, public internal report manifests, an inactive or unsynchronised Epstein investigator docket, a missing homepage AI Detective route or stale deployment metadata.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);

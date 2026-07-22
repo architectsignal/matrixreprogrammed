@@ -3,7 +3,7 @@ name: Behind the Curtain Structural Power Intelligence
 on:
   workflow_dispatch:
   issues:
-    types: [opened]
+    types: [opened, edited]
   pull_request:
     branches: [main]
     paths:

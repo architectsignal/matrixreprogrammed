@@ -14,6 +14,7 @@ const production = read('src/worker-production.js');
 const auth = read('src/worker.js');
 const member = read('src/worker-member-experience.js');
 const paypal = read('src/worker-paypal-subscriptions.js');
+const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
 const gate = read('src/worker-access-gate.js');
 const email = read('src/worker-email-lifecycle.js');
 const membership = read('membership.html');
@@ -40,8 +41,10 @@ check('Member dashboard accepts current and legacy cookies', member.includes("co
 check('PayPal accepts current and legacy cookies', paypal.includes('values.matrix_session_v2||values.matrix_session'), 'A logged-in member must remain authenticated when loading or creating a subscription');
 check('Protected assets accept current and legacy cookies', gate.includes("cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"), 'Logged-in members must not be denied protected downloads because of cookie-version drift');
 
-check('Duplicate active PayPal subscriptions are blocked', paypal.includes('currentSubscriptionForMember') && paypal.includes('An active PayPal membership already exists') && paypal.includes("billingUrl:'/billing-dashboard.html'"), 'An active entitlement must block allocation of another checkout intent');
-check('PayPal config exposes current billing state', paypal.includes('currentSubscription:currentSubscription||null') && paypal.includes('paidAccess:bool(currentSubscription?.entitlement_active)'), 'The membership page must be able to distinguish active access from a new checkout opportunity');
+check('PayPal subscription view exposes compatibility fields', paypalMigration.includes('s.status AS provider_status') && paypalMigration.includes('p.updated_at AS state_updated_at'), 'The duplicate guard needs both provider status and modern state timestamps');
+check('Duplicate active PayPal subscriptions are blocked', paypal.includes('currentSubscriptionForMember') && paypal.includes('An active PayPal membership already exists') && paypal.includes('bool(currentSubscription.paid_access)') && paypal.includes("billingUrl:'/billing-dashboard.html'"), 'An active entitlement must block allocation of another checkout intent');
+check('Legacy active PayPal subscriptions are blocked', paypal.includes("LOWER(provider_status) IN ('active','trialing')") && paypal.includes("datetime(current_period_end)>datetime('now')") && paypal.includes('AS paid_access'), 'Older active subscriptions without a PayPal state row must still prevent duplicate billing');
+check('PayPal config exposes compatible billing state', paypal.includes('currentSubscription:currentSubscription||null') && paypal.includes('paidAccess:bool(currentSubscription?.paid_access)'), 'The membership page must recognise modern and legacy paid access');
 check('Active membership UI routes to billing', membership.includes("billingLink.textContent = 'Manage billing'") && membership.includes('Paid access is already active'), 'An active member should see billing management instead of another subscription button');
 check('Billing dashboard requests include credentials', billingDashboard.includes("fetch(path,{cache:'no-store',credentials:'include'"), 'Billing status and cancellation must carry the active Cloudflare session');
 

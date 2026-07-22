@@ -7,7 +7,10 @@ on:
     paths:
       - 'behind-the-curtain.html'
       - 'behind-the-curtain.js'
+      - 'behind-the-curtain-access.html'
+      - 'behind-the-curtain-access.js'
       - 'data/behind-the-curtain.json'
+      - 'data/behind-the-curtain-family-access.json'
       - 'data/behind-the-curtain-source-intake.json'
       - 'data/entity-registry.json'
       - 'data/relationship-registry.json'
@@ -17,12 +20,15 @@ on:
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/seed-behind-the-curtain-data.js'
       - 'scripts/patch-behind-the-curtain-links.js'
+      - 'scripts/patch-behind-the-curtain-access-link.js'
       - 'scripts/behind-the-curtain-test.js'
+      - 'scripts/behind-the-curtain-access-test.js'
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - '.github/workflows/behind-the-curtain-intelligence.yml'
   push:
     branches: [main]
     paths:
+      - 'data/behind-the-curtain-family-access.json'
       - 'data/behind-the-curtain-source-intake.json'
       - 'data/entity-registry.json'
       - 'data/relationship-registry.json'
@@ -32,7 +38,9 @@ on:
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/seed-behind-the-curtain-data.js'
       - 'scripts/patch-behind-the-curtain-links.js'
+      - 'scripts/patch-behind-the-curtain-access-link.js'
       - 'scripts/behind-the-curtain-test.js'
+      - 'scripts/behind-the-curtain-access-test.js'
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - '.github/workflows/behind-the-curtain-intelligence.yml'
 
@@ -55,27 +63,31 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Recalculate structural power and patch internal routes
+      - name: Recalculate structural power, family access and internal routes
         run: node scripts/build-behind-the-curtain.js
       - name: Validate syntax and evidence contracts
         run: |
           node --check behind-the-curtain.js
+          node --check behind-the-curtain-access.js
           node --check scripts/build-behind-the-curtain.js
           node --check scripts/seed-behind-the-curtain-data.js
           node --check scripts/patch-behind-the-curtain-links.js
+          node --check scripts/patch-behind-the-curtain-access-link.js
           node --check scripts/behind-the-curtain-test.js
+          node --check scripts/behind-the-curtain-access-test.js
           node scripts/behind-the-curtain-test.js
+          node scripts/behind-the-curtain-access-test.js
       - name: Commit generated intelligence to Git only
         if: ${{ github.event_name != 'pull_request' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add behind-the-curtain.html behind-the-curtain.js data/behind-the-curtain.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
+          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js data/behind-the-curtain.json data/behind-the-curtain-family-access.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "Behind the Curtain already current."
+            echo "Behind the Curtain and Access Layer already current."
           else
             git commit -m "Refresh Behind the Curtain intelligence [curtain-built]"
             git push
           fi
       - name: Confirm production cost boundary
-        run: echo "GIT-ONLY PASS — the structural-power workflow contains no production deployment step."
+        run: echo "GIT-ONLY PASS — the structural-power and family-access workflow contains no production deployment step."

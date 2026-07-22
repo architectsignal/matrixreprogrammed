@@ -1,6 +1,9 @@
 const fs=require('fs');
 const path=require('path');
+const {spawnSync}=require('child_process');
 const root=process.cwd();
+function run(script){const result=spawnSync(process.execPath,[path.join(root,'scripts',script)],{cwd:root,encoding:'utf8',stdio:'pipe',env:process.env});if(result.stdout)process.stdout.write(result.stdout);if(result.stderr)process.stderr.write(result.stderr);if(result.status!==0)throw new Error(`${script} failed during final Puppet reconciliation`);}
+for(const script of ['patch-top-52-influence-profiles.js','refresh-puppets-current-roles.js','ensure-card-art-assets.js','build-clean-card-decks.js','build-card-download-manifest.js','build-direct-card-dossiers.js'])run(script);
 const file=path.join(root,'top-52-power-deck.html');
 if(!fs.existsSync(file))process.exit(0);
 let html=fs.readFileSync(file,'utf8');
@@ -27,4 +30,4 @@ if(fs.existsSync(dir)&&fs.statSync(dir).isDirectory()){
   fs.writeFileSync(p,page);
  }
 }
-console.log('Final Puppets of Interest title, dossier, art-state and compatibility markers patched.');
+console.log('Final Puppets of Interest data, current roles, direct dossiers, art states and compatibility markers reconciled.');

@@ -52,7 +52,9 @@ for (const required of [
   ['member-dashboard.html', '/api/member/me'],
   ['member-dashboard.html', '/api/auth/logout'],
   ['member-dashboard.html', '/api/paypal/subscription/cancel'],
-  ['member-dashboard.html', 'paidAccessEnabled']
+  ['member-dashboard.html', 'paidAccessEnabled'],
+  ['member-dashboard.html', 'Manage membership'],
+  ['email-status.html', 'Open member login']
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
@@ -62,14 +64,22 @@ for (const required of [
 }
 
 for (const required of [
+  ['wrangler.toml', 'main = "src/worker-production.js"'],
+  ['wrangler.toml', 'binding = "MEMBERS_DB"'],
+  ['wrangler.toml', 'binding = "ASSETS"'],
+  ['src/worker-production.js', 'isMemberExperienceRoute'],
+  ['src/worker-production.js', 'isPayPalRoute'],
+  ['src/worker-production.js', 'emailRoutes.has(path)'],
   ['src/worker-paypal-subscriptions.js', 'values.matrix_session_v2||values.matrix_session'],
+  ['src/worker-access-gate.js', "cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"],
   ['src/worker-email-lifecycle.js', 'input.consent??input.marketingConsent'],
+  ['src/worker-email-lifecycle.js', 'const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);'],
   ['member-dashboard-app.js', "capabilities.includes('member_watchlists')"],
   ['member-dashboard-app.js', "credentials:'include'"]
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
-    console.error(`Membership integration verification failed: ${required[0]} missing ${required[1]}`);
+    console.error(`Cloudflare membership integration verification failed: ${required[0]} missing ${required[1]}`);
     process.exit(1);
   }
 }
@@ -77,15 +87,17 @@ for (const required of [
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
+  platform: 'Cloudflare Worker + D1 + Cloudflare Assets',
   changed,
   pages: pages.map(page => page.name),
   paypalCheckout: true,
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
-  sessionCookiePolicy: 'PayPal and member services accept matrix_session_v2 with legacy matrix_session fallback',
-  newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent',
+  sessionCookiePolicy: 'PayPal, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback',
+  newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent; the server retains compatibility for marketingConsent',
+  newsletterDeliveryPolicy: 'Welcome email and selected first daily brief are delivered through the D1 outbox and Brevo lifecycle; the detailed intelligence builder falls back safely',
   dashboardTierPolicy: 'Free dashboards do not call Intelligence-only watchlist routes during initial loading',
-  boundary: 'Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
+  boundary: 'Canonical membership, passwordless authentication, protected assets and PayPal subscription pages are restored before Cloudflare Assets are copied to both HTML and extensionless routes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));
-console.log(`Membership auth UI patched: ${changed.length ? changed.join(', ') : 'already current'}`);
+console.log(`Cloudflare membership auth UI patched: ${changed.length ? changed.join(', ') : 'already current'}`);

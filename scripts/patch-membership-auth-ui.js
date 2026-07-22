@@ -3,6 +3,7 @@ const path = require('path');
 
 const root = process.cwd();
 require('./harden-worker-api-contracts.js');
+require('./patch-member-login-paypal-newsletter.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
 const pages = [
@@ -40,6 +41,7 @@ for (const page of pages) {
 for (const required of [
   ['membership.html', '/api/membership/signup'],
   ['membership.html', 'marketingConsent'],
+  ['membership.html', 'consent:marketingConsent'],
   ['membership.html', '/api/paypal/config'],
   ['membership.html', '/api/paypal/checkout-intent'],
   ['membership.html', '/api/paypal/subscription/confirm'],
@@ -59,6 +61,19 @@ for (const required of [
   }
 }
 
+for (const required of [
+  ['src/worker-paypal-subscriptions.js', 'values.matrix_session_v2||values.matrix_session'],
+  ['src/worker-email-lifecycle.js', 'input.consent??input.marketingConsent'],
+  ['member-dashboard-app.js', "capabilities.includes('member_watchlists')"],
+  ['member-dashboard-app.js', "credentials:'include'"]
+]) {
+  const file = path.join(root, required[0]);
+  if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
+    console.error(`Membership integration verification failed: ${required[0]} missing ${required[1]}`);
+    process.exit(1);
+  }
+}
+
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
@@ -66,6 +81,9 @@ const report = {
   pages: pages.map(page => page.name),
   paypalCheckout: true,
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
+  sessionCookiePolicy: 'PayPal and member services accept matrix_session_v2 with legacy matrix_session fallback',
+  newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent',
+  dashboardTierPolicy: 'Free dashboards do not call Intelligence-only watchlist routes during initial loading',
   boundary: 'Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

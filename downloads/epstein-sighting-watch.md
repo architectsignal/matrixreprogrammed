@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-22T14:21:59.829Z
+Generated: 2026-07-22T19:43:08.199Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: low
+- Internet claim activity: medium
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -48,6 +48,16 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 - Likely explanation: Synthetic image, altered image, old footage, compression artefact, or repost without origin.
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
+
+### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Type: related-claim-traffic

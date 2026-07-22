@@ -1,11 +1,26 @@
 # Intel Vault
 
-Updated: 2026-07-22T14:21:54.991Z
+Updated: 2026-07-22T19:42:55.318Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
+- Published: 2026-07-15T17:32:31.000Z
+- Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
+- Source class: primary-or-official
+
+### Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
+- Published: 2026-07-15T16:34:31.000Z
+- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5
+- Source class: primary-or-official
+
+### Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
+- Published: 2026-07-15T16:25:19.000Z
+- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
+- Source class: primary-or-official
 
 ### Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
 - Published: 2026-07-15T13:35:00.000Z

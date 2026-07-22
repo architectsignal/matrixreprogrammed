@@ -1,7 +1,7 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-22T14:21:54.991Z
-Latest source publication: 2026-07-22T12:00:00.000Z
+Collection completed: 2026-07-22T19:42:55.318Z
+Latest source publication: 2026-07-22T18:10:00.000Z
 Collection status: fresh-items-added
 New items this collection: 3
 
@@ -26,11 +26,23 @@ New items this collection: 3
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-22 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Critical minerals: The hidden resources powering the clean energy future
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167996
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — From lithium to nickel: How the UN is helping countries make the most of critical minerals
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167994
@@ -38,11 +50,11 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: From lithium to nickel: How the UN is helping countries make the most of critical minerals
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace instead of conflict?
+- 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167995
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Security Council LIVE: Can critical minerals fuel peace instead of conflict?
+  - Video hook: New public-record signal: Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
   - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
@@ -188,6 +200,12 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-17 — Massie introduces second Epstein files bill - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPanhOT1FIblRCaDJfS3JLbGVIREdJZklFOTdmNjBuU1I4ams3RDZHNU0wSnd3azQ5OTNjSEtVaTNVX0FmM0ZjMmtyN01PR0lZd2ZBMDVVd1V1NUFmRWNGcXpZMHZBcklqM0E5MTJ6M20tLUUtMkJUWkpiakI4Zkhwdkw0NDlHVjJM?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Massie introduces second Epstein files bill - Spectrum News
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
   - Source class: primary-or-official
@@ -277,22 +295,4 @@ New items this collection: 3
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
-  - Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
-  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
-  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

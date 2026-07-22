@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-22T14:21:59.883Z
-Live Intel source window: 2026-07-22T14:21:54.991Z
+Generated: 2026-07-22T19:43:08.257Z
+Live Intel source window: 2026-07-22T19:42:55.318Z
 Tracked cards: 873
-Cards with current matched records: 96
-Cards with no new verified record: 777
+Cards with current matched records: 95
+Cards with no new verified record: 778
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -2203,10 +2203,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-22T11:32:31.000Z
+- Latest record: 2026-07-22T18:10:00.000Z
+- 2026-07-22T18:10:00.000Z — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo — https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
 - 2026-07-22T11:32:31.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 - 2026-07-21T18:38:00.000Z — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
-- 2026-07-21T18:16:00.000Z — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -4152,10 +4152,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Reuters
 - Route: institutions/reuters.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-15T17:32:31.000Z
-- 2026-07-15T17:32:31.000Z — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## REVIEW DASHBOARD.
 - Route: review-dashboard.html

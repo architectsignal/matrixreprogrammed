@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-22T14:21:59.783Z
-Live Intel source window: 2026-07-22T14:21:54.991Z
-Latest source publication: 2026-07-22T11:32:31.000Z
+Generated: 2026-07-22T19:43:08.157Z
+Live Intel source window: 2026-07-22T19:42:55.318Z
+Latest source publication: 2026-07-22T18:10:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+12 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+- Published: 2026-07-22T18:10:00.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
+
+Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Published: 2026-07-22T11:32:31.000Z
@@ -75,6 +85,16 @@ Leon Black walked out of an Epstein House committee interview. Here's what we kn
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### Massie introduces second Epstein files bill - Spectrum News
+- Published: 2026-07-17T14:14:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPanhOT1FIblRCaDJfS3JLbGVIREdJZklFOTdmNjBuU1I4ams3RDZHNU0wSnd3azQ5OTNjSEtVaTNVX0FmM0ZjMmtyN01PR0lZd2ZBMDVVd1V1NUFmRWNGcXpZMHZBcklqM0E5MTJ6M20tLUUtMkJUWkpiakI4Zkhwdkw0NDlHVjJM?oc=5
+
+Massie introduces second Epstein files bill Spectrum News
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
 - Published: 2026-07-16T06:24:40.000Z
 - Source: Google News / Epstein timeline and files
@@ -112,36 +132,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
 
 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties Fox News
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
-- Published: 2026-07-15T17:32:31.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-
-Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women Reuters
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
-- Published: 2026-07-15T16:34:31.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5
-
-Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women Yahoo! Finance Canada
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
-- Published: 2026-07-15T16:25:19.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
-
-Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB Charlotte
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

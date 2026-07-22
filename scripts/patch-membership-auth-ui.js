@@ -3,6 +3,19 @@ const path = require('path');
 
 const root = process.cwd();
 require('./harden-worker-api-contracts.js');
+require('./patch-cloudflare-canonical-member-origin.js');
+const { repairPayPalCheckoutGateOrder, shutdownFirst } = require('./patch-paypal-checkout-gate-order.js');
+const paypalGateTarget = path.join(root, 'src', 'worker-paypal-subscriptions.js');
+const paypalInitialSource = fs.readFileSync(paypalGateTarget, 'utf8');
+const canonicalPayPalMembershipReady = paypalInitialSource.includes(shutdownFirst)
+  && paypalInitialSource.includes('values.matrix_session_v2||values.matrix_session')
+  && paypalInitialSource.includes('currentSubscriptionForMember')
+  && paypalInitialSource.includes('paidAccess:bool(currentSubscription?.paid_access)');
+if (!canonicalPayPalMembershipReady) require('./patch-member-login-paypal-newsletter.js');
+const paypalGateBefore = fs.readFileSync(paypalGateTarget, 'utf8');
+const paypalGateAfter = repairPayPalCheckoutGateOrder(paypalGateBefore);
+if (paypalGateAfter !== paypalGateBefore) fs.writeFileSync(paypalGateTarget, paypalGateAfter);
+require('./patch-money-graph-root-data.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
 const pages = [
@@ -40,17 +53,22 @@ for (const page of pages) {
 for (const required of [
   ['membership.html', '/api/membership/signup'],
   ['membership.html', 'marketingConsent'],
+  ['membership.html', 'consent:marketingConsent'],
   ['membership.html', '/api/paypal/config'],
   ['membership.html', '/api/paypal/checkout-intent'],
   ['membership.html', '/api/paypal/subscription/confirm'],
   ['membership.html', 'actions.subscription.create'],
   ['membership.html', 'config.checkoutEnabled'],
   ['membership.html', 'data.verification && data.verification.sent'],
+  ['membership.html', 'Paid access is already active'],
+  ['membership.html', 'Manage billing'],
   ['member-login.html', '/api/auth/request-link'],
   ['member-dashboard.html', '/api/member/me'],
   ['member-dashboard.html', '/api/auth/logout'],
   ['member-dashboard.html', '/api/paypal/subscription/cancel'],
-  ['member-dashboard.html', 'paidAccessEnabled']
+  ['member-dashboard.html', 'paidAccessEnabled'],
+  ['member-dashboard.html', 'id="membership-action"'],
+  ['email-status.html', 'Open member login']
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
@@ -59,15 +77,72 @@ for (const required of [
   }
 }
 
+for (const required of [
+  ['wrangler.toml', 'main = "src/worker-production.js"'],
+  ['wrangler.toml', 'binding = "MEMBERS_DB"'],
+  ['wrangler.toml', 'binding = "ASSETS"'],
+  ['src/worker-production.js', 'isMemberExperienceRoute'],
+  ['src/worker-production.js', 'isPayPalRoute'],
+  ['src/worker-production.js', 'emailRoutes.has(path)'],
+  ['src/worker-production.js', "requestUrl.hostname.toLowerCase() === 'www.matrixreprogrammed.com'"],
+  ['src/worker-production.js', "requestUrl.hostname = 'matrixreprogrammed.com'"],
+  ['src/worker-production.js', 'Response.redirect(requestUrl.toString(), 308)'],
+  ['src/worker-paypal-subscriptions.js', 'values.matrix_session_v2||values.matrix_session'],
+  ['src/worker-paypal-subscriptions.js', 'currentSubscriptionForMember'],
+  ['src/worker-paypal-subscriptions.js', 'An active PayPal membership already exists'],
+  ['src/worker-paypal-subscriptions.js', 'bool(currentSubscription.paid_access)'],
+  ['src/worker-paypal-subscriptions.js', "LOWER(provider_status) IN ('active','trialing')"],
+  ['src/worker-paypal-subscriptions.js', 'paidAccess:bool(currentSubscription?.paid_access)'],
+  ['src/worker-paypal-subscriptions.js', "billingUrl:'/billing-dashboard.html'"],
+  ['migrations/phase6_paypal_subscriptions.sql', 's.status AS provider_status'],
+  ['migrations/phase6_paypal_subscriptions.sql', 'p.updated_at AS state_updated_at'],
+  ['src/worker-access-gate.js', "cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"],
+  ['src/worker-email-lifecycle.js', 'input.consent??input.marketingConsent'],
+  ['src/worker-email-lifecycle.js', 'const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);'],
+  ['member-dashboard-app.js', "capabilities.includes('member_watchlists')"],
+  ['member-dashboard-app.js', "membershipAction.href=paid?'billing-dashboard.html':'membership.html'"],
+  ['member-dashboard-app.js', "credentials:'include'"],
+  ['billing-dashboard.js', "credentials:'include'"],
+  ['money-graph.js', "fetch('/data/money-overlap-graph.json'"],
+  ['money-graph.js', "fetch('/data/money-intelligence-registry.json'"]
+]) {
+  const file = path.join(root, required[0]);
+  if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
+    console.error(`Cloudflare membership integration verification failed: ${required[0]} missing ${required[1]}`);
+    process.exit(1);
+  }
+}
+
+const paypalSource = fs.readFileSync(path.join(root, 'src', 'worker-paypal-subscriptions.js'), 'utf8');
+const disabledIndex = paypalSource.indexOf("if(!state.checkoutEnabled)return json(");
+const duplicateIndex = paypalSource.indexOf("if(currentSubscription&&bool(currentSubscription.paid_access))");
+if (disabledIndex < 0 || duplicateIndex < 0 || disabledIndex > duplicateIndex) {
+  console.error('Cloudflare membership integration verification failed: checkout shutdown must precede duplicate-subscription handling');
+  process.exit(1);
+}
+
+const emailLifecycleSource = fs.readFileSync(path.join(root, 'src', 'worker-email-lifecycle.js'), 'utf8');
+if (emailLifecycleSource.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);')) {
+  console.error('Cloudflare membership integration verification failed: the legacy executable first-daily-brief call remains');
+  process.exit(1);
+}
+
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
+  platform: 'Cloudflare Worker + D1 + Cloudflare Assets',
   changed,
   pages: pages.map(page => page.name),
   paypalCheckout: true,
-  paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
-  boundary: 'Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
+  canonicalOriginPolicy: 'All www requests receive a method-preserving 308 redirect to the apex Cloudflare Worker origin before authentication or asset routing',
+  paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only; global checkout shutdown is evaluated first, then a second checkout is blocked for current state-backed and legacy active/trialing entitlements',
+  sessionCookiePolicy: 'PayPal, billing, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback',
+  newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent; the server retains compatibility for marketingConsent',
+  newsletterDeliveryPolicy: 'Welcome email and selected first daily brief are delivered through the D1 outbox and Brevo lifecycle; the detailed intelligence builder falls back safely',
+  dashboardTierPolicy: 'Free dashboards do not call Intelligence-only watchlist routes during initial loading; paid members are routed to billing management',
+  dataRoutePolicy: 'Shared Cloudflare asset scripts use canonical root data routes so nested source pages and public routes load identical generated datasets',
+  boundary: 'Canonical membership, passwordless authentication, protected assets and PayPal subscription pages are restored before Cloudflare Assets are copied to both HTML and extensionless routes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));
-console.log(`Membership auth UI patched: ${changed.length ? changed.join(', ') : 'already current'}`);
+console.log(`Cloudflare membership auth UI patched: ${changed.length ? changed.join(', ') : 'already current'}`);

@@ -87,6 +87,7 @@ jobs:
         with:
           name: mission-readiness-${{ github.run_id }}
           path: |
+            downloads/osint-worker-patch-report.json
             downloads/mission-readiness-test.json
             downloads/mission-acceptance-audit.json
             downloads/mission-acceptance-audit.md

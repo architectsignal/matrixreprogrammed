@@ -7,10 +7,11 @@ const targets = ['index.html','daily-drop.html','epstein-files.html','network-se
 const hiddenTargets = new Set(['index.html', 'news.html']);
 const section = '<section id="evidence-badge-system-route" class="section wrap"><h2>Evidence Badge / Claim Classifier</h2><p class="lead">Every major claim should show what the record proves, what it does not prove, and what would strengthen it. Use the classifier before treating a source lead as a conclusion.</p><div class="cta-row"><a class="btn" href="claim-classifier.html">Open Claim Classifier</a><a class="btn alt" href="downloads/claim-classifier.json">Classifier JSON</a><a class="btn alt" href="evidence-vault.html">Evidence Vault</a></div></section>';
 const hiddenContract = '<script type="application/json" id="evidence-badge-system-route-contract" data-internal-only="true">{"route":"evidence-badge-system-route","status":"preserved-after-utility-cleanup","open":"claim-classifier.html"}</script>';
-const visibleSection = /<section\b[^>]*\sid=["']evidence-badge-system-route["'][^>]*>[\s\S]*?<\/section>/gi;
-const hiddenExisting = /<script\b[^>]*\sid=["']evidence-badge-system-route-contract["'][^>]*>[\s\S]*?<\/script>/gi;
+const visibleSection = /<section\b[^>]*\sid=["']evidence-badge-system-route(?:--duplicate-\d+)?["'][^>]*>[\s\S]*?<\/section>/gi;
+const hiddenExisting = /<script\b[^>]*\sid=["']evidence-badge-system-route-contract(?:--duplicate-\d+)?["'][^>]*>[\s\S]*?<\/script>/gi;
 const exactVisibleId = /(^|\s)id=["']evidence-badge-system-route["']/gi;
 const exactContractId = /(^|\s)id=["']evidence-badge-system-route-contract["']/gi;
+const duplicateRouteId = /(^|\s)id=["']evidence-badge-system-route(?:-contract)?--duplicate-\d+["']/gi;
 let changed = 0;
 let checked = 0;
 
@@ -22,6 +23,8 @@ function insert(html, block) {
 
 function removeNoncanonicalIdReferences(html) {
   return html
+    .replace(/(^|\s)id=["']evidence-badge-system-route--duplicate-\d+["']/gi, '$1data-evidence-badge-route-reference="evidence-badge-system-route"')
+    .replace(/(^|\s)id=["']evidence-badge-system-route-contract--duplicate-\d+["']/gi, '$1data-evidence-badge-contract-reference="evidence-badge-system-route-contract"')
     .replace(exactVisibleId, '$1data-evidence-badge-route-reference="evidence-badge-system-route"')
     .replace(exactContractId, '$1data-evidence-badge-contract-reference="evidence-badge-system-route-contract"');
 }
@@ -53,7 +56,9 @@ for (const scope of scopes) {
     const contracts = html.match(hiddenExisting) || [];
     const visibleIds = html.match(exactVisibleId) || [];
     const contractIds = html.match(exactContractId) || [];
+    const staleDuplicateIds = html.match(duplicateRouteId) || [];
     const label = path.relative(root, full) || file;
+    if (staleDuplicateIds.length) throw new Error(`${label} still contains renamed duplicate Evidence Badge route IDs`);
     if (hiddenTargets.has(file)) {
       if (sections.length !== 0 || contracts.length !== 1 || visibleIds.length !== 0 || contractIds.length !== 1) {
         throw new Error(`${label} expected one hidden evidence badge contract, no visible section and no duplicate IDs`);

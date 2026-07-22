@@ -14,7 +14,8 @@ const report = {
   asyncImages: 0,
   lazyFrames: 0,
   metadataVideos: 0,
-  cssFiles: []
+  cssFiles: [],
+  synchronizedSourceHtml: []
 };
 
 function read(file) { return fs.readFileSync(file, 'utf8'); }
@@ -189,6 +190,16 @@ if (fs.existsSync(site)) {
     if (fs.existsSync(source)) write(path.join(site, relative), read(source));
   }
   walkHtml(site);
+
+  // The automatic-update audit treats these generated pages as authoritative
+  // source/output pairs. Preserve the final optimized HTML in both locations
+  // instead of leaving the deployable copy one mutation ahead of root.
+  for (const relative of ['timers.html', 'search.html']) {
+    const optimized = path.join(site, relative);
+    if (!fs.existsSync(optimized)) continue;
+    write(path.join(root, relative), read(optimized));
+    report.synchronizedSourceHtml.push(relative);
+  }
 }
 
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

@@ -3,6 +3,7 @@ const path = require('path');
 
 const root = process.cwd();
 require('./harden-worker-api-contracts.js');
+require('./patch-cloudflare-canonical-member-origin.js');
 require('./patch-member-login-paypal-newsletter.js');
 require('./patch-money-graph-root-data.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
@@ -73,6 +74,9 @@ for (const required of [
   ['src/worker-production.js', 'isMemberExperienceRoute'],
   ['src/worker-production.js', 'isPayPalRoute'],
   ['src/worker-production.js', 'emailRoutes.has(path)'],
+  ['src/worker-production.js', "requestUrl.hostname.toLowerCase() === 'www.matrixreprogrammed.com'"],
+  ['src/worker-production.js', "requestUrl.hostname = 'matrixreprogrammed.com'"],
+  ['src/worker-production.js', 'Response.redirect(requestUrl.toString(), 308)'],
   ['src/worker-paypal-subscriptions.js', 'values.matrix_session_v2||values.matrix_session'],
   ['src/worker-paypal-subscriptions.js', 'currentSubscriptionForMember'],
   ['src/worker-paypal-subscriptions.js', 'An active PayPal membership already exists'],
@@ -112,6 +116,7 @@ const report = {
   changed,
   pages: pages.map(page => page.name),
   paypalCheckout: true,
+  canonicalOriginPolicy: 'All www requests receive a method-preserving 308 redirect to the apex Cloudflare Worker origin before authentication or asset routing',
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only; a second checkout is blocked for current state-backed and legacy active/trialing entitlements',
   sessionCookiePolicy: 'PayPal, billing, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback',
   newsletterConsentPolicy: 'Membership and newsletter forms send canonical explicit consent; the server retains compatibility for marketingConsent',

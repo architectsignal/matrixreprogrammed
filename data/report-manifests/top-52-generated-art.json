@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:20:00.499Z",
+  "generatedAt": "2026-07-22T06:52:32.899Z",
   "pageCount": 72,
   "output": "downloads/top-52-generated-art.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Top 52 Generated Card Artwork",
-    "contentHash": "0316fe369d9bd6099de158521e8404aea61bdb571548e1c03273c3ed67d39506",
+    "contentHash": "aa9fa001c128f2eac81ee8e1e9b3506fd8ca8767e38b1789a9720879365af048",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -22,12 +22,12 @@
       "e72d22f4f28eb53e3173d0a6",
       "15adccba38bd91644b561261",
       "f59da50ababa3ddae79a8f1c",
+      "65debd126cdfa5f7547a3eca",
+      "3c9c23f7f9a1cec81ef90f59",
       "institutions",
       "power-families",
       "policy",
       "think-tanks",
-      "65debd126cdfa5f7547a3eca",
-      "3c9c23f7f9a1cec81ef90f59",
       "larry-fink",
       "klaus-schwab",
       "emmanuel-macron",
@@ -40,7 +40,6 @@
       "sundar-pichai",
       "satya-nadella",
       "george-soros",
-      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "secret-societies",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
@@ -51,9 +50,9 @@
       "giorgia-meloni",
       "mark-rutte",
       "laurene-powell-jobs",
+      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "jensen-huang",
       "bill-gates",
-      "mark-zuckerberg",
       "peter-thiel",
       "soros-family",
       "musk-family",
@@ -61,11 +60,13 @@
       "bezos-family",
       "zuckerberg-chan-family",
       "cook-islands",
+      "594100b62a47db521fe2a128",
       "ec1316fb1fb70c83dc347bb6",
       "72ef7895f95288946ccb3cff",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
+      "34805734b1ad3b73f0ede0d8",
       "mukesh-ambani",
       "xi-jinping",
       "narendra-modi",
@@ -87,6 +88,7 @@
       "rupert-murdoch",
       "mackenzie-scott",
       "priscilla-chan",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "larry-ellison",
       "trilateral-commission",
       "brookings-institution",
@@ -126,34 +128,32 @@
       "ferrero-family",
       "del-vecchio-family",
       "benetton-family",
-      "newhouse-family",
-      "hearst-family",
-      "sulzberger-family"
+      "newhouse-family"
     ],
     "metrics": {
       "evidenceCount": 122,
-      "primarySourceCount": 0,
+      "primarySourceCount": 1,
       "disputedClaimCount": 1,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 47,
+      "relationshipCount": 45,
       "moneyRecordCount": 79
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Top 52 Generated Card Artwork beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Top 52 Generated Card Artwork.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Top 52 Persons of Interest,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Top 52 Persons of Interest",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -161,7 +161,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 47 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 45 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Soros family; Musk family; Gates family",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -176,7 +176,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 47 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 45 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",
@@ -200,6 +200,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:20:00.499Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

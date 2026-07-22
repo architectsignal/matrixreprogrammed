@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:20:18.467Z",
-  "pageCount": 98,
+  "generatedAt": "2026-07-22T06:52:48.736Z",
+  "pageCount": 102,
   "output": "downloads/weekly-investigation-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Weekly Investigation Report",
-    "contentHash": "0ff23e96dd96a27888690979de51a8d21d3e7953aa2944fd608c77d46f10f7a1",
+    "contentHash": "35a492fecef574e0712021a18fbc28397e840206ff2c160afed1f889457c3051",
     "sourceIds": [
       "9bbc696ef2be0a07a5a0d60d",
       "d5dc2c92eb67b315eece1f0b",
@@ -105,25 +105,18 @@
       "daily-16",
       "daily-17",
       "daily-18",
-      "source-change-ff1a3a77816af400f09ab95e",
       "ASC-REVIEW-6CA3C5666C487CEE",
-      "source-change-cb7ce67fe443d7c98b486d34",
       "ASC-REVIEW-E418D481FC89E768",
       "ASC-REVIEW-8DCAFBC1E6283393",
-      "source-change-4f6142409f6345aa4038244f",
       "c1520a15d6e62871a66c558e",
       "71e0563ca7b139c37c302956",
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
-      "source-change-fbfb678d637444fe7b488644",
       "ASC-REVIEW-3095B2F09AF1518E",
       "ASC-REVIEW-FCA45307EA918E28",
       "def94e0a086f2eac4c5ad91a",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-eb3448928554960651da56f6",
-      "source-change-c1520a15d6e62871a66c558e",
       "ASC-REVIEW-1DEA85B53498EF4A",
       "ASC-REVIEW-A16F0CE46FC26A15",
       "ASC-REVIEW-033C88D9E541BF5B",
@@ -131,7 +124,6 @@
       "daee19f2c0d92279cc9a7569",
       "72ef7895f95288946ccb3cff",
       "e3280e940a03a48febf72d99",
-      "source-change-58a212e4e1a93007ec5b3d6d",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-45ACC28AC220EA79",
       "eb3448928554960651da56f6",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "26b90533dbf7d2ed42f02de6",
-      "cb41392653fa4af1ef87b3cb"
+      "cb41392653fa4af1ef87b3cb",
+      "659ca1f7ccf26a9aecaf9d20",
+      "ASC-REVIEW-DA07BCFBB726AA49",
+      "ASC-REVIEW-CFB2B8804532DFFC",
+      "ASC-REVIEW-7729CF4536080393",
+      "ASC-REVIEW-EAB6011874016286",
+      "ASC-REVIEW-C973762B151D5947",
+      "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-0C3383FAE797FF46"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 113,
-      "disputedClaimCount": 25,
+      "primarySourceCount": 105,
+      "disputedClaimCount": 32,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
-      "moneyRecordCount": 8
+      "relationshipCount": 24,
+      "moneyRecordCount": 14
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 113 A/B-grade public-record items are materially relevant to Weekly Investigation Report.",
+        "conclusion": "The indexed record establishes that 105 A/B-grade public-record items are materially relevant to Weekly Investigation Report.",
         "evidence": "Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment (data/daily-investigation-conclusions.json); Revised Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Order and Final Judgment (data/weekly-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Proposed Final Judgment - Shaukat Shamim (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,22 +179,22 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Matrix Reprogrammed Canonical Intelligence Record; content changed: European Public Prosecutor's Office — News; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: USAspending.gov — Recent Contract Awards; content changed: Federal Register — Latest Documents",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Matrix Reprogrammed Canonical Intelligence Record; content changed: European Public Prosecutor's Office — News; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: Federal Register — Latest Documents; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -202,8 +202,8 @@
           "Matrix Reprogrammed Canonical Intelligence Record",
           "content changed: European Public Prosecutor's Office — News",
           "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
-          "content changed: USAspending.gov — Recent Contract Awards",
-          "content changed: Federal Register — Latest Documents"
+          "content changed: Federal Register — Latest Documents",
+          "content changed: U.S. Treasury OFAC — Recent Actions"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-21T07:44:05.392Z"
   }
 }

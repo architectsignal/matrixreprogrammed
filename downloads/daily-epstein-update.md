@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-22T06:21:43.277Z
-Live Intel source window: 2026-07-22T06:21:31.095Z
+Generated: 2026-07-22T06:54:08.231Z
+Live Intel source window: 2026-07-22T06:53:56.588Z
 Latest source publication: 2026-07-21T18:38:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-17 current Epstein-lane record leads remain inside the active source window.
+14 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -45,16 +45,6 @@ External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazee
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
-- Published: 2026-07-21T15:27:26.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
-
-Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 - Published: 2026-07-17T23:17:00.000Z
 - Source: Google News / Epstein timeline and files
@@ -85,16 +75,6 @@ Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Published: 2026-07-16T05:00:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
 - Published: 2026-07-16T04:11:50.000Z
 - Source: Google News / Epstein sighting and alive claims
@@ -102,16 +82,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
 
 US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-- Published: 2026-07-16T00:34:45.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
-
-Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:13:18.732Z",
-  "pageCount": 137,
+  "generatedAt": "2026-07-22T06:46:31.309Z",
+  "pageCount": 141,
   "output": "downloads/deep-audit-member-posting-contract.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Deep Audit Member Posting Contract",
-    "contentHash": "a6a44a68472564ba8a3b44e0260a677250aa1ef405a25f296e37be79e12637a3",
+    "contentHash": "030165ae6901a7ece47ebb6eb97487071d4efa19e78494338b50befb2ab08208",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-3B61EAB39C318DF1",
@@ -22,7 +22,6 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-369E078C8610D4F1",
       "ASC-REVIEW-D5FA458F66004D27",
-      "71e0563ca7b139c37c302956",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -96,7 +95,7 @@
       "ASC-REVIEW-3D349F2C3EEE9A65",
       "ASC-REVIEW-2BE76D9880CA56F8",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "71e0563ca7b139c37c302956",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,32 +145,33 @@
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "ASC-REVIEW-7B1A15ED77443F13"
+      "ASC-REVIEW-7B1A15ED77443F13",
+      "ASC-REVIEW-54C7773F8BEDE2F4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 137,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 138,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 81,
+      "relationshipCount": 82,
       "moneyRecordCount": 83
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Deep Audit Member Posting Contract.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Deep Audit Member Posting Contract beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “Daily Brain Brief,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "[object Object]",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:46:31.309Z"
   }
 }

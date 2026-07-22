@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:18:22.566Z",
-  "pageCount": 140,
+  "generatedAt": "2026-07-22T06:51:04.746Z",
+  "pageCount": 137,
   "output": "downloads/recovery-worker-api-contract-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Recovery Worker Api Contract Test",
-    "contentHash": "4d08194b36a9313d185e4b935bfcbd7503506357547b1288bace5188695c7dd5",
+    "contentHash": "268213d1432b6dfea9ae62334ef21b3ddd5ecebfdd49104ef2cc2b154c76c272",
     "sourceIds": [
       "ASC-REVIEW-241E89BE4AC6B532",
       "ASC-REVIEW-C130665F0F8D4152",
@@ -13,6 +13,7 @@
       "ASC-REVIEW-E628602ED9901D15",
       "ASC-REVIEW-231937A512687C7B",
       "ASC-REVIEW-DB3B48F4467DAAF3",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -74,7 +75,7 @@
       "ASC-REVIEW-3D349F2C3EEE9A65",
       "ASC-REVIEW-2BE76D9880CA56F8",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-033C88D9E541BF5B",
@@ -88,9 +89,11 @@
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -143,33 +146,30 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F"
+      "ASC-REVIEW-F42C454D9E75A8A7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 136,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 133,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 80,
-      "moneyRecordCount": 75
+      "moneyRecordCount": 72
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Recovery Worker Api Contract Test.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Recovery Worker Api Contract Test.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -187,7 +187,7 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
   }
 }

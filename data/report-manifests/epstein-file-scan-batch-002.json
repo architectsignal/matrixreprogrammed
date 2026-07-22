@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:14:25.958Z",
+  "generatedAt": "2026-07-22T06:47:31.956Z",
   "pageCount": 88,
   "output": "downloads/epstein-file-scan-batch-002.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs",
-    "contentHash": "656d6de40d91b5d106c0d3fa0d55e78fbe931475982d036612d8b8f2cce535c6",
+    "contentHash": "ea8b429ba1b5d134d9c77296e8fac729b087e7a465a0e05ea1f9711a50c4921e",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "ecd4a1111010f13b2d74bf8c",
@@ -19,44 +19,36 @@
       "41772e5c9af7970ddd7d5aac",
       "DOJ-DATASET-9",
       "d0b647e325275daa6d824a49",
+      "76a719654ec3312153163154",
+      "c5d9edd2562c4c00e3ddfdfb",
       "cee347fbc3752c6e0f890457",
       "e4a0df7a70409789454722e7",
       "EFS-001-R009",
       "MF-002",
-      "594100b62a47db521fe2a128",
-      "76a719654ec3312153163154",
-      "c5d9edd2562c4c00e3ddfdfb",
-      "34805734b1ad3b73f0ede0d8",
       "EFS-001-R008",
       "EFS-001-R010",
+      "594100b62a47db521fe2a128",
+      "34805734b1ad3b73f0ede0d8",
       "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
+      "65debd126cdfa5f7547a3eca",
       "ec1316fb1fb70c83dc347bb6",
       "MF-001",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
+      "3c9c23f7f9a1cec81ef90f59",
       "c1520a15d6e62871a66c558e",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "6510364e9b1a1504b9f99521",
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
       "EFS-001-R007",
       "9b9816cd15ea0d816c77affa",
-      "65debd126cdfa5f7547a3eca",
       "360e80c162081c85d2c680ef",
-      "3c9c23f7f9a1cec81ef90f59",
-      "source-change-cb7ce67fe443d7c98b486d34",
-      "source-change-ff1a3a77816af400f09ab95e",
-      "source-change-fbfb678d637444fe7b488644",
-      "source-change-4f6142409f6345aa4038244f",
       "eb3448928554960651da56f6",
       "b5a32a76f19d554c484e917f",
       "7dcf4ef18ea1f86d01068773",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-58a212e4e1a93007ec5b3d6d",
-      "source-change-eb3448928554960651da56f6",
-      "source-change-c1520a15d6e62871a66c558e",
       "DOJ-DISCLOSURES",
       "EP-AI-004",
       "EPSTEIN-TRIGGER-2026-07-03",
@@ -104,10 +96,6 @@
       "daily-16",
       "daily-17",
       "daily-18",
-      "daily-19",
-      "daily-20",
-      "daily-21",
-      "daily-26",
       "535d2f595c3ec1621e13dd0f",
       "76cf5cb1f42b219ea38128f4",
       "15adccba38bd91644b561261",
@@ -146,20 +134,32 @@
       "weekly-30",
       "weekly-31",
       "weekly-32",
-      "weekly-33"
+      "weekly-33",
+      "weekly-34",
+      "weekly-35",
+      "weekly-36",
+      "weekly-37",
+      "weekly-38",
+      "weekly-39",
+      "weekly-40",
+      "epstein-files-2026-07-21-853016c4",
+      "ASC-REVIEW-2EAFF47D9C619640",
+      "ASC-REVIEW-AF729BF83147A0D4",
+      "ASC-REVIEW-45635942D9BD8BFF",
+      "ASC-REVIEW-6809880AE2446DD1"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 87,
-      "disputedClaimCount": 12,
+      "primarySourceCount": 82,
+      "disputedClaimCount": 16,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 14,
-      "moneyRecordCount": 21
+      "relationshipCount": 16,
+      "moneyRecordCount": 23
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 87 A/B-grade public-record items are materially relevant to Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs.",
+        "conclusion": "The indexed record establishes that 82 A/B-grade public-record items are materially relevant to Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs.",
         "evidence": "United States v. Maxwell DOJ court-record page (data/auto-evidence-latest.json); United States v. Epstein DOJ court-record page (data/auto-evidence-latest.json); Government of the USVI v. JPMorgan Chase Bank, N.A. DOJ court-record page (data/auto-evidence-latest.json); DOJ Data Set 9 files (data/auto-evidence-latest.json); Court Record lane — United States v. Maxwell, No. 1:20-cr-00330 (data/tracker-core-investigations.json); Court Record lane — United States v. Epstein, No. 1:19-cr-00490 (data/tracker-core-investigations.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; content changed: USAspending.gov — Recent Contract Awards; Matrix Reprogrammed Structured Investigation Schema; Media / Narrative Theory; 12. Lawful OSINT & Source Verification",
+        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; Media / Narrative Theory; 12. Lawful OSINT & Source Verification; Media / Narrative Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "content changed: USAspending.gov — Recent Contract Awards",
           "Matrix Reprogrammed Structured Investigation Schema",
           "Media / Narrative Theory",
-          "12. Lawful OSINT & Source Verification"
+          "12. Lawful OSINT & Source Verification",
+          "Media / Narrative Theory"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-21T17:01:51.000Z"
   }
 }

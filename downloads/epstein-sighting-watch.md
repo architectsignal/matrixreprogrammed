@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-22T06:20:34.212Z
+Generated: 2026-07-22T06:53:03.376Z
 
 ## Official Boundary
 
@@ -58,13 +58,3 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
-
-### Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-- Type: debunk/fake-media-risk
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
-
-Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au

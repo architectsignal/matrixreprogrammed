@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-22T06:11:11.561Z
+Updated: 2026-07-22T06:44:36.494Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -58,11 +58,6 @@ Items: 12
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
 - 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Security Council LIVE: International Criminal Court briefs on Darfur
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167945
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -111,6 +106,11 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
 ## Source Pathways / Relevant Source Files
 
@@ -131,7 +131,6 @@ Items: 12
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
 - UN News: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — https://news.un.org/feed/view/en/story/2026/07/1167972
-- UN News: Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 - UN News: Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - UN News: Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
 - UN News: Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
@@ -141,6 +140,7 @@ Items: 12
 - UN News: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
 - UN News: Middle East: Civilians again under fire as US-Iran strikes continue — https://news.un.org/feed/view/en/story/2026/07/1167979
 - UN News: Health response brings lifesaving care closer to thousands in Yemen — https://news.un.org/feed/view/en/story/2026/07/1167982
+- UN News: Baristas behind bars: Thai prisoners brew a path back to daily life — https://news.un.org/feed/view/en/story/2026/07/1167954
 
 ## Book Routes
 

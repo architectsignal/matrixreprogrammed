@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-22T06:13:26.825Z",
+  "generatedAt": "2026-07-22T06:46:38.771Z",
   "pageCount": 97,
   "output": "downloads/detailed-wealth-guide-builder-repair.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Detailed Wealth Guide Builder Repair",
-    "contentHash": "805927e413de8da862c08bf05031b855fd608d48d3ac7445cc30f04a1a941d6a",
+    "contentHash": "f1f895cc4f6d7e909aeb805b3acbd9f03fbede83a954fbc554c957253c1d835a",
     "sourceIds": [
+      "pdf-detailed-wealth-guide-builder-repair-45ff55e859e1",
       "d5dc2c92eb67b315eece1f0b",
       "57344d2a11a8c95d74dd1da8",
       "9bbc696ef2be0a07a5a0d60d",
@@ -50,9 +51,6 @@
       "declassified-files-2026-07-17-fc270d9d",
       "declassified-files-2026-07-17-caa99125",
       "declassified-files-2026-07-17-ecb37135",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
       "96c00651a460596a3c34f297",
       "eb5d60860a79b38aeefa3633",
       "epstein-nda-settlement-protection-lane-2026-06-26",
@@ -72,6 +70,7 @@
       "58a212e4e1a93007ec5b3d6d",
       "a2bb881829aebc0f3da87989",
       "50146345833ee35e94dd4940",
+      "pdf-detailed-wealth-guide-layout-repair-0922bd50e263",
       "us-doj",
       "gao-hq",
       "family-offices-cascade-investment",
@@ -146,20 +145,21 @@
       "trusts-wolfson-foundation",
       "trusts-calouste-gulbenkian-foundation",
       "trusts-rhodes-trust",
-      "trusts-national-trust"
+      "trusts-national-trust",
+      "trusts-crown-estate-ownership-trust-routes"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 129,
+      "primarySourceCount": 127,
       "disputedClaimCount": 12,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 21,
-      "moneyRecordCount": 89
+      "relationshipCount": 19,
+      "moneyRecordCount": 92
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Detailed Wealth Guide Builder Repair.",
+        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Detailed Wealth Guide Builder Repair.",
         "evidence": "Revised Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Proposed Final Judgment - Shaukat Shamim (data/daily-investigation-conclusions.json); Proposed Final Judgment - YouPlus, Inc. (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 21 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 21 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Henry Lucas",
           "Henry Lucas Part 01",
           "Henry Lucas Part 02 (Final)",
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer",
+          "Booz Allen Hamilton → Intelligence: execution layer",
+          "Booz Allen Hamilton → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

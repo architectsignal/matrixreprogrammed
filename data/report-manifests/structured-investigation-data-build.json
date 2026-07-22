@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:19:44.202Z",
-  "pageCount": 138,
+  "generatedAt": "2026-07-22T06:52:17.866Z",
+  "pageCount": 137,
   "output": "downloads/structured-investigation-data-build.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Structured Investigation Data Build",
-    "contentHash": "07af4a0ce3f1bb0d96434ae288d3f18f5de181766f2b5fcfae6a2e2d41b7f714",
+    "contentHash": "218a73fe4c661bc897000a41c1f12bb67f0d49f046d0275697c88f9c25b524f7",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
       "1769af26a7bda813406cd8f5",
@@ -77,11 +77,14 @@
       "ASC-REVIEW-3D349F2C3EEE9A65",
       "ASC-REVIEW-2BE76D9880CA56F8",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
+      "594100b62a47db521fe2a128",
       "EP-AI-004",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "26b90533dbf7d2ed42f02de6",
       "osint",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-7729CF4536080393",
@@ -102,9 +105,9 @@
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "26b90533dbf7d2ed42f02de6",
-      "594100b62a47db521fe2a128",
-      "34805734b1ad3b73f0ede0d8",
+      "9e8903fd8dfa9b54a1d6db30",
+      "e72d22f4f28eb53e3173d0a6",
+      "88ef9baf356c096816236956",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -143,19 +146,16 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-6FEEE1F638ADFCD6",
-      "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158"
+      "ASC-REVIEW-6FEEE1F638ADFCD6"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 133,
+      "disputedClaimCount": 130,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 80
+      "relationshipCount": 78,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Structured Investigation Schema; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Structured Investigation Schema",
           "Follow The Money Watch",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:19:44.202Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:52:17.866Z"
   }
 }

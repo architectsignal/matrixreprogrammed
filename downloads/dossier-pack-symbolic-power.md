@@ -46,7 +46,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-22T06:11:11.561Z
+Updated: 2026-07-22T06:44:36.494Z
 Items: 12
 
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
@@ -64,11 +64,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-16 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Evidence: Primary or official public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -109,6 +104,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-04 — House committee calls on DOJ to investigate 2 men with ties to Jeffrey Epstein - NBC News
+  - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxNSjRDaWZfVDR4WXBTZDFBY251R05zWFl5eHgySmlTbFFPclNRMFRZbFN3NTlWTWVMU2ZxWWNhTjY5QndiQXNQZmg0RGRQRDBtSklFYjdTbm9qRGRZVW9VQzliNnVfRjFXVkFaYWY0eG4yRkh6TmdZSzBRQ2tlNko1ZlBkZ0pScE5hVzNHOHlWS1lRNTUyNFdTOHZncTR0S2RIczdkaWczUlZSVHM4Q0JLUjAzRDN4aXo5SlpfempPX3VYS05PZUE?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -131,7 +131,6 @@ Items: 12
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media — https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5
-- Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Axios / federal court order report: Judge orders DOJ to release more Epstein records or justify redactions by July 2 — https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
 - Google News / Epstein timeline and files: 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiowFBVV95cUxOLVdoa3J5RzRHZDlnbnVUWWhfaXNXSFZUUkN6MDA0VTlOUDV6UDB1ZTNSY3g5Y3dob1hWTjB1alQ5eld3ZjEzN1dMOXpCcFRMUnh3Y1lqTFBRNENKOTZsakxGTlJEOEZsZm5LdEpCalJjX0RDWjRROGdnVkprb19kSHl3MnlrLVFJd2Fobkl1R0x0UHBNZ01nRjlEdnhXekV2ZXFv0gGoAUFVX3lxTE5kWWltOWVuUnluaGktcFo0VEp0c1RwR2hhNnNpcDZKQUhOMF9wcnVwNHA3Z09BQWQzZy1oSUdkXzJKSkRKanRaT1FXSTdoeThOVGhLY1JmZnR5WmRwR3BBQUFUdlhzdVUxN0EtdzZtdFJzUGliM1JBeXhtY0QzZWJkUnlVaER0VUtHM0I1czI4c1kxc1lkQ2lBV3FHQS0yTUxZOGtzX1RYbA?oc=5
@@ -140,6 +139,7 @@ Items: 12
 - Google News / Epstein timeline and files: Bill Gates tells Congress he didn’t know of Epstein’s crimes, renounces ties - The Washington Post — https://news.google.com/rss/articles/CBMiswFBVV95cUxOVnp5SkNYZEtZYVBDZVhhZ29sem5WWkQyQVFuQVQxZ1VsOFUtZDRvdHBRZ0NlS1dHTndvaDM3bWJpc1hoR280VXMwdnpheFZydk0xTzVBMUtIb2YyRVFlbVlTTUsxT0hMS1p6bEZSQ0FtRXB3OG5UOF85WGhjakpabXdpd3YzSkhBZGJGMDNGZ2NHY1JMZ2g1NWhMb19iR3ZUOFFKY0pyVXQ1Z0Z3UnlSV21wQQ?oc=5
 - Google News / Epstein timeline and files: Gates sought donations from Epstein despite knowledge of crimes - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaVdIMHFJeXRycE0xRkpwSW1wNW5EVy1DdzhTX29HR01kNFJyNEQwM0VhNDRKbV9waVBRUGxXZThkQjdYaUlDVHZGZ2dfTG8wRldBUWFwZDN5ZVFkRFBxdjhfbElpWGpuSHZrcko1ejV2RS1LTERGcnBMdEVHSmpXM3Jab3RsenFPdEI1YnFZMmlhUzk20gGaAUFVX3lxTE1aTlFIZUV6Tk1PRFZYRGtieFF4UzJKeFhwRnNab01WcjNlakUzb3JoeS0ybkdpRTNQek5LTUdYeU5JR0VhUkhqdzU4UWlSVzc3ZTdJUndxZW5aRjluN2dWSGRTZzlPNXZTbVN0aTNnWFdzMUtrakNBZUM2TjI5NXFaMEItSnowVmR6YWRwQW9FcDFSQkdEdGo2Tnc?oc=5
 - Google News / Epstein sighting and alive claims: Bill Gates tells lawmakers he was not aware of Epstein's crimes - NPR — https://news.google.com/rss/articles/CBMinAFBVV95cUxON0d0Yk5zZGJqRDB5WGFuSTlIamVMbFdocVRLZU82WmMtYTlQQktmTVJ6ZWFfeC1WcDNMZzFTdXBQWTNxQnZkdk14SWZNanA5eUF6R2xxek5rYm5TSUdIVHJWaDFjcUw1OWRUUjhUalphLXNqMHNyaGlNQk1IQXJaUHJsS0FjS2RqTFdDTUtwYzlBaGxoNU14MlVidUQ?oc=5
+- Google News / Epstein timeline and files: House committee calls on DOJ to investigate 2 men with ties to Jeffrey Epstein - NBC News — https://news.google.com/rss/articles/CBMixgFBVV95cUxNSjRDaWZfVDR4WXBTZDFBY251R05zWFl5eHgySmlTbFFPclNRMFRZbFN3NTlWTWVMU2ZxWWNhTjY5QndiQXNQZmg0RGRQRDBtSklFYjdTbm9qRGRZVW9VQzliNnVfRjFXVkFaYWY0eG4yRkh6TmdZSzBRQ2tlNko1ZlBkZ0pScE5hVzNHOHlWS1lRNTUyNFdTOHZncTR0S2RIczdkaWczUlZSVHM4Q0JLUjAzRDN4aXo5SlpfempPX3VYS05PZUE?oc=5
 
 ## Book Routes
 

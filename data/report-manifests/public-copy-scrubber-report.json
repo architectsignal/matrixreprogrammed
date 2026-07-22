@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-22T06:17:54.427Z",
+  "generatedAt": "2026-07-22T06:50:40.588Z",
   "pageCount": 128,
   "output": "downloads/public-copy-scrubber-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Public Copy Scrubber Report",
-    "contentHash": "b3be727548a5298c7137b2242a9ed15eaefa2597bf3a4fc2f7b6ef0e09646d9b",
+    "contentHash": "e019ab84c7468a6adff2d22a3446907e69f1122df8db2950e7df4891265beac8",
     "sourceIds": [
+      "a4c15f7c3d808369b294115e",
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
-      "a4c15f7c3d808369b294115e",
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
       "58a212e4e1a93007ec5b3d6d",
@@ -18,6 +18,7 @@
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
       "eb3448928554960651da56f6",
+      "daily-revelation-report",
       "9f77464e401ac59ad1adb812",
       "7dcf4ef18ea1f86d01068773",
       "b7e4a66335a706ef5097117f",
@@ -49,8 +50,10 @@
       "ff1a3a77816af400f09ab95e",
       "EP-AI-002",
       "ecb",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
+      "14d04c0943d24cbe6a1926db",
       "def94e0a086f2eac4c5ad91a",
       "9d13cbe9989a1430580de2ff",
       "7fc07964a27914afe516c45b",
@@ -143,23 +146,20 @@
       "ASC-REVIEW-F75F4FFBA085D396",
       "ASC-REVIEW-0F8586CC2CBF8ED4",
       "ASC-REVIEW-ECFD914DA00A7C36",
-      "ASC-REVIEW-44CBDE6F2AE4CA62",
-      "ASC-REVIEW-455A22488324C269",
-      "ASC-REVIEW-3D349F2C3EEE9A65",
-      "ASC-REVIEW-2BE76D9880CA56F8"
+      "ASC-REVIEW-44CBDE6F2AE4CA62"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
-      "disputedClaimCount": 115,
-      "newEntityCount": 0,
+      "primarySourceCount": 19,
+      "disputedClaimCount": 112,
+      "newEntityCount": 18,
       "updatedAssessmentCount": 1,
       "relationshipCount": 55,
-      "moneyRecordCount": 48
+      "moneyRecordCount": 47
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Public Copy Scrubber Report.",
+        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Public Copy Scrubber Report.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:17:54.427Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:50:40.588Z"
   }
 }

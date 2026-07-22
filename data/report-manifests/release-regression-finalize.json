@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:18:25.251Z",
+  "generatedAt": "2026-07-22T06:51:06.820Z",
   "pageCount": 129,
   "output": "downloads/release-regression-finalize.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Release Regression Finalize",
-    "contentHash": "e46834b8710c3ff6f56c5dbdd9e84cd9428da3b40c6103e213291d58b822063b",
+    "contentHash": "10b80a093bfb7e75193090d3ac57ae2c8d7ed9d3c4db0d714bf9e806a68532a2",
     "sourceIds": [
       "ASC-REVIEW-FCA45307EA918E28",
       "ASC-REVIEW-6CA3C5666C487CEE",
@@ -49,9 +49,9 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -72,9 +72,6 @@
       "ASC-REVIEW-21E454816F050A34",
       "360e80c162081c85d2c680ef",
       "EFS-001-R006",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "declassified-files-2026-06-16-pentagon-releases-72-ufo-files-military-reports-reveal-new-sightings-r",
       "declassified-files-2026-05-08-presidential-unsealing-and-reporting-system-for-uap-encounters-pursue-",
       "declassified-files-2026-01-01-uk-considered-military-overthrow-of-depressingly-healthy-robert-mugabe",
@@ -146,20 +143,23 @@
       "ASC-REVIEW-0649A6CC727CB73D",
       "ASC-REVIEW-14F87972EF83E77D",
       "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B"
+      "ASC-REVIEW-9445AB7A6FE43B5B",
+      "ASC-REVIEW-B5FCD410F732DBED",
+      "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-3CA200E0FB3097E4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 49,
-      "disputedClaimCount": 88,
+      "primarySourceCount": 46,
+      "disputedClaimCount": 91,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 74,
-      "moneyRecordCount": 63
+      "relationshipCount": 73,
+      "moneyRecordCount": 66
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 49 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
+        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
         "evidence": "Revised Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Proposed Final Judgment - Shaukat Shamim (data/daily-investigation-conclusions.json); Proposed Final Judgment - YouPlus, Inc. (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 74 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
+        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,13 +194,13 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 74 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
+          "Henry Lucas",
+          "Henry Lucas Part 01",
+          "Henry Lucas Part 02 (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer"

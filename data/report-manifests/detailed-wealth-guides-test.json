@@ -1,20 +1,17 @@
 {
-  "generatedAt": "2026-07-22T06:13:29.264Z",
-  "pageCount": 79,
+  "generatedAt": "2026-07-22T06:46:40.701Z",
+  "pageCount": 77,
   "output": "downloads/detailed-wealth-guides-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Detailed Wealth Guides Test",
-    "contentHash": "6d46de4fae236bce87f5c6bfd383f877a7c801b54ccfbf65d524cd19de2dfd1b",
+    "contentHash": "7d169bee6ead43cc1709affbdfe2030c0425302a45fda05ae40d1e39cde0d6d4",
     "sourceIds": [
       "bf041695a279c3dc5412cdf4",
       "58a212e4e1a93007ec5b3d6d",
       "declassified-files-2026-07-17-fc270d9d",
       "declassified-files-2026-07-17-caa99125",
       "declassified-files-2026-07-17-ecb37135",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -146,7 +143,10 @@
       "private-equity-pai-partners",
       "private-equity-bc-partners",
       "private-equity-apax-partners",
-      "private-equity-new-mountain-capital"
+      "private-equity-new-mountain-capital",
+      "private-equity-insight-partners",
+      "private-equity-hg",
+      "hedge-funds-bridgewater-associates"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 11,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 25,
-      "moneyRecordCount": 130
+      "relationshipCount": 22,
+      "moneyRecordCount": 133
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Detailed Wealth Guides Test.",
-        "evidence": "Congressional hearings and records (data/atlas-layers.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); Henry Lucas (data/latest-public-drops.json); Henry Lucas Part 01 (data/latest-public-drops.json); Henry Lucas Part 02 (Final) (data/latest-public-drops.json); Edwin Wilson and Frank Terpil Part 54 (data/live-intel.json)",
+        "evidence": "Congressional hearings and records (data/atlas-layers.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Henry Lucas",
           "Henry Lucas Part 01",
           "Henry Lucas Part 02 (Final)",
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer",
+          "Booz Allen Hamilton → Intelligence: execution layer",
+          "Booz Allen Hamilton → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

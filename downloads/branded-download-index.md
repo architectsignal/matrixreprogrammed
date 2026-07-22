@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-22T06:20:31.379Z
+Updated: 2026-07-22T06:53:00.169Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -158,7 +158,12 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Forum Controlled Deploy Runs: downloads/forum-controlled-deploy-runs.pdf
 - Forum Health Member Policy Normalize: downloads/forum-health-member-policy-normalize.pdf
 - Forum Hotfix Runs: downloads/forum-hotfix-runs.pdf
+- Forum Login Canonical Repair: downloads/forum-login-canonical-repair.pdf
+- Forum Member Posting Repair: downloads/forum-member-posting-repair.pdf
+- Forum Member Posting Test: downloads/forum-member-posting-test.pdf
+- Forum Page Consistency Repair: downloads/forum-page-consistency-repair.pdf
 - Forum Posts Export: downloads/forum-posts.pdf
+- Forum Session Compatibility Repair: downloads/forum-session-compatibility-repair.pdf
 - Full Site Audit Target Detection Patch: downloads/full-site-audit-target-detection-patch.pdf
 - Full Site Function and Tool Audit: downloads/full-site-function-tool-audit.pdf
 - Generated Machine Page Cleanup: downloads/generated-machine-page-cleanup.pdf

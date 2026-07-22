@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:15:27.671Z",
-  "pageCount": 115,
+  "generatedAt": "2026-07-22T06:48:32.655Z",
+  "pageCount": 113,
   "output": "downloads/geographic-power-atlas-runtime-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Geographic Power Atlas Runtime Test",
-    "contentHash": "58faf82d47682399913e2afb79f0f8aca44edc8f30653bcf8f869a722d47721c",
+    "contentHash": "08d620fdff4274cb629722ea5a10dd9bf6880dbe2f42effcf5c97c1f61ba105f",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "58a212e4e1a93007ec5b3d6d",
@@ -65,11 +65,12 @@
       "ASC-REVIEW-0A691C22215E587D",
       "eb3448928554960651da56f6",
       "3a425f0d5d683952bc0ad7ac",
+      "9f77464e401ac59ad1adb812",
       "b079bec5bc869b0463d0584c",
       "270841af2bd81407a26bed0b",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -145,21 +146,20 @@
       "ASC-REVIEW-2BE76D9880CA56F8",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
       "fbfb678d637444fe7b488644",
-      "d652e1fa40dcd5dc95de9bb1",
-      "553ca36157c97552aafe2abb"
+      "d652e1fa40dcd5dc95de9bb1"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 60,
+      "primarySourceCount": 59,
       "disputedClaimCount": 78,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 25,
-      "moneyRecordCount": 17
+      "relationshipCount": 24,
+      "moneyRecordCount": 16
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 60 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
+        "conclusion": "The indexed record establishes that 59 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,11 +194,11 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
+          "Henry Lucas",
+          "Henry Lucas Part 01",
+          "Henry Lucas Part 02 (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",

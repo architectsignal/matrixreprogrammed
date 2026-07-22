@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-22T06:21:43.298Z
-Live Intel source window: 2026-07-22T06:21:31.095Z
+Generated: 2026-07-22T06:54:08.252Z
+Live Intel source window: 2026-07-22T06:53:56.588Z
 Tracked cards: 873
-Cards with current matched records: 102
-Cards with no new verified record: 771
+Cards with current matched records: 96
+Cards with no new verified record: 777
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -430,11 +430,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## António Guterres
 - Route: top-52/ant-nio-guterres.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
 - 2026-07-17T12:00:00.000Z — Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
-- 2026-07-15T12:00:00.000Z — Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-timelines/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
@@ -1691,10 +1690,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## ENTITY DAILY BRIEFS.
 - Route: entity-daily-briefs.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-15T12:00:00.000Z
-- 2026-07-15T12:00:00.000Z — Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## ENTITY REGISTRY
 - Route: entity-registry.html
@@ -4932,15 +4930,14 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## UN Sustainable Development Goals
 - Route: policy/un-sustainable-development-goals.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Global hunger declines again but progress remains uneven across regions — https://news.un.org/feed/view/en/story/2026/07/1167987
-- 2026-07-16T12:00:00.000Z — As aid dries up, countries pledge to close the $4 trillion development gap — https://news.un.org/feed/view/en/story/2026/07/1167957
 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
@@ -4949,7 +4946,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
@@ -5144,9 +5141,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-21T15:27:26.000Z
-- 2026-07-21T15:27:26.000Z — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+- Current matched records: 1
+- Latest record: 2026-07-16T06:24:40.000Z
 - 2026-07-16T06:24:40.000Z — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 
 ## WEEKLY INVESTIGATION REPORT.
@@ -5235,17 +5231,15 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## World Bank
 - Route: institutions/world-bank.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-15T12:00:00.000Z
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WORLD BANK
 - Route: institution-briefs/world-bank.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-15T12:00:00.000Z
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## World Bank ID4D identity programmes
 - Route: policy/world-bank-id4d-identity-programmes.html
@@ -5279,30 +5273,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-16T12:00:00.000Z
-- 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
-- 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
-- 2026-07-15T12:00:00.000Z — New guidance offers hope for reducing the global toll of dementia — https://news.un.org/feed/view/en/story/2026/07/1167948
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-16T12:00:00.000Z
-- 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
-- 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
-- 2026-07-15T12:00:00.000Z — New guidance offers hope for reducing the global toll of dementia — https://news.un.org/feed/view/en/story/2026/07/1167948
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-16T12:00:00.000Z
-- 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
-- 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
-- 2026-07-15T12:00:00.000Z — New guidance offers hope for reducing the global toll of dementia — https://news.un.org/feed/view/en/story/2026/07/1167948
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

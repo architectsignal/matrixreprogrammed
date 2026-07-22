@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:15.054Z",
-  "pageCount": 128,
+  "generatedAt": "2026-07-22T06:50:05.045Z",
+  "pageCount": 127,
   "output": "downloads/osint-tools-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Osint Tools Test",
-    "contentHash": "5368f9bc8daa5bb27f5a9a080a7b8682203cdcea653a14ae4ec9a2024d10503d",
+    "contentHash": "6329a098e4bae15e131acd35118a5272d493aec4362b31fe4ac14cb71aabcea9",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
@@ -14,10 +14,12 @@
       "network-defence",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
-      "7f5b91c14c671bd24b8bbd81",
-      "9f3052b5d8cec138a2a37e8c",
       "9e8903fd8dfa9b54a1d6db30",
+      "7f5b91c14c671bd24b8bbd81",
       "88ef9baf356c096816236956",
+      "9f3052b5d8cec138a2a37e8c",
+      "ec1316fb1fb70c83dc347bb6",
+      "7c05d9244c4620950350cf27",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-9EA06AB515E1538B",
       "ASC-REVIEW-19658B800C457D28",
@@ -27,15 +29,19 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
+      "594100b62a47db521fe2a128",
       "EP-AI-001",
-      "ec1316fb1fb70c83dc347bb6",
+      "76a719654ec3312153163154",
       "9f77464e401ac59ad1adb812",
       "a42c91c655cd066504ed6515",
       "b7e4a66335a706ef5097117f",
       "511ed227bb4be58b582ebb8d",
-      "7c05d9244c4620950350cf27",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "e4a0df7a70409789454722e7",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-AF729BF83147A0D4",
@@ -64,14 +70,11 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-231937A512687C7B",
       "ASC-REVIEW-9E2B6A9134D40A29",
-      "d0b647e325275daa6d824a49",
       "eb3448928554960651da56f6",
       "EP-AI-004",
-      "76a719654ec3312153163154",
+      "3a425f0d5d683952bc0ad7ac",
       "osint",
       "a5e5d4ec4df4352ea242ea3f",
-      "c5d9edd2562c4c00e3ddfdfb",
-      "cee347fbc3752c6e0f890457",
       "ASC-002",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -143,18 +146,15 @@
       "ASC-REVIEW-EDBD1451B47A2108",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
       "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-40C720A53E868768"
+      "ASC-REVIEW-B3BA7D663A9BE4B2"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 9,
-      "disputedClaimCount": 113,
+      "disputedClaimCount": 110,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 63,
+      "relationshipCount": 61,
       "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 63 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Follow The Money Watch; 10. Device, Network & Incident Defence; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; The strongest public pattern is convergence across access systems.; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 63 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Follow The Money Watch",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:17:15.054Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:50:05.045Z"
   }
 }

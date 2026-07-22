@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:16:40.120Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-22T06:49:34.694Z",
+  "pageCount": 130,
   "output": "downloads/membership-access-copy-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Membership Access Copy Report",
-    "contentHash": "e009016d351d56e43860767eb9ff3daf532b0624435f5a406cada514047708d3",
+    "contentHash": "a0c1ba9b64fe19ef142f2ea2fc71a7e63fd7cb2ab902b9fdc15621101667783b",
     "sourceIds": [
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
@@ -31,8 +31,9 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-52C3694FF95479F1",
       "c1520a15d6e62871a66c558e",
+      "9e8903fd8dfa9b54a1d6db30",
       "a5e5d4ec4df4352ea242ea3f",
-      "source-change-c1520a15d6e62871a66c558e",
+      "88ef9baf356c096816236956",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -145,31 +146,30 @@
       "ASC-REVIEW-CA2354BF2081EB62",
       "ASC-REVIEW-8A44FB8AADF1FB38",
       "ASC-REVIEW-7527D6692621D585",
-      "ASC-REVIEW-D6340B09DE08EAC5",
-      "ASC-REVIEW-3EB368ED00ADD23E"
+      "ASC-REVIEW-D6340B09DE08EAC5"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 134,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 133,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 134,
-      "moneyRecordCount": 134
+      "relationshipCount": 135,
+      "moneyRecordCount": 133
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 134 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 135 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 134 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 135 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:49:34.694Z"
   }
 }

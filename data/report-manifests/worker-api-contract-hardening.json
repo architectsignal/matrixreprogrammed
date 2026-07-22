@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:20:23.005Z",
+  "generatedAt": "2026-07-22T06:52:52.461Z",
   "pageCount": 119,
   "output": "downloads/worker-api-contract-hardening.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Worker Api Contract Hardening",
-    "contentHash": "6dfe2367b379e10e2ff0bcc58914984a090091deafba99a55c3598c593c20796",
+    "contentHash": "bec7cc012c96df1d9f19429256345b5a28f14c2298ea09bbc53673c8b17dc96c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
@@ -75,6 +75,7 @@
       "ASC-REVIEW-17EAF4AC47F2CCB1",
       "eb3448928554960651da56f6",
       "71e0563ca7b139c37c302956",
+      "e72d22f4f28eb53e3173d0a6",
       "7dcf4ef18ea1f86d01068773",
       "7fc07964a27914afe516c45b",
       "b079bec5bc869b0463d0584c",
@@ -83,7 +84,6 @@
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ff1a3a77816af400f09ab95e",
       "72ef7895f95288946ccb3cff",
-      "e72d22f4f28eb53e3173d0a6",
       "def94e0a086f2eac4c5ad91a",
       "7f5b91c14c671bd24b8bbd81",
       "bdd7e454126ebfa6319a594c",
@@ -105,8 +105,12 @@
       "58a212e4e1a93007ec5b3d6d",
       "4f6142409f6345aa4038244f",
       "12211ad7f5ffc796baa3c75a",
-      "023dcc20a52e1c6c4aa643eb",
       "535d2f595c3ec1621e13dd0f",
+      "daily-revelation-report",
+      "subject-digital-id-and-access-systems",
+      "subject-health-data-and-emergency-systems",
+      "3a425f0d5d683952bc0ad7ac",
+      "023dcc20a52e1c6c4aa643eb",
       "cac4acf03dae66ffc38d1dab",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
@@ -115,6 +119,10 @@
       "ec24f811962be678d371bfc7",
       "source-change-cb7ce67fe443d7c98b486d34",
       "source-change-4f6142409f6345aa4038244f",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
+      "digital-euro-parliament-hurdle-2026-06-23",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
@@ -138,28 +146,20 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
-      "ASC-REVIEW-5D75F861BBF77D9D",
-      "d652e1fa40dcd5dc95de9bb1",
-      "553ca36157c97552aafe2abb",
-      "daily-revelation-report",
-      "3a425f0d5d683952bc0ad7ac",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135"
+      "ASC-REVIEW-5D75F861BBF77D9D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 30,
+      "primarySourceCount": 28,
       "disputedClaimCount": 101,
-      "newEntityCount": 18,
+      "newEntityCount": 21,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 36,
-      "moneyRecordCount": 28
+      "relationshipCount": 35,
+      "moneyRecordCount": 26
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Worker Api Contract Hardening.",
+        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Worker Api Contract Hardening.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au; The surveillance networks cities do not have to buy - Biometric Update; Matrix Reprogrammed Canonical Intelligence Record; content changed: USAspending.gov — Recent Contract Awards; Influence should be mapped through infrastructure, filings and contracts.; Top contractor lane",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

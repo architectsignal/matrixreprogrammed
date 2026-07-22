@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:18:35.372Z",
+  "generatedAt": "2026-07-22T06:51:15.077Z",
   "pageCount": 69,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Search V3 Build Report",
-    "contentHash": "38cddb4afccd476ea0e0d18a1d06d107f3be4da454f8ea272b6e5427ed62227f",
+    "contentHash": "ec35465eef151c4602942b60c01df63cdbbb409941870ba256d909fb33e6da44",
     "sourceIds": [
       "ecd4a1111010f13b2d74bf8c",
       "1769af26a7bda813406cd8f5",
@@ -13,6 +13,7 @@
       "58a212e4e1a93007ec5b3d6d",
       "eb3448928554960651da56f6",
       "c1520a15d6e62871a66c558e",
+      "594100b62a47db521fe2a128",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -145,12 +146,11 @@
       "hedge-funds-marshall-wace",
       "hedge-funds-brevan-howard",
       "hedge-funds-balyasny-asset-management",
-      "hedge-funds-point72-asset-management",
-      "hedge-funds-aqr-capital-management"
+      "hedge-funds-point72-asset-management"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 138,
+      "primarySourceCount": 137,
       "disputedClaimCount": 0,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 138 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
+        "conclusion": "The indexed record establishes that 137 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); Cascade Investment (data/history/money-intelligence/2026-07-20.json); Bezos Expeditions (data/history/money-intelligence/2026-07-20.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:18:35.372Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:51:15.077Z"
   }
 }

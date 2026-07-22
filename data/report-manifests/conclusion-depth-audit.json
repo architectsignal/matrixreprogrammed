@@ -1,14 +1,13 @@
 {
-  "generatedAt": "2026-07-22T06:12:37.593Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-22T06:45:55.342Z",
+  "pageCount": 124,
   "output": "downloads/conclusion-depth-audit.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Conclusion Depth Audit",
-    "contentHash": "3e8b2ea6ac1ee6b98c7a2075f97eaeaa7db72bd9799b4fa6a4bd446fc72f9de4",
+    "contentHash": "77293aa210bfa05633b6beececa95cd46de5f5740bc4d1a2660a1a645c3b0f78",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "d0b647e325275daa6d824a49",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
@@ -17,11 +16,12 @@
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
+      "d0b647e325275daa6d824a49",
       "cee347fbc3752c6e0f890457",
       "3a425f0d5d683952bc0ad7ac",
+      "e72d22f4f28eb53e3173d0a6",
       "65debd126cdfa5f7547a3eca",
       "9f77464e401ac59ad1adb812",
-      "e72d22f4f28eb53e3173d0a6",
       "b5a32a76f19d554c484e917f",
       "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -62,8 +62,13 @@
       "ASC-001",
       "ASC-REVIEW-8A2ACAFD47272636",
       "EP-AI-003",
+      "f57e3473bfa6d9b11e5234e8",
+      "46757b632ca28a9b50b2985e",
+      "14d04c0943d24cbe6a1926db",
+      "8c2f9ce345ff56f46aa1ea62",
       "9b9816cd15ea0d816c77affa",
       "41772e5c9af7970ddd7d5aac",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -141,37 +146,32 @@
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793",
-      "ASC-REVIEW-14DA4C1F787B63ED"
+      "ASC-REVIEW-9553A9554C0E8D6A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 107,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 102,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 101
+      "relationshipCount": 92,
+      "moneyRecordCount": 98
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Conclusion Depth Audit beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Conclusion Depth Audit.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 82,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Brain Brief,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "[object Object]",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 92 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Elite Power Theory; Media / Narrative Theory; Elite Power Theory; Media / Narrative Theory; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 92 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:12:37.593Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

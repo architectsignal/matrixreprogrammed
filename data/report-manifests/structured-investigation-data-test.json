@@ -1,20 +1,28 @@
 {
-  "generatedAt": "2026-07-22T06:19:45.956Z",
-  "pageCount": 127,
+  "generatedAt": "2026-07-22T06:52:19.455Z",
+  "pageCount": 124,
   "output": "downloads/structured-investigation-data-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Structured Investigation Data Test",
-    "contentHash": "eae6516415c8eab22c59d98fa05824cba6ba6377dd253d6f8121ad4fa45413f2",
+    "contentHash": "e2da982b3673bfa02e17b5b8161d9305b29af27a1fc8917ebd5ff516c862ae4a",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
       "daee19f2c0d92279cc9a7569",
+      "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "9f3052b5d8cec138a2a37e8c",
       "72ef7895f95288946ccb3cff",
+      "76a719654ec3312153163154",
       "osint",
-      "26b90533dbf7d2ed42f02de6",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "594100b62a47db521fe2a128",
       "fbi-hq",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
+      "34805734b1ad3b73f0ede0d8",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-9F5E6DCB06093895",
       "ASC-REVIEW-CAEF74273342914C",
@@ -28,26 +36,16 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-BE1984C8AB0488C9",
-      "d0b647e325275daa6d824a49",
-      "594100b62a47db521fe2a128",
       "sec-hq",
       "us-treasury",
       "us-doj",
       "gao-hq",
       "eu-commission",
-      "9e8903fd8dfa9b54a1d6db30",
-      "ec1316fb1fb70c83dc347bb6",
-      "76a719654ec3312153163154",
+      "3a425f0d5d683952bc0ad7ac",
+      "e72d22f4f28eb53e3173d0a6",
       "7f5b91c14c671bd24b8bbd81",
-      "c5d9edd2562c4c00e3ddfdfb",
-      "88ef9baf356c096816236956",
-      "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
-      "cee347fbc3752c6e0f890457",
       "e4a0df7a70409789454722e7",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-fbfb678d637444fe7b488644",
-      "source-change-c1520a15d6e62871a66c558e",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -146,11 +144,13 @@
       "ASC-REVIEW-47D759A5CEFDFF6F",
       "ASC-REVIEW-A52E8F36DAEA13B7",
       "ASC-REVIEW-853E16482F19EB13",
-      "ASC-REVIEW-19884C8F2FB18608"
+      "ASC-REVIEW-19884C8F2FB18608",
+      "ASC-REVIEW-36CCC3F98C1D030D",
+      "ASC-REVIEW-38A2AF3C714E50C0"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
+      "primarySourceCount": 7,
       "disputedClaimCount": 114,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Structured Investigation Data Test.",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Structured Investigation Data Test.",
         "evidence": "Federal Bureau of Investigation Headquarters (data/geographic-power-atlas-data.json); U.S. Securities and Exchange Commission (data/geographic-power-atlas-data.json); United States Department of the Treasury (data/geographic-power-atlas-data.json); United States Department of Justice (data/geographic-power-atlas-data.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); European Commission (data/geographic-power-atlas-data.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; Follow The Money Watch; 12. Lawful OSINT & Source Verification; BlackRock → Public Company Ownership Concentration: capital layer; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Breakspear → Name Lineage: layer hint; DynCorp / Amentum lineage → Contractors: execution layer",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; Follow The Money Watch; 12. Lawful OSINT & Source Verification; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; BlackRock → Public Company Ownership Concentration: capital layer; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -200,10 +200,10 @@
           "Matrix Reprogrammed Structured Investigation Schema",
           "Follow The Money Watch",
           "12. Lawful OSINT & Source Verification",
+          "Illuminati / Secret Society Theory",
+          "Illuminati / Secret Society Theory",
           "BlackRock → Public Company Ownership Concentration: capital layer",
-          "Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer",
-          "Breakspear → Name Lineage: layer hint",
-          "DynCorp / Amentum lineage → Contractors: execution layer"
+          "Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:52:19.455Z"
   }
 }

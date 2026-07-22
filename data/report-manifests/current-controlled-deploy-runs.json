@@ -1,20 +1,18 @@
 {
-  "generatedAt": "2026-07-22T06:12:46.294Z",
-  "pageCount": 99,
+  "generatedAt": "2026-07-22T06:46:02.915Z",
+  "pageCount": 97,
   "output": "downloads/current-controlled-deploy-runs.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Current Controlled Deploy Runs",
-    "contentHash": "1370f41f803203050bc988779d603f26878612afe1fbcf1b4db5734029a9a950",
+    "contentHash": "ece751161f84b48bf30b3a3a09a44eafaa2303b95feed27ee679c154d5407d40",
     "sourceIds": [
       "29737905840",
       "29737864279",
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "7f5b91c14c671bd24b8bbd81",
-      "d0b647e325275daa6d824a49",
       "360e80c162081c85d2c680ef",
-      "cee347fbc3752c6e0f890457",
       "aa93ff989cf62abb814747c9",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
@@ -24,16 +22,16 @@
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "511ed227bb4be58b582ebb8d",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "7d7ccb5b896a02cf45094879",
       "904512c4cc9427a39650c32a",
       "5ad827d001f90dc0134b3260",
       "d98fbb852c4ba20ad85be270",
       "f9a646e1d3bf2abf0b0b3767",
       "epstein-nda-settlement-protection-lane-2026-06-26",
-      "daily-26",
+      "d0b647e325275daa6d824a49",
       "eb3448928554960651da56f6",
       "553ca36157c97552aafe2abb",
       "1769af26a7bda813406cd8f5",
@@ -42,15 +40,12 @@
       "us-doj",
       "gao-hq",
       "9e8903fd8dfa9b54a1d6db30",
+      "76a719654ec3312153163154",
       "9f77464e401ac59ad1adb812",
+      "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
+      "cee347fbc3752c6e0f890457",
       "ecd4a1111010f13b2d74bf8c",
-      "weekly-48",
-      "war-machine-2026-07-21-a8c49c58",
-      "war-machine-2026-07-21-abc4a111",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-58a212e4e1a93007ec5b3d6d",
-      "source-change-c1520a15d6e62871a66c558e",
       "d5dc2c92eb67b315eece1f0b",
       "57344d2a11a8c95d74dd1da8",
       "9bbc696ef2be0a07a5a0d60d",
@@ -91,10 +86,6 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
-      "source-change-4f6142409f6345aa4038244f",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "6188547d91106e0f9d3bce50",
@@ -124,10 +115,6 @@
       "daily-16",
       "daily-17",
       "daily-18",
-      "daily-19",
-      "daily-22",
-      "daily-23",
-      "daily-25",
       "ff1a3a77816af400f09ab95e",
       "d652e1fa40dcd5dc95de9bb1",
       "4f6142409f6345aa4038244f",
@@ -135,7 +122,7 @@
       "594100b62a47db521fe2a128",
       "EP-AI-001",
       "EP-AI-004",
-      "pdf-current-controlled-deploy-runs-98b2aa27e30c",
+      "pdf-current-controlled-deploy-runs-b1a429bd580e",
       "9f3052b5d8cec138a2a37e8c",
       "fbi-hq",
       "cia-hq",
@@ -146,7 +133,20 @@
       "government-contractors-general-dynamics",
       "government-contractors-boeing",
       "government-contractors-northrop-grumman",
-      "government-contractors-bae-systems"
+      "government-contractors-bae-systems",
+      "government-contractors-l3harris-technologies",
+      "government-contractors-leidos",
+      "government-contractors-booz-allen-hamilton",
+      "government-contractors-huntington-ingalls-industries",
+      "government-contractors-saic",
+      "government-contractors-caci-international",
+      "government-contractors-palantir-technologies",
+      "government-contractors-kbr",
+      "government-contractors-fluor",
+      "government-contractors-jacobs-solutions",
+      "government-contractors-amentum",
+      "government-contractors-accenture-federal-services",
+      "government-contractors-deloitte-government-public-services"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 9,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 23,
-      "moneyRecordCount": 21
+      "relationshipCount": 16,
+      "moneyRecordCount": 32
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; content changed: USAspending.gov — Recent Contract Awards",
+        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; content changed: USAspending.gov — Recent Contract Awards",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,12 +194,12 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
+          "Henry Lucas",
+          "Henry Lucas Part 01",
+          "Henry Lucas Part 02 (Final)",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-21T07:44:05.392Z"
   }
 }

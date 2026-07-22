@@ -1,30 +1,22 @@
 {
-  "generatedAt": "2026-07-22T06:17:12.050Z",
-  "pageCount": 132,
+  "generatedAt": "2026-07-22T06:50:02.249Z",
+  "pageCount": 133,
   "output": "downloads/open-source-research-suite-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Open Source Research Suite Test",
-    "contentHash": "71c1be8a7e9a55b336b8941a10f26ca2dda9f994d37706d66cb616320dbccc83",
+    "contentHash": "252dbf0452ad5d33945ae5b39707fcdf2c1811f5ecc204e2dfa0c7cce590499d",
     "sourceIds": [
-      "72ef7895f95288946ccb3cff",
-      "d0b647e325275daa6d824a49",
-      "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
-      "cee347fbc3752c6e0f890457",
+      "3a425f0d5d683952bc0ad7ac",
+      "72ef7895f95288946ccb3cff",
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
-      "26b90533dbf7d2ed42f02de6",
-      "c1520a15d6e62871a66c558e",
-      "594100b62a47db521fe2a128",
+      "d0b647e325275daa6d824a49",
       "9e8903fd8dfa9b54a1d6db30",
-      "ec1316fb1fb70c83dc347bb6",
-      "a5e5d4ec4df4352ea242ea3f",
       "88ef9baf356c096816236956",
-      "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-C369A84AD971DD75",
@@ -61,17 +53,17 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "ASC-REVIEW-C53B123A4708B84E",
-      "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "ASC-REVIEW-6318EF16062CE35D",
-      "58a212e4e1a93007ec5b3d6d",
-      "9f3052b5d8cec138a2a37e8c",
+      "26b90533dbf7d2ed42f02de6",
+      "c1520a15d6e62871a66c558e",
+      "594100b62a47db521fe2a128",
+      "1769af26a7bda813406cd8f5",
+      "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "9f77464e401ac59ad1adb812",
-      "a42c91c655cd066504ed6515",
-      "511ed227bb4be58b582ebb8d",
+      "a5e5d4ec4df4352ea242ea3f",
       "c5d9edd2562c4c00e3ddfdfb",
+      "7c05d9244c4620950350cf27",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,23 +138,31 @@
       "ASC-REVIEW-FE267E981A361906",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
-      "ASC-REVIEW-98888270E5A6D011"
+      "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-0F0776894447C197",
+      "ASC-REVIEW-6E0BEE85BA956CBF",
+      "ASC-REVIEW-F9B27A08465F560B",
+      "ASC-REVIEW-8A2ACAFD47272636",
+      "ASC-REVIEW-53BD0E17B018491C",
+      "ASC-REVIEW-0177F61D444ED739",
+      "ASC-REVIEW-FE9A5B02284E30E4",
+      "ASC-REVIEW-9B9644A27C9A796C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 120,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 124,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 96,
-      "moneyRecordCount": 96
+      "relationshipCount": 103,
+      "moneyRecordCount": 102
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Bilderberg Meeting → Policy Networks: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
+        "inference": "The indexed set contains 103 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Bilderberg Meeting → Policy Networks: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 103 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "Bilderberg Meeting → Policy Networks: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer"
+          "Booz Allen Hamilton → Consulting: execution layer",
+          "Booz Allen Hamilton → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:17:12.050Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:50:02.249Z"
   }
 }

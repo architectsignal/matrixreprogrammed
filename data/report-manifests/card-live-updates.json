@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-07-22T06:12:24.326Z",
-  "pageCount": 68,
+  "generatedAt": "2026-07-22T06:45:43.268Z",
+  "pageCount": 69,
   "output": "downloads/card-live-updates.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Card Live Intelligence Updates",
-    "contentHash": "9de17b67121b28a5b110a3cf9fd3a79193a10872f5a9932180ce77cb2c51991f",
+    "contentHash": "8bd8e6da89ea13be7e5c0310aa8699e40d96351dee3c3934997b1672297554d0",
     "sourceIds": [
-      "244240a21dbee0379b417168",
       "26b90533dbf7d2ed42f02de6",
+      "244240a21dbee0379b417168",
+      "3a425f0d5d683952bc0ad7ac",
       "2258ce6a1b9ac910c8f23e3f",
       "0ca8fcdd2618222c548b94b2",
       "d4d74382a67f0ec76c12f6ce",
@@ -25,7 +26,6 @@
       "495efbb6e1ee304347ae3bdf",
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
-      "3a425f0d5d683952bc0ad7ac",
       "82c83979ed5079bd0d158fbb",
       "66ea7a167522ab263066f8df",
       "5d289db7842c7ab8e2edb535",
@@ -33,8 +33,6 @@
       "299c39e6cb1be12e1b49f508",
       "5396c86b5d3a05623cb45afc",
       "7539d8d18b990c97e0ed657e",
-      "00ea9725f1cf48791f2e4660",
-      "e4fdea4ec415d76af6826de7",
       "92800a72d9e14144d94b6772",
       "b17a9a2f243f976785d8679b",
       "e62fedc4597f32332cbf098a",
@@ -43,6 +41,7 @@
       "22056a49b1a5df08672f6b75",
       "84c4b68636ab56c64f6a0315",
       "d69cbcd46971bbc4faf43604",
+      "missing-records-report",
       "1769af26a7bda813406cd8f5",
       "360e80c162081c85d2c680ef",
       "aea160410c5d9e5f4966ab0a",
@@ -65,6 +64,7 @@
       "97e1d4f839d224fc4740a279",
       "66a4f4aef4c59e76a7a3d2f6",
       "58a212e4e1a93007ec5b3d6d",
+      "daily-revelation-report",
       "def94e0a086f2eac4c5ad91a",
       "a42c91c655cd066504ed6515",
       "7f5b91c14c671bd24b8bbd81",
@@ -137,7 +137,6 @@
       "dc8f0752e537f36336389287",
       "ff1a3a77816af400f09ab95e",
       "eb3448928554960651da56f6",
-      "missing-records-report",
       "7dcf4ef18ea1f86d01068773",
       "b079bec5bc869b0463d0584c",
       "a3273fbdeabc3dba464bee0a",
@@ -145,21 +144,22 @@
       "b71d35918f986027f977e7bd",
       "3a2f937aacc0d8a41239bb95",
       "374cb770556164901e75e509",
-      "60b75d62ce538217d03865c8",
-      "3398dc3f089d29938f4382a5"
+      "288a0b1178903e962bbb8acc",
+      "419612707a389c77ce72e09e",
+      "5819909561ded72d47945615"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 34,
+      "primarySourceCount": 32,
       "disputedClaimCount": 0,
-      "newEntityCount": 12,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
       "relationshipCount": 1,
       "moneyRecordCount": 2
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Card Live Intelligence Updates.",
+        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Card Live Intelligence Updates.",
         "evidence": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK (data/card-live-updates.json); APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK (data/card-live-updates.json); APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK (data/card-live-updates.json); CALIFORNIA COURT OF APPEAL (data/card-live-updates.json); CALIFORNIA COURT OF APPEAL (data/card-live-updates.json); CALIFORNIA COURT OF APPEAL (data/card-live-updates.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -211,6 +211,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:12:24.326Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:45:43.268Z"
   }
 }

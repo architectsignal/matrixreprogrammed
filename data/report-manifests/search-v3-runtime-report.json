@@ -1,20 +1,26 @@
 {
-  "generatedAt": "2026-07-22T06:18:41.069Z",
-  "pageCount": 123,
+  "generatedAt": "2026-07-22T06:51:19.976Z",
+  "pageCount": 125,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Search V3 Runtime Report",
-    "contentHash": "6be058dad5965fe5511794cc78000225b8e2fec2f60159aa4fe6195df95f8a2a",
+    "contentHash": "e4bf8ac327d2c0e19c51900f465cfd9461b933d1d41cd071623bb49a0e577384",
     "sourceIds": [
-      "d0b647e325275daa6d824a49",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
+      "594100b62a47db521fe2a128",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
+      "76a719654ec3312153163154",
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "511ed227bb4be58b582ebb8d",
-      "cee347fbc3752c6e0f890457",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -31,18 +37,10 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "594100b62a47db521fe2a128",
+      "d0b647e325275daa6d824a49",
       "9f3052b5d8cec138a2a37e8c",
-      "9e8903fd8dfa9b54a1d6db30",
-      "ec1316fb1fb70c83dc347bb6",
-      "76a719654ec3312153163154",
       "7f5b91c14c671bd24b8bbd81",
-      "c5d9edd2562c4c00e3ddfdfb",
-      "88ef9baf356c096816236956",
-      "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-c1520a15d6e62871a66c558e",
+      "cee347fbc3752c6e0f890457",
       "d5dc2c92eb67b315eece1f0b",
       "57344d2a11a8c95d74dd1da8",
       "9bbc696ef2be0a07a5a0d60d",
@@ -83,6 +81,7 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673"
+      "ASC-REVIEW-6B883D09C63ED673",
+      "ASC-REVIEW-1CDBDA84057D802E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 49,
-      "disputedClaimCount": 83,
+      "primarySourceCount": 48,
+      "disputedClaimCount": 84,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 79,
-      "moneyRecordCount": 80
+      "moneyRecordCount": 81
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 49 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
+        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -180,14 +180,14 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -196,14 +196,14 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Illuminati / Secret Society Theory",
+          "Illuminati / Secret Society Theory",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-21T07:44:05.392Z"
   }
 }

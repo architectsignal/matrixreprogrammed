@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:13:58.664Z",
-  "pageCount": 127,
+  "generatedAt": "2026-07-22T06:47:07.113Z",
+  "pageCount": 128,
   "output": "downloads/email-campaign-quality-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Email Campaign Quality Patch",
-    "contentHash": "48da930477f81c9d2901f632881ae8141f15194df5517444c2fa1ffe0b24f586",
+    "contentHash": "3197da488d45fffd6031398f51f07cd2e9f5768ffd5a4d22ce879849bd08f505",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-A16F0CE46FC26A15",
@@ -24,6 +24,7 @@
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
+      "9f77464e401ac59ad1adb812",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
@@ -36,11 +37,11 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-6318EF16062CE35D",
-      "9f77464e401ac59ad1adb812",
       "osint",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-2BE76D9880CA56F8",
       "9f3052b5d8cec138a2a37e8c",
+      "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-6B00EC8DF8FFD131",
       "ASC-REVIEW-B3E7B22DBE204184",
@@ -52,21 +53,19 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-3D349F2C3EEE9A65",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
+      "d0b647e325275daa6d824a49",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
+      "daily-revelation-report",
       "594100b62a47db521fe2a128",
       "EP-AI-003",
       "3a425f0d5d683952bc0ad7ac",
-      "e72d22f4f28eb53e3173d0a6",
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "7fc07964a27914afe516c45b",
       "511ed227bb4be58b582ebb8d",
       "34805734b1ad3b73f0ede0d8",
-      "source-change-cb7ce67fe443d7c98b486d34",
-      "source-change-58a212e4e1a93007ec5b3d6d",
-      "source-change-c1520a15d6e62871a66c558e",
-      "source-change-4f6142409f6345aa4038244f",
+      "cee347fbc3752c6e0f890457",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
@@ -130,19 +129,20 @@
       "ASC-REVIEW-DB3B48F4467DAAF3",
       "ASC-REVIEW-C1F0D685B3D7BC1C",
       "ASC-REVIEW-455A22488324C269",
-      "d0b647e325275daa6d824a49",
-      "daily-revelation-report",
+      "subject-digital-id-and-access-systems",
+      "subject-health-data-and-emergency-systems",
       "EP-AI-001",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
       "310372a3fc518b6aabbc5d07",
+      "76a719654ec3312153163154",
       "008875ef7bf45eb14dccb254",
       "b5a32a76f19d554c484e917f",
       "270841af2bd81407a26bed0b",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
       "f59da50ababa3ddae79a8f1c",
-      "cee347fbc3752c6e0f890457",
-      "source-change-ff1a3a77816af400f09ab95e",
-      "source-change-fbfb678d637444fe7b488644",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-eb3448928554960651da56f6",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -150,19 +150,19 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 16,
+      "primarySourceCount": 8,
       "disputedClaimCount": 106,
-      "newEntityCount": 18,
+      "newEntityCount": 21,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 37,
-      "moneyRecordCount": 33
+      "relationshipCount": 40,
+      "moneyRecordCount": 34
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Email Campaign Quality Patch.",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Email Campaign Quality Patch.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Treasury OFAC — Recent Actions; content changed: European Public Prosecutor's Office — News; content changed: Federal Register — Latest Documents; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: USAspending.gov — Recent Contract Awards",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Treasury OFAC — Recent Actions",
           "content changed: European Public Prosecutor's Office — News",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

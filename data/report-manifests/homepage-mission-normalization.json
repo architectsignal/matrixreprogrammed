@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:15:34.497Z",
+  "generatedAt": "2026-07-22T06:48:38.634Z",
   "pageCount": 135,
   "output": "downloads/homepage-mission-normalization.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Homepage Mission Normalization",
-    "contentHash": "c8692c740716d8c9422c68e7f9139a68d1f7df4d7c93411a4d60317cacacad82",
+    "contentHash": "6af2e6b901bb2149dbd1941922b1898071e013945d5ba160c5c08265e1803353",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
@@ -22,6 +22,8 @@
       "ASC-REVIEW-31355A183BF17CCD",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-21E454816F050A34",
+      "3a425f0d5d683952bc0ad7ac",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -144,34 +146,32 @@
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
       "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-6DE76C80FA805761",
-      "ASC-REVIEW-3EC279A28E26037E"
+      "ASC-REVIEW-B3BA7D663A9BE4B2"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 137,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 135,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 117,
-      "moneyRecordCount": 117
+      "moneyRecordCount": 118
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:15:34.497Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

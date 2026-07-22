@@ -1,21 +1,25 @@
 {
-  "generatedAt": "2026-07-22T06:16:48.869Z",
+  "generatedAt": "2026-07-22T06:49:41.769Z",
   "pageCount": 124,
   "output": "downloads/mission-acceptance-copy-alignment.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Mission Acceptance Copy Alignment",
-    "contentHash": "85939cbd1dd7f54cd9bddfb497e04c6c9d6f95046225ad80a26f08416491d1d8",
+    "contentHash": "80dd8dfacd7baf5feddabf7897ab1c6687f15b87120baaa3d7880c7accc76c63",
     "sourceIds": [
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ff1a3a77816af400f09ab95e",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
+      "14d04c0943d24cbe6a1926db",
       "def94e0a086f2eac4c5ad91a",
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "b079bec5bc869b0463d0584c",
       "511ed227bb4be58b582ebb8d",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -26,9 +30,12 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "495efbb6e1ee304347ae3bdf",
+      "c495decb9e41ce889da20ed1",
+      "c8acdb17acd478f0ba121c11",
       "1769af26a7bda813406cd8f5",
-      "14d04c0943d24cbe6a1926db",
-      "fa4f83858020b2edcc91129b",
+      "e72d22f4f28eb53e3173d0a6",
+      "a8957d0c5af503ab770a4aeb",
       "a4c15f7c3d808369b294115e",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
@@ -72,14 +79,9 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
       "96c00651a460596a3c34f297",
       "eb5d60860a79b38aeefa3633",
+      "digital-euro-parliament-hurdle-2026-06-23",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -144,23 +146,21 @@
       "ASC-REVIEW-9EA06AB515E1538B",
       "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
-      "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158"
+      "ASC-REVIEW-6D7642B46743C895"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 61,
-      "disputedClaimCount": 78,
+      "primarySourceCount": 62,
+      "disputedClaimCount": 76,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 67,
-      "moneyRecordCount": 62
+      "relationshipCount": 62,
+      "moneyRecordCount": 61
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 61 A/B-grade public-record items are materially relevant to Mission Acceptance Copy Alignment.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Mission Acceptance Copy Alignment.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 67 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 62 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 67 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 62 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Henry Lucas",
+          "Henry Lucas Part 01",
+          "Henry Lucas Part 02 (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

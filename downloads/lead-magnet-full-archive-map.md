@@ -35,11 +35,6 @@ The reader gets a complete navigation map rather than a random pile of pages.
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
-  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
-  - Evidence: Primary or official public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167993
   - Evidence: Primary or official public-record lead
@@ -47,6 +42,11 @@ The reader gets a complete navigation map rather than a random pile of pages.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167983
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

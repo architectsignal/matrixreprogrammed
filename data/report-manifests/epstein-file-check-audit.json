@@ -1,14 +1,16 @@
 {
-  "generatedAt": "2026-07-22T06:14:18.761Z",
-  "pageCount": 87,
+  "generatedAt": "2026-07-22T06:47:25.284Z",
+  "pageCount": 91,
   "output": "downloads/epstein-file-check-audit.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Epstein File Check Audit",
-    "contentHash": "307af1c40776773a8651345e17c14972236ee6210cca26ccf7fd3eb6c2e1e6f9",
+    "contentHash": "5022fa247b9794d598e44c91a952c0315f354e66d7d12315b3087cdd7944f7a8",
     "sourceIds": [
       "f6e76b789e1d33c323321a99",
-      "d0b647e325275daa6d824a49",
+      "9f77464e401ac59ad1adb812",
+      "26b90533dbf7d2ed42f02de6",
+      "a4c15f7c3d808369b294115e",
       "daily-1",
       "daily-2",
       "daily-3",
@@ -27,9 +29,9 @@
       "daily-16",
       "daily-17",
       "daily-18",
-      "9f77464e401ac59ad1adb812",
-      "a4c15f7c3d808369b294115e",
-      "cee347fbc3752c6e0f890457",
+      "72ef7895f95288946ccb3cff",
+      "008875ef7bf45eb14dccb254",
+      "8c2f9ce345ff56f46aa1ea62",
       "weekly-1",
       "weekly-2",
       "weekly-3",
@@ -70,8 +72,6 @@
       "weekly-38",
       "weekly-39",
       "weekly-40",
-      "source-change-fbfb678d637444fe7b488644",
-      "source-change-eb3448928554960651da56f6",
       "d5dc2c92eb67b315eece1f0b",
       "57344d2a11a8c95d74dd1da8",
       "9bbc696ef2be0a07a5a0d60d",
@@ -112,15 +112,7 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
-      "26b90533dbf7d2ed42f02de6",
-      "72ef7895f95288946ccb3cff",
-      "008875ef7bf45eb14dccb254",
-      "a0f3234a6a179095299579db",
-      "source-change-cb7ce67fe443d7c98b486d34",
-      "source-change-ff1a3a77816af400f09ab95e",
-      "source-change-d652e1fa40dcd5dc95de9bb1",
-      "source-change-58a212e4e1a93007ec5b3d6d",
-      "source-change-c1520a15d6e62871a66c558e",
+      "d0b647e325275daa6d824a49",
       "8b0aaa914b3efe8e3fc27669",
       "0fac176259d48af283910a75",
       "6555d6c770e6656f87f46b2c",
@@ -136,30 +128,38 @@
       "a0678d608d623c39abcd07f4",
       "97fdd7eae9b3bfbbd302dd7a",
       "00e3caa3c2052107e9e297ab",
-      "daily-19",
-      "daily-20",
-      "daily-21",
-      "daily-22",
-      "daily-23",
-      "daily-24",
-      "daily-25",
-      "eb3448928554960651da56f6",
-      "c1520a15d6e62871a66c558e",
       "9e8903fd8dfa9b54a1d6db30",
-      "e72d22f4f28eb53e3173d0a6"
+      "e72d22f4f28eb53e3173d0a6",
+      "a8957d0c5af503ab770a4aeb",
+      "0b05608c90af6fa86de444b2",
+      "7f5b91c14c671bd24b8bbd81",
+      "360e80c162081c85d2c680ef",
+      "88ef9baf356c096816236956",
+      "cee347fbc3752c6e0f890457",
+      "EFS-001-R006",
+      "41772e5c9af7970ddd7d5aac",
+      "14ebc88d3f921ccac29b9205",
+      "92e81f3ecdd89e5a1cecdc6a",
+      "a894f4733ddc33a819f163b5",
+      "6df03362f59ea3a7b847b876",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "36552e5cb400363cc3f311f8",
+      "9c9ec778fc211076aacbfc9e",
+      "5b2917fb9920de3aaa2ae0a0",
+      "52fb006b78e2228c6142ad62"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 130,
-      "disputedClaimCount": 5,
+      "primarySourceCount": 127,
+      "disputedClaimCount": 6,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 3,
-      "moneyRecordCount": 3
+      "relationshipCount": 2,
+      "moneyRecordCount": 2
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 130 A/B-grade public-record items are materially relevant to Epstein File Check Audit.",
+        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Epstein File Check Audit.",
         "evidence": "Revised Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Amended Order Granting in Part and Denying in Part Remedies and Entry of FInal Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Proposed Final Judgment - Shaukat Shamim (data/daily-investigation-conclusions.json); Proposed Final Judgment - YouPlus, Inc. (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,25 +179,24 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 3 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: USAspending.gov — Recent Contract Awards; content changed: USAspending.gov — Recent Contract Awards; Illuminati / Secret Society Theory",
+        "inference": "The indexed set contains 2 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
-        "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 3 repeated relationship or institutional-overlap indicators.",
+        "hypothesis": "Additional unreleased primary records may materially change the present assessment.",
+        "whyItIsBeingConsidered": "The report contains evidence gaps, unavailable sources, redactions or thin primary-source coverage.",
         "supportingIndicators": [
-          "content changed: USAspending.gov — Recent Contract Awards",
-          "content changed: USAspending.gov — Recent Contract Awards",
+          "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory"
         ],
         "counterEvidence": [
@@ -213,6 +212,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-07-21T07:44:05.392Z"
   }
 }

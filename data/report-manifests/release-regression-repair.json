@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-22T06:18:26.445Z",
-  "pageCount": 136,
+  "generatedAt": "2026-07-22T06:51:07.839Z",
+  "pageCount": 134,
   "output": "downloads/release-regression-repair.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Release Regression Repair",
-    "contentHash": "474710b4f9f231cb3fbcc603048737ec6901df9810b46d610e23f2a52d09836a",
+    "contentHash": "ed043328faffe871e5f293494ff822c5f309c9a10c03dfd64872cf533042dcc0",
     "sourceIds": [
       "eb3448928554960651da56f6",
-      "360e80c162081c85d2c680ef",
       "7f5b91c14c671bd24b8bbd81",
+      "360e80c162081c85d2c680ef",
       "ASC-REVIEW-3EC279A28E26037E",
-      "26b90533dbf7d2ed42f02de6",
+      "71e0563ca7b139c37c302956",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -34,15 +34,16 @@
       "ASC-REVIEW-31355A183BF17CCD",
       "ASC-REVIEW-6DE76C80FA805761",
       "ASC-REVIEW-5F18C934E1FFBBB4",
-      "3a425f0d5d683952bc0ad7ac",
-      "71e0563ca7b139c37c302956",
+      "26b90533dbf7d2ed42f02de6",
+      "c1520a15d6e62871a66c558e",
+      "9f77464e401ac59ad1adb812",
       "7dcf4ef18ea1f86d01068773",
+      "a5e5d4ec4df4352ea242ea3f",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-3CA200E0FB3097E4",
       "ASC-REVIEW-3B61EAB39C318DF1",
       "ASC-REVIEW-97089BE83A5DC2E4",
       "ASC-REVIEW-6447FD3CB2AD1C0F",
@@ -53,9 +54,10 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "c1520a15d6e62871a66c558e",
-      "9f77464e401ac59ad1adb812",
-      "a5e5d4ec4df4352ea242ea3f",
+      "3a425f0d5d683952bc0ad7ac",
+      "daee19f2c0d92279cc9a7569",
+      "b7e4a66335a706ef5097117f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -119,6 +121,7 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-3CA200E0FB3097E4",
       "ASC-REVIEW-C130665F0F8D4152",
       "ASC-REVIEW-45494714DB282CCB",
       "ASC-REVIEW-3C49CC8F6A779719",
@@ -143,35 +146,32 @@
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
       "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-285205442D5C5D56"
+      "ASC-REVIEW-5F2C7C064DEAB967"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 130,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 127,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 90,
-      "moneyRecordCount": 89
+      "relationshipCount": 88,
+      "moneyRecordCount": 88
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Release Regression Repair.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Release Regression Repair.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer; CACI International → Surveillance: execution layer",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Matrix Reprogrammed Canonical Intelligence Record",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
           "CACI International → Defense Technology: execution layer",
           "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer",
-          "CACI International → Surveillance: execution layer"
+          "CACI International → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:18:26.445Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

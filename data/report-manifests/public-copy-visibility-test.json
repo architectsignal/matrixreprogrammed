@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:56.238Z",
-  "pageCount": 120,
+  "generatedAt": "2026-07-22T06:50:42.239Z",
+  "pageCount": 119,
   "output": "downloads/public-copy-visibility-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Public Copy Visibility Test",
-    "contentHash": "42f96dd4a1d79eca9f1e64e6eb60aa6cd2e21a2389985eb599c7814376911c37",
+    "contentHash": "56c4162f6636ba576e76a454e901e4d4219bc6f875421b1345c0c99f1e0acf2b",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -16,18 +16,18 @@
       "360e80c162081c85d2c680ef",
       "88ef9baf356c096816236956",
       "41772e5c9af7970ddd7d5aac",
-      "d0b647e325275daa6d824a49",
       "b5a32a76f19d554c484e917f",
-      "cee347fbc3752c6e0f890457",
       "e4a0df7a70409789454722e7",
       "594100b62a47db521fe2a128",
       "008875ef7bf45eb14dccb254",
       "34805734b1ad3b73f0ede0d8",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "d0b647e325275daa6d824a49",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
+      "cee347fbc3752c6e0f890457",
       "9f3052b5d8cec138a2a37e8c",
       "9f77464e401ac59ad1adb812",
       "e72d22f4f28eb53e3173d0a6",
@@ -40,6 +40,7 @@
       "638db2da94945ca92a901ffb",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "control-system-2026-07-17-36",
       "904512c4cc9427a39650c32a",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
@@ -56,7 +57,10 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "504cb0d739ef4a5a5798123f",
+      "65debd126cdfa5f7547a3eca",
+      "a8957d0c5af503ab770a4aeb",
       "network-defence",
+      "3c9c23f7f9a1cec81ef90f59",
       "ec8ef1adbaaebb9fde883cae",
       "5ad827d001f90dc0134b3260",
       "epstein-files-2026-04-23-doj-internal-watchdog-to-review-department-s-compliance-with-epstein-f",
@@ -119,16 +123,13 @@
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-2BE76D9880CA56F8",
       "eb3448928554960651da56f6",
-      "65debd126cdfa5f7547a3eca",
       "3d90c7929346a292b6c46095",
-      "9618f081052f3516304f586b",
+      "0b05608c90af6fa86de444b2",
       "osint",
-      "3c9c23f7f9a1cec81ef90f59",
       "356f10eff5c6f147fc33ebeb",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
-      "war-machine-2026-07-15-aacf2cda",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "6188547d91106e0f9d3bce50",
@@ -145,12 +146,11 @@
       "epstein-files-2026-02-04-details-of-jeffrey-epstein-post-mortem-released-in-latest-files-bbc",
       "control-system-2026-02-02-equifax-complycube-idenfy-seon-lexisnexis-tout-fresh-identity-security",
       "control-system-2025-12-05-how-commercial-surveillance-tools-became-essential-to-fbi-investigatio",
-      "control-system-2025-11-23-border-patrol-s-monitoring-of-us-drivers-raises-privacy-concerns-biome",
-      "control-system-2025-11-18-ice-s-license-plate-app-quietly-expands-a-nationwide-surveillance-web-"
+      "control-system-2025-11-23-border-patrol-s-monitoring-of-us-drivers-raises-privacy-concerns-biome"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 11,
+      "primarySourceCount": 12,
       "disputedClaimCount": 77,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Edwin Wilson and Frank Terpil Part 54,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Edwin Wilson and Frank Terpil Part 54 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; The surveillance networks cities do not have to buy - Biometric Update; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -202,8 +202,8 @@
           "Illuminati / Secret Society Theory",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
-          "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
-          "Bill Gates → Health And Development Philanthropy: ecosystem hint"
+          "The surveillance networks cities do not have to buy - Biometric Update",
+          "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-16T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T17:38:00.000Z"
   }
 }

@@ -45,7 +45,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-22T06:11:11.561Z
+Updated: 2026-07-22T06:44:36.494Z
 Items: 12
 
 - 2026-06-19 — What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News
@@ -61,11 +61,6 @@ Items: 12
 - 2026-06-13 — Dershowitz Asked to Testify Before House Oversight Committee in July on Epstein Ties - The Harvard Crimson
   - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOVThYdEZPejFKbEF4QkRDdjl2TkdkaG1qMWJ0OC12dWxrdXkxbU52OGdiTGlrNTljTGI5QzExOXlSNUhTWXk0ZUhfbzBWWFJxNWpLZ2p5QXdIX3UwQjBoV1hnbWlwVmRyNUJZME5Zd0FWYjFSZ01sMV9NODBjX1F4ZW40cjM?oc=5
   - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-17 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-  - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-26 — Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News
@@ -108,6 +103,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -128,7 +128,6 @@ Items: 12
 - Google News / Epstein timeline and files: What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News — https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VbXJQZVZ1RWEyaG5uTDM2R01PcVNXamlkYkY1MlVySWMtVDhudE5wcFJnOU43WnpoTC1DeFN6b1pSQXNwU1J6NkJZekUzdkY5SFhrWGZmSzZuWGZkOTRfQkk2MFM5blc4?oc=5
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Google News / Epstein timeline and files: Dershowitz Asked to Testify Before House Oversight Committee in July on Epstein Ties - The Harvard Crimson — https://news.google.com/rss/articles/CBMihAFBVV95cUxOVThYdEZPejFKbEF4QkRDdjl2TkdkaG1qMWJ0OC12dWxrdXkxbU52OGdiTGlrNTljTGI5QzExOXlSNUhTWXk0ZUhfbzBWWFJxNWpLZ2p5QXdIX3UwQjBoV1hnbWlwVmRyNUJZME5Zd0FWYjFSZ01sMV9NODBjX1F4ZW40cjM?oc=5
-- Google News / Epstein timeline and files: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
 - Google News / Epstein timeline and files: Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News — https://news.google.com/rss/articles/CBMif0FVX3lxTE5sOXdTelVIRHM3Njl2OEtLbl9UWXBrM3JaRmNTU0VyNVY5Skc1a2NmMm1KUEZqUlY2OExJS0ZPMnZJTjVsYzdtTENGT0pudUJ5Y0N1VW0wQlJZVFA2RHliNzB6ajgtVkhscW03UlhJTFdUS0Via1ZWd3dHWXhDZmM?oc=5
 - Google News / Epstein timeline and files: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS — https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
 - Google News / Epstein timeline and files: Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW — https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
@@ -137,6 +136,7 @@ Items: 12
 - Google News / Epstein timeline and files: House committee calls on DOJ to investigate 2 men with ties to Jeffrey Epstein - NBC News — https://news.google.com/rss/articles/CBMixgFBVV95cUxNSjRDaWZfVDR4WXBTZDFBY251R05zWFl5eHgySmlTbFFPclNRMFRZbFN3NTlWTWVMU2ZxWWNhTjY5QndiQXNQZmg0RGRQRDBtSklFYjdTbm9qRGRZVW9VQzliNnVfRjFXVkFaYWY0eG4yRkh6TmdZSzBRQ2tlNko1ZlBkZ0pScE5hVzNHOHlWS1lRNTUyNFdTOHZncTR0S2RIczdkaWczUlZSVHM4Q0JLUjAzRDN4aXo5SlpfempPX3VYS05PZUE?oc=5
 - Google News / Epstein timeline and files: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider — https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
 - Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+- Google News / Epstein timeline and files: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
 
 ## Book Routes
 

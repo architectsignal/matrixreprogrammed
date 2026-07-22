@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:11:35.087Z",
+  "generatedAt": "2026-07-22T06:44:59.151Z",
   "pageCount": 134,
   "output": "downloads/ai-speculative-conclusions-integrity.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Ai Speculative Conclusions Integrity",
-    "contentHash": "d6cd97efee9b4fbccd97da563d68e15eb9e60460fd388241779b18afd595e5b8",
+    "contentHash": "55622ba9e3de92d14d4eacf2053907c6a800dde2fa8a3e974fef68f438cc6b76",
     "sourceIds": [
       "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
@@ -46,6 +46,11 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "14d04c0943d24cbe6a1926db",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-001",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
@@ -141,37 +146,32 @@
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-4F99F3883B57A839",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-97089BE83A5DC2E4",
-      "ASC-REVIEW-CF855D1D23095240"
+      "ASC-REVIEW-DEA5865B50E63221"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 139,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 134,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 87,
-      "moneyRecordCount": 82
+      "relationshipCount": 86,
+      "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Ai Speculative Conclusions Integrity beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Ai Speculative Conclusions Integrity.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 86,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Elite-control infrastructure,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The scenario “Elite-control infrastructure — evidence-graph.html” could indicate a future convergence route only if later records document the stated authority, implementation and cross-institutional links. The current output is a modelled research hypothesis, not a factual forecast.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 87 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Top contractor lane; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 87 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Top contractor lane",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:11:35.087Z"
+    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:52.327Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-22T06:50:38.588Z",
+  "pageCount": 130,
   "output": "downloads/production-receipt-email-safety-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Production Receipt Email Safety Patch",
-    "contentHash": "1a143142d6094454cd8693363ddb938f55c3b5d121823ea8b21d10f9a6720636",
+    "contentHash": "de2b3f928eb5b6a7b2dae60d54bff5d86ee5c8bf138e6633b6a23edb4d4d1d64",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -18,13 +18,13 @@
       "ASC-REVIEW-A16F0CE46FC26A15",
       "ASC-REVIEW-033C88D9E541BF5B",
       "ASC-REVIEW-9B01C094346A78B0",
+      "9f77464e401ac59ad1adb812",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "1769af26a7bda813406cd8f5",
-      "9f77464e401ac59ad1adb812",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -55,8 +55,10 @@
       "ASC-REVIEW-6318EF16062CE35D",
       "eb3448928554960651da56f6",
       "c1520a15d6e62871a66c558e",
+      "9e8903fd8dfa9b54a1d6db30",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
+      "88ef9baf356c096816236956",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-6B00EC8DF8FFD131",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-0177F61D444ED739",
       "ASC-REVIEW-FE9A5B02284E30E4",
       "ASC-REVIEW-9B9644A27C9A796C",
-      "ASC-REVIEW-5D6BEB26E7D5659F",
-      "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-E628602ED9901D15"
+      "ASC-REVIEW-5D6BEB26E7D5659F"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 5,
-      "disputedClaimCount": 130,
+      "disputedClaimCount": 128,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 109,
-      "moneyRecordCount": 105
+      "relationshipCount": 110,
+      "moneyRecordCount": 104
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 109 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: European Public Prosecutor's Office — News; content changed: Federal Register — Latest Documents; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: USAspending.gov — Recent Contract Awards",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 109 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: European Public Prosecutor's Office — News",
           "content changed: Federal Register — Latest Documents",

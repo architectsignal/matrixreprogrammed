@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Mission Timers
 
-Updated: 2026-07-22T06:24:15.863Z
+Updated: 2026-07-22T06:57:41.997Z
 
 Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.
 
@@ -33,7 +33,7 @@ This clock is relevant to Security and emergency power, Corporate-state converge
 - Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
-- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
+- Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — 3
 - Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — 3
 - Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5
 
@@ -885,9 +885,9 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 
 ## Government Transparency and Missing Records Clock
 
-- Pressure index: 68% — Elevated
+- Pressure index: 71% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
-- Movement: Held at 68. No source-linked trigger justified a change in this build.
+- Movement: Held at 71. No source-linked trigger justified a change in this build.
 - Calculation basis: 0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
 - Window: 0–3 years
 
@@ -1092,7 +1092,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - CBDC Rollout Clock — surveillance-hub.html
 - Access infrastructure is a measurable power layer.
 - Access infrastructure is a measurable power layer.
-- World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
+- Bill Gates → Health And Development Philanthropy: ecosystem hint
 
 ### What would raise it
 - Raise when official shortage, waiting-time, workforce, capacity or affordability indicators worsen, or health access becomes identity- or payment-gated.
@@ -1183,10 +1183,10 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Surveillance State Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
 - Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
-- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 - US bid for Dutch digital ID infrastructure company raises national security fears - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMivAFBVV95cUxQT1N6amx4M2JBaVF2dDVUN3AtU2NXZjZObXE3bVZuTDVZVjZOYUhMUU1mazJreHNrQ1lVM1JGSURtc0JST2F0X2lzZW5PbTRBWXVsZ3FCYWdxOW9iNzJIV2IwRG9MR2xTVWltNDF2MVhFWWJXMTE5a1doRS1xeG8zQi1PSWtaY1pPeDc0b29fcWYtZkZrSVZBN1MzNmxJZld5dmFZcGViZFdsY3ZERmF4SXZzY2hBZjc3SGRjRg?oc=5
 - G4S / Allied Universal security lineage → Detention: execution layer
 - G4S / Allied Universal security lineage → Facilities: execution layer
+- G4S / Allied Universal security lineage → Public Private Power: execution layer
 
 ### What would raise it
 - Raise on restrictions, contamination, falling reserves, infrastructure failure, unaffordable pricing or concentrated control without safeguards.
@@ -1277,10 +1277,10 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - CBDC Rollout Clock — surveillance-hub.html
 - World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — 3
 - Surveillance State Clock — surveillance-hub.html
-- WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
 - Highest clock pressure
 - AI Breakout Clock — answer-engine.html
 - WWIII Escalation Clock — live-intel.html
+- Influence is strongest where money and implementation meet.
 
 ### What would raise it
 - Raise on authoritative findings of interference, unlawful administration, opaque financing, intimidation, non-auditable systems or refusal to comply with final lawful outcomes. Lower when independent audits, transparent procedures and peaceful legal resolution strengthen.
@@ -1833,7 +1833,6 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 
 - WWIII Escalation Clock — live-intel.html
 - Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
-- Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - Highest clock pressure
@@ -1841,6 +1840,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Probability weighting
 - Risk clocks — timers.html
 - Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
+- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “War and crisis as control-system accelerator”, not merely repeat its keywords.
@@ -3556,7 +3556,7 @@ This clock tracks a system-pressure lane. It does not identify a single controll
 - Risk clocks — timers.html
 - Surveillance State Clock — surveillance-hub.html
 - Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
-- Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- Smart city digital infrastructure strategies — policy/smart-city-digital-infrastructure-strategies.html
 
 ### What would raise it
 - Raise only when At least one primary-or-official record tied to the claimed mechanism is required before an automatic increase. The evidence must directly address the classified claim “Smart cities as open-air prisons”, not merely repeat its keywords. Lower when the claim is corrected, debunked, contradicted by stronger primary evidence, based on a false date or identity, lacks chain of custody, is rejected by a court or investigation, or has a stronger innocent explanation.

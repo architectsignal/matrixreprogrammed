@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:14:02.157Z",
-  "pageCount": 132,
+  "generatedAt": "2026-07-22T06:47:10.131Z",
+  "pageCount": 133,
   "output": "downloads/empty-public-controls-output.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Empty Public Controls Output",
-    "contentHash": "a594e8a9d9bae6821559a58030abf505a73c6f7610f1975cb1728451fae21365",
+    "contentHash": "cfb8f59f61021061f929a663a753b7885138beee8169b727384c9743e7239f33",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-5AE5A3805582A7F2",
@@ -57,6 +57,7 @@
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
+      "five-eyes-ai-cyber-warning-2026-06-22",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-F9FB4BEDAA3F0383",
       "ASC-REVIEW-369E078C8610D4F1",
       "ASC-REVIEW-54C7773F8BEDE2F4",
-      "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227"
+      "ASC-REVIEW-603C7E693C77AF6C"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 1,
-      "disputedClaimCount": 136,
+      "disputedClaimCount": 135,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 87,
-      "moneyRecordCount": 81
+      "relationshipCount": 86,
+      "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 87 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 87 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:14:02.157Z"
+    "intelligenceFreshnessDate": "2026-06-22T12:00:00.000Z"
   }
 }

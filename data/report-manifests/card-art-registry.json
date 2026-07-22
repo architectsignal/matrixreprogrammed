@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:12:14.304Z",
-  "pageCount": 71,
+  "generatedAt": "2026-07-22T06:45:34.226Z",
+  "pageCount": 72,
   "output": "downloads/card-art-registry.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Card Art Registry",
-    "contentHash": "b42c04e9d71e97d5708ef09810e71463a2765564d2a24bd847f5866d406563fc",
+    "contentHash": "b04dcd4ac67172430b47abf3a557ee258f7378be317c0d1f1dff0aff84199047",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -21,11 +21,11 @@
       "e4a0df7a70409789454722e7",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
-      "e72d22f4f28eb53e3173d0a6",
       "79ea408cdb375b45f1060e6c",
+      "e72d22f4f28eb53e3173d0a6",
       "bf773d3ec83b9b3768dfce6b",
-      "594100b62a47db521fe2a128",
       "8a10f165e16d0f8648cb8ec4",
+      "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
       "institutions",
       "1769af26a7bda813406cd8f5",
@@ -73,26 +73,27 @@
       "ray-dalio",
       "ant-nio-guterres",
       "priscilla-chan",
-      "eb3448928554960651da56f6",
       "mackenzie-scott",
       "controlled-opposition",
+      "26b90533dbf7d2ed42f02de6",
       "7dcf4ef18ea1f86d01068773",
       "360e80c162081c85d2c680ef",
-      "26b90533dbf7d2ed42f02de6",
-      "d0b647e325275daa6d824a49",
+      "eb3448928554960651da56f6",
       "jensen-huang",
-      "mark-zuckerberg",
       "daily-revelation-report",
+      "3a425f0d5d683952bc0ad7ac",
       "b5a32a76f19d554c484e917f",
-      "cee347fbc3752c6e0f890457",
+      "d0b647e325275daa6d824a49",
       "bill-gates",
       "brookings-institution",
       "zuckerberg-chan-family",
       "world-economic-forum-policy-platform",
-      "missing-records-report",
-      "3a425f0d5d683952bc0ad7ac",
+      "71a3045cf08c6dd9f4d1961e",
+      "billionaire-elon-musk",
       "72ef7895f95288946ccb3cff",
+      "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
+      "cee347fbc3752c6e0f890457",
       "larry-ellison",
       "alex-jones",
       "mark-sargent",
@@ -108,22 +109,21 @@
       "international-organization-for-standardization",
       "ambani-family",
       "adani-family",
-      "rupert-family",
-      "soros-family"
+      "rupert-family"
     ],
     "metrics": {
       "evidenceCount": 103,
       "primarySourceCount": 4,
       "disputedClaimCount": 2,
-      "newEntityCount": 20,
+      "newEntityCount": 24,
       "updatedAssessmentCount": 1,
       "relationshipCount": 12,
-      "moneyRecordCount": 73
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Card Art Registry.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -181,6 +181,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:12:14.304Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:45:34.226Z"
   }
 }

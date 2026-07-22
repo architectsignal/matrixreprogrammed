@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-22T06:20:35.479Z
+Generated: 2026-07-22T06:53:04.594Z
 
 ## Open Routes
 
@@ -26,11 +26,6 @@ President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
 - Date: 2026-07-21T17:01:51.000Z
 - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
-### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-21T15:27:26.000Z
-- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
-Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
 ### ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-21T12:00:00.000Z
@@ -111,3 +106,8 @@ Amid surging lunar exploration, the UN on Monday urged governments to ensure tha
 - Date: 2026-07-20T12:00:00.000Z
 - Source: https://news.un.org/feed/view/en/story/2026/07/1167980
 Russian attacks and drone strikes killed at least two children and injured dozens more across Ukraine over recent days while severely damaging three critical aid warehouses, UN agencies reported on Monday.
+### Haiti: Signs of hope despite gang violence and political uncertainty
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-19T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167963
+For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.

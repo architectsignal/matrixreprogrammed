@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:12:08.297Z",
+  "generatedAt": "2026-07-22T06:45:28.750Z",
   "pageCount": 115,
   "output": "downloads/campaign-intelligence-dossiers-push.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Intelligence Dossiers Campaign",
-    "contentHash": "e074f231f6e44130f32aca1988c944adafda831b2313c59dadbfd0f8c32d9a6d",
+    "contentHash": "1f031a6b3ab9489c8f64f27c63762ee9a843452cf117b7c9590896664b0d20f5",
     "sourceIds": [
       "8277ac276bab9b050504a33f",
       "c773a9b56feb9b238da1ce66",
@@ -33,9 +33,7 @@
       "crime-state-overlap-2026-02-17-ukraine-charges-ex-energy-minister-with-money-laundering-in-operation-",
       "crime-state-overlap-2025-11-12-paradise-lost-ecuador-s-battle-with-organised-crime-international-cris",
       "crime-state-overlap-2025-10-23-blazers-head-coach-charged-with-wire-fraud-money-laundering-in-mafia-g",
-      "594100b62a47db521fe2a128",
       "e84fd0d8dc566190676f4f87",
-      "34805734b1ad3b73f0ede0d8",
       "crime-state-overlap-2026-06-26-cartels-law-enforcement-and-counternarcotics-dr-john-p-sullivan-of-sma",
       "crime-state-overlap-2026-06-17-ex-cyprus-president-may-face-criminal-charges-in-corruption-probe-orga",
       "crime-state-overlap-2026-06-09-alex-saab-profile-insight-crime",
@@ -87,10 +85,9 @@
       "55a324e4bddcaa4ce8c4586e",
       "360e80c162081c85d2c680ef",
       "aa45c75a112060231ce901ba",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
-      "war-machine-2026-07-15-aacf2cda",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "6188547d91106e0f9d3bce50",
       "declassified-files-2026-06-16-pentagon-releases-72-ufo-files-military-reports-reveal-new-sightings-r",
       "declassified-files-2026-05-19-cuba-declassified-records-on-the-brothers-to-the-rescue-shootdown-nati",
@@ -129,11 +126,17 @@
       "declassified-files-2025-07-24-declassified-files-outline-uk-plan-to-evacuate-hongkongers-in-armagedd",
       "d0b647e325275daa6d824a49",
       "535d2f595c3ec1621e13dd0f",
+      "594100b62a47db521fe2a128",
       "8a388409c7e1203c78157fcc",
       "9e8903fd8dfa9b54a1d6db30",
       "843bf0e89d5e2c3d8673724c",
+      "76a719654ec3312153163154",
+      "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
+      "34805734b1ad3b73f0ede0d8",
       "cee347fbc3752c6e0f890457",
+      "war-machine-2026-07-17-aed171bd",
+      "war-machine-2026-07-17-acd16e97",
       "war-machine-2026-07-16-92d38440",
       "7d7ccb5b896a02cf45094879",
       "epstein-files-2026-06-10-bill-gates-tells-congress-he-didn-t-know-of-epstein-s-crimes-renounces",
@@ -143,10 +146,7 @@
       "epstein-files-2026-06-05-jeffrey-epstein-s-death-mystery-deepens-around-orange-figure-near-his-",
       "epstein-files-2026-06-04-bondi-invoked-privilege-declined-to-answer-questions-about-interaction",
       "epstein-files-2026-06-04-house-oversight-releases-transcribed-interview-with-epstein-s-former-a",
-      "war-machine-2026-06-03-trump-s-choice-of-acting-intel-chief-threatens-fragile-surveillance-po",
-      "epstein-files-2026-05-30-bondi-refuses-to-answer-trump-questions-in-epstein-probe-abc-news-head",
-      "epstein-files-2026-05-29-bondi-refuses-to-answer-questions-about-trump-s-involvement-in-epstein",
-      "epstein-files-2026-05-28-viral-jeffrey-epstein-lookalike-announces-run-for-palm-beach-mayor-pro"
+      "war-machine-2026-06-03-trump-s-choice-of-acting-intel-chief-threatens-fragile-surveillance-po"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 6,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 21,
+      "relationshipCount": 22,
       "moneyRecordCount": 21
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Intelligence Dossiers Campaign.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Edwin Wilson and Frank Terpil Part 54 (data/live-intel.json); Thomas Bilotti (data/live-intel.json); Thomas Bilotti (Final) (data/live-intel.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Edwin Wilson and Frank Terpil Part 54,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Edwin Wilson and Frank Terpil Part 54 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 21 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Share Kit; War Machine Campaign; Intelligence Dossiers Offer; Intelligence Network Pack; Crime Network Starter Brief; War Machine Share Kit; Follow The Money Watch; Organised Crime Index 2025: South Africa a continental hotspot for criminal networks - Mail & Guardian",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 21 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Share Kit",
           "War Machine Campaign",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-16T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T12:00:00.000Z"
   }
 }

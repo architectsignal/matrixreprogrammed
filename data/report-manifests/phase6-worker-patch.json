@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:29.167Z",
+  "generatedAt": "2026-07-22T06:50:17.720Z",
   "pageCount": 128,
   "output": "downloads/phase6-worker-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Phase6 Worker Patch",
-    "contentHash": "a68cda56891b37707dc074b3a71cc18fe6d5bc9feeea1d6200a45b357732844e",
+    "contentHash": "f2e8f270fed45836e89e89bc109c2a3b39013cd6451b45b8a865835cdd26fca0",
     "sourceIds": [
       "ASC-REVIEW-80297B4C795D4F94",
       "ASC-REVIEW-241E89BE4AC6B532",
@@ -139,27 +139,27 @@
       "9426a075a5be2fc210d3c898",
       "40ade32d4d3eb88dd113e310",
       "746b0d178824f626f6fceddc",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
-      "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-7729CF4536080393"
+      "ASC-REVIEW-A6F3D2598C5BA884"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 43,
-      "disputedClaimCount": 94,
+      "primarySourceCount": 44,
+      "disputedClaimCount": 93,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 35,
+      "relationshipCount": 34,
       "moneyRecordCount": 38
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
+        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
         "evidence": "Final Judgment - DaveGlo Investment Group, Inc. (data/weekly-investigation-conclusions.json); U.S. Securities and Exchange Commission (data/geographic-power-atlas-data.json); United States Department of Justice (data/geographic-power-atlas-data.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); Revised Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 34 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; State Street / State Street Investment Management → Market Services: capital layer; Follow The Money Watch; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; BlackRock → Private Markets Infrastructure Expansion: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 34 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "State Street / State Street Investment Management → Market Services: capital layer",

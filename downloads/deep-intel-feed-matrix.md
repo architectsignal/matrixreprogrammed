@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-22T06:21:50.509Z
+Generated: 2026-07-22T06:54:14.197Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -43,5 +43,5 @@ Generated: 2026-07-22T06:21:50.509Z
 - 72 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — live-intel.html
 - 72 — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — live-intel.html
 - 72 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — live-intel.html
-- 72 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — live-intel.html
 - 72 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection — live-intel.html
+- 72 — Critical minerals: The hidden resources powering the clean energy future — live-intel.html

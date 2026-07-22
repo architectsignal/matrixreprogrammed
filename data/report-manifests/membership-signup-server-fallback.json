@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:16:44.798Z",
+  "generatedAt": "2026-07-22T06:49:38.392Z",
   "pageCount": 129,
   "output": "downloads/membership-signup-server-fallback.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Membership Signup Server Fallback",
-    "contentHash": "723063953618573b52b204267db8754a4865347f5c0195a67fd743e85202d6ea",
+    "contentHash": "1f54545fbe0532e159f472d29a232e2a9ff5b43fc61e4ff0fa110f66cab5dd94",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -38,8 +38,8 @@
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "daily-21",
-      "source-change-fbfb678d637444fe7b488644",
+      "9e8903fd8dfa9b54a1d6db30",
+      "88ef9baf356c096816236956",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-001",
       "ASC-002",
@@ -150,19 +150,19 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
+      "primarySourceCount": 1,
       "disputedClaimCount": 129,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 125,
+      "relationshipCount": 127,
       "moneyRecordCount": 116
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Membership Signup Server Fallback.",
-        "evidence": "content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Membership Signup Server Fallback.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 125 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 127 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: European Public Prosecutor's Office — News; content changed: Federal Register — Latest Documents; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: USAspending.gov — Recent Contract Awards",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 125 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 127 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: European Public Prosecutor's Office — News",
           "content changed: Federal Register — Latest Documents",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

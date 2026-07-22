@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:18:08.592Z",
+  "generatedAt": "2026-07-22T06:50:52.700Z",
   "pageCount": 138,
   "output": "downloads/public-runtime-controls-output.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Public Runtime Controls Output",
-    "contentHash": "32993bcb1d30b91be12dd7cc0009e3a387fa1b0a2e8f442ca83dc062b6bcc673",
+    "contentHash": "7f4c9cc3f5911b8a42741623ec5c9a8c4caf01030a681f8cbf92263c55840235",
     "sourceIds": [
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -31,6 +31,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "26b90533dbf7d2ed42f02de6",
       "511ed227bb4be58b582ebb8d",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-AF729BF83147A0D4",
@@ -145,33 +146,32 @@
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-98888270E5A6D011",
       "ASC-REVIEW-31355A183BF17CCD",
-      "ASC-REVIEW-6447FD3CB2AD1C0F",
-      "ASC-REVIEW-0F0776894447C197"
+      "ASC-REVIEW-6447FD3CB2AD1C0F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 138,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 137,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 96,
+      "relationshipCount": 95,
       "moneyRecordCount": 91
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Public Runtime Controls Output.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Public Runtime Controls Output.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:18:08.592Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

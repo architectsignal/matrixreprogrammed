@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:23.058Z",
-  "pageCount": 113,
+  "generatedAt": "2026-07-22T06:50:12.139Z",
+  "pageCount": 114,
   "output": "downloads/paypal-server-redirect-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Paypal Server Redirect Patch",
-    "contentHash": "72cdace099e0d78a35c4b7c7423c00861cd8e87ef70533af984c44fb740992a4",
+    "contentHash": "f7df4f700997c07a5cce0178a00515f68eee9ecb964d245bdbe8261d748799cd",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "eb3448928554960651da56f6",
@@ -29,10 +29,10 @@
       "6510364e9b1a1504b9f99521",
       "72ef7895f95288946ccb3cff",
       "ecd4a1111010f13b2d74bf8c",
+      "declassified-files-2026-07-17-fc270d9d",
+      "declassified-files-2026-07-17-caa99125",
+      "declassified-files-2026-07-17-ecb37135",
       "war-machine-2026-07-16-92d38440",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
       "ASC-001",
       "ASC-002",
       "ASC-REVIEW-3CA200E0FB3097E4",
@@ -49,10 +49,10 @@
       "4f6142409f6345aa4038244f",
       "12211ad7f5ffc796baa3c75a",
       "553ca36157c97552aafe2abb",
-      "023dcc20a52e1c6c4aa643eb",
       "EP-AI-002",
       "71e0563ca7b139c37c302956",
       "a4c15f7c3d808369b294115e",
+      "023dcc20a52e1c6c4aa643eb",
       "cac4acf03dae66ffc38d1dab",
       "3a612824bd2383e3b7554062",
       "41238c8b70e678402d643e26",
@@ -61,13 +61,8 @@
       "3074e1c1bea52f04ac59408f",
       "ec24f811962be678d371bfc7",
       "EFS-001-R006",
-      "war-machine-2026-07-21-abc4a111",
       "source-change-fbfb678d637444fe7b488644",
       "source-change-c1520a15d6e62871a66c558e",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
-      "war-machine-2026-07-15-21cc1698",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-1F3FFE9F9EADB1F7",
       "ASC-REVIEW-80297B4C795D4F94",
@@ -146,20 +141,25 @@
       "ASC-REVIEW-DB3B48F4467DAAF3",
       "ASC-REVIEW-C1F0D685B3D7BC1C",
       "ASC-REVIEW-455A22488324C269",
-      "ASC-REVIEW-3D349F2C3EEE9A65"
+      "ASC-REVIEW-3D349F2C3EEE9A65",
+      "ASC-REVIEW-2BE76D9880CA56F8",
+      "ASC-REVIEW-17EAF4AC47F2CCB1",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-E76F1740FFF4E811"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 88,
+      "primarySourceCount": 35,
+      "disputedClaimCount": 93,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
+      "relationshipCount": 35,
       "moneyRecordCount": 25
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
+        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Peacekeepers step up support as families return to south Lebanon; Edwin Wilson and Frank Terpil Part 54; Thomas Bilotti; Thomas Bilotti (Final); Conditional-access systems may become increasingly interconnected; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; content changed: USAspending.gov — Recent Contract Awards",
+        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Peacekeepers step up support as families return to south Lebanon; Conditional-access systems may become increasingly interconnected; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; content changed: USAspending.gov — Recent Contract Awards",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,12 +194,12 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Henry Lucas",
+          "Henry Lucas Part 01",
+          "Henry Lucas Part 02 (Final)",
           "Peacekeepers step up support as families return to south Lebanon",
-          "Edwin Wilson and Frank Terpil Part 54",
-          "Thomas Bilotti",
-          "Thomas Bilotti (Final)",
           "Conditional-access systems may become increasingly interconnected",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-21T07:44:16.592Z"
   }
 }

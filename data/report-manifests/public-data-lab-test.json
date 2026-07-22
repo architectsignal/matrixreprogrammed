@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:17:59.457Z",
+  "generatedAt": "2026-07-22T06:50:44.864Z",
   "pageCount": 127,
   "output": "downloads/public-data-lab-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Public Data Lab Test",
-    "contentHash": "bbde4a96ef300e5e42142f22196f762e51c9c709671fd2b20ffc814f46c6677a",
+    "contentHash": "66e1ca8a372022a872784fb3fb33ee1b051b998cfa1e1c1eae7327f016c818d2",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "osint",
@@ -39,9 +39,9 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "d0b647e325275daa6d824a49",
+      "9e8903fd8dfa9b54a1d6db30",
       "6510364e9b1a1504b9f99521",
-      "cee347fbc3752c6e0f890457",
+      "88ef9baf356c096816236956",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -151,10 +151,10 @@
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 132,
+      "disputedClaimCount": 130,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 130,
+      "relationshipCount": 132,
       "moneyRecordCount": 129
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 130 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "12. Lawful OSINT & Source Verification; BlackRock → Private Markets Infrastructure Expansion: capital layer; Rockefeller → Public Private Routes: layer hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer; Bohemian Grove / Bohemian Club → Private Club Networks: overlap hint; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 130 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "12. Lawful OSINT & Source Verification",
           "BlackRock → Private Markets Infrastructure Expansion: capital layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:17:59.457Z"
+    "intelligenceFreshnessDate": "2026-07-22T06:50:44.864Z"
   }
 }

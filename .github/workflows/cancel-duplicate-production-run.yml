@@ -1,0 +1,32 @@
+name: Cancel Duplicate Production Run
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/cancel-duplicate-production-run.trigger
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel-duplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel queued duplicate production release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const runId = 29917775376;
+            const run = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId });
+            core.info(`Duplicate run ${runId} status before cancellation: ${run.data.status}/${run.data.conclusion || ''}`);
+            if (['queued','in_progress','waiting','pending','requested'].includes(run.data.status)) {
+              await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: runId });
+              core.info(`Cancellation requested for duplicate production run ${runId}.`);
+            } else {
+              core.info(`Duplicate run ${runId} is already terminal; no cancellation required.`);
+            }

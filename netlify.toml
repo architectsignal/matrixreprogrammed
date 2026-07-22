@@ -1,4 +1,5 @@
 [build]
+  ignore = "exit 0"
   command = "mkdir -p .netlify-disabled && printf '<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex,nofollow\"><title>Deployment Disabled</title></head><body><h1>Netlify deployment disabled</h1><p>Matrix Reprogrammed is deployed through Cloudflare.</p></body></html>' > .netlify-disabled/index.html"
   publish = ".netlify-disabled"
 

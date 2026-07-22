@@ -1,7 +1,7 @@
 {
   "ok": true,
   "title": "Card Artwork Inbox",
-  "updated": "2026-07-21T07:59:13.590Z",
+  "updated": "2026-07-22T06:22:02.193Z",
   "purpose": "Install approved card artwork from a repository path, direct URL, or data URI and propagate it to every deck surface in the same build.",
   "rule": "Each pending item needs deckId, cardId, and one of sourcePath, sourceUrl, or sourceDataUri. Repository files may also be dropped directly into card-art-inbox/ using the normalized card ID as the filename; the resolver scans them automatically.",
   "acceptedDeckIds": [

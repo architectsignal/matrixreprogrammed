@@ -148,12 +148,20 @@ async function ensureSchema(env) {
 async function insertPost(env, post, origin = 'd1', memberId = '') {
   const p = safePost(post);
   const now = new Date().toISOString();
-  await env.MEMBERS_DB.prepare(
-    `INSERT OR IGNORE INTO forum_posts
+  const memberKey = clean(memberId, 160);
+  const result = await env.MEMBERS_DB.prepare(
+    `INSERT INTO forum_posts
       (id, member_id, board, title, body, category, display_name, source_url, created_at, approved_at, status, storage_origin, updated_at)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-  ).bind(p.id, clean(memberId, 160), p.board, p.title, p.body, p.category, p.name, p.sourceUrl, p.createdAt, p.approvedAt, p.status, origin, now).run();
-  return p;
+  ).bind(p.id, memberKey, p.board, p.title, p.body, p.category, p.name, p.sourceUrl, p.createdAt, p.approvedAt, p.status, origin, now).run();
+  if (Number(result?.meta?.changes || 0) !== 1) throw new Error('D1 did not confirm the forum insert');
+  const stored = await env.MEMBERS_DB.prepare(
+    `SELECT id, board, title, body, category, display_name AS name, source_url AS sourceUrl,
+            created_at AS createdAt, approved_at AS approvedAt, status
+       FROM forum_posts WHERE id=? AND member_id=? LIMIT 1`
+  ).bind(p.id, memberKey).first();
+  if (!stored || stored.id !== p.id) throw new Error('D1 forum read-after-write confirmation failed');
+  return safePost(stored);
 }
 async function metaValue(env, key) {
   try {

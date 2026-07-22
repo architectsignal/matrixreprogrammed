@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-21T07:58:35.957Z
+Generated: 2026-07-22T06:21:50.509Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -17,31 +17,31 @@ Generated: 2026-07-21T07:58:35.957Z
 ## Top items
 - 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
-- 85 — Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/defense-department.html
-- 85 — Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/federal-procurement-policy-office.html
-- 85 — General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/general-services-administration.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
-- 85 — Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/management-and-budget-office.html
-- 85 — National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/national-aeronautics-and-space-administration.html
 - 85 — 2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-00294.html
 - 85 — 2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-07773.html
 - 85 — 2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2025-0045-appeal.html
+- 85 — 23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/23-wap-2023.html
 - 85 — 25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-113.html
-- 85 — 25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-581.html
 - 85 — A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/a170747m.html
-- 85 — Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/biddle-v-biddle.html
 - 85 — California Court of Appeal — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/california-court-of-appeal.html
 - 85 — Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-second-circuit.html
-- 85 — Court of Appeals of North Carolina — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-of-north-carolina.html
 - 85 — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
 - 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
 - 85 — Matter of Pagliughi — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/matter-of-pagliughi.html
 - 85 — People v. Brim — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-v-brim.html
+- 85 — Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/punxsutawney-hunting-club-v-pgc.html
 - 85 — Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/sawas-v-elzanaty.html
+- 85 — Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-pennsylvania.html
 - 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
 - 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
-- 72 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela — live-intel.html
-- 72 — From the General Assembly to Harlem: Mandela’s call to action endures — live-intel.html
-- 72 — Health response brings lifesaving care closer to thousands in Yemen — live-intel.html
-- 72 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — live-intel.html
-- 72 — Middle East: Civilians again under fire as US-Iran strikes continue — live-intel.html
+- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
+- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
+- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
+- 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
+- 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
+- 72 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — live-intel.html
+- 72 — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — live-intel.html
+- 72 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — live-intel.html
+- 72 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — live-intel.html
+- 72 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection — live-intel.html

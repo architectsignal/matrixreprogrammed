@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:24:29.605Z",
+  "version": "20260720-forum-member-posting-v3",
+  "canonicalOrigin": "https://matrixreprogrammed.com",
+  "changed": [
+    "forum.js",
+    "forum.html",
+    "dark-speculation-forum.html",
+    "epstein-alive-board.html",
+    "member-login.html"
+  ],
+  "sessionCookie": "matrix_session_v2; Domain=matrixreprogrammed.com; HttpOnly; Secure; SameSite=Lax",
+  "legacyCookieReadFallback": true,
+  "browserCredentials": "include",
+  "persistence": "Cloudflare D1 insert plus read-after-write confirmation",
+  "boards": [
+    "main",
+    "speculation",
+    "epstein-alive"
+  ],
+  "boundary": "A browser success message is forbidden unless the authenticated Worker confirms the exact forum row exists in D1."
+}

@@ -1,18 +1,18 @@
 # Full Site Function and Tool Audit
 
-Generated: 2026-07-20T06:37:51.855Z
+Generated: 2026-07-22T06:24:59.253Z
 Mode: postbuild-cloudflare-output
 Status: PASS
 
 ## Coverage
 
-- html: 2657
-- js: 66
-- json: 550
-- links: 120856
-- localFetches: 21
-- forms: 100
-- buttons: 696
+- html: 3001
+- js: 77
+- json: 900
+- links: 131635
+- localFetches: 34
+- forms: 101
+- buttons: 2170
 - criticalTools: 31
 
 ## Hard Issues
@@ -21,6 +21,9 @@ Status: PASS
 
 ## Warnings
 
-- None
+- src/money-command-center.js: fetch target not found data/money-intelligence-registry.json
+- src/money-command-center.js: fetch target not found data/money-overlap-graph.json
+- src/money-overlap-graph.js: fetch target not found data/money-overlap-graph.json
+- src/money-overlap-graph.js: fetch target not found data/money-intelligence-registry.json
 
 Boundary: Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, supported MapLibre browser-bundle wiring, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require live environment verification.

@@ -1,6 +1,6 @@
 # Site Relationship Map
 
-Nodes: 105
+Nodes: 101
 Edges: 172
 
 - The map is layered so readers can separate history, institutions, capital, execution, rails and evidence.

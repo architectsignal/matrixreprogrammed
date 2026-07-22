@@ -1,9 +1,165 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-20T21:30:51.519Z
+Updated: 2026-07-22T06:21:31.217Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+
+- Date: 2026-07-21
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+- Timers: none
+
+Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz New York Post
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
+
+- Date: 2026-07-21
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+- Timers: none
+
+President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+
+- Date: 2026-07-21
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
+- Timers: none
+
+External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+
+- Date: 2026-07-21
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+- Timers: none
+
+Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167993
+- Timers: none
+
+The UN General Assembly closed its first ever High-level Meeting on road safety on Tuesday by adopting a sweeping new declaration aimed at halving road deaths by 2030 – over the sole objection of the United States.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Critical minerals: The hidden resources powering the clean energy future
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+- Timers: none
+
+Why are critical minerals suddenly at the centre of global politics?
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167983
+- Timers: none
+
+In the Democratic Republic of the Congo (DRC), UN health teams and partners are still racing to contain the rapidly expanding Ebola outbreak, despite ongoing insecurity in eastern areas where the virus has taken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Global hunger declines again but progress remains uneven across regions
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167987
+- Timers: none
+
+Global hunger declined for a third consecutive year in 2025 showing that progress is possible, but gains remain fragile and far too slow to achieve the Sustainable Development Goals (SDGs) by the 2030 deadline.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167989
+- Timers: none
+
+The United Nations again called for restraint as war ramps up in the Middle East, underscoring the need for dialogue and an end to attacks on “vital infrastructure” across the region.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Israeli attacks on Gaza intensify amid surge of West Bank settler violence
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167991
+- Timers: none
+
+Amid intensified deadly Israeli attacks in Gaza, the UN chief and top officials condemned the killings while a surge violence rocked the West Bank and aid agencies scrambled to help Palestinians.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167984
+- Timers: none
+
+The Security Council discussed the situation on the ground in Syria amid reports of an Israeli attack in occupied territory and of a multi-national oil pipeline to counter the closure of the critical Strait of Hormuz – still the focus of the ongoing US-Iran war. The meeting follows UN independent investigators’ findings that security conditions remain fragile in the south as António Guterres heads to Damascus for his first visit to the country as Secretary-General.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## UN refugee agency reports 144 migrants dead or missing off Mauritanian coast
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167985
+- Timers: none
+
+The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to reach Europe are dead or missing due to a series of “tragic maritime incidents” off the coast of Mauritania last week.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
+
+- Date: 2026-07-21
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167992
+- Timers: none
+
+Independent UN human rights experts on Tuesday condemned the M23 armed group’s “reign of terror” over territory it controls in eastern Democratic Republic of the Congo (DRC), calling for an end to the Rwanda-backed group’s sexual torture and violence against civilians.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
 ## ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
 
@@ -65,6 +221,30 @@ Russian attacks and drone strikes killed at least two children and injured dozen
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
+## From the General Assembly to Harlem: Mandela’s call to action endures
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167981
+- Timers: none
+
+Sixty-seven minutes. That is how long volunteers spent serving lunch to people experiencing food insecurity at Refettorio Harlem in New York City last week – one for every year Nelson Mandela gave to public service.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Health response brings lifesaving care closer to thousands in Yemen
+
+- Date: 2026-07-20
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167982
+- Timers: none
+
+Thousands of people in some of Yemen&#039;s most conflict-affected communities are receiving lifesaving health care closer to home, thanks to funding from the UN aid coordination office (OCHA) through the Yemen Humanitarian Fund.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
 ## Haiti: Signs of hope despite gang violence and political uncertainty
 
 - Date: 2026-07-19
@@ -112,183 +292,3 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-
-- Date: 2026-07-17
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-- Timers: none
-
-Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## The surveillance networks cities do not have to buy - Biometric Update
-
-- Date: 2026-07-17
-- Lane: Elite Control Structure
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
-- Timers: none
-
-The surveillance networks cities do not have to buy Biometric Update
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Baristas behind bars: Thai prisoners brew a path back to daily life
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167954
-- Timers: none
-
-It looks like a regular coffee shop, albeit set up in an old red bus. Stairs lead up to a serving hatch, with a menu of drink options. A selection of jaunty coffee-related messages like “My one and only love: Americano” and “Miss you a latte,” adorn the side of the bus.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Djibouti: Emergency alert spotlights sharp hunger spike
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167971
-- Timers: none
-
-More than 256,000 people in Djibouti – around 25 per cent of the population – are likely to face crisis or emergency level hunger over the coming months, a UN-backed global food monitoring network warned in a new report released Friday.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167965
-- Timers: none
-
-UN Secretary-General António Guterres on Friday urged governments and technology companies to work together to ensure artificial intelligence (AI) benefits all countries.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Hunger deepens for displaced families in Sudan’s El Obeid
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167967
-- Timers: none
-
-UN humanitarians working in war-torn Sudan on Friday highlighted rapidly growing needs among the more than 100,000 displaced people now sheltering in camps in the city of El Obeid.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167973
-- Timers: none
-
-The UN Secretary-General remains deeply concerned by the continuing deadly military escalation between Iran and the United States, his spokesperson said on Friday as attacks destroyed key civilian and military infrastructure across the Gulf region.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
-
-- Date: 2026-07-17
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167970
-- Timers: none
-
-The UN human rights chief, Volker Türk, has appealed for calm in Pakistan-Administered Kashmir amid unrest ahead of regional elections.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Henry Lucas
-
-- Date: 2026-07-17
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/henry-lucas
-- Timers: none
-
-Henry Lucas
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Henry Lucas Part 01
-
-- Date: 2026-07-17
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
-- Timers: none
-
-Henry Lucas Part 01
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Henry Lucas Part 02 (Final)
-
-- Date: 2026-07-17
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
-- Timers: none
-
-Henry Lucas Part 02 (Final)
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167955
-- Timers: none
-
-As Europe battles a deadly record-breaking heatwave, the World Health Organization (WHO) issued new guidance on Thursday to help countries face scorching temperatures now and in the future.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## As aid dries up, countries pledge to close the $4 trillion development gap
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167957
-- Timers: none
-
-UN Member States reaffirmed their commitment to the Sustainable Development Goals (SDGs) by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167956
-- Timers: none
-
-For Tanatswa Amanda Chikaura, mental health advocacy began with a personal loss: while studying psychology at the University of Zimbabwe, she learned that a fellow student had died by suicide.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Gaza farmers battle to rebuild as WFP warns of West Bank settler violence
-
-- Date: 2026-07-16
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167960
-- Timers: none
-
-The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-20T06:35:11.986Z
-Live Intel source window: 2026-07-20T06:35:02.861Z
-Latest source publication: 2026-07-17T23:17:00.000Z
+Generated: 2026-07-22T06:21:43.277Z
+Live Intel source window: 2026-07-22T06:21:31.095Z
+Latest source publication: 2026-07-21T18:38:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,49 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-16 current Epstein-lane record leads remain inside the active source window.
+17 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+- Published: 2026-07-21T18:38:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+
+Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz New York Post
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
+- Published: 2026-07-21T18:16:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+
+President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+- Published: 2026-07-21T17:01:51.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
+
+External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+- Published: 2026-07-21T15:27:26.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+
+Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 - Published: 2026-07-17T23:17:00.000Z
@@ -105,6 +145,16 @@ Goldman counsel Ruemmler says she would have reported Epstein if she knew he abu
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
+- Published: 2026-07-15T16:34:31.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5
+
+Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women Yahoo! Finance Canada
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
 - Published: 2026-07-15T16:25:19.000Z
 - Source: Google News / Epstein timeline and files
@@ -112,16 +162,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
 
 Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB Charlotte
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-- Published: 2026-07-15T14:28:00.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-
-Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her New York Post
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -135,16 +175,6 @@ Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democra
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
-- Published: 2026-07-15T12:09:02.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
-
-Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
 - Published: 2026-07-15T12:00:01.000Z
 - Source: Google News / Epstein timeline and files
@@ -152,26 +182,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
 
 Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-- Published: 2026-07-14T18:33:29.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
-
-Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-- Published: 2026-07-13T14:49:05.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
-
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

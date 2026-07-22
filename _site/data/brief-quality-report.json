@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:34:11.022Z",
+  "updated": "2026-07-22T06:11:29.126Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
@@ -9,56 +9,6 @@
       "score": 100,
       "level": "elite priority",
       "source_strength": 50,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "defense-department",
-      "name": "Defense Department",
-      "score": 91,
-      "level": "elite priority",
-      "source_strength": 25,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "federal-procurement-policy-office",
-      "name": "Federal Procurement Policy Office",
-      "score": 91,
-      "level": "elite priority",
-      "source_strength": 25,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "general-services-administration",
-      "name": "General Services Administration",
-      "score": 91,
-      "level": "elite priority",
-      "source_strength": 25,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "score": 91,
-      "level": "elite priority",
-      "source_strength": 25,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "score": 91,
-      "level": "elite priority",
-      "source_strength": 25,
       "relationship_depth": 80,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
@@ -114,6 +64,16 @@
       "reader_friendliness": 85
     },
     {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "25-113",
       "name": "25-113",
       "score": 67,
@@ -124,28 +84,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "25-581",
-      "name": "25-581",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
       "id": "a170747m",
       "name": "A170747M",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "biddle-v-biddle",
-      "name": "Biddle v. Biddle",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -166,16 +106,6 @@
     {
       "id": "court-of-appeals-for-the-second-circuit",
       "name": "Court of Appeals for the Second Circuit",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "court-of-appeals-of-north-carolina",
-      "name": "Court of Appeals of North Carolina",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -214,8 +144,28 @@
       "reader_friendliness": 85
     },
     {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "sawas-v-elzanaty",
       "name": "Sawas v. Elzanaty",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -376,6 +326,16 @@
     {
       "id": "nuclear-regulatory-commission",
       "name": "Nuclear Regulatory Commission",
+      "score": 43,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 0,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "securities-and-exchange-commission",
+      "name": "Securities and Exchange Commission",
       "score": 43,
       "level": "active watch",
       "source_strength": 25,

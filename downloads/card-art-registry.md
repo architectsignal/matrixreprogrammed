@@ -1,6 +1,6 @@
 # Card Art Registry
 
-Updated: 2026-07-21T07:59:13.592Z
+Updated: 2026-07-22T06:22:02.193Z
 
 Real artwork: 2
 

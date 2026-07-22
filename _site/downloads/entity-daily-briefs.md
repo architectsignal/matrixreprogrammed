@@ -1,8 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-20T06:34:10.904Z
+Updated: 2026-07-22T06:11:28.984Z
 
-Briefs generated: 38
+Briefs generated: 34
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -24,36 +24,6 @@ Evidence: documented public-record association
 
 Watch next: Watch Centers for Medicare & Medicaid Services across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
-## Defense Department
-
-At a glance: Defense Department is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Defense Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Federal Procurement Policy Office
-
-At a glance: Federal Procurement Policy Office is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Federal Procurement Policy Office across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## General Services Administration
-
-At a glance: General Services Administration is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch General Services Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
 ## Health and Human Services Department
 
 At a glance: Health and Human Services Department is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
@@ -63,26 +33,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Management and Budget Office
-
-At a glance: Management and Budget Office is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Management and Budget Office across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## National Aeronautics and Space Administration
-
-At a glance: National Aeronautics and Space Administration is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch National Aeronautics and Space Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## 2021-00294
 
@@ -114,6 +64,16 @@ Evidence: legal record present
 
 Watch next: Watch 2025-0045-Appeal. across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## 23 WAP 2023
+
+At a glance: 23 WAP 2023 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 23 WAP 2023 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## 25-113
 
 At a glance: 25-113 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -124,16 +84,6 @@ Evidence: legal record present
 
 Watch next: Watch 25-113 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 25-581
-
-At a glance: 25-581 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 25-581 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## A170747M
 
 At a glance: A170747M is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -143,16 +93,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch A170747M across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Biddle v. Biddle
-
-At a glance: Biddle v. Biddle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Biddle v. Biddle across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## California Court of Appeal
 
@@ -173,16 +113,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Court of Appeals for the Second Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Court of Appeals of North Carolina
-
-At a glance: Court of Appeals of North Carolina is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Court of Appeals of North Carolina across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
 
@@ -224,6 +154,16 @@ Evidence: legal record present
 
 Watch next: Watch People v. Brim across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## Punxsutawney Hunting Club v. PGC
+
+At a glance: Punxsutawney Hunting Club v. PGC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Punxsutawney Hunting Club v. PGC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Sawas v. Elzanaty
 
 At a glance: Sawas v. Elzanaty is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -233,6 +173,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Sawas v. Elzanaty across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Supreme Court of Pennsylvania
+
+At a glance: Supreme Court of Pennsylvania is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Supreme Court of Pennsylvania across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Supreme Court of Rhode Island
 
@@ -383,3 +333,13 @@ Judgement: A source route exists. More records are needed before drawing a stron
 Evidence: documented public-record association
 
 Watch next: Watch Nuclear Regulatory Commission across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## Securities and Exchange Commission
+
+At a glance: Securities and Exchange Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
+
+Evidence: documented public-record association
+
+Watch next: Watch Securities and Exchange Commission across federal-register-policy.; Check whether new federal-register-policy records repeat this name.

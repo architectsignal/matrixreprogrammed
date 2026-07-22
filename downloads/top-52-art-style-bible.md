@@ -1,6 +1,6 @@
 # Top 52 Art System Style Bible
 
-Generated: 2026-07-21T07:58:36.014Z
+Generated: 2026-07-22T06:21:50.576Z
 
 ## House Style
 Victorian engraved intelligence playing cards, black lacquer ground, antique gold linework, deep crimson evidence marks, occult/tarot geometry, newspaper editorial portrait energy, dignified not defamatory.

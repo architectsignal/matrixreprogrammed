@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:33:54.086Z",
+  "updated": "2026-07-22T06:11:12.525Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "federal-register-policy",
   "name": "Federal Register latest policy records",
@@ -11,10 +11,32 @@
   "itemCount": 6,
   "raw": {
     "description": "Documents matching 'digital identity OR emergency OR surveillance OR bank'",
-    "count": 182,
+    "count": 183,
     "total_pages": 19,
     "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=digital+identity+OR+emergency+OR+surveillance+OR+bank&format=json&order=newest&page=2&per_page=10",
     "results": [
+      {
+        "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+        "type": "Proposed Rule",
+        "abstract": "The Securities and Exchange Commission (the \"SEC\" or the \"Commission\") is proposing Regulation E-Delivery. The proposed rule sets forth conditions for covered entities to deliver covered information to covered recipients electronically without first obtaining their affirmative consent. The proposed rule further establishes conditions under which the Commission would consider delivery requirements under the Federal securities laws to be satisfied by electronic delivery. The Commission also is proposing to rescind the rule providing alternative means for registered investment companies to satisfy shareholder report transmission requirements, and to amend rules addressing the dissemination of proxy materials and tender offer materials.",
+        "document_number": "2026-14679",
+        "html_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-07-21/pdf/2026-14679.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-14679.pdf?1784551516",
+        "publication_date": "2026-07-21",
+        "agencies": [
+          {
+            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+            "name": "Securities and Exchange Commission",
+            "id": 466,
+            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+            "parent_id": null,
+            "slug": "securities-and-exchange-commission"
+          }
+        ],
+        "excerpts": "information shall: \n (1) Promptly inquire of each record holder and each respondent <span class=\"match\">bank</span> identified to the registrant pursuant to § 240.14b-2(b)(4)(i) whether such record holder or respondent <span class=\"match\">bank</span> holds the registrant's securities on behalf of any respondent <span class=\"match\">banks</span> and, if so, the name and address of each such respondent <span class=\"match\">bank</span>; \n (2) * * * \n \n (3) Make such request to the following persons that hold the registrant's securities on behalf of beneficial owners: all brokers, dealers, <span class=\"match\">banks</span>, associations, and other entities that exercise fiduciary powers; \n Provided"
+      },
       {
         "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
         "type": "Rule",
@@ -662,40 +684,6 @@
           }
         ],
         "excerpts": "NPRM Proposals \n \n TCB Post-market <span class=\"match\">surveillance</span>. \n In the \n EA Integrity NPRM, \n the Commission invited comment on whether to revise the post-market <span class=\"match\">surveillance</span> rules, policies, or guidance to require <span class=\"match\">surveillance</span> of authorized equipment for compliance relating to the prohibition on authorization of “covered” equipment. In particular, the Commission sought comment on reasonable practices TCBs could implement to identify erroneous authorizations of “covered” equipment, whether to change the post-market <span class=\"match\">surveillance</span> requirements to require that TCBs"
-      },
-      {
-        "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2026 Rates; Changes to the FY 2025 IPPS Rates Due to Court Decision; Requirements for Quality Programs; and Other Policy Changes; Health Data, Technology, and Interoperability: Electronic Prescribing, Real-Time Prescription Benefit and Electronic Prior Authorization",
-        "type": "Rule",
-        "abstract": "This final rule revises the Medicare hospital inpatient prospective payment systems (IPPS) for operating and capital-related costs of acute care hospitals; makes changes relating to Medicare graduate medical education (GME) for teaching hospitals; updates the payment policies and the annual payment rates for the Medicare prospective payment system (PPS) for inpatient hospital services provided by long-term care hospitals (LTCHs); updates and makes changes to requirements for certain quality programs; and makes other policy- related changes. We are also finalizing the provisions of the interim final action with comment period regarding the changes to the FY 2025 IPPS rates due to the court decision in Bridgeport Hosp. v. Becerra. Lastly, it finalizes certain updates to the ONC Health Information Technology (IT) Certification Program.",
-        "document_number": "2025-14681",
-        "html_url": "https://www.federalregister.gov/documents/2025/08/04/2025-14681/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
-        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-08-04/pdf/2025-14681.pdf",
-        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-14681.pdf?1753992911",
-        "publication_date": "2025-08-04",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
-            "name": "Health and Human Services Department",
-            "id": 221,
-            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
-            "parent_id": null,
-            "slug": "health-and-human-services-department"
-          },
-          {
-            "raw_name": "Centers for Medicare & Medicaid Services",
-            "name": "Centers for Medicare & Medicaid Services",
-            "id": 45,
-            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
-            "parent_id": 221,
-            "slug": "centers-for-medicare-medicaid-services"
-          },
-          {
-            "raw_name": "Office of the Secretary"
-          }
-        ],
-        "excerpts": "(NHSN) is leading the development of fully electronic and automated <span class=\"match\">digital</span> quality measures for patient safety and public health <span class=\"match\">surveillance</span>, preparedness, and response.\n 239 \n \n We are working together with NHSN to explore a modernized approach for reporting quality measures to CMS via the NHSN data pipeline. There are currently nine <span class=\"match\">digital</span> quality measures reported to NHSN that are used in CMS programs.\n 240 \n \n CMS and CDC are working together to transition to fully automated <span class=\"match\">digital</span> quality measures using a two-pronged approach: (1) Develop new"
       }
     ]
   },

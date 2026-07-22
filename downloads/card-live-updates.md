@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-22T03:45:27.825Z
-Live Intel source window: 2026-07-22T03:45:23.678Z
-Tracked cards: 890
+Generated: 2026-07-22T06:21:43.298Z
+Live Intel source window: 2026-07-22T06:21:31.095Z
+Tracked cards: 873
 Cards with current matched records: 102
-Cards with no new verified record: 788
+Cards with no new verified record: 771
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -119,18 +119,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 25-581
 - Route: entity-timelines/25-581.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 25-581
-- Route: entity-briefs/25-581.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 25-581
-- Route: entity-exposure/25-581.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -697,18 +685,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## BIDDLE V. BIDDLE
 - Route: entity-timelines/biddle-v-biddle.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## BIDDLE V. BIDDLE
-- Route: entity-briefs/biddle-v-biddle.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## BIDDLE V. BIDDLE
-- Route: entity-exposure/biddle-v-biddle.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1419,18 +1395,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## COURT OF APPEALS OF NORTH CAROLINA
-- Route: entity-briefs/court-of-appeals-of-north-carolina.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## COURT OF APPEALS OF NORTH CAROLINA
-- Route: entity-exposure/court-of-appeals-of-north-carolina.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
 ## Cox family
 - Route: power-families/cox-family.html
 - Status: no-new-verified-record-in-current-window
@@ -1505,18 +1469,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## DEFENSE DEPARTMENT
 - Route: entity-timelines/defense-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## DEFENSE DEPARTMENT
-- Route: entity-briefs/defense-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## DEFENSE DEPARTMENT
-- Route: entity-exposure/defense-department.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1948,18 +1900,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## FEDERAL PROCUREMENT POLICY OFFICE
-- Route: entity-briefs/federal-procurement-policy-office.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## FEDERAL PROCUREMENT POLICY OFFICE
-- Route: entity-exposure/federal-procurement-policy-office.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
 ## Federal Reserve
 - Route: top-52/federal-reserve.html
 - Status: no-new-verified-record-in-current-window
@@ -2133,18 +2073,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GENERAL SERVICES ADMINISTRATION
 - Route: entity-timelines/general-services-administration.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## GENERAL SERVICES ADMINISTRATION
-- Route: entity-briefs/general-services-administration.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## GENERAL SERVICES ADMINISTRATION
-- Route: entity-exposure/general-services-administration.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3092,18 +3020,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## MANAGEMENT AND BUDGET OFFICE
-- Route: entity-briefs/management-and-budget-office.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## MANAGEMENT AND BUDGET OFFICE
-- Route: entity-exposure/management-and-budget-office.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
 ## Manhattan Institute
 - Route: think-tanks/manhattan-institute.html
 - Status: no-new-verified-record-in-current-window
@@ -3569,18 +3485,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
 - Route: entity-timelines/national-aeronautics-and-space-administration.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
-- Route: entity-briefs/national-aeronautics-and-space-administration.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
-- Route: entity-exposure/national-aeronautics-and-space-administration.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4089,12 +3993,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Prajogo Pangestu
 - Route: follow-the-money/people/prajogo-pangestu.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## PREMIUM REPORTS.
-- Route: premium-reports.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -5246,8 +5144,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T06:24:40.000Z
+- Current matched records: 2
+- Latest record: 2026-07-21T15:27:26.000Z
+- 2026-07-21T15:27:26.000Z — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
 - 2026-07-16T06:24:40.000Z — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 
 ## WEEKLY INVESTIGATION REPORT.

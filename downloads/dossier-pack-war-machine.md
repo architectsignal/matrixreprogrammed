@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-20T06:33:46.948Z
+Updated: 2026-07-22T06:11:11.561Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -56,8 +56,23 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
+- 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — Security Council LIVE: International Criminal Court briefs on Darfur
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167945
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167989
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167984
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -71,46 +86,31 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167937
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — World News in Brief: Gaza aid challenges persist, renewed push for clean energy, Sudan cholera update
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167939
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-06-16 — Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
+- 2026-07-21 — Critical minerals: The hidden resources powering the clean energy future
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167949
+- 2026-07-21 — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167992
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
-  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
-  - Evidence: Seven-day public-record lead
+- 2026-07-20 — Middle East: Civilians again under fire as US-Iran strikes continue
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167979
+  - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-16 — Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au
-  - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-20 — Health response brings lifesaving care closer to thousands in Yemen
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167982
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
 ## Source Pathways / Relevant Source Files
 
@@ -130,17 +130,17 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
+- UN News: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — https://news.un.org/feed/view/en/story/2026/07/1167972
 - UN News: Security Council LIVE: International Criminal Court briefs on Darfur — https://news.un.org/feed/view/en/story/2026/07/1167945
+- UN News: Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
+- UN News: Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
 - UN News: Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 - UN News: US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas — https://news.un.org/feed/view/en/story/2026/07/1167973
-- UN News: Independent expert urges UK leaders to uphold Supreme Court ruling on women’s rights — https://news.un.org/feed/view/en/story/2026/07/1167937
-- UN News: World News in Brief: Gaza aid challenges persist, renewed push for clean energy, Sudan cholera update — https://news.un.org/feed/view/en/story/2026/07/1167939
 - Google News / declassified files: Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
-- UN News: Baristas behind bars: Thai prisoners brew a path back to daily life — https://news.un.org/feed/view/en/story/2026/07/1167954
-- UN News: Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
-- Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
-- Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-- Google News / Epstein sighting and alive claims: Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au — https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
+- UN News: Critical minerals: The hidden resources powering the clean energy future — https://news.un.org/feed/view/en/story/2026/07/1167990
+- UN News: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
+- UN News: Middle East: Civilians again under fire as US-Iran strikes continue — https://news.un.org/feed/view/en/story/2026/07/1167979
+- UN News: Health response brings lifesaving care closer to thousands in Yemen — https://news.un.org/feed/view/en/story/2026/07/1167982
 
 ## Book Routes
 

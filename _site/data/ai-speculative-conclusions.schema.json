@@ -23,6 +23,19 @@
     "automaticPublicationApproved": { "const": true },
     "verifiedEvidencePagesAffected": { "const": false },
     "boundary": { "type": "string", "minLength": 80 },
+    "reviewQueueAutoPublication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled", "source", "rule", "factualPromotionAllowed", "imported", "rejected"],
+      "properties": {
+        "enabled": { "const": true },
+        "source": { "type": "string", "minLength": 5 },
+        "rule": { "type": "string", "minLength": 50 },
+        "factualPromotionAllowed": { "const": false },
+        "imported": { "type": "integer", "minimum": 0 },
+        "rejected": { "type": "integer", "minimum": 0 }
+      }
+    },
     "publicationRules": {
       "type": "object",
       "additionalProperties": false,
@@ -48,7 +61,11 @@
         "minorsProhibited": { "const": true },
         "privateAddressesProhibited": { "const": true },
         "intimateMaterialProhibited": { "const": true },
-        "unsupportedDirectAccusationsProhibited": { "const": true }
+        "unsupportedDirectAccusationsProhibited": { "const": true },
+        "reviewQueueAutoPublish": { "const": true },
+        "verifiedSurfacePromotionProhibited": { "const": true },
+        "alarmRankingPromotionProhibited": { "const": true },
+        "privateSensitiveContentStillBlocked": { "const": true }
       }
     },
     "items": {
@@ -78,6 +95,18 @@
         "meaning": { "type": "string", "minLength": 20 }
       }
     },
+    "reviewOrigin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["recordId", "originalState", "failedGates", "sourceRecordStatus", "recordType"],
+      "properties": {
+        "recordId": { "type": "string", "minLength": 1 },
+        "originalState": { "type": "string", "minLength": 1 },
+        "failedGates": { "type": "array", "items": { "type": "string" } },
+        "sourceRecordStatus": { "type": "string", "minLength": 1 },
+        "recordType": { "type": "string", "minLength": 1 }
+      }
+    },
     "item": {
       "type": "object",
       "additionalProperties": false,
@@ -105,8 +134,10 @@
         "title": { "type": "string", "minLength": 8 },
         "classification": { "const": "ai_speculative_conclusion" },
         "status": {
-          "enum": ["evidence-supported", "developing", "weakened", "rejected"]
+          "enum": ["evidence-supported", "developing", "unverified", "weakened", "rejected"]
         },
+        "publicationState": { "enum": ["auto-published-from-review-queue"] },
+        "reviewOrigin": { "$ref": "#/$defs/reviewOrigin" },
         "confidence": { "$ref": "#/$defs/confidence" },
         "conclusion": { "type": "string", "minLength": 40 },
         "documentedSupport": {
@@ -141,7 +172,9 @@
         },
         "criminalConductEstablished": { "const": false },
         "humanReviewed": { "type": "boolean" },
+        "autoPublished": { "type": "boolean" },
         "generatedAt": { "type": "string", "format": "date-time" },
+        "autoPublishedAt": { "type": "string", "format": "date-time" },
         "lastReviewedAt": {
           "oneOf": [
             { "type": "null" },
@@ -149,7 +182,13 @@
           ]
         },
         "boundary": { "type": "string", "minLength": 40 }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "publicationState": { "const": "auto-published-from-review-queue" } }, "required": ["publicationState"] },
+          "then": { "required": ["reviewOrigin", "autoPublished", "autoPublishedAt"] }
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:24:29.739Z",
+  "failures": [],
+  "sessionModel": "Domain-wide v2 HttpOnly session with temporary legacy-cookie read fallback; existing host-only sessions remain valid on their current host.",
+  "loginModel": "www canonicalizes to the apex before a same-origin credentialed magic-link request.",
+  "logoutModel": "D1 session revoked and both v2 plus legacy cookies cleared.",
+  "postingModel": "Verified member session -> D1 insert -> exact D1 read-back -> success response.",
+  "persistenceModel": "Cloudflare D1 MEMBERS_DB.forum_posts remains authoritative across all three boards.",
+  "pageModel": "Main, speculation and Epstein boards share one free verified-member posting contract; the obsolete paid Signal Pass is removed before every production copy.",
+  "boundary": "The regression fails if login can hit CORS, the browser omits credentials, an existing session is discarded, logout leaves a cookie active, D1 silently ignores a write, a page can show success without read-after-write confirmation, or a legacy paid posting control returns."
+}

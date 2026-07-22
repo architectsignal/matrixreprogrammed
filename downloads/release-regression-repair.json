@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:23:07.212Z",
+  "changed": [
+    "forum.js",
+    "src/worker.js",
+    "src/worker-forum-persistence.js"
+  ],
+  "repairs": [
+    "timeline accessible fallback contract",
+    "D1-only forum copy and markers",
+    "verified-member Epstein board generator",
+    "homepage main-archive anchor",
+    "passwordless session cookie compatibility",
+    "D1 forum insertion marker"
+  ],
+  "boundary": "The repair preserves capped timeline rendering, secure passwordless sessions, strict D1 persistence and evidence boundaries; it does not re-enable browser-only posts or paid Signal Pass unlocking."
+}

@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-20T06:34:10.949Z
+Updated: 2026-07-22T06:11:29.038Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -32,7 +32,7 @@ Highest evidence: charged / sued
 
 Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Court of Appeals of North Carolina
+## Supreme Court of Pennsylvania
 
 Score: 184
 
@@ -40,7 +40,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Supreme Court of Pennsylvania deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Supreme Court of Rhode Island
 
@@ -82,6 +82,16 @@ Highest evidence: charged / sued
 
 Reading: 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## 23 WAP 2023
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## 25-113
 
 Score: 179
@@ -92,16 +102,6 @@ Highest evidence: charged / sued
 
 Reading: 25-113 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## 25-581
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## A170747M
 
 Score: 179
@@ -111,16 +111,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Biddle v. Biddle
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
 
@@ -151,6 +141,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Punxsutawney Hunting Club v. PGC
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Punxsutawney Hunting Club v. PGC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Sawas v. Elzanaty
 
@@ -201,56 +201,6 @@ Level: high public-record exposure
 Highest evidence: documented association
 
 Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Federal Procurement Policy Office
-
-Score: 79
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Federal Procurement Policy Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Defense Department
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## General Services Administration
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: General Services Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Management and Budget Office
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## National Aeronautics and Space Administration
-
-Score: 60
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## AAPL
 
@@ -381,4 +331,14 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Securities and Exchange Commission
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Securities and Exchange Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 

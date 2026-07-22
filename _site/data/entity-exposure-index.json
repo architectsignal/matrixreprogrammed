@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:34:10.949Z",
+  "updated": "2026-07-22T06:11:29.038Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -224,8 +224,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "court-of-appeals-of-north-carolina",
-      "name": "Court of Appeals of North Carolina",
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
       "exposure_score": 184,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -234,8 +234,8 @@
       ],
       "records": [
         {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -245,8 +245,8 @@
           ]
         },
         {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -260,13 +260,13 @@
       ],
       "relationships": [
         {
-          "with": "Biddle v. Biddle",
+          "with": "Punxsutawney Hunting Club v. PGC",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "25-581",
+          "with": "23 WAP 2023",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -276,12 +276,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Court of Appeals of North Carolina across courtlistener-court-records.",
+        "Watch Supreme Court of Pennsylvania across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Court of Appeals of North Carolina."
+        "Watch courtlistener-court-records for follow-up records involving Supreme Court of Pennsylvania."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Supreme Court of Pennsylvania deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -526,6 +526,66 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Punxsutawney Hunting Club v. PGC",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Supreme Court of Pennsylvania",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 23 WAP 2023 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 23 WAP 2023."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
       "id": "25-113",
       "name": "25-113",
       "exposure_score": 179,
@@ -586,66 +646,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "25-581",
-      "name": "25-581",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Biddle v. Biddle",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Court of Appeals of North Carolina",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch 25-581 across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 25-581."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "a170747m",
       "name": "A170747M",
       "exposure_score": 179,
@@ -703,66 +703,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "biddle-v-biddle",
-      "name": "Biddle v. Biddle",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Biddle v. Biddle",
-          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Court of Appeals of North Carolina",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "25-581",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Biddle v. Biddle across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Biddle v. Biddle."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -943,6 +883,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Supreme Court of Pennsylvania",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "23 WAP 2023",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Punxsutawney Hunting Club v. PGC across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Punxsutawney Hunting Club v. PGC."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Punxsutawney Hunting Club v. PGC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -1249,334 +1249,6 @@
       ],
       "exposure_level": "high public-record exposure",
       "public_reading": "Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "federal-procurement-policy-office",
-      "name": "Federal Procurement Policy Office",
-      "exposure_score": 79,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "Contract, procurement or public-money concentration",
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "Contract, procurement or public-money concentration",
-          "matched_terms": [
-            "procurement"
-          ]
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "federal-register-policy",
-          "record_type": "rule_or_notice",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Defense Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Federal Procurement Policy Office across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name.",
-        "Watch federal-register-policy for follow-up records involving Federal Procurement Policy Office."
-      ],
-      "exposure_level": "high public-record exposure",
-      "public_reading": "Federal Procurement Policy Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "defense-department",
-      "name": "Defense Department",
-      "exposure_score": 60,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "federal-register-policy",
-          "record_type": "rule_or_notice",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Defense Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name.",
-        "Watch federal-register-policy for follow-up records involving Defense Department."
-      ],
-      "exposure_level": "moderate public-record exposure",
-      "public_reading": "Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "general-services-administration",
-      "name": "General Services Administration",
-      "exposure_score": 60,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "federal-register-policy",
-          "record_type": "rule_or_notice",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Defense Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch General Services Administration across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name.",
-        "Watch federal-register-policy for follow-up records involving General Services Administration."
-      ],
-      "exposure_level": "moderate public-record exposure",
-      "public_reading": "General Services Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "exposure_score": 60,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "federal-register-policy",
-          "record_type": "rule_or_notice",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Defense Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Management and Budget Office across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name.",
-        "Watch federal-register-policy for follow-up records involving Management and Budget Office."
-      ],
-      "exposure_level": "moderate public-record exposure",
-      "public_reading": "Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "exposure_score": 60,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "federal-register-policy",
-          "record_type": "rule_or_notice",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Defense Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch National Aeronautics and Space Administration across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name.",
-        "Watch federal-register-policy for follow-up records involving National Aeronautics and Space Administration."
-      ],
-      "exposure_level": "moderate public-record exposure",
-      "public_reading": "National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -2180,6 +1852,45 @@
       ],
       "exposure_level": "moderate public-record exposure",
       "public_reading": "Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "securities-and-exchange-commission",
+      "name": "Securities and Exchange Commission",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Securities and Exchange Commission across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Securities and Exchange Commission."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Securities and Exchange Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     }
   ]

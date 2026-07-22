@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:23:01.747Z",
+  "changed": {
+    "emailWorker": false,
+    "wranglerToml": false,
+    "wranglerJsonc": false
+  },
+  "safeguards": {
+    "verifiedRepeatSignupPreserved": true,
+    "pendingVerifiedRecoverySupported": true,
+    "runtimeRecoveryBeforeCampaign": true,
+    "explicitUnsubscribeAndSuppressionsPreserved": true,
+    "hourlyIdempotentCatchUp": true,
+    "dailyCron": "5 6 * * *",
+    "weeklyCron": "15 7 * * 1",
+    "catchUpCron": "35 * * * *"
+  }
+}

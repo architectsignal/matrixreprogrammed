@@ -1,14 +1,47 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T06:37:26.479Z",
+  "generatedAt": "2026-07-22T06:24:29.755Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
     "stdout": "Membership Daily Control Brief preference form patched: already current; newsletter runtime verified.\nMembership page restored across 4 source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\n",
     "stderr": ""
   },
+  "forumRepairResults": [
+    {
+      "script": "scripts/repair-forum-member-posting.js",
+      "status": 0,
+      "stdout": "Forum member posting repair applied: forum.js, forum.html, dark-speculation-forum.html, epstein-alive-board.html, member-login.html.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-login-canonical.js",
+      "status": 0,
+      "stdout": "Forum login canonical repair applied.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-session-compatibility.js",
+      "status": 0,
+      "stdout": "Forum session compatibility repair applied to forum.js.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-page-consistency.js",
+      "status": 0,
+      "stdout": "Forum page consistency repair passed: dark-speculation-forum.html.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/forum-member-posting-test.js",
+      "status": 0,
+      "stdout": "Forum login canonical repair already current.\nForum session compatibility repair already current.\nForum page consistency repair passed: already current.\nFORUM MEMBER POSTING TEST PASSED\n",
+      "stderr": ""
+    }
+  ],
   "workerEntrypoint": "src/worker-production.js",
-  "forumStorage": "Cloudflare D1 authoritative with KV compatibility/recovery only",
+  "forumStorage": "Cloudflare D1 authoritative with strict insert and exact read-after-write confirmation; KV compatibility/recovery only",
+  "forumAccess": "verified free member session across main, speculation and Epstein boards",
   "paymentStatus": "runtime-gated-dashboard-managed",
-  "boundary": "PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked."
+  "boundary": "Late generators are repaired before this audit. PayPal remains runtime-gated and forum success is impossible without authenticated D1 write/read proof."
 }

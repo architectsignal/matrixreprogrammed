@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-20T06:35:23.849Z",
+  "updated": "2026-07-22T06:22:00.896Z",
   "title": "Deep Daily Control Brief",
   "boundary": "This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.",
   "mainConclusion": {
@@ -79,8 +79,8 @@
     {
       "rank": 5,
       "title": "Top institution lane",
-      "text": "World Bank is the strongest institution route in current data.",
-      "route": "institution-briefs/world-bank.html",
+      "text": "United Nations is the strongest institution route in current data.",
+      "route": "institution-briefs/united-nations.html",
       "evidenceStrength": "Review",
       "readerAction": "Open the route, then check the missing-record queue before treating the pattern as settled."
     },
@@ -215,7 +215,7 @@
       "score": 100,
       "route": "institution-briefs/world-bank.html",
       "layer": "policy-and-institutions",
-      "why": "high priority"
+      "why": "active watch"
     },
     {
       "name": "International Monetary Fund",
@@ -239,7 +239,7 @@
       "score": 100,
       "route": "institution-briefs/european-commission.html",
       "layer": "policy-and-institutions",
-      "why": "high priority"
+      "why": "active watch"
     },
     {
       "name": "NATO",
@@ -298,6 +298,14 @@
       "why": "elite priority"
     },
     {
+      "name": "Mark Zuckerberg",
+      "type": "profile route",
+      "score": 100,
+      "route": "billionaire-briefs/mark-zuckerberg.html",
+      "layer": "capital-and-ownership",
+      "why": "active watch"
+    },
+    {
       "name": "Blackwater / Xe / Academi / Constellis lineage",
       "type": "contractor route",
       "score": 100,
@@ -328,14 +336,6 @@
       "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "layer": "execution-and-contracts",
       "why": "seed contractor profile"
-    },
-    {
-      "name": "Palantir government platforms",
-      "type": "contractor route",
-      "score": 100,
-      "route": "contractor-briefs/palantir-government-platforms.html",
-      "layer": "execution-and-contracts",
-      "why": "active contractor watch"
     }
   ],
   "sourceRegistryRoutes": [

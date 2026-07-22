@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "updated": "2026-07-21T07:58:31.901Z",
+  "updated": "2026-07-22T06:21:45.232Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 121,
-    "edges": 151,
+    "nodes": 117,
+    "edges": 134,
     "topNodes": 25
   },
   "top": [
@@ -24,12 +24,12 @@
       "missingPressure": 16,
       "contradictionPressure": 0,
       "records": [
+        "Punxsutawney Hunting Club v. PGC",
         "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
         "Sawas v. Elzanaty",
         "People v. Brim",
         "The New York and Presbyterian Hospital v. New York State Nurses Association",
-        "Matter of Pagliughi",
-        "Biddle v. Biddle"
+        "Matter of Pagliughi"
       ],
       "missing": [
         "Primary record route",
@@ -545,129 +545,6 @@
       "summary": "SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
-      "id": "digital-id-and-access-systems",
-      "name": "Digital ID and access systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "identity-access",
-        "ai-data",
-        "public-private-contracts"
-      ],
-      "score": 78,
-      "centrality": 9,
-      "evidenceConfidence": 9,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "health-data-and-emergency-systems",
-      "name": "Health data and emergency systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "health",
-        "identity-access",
-        "public-private-contracts"
-      ],
-      "score": 78,
-      "centrality": 9,
-      "evidenceConfidence": 9,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Health data and emergency systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "foundation-and-ngo-policy-influence",
-      "name": "Foundation and NGO policy influence",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "foundations-ngos",
-        "education",
-        "health"
-      ],
-      "score": 78,
-      "centrality": 9,
-      "evidenceConfidence": 9,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Foundation and NGO policy influence is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
       "id": "united-nations",
       "name": "United Nations",
       "types": [
@@ -709,84 +586,46 @@
       "summary": "United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
-      "id": "world-bank",
-      "name": "World Bank",
+      "id": "elon-musk",
+      "name": "Elon Musk",
       "types": [
-        "institution signal",
-        "institution"
+        "elite network profile"
       ],
       "layers": [
-        "institution",
-        "money",
-        "foundations-ngos",
+        "ai-data",
+        "media-narrative",
+        "security",
+        "energy",
         "public-private-contracts"
       ],
-      "score": 74,
-      "centrality": 3,
+      "score": 75,
+      "centrality": 5,
       "evidenceConfidence": 10,
-      "missingPressure": 24,
+      "missingPressure": 20,
       "contradictionPressure": 0,
       "records": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+        "Electronic Delivery of Information Under the Federal Securities Laws",
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Punxsutawney Hunting Club v. PGC"
       ],
       "missing": [
-        "Funding route",
-        "Board / leadership record",
-        "Partner companies",
-        "Procurement or grant route",
-        "Legal, audit or oversight record",
-        "Counter-source route"
+        "Current beneficial ownership and voting-control record where relevant",
+        "Public contracts touching the ecosystem",
+        "Foundation grant routes where relevant",
+        "Lobbying or political funding routes where relevant",
+        "Legal/regulatory records and counter-sources"
       ],
       "watch": [
-        "Policy changes",
-        "Procurement records",
-        "Partner announcements",
-        "Legal or oversight records"
+        "New filings",
+        "New contracts",
+        "New court or regulatory records",
+        "New foundation or policy-route records"
       ],
       "links": [
-        "institution-control-tracker.html"
+        "billionaire-control-tracker.html"
       ],
-      "summary": "World Bank is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "european-commission",
-      "name": "European Commission",
-      "types": [
-        "institution signal",
-        "institution"
-      ],
-      "layers": [
-        "institution",
-        "identity-access",
-        "migration",
-        "public-private-contracts"
-      ],
-      "score": 74,
-      "centrality": 3,
-      "evidenceConfidence": 10,
-      "missingPressure": 24,
-      "contradictionPressure": 0,
-      "records": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
-      ],
-      "missing": [
-        "Funding route",
-        "Board / leadership record",
-        "Partner companies",
-        "Procurement or grant route",
-        "Legal, audit or oversight record",
-        "Counter-source route"
-      ],
-      "watch": [
-        "Policy changes",
-        "Procurement records",
-        "Partner announcements",
-        "Legal or oversight records"
-      ],
-      "links": [
-        "institution-control-tracker.html"
-      ],
-      "summary": "European Commission is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "world-economic-forum",
@@ -865,6 +704,44 @@
       "summary": "World Health Organization is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
+      "id": "world-bank",
+      "name": "World Bank",
+      "types": [
+        "institution signal",
+        "institution"
+      ],
+      "layers": [
+        "institution",
+        "money",
+        "foundations-ngos",
+        "public-private-contracts"
+      ],
+      "score": 73,
+      "centrality": 3,
+      "evidenceConfidence": 9,
+      "missingPressure": 24,
+      "contradictionPressure": 0,
+      "records": [],
+      "missing": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "links": [
+        "institution-control-tracker.html"
+      ],
+      "summary": "World Bank is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
       "id": "international-monetary-fund",
       "name": "International Monetary Fund",
       "types": [
@@ -941,6 +818,44 @@
       "summary": "Federal Reserve is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
+      "id": "european-commission",
+      "name": "European Commission",
+      "types": [
+        "institution signal",
+        "institution"
+      ],
+      "layers": [
+        "institution",
+        "identity-access",
+        "migration",
+        "public-private-contracts"
+      ],
+      "score": 73,
+      "centrality": 3,
+      "evidenceConfidence": 9,
+      "missingPressure": 24,
+      "contradictionPressure": 0,
+      "records": [],
+      "missing": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "links": [
+        "institution-control-tracker.html"
+      ],
+      "summary": "European Commission is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
       "id": "nato",
       "name": "NATO",
       "types": [
@@ -979,85 +894,6 @@
       "summary": "NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
-      "id": "elon-musk",
-      "name": "Elon Musk",
-      "types": [
-        "elite network profile"
-      ],
-      "layers": [
-        "ai-data",
-        "media-narrative",
-        "security",
-        "energy",
-        "public-private-contracts"
-      ],
-      "score": 73,
-      "centrality": 5,
-      "evidenceConfidence": 8,
-      "missingPressure": 20,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies"
-      ],
-      "missing": [
-        "Current beneficial ownership and voting-control record where relevant",
-        "Public contracts touching the ecosystem",
-        "Foundation grant routes where relevant",
-        "Lobbying or political funding routes where relevant",
-        "Legal/regulatory records and counter-sources"
-      ],
-      "watch": [
-        "New filings",
-        "New contracts",
-        "New court or regulatory records",
-        "New foundation or policy-route records"
-      ],
-      "links": [
-        "billionaire-control-tracker.html"
-      ],
-      "summary": "Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "private-contractor-power",
-      "name": "Private contractor power",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "security",
-        "war",
-        "public-private-contracts"
-      ],
-      "score": 68,
-      "centrality": 7,
-      "evidenceConfidence": 7,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
       "id": "jeff-bezos",
       "name": "Jeff Bezos",
       "types": [
@@ -1069,12 +905,13 @@
         "public-private-contracts",
         "security"
       ],
-      "score": 65,
+      "score": 66,
       "centrality": 4,
-      "evidenceConfidence": 7,
+      "evidenceConfidence": 8,
       "missingPressure": 20,
       "contradictionPressure": 0,
       "records": [
+        "Electronic Delivery of Information Under the Federal Securities Laws",
         "AMAZON COM INC (AMZN)"
       ],
       "missing": [
@@ -1093,7 +930,165 @@
       "links": [
         "billionaire-control-tracker.html"
       ],
-      "summary": "Jeff Bezos is ranked 65/100 because of 4 relationship route(s), 4 control layer(s), 1 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Jeff Bezos is ranked 66/100 because of 4 relationship route(s), 4 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "digital-id-and-access-systems",
+      "name": "Digital ID and access systems",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "identity-access",
+        "ai-data",
+        "public-private-contracts"
+      ],
+      "score": 62,
+      "centrality": 5,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Electronic Delivery of Information Under the Federal Securities Laws",
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Digital ID and access systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "health-data-and-emergency-systems",
+      "name": "Health data and emergency systems",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "health",
+        "identity-access",
+        "public-private-contracts"
+      ],
+      "score": 62,
+      "centrality": 5,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Electronic Delivery of Information Under the Federal Securities Laws",
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Health data and emergency systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "foundation-and-ngo-policy-influence",
+      "name": "Foundation and NGO policy influence",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "foundations-ngos",
+        "education",
+        "health"
+      ],
+      "score": 62,
+      "centrality": 5,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Electronic Delivery of Information Under the Federal Securities Laws",
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Foundation and NGO policy influence is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "mark-zuckerberg",
+      "name": "Mark Zuckerberg",
+      "types": [
+        "elite network profile"
+      ],
+      "layers": [
+        "media-narrative",
+        "ai-data",
+        "identity-access"
+      ],
+      "score": 61,
+      "centrality": 4,
+      "evidenceConfidence": 6,
+      "missingPressure": 20,
+      "contradictionPressure": 0,
+      "records": [],
+      "missing": [
+        "Current beneficial ownership and voting-control record where relevant",
+        "Public contracts touching the ecosystem",
+        "Foundation grant routes where relevant",
+        "Lobbying or political funding routes where relevant",
+        "Legal/regulatory records and counter-sources"
+      ],
+      "watch": [
+        "New filings",
+        "New contracts",
+        "New court or regulatory records",
+        "New foundation or policy-route records"
+      ],
+      "links": [
+        "billionaire-control-tracker.html"
+      ],
+      "summary": "Mark Zuckerberg is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     }
   ],
   "edges": [
@@ -1582,6 +1577,13 @@
     },
     {
       "from": "digital-id-and-access-systems",
+      "to": "securities-and-exchange-commission",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "digital-id-and-access-systems",
       "to": "homeland-security-department",
       "type": "subject entity route",
       "weight": 2,
@@ -1609,41 +1611,6 @@
       "source": "subject brief"
     },
     {
-      "from": "digital-id-and-access-systems",
-      "to": "management-and-budget-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "federal-procurement-policy-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "defense-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "general-services-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
       "from": "private-contractor-power",
       "to": "homeland-security-department",
       "type": "subject entity route",
@@ -1653,41 +1620,6 @@
     {
       "from": "private-contractor-power",
       "to": "nuclear-regulatory-commission",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "management-and-budget-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "federal-procurement-policy-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "defense-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "general-services-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "national-aeronautics-and-space-administration",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1722,6 +1654,13 @@
     },
     {
       "from": "health-data-and-emergency-systems",
+      "to": "securities-and-exchange-commission",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "health-data-and-emergency-systems",
       "to": "homeland-security-department",
       "type": "subject entity route",
       "weight": 2,
@@ -1749,36 +1688,22 @@
       "source": "subject brief"
     },
     {
-      "from": "health-data-and-emergency-systems",
-      "to": "management-and-budget-office",
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "punxsutawney-hunting-club-v-pgc",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
-      "from": "health-data-and-emergency-systems",
-      "to": "federal-procurement-policy-office",
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-pennsylvania",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
-      "from": "health-data-and-emergency-systems",
-      "to": "defense-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "general-services-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "national-aeronautics-and-space-administration",
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "23-wap-2023",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1882,22 +1807,8 @@
       "source": "subject brief"
     },
     {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "biddle-v-biddle",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "court-of-appeals-of-north-carolina",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "25-581",
+      "from": "foundation-and-ngo-policy-influence",
+      "to": "securities-and-exchange-commission",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1926,41 +1837,6 @@
     {
       "from": "foundation-and-ngo-policy-influence",
       "to": "nuclear-regulatory-commission",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "management-and-budget-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "federal-procurement-policy-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "defense-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "general-services-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "national-aeronautics-and-space-administration",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2285,11 +2161,11 @@
       ]
     },
     {
-      "entity": "Digital ID and access systems",
+      "entity": "United Nations",
       "priority": "amber",
-      "why": "Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "why": "United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
-        "subject-briefs.html",
+        "institution-control-tracker.html",
         "evidence-vault.html",
         "daily-missing-records.html",
         "search.html"

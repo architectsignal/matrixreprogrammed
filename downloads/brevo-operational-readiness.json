@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-20T06:36:12.995Z",
+  "generatedAt": "2026-07-22T06:23:01.749Z",
   "phase": "controlled-automation-live",
   "status": "automation-and-transactional-ready",
   "checks": {
@@ -26,6 +26,9 @@
     "reusableMarketingActionLinks": true,
     "zeroRecipientCampaignCompletion": true,
     "scheduledDailyAndWeekly": true,
+    "catchUpSchedulerPresent": true,
+    "verifiedPendingRecoveryPresent": true,
+    "repeatSignupPreservesVerification": true,
     "suppressionCheckedBeforeSend": true,
     "marketingAutomationOn": true,
     "transactionalDeliveryOn": true,
@@ -37,7 +40,8 @@
     "replyToEmailConfigured": true,
     "replyToNameConfigured": true,
     "dailyCronConfigured": true,
-    "weeklyCronConfigured": true
+    "weeklyCronConfigured": true,
+    "catchUpCronConfigured": true
   },
   "currentSafetyState": {
     "marketingAutomation": true,
@@ -50,6 +54,8 @@
     "retryQuarantineBefore": "2026-07-18T00:00:00.000Z",
     "manualRetryQuarantineAvailable": true,
     "automaticRetryQuarantineAvailable": true,
+    "verifiedSubscriberRecovery": true,
+    "repeatSignupPreservation": true,
     "dailyCampaignSource": "/data/daily-brain-brief.json",
     "weeklyCampaignSource": "/data/weekly-investigation-conclusions.json",
     "perRecipientUnsubscribe": true
@@ -58,6 +64,7 @@
     "enabled": true,
     "dailyUtc": "06:05",
     "weeklyUtc": "Monday 07:15",
+    "catchUpUtc": "hourly at minute 35 after the normal delivery boundary",
     "franceSummer": {
       "daily": "08:05",
       "weekly": "Monday 09:15"
@@ -77,6 +84,7 @@
     "Preserve explicit consent, per-recipient preferences, unsubscribe and suppression controls.",
     "Use D1 outbox idempotency and retry quarantine for every delivery.",
     "Keep personalized report generation bounded to 100 recipients per scheduled execution.",
+    "Recover verified pending records only when latest consent is granted and no active suppression exists.",
     "Withhold unsupported claims when source bundles contain no usable evidence."
   ],
   "boundary": "Daily and weekly report automation is enabled only through the verified D1 membership, preference, suppression, idempotency and evidence-bound delivery path. Transactional account email remains independently enabled."

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-20T06:35:12.000Z
-Live Intel source window: 2026-07-20T06:35:02.861Z
-Tracked cards: 774
-Cards with current matched records: 111
-Cards with no new verified record: 663
+Generated: 2026-07-22T06:21:43.298Z
+Live Intel source window: 2026-07-22T06:21:31.095Z
+Tracked cards: 873
+Cards with current matched records: 102
+Cards with no new verified record: 771
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -72,6 +72,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 - undated — 2025-0045-Appeal. — Entity Observation
 
+## 23 WAP 2023
+- Route: entity-timelines/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-briefs/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-exposure/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
 ## 25-113
 - Route: entity-timelines/25-113.html
 - Status: no-new-verified-record-in-current-window
@@ -98,18 +119,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 25-581
 - Route: entity-timelines/25-581.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 25-581
-- Route: entity-briefs/25-581.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 25-581
-- Route: entity-exposure/25-581.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -155,6 +164,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AAPL
 - Route: entity-exposure/aapl.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Abigail Johnson
+- Route: follow-the-money/people/abigail-johnson.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -231,6 +246,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Alain Wertheimer
+- Route: follow-the-money/people/alain-wertheimer.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Albrecht family
 - Route: power-families/albrecht-family.html
 - Status: no-new-verified-record-in-current-window
@@ -255,6 +276,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Alexey Mordashov family
+- Route: follow-the-money/people/alexey-mordashov-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Alice Walton
+- Route: follow-the-money/people/alice-walton.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Aliko Dangote
+- Route: follow-the-money/people/aliko-dangote.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## ALPHABET INC.
 - Route: entity-timelines/alphabet-inc.html
 - Status: current-records-matched
@@ -275,6 +314,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 1
 - Latest record: none in current window
 - undated — Alphabet Inc. — Entity Observation
+
+## Amancio Ortega
+- Route: follow-the-money/people/amancio-ortega.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Amazon
 - Route: institutions/amazon.html
@@ -352,6 +397,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Andrea Pignataro
+- Route: follow-the-money/people/andrea-pignataro.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Andreas von Bechtolsheim family
+- Route: follow-the-money/people/andreas-von-bechtolsheim-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Andrew Tate
 - Route: controlled-opposition/andrew-tate.html
 - Status: no-new-verified-record-in-current-window
@@ -373,8 +430,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## António Guterres
 - Route: top-52/ant-nio-guterres.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-17T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
 - 2026-07-17T12:00:00.000Z — Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 - 2026-07-15T12:00:00.000Z — Gulf crisis: Guterres calls for de-escalation, warns against return to full-on war — https://news.un.org/feed/view/en/story/2026/07/1167949
 
@@ -607,6 +665,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Bernard Arnault family
+- Route: follow-the-money/people/bernard-arnault-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Bettencourt Meyers family
 - Route: power-families/bettencourt-meyers-family.html
 - Status: no-new-verified-record-in-current-window
@@ -621,24 +685,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## BIDDLE V. BIDDLE
 - Route: entity-timelines/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
-
-## BIDDLE V. BIDDLE
-- Route: entity-briefs/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
-
-## BIDDLE V. BIDDLE
-- Route: entity-exposure/biddle-v-biddle.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Biddle v. Biddle — Entity Observation
 
 ## Bilderberg Group
 - Route: institutions/bilderberg-group.html
@@ -648,6 +697,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Bilderberg Meetings
 - Route: secret-societies/bilderberg-meetings.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Bill Gates
+- Route: follow-the-money/people/bill-gates.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -979,10 +1034,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## CARD DOSSIER STANDARD.
 - Route: card-dossier-standard.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-16T04:11:50.000Z
 - 2026-07-16T04:11:50.000Z — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK) — https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-- 2026-07-15T12:09:02.000Z — Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK) — https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
 
 ## CARD DOWNLOADS.
 - Route: card-downloads.html
@@ -1010,6 +1064,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Cargill-MacMillan family
 - Route: power-families/cargill-macmillan-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Carlos Slim Helu family
+- Route: follow-the-money/people/carlos-slim-helu-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1116,6 +1176,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Changpeng Zhao
+- Route: follow-the-money/people/changpeng-zhao.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Charles Koch family
+- Route: follow-the-money/people/charles-koch-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Charlie Kirk
 - Route: controlled-opposition/charlie-kirk.html
 - Status: no-new-verified-record-in-current-window
@@ -1202,6 +1274,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Codex Alimentarius Commission
 - Route: institutions/codex-alimentarius-commission.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Colin Huang
+- Route: follow-the-money/people/colin-huang.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1313,24 +1391,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-timelines/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
-
-## COURT OF APPEALS OF NORTH CAROLINA
-- Route: entity-briefs/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
-
-## COURT OF APPEALS OF NORTH CAROLINA
-- Route: entity-exposure/court-of-appeals-of-north-carolina.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Court of Appeals of North Carolina — Entity Observation
 
 ## Cox family
 - Route: power-families/cox-family.html
@@ -1368,8 +1431,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Cyrus Poonawalla
+- Route: follow-the-money/people/cyrus-poonawalla.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## DAILY COMMAND BRIEF
 - Route: daily-command-brief.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Daniel Gilbert
+- Route: follow-the-money/people/daniel-gilbert.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1394,24 +1469,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## DEFENSE DEPARTMENT
 - Route: entity-timelines/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Defense Department — Entity Observation
-
-## DEFENSE DEPARTMENT
-- Route: entity-briefs/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Defense Department — Entity Observation
-
-## DEFENSE DEPARTMENT
-- Route: entity-exposure/defense-department.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Defense Department — Entity Observation
 
 ## Del Bigtree
 - Route: controlled-opposition/del-bigtree.html
@@ -1437,6 +1497,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Dieter Schwarz
+- Route: follow-the-money/people/dieter-schwarz.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Digital euro legislative package
 - Route: policy/digital-euro-legislative-package.html
 - Status: no-new-verified-record-in-current-window
@@ -1451,6 +1517,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Digital public infrastructure policies
 - Route: policy/digital-public-infrastructure-policies.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Dilip Shanghvi
+- Route: follow-the-money/people/dilip-shanghvi.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1515,6 +1587,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Eduardo Saverin
+- Route: follow-the-money/people/eduardo-saverin.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Edward Snowden
 - Route: controlled-opposition/edward-snowden.html
 - Status: no-new-verified-record-in-current-window
@@ -1523,6 +1601,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## eIDAS 2 / European Digital Identity Wallet
 - Route: policy/eidas-2-european-digital-identity-wallet.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Elaine Marshall family
+- Route: follow-the-money/people/elaine-marshall-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1552,6 +1636,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Elon Musk
+- Route: follow-the-money/people/elon-musk.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Elon Musk
 - Route: controlled-opposition/elon-musk.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -1571,6 +1661,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## ELON MUSK
 - Route: main-players/elon-musk.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Emmanuel Besnier
+- Route: follow-the-money/people/emmanuel-besnier.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1656,6 +1752,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## EPSTEIN SEARCH.
 - Route: epstein-search.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Eric Schmidt
+- Route: follow-the-money/people/eric-schmidt.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1762,6 +1864,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Eyal Ofer
+- Route: follow-the-money/people/eyal-ofer.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Fabian Society
 - Route: secret-societies/fabian-society.html
 - Status: no-new-verified-record-in-current-window
@@ -1788,24 +1896,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-timelines/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
-
-## FEDERAL PROCUREMENT POLICY OFFICE
-- Route: entity-briefs/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
-
-## FEDERAL PROCUREMENT POLICY OFFICE
-- Route: entity-exposure/federal-procurement-policy-office.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Federal Procurement Policy Office — Entity Observation
 
 ## Federal Reserve
 - Route: top-52/federal-reserve.html
@@ -1837,14 +1930,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## FOLLOW THE MONEY.
-- Route: follow-the-money.html
+## Food and Agriculture Organization
+- Route: institutions/food-and-agriculture-organization.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
-## Food and Agriculture Organization
-- Route: institutions/food-and-agriculture-organization.html
+## Francois Pinault family
+- Route: follow-the-money/people/francois-pinault-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Francoise Bettencourt Meyers family
+- Route: follow-the-money/people/francoise-bettencourt-meyers-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1937,6 +2036,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Gautam Adani
+- Route: follow-the-money/people/gautam-adani.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Gautam Adani
 - Route: top-52/gautam-adani.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -1968,24 +2073,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GENERAL SERVICES ADMINISTRATION
 - Route: entity-timelines/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — General Services Administration — Entity Observation
-
-## GENERAL SERVICES ADMINISTRATION
-- Route: entity-briefs/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — General Services Administration — Entity Observation
-
-## GENERAL SERVICES ADMINISTRATION
-- Route: entity-exposure/general-services-administration.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — General Services Administration — Entity Observation
 
 ## Geneva
 - Route: jurisdictions-of-power/geneva.html
@@ -2005,8 +2095,32 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Gerard Wertheimer
+- Route: follow-the-money/people/gerard-wertheimer.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## German Larrea Mota Velasco family
+- Route: follow-the-money/people/german-larrea-mota-velasco-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## German Marshall Fund
 - Route: think-tanks/german-marshall-fund.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Giancarlo Devasini
+- Route: follow-the-money/people/giancarlo-devasini.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Gianluigi Aponte
+- Route: follow-the-money/people/gianluigi-aponte.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2019,6 +2133,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Giorgia Meloni
 - Route: top-52/giorgia-meloni.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Giovanni Ferrero
+- Route: follow-the-money/people/giovanni-ferrero.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2084,10 +2204,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-17T23:17:00.000Z
-- 2026-07-17T23:17:00.000Z — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News — https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
-- 2026-07-17T22:44:14.000Z — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-- 2026-07-17T17:38:00.000Z — The surveillance networks cities do not have to buy - Biometric Update — https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
+- Latest record: 2026-07-21T18:38:00.000Z
+- 2026-07-21T18:38:00.000Z — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+- 2026-07-21T18:16:00.000Z — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+- 2026-07-21T17:01:51.000Z — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -2131,6 +2251,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## He Xiangjian family
+- Route: follow-the-money/people/he-xiangjian-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## HEALTH AND HUMAN SERVICES DEPARTMENT
 - Route: entity-timelines/health-and-human-services-department.html
 - Status: current-records-matched
@@ -2160,6 +2286,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Heather Heying
 - Route: controlled-opposition/heather-heying.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Henry Samueli
+- Route: follow-the-money/people/henry-samueli.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2235,6 +2367,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## ICAO digital travel credential standards
 - Route: policy/icao-digital-travel-credential-standards.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Idan Ofer
+- Route: follow-the-money/people/idan-ofer.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2366,8 +2504,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Iris Fontbona family
+- Route: follow-the-money/people/iris-fontbona-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Isle of Man
 - Route: jurisdictions-of-power/isle-of-man.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Israel Englander
+- Route: follow-the-money/people/israel-englander.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2378,8 +2528,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Jack Ma
+- Route: follow-the-money/people/jack-ma.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Jack Posobiec
 - Route: controlled-opposition/jack-posobiec.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Jacqueline Mars
+- Route: follow-the-money/people/jacqueline-mars.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2414,6 +2576,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Jay Y. Lee
+- Route: follow-the-money/people/jay-y-lee.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Jean-Louis van der Velde
+- Route: follow-the-money/people/jean-louis-van-der-velde.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Jeff Bezos
+- Route: follow-the-money/people/jeff-bezos.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Jeff Bezos
 - Route: top-52/jeff-bezos.html
 - Status: no-new-verified-record-in-current-window
@@ -2432,8 +2612,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Jeff Yass
+- Route: follow-the-money/people/jeff-yass.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Jensen Huang
+- Route: follow-the-money/people/jensen-huang.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2474,6 +2666,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Jim Walton family
+- Route: follow-the-money/people/jim-walton-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Jimmy Dore
 - Route: controlled-opposition/jimmy-dore.html
 - Status: no-new-verified-record-in-current-window
@@ -2486,6 +2684,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## John Mars
+- Route: follow-the-money/people/john-mars.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Johnson SC family
 - Route: power-families/johnson-sc-family.html
 - Status: no-new-verified-record-in-current-window
@@ -2494,6 +2698,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Jordan Peterson
 - Route: controlled-opposition/jordan-peterson.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Julia Koch family
+- Route: follow-the-money/people/julia-koch-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2524,6 +2734,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Kate Shemirani
 - Route: controlled-opposition/kate-shemirani.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Ken Griffin
+- Route: follow-the-money/people/ken-griffin.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2564,6 +2780,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Klaus-Michael Kuehne
+- Route: follow-the-money/people/klaus-michael-kuehne.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Knights of Columbus
 - Route: secret-societies/knights-of-columbus.html
 - Status: no-new-verified-record-in-current-window
@@ -2594,6 +2816,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Lakshmi Mittal
+- Route: follow-the-money/people/lakshmi-mittal.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Larry Ellison
+- Route: follow-the-money/people/larry-ellison.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Larry Ellison
 - Route: top-52/larry-ellison.html
 - Status: no-new-verified-record-in-current-window
@@ -2614,6 +2848,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Larry Fink
 - Route: top-52/larry-fink.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Larry Page
+- Route: follow-the-money/people/larry-page.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2644,6 +2884,30 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Lee Samsung family
 - Route: power-families/lee-samsung-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Lei Jun
+- Route: follow-the-money/people/lei-jun.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Len Blavatnik
+- Route: follow-the-money/people/len-blavatnik.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Leonid Mikhelson family
+- Route: follow-the-money/people/leonid-mikhelson-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Li Ka-shing
+- Route: follow-the-money/people/li-ka-shing.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2690,14 +2954,38 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Lukas Walton
+- Route: follow-the-money/people/lukas-walton.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Luxembourg
 - Route: jurisdictions-of-power/luxembourg.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
+## Lyndal Stephens Greth family
+- Route: follow-the-money/people/lyndal-stephens-greth-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Ma Huateng
+- Route: follow-the-money/people/ma-huateng.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Macau
 - Route: jurisdictions-of-power/macau.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## MacKenzie Scott
+- Route: follow-the-money/people/mackenzie-scott.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2728,24 +3016,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MANAGEMENT AND BUDGET OFFICE
 - Route: entity-timelines/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
-
-## MANAGEMENT AND BUDGET OFFICE
-- Route: entity-briefs/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
-
-## MANAGEMENT AND BUDGET OFFICE
-- Route: entity-exposure/management-and-budget-office.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — Management and Budget Office — Entity Observation
 
 ## Manhattan Institute
 - Route: think-tanks/manhattan-institute.html
@@ -2753,8 +3026,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Marilyn Simons family
+- Route: follow-the-money/people/marilyn-simons-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Marine Le Pen
 - Route: controlled-opposition/marine-le-pen.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Mark Mateschitz
+- Route: follow-the-money/people/mark-mateschitz.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2773,6 +3058,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Mark Steele
 - Route: controlled-opposition/mark-steele.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Mark Zuckerberg
+- Route: follow-the-money/people/mark-zuckerberg.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2821,6 +3112,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Martinist Order
 - Route: secret-societies/martinist-order.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Masayoshi Son
+- Route: follow-the-money/people/masayoshi-son.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2936,6 +3233,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Melinda French Gates
+- Route: follow-the-money/people/melinda-french-gates.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Mellon family
 - Route: power-families/mellon-family.html
 - Status: no-new-verified-record-in-current-window
@@ -2979,6 +3282,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Michael Bloomberg
+- Route: follow-the-money/people/michael-bloomberg.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Michael Bloomberg
 - Route: top-52/michael-bloomberg.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -2992,6 +3301,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MICHAEL BLOOMBERG
 - Route: main-players/michael-bloomberg.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Michael Dell
+- Route: follow-the-money/people/michael-dell.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Michal Strnad
+- Route: follow-the-money/people/michal-strnad.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3050,6 +3371,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Miriam Adelson
 - Route: top-52/miriam-adelson.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Miriam Adelson family
+- Route: follow-the-money/people/miriam-adelson-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3121,6 +3448,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Mukesh Ambani
+- Route: follow-the-money/people/mukesh-ambani.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Mukesh Ambani
 - Route: top-52/mukesh-ambani.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -3152,24 +3485,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
 - Route: entity-timelines/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
-
-## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
-- Route: entity-briefs/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
-
-## NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
-- Route: entity-exposure/national-aeronautics-and-space-administration.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
-- undated — National Aeronautics and Space Administration — Entity Observation
 
 ## National digital health records strategies
 - Route: policy/national-digital-health-records-strategies.html
@@ -3221,9 +3539,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## New York City
 - Route: jurisdictions-of-power/new-york-city.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-20T12:00:00.000Z
+- 2026-07-20T12:00:00.000Z — From the General Assembly to Harlem: Mandela’s call to action endures — https://news.un.org/feed/view/en/story/2026/07/1167981
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -3495,6 +3814,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Paolo Ardoino
+- Route: follow-the-money/people/paolo-ardoino.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Paris / OECD-FATF Route
 - Route: jurisdictions-of-power/paris-oecd-fatf-route.html
 - Status: no-new-verified-record-in-current-window
@@ -3553,6 +3878,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Peter Thiel
+- Route: follow-the-money/people/peter-thiel.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Peter Thiel
 - Route: top-52/peter-thiel.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
@@ -3572,6 +3903,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Peterson Institute for International Economics
 - Route: think-tanks/peterson-institute-for-international-economics.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Pham Nhat Vuong
+- Route: follow-the-money/people/pham-nhat-vuong.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Phil Knight family
+- Route: follow-the-money/people/phil-knight-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3648,6 +3991,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Prajogo Pangestu
+- Route: follow-the-money/people/prajogo-pangestu.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Priscilla Chan
 - Route: top-52/priscilla-chan.html
 - Status: no-new-verified-record-in-current-window
@@ -3696,6 +4045,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-timelines/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-exposure/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
 ## Qatar Financial Centre
 - Route: jurisdictions-of-power/qatar-financial-centre.html
 - Status: no-new-verified-record-in-current-window
@@ -3710,6 +4080,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Querini
 - Route: black-nobility/querini.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Rafaela Aponte-Diamant
+- Route: follow-the-money/people/rafaela-aponte-diamant.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3744,6 +4120,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Reinhold Wuerth family
+- Route: follow-the-money/people/reinhold-wuerth-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## RELATIONSHIP OVERLAP MAP.
+- Route: money-graph.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## RELATIONSHIP OVERLAP MAP.
+- Route: src/money-overlap-graph.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## REPUBLIC OF INDIA
 - Route: entity-timelines/republic-of-india.html
 - Status: no-new-verified-record-in-current-window
@@ -3752,18 +4146,17 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## REPUBLIC OF RWANDA
 - Route: entity-timelines/republic-of-rwanda.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
 
 ## Reuters
 - Route: institutions/reuters.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 1
 - Latest record: 2026-07-15T17:32:31.000Z
 - 2026-07-15T17:32:31.000Z — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
-- 2026-07-13T14:49:05.000Z — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters — https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
 
 ## REVIEW DASHBOARD.
 - Route: review-dashboard.html
@@ -3789,14 +4182,38 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Rick Cohen family
+- Route: follow-the-money/people/rick-cohen-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Riyadh
 - Route: jurisdictions-of-power/riyadh.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
 
+## Rob Walton family
+- Route: follow-the-money/people/rob-walton-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Robert Malone
 - Route: controlled-opposition/robert-malone.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Robert Pera
+- Route: follow-the-money/people/robert-pera.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Robin Zeng
+- Route: follow-the-money/people/robin-zeng.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3927,6 +4344,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Savitri Jindal family
+- Route: follow-the-money/people/savitri-jindal-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Savoy
 - Route: black-nobility/savoy.html
 - Status: no-new-verified-record-in-current-window
@@ -3978,6 +4401,33 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-timelines/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-briefs/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-exposure/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## Sergey Brin
+- Route: follow-the-money/people/sergey-brin.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Seychelles
 - Route: jurisdictions-of-power/seychelles.html
 - Status: no-new-verified-record-in-current-window
@@ -3992,6 +4442,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Sherri Tenpenny
 - Route: controlled-opposition/sherri-tenpenny.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Shiv Nadar
+- Route: follow-the-money/people/shiv-nadar.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4092,6 +4548,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Stefan Quandt
+- Route: follow-the-money/people/stefan-quandt.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Stephen Schwarzman
+- Route: follow-the-money/people/stephen-schwarzman.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Steve Ballmer
+- Route: follow-the-money/people/steve-ballmer.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Steve Bannon
 - Route: controlled-opposition/steve-bannon.html
 - Status: no-new-verified-record-in-current-window
@@ -4110,6 +4584,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Suleiman Kerimov family
+- Route: follow-the-money/people/suleiman-kerimov-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Sulzberger family
 - Route: power-families/sulzberger-family.html
 - Status: no-new-verified-record-in-current-window
@@ -4121,6 +4601,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-timelines/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-briefs/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-exposure/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-timelines/supreme-court-of-rhode-island.html
@@ -4149,6 +4650,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Susanne Klatten
+- Route: follow-the-money/people/susanne-klatten.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## SWIFT
 - Route: institutions/swift.html
 - Status: no-new-verified-record-in-current-window
@@ -4163,6 +4670,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SWP Berlin
 - Route: think-tanks/swp-berlin.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Tadashi Yanai family
+- Route: follow-the-money/people/tadashi-yanai-and-family.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4187,6 +4700,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## The Black File / Thirty-Three Systems
 - Route: atlas-black-file.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## THE EPSTEIN EMAIL NETWORK
+- Route: epstein-email-network.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4254,6 +4773,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Thomas Frist Jr family
+- Route: follow-the-money/people/thomas-frist-jr-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Thomas Peterffy
+- Route: follow-the-money/people/thomas-peterffy.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Thurn und Taxis
 - Route: black-nobility/thurn-und-taxis.html
 - Status: no-new-verified-record-in-current-window
@@ -4274,6 +4805,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Tony Blair
 - Route: top-52/tony-blair.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## TOP 100 FAMILY OFFICES
+- Route: follow-the-money/family-offices.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4395,27 +4932,28 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## UN Sustainable Development Goals
 - Route: policy/un-sustainable-development-goals.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Global hunger declines again but progress remains uneven across regions — https://news.un.org/feed/view/en/story/2026/07/1167987
 - 2026-07-16T12:00:00.000Z — As aid dries up, countries pledge to close the $4 trillion development gap — https://news.un.org/feed/view/en/story/2026/07/1167957
 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-19T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 - 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-19T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 - 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html
@@ -4431,6 +4969,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Urban Institute
 - Route: think-tanks/urban-institute.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Vagit Alekperov
+- Route: follow-the-money/people/vagit-alekperov.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4489,6 +5033,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Vicky Safra family
+- Route: follow-the-money/people/vicky-safra-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Visconti
 - Route: black-nobility/visconti.html
 - Status: no-new-verified-record-in-current-window
@@ -4497,6 +5047,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Vivek Ramaswamy
 - Route: controlled-opposition/vivek-ramaswamy.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Vladimir Potanin
+- Route: follow-the-money/people/vladimir-potanin.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4562,31 +5118,35 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: none in current window
 
 ## Warren Buffett
+- Route: follow-the-money/people/warren-buffett.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Warren Buffett
 - Route: top-52/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WARREN BUFFETT
 - Route: billionaire-briefs/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WARREN BUFFETT
 - Route: main-players/warren-buffett.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-14T18:33:29.000Z
-- 2026-07-14T18:33:29.000Z — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters — https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T06:24:40.000Z
+- Current matched records: 2
+- Latest record: 2026-07-21T15:27:26.000Z
+- 2026-07-21T15:27:26.000Z — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
 - 2026-07-16T06:24:40.000Z — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 
 ## WEEKLY INVESTIGATION REPORT.
@@ -4633,6 +5193,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WHO Pandemic Agreement
 - Route: policy/who-pandemic-agreement.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## William Ding
+- Route: follow-the-money/people/william-ding.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4714,7 +5280,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
@@ -4723,7 +5289,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
@@ -4732,7 +5298,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-16T12:00:00.000Z
 - 2026-07-16T12:00:00.000Z — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals — https://news.un.org/feed/view/en/story/2026/07/1167955
 - 2026-07-16T12:00:00.000Z — WHO warns DR Congo Ebola outbreak is outpacing response as Uganda reaches milestone — https://news.un.org/feed/view/en/story/2026/07/1167959
@@ -4758,9 +5324,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WRONGDOING TRACKER.
 - Route: wrongdoing-tracker.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T17:01:51.000Z
+- 2026-07-21T17:01:51.000Z — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 
 ## Xi Jinping
 - Route: top-52/xi-jinping.html
@@ -4770,6 +5337,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## York Rite Freemasonry
 - Route: secret-societies/york-rite-freemasonry.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Zhang Yiming
+- Route: follow-the-money/people/zhang-yiming.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Zheng Shuliang family
+- Route: follow-the-money/people/zheng-shuliang-and-family.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## Zhong Shanshan
+- Route: follow-the-money/people/zhong-shanshan.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

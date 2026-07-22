@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-20T06:35:31.254Z
+Updated: 2026-07-22T06:22:12.255Z
 
-Inputs: 2530
+Inputs: 2446
 
-Routed sources: 2530
+Routed sources: 2446
 
 Conclusions: 14
 
-Missing-record queue: 2530
+Missing-record queue: 2446
 
 ## Conclusions
 ### Institution dossier
@@ -33,10 +33,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### War/security route
-Conclusion: 5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.
+### Missing-record queue
+Conclusion: 5 source route(s) currently point to Missing-record queue. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Missing-record queue is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -55,21 +55,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Missing-record queue
-Conclusion: 5 source route(s) currently point to Missing-record queue. Treat this as an update-priority cluster, not proof of a final claim.
+### Jurisdictions of Power dossier
+Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Missing-record queue is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Digital ID / surveillance route
-Conclusion: 5 source route(s) currently point to Digital ID / surveillance route. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Digital ID / surveillance route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -77,10 +66,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Think Tanks dossier
-Conclusion: 5 source route(s) currently point to Think Tanks dossier. Treat this as an update-priority cluster, not proof of a final claim.
+### War/security route
+Conclusion: 5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Think Tanks dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -99,10 +88,32 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### Think Tanks dossier
+Conclusion: 5 source route(s) currently point to Think Tanks dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Think Tanks dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Financial/currency route
 Conclusion: 5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### Digital ID / surveillance route
+Conclusion: 5 source route(s) currently point to Digital ID / surveillance route. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Digital ID / surveillance route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -147,17 +158,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Jurisdictions of Power dossier
-Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

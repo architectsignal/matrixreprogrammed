@@ -1,16 +1,16 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-21T07:59:45.213Z
+Updated: 2026-07-22T06:22:33.048Z
 
-Files scanned: 4509
+Files scanned: 4769
 
-High issues: 2572
+High issues: 2611
 
 Review issues: 9
 
-Intake areas: 2422
+Intake areas: 2575
 
-Weak intake areas: 0
+Weak intake areas: 1
 
 ## High Issues
 - SITE_BUILD_STATUS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -511,4 +511,4 @@ Weak intake areas: 0
 - _site/downloads/card-live-updates.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
-None
+- follow-the-money/making-money.html: boundary=false, action=true, fallback=false

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:36:57.493Z",
+  "updated": "2026-07-22T06:23:52.924Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -15,34 +15,9 @@
       "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html"
     },
     {
-      "name": "Defense Department",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/defense-department.html"
-    },
-    {
-      "name": "Federal Procurement Policy Office",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/federal-procurement-policy-office.html"
-    },
-    {
-      "name": "General Services Administration",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/general-services-administration.html"
-    },
-    {
       "name": "Health and Human Services Department",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/health-and-human-services-department.html"
-    },
-    {
-      "name": "Management and Budget Office",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/management-and-budget-office.html"
-    },
-    {
-      "name": "National Aeronautics and Space Administration",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html"
     },
     {
       "name": "2021-00294",
@@ -53,6 +28,31 @@
       "name": "2024-07773",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/2024-07773.html"
+    },
+    {
+      "name": "2025-0045-Appeal.",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/2025-0045-appeal.html"
+    },
+    {
+      "name": "23 WAP 2023",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/23-wap-2023.html"
+    },
+    {
+      "name": "25-113",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/25-113.html"
+    },
+    {
+      "name": "A170747M",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/a170747m.html"
+    },
+    {
+      "name": "California Court of Appeal",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/california-court-of-appeal.html"
     }
   ],
   "topContractors": [
@@ -122,6 +122,11 @@
       "level": "elite priority",
       "latest_records": [
         {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association"
+        },
+        {
           "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
           "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
           "grade": "documented association"
@@ -130,11 +135,71 @@
           "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association"
+        },
+        {
+          "title": "Punxsutawney Hunting Club v. PGC",
+          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+          "grade": "charged / sued"
         }
       ],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [],
+      "relationship_candidates": [
+        {
+          "id": "punxsutawney-hunting-club-v-pgc__supreme-court-of-pennsylvania",
+          "from": "Punxsutawney Hunting Club v. PGC",
+          "to": "Supreme Court of Pennsylvania",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10933234-1"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "23-wap-2023__punxsutawney-hunting-club-v-pgc",
+          "from": "Punxsutawney Hunting Club v. PGC",
+          "to": "23 WAP 2023",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10933234-1"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",
@@ -176,6 +241,11 @@
       "control_score": 100,
       "level": "elite priority",
       "latest_records": [
+        {
+          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
+          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+          "grade": "documented association"
+        },
         {
           "title": "AMAZON COM INC (AMZN)",
           "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
@@ -684,125 +754,10 @@
         "foundations-ngos": 20,
         "public-private-contracts": 20
       },
-      "control_score": 84,
-      "level": "high priority",
-      "latest_records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        }
-      ],
-      "relationship_candidates": [
-        {
-          "id": "federal-procurement-policy-office__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Federal Procurement Policy Office",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__general-services-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
       "missing_records": [
         "Funding route",
         "Board / leadership record",
@@ -915,125 +870,10 @@
         "migration": 20,
         "public-private-contracts": 20
       },
-      "control_score": 84,
-      "level": "high priority",
-      "latest_records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        }
-      ],
-      "relationship_candidates": [
-        {
-          "id": "federal-procurement-policy-office__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Federal Procurement Policy Office",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__general-services-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
       "missing_records": [
         "Funding route",
         "Board / leadership record",
@@ -1151,39 +991,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Defense Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/defense-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Federal Procurement Policy Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/federal-procurement-policy-office.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "General Services Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/general-services-administration.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Management and Budget Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "National Aeronautics and Space Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
       "type": "entity brief"
     },
     {
@@ -1205,27 +1015,21 @@
       "type": "entity brief"
     },
     {
+      "entity": "23 WAP 2023",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/23-wap-2023.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "25-113",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/25-113.html",
       "type": "entity brief"
     },
     {
-      "entity": "25-581",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-581.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "A170747M",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/a170747m.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Biddle v. Biddle",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/biddle-v-biddle.html",
       "type": "entity brief"
     },
     {
@@ -1241,12 +1045,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "Court of Appeals of North Carolina",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
@@ -1256,6 +1054,48 @@
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/homeland-security-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Matter of Pagliughi",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/matter-of-pagliughi.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "People v. Brim",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/people-v-brim.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Punxsutawney Hunting Club v. PGC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Sawas v. Elzanaty",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/sawas-v-elzanaty.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Pennsylvania",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Rhode Island",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-rhode-island.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "type": "entity brief"
     }
   ],
@@ -1272,8 +1112,8 @@
   "missionConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Surveillance State Clock is the highest canonical pressure index at 92%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
   "controlPathways": [
     "Information, media and platform access: Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-    "Procurement and public-private implementation: Public authority can become dependent on private operators of critical infrastructure.",
     "Money, banking and payment access: Payment, custody and financial identity can make participation conditional.",
+    "Procurement and public-private implementation: Public authority can become dependent on private operators of critical infrastructure.",
     "Security, intelligence and emergency powers: Crisis and security powers can accelerate integration and become permanent.",
     "Law, treaties and standards: Common rules can turn policy preference into cross-jurisdiction operating requirements.",
     "Health, biosecurity and mobility: Health records and emergency credentials can become cross-border access controls.",
@@ -1298,7 +1138,7 @@
       "action": "Documented in the linked public record",
       "whyItMatters": "This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 11,
+      "records": 13,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1378,15 +1218,15 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "ATT MOBILITY LLC — Department of Defense",
+      "name": "F & M MICRO PRODUCTS INC — General Services Administration",
       "documentedRole": "Contract",
-      "roleGroup": "public authority and regulation",
+      "roleGroup": "corporate ownership and capital",
       "authority": "",
       "instrument": "",
       "action": "Contract",
-      "whyItMatters": "This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "whyItMatters": "This record places F & M MICRO PRODUCTS INC — General Services Administration inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 34,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1438,7 +1278,7 @@
       "action": "CourtCase",
       "whyItMatters": "This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 24,
+      "records": 27,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1456,6 +1296,159 @@
       "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
       "records": 24,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "ATT MOBILITY LLC — Department of Defense",
+      "documentedRole": "Contract",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 22,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Customs and Border Protection (CBP)",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "DOJ Disclosures",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Epstein Library",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Facebook",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Federal Bureau of Investigation (FBI)",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "House Disclosures",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "LinkedIn",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Search Full Library",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1505,91 +1498,6 @@
       "instrument": "",
       "action": "CourtCase",
       "whyItMatters": "This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Customs and Border Protection (CBP)",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "DOJ Disclosures",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Epstein Library",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Facebook",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Federal Bureau of Investigation (FBI)",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
       "records": 18,
       "sources": [
@@ -1651,40 +1559,6 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "House Disclosures",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "LinkedIn",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
       "name": "Maxwell Proffer",
       "documentedRole": "CourtCase",
       "roleGroup": "public authority and regulation",
@@ -1711,40 +1585,6 @@
       "whyItMatters": "This record places Memoranda and Correspondence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
       "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Search Full Library",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 18,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Default Judgment",
-      "documentedRole": "CourtCase",
-      "roleGroup": "public authority and regulation",
-      "authority": "",
-      "instrument": "",
-      "action": "CourtCase",
-      "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 17,
       "sources": [
         "data/entity-registry.json"
       ],

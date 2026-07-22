@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-20T06:34:14.351Z
+Updated: 2026-07-22T06:11:33.677Z
 
 ## Status
 
-- Live Intel items: 67
+- Live Intel items: 63
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -12,59 +12,59 @@ Updated: 2026-07-20T06:34:14.351Z
 
 ## Latest Items
 
-- 2026-07-19 — Haiti: Signs of hope despite gang violence and political uncertainty
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167963
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-19 — Ukraine: UN condemns overnight attack on Kyiv
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167975
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-18 — A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167974
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
+- 2026-07-21 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-17 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
+- 2026-07-21 — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-17 — The surveillance networks cities do not have to buy - Biometric Update
-  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
+- 2026-07-21 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-21 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167993
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — Djibouti: Emergency alert spotlights sharp hunger spike
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167971
+- 2026-07-21 — Critical minerals: The hidden resources powering the clean energy future
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167965
+- 2026-07-21 — DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167983
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — Hunger deepens for displaced families in Sudan’s El Obeid
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167967
+- 2026-07-21 — Global hunger declines again but progress remains uneven across regions
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167987
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167973
+- 2026-07-21 — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167989
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167970
+- 2026-07-21 — Israeli attacks on Gaza intensify amid surge of West Bank settler violence
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167991
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-17 — Henry Lucas
-  - Source: https://vault.fbi.gov/henry-lucas
+- 2026-07-21 — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167984
   - Evidence: Primary or official public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-17 — Henry Lucas Part 01
-  - Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-21 — UN refugee agency reports 144 migrants dead or missing off Mauritanian coast
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167985
   - Evidence: Primary or official public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-21 — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167992
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

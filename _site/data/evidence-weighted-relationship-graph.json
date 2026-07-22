@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-20T06:35:17.034Z",
+  "updated": "2026-07-22T06:21:50.518Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
-  "nodeCount": 135,
+  "nodeCount": 131,
   "edgeCount": 172,
   "nodes": [
     {
@@ -41,7 +41,7 @@
       "type": "institution route",
       "route": "institution-briefs/world-bank.html",
       "notes": [
-        "high priority",
+        "active watch",
         "money",
         "foundations-ngos",
         "public-private-contracts"
@@ -83,7 +83,7 @@
       "type": "institution route",
       "route": "institution-briefs/european-commission.html",
       "notes": [
-        "high priority",
+        "active watch",
         "identity-access",
         "migration",
         "public-private-contracts"
@@ -191,6 +191,21 @@
         "AWS",
         "Blue Origin",
         "Washington Post"
+      ],
+      "score": 100
+    },
+    {
+      "id": "mark-zuckerberg",
+      "layer": "capital-and-ownership",
+      "name": "Mark Zuckerberg",
+      "type": "profile route",
+      "route": "billionaire-briefs/mark-zuckerberg.html",
+      "notes": [
+        "active watch",
+        "Meta",
+        "Facebook",
+        "Instagram",
+        "WhatsApp"
       ],
       "score": 100
     },
@@ -311,21 +326,6 @@
         "Microsoft legacy",
         "health and development philanthropy",
         "health"
-      ],
-      "score": 70
-    },
-    {
-      "id": "mark-zuckerberg",
-      "layer": "capital-and-ownership",
-      "name": "Mark Zuckerberg",
-      "type": "profile route",
-      "route": "billionaire-briefs/mark-zuckerberg.html",
-      "notes": [
-        "active watch",
-        "Meta",
-        "Facebook",
-        "Instagram",
-        "WhatsApp"
       ],
       "score": 70
     },
@@ -652,66 +652,11 @@
       "score": 54
     },
     {
-      "id": "defense-department",
-      "layer": "evidence-and-records",
-      "name": "Defense Department",
-      "type": "missing record",
-      "route": "entity-briefs/defense-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "federal-procurement-policy-office",
-      "layer": "evidence-and-records",
-      "name": "Federal Procurement Policy Office",
-      "type": "missing record",
-      "route": "entity-briefs/federal-procurement-policy-office.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "general-services-administration",
-      "layer": "evidence-and-records",
-      "name": "General Services Administration",
-      "type": "missing record",
-      "route": "entity-briefs/general-services-administration.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "health-and-human-services-department",
       "layer": "evidence-and-records",
       "name": "Health and Human Services Department",
       "type": "missing record",
       "route": "entity-briefs/health-and-human-services-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "management-and-budget-office",
-      "layer": "evidence-and-records",
-      "name": "Management and Budget Office",
-      "type": "missing record",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "layer": "evidence-and-records",
-      "name": "National Aeronautics and Space Administration",
-      "type": "missing record",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -751,6 +696,17 @@
       "score": 54
     },
     {
+      "id": "23-wap-2023",
+      "layer": "evidence-and-records",
+      "name": "23 WAP 2023",
+      "type": "missing record",
+      "route": "entity-briefs/23-wap-2023.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "25-113",
       "layer": "evidence-and-records",
       "name": "25-113",
@@ -762,33 +718,11 @@
       "score": 54
     },
     {
-      "id": "25-581",
-      "layer": "evidence-and-records",
-      "name": "25-581",
-      "type": "missing record",
-      "route": "entity-briefs/25-581.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "a170747m",
       "layer": "evidence-and-records",
       "name": "A170747M",
       "type": "missing record",
       "route": "entity-briefs/a170747m.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "biddle-v-biddle",
-      "layer": "evidence-and-records",
-      "name": "Biddle v. Biddle",
-      "type": "missing record",
-      "route": "entity-briefs/biddle-v-biddle.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -811,17 +745,6 @@
       "name": "Court of Appeals for the Second Circuit",
       "type": "missing record",
       "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "court-of-appeals-of-north-carolina",
-      "layer": "evidence-and-records",
-      "name": "Court of Appeals of North Carolina",
-      "type": "missing record",
-      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -872,11 +795,33 @@
       "score": 54
     },
     {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "layer": "evidence-and-records",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "type": "missing record",
+      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "sawas-v-elzanaty",
       "layer": "evidence-and-records",
       "name": "Sawas v. Elzanaty",
       "type": "missing record",
       "route": "entity-briefs/sawas-v-elzanaty.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "layer": "evidence-and-records",
+      "name": "Supreme Court of Pennsylvania",
+      "type": "missing record",
+      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1048,6 +993,17 @@
       "score": 54
     },
     {
+      "id": "securities-and-exchange-commission",
+      "layer": "evidence-and-records",
+      "name": "Securities and Exchange Commission",
+      "type": "missing record",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "breakspear",
       "layer": "lineage-and-orders",
       "name": "Breakspear",
@@ -1206,71 +1162,11 @@
       "score": 43
     },
     {
-      "id": "feed-defense-department-confirm-the-primary-record-page-pdf-docke",
-      "layer": "evidence-and-records",
-      "name": "Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/defense-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-federal-procurement-policy-office-confirm-the-primary-record",
-      "layer": "evidence-and-records",
-      "name": "Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/federal-procurement-policy-office.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-general-services-administration-confirm-the-primary-record-p",
-      "layer": "evidence-and-records",
-      "name": "General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/general-services-administration.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
       "layer": "evidence-and-records",
       "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/health-and-human-services-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-management-and-budget-office-confirm-the-primary-record-page",
-      "layer": "evidence-and-records",
-      "name": "Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-national-aeronautics-and-space-administration-confirm-the-pr",
-      "layer": "evidence-and-records",
-      "name": "National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1314,6 +1210,18 @@
       "score": 43
     },
     {
+      "id": "feed-23-wap-2023-confirm-the-primary-record-page-pdf-docket-filin",
+      "layer": "evidence-and-records",
+      "name": "23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/23-wap-2023.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "feed-25-113-confirm-the-primary-record-page-pdf-docket-filing-awa",
       "layer": "evidence-and-records",
       "name": "25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1326,35 +1234,11 @@
       "score": 43
     },
     {
-      "id": "feed-25-581-confirm-the-primary-record-page-pdf-docket-filing-awa",
-      "layer": "evidence-and-records",
-      "name": "25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/25-581.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-a170747m-confirm-the-primary-record-page-pdf-docket-filing-a",
       "layer": "evidence-and-records",
       "name": "A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/a170747m.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-biddle-v-biddle-confirm-the-primary-record-page-pdf-docket-f",
-      "layer": "evidence-and-records",
-      "name": "Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/biddle-v-biddle.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1386,18 +1270,6 @@
       "score": 43
     },
     {
-      "id": "feed-court-of-appeals-of-north-carolina-confirm-the-primary-recor",
-      "layer": "evidence-and-records",
-      "name": "Court of Appeals of North Carolina — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-galbin-fernandez-in-his-capacity-as-the-administrator-of-the",
       "layer": "evidence-and-records",
       "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1415,6 +1287,90 @@
       "name": "Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/homeland-security-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-matter-of-pagliughi-confirm-the-primary-record-page-pdf-dock",
+      "layer": "evidence-and-records",
+      "name": "Matter of Pagliughi — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/matter-of-pagliughi.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-people-v-brim-confirm-the-primary-record-page-pdf-docket-fil",
+      "layer": "evidence-and-records",
+      "name": "People v. Brim — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/people-v-brim.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-punxsutawney-hunting-club-v-pgc-confirm-the-primary-record-p",
+      "layer": "evidence-and-records",
+      "name": "Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-sawas-v-elzanaty-confirm-the-primary-record-page-pdf-docket-",
+      "layer": "evidence-and-records",
+      "name": "Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/sawas-v-elzanaty.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-supreme-court-of-pennsylvania-confirm-the-primary-record-pag",
+      "layer": "evidence-and-records",
+      "name": "Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-supreme-court-of-rhode-island-confirm-the-primary-record-pag",
+      "layer": "evidence-and-records",
+      "name": "Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/supreme-court-of-rhode-island.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-the-new-york-and-presbyterian-hospital-v-new-york-state-nurs",
+      "layer": "evidence-and-records",
+      "name": "The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1519,6 +1475,50 @@
         "site layer"
       ],
       "score": 39
+    },
+    {
+      "id": "courts",
+      "layer": "control-rails",
+      "name": "courts",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "education",
+      "layer": "control-rails",
+      "name": "education",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "policy-forums",
+      "layer": "policy-and-institutions",
+      "name": "policy forums",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "research-institutes",
+      "layer": "policy-and-institutions",
+      "name": "research institutes",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
     }
   ],
   "edges": [

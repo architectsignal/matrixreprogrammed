@@ -1,14 +1,492 @@
 {
-  "updated": "2026-07-19T08:57:26.613Z",
+  "updated": "2026-07-21T07:44:16.592Z",
   "summary": {
     "registeredSources": 20,
-    "checkedThisRun": 20,
-    "changesThisRun": 1,
-    "retainedChanges": 25,
+    "checkedThisRun": 12,
+    "changesThisRun": 7,
+    "retainedChanges": 35,
     "unavailableSources": 0
   },
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
   "changes": [
+    {
+      "id": "cb7ce67fe443d7c98b486d34",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "8ab23c387e944478aa65f53e7f9f9f37c78a7fdb0c8b5ffc16e961b2043bb023",
+      "currentHash": "de97c9291104c921e9e5df09661fc83ea74254a42bf201546e5c4c311d6eb7d2",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Tue, 21 Jul 2026 03:44:16 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-21T03:44:16-04:00 3 - Wilson Megan R.",
+        "(0002144567) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144567-26-000002 <b>Size:</b> 28 KB 2026-07-20T21:56:24-04:00 urn:tag:sec.gov,2008:accession-number=0002144567-26-000002 3 - General Fusion Group Ltd.",
+        "(0002074850) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144567-26-000002 <b>Size:</b> 28 KB 2026-07-20T21:56:24-04:00 urn:tag:sec.gov,2008:accession-number=0002144567-26-000002 3 - Donaldson Ross M.",
+        "(0002144075) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144075-26-000002 <b>Size:</b> 35 KB 2026-07-20T21:55:54-04:00 urn:tag:sec.gov,2008:accession-number=0002144075-26-000002 3 - General Fusion Group Ltd.",
+        "(0002074850) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144075-26-000002 <b>Size:</b> 35 KB 2026-07-20T21:55:54-04:00 urn:tag:sec.gov,2008:accession-number=0002144075-26-000002 3 - Little Mark S.",
+        "(0002144486) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144486-26-000002 <b>Size:</b> 28 KB 2026-07-20T21:55:21-04:00 urn:tag:sec.gov,2008:accession-number=0002144486-26-000002 3 - General Fusion Group Ltd.",
+        "(0002074850) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002144486-26-000002 <b>Size:</b> 28 KB 2026-07-20T21:55:21-04:00 urn:tag:sec.gov,2008:accession-number=0002144486-26-000002 SCHEDULE 13D/A - Goldenwise Capital Group Ltd (0001989386) (Filed by) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001989386-26-000010 <b>Size:</b> 30 KB 2026-07-20T21:55:20-04:00 urn:tag:sec.gov,2008:accession-number=0001989386-26-000010 SCHEDULE 13D/A - Phunware, Inc.",
+        "(0001665300) (Subject) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001989386-26-000010 <b>Size:</b> 30 KB 2026-07-20T21:55:20-04:00 urn:tag:sec.gov,2008:accession-number=0001989386-26-000010 4 - Lally Robert B (0002126940) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002126940-26-000004 <b>Size:</b> 7 KB 2026-07-20T21:47:12-04:00 urn:tag:sec.gov,2008:accession-number=0002126940-26-000004 4 - ImageneBio, Inc.",
+        "(0001835579) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0002126940-26-000004 <b>Size:</b> 7 KB 2026-07-20T21:47:12-04:00 urn:tag:sec.gov,2008:accession-number=0002126940-26-000004 SCHEDULE 13D/A - BNDES Participacoes S.A.",
+        "(0001715696) (Filed by) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001140361-26-029018 <b>Size:</b> 19 KB 2026-07-20T21:42:42-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029018 SCHEDULE 13D/A - PETROBRAS - PETROLEO BRASILEIRO SA (0001119639) (Subject) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001140361-26-029018 <b>Size:</b> 19 KB 2026-07-20T21:42:42-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029018 4 - Tomasello Vickie (0001990830) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000088 <b>Size:</b> 8 KB 2026-07-20T21:36:35-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000088 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000088 <b>Size:</b> 8 KB 2026-07-20T21:36:35-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000088 4 - Patafio Frank P.",
+        "(0001586204) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000087 <b>Size:</b> 7 KB 2026-07-20T21:36:29-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000087 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000087 <b>Size:</b> 7 KB 2026-07-20T21:36:29-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000087 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000086 <b>Size:</b> 10 KB 2026-07-20T21:36:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000086 4 - Chapman Gil (0001409452) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000086 <b>Size:</b> 10 KB 2026-07-20T21:36:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000086 4 - Harrison Timothy C (0001586195) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000085 <b>Size:</b> 7 KB 2026-07-20T21:36:17-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000085 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000085 <b>Size:</b> 7 KB 2026-07-20T21:36:17-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000085 4 - Fasanella David (0001751608) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000084 <b>Size:</b> 11 KB 2026-07-20T21:36:10-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000084 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000084 <b>Size:</b> 11 KB 2026-07-20T21:36:10-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000084 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000083 <b>Size:</b> 10 KB 2026-07-20T21:36:04-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000083 4 - CATINO ANNETTE (0001222008) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000083 <b>Size:</b> 10 KB 2026-07-20T21:36:04-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000083 4 - Stahlin Paul (0001764337) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000082 <b>Size:</b> 7 KB 2026-07-20T21:35:58-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000082 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000082 <b>Size:</b> 7 KB 2026-07-20T21:35:58-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000082 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000081 <b>Size:</b> 11 KB 2026-07-20T21:35:47-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000081 4 - Connors John P Jr (0001409453) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000081 <b>Size:</b> 11 KB 2026-07-20T21:35:47-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000081 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000080 <b>Size:</b> 10 KB 2026-07-20T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000080 4 - Klein Steven M (0001409460) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000080 <b>Size:</b> 10 KB 2026-07-20T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000080 4 - Jacobs William R.",
+        "(0001565566) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000079 <b>Size:</b> 10 KB 2026-07-20T21:35:31-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000079 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000079 <b>Size:</b> 10 KB 2026-07-20T21:35:31-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000079 4 - Kulkarni Rachana A (0002007759) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000078 <b>Size:</b> 7 KB 2026-07-20T21:35:25-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000078 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000078 <b>Size:</b> 7 KB 2026-07-20T21:35:25-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000078 4 - Kessler Karen J.",
+        "(0001586206) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000077 <b>Size:</b> 8 KB 2026-07-20T21:35:21-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000077 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000077 <b>Size:</b> 8 KB 2026-07-20T21:35:21-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000077 4 - Lefkowitz Robin (0001667478) (Reporting) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000076 <b>Size:</b> 13 KB 2026-07-20T21:35:14-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000076 4 - Northfield Bancorp, Inc.",
+        "(0001493225) (Issuer) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0001493225-26-000076 <b>Size:</b> 13 KB 2026-07-20T21:35:14-04:00 urn:tag:sec.gov,2008:accession-number=0001493225-26-000076 SCHEDULE 13D/A - Q32 Bio Inc.",
+        "(0001661998) (Subject) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0000947871-26-000713 <b>Size:</b> 30 KB 2026-07-20T21:32:47-04:00 urn:tag:sec.gov,2008:accession-number=0000947871-26-000713 SCHEDULE 13D/A - ORBIMED ADVISORS LLC (0001055951) (Filed by) <b>Filed:</b> 2026-07-20 <b>AccNo:</b> 0000947871-26-000713 <b>Size:</b> 30 KB 2026-07-20T21:32:47-04:00 urn:tag:sec.gov,2008:accession-number=0000947871-26-000713"
+      ],
+      "removals": [
+        "Latest Filings - Mon, 20 Jul 2026 04:20:14 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T04:20:14-04:00 4 - Langlois Sophia J.",
+        "(0001903130) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Yoskowitz Marc J (0001617306) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Hirsch Scott (0002024619) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Zinman Jon (0002001886) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Efron Paul (0002024711) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Dorton Katina (0001617541) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4 - Bisaro Paul (0001237253) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4/A - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4/A - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4 - Jaffe Jennifer Anne (0002070626) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - Kowalski Thomas Michael (0002070708) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BREITMEYER JAMES B (0001244823) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - HERON ELAINE J (0001235471) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Watson W.",
+        "Mark (0001612372) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Wheadon David E.",
+        "(0001789507) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Prentiss Christopher B (0001717583) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - Marasco Dominic (0002053897) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MapLight Therapeutics, Inc.",
+        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - Kroeger Christopher A.",
+        "(0001658918) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - MapLight Therapeutics, Inc.",
+        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Lillie James Woodruff (0001728746) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Tross Stuart A (0001589641) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134"
+      ],
+      "additionCount": 27,
+      "removalCount": 11,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "ff1a3a77816af400f09ab95e",
+      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "1365c8795c11927e487f3a52606a500210501add394a3e3a86b59d06654fb5eb",
+      "currentHash": "b8902cb8120a874d15ecfaf26dafcd95b87ebfb7f650b0993ac18f0b8acfe9d5",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "additions": [
+        "Litigation Releases RSS Feed Search Year: -View All- 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 2008 2007 2006 2005 2004 2003 2002 2001 2000 1999 1998 1997 1996 1995 Month -View All- January February March April May June July August September October November December Date Sort descending Respondents July 20, 2026 Zan Shaikh and Bright Vision Distribution LLC, d/b/a Mining Automatic Release No.",
+        "LR-26590 See Also: SEC Complaint July 17, 2026 Jamal (“Jimmy”) Chammout; Ali El Siblani; Ali Jawad; Rabih Rakha Release No.",
+        "LR-26491 Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11916 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "removals": [
+        "Litigation Releases RSS Feed Search Year: -View All- 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 2008 2007 2006 2005 2004 2003 2002 2001 2000 1999 1998 1997 1996 1995 Month -View All- January February March April May June July August September October November December Date Sort descending Respondents July 17, 2026 Jamal (“Jimmy”) Chammout; Ali El Siblani; Ali Jawad; Rabih Rakha Release No.",
+        "24, 2026 Joel Castellanos Release No.",
+        "LR-26490 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11915 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "additionCount": 3,
+      "removalCount": 3,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "fbfb678d637444fe7b488644",
+      "title": "content changed: Federal Register — Latest Documents",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "e05251257865a2d3bc4023df38aeb6f921dd425729bbcdebef8a7702f8a87024",
+      "currentHash": "2f64f5ec1cebbeb99d7e919d8ac1cbe3175f66cbea1457b3f5cac8cff87cc78a",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQ1MDU2MDAwMDAsIjIwMjYtMTQ1OTgiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ1MDUiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "d652e1fa40dcd5dc95de9bb1",
+      "title": "content changed: USAspending.gov — Recent Contract Awards",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "6330cc14020272b6368be6022ad7137cb59274a2537dccafa45d028c006f3c64",
+      "currentHash": "f809258b500247dfea12ce229f0f321223a565e34ef714a20bbb70782e1c6ea7",
+      "httpStatus": 200,
+      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "additions": [
+        "\" ], \"page_metadata\": {}, \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"spending_level\": \"awards\" }"
+      ],
+      "removals": [
+        "\" ], \"page_metadata\": {}, \"results\": [], \"spending_level\": \"awards\" }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "58a212e4e1a93007ec5b3d6d",
+      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+      "sourceId": "treasury-ofac-recent-actions",
+      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
+      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "8bf249fd436ca0b34c518cac74192ab1f470ab6c87155132aa930107b533074f",
+      "currentHash": "f9ad607fe956f46f074ca6c22e0af57ba91d4b83471840dd6ed0c2f20d8da8c4",
+      "httpStatus": 200,
+      "finalUrl": "https://ofac.treasury.gov/recent-actions",
+      "additions": [
+        "Department of the Treasury Read the latest Treasury news Office of Foreign Assets Control A Part of Treasury's Office of Terrorism and Financial Intelligence MENU About OFAC Recent Actions Sanctions Lists Sanctions List Service Specially Designated Nationals (SDN) List Consolidated Sanctions List (Non-SDN Lists) Other OFAC Sanctions Lists Sanctions List Search Sanctions Programs Russia-related Sanctions Iran Sanctions North Korea Sanctions Cuba Sanctions Counter Narcotics Sanctions Cyber-related Sanctions Venezuela-related Sanctions Complete List of Sanctions Programs and Country Information Submit a Report Contact Us Search Enter Search Term(s): Breadcrumb Home Recent Actions Specially Designated Nationals List (SDN List) Consolidated Sanctions List (Non-SDN Lists) Additional Sanctions Lists Search OFAC&#039;s Sanctions Lists Sanctions Programs and Country Information Recent Actions OFAC License Application Page Additional OFAC Resources Frequently Asked Questions Civil Penalties and Enforcement Information OFAC Reporting System Selected General Licenses Issued by OFAC Contact OFAC Recent Actions Displaying 1 - 10 of 3132 results.",
+        "Russia-related Designations Updates July 20, 2026 - Sanctions List Updates Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran-related Designations; Iran-related and Counter Terrorism Designation Update; Issuance of Iran-related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Issuance of Democratic Republic of the Congo-related General License July 10, 2026 - General Licenses Issuance of Amended Russia-related General License and Frequently Asked Questions July 08, 2026 - General Licenses Issuance of Amended Iran-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "removals": [
+        "Department of the Treasury Read the latest Treasury news Office of Foreign Assets Control A Part of Treasury's Office of Terrorism and Financial Intelligence MENU About OFAC Recent Actions Sanctions Lists Sanctions List Service Specially Designated Nationals (SDN) List Consolidated Sanctions List (Non-SDN Lists) Other OFAC Sanctions Lists Sanctions List Search Sanctions Programs Russia-related Sanctions Iran Sanctions North Korea Sanctions Cuba Sanctions Counter Narcotics Sanctions Cyber-related Sanctions Venezuela-related Sanctions Complete List of Sanctions Programs and Country Information Submit a Report Contact Us Search Enter Search Term(s): Breadcrumb Home Recent Actions Specially Designated Nationals List (SDN List) Consolidated Sanctions List (Non-SDN Lists) Additional Sanctions Lists Search OFAC&#039;s Sanctions Lists Sanctions Programs and Country Information Recent Actions OFAC License Application Page Additional OFAC Resources Frequently Asked Questions Civil Penalties and Enforcement Information OFAC Reporting System Selected General Licenses Issued by OFAC Contact OFAC Recent Actions Displaying 1 - 10 of 3131 results.",
+        "Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran-related Designations; Iran-related and Counter Terrorism Designation Update; Issuance of Iran-related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Issuance of Democratic Republic of the Congo-related General License July 10, 2026 - General Licenses Issuance of Amended Russia-related General License and Frequently Asked Questions July 08, 2026 - General Licenses Issuance of Amended Iran-related General License July 07, 2026 - General Licenses Reminder to File the 2026 Annual Report of Blocked Property July 01, 2026 - Regulations and Guidance Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "additionCount": 2,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "eb3448928554960651da56f6",
+      "title": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+      "sourceId": "house-oversight-releases",
+      "sourceLabel": "U.S. House Committee on Oversight and Government Reform — Releases",
+      "sourceUrl": "https://oversight.house.gov/release/",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "6bd5b0365741d475d0784c32b2edb8cc92b060ef67ec22bd1c914924047a473b",
+      "currentHash": "578229120d0335622018fcae015c9973edf610c5b606cf0c80a32acd93800f4d",
+      "httpStatus": 200,
+      "finalUrl": "https://oversight.house.gov/release/",
+      "additions": [
+        "Press Releases Archive - United States House Committee on Oversight and Government Reform Skip to main content Toggle navigation Search About Chairman James Comer Full Committee Rules Committee Activity Calendar Hearings Letters Markups Reports Forums Roundtables Subcommittees Cybersecurity, Information Technology, and Government Innovation Economic Growth, Energy Policy, and Regulatory Affairs Government Operations Health Care and Financial Services Military and Foreign Affairs Federal Law Enforcement Delivering on Government Efficiency Task Force on the Declassification of Federal Secrets Task Force on Defending Constitutional Rights and Exposing Institutional Abuses Media Center Press Releases Biden Family Investigation The Bidens’ Influence Peddling Timeline COVID Origins The Overview The Biden Autopen Presidency Blow the Whistle Press Releases Filter By Post Category Post Category Cybersecurity, Information Technology, and Government Innovation Delivering on Government Efficiency Economic Growth, Energy Policy, and Regulatory Affairs Federal Law Enforcement Full Committee Government Operations Health Care and Financial Services Military and Foreign Affairs Task Force on the Declassification of Federal Secrets Month Month January February March April May June July August September October November December Year Year 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 Press Release Comer Announces Full Committee Markup to Lower Prescription Drug Prices, Strengthen Congressional D.C.",
+        "Oversight, and Improve Government Operations July 20, 2026 WASHINGTON—Today, House Committee on Oversight and Government Reform Chairman James Comer (R-Ky.) announced a markup will take place on Wednesday, July 22, 2026, at 10:00 a.m.",
+        "ET to consider legislation aimed at lowering prescription drug prices, strengthening congressional oversight over the District of Columbia, and improving the efficiency of the federal government.“The House Oversight Committee will advance commonsense legislation to hold pharmacy benefit managers ...",
+        "Press Release Gill Announces Hearing on the Future of DEI in Law Schools and the Legal Profession July 20, 2026 WASHINGTON—Task Force on Defending Constitutional Rights and Exposing Constitutional Abuses Chairman Brandon Gill (R-Texas) today announced a hearing titled “The Future of DEI in Law School Accreditation and the Legal Profession.” This hearing follows the Task Force’s Press Release Oversight Committee Releases Leon Black and Doug Band Transcripts July 17, 2026 WASHINGTON—Today, the House Committee on Oversight and Government Reform released the transcript from Leon Black’s transcribed interview as part of the Committee’s review of the federal investigations into Jeffrey Epstein and Ghislaine Maxwell."
+      ],
+      "removals": [
+        "Press Releases Archive - United States House Committee on Oversight and Government Reform Skip to main content Toggle navigation Search About Chairman James Comer Full Committee Rules Committee Activity Calendar Hearings Letters Markups Reports Forums Roundtables Subcommittees Cybersecurity, Information Technology, and Government Innovation Economic Growth, Energy Policy, and Regulatory Affairs Government Operations Health Care and Financial Services Military and Foreign Affairs Federal Law Enforcement Delivering on Government Efficiency Task Force on the Declassification of Federal Secrets Task Force on Defending Constitutional Rights and Exposing Institutional Abuses Media Center Press Releases Biden Family Investigation The Bidens’ Influence Peddling Timeline COVID Origins The Overview The Biden Autopen Presidency Blow the Whistle Press Releases Filter By Post Category Post Category Cybersecurity, Information Technology, and Government Innovation Delivering on Government Efficiency Economic Growth, Energy Policy, and Regulatory Affairs Federal Law Enforcement Full Committee Government Operations Health Care and Financial Services Military and Foreign Affairs Task Force on the Declassification of Federal Secrets Month Month January February March April May June July August September October November December Year Year 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 2009 Press Release Oversight Committee Releases Leon Black and Doug Band Transcripts July 17, 2026 WASHINGTON—Today, the House Committee on Oversight and Government Reform released the transcript from Leon Black’s transcribed interview as part of the Committee’s review of the federal investigations into Jeffrey Epstein and Ghislaine Maxwell.",
+        "Press Release Burlison Leads Roundtable on Strategic Competition with China July 14, 2026 WASHINGTON­—Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs Chairman Eric Burlison (R-Mo.) delivered opening remarks at today’s roundtable titled “Winning the Economic Competition with China: Working Families, the AI Race, and Energy.” In his remarks, Subcommittee Chairman Burlison highlighted China’s push to control key ...",
+        "Press Release Sessions Announces Hearing on Emerging Fraud Threats and the Evolving Landscapes July 9, 2026 WASHINGTON—Subcommittee on Government Operations Chairman Pete Sessions (R-Texas) today announced a hearing on “Emerging Fraud Threats and the Evolving Fraud Landscape.” This builds on the House Oversight Committee’s larger efforts to identify and eliminate fraud within the federal government.",
+        "During the hearing, members will examine the use and effectiveness of digital ..."
+      ],
+      "additionCount": 4,
+      "removalCount": 4,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "c1520a15d6e62871a66c558e",
+      "title": "content changed: European Public Prosecutor's Office — News",
+      "sourceId": "eppo-news",
+      "sourceLabel": "European Public Prosecutor's Office — News",
+      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-21T07:44:16.592Z",
+      "detectedAt": "2026-07-21T07:44:16.592Z",
+      "changeType": "content-changed",
+      "previousHash": "7a756c981cf20c105a106ae76ccaab3b9a01546eb5035dcfc9388121b3aa6953",
+      "currentHash": "807d9d8dcd4cf7b99b1361716417c77dd1694cf9287857a0647f40c3447acd58",
+      "httpStatus": 200,
+      "finalUrl": "https://www.eppo.europa.eu/media/news_en",
+      "additions": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Working for the EPPO Vacancies Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (901) RSS Showing results 1 to 10 News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investigation into suspected fraud involving funding from the Recovery and Resilience Facility (RRF).",
+        "2 min read News article 17 July 2026 Poland: EPPO carries out investigative measures in customs and VAT fraud probe and suspected sanctions circumvention At the request of the European Public Prosecutor’s Office (EPPO) in Katowice (Poland), law enforcement authorities have carried out investigative measures, as part of a probe into possible customs and VAT fraud and suspected circumvention of sanctions.",
+        "3 min read News article 17 July 2026 Latvia: EPPO indicts farmer in suspected agricultural subsidy fraud involving robotic milking equipment The European Public Prosecutor’s Office (EPPO) in Riga (Latvia) has filed an indictment before the competent national court against a farmer suspected of fraudulently obtaining €122 725 in EU funding for the purchase and installation of robotic milking equipment.",
+        "1 min read News article 16 July 2026 Greece: EPPO indicts 22 in ongoing probe into large-scale agricultural subsidy fraud The EPPO in Athens (Greece) has indicted 22 defendants, including four current Members of the Hellenic Parliament, several former high-ranked public officials and political staff, as part of an investigation into an alleged organised fraud scheme involving agricultural funds.",
+        "2 min read 1 Page 1 2 3 ...",
+        "91 Next The independent public prosecution office of the EU This site is managed by: European Public Prosecutor’s Office Contact us Career opportunities General information Media request (for journalists only) Legal Disclaimer Cookie policy Processing of personal data Accessibility Statement Follow us Facebook Instagram Linkedin X (formerly Twitter) News alerts Subscribe Unsubscribe"
+      ],
+      "removals": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Working for the EPPO Vacancies Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU VAT European Public Prosecutor’s Office agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (900) RSS Showing results 1 to 10 News article 17 July 2026 Latvia: EPPO indicts farmer in suspected agricultural subsidy fraud involving robotic milking equipment The European Public Prosecutor’s Office (EPPO) in Riga (Latvia) has filed an indictment before the competent national court against a farmer suspected of fraudulently obtaining €122 725 in EU funding for the purchase and installation of robotic milking equipment.",
+        "1 min read News article 17 July 2026 Poland: EPPO carries out investigative measures in customs and VAT fraud probe and suspected sanctions circumvention At the request of the European Public Prosecutor’s Office (EPPO) in Katowice (Poland), law enforcement authorities have carried out investigative measures, as part of a probe into possible customs and VAT fraud and suspected circumvention of sanctions.",
+        "3 min read News article 16 July 2026 Greece: EPPO indicts 22 in ongoing probe into large-scale agricultural subsidy fraud The EPPO in Athens (Greece) has indicted 22 defendants, including four current Members of the Hellenic Parliament, several former high-ranked public officials and political staff, as part of an investigation into an alleged organised fraud scheme involving agricultural funds.",
+        "2 min read News article 8 July 2026 Greece: 57 convicted in €1.7 million agricultural subsidy fraud involving National Reserve payments At the request of the EPPO in Athens, the 1st Three-member Misdemeanour Court of First Instance of Athens has convicted 57 individuals for fraud involving EU agricultural subsidies financed through the National Reserve, a mechanism under the EU&#039;s Common Agricultural Policy (CAP).",
+        "3 min read 1 Page 1 2 3 ...",
+        "90 Next The independent public prosecution office of the EU This site is managed by: European Public Prosecutor’s Office Contact us Career opportunities General information Media request (for journalists only) Legal Disclaimer Cookie policy Processing of personal data Accessibility Statement Follow us Facebook Instagram Linkedin X (formerly Twitter) News alerts Subscribe Unsubscribe"
+      ],
+      "additionCount": 6,
+      "removalCount": 6,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "4f6142409f6345aa4038244f",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-20T08:20:14.211Z",
+      "detectedAt": "2026-07-20T08:20:14.211Z",
+      "changeType": "content-changed",
+      "previousHash": "888ad7e4e2ee65fe10171abf0bd4c72ec101e4c8b29eae72baf95c62f37ccac4",
+      "currentHash": "8ab23c387e944478aa65f53e7f9f9f37c78a7fdb0c8b5ffc16e961b2043bb023",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 20 Jul 2026 04:20:14 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T04:20:14-04:00 4 - Langlois Sophia J."
+      ],
+      "removals": [
+        "Latest Filings - Mon, 20 Jul 2026 03:04:37 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T03:04:37-04:00 4 - Langlois Sophia J."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "12211ad7f5ffc796baa3c75a",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-20T07:04:37.480Z",
+      "detectedAt": "2026-07-20T07:04:37.480Z",
+      "changeType": "content-changed",
+      "previousHash": "2efe10dca768aaca58d47724288c8ef0417c2bec541952ea0df4482c706089a9",
+      "currentHash": "888ad7e4e2ee65fe10171abf0bd4c72ec101e4c8b29eae72baf95c62f37ccac4",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 20 Jul 2026 03:04:37 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-20T03:04:37-04:00 4 - Langlois Sophia J."
+      ],
+      "removals": [
+        "Latest Filings - Sun, 19 Jul 2026 04:57:26 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-19T04:57:26-04:00 4 - Langlois Sophia J."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "553ca36157c97552aafe2abb",
+      "title": "content changed: USAspending.gov — Recent Contract Awards",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-20T07:04:37.480Z",
+      "detectedAt": "2026-07-20T07:04:37.480Z",
+      "changeType": "content-changed",
+      "previousHash": "f809258b500247dfea12ce229f0f321223a565e34ef714a20bbb70782e1c6ea7",
+      "currentHash": "6330cc14020272b6368be6022ad7137cb59274a2537dccafa45d028c006f3c64",
+      "httpStatus": 200,
+      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "additions": [
+        "\" ], \"page_metadata\": {}, \"results\": [], \"spending_level\": \"awards\" }"
+      ],
+      "removals": [
+        "\" ], \"page_metadata\": {}, \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"spending_level\": \"awards\" }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "023dcc20a52e1c6c4aa643eb",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

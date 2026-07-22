@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:34:11.022Z",
+  "updated": "2026-07-22T06:11:29.126Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
@@ -17,39 +17,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Defense Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/defense-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Federal Procurement Policy Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/federal-procurement-policy-office.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "General Services Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/general-services-administration.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Management and Budget Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "National Aeronautics and Space Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
       "type": "entity brief"
     },
     {
@@ -71,27 +41,21 @@
       "type": "entity brief"
     },
     {
+      "entity": "23 WAP 2023",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/23-wap-2023.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "25-113",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/25-113.html",
       "type": "entity brief"
     },
     {
-      "entity": "25-581",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-581.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "A170747M",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/a170747m.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Biddle v. Biddle",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/biddle-v-biddle.html",
       "type": "entity brief"
     },
     {
@@ -104,12 +68,6 @@
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Court of Appeals of North Carolina",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
       "type": "entity brief"
     },
     {
@@ -137,9 +95,21 @@
       "type": "entity brief"
     },
     {
+      "entity": "Punxsutawney Hunting Club v. PGC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Sawas v. Elzanaty",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/sawas-v-elzanaty.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Pennsylvania",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
       "type": "entity brief"
     },
     {
@@ -233,6 +203,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Appellate Division of the Supreme Court of the State of New York",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
@@ -251,9 +227,9 @@
       "type": "record review"
     },
     {
-      "entity": "Court of Appeals of North Carolina",
+      "entity": "Supreme Court of Pennsylvania",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/court-of-appeals-of-north-carolina.html",
+      "route": "entity-exposure/supreme-court-of-pennsylvania.html",
       "type": "record review"
     },
     {
@@ -281,27 +257,21 @@
       "type": "record review"
     },
     {
+      "entity": "23 WAP 2023",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/23-wap-2023.html",
+      "type": "record review"
+    },
+    {
       "entity": "25-113",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/25-113.html",
       "type": "record review"
     },
     {
-      "entity": "25-581",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/25-581.html",
-      "type": "record review"
-    },
-    {
       "entity": "A170747M",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/a170747m.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Biddle v. Biddle",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/biddle-v-biddle.html",
       "type": "record review"
     },
     {
@@ -320,6 +290,12 @@
       "entity": "People v. Brim",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/people-v-brim.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Punxsutawney Hunting Club v. PGC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
       "type": "record review"
     },
     {
@@ -350,36 +326,6 @@
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/health-and-human-services-department.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Federal Procurement Policy Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/federal-procurement-policy-office.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Defense Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/defense-department.html",
-      "type": "record review"
-    },
-    {
-      "entity": "General Services Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/general-services-administration.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Management and Budget Office",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/management-and-budget-office.html",
-      "type": "record review"
-    },
-    {
-      "entity": "National Aeronautics and Space Administration",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/national-aeronautics-and-space-administration.html",
       "type": "record review"
     },
     {
@@ -458,6 +404,12 @@
       "entity": "Nuclear Regulatory Commission",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/nuclear-regulatory-commission.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/securities-and-exchange-commission.html",
       "type": "record review"
     },
     {

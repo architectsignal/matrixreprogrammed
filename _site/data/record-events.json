@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:33:54.086Z",
+  "updated": "2026-07-22T06:11:12.525Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -71,9 +71,43 @@
   ],
   "events": [
     {
-      "id": "federal-register-policy-2026-14439-1",
+      "id": "federal-register-policy-2026-14679-1",
+      "date": "2026-07-21",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Securities and Exchange Commission"
+      ],
+      "institution_names": [
+        "Securities and Exchange Commission"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+      "source_record_id": "2026-14679",
+      "summary": "Electronic Delivery of Information Under the Federal Securities Laws",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-14439-2",
       "date": "2026-07-17",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -105,9 +139,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-13656-2",
+      "id": "federal-register-policy-2026-13656-3",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -140,9 +174,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-13602-3",
+      "id": "federal-register-policy-2026-13602-4",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -175,9 +209,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-13057-4",
+      "id": "federal-register-policy-2026-13057-5",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -209,9 +243,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-12989-5",
+      "id": "federal-register-policy-2026-12989-6",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -243,47 +277,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-12559-6",
-      "date": "2026-06-23",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "federal-register-policy",
-      "source_name": "Federal Register latest policy records",
-      "entity_names": [
-        "Management and Budget Office",
-        "Federal Procurement Policy Office",
-        "Defense Department",
-        "General Services Administration",
-        "National Aeronautics and Space Administration"
-      ],
-      "institution_names": [
-        "Defense Department"
-      ],
-      "control_layers": [
-        "policy",
-        "emergency_power",
-        "identity_access"
-      ],
-      "record_type": "rule_or_notice",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-      "source_record_id": "2026-12559",
-      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -317,8 +313,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -352,8 +348,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -387,8 +383,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -422,8 +418,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -457,8 +453,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-20",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "date": "2026-07-22",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -491,9 +487,45 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10928510-1",
+      "id": "courtlistener-court-records-10933234-1",
+      "date": "2026-07-21",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Punxsutawney Hunting Club v. PGC",
+        "Supreme Court of Pennsylvania",
+        "23 WAP 2023"
+      ],
+      "institution_names": [
+        "Supreme Court of Pennsylvania"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+      "source_record_id": 10933234,
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10928510-2",
       "date": "2026-07-15",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -527,9 +559,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10919908-2",
+      "id": "courtlistener-court-records-10919908-3",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -563,9 +595,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10919846-3",
+      "id": "courtlistener-court-records-10919846-4",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -599,9 +631,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10917016-4",
+      "id": "courtlistener-court-records-10917016-5",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -635,9 +667,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10883674-5",
+      "id": "courtlistener-court-records-10883674-6",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
+      "pulled_at": "2026-07-22T06:11:12.525Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -659,42 +691,6 @@
       "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
       "source_record_id": 10883674,
       "summary": "Matter of Pagliughi",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883331-6",
-      "date": "2026-07-01",
-      "pulled_at": "2026-07-20T06:33:54.086Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ],
-      "institution_names": [
-        "Court of Appeals of North Carolina"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-      "source_record_id": 10883331,
-      "summary": "Biddle v. Biddle",
       "missing_records": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],

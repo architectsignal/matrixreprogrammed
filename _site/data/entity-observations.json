@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:33:54.086Z",
+  "updated": "2026-07-22T06:11:12.525Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -18,8 +18,8 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-14439-1",
-        "federal-register-policy-2026-13057-4"
+        "federal-register-policy-2026-14439-2",
+        "federal-register-policy-2026-13057-5"
       ],
       "last_seen": "2026-06-29"
     },
@@ -37,8 +37,8 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-2",
-        "federal-register-policy-2026-13602-3"
+        "federal-register-policy-2026-13656-3",
+        "federal-register-policy-2026-13602-4"
       ],
       "last_seen": "2026-07-06"
     },
@@ -56,8 +56,8 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-2",
-        "federal-register-policy-2026-13602-3"
+        "federal-register-policy-2026-13656-3",
+        "federal-register-policy-2026-13602-4"
       ],
       "last_seen": "2026-07-06"
     },
@@ -75,10 +75,28 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-2",
-        "courtlistener-court-records-10883674-5"
+        "courtlistener-court-records-10919908-3",
+        "courtlistener-court-records-10883674-6"
       ],
       "last_seen": "2026-07-01"
+    },
+    {
+      "id": "securities-and-exchange-commission",
+      "name": "Securities and Exchange Commission",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-14679-1"
+      ],
+      "last_seen": "2026-07-21"
     },
     {
       "id": "nuclear-regulatory-commission",
@@ -94,99 +112,9 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12989-5"
+        "federal-register-policy-2026-12989-6"
       ],
       "last_seen": "2026-06-26"
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-6"
-      ],
-      "last_seen": "2026-06-23"
-    },
-    {
-      "id": "federal-procurement-policy-office",
-      "name": "Federal Procurement Policy Office",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-6"
-      ],
-      "last_seen": "2026-06-23"
-    },
-    {
-      "id": "defense-department",
-      "name": "Defense Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-6"
-      ],
-      "last_seen": "2026-06-23"
-    },
-    {
-      "id": "general-services-administration",
-      "name": "General Services Administration",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-6"
-      ],
-      "last_seen": "2026-06-23"
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-6"
-      ],
-      "last_seen": "2026-06-23"
     },
     {
       "id": "nvidia-corp",
@@ -204,7 +132,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "nvda",
@@ -222,7 +150,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "apple-inc",
@@ -240,7 +168,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "aapl",
@@ -258,7 +186,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "alphabet-inc",
@@ -276,7 +204,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "googl",
@@ -294,7 +222,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "microsoft-corp",
@@ -312,7 +240,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "msft",
@@ -330,7 +258,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "amazon-com-inc",
@@ -348,7 +276,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "amzn",
@@ -366,7 +294,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "broadcom-inc",
@@ -384,7 +312,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
     },
     {
       "id": "avgo",
@@ -402,7 +330,61 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-20"
+      "last_seen": "2026-07-22"
+    },
+    {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-1"
+      ],
+      "last_seen": "2026-07-21"
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-1"
+      ],
+      "last_seen": "2026-07-21"
+    },
+    {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-1"
+      ],
+      "last_seen": "2026-07-21"
     },
     {
       "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
@@ -418,7 +400,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-1"
+        "courtlistener-court-records-10928510-2"
       ],
       "last_seen": "2026-07-15"
     },
@@ -436,7 +418,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-1"
+        "courtlistener-court-records-10928510-2"
       ],
       "last_seen": "2026-07-15"
     },
@@ -454,7 +436,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-1"
+        "courtlistener-court-records-10928510-2"
       ],
       "last_seen": "2026-07-15"
     },
@@ -472,7 +454,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-2"
+        "courtlistener-court-records-10919908-3"
       ],
       "last_seen": "2026-07-08"
     },
@@ -490,7 +472,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-2"
+        "courtlistener-court-records-10919908-3"
       ],
       "last_seen": "2026-07-08"
     },
@@ -508,7 +490,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-3"
+        "courtlistener-court-records-10919846-4"
       ],
       "last_seen": "2026-07-08"
     },
@@ -526,7 +508,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-3"
+        "courtlistener-court-records-10919846-4"
       ],
       "last_seen": "2026-07-08"
     },
@@ -544,7 +526,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-3"
+        "courtlistener-court-records-10919846-4"
       ],
       "last_seen": "2026-07-08"
     },
@@ -562,7 +544,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-4"
+        "courtlistener-court-records-10917016-5"
       ],
       "last_seen": "2026-07-07"
     },
@@ -580,7 +562,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-4"
+        "courtlistener-court-records-10917016-5"
       ],
       "last_seen": "2026-07-07"
     },
@@ -598,7 +580,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-4"
+        "courtlistener-court-records-10917016-5"
       ],
       "last_seen": "2026-07-07"
     },
@@ -616,7 +598,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-5"
+        "courtlistener-court-records-10883674-6"
       ],
       "last_seen": "2026-07-01"
     },
@@ -634,61 +616,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-5"
-      ],
-      "last_seen": "2026-07-01"
-    },
-    {
-      "id": "biddle-v-biddle",
-      "name": "Biddle v. Biddle",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883331-6"
-      ],
-      "last_seen": "2026-07-01"
-    },
-    {
-      "id": "court-of-appeals-of-north-carolina",
-      "name": "Court of Appeals of North Carolina",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883331-6"
-      ],
-      "last_seen": "2026-07-01"
-    },
-    {
-      "id": "25-581",
-      "name": "25-581",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883331-6"
+        "courtlistener-court-records-10883674-6"
       ],
       "last_seen": "2026-07-01"
     }

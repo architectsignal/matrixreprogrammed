@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-22T03:45:27.711Z
-Live Intel source window: 2026-07-22T03:45:23.678Z
+Generated: 2026-07-22T06:21:43.277Z
+Live Intel source window: 2026-07-22T06:21:31.095Z
 Latest source publication: 2026-07-21T18:38:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-16 current Epstein-lane record leads remain inside the active source window.
+17 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -42,6 +42,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 
 External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+- Published: 2026-07-21T15:27:26.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+
+Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

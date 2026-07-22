@@ -1,11 +1,21 @@
 # Intel Vault
 
-Updated: 2026-07-20T06:37:14.472Z
+Updated: 2026-07-22T06:24:15.063Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
+- Published: 2026-07-14T21:48:42.000Z
+- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxON0dEcXpTeGFia3pzUjlBUjlEMnprYmdiVGdnbXQ5R0d1R2RVNUNzejZqTDhBZmxLQVlVSTJWVmZlVlRkS05kdWhpSktOY09yQ0s0NTM4WmoyVnZWYmx5Y2xkTmlSclFIS0U3MWk3a1VqWjRzbkpFZURPNmhTY19zUm1qQk9rTVpSdF9jQ2poZjNiXzdrWllGRmkxQmswTkFSTmszTUtSUDgwY1hFSEhFQ2JtZ19mUmfSAbwBQVVfeXFMTXhkSWJPal80TXllZkNhdDJwOUw5NTJzUDVzcnBrbjhYaDlPeUppMk5MakNtQWpTX0FzR2Q5TWJmWVdSbS1RUkpMZHNlbmNYaVhvdEhxUWFqNU5Qd3RmeU1teDk5OEFRZzdDRERZM2RrT0toX1d2RnZtX2JMRlJVRDRLTWZLX2hNSVc3ckNIa2Jaa2ltR0xoUy1NMkVFbUYwakYwalFLNUN1eEx1OGx0NE45OTFfNU5DYmdSM2I?oc=5
+- Source class: primary-or-official
+
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+- Published: 2026-07-13T14:49:05.000Z
+- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+- Source class: primary-or-official
 
 ### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
 - Published: 2026-06-29T05:00:00.000Z

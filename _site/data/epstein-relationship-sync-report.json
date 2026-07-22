@@ -1,0 +1,32 @@
+{
+  "site_root": "C:\\matrixreprogrammed",
+  "output": "C:\\matrixreprogrammed\\data\\epstein-relationship-intelligence.json",
+  "counts": {
+    "entities": 703,
+    "relationships": 850,
+    "events": 20,
+    "financial_records": 1,
+    "mentions": 0,
+    "editorial_review": 0,
+    "publication_lanes": {
+      "strong_inference": 0,
+      "speculation": 0,
+      "supported_inference": 0,
+      "unresolved_identity": 834,
+      "unconfirmed_lead": 21,
+      "documented_fact": 16
+    }
+  },
+  "publication_policy": {
+    "mode": "classified_public_record_publication",
+    "editorial_review_lane": "speculation",
+    "public_record_unredacted": true,
+    "principle": "Review changes the label and confidence, not whether a public record is visible."
+  },
+  "builder": "scripts\\build-epstein-timeline-map.js",
+  "built": true,
+  "node_executable": "C:\\Program Files\\nodejs\\node.exe",
+  "build_returncode": 0,
+  "build_stdout": "Built Epstein Timeline + Cross-Reference Map with 13 timeline items and 5 cross-reference rules.\nNamespaced public-record fields in 0 editorial review items and verified 0 values were preserved.\nBuilt Epstein Relationship Intelligence: 703 entities, 850 approved edges, 20 events, 1 financial records.\nEnhanced Epstein publication lanes: 850 relationships, 0 mentions, 0 review items.\nRepaired Epstein relationship language for classified public-record publication.\nEpstein relationship evidence links repaired for static route auditing and browser activation.",
+  "build_stderr": ""
+}

@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:24:29.735Z",
+  "changed": [],
+  "existingLegacySessions": "accepted on their current host",
+  "newSessions": "matrix_session_v2 shared across apex and www",
+  "logout": "revokes D1 session and clears v2 plus legacy cookies",
+  "boundary": "The repair fixes split-domain posting without discarding a valid existing session or leaving an old cookie active after logout."
+}

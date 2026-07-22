@@ -1,64 +1,69 @@
 {
-  "updated": "2026-07-20T06:34:14.844Z",
-  "sourceUpdated": "2026-06-26",
-  "purpose": "Generated subject-level PDF mini-book index. Each subject PDF is controlled by data/subject-intelligence-profiles.json and rebuilt when the site build runs.",
+  "updated": "2026-07-22T06:20:31.114Z",
   "count": 7,
   "subjects": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
       "title": "Epstein / Black File Source Map",
-      "label": "Black File Subject Mini Book",
-      "slug": "epstein-black-file",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 114,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "b9c8666d6aa322d418f9b724947b565eb9ee006b56425ccca36d95688d93e051"
     },
     {
       "file": "downloads/subject-intelligence-network.pdf",
       "title": "Intelligence Network Starter File",
-      "label": "Agency Network Subject Mini Book",
-      "slug": "intelligence-network",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 110,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "9f6756c498d5821b9083a162a3670dff69398df4e24807f1771c91d7ee38eb87"
     },
     {
       "file": "downloads/subject-dog-architect.pdf",
       "title": "D.O.G The Architect Initiation Map",
-      "label": "Symbolic Archive Subject Mini Book",
-      "slug": "dog-architect",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 93,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "996efae63f881f7903a4ef71b273e6cc9ac377097b91f1ed11f4bbf92b068819"
     },
     {
       "file": "downloads/subject-crime-state-overlap.pdf",
       "title": "Crime-State Overlap Brief",
-      "label": "Crime / Power Subject Mini Book",
-      "slug": "crime-state-overlap",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 109,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "b1bc3d65ac40f05a60d15189405b4d7044715cc9f065fc167de4c5b1221a8e2b"
     },
     {
       "file": "downloads/subject-trust-evidence-method.pdf",
       "title": "Trust & Evidence Method",
-      "label": "Evidence Method Subject Mini Book",
-      "slug": "trust-evidence-method",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 117,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "e69abe636c214527427298e212bb97fdb070c0369c3b20b48d7fe7b13d3bc8a9"
     },
     {
       "file": "downloads/subject-nasa-hidden-architecture.pdf",
       "title": "NASA Hidden Architecture File",
-      "label": "NASA / Space Symbolism Subject Mini Book",
-      "slug": "nasa-hidden-architecture",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 121,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "366d114a4f5106986c4a2955ef197abcbf41c7bbea92cda933afcb0e4d044f87"
     },
     {
       "file": "downloads/subject-freemasonry-symbol-system.pdf",
       "title": "Freemasonry Symbol System Map",
-      "label": "Symbol / Fraternal System Subject Mini Book",
-      "slug": "freemasonry-symbol-system",
-      "kind": "subject-profile",
-      "reused": false
+      "version": 1,
+      "pageCount": 114,
+      "evidenceCount": 140,
+      "unchanged": false,
+      "contentHash": "f22072e54caeafab4fea516044cab053548a600011ed15bd7726fd82bbc670b3"
     }
   ]
 }

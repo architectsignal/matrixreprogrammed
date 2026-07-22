@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "testedAt": "2026-07-20T06:36:12.721Z",
+  "testedAt": "2026-07-22T06:23:01.394Z",
   "sample": {
     "tracker": "Donald Trump",
     "relevantRecords": 4,
@@ -8,20 +8,29 @@
     "contradictions": 2,
     "connections": 1,
     "evidenceCount": 4,
-    "primarySourceCount": 4,
-    "pdfBytes": 4294
+    "primarySourceCount": 3,
+    "keyFindings": 4,
+    "conclusions": 2,
+    "inferences": 1,
+    "speculativeHypotheses": 1,
+    "pdfBytes": 81273
   },
   "safeguards": {
     "unrelatedRecordExcluded": true,
     "evidenceLabelsValidated": true,
     "eventAndPublicationDatesSeparated": true,
     "coverageFailuresDisclosed": true,
-    "nativePdfGenerated": true,
+    "deepNativePdfGenerated": true,
+    "fiveEvidenceLayers": true,
+    "conclusionsSeparatedFromSpeculation": true,
+    "alternativeExplanationsRequired": true,
     "automationEnabled": true,
     "batchLimit": 100,
     "transactionalEmailStillEnabled": true,
     "paypalBoundaryPreserved": true,
     "unsubscribeAndSuppressionPreserved": true,
-    "dailyAndWeeklySchedulesWired": true
+    "dailyAndWeeklySchedulesWired": true,
+    "verifiedRepeatSignupPreserved": true,
+    "idempotentCatchUpCron": true
   }
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-21T07:58:44.484Z",
+  "updated": "2026-07-22T06:22:00.896Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -175,6 +175,12 @@
           "type": "profile route"
         },
         {
+          "name": "Mark Zuckerberg",
+          "score": 100,
+          "route": "billionaire-briefs/mark-zuckerberg.html",
+          "type": "profile route"
+        },
+        {
           "name": "Blackwater / Xe / Academi / Constellis lineage",
           "score": 100,
           "route": "contractor-briefs/blackwater-constellis-lineage.html",
@@ -196,12 +202,6 @@
           "name": "Booz Allen Hamilton",
           "score": 100,
           "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "Palantir government platforms",
-          "score": 100,
-          "route": "contractor-briefs/palantir-government-platforms.html",
           "type": "contractor route"
         }
       ]
@@ -237,7 +237,7 @@
         {
           "name": "Top institution lane",
           "score": 80,
-          "route": "institution-briefs/world-bank.html",
+          "route": "institution-briefs/united-nations.html",
           "type": "daily conclusion"
         },
         {

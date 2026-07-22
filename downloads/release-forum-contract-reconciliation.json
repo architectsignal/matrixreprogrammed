@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-22T06:23:07.214Z",
+  "changed": [
+    "src/worker.js",
+    "src/worker-forum-persistence.js"
+  ],
+  "sessionCookie": "matrix_session_v2 domain-wide with legacy read fallback",
+  "forumWrite": "strict INSERT plus D1 read-after-write",
+  "compatibilityTest": "accepts v2 and temporary v1 names",
+  "boundary": "This reconciliation does not weaken authentication, accept unconfirmed writes, or restore browser-only forum storage."
+}

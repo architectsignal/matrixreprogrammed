@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-20T06:34:18.149Z
+Generated: 2026-07-22T06:20:35.479Z
 
 ## Open Routes
 
@@ -11,103 +11,103 @@ Generated: 2026-07-20T06:34:18.149Z
 
 ## Latest Drops
 
-### Haiti: Signs of hope despite gang violence and political uncertainty
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-19T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167963
-For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.
-### Ukraine: UN condemns overnight attack on Kyiv
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-19T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167975
-United Nations agencies have deplored a fresh Russian assault on the Ukrainian capital Kyiv which left at least one person dead and a dozen injured.
-### A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-18T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167974
-Jean Todt spent decades around the deadliest motorsport on Earth. He was a rally co‑driver, then ran Ferrari’s Formula One team, then became president of world motorsport’s governing body. In his early years, a driver dying at the track barely made news.
-### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+### Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-17T23:17:00.000Z
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
-House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
-### Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+- Date: 2026-07-21T18:38:00.000Z
+- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz New York Post
+### President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-17T22:44:14.000Z
-- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
-### The surveillance networks cities do not have to buy - Biometric Update
-- Lane: Elite Control Structure
-- Date: 2026-07-17T17:38:00.000Z
-- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
-The surveillance networks cities do not have to buy Biometric Update
-### Baristas behind bars: Thai prisoners brew a path back to daily life
+- Date: 2026-07-21T18:16:00.000Z
+- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
+### External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-21T17:01:51.000Z
+- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
+External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazeera
+### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-21T15:27:26.000Z
+- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
+### ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167954
-It looks like a regular coffee shop, albeit set up in an old red bus. Stairs lead up to a serving hatch, with a menu of drink options. A selection of jaunty coffee-related messages like “My one and only love: Americano” and “Miss you a latte,” adorn the side of the bus.
-### Djibouti: Emergency alert spotlights sharp hunger spike
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167993
+The UN General Assembly closed its first ever High-level Meeting on road safety on Tuesday by adopting a sweeping new declaration aimed at halving road deaths by 2030 – over the sole objection of the United States.
+### Critical minerals: The hidden resources powering the clean energy future
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167971
-More than 256,000 people in Djibouti – around 25 per cent of the population – are likely to face crisis or emergency level hunger over the coming months, a UN-backed global food monitoring network warned in a new report released Friday.
-### Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+Why are critical minerals suddenly at the centre of global politics?
+### DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167965
-UN Secretary-General António Guterres on Friday urged governments and technology companies to work together to ensure artificial intelligence (AI) benefits all countries.
-### Hunger deepens for displaced families in Sudan’s El Obeid
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167983
+In the Democratic Republic of the Congo (DRC), UN health teams and partners are still racing to contain the rapidly expanding Ebola outbreak, despite ongoing insecurity in eastern areas where the virus has taken hold. As of 19 July, the DRC Government has recorded 2,423 confirmed cases, including 967 deaths and 469 recoveries.
+### Global hunger declines again but progress remains uneven across regions
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167967
-UN humanitarians working in war-torn Sudan on Friday highlighted rapidly growing needs among the more than 100,000 displaced people now sheltering in camps in the city of El Obeid.
-### US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167987
+Global hunger declined for a third consecutive year in 2025 showing that progress is possible, but gains remain fragile and far too slow to achieve the Sustainable Development Goals (SDGs) by the 2030 deadline.
+### Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167973
-The UN Secretary-General remains deeply concerned by the continuing deadly military escalation between Iran and the United States, his spokesperson said on Friday as attacks destroyed key civilian and military infrastructure across the Gulf region.
-### World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167989
+The United Nations again called for restraint as war ramps up in the Middle East, underscoring the need for dialogue and an end to attacks on “vital infrastructure” across the region.
+### Israeli attacks on Gaza intensify amid surge of West Bank settler violence
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-17T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167970
-The UN human rights chief, Volker Türk, has appealed for calm in Pakistan-Administered Kashmir amid unrest ahead of regional elections.
-### Henry Lucas
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-17T04:00:00.000Z
-- Source: https://vault.fbi.gov/henry-lucas
-Henry Lucas
-### Henry Lucas Part 01
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-17T04:00:00.000Z
-- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
-Henry Lucas Part 01
-### Henry Lucas Part 02 (Final)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-17T04:00:00.000Z
-- Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
-Henry Lucas Part 02 (Final)
-### ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167991
+Amid intensified deadly Israeli attacks in Gaza, the UN chief and top officials condemned the killings while a surge violence rocked the West Bank and aid agencies scrambled to help Palestinians.
+### Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-16T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167955
-As Europe battles a deadly record-breaking heatwave, the World Health Organization (WHO) issued new guidance on Thursday to help countries face scorching temperatures now and in the future.
-### As aid dries up, countries pledge to close the $4 trillion development gap
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167984
+The Security Council discussed the situation on the ground in Syria amid reports of an Israeli attack in occupied territory and of a multi-national oil pipeline to counter the closure of the critical Strait of Hormuz – still the focus of the ongoing US-Iran war. The meeting follows UN independent investigators’ findings that security conditions remain fragile in the south as António Guterres heads to Damascus for his first visit to the country as Secretary-General.
+### UN refugee agency reports 144 migrants dead or missing off Mauritanian coast
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-16T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167957
-UN Member States reaffirmed their commitment to the Sustainable Development Goals (SDGs) by adopting a declaration on Wednesday that they will implement reforms to help close the $4 trillion SDG financing gap.
-### Breaking the silence: Zimbabwean youth leader calls for urgent investment in mental health
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167985
+The UN’s refugee agency (UNHCR) reports that 144 migrants attempting to reach Europe are dead or missing due to a series of “tragic maritime incidents” off the coast of Mauritania last week.
+### World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-16T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167956
-For Tanatswa Amanda Chikaura, mental health advocacy began with a personal loss: while studying psychology at the University of Zimbabwe, she learned that a fellow student had died by suicide.
-### Gaza farmers battle to rebuild as WFP warns of West Bank settler violence
+- Date: 2026-07-21T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167992
+Independent UN human rights experts on Tuesday condemned the M23 armed group’s “reign of terror” over territory it controls in eastern Democratic Republic of the Congo (DRC), calling for an end to the Rwanda-backed group’s sexual torture and violence against civilians.
+### ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-16T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167960
-The UN is supporting farmers in Gaza who are struggling to rebuild their smallholdings in areas devastated by the Hamas-Israel war.
-### Haiti: Training the next generation to fight corruption
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167978
+When a 12-story apartment building pancaked in La Guaira, Venezuela, following two powerful earthquakes late last month, panic ensued to save people injured or trapped under the rubble.
+### From the General Assembly to Harlem: Mandela’s call to action endures
 - Lane: War Machine And Intelligence State
-- Date: 2026-07-16T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167931
-How do you tackle corruption in a country grappling with insecurity, weak institutions and widespread impunity? In Haiti, the Government and the United Nations are betting on the country&#039;s youth.
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167981
+Sixty-seven minutes. That is how long volunteers spent serving lunch to people experiencing food insecurity at Refettorio Harlem in New York City last week – one for every year Nelson Mandela gave to public service.
+### Health response brings lifesaving care closer to thousands in Yemen
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167982
+Thousands of people in some of Yemen&#039;s most conflict-affected communities are receiving lifesaving health care closer to home, thanks to funding from the UN aid coordination office (OCHA) through the Yemen Humanitarian Fund.
+### LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167972
+Haiti’s future success depends on “security, political engagement, and humanitarian action reinforcing each other,” the UN’s most senior official in Haiti has told the UN Security Council which met in New York on Monday to discuss the way forward for the embattled Caribbean island nation.
+### Middle East: Civilians again under fire as US-Iran strikes continue
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167979
+As the United States and Iran trade deadly attacks for a second week, the UN continues to call for de-escalation while highlighting the devastation caused to civilians and critical infrastructure across the Middle East.
+### Moon Day focuses growing concerns around space junk
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167976
+Amid surging lunar exploration, the UN on Monday urged governments to ensure that humanity&#039;s return to the Moon does not come at the expense of planet Earth – or the long-term sustainability of space.
+### Ukraine: Deadly Russian attacks severely damage aid warehouses
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-20T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167980
+Russian attacks and drone strikes killed at least two children and injured dozens more across Ukraine over recent days while severely damaging three critical aid warehouses, UN agencies reported on Monday.

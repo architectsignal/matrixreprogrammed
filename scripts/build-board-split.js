@@ -25,6 +25,19 @@ function ensureFeed(html, heading, lead){
   const section = `<section id="board-feed" class="section wrap"><h2>${esc(heading)}</h2><p class="lead">${esc(lead)}</p><div class="grid" id="signal-board-feed"><article class="card"><h3>Loading signals...</h3><p>The board is checking for posts.</p></article></div></section>`;
   return html.includes('</main>') ? html.replace('</main>', `${section}</main>`) : `${html}${section}`;
 }
+function ensureMemberPosting(html, name){
+  const route = '/' + name;
+  const loginUrl = `https://matrixreprogrammed.com/member-login.html?return=${encodeURIComponent(route)}`;
+  const section = `<section id="signal-pass" class="section wrap split"><div class="card redline"><h2>Verified Member Posting</h2><p>The board is free to read. A verified Free Member account unlocks posting across devices and gives you session controls.</p><p id="forum-member-status" class="form-status pending">Checking your member session…</p><div class="cta-row small"><a class="btn" href="${loginUrl}">Sign In</a><a class="btn alt" href="membership.html">Create Free Account</a></div></div><aside class="card"><h2>Reader Promise</h2><p>Membership does not buy agreement or ideological approval. The hard floor remains: no threats, doxxing, private victim names, spam or illegal content.</p></aside></section>`;
+  if (!html.includes('id="forum-member-status"') || html.includes('unlock-signal-pass') || html.includes('paypal.me/njmgroup/1')) {
+    if (/<section id="signal-pass" class="section wrap split">[\s\S]*?<\/section>/.test(html)) html = html.replace(/<section id="signal-pass" class="section wrap split">[\s\S]*?<\/section>/, section);
+    else html = html.replace('<section id="submit-signal"', section + '<section id="submit-signal"');
+  }
+  html = html
+    .replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.')
+    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+  return html;
+}
 function patchPage(name, board, heading, lead){
   if (!exists(name)) return false;
   let html = read(name);
@@ -32,6 +45,7 @@ function patchPage(name, board, heading, lead){
   html = ensureFormBoard(html, board);
   html = ensureBoardNav(html);
   html = ensureFeed(html, heading, lead);
+  html = ensureMemberPosting(html, name);
   write(name, html);
   return true;
 }

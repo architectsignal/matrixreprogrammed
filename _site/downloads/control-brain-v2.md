@@ -1,11 +1,11 @@
 # Control Brain V2
 
-Generated: 2026-07-20T06:35:13.584Z
+Generated: 2026-07-22T06:21:45.232Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 121
-Edges: 151
+Nodes: 117
+Edges: 134
 
 ## Disclosure gaps and missing files
 
@@ -95,30 +95,6 @@ SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 con
 
 Source routes: private-contractor-tracker.html, contractor-briefs/leidos-saic-lineage.html
 
-## Digital ID and access systems
-
-Score: 78
-
-Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Health data and emergency systems
-
-Score: 78
-
-Health data and emergency systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Foundation and NGO policy influence
-
-Score: 78
-
-Foundation and NGO policy influence is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
 ## United Nations
 
 Score: 77
@@ -127,21 +103,13 @@ United Nations is ranked 77/100 because of 3 relationship route(s), 5 control la
 
 Source routes: institution-control-tracker.html
 
-## World Bank
+## Elon Musk
 
-Score: 74
+Score: 75
 
-World Bank is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
-Source routes: institution-control-tracker.html
-
-## European Commission
-
-Score: 74
-
-European Commission is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: institution-control-tracker.html
+Source routes: billionaire-control-tracker.html
 
 ## World Economic Forum
 
@@ -156,6 +124,14 @@ Source routes: institution-control-tracker.html
 Score: 73
 
 World Health Organization is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: institution-control-tracker.html
+
+## World Bank
+
+Score: 73
+
+World Bank is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
 
@@ -175,6 +151,14 @@ Federal Reserve is ranked 73/100 because of 3 relationship route(s), 4 control l
 
 Source routes: institution-control-tracker.html
 
+## European Commission
+
+Score: 73
+
+European Commission is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: institution-control-tracker.html
+
 ## NATO
 
 Score: 73
@@ -183,26 +167,42 @@ NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 
 
 Source routes: institution-control-tracker.html
 
-## Elon Musk
+## Jeff Bezos
 
-Score: 73
+Score: 66
 
-Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+Jeff Bezos is ranked 66/100 because of 4 relationship route(s), 4 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html
 
-## Private contractor power
+## Digital ID and access systems
 
-Score: 68
+Score: 62
 
-Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+Digital ID and access systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
 
-## Jeff Bezos
+## Health data and emergency systems
 
-Score: 65
+Score: 62
 
-Jeff Bezos is ranked 65/100 because of 4 relationship route(s), 4 control layer(s), 1 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+Health data and emergency systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Foundation and NGO policy influence
+
+Score: 62
+
+Foundation and NGO policy influence is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Mark Zuckerberg
+
+Score: 61
+
+Mark Zuckerberg is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html

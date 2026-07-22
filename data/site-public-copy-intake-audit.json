@@ -2,13 +2,13 @@
   "title": "Site Public Copy And Intake Audit",
   "summary": {
     "ok": false,
-    "intakeOk": true,
-    "updated": "2026-07-21T07:59:45.213Z",
-    "filesScanned": 4509,
-    "highIssues": 2572,
+    "intakeOk": false,
+    "updated": "2026-07-22T06:22:33.048Z",
+    "filesScanned": 4769,
+    "highIssues": 2611,
     "reviewIssues": 9,
-    "intakeAreas": 2422,
-    "weakIntakeAreas": 0
+    "intakeAreas": 2575,
+    "weakIntakeAreas": 1
   },
   "issues": [
     {
@@ -5110,7 +5110,7 @@
       "file": "_site/card-artwork-batches.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": true,
+      "hasFallback": false,
       "status": "ok"
     },
     {
@@ -6150,539 +6150,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/entity-briefs/2021-00294.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/2024-07773.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/2025-0045-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/25-113.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/25-581.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/a170747m.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/aapl.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/alphabet-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/amazon-com-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/amzn.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/apple-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/avgo.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/biddle-v-biddle.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/broadcom-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/california-court-of-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/centers-for-medicare-and-medicaid-services.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/court-of-appeals-of-north-carolina.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/defense-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/federal-procurement-policy-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/general-services-administration.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/googl.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/health-and-human-services-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/homeland-security-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/management-and-budget-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/matter-of-pagliughi.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/microsoft-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/msft.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/national-aeronautics-and-space-administration.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/nuclear-regulatory-commission.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/nvda.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/nvidia-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/sawas-v-elzanaty.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/supreme-court-of-rhode-island.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/entity-daily-briefs.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/2021-00294.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/2024-07773.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/2025-0045-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/25-113.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/25-581.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/a170747m.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/aapl.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/alphabet-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/amazon-com-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/amzn.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/apple-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/avgo.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/biddle-v-biddle.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/broadcom-inc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/california-court-of-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/centers-for-medicare-and-medicaid-services.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/court-of-appeals-for-the-second-circuit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/court-of-appeals-of-north-carolina.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/defense-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/federal-procurement-policy-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/general-services-administration.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/googl.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/health-and-human-services-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/homeland-security-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/management-and-budget-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/matter-of-pagliughi.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/microsoft-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/msft.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/national-aeronautics-and-space-administration.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/nuclear-regulatory-commission.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/nvda.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/nvidia-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/sawas-v-elzanaty.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/supreme-court-of-rhode-island.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10563,7 +10031,7 @@
       "file": "_site/site-population-audit.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": true,
+      "hasFallback": false,
       "status": "ok"
     },
     {
@@ -11788,7 +11256,7 @@
       "file": "_site/top-52-power-deck.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": true,
+      "hasFallback": false,
       "status": "ok"
     },
     {
@@ -14697,6 +14165,13 @@
       "status": "ok"
     },
     {
+      "file": "document-library.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "dog-the-architect.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14851,6 +14326,496 @@
       "status": "ok"
     },
     {
+      "file": "entity-briefs/2021-00294.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/2024-07773.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/2025-0045-appeal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/23-wap-2023.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/25-113.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/a170747m.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/aapl.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/alphabet-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/amazon-com-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/amzn.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/apple-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/avgo.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/broadcom-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/california-court-of-appeal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/googl.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/health-and-human-services-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/homeland-security-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/matter-of-pagliughi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/microsoft-corp.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/msft.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/nuclear-regulatory-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/nvda.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/nvidia-corp.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/people-v-brim.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/sawas-v-elzanaty.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/securities-and-exchange-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/supreme-court-of-rhode-island.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-daily-briefs.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/2021-00294.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/2024-07773.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/2025-0045-appeal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/23-wap-2023.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/25-113.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/a170747m.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/aapl.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/alphabet-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/amazon-com-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/amzn.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/apple-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/avgo.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/broadcom-inc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/california-court-of-appeal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/googl.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/health-and-human-services-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/homeland-security-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/matter-of-pagliughi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/microsoft-corp.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/msft.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/nuclear-regulatory-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/nvda.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/nvidia-corp.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/people-v-brim.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/sawas-v-elzanaty.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/securities-and-exchange-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/supreme-court-of-pennsylvania.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/supreme-court-of-rhode-island.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-exposure-index.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-registry.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14873,6 +14838,13 @@
     },
     {
       "file": "entity-timelines/2025-0045-appeal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/23-wap-2023.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -15236,6 +15208,13 @@
       "status": "ok"
     },
     {
+      "file": "entity-timelines/punxsutawney-hunting-club-v-pgc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-timelines/republic-of-india.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -15257,7 +15236,21 @@
       "status": "ok"
     },
     {
+      "file": "entity-timelines/securities-and-exchange-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-timelines/state-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/supreme-court-of-pennsylvania.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -15356,6 +15349,13 @@
     },
     {
       "file": "epstein-capital-class-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "epstein-email-network.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -15656,6 +15656,13 @@
       "status": "ok"
     },
     {
+      "file": "follow-the-money/making-money.html",
+      "hasBoundary": false,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "review"
+    },
+    {
       "file": "follow-the-money/media.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -15664,6 +15671,706 @@
     },
     {
       "file": "follow-the-money/pension-funds.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/abigail-johnson.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/alain-wertheimer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/alexey-mordashov-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/alice-walton.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/aliko-dangote.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/amancio-ortega.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/andrea-pignataro.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/andreas-von-bechtolsheim-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/bernard-arnault-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/bill-gates.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/carlos-slim-helu-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/changpeng-zhao.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/charles-koch-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/colin-huang.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/cyrus-poonawalla.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/daniel-gilbert.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/dieter-schwarz.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/dilip-shanghvi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/eduardo-saverin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/elaine-marshall-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/elon-musk.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/emmanuel-besnier.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/eric-schmidt.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/eyal-ofer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/francois-pinault-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/francoise-bettencourt-meyers-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/gautam-adani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/gerard-wertheimer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/german-larrea-mota-velasco-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/giancarlo-devasini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/gianluigi-aponte.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/giovanni-ferrero.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/he-xiangjian-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/henry-samueli.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/idan-ofer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/iris-fontbona-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/israel-englander.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jack-ma.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jacqueline-mars.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jay-y-lee.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jean-louis-van-der-velde.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jeff-bezos.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jeff-yass.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jensen-huang.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/jim-walton-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/john-mars.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/julia-koch-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/ken-griffin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/klaus-michael-kuehne.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/lakshmi-mittal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/larry-ellison.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/larry-page.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/lei-jun.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/len-blavatnik.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/leonid-mikhelson-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/li-ka-shing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/lukas-walton.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/lyndal-stephens-greth-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/ma-huateng.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/mackenzie-scott.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/marilyn-simons-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/mark-mateschitz.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/mark-zuckerberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/masayoshi-son.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/melinda-french-gates.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/michael-bloomberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/michael-dell.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/michal-strnad.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/miriam-adelson-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/mukesh-ambani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/paolo-ardoino.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/peter-thiel.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/pham-nhat-vuong.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/phil-knight-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/prajogo-pangestu.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/rafaela-aponte-diamant.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/reinhold-wuerth-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/rick-cohen-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/rob-walton-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/robert-pera.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/robin-zeng.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/savitri-jindal-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/sergey-brin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/shiv-nadar.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/stefan-quandt.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/stephen-schwarzman.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/steve-ballmer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/suleiman-kerimov-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/susanne-klatten.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/tadashi-yanai-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/thomas-frist-jr-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/thomas-peterffy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/vagit-alekperov.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/vicky-safra-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/vladimir-potanin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/warren-buffett.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/william-ding.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/zhang-yiming.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/zheng-shuliang-and-family.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "follow-the-money/people/zhong-shanshan.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -16307,6 +17014,13 @@
       "status": "ok"
     },
     {
+      "file": "investigation-source-ledger.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "investigations.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16713,6 +17427,20 @@
       "status": "ok"
     },
     {
+      "file": "machine-digest.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "machine-intelligence.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "main-player-profiles.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16860,6 +17588,34 @@
       "status": "ok"
     },
     {
+      "file": "making-money/guides/acquire-ip.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/acquire-newsletters.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/acquire-websites.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/angel-investing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "making-money/guides/b2b-sales.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16867,7 +17623,315 @@
       "status": "ok"
     },
     {
+      "file": "making-money/guides/bonds.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/business-ownership.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/buy-small-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/cash-management.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/compounding.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/consulting.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/content-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/credit-building.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/debt-reduction.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/digital-products.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/distressed-assets.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/dividends.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/ecommerce.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/emergency-funds.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/exporting.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/franchise.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/freelancing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "making-money/guides/government-contracts.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/high-value-skills.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/holding-company.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/importing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/increase-earned-income.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/index-funds.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/ip-licensing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/local-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/manufacturing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/micro-saas.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/online-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/partnerships.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/private-companies.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/property-investing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/property-management.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/property-renovation.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/publishing-books.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/renting-property.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/reselling.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/retirement-accounts.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/royalties.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/salary-negotiation.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/service-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/shares.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/small-farm.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/subscription-business.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/tax-efficient-structures.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "making-money/guides/vendor-finance.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -18058,6 +19122,13 @@
     },
     {
       "file": "premium-reports.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "private-contractor-tracker.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

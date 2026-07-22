@@ -188,6 +188,7 @@ const downloadableExt = new Set(['.pdf','.json','.csv','.md','.txt','.zip','.wac
 const downloads = walk(downloadDir, file => downloadableExt.has(path.extname(file).toLowerCase()));
 for (const file of downloads) {
   const route = rel(file);
+  if (route.startsWith('downloads/report-manifests/')) continue;
   const ext = path.extname(file).toLowerCase();
   const stat = fs.statSync(file);
   const classification = classifyDownload(route);

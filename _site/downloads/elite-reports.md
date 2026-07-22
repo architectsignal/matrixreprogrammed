@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-20T06:35:13.565Z
+Generated: 2026-07-22T06:21:45.212Z
 
 ## Daily Revelation Report
 
-Haiti: Signs of hope despite gang violence and political uncertainty
+Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
 
 Source: daily-command-brief.html
 
@@ -20,37 +20,7 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Defense Department — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Federal Procurement Policy Office — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## General Services Administration — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
 ## Health and Human Services Department — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Management and Budget Office — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## National Aeronautics and Space Administration — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
@@ -63,6 +33,36 @@ Worth watching because records and relationship signals both exist.
 Source: entity-daily-briefs.html
 
 ## 2024-07773 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## 2025-0045-Appeal. — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## 23 WAP 2023 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## 25-113 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## A170747M — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## California Court of Appeal — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

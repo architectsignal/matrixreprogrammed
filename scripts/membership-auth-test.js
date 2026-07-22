@@ -221,7 +221,7 @@ async function main() {
     const sessionCookieHeader = verifyResponse.headers.get('set-cookie') || '';
     const sessionCookie = sessionCookieHeader.split(';')[0];
     const verifiedMember = d1.membersByEmail.get('member@example.com');
-    checks.push({ name: 'verification activates member and creates secure cookie', ok: verifyResponse.status === 303 && verifiedMember.status === 'active' && verifiedMember.marketing_status === 'subscribed' && Boolean(verifiedMember.email_verified_at) && /matrix_session=/.test(sessionCookieHeader) && /HttpOnly/.test(sessionCookieHeader) && /Secure/.test(sessionCookieHeader) && /SameSite=Lax/.test(sessionCookieHeader) });
+    checks.push({ name: 'verification activates member and creates secure cookie', ok: verifyResponse.status === 303 && verifiedMember.status === 'active' && verifiedMember.marketing_status === 'subscribed' && Boolean(verifiedMember.email_verified_at) && /(?:matrix_session_v2|matrix_session)=/.test(sessionCookieHeader) && /HttpOnly/.test(sessionCookieHeader) && /Secure/.test(sessionCookieHeader) && /SameSite=Lax/.test(sessionCookieHeader) });
 
     const meResponse = await worker.fetch(new Request('https://matrixreprogrammed.com/api/member/me', { headers: { cookie: sessionCookie } }), env);
     const me = await readJson(meResponse);
@@ -245,7 +245,7 @@ async function main() {
 
     const loginLink = extractLink(outbound[outbound.length - 1] || {});
     const loginResponse = await worker.fetch(new Request(loginLink), env);
-    checks.push({ name: 'verified member can create a new passwordless session', ok: loginResponse.status === 303 && /login=1/.test(loginResponse.headers.get('location') || '') && /matrix_session=/.test(loginResponse.headers.get('set-cookie') || '') });
+    checks.push({ name: 'verified member can create a new passwordless session', ok: loginResponse.status === 303 && /login=1/.test(loginResponse.headers.get('location') || '') && /(?:matrix_session_v2|matrix_session)=/.test(loginResponse.headers.get('set-cookie') || '') });
 
     const invalidResponse = await worker.fetch(new Request('https://matrixreprogrammed.com/api/auth/verify?purpose=login&token=invalid-token'), env);
     checks.push({ name: 'invalid magic token is rejected safely', ok: invalidResponse.status === 303 && /invalid|expired/.test(invalidResponse.headers.get('location') || '') });

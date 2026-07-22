@@ -5,7 +5,7 @@ import { enrichIntelligenceReport, buildDeepIntelligencePdf } from '../src/worke
 
 const root=process.cwd();
 const downloads=path.join(root,'downloads');
-const manifests=path.join(downloads,'report-manifests');
+const manifests=path.join(root,'data','report-manifests');
 const SITE='https://matrixreprogrammed.com';
 fs.mkdirSync(manifests,{recursive:true});
 const read=file=>{try{return fs.readFileSync(file,'utf8')}catch{return''}};

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T06:34:11.022Z",
+  "updated": "2026-07-22T06:11:29.126Z",
   "title": "Institution Control Tracker",
   "boundary": "Institution profiles describe public-record routes, partnerships and missing documents.",
   "profiles": [
@@ -100,125 +100,10 @@
         "foundations-ngos": 20,
         "public-private-contracts": 20
       },
-      "control_score": 84,
-      "level": "high priority",
-      "latest_records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        }
-      ],
-      "relationship_candidates": [
-        {
-          "id": "federal-procurement-policy-office__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Federal Procurement Policy Office",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__general-services-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
       "missing_records": [
         "Funding route",
         "Board / leadership record",
@@ -331,125 +216,10 @@
         "migration": 20,
         "public-private-contracts": 20
       },
-      "control_score": 84,
-      "level": "high priority",
-      "latest_records": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        }
-      ],
-      "relationship_candidates": [
-        {
-          "id": "federal-procurement-policy-office__management-and-budget-office",
-          "from": "Management and Budget Office",
-          "to": "Federal Procurement Policy Office",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "defense-department__federal-procurement-policy-office",
-          "from": "Federal Procurement Policy Office",
-          "to": "Defense Department",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__general-services-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "General Services Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
-          "from": "Federal Procurement Policy Office",
-          "to": "National Aeronautics and Space Administration",
-          "count": 1,
-          "lanes": [
-            "federal-register-policy"
-          ],
-          "record_types": [
-            "rule_or_notice"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "federal-register-policy-2026-12559-6"
-          ],
-          "control_layers": [
-            "policy",
-            "emergency_power",
-            "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
       "missing_records": [
         "Funding route",
         "Board / leadership record",

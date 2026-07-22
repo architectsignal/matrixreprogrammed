@@ -63,10 +63,18 @@ function repairPowerMap(html) {
 }
 function repairHomepage(html) { return html.replace(/Site Brain Router/g, 'Research Navigation'); }
 function repairInformationGathering(html) { return html.replace(/No \[object Object\] visible in public pages\./g, 'No raw object placeholders are published on public pages.'); }
-function repairSignalPass(html) {
-  if (!html.includes('id="unlock-signal-pass"') || html.includes('id="signal-pass-unlock-runtime"')) return html;
-  const runtime = `<script id="signal-pass-unlock-runtime">(()=>{const button=document.getElementById('unlock-signal-pass');const section=document.getElementById('submit-signal');const status=document.getElementById('signal-pass-status');if(!button||!section)return;const key='matrix-signal-pass-unlocked-v1';const unlock=()=>{section.classList.remove('signal-locked');section.setAttribute('data-signal-pass-unlocked','true');if(status)status.textContent='Posting unlocked on this device. Every submission remains an unverified reader signal until reviewed.';try{sessionStorage.setItem(key,'1')}catch{}};button.addEventListener('click',unlock);try{if(sessionStorage.getItem(key)==='1')unlock()}catch{}})();</script>`;
-  return /<\/body>/i.test(html) ? html.replace(/<\/body>/i, `${runtime}</body>`) : `${html}${runtime}`;
+function repairMemberPosting(html) {
+  const loginUrl = 'https://matrixreprogrammed.com/member-login.html?return=' + encodeURIComponent('/epstein-sighting-submit.html');
+  const section = '<section id="signal-pass" class="section wrap split"><div class="card redline"><h2>Verified Member Posting</h2><p>The board is free to read. A verified Free Member account unlocks posting across devices and gives you session controls.</p><p id="forum-member-status" class="form-status pending">Checking your member session…</p><div class="cta-row small"><a class="btn" href="' + loginUrl + '">Sign In</a><a class="btn alt" href="membership.html">Create Free Account</a></div></div><aside class="card"><h2>What to include</h2><p>Source URL, claimed location/date, media link, why it matters, and any counter-source or debunk.</p></aside></section>';
+  let next = html;
+  if (/<section id="signal-pass" class="section wrap split">[\s\S]*?<\/section>/i.test(next)) next = next.replace(/<section id="signal-pass" class="section wrap split">[\s\S]*?<\/section>/i, section);
+  else if (next.includes('<section id="submit-signal"')) next = next.replace('<section id="submit-signal"', section + '<section id="submit-signal"');
+  next = next
+    .replace(/\s+signal-locked(?=["'])/g, '')
+    .replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.')
+    .replace(/<script id="signal-pass-unlock-runtime">[\s\S]*?<\/script>/gi, '')
+    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+  return next;
 }
 function repairWarnings(relative, html) {
   let next = html;
@@ -84,7 +92,7 @@ const trackerPages = ['case-status-dashboard.html', 'epstein-billionaire-tracker
 const unstableFiles = ['reports/entity-object-object.html','reports/entity-object-object','entity-exposure/object-object.html','entity-exposure/object-object','reports/entity-chattogram-water-supply-and-sewerage-authority.html','reports/entity-chattogram-water-supply-and-sewerage-authority','reports/entity-finance-division-ministry-of-finance.html','reports/entity-finance-division-ministry-of-finance'];
 for (const base of bases) {
   patchAliases(base, 'epstein-upload-check.html', repairEpstein);
-  patchAliases(base, 'epstein-sighting-submit.html', repairSignalPass);
+  patchAliases(base, 'epstein-sighting-submit.html', repairMemberPosting);
   patchAliases(base, 'information-gathering-system.html', repairInformationGathering);
   patchAliases(base, 'index.html', repairHomepage);
   for (const route of trackerPages) patchAliases(base, route, route === 'wrongdoing-tracker.html' ? repairWrongdoing : repairTrackerJavaScript);
@@ -122,7 +130,7 @@ for (const base of bases) {
     const file = path.join(base, route);
     if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
     const html = fs.readFileSync(file, 'utf8');
-    checks.push({ file: display(file), ok: html.includes('id="signal-pass-unlock-runtime"') && html.includes("button.addEventListener('click',unlock)") });
+    checks.push({ file: display(file), ok: html.includes('id="forum-member-status"') && html.includes('Verified Member Posting') && html.includes('member-login.html?return=') && html.includes('forum-member-posting-v3') && !html.includes('unlock-signal-pass') && !html.includes('paypal.me/njmgroup/1') && !html.includes('signal-pass-unlock-runtime') });
   }
   for (const route of ['information-gathering-system.html','information-gathering-system']) {
     const file = path.join(base, route);

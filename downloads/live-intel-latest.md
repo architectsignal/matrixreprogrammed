@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-22T03:45:23.678Z
+Collection completed: 2026-07-22T06:24:15.063Z
 Latest source publication: 2026-07-21T18:38:00.000Z
-Collection status: fresh-items-added
-New items this collection: 6
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -43,6 +43,12 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167993
@@ -216,19 +222,19 @@ New items this collection: 6
   - Source: https://vault.fbi.gov/henry-lucas
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas. Source first, claim second.
+  - Video hook: New public-record signal: Henry Lucas
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — Henry Lucas Part 01
   - Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-01/view
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 01. Source first, claim second.
+  - Video hook: New public-record signal: Henry Lucas Part 01
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — Henry Lucas Part 02 (Final)
   - Source: https://vault.fbi.gov/henry-lucas/henry-lucas-part-02-final/view
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Henry Lucas Part 02 (Final). Source first, claim second.
+  - Video hook: New public-record signal: Henry Lucas Part 02 (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-16 — ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167955
@@ -301,6 +307,24 @@ New items this collection: 6
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-16 — Edwin Wilson and Frank Terpil Part 54
+  - Source: https://vault.fbi.gov/edwin-wilson-and-frank-terpil/edwin-wilson-and-frank-terpil-part-54/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Edwin Wilson and Frank Terpil Part 54
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-16 — Thomas Bilotti
+  - Source: https://vault.fbi.gov/thomas-bilotti
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Thomas Bilotti
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-16 — Thomas Bilotti (Final)
+  - Source: https://vault.fbi.gov/thomas-bilotti/thomas-bilotti-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Thomas Bilotti (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-16 — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
   - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5

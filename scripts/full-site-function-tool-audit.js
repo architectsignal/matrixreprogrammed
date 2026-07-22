@@ -29,7 +29,7 @@ const leakedMarkers = [
   'preservedaftervisiblede-duplication'
 ];
 const dynamicPrefixes = [
-  '/api/', '/forum-', '/submit-', '/report-', '/track-', '/member-', '/billing-', '/admin-', '/newsletter-', '/osint-', '/health', '/deploy-status', '/intro-voice', '/intro-voice'
+  '/api/', '/forum-', '/submit-', '/report-', '/track-', '/member-', '/billing-', '/admin-', '/newsletter-', '/osint-', '/health', '/deploy-status', '/intro-voice', '/intro-voice', '/intro-voice'
 ];
 const criticalPages = new Set([
   'index.html', 'start-here.html', 'search.html', 'live-intel.html', 'books.html',

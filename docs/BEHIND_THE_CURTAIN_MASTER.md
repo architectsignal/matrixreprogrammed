@@ -83,6 +83,48 @@ Every entry must show:
 
 Historical snapshots must be preserved when future infrastructure supports them.
 
+## The Access Layer — families, dynasties and continuity structures
+
+The final conclusion above the Top 10 must ask who can legally or operationally reach the controls of each power center.
+
+The Access Layer must separately measure:
+
+- hereditary constitutional office;
+- controlling voting rights;
+- beneficial ownership;
+- board and trustee representation;
+- appointment and succession power;
+- family-office and foundation capital;
+- access to sovereign funds and state companies;
+- company-level infrastructure control;
+- historical institution-building;
+- professional, advisory and political access;
+- constraints, vetoes and external dependencies.
+
+A family may be ranked only where public records document an actual mechanism. A surname, marriage, donation, social connection, club membership, historic reputation or symbolic association is never enough.
+
+The family investigation must maintain three distinct lanes:
+
+1. **Hereditary state authority** — ruling dynasties whose constitutional or legal powers are explicit.
+2. **Corporate continuity control** — families whose voting shares, trusts, foundations or holding companies preserve documented control of major institutions.
+3. **Historical architects** — families that materially helped build banking, sovereign credit, philanthropy, medicine, industry or policy networks but whose present-day command must be separately proven.
+
+Every family entry must show:
+
+- the precise legal or corporate mechanism;
+- structures reached;
+- score and evidence confidence;
+- formal authority versus informal access;
+- constraints and dependencies;
+- strongest counterargument;
+- claims the evidence does not support;
+- source ledger;
+- what would raise, lower or remove the family from the index.
+
+The Access Layer must test all ten structural power centers and state who formally controls each one. Where no family control is documented, it must say so directly.
+
+The Access Layer's permanent conclusion is evidence-led: families matter most where succession, ownership or voting power is legally embedded. Modern monetary, security, regulatory, technological and financial systems are otherwise governed by overlapping offices, boards, member states, regulators, executives, fiduciaries and professional networks. Evidence of access is not evidence of unified command.
+
 ## Continuous evidence feed
 
 Relevant additions to the site are evaluated through:
@@ -121,7 +163,7 @@ Never treat an ethnicity, religion, nationality, family or culture as one coordi
 
 ## Current starting conclusion
 
-The initial model does **not** establish one unified hidden command structure. It provisionally identifies competing state systems and overlapping monetary, legal, security, technological, settlement, standards and capital-allocation chokepoints. That conclusion must change if stronger evidence requires it.
+The initial model does **not** establish one unified hidden command structure. It provisionally identifies competing state systems and overlapping monetary, legal, security, technological, settlement, standards and capital-allocation chokepoints. The family Access Layer finds the strongest direct control where hereditary law or corporate voting structures preserve authority. That conclusion must change if stronger evidence requires it.
 
 ## Production boundary
 

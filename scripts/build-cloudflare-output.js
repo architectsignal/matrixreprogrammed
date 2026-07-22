@@ -30,8 +30,9 @@ function ensureArchiveSearchMarker(file) {
   fs.writeFileSync(file, html);
 }
 
-function repairTop52ArtLinks() {
-  let files = 0, links = 0;
+function normalizeTop52DossierLinks() {
+  let files = 0;
+  let links = 0;
   function htmlFiles(dir) {
     if (!fs.existsSync(dir)) return [];
     const result = [];
@@ -43,22 +44,24 @@ function repairTop52ArtLinks() {
     }
     return result;
   }
-  function fixed(target) {
-    if (target.startsWith('../../top-52/')) return '../../top-52-power-deck.html';
-    if (target.startsWith('../top-52/')) return '../top-52-power-deck.html';
-    if (target.startsWith('top-52/')) return 'top-52-power-deck.html';
-    return target;
+  function canonical(target) {
+    const match = String(target).match(/(?:^|\/)(top-52)\/([^/?#]+?)(?:\.html)?(?:[?#].*)?$/i);
+    if (!match) return target;
+    const id = match[2].replace(/\.html$/i, '');
+    const dossier = path.join(root, 'top-52', `${id}.html`);
+    if (!fs.existsSync(dossier)) throw new Error(`Cloudflare output failed: missing Puppet dossier top-52/${id}.html`);
+    return `/top-52/${id}`;
   }
   for (const file of htmlFiles(root)) {
     const before = fs.readFileSync(file, 'utf8');
     const after = before.replace(/href=(['"])(\.\.\/\.\.\/top-52\/[^'"]+|\.\.\/top-52\/[^'"]+|top-52\/[^'"]+)\1/g, (match, quote, target) => {
-      const next = fixed(target);
+      const next = canonical(target);
       if (next !== target) links++;
       return `href=${quote}${next}${quote}`;
     });
     if (after !== before) { fs.writeFileSync(file, after); files++; }
   }
-  if (files || links) console.log(`Top 52 art link repair complete: ${files} file(s), ${links} link(s).`);
+  if (files || links) console.log(`Puppet dossier link normalization complete: ${files} file(s), ${links} direct link(s).`);
 }
 
 function runRequired(label, script) {
@@ -125,7 +128,7 @@ function walk(dir) {
 }
 
 normalizeWorkerAuditMarkers();
-repairTop52ArtLinks();
+normalizeTop52DossierLinks();
 ensureArchiveSearchMarker(path.join(root, 'search.html'));
 require('./patch-osint-tools-system.js');
 require('./patch-research-tools-ui.js');
@@ -179,6 +182,8 @@ runRequired('Cytoscape network map test', 'scripts/cytoscape-network-map-test.js
 require('./patch-osint-tool-tiers.js');
 require('./patch-newsletter-consent.js');
 require('./patch-homepage-construction-banner.js');
+normalizeTop52DossierLinks();
+runRequired('Puppets of Interest people-only and dossier test', 'scripts/top-52-people-only-test.js');
 
 rm(out);
 ensure(out);
@@ -197,7 +202,8 @@ const requiredFiles = [
   'investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','source-changes.html','source-changes',
   'entity-registry.html','entity-registry','relationship-registry.html','relationship-registry','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv',
   'data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','data/source-change-public.json','data/investigation-entity-schema.json','data/investigation-knowledge-graph.json','data/entity-registry.json','data/relationship-registry.json','downloads/investigation-entities.csv','downloads/investigation-relationships.csv',
-  'timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
+  'timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers',
+  'top-52-power-deck.html','top-52-power-deck'
 ];
 for (const required of requiredFiles) {
   if (!fs.existsSync(path.join(out, required))) {
@@ -245,6 +251,11 @@ const builtNewsletter = fs.readFileSync(path.join(out, 'newsletter.html'), 'utf8
 const builtNewsletterClient = fs.readFileSync(path.join(out, 'newsletter.js'), 'utf8');
 if (!builtNewsletter.includes('data-marketing-consent') || !builtNewsletterClient.includes('consent:consentGranted')) {
   console.error('Cloudflare output failed: explicit newsletter consent missing from final assets.');
+  process.exit(1);
+}
+const builtPuppets = fs.readFileSync(path.join(out, 'top-52-power-deck.html'), 'utf8');
+if (!builtPuppets.includes('PUPPETS OF INTEREST') || /href=["']top-52-power-deck\.html["'][^>]*>Deep Dossier/i.test(builtPuppets)) {
+  console.error('Cloudflare output failed: Puppets of Interest title or direct dossier links were lost.');
   process.exit(1);
 }
 

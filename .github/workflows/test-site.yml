@@ -32,12 +32,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify Cloudflare member experience contracts
-        run: |
-          node scripts/patch-membership-auth-ui.js
-          node scripts/cloudflare-member-experience-test.mjs
-          node scripts/paypal-active-subscription-compatibility-test.mjs
-          node scripts/cloudflare-canonical-origin-test.mjs
+      - name: Apply Cloudflare member experience repairs
+        run: node scripts/patch-membership-auth-ui.js
+
+      - name: Verify Cloudflare member contracts
+        run: node scripts/cloudflare-member-experience-test.mjs
+
+      - name: Verify PayPal active-subscription compatibility
+        run: node scripts/paypal-active-subscription-compatibility-test.mjs
+
+      - name: Verify canonical Cloudflare origin at runtime
+        run: node scripts/cloudflare-canonical-origin-test.mjs
 
       - name: Full build and pressure tests
         run: npm run build

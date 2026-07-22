@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-07-21T07:44:05.392Z
+Generated: 2026-07-22T07:44:13.840Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -11,12 +11,12 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - sourcesScheduled: 12
 - sourcesFetched: 12
 - sourceFailures: 0
-- changedSources: 10
-- findingsInWindow: 1090
+- changedSources: 9
+- findingsInWindow: 1084
 - establishedWrongdoingFindings: 18
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
-- meaningfulSourceChanges: 10
+- meaningfulSourceChanges: 12
 
 ## Permanent Evidence Method
 
@@ -366,24 +366,6 @@ Next records: Open the current source and identify the exact added, removed or a
 
 Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
 
-### content changed: U.S. Securities and Exchange Commission — Litigation Releases
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://www.sec.gov/enforcement-litigation/litigation-releases
-
 ### content changed: Federal Register — Latest Documents
 
 Grade: B · Status: source-change · Severity: 2
@@ -419,24 +401,6 @@ Boundary: The change alone does not establish wrongdoing, deliberate concealment
 Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
 Source URL: https://api.usaspending.gov/api/v2/search/spending_by_award/
-
-### content changed: U.S. Treasury OFAC — Recent Actions
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: U.S. Treasury OFAC — Recent Actions
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://ofac.treasury.gov/recent-actions
 
 ### content changed: U.S. House Committee on Oversight and Government Reform — Releases
 
@@ -491,3 +455,39 @@ Boundary: The change alone does not establish wrongdoing, deliberate concealment
 Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
 Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+
+### content changed: U.S. Securities and Exchange Commission — Litigation Releases
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/enforcement-litigation/litigation-releases
+
+### content changed: Federal Register — Latest Documents
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: Federal Register — Latest Documents
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest

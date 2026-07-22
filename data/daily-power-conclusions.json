@@ -1,62 +1,163 @@
 {
   "ok": true,
-  "updated": "2026-07-22T06:54:21.699Z",
+  "updated": "2026-07-22T07:45:01.441Z",
   "conclusions": [
     {
       "title": "Strongest route today",
       "text": "World Economic Forum is the strongest current map node because it has the highest combined route, evidence and brain score.",
-      "route": "institution-briefs/world-economic-forum.html"
+      "route": "institution-briefs/world-economic-forum.html",
+      "integrity": {
+        "id": "power-1",
+        "title": "Strongest route today",
+        "conclusion": "World Economic Forum is the strongest current map node because it has the highest combined route, evidence and brain score.",
+        "route": "institution-briefs/world-economic-forum.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/evidence-weighted-relationship-graph.json",
+          "data/site-relationship-map.json",
+          "data/control-brain-v2.json"
+        ]
+      }
     },
     {
       "title": "Highest clock pressure",
       "text": "No clock data yet.",
-      "route": "timers.html"
+      "route": "timers.html",
+      "integrity": {
+        "id": "power-2",
+        "title": "Highest clock pressure",
+        "conclusion": "No clock data yet.",
+        "route": "timers.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/clock-wall.json"
+        ]
+      }
     },
     {
       "title": "Top capital lane",
       "text": "BlackRock should be watched through AUM, holdings, proxy voting, mandates and public filings.",
-      "route": "big-three/blackrock.html"
+      "route": "big-three/blackrock.html",
+      "integrity": {
+        "id": "power-3",
+        "title": "Top capital lane",
+        "conclusion": "BlackRock should be watched through AUM, holdings, proxy voting, mandates and public filings.",
+        "route": "big-three/blackrock.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/big-three-asset-managers.json"
+        ]
+      }
     },
     {
       "title": "Top contractor lane",
       "text": "Blackwater / Xe / Academi / Constellis lineage is the strongest contractor watch route in current data.",
-      "route": "contractor-briefs/blackwater-constellis-lineage.html"
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
+      "integrity": {
+        "id": "power-4",
+        "title": "Top contractor lane",
+        "conclusion": "Blackwater / Xe / Academi / Constellis lineage is the strongest contractor watch route in current data.",
+        "route": "contractor-briefs/blackwater-constellis-lineage.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/private-contractor-intelligence.json"
+        ]
+      }
     },
     {
       "title": "Top institution lane",
       "text": "United Nations is the strongest institution route in current data.",
-      "route": "institution-briefs/united-nations.html"
+      "route": "institution-briefs/united-nations.html",
+      "integrity": {
+        "id": "power-5",
+        "title": "Top institution lane",
+        "conclusion": "United Nations is the strongest institution route in current data.",
+        "route": "institution-briefs/united-nations.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/institution-control-index.json"
+        ]
+      }
     },
     {
       "title": "Top billionaire lane",
       "text": "Elon Musk is the strongest elite-network route in current data.",
-      "route": "billionaire-briefs/elon-musk.html"
+      "route": "billionaire-briefs/elon-musk.html",
+      "integrity": {
+        "id": "power-6",
+        "title": "Top billionaire lane",
+        "conclusion": "Elon Musk is the strongest elite-network route in current data.",
+        "route": "billionaire-briefs/elon-musk.html",
+        "classification": "heuristic ranking",
+        "confidence": "medium-low",
+        "evidenceBasis": "A transparent site-ranking heuristic over route presence, notes, type and any matching brain score.",
+        "supportingCount": 131,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.",
+        "counterEvidence": "Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.",
+        "limitation": "Rank position measures the site model, not real-world control, guilt, intent or coordination.",
+        "sources": [
+          "data/billionaire-control-index.json"
+        ]
+      }
     },
     {
       "title": "Most important missing record",
-      "text": "Appellate Division of the Supreme Court of the State of New York needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
-    },
-    {
-      "title": "One-world governance convergence",
-      "text": "Track whether national decision-making is being pulled upward into global policy bodies, treaty systems, standards bodies, public-private forums and emergency frameworks. Evidence route: UN / WHO / IMF / BIS / G20 policy documents. Boundary: This does not prove a single hidden world government. It tracks documented convergence of policy authority and institutional coordination.",
-      "route": "power-structure-map.html"
-    },
-    {
-      "title": "One-world currency / digital-money rail",
-      "text": "Track CBDC pilots, BIS settlement projects, digital ID, payment rails, stablecoin regulation, programmable payments and central-bank coordination. Evidence route: central-bank papers. Boundary: This does not prove one single currency is already here. It tracks the infrastructure that could make money more centralized, programmable and surveillable.",
-      "route": "deep-intel-feed.html"
-    },
-    {
-      "title": "One-world religion / interfaith convergence",
-      "text": "Track interfaith diplomacy, religious soft-power forums, Vatican/UN routes, global ethics language, education programmes and institutional spiritual framing. Evidence route: official interfaith declarations. Boundary: This does not prove a single world religion. It tracks public institutional convergence around religion, ethics, diplomacy and social doctrine.",
-      "route": "secret-societies-tracker.html"
-    },
-    {
-      "title": "Elite-control infrastructure",
-      "text": "Track how asset managers, central banks, contractors, think tanks, governments, tech platforms, media systems, foundations and elite networks connect through records. Evidence route: SEC filings and proxy votes. Boundary: Association is not guilt. A control route strengthens only when records show money, office, contract, mandate, voting power or policy influence.",
-      "route": "evidence-graph.html"
+      "text": "Appellate Division of the Supreme Court of the State of New York needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "integrity": {
+        "id": "power-7",
+        "title": "Most important missing record",
+        "conclusion": "Appellate Division of the Supreme Court of the State of New York needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+        "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+        "classification": "missing-record priority",
+        "confidence": "medium",
+        "evidenceBasis": "A queue priority derived from explicitly missing primary records.",
+        "supportingCount": 1,
+        "freshness": "2026-07-22T07:45:01.441Z",
+        "formula": "First unresolved record in the current missing-record queue.",
+        "counterEvidence": "The missing record itself may confirm, narrow or falsify the route.",
+        "limitation": "Priority does not establish that the absent record contains wrongdoing.",
+        "sources": [
+          "data/missing-records.json"
+        ]
+      }
     }
   ],
-  "convergenceLenses": true
+  "integrityVersion": 1
 }

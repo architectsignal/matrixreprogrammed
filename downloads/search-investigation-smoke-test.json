@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-22T06:56:49.716Z",
+  "generatedAt": "2026-07-22T07:45:03.352Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1642 entries"
+      "detail": "1647 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1642 unique routes"
+      "detail": "1647 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -120,12 +120,12 @@
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=fbfb678d637444fe7b488644, source-changes.html?change=3a612824bd2383e3b7554062"
+      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=1abf4240a692c2dda1388443, source-changes.html?change=fbfb678d637444fe7b488644"
     },
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "source-changes.html?change=d652e1fa40dcd5dc95de9bb1, source-changes.html?change=553ca36157c97552aafe2abb, investigation-source-ledger.html?source=usaspending-recent-contracts"
+      "detail": "source-changes.html?change=b74173cd5f46b45d0e8f3fe1, source-changes.html?change=d652e1fa40dcd5dc95de9bb1, source-changes.html?change=553ca36157c97552aafe2abb"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=cb7ce67fe443d7c98b486d34, source-changes.html?change=4f6142409f6345aa4038244f"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=6abef96c5fc5ea85ab0487a7, source-changes.html?change=cb7ce67fe443d7c98b486d34"
     }
   ],
   "failures": []

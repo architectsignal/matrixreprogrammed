@@ -2,8 +2,6 @@ name: Behind the Curtain Structural Power Intelligence
 
 on:
   workflow_dispatch:
-  issues:
-    types: [opened, edited]
   pull_request:
     branches: [main]
     paths:
@@ -23,7 +21,7 @@ on:
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - '.github/workflows/behind-the-curtain-intelligence.yml'
   push:
-    branches: [main, 'agent/behind-the-curtain-structural-power']
+    branches: [main]
     paths:
       - 'data/behind-the-curtain-source-intake.json'
       - 'data/entity-registry.json'
@@ -47,7 +45,7 @@ concurrency:
 
 jobs:
   build-and-test-git-only:
-    if: ${{ (github.event_name != 'issues' || github.event.issue.title == 'RUN BEHIND THE CURTAIN BUILD') && (github.event_name != 'push' || !contains(github.event.head_commit.message, '[curtain-built]')) }}
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[curtain-built]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -63,6 +61,7 @@ jobs:
         run: |
           node --check behind-the-curtain.js
           node --check scripts/build-behind-the-curtain.js
+          node --check scripts/seed-behind-the-curtain-data.js
           node --check scripts/patch-behind-the-curtain-links.js
           node --check scripts/behind-the-curtain-test.js
           node scripts/behind-the-curtain-test.js

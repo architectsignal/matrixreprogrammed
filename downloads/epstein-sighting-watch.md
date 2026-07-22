@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-22T08:44:18.812Z
+Generated: 2026-07-22T14:21:59.829Z
 
 ## Official Boundary
 
@@ -48,6 +48,16 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 - Likely explanation: Synthetic image, altered image, old footage, compression artefact, or repost without origin.
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
+
+### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)
 
 ### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
 - Type: related-claim-traffic

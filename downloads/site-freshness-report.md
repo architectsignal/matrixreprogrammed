@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 3002
-Flagged pages: 2450
+Scanned pages: 3003
+Flagged pages: 2451
 High priority pages: 803
-Medium priority pages: 1641
+Medium priority pages: 1642
 Pages with missing rules: 421
 Auto-update eligible figures: 2
 Manual-review figures: 108
-Missing-rule figures: 951
+Missing-rule figures: 946
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -28,9 +28,9 @@ Missing-rule figures: 951
 - store.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - timers.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/machine-digest.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 14 figure/stat markers; 14 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
@@ -60,9 +60,9 @@ Missing-rule figures: 951
 - store.html: 20 figure(s) need source rules.
 - timers.html: 20 figure(s) need source rules.
 - _site/machine-digest.html: 18 figure(s) need source rules.
-- live-intel.html: 14 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
+- live-intel.html: 8 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - _site/daily-brain-brief.html: 6 figure(s) need source rules.

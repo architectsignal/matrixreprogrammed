@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-22T08:44:18.771Z
-Live Intel source window: 2026-07-22T08:44:12.537Z
-Latest source publication: 2026-07-21T18:38:00.000Z
+Generated: 2026-07-22T14:21:59.783Z
+Live Intel source window: 2026-07-22T14:21:54.991Z
+Latest source publication: 2026-07-22T11:32:31.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-14 current Epstein-lane record leads remain inside the active source window.
+13 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+- Published: 2026-07-22T11:32:31.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+
+French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
 - Published: 2026-07-21T18:38:00.000Z
@@ -132,26 +142,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
 
 Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB Charlotte
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
-- Published: 2026-07-15T13:35:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
-
-Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say The Guardian
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-- Published: 2026-07-15T12:00:01.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-
-Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

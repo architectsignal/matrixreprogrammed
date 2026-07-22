@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-22T08:44:12.537Z
-Latest source publication: 2026-07-21T18:38:00.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection completed: 2026-07-22T14:21:54.991Z
+Latest source publication: 2026-07-22T12:00:00.000Z
+Collection status: fresh-items-added
+New items this collection: 3
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+3 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,30 @@ The collector completed successfully, but no newly published source item entered
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Critical minerals: The hidden resources powering the clean energy future
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — From lithium to nickel: How the UN is helping countries make the most of critical minerals
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167994
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: From lithium to nickel: How the UN is helping countries make the most of critical minerals
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace instead of conflict?
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167995
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Security Council LIVE: Can critical minerals fuel peace instead of conflict?
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+  - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
   - Source class: primary-or-official
@@ -49,12 +73,6 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Critical minerals: The hidden resources powering the clean energy future
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Critical minerals: The hidden resources powering the clean energy future
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167983
@@ -277,16 +295,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

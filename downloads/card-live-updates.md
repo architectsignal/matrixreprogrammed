@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-22T08:44:18.864Z
-Live Intel source window: 2026-07-22T08:44:12.537Z
+Generated: 2026-07-22T14:21:59.883Z
+Live Intel source window: 2026-07-22T14:21:54.991Z
 Tracked cards: 873
 Cards with current matched records: 96
 Cards with no new verified record: 777
@@ -1033,8 +1033,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## CARD DOSSIER STANDARD.
 - Route: card-dossier-standard.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T04:11:50.000Z
+- Current matched records: 2
+- Latest record: 2026-07-22T11:32:31.000Z
+- 2026-07-22T11:32:31.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 - 2026-07-16T04:11:50.000Z — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK) — https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
 
 ## CARD DOWNLOADS.
@@ -2202,10 +2203,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-21T18:38:00.000Z
+- Latest record: 2026-07-22T11:32:31.000Z
+- 2026-07-22T11:32:31.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 - 2026-07-21T18:38:00.000Z — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
 - 2026-07-21T18:16:00.000Z — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
-- 2026-07-21T17:01:51.000Z — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html

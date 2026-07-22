@@ -5,11 +5,9 @@ const root = process.cwd();
 const changes = [];
 
 function replaceRequired(text, before, after, label) {
+  if (text.includes(before)) return text.replace(before, after);
   if (text.includes(after)) return text;
-  if (!text.includes(before)) {
-    throw new Error(`Membership integration patch could not find ${label}`);
-  }
-  return text.replace(before, after);
+  throw new Error(`Membership integration patch could not find ${label}`);
 }
 
 function patchFile(relativePath, transform) {
@@ -139,7 +137,7 @@ const checks = {
   paypalReadsCurrentSession: paypal.includes('values.matrix_session_v2||values.matrix_session'),
   protectedAssetsReadCurrentSession: assetGate.includes("cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"),
   emailAcceptsMembershipConsent: emailLifecycle.includes('input.consent??input.marketingConsent'),
-  firstDailyBriefUsesDetailedBuilder: emailLifecycle.includes('const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);'),
+  firstDailyBriefUsesDetailedBuilder: emailLifecycle.includes('const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);') && !emailLifecycle.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);'),
   signupSendsCanonicalConsent: membershipTemplate.includes('consent:marketingConsent,marketingConsent'),
   membershipFetchesIncludeCredentials: membershipTemplate.includes("credentials:'include'"),
   dashboardFetchIncludesCredentials: dashboard.includes("fetch(path,{cache:'no-store',credentials:'include'"),

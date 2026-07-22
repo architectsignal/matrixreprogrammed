@@ -37,6 +37,7 @@ jobs:
           node scripts/patch-membership-auth-ui.js
           node scripts/cloudflare-member-experience-test.mjs
           node scripts/paypal-active-subscription-compatibility-test.mjs
+          node scripts/cloudflare-canonical-origin-test.mjs
 
       - name: Full build and pressure tests
         run: npm run build

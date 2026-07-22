@@ -178,6 +178,7 @@ runRequired('Cytoscape network map test', 'scripts/cytoscape-network-map-test.js
 // copied, so the live build cannot lose explicit consent or tier boundaries.
 require('./patch-osint-tool-tiers.js');
 require('./patch-newsletter-consent.js');
+require('./patch-homepage-construction-banner.js');
 
 rm(out);
 ensure(out);

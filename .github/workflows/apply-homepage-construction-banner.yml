@@ -1,0 +1,66 @@
+name: Apply Homepage Construction Banner to Git
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/apply-homepage-construction-banner.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-construction-banner-git-only
+  cancel-in-progress: false
+
+jobs:
+  patch-source-only:
+    name: Patch homepage source without deploying
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Integrate final build owner and patch homepage
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const file = 'scripts/build-cloudflare-output.js';
+          let source = fs.readFileSync(file, 'utf8');
+          const anchor = "require('./patch-newsletter-consent.js');";
+          const owner = "require('./patch-homepage-construction-banner.js');";
+          if (!source.includes(owner)) {
+            if (!source.includes(anchor)) throw new Error('Final Cloudflare output integration anchor is missing');
+            source = source.replace(anchor, `${anchor}\n${owner}`);
+            fs.writeFileSync(file, source);
+          }
+          NODE
+          node scripts/patch-homepage-construction-banner.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const html = fs.readFileSync('index.html', 'utf8');
+          const owner = fs.readFileSync('scripts/build-cloudflare-output.js', 'utf8');
+          const exact = value => (html.match(new RegExp(value, 'g')) || []).length;
+          if (exact('id="matrix-construction-banner"') !== 1) throw new Error('Homepage does not contain exactly one construction banner');
+          if (exact('UNDER CONSTRUCTION — THE MACHINE IS STILL BUILDING\\.') !== 1) throw new Error('Construction message is missing or duplicated');
+          if (!owner.includes("require('./patch-homepage-construction-banner.js');")) throw new Error('Final Cloudflare output owner is not wired');
+          NODE
+
+      - name: Commit Git-only homepage repair
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html scripts/build-cloudflare-output.js
+          if git diff --cached --quiet; then
+            echo 'Homepage construction banner already current in Git.'
+            exit 0
+          fi
+          git commit -m 'Secure homepage construction banner in final build'
+          git push origin HEAD:main

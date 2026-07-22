@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-22T06:57:41.561Z
+Collection completed: 2026-07-22T08:44:12.537Z
 Latest source publication: 2026-07-21T18:38:00.000Z
 Collection status: current-window-refreshed-no-new-items
 New items this collection: 0
@@ -43,12 +43,6 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
-  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
-  - Source class: discovery
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times. Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167993

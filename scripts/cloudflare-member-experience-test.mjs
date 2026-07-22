@@ -34,6 +34,7 @@ check('Production router dispatches email lifecycle', production.includes('email
 check('Production router dispatches PayPal lifecycle', production.includes('isPayPalRoute(path)') && production.includes('validatePayPalResponse'), 'PayPal routes must use worker-paypal-subscriptions.js');
 check('Production router dispatches member experience', production.includes('isMemberExperienceRoute(path)') && production.includes('validateMemberResponse'), 'Dashboard routes must use worker-member-experience.js');
 check('Production router protects member assets', production.includes('protectedAssetTier(path)') && production.includes('enforceProtectedAssetAccess'), 'Protected downloads must be checked before static delivery');
+check('Cloudflare Worker canonicalizes www to apex', production.includes("requestUrl.hostname.toLowerCase() === 'www.matrixreprogrammed.com'") && production.includes("requestUrl.hostname = 'matrixreprogrammed.com'") && production.includes('Response.redirect(requestUrl.toString(), 308)'), 'Every member and API request must reach the same host-only cookie origin with a method-preserving redirect');
 
 check('Login writes current secure session cookie', auth.includes("matrix_session_v2='+encodeURIComponent(token)") && auth.includes('HttpOnly; Secure; SameSite=Lax'), 'Passwordless login must issue the current secure cookie');
 check('Logout clears current and legacy cookies', auth.includes('matrix_session_v2=;') && auth.includes('matrix_session=;'), 'Logout must clear both cookie generations');

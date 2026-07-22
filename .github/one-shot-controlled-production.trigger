@@ -1,5 +1,5 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-21T08:50:00+02:00
-Target: latest main containing the content-tested and layout-tested 16-guide wealth PDF library
-Required proof: 16 subject-specific guides, at least 8 pages and 1,840 words each, 140 checked pages total, zero content failures, zero layout failures, current deploy manifest and health SHA, D1 forum write/read, member and PayPal boundaries, AI Detective routes, money intelligence and corrected artwork queue.
-Purpose: deploy the exact proven library and stop only when the public no-cache files match repository proofs.
+Requested: 2026-07-22T13:30:00+02:00
+Target: main commit 1be92355e9f1da48dfe4b865df5afba828b9e3cf
+Required proof: all eleven release gates green; live login, signup, member dashboard, PayPal boundary, newsletter lifecycle, protected downloads, homepage construction banner, deploy manifest and health SHA verified.
+Purpose: perform the one final controlled Cloudflare production release, then freeze every production deployment path until free Worker build minutes are available again.

@@ -133,6 +133,7 @@ for (const relative of [
 ]) copy(relative);
 run('scripts/patch-homepage-ai-detective-button.js');
 repairHomepageAuthorFacingLabels();
+run('scripts/patch-homepage-construction-banner.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 run('scripts/runtime-performance-budget-test.js');
@@ -143,6 +144,8 @@ const report = {
   commands,
   synchronized: [
     'index.html', '_site/index.html', '_site/index',
+    'scripts/patch-homepage-construction-banner.js',
+    'downloads/homepage-construction-banner.json',
     'ai-speculative-conclusions.html', '_site/ai-speculative-conclusions.html',
     'ai-speculative-conclusions.js', '_site/ai-speculative-conclusions.js',
     'data/epstein-investigator-status.json', '_site/data/epstein-investigator-status.json',
@@ -193,8 +196,8 @@ const report = {
     'downloads/internal-report-manifest-cleanup.json',
     'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, author-facing build labels, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data, public internal report manifests, an inactive or unsynchronised Epstein investigator docket, a missing homepage AI Detective route or stale deployment metadata.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, author-facing build labels, a missing construction-status banner, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data, public internal report manifests, an inactive or unsynchronised Epstein investigator docket, a missing homepage AI Detective route or stale deployment metadata.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable bundle, current release metadata routes, protected homepage navigation, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, conclusion-integrity routes, runtime performance budgets, voluntary support pages, active Epstein AI Detective docket, homepage AI Detective route, accessibility, metadata, internal-manifest exclusion and Cloudflare configuration.');
+console.log('Final release sanitation passed for the deployable bundle, current release metadata routes, protected homepage navigation, construction status banner, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, conclusion-integrity routes, runtime performance budgets, voluntary support pages, active Epstein AI Detective docket, homepage AI Detective route, accessibility, metadata, internal-manifest exclusion and Cloudflare configuration.');

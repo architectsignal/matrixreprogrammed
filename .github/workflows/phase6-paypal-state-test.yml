@@ -85,7 +85,7 @@ jobs:
           const summary=JSON.parse(fs.readFileSync('downloads/phase6-paypal-state-test/summary.json','utf8'));
           const lifecycle=JSON.parse(fs.readFileSync('downloads/phase6-paypal-state-test/lifecycle.json','utf8'));
           if(!summary.ok||!lifecycle.ok)throw new Error('Phase 6 proof package is not healthy');
-          if(summary.stagesPassed!==15||summary.requiredStages!==15||lifecycle.stages.length!==15||lifecycle.stages.some(stage=>stage.passed!==true))throw new Error('All 15 payment states did not pass');
+          if(summary.stagesPassed!==16||summary.requiredStages!==16||lifecycle.stages.length!==16||lifecycle.stages.some(stage=>stage.passed!==true))throw new Error('All 16 payment states did not pass');
           if(JSON.stringify(summary.pricesEur)!==JSON.stringify(['3.00','6.00','9.00']))throw new Error('Locked membership prices changed');
           if(summary.productsCreated!==3||summary.plansCreated!==3)throw new Error('Three sandbox products and plans were not proven');
           if(summary.webhookEvents<10||summary.verifiedWebhooks<10||summary.transitions<10||summary.paymentRecords<5)throw new Error('Payment event or transition coverage is incomplete');
@@ -95,7 +95,7 @@ jobs:
           const routeSurface=['src/worker-paypal-subscriptions.js','src/worker-production.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
           for(const route of policy.requiredRoutes)if(!routeSurface.includes(route))throw new Error(`Required PayPal route missing: ${route}`);
           for(const event of policy.requiredWebhookEvents)if(!coverage.events[event])throw new Error(`Required webhook state is not covered: ${event}`);
-          console.log(`PHASE 6 EXIT PASS: ${summary.stagesPassed}/15 sandbox payment states; ${Object.keys(coverage.events).length} webhook events mapped; live switch remains off.`);
+          console.log(`PHASE 6 EXIT PASS: ${summary.stagesPassed}/16 sandbox payment states; ${Object.keys(coverage.events).length} webhook events mapped; live switch remains off.`);
           NODE
 
       - name: Snapshot first deterministic result

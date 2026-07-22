@@ -5,7 +5,14 @@ const outputDir=path.join(process.cwd(),'downloads','phase6-paypal-state-test');
 fs.mkdirSync(outputDir,{recursive:true});
 try{
   const testPath=path.join(process.cwd(),'scripts','phase6-paypal-state-test.mjs');
-  const source=fs.readFileSync(testPath,'utf8')
+  const duplicateGuardAnchor="pass('verified-activation-and-idempotency');";
+  const duplicateGuardStage="const duplicateCheckout=await call('/api/paypal/checkout-intent',{as:'member-buyer',method:'POST',body:{tier:'intelligence'}});assert(duplicateCheckout.response.status===409&&duplicateCheckout.data.billingUrl==='/billing-dashboard.html','Active PayPal membership did not block duplicate checkout');pass('duplicate-active-subscription-blocked');";
+  let source=fs.readFileSync(testPath,'utf8');
+  if(!source.includes(duplicateGuardStage)){
+    if(!source.includes(duplicateGuardAnchor))throw new Error('Phase 6 duplicate-subscription stage anchor is missing');
+    source=source.replace(duplicateGuardAnchor,`${duplicateGuardAnchor}\n${duplicateGuardStage}`);
+  }
+  source=source
     .replace("requiredStages:14","requiredStages:15")
     .replace("stages.length===14","stages.length===15")
     .replace("all 14 state stages","all 15 state stages");
@@ -13,6 +20,7 @@ try{
 }catch(error){
   const failure={ok:false,failedAt:new Date().toISOString(),name:error?.name||'Error',message:String(error?.message||error),stack:String(error?.stack||error),boundary:'Diagnostic only. No real PayPal account, charge, subscription, member or production database was modified.'};
   fs.writeFileSync(path.join(outputDir,'failure.json'),JSON.stringify(failure,null,2)+'\n');
+  console.error(`PHASE 6 FAILURE: ${failure.message}`);
   console.error(failure.stack);
   process.exitCode=1;
 }

@@ -24,39 +24,46 @@ function patchForumJs(){
   s = s.replace(/function saveLocalReport\([\s\S]*?\n  \}/g, '');
   s = s.replace(/async function syncPendingLocalPosts\([\s\S]*?\n  \}/g, '');
   s = s.replace(/localOnly/g, 'persistentOnly');
-  s = s.replace(/not live yet/g, 'persistent only');
+  s = s.replace(/not live yet/gi, 'persistent only');
   s = s.replace(/Saved only on this device[\s\S]*?reachable\./g, 'Not saved. Persistent Cloudflare D1 backend unavailable.');
 
   if (/const LOCAL_POSTS_KEY\s*=/.test(s)) {
     s = s.replace(/const LOCAL_POSTS_KEY\s*=\s*['"][^'"]*['"]\s*;/, "const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';");
-  } else {
+  } else if (s.includes("const PASS_KEY = 'matrix_signal_pass_unlocked_v1';")) {
     s = s.replace("const PASS_KEY = 'matrix_signal_pass_unlocked_v1';", "const PASS_KEY = 'matrix_signal_pass_unlocked_v1';\n  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';");
   }
 
-  s = s.split('Signal Board is syncing').join('Cloudflare D1 feed refreshing');
-  s = s.split('pending sync').join('Cloudflare D1 write pending');
+  s = s.split('Signal Board is syncing').join('Authoritative board feed check');
+  s = s.split('pending sync').join('Persistent D1 write pending');
   s = s.replace(/Cloudflare KV/g, 'Cloudflare D1');
   s = s.replace(/\n\s*const SYNC_STATUS_COPY[\s\S]*?;\n/g, '\n');
   s = s.replace(/\n\s*const PENDING_SYNC_COPY[\s\S]*?;\n/g, '\n');
+  s = s.replace(
+    "feed.innerHTML = '<article class=\"card\"><span class=\"label\">Persistent D1 write pending</span><h3>Authoritative board feed check</h3><p>Checking the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';",
+    "feed.innerHTML = '<article class=\"card\"><span class=\"label\">Persistent D1 feed</span><h3>Checking the authoritative board</h3><p>Loading confirmed Cloudflare D1 posts for ' + esc(BOARD_LABEL) + '.</p></article>';"
+  );
+  s = s.replace(
+    'Signal posted live. D1 persistence was confirmed by read-after-write.',
+    'Signal posted live and saved persistently. D1 read-after-write confirmed.'
+  );
+  s = s.replace(
+    'Signal posted live. D1 persistence was confirmed by read-after-write',
+    'Signal posted live and saved persistently. D1 read-after-write confirmed'
+  );
 
   const loadFallback = "function loadFallback(message){ return offlineNotice(message || 'Cloudflare D1 persistent forum feed unavailable'); }";
-  if (/function loadFallback\(message\)\{[\s\S]*?\}/.test(s)) {
-    s = s.replace(/function loadFallback\(message\)\{[\s\S]*?\}/, loadFallback);
-  }
-
   const offlineNotice = `function offlineNotice(message){
-    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
+    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'Cloudflare D1 persistent forum feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
   }`;
-  const offlinePattern = /function offlineNotice\(message\)\{[\s\S]*?\n  \}/;
-  if (offlinePattern.test(s)) {
-    s = s.replace(offlinePattern, offlineNotice);
+  const offlineToLoad = /function offlineNotice\(message\)\{[\s\S]*?\}\s*async function loadFeed\(\)\{/;
+  if (offlineToLoad.test(s)) {
+    s = s.replace(offlineToLoad, `${offlineNotice}\n  async function loadFeed(){`);
   } else if (s.includes('async function loadFeed(){')) {
     s = s.replace('async function loadFeed(){', `${offlineNotice}\n  async function loadFeed(){`);
   } else {
     throw new Error('forum.js is missing the loadFeed anchor required for the D1 offline notice');
   }
-
-  if (!s.includes('loadFallback')) {
+  if (!s.includes('function loadFallback(message)')) {
     s = s.replace(offlineNotice, `${loadFallback}\n  ${offlineNotice}`);
   }
 
@@ -68,6 +75,9 @@ function patchForumJs(){
     'persistent !== true'
   ];
   for (const marker of markers) if (!s.includes(marker)) throw new Error(`forum.js D1 persistence marker missing after repair: ${marker}`);
+  for (const banned of ['pending sync','Signal Board is syncing','Local fallback','saved on this device','matrix_signal_board_posts_v2_','saveLocalPosts','syncPendingLocalPosts','localOnly','Cloudflare KV']) {
+    if (s.includes(banned)) throw new Error(`forum.js still contains forbidden browser-fallback marker after repair: ${banned}`);
+  }
   for (const route of requiredRoutes) if (!s.includes(route)) throw new Error(`forum.js hard board route missing after repair: ${route}`);
 
   if (s !== before) { write('forum.js', s); changed.push('forum.js'); }

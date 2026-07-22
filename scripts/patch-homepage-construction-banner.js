@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const output = path.join(root, '_site');
@@ -40,6 +41,11 @@ function ensureOne(file) {
   if (banners !== 1 || starts !== 1 || ends !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
 }
 
+const structuralPowerBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'build-behind-the-curtain.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
+if (structuralPowerBuild.stdout) process.stdout.write(structuralPowerBuild.stdout);
+if (structuralPowerBuild.stderr) process.stderr.write(structuralPowerBuild.stderr);
+if (structuralPowerBuild.status !== 0) throw new Error('Behind the Curtain structural-power build failed before homepage finalization');
+
 const source = path.join(root, 'index.html');
 if (!fs.existsSync(source)) throw new Error('index.html is missing');
 const before = fs.readFileSync(source, 'utf8');
@@ -65,7 +71,8 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   bannerId: 'matrix-construction-banner',
   message: 'UNDER CONSTRUCTION — THE MACHINE IS STILL BUILDING.',
   liveRoute: 'live-intel.html',
+  structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction banner secured across ${patched.join(', ')}.`);
+console.log(`Homepage construction banner secured across ${patched.join(', ')}; Behind the Curtain structural-power model rebuilt first.`);

@@ -49,6 +49,13 @@ function runRequired(label, script) {
 }
 
 runRequired('Behind the Curtain structural-power build', 'build-behind-the-curtain.js');
+runRequired('Puppets current-role refresh', 'refresh-puppets-current-roles.js');
+runRequired('Puppets artwork asset guard', 'ensure-card-art-assets.js');
+runRequired('Puppets clean card wall rebuild', 'build-clean-card-decks.js');
+runRequired('Puppets card manifest rebuild', 'build-card-download-manifest.js');
+runRequired('Puppets deep dossier rebuild', 'build-direct-card-dossiers.js');
+runRequired('Puppets final title and art-state pass', 'finalize-top-52-test-markers.js');
+runRequired('Puppets people-only and direct-dossier contract', 'top-52-people-only-test.js');
 runRequired('Follow the Money coverage and freshness repair', 'repair-money-intelligence-coverage.js');
 runRequired('Follow the Money completeness contract', 'money-intelligence-completeness-test.js');
 
@@ -78,9 +85,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   message: 'UNDER CONSTRUCTION — THE MACHINE IS STILL BUILDING.',
   liveRoute: 'live-intel.html',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
+  puppetsCurrentRoleRefresh: 'scripts/refresh-puppets-current-roles.js',
+  puppetsDossierTest: 'scripts/top-52-people-only-test.js',
   moneyCoverageRepair: 'scripts/repair-money-intelligence-coverage.js',
   moneyCoverageTest: 'scripts/money-intelligence-completeness-test.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction banner secured across ${patched.join(', ')}; structural power and money coverage models rebuilt first.`);
+console.log(`Homepage construction banner secured across ${patched.join(', ')}; structural power, current Puppet dossiers and money coverage models rebuilt first.`);

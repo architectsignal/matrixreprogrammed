@@ -1,0 +1,45 @@
+name: One-use Netlify build freeze
+
+on:
+  push:
+    branches:
+      - agent/puppets-of-interest-link-art-repair
+    paths:
+      - .github/workflows/one-use-netlify-build-freeze.yml
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repair branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/puppets-of-interest-link-art-repair
+          fetch-depth: 0
+
+      - name: Add permanent build-ignore rule and remove this workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! grep -q '^  ignore = "exit 0"$' netlify.toml; then
+            sed -i '/^\[build\]$/a\  ignore = "exit 0"' netlify.toml
+          fi
+          rm -f .github/workflows/one-use-netlify-build-freeze.yml
+          grep -A3 '^\[build\]$' netlify.toml
+
+      - name: Commit Netlify build freeze
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "matrix-reprogrammed-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add netlify.toml .github/workflows/one-use-netlify-build-freeze.yml
+          if git diff --cached --quiet; then
+            echo "Netlify build freeze already present."
+            exit 0
+          fi
+          git commit -m "Hard-stop Netlify builds"
+          git push origin HEAD:agent/puppets-of-interest-link-art-repair

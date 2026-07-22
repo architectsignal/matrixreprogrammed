@@ -1,124 +1,38 @@
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-const { spawnSync } = require('child_process');
+const fs=require('fs');
+const path=require('path');
+const crypto=require('crypto');
+const {spawnSync}=require('child_process');
 
-const root = process.cwd();
-const corePath = path.join(root, 'data', 'behind-the-curtain.json');
-const intakePath = path.join(root, 'data', 'behind-the-curtain-source-intake.json');
-const optionalInputs = [
-  'data/entity-registry.json',
-  'data/relationship-registry.json',
-  'data/money-overlap-graph.json',
-  'data/epstein-relationship-public.json',
-  'data/investigation-knowledge-graph.json'
-];
-const allowedClassifications = new Set([
-  'documented_fact', 'official_allegation', 'strongly_supported_assessment',
-  'plausible_structural_inference', 'speculative_hypothesis', 'disputed',
-  'unsupported', 'rejected'
-]);
+const root=process.cwd();
+const corePath=path.join(root,'data','behind-the-curtain.json');
+const accessPath=path.join(root,'data','behind-the-curtain-family-access.json');
+const continuityPath=path.join(root,'data','behind-the-curtain-continuity-layers.json');
+const livingPath=path.join(root,'data','behind-the-curtain-living-access.json');
+const livingIntakePath=path.join(root,'data','behind-the-curtain-living-access-intake.json');
+const livingHistoryPath=path.join(root,'data','behind-the-curtain-living-access-history.json');
+const intakePath=path.join(root,'data','behind-the-curtain-source-intake.json');
+const optionalInputs=['data/entity-registry.json','data/relationship-registry.json','data/money-overlap-graph.json','data/epstein-relationship-public.json','data/investigation-knowledge-graph.json'];
+const allowedClassifications=new Set(['documented_fact','official_allegation','strongly_supported_assessment','plausible_structural_inference','speculative_hypothesis','disputed','unsupported','rejected']);
+const livingActions=new Set(['confirm_role','update_role','adjust_score','deactivate','reactivate','add_candidate','source_correction']);
 
-function readJson(relative, fallback = null) {
-  const file = path.join(root, relative);
-  if (!fs.existsSync(file)) return fallback;
-  const text = fs.readFileSync(file, 'utf8').trim();
-  if (!text) return fallback;
-  try { return JSON.parse(text); }
-  catch (error) { throw new Error(`${relative} contains invalid JSON: ${error.message}`); }
-}
-function stable(value) {
-  if (Array.isArray(value)) return value.map(stable);
-  if (!value || typeof value !== 'object') return value;
-  return Object.fromEntries(Object.keys(value).sort().map(key => [key, stable(value[key])]));
-}
-function hash(value) { return crypto.createHash('sha256').update(JSON.stringify(stable(value))).digest('hex'); }
-function clamp(value, min = 0, max = 100) { return Math.max(min, Math.min(max, Number(value))); }
-function calculate(center, weights) {
-  return Math.round((Object.entries(weights).reduce((sum, [key, weight]) => sum + clamp(center.dimensions[key]) * Number(weight), 0) / 100) * 10) / 10;
-}
-function mentionCount(payload, center) {
-  if (payload == null) return 0;
-  const text = JSON.stringify(payload).toLowerCase();
-  const terms = [center.name, center.shortName].filter(Boolean).map(value => String(value).toLowerCase());
-  return terms.reduce((count, term) => count + (text.split(term).length - 1), 0);
-}
-function applyApprovedIntake(model, intake) {
-  const centers = new Map(model.powerCenters.map(center => [center.id, center]));
-  let approved = 0;
-  for (const entry of intake.entries || []) {
-    if (entry.reviewStatus !== 'approved') continue;
-    const center = centers.get(entry.entityId);
-    if (!center) throw new Error(`Approved intake references unknown entityId: ${entry.entityId}`);
-    if (!allowedClassifications.has(entry.classification)) throw new Error(`Approved intake has invalid classification: ${entry.classification}`);
-    if (!entry.source || !/^https:\/\//.test(entry.source.url || '')) throw new Error(`Approved intake for ${entry.entityId} requires an HTTPS source`);
-    const sourceId = entry.source.id || `intake-${hash(entry.source).slice(0, 12)}`;
-    if (!model.sources.some(source => source.id === sourceId)) {
-      model.sources.push({
-        id: sourceId,
-        tier: entry.source.tier || 'C',
-        publisher: entry.source.publisher || 'Source under review',
-        title: entry.source.title || 'Reviewed structural-power evidence',
-        url: entry.source.url,
-        date: entry.source.date || model.asOf,
-        establishes: entry.source.establishes || entry.summary || 'A reviewed evidence signal relevant to the named power mechanism.',
-        doesNotEstablish: entry.source.doesNotEstablish || 'This record alone does not prove unified command, criminality or comprehensive control.'
-      });
-    }
-    if (!center.sourceIds.includes(sourceId)) center.sourceIds.push(sourceId);
-    for (const [dimension, delta] of Object.entries(entry.dimensionAdjustments || {})) {
-      if (!(dimension in model.weights)) throw new Error(`Unknown score dimension in approved intake: ${dimension}`);
-      const boundedDelta = Math.max(-5, Math.min(5, Number(delta)));
-      center.dimensions[dimension] = clamp(Number(center.dimensions[dimension]) + boundedDelta);
-    }
-    if (entry.classification) center.classification = entry.classification;
-    if (entry.confidence) center.confidence = entry.confidence;
-    if (entry.summary) center.strongestEvidence = [...new Set([...(center.strongestEvidence || []), entry.summary])];
-    approved++;
-  }
-  return approved;
-}
+function readJson(relative,fallback=null){const file=path.join(root,relative);if(!fs.existsSync(file))return fallback;const text=fs.readFileSync(file,'utf8').trim();if(!text)return fallback;try{return JSON.parse(text)}catch(error){throw new Error(`${relative} contains invalid JSON: ${error.message}`)}}
+function stable(value){if(Array.isArray(value))return value.map(stable);if(!value||typeof value!=='object')return value;return Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])]))}
+function hash(value){return crypto.createHash('sha256').update(JSON.stringify(stable(value))).digest('hex')}
+function clamp(value,min=0,max=100){return Math.max(min,Math.min(max,Number(value)))}
+function calculate(entity,weights){return Math.round((Object.entries(weights).reduce((sum,[key,weight])=>sum+clamp(entity.dimensions[key])*Number(weight),0)/100)*10)/10}
+function mentionCount(payload,center){if(payload==null)return 0;const text=JSON.stringify(payload).toLowerCase();const terms=[center.name,center.shortName].filter(Boolean).map(value=>String(value).toLowerCase());return terms.reduce((count,term)=>count+(text.split(term).length-1),0)}
+function runRequired(label,script){const result=spawnSync(process.execPath,[path.join(root,script)],{cwd:root,stdio:'inherit',env:process.env});if(result.status!==0)throw new Error(`${label} failed`)}
+function addBoundedSource(model,entry){if(!entry.source||!/^https:\/\//.test(entry.source.url||''))throw new Error(`Approved intake for ${entry.entityId||entry.candidate?.id||'unknown'} requires an HTTPS source`);const sourceId=entry.source.id||`intake-${hash(entry.source).slice(0,12)}`;if(!model.sources.some(source=>source.id===sourceId)){model.sources.push({id:sourceId,tier:entry.source.tier||'A',publisher:entry.source.publisher||'Reviewed source',title:entry.source.title||'Reviewed structural-power evidence',url:entry.source.url,date:entry.source.date||model.asOf,establishes:entry.source.establishes||entry.summary||'A reviewed evidence signal relevant to the named power mechanism.',doesNotEstablish:entry.source.doesNotEstablish||'This record alone does not prove unified command, criminality or comprehensive control.'})}return sourceId}
 
-if (!fs.existsSync(corePath)) {
-  const seeded = spawnSync(process.execPath, [path.join(root, 'scripts', 'seed-behind-the-curtain-data.js')], { cwd: root, stdio: 'inherit' });
-  if (seeded.status !== 0 || !fs.existsSync(corePath)) throw new Error('Unable to seed data/behind-the-curtain.json');
-}
-const model = readJson('data/behind-the-curtain.json');
-const intake = readJson('data/behind-the-curtain-source-intake.json', { entries: [] });
-const weightTotal = Object.values(model.weights || {}).reduce((sum, value) => sum + Number(value), 0);
-if (weightTotal !== 100) throw new Error(`Structural Power Score weights total ${weightTotal}, expected 100`);
+function applyApprovedIntake(model,intake){const centers=new Map(model.powerCenters.map(center=>[center.id,center]));let approved=0;for(const entry of intake.entries||[]){if(entry.reviewStatus!=='approved')continue;const center=centers.get(entry.entityId);if(!center)throw new Error(`Approved intake references unknown entityId: ${entry.entityId}`);if(!allowedClassifications.has(entry.classification))throw new Error(`Approved intake has invalid classification: ${entry.classification}`);const sourceId=addBoundedSource(model,entry);if(!center.sourceIds.includes(sourceId))center.sourceIds.push(sourceId);for(const [dimension,delta] of Object.entries(entry.dimensionAdjustments||{})){if(!(dimension in model.weights))throw new Error(`Unknown score dimension in approved intake: ${dimension}`);center.dimensions[dimension]=clamp(Number(center.dimensions[dimension])+Math.max(-5,Math.min(5,Number(delta))))}if(entry.classification)center.classification=entry.classification;if(entry.confidence)center.confidence=entry.confidence;if(entry.summary)center.strongestEvidence=[...new Set([...(center.strongestEvidence||[]),entry.summary])];approved++}return approved}
 
-const previousRanks = new Map((model.powerCenters || []).map(center => [center.id, center.rank]));
-const approvedIntakeEntries = applyApprovedIntake(model, intake);
-const inputPayloads = optionalInputs.map(relative => ({ relative, data: readJson(relative, null) }));
-let filesRead = 0;
-for (const { data } of inputPayloads) if (data != null) filesRead++;
-for (const center of model.powerCenters || []) {
-  center.siteSignals = inputPayloads.reduce((sum, item) => sum + mentionCount(item.data, center), 0);
-  center.structuralPowerScore = calculate(center, model.weights);
-  center.lastReviewed = model.asOf;
-}
-model.powerCenters.sort((a, b) => b.structuralPowerScore - a.structuralPowerScore || a.name.localeCompare(b.name));
-model.powerCenters.forEach((center, index) => {
-  center.rank = index + 1;
-  const prior = previousRanks.get(center.id);
-  center.previousRank = prior ?? null;
-  center.movement = prior == null ? 'new' : prior === center.rank ? 'stable' : prior > center.rank ? 'up' : 'down';
-});
+function validateCandidate(candidate,weights){if(!candidate.id||!candidate.name||!candidate.currentRole)throw new Error('Living candidate requires id, name and currentRole');if(!allowedClassifications.has(candidate.classification))throw new Error(`${candidate.id} has invalid classification`);for(const key of Object.keys(weights))if(!Number.isFinite(Number(candidate.dimensions?.[key])))throw new Error(`${candidate.id} lacks living score dimension ${key}`);if(!Array.isArray(candidate.sourceIds)||!candidate.sourceIds.length)throw new Error(`${candidate.id} requires authoritative role sources`);if(!candidate.strongestCounterargument||!candidate.removalTriggers?.length)throw new Error(`${candidate.id} requires counterargument and removal triggers`)}
+function applyLivingIntake(model,intake){const candidates=new Map((model.candidates||[]).map(candidate=>[candidate.id,candidate]));let approved=0;for(const entry of intake.entries||[]){if(entry.reviewStatus!=='approved')continue;if(!livingActions.has(entry.action))throw new Error(`Unsupported living access action: ${entry.action}`);if(!allowedClassifications.has(entry.classification||'strongly_supported_assessment'))throw new Error(`Invalid living classification: ${entry.classification}`);if(entry.action==='add_candidate'){if(!entry.candidate?.id)throw new Error('add_candidate requires candidate payload');if(candidates.has(entry.candidate.id))throw new Error(`Living candidate already exists: ${entry.candidate.id}`);const sourceId=addBoundedSource(model,entry);const candidate={...entry.candidate,classification:entry.candidate.classification||entry.classification||'strongly_supported_assessment',confidence:entry.candidate.confidence||entry.confidence||'moderate',status:entry.candidate.status||'verified_current',verifiedAt:entry.verifiedAt||model.asOf,nextReviewDue:entry.nextReviewDue||model.asOf,sourceIds:[...new Set([...(entry.candidate.sourceIds||[]),sourceId])]};validateCandidate(candidate,model.scoreDimensions);model.candidates.push(candidate);candidates.set(candidate.id,candidate);approved++;continue}const candidate=candidates.get(entry.entityId);if(!candidate)throw new Error(`Approved living intake references unknown entityId: ${entry.entityId}`);const sourceId=addBoundedSource(model,entry);candidate.sourceIds=[...new Set([...(candidate.sourceIds||[]),sourceId])];for(const [dimension,delta] of Object.entries(entry.dimensionAdjustments||{})){if(!(dimension in model.scoreDimensions))throw new Error(`Unknown living score dimension: ${dimension}`);candidate.dimensions[dimension]=clamp(Number(candidate.dimensions[dimension])+Math.max(-10,Math.min(10,Number(delta))))}if(entry.action==='deactivate')candidate.status=entry.status||'role_ended';if(entry.action==='reactivate')candidate.status='verified_current';if(entry.currentRole)candidate.currentRole=entry.currentRole;if(entry.classification)candidate.classification=entry.classification;if(entry.confidence)candidate.confidence=entry.confidence;if(entry.verifiedAt)candidate.verifiedAt=entry.verifiedAt;if(entry.nextReviewDue)candidate.nextReviewDue=entry.nextReviewDue;if(entry.summary)candidate.latestChange=entry.summary;approved++}return approved}
+function rankingSnapshot(model,reason){return{asOf:model.asOf,reason,ranking:(model.candidates||[]).filter(candidate=>candidate.rank&&candidate.rank<=10).sort((a,b)=>a.rank-b.rank).map(candidate=>({rank:candidate.rank,id:candidate.id,name:candidate.name,accessScore:candidate.accessScore,role:candidate.currentRole,status:candidate.status}))}}
+function snapshotSignature(snapshot){return JSON.stringify((snapshot?.ranking||[]).map(item=>[item.rank,item.id,item.accessScore,item.role,item.status]))}
+function rebuildLivingLayer(){if(!fs.existsSync(livingPath))runRequired('Living access seed','scripts/seed-behind-the-curtain-living-access.js');const model=readJson('data/behind-the-curtain-living-access.json');const intake=readJson('data/behind-the-curtain-living-access-intake.json',{entries:[]});const history=readJson('data/behind-the-curtain-living-access-history.json',{schemaVersion:1,snapshots:[]});const total=Object.values(model.scoreDimensions||{}).reduce((sum,value)=>sum+Number(value),0);if(total!==100)throw new Error(`Living Access score weights total ${total}, expected 100`);const previousRanks=new Map((model.candidates||[]).map(candidate=>[candidate.id,candidate.rank]));const approved=applyLivingIntake(model,intake);for(const candidate of model.candidates||[]){validateCandidate(candidate,model.scoreDimensions);candidate.accessScore=calculate(candidate,model.scoreDimensions);candidate.previousRank=previousRanks.get(candidate.id)||null;candidate.rank=null;candidate.movement='inactive'}const eligible=new Set(model.rankingPolicy?.eligibleStatus||['verified_current']);const active=(model.candidates||[]).filter(candidate=>eligible.has(candidate.status)).sort((a,b)=>b.accessScore-a.accessScore||a.name.localeCompare(b.name));active.forEach((candidate,index)=>{candidate.rank=index+1;const prior=previousRanks.get(candidate.id);candidate.movement=prior==null?'new':prior===candidate.rank?'stable':prior>candidate.rank?'up':'down'});model.candidates.sort((a,b)=>(a.rank||999)-(b.rank||999)||a.name.localeCompare(b.name));const inputHash=hash({core:{...model,build:undefined,candidates:model.candidates.map(candidate=>({...candidate,rank:undefined,previousRank:undefined,movement:undefined,accessScore:undefined}))},intake});const previousHash=model.build?.inputHash||null;model.build={inputHash,lastCalculatedAt:previousHash===inputHash?(model.build?.lastCalculatedAt||`${model.asOf}T00:00:00.000Z`):new Date().toISOString(),approvedIntakeEntries:approved};const snapshot=rankingSnapshot(model,approved?'approved_evidence_change':'model_recalculation');const last=history.snapshots?.[history.snapshots.length-1];if(snapshotSignature(last)!==snapshotSignature(snapshot)){history.snapshots=history.snapshots||[];history.snapshots.push(snapshot)}fs.writeFileSync(livingPath,JSON.stringify(model,null,2)+'\n');fs.writeFileSync(livingHistoryPath,JSON.stringify(history,null,2)+'\n');return{model,approved,snapshots:history.snapshots.length}}
+function validateAccessLayer(){if(!fs.existsSync(accessPath))throw new Error('Behind the Curtain Access Layer evidence model is missing');if(!fs.existsSync(continuityPath))throw new Error('Behind the Curtain continuity-layer model is missing');const access=readJson('data/behind-the-curtain-family-access.json');const continuity=readJson('data/behind-the-curtain-continuity-layers.json');const total=Object.values(access.scoreDimensions||{}).reduce((sum,value)=>sum+Number(value),0);if(total!==100)throw new Error(`Access Layer score weights total ${total}, expected 100`);if((access.families||[]).length<9)throw new Error('Access Layer requires at least nine documented continuity-family structures');if((access.structureAccessMatrix||[]).length!==10)throw new Error('Access Layer must test all ten structural power centers');if((continuity.layers||[]).length!==10)throw new Error('Continuity Layer must define ten long-duration mechanisms')}
 
-const inputHash = hash({
-  core: { ...model, build: undefined, changeLog: undefined },
-  intake,
-  optionalInputs: inputPayloads.map(item => ({ path: item.relative, data: item.data }))
-});
-const previousHash = model.build?.inputHash || null;
-const lastCalculatedAt = previousHash === inputHash
-  ? model.build?.lastCalculatedAt || `${model.asOf}T00:00:00.000Z`
-  : new Date().toISOString();
-model.build = { inputHash, lastCalculatedAt, siteSignalFilesRead: filesRead, approvedIntakeEntries };
-
-fs.mkdirSync(path.dirname(corePath), { recursive: true });
-fs.writeFileSync(corePath, `${JSON.stringify(model, null, 2)}\n`);
-const patch = spawnSync(process.execPath, [path.join(root, 'scripts', 'patch-behind-the-curtain-links.js')], { cwd: root, stdio: 'inherit' });
-if (patch.status !== 0) process.exit(patch.status || 1);
-console.log(`Behind the Curtain rebuilt: ${model.powerCenters.length} power centers, ${model.relationships.length} relationships, ${model.sources.length} sources, ${approvedIntakeEntries} approved intake entries.`);
+if(!fs.existsSync(corePath))runRequired('Structural power seed','scripts/seed-behind-the-curtain-data.js');if(!fs.existsSync(corePath))throw new Error('Unable to seed data/behind-the-curtain.json');
+const model=readJson('data/behind-the-curtain.json');const intake=readJson('data/behind-the-curtain-source-intake.json',{entries:[]});const weightTotal=Object.values(model.weights||{}).reduce((sum,value)=>sum+Number(value),0);if(weightTotal!==100)throw new Error(`Structural Power Score weights total ${weightTotal}, expected 100`);const previousRanks=new Map((model.powerCenters||[]).map(center=>[center.id,center.rank]));const approvedIntakeEntries=applyApprovedIntake(model,intake);const inputPayloads=optionalInputs.map(relative=>({relative,data:readJson(relative,null)}));let filesRead=0;for(const{data}of inputPayloads)if(data!=null)filesRead++;for(const center of model.powerCenters||[]){center.siteSignals=inputPayloads.reduce((sum,item)=>sum+mentionCount(item.data,center),0);center.structuralPowerScore=calculate(center,model.weights);center.lastReviewed=model.asOf}model.powerCenters.sort((a,b)=>b.structuralPowerScore-a.structuralPowerScore||a.name.localeCompare(b.name));model.powerCenters.forEach((center,index)=>{center.rank=index+1;const prior=previousRanks.get(center.id);center.previousRank=prior??null;center.movement=prior==null?'new':prior===center.rank?'stable':prior>center.rank?'up':'down'});const inputHash=hash({core:{...model,build:undefined,changeLog:undefined},intake,optionalInputs:inputPayloads.map(item=>({path:item.relative,data:item.data}))});const previousHash=model.build?.inputHash||null;model.build={inputHash,lastCalculatedAt:previousHash===inputHash?(model.build?.lastCalculatedAt||`${model.asOf}T00:00:00.000Z`):new Date().toISOString(),siteSignalFilesRead:filesRead,approvedIntakeEntries};fs.mkdirSync(path.dirname(corePath),{recursive:true});fs.writeFileSync(corePath,JSON.stringify(model,null,2)+'\n');
+validateAccessLayer();const living=rebuildLivingLayer();runRequired('Behind the Curtain family access link','scripts/patch-behind-the-curtain-access-link.js');runRequired('Behind the Curtain Access Layer validation','scripts/behind-the-curtain-access-test.js');runRequired('Behind the Curtain Living Access validation','scripts/behind-the-curtain-living-access-test.js');const patch=spawnSync(process.execPath,[path.join(root,'scripts','patch-behind-the-curtain-links.js')],{cwd:root,stdio:'inherit'});if(patch.status!==0)process.exit(patch.status||1);console.log(`Behind the Curtain rebuilt: ${model.powerCenters.length} power centers, ${model.relationships.length} relationships, ${model.sources.length} sources; ${living.model.candidates.filter(candidate=>candidate.rank&&candidate.rank<=10).length} living access-holders, ${living.snapshots} snapshots, ${living.approved} approved living changes.`);

@@ -207,6 +207,9 @@ function verifyOutputs(afterBuild = false) {
   const slugs = (clocks.clocks || []).map(clock => clock.slug);
   const wallSlugs = (wall.clocks || []).map(clock => clock.slug);
   const fetched = (pull.results || []).filter(item => item.status === 'fetched');
+  const registryStates = Object.values(state.sources || {});
+  const registryFetched = registryStates.filter(item => item.status === 'fetched').length;
+  const registryFailed = registryStates.filter(item => String(item.status || '').startsWith('failed')).length;
   const failureRatio = Number(pull.selectedSources || 0) > 0 ? Number(pull.failedSources || 0) / Number(pull.selectedSources) : 1;
 
   check('Source registry has unique IDs and valid lanes',
@@ -227,10 +230,20 @@ function verifyOutputs(afterBuild = false) {
   check('Source failure ratio stays below 25 percent', failureRatio <= 0.25, { failureRatio });
   if (failureRatio > 0) warn('One or more live sources failed during the audit.', { failures: pull.failedSources });
 
-  check('Investigation status reconciles with the daily pull',
-    Number(status.fetchedSources) === Number(pull.fetchedSources)
-      && Number(status.failedSources) === Number(pull.failedSources)
-      && Number(status.ledgerFindings) === Number(pull.ledgerFindings));
+  const scopedDailyStatusOk = status.lastRunFetchedSources == null
+    || (Number(status.lastRunSelectedSources) === Number(pull.selectedSources)
+      && Number(status.lastRunFetchedSources) === Number(pull.fetchedSources)
+      && Number(status.lastRunFailedSources) === Number(pull.failedSources));
+  check('Investigation status reconciles with registry and daily pull',
+    Number(status.registeredSources) === sourceIds.length
+      && Number(status.fetchedSources) === registryFetched
+      && Number(status.failedSources) === registryFailed
+      && Number(status.ledgerFindings) === Number(pull.ledgerFindings)
+      && scopedDailyStatusOk,
+    {
+      registry: { registered: sourceIds.length, fetched: registryFetched, failed: registryFailed },
+      daily: { selected: pull.selectedSources, fetched: pull.fetchedSources, failed: pull.failedSources }
+    });
   check('Source state records every attempted daily source',
     pullIds.every(id => state.sources && state.sources[id] && state.sources[id].lastAttempt));
   check('Investigation ledger IDs are unique and bounded',

@@ -7,7 +7,14 @@ on:
     paths:
       - 'behind-the-curtain.html'
       - 'behind-the-curtain.js'
+      - 'behind-the-curtain-access.html'
+      - 'behind-the-curtain-access.js'
       - 'data/behind-the-curtain.json'
+      - 'data/behind-the-curtain-family-access.json'
+      - 'data/behind-the-curtain-continuity-layers.json'
+      - 'data/behind-the-curtain-living-access.json'
+      - 'data/behind-the-curtain-living-access-history.json'
+      - 'data/behind-the-curtain-living-access-intake.json'
       - 'data/behind-the-curtain-source-intake.json'
       - 'data/entity-registry.json'
       - 'data/relationship-registry.json'
@@ -16,13 +23,22 @@ on:
       - 'data/investigation-knowledge-graph.json'
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/seed-behind-the-curtain-data.js'
+      - 'scripts/seed-behind-the-curtain-living-access.js'
       - 'scripts/patch-behind-the-curtain-links.js'
+      - 'scripts/patch-behind-the-curtain-access-link.js'
       - 'scripts/behind-the-curtain-test.js'
+      - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - '.github/workflows/behind-the-curtain-intelligence.yml'
   push:
     branches: [main]
     paths:
+      - 'data/behind-the-curtain-family-access.json'
+      - 'data/behind-the-curtain-continuity-layers.json'
+      - 'data/behind-the-curtain-living-access.json'
+      - 'data/behind-the-curtain-living-access-history.json'
+      - 'data/behind-the-curtain-living-access-intake.json'
       - 'data/behind-the-curtain-source-intake.json'
       - 'data/entity-registry.json'
       - 'data/relationship-registry.json'
@@ -31,8 +47,12 @@ on:
       - 'data/investigation-knowledge-graph.json'
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/seed-behind-the-curtain-data.js'
+      - 'scripts/seed-behind-the-curtain-living-access.js'
       - 'scripts/patch-behind-the-curtain-links.js'
+      - 'scripts/patch-behind-the-curtain-access-link.js'
       - 'scripts/behind-the-curtain-test.js'
+      - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - '.github/workflows/behind-the-curtain-intelligence.yml'
 
@@ -55,27 +75,65 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Recalculate structural power and patch internal routes
-        run: node scripts/build-behind-the-curtain.js
-      - name: Validate syntax and evidence contracts
+      - name: Recalculate structures, families, living access and archives
+        shell: bash
         run: |
-          node --check behind-the-curtain.js
-          node --check scripts/build-behind-the-curtain.js
-          node --check scripts/seed-behind-the-curtain-data.js
-          node --check scripts/patch-behind-the-curtain-links.js
-          node --check scripts/behind-the-curtain-test.js
-          node scripts/behind-the-curtain-test.js
+          set +e
+          node scripts/build-behind-the-curtain.js > /tmp/behind-the-curtain-build.log 2>&1
+          status=$?
+          cp /tmp/behind-the-curtain-build.log behind-the-curtain-build.log
+          tail -n 160 /tmp/behind-the-curtain-build.log
+          exit $status
+      - name: Upload focused build failure diagnostic
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: behind-the-curtain-build-failure-${{ github.run_id }}
+          path: behind-the-curtain-build.log
+          if-no-files-found: error
+          retention-days: 7
+      - name: Validate syntax and evidence contracts
+        shell: bash
+        run: |
+          set +e
+          {
+            node --check behind-the-curtain.js
+            node --check behind-the-curtain-access.js
+            node --check scripts/build-behind-the-curtain.js
+            node --check scripts/seed-behind-the-curtain-data.js
+            node --check scripts/seed-behind-the-curtain-living-access.js
+            node --check scripts/patch-behind-the-curtain-links.js
+            node --check scripts/patch-behind-the-curtain-access-link.js
+            node --check scripts/behind-the-curtain-test.js
+            node --check scripts/behind-the-curtain-access-test.js
+            node --check scripts/behind-the-curtain-living-access-test.js
+            node scripts/behind-the-curtain-test.js
+            node scripts/behind-the-curtain-access-test.js
+            node scripts/behind-the-curtain-living-access-test.js
+          } > /tmp/behind-the-curtain-validation.log 2>&1
+          status=$?
+          cp /tmp/behind-the-curtain-validation.log behind-the-curtain-validation.log
+          tail -n 200 /tmp/behind-the-curtain-validation.log
+          exit $status
+      - name: Upload focused validation failure diagnostic
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: behind-the-curtain-validation-failure-${{ github.run_id }}
+          path: behind-the-curtain-validation.log
+          if-no-files-found: error
+          retention-days: 7
       - name: Commit generated intelligence to Git only
         if: ${{ github.event_name != 'pull_request' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add behind-the-curtain.html behind-the-curtain.js data/behind-the-curtain.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
+          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js data/behind-the-curtain.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json data/behind-the-curtain-living-access-intake.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
           if git diff --cached --quiet; then
-            echo "Behind the Curtain already current."
+            echo "Behind the Curtain intelligence is already current."
           else
             git commit -m "Refresh Behind the Curtain intelligence [curtain-built]"
             git push
           fi
       - name: Confirm production cost boundary
-        run: echo "GIT-ONLY PASS — the structural-power workflow contains no production deployment step."
+        run: echo "GIT-ONLY PASS — the structural-power, family-access and living-access workflow contains no production deployment step."

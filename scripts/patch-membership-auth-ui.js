@@ -4,9 +4,14 @@ const path = require('path');
 const root = process.cwd();
 require('./harden-worker-api-contracts.js');
 require('./patch-cloudflare-canonical-member-origin.js');
-require('./patch-member-login-paypal-newsletter.js');
-const { repairPayPalCheckoutGateOrder } = require('./patch-paypal-checkout-gate-order.js');
+const { repairPayPalCheckoutGateOrder, shutdownFirst } = require('./patch-paypal-checkout-gate-order.js');
 const paypalGateTarget = path.join(root, 'src', 'worker-paypal-subscriptions.js');
+const paypalInitialSource = fs.readFileSync(paypalGateTarget, 'utf8');
+const canonicalPayPalMembershipReady = paypalInitialSource.includes(shutdownFirst)
+  && paypalInitialSource.includes('values.matrix_session_v2||values.matrix_session')
+  && paypalInitialSource.includes('currentSubscriptionForMember')
+  && paypalInitialSource.includes('paidAccess:bool(currentSubscription?.paid_access)');
+if (!canonicalPayPalMembershipReady) require('./patch-member-login-paypal-newsletter.js');
 const paypalGateBefore = fs.readFileSync(paypalGateTarget, 'utf8');
 const paypalGateAfter = repairPayPalCheckoutGateOrder(paypalGateBefore);
 if (paypalGateAfter !== paypalGateBefore) fs.writeFileSync(paypalGateTarget, paypalGateAfter);

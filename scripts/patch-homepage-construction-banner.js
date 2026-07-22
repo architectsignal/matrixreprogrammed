@@ -41,10 +41,16 @@ function ensureOne(file) {
   if (banners !== 1 || starts !== 1 || ends !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
 }
 
-const structuralPowerBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'build-behind-the-curtain.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
-if (structuralPowerBuild.stdout) process.stdout.write(structuralPowerBuild.stdout);
-if (structuralPowerBuild.stderr) process.stderr.write(structuralPowerBuild.stderr);
-if (structuralPowerBuild.status !== 0) throw new Error('Behind the Curtain structural-power build failed before homepage finalization');
+function runRequired(label, script) {
+  const result = spawnSync(process.execPath, [path.join(root, 'scripts', script)], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${label} failed before homepage finalization`);
+}
+
+runRequired('Behind the Curtain structural-power build', 'build-behind-the-curtain.js');
+runRequired('Follow the Money coverage and freshness repair', 'repair-money-intelligence-coverage.js');
+runRequired('Follow the Money completeness contract', 'money-intelligence-completeness-test.js');
 
 const source = path.join(root, 'index.html');
 if (!fs.existsSync(source)) throw new Error('index.html is missing');
@@ -72,7 +78,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   message: 'UNDER CONSTRUCTION — THE MACHINE IS STILL BUILDING.',
   liveRoute: 'live-intel.html',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
+  moneyCoverageRepair: 'scripts/repair-money-intelligence-coverage.js',
+  moneyCoverageTest: 'scripts/money-intelligence-completeness-test.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction banner secured across ${patched.join(', ')}; Behind the Curtain structural-power model rebuilt first.`);
+console.log(`Homepage construction banner secured across ${patched.join(', ')}; structural power and money coverage models rebuilt first.`);

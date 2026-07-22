@@ -2,6 +2,8 @@ name: Behind the Curtain Structural Power Intelligence
 
 on:
   workflow_dispatch:
+  issues:
+    types: [opened]
   pull_request:
     branches: [main]
     paths:
@@ -45,7 +47,7 @@ concurrency:
 
 jobs:
   build-and-test-git-only:
-    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[curtain-built]') }}
+    if: ${{ (github.event_name != 'issues' || github.event.issue.title == 'RUN BEHIND THE CURTAIN BUILD') && (github.event_name != 'push' || !contains(github.event.head_commit.message, '[curtain-built]')) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

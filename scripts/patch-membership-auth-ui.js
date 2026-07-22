@@ -84,6 +84,12 @@ for (const required of [
   }
 }
 
+const emailLifecycleSource = fs.readFileSync(path.join(root, 'src', 'worker-email-lifecycle.js'), 'utf8');
+if (emailLifecycleSource.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);')) {
+  console.error('Cloudflare membership integration verification failed: the legacy executable first-daily-brief call remains');
+  process.exit(1);
+}
+
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),

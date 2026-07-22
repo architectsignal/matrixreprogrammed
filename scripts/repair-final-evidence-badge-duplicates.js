@@ -23,8 +23,11 @@ function countId(html, id) {
   const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return (String(html).match(new RegExp(`(?:^|\\s)id=["']${escaped}["']`, 'gi')) || []).length;
 }
+function allIds(html) {
+  return [...String(html).matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+}
 function duplicateIds(html) {
-  const ids = [...String(html).matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+  const ids = allIds(html);
   return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 }
 function copy(rel) {
@@ -68,10 +71,11 @@ for (const rel of targets) {
     const routeCount = countId(html, 'evidence-badge-system-route');
     const contractCount = countId(html, 'evidence-badge-system-route-contract');
     const duplicates = duplicateIds(html);
+    const staleBadgeIds = allIds(html).filter(id => /^evidence-badge-system-route(?:-contract)?--duplicate-\d+$/i.test(id));
     const expectedRoute = hiddenTargets.has(rel) ? 0 : 1;
     const expectedContract = hiddenTargets.has(rel) ? 1 : 0;
-    const ok = routeCount === expectedRoute && contractCount === expectedContract && !duplicates.includes('evidence-badge-system-route');
-    report.checks.push({ rel: `${prefix}:${rel}`, routeCount, contractCount, expectedRoute, expectedContract, duplicateIds: duplicates, ok });
+    const ok = routeCount === expectedRoute && contractCount === expectedContract && staleBadgeIds.length === 0 && !duplicates.some(id => id.startsWith('evidence-badge-system-route'));
+    report.checks.push({ rel: `${prefix}:${rel}`, routeCount, contractCount, expectedRoute, expectedContract, staleBadgeIds, duplicateIds: duplicates, ok });
     if (!ok) fail(`${prefix}:${rel} evidence badge IDs are not canonical`);
   }
 }

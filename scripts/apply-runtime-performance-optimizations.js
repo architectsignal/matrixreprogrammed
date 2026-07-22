@@ -70,10 +70,19 @@ function patchSearchRuntime(file) {
   if (!fs.existsSync(file)) return;
   let source = read(file);
   if (source.includes(oldPopulate)) source = source.replace(oldPopulate, newPopulate);
-  const start = source.indexOf('function init(index){');
+  const performanceStart = source.indexOf('/* matrix-search-performance-v1');
+  const initStart = source.indexOf('function init(index){');
+  const start = performanceStart >= 0 ? performanceStart : initStart;
   const end = source.lastIndexOf('})();');
   if (start < 0 || end < start) throw new Error(`Unable to locate Search V3 runtime tail in ${path.relative(root, file)}`);
   source = `${source.slice(0, start)}${searchTail}\n`;
+  const activeIndexDeclarations = (source.match(/\blet activeIndex=fallbackIndex;/g) || []).length;
+  const performanceMarkers = (source.match(/matrix-search-performance-v1/g) || []).length;
+  if (activeIndexDeclarations !== 1 || performanceMarkers !== 1) {
+    throw new Error(`Search performance runtime is not idempotent in ${path.relative(root, file)}: activeIndex=${activeIndexDeclarations}, markers=${performanceMarkers}`);
+  }
+  try { new Function(source); }
+  catch (error) { throw new Error(`Search performance runtime syntax failed in ${path.relative(root, file)}: ${error.message}`); }
   write(file, source);
   report.searchRuntimeFiles.push(path.relative(root, file).replace(/\\/g, '/'));
 }
@@ -90,7 +99,20 @@ function patchNetworkRuntime(file) {
     source = source.replace("  q('#map-reset').onclick = () => {", "  q('#map-reset').onclick = () => {\n    startLoad();");
     source = source.replace(
       '  load();\n})();',
-      `  /* matrix-network-performance-v1 */\n  if (location.search) startLoad();\n  else if ('IntersectionObserver' in window) {\n    const observer = new IntersectionObserver(entries => {\n      if (!entries.some(entry => entry.isIntersecting)) return;\n      observer.disconnect();\n      startLoad();\n    }, { rootMargin: '650px 0px' });\n    observer.observe(map);\n    setStatus('Interactive graph ready to load when this section enters view…', 'pending');\n  } else {\n    window.setTimeout(startLoad, 700);\n  }\n})();`
+      `  /* matrix-network-performance-v1 */
+  if (location.search) startLoad();
+  else if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      startLoad();
+    }, { rootMargin: '650px 0px' });
+    observer.observe(map);
+    setStatus('Interactive graph ready to load when this section enters view…', 'pending');
+  } else {
+    window.setTimeout(startLoad, 700);
+  }
+})();`
     );
   }
   write(file, source);
@@ -138,7 +160,15 @@ function walkHtml(dir) {
   }
 }
 
-const performanceCss = `\n/* matrix-runtime-performance-v1 */\n@supports (content-visibility:auto){\n  main > section.section{content-visibility:auto;contain-intrinsic-size:1px 760px}\n  .grid > article.card{content-visibility:auto;contain-intrinsic-size:1px 420px}\n  .hero,.topbar,.reader-governor-strip,.page-guide{content-visibility:visible}\n}\nimg{height:auto}\n`;
+const performanceCss = `
+/* matrix-runtime-performance-v1 */
+@supports (content-visibility:auto){
+  main > section.section{content-visibility:auto;contain-intrinsic-size:1px 760px}
+  .grid > article.card{content-visibility:auto;contain-intrinsic-size:1px 420px}
+  .hero,.topbar,.reader-governor-strip,.page-guide{content-visibility:visible}
+}
+img{height:auto}
+`;
 
 function patchCss(file) {
   if (!fs.existsSync(file)) return;

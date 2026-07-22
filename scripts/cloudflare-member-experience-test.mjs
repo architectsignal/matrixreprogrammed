@@ -61,7 +61,9 @@ check('Login uses canonical Cloudflare origin', login.includes("const MEMBER_CAN
 
 check('Welcome email uses D1 outbox', email.includes("messageKind:'welcome'") && email.includes('processOutbox(env,{memberId:member.id,limit:5})'), 'Welcome delivery must be recorded and processed through the authoritative outbox');
 check('First daily brief uses detailed intelligence builder', email.includes('const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);') && !email.includes('const firstBrief=await sendFirstDailyBrief(request,env,member);') && email.includes('email.daily.detailed_first_brief_fallback'), 'Selected daily subscribers should get the detailed brief with a safe fallback, and the legacy executable call must be absent');
-check('Daily and weekly Cloudflare cron paths exist', wrangler.includes('"5 6 * * *"') && wrangler.includes('"15 7 * * 1"') && email.includes("event?.cron==='15 7 * * 1'"), 'Cloudflare scheduled events must drive daily and weekly automation');
+const hasDailyCronRoute = email.includes("event?.cron==='5 6 * * *'") || email.includes("cron==='5 6 * * *'");
+const hasWeeklyCronRoute = email.includes("event?.cron==='15 7 * * 1'") || email.includes("cron==='15 7 * * 1'");
+check('Daily and weekly Cloudflare cron paths exist', wrangler.includes('"5 6 * * *"') && wrangler.includes('"15 7 * * 1"') && hasDailyCronRoute && hasWeeklyCronRoute, 'Cloudflare scheduled events must drive both daily and weekly automation, whether the handler reads event.cron directly or normalises it first');
 check('Brevo lifecycle is fail-closed', email.includes('BREVO_API_KEY') && email.includes('BREVO_DOMAIN_AUTHENTICATED') && email.includes('Transactional email delivery is disabled'), 'Provider configuration and sender-domain readiness must be verified before delivery success');
 check('Email retries and suppression are persistent', email.includes("status IN ('pending','retry')") && email.includes('email_suppressions') && email.includes('email_webhook_receipts'), 'Retries, unsubscribes, bounces and webhook events must remain in D1');
 

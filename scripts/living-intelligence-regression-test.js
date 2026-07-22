@@ -40,8 +40,11 @@ syntaxCheck('src/worker-member-experience.js', true);
 syntaxCheck('src/worker-forum-persistence.js', true);
 
 const worker = read('src/worker-email-lifecycle.js');
+const detailedFirstBriefCall = 'const firstBrief=await sendDetailedFirstDailyBrief(request,env,member)';
+const legacyFirstBriefCall = 'const firstBrief=await sendFirstDailyBrief(request,env,member)';
 need(worker.includes("const DAILY_FIRST_BRIEF_VERSION='daily-first-brief-v1'"), 'worker missing immediate first-brief version marker');
-need(worker.includes('const firstBrief=await sendFirstDailyBrief(request,env,member)'), 'verification does not trigger the first Daily Control Brief');
+need(worker.includes(detailedFirstBriefCall), 'verification does not trigger the detailed first Daily Control Brief');
+need(!worker.includes(legacyFirstBriefCall), 'verification still triggers the legacy basic first Daily Control Brief');
 need(worker.includes('daily-control-brief:${member.id}:${date}'), 'same-day Daily Control Brief idempotency key missing');
 need(worker.includes("key.startsWith('automation:daily:')||key.startsWith('daily-first-brief:')"), 'scheduled and first-brief deliveries do not share the dedupe rule');
 need(worker.includes("'/api/email/admin/subscriber'"), 'protected subscriber diagnostic route missing');
@@ -115,7 +118,8 @@ const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
   checks: {
-    immediateDailyBrief: true,
+    immediateDetailedDailyBrief: true,
+    legacyBasicFirstBriefRemoved: true,
     sameDayDeduplication: true,
     truthfulDeliveryStatus: true,
     independentNewsletterPreferences: dailyPreferencePayload && weeklyPreferencePayload && releasePreferencePayload,
@@ -133,5 +137,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery, independent email preferences and verified-member forum posting.`);
+console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, detailed immediate Daily Brief delivery, independent email preferences and verified-member forum posting.`);
 require('./build-cloudflare-investigation-graph-projection.js');

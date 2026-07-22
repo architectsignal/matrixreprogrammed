@@ -1,0 +1,18 @@
+PRODUCTION DEPLOYMENT LOCKED
+
+Reason: Cloudflare Worker build-minute cost control.
+Effective: immediately after the final verified release requested on 2026-07-22.
+
+Allowed:
+- Run the local intelligence machine.
+- Build and test locally.
+- Commit and push source, intelligence, reports, data and site changes to GitHub.
+
+Blocked:
+- Automatic Cloudflare Worker deployment.
+- Scheduled Cloudflare Worker deployment.
+- Manual controlled production deployment.
+- Manual fallback production deployment.
+- One-shot production dispatch.
+
+Unlock condition: the repository owner explicitly confirms that free Cloudflare Worker build minutes are available again and deliberately removes this lock in a reviewed change.

@@ -56,6 +56,7 @@ runRequired('Puppets card manifest rebuild', 'build-card-download-manifest.js');
 runRequired('Puppets deep dossier rebuild', 'build-direct-card-dossiers.js');
 runRequired('Puppets final title and art-state pass', 'finalize-top-52-test-markers.js');
 runRequired('Puppets people-only and direct-dossier contract', 'top-52-people-only-test.js');
+runRequired('Follow the Money canonical title normalization', 'normalize-money-intelligence-titles.js');
 runRequired('Follow the Money coverage and freshness repair', 'repair-money-intelligence-coverage.js');
 runRequired('Follow the Money completeness contract', 'money-intelligence-completeness-test.js');
 
@@ -87,6 +88,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   puppetsCurrentRoleRefresh: 'scripts/refresh-puppets-current-roles.js',
   puppetsDossierTest: 'scripts/top-52-people-only-test.js',
+  moneyTitleNormalization: 'scripts/normalize-money-intelligence-titles.js',
   moneyCoverageRepair: 'scripts/repair-money-intelligence-coverage.js',
   moneyCoverageTest: 'scripts/money-intelligence-completeness-test.js',
   patched

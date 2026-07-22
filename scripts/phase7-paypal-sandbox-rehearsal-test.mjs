@@ -52,6 +52,7 @@ const wranglerJsonc = read('wrangler.jsonc');
 const adminPage = read('admin-paypal-rehearsal.html');
 const adminRuntime = read('admin-paypal-rehearsal.js');
 const deploy = read('.github/workflows/deploy.yml');
+const packageJson = read('package.json');
 
 for (const marker of [
   'CREATE TABLE IF NOT EXISTS paypal_sandbox_rehearsal_runs',
@@ -89,10 +90,18 @@ check('Wrangler has no active PayPal JSONC overrides', !/^\s*"PAYPAL_[A-Z0-9_]+"
 for (const marker of ['PAYPAL SANDBOX REHEARSAL.', 'maximum 45-minute window', 'admin-paypal-rehearsal.js', 'Complete and close checkout', 'Abort and close checkout']) check(`admin page contains ${marker}`, adminPage.includes(marker));
 for (const marker of ['/api/paypal/admin/rehearsal/readiness','/api/paypal/admin/rehearsal/start','/api/paypal/admin/rehearsal/status','/api/paypal/admin/rehearsal/complete','/api/paypal/admin/rehearsal/abort']) check(`admin runtime calls ${marker}`, adminRuntime.includes(marker));
 
-check('canonical deployment applies Phase 7 migration', deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql'));
-check('canonical deployment syntax-checks rehearsal Worker', deploy.includes('node --check src/worker-paypal-sandbox-rehearsal.js'));
-check('canonical deployment runs Phase 7 test', deploy.includes('node scripts/phase7-paypal-sandbox-rehearsal-test.mjs'));
-check('canonical deployment closes sandbox while preserving live state', deploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && deploy.includes('live checkout state preserved'));
+const hardFreeze = /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED/i.test(deploy);
+if (hardFreeze) {
+  check('canonical production deployment is explicitly hard frozen', /HARD FREEZE/i.test(deploy) && /PRODUCTION DEPLOYMENT LOCKED/i.test(deploy));
+  check('hard freeze contains no Wrangler or Cloudflare deployment command', !/wrangler(?:@latest)?\s+deploy|cloudflare.*deploy/i.test(deploy));
+  check('Phase 7 rehearsal assets remain build-tested while deployment is frozen', packageJson.includes('phase7-paypal-sandbox-rehearsal-test.mjs') && migration.length > 0 && worker.length > 0);
+  check('hard freeze preserves live state by performing no migration or checkout mutation', !deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql') && !/checkout_enabled\s*=|d1 execute|migrations apply/i.test(deploy));
+} else {
+  check('canonical deployment applies Phase 7 migration', deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql'));
+  check('canonical deployment syntax-checks rehearsal Worker', deploy.includes('node --check src/worker-paypal-sandbox-rehearsal.js'));
+  check('canonical deployment runs Phase 7 test', deploy.includes('node scripts/phase7-paypal-sandbox-rehearsal-test.mjs'));
+  check('canonical deployment closes sandbox while preserving live state', deploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && deploy.includes('live checkout state preserved'));
+}
 
 try {
   const module = await import(pathToFileURL(path.join(root, 'src/worker-paypal-sandbox-rehearsal.js')).href + `?test=${Date.now()}`);
@@ -129,9 +138,12 @@ const report = {
   generatedAt: new Date().toISOString(),
   phase: 7,
   name: 'PayPal sandbox rehearsal',
+  deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
   checks,
   failures,
-  safetyBoundary: 'Sandbox checkout is allowed only during an active timed rehearsal. Cloudflare owns the current environment and credentials; deployment keeps sandbox closed and preserves the independently authorized live D1 switch.'
+  safetyBoundary: hardFreeze
+    ? 'Production deployment is hard frozen. Rehearsal code and migration remain validated in Git; sandbox checkout stays closed and no workflow may mutate live or sandbox state.'
+    : 'Sandbox checkout is allowed only during an active timed rehearsal. Cloudflare owns the current environment and credentials; deployment keeps sandbox closed and preserves the independently authorized live D1 switch.'
 };
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -141,4 +153,4 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
-console.log(`PHASE 7 PAYPAL SANDBOX REHEARSAL TEST PASSED (${checks.length} checks)`);
+console.log(`PHASE 7 PAYPAL SANDBOX REHEARSAL TEST PASSED (${checks.length} checks; ${report.deploymentMode})`);

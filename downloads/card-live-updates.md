@@ -1,9 +1,9 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-21T19:51:29.581Z
-Live Intel source window: 2026-07-21T19:51:23.110Z
-Tracked cards: 889
-Cards with current matched records: 101
+Generated: 2026-07-22T03:45:27.825Z
+Live Intel source window: 2026-07-22T03:45:23.678Z
+Tracked cards: 890
+Cards with current matched records: 102
 Cards with no new verified record: 788
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
@@ -2278,7 +2278,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 8
 - Latest record: 2026-07-21T18:38:00.000Z
 - 2026-07-21T18:38:00.000Z — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
-- 2026-07-21T18:15:32.000Z — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
+- 2026-07-21T18:16:00.000Z — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
 - 2026-07-21T17:01:51.000Z — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
 
 ## GovTech digital service mandates
@@ -4248,9 +4248,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## REPUBLIC OF RWANDA
 - Route: entity-timelines/republic-of-rwanda.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
 
 ## Reuters
 - Route: institutions/reuters.html
@@ -4805,6 +4806,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## THE EPSTEIN EMAIL NETWORK
+- Route: epstein-email-network.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## THE EPSTEIN FILES: THE PROTECTION NETWORK.
 - Route: black-file-epstein-protection-network.html
 - Status: no-new-verified-record-in-current-window
@@ -5035,20 +5042,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-19T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 - 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-19T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-21T12:00:00.000Z
+- 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 - 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
-- 2026-07-15T12:00:00.000Z — World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights — https://news.un.org/feed/view/en/story/2026/07/1167950
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html

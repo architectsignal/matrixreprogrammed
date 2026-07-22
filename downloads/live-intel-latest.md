@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-21T19:51:23.110Z
+Collection completed: 2026-07-22T03:45:23.678Z
 Latest source publication: 2026-07-21T18:38:00.000Z
 Collection status: fresh-items-added
 New items this collection: 6
@@ -44,6 +44,18 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167993
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Critical minerals: The hidden resources powering the clean energy future
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Critical minerals: The hidden resources powering the clean energy future
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — DR Congo: Ebola outbreak still expanding, WHO sees signs of stabilization
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167983
   - Source class: primary-or-official
@@ -56,6 +68,18 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Global hunger declines again but progress remains uneven across regions
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167989
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Guterres calls for stepping up diplomatic efforts to end US-Iran conflict
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Israeli attacks on Gaza intensify amid surge of West Bank settler violence
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167991
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Israeli attacks on Gaza intensify amid surge of West Bank settler violence
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167984
   - Source class: primary-or-official
@@ -67,6 +91,12 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167992
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
@@ -296,11 +326,11 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxQdEdCMk5HcnpmVWxraThsM2VGcmZRYVRaZEc0TGNSaXNkaGpjNzlac3kzck9sS1pGWmhibUM5emttWWtrS3hEakI0Q1BRanloTVB2bVlSbVpLX21WZFVPem1scjBDMnpfY2NZTEozaEtwWnlocG9xcGNJSnhTTkt2MmhYUnV4WXdFaFE5QmhDa2JVYUR4U0I4bkFn?oc=5
+- 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
+  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
+  - Video hook: New public-record signal: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-15 — Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
   - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
@@ -349,10 +379,4 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Schools closed in West Bank, AI in healthcare, Indigenous rights
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-14 — WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
-  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxON0dEcXpTeGFia3pzUjlBUjlEMnprYmdiVGdnbXQ5R0d1R2RVNUNzejZqTDhBZmxLQVlVSTJWVmZlVlRkS05kdWhpSktOY09yQ0s0NTM4WmoyVnZWYmx5Y2xkTmlSclFIS0U3MWk3a1VqWjRzbkpFZURPNmhTY19zUm1qQk9rTVpSdF9jQ2poZjNiXzdrWllGRmkxQmswTkFSTmszTUtSUDgwY1hFSEhFQ2JtZ19mUmfSAbwBQVVfeXFMTXhkSWJPal80TXllZkNhdDJwOUw5NTJzUDVzcnBrbjhYaDlPeUppMk5MakNtQWpTX0FzR2Q5TWJmWVdSbS1RUkpMZHNlbmNYaVhvdEhxUWFqNU5Qd3RmeU1teDk5OEFRZzdDRERZM2RrT0toX1d2RnZtX2JMRlJVRDRLTWZLX2hNSVc3ckNIa2Jaa2ltR0xoUy1NMkVFbUYwakYwalFLNUN1eEx1OGx0NE45OTFfNU5DYmdSM2I?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: WATCH: Todd Blanche testifies in confirmation hearing for attorney general - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

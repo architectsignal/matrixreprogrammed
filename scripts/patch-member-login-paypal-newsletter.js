@@ -31,12 +31,28 @@ const paypal = patchFile('src/worker-paypal-subscriptions.js', text => replaceRe
   'the legacy PayPal session-cookie reader'
 ));
 
-const emailLifecycle = patchFile('src/worker-email-lifecycle.js', text => replaceRequired(
+const assetGate = patchFile('src/worker-access-gate.js', text => replaceRequired(
   text,
-  "if(!bool(input.consent,false))return json({ok:false,error:'Explicit email consent is required'},400);",
-  "if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);",
-  'the email consent check'
+  "  const token = cookieValue(request, 'matrix_session');",
+  "  const token = cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session');",
+  'the protected-asset legacy session-cookie reader'
 ));
+
+const emailLifecycle = patchFile('src/worker-email-lifecycle.js', text => {
+  let next = replaceRequired(
+    text,
+    "if(!bool(input.consent,false))return json({ok:false,error:'Explicit email consent is required'},400);",
+    "if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);",
+    'the email consent check'
+  );
+  next = replaceRequired(
+    next,
+    "const firstBrief=await sendFirstDailyBrief(request,env,member);",
+    "const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);",
+    'the basic first-daily-brief call'
+  );
+  return next;
+});
 
 const membershipTemplate = patchFile('scripts/templates/membership-auth/membership.template', text => {
   let next = text;
@@ -80,16 +96,57 @@ const dashboard = patchFile('member-dashboard-app.js', text => {
     "async function load(){try{setStatus('Loading your entitlement-controlled workspace…');state.dashboard=await api('/api/member/dashboard');renderAccount();$('dashboard-content').hidden=false;const member=state.dashboard.member||{};const capabilities=Array.isArray(member.capabilities)?member.capabilities:[];const canWatch=member.isAdmin===true||capabilities.includes('member_watchlists');$('watch-form').hidden=!canWatch;if(!canWatch)empty($('watch-list'),'Intelligence membership unlocks watchlists.');const tasks=[loadSessions(),loadSaved(),loadFollows(),loadArchive(),loadDownloads()];if(canWatch)tasks.push(loadWatchlists());await Promise.all(tasks);setStatus('Your account and entitlement state are current.','good')}catch(error){setStatus(error.message||'The dashboard could not be loaded.','danger')}}",
     'free-member watchlist gating'
   );
+  next = replaceRequired(
+    next,
+    "await fetch('/api/auth/logout',{method:'POST'}).catch(()=>null);",
+    "await fetch('/api/auth/logout',{method:'POST',credentials:'include',cache:'no-store'}).catch(()=>null);",
+    'member logout credential forwarding'
+  );
+  return next;
+});
+
+const dashboardHtml = patchFile('member-dashboard.html', text => replaceRequired(
+  text,
+  '<a id="admin-link" class="btn alt" href="admin-member-dashboard.html" hidden>Admin dashboard</a>\n        <a class="btn alt" href="index.html">Public site</a>',
+  '<a id="admin-link" class="btn alt" href="admin-member-dashboard.html" hidden>Admin dashboard</a>\n        <a class="btn" href="membership.html">Manage membership</a>\n        <a class="btn alt" href="index.html">Public site</a>',
+  'the dashboard membership-management action'
+));
+
+const emailStatus = patchFile('email-status.html', text => {
+  let next = replaceRequired(
+    text,
+    '<p><a class="btn" id="dashboard-link" href="subscriber-dashboard.html" hidden>Open subscriber dashboard</a></p>\n        <p><a class="btn alt" href="newsletter.html">Return to newsletter</a></p>',
+    '<p><a class="btn" id="dashboard-link" href="subscriber-dashboard.html" hidden>Manage email preferences</a></p>\n        <p><a class="btn alt" id="member-login-link" href="member-login.html" hidden>Open member login</a></p>\n        <p><a class="btn alt" href="newsletter.html">Return to newsletter</a></p>',
+    'the verified-email recovery actions'
+  );
+  next = replaceRequired(
+    next,
+    "const dashboard=document.getElementById('dashboard-link');\n    const token=params.get('token');",
+    "const dashboard=document.getElementById('dashboard-link');\n    const memberLogin=document.getElementById('member-login-link');\n    const token=params.get('token');",
+    'the member-login status reference'
+  );
+  next = replaceRequired(
+    next,
+    "if(token){dashboard.href='subscriber-dashboard.html?token='+encodeURIComponent(token);dashboard.hidden=false;sessionStorage.setItem('matrixEmailPreferenceToken',token)}",
+    "if(token){dashboard.href='subscriber-dashboard.html?token='+encodeURIComponent(token);dashboard.hidden=false;sessionStorage.setItem('matrixEmailPreferenceToken',token)}memberLogin.hidden=false",
+    'the verified-email member-login action'
+  );
   return next;
 });
 
 const checks = {
+  cloudflareProductionWorker: fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8').includes('main = "src/worker-production.js"'),
   paypalReadsCurrentSession: paypal.includes('values.matrix_session_v2||values.matrix_session'),
+  protectedAssetsReadCurrentSession: assetGate.includes("cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session')"),
   emailAcceptsMembershipConsent: emailLifecycle.includes('input.consent??input.marketingConsent'),
+  firstDailyBriefUsesDetailedBuilder: emailLifecycle.includes('const firstBrief=await sendDetailedFirstDailyBrief(request,env,member);'),
   signupSendsCanonicalConsent: membershipTemplate.includes('consent:marketingConsent,marketingConsent'),
   membershipFetchesIncludeCredentials: membershipTemplate.includes("credentials:'include'"),
   dashboardFetchIncludesCredentials: dashboard.includes("fetch(path,{cache:'no-store',credentials:'include'"),
-  freeDashboardSkipsPaidWatchlistCall: dashboard.includes("capabilities.includes('member_watchlists')")
+  dashboardLogoutIncludesCredentials: dashboard.includes("method:'POST',credentials:'include',cache:'no-store'"),
+  freeDashboardSkipsPaidWatchlistCall: dashboard.includes("capabilities.includes('member_watchlists')"),
+  dashboardHasMembershipAction: dashboardHtml.includes('Manage membership'),
+  verifiedEmailHasMemberLoginAction: emailStatus.includes('Open member login')
 };
 
 if (Object.values(checks).some(value => value !== true)) {
@@ -102,12 +159,14 @@ fs.writeFileSync(
   JSON.stringify({
     ok: true,
     generatedAt: new Date().toISOString(),
+    platform: 'Cloudflare Worker + D1 + Cloudflare Assets',
     changes,
     checks,
-    rootCause: 'Passwordless login writes matrix_session_v2 while the PayPal worker read only matrix_session.',
-    newsletterRepair: 'Membership signup now sends canonical consent and the email lifecycle also accepts marketingConsent as a compatible alias.',
-    dashboardRepair: 'Free members no longer trigger the Intelligence-only watchlist endpoint during initial dashboard loading.'
+    rootCause: 'Passwordless login writes matrix_session_v2 while the PayPal worker and protected-asset gate read only matrix_session.',
+    newsletterRepair: 'Membership signup now sends canonical consent, the email lifecycle accepts the compatible alias, and the first selected daily brief uses the detailed intelligence builder with its safe fallback.',
+    dashboardRepair: 'Free members no longer trigger the Intelligence-only watchlist endpoint during initial loading, logout carries credentials explicitly, and membership management is directly reachable.',
+    recoveryRepair: 'A verified email subscriber is given clear routes to email preferences and secure member login.'
   }, null, 2)
 );
 
-console.log(`Member login, PayPal and newsletter integration patched: ${changes.length ? changes.join(', ') : 'already current'}`);
+console.log(`Cloudflare member login, PayPal, protected assets and newsletter integration patched: ${changes.length ? changes.join(', ') : 'already current'}`);

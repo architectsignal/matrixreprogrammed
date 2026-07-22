@@ -36,13 +36,67 @@ jobs:
         run: node scripts/patch-membership-auth-ui.js
 
       - name: Verify Cloudflare member contracts
-        run: node scripts/cloudflare-member-experience-test.mjs
+        id: member_contracts
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads
+          node scripts/cloudflare-member-experience-test.mjs > downloads/cloudflare-member-contract.log 2>&1
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Verify PayPal active-subscription compatibility
-        run: node scripts/paypal-active-subscription-compatibility-test.mjs
+        id: paypal_compatibility
+        shell: bash
+        run: |
+          set +e
+          node scripts/paypal-active-subscription-compatibility-test.mjs > downloads/paypal-active-subscription-compatibility.log 2>&1
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Verify canonical Cloudflare origin at runtime
-        run: node scripts/cloudflare-canonical-origin-test.mjs
+        id: canonical_origin
+        shell: bash
+        run: |
+          set +e
+          node scripts/cloudflare-canonical-origin-test.mjs > downloads/cloudflare-canonical-origin.log 2>&1
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Upload focused Cloudflare diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-member-diagnostics-${{ github.run_id }}
+          path: |
+            downloads/cloudflare-member-contract.log
+            downloads/cloudflare-member-experience-test.json
+            downloads/paypal-active-subscription-compatibility.log
+            downloads/paypal-active-subscription-compatibility-test.json
+            downloads/cloudflare-canonical-origin.log
+            downloads/cloudflare-canonical-member-origin.json
+            downloads/member-login-paypal-newsletter-patch.json
+            downloads/membership-auth-ui-patch.json
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Fail if a focused Cloudflare contract failed
+        if: steps.member_contracts.outputs.exit_code != '0' || steps.paypal_compatibility.outputs.exit_code != '0' || steps.canonical_origin.outputs.exit_code != '0'
+        shell: bash
+        run: |
+          echo "member_contracts=${{ steps.member_contracts.outputs.exit_code }}"
+          echo "paypal_compatibility=${{ steps.paypal_compatibility.outputs.exit_code }}"
+          echo "canonical_origin=${{ steps.canonical_origin.outputs.exit_code }}"
+          for log in downloads/cloudflare-member-contract.log downloads/paypal-active-subscription-compatibility.log downloads/cloudflare-canonical-origin.log; do
+            if [ -f "$log" ]; then
+              echo "===== $log ====="
+              cat "$log"
+            fi
+          done
+          exit 1
 
       - name: Full build and pressure tests
         run: npm run build

@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-07-22",
+  "title": "Top 10 Living Access-Holders",
+  "editorialBoundary": "This ranking estimates current documented access to major structural power systems. It is not a claim of secret command, criminality, moral worth or total control. Office, ownership and operational authority are separated from influence, fame and wealth.",
+  "scoreDimensions": {
+    "formalAuthority": 20,
+    "coerciveCommand": 15,
+    "appointmentPower": 15,
+    "capitalAllocation": 15,
+    "infrastructureControl": 10,
+    "informationAccess": 10,
+    "crossBorderReach": 10,
+    "continuityLeverage": 5
+  },
+  "rankingPolicy": {
+    "eligibleStatus": [
+      "verified_current"
+    ],
+    "requiredEvidence": "At least one authoritative source confirming the current role plus a documented mechanism of access.",
+    "automaticRemoval": [
+      "role_ended",
+      "deceased",
+      "resigned",
+      "removed",
+      "source_retracted",
+      "verification_expired"
+    ],
+    "reviewCadenceDays": 31,
+    "snapshotRule": "Append a dated snapshot whenever membership, ranked order, role or score changes after approved evidence intake.",
+    "intakeFile": "data/behind-the-curtain-living-access-intake.json",
+    "historyFile": "data/behind-the-curtain-living-access-history.json"
+  },
+  "candidates": [
+    {
+      "id": "xi-jinping",
+      "name": "Xi Jinping",
+      "currentRole": "General Secretary of the Communist Party of China; President of the People’s Republic of China; Chairman of the CPC and PRC Central Military Commissions",
+      "entityType": "State and party command",
+      "jurisdictions": [
+        "China"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "very_high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 98,
+      "dimensions": {
+        "formalAuthority": 100,
+        "coerciveCommand": 100,
+        "appointmentPower": 100,
+        "capitalAllocation": 96,
+        "infrastructureControl": 90,
+        "informationAccess": 100,
+        "crossBorderReach": 97,
+        "continuityLeverage": 98
+      },
+      "structuresReached": [
+        "Party-state leadership",
+        "Military command",
+        "Senior appointments",
+        "Industrial strategy",
+        "State security",
+        "Foreign policy"
+      ],
+      "mechanisms": [
+        "Combined party, state and military offices",
+        "Cadre and senior appointment authority",
+        "Command access to security and defence structures",
+        "Agenda-setting over national strategy"
+      ],
+      "constraints": [
+        "Collective party institutions and state bureaucracy",
+        "Economic and technical constraints",
+        "Dependence on subordinate implementation"
+      ],
+      "strongestCounterargument": "Concentration of offices is exceptional, but it does not mean every Chinese institution or commercial actor is personally directed in every decision.",
+      "removalTriggers": [
+        "Loss of a principal office",
+        "Formal succession or transfer of military command",
+        "Documented reduction of appointment authority"
+      ],
+      "sourceIds": [
+        "xi-mod-leadership",
+        "xi-gov-2026"
+      ],
+      "rank": 1,
+      "previousRank": 1,
+      "movement": "stable"
+    },
+    {
+      "id": "mohammed-bin-salman",
+      "name": "Mohammed bin Salman",
+      "currentRole": "Crown Prince and Prime Minister of Saudi Arabia; Chairman of the Council of Economic and Development Affairs; Chairman of the Public Investment Fund",
+      "entityType": "Hereditary executive and sovereign-capital command",
+      "jurisdictions": [
+        "Saudi Arabia"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "very_high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 96.1,
+      "dimensions": {
+        "formalAuthority": 98,
+        "coerciveCommand": 94,
+        "appointmentPower": 100,
+        "capitalAllocation": 99,
+        "infrastructureControl": 90,
+        "informationAccess": 92,
+        "crossBorderReach": 94,
+        "continuityLeverage": 98
+      },
+      "structuresReached": [
+        "Executive government",
+        "Senior appointments",
+        "Sovereign investment",
+        "Energy strategy",
+        "Security and defence",
+        "Foreign policy"
+      ],
+      "mechanisms": [
+        "Hereditary succession position",
+        "Prime-ministerial authority",
+        "Chairmanship of PIF and CEDA",
+        "Access to energy and sovereign-capital systems"
+      ],
+      "constraints": [
+        "Royal succession and elite bargaining",
+        "State bureaucracy and professional management",
+        "Energy markets and international security relationships"
+      ],
+      "strongestCounterargument": "Authority is unusually concentrated, but Saudi institutions, markets, alliances and succession dynamics still constrain outcomes.",
+      "removalTriggers": [
+        "Loss of prime-ministerial or crown-prince status",
+        "Transfer of PIF chairmanship",
+        "Succession change"
+      ],
+      "sourceIds": [
+        "mbs-pif-leadership"
+      ],
+      "rank": 2,
+      "previousRank": 2,
+      "movement": "stable"
+    },
+    {
+      "id": "donald-trump",
+      "name": "Donald J. Trump",
+      "currentRole": "President of the United States",
+      "entityType": "Constitutional executive authority",
+      "jurisdictions": [
+        "United States"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "very_high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 94.8,
+      "dimensions": {
+        "formalAuthority": 100,
+        "coerciveCommand": 96,
+        "appointmentPower": 98,
+        "capitalAllocation": 94,
+        "infrastructureControl": 85,
+        "informationAccess": 97,
+        "crossBorderReach": 98,
+        "continuityLeverage": 72
+      },
+      "structuresReached": [
+        "Executive branch",
+        "Military command",
+        "Intelligence access",
+        "Sanctions and foreign policy",
+        "Senior appointments",
+        "Regulatory agenda"
+      ],
+      "mechanisms": [
+        "Constitutional presidency",
+        "Commander-in-chief authority",
+        "Appointment and removal powers within law",
+        "Access to classified and diplomatic systems"
+      ],
+      "constraints": [
+        "Congress, courts, federalism and independent agencies",
+        "Fixed electoral term and statutory limits",
+        "Institutional and alliance constraints"
+      ],
+      "strongestCounterargument": "The presidency has immense formal access, but authority is divided and time-limited compared with hereditary or permanent institutional structures.",
+      "removalTriggers": [
+        "End of presidential term",
+        "Removal, resignation or incapacity",
+        "Material statutory restriction"
+      ],
+      "sourceIds": [
+        "trump-whitehouse-2026"
+      ],
+      "rank": 3,
+      "previousRank": 3,
+      "movement": "stable"
+    },
+    {
+      "id": "mohamed-bin-zayed",
+      "name": "Mohamed bin Zayed Al Nahyan",
+      "currentRole": "President of the United Arab Emirates and Ruler of Abu Dhabi",
+      "entityType": "Hereditary federal and emirate authority",
+      "jurisdictions": [
+        "United Arab Emirates"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "very_high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 94.5,
+      "dimensions": {
+        "formalAuthority": 98,
+        "coerciveCommand": 93,
+        "appointmentPower": 96,
+        "capitalAllocation": 98,
+        "infrastructureControl": 87,
+        "informationAccess": 92,
+        "crossBorderReach": 91,
+        "continuityLeverage": 97
+      },
+      "structuresReached": [
+        "Federal executive authority",
+        "Abu Dhabi government",
+        "Sovereign capital",
+        "Energy",
+        "Defence and security",
+        "Federal appointments"
+      ],
+      "mechanisms": [
+        "Presidency and rulership",
+        "Supreme Council participation",
+        "Appointment powers",
+        "Access to sovereign and energy institutions"
+      ],
+      "constraints": [
+        "Federal bargaining with other emirates",
+        "Professional management and legal mandates",
+        "Global finance, energy and alliance dependencies"
+      ],
+      "strongestCounterargument": "The offices provide deep access, but the UAE remains a federation and major assets are administered through institutions with their own mandates.",
+      "removalTriggers": [
+        "Loss of presidency or Abu Dhabi rulership",
+        "Succession change",
+        "Transfer of sovereign-capital authority"
+      ],
+      "sourceIds": [
+        "mbz-uae-president"
+      ],
+      "rank": 4,
+      "previousRank": 4,
+      "movement": "stable"
+    },
+    {
+      "id": "vladimir-putin",
+      "name": "Vladimir Putin",
+      "currentRole": "President of the Russian Federation",
+      "entityType": "Constitutional executive and security command",
+      "jurisdictions": [
+        "Russia"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "very_high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 94,
+      "dimensions": {
+        "formalAuthority": 100,
+        "coerciveCommand": 99,
+        "appointmentPower": 97,
+        "capitalAllocation": 86,
+        "infrastructureControl": 83,
+        "informationAccess": 99,
+        "crossBorderReach": 89,
+        "continuityLeverage": 91
+      },
+      "structuresReached": [
+        "Executive government",
+        "Military and security command",
+        "Senior appointments",
+        "Energy and strategic industry",
+        "Foreign policy",
+        "State information access"
+      ],
+      "mechanisms": [
+        "Presidential office",
+        "Commander-in-chief and security-council authority",
+        "Appointment powers",
+        "Access to strategic-industry systems"
+      ],
+      "constraints": [
+        "Constitutional and bureaucratic institutions",
+        "Economic capacity, sanctions and external constraints",
+        "Dependence on administrative implementation"
+      ],
+      "strongestCounterargument": "The presidency concentrates major authority, but it is not ownership of the Russian state or automatic command over every elite and institution.",
+      "removalTriggers": [
+        "End of presidential tenure",
+        "Transfer of security or military command",
+        "Documented loss of executive authority"
+      ],
+      "sourceIds": [
+        "putin-kremlin-president"
+      ],
+      "rank": 5,
+      "previousRank": 5,
+      "movement": "stable"
+    },
+    {
+      "id": "kevin-warsh",
+      "name": "Kevin Warsh",
+      "currentRole": "Chairman of the Board of Governors of the Federal Reserve System and Chairman of the Federal Open Market Committee",
+      "entityType": "Central-bank monetary authority",
+      "jurisdictions": [
+        "United States"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 73.5,
+      "dimensions": {
+        "formalAuthority": 85,
+        "coerciveCommand": 8,
+        "appointmentPower": 78,
+        "capitalAllocation": 98,
+        "infrastructureControl": 92,
+        "informationAccess": 82,
+        "crossBorderReach": 92,
+        "continuityLeverage": 45
+      },
+      "structuresReached": [
+        "US monetary policy",
+        "Dollar liquidity",
+        "Bank supervision",
+        "Payment-system oversight",
+        "Financial-stability coordination",
+        "International central-bank relations"
+      ],
+      "mechanisms": [
+        "Board chairmanship",
+        "FOMC chairmanship",
+        "Agenda-setting and public communication",
+        "Access to supervisory and market information"
+      ],
+      "constraints": [
+        "Committee voting and statutory mandate",
+        "Congressional law and judicial review",
+        "No unilateral fiscal or sanctions authority"
+      ],
+      "strongestCounterargument": "The chair has exceptional agenda and information access, but monetary decisions are committee-based and legally bounded.",
+      "removalTriggers": [
+        "End of chairmanship",
+        "Loss of Board membership",
+        "Statutory change reducing the role"
+      ],
+      "sourceIds": [
+        "warsh-fed-oath",
+        "warsh-fed-bio"
+      ],
+      "rank": 6,
+      "previousRank": 6,
+      "movement": "stable"
+    },
+    {
+      "id": "ursula-von-der-leyen",
+      "name": "Ursula von der Leyen",
+      "currentRole": "President of the European Commission",
+      "entityType": "Supranational regulatory and agenda authority",
+      "jurisdictions": [
+        "European Union"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 73.2,
+      "dimensions": {
+        "formalAuthority": 90,
+        "coerciveCommand": 12,
+        "appointmentPower": 92,
+        "capitalAllocation": 75,
+        "infrastructureControl": 82,
+        "informationAccess": 82,
+        "crossBorderReach": 92,
+        "continuityLeverage": 55
+      },
+      "structuresReached": [
+        "EU policy agenda",
+        "Competition and digital regulation",
+        "Trade policy",
+        "EU budget programmes",
+        "Commission portfolios",
+        "International representation"
+      ],
+      "mechanisms": [
+        "Commission presidency",
+        "Portfolio allocation",
+        "Agenda-setting",
+        "International representation"
+      ],
+      "constraints": [
+        "College of Commissioners, Council and Parliament",
+        "Treaty limits and member-state authority",
+        "Courts and national implementation"
+      ],
+      "strongestCounterargument": "The Commission President is a central agenda setter, but EU authority is deliberately shared among institutions and member states.",
+      "removalTriggers": [
+        "End of Commission mandate",
+        "Resignation or removal",
+        "Treaty change reducing authority"
+      ],
+      "sourceIds": [
+        "vdl-eu-president"
+      ],
+      "rank": 7,
+      "previousRank": 7,
+      "movement": "stable"
+    },
+    {
+      "id": "larry-fink",
+      "name": "Laurence D. Fink",
+      "currentRole": "Founder, Chairman and Chief Executive Officer of BlackRock",
+      "entityType": "Institutional-capital and financial-technology access",
+      "jurisdictions": [
+        "United States",
+        "Global"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 70.8,
+      "dimensions": {
+        "formalAuthority": 60,
+        "coerciveCommand": 0,
+        "appointmentPower": 86,
+        "capitalAllocation": 100,
+        "infrastructureControl": 84,
+        "informationAccess": 88,
+        "crossBorderReach": 98,
+        "continuityLeverage": 78
+      },
+      "structuresReached": [
+        "Institutional asset management",
+        "Risk and advisory systems",
+        "Aladdin financial technology",
+        "Corporate and policy relationships",
+        "Private markets",
+        "Global capital allocation"
+      ],
+      "mechanisms": [
+        "Founder and CEO authority",
+        "Executive and succession leadership",
+        "Strategic-client access",
+        "Control over firm strategy"
+      ],
+      "constraints": [
+        "Fiduciary duties and client mandates",
+        "Board oversight and regulators",
+        "Client ownership of managed assets",
+        "Competition and market performance"
+      ],
+      "strongestCounterargument": "BlackRock’s scale creates access and influence, but assets under management are not personal ownership and clients, boards and regulators constrain decisions.",
+      "removalTriggers": [
+        "Departure as chairman or CEO",
+        "Loss of board authority",
+        "Material reduction in systemic reach"
+      ],
+      "sourceIds": [
+        "fink-blackrock-board",
+        "fink-blackrock-leadership"
+      ],
+      "rank": 8,
+      "previousRank": 8,
+      "movement": "stable"
+    },
+    {
+      "id": "christine-lagarde",
+      "name": "Christine Lagarde",
+      "currentRole": "President of the European Central Bank",
+      "entityType": "Central-bank monetary and supervisory access",
+      "jurisdictions": [
+        "Euro area"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 70.4,
+      "dimensions": {
+        "formalAuthority": 84,
+        "coerciveCommand": 5,
+        "appointmentPower": 70,
+        "capitalAllocation": 95,
+        "infrastructureControl": 90,
+        "informationAccess": 78,
+        "crossBorderReach": 90,
+        "continuityLeverage": 45
+      },
+      "structuresReached": [
+        "Euro-area monetary policy",
+        "Banking-system liquidity",
+        "Collateral policy",
+        "Financial stability",
+        "Banking supervision",
+        "Central-bank coordination"
+      ],
+      "mechanisms": [
+        "ECB presidency",
+        "Governing Council agenda and communication",
+        "Executive Board leadership",
+        "Monetary and supervisory information"
+      ],
+      "constraints": [
+        "Collective Governing Council decisions",
+        "Treaty mandate and judicial review",
+        "National central banks and political constraints"
+      ],
+      "strongestCounterargument": "The presidency is influential, but ECB decisions are collective and the office does not control fiscal policy or member-state governments.",
+      "removalTriggers": [
+        "End of ECB term",
+        "Resignation or incapacity",
+        "Governance change reducing the office"
+      ],
+      "sourceIds": [
+        "lagarde-ecb-2026"
+      ],
+      "rank": 9,
+      "previousRank": 9,
+      "movement": "stable"
+    },
+    {
+      "id": "cc-wei",
+      "name": "C.C. Wei",
+      "currentRole": "Chairman and Chief Executive Officer of Taiwan Semiconductor Manufacturing Company",
+      "entityType": "Advanced-semiconductor operational access",
+      "jurisdictions": [
+        "Taiwan",
+        "Global"
+      ],
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "status": "verified_current",
+      "verifiedAt": "2026-07-22",
+      "nextReviewDue": "2026-08-22",
+      "accessScore": 68.8,
+      "dimensions": {
+        "formalAuthority": 65,
+        "coerciveCommand": 0,
+        "appointmentPower": 82,
+        "capitalAllocation": 90,
+        "infrastructureControl": 100,
+        "informationAccess": 78,
+        "crossBorderReach": 94,
+        "continuityLeverage": 55
+      },
+      "structuresReached": [
+        "Advanced semiconductor manufacturing",
+        "Capital expenditure and capacity",
+        "Customer allocation",
+        "Technology roadmap",
+        "Supply-chain coordination",
+        "Industrial strategy"
+      ],
+      "mechanisms": [
+        "Chairman and CEO authority",
+        "Operational control over the leading pure-play foundry",
+        "Board and management access",
+        "Strategic customer and government relationships"
+      ],
+      "constraints": [
+        "Board, shareholders and Taiwanese law",
+        "Export controls and security policy",
+        "Supply-chain and technical dependencies"
+      ],
+      "strongestCounterargument": "TSMC is a critical chokepoint, but its CEO cannot independently control the wider semiconductor ecosystem or state export policies.",
+      "removalTriggers": [
+        "End of chairman or CEO role",
+        "Board replacement",
+        "Loss of leading-edge manufacturing position"
+      ],
+      "sourceIds": [
+        "wei-tsmc-2025-report"
+      ],
+      "rank": 10,
+      "previousRank": 10,
+      "movement": "stable"
+    }
+  ],
+  "watchlist": [
+    {
+      "name": "Hyperscale cloud and AI leaders",
+      "reason": "Requires verified role, mechanism and comparative score."
+    },
+    {
+      "name": "Commercial-bank and payment-rail leaders",
+      "reason": "Do not treat firm scale as personal ownership."
+    },
+    {
+      "name": "Intelligence and national-security officials",
+      "reason": "Publication requires strong public-interest sourcing and editorial review."
+    },
+    {
+      "name": "Additional royal, sovereign-wealth and family-office leaders",
+      "reason": "Requires a current personal office or enforceable right, not surname alone."
+    }
+  ],
+  "sources": [
+    {
+      "id": "xi-mod-leadership",
+      "publisher": "PRC Ministry of National Defense",
+      "title": "Xi Jinping leadership profile",
+      "url": "https://eng.mod.gov.cn/xb/Leadership/XiJinping/",
+      "date": "2026-07-22",
+      "establishes": "Current party, state and military offices.",
+      "doesNotEstablish": "Personal control of every Chinese institution or private decision."
+    },
+    {
+      "id": "xi-gov-2026",
+      "publisher": "State Council of the PRC",
+      "title": "Xi stresses absolute Party leadership over people’s armed forces",
+      "url": "https://english.www.gov.cn/news/202607/01/content_WS6a448d64c6d00ca5f9a0bf47.html",
+      "date": "2026-07-01",
+      "establishes": "Current roles as general secretary, president and CMC chairman.",
+      "doesNotEstablish": "Unbounded authority outside Chinese institutions."
+    },
+    {
+      "id": "mbs-pif-leadership",
+      "publisher": "Public Investment Fund",
+      "title": "Our Leadership",
+      "url": "https://www.pif.gov.sa/en/who-we-are/our-leadership/",
+      "date": "2026-07-22",
+      "establishes": "Current Crown Prince, Prime Minister, CEDA and PIF chair roles.",
+      "doesNotEstablish": "Personal direction of every investment or foreign institution."
+    },
+    {
+      "id": "trump-whitehouse-2026",
+      "publisher": "The White House",
+      "title": "250th Anniversary of the Adoption of the Declaration of Independence",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/07/250th-anniversary-of-the-adoption-of-the-declaration-of-independence/",
+      "date": "2026-07-03",
+      "establishes": "Donald J. Trump is the current US President.",
+      "doesNotEstablish": "Control beyond constitutional and statutory authority."
+    },
+    {
+      "id": "mbz-uae-president",
+      "publisher": "UAE Government",
+      "title": "The President and his deputies",
+      "url": "https://u.ae/about-the-uae/the-uae-government/the-president-and-his-deputy",
+      "date": "2026-07-22",
+      "establishes": "Current UAE presidency, Abu Dhabi rulership and constitutional powers.",
+      "doesNotEstablish": "Personal management of every federal or sovereign asset."
+    },
+    {
+      "id": "putin-kremlin-president",
+      "publisher": "President of Russia",
+      "title": "President of the Russian Federation",
+      "url": "https://en.kremlin.ru/structure/president",
+      "date": "2026-07-22",
+      "establishes": "Vladimir Putin is current President and identifies the office’s powers.",
+      "doesNotEstablish": "Ownership of the Russian state or automatic control of every institution."
+    },
+    {
+      "id": "warsh-fed-oath",
+      "publisher": "Federal Reserve Board",
+      "title": "Kevin Warsh takes oath of office as chairman",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm",
+      "date": "2026-05-22",
+      "establishes": "Current Fed and FOMC chairmanship and term dates.",
+      "doesNotEstablish": "Unilateral control of committee decisions or fiscal policy."
+    },
+    {
+      "id": "warsh-fed-bio",
+      "publisher": "Federal Reserve Board",
+      "title": "Kevin Warsh, Chairman",
+      "url": "https://www.federalreserve.gov/aboutthefed/bios/board/warsh.htm",
+      "date": "2026-06-17",
+      "establishes": "Current chairmanship and Board membership.",
+      "doesNotEstablish": "Authority beyond the Fed’s statutory mandate."
+    },
+    {
+      "id": "vdl-eu-president",
+      "publisher": "European Commission",
+      "title": "About the President",
+      "url": "https://commission.europa.eu/about/organisation/president/about-president_en",
+      "date": "2026-07-22",
+      "establishes": "Current Commission presidency, term and agenda-setting role.",
+      "doesNotEstablish": "Unilateral control of member states or other EU institutions."
+    },
+    {
+      "id": "lagarde-ecb-2026",
+      "publisher": "European Central Bank",
+      "title": "Monetary policy statement, 11 June 2026",
+      "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260611~372040d313.en.html",
+      "date": "2026-06-11",
+      "establishes": "Christine Lagarde is current ECB President.",
+      "doesNotEstablish": "Unilateral control of Governing Council decisions or fiscal policy."
+    },
+    {
+      "id": "wei-tsmc-2025-report",
+      "publisher": "TSMC",
+      "title": "2025 Annual Report",
+      "url": "https://investor.tsmc.com/static/annualReports/2025/english/index.html",
+      "date": "2026-02-28",
+      "establishes": "C.C. Wei is TSMC Chairman and CEO.",
+      "doesNotEstablish": "Control of the entire semiconductor ecosystem or export policy."
+    },
+    {
+      "id": "fink-blackrock-board",
+      "publisher": "BlackRock",
+      "title": "Board of Directors — Laurence D. Fink",
+      "url": "https://ir.blackrock.com/governance/board-of-directors/",
+      "date": "2026-07-22",
+      "establishes": "Larry Fink is founder, Chairman and CEO and identifies leadership responsibilities.",
+      "doesNotEstablish": "Personal ownership of client assets or control of governments."
+    },
+    {
+      "id": "fink-blackrock-leadership",
+      "publisher": "BlackRock",
+      "title": "Global Executive Committee",
+      "url": "https://www.blackrock.com/corporate/about-us/leadership",
+      "date": "2026-07-22",
+      "establishes": "Current executive role.",
+      "doesNotEstablish": "Unilateral authority over clients, portfolio companies or regulators."
+    }
+  ],
+  "build": {
+    "inputHash": "00e6dfee56724e6be997537f07463814d05089f764b8d02970c7649bae63b91e",
+    "lastCalculatedAt": "2026-07-22T18:16:53.063Z",
+    "approvedIntakeEntries": 0
+  }
+}

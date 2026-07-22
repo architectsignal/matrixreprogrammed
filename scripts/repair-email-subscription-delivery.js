@@ -25,9 +25,12 @@ function repairEmailWorker(source) {
   const signupStartLegacy = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent,false))return json({ok:false,error:'Explicit email consent is required'},400);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
   const signupStartCompatible = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
   const signupStartSafe = "const email=clean(input.email,254).toLowerCase();if(!validEmail(email))return json({ok:false,error:'Valid email required'},400);if(!bool(input.consent??input.marketingConsent,false))return json({ok:false,error:'Explicit email consent is required'},400);const existingBeforeSignup=await memberByEmail(env,email);let member=await upsertSignupMember(env,{...input,email},{resubscribe});";
-  if (source.includes(signupStartCompatible)) source = source.replace(signupStartCompatible, signupStartSafe);
-  else if (source.includes(signupStartLegacy)) source = source.replace(signupStartLegacy, signupStartSafe);
-  else if (!source.includes(signupStartSafe)) throw new Error('Existing subscriber snapshot anchor not found');
+  const existingSnapshotMarker = 'const existingBeforeSignup=await memberByEmail(env,email);';
+  if (!source.includes(existingSnapshotMarker)) {
+    if (source.includes(signupStartCompatible)) source = source.replace(signupStartCompatible, signupStartSafe);
+    else if (source.includes(signupStartLegacy)) source = source.replace(signupStartLegacy, signupStartSafe);
+    else throw new Error('Existing subscriber snapshot anchor not found');
+  }
 
   const consentAnchor = "const consentId=await appendConsent(env,member.id,true,sourcePage,resubscribe?'email-resubscribe-v1':'email-signup-v2');await savePreferences(env,member.id,input);const purpose=resubscribe?'resubscribe':'verify_marketing';";
   const consentSafe = "const consentId=await appendConsent(env,member.id,true,sourcePage,resubscribe?'email-resubscribe-v1':'email-signup-v2');await savePreferences(env,member.id,input);const blockedStatuses=new Set(['unsubscribed','suppressed','bounced','complained']);const alreadyVerified=Boolean(!resubscribe&&existingBeforeSignup&&existingBeforeSignup.status==='active'&&existingBeforeSignup.email_verified_at&&!blockedStatuses.has(String(existingBeforeSignup.marketing_status||''))&&!(await activeSuppression(env,member.id)));if(alreadyVerified){await env.MEMBERS_DB.prepare(`UPDATE members SET marketing_status='subscribed',updated_at=? WHERE id=? AND status='active' AND email_verified_at IS NOT NULL`).bind(iso(env),member.id).run();member=await memberById(env,member.id);await syncSegments(env,member);const providerSync=await syncBrevoContact(env,member,{blacklisted:false});await audit(env,member.id,'email.signup.verified_preferences_refreshed','member',member.id,{sourcePage,providerSynced:providerSync.synced,verificationRequired:false});return json({ok:true,accepted:true,saved:true,status:'active',providerSync,verification:{required:false,queued:false,sent:false},message:'Your verified subscription remains active and your email preferences were updated.'},200)}const purpose=resubscribe?'resubscribe':'verify_marketing';";
@@ -88,6 +91,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   safeguards: {
     canonicalConsentCompatible: true,
     verifiedRepeatSignupPreserved: true,
+    semanticExistingSubscriberSnapshot: true,
     pendingVerifiedRecoverySupported: true,
     runtimeRecoveryBeforeCampaign: true,
     explicitUnsubscribeAndSuppressionsPreserved: true,

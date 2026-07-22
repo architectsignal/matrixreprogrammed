@@ -64,7 +64,13 @@ jobs:
         with:
           node-version: '24'
       - name: Recalculate structural power, family access and internal routes
-        run: node scripts/build-behind-the-curtain.js
+        shell: bash
+        run: |
+          set +e
+          node scripts/build-behind-the-curtain.js > /tmp/behind-the-curtain-build.log 2>&1
+          status=$?
+          tail -n 120 /tmp/behind-the-curtain-build.log
+          exit $status
       - name: Validate syntax and evidence contracts
         run: |
           node --check behind-the-curtain.js

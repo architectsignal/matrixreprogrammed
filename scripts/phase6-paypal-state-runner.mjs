@@ -52,10 +52,10 @@ try{
     source=source.replace(duplicateGuardAnchor,`${duplicateGuardAnchor}\n${duplicateGuardStage}`);
   }
   source=source
-    .replace('requiredStages:14','requiredStages:15')
-    .replace('stages.length===14','stages.length===15')
-    .replace('all 14 state stages','all 15 state stages')
-    .replace('${stages.length}/14 stages','${stages.length}/15 stages');
+    .replace('requiredStages:14','requiredStages:16')
+    .replace('stages.length===14','stages.length===16')
+    .replace('all 14 state stages','all 16 state stages')
+    .replace('${stages.length}/14 stages','${stages.length}/16 stages');
   await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
 }catch(error){
   const failure={ok:false,failedAt:new Date().toISOString(),name:error?.name||'Error',message:String(error?.message||error),stack:String(error?.stack||error),boundary:'Diagnostic only. No real PayPal account, charge, subscription, member, source file or production database was modified.'};

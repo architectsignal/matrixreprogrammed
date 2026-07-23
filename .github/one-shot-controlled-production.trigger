@@ -1,5 +1,7 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-22T13:30:00+02:00
-Target: main commit 1be92355e9f1da48dfe4b865df5afba828b9e3cf
-Required proof: all eleven release gates green; live login, signup, member dashboard, PayPal boundary, newsletter lifecycle, protected downloads, homepage construction banner, deploy manifest and health SHA verified.
-Purpose: perform the one final controlled Cloudflare production release, then freeze every production deployment path until free Worker build minutes are available again.
+Requested: 2026-07-23T12:43:00+02:00
+Target: latest tested main
+Authorization: one controlled production deployment only
+Required proof: guarded build, D1 rollback bookmark and migrations, Cloudflare deployment, exact live SHA, Worker health, forum D1, membership boundaries, PayPal checkout disabled, and live route verification.
+Purpose: deploy the audited predeployment repairs once, verify production, and do not dispatch a second production run.
+Nonce: 2026-07-23T12:43:00+02:00

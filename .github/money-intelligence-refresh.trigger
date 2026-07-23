@@ -1,5 +1,6 @@
 REFRESH MATRIX MONEY INTELLIGENCE
-Requested: 2026-07-21T09:15:00+02:00
+Requested: 2026-07-23T12:38:28+02:00
 Target: latest main
-Purpose: rebuild the capital overlap map from its canonical root-safe template, run the new link regression, preserve the verified 16-guide wealth library, and publish exact tested money outputs before controlled production deployment.
-Nonce: 2026-07-21T09:15:00+02:00
+Purpose: perform the user-authorized single controlled production deployment from the current audited main branch, preserving the verified money-intelligence outputs and all permanent release-audit repairs.
+Authorization: one production deployment only
+Nonce: 2026-07-23T12:38:28+02:00

@@ -22,7 +22,7 @@ for (const relative of workflows) {
   const lines = text.split(/\r?\n/);
   const bookmarkLines = lines.filter(line => /wrangler@latest\s+d1\s+time-travel\s+info\s+matrix-members/.test(line));
   const exportLines = lines.filter(line => /wrangler@latest\s+d1\s+export\s+matrix-members/.test(line));
-  const executableDeploy = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im.test(text);
+  const executableDeploy = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im.test(text);
   const d1Mutation = /wrangler@latest\s+d1\s+execute\s+matrix-members\s+--remote|Apply idempotent D1 migration chain/i.test(text);
   const hardFreeze = /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED/i.test(text);
 

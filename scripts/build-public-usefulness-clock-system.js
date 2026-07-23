@@ -8,9 +8,11 @@ const scripts = [
   'merge-public-usefulness-clocks.js',
   'build-clock-wall.js',
   'enrich-public-usefulness-clock-evidence.js',
+  'inject-current-clock-evidence.js',
   'update-public-usefulness-clock-scores.js',
   'build-clock-wall.js',
   'enrich-public-usefulness-clock-evidence.js',
+  'inject-current-clock-evidence.js',
   'render-public-usefulness-clock-wall.js',
   'run-current-clock-intelligence.js',
   'render-current-clock-intelligence-ui.js',
@@ -25,4 +27,4 @@ for (const script of scripts) {
   });
 }
 
-console.log('Public usefulness clock system built, evidence-enriched, current-status classified, fact/speculation separated and release-gated.');
+console.log('Public usefulness clock system built from current evidence, scored, current-status classified, fact/speculation separated and release-gated.');

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const targets = [path.join(root, 'index.html'), path.join(root, '_site', 'index.html')];
@@ -46,3 +47,15 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   boundary: 'The homepage advertises an active public-record hypothesis docket while preserving the distinction between evidence, inference, speculation and established findings.'
 }, null, 2)}\n`);
 console.log(`Homepage AI detective route ${changed.length ? `updated ${changed.join(', ')}` : 'already current'}.`);
+
+const repairScript = path.join(root, 'scripts', 'repair-release-audit-hard-issues.js');
+if (!fs.existsSync(repairScript)) throw new Error('Release audit hard-issue repair script is missing');
+const repair = spawnSync(process.execPath, [repairScript], {
+  cwd: root,
+  encoding: 'utf8',
+  env: process.env,
+  maxBuffer: 100 * 1024 * 1024
+});
+if (repair.stdout) process.stdout.write(repair.stdout);
+if (repair.stderr) process.stderr.write(repair.stderr);
+if (repair.status !== 0) throw new Error('Release audit hard-issue repair failed after the AI detective route was finalized');

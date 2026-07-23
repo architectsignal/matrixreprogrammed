@@ -15,6 +15,7 @@ const scripts = [
   'inject-current-clock-evidence.js',
   'run-current-clock-intelligence.js',
   'run-july-2026-full-clock-sweep.js',
+  'finalize-july-2026-clock-sweep-metadata.js',
   'render-public-usefulness-clock-wall.js',
   'render-current-clock-intelligence-ui.js',
   'run-current-clock-intelligence-test.js',

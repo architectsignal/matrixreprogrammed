@@ -21,9 +21,9 @@ const liveVerifier = read('scripts/verify-live-production.js');
 const productionHealth = read('scripts/build-production-health.js');
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
-const d1MutationCommand = /\b(?:wrangler(?:@latest)?\s+)?d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
-const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
+const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
+const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
+const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
 const hardFreeze = [canonicalDeploy, fallbackDeploy, dispatchDeploy].every(explicitFreeze);
 
 if (hardFreeze) {
@@ -55,11 +55,15 @@ if (hardFreeze) {
   check('canonical deploy preserves live payment state and closes sandbox', canonicalDeploy.includes('preserve payment switches') && canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && canonicalDeploy.includes('live checkout state preserved'));
   check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 
-  check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(fallbackDeploy));
-  check('fallback deploy shares production concurrency without interruption', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(fallbackDeploy));
-  check('fallback deploy uses final reconciliation', fallbackDeploy.includes('final-production-reconcile.js') && fallbackDeploy.includes('verify-live-production.js'));
-  check('fallback deploy captures D1 Time Travel rollback', fallbackDeploy.includes('d1 time-travel info matrix-members --json') && fallbackDeploy.includes('d1-rollback-proof.json') && fallbackDeploy.includes('restoreCommand') && !fallbackDeploy.includes('d1 export matrix-members --remote'));
+  check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy));
+  check('fallback deploy remains explicitly hard frozen', explicitFreeze(fallbackDeploy));
+  check('fallback deploy contains no executable Wrangler deploy', !executableDeployCommand.test(fallbackDeploy));
+  check('fallback deploy contains no D1 or checkout mutation', !d1MutationCommand.test(fallbackDeploy));
   check('fallback deploy cannot silently activate PayPal', !fallbackDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') && !fallbackDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE'));
+
+  check('dispatcher contains no direct Cloudflare deployment command', !executableDeployCommand.test(dispatchDeploy));
+  check('dispatcher contains no D1 or checkout mutation', !d1MutationCommand.test(dispatchDeploy));
+  check('dispatcher cannot silently activate PayPal', !dispatchDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') && !dispatchDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE'));
 }
 
 check('legacy repair cannot publish health', legacyRepair.includes("productionHealthOwner: 'scripts/build-production-health.js'") && !legacyRepair.includes("workerScript: 'src/worker.js'") && !legacyRepair.includes("write('deploy-health.json'"));
@@ -110,10 +114,10 @@ const report = {
   deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
   deploymentModel: hardFreeze
     ? 'Cloudflare production is hard frozen. Git intelligence updates continue, while canonical, fallback and dispatcher workflows are inert and mutation-free.'
-    : 'One manually confirmed canonical Cloudflare production release plus one manual fallback. Both share a non-interrupting production concurrency queue and the same fail-closed gates.',
+    : 'One manually confirmed canonical Cloudflare production release is active. The fallback remains hard frozen and the dispatcher cannot mutate Cloudflare or D1 directly.',
   rollbackModel: hardFreeze
     ? 'No production migration may run while frozen. Migration files, strict Worker, reconciliation and guard assets remain preserved for a future explicitly restored release workflow.'
-    : 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
+    : 'The single canonical migration path captures and validates a Cloudflare D1 Time Travel bookmark before every migration chain and records the exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'D1 authoritative behind a strict fail-closed Worker; every accepted forum insert must change one row and the exact post must be read back before success.',
   paymentStatus: 'PayPal runtime values are Cloudflare-managed and preserved by Wrangler; the Worker creates subscriptions and returns an official PayPal approval URL while checkout remains controlled by credentials, matching environment switch, D1 state, live confirmation and three active plans.'
@@ -126,4 +130,4 @@ if (failures.length) {
 }
 console.log(hardFreeze
   ? 'Production synchronization assurance passed: all production workflows are hard frozen, mutation-free and deployment readiness remains preserved in Git.'
-  : 'Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict read-after-write forums and SDK-free runtime-gated PayPal.');
+  : 'Production synchronization assurance passed: one manually confirmed rollback-protected Cloudflare release, frozen non-mutating fallback, strict read-after-write forums and SDK-free runtime-gated PayPal.');

@@ -101,7 +101,17 @@ const hasProductionDeployCommand = (text) => {
   const normalized = text.toLowerCase();
   return normalized.includes('wrangler@latest deploy') || normalized.includes('wrangler deploy');
 };
-const authorizedControlledDeploy = process.env.MATRIX_AUTHORIZED_CONTROLLED_DEPLOY === 'true';
+const guardedManualRelease =
+  deployWorkflow.includes('name: Matrix Reprogrammed Controlled Production Deploy') &&
+  deployWorkflow.includes('workflow_dispatch:') &&
+  !deployWorkflow.includes('\n  push:') &&
+  !deployWorkflow.includes('\n  schedule:') &&
+  deployWorkflow.includes('inputs.confirmation') &&
+  deployWorkflow.includes('DEPLOY MATRIX REPROGRAMMED') &&
+  deployWorkflow.includes('cancel-in-progress: false') &&
+  hasProductionDeployCommand(deployWorkflow);
+const authorizedControlledDeploy =
+  process.env.MATRIX_AUTHORIZED_CONTROLLED_DEPLOY === 'true' || guardedManualRelease;
 
 if (authorizedControlledDeploy) {
   assert(
@@ -109,6 +119,8 @@ if (authorizedControlledDeploy) {
     'Authorized release must use the named controlled production workflow',
   );
   assert(deployWorkflow.includes('workflow_dispatch:'), 'Authorized release must remain manual-only');
+  assert(!deployWorkflow.includes('\n  push:'), 'Authorized release must not have a push trigger');
+  assert(!deployWorkflow.includes('\n  schedule:'), 'Authorized release must not have a schedule trigger');
   assert(deployWorkflow.includes('inputs.confirmation'), 'Authorized release lacks the confirmation input gate');
   assert(
     deployWorkflow.includes('DEPLOY MATRIX REPROGRAMMED'),

@@ -32,8 +32,24 @@ function parseDataUri(uri) {
   const buffer = isBase64 ? Buffer.from(raw, 'base64') : Buffer.from(decodeURIComponent(raw), 'utf8');
   return { mime, buffer };
 }
+function readSourcePath(sourcePath) {
+  if (!sourcePath || !ex(sourcePath)) throw new Error('missing source file');
+  if (/\.(?:base64|b64)$/i.test(sourcePath)) {
+    const encoded = rd(sourcePath).trim();
+    const dataUri = parseDataUri(encoded);
+    const buffer = dataUri ? dataUri.buffer : Buffer.from(encoded.replace(/\s+/g, ''), 'base64');
+    if (!buffer.length) throw new Error('decoded base64 artwork is empty');
+    const underlying = sourcePath.replace(/\.(?:base64|b64)$/i, '');
+    const ext = extFromMime(dataUri?.mime || '', path.extname(underlying).replace(/^\./, '') || 'webp');
+    return { image: { mime: dataUri?.mime || `image/${ext}`, buffer }, ext, temporaryEncodedSource: true };
+  }
+  const ext = path.extname(sourcePath).replace(/^\./, '') || 'webp';
+  const buffer = fs.readFileSync(fp(sourcePath));
+  if (!buffer.length) throw new Error('source artwork is empty');
+  return { image: { mime: '', buffer }, ext, temporaryEncodedSource: false };
+}
 async function fetchImage(url) {
-  const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': 'MatrixReprogrammedCardArtInstaller/2.0' } });
+  const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': 'MatrixReprogrammedCardArtInstaller/2.1' } });
   if (!res.ok) throw new Error(`download failed ${res.status} ${res.statusText}`);
   const mime = res.headers.get('content-type') || 'image/webp';
   const buffer = Buffer.from(await res.arrayBuffer());
@@ -77,6 +93,7 @@ async function main() {
     try {
       let image;
       let ext;
+      let temporaryEncodedSource = false;
       if (item.sourceDataUri) {
         image = parseDataUri(item.sourceDataUri);
         if (!image) throw new Error('invalid sourceDataUri');
@@ -85,8 +102,10 @@ async function main() {
         image = await fetchImage(item.sourceUrl);
         ext = extFromMime(image.mime, path.extname(new URL(item.sourceUrl).pathname).replace(/^\./, '') || 'webp');
       } else if (item.sourcePath && ex(item.sourcePath)) {
-        image = { mime: '', buffer: fs.readFileSync(fp(item.sourcePath)) };
-        ext = path.extname(item.sourcePath).replace(/^\./, '') || 'webp';
+        const source = readSourcePath(item.sourcePath);
+        image = source.image;
+        ext = source.ext;
+        temporaryEncodedSource = source.temporaryEncodedSource;
       } else {
         throw new Error('missing sourceUrl, sourceDataUri, or valid sourcePath');
       }
@@ -102,6 +121,7 @@ async function main() {
       item.wrapperPath = svgPath;
       item.deckId = deckId;
       item.cardId = cardId;
+      if (temporaryEncodedSource && item.sourcePath && ex(item.sourcePath)) fs.unlinkSync(fp(item.sourcePath));
       installed.push({ deckId, cardId, label, assetPath: canonicalPath, wrapperPath: svgPath, sourceUrl: item.sourceUrl || null, sourcePath: item.sourcePath || null, installedAt: item.installedAt });
     } catch (error) {
       item.status = process.env.ARTWORK_INBOX_KEEP_PENDING === '1' ? 'pending' : 'error';

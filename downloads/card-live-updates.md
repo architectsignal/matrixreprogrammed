@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-23T14:31:01.741Z
-Live Intel source window: 2026-07-23T14:30:56.982Z
+Generated: 2026-07-23T19:45:18.247Z
+Live Intel source window: 2026-07-23T19:45:12.692Z
 Tracked cards: 873
 Cards with current matched records: 97
 Cards with no new verified record: 776
@@ -2203,10 +2203,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-23T10:55:34.000Z
+- Latest record: 2026-07-23T18:38:38.000Z
+- 2026-07-23T18:38:38.000Z — Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
 - 2026-07-23T10:55:34.000Z — Examining 2 decades since Epstein's arrest - WPTV — https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
 - 2026-07-23T10:22:15.000Z — US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein - AOL.co.uk — https://news.google.com/rss/articles/CBMigwFBVV95cUxNZWVHYzhiald6dVdjY1Z5b3VEcWx5OWo3ck5EdkJJZlk4QjJEeHZUMUFselhFYi1kaVJIRi1ySzdab3pFMXJmX1VObkh0QTRBUVdCaDNRZzZ3S2VpTlBwSk81N1dXZ25PNkxKeWYyUkdYZTBrbUdRUjc4VUp3Z2thYUpLaw?oc=5
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html

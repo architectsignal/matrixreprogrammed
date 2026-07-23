@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-23T14:31:01.681Z
+Generated: 2026-07-23T19:45:18.196Z
 
 ## Official Boundary
 
@@ -49,15 +49,15 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### House Oversight Committee to interview Epstein's former private banker - ABC News - Breaking News, Latest News and Videos
+### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
 - Type: sighting-claim
 - Status: unverified-claim
-- Evidence level: 5
+- Evidence level: 3
 - Location claim: Unverified / source dependent
 - Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
 
-House Oversight Committee to interview Epstein's former private banker ABC News - Breaking News, Latest News and Videos
+Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
 
 ### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
 - Type: related-claim-traffic

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-23T03:44:23.412Z
-Live Intel source window: 2026-07-23T03:44:17.940Z
+Generated: 2026-07-23T06:51:33.859Z
+Live Intel source window: 2026-07-23T06:51:22.703Z
 Tracked cards: 873
-Cards with current matched records: 95
-Cards with no new verified record: 778
+Cards with current matched records: 94
+Cards with no new verified record: 779
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -430,10 +430,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## António Guterres
 - Route: top-52/ant-nio-guterres.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
-- 2026-07-17T12:00:00.000Z — Guterres: AI must be shaped by all of humanity , not a handful of powers — https://news.un.org/feed/view/en/story/2026/07/1167965
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-timelines/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
@@ -1033,10 +1032,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## CARD DOSSIER STANDARD.
 - Route: card-dossier-standard.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-22T11:32:31.000Z
-- 2026-07-22T11:32:31.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
-- 2026-07-16T04:11:50.000Z — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK) — https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
+- Current matched records: 1
+- Latest record: 2026-07-22T11:27:32.000Z
+- 2026-07-22T11:27:32.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 
 ## CARD DOWNLOADS.
 - Route: card-downloads.html
@@ -2205,7 +2203,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 8
 - Latest record: 2026-07-22T18:10:00.000Z
 - 2026-07-22T18:10:00.000Z — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo — https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-- 2026-07-22T11:32:31.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+- 2026-07-22T11:27:32.000Z — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 - 2026-07-21T18:38:00.000Z — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
 
 ## GovTech digital service mandates
@@ -2438,10 +2436,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## INSTITUTIONS
 - Route: atlas-lanes/institutions.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T12:00:00.000Z
-- 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## INTEL VAULT.
 - Route: intel-vault.html
@@ -4937,20 +4934,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
-- 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-21T12:00:00.000Z
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
-- 2026-07-16T12:00:00.000Z — Haiti: Training the next generation to fight corruption — https://news.un.org/feed/view/en/story/2026/07/1167931
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html
@@ -5141,10 +5136,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-21T15:27:26.000Z
 - 2026-07-21T15:27:26.000Z — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
-- 2026-07-16T06:24:40.000Z — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html

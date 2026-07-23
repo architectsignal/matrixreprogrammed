@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:45:35.418Z",
-  "pageCount": 87,
+  "generatedAt": "2026-07-23T06:43:14.448Z",
+  "pageCount": 88,
   "output": "downloads/card-artwork-batches.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Card Artwork Batches",
-    "contentHash": "34d123c9f609811fea0a3098f7ed6043d94577e0bdd6db10f6daaa98fd526f45",
+    "contentHash": "41037b88095d4ec4638f540657b1c630c71fa69cecff5f183c8b8515cd57fa3b",
     "sourceIds": [
       "people-of-interest",
       "310372a3fc518b6aabbc5d07",
@@ -60,7 +60,6 @@
       "6188547d91106e0f9d3bce50",
       "5ad827d001f90dc0134b3260",
       "d0b647e325275daa6d824a49",
-      "3a425f0d5d683952bc0ad7ac",
       "9f77464e401ac59ad1adb812",
       "853458de10881c013c3b2789",
       "3bc8cc62a8484e679ce7977c",
@@ -71,7 +70,10 @@
       "cee347fbc3752c6e0f890457",
       "d98fbb852c4ba20ad85be270",
       "f9a646e1d3bf2abf0b0b3767",
+      "157cdab04b61ae6309c0c713",
+      "9848ec4b4c3f6c2693269839",
       "eb3448928554960651da56f6",
+      "3a425f0d5d683952bc0ad7ac",
       "3cda8ecc62fa043720f522e4",
       "a2c7d0283fed1edc4c0ee30d",
       "2021a8a61b4e06c82b5ef7b7",
@@ -138,13 +140,11 @@
       "david-solomon",
       "jane-fraser",
       "ajay-banga",
-      "ant-nio-guterres",
-      "miriam-adelson",
-      "rupert-murdoch"
+      "ant-nio-guterres"
     ],
     "metrics": {
       "evidenceCount": 134,
-      "primarySourceCount": 9,
+      "primarySourceCount": 11,
       "disputedClaimCount": 2,
       "newEntityCount": 20,
       "updatedAssessmentCount": 1,
@@ -153,10 +153,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Card Artwork Batches.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); SEC FILING FEED. (data/search-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); U.S. Department of Justice (data/search-index.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Card Artwork Batches.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); SEC FILING FEED. (data/search-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:31.650Z",
-  "pageCount": 114,
+  "generatedAt": "2026-07-23T06:50:00.287Z",
+  "pageCount": 112,
   "output": "downloads/top-52-card-art-manifest.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Top 52 Card Art Manifest",
-    "contentHash": "a7e3ca35e2aaecd06df26dc8ba412d3a82def930a3aa2c389c69f5c86f8b27b7",
+    "contentHash": "7f9c2e4a535129b9c339274d6f555539e61ab93209a527b5568371f8ba8913ff",
     "sourceIds": [
       "people-of-interest",
       "world-health-organization",
@@ -42,7 +42,6 @@
       "76cf5cb1f42b219ea38128f4",
       "15adccba38bd91644b561261",
       "34805734b1ad3b73f0ede0d8",
-      "war-machine-2026-07-16-26cc1e77",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "6188547d91106e0f9d3bce50",
@@ -91,6 +90,7 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "26b90533dbf7d2ed42f02de6",
+      "9848ec4b4c3f6c2693269839",
       "bf773d3ec83b9b3768dfce6b",
       "ec1316fb1fb70c83dc347bb6",
       "b7e4a66335a706ef5097117f",
@@ -138,25 +138,25 @@
       "ASC-REVIEW-FF5E6B71C62F4EBB",
       "ASC-REVIEW-BC9A7DE25FDF5F78",
       "ASC-REVIEW-55AEF4F6803A279A",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811"
+      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-5AE5A3805582A7F2"
     ],
     "metrics": {
       "evidenceCount": 134,
-      "primarySourceCount": 4,
+      "primarySourceCount": 5,
       "disputedClaimCount": 71,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
+      "relationshipCount": 77,
       "moneyRecordCount": 82
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Top 52 Card Art Manifest.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Top 52 Card Art Manifest.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -173,8 +173,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; ‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals; General Assembly LIVE: Debating US sanctions against Cuba; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; General Assembly LIVE: Debating US sanctions against Cuba; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -188,16 +188,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
-          "‘Heat deaths are not inevitable’: WHO pushes Europe to heat‑proof its hospitals",
           "General Assembly LIVE: Debating US sanctions against Cuba",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -212,6 +212,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-16T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-10T00:00:00.000Z"
   }
 }

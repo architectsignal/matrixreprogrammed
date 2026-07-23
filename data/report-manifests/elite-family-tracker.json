@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:47:03.650Z",
-  "pageCount": 106,
+  "generatedAt": "2026-07-23T06:44:39.837Z",
+  "pageCount": 105,
   "output": "downloads/elite-family-tracker.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Elite Family Tracker",
-    "contentHash": "7abb1357dfb3b4ab53f640556c7931aa08eda43db698bb974bc9c9232cb6bfe1",
+    "contentHash": "e1418313a658e4b38bfaa35a432c887d58287e1e24f20bcfc5d80b61ed86f4ce",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -14,9 +14,9 @@
       "88ef9baf356c096816236956",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
-      "3a425f0d5d683952bc0ad7ac",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
+      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
       "bf773d3ec83b9b3768dfce6b",
@@ -71,6 +71,7 @@
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-B5A7582A4286A663",
       "power-families",
+      "157cdab04b61ae6309c0c713",
       "c1520a15d6e62871a66c558e",
       "bb5dfe90c29929d84ce60e6d",
       "a5e5d4ec4df4352ea242ea3f",
@@ -145,31 +146,30 @@
       "billionaire-michael-bloomberg",
       "9f77464e401ac59ad1adb812",
       "ASC-001",
-      "ASC-REVIEW-CFB2B8804532DFFC",
-      "ASC-REVIEW-C973762B151D5947"
+      "ASC-REVIEW-CFB2B8804532DFFC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 64,
+      "primarySourceCount": 6,
+      "disputedClaimCount": 63,
       "newEntityCount": 36,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 74,
-      "moneyRecordCount": 74
+      "relationshipCount": 73,
+      "moneyRecordCount": 73
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 74 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Elite Power Theory; Elite Power Theory; Matrix Reprogrammed Canonical Intelligence Record; Habsburg → Orders And Titles: layer hint; Breakspear → Historic Church Office: layer hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 74 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:47:03.650Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:44:39.837Z"
   }
 }

@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-23T06:52:52.774Z",
+  "platform": "Cloudflare Worker + D1 + Cloudflare Assets",
+  "changes": [
+    "src/worker-paypal-subscriptions.js",
+    "src/worker-access-gate.js",
+    "src/worker-email-lifecycle.js",
+    "scripts/templates/membership-auth/membership.template",
+    "member-dashboard-app.js",
+    "member-dashboard.html",
+    "billing-dashboard.js",
+    "email-status.html"
+  ],
+  "checks": {
+    "cloudflareProductionWorker": true,
+    "paypalReadsCurrentSession": true,
+    "duplicateSubscriptionsBlocked": true,
+    "legacyActiveSubscriptionsBlocked": true,
+    "configReturnsBillingState": true,
+    "protectedAssetsReadCurrentSession": true,
+    "emailAcceptsMembershipConsent": true,
+    "firstDailyBriefUsesDetailedBuilder": true,
+    "signupSendsCanonicalConsent": true,
+    "membershipFetchesIncludeCredentials": true,
+    "activeMembershipShowsBilling": true,
+    "dashboardFetchIncludesCredentials": true,
+    "dashboardLogoutIncludesCredentials": true,
+    "freeDashboardSkipsPaidWatchlistCall": true,
+    "dashboardHasMembershipAction": true,
+    "billingDashboardIncludesCredentials": true,
+    "verifiedEmailHasMemberLoginAction": true
+  },
+  "rootCause": "Passwordless login writes matrix_session_v2 while the PayPal worker and protected-asset gate read only matrix_session.",
+  "newsletterRepair": "Membership signup now sends canonical consent, the email lifecycle accepts the compatible alias, and the first selected daily brief uses the detailed intelligence builder with its safe fallback.",
+  "dashboardRepair": "Free members no longer trigger the Intelligence-only watchlist endpoint during initial loading, logout carries credentials explicitly, and membership or billing management is directly reachable.",
+  "paymentSafetyRepair": "The server blocks a second checkout for both current state-backed and legacy active PayPal entitlements, and the member sees a Manage billing path instead of another subscribe button.",
+  "recoveryRepair": "A verified email subscriber is given clear routes to email preferences and secure member login."
+}

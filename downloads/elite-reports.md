@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-22T06:54:09.867Z
+Generated: 2026-07-23T06:51:35.259Z
 
 ## Daily Revelation Report
 
-Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
 
 Source: daily-command-brief.html
 

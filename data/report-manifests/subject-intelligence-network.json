@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:55.763Z",
-  "pageCount": 111,
+  "generatedAt": "2026-07-23T06:50:23.459Z",
+  "pageCount": 110,
   "output": "downloads/subject-intelligence-network.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Intelligence Network Starter File",
-    "contentHash": "fe3389161b8186ef21cee246416c518911e97ccdef18bac1f9b58a26bc6db4b8",
+    "contentHash": "0c915ec202968b8b3167f8f97c4a4db12d1f24b34f7a8e22ff522a39827f8696",
     "sourceIds": [
       "beb907a8490963e80b4d0a90",
       "c773a9b56feb9b238da1ce66",
@@ -90,11 +90,8 @@
       "b20c82d1fd1d7a9d83d5fd31",
       "342961d8152df17239bb0bc0",
       "f59da50ababa3ddae79a8f1c",
+      "war-machine-2026-07-22-a6c25a9b",
       "war-machine-2026-07-21-abc4a111",
-      "control-system-2026-07-17-36",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "6188547d91106e0f9d3bce50",
       "war-machine-2026-05-22-dod-wants-nearly-30-billion-to-modernize-its-ai-supercomputing-arsenal",
       "declassified-files-2026-05-19-cuba-declassified-records-on-the-brothers-to-the-rescue-shootdown-nati",
@@ -125,12 +122,7 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-CB735F163FB2AAC6",
-      "ASC-REVIEW-19884C8F2FB18608",
-      "ASC-REVIEW-36CCC3F98C1D030D",
-      "ASC-REVIEW-38A2AF3C714E50C0",
       "ASC-REVIEW-F9FB4BEDAA3F0383",
-      "ASC-REVIEW-97089BE83A5DC2E4",
       "ASC-REVIEW-3EC279A28E26037E",
       "7bf58b4062bae3da680c4bf1",
       "36552e5cb400363cc3f311f8",
@@ -146,20 +138,28 @@
       "65debd126cdfa5f7547a3eca",
       "60ffee3d081bb309f1d3fd65",
       "a05f919fdfcc57932cdfc71e",
-      "f5ab8aa5f5d052af5fb7748f"
+      "f5ab8aa5f5d052af5fb7748f",
+      "631dc300e1104c0de46b6bc5",
+      "fecfc577219453326d559c64",
+      "9b0c4a09bd73d07e7743848b",
+      "e43e67c0689f3de6c352eba2",
+      "12f301539bd4aa4906de3aa3",
+      "9ebcfe337105841d75b97ac8",
+      "05c91be1e8d9832204e0a841",
+      "d40e8088637ecc0292cfdc12"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 15,
-      "disputedClaimCount": 12,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 7,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 20
+      "relationshipCount": 39,
+      "moneyRecordCount": 21
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Intelligence Network Starter File.",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Intelligence Network Starter File.",
         "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); FBI Vault (data/evidence-vault.json); Declassified Archives (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Starter File; Central Intelligence Agency; Intelligence Network Pack; Follow The Money Watch; Intelligence Network Share Kit; Intelligence Network Map; Five Eyes Intelligence Network; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Starter File",
           "Central Intelligence Agency",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

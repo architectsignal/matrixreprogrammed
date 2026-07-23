@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:16:46.067Z",
-  "pageCount": 135,
+  "generatedAt": "2026-07-23T06:47:12.783Z",
+  "pageCount": 131,
   "output": "downloads/membership-tiers-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Membership Tiers Report",
-    "contentHash": "7ff460b5fe64dbac28982477bae8f74591dbadfc665aad5eb25be27098415b6d",
+    "contentHash": "0c88d8b92d8e26a784a330cca91976da7bd9510c0485fe228c5babf25521e891",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
       "ASC-REVIEW-836A8E9D516E6FEC",
@@ -30,35 +30,31 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-3095B2F09AF1518E",
+      "ASC-REVIEW-131C0E5550327B37",
+      "ASC-REVIEW-09ACD9715E501825",
       "ASC-REVIEW-1DEA85B53498EF4A",
-      "ASC-REVIEW-FCA45307EA918E28",
+      "ASC-REVIEW-9348EFDAAAC19C62",
+      "ASC-REVIEW-86E5F84065E82718",
       "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-8DCAFBC1E6283393",
       "ASC-REVIEW-6CA3C5666C487CEE",
-      "ASC-REVIEW-A16F0CE46FC26A15",
-      "ASC-REVIEW-033C88D9E541BF5B",
+      "ASC-REVIEW-76AAD83597F51FBE",
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-E76F1740FFF4E811",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "ASC-REVIEW-6318EF16062CE35D",
+      "ASC-REVIEW-CE615863A9722AC5",
+      "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
-      "ASC-REVIEW-2EAFF47D9C619640",
       "ASC-REVIEW-2CE9F12A381B8D97",
       "ASC-REVIEW-6B00EC8DF8FFD131",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -102,8 +98,6 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-9EA06AB515E1538B",
-      "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -112,7 +106,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-8DD092B1DAA0D076",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -146,23 +139,30 @@
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-4C256A755BDBA2D3"
+      "ASC-REVIEW-4C256A755BDBA2D3",
+      "ASC-REVIEW-90FA3F8805F271FF",
+      "ASC-REVIEW-D33599099BE12C6C",
+      "ASC-REVIEW-8FE8E072E8149C71",
+      "ASC-REVIEW-D63BAC3D4EA4E2FC",
+      "ASC-REVIEW-FB46D93D6179DCC7",
+      "ASC-REVIEW-376546BBB3F711C2",
+      "ASC-REVIEW-21C56289EDA1B8BD"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 136,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 135,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 115,
-      "moneyRecordCount": 107
+      "relationshipCount": 122,
+      "moneyRecordCount": 112
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Membership Tiers Report.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Membership Tiers Report.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 122 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 122 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:16:46.067Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:47:12.783Z"
   }
 }

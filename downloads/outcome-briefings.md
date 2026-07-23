@@ -1,6 +1,6 @@
 # Outcome Briefings
 
-Updated: 2026-07-22T06:44:37.291Z
+Updated: 2026-07-23T06:42:18.364Z
 
 ## OB-001 — Disclosure Watch
 

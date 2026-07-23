@@ -7,9 +7,9 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-22T06:44:36.494Z",
-  "latestDropsUpdated": "2026-07-22T06:24:15.187Z",
-  "intelVaultUpdated": "2026-07-22T06:44:36.494Z",
+  "liveIntelUpdated": "2026-07-23T06:42:17.607Z",
+  "latestDropsUpdated": "2026-07-22T06:57:41.664Z",
+  "intelVaultUpdated": "2026-07-23T06:42:17.607Z",
   "title": "War Machine Pack",
   "label": "War / contractors pack",
   "summary": "A briefing pack for contractors, war budgets, cyber conflict, procurement, sanctions, intelligence claims, and human cost.",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=war-machine",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=war-machine",
   "liveIntelWindow": {
-    "updated": "2026-07-22T06:44:36.494Z",
+    "updated": "2026-07-23T06:42:17.607Z",
     "itemCount": 12,
     "items": [
       {
@@ -94,7 +94,7 @@
         "title": "Five Eyes warns frontier AI cyber-attack capability could arrive within months",
         "url": "https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security",
         "published": "2026-06-22T12:00:00.000Z",
-        "fetchedAt": "2026-07-22T06:44:36.494Z",
+        "fetchedAt": "2026-07-23T06:42:17.607Z",
         "summary": "Five Eyes cyber authorities reportedly warned that advanced AI models capable of major cyberattacks against governments and businesses may be only months away.",
         "evidenceLevel": "Intelligence-alliance warning / cyber-risk lane",
         "evidenceBoundary": "A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.",
@@ -118,6 +118,40 @@
         "status": "archived-intel-vault",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
+      },
+      {
+        "id": "war-machine-2026-07-22-a6c25a9b",
+        "lane": "war-machine",
+        "laneTitle": "War Machine And Intelligence State",
+        "sourceLabel": "UN News",
+        "sourceTier": "primary-or-official",
+        "sourceWeight": 5,
+        "title": "Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?",
+        "url": "https://news.un.org/feed/view/en/story/2026/07/1167995",
+        "published": "2026-07-22T12:00:00.000Z",
+        "fetchedAt": "2026-07-23T06:42:17.607Z",
+        "summary": "The Security Council met Wednesday in New York to debate critical minerals — the lithium, cobalt and copper powering the clean energy transition. Demand is set to triple by 2030. The question: will this mineral wealth build peace and prosperity, or fund conflict and corruption? Follow live updates throughout the day below and go here for full coverage from across the UN.",
+        "evidenceLevel": "Primary or official public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+        "videoHook": "New public-record signal: Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?",
+        "rumbleShortTitle": "Security Council LIVE: Can critical minerals fuel peace and prosperity i",
+        "rumbleLongTitle": "War Machine And Intelligence State — Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?",
+        "socialThread": [
+          "1/ Fresh war-machine lead: Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "war-machine-2026-07-20-abd16d04",
@@ -189,40 +223,6 @@
         "freshness": "active weekly drop"
       },
       {
-        "id": "war-machine-2026-07-17-96d38a8c",
-        "lane": "war-machine",
-        "laneTitle": "War Machine And Intelligence State",
-        "sourceLabel": "UN News",
-        "sourceTier": "primary-or-official",
-        "sourceWeight": 5,
-        "title": "Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1167965",
-        "published": "2026-07-17T12:00:00.000Z",
-        "fetchedAt": "2026-07-22T06:44:36.494Z",
-        "summary": "UN Secretary-General António Guterres on Friday urged governments and technology companies to work together to ensure artificial intelligence (AI) benefits all countries.",
-        "evidenceLevel": "Primary or official public-record lead",
-        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
-        "videoHook": "New public-record signal: Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers",
-        "rumbleShortTitle": "Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handfu",
-        "rumbleLongTitle": "War Machine And Intelligence State — Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers",
-        "socialThread": [
-          "1/ Fresh war-machine lead: Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-fetched",
-        "sourceType": "live-intel",
-        "freshness": "active live intel"
-      },
-      {
         "id": "war-machine-2026-07-17-acd16e97",
         "lane": "war-machine",
         "laneTitle": "War Machine And Intelligence State",
@@ -232,7 +232,7 @@
         "title": "US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas",
         "url": "https://news.un.org/feed/view/en/story/2026/07/1167973",
         "published": "2026-07-17T12:00:00.000Z",
-        "fetchedAt": "2026-07-22T06:44:36.494Z",
+        "fetchedAt": "2026-07-23T06:42:17.607Z",
         "summary": "The UN Secretary-General remains deeply concerned by the continuing deadly military escalation between Iran and the United States, his spokesperson said on Friday as attacks destroyed key civilian and military infrastructure across the Gulf region.",
         "evidenceLevel": "Primary or official public-record lead",
         "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
@@ -266,7 +266,7 @@
         "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
         "published": "2026-06-16T07:00:00.000Z",
-        "fetchedAt": "2026-07-22T06:44:36.494Z",
+        "fetchedAt": "2026-07-23T06:42:17.607Z",
         "summary": "Pentagon releases 72 UFO files: Military reports reveal new sightings RBC-Ukraine",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -289,6 +289,40 @@
         "status": "archived-intel-vault",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
+      },
+      {
+        "id": "war-machine-2026-07-22-a9c25f54",
+        "lane": "war-machine",
+        "laneTitle": "War Machine And Intelligence State",
+        "sourceLabel": "UN News",
+        "sourceTier": "primary-or-official",
+        "sourceWeight": 5,
+        "title": "Critical minerals: The hidden resources powering the clean energy future",
+        "url": "https://news.un.org/feed/view/en/story/2026/07/1167990",
+        "published": "2026-07-22T12:00:00.000Z",
+        "fetchedAt": "2026-07-23T06:42:17.607Z",
+        "summary": "Why are critical minerals suddenly at the centre of global politics?",
+        "evidenceLevel": "Primary or official public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+        "videoHook": "New public-record signal: Critical minerals: The hidden resources powering the clean energy future",
+        "rumbleShortTitle": "Critical minerals: The hidden resources powering the clean energy future",
+        "rumbleLongTitle": "War Machine And Intelligence State — Critical minerals: The hidden resources powering the clean energy future",
+        "socialThread": [
+          "1/ Fresh war-machine lead: Critical minerals: The hidden resources powering the clean energy future",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "war-machine-2026-07-21-a9c25f54",
@@ -381,40 +415,6 @@
         "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source.",
         "sourceType": "latest-public-drop",
         "freshness": "active weekly drop"
-      },
-      {
-        "id": "war-machine-2026-07-17-25cc1ce4",
-        "lane": "war-machine",
-        "laneTitle": "War Machine And Intelligence State",
-        "sourceLabel": "UN News",
-        "sourceTier": "primary-or-official",
-        "sourceWeight": 5,
-        "title": "Baristas behind bars: Thai prisoners brew a path back to daily life",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1167954",
-        "published": "2026-07-17T12:00:00.000Z",
-        "fetchedAt": "2026-07-22T06:44:36.494Z",
-        "summary": "It looks like a regular coffee shop, albeit set up in an old red bus. Stairs lead up to a serving hatch, with a menu of drink options. A selection of jaunty coffee-related messages like “My one and only love: Americano” and “Miss you a latte,” adorn the side of the bus.",
-        "evidenceLevel": "Primary or official public-record lead",
-        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
-        "videoHook": "New public-record signal: Baristas behind bars: Thai prisoners brew a path back to daily life",
-        "rumbleShortTitle": "Baristas behind bars: Thai prisoners brew a path back to daily life",
-        "rumbleLongTitle": "War Machine And Intelligence State — Baristas behind bars: Thai prisoners brew a path back to daily life",
-        "socialThread": [
-          "1/ Fresh war-machine lead: Baristas behind bars: Thai prisoners brew a path back to daily life",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-fetched",
-        "sourceType": "live-intel",
-        "freshness": "active live intel"
       }
     ]
   },
@@ -500,6 +500,11 @@
       "kind": "Guardian / Five Eyes warning report"
     },
     {
+      "title": "Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1167995",
+      "kind": "UN News"
+    },
+    {
       "title": "LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future",
       "route": "https://news.un.org/feed/view/en/story/2026/07/1167972",
       "kind": "UN News"
@@ -515,11 +520,6 @@
       "kind": "UN News"
     },
     {
-      "title": "Guterres: AI must be shaped by &#039;all of humanity&#039;, not a handful of powers",
-      "route": "https://news.un.org/feed/view/en/story/2026/07/1167965",
-      "kind": "UN News"
-    },
-    {
       "title": "US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas",
       "route": "https://news.un.org/feed/view/en/story/2026/07/1167973",
       "kind": "UN News"
@@ -528,6 +528,11 @@
       "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
       "route": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
       "kind": "Google News / declassified files"
+    },
+    {
+      "title": "Critical minerals: The hidden resources powering the clean energy future",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1167990",
+      "kind": "UN News"
     },
     {
       "title": "Critical minerals: The hidden resources powering the clean energy future",
@@ -547,11 +552,6 @@
     {
       "title": "Health response brings lifesaving care closer to thousands in Yemen",
       "route": "https://news.un.org/feed/view/en/story/2026/07/1167982",
-      "kind": "UN News"
-    },
-    {
-      "title": "Baristas behind bars: Thai prisoners brew a path back to daily life",
-      "route": "https://news.un.org/feed/view/en/story/2026/07/1167954",
       "kind": "UN News"
     }
   ],

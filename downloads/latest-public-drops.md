@@ -1,9 +1,117 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-22T06:53:56.707Z
+Updated: 2026-07-23T06:51:22.795Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+
+- Date: 2026-07-22
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
+- Timers: none
+
+Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Critical minerals: The hidden resources powering the clean energy future
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+- Timers: none
+
+Why are critical minerals suddenly at the centre of global politics?
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167996
+- Timers: none
+
+Flash floods have killed at least 26 people across eastern Afghanistan, including 23 in the mountainous province of Nuristan, where homes, markets and roads were swept away and search teams continued looking for people reported missing.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## From lithium to nickel: How the UN is helping countries make the most of critical minerals
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167994
+- Timers: none
+
+The world&#039;s shift to clean energy is driving huge demand for critical minerals such as lithium, nickel, cobalt and copper.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Nicaragua continues to weaken political freedoms, UN warns
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167999
+- Timers: none
+
+The UN human rights chief Volker Türk on Wednesday condemned new threats from Nicaragua’s co-president Daniel Ortega to hinder civil rights and prevent dissenting individuals and groups from participating in elections.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1167995
+- Timers: none
+
+The Security Council met Wednesday in New York to debate critical minerals — the lithium, cobalt and copper powering the clean energy transition. Demand is set to triple by 2030. The question: will this mineral wealth build peace and prosperity, or fund conflict and corruption? Follow live updates throughout the day below and go here for full coverage from across the UN.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Thousands prevented from returning home to southern Lebanon
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168003
+- Timers: none
+
+As months of conflict continue to devastate communities across Lebanon, families are being left without shelter, healthcare and other essential services.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## World News in Brief: Aid for Ukraine, drone attacks in Sudan, DR Congo deaths, neurological disorders in the Americas
+
+- Date: 2026-07-22
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168000
+- Timers: none
+
+UN partners launched the Winter Response Plan to help 2.1 million people in Ukraine survive another cold season as the country grapples with the on-going Russian invasion.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+
+- Date: 2026-07-22
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+- Timers: none
+
+French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
 ## Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
 
@@ -62,18 +170,6 @@ Boundary: A fresh news or archive item is a lead, not a verdict. Open the source
 - Timers: none
 
 The UN General Assembly closed its first ever High-level Meeting on road safety on Tuesday by adopting a sweeping new declaration aimed at halving road deaths by 2030 – over the sole objection of the United States.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Critical minerals: The hidden resources powering the clean energy future
-
-- Date: 2026-07-21
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167990
-- Timers: none
-
-Why are critical minerals suddenly at the centre of global politics?
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
@@ -196,99 +292,3 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 As the United States and Iran trade deadly attacks for a second week, the UN continues to call for de-escalation while highlighting the devastation caused to civilians and critical infrastructure across the Middle East.
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Moon Day focuses growing concerns around space junk
-
-- Date: 2026-07-20
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167976
-- Timers: none
-
-Amid surging lunar exploration, the UN on Monday urged governments to ensure that humanity&#039;s return to the Moon does not come at the expense of planet Earth – or the long-term sustainability of space.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Ukraine: Deadly Russian attacks severely damage aid warehouses
-
-- Date: 2026-07-20
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167980
-- Timers: none
-
-Russian attacks and drone strikes killed at least two children and injured dozens more across Ukraine over recent days while severely damaging three critical aid warehouses, UN agencies reported on Monday.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## From the General Assembly to Harlem: Mandela’s call to action endures
-
-- Date: 2026-07-20
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167981
-- Timers: none
-
-Sixty-seven minutes. That is how long volunteers spent serving lunch to people experiencing food insecurity at Refettorio Harlem in New York City last week – one for every year Nelson Mandela gave to public service.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Health response brings lifesaving care closer to thousands in Yemen
-
-- Date: 2026-07-20
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167982
-- Timers: none
-
-Thousands of people in some of Yemen&#039;s most conflict-affected communities are receiving lifesaving health care closer to home, thanks to funding from the UN aid coordination office (OCHA) through the Yemen Humanitarian Fund.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Haiti: Signs of hope despite gang violence and political uncertainty
-
-- Date: 2026-07-19
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167963
-- Timers: none
-
-For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Ukraine: UN condemns overnight attack on Kyiv
-
-- Date: 2026-07-19
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167975
-- Timers: none
-
-United Nations agencies have deplored a fresh Russian assault on the Ukrainian capital Kyiv which left at least one person dead and a dozen injured.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
-
-- Date: 2026-07-18
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1167974
-- Timers: none
-
-Jean Todt spent decades around the deadliest motorsport on Earth. He was a rally co‑driver, then ran Ferrari’s Formula One team, then became president of world motorsport’s governing body. In his early years, a driver dying at the track barely made news.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-
-- Date: 2026-07-17
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
-- Timers: none
-
-House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.

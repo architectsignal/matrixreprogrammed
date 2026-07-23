@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:45:31.065Z",
-  "pageCount": 120,
+  "generatedAt": "2026-07-23T06:43:10.328Z",
+  "pageCount": 123,
   "output": "downloads/campaign-trust-evidence-push.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Trust And Evidence Campaign",
-    "contentHash": "cf9ca2d07c94a56a67d3ed3d51f17ab11ab649fbdeb2e786353de2bfc292113e",
+    "contentHash": "0f1d69810dbef463cad5692ac22152a30fb58b05cae4cb62d703327ab6cd1722",
     "sourceIds": [
       "16b845aacad691a1299d5faa",
       "232955cb3e08720ec29ae560",
@@ -42,9 +42,6 @@
       "34805734b1ad3b73f0ede0d8",
       "72ef7895f95288946ccb3cff",
       "ad283f9945fc2a5c7c0facc5",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "crime-state-overlap-2026-04-23-legal-experts-skeptical-of-doj-s-criminal-case-against-southern-povert",
       "crime-state-overlap-2026-04-21-southern-poverty-law-center-indicted-for-fraud-money-laundering-politi",
       "crime-state-overlap-2026-04-21-us-department-of-justice-charges-southern-poverty-law-center-with-frau",
@@ -60,12 +57,9 @@
       "430b96f7d9c0b8b34fe8c029",
       "a48e62c41a98c1650efe9d98",
       "cee347fbc3752c6e0f890457",
+      "war-machine-2026-07-22-a6c25a9b",
       "war-machine-2026-07-20-abd16d04",
-      "control-system-2026-07-17-36",
       "war-machine-2026-07-17-acd16e97",
-      "war-machine-2026-07-16-92d38440",
-      "war-machine-2026-07-16-26cc1e77",
-      "war-machine-2026-07-16-28cc219d",
       "control-system-2026-06-26-major-uk-banks-back-reusable-digital-id-network-for-financial-services",
       "crime-state-overlap-2026-06-26-cartels-law-enforcement-and-counternarcotics-dr-john-p-sullivan-of-sma",
       "epstein-files-2026-06-25-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
@@ -140,38 +134,44 @@
       "65debd126cdfa5f7547a3eca",
       "e72d22f4f28eb53e3173d0a6",
       "3c9c23f7f9a1cec81ef90f59",
+      "war-machine-2026-07-22-a9c25f54",
+      "war-machine-2026-07-22-a7c25c2e",
+      "war-machine-2026-07-22-a5c25908",
+      "war-machine-2026-07-22-a2c2544f",
+      "war-machine-2026-07-22-af261a24",
+      "war-machine-2026-07-22-b2261edd",
       "war-machine-2026-07-21-abc4a111",
       "war-machine-2026-07-20-a5d16392",
       "war-machine-2026-07-17-25cc1ce4",
       "war-machine-2026-07-17-aed171bd",
-      "war-machine-2026-07-17-96d38a8c",
       "war-machine-2026-07-17-98d38db2",
-      "war-machine-2026-07-17-add1702a"
+      "war-machine-2026-07-17-add1702a",
+      "war-machine-2026-07-17-96d38a8c"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
+      "primarySourceCount": 0,
       "disputedClaimCount": 9,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 34,
-      "moneyRecordCount": 34
+      "moneyRecordCount": 35
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Trust And Evidence Campaign.",
-        "evidence": "Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Trust And Evidence Campaign beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “DOD wants nearly $30 billion to modernize its AI supercomputing arsenal in fiscal 2027 - DefenseScoop,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "DOD wants nearly $30 billion to modernize its AI supercomputing arsenal in fiscal 2027 DefenseScoop This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 68,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -187,7 +187,7 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

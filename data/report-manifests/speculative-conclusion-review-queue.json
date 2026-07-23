@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:11.002Z",
+  "generatedAt": "2026-07-23T06:49:40.768Z",
   "pageCount": 117,
   "output": "downloads/speculative-conclusion-review-queue.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Speculative Conclusion Review Queue",
-    "contentHash": "9f75af13a5a49d38a7a829e030a0705134527b65b33431c68aaed13af0b53669",
+    "contentHash": "050046bd5e48007a884382b20ce45375ea4ea2ddedcab81bed033e85c74bc350",
     "sourceIds": [
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
@@ -55,7 +55,7 @@
       "ASC-REVIEW-C2A19D091C2D1254",
       "ASC-REVIEW-FF5E6B71C62F4EBB",
       "ASC-REVIEW-BC9A7DE25FDF5F78",
-      "ASC-REVIEW-40BE75698429CC21",
+      "ASC-REVIEW-F530B7C452E8CBB2",
       "bf773d3ec83b9b3768dfce6b",
       "bb5dfe90c29929d84ce60e6d",
       "8a10f165e16d0f8648cb8ec4",
@@ -97,10 +97,7 @@
       "laurene-powell-jobs",
       "mackenzie-scott",
       "priscilla-chan",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-CB219B546C9C0D99",
-      "ASC-REVIEW-2EAFF47D9C619640",
-      "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -133,7 +130,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-CB735F163FB2AAC6",
+      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -141,37 +138,40 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-9EA06AB515E1538B",
-      "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158"
+      "ASC-REVIEW-E6C400911BD1A158",
+      "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-897F71D253591D8F",
+      "ASC-REVIEW-F42C454D9E75A8A7",
+      "ASC-REVIEW-9445AB7A6FE43B5B",
+      "ASC-REVIEW-B5FCD410F732DBED"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 84,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 85,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 76,
-      "moneyRecordCount": 81
+      "relationshipCount": 80,
+      "moneyRecordCount": 84
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Speculative Conclusion Review Queue.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Speculative Conclusion Review Queue beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “Global Risk Clocks,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Evidence-fed pressure indexes with plain-language meanings, score methods, movement, control-system relevance, source trails, counter-signals and useful actions.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; World Economic Forum → Media Narrative: institution layer; Matrix Reprogrammed Canonical Intelligence Record; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Media: overlap hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:49:40.768Z"
   }
 }

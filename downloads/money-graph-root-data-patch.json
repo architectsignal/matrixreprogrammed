@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-23T06:52:52.776Z",
+  "changed": true,
+  "platform": "Cloudflare Assets",
+  "checks": {
+    "overlapGraphUsesRootRoute": true,
+    "registryUsesRootRoute": true,
+    "legacyRelativeOverlapRouteRemoved": true,
+    "legacyRelativeRegistryRouteRemoved": true
+  },
+  "boundary": "The shared overlap-map runtime uses canonical root data routes so root pages and source-route copies resolve the same generated datasets."
+}

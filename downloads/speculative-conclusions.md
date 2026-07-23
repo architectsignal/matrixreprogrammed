@@ -1,6 +1,6 @@
 # Speculative Conclusions
 
-Updated: 2026-07-22T06:54:31.189Z
+Updated: 2026-07-23T06:51:54.859Z
 
 Generated: 10
 
@@ -33,7 +33,7 @@ What The Evidence Does Not Prove: It does not prove a single hidden command stru
 Speculation Level: Level 4 — Strong public-record convergence
 Confidence Level: medium
 Evidence Level: Evidence 3 — Multiple public sources
-Missing Record: Primary public records, official documents, dated source routes and counter-evidence are still needed.
+Missing Record: Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.
 Next Action: Add primary sources, submit corrections, and promote only evidence-bounded conclusions to public pages.
 
 ## One-World Currency Theory
@@ -75,7 +75,7 @@ What The Evidence Does Not Prove: It does not prove a single hidden command stru
 Speculation Level: Level 4 — Strong public-record convergence
 Confidence Level: medium
 Evidence Level: Evidence 3 — Multiple public sources
-Missing Record: Primary public records, official documents, dated source routes and counter-evidence are still needed.
+Missing Record: Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.
 Next Action: Add primary sources, submit corrections, and promote only evidence-bounded conclusions to public pages.
 
 ## Jurisdictional Power Theory

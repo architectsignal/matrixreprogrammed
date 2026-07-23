@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:11:39.575Z",
-  "pageCount": 136,
+  "generatedAt": "2026-07-23T06:42:43.541Z",
+  "pageCount": 134,
   "output": "downloads/ai-speculative-conclusions-policy.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "AI Speculative Conclusions — Publication Policy",
-    "contentHash": "07661dee455908a2a8e75aa13a1090aa255bb91dd27e521e94f17ef51982d8fc",
+    "contentHash": "5d74178418bdab37e51435063d7c9020c46e75e7c0eeebbcae744b9e23bf46c2",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -21,16 +21,16 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-86E5F84065E82718",
       "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-8DCAFBC1E6283393",
       "ASC-REVIEW-6CA3C5666C487CEE",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-747FA1D74D7A92E3",
-      "ASC-REVIEW-FCA45307EA918E28",
-      "ASC-REVIEW-033C88D9E541BF5B",
+      "ASC-REVIEW-9348EFDAAAC19C62",
+      "ASC-REVIEW-76AAD83597F51FBE",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-F9FB4BEDAA3F0383",
       "ASC-REVIEW-14DA4C1F787B63ED",
@@ -68,10 +68,10 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-3095B2F09AF1518E",
+      "ASC-REVIEW-131C0E5550327B37",
+      "ASC-REVIEW-09ACD9715E501825",
       "ASC-REVIEW-1DEA85B53498EF4A",
-      "ASC-REVIEW-A16F0CE46FC26A15",
-      "ASC-REVIEW-5799AE4930475225",
+      "ASC-REVIEW-C06BEA89A8588561",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
       "ASC-REVIEW-ECBF89F9DB572E57",
@@ -79,9 +79,9 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-E6C400911BD1A158",
+      "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-3B61EAB39C318DF1",
-      "ASC-REVIEW-38A2AF3C714E50C0",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
@@ -105,6 +105,7 @@
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
+      "ASC-REVIEW-A587A49D50D6CDC2",
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
@@ -124,11 +125,8 @@
       "ASC-REVIEW-ECFD914DA00A7C36",
       "ASC-REVIEW-44CBDE6F2AE4CA62",
       "ASC-REVIEW-E76F1740FFF4E811",
-      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "ASC-REVIEW-6318EF16062CE35D",
-      "ASC-REVIEW-2EAFF47D9C619640",
-      "ASC-REVIEW-AF729BF83147A0D4",
+      "ASC-REVIEW-CE615863A9722AC5",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
@@ -146,7 +144,9 @@
       "ASC-REVIEW-FF1A5D475493F22D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-B3E7B22DBE204184",
-      "ASC-REVIEW-26C98CAD8AA9CE0A"
+      "ASC-REVIEW-26C98CAD8AA9CE0A",
+      "ASC-REVIEW-D921C72A4BA2FDF3",
+      "ASC-REVIEW-AFF7699289F993E4"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,7 +154,7 @@
       "disputedClaimCount": 137,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 115,
+      "relationshipCount": 117,
       "moneyRecordCount": 109
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 117 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Litigation Releases",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 117 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:11:39.575Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:42:43.541Z"
   }
 }

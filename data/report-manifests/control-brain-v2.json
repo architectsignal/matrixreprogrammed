@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-22T06:45:56.954Z",
-  "pageCount": 113,
+  "generatedAt": "2026-07-23T06:43:35.400Z",
+  "pageCount": 114,
   "output": "downloads/control-brain-v2.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Control Brain V2",
-    "contentHash": "e6fc5b012136bc8d0afc8edce8dd8c1477dc3808edd85f62719c4937c42c3b5d",
+    "contentHash": "6b9915764d979a19c498ec0e69c0eb44a118c451f2fc8cb7f3dbe93492394483",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
       "daily-revelation-report",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
-      "3a425f0d5d683952bc0ad7ac",
       "people-of-interest",
+      "3a425f0d5d683952bc0ad7ac",
       "missing-records-report",
       "26b90533dbf7d2ed42f02de6",
       "erik-prince",
@@ -121,6 +121,7 @@
       "saic-leidos-lineage",
       "digital-id-and-access-systems",
       "health-data-and-emergency-systems",
+      "157cdab04b61ae6309c0c713",
       "institution-world-health-organization",
       "institution-united-nations",
       "9e8903fd8dfa9b54a1d6db30",
@@ -145,12 +146,11 @@
       "gautam-adani",
       "ray-dalio",
       "brian-moynihan",
-      "david-solomon",
-      "jane-fraser"
+      "david-solomon"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
+      "primarySourceCount": 3,
       "disputedClaimCount": 56,
       "newEntityCount": 42,
       "updatedAssessmentCount": 1,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Control Brain V2.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Control Brain V2.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:45:56.954Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:43:35.400Z"
   }
 }

@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-22T06:55:43.137Z",
+  "generatedAt": "2026-07-23T06:53:05.122Z",
   "schemaVersion": "2.0.0",
   "totals": {
-    "entities": 8562,
-    "relationships": 12461,
-    "coreRelationships": 9178,
-    "officialRelationships": 12145,
-    "reviewedRelationships": 2555,
-    "weakMentions": 3283,
+    "entities": 8564,
+    "relationships": 12509,
+    "coreRelationships": 9268,
+    "officialRelationships": 12193,
+    "reviewedRelationships": 2560,
+    "weakMentions": 3241,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
@@ -17,7 +17,7 @@
   },
   "dateRange": {
     "from": "2025-12-30T00:00:00.000Z",
-    "to": "2027-07-12T00:00:00.000Z"
+    "to": "2028-04-30T00:00:00.000Z"
   },
   "publicRoute": "evidence-network-map.html",
   "dataRoute": "data/evidence-network-map.json",
@@ -25,8 +25,8 @@
   "software": "Cytoscape.js",
   "serialization": "compact-json",
   "projection": "UI-used node and edge fields only; complete registries and CSV retained separately.",
-  "graphBytes": 21396817,
-  "graphMiB": 20.41,
+  "graphBytes": 21427042,
+  "graphMiB": 20.43,
   "cloudflareTargetBytes": 25165824,
   "withinCloudflareTarget": true,
   "boundary": "Every line represents a relationship stated by a cited source or observed by a disclosed extraction method. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt."

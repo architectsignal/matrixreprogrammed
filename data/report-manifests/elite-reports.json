@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:47:05.375Z",
+  "generatedAt": "2026-07-23T06:44:41.448Z",
   "pageCount": 105,
   "output": "downloads/elite-reports.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Elite Reports",
-    "contentHash": "1e14cb6d77f23e88bbd2b015a6de5f2c90822cf9b4b77e12c65fd0f8c6c9014c",
+    "contentHash": "efe646abcee520265206e88b499b14303baf963e992322132c50192865942ca8",
     "sourceIds": [
       "daily-revelation-report",
       "missing-records-report",
@@ -27,7 +27,6 @@
       "cee347fbc3752c6e0f890457",
       "entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "billionaire-peter-thiel",
-      "EP-AI-001",
       "41772e5c9af7970ddd7d5aac",
       "entity-centers-for-medicare-and-medicaid-services",
       "entity-health-and-human-services-department",
@@ -75,9 +74,9 @@
       "people-of-interest",
       "blackwater-xe-academi-constellis-lineage",
       "palantir-government-platforms",
+      "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "bf773d3ec83b9b3768dfce6b",
-      "3a425f0d5d683952bc0ad7ac",
       "360e80c162081c85d2c680ef",
       "8a10f165e16d0f8648cb8ec4",
       "9b9816cd15ea0d816c77affa",
@@ -87,10 +86,9 @@
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
-      "be6ae8bb29c9fcc52ef7e823",
       "dyncorp-amentum-lineage",
+      "3a425f0d5d683952bc0ad7ac",
       "erik-prince",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -114,6 +112,7 @@
       "OB-004",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-DA186233A3EDF0BE",
@@ -129,7 +128,6 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A04C87BD046475D3",
       "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-40C720A53E868768",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -146,23 +144,25 @@
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
-      "ASC-REVIEW-ECBF89F9DB572E57"
+      "ASC-REVIEW-ECBF89F9DB572E57",
+      "ASC-REVIEW-9CC26AD16796DAE5",
+      "ASC-REVIEW-2F50A2BA863FFF4F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 50,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 51,
       "newEntityCount": 98,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 98,
-      "moneyRecordCount": 69
+      "relationshipCount": 100,
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Elite Reports.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Appellate Division of the Supreme Court of the State of New York (data/daily-command-brief.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Elite Reports.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 98 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 100 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Palantir government platforms — Contractor Power Report; Disclosure gaps and missing files — Subject Report; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; DynCorp / Amentum lineage — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; CACI International — Contractor Power Report; G4S / Allied Universal security lineage — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 98 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 100 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Palantir government platforms — Contractor Power Report",

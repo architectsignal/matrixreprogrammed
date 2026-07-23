@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:45:51.028Z",
+  "generatedAt": "2026-07-23T06:43:29.446Z",
   "pageCount": 118,
   "output": "downloads/cloudflare-search-index-compaction.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Cloudflare Search Index Compaction",
-    "contentHash": "5a1377dc559719e870e4615230bac839bd62ee6e8cf359769d2089ba4a15c946",
+    "contentHash": "ac26dfadbfe4303bf5bf7c5526c3ff8719dab3935e3be437c941e334b4f4d27b",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
@@ -21,6 +21,7 @@
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
       "26b90533dbf7d2ed42f02de6",
+      "157cdab04b61ae6309c0c713",
       "c1520a15d6e62871a66c558e",
       "71e0563ca7b139c37c302956",
       "a5e5d4ec4df4352ea242ea3f",
@@ -41,6 +42,8 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-21E454816F050A34",
+      "1abf4240a692c2dda1388443",
+      "9848ec4b4c3f6c2693269839",
       "ff1a3a77816af400f09ab95e",
       "fbfb678d637444fe7b488644",
       "daee19f2c0d92279cc9a7569",
@@ -118,7 +121,7 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-B2E7D62740B52D54",
+      "ASC-REVIEW-7757E49DD8F6D264",
       "ASC-REVIEW-D5386E9017A18F49",
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-CBB7EB7E52CE7014",
@@ -141,16 +144,13 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "b74173cd5f46b45d0e8f3fe1",
       "d652e1fa40dcd5dc95de9bb1",
-      "553ca36157c97552aafe2abb",
-      "pdf-cloudflare-search-index-compaction-9e2b5fe41da3",
-      "9f3052b5d8cec138a2a37e8c",
-      "3a425f0d5d683952bc0ad7ac",
-      "72ef7895f95288946ccb3cff"
+      "pdf-cloudflare-search-index-compaction-501243dac80b"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 19,
+      "primarySourceCount": 22,
       "disputedClaimCount": 102,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -159,8 +159,8 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Cloudflare Search Index Compaction.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Cloudflare Search Index Compaction.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:45:51.028Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:43:29.446Z"
   }
 }

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "working-with-gaps",
-  "updated": "2026-07-22T06:55:19.998Z",
+  "updated": "2026-07-23T06:52:43.097Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 41,
@@ -86,7 +86,7 @@
       "id": "fresh-current-news",
       "stage": "Collect",
       "status": "green",
-      "finding": "45 news item(s) are inside the active seven-day window.",
+      "finding": "38 news item(s) are inside the active seven-day window.",
       "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
       "evidence": [
         "downloads/seven-day-intel.json"
@@ -443,12 +443,15 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "128 workflow file(s) scanned for daily scheduling.",
+      "finding": "131 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
+        ".github/workflows/apply-homepage-construction-banner.yml",
         ".github/workflows/auto-evidence-pipeline.yml",
         ".github/workflows/auto-update-orchestrator.yml",
         ".github/workflows/auto-update-system-deep-test.yml",
+        ".github/workflows/behind-the-curtain-intelligence.yml",
+        ".github/workflows/cancel-duplicate-production-run.yml",
         ".github/workflows/cancel-stale-forum-deploy.yml",
         ".github/workflows/capture-current-deploy-status.yml",
         ".github/workflows/capture-forum-repair-status.yml",
@@ -583,9 +586,12 @@
       "finding": "Workflow files were scanned for weekly synthesis scheduling.",
       "fix": "Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.",
       "evidence": [
+        ".github/workflows/apply-homepage-construction-banner.yml",
         ".github/workflows/auto-evidence-pipeline.yml",
         ".github/workflows/auto-update-orchestrator.yml",
         ".github/workflows/auto-update-system-deep-test.yml",
+        ".github/workflows/behind-the-curtain-intelligence.yml",
+        ".github/workflows/cancel-duplicate-production-run.yml",
         ".github/workflows/cancel-stale-forum-deploy.yml",
         ".github/workflows/capture-current-deploy-status.yml",
         ".github/workflows/capture-forum-repair-status.yml",

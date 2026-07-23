@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:50:59.704Z",
+  "generatedAt": "2026-07-23T06:48:31.419Z",
   "pageCount": 115,
   "output": "downloads/readable-user-briefs.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Readable User Briefs",
-    "contentHash": "3fa597d09462a8fd78371173bad258944ab9586fac949dba3bf9180ebc9343c1",
+    "contentHash": "4e566b4659b6ea17375aa56a72f6578ae2881746974c16971277a6cafb2a2750",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "26b90533dbf7d2ed42f02de6",
@@ -14,9 +14,9 @@
       "daily-revelation-report",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
-      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
@@ -65,6 +65,8 @@
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
+      "912760dd7dac0f77db5f125e",
+      "power-7",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
       "ASC-REVIEW-9F5E6DCB06093895",
@@ -93,7 +95,7 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
-      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-CE615863A9722AC5",
       "entity-centers-for-medicare-and-medicaid-services",
       "entity-health-and-human-services-department",
       "entity-2021-00294",
@@ -104,11 +106,11 @@
       "entity-a170747m",
       "entity-california-court-of-appeal",
       "contractor-dyncorp-amentum-lineage",
-      "EP-AI-001",
       "EP-AI-003",
       "EP-AI-004",
       "daee19f2c0d92279cc9a7569",
       "a5e5d4ec4df4352ea242ea3f",
+      "source-change-b74173cd5f46b45d0e8f3fe1",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-E0C2B02D28255CC3",
@@ -144,32 +146,30 @@
       "ASC-REVIEW-A04C87BD046475D3",
       "ASC-REVIEW-3A6BF3064A28E236",
       "ASC-REVIEW-3C0E3174433D0A74",
-      "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-3266CA18BAEC4ACB",
-      "ASC-REVIEW-DF9D7EABC07B3635"
+      "ASC-REVIEW-8A44FB8AADF1FB38"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 74,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 72,
       "newEntityCount": 74,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 99,
-      "moneyRecordCount": 84
+      "relationshipCount": 98,
+      "moneyRecordCount": 83
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Readable User Briefs.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Readable User Briefs.",
+        "evidence": "Most important missing record (data/daily-power-conclusions.json); Most important missing record (data/daily-power-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: USAspending.gov — Recent Contract Awards (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “content changed: USAspending.gov — Recent Contract Awards,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 99 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 98 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; Elite Power Theory; Elite Power Theory; Elon Musk — Elite Network Report; Appellate Division of the Supreme Court of the State of New York — Entity Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 99 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 98 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:50:59.704Z"
+    "intelligenceFreshnessDate": "2026-07-22T07:44:23.482Z"
   }
 }

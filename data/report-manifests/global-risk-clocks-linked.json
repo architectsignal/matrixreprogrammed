@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:48:36.348Z",
+  "generatedAt": "2026-07-23T06:46:08.757Z",
   "pageCount": 124,
   "output": "downloads/global-risk-clocks-linked.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Global Risk Clocks",
-    "contentHash": "64d03b4a9f6cd21723118ded225c10a50ea6f664de379bcb55ddf297d8a7c364",
+    "contentHash": "b3af6508df62f0fb0fc90e141bf0a83af5e76e88620f7dbde9108d0717d3fc79",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "26b90533dbf7d2ed42f02de6",
@@ -23,11 +23,11 @@
       "72ef7895f95288946ccb3cff",
       "71e0563ca7b139c37c302956",
       "e72d22f4f28eb53e3173d0a6",
-      "daily-revelation-report",
       "9f3052b5d8cec138a2a37e8c",
+      "daily-revelation-report",
       "360e80c162081c85d2c680ef",
-      "9f77464e401ac59ad1adb812",
       "ASC-001",
+      "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "65debd126cdfa5f7547a3eca",
@@ -39,6 +39,7 @@
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-17EAF4AC47F2CCB1",
+      "157cdab04b61ae6309c0c713",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
@@ -91,7 +92,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-3B61EAB39C318DF1",
-      "ASC-REVIEW-C130665F0F8D4152",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
@@ -119,10 +119,10 @@
       "ASC-REVIEW-AD7847E11513D899",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-6AD142382DA610CB",
       "ASC-REVIEW-8A44FB8AADF1FB38",
       "ASC-REVIEW-C7A00AFA602DD2A9",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-69C44AE268E70074",
       "ASC-REVIEW-231937A512687C7B",
       "ASC-REVIEW-DB3B48F4467DAAF3",
       "ASC-REVIEW-1EA1A54BAAF5A93D",
@@ -130,6 +130,7 @@
       "ASC-REVIEW-0F8586CC2CBF8ED4",
       "ASC-REVIEW-ECFD914DA00A7C36",
       "ASC-REVIEW-44CBDE6F2AE4CA62",
+      "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-A9879DBB68A52307",
       "bb5dfe90c29929d84ce60e6d",
       "f17e0de0ef7b66aa842ac3a1",
@@ -145,24 +146,23 @@
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
       "ASC-REVIEW-D23512B8758FE6BB",
-      "ASC-REVIEW-9F5E6DCB06093895",
-      "ASC-REVIEW-686B68808D58A838"
+      "ASC-REVIEW-9F5E6DCB06093895"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 106,
+      "primarySourceCount": 6,
+      "disputedClaimCount": 105,
       "newEntityCount": 18,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 100,
-      "moneyRecordCount": 103
+      "relationshipCount": 98,
+      "moneyRecordCount": 102
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 100 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 98 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; CACI International → Surveillance: execution layer; Jensen Huang → Data Center Infrastructure: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 100 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 98 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",

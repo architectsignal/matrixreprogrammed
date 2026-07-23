@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:45:14.258Z",
+  "generatedAt": "2026-07-23T06:42:54.316Z",
   "pageCount": 105,
   "output": "downloads/big-three-asset-managers.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Big Three Asset Manager Tracker",
-    "contentHash": "0b3f02ce2cf54d6fedb7c5ea79e56f414fedc32565cccec221bc7d6ca3e50a62",
+    "contentHash": "62bc963510d7ae71239e8aa4416e164215e4e1e72fc0d07ec95200261a03a5cf",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "blackrock",
@@ -24,9 +24,10 @@
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "7fc07964a27914afe516c45b",
-      "3a425f0d5d683952bc0ad7ac",
+      "157cdab04b61ae6309c0c713",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
+      "3a425f0d5d683952bc0ad7ac",
       "7dcf4ef18ea1f86d01068773",
       "larry-fink",
       "ecd4a1111010f13b2d74bf8c",
@@ -48,6 +49,7 @@
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-D86EBD209FFF875A",
+      "9848ec4b4c3f6c2693269839",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "klaus-schwab",
@@ -70,9 +72,7 @@
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-1EA1A54BAAF5A93D",
       "ASC-REVIEW-8F2468497DC18A3E",
-      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-C53B123A4708B84E",
-      "ASC-REVIEW-6318EF16062CE35D",
       "7bf58b4062bae3da680c4bf1",
       "institutions",
       "contractor-blackwater-xe-academi-constellis-lineage",
@@ -105,7 +105,7 @@
       "priscilla-chan",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-BE461670E34D316C",
-      "ASC-REVIEW-FCA45307EA918E28",
+      "ASC-REVIEW-9348EFDAAAC19C62",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-54C7773F8BEDE2F4",
@@ -122,14 +122,12 @@
       "ASC-REVIEW-A5C911DFEE587573",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-E76F1740FFF4E811",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
+      "ASC-REVIEW-CE615863A9722AC5",
       "d0b647e325275daa6d824a49",
       "d8ecb32adba2be66cbad8982",
       "58a212e4e1a93007ec5b3d6d",
@@ -143,21 +141,23 @@
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
-      "bdd7e454126ebfa6319a594c"
+      "bdd7e454126ebfa6319a594c",
+      "8a10f165e16d0f8648cb8ec4",
+      "7c05d9244c4620950350cf27"
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 13,
-      "disputedClaimCount": 49,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 45,
       "newEntityCount": 45,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 48,
+      "relationshipCount": 49,
       "moneyRecordCount": 40
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Big Three Asset Manager Tracker.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Big Three Asset Manager Tracker.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -176,7 +176,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 48 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; BlackRock; State Street / State Street Investment Management; Vanguard; Matrix Reprogrammed Canonical Intelligence Record; State Street / State Street Investment Management → Proxy Voting Stewardship: capital layer; BlackRock → Private Markets Infrastructure Expansion: capital layer; Influence should be mapped through infrastructure, filings and contracts.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -191,7 +191,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 48 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "BlackRock",
@@ -215,6 +215,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:45:14.258Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:42:54.316Z"
   }
 }

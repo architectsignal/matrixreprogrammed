@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:14:55.522Z",
-  "pageCount": 135,
+  "generatedAt": "2026-07-23T06:45:32.506Z",
+  "pageCount": 133,
   "output": "downloads/evidence-network-map-build.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Evidence Network Map Build",
-    "contentHash": "0d04333429cbff2e57a64d76069e3a28ac3b12edcf8dd618fdb4b358039be57b",
+    "contentHash": "2aa880d6f56507a1ddb461952879340bb6f2b3c7a02cb38b64831dda8ab04198",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
       "ASC-REVIEW-9E85403F3389F334",
@@ -60,7 +60,7 @@
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-3095B2F09AF1518E",
+      "ASC-REVIEW-131C0E5550327B37",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
       "ASC-REVIEW-ECBF89F9DB572E57",
@@ -77,9 +77,6 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-8BCC3EF09DEF8D83",
-      "ASC-REVIEW-8DD092B1DAA0D076",
-      "ASC-REVIEW-EFF7CF8A8CCC60F7",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -116,7 +113,7 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
@@ -146,7 +143,10 @@
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
       "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585"
+      "ASC-REVIEW-7527D6692621D585",
+      "ASC-REVIEW-D6340B09DE08EAC5",
+      "ASC-REVIEW-52C3694FF95479F1",
+      "ASC-REVIEW-3EB368ED00ADD23E"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 138,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 136,
-      "moneyRecordCount": 135
+      "relationshipCount": 139,
+      "moneyRecordCount": 138
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 139 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Structured Investigation Schema; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; SAIC / Leidos lineage → Intelligence: execution layer; Follow The Money Watch; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer; Blackwater / Xe / Academi / Constellis lineage → security: execution layer; Blackwater / Xe / Academi / Constellis lineage → war: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 139 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Structured Investigation Schema",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:14:55.522Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:45:32.506Z"
   }
 }

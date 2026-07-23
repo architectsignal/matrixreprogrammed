@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:50:42.239Z",
+  "generatedAt": "2026-07-23T06:48:13.282Z",
   "pageCount": 119,
   "output": "downloads/public-copy-visibility-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Public Copy Visibility Test",
-    "contentHash": "56c4162f6636ba576e76a454e901e4d4219bc6f875421b1345c0c99f1e0acf2b",
+    "contentHash": "d959e6aea026863fb06b9c8c5fcb2aeedf5d9122bc1adab4434faa590d768992",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -40,7 +40,6 @@
       "638db2da94945ca92a901ffb",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "control-system-2026-07-17-36",
       "904512c4cc9427a39650c32a",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
@@ -75,7 +74,6 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-CB735F163FB2AAC6",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -121,15 +119,13 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-2BE76D9880CA56F8",
+      "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "3d90c7929346a292b6c46095",
       "0b05608c90af6fa86de444b2",
       "osint",
       "356f10eff5c6f147fc33ebeb",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
+      "war-machine-2026-07-22-a6c25a9b",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "6188547d91106e0f9d3bce50",
@@ -146,20 +142,24 @@
       "epstein-files-2026-02-04-details-of-jeffrey-epstein-post-mortem-released-in-latest-files-bbc",
       "control-system-2026-02-02-equifax-complycube-idenfy-seon-lexisnexis-tout-fresh-identity-security",
       "control-system-2025-12-05-how-commercial-surveillance-tools-became-essential-to-fbi-investigatio",
-      "control-system-2025-11-23-border-patrol-s-monitoring-of-us-drivers-raises-privacy-concerns-biome"
+      "control-system-2025-11-23-border-patrol-s-monitoring-of-us-drivers-raises-privacy-concerns-biome",
+      "control-system-2025-11-18-ice-s-license-plate-app-quietly-expands-a-nationwide-surveillance-web-",
+      "control-system-2025-11-06-us-lawmakers-call-for-ftc-probe-into-flock-safety-over-data-security-f",
+      "control-system-2025-10-20-surveillance-shadows-no-kings-protests-biometric-update",
+      "control-system-2025-10-06-amazon-s-quiet-rise-as-a-power-broker-in-police-surveillance-biometric"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 77,
+      "primarySourceCount": 10,
+      "disputedClaimCount": 75,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 81,
+      "relationshipCount": 78,
       "moneyRecordCount": 79
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
+        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,22 +179,22 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; The surveillance networks cities do not have to buy - Biometric Update; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -202,8 +202,8 @@
           "Illuminati / Secret Society Theory",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
-          "The surveillance networks cities do not have to buy - Biometric Update",
-          "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint"
+          "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
+          "Bill Gates → Health And Development Philanthropy: ecosystem hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T17:38:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

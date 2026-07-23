@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:49:29.371Z",
-  "pageCount": 125,
+  "generatedAt": "2026-07-23T06:47:02.299Z",
+  "pageCount": 121,
   "output": "downloads/market-activity-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Market Activity Test",
-    "contentHash": "f110e8a23a54cf44eaa2274fc0ea4a5c79e9c6db28e60560a6439ad6b1433e7e",
+    "contentHash": "eb19192372b1a05c090743f3414b190c73a7937c88f2c6cb66345602ccd19083",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -14,8 +14,8 @@
       "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
       "a5e5d4ec4df4352ea242ea3f",
-      "3a425f0d5d683952bc0ad7ac",
       "b7e4a66335a706ef5097117f",
+      "3a425f0d5d683952bc0ad7ac",
       "ecd4a1111010f13b2d74bf8c",
       "7f5b91c14c671bd24b8bbd81",
       "9f3052b5d8cec138a2a37e8c",
@@ -26,6 +26,8 @@
       "511ed227bb4be58b582ebb8d",
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "157cdab04b61ae6309c0c713",
+      "9848ec4b4c3f6c2693269839",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "EP-AI-004",
@@ -144,22 +146,20 @@
       "ASC-REVIEW-FE267E981A361906",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
-      "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-0F0776894447C197",
-      "ASC-REVIEW-6E0BEE85BA956CBF"
+      "ASC-REVIEW-98888270E5A6D011"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 10,
-      "disputedClaimCount": 114,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 112,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 112,
-      "moneyRecordCount": 108
+      "relationshipCount": 110,
+      "moneyRecordCount": 106
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Market Activity Test.",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Market Activity Test.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 112 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; 12. Lawful OSINT & Source Verification; BlackRock → Private Markets Infrastructure Expansion: capital layer; CACI International → Public Money: execution layer; Influence should be mapped through infrastructure, filings and contracts.; Rockefeller → Public Private Routes: layer hint; State Street / State Street Investment Management → Market Services: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 112 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:49:29.371Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:47:02.299Z"
   }
 }

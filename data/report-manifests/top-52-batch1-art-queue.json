@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:30.373Z",
+  "generatedAt": "2026-07-23T06:49:59.094Z",
   "pageCount": 102,
   "output": "downloads/top-52-batch1-art-queue.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Top 52 Batch 1 Art Queue",
-    "contentHash": "bc379dde453ef73e921a6bfc5bdf7f3e8fb518aa8b1cf78dfb0c8ab9ea37a83a",
+    "contentHash": "992aa7c134e5355cda55f38ae6ae50e8685f0f058a9adbfcf8b0668bbb48e6ac",
     "sourceIds": [
       "world-health-organization",
       "elon-musk",
@@ -77,7 +77,6 @@
       "ASC-REVIEW-E617D0A88088FBF7",
       "ASC-REVIEW-E88A7B581690918F",
       "bf773d3ec83b9b3768dfce6b",
-      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "8a10f165e16d0f8648cb8ec4",
       "3c9c23f7f9a1cec81ef90f59",
@@ -98,7 +97,9 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
+      "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
+      "3a425f0d5d683952bc0ad7ac",
       "76cf5cb1f42b219ea38128f4",
       "008875ef7bf45eb14dccb254",
       "b7e4a66335a706ef5097117f",
@@ -123,7 +124,6 @@
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "secret-societies",
@@ -144,19 +144,19 @@
     ],
     "metrics": {
       "evidenceCount": 134,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 43,
+      "primarySourceCount": 6,
+      "disputedClaimCount": 42,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 50,
-      "moneyRecordCount": 56
+      "moneyRecordCount": 55
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Top 52 Batch 1 Art Queue.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Top 52 Batch 1 Art Queue.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

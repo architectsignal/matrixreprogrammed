@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-23T06:52:52.770Z",
+  "changed": true,
+  "canonicalOrigin": "https://matrixreprogrammed.com",
+  "redirectStatus": 308,
+  "checks": {
+    "redirectsWwwToApex": true,
+    "preservesMethodWith308": true,
+    "routesFromCanonicalUrl": true,
+    "legacyDirectPathParserRemoved": true
+  },
+  "reason": "Host-only authentication cookies must not split member state between www and the apex Cloudflare Worker origin."
+}

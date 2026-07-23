@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:50:35.991Z",
+  "generatedAt": "2026-07-23T06:48:07.249Z",
   "pageCount": 122,
   "output": "downloads/probability-snapshot.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Probability Snapshot",
-    "contentHash": "d84330ec6242159482dad940563c6163e2049dd787a19f477d75232b179cf40c",
+    "contentHash": "5e46788bafd7ffa4815126a7166a24f0406edb2d1d2f9284e9e1f3d69ca004b0",
     "sourceIds": [
       "9f77464e401ac59ad1adb812",
       "26b90533dbf7d2ed42f02de6",
@@ -33,22 +33,24 @@
       "EPSTEIN-TRIGGER-2026-07-03",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
+      "157cdab04b61ae6309c0c713",
       "subject-digital-id-and-access-systems",
       "71e0563ca7b139c37c302956",
       "d0b647e325275daa6d824a49",
       "c1520a15d6e62871a66c558e",
       "daily-revelation-report",
       "subject-health-data-and-emergency-systems",
+      "EP-AI-004",
       "310372a3fc518b6aabbc5d07",
       "f59da50ababa3ddae79a8f1c",
       "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-7B1A15ED77443F13",
       "eb3448928554960651da56f6",
+      "EP-AI-001",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
-      "EP-AI-004",
       "76cf5cb1f42b219ea38128f4",
       "e72d22f4f28eb53e3173d0a6",
       "7dcf4ef18ea1f86d01068773",
@@ -61,7 +63,6 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "subject-banking-and-payment-rails",
       "subject-foundation-and-ngo-policy-influence",
-      "EP-AI-001",
       "osint",
       "ASC-002",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -101,7 +102,7 @@
       "ASC-REVIEW-C2C7140B7B6F51FF",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-B2E7D62740B52D54",
+      "ASC-REVIEW-7757E49DD8F6D264",
       "ASC-REVIEW-35409BA5B302BB83",
       "ASC-REVIEW-7EFB3EFB7EE261FF",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -145,24 +146,23 @@
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-0177F61D444ED739",
-      "ASC-REVIEW-90FA3F8805F271FF",
-      "ASC-REVIEW-D33599099BE12C6C"
+      "ASC-REVIEW-90FA3F8805F271FF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 90,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 89,
       "newEntityCount": 34,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 98,
-      "moneyRecordCount": 96
+      "relationshipCount": 97,
+      "moneyRecordCount": 95
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Probability Snapshot.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Probability Snapshot.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 98 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Digital ID and access systems — Subject Report; Matrix Reprogrammed Canonical Intelligence Record; Health data and emergency systems — Subject Report; Media / Narrative Theory; Media / Narrative Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 98 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:50:35.991Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:48:07.249Z"
   }
 }

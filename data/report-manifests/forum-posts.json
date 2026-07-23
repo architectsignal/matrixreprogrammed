@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:48:24.396Z",
+  "generatedAt": "2026-07-23T06:45:57.276Z",
   "pageCount": 130,
   "output": "downloads/forum-posts.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Forum Posts Export",
-    "contentHash": "cc051cf59416f69e782434ef26bcbdda0fae4b32e13f438f146a01e7614f2a80",
+    "contentHash": "6193d67743fba8fd791cb90ec970521871034e24e5c5b15dc6b3fa3e7ff89cce",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "aa93ff989cf62abb814747c9",
@@ -23,7 +23,6 @@
       "ec8ef1adbaaebb9fde883cae",
       "904512c4cc9427a39650c32a",
       "ASC-REVIEW-9E85403F3389F334",
-      "ASC-REVIEW-9EA06AB515E1538B",
       "ASC-REVIEW-F9FB4BEDAA3F0383",
       "ASC-REVIEW-31355A183BF17CCD",
       "ASC-REVIEW-8D34DAEE930AC84F",
@@ -34,8 +33,6 @@
       "cee347fbc3752c6e0f890457",
       "7d7ccb5b896a02cf45094879",
       "epstein-nda-settlement-protection-lane-2026-06-26",
-      "ASC-REVIEW-2EAFF47D9C619640",
-      "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -54,15 +51,12 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-CB735F163FB2AAC6",
+      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-B3E7B22DBE204184",
-      "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-8BCC3EF09DEF8D83",
-      "ASC-REVIEW-8DD092B1DAA0D076",
-      "ASC-REVIEW-EFF7CF8A8CCC60F7",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-CF855D1D23095240",
+      "ASC-REVIEW-39EC1E0CE66D921D",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-6DE76C80FA805761",
       "ASC-REVIEW-3EC279A28E26037E",
@@ -98,8 +92,7 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-D931CC919E22DAA7",
-      "ASC-REVIEW-5799AE4930475225",
+      "ASC-REVIEW-C06BEA89A8588561",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -120,6 +113,7 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
@@ -131,9 +125,6 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
-      "ASC-REVIEW-19884C8F2FB18608",
-      "ASC-REVIEW-36CCC3F98C1D030D",
-      "ASC-REVIEW-38A2AF3C714E50C0",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
@@ -142,11 +133,20 @@
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
       "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-97089BE83A5DC2E4",
+      "ASC-REVIEW-8EFDEAA9D6CD7D89",
       "ASC-REVIEW-5F2C7C064DEAB967",
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-285205442D5C5D56"
+      "ASC-REVIEW-285205442D5C5D56",
+      "ASC-REVIEW-9553A9554C0E8D6A",
+      "ASC-REVIEW-375A853A96E42D84",
+      "ASC-REVIEW-D5FA458F66004D27",
+      "ASC-REVIEW-FE267E981A361906",
+      "ASC-REVIEW-E48690C00EA31793",
+      "ASC-REVIEW-14DA4C1F787B63ED",
+      "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-0F0776894447C197",
+      "ASC-REVIEW-6E0BEE85BA956CBF"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 115,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 93,
-      "moneyRecordCount": 92
+      "relationshipCount": 102,
+      "moneyRecordCount": 101
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 93 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 102 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Intelligence Network Pack; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 93 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 102 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "General Assembly LIVE: Debating US sanctions against Cuba",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:57.159Z",
+  "generatedAt": "2026-07-23T06:50:24.831Z",
   "pageCount": 112,
   "output": "downloads/subject-crime-state-overlap.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Crime-State Overlap Brief",
-    "contentHash": "6b1ff4fe06fd2f309211b0ed733e0c100d719cf13a2a646384fb978f19ac3411",
+    "contentHash": "120e682e5a1285246bbb67952d610066c62c8ef0e4443a03272742ea51db2f88",
     "sourceIds": [
       "aa45c75a112060231ce901ba",
       "a0a974f7d560e8b12930c956",
@@ -26,6 +26,7 @@
       "88ef9baf356c096816236956",
       "cee347fbc3752c6e0f890457",
       "26b90533dbf7d2ed42f02de6",
+      "9848ec4b4c3f6c2693269839",
       "67f26a2a1ba1e136d90bd1ad",
       "594100b62a47db521fe2a128",
       "97ac8917477bc1c860f869f7",
@@ -106,7 +107,7 @@
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "pdf-subject-crime-state-overlap-90cdfa8130c9",
+      "pdf-subject-crime-state-overlap-485d029cfd0d",
       "e2ac57ffd11f45bcdfb24c2e",
       "fincen",
       "65debd126cdfa5f7547a3eca",
@@ -121,14 +122,12 @@
       "270841af2bd81407a26bed0b",
       "3c9c23f7f9a1cec81ef90f59",
       "beb907a8490963e80b4d0a90",
+      "war-machine-2026-07-22-a7c25c2e",
       "war-machine-2026-07-21-aac260e7",
       "war-machine-2026-07-21-abc2627a",
       "war-machine-2026-07-20-afc4a75d",
       "war-machine-2026-07-19-aad16b71",
       "war-machine-2026-07-17-25cc1ce4",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "904512c4cc9427a39650c32a",
       "epstein-files-2026-02-26-hillary-clinton-tells-house-panel-she-had-no-idea-of-epstein-s-crimes-",
       "epstein-files-2026-02-26-hillary-clinton-testifies-she-has-no-information-on-epstein-crimes-can",
@@ -146,21 +145,22 @@
       "contractor-g4s-allied-universal-security-lineage",
       "missing-records-report",
       "EP-AI-001",
-      "pdf-campaign-crime-state-overlap-push-66b488b31996"
+      "pdf-campaign-crime-state-overlap-push-a2dca03bf460",
+      "pdf-campaign-intelligence-dossiers-push-b0e5a7757d27"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
+      "primarySourceCount": 16,
       "disputedClaimCount": 4,
       "newEntityCount": 30,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 52,
+      "relationshipCount": 50,
       "moneyRecordCount": 41
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); U.S. Department of Justice (data/evidence-vault.json); U.S. Treasury OFAC Sanctions (data/evidence-vault.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); U.S. Department of Justice (data/evidence-vault.json); U.S. Treasury OFAC Sanctions (data/evidence-vault.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 52 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Crime-State Overlap Map; Crime Network Starter Brief; Cartel Power Systems; Longform Dossier Videos; Follow The Money Watch; Illuminati / Secret Society Theory; The War Machine; The Black File / Thirty-Three Systems",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 52 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Crime-State Overlap Map",
           "Crime Network Starter Brief",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

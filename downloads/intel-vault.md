@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-23T03:44:17.940Z
+Updated: 2026-07-23T06:55:01.519Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
+- Published: 2026-07-16T06:24:40.000Z
+- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
+- Source class: discovery
 
 ### 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
 - Published: 2026-07-15T23:34:19.000Z

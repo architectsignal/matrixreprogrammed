@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-07-22T06:52:45.876Z",
-  "pageCount": 78,
+  "generatedAt": "2026-07-23T06:50:14.088Z",
+  "pageCount": 76,
   "output": "downloads/wealth-pdf-layout-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Wealth Pdf Layout Test",
-    "contentHash": "e336b25aeb93c6b21e85aed77ce793fb9f7aed6cffbe4c9f8a206c7bf12e3e9f",
+    "contentHash": "77d813dd104ba7fa3e4b221e0832f8deb1a0521d6d99677d341b8375c03598cc",
     "sourceIds": [
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "bf041695a279c3dc5412cdf4",
+      "us-doj",
+      "gao-hq",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -23,13 +22,13 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-21E454816F050A34",
-      "495efbb6e1ee304347ae3bdf",
-      "c495decb9e41ce889da20ed1",
-      "c8acdb17acd478f0ba121c11",
       "26b90533dbf7d2ed42f02de6",
       "58a212e4e1a93007ec5b3d6d",
-      "us-doj",
-      "gao-hq",
+      "sec-hq",
+      "us-treasury",
+      "fbi-hq",
+      "cia-hq",
+      "eu-commission",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -146,7 +145,8 @@
       "private-equity-ardian",
       "private-equity-pai-partners",
       "private-equity-bc-partners",
-      "private-equity-apax-partners"
+      "private-equity-apax-partners",
+      "private-equity-new-mountain-capital"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 11,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 22,
-      "moneyRecordCount": 129
+      "relationshipCount": 19,
+      "moneyRecordCount": 130
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Wealth Pdf Layout Test.",
-        "evidence": "Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Congressional hearings and records (data/atlas-layers.json); NUCLEAR REGULATORY COMMISSION (data/card-live-updates.json)",
+        "evidence": "Congressional hearings and records (data/atlas-layers.json); United States Department of Justice (data/geographic-power-atlas-data.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); U.S. Securities and Exchange Commission (data/geographic-power-atlas-data.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
+        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Henry Lucas",
-          "Henry Lucas Part 01",
-          "Henry Lucas Part 02 (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer",
+          "CACI International → Defense Technology: execution layer",
+          "CACI International → Intelligence: execution layer",
+          "CACI International → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

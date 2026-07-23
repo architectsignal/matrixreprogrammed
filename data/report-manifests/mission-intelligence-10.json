@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:49:43.796Z",
-  "pageCount": 115,
+  "generatedAt": "2026-07-23T06:47:17.129Z",
+  "pageCount": 114,
   "output": "downloads/mission-intelligence-10.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Mission Intelligence 10",
-    "contentHash": "8781b4bd837a7116c12c7b8419230dbd7aacc89d66ef98313cdbbede9ee9bf2a",
+    "contentHash": "c9d2ad85d5697bce13f6fa39dc6935f5cc3b01fb931c7198d10568efef8abffc",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "daily-revelation-report",
@@ -13,9 +13,11 @@
       "contractor-blackwater-xe-academi-constellis-lineage",
       "missing-records-report",
       "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
+      "912760dd7dac0f77db5f125e",
+      "power-7",
       "72ef7895f95288946ccb3cff",
       "entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "3a425f0d5d683952bc0ad7ac",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "ASC-REVIEW-E76F1740FFF4E811",
@@ -28,7 +30,8 @@
       "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-9E85403F3389F334",
-      "912760dd7dac0f77db5f125e",
+      "5509fbcf351ec0448501dc2e",
+      "power-3",
       "ec1316fb1fb70c83dc347bb6",
       "1602b4124e51dd576ec17fa5",
       "7c05d9244c4620950350cf27",
@@ -94,6 +97,8 @@
       "7bf58b4062bae3da680c4bf1",
       "people-of-interest",
       "state-street-state-street-investment-management",
+      "beedbc0e98fe70d6d55fec2e",
+      "power-1",
       "entity-centers-for-medicare-and-medicaid-services",
       "entity-health-and-human-services-department",
       "entity-2021-00294",
@@ -116,8 +121,8 @@
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-E0C2B02D28255CC3",
       "ASC-REVIEW-F26BA2899C21B0EA",
+      "ASC-REVIEW-86E5F84065E82718",
       "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-8DCAFBC1E6283393",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
@@ -137,32 +142,27 @@
       "ASC-REVIEW-DF9D7EABC07B3635",
       "ASC-REVIEW-B8034056CD461A0D",
       "ASC-REVIEW-DAC9306D89683C63",
-      "ASC-REVIEW-B2E7D62740B52D54",
+      "ASC-REVIEW-7757E49DD8F6D264",
       "ASC-REVIEW-D5386E9017A18F49",
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-CBB7EB7E52CE7014",
-      "ASC-REVIEW-1EA1A54BAAF5A93D",
-      "ASC-REVIEW-8F4A530FA82C384B",
-      "ASC-REVIEW-D2F6E9BE7B7B66ED",
-      "ASC-REVIEW-45FC68BFE6057AEE",
-      "ASC-REVIEW-A5C911DFEE587573",
-      "ASC-REVIEW-44CBDE6F2AE4CA62"
+      "ASC-REVIEW-1EA1A54BAAF5A93D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 75,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 70,
       "newEntityCount": 72,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 105,
-      "moneyRecordCount": 83
+      "relationshipCount": 100,
+      "moneyRecordCount": 78
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Mission Intelligence 10.",
-        "evidence": "Most important missing record (data/daily-brief-master.json); Most important missing record (data/daily-power-conclusions.json); Most important missing record (data/readable-user-briefs.json); Appellate Division of the Supreme Court of the State of New York (data/evidence-weighted-relationship-graph.json); Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. (data/evidence-weighted-relationship-graph.json); Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. (missing record)",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Mission Intelligence 10.",
+        "evidence": "Most important missing record (data/daily-power-conclusions.json); Most important missing record (data/daily-power-conclusions.json); Most important missing record (data/daily-brief-master.json); Most important missing record (data/readable-user-briefs.json); Appellate Division of the Supreme Court of the State of New York (data/evidence-weighted-relationship-graph.json); Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. (data/evidence-weighted-relationship-graph.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 105 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 100 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; Follow The Money Watch; Appellate Division of the Supreme Court of the State of New York — Entity Report; Blackwater / Xe / Academi / Constellis lineage; Elon Musk — Elite Network Report; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 105 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 100 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report",
           "Follow The Money Watch",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:49:43.796Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:47:17.129Z"
   }
 }

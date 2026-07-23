@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-22T06:53:00.169Z
+Updated: 2026-07-23T06:50:27.755Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:52:15.512Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-23T06:49:45.024Z",
+  "pageCount": 130,
   "output": "downloads/speculative-intelligence-synthesis.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Speculative Intelligence Synthesis",
-    "contentHash": "e55867dc4aed8428fc74e7b0d9256982792d31c1ab12f73b629b6363ffcc30d3",
+    "contentHash": "1086791b8eac2d0ecab2143471ca91161295a30402435d4b2a3c9283e6cb8267",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "26b90533dbf7d2ed42f02de6",
@@ -13,17 +13,17 @@
       "ASC-001",
       "ecd4a1111010f13b2d74bf8c",
       "72ef7895f95288946ccb3cff",
-      "ASC-REVIEW-033C88D9E541BF5B",
+      "ASC-REVIEW-76AAD83597F51FBE",
       "71e0563ca7b139c37c302956",
       "a5e5d4ec4df4352ea242ea3f",
+      "ASC-REVIEW-09ACD9715E501825",
       "ASC-REVIEW-1DEA85B53498EF4A",
-      "ASC-REVIEW-FCA45307EA918E28",
+      "ASC-REVIEW-9348EFDAAAC19C62",
+      "ASC-REVIEW-86E5F84065E82718",
       "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-8DCAFBC1E6283393",
       "c1520a15d6e62871a66c558e",
-      "ASC-REVIEW-3095B2F09AF1518E",
+      "ASC-REVIEW-131C0E5550327B37",
       "ASC-REVIEW-6CA3C5666C487CEE",
-      "ASC-REVIEW-A16F0CE46FC26A15",
       "9f3052b5d8cec138a2a37e8c",
       "ASC-003",
       "ASC-REVIEW-19181472DB04522E",
@@ -44,7 +44,6 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-8DD092B1DAA0D076",
       "ASC-REVIEW-F9FB4BEDAA3F0383",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -61,8 +60,6 @@
       "008875ef7bf45eb14dccb254",
       "7f5b91c14c671bd24b8bbd81",
       "88ef9baf356c096816236956",
-      "ASC-REVIEW-2EAFF47D9C619640",
-      "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -76,12 +73,11 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-9EA06AB515E1538B",
-      "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-3B61EAB39C318DF1",
+      "ASC-REVIEW-8EFDEAA9D6CD7D89",
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
@@ -95,7 +91,6 @@
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-1C806B2577C4D44C",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-40C720A53E868768",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-B8034056CD461A0D",
       "ASC-REVIEW-44F136F26F8A52B2",
@@ -135,7 +130,6 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-D931CC919E22DAA7",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
@@ -144,9 +138,15 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-CB735F163FB2AAC6",
+      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-B3E7B22DBE204184"
+      "ASC-REVIEW-B3E7B22DBE204184",
+      "ASC-REVIEW-6FEEE1F638ADFCD6",
+      "ASC-REVIEW-6D7642B46743C895",
+      "ASC-REVIEW-2638AEF62CDCC03A",
+      "ASC-REVIEW-E6C400911BD1A158",
+      "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-897F71D253591D8F"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 113,
       "newEntityCount": 18,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 104,
-      "moneyRecordCount": 98
+      "relationshipCount": 110,
+      "moneyRecordCount": 103
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 104 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; content changed: USAspending.gov — Recent Contract Awards; Matrix Reprogrammed Canonical Intelligence Record; content changed: Federal Register — Latest Documents; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: European Public Prosecutor's Office — News",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; content changed: USAspending.gov — Recent Contract Awards; Matrix Reprogrammed Canonical Intelligence Record; content changed: Federal Register — Latest Documents; content changed: Federal Register — Latest Documents; content changed: U.S. House Committee on Oversight and Government Reform — Releases; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 104 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "content changed: USAspending.gov — Recent Contract Awards",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "content changed: Federal Register — Latest Documents",
+          "content changed: Federal Register — Latest Documents",
           "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: European Public Prosecutor's Office — News"
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:52:15.512Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:49:45.024Z"
   }
 }

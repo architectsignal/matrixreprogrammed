@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:51:37.789Z",
-  "pageCount": 116,
+  "generatedAt": "2026-07-23T06:49:09.256Z",
+  "pageCount": 117,
   "output": "downloads/share-kit-trust-evidence.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Trust And Evidence Share Kit",
-    "contentHash": "f76eb6f42f22257f5a748f7a2f2b2175ad49472038a1f5d67ffd8c8c55d49e64",
+    "contentHash": "53b48c6dee5428028c82c860bd2520e108427de35f2ffa8fa9fa03c5efb71d94",
     "sourceIds": [
       "1736ddf4a59cdfa0e0b77b66",
       "9c2ed866829ec14701b4f6aa",
@@ -40,9 +40,6 @@
       "cab66e2bb53cf082d241d7e1",
       "dd21e9746bde52a513cf5418",
       "88523724ee8578e0b21bb0f4",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "6188547d91106e0f9d3bce50",
@@ -59,6 +56,7 @@
       "f9a646e1d3bf2abf0b0b3767",
       "aa93ff989cf62abb814747c9",
       "declassified-files-2025-11-14-dni-gabbard-national-archives-launch-trump-administration-s-release-of",
+      "157cdab04b61ae6309c0c713",
       "71e0563ca7b139c37c302956",
       "573415eea452f7029c78ea22",
       "843bf0e89d5e2c3d8673724c",
@@ -100,8 +98,7 @@
       "9f3052b5d8cec138a2a37e8c",
       "310372a3fc518b6aabbc5d07",
       "f59da50ababa3ddae79a8f1c",
-      "war-machine-2026-07-16-27cc200a",
-      "war-machine-2026-07-16-26db2901",
+      "war-machine-2026-07-22-af261a24",
       "declassified-files-2026-06-27-moldova-publishes-declassified-soviet-deportation-lists-from-1941-mold",
       "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
       "epstein-files-2026-06-26-house-committee-subpoenas-leon-black-in-the-middle-of-closed-door-inte",
@@ -146,30 +143,33 @@
       "crime-state-overlap-2026-04-23-legal-experts-skeptical-of-doj-s-criminal-case-against-southern-povert",
       "crime-state-overlap-2026-04-21-southern-poverty-law-center-indicted-for-fraud-money-laundering-politi",
       "declassified-files-2026-04-06-gerry-adams-ira-leader-declassified-file-reveals-1996-memo-belfast-tel",
-      "crime-state-overlap-2026-04-05-minister-of-state-for-home-affairs-shri-nityanand-rai-attends-two-day-"
+      "crime-state-overlap-2026-04-05-minister-of-state-for-home-affairs-shri-nityanand-rai-attends-two-day-",
+      "epstein-files-2026-03-22-sky-news-australia-daily-dose-of-dana-host-dana-bowling-has-reacted-to",
+      "epstein-files-2026-03-21-i-m-not-jeffrey-epstein-viral-palm-beach-lookalike-speaks-out-national",
+      "epstein-files-2026-03-20-i-m-not-jeffrey-epstein-viral-palm-beach-lookalike-speaks-out-wpec"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 4,
+      "primarySourceCount": 2,
       "disputedClaimCount": 10,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 23,
+      "relationshipCount": 19,
       "moneyRecordCount": 27
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Trust And Evidence Share Kit.",
-        "evidence": "Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Trust And Evidence Share Kit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,22 +179,22 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Intelligence Network Share Kit; War Machine Share Kit; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; War Machine Campaign; Henry Lucas; Henry Lucas Part 01",
+        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Intelligence Network Share Kit; War Machine Share Kit; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; War Machine Campaign; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Share Kit",
           "War Machine Share Kit",
@@ -202,8 +202,8 @@
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "War Machine Campaign",
-          "Henry Lucas",
-          "Henry Lucas Part 01"
+          "General Assembly LIVE: Debating US sanctions against Cuba",
+          "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

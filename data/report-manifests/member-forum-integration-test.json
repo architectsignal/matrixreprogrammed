@@ -1,17 +1,14 @@
 {
-  "generatedAt": "2026-07-22T06:49:34.075Z",
+  "generatedAt": "2026-07-23T06:47:06.908Z",
   "pageCount": 131,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Member Forum Integration Test",
-    "contentHash": "5c3939f4bdae37722145b85bfa8d665e28068bffb2309d65e3a61fe58aafb2f2",
+    "contentHash": "50b94178039b77d9c33f1a5a0ee72cc8f6617b7789bc7f300836bd3af334eeac",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -31,10 +28,10 @@
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5AE5A3805582A7F2",
+      "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "71e0563ca7b139c37c302956",
       "7f5b91c14c671bd24b8bbd81",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -121,7 +118,8 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-A587A49D50D6CDC2",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
@@ -146,32 +144,34 @@
       "ASC-REVIEW-2527E3DEA85AE958",
       "ASC-REVIEW-AF658BEE2D866332",
       "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3"
+      "ASC-REVIEW-A04C87BD046475D3",
+      "ASC-REVIEW-3A6BF3064A28E236",
+      "ASC-REVIEW-3B7DCAEF5ABCE701"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 132,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 135,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 133,
-      "moneyRecordCount": 130
+      "relationshipCount": 132,
+      "moneyRecordCount": 131
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 133 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Henry Lucas; Henry Lucas Part 01; Henry Lucas Part 02 (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
+        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 133 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
-          "Henry Lucas",
-          "Henry Lucas Part 01",
-          "Henry Lucas Part 02 (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer"
+          "Booz Allen Hamilton → Intelligence: execution layer",
+          "Booz Allen Hamilton → Public Money: execution layer",
+          "CACI International → Defense Technology: execution layer",
+          "CACI International → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:47:06.908Z"
   }
 }

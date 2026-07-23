@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": false,
-    "updated": "2026-07-22T06:54:53.063Z",
-    "filesScanned": 5312,
-    "highIssues": 2876,
-    "reviewIssues": 9,
-    "intakeAreas": 2756,
+    "updated": "2026-07-23T06:52:14.703Z",
+    "filesScanned": 5331,
+    "highIssues": 2878,
+    "reviewIssues": 8,
+    "intakeAreas": 2758,
     "weakIntakeAreas": 2
   },
   "issues": [
@@ -13368,6 +13368,20 @@
     },
     {
       "file": "aviation-evidence-policy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "behind-the-curtain-access.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "behind-the-curtain.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:51:08.505Z",
+  "generatedAt": "2026-07-23T06:48:40.233Z",
   "pageCount": 133,
   "output": "downloads/research-tools-ui-patch.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Research Tools Ui Patch",
-    "contentHash": "99f271fc6e12767a72bb2010b91f99da4481a9457647ea6aacb970b07bc4963d",
+    "contentHash": "e8664ce0b87ab07eabb59c4d2e72931ceb18ef425567ab8b0e62c8e2537beefd",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -19,10 +19,6 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "14d04c0943d24cbe6a1926db",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -114,7 +110,7 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
@@ -146,30 +142,34 @@
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
       "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585"
+      "ASC-REVIEW-7527D6692621D585",
+      "ASC-REVIEW-D6340B09DE08EAC5",
+      "ASC-REVIEW-52C3694FF95479F1",
+      "ASC-REVIEW-3EB368ED00ADD23E",
+      "ASC-REVIEW-C47A1B7DA11B68C4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 135,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 139,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 136,
-      "moneyRecordCount": 134
+      "relationshipCount": 137,
+      "moneyRecordCount": 137
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); Henry Lucas (data/live-intel.json); Henry Lucas Part 01 (data/live-intel.json); Henry Lucas Part 02 (Final) (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Research Tools Ui Patch.",
+        "evidence": "SEC FILING FEED. (data/search-index.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “SEC FILING FEED.,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "SEC Filing Feed | Matrix Reprogrammed MATRIX REPROGRAMMED System Feed Intake VRC Batch You are here Site route This page is part of the wider reporting system. Start with the summary, then open the evidence route or research tools for deeper source work. Summa",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:48:40.233Z"
   }
 }

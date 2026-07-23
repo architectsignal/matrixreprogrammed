@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T03:43:54.223Z",
+  "updated": "2026-07-23T06:53:32.997Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -1101,15 +1101,718 @@
   ],
   "contradictions": [],
   "watchNext": [
-    "Any new filing, redaction explanation, or changed document index in the disclosure lane.",
-    "Any digital identity, wallet, payment or public-service access rule changing from optional to mandatory.",
-    "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
-    "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
-    "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "New records in this subject lane",
-    "Repeated entities",
-    "Evidence upgrades",
-    "Contradictions"
-  ]
+    "Voluntary identity or wallet systems becoming mandatory",
+    "Identity linked to payments, benefits, health, travel or platform access",
+    "International standards becoming law or procurement conditions",
+    "Government dependence on a small vendor group",
+    "Emergency infrastructure becoming permanent",
+    "Risk or eligibility decisions reused across unrelated systems",
+    "Legal, technical or political reversals that weaken convergence"
+  ],
+  "missionConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Surveillance State Clock is the highest canonical pressure index at 92%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
+  "controlPathways": [
+    "Information, media and platform access: Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
+    "Money, banking and payment access: Payment, custody and financial identity can make participation conditional.",
+    "Procurement and public-private implementation: Public authority can become dependent on private operators of critical infrastructure.",
+    "Security, intelligence and emergency powers: Crisis and security powers can accelerate integration and become permanent.",
+    "Law, treaties and standards: Common rules can turn policy preference into cross-jurisdiction operating requirements.",
+    "Health, biosecurity and mobility: Health records and emergency credentials can become cross-border access controls.",
+    "Identity, credentials and biometrics: Reusable identity can connect decisions across otherwise separate services.",
+    "Data, cloud and AI infrastructure: Shared data and automated decisions can centralise practical gatekeeping."
+  ],
+  "speculativeTrajectory": "If the pattern continues, the most plausible outcome is a de facto governance layer rather than one dramatic declaration: compatible rules and public-private infrastructure connect identity, payments, AI, health, security, mobility and information access. This could make world-government-like functions or currency-like controls technically possible without proving one central authority. A one-world religion claim remains weak without direct evidence of mandatory doctrine and enforcement.",
+  "counterpoint": "The thesis weakens when participation remains voluntary, systems are decentralised and reversible, data stays separated, open standards preserve exit, meaningful competition exists, courts enforce rights, and primary records show parallel development rather than common enforcement.",
+  "practicalMeaning": "Follow implementation rather than rhetoric: identify the legal mandate, funding source, procurement contract, technical operator, shared identifier, data exchange, enforcement power, appeal route, lock-in mechanism and beneficiary.",
+  "analyticConfidence": {
+    "score": 73,
+    "band": "substantial analytic support",
+    "meaning": "Support for the observed convergence pattern, not probability that a scenario will occur."
+  },
+  "actorMap": [
+    {
+      "name": "SEC Complaint",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 13,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 12,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Exercise or conversion of derivative security",
+      "documentedRole": "reportedTransaction",
+      "roleGroup": "security, intelligence and emergency power",
+      "authority": "",
+      "instrument": "",
+      "action": "reportedTransaction",
+      "whyItMatters": "This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "entity-daily-briefs.html",
+      "records": 58,
+      "sources": [
+        "data/relationship-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Corporate-state convergence",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "corporate ownership and capital",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 55,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Information and narrative control",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "media and information access",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Identity, surveillance and access",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "technology, identity, data and platforms",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 37,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "F & M MICRO PRODUCTS INC — General Services Administration",
+      "documentedRole": "Contract",
+      "roleGroup": "corporate ownership and capital",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places F & M MICRO PRODUCTS INC — General Services Administration inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 36,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Grant, award or other acquisition",
+      "documentedRole": "reportedTransaction",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "reportedTransaction",
+      "whyItMatters": "This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "entity-daily-briefs.html",
+      "records": 34,
+      "sources": [
+        "data/relationship-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Consolidated Sanctions List (Non-SDN Lists)",
+      "documentedRole": "Finding",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Finding",
+      "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 28,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Global governance convergence",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 28,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Skip to main content",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 27,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "ATT MOBILITY LLC — Department of Defense",
+      "documentedRole": "Contract",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 22,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Attorney Review Protocol for Epstein Files",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "BOP Video Footage",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Customs and Border Protection (CBP)",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "DOJ Disclosures",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Epstein Library",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Facebook",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Federal Bureau of Investigation (FBI)",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Federal Bureau of Prisons (BOP)",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Federal Bureau of Prisons (BOP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "First Phase of Declassified Epstein Files",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Florida",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Florida inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "House Disclosures",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "LinkedIn",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Maxwell Proffer",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Maxwell Proffer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Memoranda and Correspondence",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Memoranda and Correspondence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Search Full Library",
+      "documentedRole": "CourtCase",
+      "roleGroup": "public authority and regulation",
+      "authority": "",
+      "instrument": "",
+      "action": "CourtCase",
+      "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 21,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "operated or published by",
+      "documentedRole": "operatedBy",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "operatedBy",
+      "whyItMatters": "This record places operated or published by inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "entity-daily-briefs.html",
+      "records": 20,
+      "sources": [
+        "data/relationship-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Money, currency and access",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "money, banking and payment infrastructure",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 17,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "4 - Keenova Therapeutics plc (0001567892) (Issuer)",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places 4 - Keenova Therapeutics plc (0001567892) (Issuer) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 16,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Security and emergency power",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "security, intelligence and emergency power",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 16,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    }
+  ],
+  "implementationChain": [
+    {
+      "stage": 1,
+      "title": "Agenda and standards",
+      "explanation": "Multilateral bodies, regulators, industry groups and standards organisations define common objectives and technical requirements."
+    },
+    {
+      "stage": 2,
+      "title": "Law, funding and procurement",
+      "explanation": "Governments translate selected objectives into law, budgets, tenders, licences or compliance duties."
+    },
+    {
+      "stage": 3,
+      "title": "Infrastructure and vendor dependency",
+      "explanation": "Technology, consulting, payment, security and cloud vendors build the operating systems."
+    },
+    {
+      "stage": 4,
+      "title": "Interoperability and shared identity",
+      "explanation": "Identity, payment, health, mobility, platform and public-service systems exchange credentials or status."
+    },
+    {
+      "stage": 5,
+      "title": "Conditional access and enforcement",
+      "explanation": "Eligibility, accounts, licences, travel, benefits or payment access can be restricted across connected systems."
+    },
+    {
+      "stage": 6,
+      "title": "Permanence and lock-in",
+      "explanation": "Contracts, data standards, sunk costs and emergency measures make reversal difficult without a single world state."
+    }
+  ],
+  "scenarioMatrix": [
+    {
+      "id": "functional-convergence",
+      "title": "Functional global governance without a single world state",
+      "status": "speculative scenario — not a factual forecast",
+      "plausibilityBand": "moderate-to-high under continuation of current signals",
+      "trajectory": "Compatible standards, public procurement and shared vendors create common governance effects while sovereignty formally remains national.",
+      "evidenceNeeded": [
+        "Binding cross-jurisdiction implementation",
+        "Shared technical standards",
+        "Documented identity, payment or eligibility exchange"
+      ],
+      "disconfirmingEvidence": [
+        "Durable decentralisation",
+        "Independent technical exit",
+        "Effective local veto and appeal"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "conditional-access",
+      "title": "Conditional-access society",
+      "status": "speculative scenario — not a factual forecast",
+      "plausibilityBand": "moderate enabling conditions; outcome not established",
+      "trajectory": "Identity, payment, health, mobility and platform status become linked, allowing a decision in one system to affect another.",
+      "evidenceNeeded": [
+        "Mandatory linkage rules",
+        "Shared identifiers",
+        "Cross-domain enforcement records"
+      ],
+      "disconfirmingEvidence": [
+        "Strict purpose limitation",
+        "Offline alternatives",
+        "Separated databases and effective appeal"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "one-world-government-threshold",
+      "title": "Formal one-world government threshold",
+      "status": "high-bar speculative scenario — currently unproven",
+      "plausibilityBand": "low on present evidence; functional convergence is more plausible",
+      "trajectory": "A central authority would require binding law-making, taxation, enforcement, adjudication and removal of meaningful national veto.",
+      "evidenceNeeded": [
+        "Supranational constitutional authority",
+        "Central taxation",
+        "Direct compulsory jurisdiction"
+      ],
+      "disconfirmingEvidence": [
+        "Sovereign vetoes",
+        "Treaty withdrawal",
+        "Competing blocs",
+        "Constitutional rejection"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "one-world-currency-threshold",
+      "title": "One-world currency or unified payment-control threshold",
+      "status": "speculative scenario — enabling infrastructure only",
+      "plausibilityBand": "low for one legal currency; moderate for interoperable digital payment governance",
+      "trajectory": "Common wallet, identity, settlement and compliance standards could create currency-like control across different legal currencies.",
+      "evidenceNeeded": [
+        "Mandatory legal-tender consolidation",
+        "Global settlement authority",
+        "Restrictions on competing rails"
+      ],
+      "disconfirmingEvidence": [
+        "Cash preservation",
+        "Competing currencies",
+        "Privacy-preserving offline payment"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "one-world-religion-threshold",
+      "title": "One-world religion threshold",
+      "status": "speculative scenario — weak and currently unsupported",
+      "plausibilityBand": "low without direct doctrinal and enforcement evidence",
+      "trajectory": "Shared ethical language would have to become mandatory doctrine backed by central religious authority and sanctions.",
+      "evidenceNeeded": [
+        "Mandatory doctrine",
+        "Central religious authority",
+        "Compulsory adherence"
+      ],
+      "disconfirmingEvidence": [
+        "Religious pluralism",
+        "Freedom of belief",
+        "Independent institutions"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "fragmented-blocs",
+      "title": "Competing digital-control blocs",
+      "status": "alternative speculative scenario",
+      "plausibilityBand": "moderate and compatible with geopolitical fragmentation",
+      "trajectory": "Rival blocs build incompatible identity, payment, AI, security and information regimes rather than one global system.",
+      "evidenceNeeded": [
+        "Divergent standards",
+        "Bloc-specific vendors",
+        "Restricted interoperability"
+      ],
+      "disconfirmingEvidence": [
+        "Successful global interoperability",
+        "Reduced sanctions and technical fragmentation"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    },
+    {
+      "id": "decentralised-countertrend",
+      "title": "Decentralised and rights-preserving countertrend",
+      "status": "alternative speculative scenario",
+      "plausibilityBand": "plausible where law and technology preserve exit and appeal",
+      "trajectory": "Open standards, privacy law, cash, judicial review, local control and competition prevent convergence from becoming coercive.",
+      "evidenceNeeded": [
+        "Working opt-outs",
+        "Open-source systems",
+        "Successful legal limits"
+      ],
+      "disconfirmingEvidence": [
+        "Mandatory central credentials",
+        "Vendor lock-in",
+        "Elimination of offline alternatives"
+      ],
+      "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+    }
+  ],
+  "currentCriticalClocks": [
+    {
+      "slug": "surveillance-state",
+      "title": "Surveillance State Clock",
+      "score": 92,
+      "route": "timers.html#surveillance-state"
+    }
+  ],
+  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity."
 }

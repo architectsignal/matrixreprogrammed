@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:48:27.380Z",
+  "generatedAt": "2026-07-23T06:46:00.128Z",
   "pageCount": 132,
   "output": "downloads/full-site-function-tool-audit.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Full Site Function and Tool Audit",
-    "contentHash": "878466334688e4665ed96aae50d0ce1bf34944cf44c5c8f79e78aebbb6fa05dd",
+    "contentHash": "177188afb3772801b41d0d64ff427fd14b06bdb84a694d4db319277e96d7d6e5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -36,10 +36,8 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-E09138F879103681",
       "EP-AI-002",
       "EP-AI-003",
-      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -87,6 +85,7 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
@@ -126,7 +125,7 @@
       "ASC-REVIEW-B1D0DFCBB6CF0079",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
@@ -146,16 +145,17 @@
       "ASC-REVIEW-AF658BEE2D866332",
       "ASC-REVIEW-1C806B2577C4D44C",
       "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236"
+      "ASC-REVIEW-3A6BF3064A28E236",
+      "ASC-REVIEW-3B7DCAEF5ABCE701"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 134,
+      "disputedClaimCount": 135,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 133,
-      "moneyRecordCount": 134
+      "relationshipCount": 134,
+      "moneyRecordCount": 135
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 133 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 134 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 133 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 134 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:48:27.380Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:46:00.128Z"
   }
 }

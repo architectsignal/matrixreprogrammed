@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:45:45.123Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-23T06:43:23.561Z",
+  "pageCount": 122,
   "output": "downloads/case-status-dashboard.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Case Status Dashboard",
-    "contentHash": "bf59f0d368c0330da6e3459df40419994b0b93e2a3b85f19bfbcfedc8c3caf4a",
+    "contentHash": "73fb1eedc55093f996c4d62452a7f319f4b0226e8dd57706c956c338392cd0e0",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -37,10 +37,20 @@
       "b5a32a76f19d554c484e917f",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
+      "source-change-6abef96c5fc5ea85ab0487a7",
+      "source-change-9848ec4b4c3f6c2693269839",
+      "source-change-cb7ce67fe443d7c98b486d34",
+      "157cdab04b61ae6309c0c713",
       "daily-revelation-report",
+      "source-change-b74173cd5f46b45d0e8f3fe1",
+      "source-change-ff1a3a77816af400f09ab95e",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-31355A183BF17CCD",
+      "9848ec4b4c3f6c2693269839",
       "7f5b91c14c671bd24b8bbd81",
+      "source-change-1abf4240a692c2dda1388443",
+      "source-change-157cdab04b61ae6309c0c713",
+      "source-change-fbfb678d637444fe7b488644",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
       "ASC-REVIEW-6809880AE2446DD1",
@@ -58,8 +68,6 @@
       "65debd126cdfa5f7547a3eca",
       "7dcf4ef18ea1f86d01068773",
       "3c9c23f7f9a1cec81ef90f59",
-      "ASC-REVIEW-2EAFF47D9C619640",
-      "ASC-REVIEW-AF729BF83147A0D4",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-5F69F7CCEE3F7274",
@@ -72,17 +80,12 @@
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-4E0C4B2A65FF8D42",
       "ASC-REVIEW-19181472DB04522E",
-      "ASC-REVIEW-CB735F163FB2AAC6",
+      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-9EA06AB515E1538B",
-      "ASC-REVIEW-19658B800C457D28",
       "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-8BCC3EF09DEF8D83",
-      "ASC-REVIEW-8DD092B1DAA0D076",
-      "ASC-REVIEW-EFF7CF8A8CCC60F7",
-      "ASC-REVIEW-97089BE83A5DC2E4",
       "ASC-REVIEW-CF855D1D23095240",
       "ASC-REVIEW-8A2ACAFD47272636",
+      "ASC-REVIEW-39EC1E0CE66D921D",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-B3BA7D663A9BE4B2",
@@ -124,8 +127,8 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-86E5F84065E82718",
       "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-8DCAFBC1E6283393",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -143,33 +146,30 @@
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED"
+      "ASC-REVIEW-0649A6CC727CB73D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 8,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 18,
+      "disputedClaimCount": 95,
       "newEntityCount": 18,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 93,
-      "moneyRecordCount": 94
+      "relationshipCount": 90,
+      "moneyRecordCount": 92
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Case Status Dashboard.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Case Status Dashboard.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 92,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 93 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer; BlackRock → Ishares: capital layer; BlackRock → Private Markets Infrastructure Expansion: capital layer",
+        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; content changed: USAspending.gov — Recent Contract Awards; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer; BlackRock → Ishares: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 93 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
+          "content changed: USAspending.gov — Recent Contract Awards",
           "BlackRock → Aladdin Risk And Portfolio Platform: capital layer",
           "BlackRock → Index Funds And Etfs: capital layer",
-          "BlackRock → Ishares: capital layer",
-          "BlackRock → Private Markets Infrastructure Expansion: capital layer"
+          "BlackRock → Ishares: capital layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:45:45.123Z"
+    "intelligenceFreshnessDate": "2026-07-22T07:44:23.482Z"
   }
 }

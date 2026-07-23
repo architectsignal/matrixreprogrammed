@@ -1,6 +1,6 @@
 # Readable User Briefs
 
-Generated: 2026-07-22T06:54:21.698Z
+Generated: 2026-07-23T06:51:46.322Z
 
 ## What matters today
 Start with the strongest route, the highest clock, the top capital lane and the most important missing record. These are the quickest paths to understanding the structure.

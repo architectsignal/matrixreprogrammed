@@ -1,7 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-22T06:55:29.655Z",
+  "generatedAt": "2026-07-23T06:52:52.781Z",
+  "platform": "Cloudflare Worker + D1 + Cloudflare Assets",
   "changed": [
+    "membership.html",
+    "_site/membership.html",
     "_site/membership",
     "_site/member-login.html",
     "_site/member-login",
@@ -14,6 +17,12 @@
     "member-dashboard.html"
   ],
   "paypalCheckout": true,
-  "paidAccessPolicy": "Server-verified PayPal ACTIVE subscriptions only",
-  "boundary": "Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes."
+  "canonicalOriginPolicy": "All www requests receive a method-preserving 308 redirect to the apex Cloudflare Worker origin before authentication or asset routing",
+  "paidAccessPolicy": "Server-verified PayPal ACTIVE subscriptions only; global checkout shutdown is evaluated first, then a second checkout is blocked for current state-backed and legacy active/trialing entitlements",
+  "sessionCookiePolicy": "PayPal, billing, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback",
+  "newsletterConsentPolicy": "Membership and newsletter forms send canonical explicit consent; the server retains compatibility for marketingConsent",
+  "newsletterDeliveryPolicy": "Welcome email and selected first daily brief are delivered through the D1 outbox and Brevo lifecycle; the detailed intelligence builder falls back safely",
+  "dashboardTierPolicy": "Free dashboards do not call Intelligence-only watchlist routes during initial loading; paid members are routed to billing management",
+  "dataRoutePolicy": "Shared Cloudflare asset scripts use canonical root data routes so nested source pages and public routes load identical generated datasets",
+  "boundary": "Canonical membership, passwordless authentication, protected assets and PayPal subscription pages are restored before Cloudflare Assets are copied to both HTML and extensionless routes."
 }

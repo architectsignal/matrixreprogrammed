@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-07-22T06:49:42.625Z",
+  "generatedAt": "2026-07-23T06:47:16.017Z",
   "pageCount": 89,
   "output": "downloads/mission-health-audit.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Mission Health Audit",
-    "contentHash": "0bbcf415e915ac25e12a4d3ca5dbbec8ebbc428fd50f40798f4e384efd454e3d",
+    "contentHash": "d198690675cc5e89bd55924914a48048ee3fc41d492c62191d34ab420b02835c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "594100b62a47db521fe2a128",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "34805734b1ad3b73f0ede0d8",
-      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "9f77464e401ac59ad1adb812",
       "88ef9baf356c096816236956",
@@ -20,6 +19,7 @@
       "d0b647e325275daa6d824a49",
       "1769af26a7bda813406cd8f5",
       "9f3052b5d8cec138a2a37e8c",
+      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "ec1316fb1fb70c83dc347bb6",
       "72ef7895f95288946ccb3cff",
@@ -29,13 +29,12 @@
       "cee347fbc3752c6e0f890457",
       "e4a0df7a70409789454722e7",
       "41772e5c9af7970ddd7d5aac",
+      "9848ec4b4c3f6c2693269839",
       "310372a3fc518b6aabbc5d07",
       "e72d22f4f28eb53e3173d0a6",
       "bdd7e454126ebfa6319a594c",
       "f59da50ababa3ddae79a8f1c",
       "9b9816cd15ea0d816c77affa",
-      "cf7cadeacdac21e216762915",
-      "97e1d4f839d224fc4740a279",
       "c3f01983899a22639032d873",
       "3d90c7929346a292b6c46095",
       "7f5b91c14c671bd24b8bbd81",
@@ -56,7 +55,8 @@
       "15adccba38bd91644b561261",
       "f17e0de0ef7b66aa842ac3a1",
       "EFS-001-R006",
-      "declassified-files-2026-07-17-ecb37135",
+      "war-machine-2026-07-22-a7c25c2e",
+      "157cdab04b61ae6309c0c713",
       "ff1a3a77816af400f09ab95e",
       "eb3448928554960651da56f6",
       "daily-revelation-report",
@@ -78,18 +78,12 @@
       "def94e0a086f2eac4c5ad91a",
       "b079bec5bc869b0463d0584c",
       "360e80c162081c85d2c680ef",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
-      "digital-euro-parliament-hurdle-2026-06-23",
-      "epstein-files-2026-06-19-what-s-missing-from-the-epstein-files-questions-persist-about-unexplai",
-      "a8410fa97662a14e93e750e5",
-      "495efbb6e1ee304347ae3bdf",
-      "c495decb9e41ce889da20ed1",
-      "c8acdb17acd478f0ba121c11",
-      "73cc3720186525d3e995a15a",
-      "412d52be38701db8d482e1b0",
-      "5ae25686df545cf091714f21",
+      "war-machine-2026-07-22-af261a24",
+      "source-change-1abf4240a692c2dda1388443",
+      "source-change-fbfb678d637444fe7b488644",
+      "cf7cadeacdac21e216762915",
+      "97e1d4f839d224fc4740a279",
+      "1abf4240a692c2dda1388443",
       "fbfb678d637444fe7b488644",
       "58a212e4e1a93007ec5b3d6d",
       "535d2f595c3ec1621e13dd0f",
@@ -146,21 +140,27 @@
       "d58b941fc9cce2a326f72d6c",
       "3613b1527b81a2beec61607b",
       "79ea408cdb375b45f1060e6c",
-      "osint"
+      "osint",
+      "3a612824bd2383e3b7554062",
+      "41238c8b70e678402d643e26",
+      "a42c91c655cd066504ed6515",
+      "b20bf5953df956897ee110a3",
+      "511ed227bb4be58b582ebb8d",
+      "source-change-6abef96c5fc5ea85ab0487a7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 45,
+      "primarySourceCount": 48,
       "disputedClaimCount": 3,
       "newEntityCount": 24,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 25,
-      "moneyRecordCount": 45
+      "relationshipCount": 24,
+      "moneyRecordCount": 41
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 45 A/B-grade public-record items are materially relevant to Mission Health Audit.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json)",
+        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Mission Health Audit.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas Part 02 (Final),” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas Part 02 (Final) This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “SEC FILING FEED.,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "SEC Filing Feed | Matrix Reprogrammed MATRIX REPROGRAMMED System Feed Intake VRC Batch You are here Site route This page is part of the wider reporting system. Start with the summary, then open the evidence route or research tools for deeper source work. Summa",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Follow The Money Watch; Media / Narrative Theory; Media / Narrative Theory; MONETISATION DASHBOARD.; Elite Power Theory; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
   }
 }

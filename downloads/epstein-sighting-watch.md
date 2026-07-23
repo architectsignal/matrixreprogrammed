@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-23T03:44:23.357Z
+Generated: 2026-07-23T06:50:31.139Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -68,13 +68,3 @@ Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Questio
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)
-
-### US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)

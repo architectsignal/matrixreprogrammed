@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:50:09.879Z",
+  "generatedAt": "2026-07-23T06:47:41.775Z",
   "pageCount": 120,
   "output": "downloads/outcome-briefings.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Outcome Briefings",
-    "contentHash": "bfac662488e067bdec896000f5ad96e3737784127bdececda7a90b506ebdc848",
+    "contentHash": "e1a9a979daf2694045d5d8e9aeaca60def2d90a3c909dc1787eb669fc141f507",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -24,43 +24,44 @@
       "7f5b91c14c671bd24b8bbd81",
       "ecd4a1111010f13b2d74bf8c",
       "c1520a15d6e62871a66c558e",
+      "157cdab04b61ae6309c0c713",
+      "eb3448928554960651da56f6",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
-      "eb3448928554960651da56f6",
-      "e72d22f4f28eb53e3173d0a6",
       "ASC-001",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
+      "e72d22f4f28eb53e3173d0a6",
       "a5e5d4ec4df4352ea242ea3f",
-      "594100b62a47db521fe2a128",
       "6510364e9b1a1504b9f99521",
-      "34805734b1ad3b73f0ede0d8",
       "e4a0df7a70409789454722e7",
       "ASC-REVIEW-7B1A15ED77443F13",
+      "594100b62a47db521fe2a128",
       "65debd126cdfa5f7547a3eca",
       "bb5dfe90c29929d84ce60e6d",
-      "76a719654ec3312153163154",
       "network-defence",
       "f17e0de0ef7b66aa842ac3a1",
-      "c5d9edd2562c4c00e3ddfdfb",
       "3c9c23f7f9a1cec81ef90f59",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "d0b647e325275daa6d824a49",
+      "76a719654ec3312153163154",
       "b5a32a76f19d554c484e917f",
       "7dcf4ef18ea1f86d01068773",
+      "c5d9edd2562c4c00e3ddfdfb",
       "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "bf773d3ec83b9b3768dfce6b",
-      "ec1316fb1fb70c83dc347bb6",
       "7fc07964a27914afe516c45b",
       "8a10f165e16d0f8648cb8ec4",
-      "7c05d9244c4620950350cf27",
       "41772e5c9af7970ddd7d5aac",
+      "ec1316fb1fb70c83dc347bb6",
       "310372a3fc518b6aabbc5d07",
       "OB-005",
       "osint",
+      "7c05d9244c4620950350cf27",
       "f59da50ababa3ddae79a8f1c",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E8F3DDB7E3724A74",
@@ -69,6 +70,7 @@
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "9848ec4b4c3f6c2693269839",
       "EPSTEIN-TRIGGER-2026-07-03",
       "76cf5cb1f42b219ea38128f4",
       "b7e4a66335a706ef5097117f",
@@ -144,23 +146,21 @@
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-C7A00AFA602DD2A9",
       "ASC-REVIEW-3266CA18BAEC4ACB",
-      "ASC-REVIEW-55AEF4F6803A279A",
-      "ASC-REVIEW-A5C911DFEE587573",
-      "ASC-REVIEW-0F8586CC2CBF8ED4"
+      "ASC-REVIEW-55AEF4F6803A279A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 84,
+      "primarySourceCount": 14,
+      "disputedClaimCount": 82,
       "newEntityCount": 45,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 90,
-      "moneyRecordCount": 91
+      "relationshipCount": 88,
+      "moneyRecordCount": 89
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Outcome Briefings.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Outcome Briefings.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; The strongest public pattern is convergence across access systems.; Influence should be mapped through infrastructure, filings and contracts.; Gold is a custody map as much as a tonnage table.; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:50:09.879Z"
+    "intelligenceFreshnessDate": "2026-07-23T06:47:41.775Z"
   }
 }

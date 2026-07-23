@@ -38,6 +38,9 @@ jobs:
       - name: Decode bundled artwork batches
         run: node scripts/install-bundled-card-art.js
 
+      - name: Resolve decoded individual artwork
+        run: npm run ensure-shared-assets
+
       - name: Install pending card artwork
         run: node scripts/install-card-artwork-inbox.js
 
@@ -61,7 +64,7 @@ jobs:
             echo "No artwork changes to commit."
             exit 0
           fi
-          git commit -m "Automated Puppets artwork install and queue refresh"
+          git commit -m "Automated card artwork install and queue refresh"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

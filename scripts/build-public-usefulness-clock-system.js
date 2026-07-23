@@ -12,7 +12,7 @@ const scripts = [
   'build-clock-wall.js',
   'enrich-public-usefulness-clock-evidence.js',
   'render-public-usefulness-clock-wall.js',
-  'upgrade-current-clock-intelligence.js',
+  'run-current-clock-intelligence.js',
   'render-current-clock-intelligence-ui.js',
   'current-clock-intelligence-test.js'
 ];

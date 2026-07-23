@@ -38,7 +38,14 @@ jobs:
       - name: Decode bundled artwork batches
         run: node scripts/install-bundled-card-art.js
 
-      - name: Resolve decoded individual artwork
+      - name: Build Puppets artwork batch 03
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-lato
+          python3 -m pip install --break-system-packages pillow
+          python3 scripts/build-puppets-batch-03.py
+
+      - name: Resolve decoded and generated individual artwork
         run: npm run ensure-shared-assets
 
       - name: Install pending card artwork

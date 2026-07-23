@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-22T19:43:08.257Z
-Live Intel source window: 2026-07-22T19:42:55.318Z
+Generated: 2026-07-23T03:44:23.412Z
+Live Intel source window: 2026-07-23T03:44:17.940Z
 Tracked cards: 873
 Cards with current matched records: 95
 Cards with no new verified record: 778
@@ -5141,8 +5141,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-16T06:24:40.000Z
+- Current matched records: 2
+- Latest record: 2026-07-21T15:27:26.000Z
+- 2026-07-21T15:27:26.000Z — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
 - 2026-07-16T06:24:40.000Z — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 
 ## WEEKLY INVESTIGATION REPORT.

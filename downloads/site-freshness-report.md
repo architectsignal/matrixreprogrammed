@@ -11,7 +11,7 @@ Medium priority pages: 1643
 Pages with missing rules: 421
 Auto-update eligible figures: 2
 Manual-review figures: 108
-Missing-rule figures: 946
+Missing-rule figures: 947
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -30,7 +30,7 @@ Missing-rule figures: 946
 - _site/machine-digest.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 9 figure/stat markers; 9 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
@@ -62,7 +62,7 @@ Missing-rule figures: 946
 - _site/machine-digest.html: 18 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
-- live-intel.html: 8 figure(s) need source rules.
+- live-intel.html: 9 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - _site/daily-brain-brief.html: 6 figure(s) need source rules.

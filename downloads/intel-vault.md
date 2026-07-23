@@ -1,11 +1,21 @@
 # Intel Vault
 
-Updated: 2026-07-22T19:42:55.318Z
+Updated: 2026-07-23T03:44:17.940Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
+- Published: 2026-07-15T23:34:19.000Z
+- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
+- Source class: primary-or-official
+
+### 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
+- Published: 2026-07-15T22:41:09.000Z
+- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
+- Source class: primary-or-official
 
 ### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
 - Published: 2026-07-15T17:32:31.000Z

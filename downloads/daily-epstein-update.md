@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-22T19:43:08.157Z
-Live Intel source window: 2026-07-22T19:42:55.318Z
+Generated: 2026-07-23T03:44:23.311Z
+Live Intel source window: 2026-07-23T03:44:17.940Z
 Latest source publication: 2026-07-22T18:10:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-12 current Epstein-lane record leads remain inside the active source window.
+11 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -65,6 +65,16 @@ External review finds no wrongdoing in Gates Foundation–Epstein links Al Jazee
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+- Published: 2026-07-21T15:27:26.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+
+Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 - Published: 2026-07-17T23:17:00.000Z
 - Source: Google News / Epstein timeline and files
@@ -112,26 +122,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
 
 US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-- Published: 2026-07-15T23:34:19.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
-
-3 major takeaways from Todd Blanche's attorney general confirmation hearing PBS
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-- Published: 2026-07-15T22:41:09.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
-
-'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties Fox News
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-22T19:42:55.318Z
+Collection completed: 2026-07-23T03:44:17.940Z
 Latest source publication: 2026-07-22T18:10:00.000Z
 Collection status: fresh-items-added
-New items this collection: 3
+New items this collection: 4
 
 ## Freshness truth
-3 new source item(s) entered the seven-day window during this collection.
+4 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -50,11 +50,29 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: From lithium to nickel: How the UN is helping countries make the most of critical minerals
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Nicaragua continues to weaken political freedoms, UN warns
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167999
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Nicaragua continues to weaken political freedoms, UN warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167995
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Thousands prevented from returning home to southern Lebanon
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168003
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Thousands prevented from returning home to southern Lebanon
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — World News in Brief: Aid for Ukraine, drone attacks in Sudan, DR Congo deaths, neurological disorders in the Americas
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168000
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World News in Brief: Aid for Ukraine, drone attacks in Sudan, DR Congo deaths, neurological disorders in the Americas
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
   - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
@@ -79,6 +97,12 @@ New items this collection: 3
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
+  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167993
@@ -283,16 +307,4 @@ New items this collection: 3
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-15 — 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

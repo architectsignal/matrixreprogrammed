@@ -1,7 +1,7 @@
 REFRESH MATRIX CARD ARTWORK PIPELINE
 Requested: 2026-07-23
 Target: main
-Purpose: decode Puppets of Interest batch 01 into ten separate image files, resolve them into the artwork registry, rebuild the card wall and refresh the next batch queue.
-Batch: puppets-of-interest-batch-01
+Purpose: decode Puppets of Interest batch 02 into ten separate image files, resolve them into the artwork registry, rebuild the card wall and refresh the next batch queue.
+Batch: puppets-of-interest-batch-02
 Expected individual assets: 10
-Nonce: 2026-07-23T19:45:00+02:00
+Nonce: 2026-07-23T20:45:00+02:00

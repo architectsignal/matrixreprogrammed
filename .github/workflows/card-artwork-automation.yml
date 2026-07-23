@@ -35,6 +35,9 @@ jobs:
       - name: Build current site assets
         run: npm run ensure-shared-assets
 
+      - name: Decode bundled artwork batches
+        run: node scripts/install-bundled-card-art.js
+
       - name: Install pending card artwork
         run: node scripts/install-card-artwork-inbox.js
 

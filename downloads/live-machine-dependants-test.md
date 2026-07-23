@@ -1,11 +1,11 @@
 # Live Machine Dependants Test
 
-Generated: 2026-07-23T08:44:46.484Z
+Generated: 2026-07-23T14:31:04.219Z
 
 - Result: PASS
-- Live Intel: 2026-07-23T08:44:38.198Z
-- Daily Epstein: 2026-07-23T08:44:44.091Z
-- Card feed: 2026-07-23T08:44:44.186Z
+- Live Intel: 2026-07-23T14:30:56.982Z
+- Daily Epstein: 2026-07-23T14:31:01.636Z
+- Card feed: 2026-07-23T14:31:01.741Z
 - Tracked cards: 874
 - Andrew Tate routes: controlled-opposition/andrew-tate.html, card-artwork-batches/batch-006.html, card-artwork-batches.html, controlled-opposition-deck.html
 

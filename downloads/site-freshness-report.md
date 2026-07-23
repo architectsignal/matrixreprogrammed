@@ -30,7 +30,7 @@ Missing-rule figures: 948
 - _site/machine-digest.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 9 figure/stat markers; 9 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - source-changes.html: 40 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
@@ -62,7 +62,7 @@ Missing-rule figures: 948
 - _site/machine-digest.html: 18 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
-- live-intel.html: 9 figure(s) need source rules.
+- live-intel.html: 8 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - source-changes.html: 6 figure(s) need source rules.
@@ -83,9 +83,9 @@ Missing-rule figures: 948
 - _site/power-atlas.html: 3 figure(s) need source rules.
 - admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 - daily-drop.html: 3 figure(s) need source rules.
+- entity-registry.html: 3 figure(s) need source rules.
 - follow-the-money.html: 3 figure(s) need source rules.
 - power-atlas.html: 3 figure(s) need source rules.
-- _site/news.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

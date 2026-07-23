@@ -13,10 +13,12 @@ const scripts = [
   'build-clock-wall.js',
   'enrich-public-usefulness-clock-evidence.js',
   'inject-current-clock-evidence.js',
-  'render-public-usefulness-clock-wall.js',
   'run-current-clock-intelligence.js',
+  'run-july-2026-full-clock-sweep.js',
+  'render-public-usefulness-clock-wall.js',
   'render-current-clock-intelligence-ui.js',
-  'current-clock-intelligence-test.js'
+  'current-clock-intelligence-test.js',
+  'july-2026-all-clock-sweep-test.js'
 ];
 
 for (const script of scripts) {
@@ -27,4 +29,4 @@ for (const script of scripts) {
   });
 }
 
-console.log('Public usefulness clock system built from current evidence, scored, current-status classified, fact/speculation separated and release-gated.');
+console.log('Mission Timer system built from July 2026 evidence: 20 practical and 49 speculative clocks scored, rendered, separated and release-gated.');

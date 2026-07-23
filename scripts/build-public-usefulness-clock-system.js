@@ -17,7 +17,7 @@ const scripts = [
   'run-july-2026-full-clock-sweep.js',
   'render-public-usefulness-clock-wall.js',
   'render-current-clock-intelligence-ui.js',
-  'current-clock-intelligence-test.js',
+  'run-current-clock-intelligence-test.js',
   'july-2026-all-clock-sweep-test.js'
 ];
 

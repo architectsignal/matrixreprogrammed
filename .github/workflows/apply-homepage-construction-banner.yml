@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   patch-source-only:
-    name: Patch homepage source without deploying
+    name: Patch and verify homepage support banner
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -41,15 +41,21 @@ jobs:
             fs.writeFileSync(file, source);
           }
           NODE
+          node --check scripts/patch-homepage-construction-banner.js
           node scripts/patch-homepage-construction-banner.js
           node - <<'NODE'
           const fs = require('fs');
           const html = fs.readFileSync('index.html', 'utf8');
           const owner = fs.readFileSync('scripts/build-cloudflare-output.js', 'utf8');
+          const report = JSON.parse(fs.readFileSync('downloads/homepage-construction-banner.json', 'utf8'));
           const exact = value => (html.match(new RegExp(value, 'g')) || []).length;
           if (exact('id="matrix-construction-banner"') !== 1) throw new Error('Homepage does not contain exactly one construction banner');
-          if (exact('UNDER CONSTRUCTION — THE MACHINE IS STILL BUILDING\\.') !== 1) throw new Error('Construction message is missing or duplicated');
+          if (exact('UNDER CONSTRUCTION — HELP US BUILD THE MACHINE\\.') !== 1) throw new Error('Professional construction message is missing or duplicated');
+          if (exact('https://gofund\\.me/0a3c74fc9') !== 1) throw new Error('GoFundMe support link is missing or duplicated');
+          if (!html.includes('high-memory GPUs')) throw new Error('GPU infrastructure explanation is missing');
+          if (!html.includes('target="_blank" rel="noopener noreferrer"')) throw new Error('External support link safety attributes are missing');
           if (!owner.includes("require('./patch-homepage-construction-banner.js');")) throw new Error('Final Cloudflare output owner is not wired');
+          if (!report.ok || report.supportRoute !== 'https://gofund.me/0a3c74fc9') throw new Error('Construction banner report did not record the support route');
           NODE
 
       - name: Commit Git-only homepage repair
@@ -57,10 +63,10 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html scripts/build-cloudflare-output.js
+          git add index.html scripts/build-cloudflare-output.js downloads/homepage-construction-banner.json
           if git diff --cached --quiet; then
-            echo 'Homepage construction banner already current in Git.'
+            echo 'Homepage construction and support banner already current in Git.'
             exit 0
           fi
-          git commit -m 'Secure homepage construction banner in final build'
+          git commit -m 'Publish professional GoFundMe and GPU support banner'
           git push origin HEAD:main

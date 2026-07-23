@@ -38,12 +38,14 @@ jobs:
       - name: Install pending card artwork
         run: node scripts/install-card-artwork-inbox.js
 
-      - name: Refresh card manifest and artwork production queues
+      - name: Refresh card manifest, Puppets naming and artwork production queues
         run: |
           node scripts/build-card-download-manifest.js
           node scripts/build-card-artwork-batches.js
           node scripts/build-card-artwork-queue.js
           node scripts/patch-card-dossier-depth.js
+          node scripts/patch-homepage-power-deck-link.js
+          node scripts/patch-top-52-compat-marker.js
           node scripts/site-public-copy-intake-audit.js
 
       - name: Commit artwork automation output
@@ -56,7 +58,7 @@ jobs:
             echo "No artwork changes to commit."
             exit 0
           fi
-          git commit -m "Automated card artwork install and queue refresh"
+          git commit -m "Automated Puppets artwork install and queue refresh"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

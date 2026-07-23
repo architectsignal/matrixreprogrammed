@@ -1,13 +1,13 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-22T07:44:13.840Z",
+  "checkedAt": "2026-07-23T07:46:01.819Z",
   "selectedSources": 12,
   "fetchedSources": 12,
   "skippedSources": 0,
   "failedSources": 0,
-  "parsedItems": 498,
-  "newOrSeenFindings": 498,
+  "parsedItems": 503,
+  "newOrSeenFindings": 503,
   "ledgerFindings": 2500,
   "results": [
     {
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2196,
-      "bodyHash": "3603924d713581f071146a0825caab851945be5af5e44c5f5973e187d323c34b",
+      "bytes": 2193,
+      "bodyHash": "f344792458824ebea10fa96a5f8d38c06b0313be798ecc4c1e9e0fb14c4e4fb6",
       "itemCount": 1,
       "error": ""
     },
@@ -44,8 +44,8 @@
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 62559,
-      "bodyHash": "dac203ddcfbab62e5e9065efd206b196e2ffefaca356afaef3427ce8b44828de",
+      "bytes": 62840,
+      "bodyHash": "68c4085fff1f5119f83ac48adc71807a8153c619eae2b987816326ec401b542b",
       "itemCount": 14,
       "error": ""
     },
@@ -56,9 +56,9 @@
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "contentType": "application/atom+xml",
-      "bytes": 22768,
-      "bodyHash": "a91c839d84a653436dc51668dbec785c91ea1047cb6c106f79b126d2398194dc",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 22954,
+      "bodyHash": "7f87a9596fa59a722e456f029b047a8a8dd646a563f4af077eedcde4eaac8a93",
       "itemCount": 40,
       "error": ""
     },
@@ -83,8 +83,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "contentType": "application/json; charset=utf-8",
-      "bytes": 130551,
-      "bodyHash": "8d5e0d99a973ad7d3ddde9a7191397cbaa1dbc41410c9ffe85e86fd6e3c4d73f",
+      "bytes": 157906,
+      "bodyHash": "13893d04f5875967a76d6a96b118e986fad5da8d76b774683fd572d13e323fd6",
       "itemCount": 100,
       "error": ""
     },
@@ -96,9 +96,9 @@
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 49174,
-      "bodyHash": "34b60baf91d80013135472f0a5a949cef3603f20855164c9613352579e8e689e",
-      "itemCount": 94,
+      "bytes": 59603,
+      "bodyHash": "65aab3baa480d9339e21c13ae3a5b1ba5cf1be8b5bcc98a6dfad33a16f328ae8",
+      "itemCount": 100,
       "error": ""
     },
     {
@@ -109,8 +109,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43113,
-      "bodyHash": "22b80f6baa4765878efd7e51e82cd41baef41cff5278f71b1cb88ae4633f37ab",
+      "bytes": 43116,
+      "bodyHash": "c3ee30ed58cafae143cae484ca061c6acd1166de9db2219e2c69f67eac1d5be6",
       "itemCount": 18,
       "error": ""
     },
@@ -122,9 +122,9 @@
       "statusCode": 200,
       "finalUrl": "https://oversight.house.gov/release/",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 69164,
-      "bodyHash": "00b07ee1b3989929245a3d8946d571d625d582dc87f7cec8986c42b9411fcba7",
-      "itemCount": 11,
+      "bytes": 69473,
+      "bodyHash": "9feffbbe3bbcdf941f0a451151d86e3024d8f796ab238eda85eb8d822b7cc7bc",
+      "itemCount": 10,
       "error": ""
     },
     {
@@ -149,7 +149,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "e7a2b1a5b2e568f22bbf35475ff48c27b71c18ee4db598be8e846302ed993b21",
+      "bodyHash": "ddeb6a4591e8ad7cd82fd407b7d74260d464ba7045f5f2ecbfa0d1b1f8eb5c91",
       "itemCount": 15,
       "error": ""
     },
@@ -161,8 +161,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 103602,
-      "bodyHash": "e8f7c1a4ccdc41f5e58ae0d76132adc430faa9f3564e681aa6ae791389a06526",
+      "bytes": 103517,
+      "bodyHash": "9bf6b9fa224a24592399ca97b6ecee74ebfb0618b7e1c792b7ee0b9985321dfa",
       "itemCount": 9,
       "error": ""
     }

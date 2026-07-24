@@ -75,3 +75,5 @@ for(const forbidden of ['one family controls the world','secretly controls all',
 }
 
 console.log(`Behind the Curtain Pyramid PASS: ${pyramid.levels.length} levels, ${pyramid.chokePoints.length} choke points, ${living.candidates.filter(x=>x.rank&&x.rank<=10).length} living names, ${families.families.length} dynasties, ${pyramid.symbolicDossiers.length} symbolic dossiers.`);
+require('./behind-the-curtain-hidden-hand-test.js');
+require('./behind-the-curtain-capstone-test.js');

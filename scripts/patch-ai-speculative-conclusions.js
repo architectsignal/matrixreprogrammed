@@ -50,4 +50,10 @@ fs.writeFileSync(path.join(root, 'downloads', 'ai-speculative-conclusions-integr
   reviewed,
   touched
 }, null, 2));
+
+// This pass runs immediately before the executable living-intelligence regression test.
+// Reconcile any late Worker rewrites here so imports stay unique and the contact routes
+// remain owned by the strict production Worker.
+require('./finalize-contact-worker.js');
+
 console.log(`AI speculative conclusions integrity pass complete: ${touched.length} file(s) updated.`);

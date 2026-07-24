@@ -1,13 +1,13 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-23T07:46:01.819Z",
+  "checkedAt": "2026-07-24T07:43:18.032Z",
   "selectedSources": 12,
   "fetchedSources": 12,
   "skippedSources": 0,
   "failedSources": 0,
-  "parsedItems": 503,
-  "newOrSeenFindings": 503,
+  "parsedItems": 505,
+  "newOrSeenFindings": 505,
   "ledgerFindings": 2500,
   "results": [
     {
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "f344792458824ebea10fa96a5f8d38c06b0313be798ecc4c1e9e0fb14c4e4fb6",
+      "bytes": 2195,
+      "bodyHash": "53e20456f460bdf8564b2aa2954d2c465fb659314b1711798a6f092e606f77b1",
       "itemCount": 1,
       "error": ""
     },
@@ -44,8 +44,8 @@
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 62840,
-      "bodyHash": "68c4085fff1f5119f83ac48adc71807a8153c619eae2b987816326ec401b542b",
+      "bytes": 62897,
+      "bodyHash": "7875b5517bac205fa038d3f21135f062db1fca9079f33e85c0dcd3442753cc80",
       "itemCount": 14,
       "error": ""
     },
@@ -57,8 +57,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 22954,
-      "bodyHash": "7f87a9596fa59a722e456f029b047a8a8dd646a563f4af077eedcde4eaac8a93",
+      "bytes": 22911,
+      "bodyHash": "a2b3a98ae1056ffe8211a37b5fe35bfac06066e0d847051915f378f0e24fd73e",
       "itemCount": 40,
       "error": ""
     },
@@ -70,9 +70,9 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 230888,
-      "bodyHash": "21b300ffa771a7c3309616aeff5811aefed4ec63bf130b73f7004874c7943994",
-      "itemCount": 73,
+      "bytes": 232293,
+      "bodyHash": "87ed82b7abc2612834cd105cb0cb6f0036f085309197ecf80196e43f97338057",
+      "itemCount": 75,
       "error": ""
     },
     {
@@ -83,8 +83,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "contentType": "application/json; charset=utf-8",
-      "bytes": 157906,
-      "bodyHash": "13893d04f5875967a76d6a96b118e986fad5da8d76b774683fd572d13e323fd6",
+      "bytes": 151737,
+      "bodyHash": "93b7575bfe071ff4585b07da4f0a07bb9bc23136dba387385b2c02b7df9892ae",
       "itemCount": 100,
       "error": ""
     },
@@ -96,8 +96,8 @@
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 59603,
-      "bodyHash": "65aab3baa480d9339e21c13ae3a5b1ba5cf1be8b5bcc98a6dfad33a16f328ae8",
+      "bytes": 59191,
+      "bodyHash": "e1ba5b3ce95e6111beb27e57ef861f81d3f0aaba2ee160745b375307edb9b2ba",
       "itemCount": 100,
       "error": ""
     },
@@ -109,8 +109,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43116,
-      "bodyHash": "c3ee30ed58cafae143cae484ca061c6acd1166de9db2219e2c69f67eac1d5be6",
+      "bytes": 43239,
+      "bodyHash": "1a664546390b1912bef3918453a84e4fcf2534d8364f87a800ccddf2c70cac6f",
       "itemCount": 18,
       "error": ""
     },
@@ -122,8 +122,8 @@
       "statusCode": 200,
       "finalUrl": "https://oversight.house.gov/release/",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 69473,
-      "bodyHash": "9feffbbe3bbcdf941f0a451151d86e3024d8f796ab238eda85eb8d822b7cc7bc",
+      "bytes": 69602,
+      "bodyHash": "81aa505ae0118d94e7d3ab8f01d24b61891261cd81d1f5bda7c32809d5c6b43d",
       "itemCount": 10,
       "error": ""
     },
@@ -149,7 +149,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "ddeb6a4591e8ad7cd82fd407b7d74260d464ba7045f5f2ecbfa0d1b1f8eb5c91",
+      "bodyHash": "0cc097efc76e5cf0bf258780fb998b771e6dc69b04a47a9e9dfb89d9ce3ef8fe",
       "itemCount": 15,
       "error": ""
     },
@@ -161,8 +161,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 103517,
-      "bodyHash": "9bf6b9fa224a24592399ca97b6ecee74ebfb0618b7e1c792b7ee0b9985321dfa",
+      "bytes": 103535,
+      "bodyHash": "4a0cdbdf76dfd2eda1ad50dbf83fd282e13d0397a31e330422ed58f42ba12b4d",
       "itemCount": 9,
       "error": ""
     }

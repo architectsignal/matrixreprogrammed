@@ -10,13 +10,19 @@ on:
       - agent/hidden-hand-evidence-expansion
     paths:
       - 'behind-the-curtain-hidden-hand.js'
+      - 'behind-the-curtain-capstone.html'
+      - 'behind-the-curtain-capstone.js'
+      - 'behind-the-curtain-capstone-link.js'
       - 'investigation-pulse.js'
       - 'data/behind-the-curtain-intermediar*.json'
       - 'data/behind-the-curtain-continuity-systems.json'
       - 'data/behind-the-curtain-hidden-hand-models.json'
       - 'data/behind-the-curtain-family-principals.json'
       - 'data/behind-the-curtain-symbolic-research.json'
+      - 'data/behind-the-curtain-capstone.json'
+      - 'data/behind-the-curtain-capstone-sources.json'
       - 'scripts/behind-the-curtain-hidden-hand-test.js'
+      - 'scripts/behind-the-curtain-capstone-test.js'
       - 'scripts/behind-the-curtain-intermediary-watch.js'
       - '.github/workflows/behind-the-curtain-hidden-hand.yml'
 
@@ -38,11 +44,16 @@ jobs:
       - name: Validate JavaScript
         run: |
           node --check behind-the-curtain-hidden-hand.js
+          node --check behind-the-curtain-capstone.js
+          node --check behind-the-curtain-capstone-link.js
           node --check investigation-pulse.js
           node --check scripts/behind-the-curtain-intermediary-watch.js
           node --check scripts/behind-the-curtain-hidden-hand-test.js
-      - name: Validate hidden-hand evidence contract
-        run: node scripts/behind-the-curtain-hidden-hand-test.js
+          node --check scripts/behind-the-curtain-capstone-test.js
+      - name: Validate hidden-hand and capstone evidence contracts
+        run: |
+          node scripts/behind-the-curtain-hidden-hand-test.js
+          node scripts/behind-the-curtain-capstone-test.js
       - name: Preserve existing Pyramid contracts
         run: |
           node scripts/behind-the-curtain-access-test.js

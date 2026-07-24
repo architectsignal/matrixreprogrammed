@@ -32,20 +32,15 @@ jobs:
       - name: Build complete 52-card Heroes deck
         run: node scripts/build-heroes-fighting-matrix-deck.js
 
-      - name: Refresh search and shared assets
-        run: |
-          node scripts/repair-search-system.js
-          node scripts/ensure-shared-assets.js
-
-      - name: Build Cloudflare output
-        run: node scripts/build-cloudflare-output.js
+      - name: Refresh search index
+        run: node scripts/repair-search-system.js
 
       - name: Commit generated deck system
         run: |
           set -euo pipefail
           git config user.name "matrix-deck-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add .
+          git add heroes-fighting-matrix-deck.html heroes-fighting-matrix-research-ledger.html heroes-fighting-matrix assets/heroes-fighting-matrix data/heroes-fighting-matrix-deck.json downloads/heroes-fighting-matrix-source-ledger.json downloads/heroes-fighting-matrix-source-ledger.md deck-expansion-hub.html search.html search-index.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No generated Heroes deck changes to commit."
             exit 0

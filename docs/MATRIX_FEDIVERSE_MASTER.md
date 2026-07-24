@@ -1,5 +1,7 @@
 # MATRIX REPROGRAMMED — FEDIVERSE MASTER REQUIREMENT
 
+**Status: locked for future implementation.**
+
 This is a permanent product requirement for Matrix Reprogrammed.
 
 ## Mission

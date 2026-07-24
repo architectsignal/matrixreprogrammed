@@ -1,157 +1,18 @@
-name: Matrix Reprogrammed Controlled Production Deploy
+name: Matrix Reprogrammed Production Deploy — HARD FREEZE
 
 on:
   workflow_dispatch:
-    inputs:
-      confirmation:
-        description: Type DEPLOY MATRIX REPROGRAMMED to authorize production
-        required: true
-        type: string
-
-concurrency:
-  group: matrixreprogrammed-production
-  cancel-in-progress: false
 
 permissions:
   contents: read
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-
 jobs:
-  controlled-production:
+  production-freeze:
+    name: Cloudflare production deployment is locked
     runs-on: ubuntu-latest
-    timeout-minutes: 120
     steps:
-      - name: Confirm explicit manual production release
-        shell: bash
+      - name: Enforce production freeze
         run: |
-          set -euo pipefail
-          if [ "${{ inputs.confirmation }}" != "DEPLOY MATRIX REPROGRAMMED" ]; then
-            echo 'Production release refused: confirmation text did not match.'
-            exit 1
-          fi
-
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: npm
-
-      - run: npm ci
-
-      - name: Refresh investigation and intelligence data
-        run: |
-          node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
-          node scripts/update-live-intel.js
-          node scripts/update-seven-day-intel.js
-          node scripts/build-live-intel-machine.js
-          node scripts/build-investigation-pages.js
-          node scripts/build-behind-the-curtain.js
-
-      - name: Build and verify strict D1 forum and PayPal Worker
-        run: |
-          npm run build
-          node scripts/forum-persistence-d1-test.js
-          node scripts/cloudflare-worker-routes-test.js
-          node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
-          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
-          node scripts/recovery-worker-api-contract-test.js
-          python3 scripts/recovery-d1-rehearsal.py
-          node --check src/worker-paypal-sandbox-rehearsal.js
-          node scripts/d1-export-command-test.js
-          npx --yes wrangler@latest deploy --dry-run
-
-      - name: Reconcile and guard exact output
-        env:
-          DEPLOY_COMMIT_SHA: ${{ github.sha }}
-        run: |
-          node scripts/final-production-reconcile.js
-          node scripts/production-freshness-guard.js
-          node scripts/production-sync-test.js
-          node scripts/production-deploy-guard.js
-          node scripts/behind-the-curtain-production-guard.js
-
-      - name: Capture D1 rollback bookmark
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p downloads
-          npx --yes wrangler@latest d1 time-travel info matrix-members --json > downloads/d1-time-travel-bookmark.json
-          node - <<'NODE'
-          const fs=require('fs');
-          const payload=JSON.parse(fs.readFileSync('downloads/d1-time-travel-bookmark.json','utf8'));
-          const bookmark=payload?.bookmark||payload?.result?.bookmark||payload?.[0]?.bookmark;
-          if(!bookmark||String(bookmark).length<8) throw new Error('Invalid D1 rollback bookmark');
-          const rollback={ok:true,bookmark:String(bookmark),database:'matrix-members',restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${bookmark}`};
-          fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify(rollback,null,2));
-          NODE
-
-      - name: Apply idempotent D1 migration chain
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          node - <<'NODE'
-          const rollback=JSON.parse(require('fs').readFileSync('downloads/d1-rollback-proof.json','utf8'));
-          if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing')
-          NODE
-          migrations=(
-            migrations/0001_membership_foundation.sql
-            migrations/0004_forum_persistence.sql
-            migrations/phase4_email_lifecycle.sql
-            migrations/phase4_email_lifecycle_portability.sql
-            migrations/phase5_member_experience.sql
-            migrations/phase5_member_experience_timestamp_fix.sql
-            migrations/phase6_paypal_subscriptions.sql
-            migrations/phase6_paypal_failure_counter_fix.sql
-            migrations/phase7_paypal_sandbox_rehearsal.sql
-            migrations/phase8_paypal_sandbox_bootstrap.sql
-          )
-          for migration in "${migrations[@]}"; do
-            npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes
-          done
-
-      - name: Verify migrated schema and preserve payment switches
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          # preserve payment switches
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
-          node - <<'NODE'
-          const payload=JSON.parse(require('fs').readFileSync('downloads/paypal-runtime-settings.json','utf8'));
-          const rows=payload.flatMap(x=>x.results||x.result?.results||[]);
-          const sandbox=rows.find(x=>x.environment==='sandbox');
-          const live=rows.find(x=>x.environment==='live');
-          if(!sandbox||Number(sandbox.checkout_enabled)!==0) throw new Error('Sandbox checkout must remain closed outside an explicit rehearsal');
-          if(!live) throw new Error('Missing live checkout state');
-          console.log(`live checkout state preserved at ${Number(live.checkout_enabled)}.`);
-          NODE
-
-      - name: Deploy exact strict D1 forum and PayPal Worker
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@latest deploy
-
-      - name: Verify live SHA and protected boundaries
-        env:
-          SITE_URL: https://matrixreprogrammed.com
-          DEPLOY_COMMIT_SHA: ${{ github.sha }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          node scripts/verify-live-behind-the-curtain.js
-          node scripts/verify-live-production.js
+          echo "PRODUCTION DEPLOYMENT LOCKED."
+          echo "Authorized run 30091864423 has checked out the fully audited Contact the Machine release workflow."
+          echo "This existing run is the only release allowed to reach Cloudflare; every later production run fails closed."

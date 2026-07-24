@@ -71,6 +71,19 @@ jobs:
           grep -q 'behind-the-curtain-access-v2.js' behind-the-curtain-access.html
           grep -q 'cross-system-top-10' data/behind-the-curtain-pyramid.json
           grep -q 'speculative_hypothesis' data/behind-the-curtain-pyramid.json
+      - name: Upload verified generated tier package
+        uses: actions/upload-artifact@v4
+        with:
+          name: behind-the-curtain-tier-package-${{ github.run_id }}
+          path: |
+            behind-the-curtain-access.html
+            behind-the-curtain-access-v2.js
+            data/behind-the-curtain-pyramid.json
+            data/behind-the-curtain-people-registry.json
+            docs/BEHIND_THE_CURTAIN_MASTER.md
+            docs/MATRIX_FEDIVERSE_MASTER.md
+          if-no-files-found: error
+          retention-days: 7
       - name: Commit generated intelligence to Git only
         if: ${{ github.event_name != 'pull_request' }}
         run: |

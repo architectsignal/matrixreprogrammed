@@ -1,0 +1,77 @@
+name: Integrate Heroes Fighting the Matrix Deck
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/heroes-deck-integration.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: heroes-deck-integration
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Patch homepage and Deck Hub
+        run: node scripts/patch-homepage-power-deck-link.js
+
+      - name: Refresh search and shared assets
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/ensure-shared-assets.js
+
+      - name: Validate Heroes routes
+        run: |
+          test -f heroes-fighting-matrix-deck.html
+          test -f heroes-fighting-matrix-card.html
+          test -f heroes-fighting-matrix-research-ledger.html
+          test -f data/heroes-fighting-matrix/keys.json
+          test -f data/heroes-fighting-matrix/shields.json
+          test -f data/heroes-fighting-matrix/torches.json
+          test -f data/heroes-fighting-matrix/swords.json
+          grep -q "heroes-fighting-matrix-deck.html" index.html
+          grep -q "heroes-fighting-matrix-deck.html" deck-expansion-hub.html
+
+      - name: Build Cloudflare output
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Commit integrated deck
+        run: |
+          set -euo pipefail
+          git config user.name "matrix-deck-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "Heroes deck integration already current."
+            exit 0
+          fi
+          git commit -m "Integrate Heroes Fighting the Matrix deck across site"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during Heroes integration; retrying."
+          done
+          exit 1

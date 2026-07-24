@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "observedAt": "2026-07-24T07:38:14.716Z",
+  "observedAt": "2026-07-24T07:52:58.281Z",
   "production": {
     "conclusion": "success",
     "createdAt": "2026-07-23T14:55:07Z",
@@ -53,13 +53,13 @@
   },
   "cardArtwork": {
     "conclusion": "failure",
-    "createdAt": "2026-07-24T07:36:53Z",
-    "databaseId": 30076051272,
+    "createdAt": "2026-07-24T07:51:44Z",
+    "databaseId": 30076879641,
     "event": "push",
-    "headSha": "e0653e1897205d95cfca2a31bc5b25fbffb6b0a0",
+    "headSha": "08509a51ab83d8c30906c7bc1078950d90969a23",
     "status": "completed",
-    "updatedAt": "2026-07-24T07:37:40Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30076051272"
+    "updatedAt": "2026-07-24T07:52:27Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30076879641"
   },
   "releaseMetadataRepair": {
     "conclusion": "success",
@@ -535,6 +535,16 @@
     "cardArtwork": [
       {
         "conclusion": "failure",
+        "createdAt": "2026-07-24T07:51:44Z",
+        "databaseId": 30076879641,
+        "event": "push",
+        "headSha": "08509a51ab83d8c30906c7bc1078950d90969a23",
+        "status": "completed",
+        "updatedAt": "2026-07-24T07:52:27Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30076879641"
+      },
+      {
+        "conclusion": "failure",
         "createdAt": "2026-07-24T07:36:53Z",
         "databaseId": 30076051272,
         "event": "push",
@@ -642,16 +652,6 @@
         "status": "completed",
         "updatedAt": "2026-07-17T07:46:37Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29564110531"
-      },
-      {
-        "conclusion": "success",
-        "createdAt": "2026-07-16T07:47:54Z",
-        "databaseId": 29481152620,
-        "event": "schedule",
-        "headSha": "51d6ed28a53bf64a6af954a8aa590ad435f797d6",
-        "status": "completed",
-        "updatedAt": "2026-07-16T07:48:57Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29481152620"
       }
     ],
     "releaseMetadataRepair": [

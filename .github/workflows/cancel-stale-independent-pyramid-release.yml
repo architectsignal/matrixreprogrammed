@@ -1,0 +1,36 @@
+name: Cancel stale pre-capstone Pyramid release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/cancel-stale-pyramid-release.trigger
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel-stale-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel run that checked out before the capstone
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runId = 30091003163;
+            const { owner, repo } = context.repo;
+            const run = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId });
+            const status = run.data.status;
+            const conclusion = run.data.conclusion;
+            core.info(`Stale run ${runId}: ${status}${conclusion ? `/${conclusion}` : ''}`);
+            if (['queued','in_progress','waiting','requested','pending'].includes(status)) {
+              await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: runId });
+              core.info(`Cancellation requested for stale pre-capstone run ${runId}.`);
+              return;
+            }
+            if (conclusion === 'success') {
+              core.setFailed(`Run ${runId} already deployed before cancellation. Do not launch another deployment until production state is reviewed.`);
+              return;
+            }
+            core.info(`Run ${runId} already ended without success; no Cloudflare release should be reused.`);

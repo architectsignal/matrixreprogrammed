@@ -1,219 +1,1677 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "asOf": "2026-07-24",
   "title": "Behind the Curtain — The Pyramid of Power",
-  "subtitle": "From public authority to the unresolved symbolic apex",
-  "editorialBoundary": "This model maps documented authority, ownership, voting rights, appointments, capital, infrastructure, intelligence access, policy influence and institutional continuity. It does not infer criminality, secret coordination, ritual involvement or supernatural command from wealth, family name, religion, nationality, social contact or symbolism.",
+  "subtitle": "From public authority through access brokers and continuity networks to the unresolved symbolic apex",
+  "editorialBoundary": "This model maps documented authority, ownership, appointments, capital, infrastructure, intelligence access, policy influence, access brokerage and institutional continuity. It separates fact, inference, disputed claims and symbolic interpretation.",
   "updatePolicy": {
     "pollMinutes": 15,
     "reviewCadenceDays": 31,
     "failClosed": true,
     "historyRequired": true,
-    "refreshRule": "When reviewed evidence changes a role, score, ownership path, family-control structure or relationship, rebuild the model, preserve the previous snapshot and publish the new dated state."
+    "peopleRegistry": "data/behind-the-curtain-people-registry.json",
+    "refreshRule": "When reviewed evidence changes a role, tier score, ownership path, family-control structure or relationship, rebuild the model and preserve previous state."
   },
   "viewModes": [
-    {"id":"proof","label":"Show Only What Can Be Proven"},
-    {"id":"structural","label":"Full Structural Analysis"},
-    {"id":"symbolic","label":"Enter the Symbolic Apex"}
+    {
+      "id": "proof",
+      "label": "Show Only What Can Be Proven"
+    },
+    {
+      "id": "structural",
+      "label": "Full Structural Analysis"
+    },
+    {
+      "id": "symbolic",
+      "label": "Enter the Symbolic Apex"
+    }
   ],
   "levels": [
     {
-      "level":12,
-      "id":"lightbringer",
-      "name":"The Lightbringer",
-      "kicker":"The idea above the pyramid",
-      "question":"Is the final ruler a person, an entity, an ideology or the system itself?",
-      "classification":"symbolic_or_mythological",
-      "minimumMode":"symbolic",
-      "thesis":"The apex is presented as an open symbolic hypothesis: knowledge, illumination, technological transcendence, false light, elite self-perception or the impersonal logic of the machine.",
-      "memberRefs":[{"dataset":"symbolic","id":"lightbringer"}],
-      "mechanisms":["Knowledge converted into authority","Initiation and information asymmetry","Technological transcendence"],
-      "counterweight":"No empirical record establishes a supernatural being as the command authority over the named people and institutions below."
+      "level": 12,
+      "id": "lightbringer",
+      "name": "The Lightbringer",
+      "kicker": "The idea above the pyramid",
+      "question": "Is the final ruler a person, an entity, an ideology or the system itself?",
+      "classification": "symbolic_or_mythological",
+      "minimumMode": "symbolic",
+      "thesis": "The apex is an open symbolic hypothesis: illumination, false light, technological transcendence, elite self-perception, spiritual claim or the impersonal logic of the machine.",
+      "memberRefs": [
+        {
+          "dataset": "symbolic",
+          "id": "lightbringer"
+        }
+      ],
+      "mechanisms": [
+        "Knowledge converted into authority",
+        "Initiation and information asymmetry",
+        "Technological transcendence"
+      ],
+      "counterweight": "No empirical record establishes a supernatural being as the operational commander of the named human network."
     },
     {
-      "level":11,
-      "id":"human-apex",
-      "name":"The Human Apex",
-      "kicker":"Broadest current documented access",
-      "question":"Which living people can reach the greatest number of consequential systems?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"This tier is generated from current verified roles and access mechanisms. It is a ranking of reach, not a declaration of secret rulership.",
-      "memberRefs":[{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"living","id":"donald-trump"},{"dataset":"living","id":"mohamed-bin-zayed"},{"dataset":"living","id":"vladimir-putin"}],
-      "mechanisms":["Concentrated formal office","Military and intelligence access","Appointment power","Sovereign capital and strategic policy"],
-      "counterweight":"Each candidate remains constrained by law, institutions, bureaucracy, markets, alliances, succession and rival power centres."
+      "level": 11,
+      "id": "human-apex",
+      "name": "The Human Apex",
+      "kicker": "Broadest current documented access",
+      "question": "Which living people combine the greatest breadth and intensity of documented access?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "Calculated from all tier-specific scores. It ranks reach, not secret rulership or moral worth.",
+      "memberQuery": "cross-system-top-10",
+      "memberRefs": [],
+      "mechanisms": [
+        "Breadth across independently scored tiers",
+        "Current enforceable office or executive authority",
+        "Cross-border reach"
+      ],
+      "counterweight": "No score proves total control. Every candidate remains constrained by institutions, law, markets, succession, rivals and implementation."
     },
     {
-      "level":10,
-      "id":"inner-councils",
-      "name":"The Inner Councils Question",
-      "kicker":"Verified bodies and alleged coordinating centres",
-      "question":"Where do high-level decisions become collective, private or technically insulated?",
-      "classification":"plausible_structural_inference",
-      "minimumMode":"structural",
-      "thesis":"The page names actual councils, committees and boards, then separates their documented mandates from claims that they form one supreme command structure.",
-      "memberRefs":[{"dataset":"core","id":"basel-fsb-network"},{"dataset":"core","id":"imf-crisis-finance"},{"dataset":"core","id":"us-security-alliance"},{"dataset":"core","id":"eu-regulatory-eurosystem"}],
-      "mechanisms":["Committee agenda setting","Standards and implementation pressure","Classified coordination","Board and quota governance"],
-      "counterweight":"No single supreme human council has been verified; these bodies possess different mandates, memberships and vetoes."
+      "level": 10,
+      "id": "inner-councils",
+      "name": "The Inner Councils Question",
+      "kicker": "Verified bodies and alleged coordinating centres",
+      "question": "Where do high-level decisions become collective, private or technically insulated?",
+      "classification": "plausible_structural_inference",
+      "minimumMode": "structural",
+      "thesis": "Actual councils, boards and committees are named and then tested against claims of a single command structure.",
+      "memberRefs": [
+        {
+          "dataset": "core",
+          "id": "basel-fsb-network"
+        },
+        {
+          "dataset": "core",
+          "id": "imf-crisis-finance"
+        },
+        {
+          "dataset": "core",
+          "id": "us-security-alliance"
+        },
+        {
+          "dataset": "core",
+          "id": "eu-regulatory-eurosystem"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-rutte"
+        },
+        {
+          "dataset": "people",
+          "id": "alois-zwinggi"
+        }
+      ],
+      "mechanisms": [
+        "Committee agenda setting",
+        "Standards and implementation pressure",
+        "Classified coordination",
+        "Board and quota governance",
+        "Private convening"
+      ],
+      "counterweight": "No single supreme human council has been verified; named bodies have different mandates, members, vetoes and rival interests."
     },
     {
-      "level":9,
-      "id":"thirteen-families",
-      "name":"The Thirteen Families Claim",
-      "kicker":"Named lineages under evidence review",
-      "question":"Is thirteen a verified command structure, a symbolic number or a later synthesis?",
-      "classification":"disputed",
-      "minimumMode":"structural",
-      "thesis":"Thirteen named dynastic structures and historical houses are compared because they recur in discussions of continuity. Inclusion does not establish a council of thirteen.",
-      "memberRefs":[{"dataset":"family","id":"house-of-saud"},{"dataset":"family","id":"al-nahyan"},{"dataset":"family","id":"al-maktoum"},{"dataset":"family","id":"al-thani"},{"dataset":"family","id":"wallenberg"},{"dataset":"family","id":"agnelli-elkann"},{"dataset":"family","id":"moller"},{"dataset":"family","id":"hoffmann-oeri"},{"dataset":"family","id":"heineken"},{"dataset":"historical","id":"rothschild-banking-houses"},{"dataset":"historical","id":"rockefeller-family-and-philanthropic-institutions"},{"dataset":"historical","id":"warburg-banking-family"},{"dataset":"historical","id":"medici-and-fugger-houses"}],
-      "mechanisms":["Inheritance and succession","Voting pools and foundations","Holding companies and family offices"],
-      "counterweight":"The current record does not establish a unified council of exactly thirteen families controlling all major systems."
+      "level": 9,
+      "id": "thirteen-families",
+      "name": "The Thirteen Families Claim",
+      "kicker": "Named lineages under evidence review",
+      "question": "Is thirteen a verified command structure, a symbolic number or a later synthesis?",
+      "classification": "disputed",
+      "minimumMode": "structural",
+      "thesis": "Thirteen dynastic structures and historical houses are compared because they recur in continuity claims. Inclusion does not establish a council of thirteen.",
+      "memberRefs": [
+        {
+          "dataset": "family",
+          "id": "house-of-saud"
+        },
+        {
+          "dataset": "family",
+          "id": "al-nahyan"
+        },
+        {
+          "dataset": "family",
+          "id": "al-maktoum"
+        },
+        {
+          "dataset": "family",
+          "id": "al-thani"
+        },
+        {
+          "dataset": "family",
+          "id": "wallenberg"
+        },
+        {
+          "dataset": "family",
+          "id": "agnelli-elkann"
+        },
+        {
+          "dataset": "family",
+          "id": "moller"
+        },
+        {
+          "dataset": "family",
+          "id": "hoffmann-oeri"
+        },
+        {
+          "dataset": "family",
+          "id": "heineken"
+        },
+        {
+          "dataset": "historical",
+          "id": "rothschild-banking-houses"
+        },
+        {
+          "dataset": "historical",
+          "id": "rockefeller-family-and-philanthropic-institutions"
+        },
+        {
+          "dataset": "historical",
+          "id": "warburg-banking-family"
+        },
+        {
+          "dataset": "historical",
+          "id": "medici-and-fugger-houses"
+        }
+      ],
+      "mechanisms": [
+        "Inheritance and succession",
+        "Voting pools and foundations",
+        "Holding companies and family offices"
+      ],
+      "counterweight": "The record does not establish a unified council of exactly thirteen families controlling all major systems."
     },
     {
-      "level":8,
-      "id":"dynastic-continuity",
-      "name":"Dynastic and Hereditary Networks",
-      "kicker":"Structures that survive individual lifetimes",
-      "question":"Which families retain enforceable authority or voting control across generations?",
-      "classification":"documented_fact",
-      "minimumMode":"proof",
-      "thesis":"The strongest family power appears where succession, voting rights, trusts, foundations or holding companies legally preserve control.",
-      "memberRefs":[{"dataset":"family","id":"house-of-saud"},{"dataset":"family","id":"al-nahyan"},{"dataset":"family","id":"al-maktoum"},{"dataset":"family","id":"al-thani"},{"dataset":"family","id":"wallenberg"},{"dataset":"family","id":"agnelli-elkann"},{"dataset":"family","id":"moller"},{"dataset":"family","id":"hoffmann-oeri"},{"dataset":"family","id":"heineken"}],
-      "mechanisms":["Hereditary state office","Controlling voting shares","Family foundations","Long-duration holding companies"],
-      "counterweight":"Family-level control is usually sectoral or jurisdictional, not proof of command over unrelated states and institutions."
+      "level": 8,
+      "id": "dynastic-continuity",
+      "name": "Dynastic and Hereditary Networks",
+      "kicker": "Structures that survive individual lifetimes",
+      "question": "Which families retain enforceable authority, voting control or continuity across generations?",
+      "classification": "documented_fact",
+      "minimumMode": "proof",
+      "thesis": "The strongest family power appears where succession, voting rights, trusts, foundations or holding companies legally preserve control.",
+      "memberRefs": [
+        {
+          "dataset": "family",
+          "id": "house-of-saud"
+        },
+        {
+          "dataset": "family",
+          "id": "al-nahyan"
+        },
+        {
+          "dataset": "family",
+          "id": "al-maktoum"
+        },
+        {
+          "dataset": "family",
+          "id": "al-thani"
+        },
+        {
+          "dataset": "family",
+          "id": "wallenberg"
+        },
+        {
+          "dataset": "family",
+          "id": "agnelli-elkann"
+        },
+        {
+          "dataset": "family",
+          "id": "moller"
+        },
+        {
+          "dataset": "family",
+          "id": "hoffmann-oeri"
+        },
+        {
+          "dataset": "family",
+          "id": "heineken"
+        }
+      ],
+      "mechanisms": [
+        "Hereditary state office",
+        "Controlling voting shares",
+        "Family foundations",
+        "Long-duration holding companies"
+      ],
+      "counterweight": "Family-level control is usually sectoral or jurisdictional, not proof of command over unrelated states and institutions."
     },
     {
-      "level":7,
-      "id":"connectors",
-      "name":"The Connectors",
-      "kicker":"People who bridge separate systems",
-      "question":"Who links capital, policy, boards, states and technical infrastructure?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"Connector power comes from repeated cross-system access rather than public office alone.",
-      "memberRefs":[{"dataset":"living","id":"larry-fink"},{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"living","id":"kevin-warsh"}],
-      "mechanisms":["Board and client networks","Regulatory access","Institutional agenda setting","Cross-border capital and policy relationships"],
-      "counterweight":"Connection is not command; every pathway must identify the actual right, role, transaction or decision."
+      "level": 7,
+      "name": "The Connectors and Access Brokers",
+      "kicker": "People who bridge separate systems",
+      "question": "Who repeatedly connects capital, government, technology, philanthropy and policy networks?",
+      "classification": "plausible_structural_inference",
+      "minimumMode": "proof",
+      "thesis": "Connector power is assessed through documented offices, boards, investment relationships and government access. It is influence and access, not automatic command.",
+      "mechanisms": [
+        "Board and advisory networks",
+        "Private capital",
+        "Political and philanthropic relationships",
+        "Convening and introductions",
+        "Cross-sector institutional access"
+      ],
+      "counterweight": "Connection is not command. Every pathway must identify the actual office, transaction, board right or advisory relationship.",
+      "id": "connectors",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "larry-fink"
+        },
+        {
+          "dataset": "people",
+          "id": "jamie-dimon"
+        },
+        {
+          "dataset": "people",
+          "id": "yasir-al-rumayyan"
+        },
+        {
+          "dataset": "people",
+          "id": "tahnoun-bin-zayed"
+        },
+        {
+          "dataset": "people",
+          "id": "andre-hoffmann"
+        },
+        {
+          "dataset": "people",
+          "id": "stephen-schwarzman"
+        },
+        {
+          "dataset": "people",
+          "id": "david-rubenstein"
+        },
+        {
+          "dataset": "people",
+          "id": "peter-thiel"
+        },
+        {
+          "dataset": "people",
+          "id": "reid-hoffman"
+        },
+        {
+          "dataset": "people",
+          "id": "michael-bloomberg"
+        },
+        {
+          "dataset": "people",
+          "id": "jared-kushner"
+        },
+        {
+          "dataset": "people",
+          "id": "ken-griffin"
+        },
+        {
+          "dataset": "people",
+          "id": "marc-rowan"
+        }
+      ]
     },
     {
-      "level":6,
-      "id":"policy-architects",
-      "name":"The Policy Architects",
-      "kicker":"Ideas before legislation",
-      "question":"Who designs the frameworks that later become policy, regulation or institutional practice?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"Policy power is measured through mandates, papers, committees, regulation and implementation, not conference attendance.",
-      "memberRefs":[{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"kevin-warsh"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"core","id":"basel-fsb-network"}],
-      "mechanisms":["Policy agenda setting","Technical standards","Monetary communication","Committee authority"],
-      "counterweight":"Proposals may be rejected, altered or constrained by legislatures, courts, member states and markets."
+      "level": 6,
+      "name": "The Policy Architects",
+      "kicker": "Ideas before legislation",
+      "question": "Who develops the frameworks that later enter policy, regulation and institutional practice?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "This tier names leaders of institutions that research, finance, convene, advise or operationalise policy before and around formal public decisions.",
+      "mechanisms": [
+        "Research and policy design",
+        "Elite convening",
+        "Technical standards",
+        "Government advisory work",
+        "Philanthropic programme funding"
+      ],
+      "counterweight": "A proposal, paper, meeting or grant does not prove adoption, control or a shared secret agenda.",
+      "id": "policy-architects",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "christine-lagarde"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "andrea-maechler"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "ajay-banga"
+        },
+        {
+          "dataset": "people",
+          "id": "ngozi-okonjo-iweala"
+        },
+        {
+          "dataset": "people",
+          "id": "mathias-cormann"
+        },
+        {
+          "dataset": "people",
+          "id": "michael-froman"
+        },
+        {
+          "dataset": "people",
+          "id": "cecilia-rouse"
+        },
+        {
+          "dataset": "people",
+          "id": "bronwen-maddox"
+        },
+        {
+          "dataset": "people",
+          "id": "frederick-kempe"
+        },
+        {
+          "dataset": "people",
+          "id": "jason-matheny"
+        },
+        {
+          "dataset": "people",
+          "id": "comfort-ero"
+        },
+        {
+          "dataset": "people",
+          "id": "rachel-glennerster"
+        },
+        {
+          "dataset": "people",
+          "id": "paul-butler"
+        },
+        {
+          "dataset": "people",
+          "id": "alois-zwinggi"
+        },
+        {
+          "dataset": "people",
+          "id": "andre-hoffmann"
+        },
+        {
+          "dataset": "people",
+          "id": "tony-blair"
+        },
+        {
+          "dataset": "people",
+          "id": "bill-gates"
+        }
+      ]
     },
     {
-      "level":5,
-      "id":"intelligence-security",
-      "name":"Intelligence, Security and Covert Capability",
-      "kicker":"Information and force outside ordinary visibility",
-      "question":"Who can see what the public cannot see and authorize capabilities unavailable to ordinary actors?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"This layer maps lawful command, classified access, military authority, intelligence-sharing and security continuity.",
-      "memberRefs":[{"dataset":"living","id":"donald-trump"},{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"vladimir-putin"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"living","id":"mohamed-bin-zayed"},{"dataset":"core","id":"us-security-alliance"}],
-      "mechanisms":["Commander-in-chief authority","Security-council access","Intelligence collection and sharing","Defence procurement"],
-      "counterweight":"Former service, social contact or media claims do not prove current covert command."
+      "level": 5,
+      "name": "Intelligence, Security and Covert Capability",
+      "kicker": "Information and force outside ordinary visibility",
+      "question": "Who can see what the public cannot and authorise exceptional capabilities?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "This tier maps current publicly documented intelligence, security and military command roles without converting secrecy into proof of unlimited power.",
+      "mechanisms": [
+        "Intelligence collection and analysis",
+        "Covert or classified capability",
+        "Counterintelligence",
+        "Military command",
+        "Security coordination"
+      ],
+      "counterweight": "A public command role does not prove private agendas, unlawful conduct or control beyond legal and institutional authority.",
+      "id": "intelligence-security",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "xi-jinping"
+        },
+        {
+          "dataset": "people",
+          "id": "mohammed-bin-salman"
+        },
+        {
+          "dataset": "people",
+          "id": "donald-trump"
+        },
+        {
+          "dataset": "people",
+          "id": "mohamed-bin-zayed"
+        },
+        {
+          "dataset": "people",
+          "id": "vladimir-putin"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-rutte"
+        },
+        {
+          "dataset": "people",
+          "id": "tulsi-gabbard"
+        },
+        {
+          "dataset": "people",
+          "id": "john-ratcliffe"
+        },
+        {
+          "dataset": "people",
+          "id": "kash-patel"
+        },
+        {
+          "dataset": "people",
+          "id": "blaise-metreweli"
+        },
+        {
+          "dataset": "people",
+          "id": "anne-keast-butler"
+        },
+        {
+          "dataset": "people",
+          "id": "roman-gofman"
+        },
+        {
+          "dataset": "people",
+          "id": "nicolas-lerner"
+        },
+        {
+          "dataset": "people",
+          "id": "sergei-shoigu"
+        },
+        {
+          "dataset": "people",
+          "id": "alexus-grynkewich"
+        },
+        {
+          "dataset": "people",
+          "id": "tahnoun-bin-zayed"
+        }
+      ]
     },
     {
-      "level":4,
-      "id":"ownership-infrastructure",
-      "name":"Ownership and Critical Infrastructure",
-      "kicker":"The rails society cannot easily replace",
-      "question":"Who controls compute, chips, payments, energy, logistics and other indispensable systems?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"Ownership, voting rights and operational authority are traced beyond the brand name to the responsible board, shareholder, state or executive.",
-      "memberRefs":[{"dataset":"living","id":"cc-wei"},{"dataset":"core","id":"cloud-ai-gatekeepers"},{"dataset":"core","id":"semiconductor-chokepoint"},{"dataset":"core","id":"payments-settlement"}],
-      "mechanisms":["Controlling shares","Board authority","Technical capacity","Licensing and export controls"],
-      "counterweight":"Critical firms are interdependent and constrained by regulators, customers, suppliers, states and technical limits."
+      "level": 4,
+      "name": "Ownership and Critical Infrastructure",
+      "kicker": "The rails society cannot easily replace",
+      "question": "Who governs compute, chips, cloud, payments, energy and logistics?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "This tier names executives and controllers of systems that states, markets and citizens cannot quickly replace.",
+      "mechanisms": [
+        "Voting or executive authority",
+        "Technical capacity",
+        "Capital expenditure",
+        "Network effects",
+        "Licensing and supply allocation"
+      ],
+      "counterweight": "Critical firms remain interdependent and constrained by boards, shareholders, regulators, customers, suppliers and states.",
+      "id": "ownership-infrastructure",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "cc-wei"
+        },
+        {
+          "dataset": "people",
+          "id": "jensen-huang"
+        },
+        {
+          "dataset": "people",
+          "id": "christophe-fouquet"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-zuckerberg"
+        },
+        {
+          "dataset": "people",
+          "id": "satya-nadella"
+        },
+        {
+          "dataset": "people",
+          "id": "sundar-pichai"
+        },
+        {
+          "dataset": "people",
+          "id": "andy-jassy"
+        },
+        {
+          "dataset": "people",
+          "id": "elon-musk"
+        },
+        {
+          "dataset": "people",
+          "id": "lisa-su"
+        },
+        {
+          "dataset": "people",
+          "id": "hock-tan"
+        },
+        {
+          "dataset": "people",
+          "id": "alex-karp"
+        },
+        {
+          "dataset": "people",
+          "id": "amin-nasser"
+        },
+        {
+          "dataset": "people",
+          "id": "vincent-clerc"
+        },
+        {
+          "dataset": "people",
+          "id": "michael-miebach"
+        },
+        {
+          "dataset": "people",
+          "id": "ryan-mcinerney"
+        },
+        {
+          "dataset": "people",
+          "id": "javier-perez-tasso"
+        },
+        {
+          "dataset": "people",
+          "id": "arvind-krishna"
+        }
+      ]
     },
     {
-      "level":3,
-      "id":"money-gatekeepers",
-      "name":"Money and Capital Gatekeepers",
-      "kicker":"Liquidity, credit, collateral and allocation",
-      "question":"Who can fund, starve, refinance, sanction or redirect major pools of capital?",
-      "classification":"strongly_supported_assessment",
-      "minimumMode":"proof",
-      "thesis":"This layer distinguishes personal ownership from delegated fiduciary authority and public monetary power.",
-      "memberRefs":[{"dataset":"living","id":"kevin-warsh"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"living","id":"larry-fink"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"core","id":"usd-system"},{"dataset":"core","id":"nonbank-capital"}],
-      "mechanisms":["Monetary policy","Sovereign investment","Asset allocation","Sanctions and liquidity"],
-      "counterweight":"Assets under management are not personal property, and monetary institutions operate through law and committees."
+      "level": 3,
+      "name": "Money and Capital Gatekeepers",
+      "kicker": "Liquidity, credit, collateral and allocation",
+      "question": "Who can create, allocate, price, custody or deny capital?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "This tier separates public monetary authority, delegated fiduciary control, sovereign investment and private banking power.",
+      "mechanisms": [
+        "Monetary policy",
+        "Liquidity and collateral",
+        "Sovereign investment",
+        "Asset allocation",
+        "Custody and settlement"
+      ],
+      "counterweight": "Assets under management are not personal property, and most financial decisions are committee-based, regulated or client-mandated.",
+      "id": "money-gatekeepers",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "mohammed-bin-salman"
+        },
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "christine-lagarde"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "andrew-bailey"
+        },
+        {
+          "dataset": "people",
+          "id": "pan-gongsheng"
+        },
+        {
+          "dataset": "people",
+          "id": "kazuo-ueda"
+        },
+        {
+          "dataset": "people",
+          "id": "larry-fink"
+        },
+        {
+          "dataset": "people",
+          "id": "salim-ramji"
+        },
+        {
+          "dataset": "people",
+          "id": "ronald-ohanley"
+        },
+        {
+          "dataset": "people",
+          "id": "jamie-dimon"
+        },
+        {
+          "dataset": "people",
+          "id": "jane-fraser"
+        },
+        {
+          "dataset": "people",
+          "id": "nicolai-tangen"
+        },
+        {
+          "dataset": "people",
+          "id": "yasir-al-rumayyan"
+        },
+        {
+          "dataset": "people",
+          "id": "dilhan-pillay"
+        },
+        {
+          "dataset": "people",
+          "id": "lim-chow-kiat"
+        }
+      ]
     },
     {
-      "level":2,
-      "id":"permanent-system",
-      "name":"The Permanent Administrative System",
-      "kicker":"What remains after elections",
-      "question":"Which institutions, legal mandates and professional systems survive changes of government?",
-      "classification":"documented_fact",
-      "minimumMode":"proof",
-      "thesis":"Durable institutions preserve archives, procedures, appointments, standards, security relationships and operational capacity.",
-      "memberRefs":[{"dataset":"core","id":"usd-system"},{"dataset":"core","id":"china-party-state"},{"dataset":"core","id":"us-security-alliance"},{"dataset":"core","id":"eu-regulatory-eurosystem"},{"dataset":"core","id":"basel-fsb-network"}],
-      "mechanisms":["Statutory mandate","Professional bureaucracy","Treaties and standards","Institutional archives"],
-      "counterweight":"Institutional continuity does not mean institutions are immune from law, politics, failure, reform or public pressure."
+      "level": 2,
+      "name": "The Permanent Administrative System",
+      "kicker": "What remains after elections",
+      "question": "Who preserves continuity, standards and operational memory?",
+      "classification": "strongly_supported_assessment",
+      "minimumMode": "proof",
+      "thesis": "This tier names institutional leaders whose organisations survive electoral turnover and retain procedures, data, mandates, relationships and implementation capacity.",
+      "mechanisms": [
+        "Statutory mandate",
+        "Professional bureaucracy",
+        "Treaties and standards",
+        "Institutional archives and continuity"
+      ],
+      "counterweight": "Continuity is not proof of a unified deep state; institutions compete, fail, fragment and remain legally bounded.",
+      "id": "permanent-system",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-rutte"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-guterres"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-costa"
+        },
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "christine-lagarde"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "andrea-maechler"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "ajay-banga"
+        },
+        {
+          "dataset": "people",
+          "id": "ngozi-okonjo-iweala"
+        },
+        {
+          "dataset": "people",
+          "id": "andrew-bailey"
+        },
+        {
+          "dataset": "people",
+          "id": "pan-gongsheng"
+        },
+        {
+          "dataset": "people",
+          "id": "kazuo-ueda"
+        },
+        {
+          "dataset": "people",
+          "id": "mathias-cormann"
+        }
+      ]
     },
     {
-      "level":1,
-      "id":"public-stage",
-      "name":"The Public Stage",
-      "kicker":"Visible authority",
-      "question":"Who appears to govern?",
-      "classification":"documented_fact",
-      "minimumMode":"proof",
-      "thesis":"Public leaders possess real authority, but the page tests which powers are temporary, shared, delegated or dependent on structures below the headlines.",
-      "memberRefs":[{"dataset":"living","id":"donald-trump"},{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"vladimir-putin"},{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"living","id":"mohamed-bin-zayed"}],
-      "mechanisms":["Constitutional office","Party leadership","Executive command","Public agenda setting"],
-      "counterweight":"Visibility is not the same as ownership, continuity or unrestricted control."
+      "level": 1,
+      "name": "The Public Stage",
+      "kicker": "Visible authority",
+      "question": "Who appears to govern?",
+      "classification": "documented_fact",
+      "minimumMode": "proof",
+      "thesis": "Visible leaders possess real authority, but their mandates are temporary, divided and dependent on institutions, advisers, capital and implementation systems.",
+      "mechanisms": [
+        "Constitutional or statutory office",
+        "Cabinet and executive authority",
+        "Public agenda setting",
+        "Military or diplomatic representation"
+      ],
+      "counterweight": "Visibility is not the same as ownership, permanence or unrestricted control.",
+      "id": "public-stage",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "xi-jinping"
+        },
+        {
+          "dataset": "people",
+          "id": "mohammed-bin-salman"
+        },
+        {
+          "dataset": "people",
+          "id": "donald-trump"
+        },
+        {
+          "dataset": "people",
+          "id": "mohamed-bin-zayed"
+        },
+        {
+          "dataset": "people",
+          "id": "vladimir-putin"
+        },
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "narendra-modi"
+        },
+        {
+          "dataset": "people",
+          "id": "keir-starmer"
+        },
+        {
+          "dataset": "people",
+          "id": "emmanuel-macron"
+        },
+        {
+          "dataset": "people",
+          "id": "friedrich-merz"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-rutte"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-guterres"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-costa"
+        }
+      ]
     }
   ],
   "chokePoints": [
-    {"id":"money","name":"Money, Liquidity and Sanctions","question":"Who can create, price, allocate or deny liquidity?","memberRefs":[{"dataset":"living","id":"kevin-warsh"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"living","id":"larry-fink"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"core","id":"usd-system"},{"dataset":"core","id":"nonbank-capital"}]},
-    {"id":"payments","name":"Payments, Settlement and Custody","question":"Who can clear, settle, custody or block transactions?","memberRefs":[{"dataset":"living","id":"kevin-warsh"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"core","id":"payments-settlement"},{"dataset":"core","id":"usd-system"}]},
-    {"id":"identity","name":"Identity, Access and Permission","question":"Who can define the credentials required to participate?","memberRefs":[{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"xi-jinping"},{"dataset":"core","id":"eu-regulatory-eurosystem"},{"dataset":"core","id":"china-party-state"}]},
-    {"id":"information","name":"Information, Data and Narrative","question":"Who can collect, rank, distribute or restrict information?","memberRefs":[{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"donald-trump"},{"dataset":"core","id":"cloud-ai-gatekeepers"},{"dataset":"core","id":"us-security-alliance"}]},
-    {"id":"security","name":"Security, Intelligence and Emergency Power","question":"Who can authorize surveillance, force or emergency measures?","memberRefs":[{"dataset":"living","id":"donald-trump"},{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"vladimir-putin"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"living","id":"mohamed-bin-zayed"},{"dataset":"core","id":"us-security-alliance"}]},
-    {"id":"compute","name":"Compute, Cloud and Advanced Chips","question":"Who controls the capacity required for modern digital power?","memberRefs":[{"dataset":"living","id":"cc-wei"},{"dataset":"core","id":"cloud-ai-gatekeepers"},{"dataset":"core","id":"semiconductor-chokepoint"}]},
-    {"id":"law","name":"Law, Regulation and Market Access","question":"Who can license, prohibit, approve or exclude?","memberRefs":[{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"donald-trump"},{"dataset":"core","id":"eu-regulatory-eurosystem"},{"dataset":"core","id":"usd-system"}]},
-    {"id":"appointments","name":"Appointments and Succession","question":"Who chooses the next operator?","memberRefs":[{"dataset":"living","id":"xi-jinping"},{"dataset":"living","id":"mohammed-bin-salman"},{"dataset":"living","id":"mohamed-bin-zayed"},{"dataset":"family","id":"house-of-saud"},{"dataset":"family","id":"al-nahyan"},{"dataset":"family","id":"wallenberg"}]},
-    {"id":"policy","name":"Policy Design and Standards","question":"Who writes the framework before the public argument begins?","memberRefs":[{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"living","id":"kevin-warsh"},{"dataset":"living","id":"christine-lagarde"},{"dataset":"core","id":"basel-fsb-network"}]},
-    {"id":"continuity","name":"Dynastic and Institutional Continuity","question":"What survives the fall of a leader or the death of a founder?","memberRefs":[{"dataset":"family","id":"house-of-saud"},{"dataset":"family","id":"al-nahyan"},{"dataset":"family","id":"al-maktoum"},{"dataset":"family","id":"al-thani"},{"dataset":"family","id":"wallenberg"},{"dataset":"family","id":"agnelli-elkann"},{"dataset":"family","id":"moller"},{"dataset":"family","id":"hoffmann-oeri"},{"dataset":"family","id":"heineken"}]}
+    {
+      "id": "money",
+      "name": "Money, Liquidity and Sanctions",
+      "question": "Who can create, price, allocate or deny liquidity?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "christine-lagarde"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "pan-gongsheng"
+        },
+        {
+          "dataset": "people",
+          "id": "kazuo-ueda"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "larry-fink"
+        },
+        {
+          "dataset": "people",
+          "id": "nicolai-tangen"
+        },
+        {
+          "dataset": "people",
+          "id": "yasir-al-rumayyan"
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "name": "Payments, Settlement and Custody",
+      "question": "Who can clear, settle, custody or block transactions?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "javier-perez-tasso"
+        },
+        {
+          "dataset": "people",
+          "id": "michael-miebach"
+        },
+        {
+          "dataset": "people",
+          "id": "ryan-mcinerney"
+        },
+        {
+          "dataset": "people",
+          "id": "ronald-ohanley"
+        },
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "christine-lagarde"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Identity, Access and Permission",
+      "question": "Who can define the credentials required to participate?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "xi-jinping"
+        },
+        {
+          "dataset": "people",
+          "id": "satya-nadella"
+        },
+        {
+          "dataset": "people",
+          "id": "sundar-pichai"
+        },
+        {
+          "dataset": "people",
+          "id": "mark-zuckerberg"
+        }
+      ]
+    },
+    {
+      "id": "information",
+      "name": "Information, Data and Narrative",
+      "question": "Who can collect, rank, distribute or restrict information?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "mark-zuckerberg"
+        },
+        {
+          "dataset": "people",
+          "id": "sundar-pichai"
+        },
+        {
+          "dataset": "people",
+          "id": "satya-nadella"
+        },
+        {
+          "dataset": "people",
+          "id": "andy-jassy"
+        },
+        {
+          "dataset": "people",
+          "id": "alex-karp"
+        },
+        {
+          "dataset": "people",
+          "id": "tulsi-gabbard"
+        },
+        {
+          "dataset": "people",
+          "id": "john-ratcliffe"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security, Intelligence and Emergency Power",
+      "question": "Who can authorise surveillance, force or emergency measures?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "tulsi-gabbard"
+        },
+        {
+          "dataset": "people",
+          "id": "john-ratcliffe"
+        },
+        {
+          "dataset": "people",
+          "id": "blaise-metreweli"
+        },
+        {
+          "dataset": "people",
+          "id": "anne-keast-butler"
+        },
+        {
+          "dataset": "people",
+          "id": "roman-gofman"
+        },
+        {
+          "dataset": "people",
+          "id": "nicolas-lerner"
+        },
+        {
+          "dataset": "people",
+          "id": "alexus-grynkewich"
+        },
+        {
+          "dataset": "people",
+          "id": "sergei-shoigu"
+        },
+        {
+          "dataset": "people",
+          "id": "tahnoun-bin-zayed"
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "name": "Compute, Cloud and Advanced Chips",
+      "question": "Who controls the capacity required for modern digital power?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "jensen-huang"
+        },
+        {
+          "dataset": "people",
+          "id": "cc-wei"
+        },
+        {
+          "dataset": "people",
+          "id": "christophe-fouquet"
+        },
+        {
+          "dataset": "people",
+          "id": "satya-nadella"
+        },
+        {
+          "dataset": "people",
+          "id": "andy-jassy"
+        },
+        {
+          "dataset": "people",
+          "id": "sundar-pichai"
+        },
+        {
+          "dataset": "people",
+          "id": "lisa-su"
+        },
+        {
+          "dataset": "people",
+          "id": "hock-tan"
+        }
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law, Regulation and Market Access",
+      "question": "Who can license, prohibit, approve or exclude?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-costa"
+        },
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "dataset": "people",
+          "id": "pan-gongsheng"
+        },
+        {
+          "dataset": "people",
+          "id": "ngozi-okonjo-iweala"
+        },
+        {
+          "dataset": "people",
+          "id": "mathias-cormann"
+        }
+      ]
+    },
+    {
+      "id": "appointments",
+      "name": "Appointments and Succession",
+      "question": "Who chooses the next operator?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "xi-jinping"
+        },
+        {
+          "dataset": "people",
+          "id": "mohammed-bin-salman"
+        },
+        {
+          "dataset": "people",
+          "id": "mohamed-bin-zayed"
+        },
+        {
+          "dataset": "people",
+          "id": "donald-trump"
+        },
+        {
+          "dataset": "people",
+          "id": "ursula-von-der-leyen"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "name": "Policy Design and Standards",
+      "question": "Who writes the framework before the public argument begins?",
+      "memberRefs": [
+        {
+          "dataset": "people",
+          "id": "michael-froman"
+        },
+        {
+          "dataset": "people",
+          "id": "cecilia-rouse"
+        },
+        {
+          "dataset": "people",
+          "id": "bronwen-maddox"
+        },
+        {
+          "dataset": "people",
+          "id": "frederick-kempe"
+        },
+        {
+          "dataset": "people",
+          "id": "jason-matheny"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "mathias-cormann"
+        },
+        {
+          "dataset": "people",
+          "id": "bill-gates"
+        },
+        {
+          "dataset": "people",
+          "id": "tony-blair"
+        }
+      ]
+    },
+    {
+      "id": "continuity",
+      "name": "Dynastic and Institutional Continuity",
+      "question": "What survives the fall of a leader or the death of a founder?",
+      "memberRefs": [
+        {
+          "dataset": "family",
+          "id": "house-of-saud"
+        },
+        {
+          "dataset": "family",
+          "id": "al-nahyan"
+        },
+        {
+          "dataset": "family",
+          "id": "al-maktoum"
+        },
+        {
+          "dataset": "family",
+          "id": "al-thani"
+        },
+        {
+          "dataset": "family",
+          "id": "wallenberg"
+        },
+        {
+          "dataset": "family",
+          "id": "agnelli-elkann"
+        },
+        {
+          "dataset": "family",
+          "id": "moller"
+        },
+        {
+          "dataset": "family",
+          "id": "hoffmann-oeri"
+        },
+        {
+          "dataset": "family",
+          "id": "heineken"
+        },
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "dataset": "people",
+          "id": "kristalina-georgieva"
+        },
+        {
+          "dataset": "people",
+          "id": "antonio-guterres"
+        }
+      ]
+    }
   ],
   "pathways": [
-    {"id":"dollar-path","title":"Presidential authority into the dollar system","steps":[{"dataset":"living","id":"donald-trump"},{"label":"Executive appointments and sanctions authorities"},{"dataset":"core","id":"usd-system"},{"label":"Dollar clearing and compliance"}],"classification":"documented_fact","boundary":"The presidency is powerful but divided by Congress, courts, statutory bodies and markets."},
-    {"id":"saudi-path","title":"Hereditary office into sovereign capital","steps":[{"dataset":"family","id":"house-of-saud"},{"dataset":"living","id":"mohammed-bin-salman"},{"label":"PIF and economic-development chairmanship"},{"label":"Sovereign capital and energy"}],"classification":"documented_fact","boundary":"This establishes concentrated Saudi access, not command of foreign governments or all portfolio companies."},
-    {"id":"blackrock-path","title":"Institutional capital into corporate and policy networks","steps":[{"dataset":"living","id":"larry-fink"},{"label":"BlackRock executive authority"},{"dataset":"core","id":"nonbank-capital"},{"label":"Client mandates, voting and risk systems"}],"classification":"strongly_supported_assessment","boundary":"Managed assets belong to clients and funds; scale is not personal ownership."},
-    {"id":"chip-path","title":"Advanced chips into AI and national strategy","steps":[{"dataset":"living","id":"cc-wei"},{"dataset":"core","id":"semiconductor-chokepoint"},{"dataset":"core","id":"cloud-ai-gatekeepers"},{"label":"AI, defence and industrial capacity"}],"classification":"strongly_supported_assessment","boundary":"No single executive controls every stage of the semiconductor or AI ecosystem."},
-    {"id":"eu-path","title":"European agenda setting into market access","steps":[{"dataset":"living","id":"ursula-von-der-leyen"},{"dataset":"core","id":"eu-regulatory-eurosystem"},{"label":"Competition, digital and trade rules"},{"dataset":"core","id":"cloud-ai-gatekeepers"}],"classification":"documented_fact","boundary":"EU authority is divided among the Commission, Council, Parliament, courts and member states."},
-    {"id":"symbolic-path","title":"The symbolic ascent","steps":[{"label":"Knowledge and initiation"},{"label":"Information asymmetry"},{"label":"Technocratic authority"},{"dataset":"symbolic","id":"lightbringer"}],"classification":"symbolic_or_mythological","boundary":"This is an interpretive pathway, not a verified command chain."}
+    {
+      "id": "dollar-path",
+      "title": "Central-bank leadership into the dollar system",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "kevin-warsh"
+        },
+        {
+          "label": "Federal Reserve Board and FOMC"
+        },
+        {
+          "dataset": "core",
+          "id": "usd-system"
+        },
+        {
+          "label": "Dollar liquidity, supervision and settlement"
+        }
+      ],
+      "classification": "documented_fact",
+      "boundary": "Federal Reserve authority is committee-based, statutory and subject to market and political constraints."
+    },
+    {
+      "id": "bis-path",
+      "title": "Central-bank coordination into global standards",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "pablo-hernandez-de-cos"
+        },
+        {
+          "label": "BIS management, FSB and central-bank networks"
+        },
+        {
+          "dataset": "core",
+          "id": "basel-fsb-network"
+        },
+        {
+          "label": "Prudential standards and implementation pressure"
+        }
+      ],
+      "classification": "strongly_supported_assessment",
+      "boundary": "Coordination and standards do not establish a private world government or unilateral command over member states."
+    },
+    {
+      "id": "capital-path",
+      "title": "Private capital into government and corporate networks",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "larry-fink"
+        },
+        {
+          "label": "Executive and forum roles"
+        },
+        {
+          "dataset": "core",
+          "id": "nonbank-capital"
+        },
+        {
+          "label": "Client mandates, voting systems and advisory access"
+        }
+      ],
+      "classification": "strongly_supported_assessment",
+      "boundary": "Managed assets belong to clients and funds; scale and access are not personal ownership of the economy."
+    },
+    {
+      "id": "connector-path",
+      "title": "Private-capital connector into policy access",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "stephen-schwarzman"
+        },
+        {
+          "label": "Investment and advisory relationships"
+        },
+        {
+          "dataset": "people",
+          "id": "michael-froman"
+        },
+        {
+          "label": "Policy forum and government-business access"
+        }
+      ],
+      "classification": "plausible_structural_inference",
+      "boundary": "Institutional access does not prove coordinated command or a shared secret agenda."
+    },
+    {
+      "id": "chip-path",
+      "title": "Advanced chips into AI and national strategy",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "cc-wei"
+        },
+        {
+          "dataset": "core",
+          "id": "semiconductor-chokepoint"
+        },
+        {
+          "dataset": "people",
+          "id": "jensen-huang"
+        },
+        {
+          "dataset": "core",
+          "id": "cloud-ai-gatekeepers"
+        }
+      ],
+      "classification": "strongly_supported_assessment",
+      "boundary": "No single executive controls every stage of the semiconductor, cloud or AI ecosystem."
+    },
+    {
+      "id": "security-tech-path",
+      "title": "Intelligence requirements into private technology",
+      "steps": [
+        {
+          "dataset": "people",
+          "id": "john-ratcliffe"
+        },
+        {
+          "label": "Public-private acquisition and mission requirements"
+        },
+        {
+          "dataset": "people",
+          "id": "andy-jassy"
+        },
+        {
+          "label": "Cloud and classified computing capacity"
+        }
+      ],
+      "classification": "plausible_structural_inference",
+      "boundary": "Contracting and technical collaboration do not establish private command of intelligence agencies or intelligence command of the company."
+    },
+    {
+      "id": "dynasty-path",
+      "title": "Hereditary office into sovereign capital and security",
+      "steps": [
+        {
+          "dataset": "family",
+          "id": "al-nahyan"
+        },
+        {
+          "dataset": "people",
+          "id": "mohamed-bin-zayed"
+        },
+        {
+          "dataset": "people",
+          "id": "tahnoun-bin-zayed"
+        },
+        {
+          "label": "State, security and sovereign-capital institutions"
+        }
+      ],
+      "classification": "strongly_supported_assessment",
+      "boundary": "This establishes concentrated UAE access, not command over foreign governments or every connected investment."
+    },
+    {
+      "id": "symbolic-path",
+      "title": "The symbolic ascent",
+      "steps": [
+        {
+          "label": "Knowledge and initiation"
+        },
+        {
+          "label": "Information asymmetry"
+        },
+        {
+          "label": "Technocratic authority"
+        },
+        {
+          "dataset": "symbolic",
+          "id": "lightbringer"
+        }
+      ],
+      "classification": "symbolic_or_mythological",
+      "boundary": "This is an interpretive pathway, not a verified command chain."
+    }
   ],
   "symbolicDossiers": [
-    {"id":"lightbringer","name":"The Lightbringer","classification":"symbolic_or_mythological","summary":"A contested archetype of illumination, forbidden knowledge, rebellion, technology, elite self-conception and false light.","interpretations":["Bringer of knowledge","False light","Intelligence principle","Technological transcendence","Impersonal system","Literal metaphysical claim"],"notEstablished":"No empirical evidence establishes the Lightbringer as the operational commander of the named human network."},
-    {"id":"lucifer","name":"Lucifer / Morning Star","classification":"symbolic_or_mythological","summary":"A term with changing textual, theological and esoteric meanings.","interpretations":["Textual history","Theology","Esoteric illumination","Political metaphor"],"notEstablished":"Use of light or star imagery does not prove worship, membership or criminal conduct."},
-    {"id":"saturn","name":"Saturn / Kronos","classification":"symbolic_or_mythological","summary":"Associated in different traditions with time, limits, law, hierarchy and the devouring father.","interpretations":["Time and limitation","Institutional permanence","Generational debt","The devouring system"],"notEstablished":"Symbolic resemblance does not demonstrate a literal Saturnian command structure."},
-    {"id":"baal","name":"Baal","classification":"symbolic_or_mythological","summary":"An ancient title later reinterpreted through polemic, theology and modern conspiracy literature.","interpretations":["Historical religious title","Biblical polemic","Authority symbolism","Modern internet synthesis"],"notEstablished":"The term cannot prove that modern institutions share one ancient cult."},
-    {"id":"moloch","name":"Moloch","classification":"symbolic_or_mythological","summary":"A disputed historical subject often used as a metaphor for systems that consume human lives or future generations.","interpretations":["Ancient textual debate","Sacrifice metaphor","War and industry","Debt imposed on descendants"],"notEstablished":"A metaphor of sacrifice does not prove literal ritual activity by named people."},
-    {"id":"black-cube","name":"The Black Cube","classification":"symbolic_or_mythological","summary":"A geometric motif linked by modern interpreters to Saturn, containment, law and institutional enclosure.","interpretations":["Geometry","Distinct religious objects","Saturnian interpretation","Containment and bureaucracy"],"notEstablished":"Similar geometry across cultures does not prove common authorship or command."},
-    {"id":"pyramid","name":"The Pyramid","classification":"symbolic_or_mythological","summary":"A model of hierarchy, concentration and ascent used here to organize evidence.","interpretations":["Hierarchy","Institutional layers","Initiatory ascent","Concentration of access"],"notEstablished":"The shape itself is not evidence of conspiracy."},
-    {"id":"architect","name":"The Architect","classification":"symbolic_or_mythological","summary":"The figure who designs systems, rules, thresholds and durable structures while remaining less visible than public operators.","interpretations":["Institution builder","Policy designer","Systems engineer","Esoteric demiurge"],"notEstablished":"Architectural language alone does not identify a secret individual."}
+    {
+      "id": "lightbringer",
+      "name": "The Lightbringer",
+      "classification": "symbolic_or_mythological",
+      "summary": "A contested archetype of illumination, forbidden knowledge, rebellion, technology, elite self-conception and false light.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Bringer of knowledge",
+        "False light",
+        "Intelligence principle",
+        "Technological transcendence",
+        "Impersonal system",
+        "Literal metaphysical claim"
+      ],
+      "notEstablished": "No empirical evidence establishes the Lightbringer as the operational commander of the named human network."
+    },
+    {
+      "id": "lucifer",
+      "name": "Lucifer / Morning Star",
+      "classification": "symbolic_or_mythological",
+      "summary": "A term with changing textual, theological, literary and esoteric meanings.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Textual history",
+        "Theology",
+        "Esoteric illumination",
+        "Political metaphor"
+      ],
+      "notEstablished": "Use of light or star imagery does not prove worship, membership, possession or criminal conduct."
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn / Kronos",
+      "classification": "symbolic_or_mythological",
+      "summary": "Associated with time, limits, law, hierarchy, agriculture and the devouring father.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Time and limitation",
+        "Institutional permanence",
+        "Generational debt",
+        "The devouring system"
+      ],
+      "notEstablished": "Symbolic resemblance does not demonstrate a literal Saturnian command structure."
+    },
+    {
+      "id": "baal",
+      "name": "Baal",
+      "classification": "symbolic_or_mythological",
+      "summary": "An ancient title and group of deities later reinterpreted through polemic, theology and modern conspiracy literature.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Historical religious title",
+        "Biblical polemic",
+        "Authority symbolism",
+        "Modern internet synthesis"
+      ],
+      "notEstablished": "The term cannot prove that modern institutions share one ancient cult."
+    },
+    {
+      "id": "moloch",
+      "name": "Moloch",
+      "classification": "symbolic_or_mythological",
+      "summary": "A disputed historical subject often used as a metaphor for systems that consume human lives or future generations.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Ancient textual debate",
+        "Sacrifice metaphor",
+        "War and industry",
+        "Debt imposed on descendants"
+      ],
+      "notEstablished": "A metaphor of sacrifice does not prove literal ritual activity by named people."
+    },
+    {
+      "id": "black-cube",
+      "name": "The Black Cube",
+      "classification": "symbolic_or_mythological",
+      "summary": "A geometric motif linked by modern interpreters to Saturn, containment, law and institutional enclosure.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Geometry",
+        "Distinct religious objects",
+        "Saturnian interpretation",
+        "Containment and bureaucracy"
+      ],
+      "notEstablished": "Similar geometry across cultures does not prove common authorship or command."
+    },
+    {
+      "id": "pyramid",
+      "name": "The Pyramid",
+      "classification": "symbolic_or_mythological",
+      "summary": "A model of hierarchy, concentration and ascent used here to organise evidence.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Hierarchy",
+        "Institutional layers",
+        "Initiatory ascent",
+        "Concentration of access"
+      ],
+      "notEstablished": "The shape itself is not evidence of conspiracy."
+    },
+    {
+      "id": "architect",
+      "name": "The Architect",
+      "classification": "symbolic_or_mythological",
+      "summary": "The figure who designs systems, rules, thresholds and durable structures while remaining less visible than public operators.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Institution builder",
+        "Policy designer",
+        "Systems engineer",
+        "Esoteric demiurge"
+      ],
+      "notEstablished": "Architectural language alone does not identify a secret individual."
+    },
+    {
+      "id": "deep-state",
+      "name": "The Deep State",
+      "classification": "plausible_structural_inference",
+      "summary": "A contested political term for durable security, administrative and institutional networks that can outlast elected governments.",
+      "historicalFrame": "Meanings vary across sources, periods and traditions.",
+      "modernUse": "Used as a model for hierarchy, sacrifice, secrecy, illumination or institutional continuity.",
+      "interpretations": [
+        "Permanent bureaucracy",
+        "Security establishment",
+        "Institutional self-preservation",
+        "Unified secret government"
+      ],
+      "notEstablished": "Institutional continuity and secrecy do not by themselves establish one centrally commanded hidden state."
+    }
+  ],
+  "hiddenHandHypotheses": [
+    {
+      "id": "permanent-state-continuity",
+      "name": "Permanent-state continuity model",
+      "classification": "strongly_supported_assessment",
+      "thesis": "Long-lived bureaucracies, security institutions, treaty systems and professional networks preserve capabilities and policy options across elections.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "networked-oligarchy",
+      "name": "Networked oligarchy model",
+      "classification": "plausible_structural_inference",
+      "thesis": "A transnational class of capital owners, executives, advisers and institutional leaders may exercise disproportionate influence through overlapping boards, finance, philanthropy and access.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "access-broker-layer",
+      "name": "Access-broker hidden-hand model",
+      "classification": "plausible_structural_inference",
+      "thesis": "Less-visible advisers, funders, lawyers, trustees, family-office figures and conveners may shape who meets, which options reach leaders and which projects receive capital.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "intelligence-private-nexus",
+      "name": "Intelligence–private-sector nexus model",
+      "classification": "strongly_supported_assessment",
+      "thesis": "Modern intelligence and defence capabilities rely on private cloud, data, cyber, aerospace and analytics companies, creating reciprocal access and dependency.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "philanthropic-policy-pipeline",
+      "name": "Philanthropic policy-pipeline model",
+      "classification": "plausible_structural_inference",
+      "thesis": "Large foundations can fund research, implementation partners, measurement systems and advocacy that shape public agendas without holding formal office.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "dynastic-coordination",
+      "name": "Dynastic coordination model",
+      "classification": "disputed",
+      "thesis": "Some families preserve exceptional authority through hereditary office, voting control, trusts, foundations and succession, but claims of joint global command require separate proof.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "The current record does not establish one unified hidden government or supreme coordinating centre."
+    },
+    {
+      "id": "occult-command",
+      "name": "Literal occult-command hypothesis",
+      "classification": "speculative_hypothesis",
+      "thesis": "Some theories claim elite systems preserve literal worship, ritual obligations or non-human spiritual command associated with Lucifer, Saturn, Baal or Moloch.",
+      "evidenceFor": [
+        "Documented institutions, networks, symbols or relationships relevant to the model",
+        "Repeated access patterns that justify further investigation"
+      ],
+      "evidenceAgainst": [
+        "Competing interests, legal limits and fragmented authority",
+        "Association, symbolism and proximity do not prove command"
+      ],
+      "requiredEvidence": "Authenticated records, direct admissions, independently corroborated practice and a demonstrable decision or command chain.",
+      "notEstablished": "This is a metaphysical and speculative claim, not an empirically verified finding."
+    }
   ],
   "thirteenFamiliesReview": {
-    "status":"disputed",
-    "headline":"Thirteen named structures under investigation — not a verified council",
-    "method":"Compare enforceable office, voting rights, ownership, succession, board influence, decline and counter-evidence. Do not merge contradictory lists into false consensus.",
-    "requiredToConfirm":["Authenticated governance records","A demonstrable joint decision mechanism","Traceable appointments across separate systems","Coordinated outcomes beyond shared interests"],
-    "currentFinding":"The model documents several powerful dynastic structures and historically important houses. It does not verify a unified group of exactly thirteen controlling the world."
+    "status": "disputed",
+    "headline": "Thirteen named structures under investigation — not a verified council",
+    "method": "Compare enforceable office, voting rights, ownership, succession, board influence, decline, original-source genealogy and counter-evidence.",
+    "requiredToConfirm": [
+      "Authenticated governance records",
+      "A demonstrable joint decision mechanism",
+      "Traceable appointments across separate systems",
+      "Coordinated outcomes beyond shared interests"
+    ],
+    "currentFinding": "The model documents several powerful dynastic structures and historically important houses. It does not verify a unified group of exactly thirteen controlling the world."
   },
   "innerCouncilsReview": {
-    "status":"unresolved",
-    "namedBodies":["Federal Open Market Committee","ECB Governing Council","IMF Executive Board","Basel Committee on Banking Supervision","Financial Stability Board","European Commission","Five Eyes intelligence relationship","Chinese Communist Party leadership institutions","Public Investment Fund boards and committees","Corporate boards and controlling shareholder vehicles"],
-    "currentFinding":"These bodies possess real but different powers. No evidence package currently demonstrates that they answer to one supreme human council."
+    "status": "unresolved",
+    "namedBodies": [
+      "Federal Open Market Committee",
+      "ECB Governing Council",
+      "IMF Executive Board",
+      "BIS Board and Basel committees",
+      "Financial Stability Board",
+      "European Commission",
+      "NATO and Five Eyes relationships",
+      "Chinese Communist Party leadership institutions",
+      "Sovereign-wealth boards and committees",
+      "Corporate boards and controlling-shareholder vehicles",
+      "World Economic Forum Board of Trustees",
+      "Major policy-institute councils and advisory boards"
+    ],
+    "currentFinding": "These bodies possess real but different powers. No evidence package currently demonstrates that they answer to one supreme human council."
   }
 }

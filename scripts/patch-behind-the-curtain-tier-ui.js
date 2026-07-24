@@ -1,0 +1,10 @@
+const fs=require('fs');
+const path=require('path');
+const file=path.join(process.cwd(),'behind-the-curtain-access.html');
+let html=fs.readFileSync(file,'utf8');
+html=html.replace(/behind-the-curtain-access(?:-v2)?\.js/g,'behind-the-curtain-access-v2.js');
+html=html.replace('<div class="eyebrow">Current Human Access</div><h2>THE NAMES ARE NAMED.</h2><p>These are the living access-holders currently scoring highest for verified office, command, appointments, capital, infrastructure, privileged information and cross-border reach.</p>','<div class="eyebrow">Selected Tier Intelligence</div><h2>SELECT A LEVEL. NAME ITS OPERATORS.</h2><p>Each level now owns an independent roster and tier-specific score. The cross-system Top 10 appears only at Level 11.</p>');
+html=html.replace('<div class="eyebrow">The Coordination Question</div><h2>THE INNER COUNCILS.</h2><p>Actual committees, boards and intelligence relationships are named. Their documented mandates are not inflated into a single supreme council.</p>','<div class="eyebrow">The Coordination and Hidden-Hand Question</div><h2>THE INNER COUNCILS.</h2><p>Actual committees, boards, access brokers and competing hidden-control models are named. Documented power, structural inference and speculative theories remain visibly separate.</p>');
+html=html.replace('The names, institutions, dynasties, control pathways and competing ideas positioned above the visible system.','The public rulers, permanent operators, capital gatekeepers, infrastructure controllers, intelligence chiefs, policy architects, access brokers, dynasties and competing ideas positioned above the visible system.');
+fs.writeFileSync(file,html);
+console.log('Behind the Curtain tier-specific public interface patched.');

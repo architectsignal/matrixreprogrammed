@@ -1,0 +1,109 @@
+name: Behind the Curtain Tier Registry
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'behind-the-curtain-access.html'
+      - 'behind-the-curtain-access-v2.js'
+      - 'data/behind-the-curtain-pyramid.json'
+      - 'data/behind-the-curtain-people-registry.json'
+      - 'data/behind-the-curtain-family-access.json'
+      - 'data/behind-the-curtain.json'
+      - 'scripts/build-behind-the-curtain-tier-registry.js'
+      - 'scripts/patch-behind-the-curtain-tier-ui.js'
+      - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
+      - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/verify-live-behind-the-curtain.js'
+      - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
+      - 'docs/MATRIX_FEDIVERSE_MASTER.md'
+      - '.github/workflows/behind-the-curtain-tier-registry.yml'
+  push:
+    branches:
+      - main
+      - 'agent/**'
+    paths:
+      - 'behind-the-curtain-access-v2.js'
+      - 'data/behind-the-curtain-pyramid.json'
+      - 'data/behind-the-curtain-people-registry.json'
+      - 'scripts/build-behind-the-curtain-tier-registry.js'
+      - 'scripts/patch-behind-the-curtain-tier-ui.js'
+      - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
+      - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/verify-live-behind-the-curtain.js'
+      - 'docs/MATRIX_FEDIVERSE_MASTER.md'
+      - '.github/workflows/behind-the-curtain-tier-registry.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: behind-the-curtain-tier-registry-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test-and-preserve:
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[tier-built]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Generate independent people registry and Pyramid tiers
+        run: |
+          node scripts/build-behind-the-curtain-tier-registry.js
+          node scripts/patch-behind-the-curtain-tier-ui.js
+      - name: Recalculate linked structural and family evidence
+        run: node scripts/build-behind-the-curtain.js
+      - name: Validate syntax and anti-repetition contracts
+        run: |
+          node --check behind-the-curtain-access-v2.js
+          node --check scripts/build-behind-the-curtain-tier-registry.js
+          node --check scripts/patch-behind-the-curtain-tier-ui.js
+          node --check scripts/behind-the-curtain-access-test.js
+          node --check scripts/behind-the-curtain-living-access-test.js
+          node --check scripts/behind-the-curtain-production-guard.js
+          node --check scripts/verify-live-behind-the-curtain.js
+          node scripts/behind-the-curtain-access-test.js
+          node scripts/behind-the-curtain-living-access-test.js
+      - name: Confirm generated public contract
+        run: |
+          test -s data/behind-the-curtain-people-registry.json
+          grep -q 'behind-the-curtain-access-v2.js' behind-the-curtain-access.html
+          grep -q 'cross-system-top-10' data/behind-the-curtain-pyramid.json
+          grep -q 'speculative_hypothesis' data/behind-the-curtain-pyramid.json
+      - name: Upload verified generated tier package
+        uses: actions/upload-artifact@v4
+        with:
+          name: behind-the-curtain-tier-package-${{ github.run_id }}
+          path: |
+            behind-the-curtain-access.html
+            behind-the-curtain-access-v2.js
+            data/behind-the-curtain-pyramid.json
+            data/behind-the-curtain-people-registry.json
+            docs/BEHIND_THE_CURTAIN_MASTER.md
+            docs/MATRIX_FEDIVERSE_MASTER.md
+          if-no-files-found: error
+          retention-days: 7
+      - name: Commit generated intelligence to Git only
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add behind-the-curtain-access.html behind-the-curtain-access-v2.js data/behind-the-curtain-pyramid.json data/behind-the-curtain-people-registry.json data/behind-the-curtain.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json docs/BEHIND_THE_CURTAIN_MASTER.md docs/MATRIX_FEDIVERSE_MASTER.md
+          if git diff --cached --quiet; then
+            echo 'Tier registry and public page are already current.'
+          else
+            git commit -m 'Refresh independent Pyramid tiers [tier-built]'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
+      - name: Confirm production boundary
+        run: echo 'GIT-ONLY PASS — no Wrangler, Cloudflare or production deployment step exists in this workflow.'

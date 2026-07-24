@@ -168,3 +168,8 @@ The initial model does **not** establish one unified hidden command structure. I
 ## Production boundary
 
 The Behind the Curtain workflow is Git-only. It may rebuild data, page assets and internal links, but it must not contain Wrangler, Cloudflare deployment or production-dispatch commands while the repository production freeze is active.
+
+
+## Tier-specific named access registry — permanent requirement
+
+The Pyramid must never reuse one global Top 10 across every layer. Levels 1–7 each require an independent roster, tier-specific score, mechanism and evidence boundary. The Human Apex is calculated only at Level 11. Speculative hidden-hand, deep-state, dynastic and occult-command models require evidence for, evidence against, required proof and an explicit not-established boundary.

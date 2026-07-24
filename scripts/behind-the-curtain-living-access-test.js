@@ -9,11 +9,12 @@ const assert = (ok, message) => {
 };
 
 const data = read('data/behind-the-curtain-living-access.json');
+const people = read('data/behind-the-curtain-people-registry.json');
 const intake = read('data/behind-the-curtain-living-access-intake.json');
 const history = read('data/behind-the-curtain-living-access-history.json');
 const continuity = read('data/behind-the-curtain-continuity-layers.json');
 const html = must('behind-the-curtain-access.html');
-const js = must('behind-the-curtain-access.js');
+const js = must('behind-the-curtain-access-v2.js');
 
 const score = (candidate) =>
   Math.round(
@@ -32,7 +33,7 @@ const ranked = data.candidates
   .filter((candidate) => candidate.rank && candidate.rank <= 10)
   .sort((a, b) => a.rank - b.rank);
 
-assert(ranked.length === 10, 'Living public ranking must contain exactly ten people');
+assert(ranked.length === 10, 'Legacy living comparison ranking must contain exactly ten people');
 assert(new Set(ranked.map((candidate) => candidate.id)).size === 10, 'Living candidate IDs must be unique');
 
 ranked.forEach((candidate, index) => {
@@ -81,23 +82,25 @@ assert(
   continuity.layers.length === 10 && continuity.evolutionPolicy?.continuous === true,
   'Continuity evolution model is incomplete',
 );
+assert(people.people.length >= 80, 'Independent named-people registry is incomplete');
 assert(
   html.includes('id="pyramid"') &&
     html.includes('id="names"') &&
     html.includes('id="freshness"') &&
-    html.includes('THE NAMES ARE NAMED'),
-  'Living Pyramid page sections missing',
+    html.includes('SELECT A LEVEL. NAME ITS OPERATORS.'),
+  'Independent-tier Pyramid page sections missing',
 );
 assert(
-  js.includes('behind-the-curtain-living-access.json') &&
+  js.includes('behind-the-curtain-people-registry.json') &&
     js.includes('behind-the-curtain-living-access-history.json') &&
     js.includes('behind-the-curtain-continuity-layers.json'),
-  'Living client data feeds missing',
+  'Independent-tier client data feeds missing',
 );
 assert(
   js.includes('setInterval') && js.includes('pollMinutes') && js.includes('visibilitychange'),
   'Living page automatic refresh rules are missing',
 );
+assert(js.includes('renderSelectedTier') && !js.includes('renderHumanApex'), 'Legacy global Top 10 renderer survived');
 
 const deployWorkflow = must('.github/workflows/deploy.yml');
 const fallbackWorkflow = must('.github/workflows/deploy-production.yml');
@@ -153,13 +156,13 @@ if (authorizedControlledDeploy) {
     '.github/workflows/deploy-production.yml',
     '.github/workflows/one-shot-dispatch-controlled-production.yml',
   ]) {
-    const text = must(relative);
-    assert(!hasProductionDeployCommand(text), `${relative} must remain production-frozen`);
+    const workflowText = must(relative);
+    assert(!hasProductionDeployCommand(workflowText), `${relative} must remain production-frozen`);
   }
 }
 
 console.log(
-  `Behind the Curtain Living Access PASS: ${ranked.length}/10 current people, ${data.sources.length} bounded sources, ${history.snapshots.length} historical snapshots, ${continuity.layers.length} continuity mechanisms; ${
+  `Behind the Curtain Living Access PASS: ${ranked.length}/10 legacy comparison people, ${people.people.length} independent tier people, ${data.sources.length} bounded sources, ${history.snapshots.length} historical snapshots, ${continuity.layers.length} continuity mechanisms; ${
     authorizedControlledDeploy ? 'guarded one-run production authorization verified' : 'production remains frozen'
   }.`,
 );

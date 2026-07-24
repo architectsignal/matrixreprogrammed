@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Discover or dispatch exactly one controlled production run
+      - name: Discover or dispatch exactly one corrected production retry
         id: release
         uses: actions/github-script@v7
         with:
@@ -33,7 +33,7 @@ jobs:
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const cutoff = new Date('2026-07-24T09:44:00Z');
+            const cutoff = new Date('2026-07-24T10:05:00Z');
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
             const target = workflows.data.workflows.find(
               workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
@@ -58,9 +58,9 @@ jobs:
             }
 
             let run = await recentRun();
-            let action = 'reused-existing-run';
+            let action = 'reused-existing-corrected-retry';
             if (!run) {
-              action = 'dispatched-once';
+              action = 'dispatched-corrected-retry-once';
               await github.rest.actions.createWorkflowDispatch({
                 owner,
                 repo,
@@ -74,7 +74,7 @@ jobs:
               }
             }
             if (!run) {
-              core.setFailed('Production dispatch was accepted but its workflow run could not be resolved.');
+              core.setFailed('Corrected production retry was accepted but its workflow run could not be resolved.');
               return;
             }
 
@@ -84,6 +84,8 @@ jobs:
               recordedAt: new Date().toISOString(),
               cutoff: cutoff.toISOString(),
               workflowId: target.id,
+              supersedesFailedRun: 30083740775,
+              repair: 'Site QA now excludes generated .cloudflare output and scans only static HTML markup, removing the false missing-link failures that stopped the first authorized run before deployment.',
               run: {
                 id: run.id,
                 status: run.status,
@@ -95,23 +97,23 @@ jobs:
                 event: run.event,
                 url: run.html_url
               },
-              boundary: 'This dispatcher reuses any controlled production run created after the final release cutoff and refuses to create a duplicate.'
+              boundary: 'This dispatcher permits exactly one corrected retry after failed run 30083740775. Any retry created after the cutoff is reused rather than duplicated.'
             };
             fs.mkdirSync('data', { recursive: true });
             fs.writeFileSync('data/final-pyramid-release-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
             core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
 
-      - name: Commit the exact production run identity
+      - name: Commit the exact corrected production run identity
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/final-pyramid-release-dispatch.json
           if git diff --cached --quiet; then
-            echo 'Production run identity already recorded.'
+            echo 'Corrected production run identity already recorded.'
             exit 0
           fi
-          git commit -m 'Record final Pyramid production run identity'
+          git commit -m 'Record corrected Heroes and Pyramid production retry identity'
           for attempt in 1 2 3 4; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

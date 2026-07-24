@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: independent-pyramid-v2-production-dispatch
+  group: capstone-pyramid-v3-production-dispatch
   cancel-in-progress: false
 
 jobs:
@@ -24,8 +24,7 @@ jobs:
           ref: main
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Discover or dispatch exactly one independent Pyramid release
+      - name: Discover or dispatch exactly one capstone-complete release
         id: release
         uses: actions/github-script@v7
         with:
@@ -33,95 +32,38 @@ jobs:
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const cutoff = new Date('2026-07-24T11:47:00Z');
-            const releaseId = 'independent-pyramid-v2-20260724';
+            const cutoff = new Date('2026-07-24T12:03:00Z');
+            const releaseId = 'capstone-pyramid-v3-20260724';
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
-            const target = workflows.data.workflows.find(
-              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
-            );
-            if (!target) {
-              core.setFailed('Controlled production workflow was not found.');
-              return;
-            }
-
+            const target = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) { core.setFailed('Controlled production workflow was not found.'); return; }
             async function recentRun() {
-              const response = await github.rest.actions.listWorkflowRuns({
-                owner,
-                repo,
-                workflow_id: target.id,
-                branch: 'main',
-                event: 'workflow_dispatch',
-                per_page: 30
-              });
-              return response.data.workflow_runs
-                .filter(run => new Date(run.created_at) >= cutoff)
-                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+              const response = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', event: 'workflow_dispatch', per_page: 30 });
+              return response.data.workflow_runs.filter(run => new Date(run.created_at) >= cutoff).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at))[0] || null;
             }
-
             let run = await recentRun();
-            let action = 'reused-existing-independent-pyramid-release';
+            let action = 'reused-existing-capstone-release';
             if (!run) {
-              action = 'dispatched-independent-pyramid-release-once';
-              await github.rest.actions.createWorkflowDispatch({
-                owner,
-                repo,
-                workflow_id: target.id,
-                ref: 'main',
-                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
-              });
-              for (let attempt = 1; attempt <= 18 && !run; attempt++) {
-                await new Promise(resolve => setTimeout(resolve, 5000));
-                run = await recentRun();
-              }
+              action = 'dispatched-capstone-release-once';
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' } });
+              for (let attempt=1; attempt<=18 && !run; attempt++) { await new Promise(resolve=>setTimeout(resolve,5000)); run=await recentRun(); }
             }
-            if (!run) {
-              core.setFailed('Independent Pyramid production release was accepted but its workflow run could not be resolved.');
-              return;
-            }
-
-            const payload = {
-              ok: true,
-              releaseId,
-              action,
-              recordedAt: new Date().toISOString(),
-              cutoff: cutoff.toISOString(),
-              workflowId: target.id,
-              mergedFeatureCommit: '437754772689f4eaa832881b22143af422c438ae',
-              releaseGuardsCommit: '27770ad55b0d795aca4c1229ca7370fd212594e8',
-              scope: 'Deploy the rebuilt Behind the Curtain Pyramid with independent tier rosters, 80 named people, dynamic Human Apex, hidden-hand analysis, symbolic boundaries and dedicated live verification.',
-              run: {
-                id: run.id,
-                status: run.status,
-                conclusion: run.conclusion,
-                createdAt: run.created_at,
-                updatedAt: run.updated_at,
-                headSha: run.head_sha,
-                headBranch: run.head_branch,
-                event: run.event,
-                url: run.html_url
-              },
-              boundary: 'Only one workflow-dispatch run created after the fresh cutoff is allowed. Later trigger retries reuse the same run rather than creating another deployment.'
-            };
-            fs.mkdirSync('data', { recursive: true });
-            fs.writeFileSync('data/independent-pyramid-release-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
-            core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
-
-      - name: Commit exact independent Pyramid release identity
+            if (!run) { core.setFailed('Capstone-complete production release could not be resolved.'); return; }
+            const payload={ok:true,releaseId,action,recordedAt:new Date().toISOString(),cutoff:cutoff.toISOString(),workflowId:target.id,staleRunCancelled:30091003163,scope:'Deploy the independent 80-person Pyramid plus the cinematic Capstone covering Black Nobility history, Orsini and related Roman houses, Baal, Moloch, Saturn and the Lightbringer with explicit speculation boundaries.',run:{id:run.id,status:run.status,conclusion:run.conclusion,createdAt:run.created_at,updatedAt:run.updated_at,headSha:run.head_sha,headBranch:run.head_branch,event:run.event,url:run.html_url},boundary:'Only one workflow-dispatch run after the post-capstone cutoff is allowed. Trigger retries reuse it.'};
+            fs.mkdirSync('data',{recursive:true});
+            fs.writeFileSync('data/capstone-pyramid-release-dispatch.json',JSON.stringify(payload,null,2)+'\n');
+            core.info(`${action}: production run ${run.id}.`);
+      - name: Commit exact capstone release identity
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/independent-pyramid-release-dispatch.json
-          if git diff --cached --quiet; then
-            echo 'Independent Pyramid production run identity already recorded.'
-            exit 0
-          fi
-          git commit -m 'Record independent Pyramid production run identity'
+          git add data/capstone-pyramid-release-dispatch.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record capstone Pyramid production run identity'
           for attempt in 1 2 3 4; do
             git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
             git rebase --abort 2>/dev/null || true
           done
           exit 1

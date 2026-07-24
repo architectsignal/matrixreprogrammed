@@ -29,25 +29,19 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Validate and finalise the 52-card deck
+      - name: Validate and finalise all 52 cards
         run: node scripts/finalize-heroes-fighting-matrix-deck.js
 
-      - name: Add the deck to the homepage
+      - name: Add the deck to homepage and Deck Hub
         run: node scripts/patch-homepage-power-deck-link.js
-
-      - name: Refresh core search
-        run: node scripts/repair-search-system.js
 
       - name: Add all 52 people and deck routes to search
         run: node scripts/patch-heroes-search-index.js
 
-      - name: Refresh shared assets
-        run: node scripts/ensure-shared-assets.js
+      - name: Publish verified Heroes files to Cloudflare output
+        run: node scripts/publish-heroes-deck-cloudflare.js
 
-      - name: Build Cloudflare output
-        run: node scripts/build-cloudflare-output.js
-
-      - name: Verify cards, suits, routes, downloads and Cloudflare copies
+      - name: Verify cards, suits, navigation, search, downloads and Cloudflare copies
         run: node scripts/heroes-deck-smoke-test.js
 
       - name: Commit completed deck system

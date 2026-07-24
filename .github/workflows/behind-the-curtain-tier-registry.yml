@@ -14,6 +14,9 @@ on:
       - 'scripts/build-behind-the-curtain-tier-registry.js'
       - 'scripts/patch-behind-the-curtain-tier-ui.js'
       - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
+      - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/verify-live-behind-the-curtain.js'
       - 'docs/BEHIND_THE_CURTAIN_MASTER.md'
       - 'docs/MATRIX_FEDIVERSE_MASTER.md'
       - '.github/workflows/behind-the-curtain-tier-registry.yml'
@@ -28,6 +31,9 @@ on:
       - 'scripts/build-behind-the-curtain-tier-registry.js'
       - 'scripts/patch-behind-the-curtain-tier-ui.js'
       - 'scripts/behind-the-curtain-access-test.js'
+      - 'scripts/behind-the-curtain-living-access-test.js'
+      - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/verify-live-behind-the-curtain.js'
       - 'docs/MATRIX_FEDIVERSE_MASTER.md'
       - '.github/workflows/behind-the-curtain-tier-registry.yml'
 
@@ -63,6 +69,9 @@ jobs:
           node --check scripts/build-behind-the-curtain-tier-registry.js
           node --check scripts/patch-behind-the-curtain-tier-ui.js
           node --check scripts/behind-the-curtain-access-test.js
+          node --check scripts/behind-the-curtain-living-access-test.js
+          node --check scripts/behind-the-curtain-production-guard.js
+          node --check scripts/verify-live-behind-the-curtain.js
           node scripts/behind-the-curtain-access-test.js
           node scripts/behind-the-curtain-living-access-test.js
       - name: Confirm generated public contract

@@ -6,4 +6,11 @@
     box.innerHTML='<strong>Investigation Machine:</strong> last source run '+esc(s.lastInvestigationRun||'pending')+' · '+esc(s.registeredSources)+' sources registered · '+esc(s.ledgerFindings)+' evidence findings · <a href="investigation-machine.html">open machine</a> · <a href="daily-investigation-conclusions.html">daily conclusions</a> · <a href="search.html">search</a>';
     var footer=document.querySelector('footer');if(footer&&footer.parentNode)footer.parentNode.insertBefore(box,footer);else document.body.appendChild(box);
   }).catch(function(){var box=document.createElement('aside');box.setAttribute('data-investigation-pulse','true');box.className='wrap investigation-pulse';box.innerHTML='<strong>Investigation Machine:</strong> status feed unavailable · <a href="investigation-source-ledger.html">check source ledger</a>';var footer=document.querySelector('footer');if(footer&&footer.parentNode)footer.parentNode.insertBefore(box,footer);});
+  if(/(?:^|\/)behind-the-curtain-access(?:\.html)?$/.test(location.pathname)){
+    var hiddenHand=document.createElement('script');
+    hiddenHand.src='behind-the-curtain-hidden-hand.js';
+    hiddenHand.defer=true;
+    hiddenHand.setAttribute('data-hidden-hand-layer','true');
+    document.head.appendChild(hiddenHand);
+  }
 })();

@@ -14,11 +14,14 @@ if(!html.includes('href="#capstone-gateway"'))html=html.replace('<a href="#sourc
 fs.writeFileSync(file,html);
 
 const capstoneFile=path.join(root,'behind-the-curtain-capstone.html');
-if(fs.existsSync(capstoneFile)){
-  let capstoneHtml=fs.readFileSync(capstoneFile,'utf8');
-  capstoneHtml=capstoneHtml
-    .replace(/href="behind-the-curtain-access"/g,'href="behind-the-curtain-access.html"')
-    .replace(/href="source-vault"/g,'href="source-vault.html"');
-  fs.writeFileSync(capstoneFile,capstoneHtml);
-}
-console.log('Behind the Curtain tier-specific interface, capstone gateway and canonical routes patched.');
+if(!fs.existsSync(capstoneFile))throw new Error('behind-the-curtain-capstone.html is missing');
+let capstoneHtml=fs.readFileSync(capstoneFile,'utf8');
+capstoneHtml=capstoneHtml
+  .replace(/href="behind-the-curtain-access"/g,'href="behind-the-curtain-access.html"')
+  .replace(/href="source-vault(?:\.html)?"/g,'href="evidence-vault.html"');
+fs.writeFileSync(capstoneFile,capstoneHtml);
+
+const capstoneRoutes=(html.match(/href="behind-the-curtain-capstone\.html"/g)||[]).length;
+const pyramidRoutes=(capstoneHtml.match(/href="behind-the-curtain-access\.html"/g)||[]).length;
+if(capstoneRoutes<1||pyramidRoutes<2||capstoneHtml.includes('href="source-vault'))throw new Error('Behind the Curtain capstone route repair is incomplete');
+console.log(`Behind the Curtain tier-specific interface, capstone gateway and canonical routes patched: ${capstoneRoutes} capstone route(s), ${pyramidRoutes} Pyramid return route(s).`);

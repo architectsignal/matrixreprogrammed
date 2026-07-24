@@ -44,4 +44,4 @@ Promise.all(suitFiles.map(url=>fetch(url).then(response=>{if(!response.ok)throw 
 document.getElementById('deck-search').addEventListener('input',render);document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(item=>item.classList.toggle('active',item===button));render();}));
 document.getElementById('download-data').addEventListener('click',()=>{if(!allCards.length)return;const payload={deckId:'heroes-fighting-matrix',title:'Heroes Fighting the Matrix',boundary:'Documented public contribution is not total endorsement.',cards:allCards};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='heroes-fighting-matrix-deck.json';link.click();URL.revokeObjectURL(link.href);});
 </script>
-</body></html>
+<script src="investigation-pulse.js"></script></body></html>

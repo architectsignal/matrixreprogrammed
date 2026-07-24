@@ -1,13 +1,19 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-24T08:42:04.661Z
-Live Intel source window: 2026-07-24T08:42:00.460Z
-Tracked cards: 873
+Generated: 2026-07-24T14:12:18.097Z
+Live Intel source window: 2026-07-24T14:12:13.621Z
+Tracked cards: 877
 Cards with current matched records: 95
-Cards with no new verified record: 778
+Cards with no new verified record: 782
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
+
+## ${esc(card.name)}
+- Route: heroes-fighting-matrix-card.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## 2021-00294
 - Route: entity-timelines/2021-00294.html
@@ -1466,6 +1472,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## DECK INTELLIGENCE HUB
+- Route: deck-expansion-hub.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## DEFENSE DEPARTMENT
 - Route: entity-timelines/defense-department.html
 - Status: no-new-verified-record-in-current-window
@@ -2302,6 +2314,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Hermetic Order of the Golden Dawn
 - Route: secret-societies/hermetic-order-of-the-golden-dawn.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## HEROES DECK RESEARCH LEDGER.
+- Route: heroes-fighting-matrix-research-ledger.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## HEROES FIGHTING THE MATRIX.
+- Route: heroes-fighting-matrix-deck.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

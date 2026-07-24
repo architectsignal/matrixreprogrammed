@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 3004
-Flagged pages: 2452
+Scanned pages: 3008
+Flagged pages: 2453
 High priority pages: 803
-Medium priority pages: 1643
+Medium priority pages: 1644
 Pages with missing rules: 421
 Auto-update eligible figures: 2
 Manual-review figures: 108
-Missing-rule figures: 946
+Missing-rule figures: 947
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -43,7 +43,7 @@ Missing-rule figures: 946
 - _site/intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/making-money.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- entity-registry.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -75,6 +75,7 @@ Missing-rule figures: 946
 - _site/intel-archive.html: 4 figure(s) need source rules.
 - _site/making-money.html: 4 figure(s) need source rules.
 - _site/power-structure-map.html: 4 figure(s) need source rules.
+- entity-registry.html: 4 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
 - making-money.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
@@ -83,7 +84,6 @@ Missing-rule figures: 946
 - _site/power-atlas.html: 3 figure(s) need source rules.
 - admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 - daily-drop.html: 3 figure(s) need source rules.
-- entity-registry.html: 3 figure(s) need source rules.
 - follow-the-money.html: 3 figure(s) need source rules.
 - power-atlas.html: 3 figure(s) need source rules.
 

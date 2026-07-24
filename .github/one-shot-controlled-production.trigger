@@ -1,7 +1,7 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-24T11:09:40+02:00
-Target: latest tested main containing cinematic Pyramid of Power and restored guarded production workflow
-Authorization: one controlled production deployment only
-Required proof: guarded build, D1 rollback bookmark and migrations, Cloudflare deployment, exact live SHA, Worker health, forum D1, membership boundaries, PayPal state preservation, and live Pyramid route verification.
-Purpose: publish the completed Behind the Curtain Pyramid of Power once, verify it live, and do not launch a second production deployment for this request.
-Nonce: 2026-07-24T11:09:40+02:00
+Requested: 2026-07-24T11:44:36+02:00
+Target: latest main containing the cinematic Pyramid of Power, living update engine, Top 52 title-contract repair, Heroes integration, and all current site intelligence work
+Authorization: exactly one controlled production deployment
+Required proof: complete build, fail-closed tests, D1 rollback bookmark and idempotent migrations, Cloudflare Worker deployment, exact live SHA, forum D1, membership and PayPal boundaries, and live Behind the Curtain Pyramid route
+Purpose: merge the completed work into one current production state, deploy once, verify it live, and immediately restore the production lock after checkout
+Nonce: final-pyramid-release-2026-07-24T11:44:36+02:00

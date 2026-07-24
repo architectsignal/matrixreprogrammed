@@ -1,0 +1,211 @@
+[
+  {
+    "rank": 1,
+    "id": "roger-dingledine",
+    "name": "Roger Dingledine",
+    "suit": "KEYS",
+    "score": 98,
+    "confidence": "high",
+    "lane": "Anonymous communications infrastructure",
+    "contribution": "Original Tor developer and long-running coordinator of a decentralised anonymity network.",
+    "whyIncluded": "Tor is a structural tool: it gives users, journalists and dissidents private access to an uncensored web rather than merely arguing for it.",
+    "sources": [
+      {"label": "Tor Project history", "url": "https://www.torproject.org/about/history/", "type": "primary"},
+      {"label": "Tor Project people", "url": "https://www.torproject.org/about/people/", "type": "primary"},
+      {"label": "Tor design paper", "url": "https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.html", "type": "primary"}
+    ],
+    "caveat": "Ranking reflects documented infrastructure and public-interest impact, not endorsement of every statement or project decision."
+  },
+  {
+    "rank": 4,
+    "id": "moxie-marlinspike",
+    "name": "Moxie Marlinspike",
+    "suit": "KEYS",
+    "score": 95,
+    "confidence": "high",
+    "lane": "Private messaging infrastructure",
+    "contribution": "Created and led the development of Signal and the Signal Protocol, bringing strong end-to-end encryption to mass-market communications.",
+    "whyIncluded": "Signal converted privacy from a specialist demand into widely usable infrastructure adopted far beyond one app.",
+    "sources": [
+      {"label": "Signal blog", "url": "https://signal.org/blog/", "type": "primary"},
+      {"label": "Moxie Marlinspike", "url": "https://moxie.org/blog/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns privacy infrastructure and adoption, not endorsement of every technical or governance decision."
+  },
+  {
+    "rank": 5,
+    "id": "brewster-kahle",
+    "name": "Brewster Kahle",
+    "suit": "KEYS",
+    "score": 94,
+    "confidence": "high",
+    "lane": "Open knowledge preservation",
+    "contribution": "Founded the Internet Archive and built long-term infrastructure for preserving websites, books, software, audio and public memory.",
+    "whyIncluded": "An independent archive limits the power of deletion, link rot and institutional forgetting.",
+    "sources": [
+      {"label": "Internet Archive", "url": "https://archive.org/about/", "type": "primary"},
+      {"label": "EPIC biography", "url": "https://epic.org/people/brewster-kahle/", "type": "authoritative"}
+    ],
+    "caveat": "Inclusion recognises preservation and access work; it does not decide every copyright or lending dispute involving the Archive."
+  },
+  {
+    "rank": 6,
+    "id": "tim-berners-lee",
+    "name": "Tim Berners-Lee",
+    "suit": "KEYS",
+    "score": 94,
+    "confidence": "high",
+    "lane": "User-controlled web architecture",
+    "contribution": "Invented the World Wide Web and later initiated Solid to return data control and interoperability to users.",
+    "whyIncluded": "Solid directly addresses platform silos by separating personal data from the applications that use it.",
+    "sources": [
+      {"label": "Solid Project", "url": "https://solidproject.org/", "type": "primary"},
+      {"label": "Solid team", "url": "https://solidproject.org/team", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns open-web architecture and user data control, not endorsement of every implementation or commercial partner."
+  },
+  {
+    "rank": 7,
+    "id": "nick-mathewson",
+    "name": "Nick Mathewson",
+    "suit": "KEYS",
+    "score": 93,
+    "confidence": "high",
+    "lane": "Tor design and engineering",
+    "contribution": "One of Tor's three original designers and a long-running architect of its anonymity and anti-censorship systems.",
+    "whyIncluded": "Tor's durability depends on sustained engineering, not only the original concept.",
+    "sources": [
+      {"label": "Tor Project people", "url": "https://www.torproject.org/about/people/", "type": "primary"},
+      {"label": "Tor design paper", "url": "https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.html", "type": "primary"}
+    ],
+    "caveat": "Ranking reflects documented technical contribution, not endorsement of every network policy or design trade-off."
+  },
+  {
+    "rank": 8,
+    "id": "paul-syverson",
+    "name": "Paul Syverson",
+    "suit": "KEYS",
+    "score": 93,
+    "confidence": "high",
+    "lane": "Onion routing and Tor architecture",
+    "contribution": "Co-invented onion routing and became one of the three original designers of Tor.",
+    "whyIncluded": "Onion routing is foundational infrastructure for anonymous and censorship-resistant communication.",
+    "sources": [
+      {"label": "Tor Project history", "url": "https://www.torproject.org/about/history/", "type": "primary"},
+      {"label": "Tor Project people", "url": "https://www.torproject.org/about/people/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns technical invention and public-interest use, not a claim that anonymity tools are risk-free or always used lawfully."
+  },
+  {
+    "rank": 9,
+    "id": "matthew-hodgson",
+    "name": "Matthew Hodgson",
+    "suit": "KEYS",
+    "score": 92,
+    "confidence": "high",
+    "lane": "Federated communications",
+    "contribution": "Co-founded Matrix, an open protocol for interoperable, decentralised real-time communication.",
+    "whyIncluded": "Matrix attacks communication silos at the protocol layer by allowing independently operated servers to federate.",
+    "sources": [
+      {"label": "Matrix Foundation", "url": "https://matrix.org/foundation/about/", "type": "primary"},
+      {"label": "Matrix origin", "url": "https://www2.matrix.org/blog/2014/10/16/who-is-matrix-org/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns open protocol design and adoption, not endorsement of every company or deployment using Matrix."
+  },
+  {
+    "rank": 10,
+    "id": "juan-benet",
+    "name": "Juan Benet",
+    "suit": "KEYS",
+    "score": 91,
+    "confidence": "high",
+    "lane": "Peer-to-peer storage and open networks",
+    "contribution": "Created IPFS and founded Protocol Labs to develop infrastructure for open, distributed networks.",
+    "whyIncluded": "IPFS reduces reliance on location-based centralised hosting by addressing information through content and peer-to-peer distribution.",
+    "sources": [
+      {"label": "IPFS project history", "url": "https://docs.ipfs.tech/project/history/", "type": "primary"},
+      {"label": "Protocol Labs", "url": "https://protocol.ai/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises open-network infrastructure; it does not endorse every token, investment or project in the wider ecosystem."
+  },
+  {
+    "rank": 15,
+    "id": "amandine-le-pape",
+    "name": "Amandine Le Pape",
+    "suit": "KEYS",
+    "score": 86,
+    "confidence": "high",
+    "lane": "Federated communications governance",
+    "contribution": "Co-founded Matrix and has led the organisational work required to sustain its open, federated communications ecosystem.",
+    "whyIncluded": "Decentralised protocols survive only when governance, adoption and operational structures are built alongside code.",
+    "sources": [
+      {"label": "Matrix Foundation", "url": "https://matrix.org/foundation/about/", "type": "primary"},
+      {"label": "Matrix Governing Board", "url": "https://www.matrix.org/foundation/governing-board/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns documented Matrix stewardship and does not endorse every deployment or business relationship."
+  },
+  {
+    "rank": 18,
+    "id": "eugen-rochko",
+    "name": "Eugen Rochko",
+    "suit": "KEYS",
+    "score": 85,
+    "confidence": "high",
+    "lane": "Federated social networking",
+    "contribution": "Created Mastodon as free, open-source social media that is not owned or controlled by one central authority.",
+    "whyIncluded": "Mastodon provides a working alternative to platform monopoly through federation and community governance.",
+    "sources": [
+      {"label": "Mastodon about", "url": "https://joinmastodon.org/about", "type": "primary"},
+      {"label": "Founder transition", "url": "https://blog.joinmastodon.org/2025/11/my-next-chapter-with-mastodon/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns decentralised social infrastructure, not endorsement of every server policy or community decision."
+  },
+  {
+    "rank": 19,
+    "id": "vitalik-buterin",
+    "name": "Vitalik Buterin",
+    "suit": "KEYS",
+    "score": 84,
+    "confidence": "high",
+    "lane": "Decentralised application infrastructure",
+    "contribution": "Conceived Ethereum and remains a major technical and philosophical contributor to its decentralised protocol ecosystem.",
+    "whyIncluded": "Ethereum expanded decentralised networks from payments toward general-purpose applications and open governance experiments.",
+    "sources": [
+      {"label": "Ethereum history", "url": "https://ethereum.org/ethereum-history-founder-and-ownership/", "type": "primary"},
+      {"label": "Evolution of Ethereum", "url": "https://blog.ethereum.org/2015/09/28/the-evolution-of-ethereum", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises protocol contribution; it is not investment advice or endorsement of every application built on Ethereum."
+  },
+  {
+    "rank": 20,
+    "id": "ian-clarke",
+    "name": "Ian Clarke",
+    "suit": "KEYS",
+    "score": 84,
+    "confidence": "high",
+    "lane": "Censorship-resistant peer-to-peer publishing",
+    "contribution": "Created Freenet, an early peer-to-peer platform designed for decentralised and censorship-resistant communication and publishing.",
+    "whyIncluded": "Freenet is a foundational attempt to make information availability independent of a central host.",
+    "sources": [
+      {"label": "Freenet project", "url": "https://freenet.org/about/news/", "type": "primary"},
+      {"label": "Freenet whitepaper", "url": "https://freenet.org/whitepaper/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns infrastructure and research contribution, not a claim that every network use is benign."
+  },
+  {
+    "rank": 21,
+    "id": "bram-cohen",
+    "name": "Bram Cohen",
+    "suit": "KEYS",
+    "score": 83,
+    "confidence": "high",
+    "lane": "Peer-to-peer distribution",
+    "contribution": "Invented the BitTorrent protocol, enabling large-scale distribution through user-contributed peer-to-peer infrastructure.",
+    "whyIncluded": "BitTorrent demonstrated that internet-scale distribution could work without a single central server carrying the full load.",
+    "sources": [
+      {"label": "BitTorrent profile", "url": "https://www.bittorrent.com/blog/2012/09/27/meet-our-team-bram-cohen/", "type": "primary"},
+      {"label": "BitTorrent protocol", "url": "https://www.bittorrent.com/blog/2009/10/05/bittorrent-is/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises protocol impact; it does not endorse copyright infringement or every later corporate use of BitTorrent."
+  }
+]

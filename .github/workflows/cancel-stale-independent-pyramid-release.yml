@@ -8,29 +8,69 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
+
+concurrency:
+  group: cancel-stale-pre-capstone-release
+  cancel-in-progress: false
 
 jobs:
   cancel-stale-run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Cancel run that checked out before the capstone
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
             const runId = 30091003163;
             const { owner, repo } = context.repo;
-            const run = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId });
-            const status = run.data.status;
-            const conclusion = run.data.conclusion;
-            core.info(`Stale run ${runId}: ${status}${conclusion ? `/${conclusion}` : ''}`);
-            if (['queued','in_progress','waiting','requested','pending'].includes(status)) {
+            const before = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId });
+            const initial = { status: before.data.status, conclusion: before.data.conclusion };
+            let action = 'already-ended-without-success';
+            if (['queued','in_progress','waiting','requested','pending'].includes(initial.status)) {
               await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: runId });
-              core.info(`Cancellation requested for stale pre-capstone run ${runId}.`);
-              return;
+              action = 'cancellation-requested';
+            } else if (initial.conclusion === 'success') {
+              action = 'too-late-already-successful';
+              core.setFailed(`Run ${runId} already succeeded before cancellation.`);
             }
-            if (conclusion === 'success') {
-              core.setFailed(`Run ${runId} already deployed before cancellation. Do not launch another deployment until production state is reviewed.`);
-              return;
+            let finalRun = before.data;
+            for (let attempt=1; attempt<=18 && ['queued','in_progress','waiting','requested','pending'].includes(finalRun.status); attempt++) {
+              await new Promise(resolve=>setTimeout(resolve,5000));
+              finalRun = (await github.rest.actions.getWorkflowRun({ owner, repo, run_id: runId })).data;
             }
-            core.info(`Run ${runId} already ended without success; no Cloudflare release should be reused.`);
+            const payload = {
+              ok: action !== 'too-late-already-successful' && finalRun.conclusion !== 'success',
+              runId,
+              action,
+              recordedAt: new Date().toISOString(),
+              initial,
+              final: { status: finalRun.status, conclusion: finalRun.conclusion, updatedAt: finalRun.updated_at },
+              reason: 'The run checked out before the capstone page, evidence model, Pyramid gateway and capstone release guards were committed.',
+              boundary: 'A cancelled or failed run before Wrangler deployment is not an actual Cloudflare production deployment.'
+            };
+            fs.mkdirSync('data',{recursive:true});
+            fs.writeFileSync('data/stale-pre-capstone-release-cancellation.json',JSON.stringify(payload,null,2)+'\n');
+            core.info(JSON.stringify(payload));
+      - name: Commit cancellation proof
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s data/stale-pre-capstone-release-cancellation.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/stale-pre-capstone-release-cancellation.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record stale pre-capstone release cancellation'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1

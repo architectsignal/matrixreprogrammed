@@ -1,19 +1,21 @@
 {
   "ok": true,
-  "action": "reused-existing-run",
-  "recordedAt": "2026-07-24T10:09:26.655Z",
-  "cutoff": "2026-07-24T09:44:00.000Z",
+  "action": "reused-existing-corrected-retry",
+  "recordedAt": "2026-07-24T10:20:31.078Z",
+  "cutoff": "2026-07-24T10:05:00.000Z",
   "workflowId": 302110600,
+  "supersedesFailedRun": 30083740775,
+  "repair": "Site QA now excludes generated .cloudflare output and scans only static HTML markup, removing the false missing-link failures that stopped the first authorized run before deployment.",
   "run": {
-    "id": 30083740775,
-    "status": "completed",
-    "conclusion": "failure",
-    "createdAt": "2026-07-24T09:45:39Z",
-    "updatedAt": "2026-07-24T10:03:13Z",
-    "headSha": "19be406f0db5f54ce367586ec1f8b4b71e9b78da",
+    "id": 30085279942,
+    "status": "in_progress",
+    "conclusion": null,
+    "createdAt": "2026-07-24T10:11:09Z",
+    "updatedAt": "2026-07-24T10:11:14Z",
+    "headSha": "8c26deeadb442ceb238386b9fc45c8b71a9da37b",
     "headBranch": "main",
     "event": "workflow_dispatch",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30083740775"
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30085279942"
   },
-  "boundary": "This dispatcher reuses any controlled production run created after the final release cutoff and refuses to create a duplicate."
+  "boundary": "This dispatcher permits exactly one corrected retry after failed run 30083740775. Any retry created after the cutoff is reused rather than duplicated."
 }

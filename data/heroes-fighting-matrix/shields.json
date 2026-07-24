@@ -1,0 +1,210 @@
+[
+  {
+    "rank": 2,
+    "id": "edward-snowden",
+    "name": "Edward Snowden",
+    "suit": "SHIELDS",
+    "score": 97,
+    "confidence": "high",
+    "lane": "Mass-surveillance exposure and privacy advocacy",
+    "contribution": "Disclosed documents that transformed public understanding of global electronic surveillance and has continued public privacy advocacy.",
+    "whyIncluded": "His disclosures produced a durable public-record route into surveillance law, intelligence oversight, encryption and source protection.",
+    "sources": [
+      {"label": "Freedom of the Press Foundation board", "url": "https://freedom.press/about/board/", "type": "primary"},
+      {"label": "EFF Pioneer Awards", "url": "https://www.eff.org/deeplinks/2015/09/pioneer-awards-2015", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises documented disclosure and privacy impact; it does not settle every legal, political or national-security argument surrounding the disclosures."
+  },
+  {
+    "rank": 11,
+    "id": "meredith-whittaker",
+    "name": "Meredith Whittaker",
+    "suit": "SHIELDS",
+    "score": 90,
+    "confidence": "high",
+    "lane": "Private communications governance",
+    "contribution": "Signal president and long-time technology critic focused on privacy, surveillance and institutional power.",
+    "whyIncluded": "She combines operational leadership of private messaging infrastructure with public resistance to surveillance business models.",
+    "sources": [
+      {"label": "Signal president announcement", "url": "https://signal.org/blog/announcing-signal-president/", "type": "primary"},
+      {"label": "Signal blog", "url": "https://signal.org/blog/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns privacy leadership and documented public work, not endorsement of every opinion."
+  },
+  {
+    "rank": 12,
+    "id": "cindy-cohn",
+    "name": "Cindy Cohn",
+    "suit": "SHIELDS",
+    "score": 89,
+    "confidence": "high",
+    "lane": "Digital civil-liberties litigation",
+    "contribution": "Long-time EFF lawyer and leader whose work includes cryptography, surveillance, privacy and free-expression cases.",
+    "whyIncluded": "Legal defence determines whether privacy tools and digital speech remain usable in practice.",
+    "sources": [
+      {"label": "EFF biography", "url": "https://www.eff.org/about/staff/cindy-cohn", "type": "primary"},
+      {"label": "EFF leadership transition", "url": "https://www.eff.org/press/releases/executive-director-cindy-cohn-will-step-down-after-25-years-eff", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises documented civil-liberties work and does not imply agreement with every EFF position."
+  },
+  {
+    "rank": 16,
+    "id": "ron-deibert",
+    "name": "Ron Deibert",
+    "suit": "SHIELDS",
+    "score": 86,
+    "confidence": "high",
+    "lane": "Spyware, censorship and surveillance research",
+    "contribution": "Founded Citizen Lab, which investigates commercial spyware, cyber-espionage, censorship and digital threats to civil society.",
+    "whyIncluded": "Citizen Lab produces evidence that can expose otherwise invisible surveillance systems and their operators.",
+    "sources": [
+      {"label": "Citizen Lab biography", "url": "https://citizenlab.ca/person/ron-deibert/", "type": "primary"},
+      {"label": "Citizen Lab", "url": "https://citizenlab.ca/who-we-are/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises evidence-led research; it does not imply every investigated claim has the same confidence or legal status."
+  },
+  {
+    "rank": 17,
+    "id": "nighat-dad",
+    "name": "Nighat Dad",
+    "suit": "SHIELDS",
+    "score": 85,
+    "confidence": "high",
+    "lane": "Digital rights and online safety",
+    "contribution": "Founded Pakistan's Digital Rights Foundation and advocates for privacy, free expression and safety for women and vulnerable users.",
+    "whyIncluded": "Her work extends digital-rights defence into environments where online abuse, censorship and surveillance carry severe real-world risks.",
+    "sources": [
+      {"label": "Digital Rights Foundation", "url": "https://digitalrightsfoundation.pk/", "type": "primary"},
+      {"label": "DRF profile", "url": "https://digitalrightsfoundation.pk/the-minds-of-the-women-behind-digital-rights-and-feminist-futures-a-comic/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises documented digital-rights work, not endorsement of every policy position."
+  },
+  {
+    "rank": 22,
+    "id": "bruce-schneier",
+    "name": "Bruce Schneier",
+    "suit": "SHIELDS",
+    "score": 83,
+    "confidence": "high",
+    "lane": "Public-interest security analysis",
+    "contribution": "Cryptographer and security technologist who has spent decades explaining surveillance, security policy and systemic technological risk.",
+    "whyIncluded": "Independent security analysis helps the public and policymakers distinguish genuine protection from security theatre and hidden trade-offs.",
+    "sources": [
+      {"label": "Bruce Schneier biography", "url": "https://www.schneier.com/about/", "type": "primary"},
+      {"label": "Schneier on Security", "url": "https://www.schneier.com/", "type": "primary"}
+    ],
+    "caveat": "Ranking reflects public-interest analysis and does not imply agreement with every policy judgment."
+  },
+  {
+    "rank": 23,
+    "id": "phil-zimmermann",
+    "name": "Phil Zimmermann",
+    "suit": "SHIELDS",
+    "score": 82,
+    "confidence": "high",
+    "lane": "Public-key encryption for ordinary users",
+    "contribution": "Created Pretty Good Privacy, helping move strong encryption from specialist circles into public use.",
+    "whyIncluded": "PGP established that individuals could possess communication privacy without depending on state or corporate permission.",
+    "sources": [
+      {"label": "Phil Zimmermann background", "url": "https://philzimmermann.com/EN/background/index.html", "type": "primary"},
+      {"label": "Internet Hall of Fame", "url": "https://www.internethalloffame.org/inductee/phil-zimmermann/", "type": "authoritative"}
+    ],
+    "caveat": "Ranking recognises encryption history and public impact, not endorsement of every product or later implementation."
+  },
+  {
+    "rank": 24,
+    "id": "adam-back",
+    "name": "Adam Back",
+    "suit": "SHIELDS",
+    "score": 82,
+    "confidence": "high",
+    "lane": "Cypherpunk and peer-to-peer money infrastructure",
+    "contribution": "Invented Hashcash and has continued building privacy-oriented Bitcoin and peer-to-peer financial infrastructure.",
+    "whyIncluded": "His work represents the cypherpunk strategy of shifting power through deployed technology rather than permission-based reform alone.",
+    "sources": [
+      {"label": "Adam Back biography", "url": "https://adam3.us/about/", "type": "primary"},
+      {"label": "Blockstream", "url": "https://blockstream.com/about/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises documented technical contribution and is not investment advice or endorsement of every corporate decision."
+  },
+  {
+    "rank": 25,
+    "id": "micah-lee",
+    "name": "Micah Lee",
+    "suit": "SHIELDS",
+    "score": 81,
+    "confidence": "high",
+    "lane": "Secure publishing and source tools",
+    "contribution": "Created OnionShare and has built tools and reporting practices for secure file sharing, source protection and privacy.",
+    "whyIncluded": "OnionShare gives users a practical way to exchange files and publish services over Tor without relying on a conventional host.",
+    "sources": [
+      {"label": "OnionShare", "url": "https://onionshare.org/", "type": "primary"},
+      {"label": "Micah Lee", "url": "https://micahflee.com/", "type": "primary"}
+    ],
+    "caveat": "Ranking concerns secure-tool development and journalism, not endorsement of every publication or opinion."
+  },
+  {
+    "rank": 26,
+    "id": "nathan-freitas",
+    "name": "Nathan Freitas",
+    "suit": "SHIELDS",
+    "score": 81,
+    "confidence": "high",
+    "lane": "Mobile privacy and circumvention tools",
+    "contribution": "Founded Guardian Project and developed tools including Orbot, bringing Tor and secure communications to mobile users.",
+    "whyIncluded": "Mobile access is essential because many users facing censorship or repression rely primarily on phones.",
+    "sources": [
+      {"label": "Guardian Project team", "url": "https://guardianproject.info/team/", "type": "primary"},
+      {"label": "Berkman Klein biography", "url": "https://cyber.harvard.edu/people/nfreitas", "type": "authoritative"}
+    ],
+    "caveat": "Ranking recognises privacy-tool development and does not imply every tool eliminates all operational risk."
+  },
+  {
+    "rank": 27,
+    "id": "eva-galperin",
+    "name": "Eva Galperin",
+    "suit": "SHIELDS",
+    "score": 80,
+    "confidence": "high",
+    "lane": "Cybersecurity for vulnerable communities",
+    "contribution": "EFF cybersecurity director focused on malware, surveillance, stalkerware and practical protection for vulnerable populations.",
+    "whyIncluded": "Her work connects technical security research to people exposed to domestic abuse, repression and targeted surveillance.",
+    "sources": [
+      {"label": "EFF biography", "url": "https://www.eff.org/about/staff/eva-galperin", "type": "primary"},
+      {"label": "Coalition Against Stalkerware", "url": "https://stopstalkerware.org/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises documented cybersecurity advocacy, not endorsement of every EFF position."
+  },
+  {
+    "rank": 28,
+    "id": "runa-sandvik",
+    "name": "Runa Sandvik",
+    "suit": "SHIELDS",
+    "score": 79,
+    "confidence": "high",
+    "lane": "Journalist security and anonymity",
+    "contribution": "Security researcher known for work on Tor, newsroom security and protecting journalists and sources.",
+    "whyIncluded": "Press freedom depends on operational security as much as legal rights.",
+    "sources": [
+      {"label": "Runa Sandvik", "url": "https://runasandvik.com/", "type": "primary"},
+      {"label": "Freedom of the Press Foundation", "url": "https://freedom.press/", "type": "context"}
+    ],
+    "caveat": "Ranking recognises security and press-protection work; public role details should be checked against current sources."
+  },
+  {
+    "rank": 29,
+    "id": "cory-doctorow",
+    "name": "Cory Doctorow",
+    "suit": "SHIELDS",
+    "score": 79,
+    "confidence": "high",
+    "lane": "Digital rights and anti-monopoly advocacy",
+    "contribution": "Author and activist focused on surveillance capitalism, platform lock-in, interoperability and user rights.",
+    "whyIncluded": "His work turns technical power structures into public concepts and policy arguments that non-specialists can act on.",
+    "sources": [
+      {"label": "EFF special advisers", "url": "https://www.eff.org/about/special-counsel", "type": "primary"},
+      {"label": "Pluralistic", "url": "https://pluralistic.net/", "type": "primary"}
+    ],
+    "caveat": "Ranking recognises documented digital-rights work, not endorsement of every political or economic claim."
+  }
+]

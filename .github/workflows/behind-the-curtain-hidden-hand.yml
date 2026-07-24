@@ -21,6 +21,7 @@ on:
       - 'data/behind-the-curtain-symbolic-research.json'
       - 'data/behind-the-curtain-capstone.json'
       - 'data/behind-the-curtain-capstone-sources.json'
+      - 'scripts/behind-the-curtain-access-test.js'
       - 'scripts/behind-the-curtain-hidden-hand-test.js'
       - 'scripts/behind-the-curtain-capstone-test.js'
       - 'scripts/behind-the-curtain-intermediary-watch.js'
@@ -38,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -58,6 +61,48 @@ jobs:
         run: |
           node scripts/behind-the-curtain-access-test.js
           node scripts/behind-the-curtain-living-access-test.js
+      - name: Publish branch validation receipt
+        if: github.event_name == 'push' && github.ref_name == 'agent/hidden-hand-evidence-expansion' && !contains(github.event.head_commit.message, '[hidden-hand-validated]')
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs=require('fs');
+          const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
+          const profiles=[1,2,3].flatMap(n=>read(`data/behind-the-curtain-intermediaries-${String(n).padStart(2,'0')}.json`));
+          const hiddenSources=read('data/behind-the-curtain-intermediary-sources.json');
+          const capstone=read('data/behind-the-curtain-capstone.json');
+          const capstoneSources=read('data/behind-the-curtain-capstone-sources.json');
+          const receipt={
+            ok:true,
+            validatedAt:new Date().toISOString(),
+            validatedSha:process.env.GITHUB_SHA,
+            workflowRun:process.env.GITHUB_RUN_ID,
+            branch:process.env.GITHUB_REF_NAME,
+            contracts:{
+              pyramid:true,
+              livingAccess:true,
+              hiddenHand:true,
+              capstone:true,
+              failClosed:true
+            },
+            counts:{
+              intermediaries:profiles.length,
+              hiddenHandSources:hiddenSources.length,
+              capstoneHouses:capstone.houses.length,
+              capstoneModels:capstone.coordinationModels.length,
+              symbolicDossiers:capstone.symbolicApex.length,
+              capstoneSources:capstoneSources.length
+            },
+            boundary:'This receipt proves the repository evidence and interface contracts passed. It does not prove the truth of speculative, unsupported or metaphysical claims.'
+          };
+          fs.writeFileSync('data/behind-the-curtain-validation-receipt.json',JSON.stringify(receipt,null,2)+'\n');
+          NODE
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/behind-the-curtain-validation-receipt.json
+          git commit -m 'Record hidden-hand capstone validation [hidden-hand-validated]'
+          git push origin HEAD:agent/hidden-hand-evidence-expansion
 
   source-watch:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'

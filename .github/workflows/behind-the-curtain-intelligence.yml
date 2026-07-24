@@ -10,6 +10,7 @@ on:
       - 'behind-the-curtain-access.html'
       - 'behind-the-curtain-access.js'
       - 'data/behind-the-curtain.json'
+      - 'data/behind-the-curtain-pyramid.json'
       - 'data/behind-the-curtain-family-access.json'
       - 'data/behind-the-curtain-continuity-layers.json'
       - 'data/behind-the-curtain-living-access.json'
@@ -34,6 +35,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/behind-the-curtain-pyramid.json'
       - 'data/behind-the-curtain-family-access.json'
       - 'data/behind-the-curtain-continuity-layers.json'
       - 'data/behind-the-curtain-living-access.json'
@@ -128,7 +130,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js data/behind-the-curtain.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json data/behind-the-curtain-living-access-intake.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
+          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js data/behind-the-curtain.json data/behind-the-curtain-pyramid.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json data/behind-the-curtain-living-access-intake.json index.html control-structure.html power-atlas.html follow-the-money.html 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Behind the Curtain intelligence is already current."
           else
@@ -136,4 +138,4 @@ jobs:
             git push
           fi
       - name: Confirm production cost boundary
-        run: echo "GIT-ONLY PASS — the structural-power, family-access and living-access workflow contains no production deployment step."
+        run: echo "GIT-ONLY PASS — the structural-power, family-access, pyramid and living-access workflow contains no production deployment step."

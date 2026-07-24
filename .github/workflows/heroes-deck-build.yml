@@ -1,0 +1,62 @@
+name: Build Heroes Fighting the Matrix Deck
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/heroes-deck-build.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: heroes-fighting-matrix-deck
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build complete 52-card Heroes deck
+        run: node scripts/build-heroes-fighting-matrix-deck.js
+
+      - name: Refresh search and shared assets
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/ensure-shared-assets.js
+
+      - name: Build Cloudflare output
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Commit generated deck system
+        run: |
+          set -euo pipefail
+          git config user.name "matrix-deck-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No generated Heroes deck changes to commit."
+            exit 0
+          fi
+          git commit -m "Build complete Heroes Fighting the Matrix deck"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Main advanced during Heroes deck build; retrying."
+          done
+          exit 1

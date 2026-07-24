@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "releaseId": "independent-pyramid-v2-20260724",
+  "action": "dispatched-independent-pyramid-release-once",
+  "recordedAt": "2026-07-24T11:51:35.276Z",
+  "cutoff": "2026-07-24T11:47:00.000Z",
+  "workflowId": 302110600,
+  "mergedFeatureCommit": "437754772689f4eaa832881b22143af422c438ae",
+  "releaseGuardsCommit": "27770ad55b0d795aca4c1229ca7370fd212594e8",
+  "scope": "Deploy the rebuilt Behind the Curtain Pyramid with independent tier rosters, 80 named people, dynamic Human Apex, hidden-hand analysis, symbolic boundaries and dedicated live verification.",
+  "run": {
+    "id": 30091003163,
+    "status": "queued",
+    "conclusion": null,
+    "createdAt": "2026-07-24T11:51:28Z",
+    "updatedAt": "2026-07-24T11:51:28Z",
+    "headSha": "ce25bee0912a1ffbdd6db5b579bccaa58c0a3e97",
+    "headBranch": "main",
+    "event": "workflow_dispatch",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30091003163"
+  },
+  "boundary": "Only one workflow-dispatch run created after the fresh cutoff is allowed. Later trigger retries reuse the same run rather than creating another deployment."
+}

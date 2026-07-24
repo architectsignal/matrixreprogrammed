@@ -176,6 +176,9 @@ const report = {
 };
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, JSON.stringify(report, null, 2));
+try {
+  fs.appendFileSync(path.join(root, 'downloads', 'production-build.log'), `\nPHASE8_RUNTIME_CONTRACT_REPORT ${JSON.stringify(report)}\n`);
+} catch {}
 if (failures.length) {
   failures.forEach(item => console.error(`PHASE 8 FAILURE: ${item}`));
   process.exit(1);

@@ -82,16 +82,21 @@ assert(
   'Continuity evolution model is incomplete',
 );
 assert(
-  html.includes('id="living-top-ten"') &&
-    html.includes('id="continuity-layer"') &&
-    html.includes('id="living-history"'),
-  'Living Access page sections missing',
+  html.includes('id="pyramid"') &&
+    html.includes('id="names"') &&
+    html.includes('id="freshness"') &&
+    html.includes('THE NAMES ARE NAMED'),
+  'Living Pyramid page sections missing',
 );
 assert(
   js.includes('behind-the-curtain-living-access.json') &&
     js.includes('behind-the-curtain-living-access-history.json') &&
     js.includes('behind-the-curtain-continuity-layers.json'),
   'Living client data feeds missing',
+);
+assert(
+  js.includes('setInterval') && js.includes('pollMinutes') && js.includes('visibilitychange'),
+  'Living page automatic refresh rules are missing',
 );
 
 const deployWorkflow = must('.github/workflows/deploy.yml');

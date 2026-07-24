@@ -9,6 +9,7 @@ on:
       - main
       - agent/hidden-hand-evidence-expansion
     paths:
+      - 'behind-the-curtain-access.html'
       - 'behind-the-curtain-hidden-hand.js'
       - 'behind-the-curtain-capstone.html'
       - 'behind-the-curtain-capstone.js'
@@ -21,6 +22,7 @@ on:
       - 'data/behind-the-curtain-symbolic-research.json'
       - 'data/behind-the-curtain-capstone.json'
       - 'data/behind-the-curtain-capstone-sources.json'
+      - 'scripts/patch-behind-the-curtain-capstone-link.js'
       - 'scripts/behind-the-curtain-access-test.js'
       - 'scripts/behind-the-curtain-hidden-hand-test.js'
       - 'scripts/behind-the-curtain-capstone-test.js'
@@ -44,12 +46,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Install audit-visible static capstone gate
+        run: node scripts/patch-behind-the-curtain-capstone-link.js
       - name: Validate JavaScript
         run: |
           node --check behind-the-curtain-hidden-hand.js
           node --check behind-the-curtain-capstone.js
           node --check behind-the-curtain-capstone-link.js
           node --check investigation-pulse.js
+          node --check scripts/patch-behind-the-curtain-capstone-link.js
           node --check scripts/behind-the-curtain-intermediary-watch.js
           node --check scripts/behind-the-curtain-hidden-hand-test.js
           node --check scripts/behind-the-curtain-capstone-test.js
@@ -61,7 +66,7 @@ jobs:
         run: |
           node scripts/behind-the-curtain-access-test.js
           node scripts/behind-the-curtain-living-access-test.js
-      - name: Publish branch validation receipt
+      - name: Publish branch validation receipt and generated gate
         if: github.event_name == 'push' && github.ref_name == 'agent/hidden-hand-evidence-expansion' && !contains(github.event.head_commit.message, '[hidden-hand-validated]')
         shell: bash
         run: |
@@ -73,6 +78,8 @@ jobs:
           const hiddenSources=read('data/behind-the-curtain-intermediary-sources.json');
           const capstone=read('data/behind-the-curtain-capstone.json');
           const capstoneSources=read('data/behind-the-curtain-capstone-sources.json');
+          const accessHtml=fs.readFileSync('behind-the-curtain-access.html','utf8');
+          if(!accessHtml.includes('data-capstone-static-gate="true"')) throw new Error('Static capstone gate was not generated');
           const receipt={
             ok:true,
             validatedAt:new Date().toISOString(),
@@ -84,6 +91,7 @@ jobs:
               livingAccess:true,
               hiddenHand:true,
               capstone:true,
+              staticCapstoneLink:true,
               failClosed:true
             },
             counts:{
@@ -92,7 +100,8 @@ jobs:
               capstoneHouses:capstone.houses.length,
               capstoneModels:capstone.coordinationModels.length,
               symbolicDossiers:capstone.symbolicApex.length,
-              capstoneSources:capstoneSources.length
+              capstoneSources:capstoneSources.length,
+              staticCapstoneRouteReferences:(accessHtml.match(/behind-the-curtain-capstone\.html/g)||[]).length
             },
             boundary:'This receipt proves the repository evidence and interface contracts passed. It does not prove the truth of speculative, unsupported or metaphysical claims.'
           };
@@ -100,7 +109,7 @@ jobs:
           NODE
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/behind-the-curtain-validation-receipt.json
+          git add behind-the-curtain-access.html data/behind-the-curtain-validation-receipt.json
           git commit -m 'Record hidden-hand capstone validation [hidden-hand-validated]'
           git push origin HEAD:agent/hidden-hand-evidence-expansion
 

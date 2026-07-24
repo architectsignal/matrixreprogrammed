@@ -4,6 +4,7 @@ const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const data=read('data/behind-the-curtain-capstone.json');
 const sources=read('data/behind-the-curtain-capstone-sources.json');
 const html=fs.readFileSync('behind-the-curtain-capstone.html','utf8');
+const accessHtml=fs.readFileSync('behind-the-curtain-access.html','utf8');
 const js=fs.readFileSync('behind-the-curtain-capstone.js','utf8');
 const link=fs.readFileSync('behind-the-curtain-capstone-link.js','utf8');
 const pulse=fs.readFileSync('investigation-pulse.js','utf8');
@@ -30,4 +31,6 @@ for(const marker of ['Capstone failed closed','cap-house-grid','cap-model-grid',
 assert.ok(link.includes('behind-the-curtain-capstone.html'),'Pyramid gate must link to capstone');
 assert.ok(link.includes('Speculative Capstone'),'Pyramid gate must label speculation');
 assert.ok(pulse.includes('behind-the-curtain-capstone-link.js'),'Pyramid page must load capstone gate');
+assert.ok(accessHtml.includes('data-capstone-static-gate="true"'),'Pyramid page requires an audit-visible static capstone gate');
+assert.ok((accessHtml.match(/behind-the-curtain-capstone\.html/g)||[]).length>=4,'Pyramid page requires at least four static capstone route references');
 console.log(`Capstone test passed: ${data.houses.length} houses, ${data.coordinationModels.length} models, ${data.symbolicApex.length} symbolic dossiers and ${sources.length} sources.`);

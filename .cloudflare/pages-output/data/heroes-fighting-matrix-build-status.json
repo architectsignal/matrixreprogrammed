@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "deckId": "heroes-fighting-matrix",
+  "cardCount": 52,
+  "rankRange": [1, 52],
+  "suitCounts": {
+    "KEYS": 13,
+    "SHIELDS": 13,
+    "TORCHES": 13,
+    "SWORDS": 13
+  },
+  "requiredPeoplePresent": [
+    "Roger Dingledine",
+    "Edward Snowden",
+    "Julian Assange",
+    "Andrew Tate",
+    "Tristan Tate"
+  ],
+  "publicRoutes": [
+    "heroes-fighting-matrix-deck.html",
+    "heroes-fighting-matrix-card.html",
+    "heroes-fighting-matrix-research-ledger.html",
+    "deck-expansion-hub.html"
+  ],
+  "machineRoutes": [
+    "data/heroes-fighting-matrix-deck.json",
+    "data/heroes-fighting-matrix/keys.json",
+    "data/heroes-fighting-matrix/shields.json",
+    "data/heroes-fighting-matrix/torches.json",
+    "data/heroes-fighting-matrix/swords.json",
+    "downloads/heroes-fighting-matrix-source-ledger.json",
+    "downloads/heroes-fighting-matrix-source-ledger.md"
+  ],
+  "editorialBoundary": "Documented public contribution is not total endorsement. Pending cases, allegations and disputed claims remain labelled.",
+  "status": "Core deck, dynamic dossiers, research ledger, Deck Hub route and machine-data manifests committed. Homepage/search/Cloudflare copies are handled by the persistent release workflow."
+}

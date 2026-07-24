@@ -29,29 +29,45 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Build complete 52-card Heroes deck
-        run: node scripts/build-heroes-fighting-matrix-deck.js
+      - name: Validate and finalise the 52-card deck
+        run: node scripts/finalize-heroes-fighting-matrix-deck.js
 
-      - name: Refresh search index
+      - name: Add the deck to the homepage
+        run: node scripts/patch-homepage-power-deck-link.js
+
+      - name: Refresh core search
         run: node scripts/repair-search-system.js
 
-      - name: Commit generated deck system
+      - name: Add all 52 people and deck routes to search
+        run: node scripts/patch-heroes-search-index.js
+
+      - name: Refresh shared assets
+        run: node scripts/ensure-shared-assets.js
+
+      - name: Build Cloudflare output
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Verify cards, suits, routes, downloads and Cloudflare copies
+        run: node scripts/heroes-deck-smoke-test.js
+
+      - name: Commit completed deck system
         run: |
           set -euo pipefail
           git config user.name "matrix-deck-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add heroes-fighting-matrix-deck.html heroes-fighting-matrix-research-ledger.html heroes-fighting-matrix assets/heroes-fighting-matrix data/heroes-fighting-matrix-deck.json downloads/heroes-fighting-matrix-source-ledger.json downloads/heroes-fighting-matrix-source-ledger.md deck-expansion-hub.html search.html search-index.json 2>/dev/null || true
+          git add .
           if git diff --cached --quiet; then
-            echo "No generated Heroes deck changes to commit."
+            echo "No Heroes deck changes to commit."
             exit 0
           fi
-          git commit -m "Build complete Heroes Fighting the Matrix deck"
+          git commit -m "Complete Heroes Fighting the Matrix 52-card deck"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
               exit 0
             fi
             git rebase --abort 2>/dev/null || true
-            echo "Main advanced during Heroes deck build; retrying."
+            echo "Main advanced during Heroes deck release; retrying."
           done
+          echo "Unable to publish the completed Heroes deck after three attempts."
           exit 1

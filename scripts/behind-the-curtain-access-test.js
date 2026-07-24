@@ -5,73 +5,73 @@ const read=relative=>JSON.parse(fs.readFileSync(path.join(root,relative),'utf8')
 const text=relative=>fs.readFileSync(path.join(root,relative),'utf8');
 const assert=(condition,message)=>{if(!condition)throw new Error(message)};
 const slug=value=>String(value||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-
 const families=read('data/behind-the-curtain-family-access.json');
-const living=read('data/behind-the-curtain-living-access.json');
+const people=read('data/behind-the-curtain-people-registry.json');
 const core=read('data/behind-the-curtain.json');
 const pyramid=read('data/behind-the-curtain-pyramid.json');
 const html=text('behind-the-curtain-access.html');
-const js=text('behind-the-curtain-access.js');
-
+const js=text('behind-the-curtain-access-v2.js');
 assert(families.schemaVersion===1,'Access Layer schema version missing');
 assert(families.families.length>=9,'At least nine documented family structures are required');
 assert(new Set(families.families.map(x=>x.id)).size===families.families.length,'Family IDs must be unique');
 assert(families.families.every((x,i)=>x.rank===i+1),'Family ranks must be sequential');
-assert(families.families.every(x=>x.accessScore>=0&&x.accessScore<=100),'Access scores must be bounded');
+assert(families.families.every(x=>x.accessScore>=0&&x.accessScore<=100),'Family access scores must be bounded');
 assert(families.families.every(x=>x.documentedAccess.length&&x.constraints.length&&x.strongestCounterargument&&x.unsupportedClaim),'Every family requires evidence, constraints and claim boundaries');
 assert(families.families.every(x=>x.sourceIds.length>=2),'Every family requires at least two sources');
-assert(Object.values(families.scoreDimensions).reduce((a,b)=>a+Number(b),0)===100,'Access score weights must total 100');
+assert(Object.values(families.scoreDimensions).reduce((a,b)=>a+Number(b),0)===100,'Family score weights must total 100');
 assert(families.structureAccessMatrix.length===10,'All ten structural power centers require an access test');
-assert(families.sources.length>=20,'Primary source ledger is incomplete');
-
-assert(pyramid.schemaVersion===1,'Pyramid schema version missing');
+assert(families.sources.length>=20,'Family primary-source ledger is incomplete');
+assert(people.schemaVersion===1,'Named people registry schema version missing');
+assert(people.people.length>=80,'The rebuilt Pyramid requires at least 80 named people');
+assert(new Set(people.people.map(x=>x.id)).size===people.people.length,'Named people IDs must be unique');
+assert(people.people.every(x=>x.name&&x.currentRole&&x.organization&&x.status==='verified_current'),'Every named person requires a current role, organisation and active status');
+assert(people.people.every(x=>x.sourceIds?.length&&x.notEstablished&&x.constraints?.length),'Every named person requires sources, constraints and a not-established boundary');
+assert(people.people.every(x=>Number.isFinite(Number(x.crossSystemScore))&&x.crossSystemScore>=0&&x.crossSystemScore<=100),'Cross-system scores must be bounded');
+assert(people.people.every(x=>x.tierAccess?.length&&x.tierAccess.every(a=>a.tierId&&Number.isFinite(Number(a.score))&&a.score>=0&&a.score<=100&&a.mechanism&&a.basis&&a.classification)),'Every person requires complete tier-specific access records');
+assert(people.people.every(x=>x.tierAccess.length<=3||x.repeatJustification),'No person may appear in more than three factual tiers without a written justification');
+for(const source of people.sources){assert(/^https:\/\//.test(source.url),'Every people source requires HTTPS');assert(source.establishes&&source.doesNotEstablish,'Every people source requires a two-sided evidence boundary')}
+const factualTierIds=['public-stage','permanent-system','money-gatekeepers','ownership-infrastructure','intelligence-security','policy-architects','connectors'];
+const rosters=new Map(factualTierIds.map(id=>[id,new Set(people.people.filter(p=>p.tierAccess.some(a=>a.tierId===id)).map(p=>p.id))]));
+for(const [id,roster] of rosters){assert(roster.size>=10,`${id} requires at least ten independently qualified people`)}
+const union=new Set([...rosters.values()].flatMap(set=>[...set]));
+assert(union.size>=80,'Levels 1–7 require at least 80 unique living people collectively');
+const jaccard=(a,b)=>{const intersection=[...a].filter(x=>b.has(x)).length;const unionSize=new Set([...a,...b]).size;return unionSize?intersection/unionSize:1};
+for(let i=0;i<factualTierIds.length;i++)for(let j=i+1;j<factualTierIds.length;j++)assert(jaccard(rosters.get(factualTierIds[i]),rosters.get(factualTierIds[j]))<0.75,`${factualTierIds[i]} and ${factualTierIds[j]} are near-identical recycled rosters`);
+assert(pyramid.schemaVersion===2,'Pyramid schema version 2 is required');
 assert(pyramid.levels.length===12,'The Pyramid must contain twelve levels');
 assert(new Set(pyramid.levels.map(x=>x.id)).size===12,'Pyramid level IDs must be unique');
 assert([...pyramid.levels].sort((a,b)=>a.level-b.level).every((x,i)=>x.level===i+1),'Pyramid levels must be numbered 1 through 12');
 assert(pyramid.chokePoints.length===10,'The Pyramid must map ten choke points');
-assert(pyramid.pathways.length>=6,'The Pyramid requires at least six mechanism pathways');
-assert(pyramid.symbolicDossiers.length>=8,'The symbolic apex requires at least eight bounded dossiers');
-assert(pyramid.symbolicDossiers.some(x=>x.id==='lightbringer'&&x.notEstablished),'The Lightbringer must be present with a not-established boundary');
+assert(pyramid.pathways.length>=8,'The Pyramid requires at least eight mechanism pathways');
+assert(pyramid.symbolicDossiers.length>=9,'The symbolic apex requires at least nine bounded dossiers');
+assert(pyramid.symbolicDossiers.some(x=>x.id==='lightbringer'&&x.notEstablished),'The Lightbringer must have a not-established boundary');
+assert(pyramid.symbolicDossiers.some(x=>x.id==='deep-state'&&x.notEstablished),'The Deep State model must be bounded');
 assert(pyramid.levels.find(x=>x.id==='lightbringer')?.minimumMode==='symbolic','The Lightbringer must remain in symbolic mode');
+assert(pyramid.levels.find(x=>x.id==='human-apex')?.memberQuery==='cross-system-top-10','The Human Apex must be calculated dynamically');
+assert((pyramid.levels.find(x=>x.id==='human-apex')?.memberRefs||[]).length===0,'The Human Apex must not hard-code the old ten-person roster');
 assert(pyramid.levels.find(x=>x.id==='thirteen-families')?.memberRefs.length===13,'The Thirteen Families review must name exactly thirteen investigated structures');
-assert(/does not verify|not a verified|does not establish/i.test(pyramid.thirteenFamiliesReview.currentFinding+' '+pyramid.thirteenFamiliesReview.headline),'The Thirteen Families claim requires an explicit non-verification boundary');
-assert(/No evidence package|No single supreme|No evidence/i.test(pyramid.innerCouncilsReview.currentFinding),'Inner council review requires an unresolved boundary');
+assert(pyramid.hiddenHandHypotheses.length>=7,'The full hidden-hand theory landscape is incomplete');
+assert(pyramid.hiddenHandHypotheses.every(x=>x.thesis&&x.evidenceFor?.length&&x.evidenceAgainst?.length&&x.requiredEvidence&&x.notEstablished),'Every hidden-hand hypothesis requires evidence for, evidence against, required proof and a boundary');
+assert(pyramid.hiddenHandHypotheses.some(x=>x.id==='occult-command'&&x.classification==='speculative_hypothesis'),'Literal occult command must remain explicitly speculative');
+assert(/does not verify|not a verified|does not establish/i.test(pyramid.thirteenFamiliesReview.currentFinding+' '+pyramid.thirteenFamiliesReview.headline),'The Thirteen Families claim requires a non-verification boundary');
+assert(/No evidence package|No single supreme|No evidence/i.test(pyramid.innerCouncilsReview.currentFinding),'The Inner Councils review requires an unresolved boundary');
 assert(pyramid.updatePolicy.failClosed===true,'The Pyramid must fail closed');
 assert(Number(pyramid.updatePolicy.pollMinutes)>=5,'Automatic refresh must not poll excessively');
-
-const indexes={
-  living:new Set(living.candidates.map(x=>x.id)),
-  family:new Set(families.families.map(x=>x.id)),
-  core:new Set(core.powerCenters.map(x=>x.id)),
-  historical:new Set(families.historicalArchitects.map(x=>slug(x.name))),
-  symbolic:new Set(pyramid.symbolicDossiers.map(x=>x.id))
-};
-const refs=[
-  ...pyramid.levels.flatMap(x=>x.memberRefs||[]),
-  ...pyramid.chokePoints.flatMap(x=>x.memberRefs||[]),
-  ...pyramid.pathways.flatMap(x=>(x.steps||[]).filter(step=>step.dataset&&step.id))
-];
-for(const ref of refs){
-  assert(indexes[ref.dataset],`Unknown Pyramid dataset ${ref.dataset}`);
-  assert(indexes[ref.dataset].has(ref.id),`Unresolved Pyramid reference ${ref.dataset}:${ref.id}`);
-}
-
-for(const source of [...families.sources,...living.sources,...core.sources]){
-  assert(/^https:\/\//.test(source.url),'Every source requires HTTPS');
-  assert(source.establishes&&source.doesNotEstablish,'Every source requires an evidence boundary');
-}
-
-for(const required of ['THE PYRAMID','THE NAMES ARE NAMED','WHO CAN REACH EACH CHOKE POINT','THE DYNASTY FILES','THE INNER COUNCILS','THE LIGHTBRINGER']){
-  assert(html.includes(required),`Missing cinematic page section: ${required}`);
-}
+const indexes={people:new Set(people.people.map(x=>x.id)),family:new Set(families.families.map(x=>x.id)),core:new Set(core.powerCenters.map(x=>x.id)),historical:new Set(families.historicalArchitects.map(x=>slug(x.name))),symbolic:new Set(pyramid.symbolicDossiers.map(x=>x.id))};
+const refs=[...pyramid.levels.flatMap(x=>x.memberRefs||[]),...pyramid.chokePoints.flatMap(x=>x.memberRefs||[]),...pyramid.pathways.flatMap(x=>(x.steps||[]).filter(step=>step.dataset&&step.id))];
+for(const ref of refs){assert(indexes[ref.dataset],`Unknown Pyramid dataset ${ref.dataset}`);assert(indexes[ref.dataset].has(ref.id),`Unresolved Pyramid reference ${ref.dataset}:${ref.id}`)}
+for(const source of [...families.sources,...people.sources,...core.sources]){assert(/^https:\/\//.test(source.url),'Every source requires HTTPS');assert(source.establishes&&source.doesNotEstablish,'Every source requires an evidence boundary')}
+for(const required of ['THE PYRAMID','WHO CAN REACH EACH CHOKE POINT','THE DYNASTY FILES','THE INNER COUNCILS','THE LIGHTBRINGER'])assert(html.includes(required),`Missing cinematic page section: ${required}`);
+assert(html.includes('behind-the-curtain-access-v2.js'),'The public page must load the tier-specific renderer');
+assert(js.includes("people:'data/behind-the-curtain-people-registry.json'"),'The renderer must load the independent named-people registry');
+assert(js.includes('renderSelectedTier'),'The selected tier must own the main roster grid');
+assert(!js.includes('renderHumanApex'),'The legacy global Top 10 renderer must not survive');
+assert(js.includes('memberQuery')&&js.includes('cross-system-top-10'),'The Human Apex must be dynamically calculated only for Level 11');
+assert(js.includes('hiddenHandHypotheses')&&js.includes('evidenceFor')&&js.includes('evidenceAgainst'),'The hidden-hand theory landscape must be rendered with two-sided evidence');
 assert(js.includes('setInterval')&&js.includes('pollMinutes'),'The page must refresh when reviewed evidence changes');
 assert(js.includes('failed closed')||js.includes('fail closed'),'The page must fail closed');
-assert(js.includes("data-view-mode")&&js.includes('symbolic'),'Evidence and symbolic modes are missing');
+assert(js.includes('data-view-mode')&&js.includes('symbolic'),'Evidence and symbolic modes are missing');
 assert(js.includes('openProfile')&&js.includes('sourceBlock'),'Named profile drawers and source boundaries are missing');
-
-const combined=JSON.stringify({families,pyramid}).toLowerCase();
-for(const forbidden of ['one family controls the world','secretly controls all','ethnicity controls','lightbringer controls every']){
-  assert(!combined.includes(forbidden),`Unsupported universal-control claim detected: ${forbidden}`);
-}
-
-console.log(`Behind the Curtain Pyramid PASS: ${pyramid.levels.length} levels, ${pyramid.chokePoints.length} choke points, ${living.candidates.filter(x=>x.rank&&x.rank<=10).length} living names, ${families.families.length} dynasties, ${pyramid.symbolicDossiers.length} symbolic dossiers.`);
+const combined=JSON.stringify({families,pyramid,people}).toLowerCase();
+for(const forbidden of ['one family controls the world','secretly controls all','ethnicity controls','lightbringer controls every'])assert(!combined.includes(forbidden),`Unsupported universal-control claim detected: ${forbidden}`);
+console.log(`Behind the Curtain Pyramid PASS: ${pyramid.levels.length} levels, ${people.people.length} named people, ${union.size} unique tier members, ${pyramid.chokePoints.length} choke points, ${families.families.length} dynasties and ${pyramid.hiddenHandHypotheses.length} bounded hidden-hand hypotheses.`);

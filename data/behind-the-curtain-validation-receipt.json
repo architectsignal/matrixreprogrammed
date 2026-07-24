@@ -1,14 +1,15 @@
 {
   "ok": true,
-  "validatedAt": "2026-07-24T12:05:34.622Z",
-  "validatedSha": "dbc63849cb9009ebd9813f6f7bc615e40d110885",
-  "workflowRun": "30091778508",
+  "validatedAt": "2026-07-24T12:19:07.096Z",
+  "validatedSha": "10007115255b12147406e2b32e9234d4f61f23e3",
+  "workflowRun": "30092124054",
   "branch": "agent/hidden-hand-evidence-expansion",
   "contracts": {
     "pyramid": true,
     "livingAccess": true,
     "hiddenHand": true,
     "capstone": true,
+    "staticCapstoneLink": true,
     "failClosed": true
   },
   "counts": {
@@ -17,7 +18,8 @@
     "capstoneHouses": 12,
     "capstoneModels": 6,
     "symbolicDossiers": 5,
-    "capstoneSources": 21
+    "capstoneSources": 21,
+    "staticCapstoneRouteReferences": 4
   },
   "boundary": "This receipt proves the repository evidence and interface contracts passed. It does not prove the truth of speculative, unsupported or metaphysical claims."
 }

@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-23T19:45:18.147Z
-Live Intel source window: 2026-07-23T19:45:12.692Z
+Generated: 2026-07-24T03:43:28.427Z
+Live Intel source window: 2026-07-24T03:43:21.992Z
 Latest source publication: 2026-07-23T18:38:38.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+16 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -25,13 +25,23 @@ Epstein's former private banker appears before House Oversight Committee ABC New
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Examining 2 decades since Epstein's arrest - WPTV
+### Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
+- Published: 2026-07-23T16:11:24.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxPZzVPOE1GT19DS1FWRGlIUDJtUFFDRWxVLUFsSjBkRHJwY25GLUdscE4zeWZnRXNWNW5LSlpXdkhXNkZVOTdNU3RCYjZfTTJKdUxvOE5DWVJKVVJpX19IVlBLTWN5d21UV252cVpPRVdVdjNuOUVkM1luSEhXTjE0R1Q0NVZTUFhVbXh3clJBQ3VOU3RRTEpsZUFpUWFIaGpuOTBmcEN5ZThCOXV1MXgxTWpjZHlVRVXSAbcBQVVfeXFMT2c1TzhNRk9fQ0tRVkRpSFAybVBRQ0VsVS1BbEowZERycGNuRi1HbHBOM3lmZ0VzVjVuS0paV3ZIVzZGVTk3TVN0QmI2X00ySnVMbzhOQ1lSSlVSaV9fSFZQS01jeXdtVFdudnFaT0VXVXYzbjlFZDNZbkhIV04xNEdUNDVWU1BYVW14d3JSQUN1TlN0UUxKbGVBaVFhSGhqbjkwZnBDeWU4Qjl1dTF4MU1qY2R5VUVV?oc=5
+
+Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Examining 2 decades since Jeffrey Epstein's arrest - WPTV
 - Published: 2026-07-23T10:55:34.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
 
-Examining 2 decades since Epstein's arrest WPTV
+Examining 2 decades since Jeffrey Epstein's arrest WPTV
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -62,6 +72,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
 
 Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
+- Published: 2026-07-22T15:22:26.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
+
+Jeffrey Epstein case ABC News - Breaking News, Latest News and Videos
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -112,6 +132,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
 
 President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+- Published: 2026-07-21T05:00:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+
+Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

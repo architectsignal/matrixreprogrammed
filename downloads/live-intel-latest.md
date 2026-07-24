@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-23T19:45:12.692Z
-Latest source publication: 2026-07-23T18:38:38.000Z
+Collection completed: 2026-07-24T03:43:21.992Z
+Latest source publication: 2026-07-23T20:14:15.000Z
 Collection status: fresh-items-added
-New items this collection: 4
+New items this collection: 6
 
 ## Freshness truth
-4 new source item(s) entered the seven-day window during this collection.
+6 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,17 +26,35 @@ New items this collection: 4
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
+  - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
   - Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxPZzVPOE1GT19DS1FWRGlIUDJtUFFDRWxVLUFsSjBkRHJwY25GLUdscE4zeWZnRXNWNW5LSlpXdkhXNkZVOTdNU3RCYjZfTTJKdUxvOE5DWVJKVVJpX19IVlBLTWN5d21UV252cVpPRVdVdjNuOUVkM1luSEhXTjE0R1Q0NVZTUFhVbXh3clJBQ3VOU3RRTEpsZUFpUWFIaGpuOTBmcEN5ZThCOXV1MXgxTWpjZHlVRVXSAbcBQVVfeXFMT2c1TzhNRk9fQ0tRVkRpSFAybVBRQ0VsVS1BbEowZERycGNuRi1HbHBOM3lmZ0VzVjVuS0paV3ZIVzZGVTk3TVN0QmI2X00ySnVMbzhOQ1lSSlVSaV9fSFZQS01jeXdtVFdudnFaT0VXVXYzbjlFZDNZbkhIV04xNEdUNDVWU1BYVW14d3JSQUN1TlN0UUxKbGVBaVFhSGhqbjkwZnBDeWU4Qjl1dTF4MU1qY2R5VUVV?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Gaza’s food gains could unravel without sustained aid, UN warns
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168006
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Gaza’s food gains could unravel without sustained aid, UN warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Iran urged to stop protest-related executions
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168009
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Iran urged to stop protest-related executions
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Satellites can now spot methane leaks in real time – but most go unfixed
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168007
@@ -56,17 +74,23 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Stranded seafarers remain trapped as Hormuz shipping stalls
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Syria ‘not alone’ in locating missing persons, tackling displacement
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168010
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Syria ‘not alone’ in locating missing persons, tackling displacement
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — World News in Brief: New ECOSOC chief, Secretary-General candidates’ debate, torture in Mali, drowning prevention
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168008
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: New ECOSOC chief, Secretary-General candidates’ debate, torture in Mali, drowning prevention
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Examining 2 decades since Epstein's arrest - WPTV
+- 2026-07-23 — Examining 2 decades since Jeffrey Epstein's arrest - WPTV
   - Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Examining 2 decades since Epstein's arrest - WPTV
+  - Video hook: New public-record signal: Examining 2 decades since Jeffrey Epstein's arrest - WPTV
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein - AOL.co.uk
   - Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxNZWVHYzhiald6dVdjY1Z5b3VEcWx5OWo3ck5EdkJJZlk4QjJEeHZUMUFselhFYi1kaVJIRi1ySzdab3pFMXJmX1VObkh0QTRBUVdCaDNRZzZ3S2VpTlBwSk81N1dXZ25PNkxKeWYyUkdYZTBrbUdRUjc4VUp3Z2thYUpLaw?oc=5
@@ -91,6 +115,12 @@ New items this collection: 4
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
@@ -211,6 +241,12 @@ New items this collection: 4
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167978

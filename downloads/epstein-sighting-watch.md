@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-23T19:45:18.196Z
+Generated: 2026-07-24T03:43:28.472Z
 
 ## Official Boundary
 
@@ -68,6 +68,16 @@ Epstein's former private banker appears before House Oversight Committee ABC New
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
+
+### Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 3
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
+- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
+
+Jeffrey Epstein case ABC News - Breaking News, Latest News and Videos
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Type: related-claim-traffic

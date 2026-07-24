@@ -1,0 +1,131 @@
+name: Verify Live Pyramid
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/live-pyramid-proof.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-live-pyramid
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify the deployed Pyramid page and evidence feeds
+        shell: bash
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_SHA: 8c26deeadb442ceb238386b9fc45c8b71a9da37b
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/pyramid-live data
+          fetch() {
+            local route="$1" output="$2"
+            curl --fail --silent --show-error --location --retry 8 --retry-delay 5 --max-time 45 \
+              -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
+              "$SITE_URL$route?proof=$(date +%s%N)" -o "$output"
+          }
+          fetch /behind-the-curtain-access /tmp/pyramid-live/page.html
+          fetch /behind-the-curtain-access.js /tmp/pyramid-live/app.js
+          fetch /data/behind-the-curtain-pyramid.json /tmp/pyramid-live/pyramid.json
+          fetch /data/behind-the-curtain.json /tmp/pyramid-live/core.json
+          fetch /data/behind-the-curtain-family-access.json /tmp/pyramid-live/families.json
+          fetch /data/behind-the-curtain-living-access.json /tmp/pyramid-live/living.json
+          fetch /data/behind-the-curtain-living-access-history.json /tmp/pyramid-live/history.json
+          fetch /data/behind-the-curtain-continuity-layers.json /tmp/pyramid-live/continuity.json
+          fetch /deploy-health.json /tmp/pyramid-live/health.json
+
+          for marker in 'THE PYRAMID OF POWER' 'THE NAMES ARE NAMED.' 'THE LIGHTBRINGER.' 'THIS PAGE CHANGES WHEN THE EVIDENCE CHANGES.'; do
+            grep -Fq "$marker" /tmp/pyramid-live/page.html
+          done
+          grep -Fq 'behind-the-curtain-access.js' /tmp/pyramid-live/page.html
+          grep -Fq 'data/behind-the-curtain-pyramid.json' /tmp/pyramid-live/app.js
+          grep -Fq "cache:'no-store'" /tmp/pyramid-live/app.js
+
+          node - <<'NODE'
+          const fs=require('fs');
+          const base='/tmp/pyramid-live/';
+          const load=name=>JSON.parse(fs.readFileSync(base+name,'utf8'));
+          const pyramid=load('pyramid.json');
+          const core=load('core.json');
+          const families=load('families.json');
+          const living=load('living.json');
+          const history=load('history.json');
+          const continuity=load('continuity.json');
+          const health=load('health.json');
+          const expected=process.env.EXPECTED_SHA;
+          const levels=Array.isArray(pyramid.levels)?pyramid.levels:[];
+          const chokePoints=Array.isArray(pyramid.chokePoints)?pyramid.chokePoints:[];
+          const symbolic=Array.isArray(pyramid.symbolicDossiers)?pyramid.symbolicDossiers:[];
+          const candidates=Array.isArray(living.candidates)?living.candidates:[];
+          if(levels.length!==12) throw new Error(`Expected 12 pyramid levels, found ${levels.length}`);
+          if(chokePoints.length!==10) throw new Error(`Expected 10 choke points, found ${chokePoints.length}`);
+          if(!levels.some(level=>level.id==='lightbringer')) throw new Error('Lightbringer level missing');
+          if(!symbolic.some(item=>item.id==='lightbringer')) throw new Error('Lightbringer symbolic dossier missing');
+          if(candidates.filter(item=>item.rank>=1&&item.rank<=10).length!==10) throw new Error('Ten named human-apex candidates not available');
+          if(!Array.isArray(families.families)||families.families.length===0) throw new Error('Dynasty files unavailable');
+          if(!Array.isArray(history.snapshots)) throw new Error('Living access history unavailable');
+          if(!continuity || typeof continuity!=='object') throw new Error('Continuity layer unavailable');
+          if(!core || typeof core!=='object') throw new Error('Core access model unavailable');
+          if(!health.ok || health.buildSha!==expected || health.manifestSha!==expected) throw new Error(`Live health SHA mismatch: ${health.buildSha}/${health.manifestSha}`);
+          const proof={
+            ok:true,
+            checkedAt:new Date().toISOString(),
+            site:'https://matrixreprogrammed.com',
+            route:'/behind-the-curtain-access',
+            deployedSha:expected,
+            healthSha:health.buildSha,
+            manifestSha:health.manifestSha,
+            markers:['THE PYRAMID OF POWER','THE NAMES ARE NAMED.','THE LIGHTBRINGER.','THIS PAGE CHANGES WHEN THE EVIDENCE CHANGES.'],
+            pyramidLevels:levels.length,
+            chokePoints:chokePoints.length,
+            namedHumanApex:candidates.filter(item=>item.rank>=1&&item.rank<=10).length,
+            dynastyProfiles:families.families.length,
+            historySnapshots:history.snapshots.length,
+            feedsVerified:[
+              '/data/behind-the-curtain-pyramid.json',
+              '/data/behind-the-curtain.json',
+              '/data/behind-the-curtain-family-access.json',
+              '/data/behind-the-curtain-living-access.json',
+              '/data/behind-the-curtain-living-access-history.json',
+              '/data/behind-the-curtain-continuity-layers.json'
+            ],
+            cachePolicy:'Page application requests evidence feeds with cache:no-store and timestamp cache busting.',
+            boundary:'Read-only post-deployment verification. This workflow contains no Wrangler, D1 mutation or Cloudflare deployment command.'
+          };
+          fs.writeFileSync('data/live-pyramid-proof.json',JSON.stringify(proof,null,2)+'\n');
+          console.log(JSON.stringify(proof,null,2));
+          NODE
+
+      - name: Commit live Pyramid proof
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/live-pyramid-proof.json
+          if git diff --cached --quiet; then
+            echo 'Live Pyramid proof is already current.'
+            exit 0
+          fi
+          git commit -m 'Record live Pyramid verification proof'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1

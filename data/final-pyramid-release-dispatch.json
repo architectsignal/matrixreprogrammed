@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "action": "reused-existing-run",
+  "recordedAt": "2026-07-24T09:58:16.680Z",
+  "cutoff": "2026-07-24T09:44:00.000Z",
+  "workflowId": 302110600,
+  "run": {
+    "id": 30083740775,
+    "status": "in_progress",
+    "conclusion": null,
+    "createdAt": "2026-07-24T09:45:39Z",
+    "updatedAt": "2026-07-24T09:52:15Z",
+    "headSha": "19be406f0db5f54ce367586ec1f8b4b71e9b78da",
+    "headBranch": "main",
+    "event": "workflow_dispatch",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30083740775"
+  },
+  "boundary": "This dispatcher reuses any controlled production run created after the final release cutoff and refuses to create a duplicate."
+}

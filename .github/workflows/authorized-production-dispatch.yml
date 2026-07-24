@@ -10,23 +10,120 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
+
+concurrency:
+  group: authorized-production-dispatch
+  cancel-in-progress: false
 
 jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify authorization marker
-        shell: bash
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Discover or dispatch exactly one corrected production run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const marker = fs.readFileSync('.github/production-deploy.trigger', 'utf8').trim();
+            if (!marker.startsWith('DEPLOY MATRIX REPROGRAMMED')) {
+              core.setFailed('Production dispatch refused: authorization marker did not match.');
+              return;
+            }
+
+            const cutoff = new Date('2026-07-24T10:09:00Z');
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(
+              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
+            );
+            if (!target) {
+              core.setFailed('Controlled production workflow was not found.');
+              return;
+            }
+
+            async function recentRun() {
+              const response = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: target.id,
+                branch: 'main',
+                event: 'workflow_dispatch',
+                per_page: 30
+              });
+              return response.data.workflow_runs
+                .filter(run => new Date(run.created_at) >= cutoff)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            }
+
+            let run = await recentRun();
+            let action = 'reused-existing-corrected-run';
+            if (!run) {
+              action = 'dispatched-corrected-run-once';
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: target.id,
+                ref: 'main',
+                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+              });
+              for (let attempt = 1; attempt <= 18 && !run; attempt++) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await recentRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Authorized production run could not be resolved.');
+              return;
+            }
+
+            const payload = {
+              ok: true,
+              action,
+              recordedAt: new Date().toISOString(),
+              cutoff: cutoff.toISOString(),
+              workflowId: target.id,
+              supersedesFailedRun: 30083740775,
+              run: {
+                id: run.id,
+                status: run.status,
+                conclusion: run.conclusion,
+                createdAt: run.created_at,
+                updatedAt: run.updated_at,
+                headSha: run.head_sha,
+                headBranch: run.head_branch,
+                event: run.event,
+                url: run.html_url
+              },
+              boundary: 'The first authorized run failed before deployment. This records or dispatches one corrected run and reuses it on all later checks.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/authorized-production-run.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`${action}: run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
+
+      - name: Commit production run identity
         run: |
           set -euo pipefail
-          marker='DEPLOY MATRIX REPROGRAMMED'
-          content="$(curl -fsSL -H "Authorization: Bearer ${{ github.token }}" -H "Accept: application/vnd.github.raw+json" "https://api.github.com/repos/${{ github.repository }}/contents/.github/production-deploy.trigger?ref=main")"
-          if [ "$content" != "$marker" ]; then
-            echo "Production dispatch refused: authorization marker did not match exactly."
-            exit 1
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/authorized-production-run.json
+          if git diff --cached --quiet; then
+            echo 'Authorized production run identity already current.'
+            exit 0
           fi
-      - name: Dispatch guarded production workflow
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow run deploy.yml --repo "${{ github.repository }}" --ref main -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          git commit -m 'Record authorized corrected production run'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1

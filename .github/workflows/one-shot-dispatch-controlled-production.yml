@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: capstone-pyramid-v3-production-dispatch
+  group: matrix-production-recovery-20260724
   cancel-in-progress: false
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
           ref: main
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Discover or dispatch exactly one capstone-complete release
+      - name: Discover or dispatch exactly one recovery release
         id: release
         uses: actions/github-script@v7
         with:
@@ -32,8 +32,8 @@ jobs:
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const cutoff = new Date('2026-07-24T12:03:00Z');
-            const releaseId = 'capstone-pyramid-v3-20260724';
+            const cutoff = new Date('2026-07-24T16:20:00Z');
+            const releaseId = 'matrix-production-recovery-20260724-1824-paris';
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
             const target = workflows.data.workflows.find(workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
             if (!target) { core.setFailed('Controlled production workflow was not found.'); return; }
@@ -42,25 +42,25 @@ jobs:
               return response.data.workflow_runs.filter(run => new Date(run.created_at) >= cutoff).sort((a,b)=>new Date(b.created_at)-new Date(a.created_at))[0] || null;
             }
             let run = await recentRun();
-            let action = 'reused-existing-capstone-release';
+            let action = 'reused-existing-recovery-release';
             if (!run) {
-              action = 'dispatched-capstone-release-once';
+              action = 'dispatched-recovery-release-once';
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' } });
               for (let attempt=1; attempt<=18 && !run; attempt++) { await new Promise(resolve=>setTimeout(resolve,5000)); run=await recentRun(); }
             }
-            if (!run) { core.setFailed('Capstone-complete production release could not be resolved.'); return; }
-            const payload={ok:true,releaseId,action,recordedAt:new Date().toISOString(),cutoff:cutoff.toISOString(),workflowId:target.id,staleRunCancelled:30091003163,scope:'Deploy the independent 80-person Pyramid plus the cinematic Capstone covering Black Nobility history, Orsini and related Roman houses, Baal, Moloch, Saturn and the Lightbringer with explicit speculation boundaries.',run:{id:run.id,status:run.status,conclusion:run.conclusion,createdAt:run.created_at,updatedAt:run.updated_at,headSha:run.head_sha,headBranch:run.head_branch,event:run.event,url:run.html_url},boundary:'Only one workflow-dispatch run after the post-capstone cutoff is allowed. Trigger retries reuse it.'};
+            if (!run) { core.setFailed('Recovery production release could not be resolved.'); return; }
+            const payload={ok:true,releaseId,action,recordedAt:new Date().toISOString(),cutoff:cutoff.toISOString(),workflowId:target.id,failedRunExcluded:30091864423,scope:'Deploy the complete Matrix Reprogrammed site and Worker through the single guarded Cloudflare path after the previous run failed before deployment at the runtime and D1 workflow-authority gate.',run:{id:run.id,status:run.status,conclusion:run.conclusion,createdAt:run.created_at,updatedAt:run.updated_at,headSha:run.head_sha,headBranch:run.head_branch,event:run.event,url:run.html_url},boundary:'Exactly one workflow-dispatch run after the recovery cutoff is allowed. Trigger retries reuse it and cannot create a duplicate release.'};
             fs.mkdirSync('data',{recursive:true});
             fs.writeFileSync('data/capstone-pyramid-release-dispatch.json',JSON.stringify(payload,null,2)+'\n');
             core.info(`${action}: production run ${run.id}.`);
-      - name: Commit exact capstone release identity
+      - name: Commit exact recovery release identity
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/capstone-pyramid-release-dispatch.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Record capstone Pyramid production run identity'
+          git commit -m 'Record recovery production run identity'
           for attempt in 1 2 3 4; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then exit 0; fi

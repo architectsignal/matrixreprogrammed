@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-24T03:43:28.472Z
+Generated: 2026-07-24T08:42:04.604Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -58,26 +58,6 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 - Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
 
 Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
-
-### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
-
-### Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 3
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
-- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
-
-Jeffrey Epstein case ABC News - Breaking News, Latest News and Videos
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Type: related-claim-traffic

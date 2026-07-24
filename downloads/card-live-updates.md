@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-24T03:43:28.522Z
-Live Intel source window: 2026-07-24T03:43:21.992Z
+Generated: 2026-07-24T08:42:04.661Z
+Live Intel source window: 2026-07-24T08:42:00.460Z
 Tracked cards: 873
-Cards with current matched records: 97
-Cards with no new verified record: 776
+Cards with current matched records: 95
+Cards with no new verified record: 778
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -1357,17 +1357,15 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Council on Foreign Relations
 - Route: institutions/council-on-foreign-relations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T10:16:08.000Z
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Council on Foreign Relations
 - Route: think-tanks/council-on-foreign-relations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T10:16:08.000Z
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-second-circuit.html
@@ -4762,10 +4760,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## The War Machine
 - Route: atlas-war-machine.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-23T20:14:15.000Z
 - 2026-07-23T20:14:15.000Z — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop — https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
 
 ## Theosophical Society
 - Route: secret-societies/theosophical-society.html

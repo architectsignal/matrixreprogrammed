@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-24T03:43:21.992Z
+Collection completed: 2026-07-24T08:42:00.460Z
 Latest source publication: 2026-07-23T20:14:15.000Z
-Collection status: fresh-items-added
-New items this collection: 6
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -92,35 +92,11 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Examining 2 decades since Jeffrey Epstein's arrest - WPTV
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein - AOL.co.uk
-  - Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxNZWVHYzhiald6dVdjY1Z5b3VEcWx5OWo3ck5EdkJJZlk4QjJEeHZUMUFselhFYi1kaVJIRi1ySzdab3pFMXJmX1VObkh0QTRBUVdCaDNRZzZ3S2VpTlBwSk81N1dXZ25PNkxKeWYyUkdYZTBrbUdRUjc4VUp3Z2thYUpLaw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein - AOL.co.uk
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
-  - Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
   - Source: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
@@ -236,12 +212,6 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Source class: primary-or-official
@@ -290,23 +260,11 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Ukraine: Deadly Russian attacks severely damage aid warehouses
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-19 — Haiti: Signs of hope despite gang violence and political uncertainty
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167963
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Haiti: Signs of hope despite gang violence and political uncertainty
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-19 — Ukraine: UN condemns overnight attack on Kyiv
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167975
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Ukraine: UN condemns overnight attack on Kyiv
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-18 — A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167974
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: A former Ferrari boss has a blunt message: Your commute is more dangerous than his old job
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
   - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
@@ -325,34 +283,4 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Massie introduces second Epstein files bill - Spectrum News
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Baristas behind bars: Thai prisoners brew a path back to daily life
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Djibouti: Emergency alert spotlights sharp hunger spike
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167971
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Djibouti: Emergency alert spotlights sharp hunger spike
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Hunger deepens for displaced families in Sudan’s El Obeid
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167967
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Hunger deepens for displaced families in Sudan’s El Obeid
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167973
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: US-Iran war: UN chief calls for new diplomatic push following attacks on civilian areas
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167970
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: World News in Brief: Appeal for calm in Kashmir, women on the move, Ebola deaths mount, 12th anniversary of MH17
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

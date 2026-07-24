@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-24T03:43:28.427Z
-Live Intel source window: 2026-07-24T03:43:21.992Z
+Generated: 2026-07-24T08:42:04.556Z
+Live Intel source window: 2026-07-24T08:42:00.460Z
 Latest source publication: 2026-07-23T18:38:38.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-16 current Epstein-lane record leads remain inside the active source window.
+12 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -45,16 +45,6 @@ Examining 2 decades since Jeffrey Epstein's arrest WPTV
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein - AOL.co.uk
-- Published: 2026-07-23T10:22:15.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxNZWVHYzhiald6dVdjY1Z5b3VEcWx5OWo3ck5EdkJJZlk4QjJEeHZUMUFselhFYi1kaVJIRi1ySzdab3pFMXJmX1VObkh0QTRBUVdCaDNRZzZ3S2VpTlBwSk81N1dXZ25PNkxKeWYyUkdYZTBrbUdRUjc4VUp3Z2thYUpLaw?oc=5
-
-US senator accuses Barclays of ‘failure’ to investigate ex-CEO’s ties to Epstein AOL.co.uk
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
 - Published: 2026-07-23T10:09:26.000Z
 - Source: Google News / Epstein timeline and files
@@ -62,26 +52,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
 
 Former Barclays boss Jes Staley to face US House panel on Epstein Forth.News
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-- Published: 2026-07-22T18:10:00.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-
-Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Jeffrey Epstein case - ABC News - Breaking News, Latest News and Videos
-- Published: 2026-07-22T15:22:26.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiU0FVX3lxTE43NlNXaDF1My1idDFoNGlMZ2ZqX3dtN3NUemxUQnRHX2gwSU02c1FYbmZpZThLa0g0anVIdGt2VENfTFo1Nm9SblRmSUJYTU84NFpZ?oc=5
-
-Jeffrey Epstein case ABC News - Breaking News, Latest News and Videos
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -122,16 +92,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
 
 Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag
-- Published: 2026-07-21T06:16:01.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxNTWFNTk9KZWs4Wk0xclZXRGxoV2gyb2VUbEp3bVRSZGxKUXJhaXRiNy1WemYzRTNiaGtBU1FpdlRFY3FLWjJyUEF4WHZweEM3d2lKS0tyRlIxX3BrRHhrVWFIRVhfaEg1WlZNb2t5TF9sb3lTUDlILVhTb05uNzJiUDNiOEpEaUhVRWdDUFpTSXA2dnZ5NW9n?oc=5
-
-President Clinton’s ‘Body Man’s’ Epstein Testimony Released LAmag
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -3,7 +3,7 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 const root = process.cwd();
-const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);
+const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler', '.cloudflare']);
 const generatedAllowList = new Set([
   'downloads/the-black-file-matrix-reprogrammed.pdf'
 ]);
@@ -97,6 +97,12 @@ function visibleCopy(html) {
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ');
 }
+function staticMarkup(html) {
+  return html
+    .replace(/<!--([\s\S]*?)-->/g, ' ')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ');
+}
 function requireFile(file) { if (!allFiles.has(file)) problems.push(`missing required core file: ${file}`); }
 function needText(file, pattern, label) {
   if (!allFiles.has(file)) return;
@@ -149,9 +155,10 @@ for (const file of publicHtmlFiles) {
       if (phrase.test(copy)) problems.push(`${file}: public-facing copy contains banned scaffold phrase: ${phrase}`);
     }
   }
+  const linkMarkup = staticMarkup(html);
   const attrRegex = /(?:href|src)=["']([^"']+)["']/gi;
   let match;
-  while ((match = attrRegex.exec(html)) !== null) {
+  while ((match = attrRegex.exec(linkMarkup)) !== null) {
     const raw = match[1].trim();
     if (isExternalOrProtocol(raw)) continue;
     const [targetPart, anchor] = raw.split('#');
@@ -237,6 +244,7 @@ if (allFiles.has('data/bulletins.json')) {
     if (!Array.isArray(b.sources) || !b.sources.length) problems.push(`data/bulletins.json: ${b.id || b.headline} missing sources`);
   }
 }
+
 if (allFiles.has('data/human-cost.json')) {
   const hc = JSON.parse(read('data/human-cost.json'));
   if (!Array.isArray(hc.panels) || hc.panels.length < 6) problems.push('data/human-cost.json: expected at least 6 human-cost panels');

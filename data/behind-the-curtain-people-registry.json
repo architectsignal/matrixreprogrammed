@@ -1,0 +1,3767 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-07-24",
+  "title": "Behind the Curtain — Named Access and Intermediary Registry",
+  "editorialBoundary": "This registry maps current public roles, documented access mechanisms and clearly labelled analytical assessments. It does not infer criminality, occult allegiance or unified secret command from wealth, office, family, philanthropy, membership, attendance or social contact.",
+  "publicationLanes": {
+    "documented_fact": "Current role or enforceable authority supported by an authoritative source.",
+    "strongly_supported_assessment": "Documented role plus a transparent structural assessment of access.",
+    "plausible_structural_inference": "A bounded inference from repeated institutional connections; not proof of command.",
+    "speculative_hypothesis": "A theory presented for testing with evidence for, evidence against and required proof."
+  },
+  "people": [
+    {
+      "id": "xi-jinping",
+      "name": "Xi Jinping",
+      "currentRole": "General Secretary of the Communist Party of China; President of the PRC; CMC Chairman",
+      "organization": "Chinese party-state",
+      "jurisdictions": [
+        "China"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 91.3,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 98,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Combined party, state and military offices.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 98,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Combined party, state and military offices.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Combined party, state and military offices."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-xi-jinping"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "mohammed-bin-salman",
+      "name": "Mohammed bin Salman",
+      "currentRole": "Crown Prince and Prime Minister; PIF Chairman",
+      "organization": "Saudi Arabia",
+      "jurisdictions": [
+        "Saudi Arabia"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 91.9,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 96,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Hereditary succession, executive authority and sovereign-capital chairmanship.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 97,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Hereditary succession, executive authority and sovereign-capital chairmanship.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 91,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Hereditary succession, executive authority and sovereign-capital chairmanship.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Hereditary succession, executive authority and sovereign-capital chairmanship."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-mohammed-bin-salman"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "donald-trump",
+      "name": "Donald J. Trump",
+      "currentRole": "President of the United States",
+      "organization": "United States",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 88.3,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 95,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Constitutional executive, commander-in-chief and classified intelligence access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 94,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Constitutional executive, commander-in-chief and classified intelligence access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Constitutional executive, commander-in-chief and classified intelligence access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-donald-trump"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "mohamed-bin-zayed",
+      "name": "Mohamed bin Zayed Al Nahyan",
+      "currentRole": "President of the UAE and Ruler of Abu Dhabi",
+      "organization": "United Arab Emirates",
+      "jurisdictions": [
+        "United Arab Emirates"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 86.6,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 94,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Federal and emirate executive, defence and strategic-state access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 91,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Federal and emirate executive, defence and strategic-state access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Federal and emirate executive, defence and strategic-state access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-mohamed-bin-zayed"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "vladimir-putin",
+      "name": "Vladimir Putin",
+      "currentRole": "President of the Russian Federation",
+      "organization": "Russian Federation",
+      "jurisdictions": [
+        "Russia"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 89.1,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 94,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Presidential, military and security-council authority.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 97,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Presidential, military and security-council authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Presidential, military and security-council authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-vladimir-putin"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "ursula-von-der-leyen",
+      "name": "Ursula von der Leyen",
+      "currentRole": "President of the European Commission",
+      "organization": "European Commission",
+      "jurisdictions": [
+        "European Union"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 83.3,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 84,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Commission agenda, portfolio and regulatory initiative access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "permanent-system",
+          "score": 82,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Commission agenda, portfolio and regulatory initiative access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 88,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Commission agenda, portfolio and regulatory initiative access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Commission agenda, portfolio and regulatory initiative access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ursula-von-der-leyen"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "narendra-modi",
+      "name": "Narendra Modi",
+      "currentRole": "Prime Minister of India",
+      "organization": "Government of India",
+      "jurisdictions": [
+        "India"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 88,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Executive and cabinet authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Executive and cabinet authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-narendra-modi"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "keir-starmer",
+      "name": "Keir Starmer",
+      "currentRole": "Prime Minister of the United Kingdom",
+      "organization": "UK Government",
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 82,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Prime-ministerial and cabinet authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Prime-ministerial and cabinet authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-keir-starmer"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "emmanuel-macron",
+      "name": "Emmanuel Macron",
+      "currentRole": "President of the French Republic",
+      "organization": "French Republic",
+      "jurisdictions": [
+        "France"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 76.6,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 85,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Presidential and defence authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Presidential and defence authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-emmanuel-macron"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "friedrich-merz",
+      "name": "Friedrich Merz",
+      "currentRole": "Federal Chancellor of Germany",
+      "organization": "Federal Government of Germany",
+      "jurisdictions": [
+        "Germany"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 72.3,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 80,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Federal chancellorship and coalition authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Federal chancellorship and coalition authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-friedrich-merz"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "mark-rutte",
+      "name": "Mark Rutte",
+      "currentRole": "Secretary General of NATO",
+      "organization": "NATO",
+      "jurisdictions": [
+        "NATO"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.9,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 74,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Alliance representation, continuity and classified security access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "permanent-system",
+          "score": 82,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Alliance representation, continuity and classified security access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "intelligence-security",
+          "score": 72,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Alliance representation, continuity and classified security access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Alliance representation, continuity and classified security access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-mark-rutte"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "antonio-guterres",
+      "name": "António Guterres",
+      "currentRole": "Secretary-General of the United Nations",
+      "organization": "United Nations",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 71.1,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 70,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "Global convening and UN Secretariat continuity.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "permanent-system",
+          "score": 79,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Global convening and UN Secretariat continuity.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Global convening and UN Secretariat continuity."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-antonio-guterres"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "antonio-costa",
+      "name": "António Costa",
+      "currentRole": "President of the European Council",
+      "organization": "European Council",
+      "jurisdictions": [
+        "European Union"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 72.8,
+      "tierAccess": [
+        {
+          "tierId": "public-stage",
+          "score": 75,
+          "mechanism": "Public executive or diplomatic authority",
+          "basis": "EU summit agenda and institutional continuity.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "permanent-system",
+          "score": 78,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "EU summit agenda and institutional continuity.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "EU summit agenda and institutional continuity."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-antonio-costa"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "kevin-warsh",
+      "name": "Kevin Warsh",
+      "currentRole": "Chairman of the Federal Reserve Board and FOMC",
+      "organization": "Federal Reserve System",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 86.2,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 86,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Dollar liquidity, supervision and monetary-policy agenda access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 96,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Dollar liquidity, supervision and monetary-policy agenda access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 82,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Dollar liquidity, supervision and monetary-policy agenda access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Dollar liquidity, supervision and monetary-policy agenda access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-kevin-warsh"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "christine-lagarde",
+      "name": "Christine Lagarde",
+      "currentRole": "President of the European Central Bank",
+      "organization": "European Central Bank",
+      "jurisdictions": [
+        "Euro area"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 86.5,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 87,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Euro liquidity, collateral, supervision and policy communication.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 94,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Euro liquidity, collateral, supervision and policy communication.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 84,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Euro liquidity, collateral, supervision and policy communication.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Euro liquidity, collateral, supervision and policy communication."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-christine-lagarde"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "pablo-hernandez-de-cos",
+      "name": "Pablo Hernández de Cos",
+      "currentRole": "General Manager",
+      "organization": "Bank for International Settlements",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 85.9,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 91,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "BIS management, FSB participation and central-bank coordination.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 90,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "BIS management, FSB participation and central-bank coordination.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 82,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "BIS management, FSB participation and central-bank coordination.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "BIS management, FSB participation and central-bank coordination."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-pablo-hernandez-de-cos"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "andrea-maechler",
+      "name": "Andréa M. Maechler",
+      "currentRole": "Deputy General Manager",
+      "organization": "Bank for International Settlements",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74.9,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 82,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "BIS management and monetary-financial policy networks.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 76,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "BIS management and monetary-financial policy networks.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "BIS management and monetary-financial policy networks."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-andrea-maechler"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "kristalina-georgieva",
+      "name": "Kristalina Georgieva",
+      "currentRole": "Managing Director",
+      "organization": "International Monetary Fund",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 83.9,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 88,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Crisis finance, surveillance and multilateral policy leadership.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 88,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Crisis finance, surveillance and multilateral policy leadership.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 80,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Crisis finance, surveillance and multilateral policy leadership.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Crisis finance, surveillance and multilateral policy leadership."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-kristalina-georgieva"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure.",
+      "repeatJustification": "The person holds distinct, publicly documented mechanisms across three separate tiers."
+    },
+    {
+      "id": "ajay-banga",
+      "name": "Ajay Banga",
+      "currentRole": "President",
+      "organization": "World Bank Group",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.4,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 82,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Development-finance and infrastructure-policy leadership.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 77,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Development-finance and infrastructure-policy leadership.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Development-finance and infrastructure-policy leadership."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ajay-banga"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "ngozi-okonjo-iweala",
+      "name": "Ngozi Okonjo-Iweala",
+      "currentRole": "Director-General",
+      "organization": "World Trade Organization",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74.1,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 80,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Trade-system continuity and negotiation agenda access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 76,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Trade-system continuity and negotiation agenda access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Trade-system continuity and negotiation agenda access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ngozi-okonjo-iweala"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "andrew-bailey",
+      "name": "Andrew Bailey",
+      "currentRole": "Governor",
+      "organization": "Bank of England",
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 81.4,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 85,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Monetary, prudential and market-stability authority.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 88,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Monetary, prudential and market-stability authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Monetary, prudential and market-stability authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-andrew-bailey"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "pan-gongsheng",
+      "name": "Pan Gongsheng",
+      "currentRole": "Governor",
+      "organization": "People’s Bank of China",
+      "jurisdictions": [
+        "China"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 82.7,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 86,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Monetary, currency and financial-system authority.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 90,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Monetary, currency and financial-system authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Monetary, currency and financial-system authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-pan-gongsheng"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "kazuo-ueda",
+      "name": "Kazuo Ueda",
+      "currentRole": "Governor",
+      "organization": "Bank of Japan",
+      "jurisdictions": [
+        "Japan"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 80.5,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 84,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Monetary policy and market-operations authority.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "money-gatekeepers",
+          "score": 87,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Monetary policy and market-operations authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Monetary policy and market-operations authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-kazuo-ueda"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "mathias-cormann",
+      "name": "Mathias Cormann",
+      "currentRole": "Secretary-General",
+      "organization": "OECD",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 73.2,
+      "tierAccess": [
+        {
+          "tierId": "permanent-system",
+          "score": 76,
+          "mechanism": "Durable institutional authority and continuity",
+          "basis": "Standards, tax and economic-policy coordination.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "policy-architects",
+          "score": 78,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Standards, tax and economic-policy coordination.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Standards, tax and economic-policy coordination."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-mathias-cormann"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "larry-fink",
+      "name": "Laurence D. Fink",
+      "currentRole": "Founder, Chairman and Chief Executive Officer",
+      "organization": "BlackRock",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 85.7,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 93,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Institutional capital, financial technology and high-level forum access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "connectors",
+          "score": 90,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Institutional capital, financial technology and high-level forum access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Institutional capital, financial technology and high-level forum access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-larry-fink"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "salim-ramji",
+      "name": "Salim Ramji",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Vanguard",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 82,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Executive access to a major investor-owned asset manager.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Executive access to a major investor-owned asset manager."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-salim-ramji"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "ronald-ohanley",
+      "name": "Ronald P. O’Hanley",
+      "currentRole": "Chairman and Chief Executive Officer",
+      "organization": "State Street",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74.9,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 83,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Custody, asset-servicing and institutional-capital access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Custody, asset-servicing and institutional-capital access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ronald-ohanley"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "jamie-dimon",
+      "name": "Jamie Dimon",
+      "currentRole": "Chairman and Chief Executive Officer",
+      "organization": "JPMorgan Chase",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 88,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Global banking, credit, markets and government-business access.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "connectors",
+          "score": 80,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Global banking, credit, markets and government-business access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Global banking, credit, markets and government-business access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-jamie-dimon"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "jane-fraser",
+      "name": "Jane Fraser",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Citigroup",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 82,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Global banking, treasury and market access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Global banking, treasury and market access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-jane-fraser"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "nicolai-tangen",
+      "name": "Nicolai Tangen",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Norges Bank Investment Management",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 77.5,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 86,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Sovereign-wealth portfolio allocation and stewardship.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Sovereign-wealth portfolio allocation and stewardship."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-nicolai-tangen"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "yasir-al-rumayyan",
+      "name": "Yasir Al-Rumayyan",
+      "currentRole": "Governor",
+      "organization": "Public Investment Fund",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 81.4,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 89,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Sovereign-capital allocation and cross-border board relationships.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Sovereign-capital allocation and cross-border board relationships.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Sovereign-capital allocation and cross-border board relationships."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-yasir-al-rumayyan"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "dilhan-pillay",
+      "name": "Dilhan Pillay Sandrasegara",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Temasek Holdings",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 84,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "State-owned investment portfolio and capital-allocation access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "State-owned investment portfolio and capital-allocation access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-dilhan-pillay"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "lim-chow-kiat",
+      "name": "Lim Chow Kiat",
+      "currentRole": "Chief Executive Officer",
+      "organization": "GIC",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 76.6,
+      "tierAccess": [
+        {
+          "tierId": "money-gatekeepers",
+          "score": 85,
+          "mechanism": "Capital, liquidity, custody or monetary-system access",
+          "basis": "Sovereign reserve investment and risk-governance access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Sovereign reserve investment and risk-governance access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-lim-chow-kiat"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "cc-wei",
+      "name": "C.C. Wei",
+      "currentRole": "Chairman and Chief Executive Officer",
+      "organization": "TSMC",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 84.3,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 94,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Leading-edge semiconductor manufacturing capacity.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Leading-edge semiconductor manufacturing capacity."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-cc-wei"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "currentRole": "Founder, President and Chief Executive Officer",
+      "organization": "NVIDIA",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 82.6,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 92,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Advanced-compute and AI accelerator strategy.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Advanced-compute and AI accelerator strategy."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-jensen-huang"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "christophe-fouquet",
+      "name": "Christophe Fouquet",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "ASML",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 81.8,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 91,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Extreme-ultraviolet lithography capacity.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Extreme-ultraviolet lithography capacity."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-christophe-fouquet"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "mark-zuckerberg",
+      "name": "Mark Zuckerberg",
+      "currentRole": "Founder, Chairman and Chief Executive Officer",
+      "organization": "Meta",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 88,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Controlling voting power and global social-platform infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Controlling voting power and global social-platform infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-mark-zuckerberg"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "satya-nadella",
+      "name": "Satya Nadella",
+      "currentRole": "Chairman and Chief Executive Officer",
+      "organization": "Microsoft",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 80,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 89,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Cloud, enterprise software and AI infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Cloud, enterprise software and AI infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-satya-nadella"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "sundar-pichai",
+      "name": "Sundar Pichai",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Alphabet and Google",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 80,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 89,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Search, advertising, mobile and cloud infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Search, advertising, mobile and cloud infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-sundar-pichai"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "andy-jassy",
+      "name": "Andy Jassy",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "Amazon",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 88,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Cloud and global logistics infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Cloud and global logistics infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-andy-jassy"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "elon-musk",
+      "name": "Elon Musk",
+      "currentRole": "Chief Executive Officer and director",
+      "organization": "Tesla; SpaceX",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 80.9,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 90,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Launch, satellite, automotive and communications infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Launch, satellite, automotive and communications infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-elon-musk"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "lisa-su",
+      "name": "Lisa Su",
+      "currentRole": "Chair and Chief Executive Officer",
+      "organization": "AMD",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74.9,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 83,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Advanced processors and AI compute supply.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Advanced processors and AI compute supply."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-lisa-su"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "hock-tan",
+      "name": "Hock Tan",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "Broadcom",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 84,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Semiconductor, network and enterprise-software infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Semiconductor, network and enterprise-software infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-hock-tan"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "alex-karp",
+      "name": "Alexander Karp",
+      "currentRole": "Co-founder and Chief Executive Officer",
+      "organization": "Palantir",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 84,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Government and enterprise data-analysis platforms.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Government and enterprise data-analysis platforms."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-alex-karp"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "amin-nasser",
+      "name": "Amin H. Nasser",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "Saudi Aramco",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 78.3,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 87,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Energy production and strategic oil infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Energy production and strategic oil infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-amin-nasser"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "vincent-clerc",
+      "name": "Vincent Clerc",
+      "currentRole": "Chief Executive Officer",
+      "organization": "A.P. Moller - Maersk",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 84,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Container shipping, ports and global logistics.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Container shipping, ports and global logistics."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-vincent-clerc"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "michael-miebach",
+      "name": "Michael Miebach",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Mastercard",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 84,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Global card-network and payment infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Global card-network and payment infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-michael-miebach"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "ryan-mcinerney",
+      "name": "Ryan McInerney",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Visa",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 84,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Global card-network and payment infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Global card-network and payment infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ryan-mcinerney"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "javier-perez-tasso",
+      "name": "Javier Pérez-Tasso",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Swift",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 77.5,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 86,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Cross-border financial messaging infrastructure.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Cross-border financial messaging infrastructure."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-javier-perez-tasso"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "arvind-krishna",
+      "name": "Arvind Krishna",
+      "currentRole": "Chairman and Chief Executive Officer",
+      "organization": "IBM",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 71.4,
+      "tierAccess": [
+        {
+          "tierId": "ownership-infrastructure",
+          "score": 79,
+          "mechanism": "Executive or controlling access to critical infrastructure",
+          "basis": "Enterprise computing, hybrid cloud and government technology.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Enterprise computing, hybrid cloud and government technology."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-arvind-krishna"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "tulsi-gabbard",
+      "name": "Tulsi Gabbard",
+      "currentRole": "Director of National Intelligence",
+      "organization": "US Intelligence Community",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 83.5,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 93,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Coordination and oversight access across the US Intelligence Community.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Coordination and oversight access across the US Intelligence Community."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-tulsi-gabbard"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "john-ratcliffe",
+      "name": "John Ratcliffe",
+      "currentRole": "Director",
+      "organization": "Central Intelligence Agency",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 81.8,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 91,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Foreign intelligence, covert-action and liaison authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign intelligence, covert-action and liaison authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-john-ratcliffe"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "kash-patel",
+      "name": "Kash Patel",
+      "currentRole": "Director",
+      "organization": "Federal Bureau of Investigation",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 84,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Federal law-enforcement, counterintelligence and national-security authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Federal law-enforcement, counterintelligence and national-security authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-kash-patel"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "blaise-metreweli",
+      "name": "Blaise Metreweli",
+      "currentRole": "Chief",
+      "organization": "Secret Intelligence Service",
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 88,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Foreign-intelligence operational authority and ministerial access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign-intelligence operational authority and ministerial access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-blaise-metreweli"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "anne-keast-butler",
+      "name": "Anne Keast-Butler",
+      "currentRole": "Director",
+      "organization": "GCHQ",
+      "jurisdictions": [
+        "United Kingdom"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 78.3,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 87,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Signals-intelligence and cyber capability authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Signals-intelligence and cyber capability authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-anne-keast-butler"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "roman-gofman",
+      "name": "Roman Gofman",
+      "currentRole": "Director",
+      "organization": "Mossad",
+      "jurisdictions": [
+        "Israel"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 88,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Foreign-intelligence and covert-operational authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign-intelligence and covert-operational authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-roman-gofman"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "nicolas-lerner",
+      "name": "Nicolas Lerner",
+      "currentRole": "Director General",
+      "organization": "DGSE",
+      "jurisdictions": [
+        "France"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 76.6,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 85,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Foreign-intelligence and executive-government access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign-intelligence and executive-government access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-nicolas-lerner"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "sergei-shoigu",
+      "name": "Sergei Shoigu",
+      "currentRole": "Secretary",
+      "organization": "Security Council of the Russian Federation",
+      "jurisdictions": [
+        "Russia"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 76.6,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 85,
+          "mechanism": "Classified, security or military command access",
+          "basis": "National-security coordination and presidential access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "National-security coordination and presidential access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-sergei-shoigu"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "alexus-grynkewich",
+      "name": "Alexus G. Grynkewich",
+      "currentRole": "Supreme Allied Commander Europe",
+      "organization": "NATO",
+      "jurisdictions": [
+        "NATO"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 77.5,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 86,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Allied military command and operational planning authority.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Allied military command and operational planning authority."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-alexus-grynkewich"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "tahnoun-bin-zayed",
+      "name": "Tahnoun bin Zayed Al Nahyan",
+      "currentRole": "National Security Adviser and senior executive figure",
+      "organization": "United Arab Emirates",
+      "jurisdictions": [
+        "UAE"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 83.5,
+      "tierAccess": [
+        {
+          "tierId": "intelligence-security",
+          "score": 88,
+          "mechanism": "Classified, security or military command access",
+          "basis": "Cross-domain access spanning security, sovereign capital and corporate networks.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "connectors",
+          "score": 90,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Cross-domain access spanning security, sovereign capital and corporate networks.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Cross-domain access spanning security, sovereign capital and corporate networks."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-tahnoun-bin-zayed"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "michael-froman",
+      "name": "Michael Froman",
+      "currentRole": "President",
+      "organization": "Council on Foreign Relations",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 84,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Foreign-policy convening and government-business network access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign-policy convening and government-business network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-michael-froman"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "cecilia-rouse",
+      "name": "Cecilia Rouse",
+      "currentRole": "President",
+      "organization": "Brookings Institution",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 70.6,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 78,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Economic-policy research and policymaker access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Economic-policy research and policymaker access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-cecilia-rouse"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "bronwen-maddox",
+      "name": "Bronwen Maddox",
+      "currentRole": "Director and Chief Executive",
+      "organization": "Chatham House",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 71.4,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 79,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Foreign-policy convening and elite-policy network access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Foreign-policy convening and elite-policy network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-bronwen-maddox"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "frederick-kempe",
+      "name": "Frederick Kempe",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "Atlantic Council",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 82,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Transatlantic policy, donor and corporate-advisory access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Transatlantic policy, donor and corporate-advisory access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-frederick-kempe"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "jason-matheny",
+      "name": "Jason Matheny",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "RAND",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 72.3,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 80,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "National-security and technology-policy research access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "National-security and technology-policy research access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-jason-matheny"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "comfort-ero",
+      "name": "Comfort Ero",
+      "currentRole": "President and Chief Executive Officer",
+      "organization": "International Crisis Group",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 68.9,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 76,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Conflict-policy analysis and diplomatic access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Conflict-policy analysis and diplomatic access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-comfort-ero"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "rachel-glennerster",
+      "name": "Rachel Glennerster",
+      "currentRole": "President",
+      "organization": "Center for Global Development",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 68,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 75,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Development-policy research and donor-government access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Development-policy research and donor-government access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-rachel-glennerster"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "paul-butler",
+      "name": "Paul E. Butler",
+      "currentRole": "Interim CEO; President and Chief Transformation Officer",
+      "organization": "New America",
+      "jurisdictions": [
+        "United States"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 66.3,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 73,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Technology and public-policy network leadership.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Technology and public-policy network leadership."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-paul-butler"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "alois-zwinggi",
+      "name": "Alois Zwinggi",
+      "currentRole": "Interim President and Chief Executive Officer",
+      "organization": "World Economic Forum",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 82,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Forum management and cross-sector convening access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Forum management and cross-sector convening access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-alois-zwinggi"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "andre-hoffmann",
+      "name": "André Hoffmann",
+      "currentRole": "Interim Co-Chair",
+      "organization": "World Economic Forum",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 84,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Board-level access across business, philanthropy and global forums.",
+          "classification": "strongly_supported_assessment"
+        },
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Board-level access across business, philanthropy and global forums.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Board-level access across business, philanthropy and global forums."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-andre-hoffmann"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "tony-blair",
+      "name": "Tony Blair",
+      "currentRole": "Executive Chairman",
+      "organization": "Tony Blair Institute for Global Change",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 73.2,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 81,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Government advisory and policy-delivery network access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Government advisory and policy-delivery network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-tony-blair"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "bill-gates",
+      "name": "Bill Gates",
+      "currentRole": "Chair",
+      "organization": "Gates Foundation",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "strongly_supported_assessment",
+      "confidence": "high",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 76.6,
+      "tierAccess": [
+        {
+          "tierId": "policy-architects",
+          "score": 85,
+          "mechanism": "Policy design, standards, research or convening access",
+          "basis": "Philanthropic capital and global health-development policy access.",
+          "classification": "strongly_supported_assessment"
+        }
+      ],
+      "accessToPower": [
+        "Philanthropic capital and global health-development policy access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-bill-gates"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "stephen-schwarzman",
+      "name": "Stephen A. Schwarzman",
+      "currentRole": "Chairman, Chief Executive Officer and Co-Founder",
+      "organization": "Blackstone",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 79.2,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 88,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Private-capital, advisory and government-business access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Private-capital, advisory and government-business access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-stephen-schwarzman"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "david-rubenstein",
+      "name": "David M. Rubenstein",
+      "currentRole": "Co-Founder and Co-Chairman",
+      "organization": "Carlyle",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Private-capital, institutional-board and policy-convening access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Private-capital, institutional-board and policy-convening access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-david-rubenstein"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "peter-thiel",
+      "name": "Peter Thiel",
+      "currentRole": "Partner and technology investor",
+      "organization": "Founders Fund",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 74,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 82,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Technology-capital, defence-tech and political-network access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Technology-capital, defence-tech and political-network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-peter-thiel"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "reid-hoffman",
+      "name": "Reid Hoffman",
+      "currentRole": "Partner and technology investor",
+      "organization": "Greylock",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 71.4,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 79,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Technology-capital, philanthropy and political-network access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Technology-capital, philanthropy and political-network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-reid-hoffman"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "michael-bloomberg",
+      "name": "Michael Bloomberg",
+      "currentRole": "Founder",
+      "organization": "Bloomberg LP and Bloomberg Philanthropies",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Financial-information, philanthropy and mayoral-policy network access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Financial-information, philanthropy and mayoral-policy network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-michael-bloomberg"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "jared-kushner",
+      "name": "Jared Kushner",
+      "currentRole": "Founder",
+      "organization": "Affinity Partners",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 70.6,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 78,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Former presidential-family access and private-capital relationships.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Former presidential-family access and private-capital relationships."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-jared-kushner"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "ken-griffin",
+      "name": "Kenneth C. Griffin",
+      "currentRole": "Founder and Chief Executive Officer",
+      "organization": "Citadel",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Market-making, hedge-fund, donor and policy-network access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Market-making, hedge-fund, donor and policy-network access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-ken-griffin"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    },
+    {
+      "id": "marc-rowan",
+      "name": "Marc Rowan",
+      "currentRole": "Chief Executive Officer",
+      "organization": "Apollo Global Management",
+      "jurisdictions": [
+        "Global"
+      ],
+      "status": "verified_current",
+      "classification": "plausible_structural_inference",
+      "confidence": "moderate",
+      "verifiedAt": "2026-07-24",
+      "nextReviewDue": "2026-08-24",
+      "crossSystemScore": 75.7,
+      "tierAccess": [
+        {
+          "tierId": "connectors",
+          "score": 84,
+          "mechanism": "Cross-sector access brokerage through boards, finance, advice or philanthropy",
+          "basis": "Private-credit, insurance and institutional-policy access.",
+          "classification": "plausible_structural_inference"
+        }
+      ],
+      "accessToPower": [
+        "Private-credit, insurance and institutional-policy access."
+      ],
+      "constraints": [
+        "Authority is bounded by law, governance, institutional process, markets, counterparties, political resistance and replacement risk."
+      ],
+      "sourceIds": [
+        "src-marc-rowan"
+      ],
+      "notEstablished": "The public record does not establish that this person secretly commands unrelated institutions, participates in a unified hidden government or follows a literal occult command structure."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-xi-jinping",
+      "tier": "A",
+      "publisher": "PRC Ministry of National Defense",
+      "title": "Xi Jinping — current role",
+      "url": "https://eng.mod.gov.cn/xb/Leadership/XiJinping/",
+      "date": "2026-07-24",
+      "establishes": "General Secretary of the Communist Party of China; President of the PRC; CMC Chairman at Chinese party-state.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-mohammed-bin-salman",
+      "tier": "A",
+      "publisher": "Public Investment Fund",
+      "title": "Mohammed bin Salman — current role",
+      "url": "https://www.pif.gov.sa/en/who-we-are/our-leadership/",
+      "date": "2026-07-24",
+      "establishes": "Crown Prince and Prime Minister; PIF Chairman at Saudi Arabia.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-donald-trump",
+      "tier": "A",
+      "publisher": "The White House",
+      "title": "Donald J. Trump — current role",
+      "url": "https://www.whitehouse.gov/administration/",
+      "date": "2026-07-24",
+      "establishes": "President of the United States at United States.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-mohamed-bin-zayed",
+      "tier": "A",
+      "publisher": "UAE Government",
+      "title": "Mohamed bin Zayed Al Nahyan — current role",
+      "url": "https://u.ae/en/about-the-uae/the-uae-government/government-leaders",
+      "date": "2026-07-24",
+      "establishes": "President of the UAE and Ruler of Abu Dhabi at United Arab Emirates.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-vladimir-putin",
+      "tier": "A",
+      "publisher": "Kremlin",
+      "title": "Vladimir Putin — current role",
+      "url": "https://en.kremlin.ru/structure/president/presidents",
+      "date": "2026-07-24",
+      "establishes": "President of the Russian Federation at Russian Federation.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ursula-von-der-leyen",
+      "tier": "A",
+      "publisher": "European Commission",
+      "title": "Ursula von der Leyen — current role",
+      "url": "https://commission.europa.eu/about/organisation/president_en",
+      "date": "2026-07-24",
+      "establishes": "President of the European Commission at European Commission.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-narendra-modi",
+      "tier": "A",
+      "publisher": "Prime Minister of India",
+      "title": "Narendra Modi — current role",
+      "url": "https://www.pmindia.gov.in/en/pms-profile/",
+      "date": "2026-07-24",
+      "establishes": "Prime Minister of India at Government of India.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-keir-starmer",
+      "tier": "A",
+      "publisher": "UK Government",
+      "title": "Keir Starmer — current role",
+      "url": "https://www.gov.uk/government/people/keir-starmer",
+      "date": "2026-07-24",
+      "establishes": "Prime Minister of the United Kingdom at UK Government.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-emmanuel-macron",
+      "tier": "A",
+      "publisher": "Élysée",
+      "title": "Emmanuel Macron — current role",
+      "url": "https://www.elysee.fr/emmanuel-macron",
+      "date": "2026-07-24",
+      "establishes": "President of the French Republic at French Republic.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-friedrich-merz",
+      "tier": "A",
+      "publisher": "German Federal Government",
+      "title": "Friedrich Merz — current role",
+      "url": "https://www.bundesregierung.de/breg-en/federal-government/cabinet/friedrich-merz",
+      "date": "2026-07-24",
+      "establishes": "Federal Chancellor of Germany at Federal Government of Germany.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-mark-rutte",
+      "tier": "A",
+      "publisher": "NATO",
+      "title": "Mark Rutte — current role",
+      "url": "https://www.nato.int/cps/en/natohq/who_is_who_229125.htm",
+      "date": "2026-07-24",
+      "establishes": "Secretary General of NATO at NATO.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-antonio-guterres",
+      "tier": "A",
+      "publisher": "United Nations",
+      "title": "António Guterres — current role",
+      "url": "https://www.un.org/sg/en/content/sg/biography",
+      "date": "2026-07-24",
+      "establishes": "Secretary-General of the United Nations at United Nations.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-antonio-costa",
+      "tier": "A",
+      "publisher": "European Council",
+      "title": "António Costa — current role",
+      "url": "https://www.consilium.europa.eu/en/european-council/president/biography/",
+      "date": "2026-07-24",
+      "establishes": "President of the European Council at European Council.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-kevin-warsh",
+      "tier": "A",
+      "publisher": "Federal Reserve",
+      "title": "Kevin Warsh — current role",
+      "url": "https://www.federalreserve.gov/aboutthefed/bios/board/warsh.htm",
+      "date": "2026-07-24",
+      "establishes": "Chairman of the Federal Reserve Board and FOMC at Federal Reserve System.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-christine-lagarde",
+      "tier": "A",
+      "publisher": "European Central Bank",
+      "title": "Christine Lagarde — current role",
+      "url": "https://www.ecb.europa.eu/ecb/decisions/eb/html/index.en.html",
+      "date": "2026-07-24",
+      "establishes": "President of the European Central Bank at European Central Bank.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-pablo-hernandez-de-cos",
+      "tier": "A",
+      "publisher": "Bank for International Settlements",
+      "title": "Pablo Hernández de Cos — current role",
+      "url": "https://www.bis.org/about/biophdc.htm",
+      "date": "2026-07-24",
+      "establishes": "General Manager at Bank for International Settlements.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-andrea-maechler",
+      "tier": "A",
+      "publisher": "Bank for International Settlements",
+      "title": "Andréa M. Maechler — current role",
+      "url": "https://www.bis.org/about/officials.htm",
+      "date": "2026-07-24",
+      "establishes": "Deputy General Manager at Bank for International Settlements.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-kristalina-georgieva",
+      "tier": "A",
+      "publisher": "International Monetary Fund",
+      "title": "Kristalina Georgieva — current role",
+      "url": "https://www.imf.org/en/about/senior-officials",
+      "date": "2026-07-24",
+      "establishes": "Managing Director at International Monetary Fund.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ajay-banga",
+      "tier": "A",
+      "publisher": "World Bank",
+      "title": "Ajay Banga — current role",
+      "url": "https://www.worldbank.org/en/about/people/a/ajay-banga",
+      "date": "2026-07-24",
+      "establishes": "President at World Bank Group.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ngozi-okonjo-iweala",
+      "tier": "A",
+      "publisher": "World Trade Organization",
+      "title": "Ngozi Okonjo-Iweala — current role",
+      "url": "https://www.wto.org/english/thewto_e/dg_e/dg_e.htm",
+      "date": "2026-07-24",
+      "establishes": "Director-General at World Trade Organization.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-andrew-bailey",
+      "tier": "A",
+      "publisher": "Bank of England",
+      "title": "Andrew Bailey — current role",
+      "url": "https://www.bankofengland.co.uk/about/people/andrew-bailey/biography",
+      "date": "2026-07-24",
+      "establishes": "Governor at Bank of England.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-pan-gongsheng",
+      "tier": "A",
+      "publisher": "People’s Bank of China",
+      "title": "Pan Gongsheng — current role",
+      "url": "https://www.pbc.gov.cn/en/3688006/3688013/index.html",
+      "date": "2026-07-24",
+      "establishes": "Governor at People’s Bank of China.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-kazuo-ueda",
+      "tier": "A",
+      "publisher": "Bank of Japan",
+      "title": "Kazuo Ueda — current role",
+      "url": "https://www.boj.or.jp/en/about/organization/policyboard/bm_ueda.htm",
+      "date": "2026-07-24",
+      "establishes": "Governor at Bank of Japan.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-mathias-cormann",
+      "tier": "A",
+      "publisher": "OECD",
+      "title": "Mathias Cormann — current role",
+      "url": "https://www.oecd.org/en/about/secretary-general.html",
+      "date": "2026-07-24",
+      "establishes": "Secretary-General at OECD.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-larry-fink",
+      "tier": "A",
+      "publisher": "BlackRock",
+      "title": "Laurence D. Fink — current role",
+      "url": "https://www.blackrock.com/corporate/about-us/leadership/larry-fink",
+      "date": "2026-07-24",
+      "establishes": "Founder, Chairman and Chief Executive Officer at BlackRock.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-salim-ramji",
+      "tier": "A",
+      "publisher": "Vanguard",
+      "title": "Salim Ramji — current role",
+      "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/why-vanguard/who-we-are/our-management-team.html",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Vanguard.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ronald-ohanley",
+      "tier": "A",
+      "publisher": "State Street",
+      "title": "Ronald P. O’Hanley — current role",
+      "url": "https://www.statestreet.com/us/en/about/our-people/leadership/ronaldohanley",
+      "date": "2026-07-24",
+      "establishes": "Chairman and Chief Executive Officer at State Street.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-jamie-dimon",
+      "tier": "A",
+      "publisher": "JPMorgan Chase",
+      "title": "Jamie Dimon — current role",
+      "url": "https://www.jpmorganchase.com/about/our-leadership/jamie-dimon",
+      "date": "2026-07-24",
+      "establishes": "Chairman and Chief Executive Officer at JPMorgan Chase.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-jane-fraser",
+      "tier": "A",
+      "publisher": "Citigroup",
+      "title": "Jane Fraser — current role",
+      "url": "https://www.citigroup.com/citi/about/leaders/jane-fraser-bio.html",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Citigroup.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-nicolai-tangen",
+      "tier": "A",
+      "publisher": "Norges Bank Investment Management",
+      "title": "Nicolai Tangen — current role",
+      "url": "https://www.nbim.no/en/about-us/leader-group/leadergroup-persons/nicolai-tangen/",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Norges Bank Investment Management.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-yasir-al-rumayyan",
+      "tier": "A",
+      "publisher": "Public Investment Fund",
+      "title": "Yasir Al-Rumayyan — current role",
+      "url": "https://www.pif.gov.sa/en/who-we-are/our-leadership/",
+      "date": "2026-07-24",
+      "establishes": "Governor at Public Investment Fund.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-dilhan-pillay",
+      "tier": "A",
+      "publisher": "Temasek",
+      "title": "Dilhan Pillay Sandrasegara — current role",
+      "url": "https://www.temasek.com.sg/en/about-us/our-leadership",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Temasek Holdings.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-lim-chow-kiat",
+      "tier": "A",
+      "publisher": "GIC",
+      "title": "Lim Chow Kiat — current role",
+      "url": "https://www.gic.com.sg/who-we-are/global-leaders/lim-chow-kiat/",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at GIC.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-cc-wei",
+      "tier": "A",
+      "publisher": "TSMC",
+      "title": "C.C. Wei — current role",
+      "url": "https://www.tsmc.com/english/aboutTSMC/executives",
+      "date": "2026-07-24",
+      "establishes": "Chairman and Chief Executive Officer at TSMC.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-jensen-huang",
+      "tier": "A",
+      "publisher": "NVIDIA",
+      "title": "Jensen Huang — current role",
+      "url": "https://www.nvidia.com/en-us/about-nvidia/governance/management-team/jensen-huang/",
+      "date": "2026-07-24",
+      "establishes": "Founder, President and Chief Executive Officer at NVIDIA.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-christophe-fouquet",
+      "tier": "A",
+      "publisher": "ASML",
+      "title": "Christophe Fouquet — current role",
+      "url": "https://www.asml.com/en/company/governance/board-of-management",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at ASML.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-mark-zuckerberg",
+      "tier": "A",
+      "publisher": "Meta",
+      "title": "Mark Zuckerberg — current role",
+      "url": "https://investor.atmeta.com/leadership-and-governance/default.aspx",
+      "date": "2026-07-24",
+      "establishes": "Founder, Chairman and Chief Executive Officer at Meta.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-satya-nadella",
+      "tier": "A",
+      "publisher": "Microsoft",
+      "title": "Satya Nadella — current role",
+      "url": "https://news.microsoft.com/exec/satya-nadella/",
+      "date": "2026-07-24",
+      "establishes": "Chairman and Chief Executive Officer at Microsoft.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-sundar-pichai",
+      "tier": "A",
+      "publisher": "Alphabet",
+      "title": "Sundar Pichai — current role",
+      "url": "https://abc.xyz/investor/other/board/",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Alphabet and Google.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-andy-jassy",
+      "tier": "A",
+      "publisher": "Amazon",
+      "title": "Andy Jassy — current role",
+      "url": "https://ir.aboutamazon.com/officers-and-directors/default.aspx",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at Amazon.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-elon-musk",
+      "tier": "A",
+      "publisher": "Tesla",
+      "title": "Elon Musk — current role",
+      "url": "https://ir.tesla.com/corporate/elon-musk",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer and director at Tesla; SpaceX.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-lisa-su",
+      "tier": "A",
+      "publisher": "AMD",
+      "title": "Lisa Su — current role",
+      "url": "https://www.amd.com/en/corporate/leadership/lisa-su.html",
+      "date": "2026-07-24",
+      "establishes": "Chair and Chief Executive Officer at AMD.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-hock-tan",
+      "tier": "A",
+      "publisher": "Broadcom",
+      "title": "Hock Tan — current role",
+      "url": "https://www.broadcom.com/company/about-us/leadership",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at Broadcom.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-alex-karp",
+      "tier": "A",
+      "publisher": "Palantir",
+      "title": "Alexander Karp — current role",
+      "url": "https://www.palantir.com/leadership/",
+      "date": "2026-07-24",
+      "establishes": "Co-founder and Chief Executive Officer at Palantir.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-amin-nasser",
+      "tier": "A",
+      "publisher": "Saudi Aramco",
+      "title": "Amin H. Nasser — current role",
+      "url": "https://www.aramco.com/en/who-we-are/our-corporate-governance/leadership-team/amin-h-nasser",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at Saudi Aramco.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-vincent-clerc",
+      "tier": "A",
+      "publisher": "Maersk",
+      "title": "Vincent Clerc — current role",
+      "url": "https://www.maersk.com/about/leadership",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at A.P. Moller - Maersk.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-michael-miebach",
+      "tier": "A",
+      "publisher": "Mastercard",
+      "title": "Michael Miebach — current role",
+      "url": "https://www.mastercard.com/news/perspectives/people/michael-miebach/",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Mastercard.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ryan-mcinerney",
+      "tier": "A",
+      "publisher": "Visa",
+      "title": "Ryan McInerney — current role",
+      "url": "https://usa.visa.com/about-visa/leadership.html",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Visa.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-javier-perez-tasso",
+      "tier": "A",
+      "publisher": "Swift",
+      "title": "Javier Pérez-Tasso — current role",
+      "url": "https://www.swift.com/about-us/organisation-governance/executive-committee",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Swift.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-arvind-krishna",
+      "tier": "A",
+      "publisher": "IBM",
+      "title": "Arvind Krishna — current role",
+      "url": "https://www.ibm.com/about/leadership/arvind-krishna",
+      "date": "2026-07-24",
+      "establishes": "Chairman and Chief Executive Officer at IBM.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-tulsi-gabbard",
+      "tier": "A",
+      "publisher": "ODNI",
+      "title": "Tulsi Gabbard — current role",
+      "url": "https://www.dni.gov/index.php/who-we-are/leadership/director-of-national-intelligence",
+      "date": "2026-07-24",
+      "establishes": "Director of National Intelligence at US Intelligence Community.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-john-ratcliffe",
+      "tier": "A",
+      "publisher": "CIA",
+      "title": "John Ratcliffe — current role",
+      "url": "https://www.cia.gov/about/director-of-cia/",
+      "date": "2026-07-24",
+      "establishes": "Director at Central Intelligence Agency.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-kash-patel",
+      "tier": "A",
+      "publisher": "FBI",
+      "title": "Kash Patel — current role",
+      "url": "https://www.fbi.gov/about/leadership-and-structure/director-patel",
+      "date": "2026-07-24",
+      "establishes": "Director at Federal Bureau of Investigation.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-blaise-metreweli",
+      "tier": "A",
+      "publisher": "SIS",
+      "title": "Blaise Metreweli — current role",
+      "url": "https://www.sis.gov.uk/about-us/our-chief/",
+      "date": "2026-07-24",
+      "establishes": "Chief at Secret Intelligence Service.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-anne-keast-butler",
+      "tier": "A",
+      "publisher": "GCHQ",
+      "title": "Anne Keast-Butler — current role",
+      "url": "https://www.gchq.gov.uk/section/governance/leadership",
+      "date": "2026-07-24",
+      "establishes": "Director at GCHQ.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-roman-gofman",
+      "tier": "A",
+      "publisher": "Israel Ministry of Defense",
+      "title": "Roman Gofman — current role",
+      "url": "https://mod.gov.il/en/press-releases/press-room/israel-defense-prize-2026-awarded-to-idf-mossad-isa-defense-industries-for-groundbreaking-projects-that-significantly-impacted-combat-operations",
+      "date": "2026-07-24",
+      "establishes": "Director at Mossad.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-nicolas-lerner",
+      "tier": "A",
+      "publisher": "DGSE",
+      "title": "Nicolas Lerner — current role",
+      "url": "https://dgse.gouv.fr/en/get-to-know-us/who-are-we",
+      "date": "2026-07-24",
+      "establishes": "Director General at DGSE.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-sergei-shoigu",
+      "tier": "A",
+      "publisher": "Russian Security Council",
+      "title": "Sergei Shoigu — current role",
+      "url": "https://www.scrf.gov.ru/persons/person97/",
+      "date": "2026-07-24",
+      "establishes": "Secretary at Security Council of the Russian Federation.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-alexus-grynkewich",
+      "tier": "A",
+      "publisher": "NATO",
+      "title": "Alexus G. Grynkewich — current role",
+      "url": "https://www.nato.int/en/about-us/organization/nato-structure/supreme-allied-commander-europe-saceur",
+      "date": "2026-07-24",
+      "establishes": "Supreme Allied Commander Europe at NATO.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-tahnoun-bin-zayed",
+      "tier": "A",
+      "publisher": "UAE Government",
+      "title": "Tahnoun bin Zayed Al Nahyan — current role",
+      "url": "https://u.ae/en/about-the-uae/the-uae-government/government-leaders",
+      "date": "2026-07-24",
+      "establishes": "National Security Adviser and senior executive figure at United Arab Emirates.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-michael-froman",
+      "tier": "A",
+      "publisher": "Council on Foreign Relations",
+      "title": "Michael Froman — current role",
+      "url": "https://www.cfr.org/experts/michael-froman",
+      "date": "2026-07-24",
+      "establishes": "President at Council on Foreign Relations.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-cecilia-rouse",
+      "tier": "A",
+      "publisher": "Brookings Institution",
+      "title": "Cecilia Rouse — current role",
+      "url": "https://www.brookings.edu/people/cecilia-rouse/",
+      "date": "2026-07-24",
+      "establishes": "President at Brookings Institution.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-bronwen-maddox",
+      "tier": "A",
+      "publisher": "Chatham House",
+      "title": "Bronwen Maddox — current role",
+      "url": "https://www.chathamhouse.org/about-us/our-people/bronwen-maddox",
+      "date": "2026-07-24",
+      "establishes": "Director and Chief Executive at Chatham House.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-frederick-kempe",
+      "tier": "A",
+      "publisher": "Atlantic Council",
+      "title": "Frederick Kempe — current role",
+      "url": "https://www.atlanticcouncil.org/about/leadership-and-governance/",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at Atlantic Council.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-jason-matheny",
+      "tier": "A",
+      "publisher": "RAND",
+      "title": "Jason Matheny — current role",
+      "url": "https://www.rand.org/about/people/m/matheny_jason.html",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at RAND.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-comfort-ero",
+      "tier": "A",
+      "publisher": "International Crisis Group",
+      "title": "Comfort Ero — current role",
+      "url": "https://www.crisisgroup.org/who-we-are/people/comfort-ero",
+      "date": "2026-07-24",
+      "establishes": "President and Chief Executive Officer at International Crisis Group.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-rachel-glennerster",
+      "tier": "A",
+      "publisher": "Center for Global Development",
+      "title": "Rachel Glennerster — current role",
+      "url": "https://www.cgdev.org/expert/rachel-glennerster",
+      "date": "2026-07-24",
+      "establishes": "President at Center for Global Development.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-paul-butler",
+      "tier": "A",
+      "publisher": "New America",
+      "title": "Paul E. Butler — current role",
+      "url": "https://www.newamerica.org/about/leadership/",
+      "date": "2026-07-24",
+      "establishes": "Interim CEO; President and Chief Transformation Officer at New America.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-alois-zwinggi",
+      "tier": "A",
+      "publisher": "World Economic Forum",
+      "title": "Alois Zwinggi — current role",
+      "url": "https://www.weforum.org/about/leadership-and-governance",
+      "date": "2026-07-24",
+      "establishes": "Interim President and Chief Executive Officer at World Economic Forum.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-andre-hoffmann",
+      "tier": "A",
+      "publisher": "World Economic Forum",
+      "title": "André Hoffmann — current role",
+      "url": "https://www.weforum.org/about/leadership-and-governance",
+      "date": "2026-07-24",
+      "establishes": "Interim Co-Chair at World Economic Forum.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-tony-blair",
+      "tier": "A",
+      "publisher": "Tony Blair Institute",
+      "title": "Tony Blair — current role",
+      "url": "https://www.institute.global/experts/tony-blair",
+      "date": "2026-07-24",
+      "establishes": "Executive Chairman at Tony Blair Institute for Global Change.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-bill-gates",
+      "tier": "A",
+      "publisher": "Gates Foundation",
+      "title": "Bill Gates — current role",
+      "url": "https://www.gatesfoundation.org/about/leadership/bill-gates",
+      "date": "2026-07-24",
+      "establishes": "Chair at Gates Foundation.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-stephen-schwarzman",
+      "tier": "A",
+      "publisher": "Blackstone",
+      "title": "Stephen A. Schwarzman — current role",
+      "url": "https://www.blackstone.com/people/stephen-a-schwarzman/",
+      "date": "2026-07-24",
+      "establishes": "Chairman, Chief Executive Officer and Co-Founder at Blackstone.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-david-rubenstein",
+      "tier": "A",
+      "publisher": "Carlyle",
+      "title": "David M. Rubenstein — current role",
+      "url": "https://www.carlyle.com/about-carlyle/team/david-m-rubenstein",
+      "date": "2026-07-24",
+      "establishes": "Co-Founder and Co-Chairman at Carlyle.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-peter-thiel",
+      "tier": "A",
+      "publisher": "Founders Fund",
+      "title": "Peter Thiel — current role",
+      "url": "https://foundersfund.com/team/peter-thiel/",
+      "date": "2026-07-24",
+      "establishes": "Partner and technology investor at Founders Fund.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-reid-hoffman",
+      "tier": "A",
+      "publisher": "Greylock",
+      "title": "Reid Hoffman — current role",
+      "url": "https://greylock.com/team/reid-hoffman/",
+      "date": "2026-07-24",
+      "establishes": "Partner and technology investor at Greylock.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-michael-bloomberg",
+      "tier": "A",
+      "publisher": "Bloomberg",
+      "title": "Michael Bloomberg — current role",
+      "url": "https://www.bloomberg.org/about/mike-bloomberg/",
+      "date": "2026-07-24",
+      "establishes": "Founder at Bloomberg LP and Bloomberg Philanthropies.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-jared-kushner",
+      "tier": "A",
+      "publisher": "Affinity Partners",
+      "title": "Jared Kushner — current role",
+      "url": "https://www.affinitypartners.com/team/jared-kushner",
+      "date": "2026-07-24",
+      "establishes": "Founder at Affinity Partners.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-ken-griffin",
+      "tier": "A",
+      "publisher": "Citadel",
+      "title": "Kenneth C. Griffin — current role",
+      "url": "https://www.citadel.com/leadership/kenneth-c-griffin/",
+      "date": "2026-07-24",
+      "establishes": "Founder and Chief Executive Officer at Citadel.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    },
+    {
+      "id": "src-marc-rowan",
+      "tier": "A",
+      "publisher": "Apollo",
+      "title": "Marc Rowan — current role",
+      "url": "https://www.apollo.com/about-apollo/our-people/marc-rowan",
+      "date": "2026-07-24",
+      "establishes": "Chief Executive Officer at Apollo Global Management.",
+      "doesNotEstablish": "The role or relationship does not by itself establish secret coordination, criminality, ritual activity or command beyond the stated mandate."
+    }
+  ]
+}

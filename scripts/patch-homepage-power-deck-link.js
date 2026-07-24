@@ -20,14 +20,19 @@ const card=(eyebrow,symbol,label,title,lead,boundary,buttons)=>`  <article class
 const block=`<!-- power-deck-home-link:start -->
 <section id="power-deck-home-link" class="section wrap">
   <div class="eyebrow">Matrix Reprogrammed · Intelligence Decks</div>
-  <h2>THE 52-CARD CONTROL MAPS.</h2>
-  <p class="lead">Nine fixed decks route readers into public-record paths: puppets, opposition lanes, institutions, power families, public/private societies, policies, think tanks, black nobility and jurisdictions of power. Every deck uses the same source-ledger, dossier and evidence-boundary structure.</p>
-  <div class="cta-row"><a class="btn" href="site-brain-router.html">Site Brain Router</a><a class="btn alt" href="card-artwork-automation.html">Artwork Automation</a><a class="btn alt" href="card-artwork-queue.html">Next Art Batch</a><a class="btn alt" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="jurisdictions-of-power-deck.html">Jurisdictions Deck</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
+  <h2>CONTROL MAPS AND THE RESISTANCE DECK.</h2>
+  <p class="lead">The deck system routes readers into source-led people, opposition, institution, family, society, policy, think-tank, jurisdiction and resistance dossiers. Every deck keeps its evidence boundary, source ledger and deeper research route visible.</p>
+  <div class="cta-row"><a class="btn" href="heroes-fighting-matrix-deck.html">Heroes Deck</a><a class="btn alt" href="top-52-power-deck.html">Puppets Deck</a><a class="btn alt" href="site-brain-router.html">Site Brain Router</a><a class="btn alt" href="card-artwork-automation.html">Artwork Automation</a><a class="btn alt" href="card-artwork-queue.html">Next Art Batch</a><a class="btn alt" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="jurisdictions-of-power-deck.html">Jurisdictions Deck</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a></div>
   <div class="grid">
 ${card('Puppets of Interest · Greatest Hits','◎','The Power Deck','PUPPETS OF INTEREST','Top 52 Puppets of Interest: a 52-card map of public-record influence routes across governance, capital, security, narrative systems, missing records and convergence lanes.','this is an influence-route deck, not an accusation list. Each card opens a dossier with evidence boundaries and source routes.',[
   {href:'top-52-power-deck.html',text:'Open The Power Deck'},
   {href:'top-52-art-studio.html',text:'Open Art Studio',alt:true},
   {href:'data/top-52-power-deck.json',text:'Deck Data',alt:true}
+])}
+${card('Heroes Fighting the Matrix · Builders / Defenders / Whistleblowers','⌘','The Resistance Deck','HEROES FIGHTING THE MATRIX','A ranked 52-card counter-deck of decentralised-internet builders, encryption and privacy defenders, whistleblowers, investigative publishers and public challengers. Structural contribution, verified evidence and documented personal risk outrank fame.','documented public contribution is not total endorsement. Pending cases, allegations and disputed claims remain explicitly labelled.',[
+  {href:'heroes-fighting-matrix-deck.html',text:'Open Heroes Deck'},
+  {href:'heroes-fighting-matrix-research-ledger.html',text:'Research Ledger',alt:true},
+  {href:'data/heroes-fighting-matrix-deck.json',text:'Deck Data',alt:true}
 ])}
 ${card('Controlled Opposition · Narrative Gateways','◉','The Opposition Deck','CONTROLLED OPPOSITION','Top 52 Opposition Lanes: a 52-card map of media lanes, platform incentives, audience capture, movement-split risk, gatekeeping claims and narrative containment routes.','this is a watchlist and narrative-analysis deck, not proof that anyone is controlled, paid, handled, deceptive or unlawful. Each card keeps the evidence boundary visible.',[
   {href:'controlled-opposition-deck.html',text:'Open Opposition Deck'},
@@ -51,7 +56,7 @@ ${card('Jurisdictions of Power · Law / Money / Sovereignty','§','The Jurisdict
   {href:'jurisdictions-of-power/city-of-london.html',text:'City of London',alt:true},
   {href:'jurisdictions-of-power/washington-d-c.html',text:'Washington D.C.',alt:true}
 ])}
-${card('Deck Expansion · Families / Societies / Policies / Think Tanks','♔','The Expansion Wave','NEXT 312 CARDS','Six new 52-card decks: Power Families, Secret Societies, Policy, Think Tanks, Black Nobility, and Jurisdictions of Power. Each card opens a dossier with main public nodes, history, functions, source routes, score, download and forum intake.','inclusion means research relevance to the public influence map, not proof of hidden control, collective intent, unlawful conduct or wrongdoing.',[
+${card('Deck Expansion · Families / Societies / Policies / Think Tanks','♔','The Expansion Wave','NEXT 312 CARDS','Six additional 52-card decks: Power Families, Secret Societies, Policy, Think Tanks, Black Nobility, and Jurisdictions of Power. Each card opens a dossier with main public nodes, history, functions, source routes, score, download and forum intake.','inclusion means research relevance to the public influence map, not proof of hidden control, collective intent, unlawful conduct or wrongdoing.',[
   {href:'deck-expansion-hub.html',text:'Open Expansion Hub'},
   {href:'power-families-deck.html',text:'Families',alt:true},
   {href:'secret-societies-deck.html',text:'Societies',alt:true},
@@ -67,4 +72,4 @@ if(html.includes('<section id="homepage-critical-clocks"')) html=html.replace('<
 else if(html.includes('<main id="main-archive">')) html=html.replace('<main id="main-archive">','<main id="main-archive">'+block);
 else html+=block;
 wr('index.html',html);
-console.log('Homepage Puppets of Interest deck, site brain, jurisdictions, artwork automation, intake, and conclusion links patched.');
+console.log('Homepage deck system patched with Puppets, Heroes, opposition, institution, site brain, jurisdictions and expansion routes.');

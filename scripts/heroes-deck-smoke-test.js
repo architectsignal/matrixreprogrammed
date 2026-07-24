@@ -8,6 +8,10 @@ const required = [
   'heroes-fighting-matrix-card.html',
   'heroes-fighting-matrix-research-ledger.html',
   'data/heroes-fighting-matrix-deck.json',
+  'data/heroes-fighting-matrix/keys.json',
+  'data/heroes-fighting-matrix/shields.json',
+  'data/heroes-fighting-matrix/torches.json',
+  'data/heroes-fighting-matrix/swords.json',
   'downloads/heroes-fighting-matrix-source-ledger.json',
   'downloads/heroes-fighting-matrix-source-ledger.md',
   'data/heroes-fighting-matrix-build-status.json',
@@ -19,9 +23,16 @@ const failures = [];
 for (const file of required) if (!fs.existsSync(fp(file))) failures.push(`missing ${file}`);
 
 if (!failures.length) {
-  const deck = JSON.parse(fs.readFileSync(fp('data/heroes-fighting-matrix-deck.json'), 'utf8'));
-  const cards = Array.isArray(deck.cards) ? deck.cards : [];
-  if (cards.length !== 52) failures.push(`combined deck has ${cards.length} cards`);
+  const manifest = JSON.parse(fs.readFileSync(fp('data/heroes-fighting-matrix-deck.json'), 'utf8'));
+  const suitPaths = [
+    'data/heroes-fighting-matrix/keys.json',
+    'data/heroes-fighting-matrix/shields.json',
+    'data/heroes-fighting-matrix/torches.json',
+    'data/heroes-fighting-matrix/swords.json'
+  ];
+  const cards = suitPaths.flatMap(file => JSON.parse(fs.readFileSync(fp(file), 'utf8'))).sort((a, b) => a.rank - b.rank);
+  if (manifest.cardCount !== 52 && (!Array.isArray(manifest.cards) || manifest.cards.length !== 52)) failures.push('deck manifest does not declare 52 cards');
+  if (cards.length !== 52) failures.push(`canonical suit files contain ${cards.length} cards`);
   const ranks = cards.map(card => card.rank).sort((a, b) => a - b);
   if (ranks.join(',') !== Array.from({ length: 52 }, (_, index) => index + 1).join(',')) failures.push('rank sequence is not 1–52');
   for (const suit of ['KEYS', 'SHIELDS', 'TORCHES', 'SWORDS']) {
@@ -42,6 +53,8 @@ if (!failures.length) {
   for (const marker of ['URLSearchParams', 'sources', 'caveat']) {
     if (!cardHtml.includes(marker)) failures.push(`card route missing marker ${marker}`);
   }
+  const ledgerHtml = fs.readFileSync(fp('heroes-fighting-matrix-research-ledger.html'), 'utf8');
+  if (!ledgerHtml.includes('data/heroes-fighting-matrix/keys.json')) failures.push('research ledger does not load canonical suit files');
   const hub = fs.readFileSync(fp('deck-expansion-hub.html'), 'utf8');
   if (!hub.includes('heroes-fighting-matrix-deck.html')) failures.push('Deck Hub link missing');
   const home = fs.readFileSync(fp('index.html'), 'utf8');
@@ -51,7 +64,16 @@ if (!failures.length) {
 
   const cf = fp('.cloudflare/pages-output');
   if (fs.existsSync(cf)) {
-    for (const file of ['heroes-fighting-matrix-deck.html', 'heroes-fighting-matrix-card.html', 'heroes-fighting-matrix-research-ledger.html', 'data/heroes-fighting-matrix-deck.json']) {
+    for (const file of [
+      'heroes-fighting-matrix-deck.html',
+      'heroes-fighting-matrix-card.html',
+      'heroes-fighting-matrix-research-ledger.html',
+      'data/heroes-fighting-matrix-deck.json',
+      'data/heroes-fighting-matrix/keys.json',
+      'data/heroes-fighting-matrix/shields.json',
+      'data/heroes-fighting-matrix/torches.json',
+      'data/heroes-fighting-matrix/swords.json'
+    ]) {
       if (!fs.existsSync(path.join(cf, file))) failures.push(`Cloudflare output missing ${file}`);
     }
   }
@@ -62,4 +84,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Heroes deck smoke test passed: 52 cards, four suits, navigation, search, downloads and Cloudflare routes verified.');
+console.log('Heroes deck smoke test passed: 52 canonical cards, four suits, navigation, search, downloads and Cloudflare routes verified.');

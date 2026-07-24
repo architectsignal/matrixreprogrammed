@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-24T14:12:13.621Z
-Latest source publication: 2026-07-23T20:14:15.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection completed: 2026-07-24T19:46:22.809Z
+Latest source publication: 2026-07-24T12:00:00.000Z
+Collection status: fresh-items-added
+New items this collection: 6
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+6 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,30 @@ The collector completed successfully, but no newly published source item entered
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-24 — After an Ebola centre was attacked, peacekeepers moved in next door
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168018
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: After an Ebola centre was attacked, peacekeepers moved in next door
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — In El Obeid, Sudanese women face drones by day, rape by night, to reach water
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168012
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: In El Obeid, Sudanese women face drones by day, rape by night, to reach water
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168016
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — Wildfires surge across Europe as Spain and France battle major blazes
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168013
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Wildfires surge across Europe as Spain and France battle major blazes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
   - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
   - Source class: discovery
@@ -98,6 +122,12 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
   - Source class: primary-or-official
@@ -145,6 +175,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
@@ -277,10 +313,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Massie introduces second Epstein files bill - Spectrum News
-  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPanhOT1FIblRCaDJfS3JLbGVIREdJZklFOTdmNjBuU1I4ams3RDZHNU0wSnd3azQ5OTNjSEtVaTNVX0FmM0ZjMmtyN01PR0lZd2ZBMDVVd1V1NUFmRWNGcXpZMHZBcklqM0E5MTJ6M20tLUUtMkJUWkpiakI4Zkhwdkw0NDlHVjJM?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Massie introduces second Epstein files bill - Spectrum News
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

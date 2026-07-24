@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-24T14:12:18.097Z
-Live Intel source window: 2026-07-24T14:12:13.621Z
+Generated: 2026-07-24T19:46:29.276Z
+Live Intel source window: 2026-07-24T19:46:22.809Z
 Tracked cards: 877
-Cards with current matched records: 95
-Cards with no new verified record: 782
+Cards with current matched records: 102
+Cards with no new verified record: 775
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -708,27 +708,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Bill Gates
 - Route: follow-the-money/people/bill-gates.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T20:37:00.000Z
+- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Gates
 - Route: top-52/bill-gates.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T20:37:00.000Z
+- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: billionaire-briefs/bill-gates.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T20:37:00.000Z
+- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: main-players/bill-gates.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-21T20:37:00.000Z
+- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Melinda Gates Foundation
 - Route: institutions/bill-and-melinda-gates-foundation.html
@@ -4960,16 +4964,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-21T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-07-24T12:00:00.000Z
+- 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-21T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-07-24T12:00:00.000Z
+- 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
 - 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 
@@ -5294,21 +5300,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-24T12:00:00.000Z
+- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-24T12:00:00.000Z
+- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-24T12:00:00.000Z
+- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

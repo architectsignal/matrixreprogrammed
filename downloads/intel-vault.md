@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-24T14:12:13.621Z
+Updated: 2026-07-24T19:46:22.809Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Massie introduces second Epstein files bill - Spectrum News
+- Published: 2026-07-17T14:14:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPanhOT1FIblRCaDJfS3JLbGVIREdJZklFOTdmNjBuU1I4ams3RDZHNU0wSnd3azQ5OTNjSEtVaTNVX0FmM0ZjMmtyN01PR0lZd2ZBMDVVd1V1NUFmRWNGcXpZMHZBcklqM0E5MTJ6M20tLUUtMkJUWkpiakI4Zkhwdkw0NDlHVjJM?oc=5
+- Source class: primary-or-official
 
 ### Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
 - Published: 2026-07-16T06:24:40.000Z

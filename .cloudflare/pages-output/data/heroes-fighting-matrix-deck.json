@@ -1,0 +1,47 @@
+{
+  "deckId": "heroes-fighting-matrix",
+  "title": "Heroes Fighting the Matrix",
+  "subtitle": "52 documented builders, defenders, whistleblowers, investigators and public challengers",
+  "cardCount": 52,
+  "rankRange": [1, 52],
+  "editorialBoundary": "EDITORIAL RESISTANCE DECK · DOCUMENTED PUBLIC CONTRIBUTION · NOT ENDORSEMENT OF EVERY VIEW OR ACT",
+  "rankingRule": "Deployed infrastructure, verified disclosure, civil-liberties defence, measurable adoption, personal risk and durable public impact outrank fame alone.",
+  "suits": [
+    {
+      "id": "KEYS",
+      "title": "Decentralised infrastructure and open protocols",
+      "cardCount": 13,
+      "data": "heroes-fighting-matrix/keys.json"
+    },
+    {
+      "id": "SHIELDS",
+      "title": "Privacy, encryption and civil-liberties defence",
+      "cardCount": 13,
+      "data": "heroes-fighting-matrix/shields.json"
+    },
+    {
+      "id": "TORCHES",
+      "title": "Whistleblowing, investigation and public evidence",
+      "cardCount": 13,
+      "data": "heroes-fighting-matrix/torches.json"
+    },
+    {
+      "id": "SWORDS",
+      "title": "Direct public resistance and anti-establishment influence",
+      "cardCount": 13,
+      "data": "heroes-fighting-matrix/swords.json"
+    }
+  ],
+  "publicRoutes": {
+    "deck": "../heroes-fighting-matrix-deck.html",
+    "dossier": "../heroes-fighting-matrix-card.html?id=roger-dingledine",
+    "researchLedger": "../heroes-fighting-matrix-research-ledger.html",
+    "sourceLedgerJson": "../downloads/heroes-fighting-matrix-source-ledger.json",
+    "sourceLedgerMarkdown": "../downloads/heroes-fighting-matrix-source-ledger.md"
+  },
+  "notes": [
+    "The four suit files are the canonical card records and together contain all 52 ranked entries.",
+    "The browser deck combines and sorts the four suit files at runtime.",
+    "Inclusion records a documented public contribution or measurable influence route; it is not total endorsement or a declaration of innocence."
+  ]
+}

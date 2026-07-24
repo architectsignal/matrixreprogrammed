@@ -1,0 +1,81 @@
+name: Behind the Curtain Hidden Hand Evidence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+  push:
+    branches:
+      - main
+      - agent/hidden-hand-evidence-expansion
+    paths:
+      - 'behind-the-curtain-hidden-hand.js'
+      - 'investigation-pulse.js'
+      - 'data/behind-the-curtain-intermediar*.json'
+      - 'data/behind-the-curtain-continuity-systems.json'
+      - 'data/behind-the-curtain-hidden-hand-models.json'
+      - 'data/behind-the-curtain-family-principals.json'
+      - 'data/behind-the-curtain-symbolic-research.json'
+      - 'scripts/behind-the-curtain-hidden-hand-test.js'
+      - 'scripts/behind-the-curtain-intermediary-watch.js'
+      - '.github/workflows/behind-the-curtain-hidden-hand.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: behind-the-curtain-hidden-hand-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate JavaScript
+        run: |
+          node --check behind-the-curtain-hidden-hand.js
+          node --check investigation-pulse.js
+          node --check scripts/behind-the-curtain-intermediary-watch.js
+          node --check scripts/behind-the-curtain-hidden-hand-test.js
+      - name: Validate hidden-hand evidence contract
+        run: node scripts/behind-the-curtain-hidden-hand-test.js
+      - name: Preserve existing Pyramid contracts
+        run: |
+          node scripts/behind-the-curtain-access-test.js
+          node scripts/behind-the-curtain-living-access-test.js
+
+  source-watch:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check official source reachability and role signals
+        run: node scripts/behind-the-curtain-intermediary-watch.js
+      - name: Commit reviewed-source health state
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/behind-the-curtain-intermediary-source-health.json
+          if git diff --cached --quiet; then
+            echo 'Hidden-hand source health unchanged.'
+            exit 0
+          fi
+          git commit -m 'Refresh hidden-hand source health'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1

@@ -17,7 +17,7 @@ jobs:
   verify-live-death-files:
     name: Verify live Death Files and record proof
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -31,15 +31,17 @@ jobs:
           node-version: '24'
 
       - name: Verify live production surfaces
+        id: verify
+        continue-on-error: true
         shell: bash
         run: |
-          set -euo pipefail
+          set -uo pipefail
           mkdir -p downloads
           node - <<'NODE'
           const fs = require('fs');
           const site = 'https://matrixreprogrammed.com';
-          const attempts = 20;
-          const delayMs = 10000;
+          const attempts = 8;
+          const delayMs = 5000;
           const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
           const headers = {
             accept: 'text/html,application/xhtml+xml,application/javascript,application/json;q=0.9,text/plain;q=0.8,*/*;q=0.7',
@@ -48,6 +50,7 @@ jobs:
             pragma: 'no-cache',
             'user-agent': 'Matrix-Reprogrammed-Production-Verifier/2.0'
           };
+          const parse = text => { try { return JSON.parse(text); } catch { return null; } };
 
           async function request(route, options = {}) {
             const response = await fetch(`${site}${route}`, {
@@ -58,51 +61,43 @@ jobs:
             return {
               route,
               status: response.status,
-              ok: response.ok,
               text: await response.text(),
               headers: Object.fromEntries(response.headers.entries())
             };
           }
 
-          const parse = text => { try { return JSON.parse(text); } catch { return null; } };
-          const dossierMarkers = [
-            'Evidence-Based Conclusion',
-            'Analytical Inference',
-            'Speculative Conclusions',
-            'death-signal-form',
-            'id="signal-drop"'
-          ];
-          const routes = [
-            { id: 'landing', route: '/death-files.html', markers: ['THE DEATH FILES', 'Browse by Year', 'Search All Dossiers'] },
-            { id: 'kennedy', route: '/death-file-john-f-kennedy.html', markers: dossierMarkers },
-            { id: 'diana', route: '/death-file-diana-princess-of-wales.html', markers: dossierMarkers },
-            { id: 'epstein', route: '/death-file-jeffrey-epstein.html', markers: dossierMarkers },
-            { id: 'year1963', route: '/death-files-year-1963.html', markers: ['1963', 'john-f-kennedy'] },
-            { id: 'year1997', route: '/death-files-year-1997.html', markers: ['1997', 'diana-princess-of-wales'] },
-            { id: 'year2019', route: '/death-files-year-2019.html', markers: ['2019', 'jeffrey-epstein'] },
-            { id: 'client', route: '/death-files.js', markers: ['/submit-main-post', '/forum-feed-main', '/api/member/me'] }
+          const dossierMarkers = ['Evidence-Based Conclusion','Analytical Inference','Speculative Conclusions','death-signal-form','id="signal-drop"'];
+          const routeDefinitions = [
+            { id:'landing', route:'/death-files.html', markers:['THE DEATH FILES','Browse by Year','Search All Dossiers'] },
+            { id:'kennedy', route:'/death-file-john-f-kennedy.html', markers:dossierMarkers },
+            { id:'diana', route:'/death-file-diana-princess-of-wales.html', markers:dossierMarkers },
+            { id:'epstein', route:'/death-file-jeffrey-epstein.html', markers:dossierMarkers },
+            { id:'year1963', route:'/death-files-year-1963.html', markers:['1963','john-f-kennedy'] },
+            { id:'year1997', route:'/death-files-year-1997.html', markers:['1997','diana-princess-of-wales'] },
+            { id:'year2019', route:'/death-files-year-2019.html', markers:['2019','jeffrey-epstein'] },
+            { id:'client', route:'/death-files.js', markers:['/submit-main-post','/forum-feed-main','/api/member/me'] }
           ];
 
           async function verifyOnce() {
             const routeResults = [];
-            for (const item of routes) {
-              const response = await request(item.route);
+            for (const definition of routeDefinitions) {
+              const response = await request(definition.route);
+              const markerResults = definition.markers.map(marker => ({ marker, present: response.text.includes(marker) }));
               routeResults.push({
-                id: item.id,
-                route: item.route,
+                id: definition.id,
+                route: definition.route,
                 status: response.status,
-                markers: item.markers,
-                markerResults: item.markers.map(marker => ({ marker, present: response.text.includes(marker) })),
-                ok: response.status === 200 && item.markers.every(marker => response.text.includes(marker))
+                markerResults,
+                ok: response.status === 200 && markerResults.every(item => item.present)
               });
             }
 
-            const manifestResponse = await request('/deploy-manifest.json', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
-            const healthResponse = await request('/deploy-health.json', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
-            const forumHealthResponse = await request('/forum-health', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
-            const forumFeedResponse = await request('/forum-feed-main', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
-            const paypalResponse = await request('/api/paypal/config', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
-
+            const jsonHeaders = { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' };
+            const manifestResponse = await request('/deploy-manifest.json', { headers: jsonHeaders });
+            const healthResponse = await request('/deploy-health.json', { headers: jsonHeaders });
+            const forumHealthResponse = await request('/forum-health', { headers: jsonHeaders });
+            const forumFeedResponse = await request('/forum-feed-main', { headers: jsonHeaders });
+            const paypalResponse = await request('/api/paypal/config', { headers: jsonHeaders });
             const manifest = parse(manifestResponse.text);
             const health = parse(healthResponse.text);
             const forumHealth = parse(forumHealthResponse.text);
@@ -110,31 +105,14 @@ jobs:
             const paypal = parse(paypalResponse.text);
             const manifestSha = String(manifest?.commitSha || '');
             const manifestOk = manifestResponse.status === 200 && /^[a-f0-9]{40}$/i.test(manifestSha);
-            const healthOk = healthResponse.status === 200
-              && health?.ok === true
-              && health?.workerScript === 'src/worker-production.js'
-              && health?.buildSha === manifestSha
-              && health?.manifestSha === manifestSha
-              && health?.manifestMatches === true;
-            const forumHealthOk = forumHealthResponse.status === 200
-              && forumHealthResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
-              && forumHealth?.persistent === true
-              && forumHealth?.d1Connected === true
-              && String(forumHealth?.authoritativeStorage || '').includes('D1');
-            const forumFeedOk = forumFeedResponse.status === 200
-              && forumFeedResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
-              && forumFeed?.ok === true
-              && forumFeed?.persistent === true
-              && Array.isArray(forumFeed?.posts);
-            const paypalProtected = paypalResponse.status === 401
-              && paypalResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
-              && paypal?.ok === false
-              && paypal?.authenticated === false;
-            const routeOk = routeResults.every(item => item.ok);
-            const ok = routeOk && manifestOk && healthOk && forumHealthOk && forumFeedOk && paypalProtected;
+            const healthOk = healthResponse.status === 200 && health?.ok === true && health?.workerScript === 'src/worker-production.js' && health?.buildSha === manifestSha && health?.manifestSha === manifestSha && health?.manifestMatches === true;
+            const forumHealthOk = forumHealthResponse.status === 200 && forumHealthResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1' && forumHealth?.persistent === true && forumHealth?.d1Connected === true && String(forumHealth?.authoritativeStorage || '').includes('D1');
+            const forumFeedOk = forumFeedResponse.status === 200 && forumFeedResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1' && forumFeed?.ok === true && forumFeed?.persistent === true && Array.isArray(forumFeed?.posts);
+            const paypalProtected = paypalResponse.status === 401 && paypalResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions' && paypal?.ok === false && paypal?.authenticated === false;
+            const productionVerified = routeResults.every(item => item.ok) && manifestOk && healthOk && forumHealthOk && forumFeedOk && paypalProtected;
 
             return {
-              productionVerified: ok,
+              productionVerified,
               observedAt: new Date().toISOString(),
               site,
               manifestSha,
@@ -145,11 +123,11 @@ jobs:
               forumFeed: { status: forumFeedResponse.status, origin: forumFeedResponse.headers['x-matrix-origin'] || null, ok: forumFeedOk, count: Number(forumFeed?.count || 0) },
               paypalBoundary: { status: paypalResponse.status, origin: paypalResponse.headers['x-matrix-origin'] || null, ok: paypalProtected, anonymousAccessRejected: paypalResponse.status === 401 },
               launchDossiers: [
-                { name: 'John F. Kennedy', year: 1963, url: `${site}/death-file-john-f-kennedy.html`, signalDrop: `${site}/death-file-john-f-kennedy.html#signal-drop` },
-                { name: 'Diana, Princess of Wales', year: 1997, url: `${site}/death-file-diana-princess-of-wales.html`, signalDrop: `${site}/death-file-diana-princess-of-wales.html#signal-drop` },
-                { name: 'Jeffrey Epstein', year: 2019, url: `${site}/death-file-jeffrey-epstein.html`, signalDrop: `${site}/death-file-jeffrey-epstein.html#signal-drop` }
+                { name:'John F. Kennedy', year:1963, url:`${site}/death-file-john-f-kennedy.html`, signalDrop:`${site}/death-file-john-f-kennedy.html#signal-drop` },
+                { name:'Diana, Princess of Wales', year:1997, url:`${site}/death-file-diana-princess-of-wales.html`, signalDrop:`${site}/death-file-diana-princess-of-wales.html#signal-drop` },
+                { name:'Jeffrey Epstein', year:2019, url:`${site}/death-file-jeffrey-epstein.html`, signalDrop:`${site}/death-file-jeffrey-epstein.html#signal-drop` }
               ],
-              persistenceRoutes: ['/api/member/me', '/submit-main-post', '/forum-feed-main'],
+              persistenceRoutes: ['/api/member/me','/submit-main-post','/forum-feed-main'],
               autoUpdate: 'Build-time cross-site dataset matching plus current live-intelligence matching when each dossier loads.'
             };
           }
@@ -160,25 +138,26 @@ jobs:
               try {
                 result = await verifyOnce();
               } catch (error) {
-                result = { productionVerified: false, observedAt: new Date().toISOString(), error: error.message };
+                result = { productionVerified:false, observedAt:new Date().toISOString(), site, error:error.stack || error.message };
               }
               result.attempt = attempt;
               fs.writeFileSync('downloads/death-files-live-proof.json', JSON.stringify(result, null, 2) + '\n');
-              console.log(`Death Files production proof attempt ${attempt}/${attempts}: ${result.productionVerified ? 'PASS' : 'not synchronized'}`);
+              console.log(`Death Files proof ${attempt}/${attempts}: ${result.productionVerified ? 'PASS' : 'diagnostic failure'}`);
               if (result.productionVerified) process.exit(0);
               if (attempt < attempts) await sleep(delayMs);
             }
-            console.error(JSON.stringify(result, null, 2));
             process.exit(1);
           })();
           NODE
 
-      - name: Commit permanent production proof
+      - name: Commit production proof or diagnostic
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
-          test -s downloads/death-files-live-proof.json
-          node -e "const p=require('./downloads/death-files-live-proof.json');if(p.productionVerified!==true)process.exit(1)"
+          if [ ! -s downloads/death-files-live-proof.json ]; then
+            printf '%s\n' '{"productionVerified":false,"error":"Verification ended without producing a diagnostic file."}' > downloads/death-files-live-proof.json
+          fi
           cp downloads/death-files-live-proof.json /tmp/death-files-production-proof.json
           git fetch origin main
           git reset --hard origin/main
@@ -188,7 +167,11 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/death-files-production-proof.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Confirm Death Files live production release'
+            if node -e "const p=require('./data/death-files-production-proof.json');process.exit(p.productionVerified===true?0:1)"; then
+              git commit -m 'Confirm Death Files live production release'
+            else
+              git commit -m 'Record Death Files live verification diagnostic'
+            fi
             git push origin main
           fi
 
@@ -200,3 +183,9 @@ jobs:
           path: downloads/death-files-live-proof.json
           if-no-files-found: ignore
           retention-days: 60
+
+      - name: Require verified production result
+        if: always()
+        shell: bash
+        run: |
+          node -e "const p=require('./data/death-files-production-proof.json');if(p.productionVerified!==true){console.error(JSON.stringify(p,null,2));process.exit(1)}"

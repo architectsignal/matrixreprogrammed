@@ -1,4 +1,4 @@
-name: Patch Live Verifier and Complete Release
+name: Prove Death Files Production Release
 
 on:
   push:
@@ -9,14 +9,15 @@ on:
 
 permissions:
   contents: write
-  actions: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
-  patch-and-release:
+  verify-live-death-files:
+    name: Verify live Death Files and record proof
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -24,79 +25,178 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Add clean-route fallback for Cloudflare verification
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify live production surfaces
         shell: bash
         run: |
           set -euo pipefail
-          cat > scripts/verify-live-production-fetch-fallback.js <<'NODE'
-          const nativeFetch = global.fetch;
-          if (typeof nativeFetch !== 'function') throw new Error('Global fetch is unavailable');
+          mkdir -p downloads
+          node - <<'NODE'
+          const fs = require('fs');
+          const site = 'https://matrixreprogrammed.com';
+          const attempts = 20;
+          const delayMs = 10000;
+          const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+          const headers = {
+            accept: 'text/html,application/xhtml+xml,application/javascript,application/json;q=0.9,text/plain;q=0.8,*/*;q=0.7',
+            'accept-language': 'en-GB,en;q=0.9',
+            'cache-control': 'no-cache',
+            pragma: 'no-cache',
+            'user-agent': 'Matrix-Reprogrammed-Production-Verifier/2.0'
+          };
 
-          global.fetch = async function matrixProductionFetch(input, init = {}) {
-            const rawUrl = typeof input === 'string' || input instanceof URL ? String(input) : String(input?.url || '');
-            if (!rawUrl.startsWith('https://matrixreprogrammed.com')) return nativeFetch(input, init);
+          async function request(route, options = {}) {
+            const response = await fetch(`${site}${route}`, {
+              redirect: 'follow',
+              ...options,
+              headers: { ...headers, ...(options.headers || {}) }
+            });
+            return {
+              route,
+              status: response.status,
+              ok: response.ok,
+              text: await response.text(),
+              headers: Object.fromEntries(response.headers.entries())
+            };
+          }
 
-            const headers = new Headers(init.headers || (typeof input === 'object' && input?.headers) || {});
-            headers.set('accept-language', 'en-GB,en;q=0.9');
-            headers.set('user-agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/138.0 Safari/537.36 MatrixProductionVerifier/7.0');
-            if (!headers.has('accept')) {
-              headers.set('accept', rawUrl.includes('/api/') || rawUrl.endsWith('.json')
-                ? 'application/json,text/plain;q=0.9,*/*;q=0.8'
-                : 'text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8');
+          const parse = text => { try { return JSON.parse(text); } catch { return null; } };
+          const dossierMarkers = [
+            'Evidence-Based Conclusion',
+            'Analytical Inference',
+            'Speculative Conclusions',
+            'death-signal-form',
+            'id="signal-drop"'
+          ];
+          const routes = [
+            { id: 'landing', route: '/death-files.html', markers: ['THE DEATH FILES', 'Browse by Year', 'Search All Dossiers'] },
+            { id: 'kennedy', route: '/death-file-john-f-kennedy.html', markers: dossierMarkers },
+            { id: 'diana', route: '/death-file-diana-princess-of-wales.html', markers: dossierMarkers },
+            { id: 'epstein', route: '/death-file-jeffrey-epstein.html', markers: dossierMarkers },
+            { id: 'year1963', route: '/death-files-year-1963.html', markers: ['1963', 'john-f-kennedy'] },
+            { id: 'year1997', route: '/death-files-year-1997.html', markers: ['1997', 'diana-princess-of-wales'] },
+            { id: 'year2019', route: '/death-files-year-2019.html', markers: ['2019', 'jeffrey-epstein'] },
+            { id: 'client', route: '/death-files.js', markers: ['/submit-main-post', '/forum-feed-main', '/api/member/me'] }
+          ];
+
+          async function verifyOnce() {
+            const routeResults = [];
+            for (const item of routes) {
+              const response = await request(item.route);
+              routeResults.push({
+                id: item.id,
+                route: item.route,
+                status: response.status,
+                markers: item.markers,
+                markerResults: item.markers.map(marker => ({ marker, present: response.text.includes(marker) })),
+                ok: response.status === 200 && item.markers.every(marker => response.text.includes(marker))
+              });
             }
 
-            const options = { ...init, headers };
-            const first = await nativeFetch(input, options);
-            if (first.status !== 403) return first;
+            const manifestResponse = await request('/deploy-manifest.json', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
+            const healthResponse = await request('/deploy-health.json', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
+            const forumHealthResponse = await request('/forum-health', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
+            const forumFeedResponse = await request('/forum-feed-main', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
+            const paypalResponse = await request('/api/paypal/config', { headers: { accept: 'application/json,text/plain;q=0.9,*/*;q=0.8' } });
 
-            const clean = new URL(rawUrl);
-            if (!clean.searchParams.has('deployment_check')) return first;
-            clean.searchParams.delete('deployment_check');
-            return nativeFetch(clean.toString(), options);
-          };
+            const manifest = parse(manifestResponse.text);
+            const health = parse(healthResponse.text);
+            const forumHealth = parse(forumHealthResponse.text);
+            const forumFeed = parse(forumFeedResponse.text);
+            const paypal = parse(paypalResponse.text);
+            const manifestSha = String(manifest?.commitSha || '');
+            const manifestOk = manifestResponse.status === 200 && /^[a-f0-9]{40}$/i.test(manifestSha);
+            const healthOk = healthResponse.status === 200
+              && health?.ok === true
+              && health?.workerScript === 'src/worker-production.js'
+              && health?.buildSha === manifestSha
+              && health?.manifestSha === manifestSha
+              && health?.manifestMatches === true;
+            const forumHealthOk = forumHealthResponse.status === 200
+              && forumHealthResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+              && forumHealth?.persistent === true
+              && forumHealth?.d1Connected === true
+              && String(forumHealth?.authoritativeStorage || '').includes('D1');
+            const forumFeedOk = forumFeedResponse.status === 200
+              && forumFeedResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+              && forumFeed?.ok === true
+              && forumFeed?.persistent === true
+              && Array.isArray(forumFeed?.posts);
+            const paypalProtected = paypalResponse.status === 401
+              && paypalResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
+              && paypal?.ok === false
+              && paypal?.authenticated === false;
+            const routeOk = routeResults.every(item => item.ok);
+            const ok = routeOk && manifestOk && healthOk && forumHealthOk && forumFeedOk && paypalProtected;
+
+            return {
+              productionVerified: ok,
+              observedAt: new Date().toISOString(),
+              site,
+              manifestSha,
+              routeResults,
+              manifest: { status: manifestResponse.status, ok: manifestOk, data: manifest },
+              health: { status: healthResponse.status, ok: healthOk, data: health },
+              forumHealth: { status: forumHealthResponse.status, origin: forumHealthResponse.headers['x-matrix-origin'] || null, ok: forumHealthOk, data: forumHealth },
+              forumFeed: { status: forumFeedResponse.status, origin: forumFeedResponse.headers['x-matrix-origin'] || null, ok: forumFeedOk, count: Number(forumFeed?.count || 0) },
+              paypalBoundary: { status: paypalResponse.status, origin: paypalResponse.headers['x-matrix-origin'] || null, ok: paypalProtected, anonymousAccessRejected: paypalResponse.status === 401 },
+              launchDossiers: [
+                { name: 'John F. Kennedy', year: 1963, url: `${site}/death-file-john-f-kennedy.html`, signalDrop: `${site}/death-file-john-f-kennedy.html#signal-drop` },
+                { name: 'Diana, Princess of Wales', year: 1997, url: `${site}/death-file-diana-princess-of-wales.html`, signalDrop: `${site}/death-file-diana-princess-of-wales.html#signal-drop` },
+                { name: 'Jeffrey Epstein', year: 2019, url: `${site}/death-file-jeffrey-epstein.html`, signalDrop: `${site}/death-file-jeffrey-epstein.html#signal-drop` }
+              ],
+              persistenceRoutes: ['/api/member/me', '/submit-main-post', '/forum-feed-main'],
+              autoUpdate: 'Build-time cross-site dataset matching plus current live-intelligence matching when each dossier loads.'
+            };
+          }
+
+          (async () => {
+            let result = null;
+            for (let attempt = 1; attempt <= attempts; attempt++) {
+              try {
+                result = await verifyOnce();
+              } catch (error) {
+                result = { productionVerified: false, observedAt: new Date().toISOString(), error: error.message };
+              }
+              result.attempt = attempt;
+              fs.writeFileSync('downloads/death-files-live-proof.json', JSON.stringify(result, null, 2) + '\n');
+              console.log(`Death Files production proof attempt ${attempt}/${attempts}: ${result.productionVerified ? 'PASS' : 'not synchronized'}`);
+              if (result.productionVerified) process.exit(0);
+              if (attempt < attempts) await sleep(delayMs);
+            }
+            console.error(JSON.stringify(result, null, 2));
+            process.exit(1);
+          })();
           NODE
-          node --check scripts/verify-live-production-fetch-fallback.js
 
-      - name: Wire fallback into canonical live verification
+      - name: Commit permanent production proof
         shell: bash
         run: |
           set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('.github/workflows/deploy.yml')
-          source=p.read_text()
-          old='run: node scripts/verify-live-production.js'
-          new='run: node -r ./scripts/verify-live-production-fetch-fallback.js scripts/verify-live-production.js'
-          if new not in source:
-              if old not in source:
-                  raise SystemExit('Canonical live verification command not found')
-              source=source.replace(old,new,1)
-          p.write_text(source)
-          PY
-          grep -q 'verify-live-production-fetch-fallback.js scripts/verify-live-production.js' .github/workflows/deploy.yml
-
-      - name: Commit verifier repair
-        shell: bash
-        run: |
-          set -euo pipefail
+          test -s downloads/death-files-live-proof.json
+          node -e "const p=require('./downloads/death-files-live-proof.json');if(p.productionVerified!==true)process.exit(1)"
+          cp downloads/death-files-live-proof.json /tmp/death-files-production-proof.json
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p data
+          cp /tmp/death-files-production-proof.json data/death-files-production-proof.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/verify-live-production-fetch-fallback.js .github/workflows/deploy.yml
+          git add data/death-files-production-proof.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Retry clean routes when Cloudflare blocks cache-busting verification'
+            git commit -m 'Confirm Death Files live production release'
             git push origin main
           fi
 
-      - name: Dispatch guarded production verification release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh api --method POST \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2022-11-28' \
-            "repos/${GITHUB_REPOSITORY}/actions/workflows/deploy.yml/dispatches" \
-            -f ref=main \
-            -f 'inputs[confirmation]=DEPLOY MATRIX REPROGRAMMED'
-          echo 'Repaired live verifier release dispatched.'
+      - name: Upload independent proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: death-files-live-proof-${{ github.run_id }}
+          path: downloads/death-files-live-proof.json
+          if-no-files-found: ignore
+          retention-days: 60

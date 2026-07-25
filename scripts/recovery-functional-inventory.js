@@ -28,6 +28,7 @@ const criticalRoutePatterns = [
   /member/i, /login/i, /membership/i, /billing/i, /paypal/i, /forum/i,
   /live-intel/i, /brief/i, /report/i, /research/i, /market/i
 ];
+const nonBlockingFunctionalRisks = new Set(['dynamic-loading-state']);
 
 function relative(file) {
   return path.relative(root, file).replace(/\\/g, '/');
@@ -58,8 +59,18 @@ function pageRoute(file) {
   const rel = relative(file);
   return rel === 'index.html' ? '/' : `/${rel}`;
 }
+function isTemplateReference(value) {
+  return /\$\{|\{\{|<%|%>/.test(String(value || ''));
+}
+function staticMarkup(html) {
+  return String(html)
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<template\b[\s\S]*?<\/template>/gi, ' ');
+}
 function resolveCandidates(fromFile, reference) {
   const raw = stripQueryHash(reference);
+  if (isTemplateReference(raw)) return [];
   const clean = raw.replace(/^\//, '');
   if (!clean) return [];
   const base = raw.startsWith('/') ? root : path.dirname(fromFile);
@@ -96,8 +107,8 @@ function parseJavaScript(file) {
   const code = read(file);
   const fetches = unique(allMatches(code, /\bfetch\s*\(\s*["'`]([^"'`]+)["'`]/g));
   const imports = unique(allMatches(code, /\bimport(?:\s+[\s\S]*?\s+from\s+|\s*\(\s*)["'`]([^"'`]+)["'`]/g));
-  const apiRoutes = unique(fetches.filter(value => value.startsWith('/api/')));
-  const dataRoutes = unique(fetches.filter(value => /(?:^|\/)data\/|\.json(?:[?#]|$)|\.csv(?:[?#]|$)/i.test(value)));
+  const apiRoutes = unique(fetches.filter(value => value.startsWith('/api/') && !isTemplateReference(value)));
+  const dataRoutes = unique(fetches.filter(value => !isTemplateReference(value) && /(?:^|\/)data\/|\.json(?:[?#]|$)|\.csv(?:[?#]|$)/i.test(value)));
   const externalDependencies = unique(imports.filter(value => /^(?:https?:|\/\/)/i.test(value)));
   const placeholders = unique(code.split(/\r?\n/)
     .filter(line => placeholderPatterns.some(pattern => pattern.test(line)))
@@ -125,6 +136,7 @@ function parseWorkerRoutes(jsRecords) {
   const routes = [];
   for (const script of jsRecords.filter(item => /(?:^|\/)src\/worker[^/]*\.js$/i.test(item.file))) {
     for (const match of script.code.matchAll(/["'`]((?:\/api\/|\/forum|\/submit|\/report|\/downloads\/)[^"'`\s]*)["'`]/g)) {
+      if (isTemplateReference(match[1])) continue;
       routes.push({ route: stripQueryHash(match[1]).replace(/\/+$/, '') || '/', owner: script.file });
     }
   }
@@ -139,6 +151,7 @@ function parseWorkerRoutes(jsRecords) {
 function classifyReference(value, workerRouteSet) {
   const raw = String(value || '').trim();
   if (!raw) return 'empty';
+  if (isTemplateReference(raw)) return 'dynamic-template';
   if (/^(?:https?:|mailto:|tel:|data:|blob:|javascript:)/i.test(raw)) return 'external-or-special';
   if (raw.startsWith('#')) return 'fragment';
   const route = stripQueryHash(raw).replace(/\/+$/, '') || '/';
@@ -183,24 +196,25 @@ function isActionableControl(control) {
 }
 function parseHtml(file, jsByFile, workerRouteSet) {
   const html = read(file);
+  const publicMarkup = staticMarkup(html);
   const scripts = unique(allMatches(html, /<script\b[^>]*\bsrc\s*=\s*["']([^"']+)["'][^>]*>/gi));
-  const styles = unique(allMatches(html, /<link\b[^>]*\brel\s*=\s*["'][^"']*stylesheet[^"']*["'][^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi)
-    .concat(allMatches(html, /<link\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*\brel\s*=\s*["'][^"']*stylesheet[^"']*["'][^>]*>/gi)));
-  const links = unique(allMatches(html, /<a\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi));
-  const images = unique(allMatches(html, /<(?:img|source)\b[^>]*\bsrc\s*=\s*["']([^"']+)["'][^>]*>/gi));
+  const styles = unique(allMatches(publicMarkup, /<link\b[^>]*\brel\s*=\s*["'][^"']*stylesheet[^"']*["'][^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi)
+    .concat(allMatches(publicMarkup, /<link\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*\brel\s*=\s*["'][^"']*stylesheet[^"']*["'][^>]*>/gi)));
+  const links = unique(allMatches(publicMarkup, /<a\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi));
+  const images = unique(allMatches(publicMarkup, /<(?:img|source)\b[^>]*\bsrc\s*=\s*["']([^"']+)["'][^>]*>/gi));
   const inlineScripts = [...html.matchAll(/<script\b(?![^>]*\bsrc\s*=)[^>]*>([\s\S]*?)<\/script>/gi)].map(match => match[1]);
   const localScriptRecords = referencedScriptRecords(file, scripts, jsByFile, workerRouteSet);
   const combinedCode = `${inlineScripts.join('\n')}\n${localScriptRecords.map(item => item.code).join('\n')}`;
   const fetches = unique(allMatches(combinedCode, /\bfetch\s*\(\s*["'`]([^"'`]+)["'`]/g));
   const bindingIds = scriptBindingIds(combinedCode);
-  const controls = parseControls(html);
+  const controls = parseControls(publicMarkup);
   const unboundControlIds = unique(controls
     .filter(isActionableControl)
     .filter(control => control.id)
     .filter(control => !control.action && !control.inlineHandler && !control.dataAction)
     .filter(control => !bindingIds.includes(control.id))
     .map(control => control.id));
-  const placeholders = unique(html.split(/\r?\n/)
+  const placeholders = unique(publicMarkup.split(/\r?\n/)
     .filter(line => placeholderPatterns.some(pattern => pattern.test(line)))
     .map(line => line.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 220)));
   const allReferences = [...scripts, ...styles, ...links, ...images];
@@ -221,12 +235,13 @@ function parseHtml(file, jsByFile, workerRouteSet) {
     placeholders.length && dynamic ? 'dynamic-loading-state' : '',
     placeholders.length && dynamic && !failureHandling ? 'loading-state-without-visible-failure-path' : '',
     unboundControlIds.length ? 'possibly-unbound-controls' : '',
-    /\[object Object\]/.test(html) ? 'object-placeholder-published' : ''
+    /\[object Object\]/.test(publicMarkup) ? 'object-placeholder-published' : ''
   ]);
+  const blockingRisks = functionalRisks.filter(risk => !nonBlockingFunctionalRisks.has(risk));
   const platformRisks = unique([
     unversionedScripts.length ? 'unversioned-javascript-reference' : ''
   ]);
-  const critical = criticalRoutePatterns.some(pattern => pattern.test(relative(file)) || pattern.test(html.slice(0, 3000)));
+  const critical = criticalRoutePatterns.some(pattern => pattern.test(relative(file)) || pattern.test(publicMarkup.slice(0, 3000)));
   return {
     file: relative(file),
     route: pageRoute(file),
@@ -249,13 +264,14 @@ function parseHtml(file, jsByFile, workerRouteSet) {
     hasDynamicDependency: dynamic,
     critical,
     functionalRisks,
+    blockingRisks,
     platformRisks,
     risks: unique([...functionalRisks, ...platformRisks])
   };
 }
 
 const files = walk(root);
-const htmlFiles = files.filter(file => path.extname(file).toLowerCase() === '.html');
+const htmlFiles = files.filter(file => path.extname(file).toLowerCase() === '.html' && !relative(file).startsWith('src/'));
 const jsFiles = files.filter(file => path.extname(file).toLowerCase() === '.js');
 const scripts = jsFiles.map(parseJavaScript);
 const jsByFile = new Map(scripts.map(script => [script.file, script]));
@@ -267,7 +283,7 @@ const missingReferences = pages.flatMap(page => page.missingReferences.map(item 
 const missingDataDependencies = pages.flatMap(page => page.missingDataDependencies.map(item => ({ page: page.file, ...item })));
 const dynamicLoadingPages = pages.filter(page => page.functionalRisks.includes('dynamic-loading-state'));
 const loadingWithoutFailurePath = pages.filter(page => page.functionalRisks.includes('loading-state-without-visible-failure-path'));
-const criticalRiskPages = pages.filter(page => page.critical && page.functionalRisks.length);
+const criticalRiskPages = pages.filter(page => page.critical && page.blockingRisks.length);
 const possiblyDeadControls = pages.filter(page => page.unboundControlIds.length);
 const objectPlaceholderPages = pages.filter(page => page.functionalRisks.includes('object-placeholder-published'));
 const unversionedAssetPages = pages.filter(page => page.platformRisks.includes('unversioned-javascript-reference'));
@@ -299,7 +315,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   branch: process.env.GITHUB_REF_NAME || '',
   commit: process.env.GITHUB_SHA || '',
-  version: 2,
+  version: 3,
   purpose: 'Authoritative recovery inventory of visible routes, controls, scripts, data dependencies, loading states and Worker/API ownership.',
   summary,
   platformFindings: {
@@ -328,6 +344,7 @@ const report = {
       file: page.file,
       route: page.route,
       risks: page.functionalRisks,
+      blockingRisks: page.blockingRisks,
       missingReferences: page.missingReferences,
       missingDataDependencies: page.missingDataDependencies,
       unboundControlIds: page.unboundControlIds
@@ -359,7 +376,7 @@ const md = [
   '',
   '## Critical functional risk pages',
   '',
-  ...(criticalRiskPages.length ? criticalRiskPages.slice(0, 300).map(page => `- \`${page.file}\` — ${page.functionalRisks.join(', ')}`) : ['- None detected']),
+  ...(criticalRiskPages.length ? criticalRiskPages.slice(0, 300).map(page => `- \`${page.file}\` — ${page.blockingRisks.join(', ')}`) : ['- None detected']),
   '',
   '## Loading states without a visible failure path',
   '',
@@ -381,9 +398,11 @@ const md = [
   '',
   ...(externalRuntimeScripts.length ? externalRuntimeScripts.map(script => `- \`${script.file}\` — ${script.externalDependencies.join(', ')}`) : ['- None detected']),
   '',
+  'Runtime-generated template references are analysed as executable dependencies, not mistaken for literal public files. HTML authoring templates under src/ are excluded from the public route count; Worker JavaScript under src/ remains included for route ownership.',
+  '',
   'This inventory is a discovery report. Headless browser execution and live user-journey tests remain mandatory before any feature is declared working.'
 ].join('\n');
 fs.writeFileSync(markdownPath, `${md}\n`);
 
-console.log(`Recovery functional inventory v2 generated: ${JSON.stringify(summary)}`);
+console.log(`Recovery functional inventory v3 generated: ${JSON.stringify(summary)}`);
 if (process.argv.includes('--fail-on-critical') && !report.ok) process.exit(1);

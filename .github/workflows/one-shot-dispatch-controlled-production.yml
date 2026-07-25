@@ -8,6 +8,7 @@ on:
       - .github/one-shot-controlled-production.trigger
 
 permissions:
+  actions: read
   contents: write
 
 concurrency:
@@ -18,7 +19,7 @@ jobs:
   deploy-homepage-intro-hotfix:
     name: Deploy and verify homepage intro v6
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -41,6 +42,29 @@ jobs:
           grep -q '20260725-video-v6' src/worker-production-intro-hotfix.js
           grep -q 'worker-production-intro-hotfix.js' wrangler.intro-hotfix.toml
           grep -q 'run_worker_first = true' wrangler.intro-hotfix.toml
+
+      - name: Wait for authoritative production deployment to stop
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const blockingRunId = 30161462181;
+            for (let attempt = 1; attempt <= 120; attempt += 1) {
+              try {
+                const { data: run } = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: blockingRunId });
+                core.info(`Authoritative production run ${blockingRunId}: ${run.status}/${run.conclusion || 'pending'} (check ${attempt}/120)`);
+                if (run.status === 'completed') return;
+              } catch (error) {
+                if (error.status === 404) {
+                  core.info('Blocking production run no longer resolves; continuing with isolated hotfix.');
+                  return;
+                }
+                throw error;
+              }
+              await new Promise(resolve => setTimeout(resolve, 15000));
+            }
+            core.setFailed(`Authoritative production run ${blockingRunId} did not complete before the hotfix deadline.`);
 
       - name: Confirm Cloudflare credentials
         env:
@@ -71,19 +95,28 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          nonce="$(date +%s)"
-          homepage="$(curl --fail --silent --show-error --location --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&hotfix=$nonce")"
-          printf '%s' "$homepage" | grep -q 'data-homepage-intro-v6'
-          printf '%s' "$homepage" | grep -q 'homepage-intro-hotfix-v6.js?v=20260725-video-v6'
-          printf '%s' "$homepage" | grep -q 'homepage-intro-hotfix-v6.css?v=20260725-video-v6'
-          runtime="$(curl --fail --silent --show-error --max-time 30 "https://matrixreprogrammed.com/homepage-intro-hotfix-v6.js?v=$nonce")"
-          printf '%s' "$runtime" | grep -q 'matrix-homepage-intro-seen-v6'
-          printf '%s' "$runtime" | grep -q '/_matrix-intro-part/1'
-          part1="$(curl --fail --silent --show-error --max-time 30 "https://matrixreprogrammed.com/_matrix-intro-part/1?v=$nonce")"
-          part2="$(curl --fail --silent --show-error --max-time 30 "https://matrixreprogrammed.com/_matrix-intro-part/2?v=$nonce")"
-          test "${#part1}" -gt 1000
-          test "${#part2}" -gt 1000
-          printf '%s' "$part1" | grep -q '^AAAAIGZ0eXB'
+          verified=0
+          for attempt in $(seq 1 30); do
+            nonce="$(date +%s)-$attempt"
+            echo "Live intro verification attempt $attempt/30"
+            homepage="$(curl --fail --silent --show-error --location --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&hotfix=$nonce" || true)"
+            runtime="$(curl --fail --silent --show-error --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-intro-hotfix-v6.js?v=$nonce" || true)"
+            part1="$(curl --fail --silent --show-error --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/_matrix-intro-part/1?v=$nonce" || true)"
+            part2="$(curl --fail --silent --show-error --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/_matrix-intro-part/2?v=$nonce" || true)"
+            if printf '%s' "$homepage" | grep -q 'data-homepage-intro-v6' \
+              && printf '%s' "$homepage" | grep -q 'homepage-intro-hotfix-v6.js?v=20260725-video-v6' \
+              && printf '%s' "$homepage" | grep -q 'homepage-intro-hotfix-v6.css?v=20260725-video-v6' \
+              && printf '%s' "$runtime" | grep -q 'matrix-homepage-intro-seen-v6' \
+              && printf '%s' "$runtime" | grep -q '/_matrix-intro-part/1' \
+              && test "${#part1}" -gt 1000 \
+              && test "${#part2}" -gt 1000 \
+              && printf '%s' "$part1" | grep -q '^AAAAIGZ0eXB'; then
+              verified=1
+              break
+            fi
+            sleep 5
+          done
+          test "$verified" -eq 1
           echo "Homepage intro v6 is live with versioned HTML injection, runtime, CSS and both MP4 data parts."
 
       - name: Record exact hotfix result
@@ -112,6 +145,7 @@ jobs:
             headSha: process.env.HEAD_SHA,
             deployOutcome: deploy,
             verifyOutcome: verify,
+            blockingProductionRun: 30161462181,
             forcedReplayUrl: 'https://matrixreprogrammed.com/?intro=1',
             scope: 'Isolated homepage intro delivery Worker; existing production API, D1, membership, forum, email and welcome/ElevenLabs gate are delegated unchanged.'
           };

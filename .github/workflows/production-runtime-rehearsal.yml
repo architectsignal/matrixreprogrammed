@@ -96,7 +96,7 @@ jobs:
           run_check d1-export node scripts/d1-export-command-test.js
           run_check wrangler-dry-run npx --yes wrangler@latest deploy --dry-run
 
-      - name: Record rehearsal status on main
+      - name: Record rehearsal status atomically on main
         if: always()
         shell: bash
         env:
@@ -106,7 +106,7 @@ jobs:
           TESTED_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          mkdir -p data
+          mkdir -p data downloads /tmp/runtime-rehearsal-proof
           node - <<'NODE'
           const fs=require('fs');
           const build=process.env.BUILD_OUTCOME||'not-run';
@@ -122,21 +122,35 @@ jobs:
           };
           fs.writeFileSync('data/production-runtime-rehearsal-status.json',`${JSON.stringify(payload,null,2)}\n`);
           NODE
-          cp data/production-runtime-rehearsal-status.json /tmp/production-runtime-rehearsal-status.json
-          git reset --hard HEAD
-          mkdir -p data
-          cp /tmp/production-runtime-rehearsal-status.json data/production-runtime-rehearsal-status.json
+          proof_files=(
+            downloads/runtime-rehearsal-build.log
+            downloads/runtime-contracts.log
+            downloads/money-depth-integration-test.json
+            downloads/money-public-market-refresh.json
+            data/money-intelligence-depth-report.json
+            data/money-research-candidate-expansion.json
+            data/production-runtime-rehearsal-status.json
+            downloads/forum-persistence-d1-test.json
+            downloads/d1-export-command-test.json
+          )
+          for file in "${proof_files[@]}"; do
+            if [ -f "$file" ]; then cp --parents "$file" /tmp/runtime-rehearsal-proof; fi
+          done
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/production-runtime-rehearsal-status.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Record production runtime rehearsal status"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
-            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            git clean -fdx
+            mkdir -p data
+            cp /tmp/runtime-rehearsal-proof/data/production-runtime-rehearsal-status.json data/production-runtime-rehearsal-status.json
+            git add data/production-runtime-rehearsal-status.json
+            if git diff --cached --quiet; then break; fi
+            git commit -m "Record production runtime rehearsal status"
+            if git push origin HEAD:main; then break; fi
+            if [ "$attempt" = 5 ]; then exit 1; fi
           done
-          exit 1
+          cp -a /tmp/runtime-rehearsal-proof/. .
 
       - name: Upload rehearsal proof
         if: always()
@@ -152,6 +166,7 @@ jobs:
             data/money-research-candidate-expansion.json
             data/production-runtime-rehearsal-status.json
             downloads/forum-persistence-d1-test.json
+            downloads/d1-export-command-test.json
           if-no-files-found: warn
           retention-days: 30
 

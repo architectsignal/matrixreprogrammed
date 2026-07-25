@@ -17,6 +17,75 @@ function run(script) {
   });
 }
 
+const canonicalPrimaryLinks = [
+  ['start-here.html', 'Start Here'],
+  ['books.html', 'Books'],
+  ['power-atlas.html', 'Control System'],
+  ['evidence-vault.html', 'Declassified Files'],
+  ['live-intel.html', 'Live Intel'],
+  ['security-privacy.html', 'Security Tools'],
+  ['dark-web-safety.html', 'Dark Web Safety'],
+  ['search.html', 'Search']
+];
+const canonicalPrimaryHtml = canonicalPrimaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
+
+function ensureRiskTimersInDrawer(html) {
+  if (/class=["'][^"']*nav-drawer[^"']*["'][\s\S]*?href=["']timers\.html["']/i.test(html)) return html;
+  const detailsStart = html.search(/<details\b[^>]*class=["'][^"']*nav-more[^"']*["'][^>]*>/i);
+  if (detailsStart < 0) return html;
+  const detailsEnd = html.indexOf('</details>', detailsStart);
+  if (detailsEnd < 0) return html;
+  const block = html.slice(detailsStart, detailsEnd + 10);
+  const drawerClose = block.lastIndexOf('</div>');
+  if (drawerClose < 0) return html;
+  const group = '<div class="nav-group"><strong>Live Tracking</strong><a href="timers.html">Risk Timers</a></div>';
+  const nextBlock = `${block.slice(0, drawerClose)}${group}${block.slice(drawerClose)}`;
+  return `${html.slice(0, detailsStart)}${nextBlock}${html.slice(detailsEnd + 10)}`;
+}
+
+function canonicalizePrimaryNavigation() {
+  const candidates = [
+    path.join(root, 'index.html'),
+    path.join(root, 'start-here.html'),
+    path.join(site, 'index.html'),
+    path.join(site, 'index'),
+    path.join(site, 'start-here.html'),
+    path.join(site, 'start-here')
+  ];
+  let changed = 0;
+  let verified = 0;
+  for (const file of candidates) {
+    if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    if (!/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i.test(before)) {
+      throw new Error(`Primary navigation container missing from ${path.relative(root, file)}`);
+    }
+    let after = before.replace(
+      /<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i,
+      `<div class="nav-primary">${canonicalPrimaryHtml}</div>`
+    );
+    after = ensureRiskTimersInDrawer(after);
+    const primary = (after.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i) || [])[1] || '';
+    const links = [...primary.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+    if (links.length !== 8) throw new Error(`Primary navigation must contain exactly eight links in ${path.relative(root, file)}; found ${links.length}`);
+    const actualRoutes = links.map(match => match[1].split('?')[0].split('#')[0]);
+    const expectedRoutes = canonicalPrimaryLinks.map(([href]) => href);
+    if (JSON.stringify(actualRoutes) !== JSON.stringify(expectedRoutes)) {
+      throw new Error(`Primary navigation routes differ from the canonical order in ${path.relative(root, file)}`);
+    }
+    if (!/class=["'][^"']*nav-drawer[^"']*["'][\s\S]*?href=["']timers\.html["']/i.test(after)) {
+      throw new Error(`Risk Timers is not preserved in the More drawer in ${path.relative(root, file)}`);
+    }
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      changed++;
+    }
+    verified++;
+  }
+  if (verified !== candidates.length) throw new Error(`Expected six canonical navigation surfaces; verified ${verified}`);
+  return { changed, verified };
+}
+
 function removeStaleCapstoneRuntime() {
   const candidates = [
     path.join(root, 'behind-the-curtain-capstone.html'),
@@ -44,9 +113,10 @@ function removeStaleCapstoneRuntime() {
   return removed;
 }
 
-// Generated pages can be rewritten by legacy builders. Remove the retired Capstone
-// runtime before budgets and fingerprinting so source, extensionless output and HTML
-// output share the same canonical evidence-led client.
+// Legacy generators can mutate public navigation and Capstone scripts after their
+// source owners run. Reassert both contracts immediately before budgets and asset
+// fingerprinting so the browser-tested bundle is the exact Cloudflare bundle.
+const navigationContract = canonicalizePrimaryNavigation();
 const staleCapstoneReferencesRemoved = removeStaleCapstoneRuntime();
 
 // Cache policy, runtime optimization, performance budgets and asset fingerprinting
@@ -174,6 +244,7 @@ const report = {
   pagesScanned,
   pagesChanged,
   referencesVersioned,
+  navigationContract,
   staleCapstoneReferencesRemoved,
   unresolved: unresolved.slice(0, 200),
   unversioned: unversioned.slice(0, 200),
@@ -182,7 +253,7 @@ const report = {
   performanceOwner: 'scripts/apply-runtime-performance-optimizations.js',
   performanceBudget: 'scripts/runtime-performance-budget-test.js',
   cacheBlocksChecked: [...headerBlocks.keys()],
-  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. The retired search-system.js Capstone runtime is removed before validation; the exact optimized bundle passes performance budgets before fingerprinting.'
+  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. The canonical eight-link navigation and retired Capstone runtime removal are asserted before performance budgets and fingerprinting.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
@@ -192,4 +263,4 @@ if (!report.ok) {
   unversioned.slice(0, 20).forEach(item => console.error(`Unversioned asset reference: ${item.page} -> ${item.reference}`));
   process.exit(1);
 }
-console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted after the optimized bundle passed its performance budget; ${staleCapstoneReferencesRemoved} stale Capstone reference(s) removed.`);
+console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted; ${navigationContract.verified} navigation surfaces verified; ${staleCapstoneReferencesRemoved} stale Capstone reference(s) removed.`);

@@ -33,7 +33,6 @@ jobs:
           set -euo pipefail
           repo="$GITHUB_REPOSITORY"
           requested_sha="$(git rev-parse HEAD)"
-          now_epoch="$(date -u +%s)"
 
           active_run="$(gh api "repos/$repo/actions/workflows/deploy.yml/runs?per_page=20" \
             --jq '.workflow_runs | map(select(.event == "workflow_dispatch" and (.status == "queued" or .status == "in_progress"))) | sort_by(.created_at) | reverse | .[0] // empty')"
@@ -82,10 +81,10 @@ jobs:
             echo "run_created=$run_created"
             echo "run_head_sha=$run_head_sha"
             echo "requested_sha=$requested_sha"
-            echo "recorded_epoch=$now_epoch"
           } >> "$GITHUB_OUTPUT"
 
       - name: Commit production dispatch receipt
+        shell: bash
         env:
           RUN_ID: ${{ steps.dispatch.outputs.run_id }}
           RUN_URL: ${{ steps.dispatch.outputs.run_url }}
@@ -94,13 +93,13 @@ jobs:
           RUN_CREATED: ${{ steps.dispatch.outputs.run_created }}
           RUN_HEAD_SHA: ${{ steps.dispatch.outputs.run_head_sha }}
           REQUESTED_SHA: ${{ steps.dispatch.outputs.requested_sha }}
-        shell: bash
+          WORKFLOW_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git pull --rebase origin main
-          observed_sha="$(git rev-parse HEAD)"
+          export OBSERVED_SHA="$(git rev-parse HEAD)"
           mkdir -p data
           node - <<'NODE'
           const fs = require('fs');
@@ -109,6 +108,7 @@ jobs:
             system: 'Behind the Curtain: Power-Family Intelligence Layer',
             confirmationContract: 'DEPLOY MATRIX REPROGRAMMED',
             recordedAt: new Date().toISOString(),
+            dispatcherWorkflowSha: process.env.WORKFLOW_SHA,
             requestedMainSha: process.env.REQUESTED_SHA,
             observedMainShaBeforeReceipt: process.env.OBSERVED_SHA,
             controlledProductionRun: {
@@ -130,12 +130,3 @@ jobs:
             git commit -m 'Record authorized Power-Family production dispatch'
             git push origin HEAD:main
           fi
-        env:
-          RUN_ID: ${{ steps.dispatch.outputs.run_id }}
-          RUN_URL: ${{ steps.dispatch.outputs.run_url }}
-          RUN_STATUS: ${{ steps.dispatch.outputs.run_status }}
-          RUN_CONCLUSION: ${{ steps.dispatch.outputs.run_conclusion }}
-          RUN_CREATED: ${{ steps.dispatch.outputs.run_created }}
-          RUN_HEAD_SHA: ${{ steps.dispatch.outputs.run_head_sha }}
-          REQUESTED_SHA: ${{ steps.dispatch.outputs.requested_sha }}
-          OBSERVED_SHA: ${{ github.sha }}

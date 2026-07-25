@@ -153,9 +153,9 @@
         <span class="link-type">${escapeHtml(source.t)}</span>
         <h2>${escapeHtml(source.n)}</h2>
         <p>${escapeHtml(source.d)}</p>
-        <span class="link-domain">${escapeHtml(domainOf(source.u))}</span>
-        <a class="btn alt" href="${escapeHtml(source.u)}" target="_blank" rel="noopener noreferrer nofollow external">Visit Source ↗</a>
-      </article>`;
+        <span class="link-domain">${escapeHtml(domainOf(source.u))}</span>` +
+        '<a class="btn alt" href="' + escapeHtml(source.u) + '" target="_blank" rel="noopener noreferrer nofollow external">Visit Source ↗</a>' +
+      `</article>`;
     }).join('');
     result.textContent = `${visible.length} of ${sources.length} sources shown`;
     empty.style.display = visible.length ? 'none' : 'block';

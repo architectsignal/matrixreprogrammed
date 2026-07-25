@@ -123,6 +123,15 @@
     catch (_) { return url; }
   }
 
+  function validExternalUrl(value) {
+    try {
+      const url = new URL(String(value));
+      return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
   function renderFilters() {
     const categories = ['All', ...new Set(sources.map((source) => source.c))];
     filters.innerHTML = categories.map((category) =>
@@ -153,10 +162,15 @@
         <span class="link-type">${escapeHtml(source.t)}</span>
         <h2>${escapeHtml(source.n)}</h2>
         <p>${escapeHtml(source.d)}</p>
-        <span class="link-domain">${escapeHtml(domainOf(source.u))}</span>` +
-        '<a class="btn alt" href="' + escapeHtml(source.u) + '" target="_blank" rel="noopener noreferrer nofollow external">Visit Source ↗</a>' +
-      `</article>`;
+        <span class="link-domain">${escapeHtml(domainOf(source.u))}</span>
+        <a class="btn alt source-link" target="_blank" rel="noopener noreferrer nofollow external">Visit Source ↗</a>
+      </article>`;
     }).join('');
+    grid.querySelectorAll('.source-link').forEach((anchor, index) => {
+      const destination = validExternalUrl(visible[index]?.u);
+      if (destination) anchor.setAttribute('href', destination);
+      else anchor.removeAttribute('href');
+    });
     result.textContent = `${visible.length} of ${sources.length} sources shown`;
     empty.style.display = visible.length ? 'none' : 'block';
   }

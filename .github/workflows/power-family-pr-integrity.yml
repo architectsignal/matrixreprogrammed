@@ -15,6 +15,7 @@ on:
       - 'data/behind-the-curtain-capstone.json'
       - 'scripts/power-family-intelligence-layer.runtime.js'
       - 'scripts/reconcile-power-family-capstone.js'
+      - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
       - '.github/workflows/power-family-pr-integrity.yml'
@@ -37,6 +38,7 @@ jobs:
           node --check behind-the-curtain-capstone.js
           node --check scripts/power-family-intelligence-layer.runtime.js
           node --check scripts/reconcile-power-family-capstone.js
+          node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
           node - <<'NODE'
           const fs=require('fs');
@@ -54,7 +56,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site/data
-          for file in behind-the-curtain.html behind-the-curtain-access.html behind-the-curtain-access-v2.js behind-the-curtain-capstone.html behind-the-curtain-symbolic-capstone.html behind-the-curtain-capstone.js power-family-intelligence-layer.js power-family-intelligence-layer.css; do cp "$file" "_site/$file"; done
+          for file in index.html start-here.html behind-the-curtain.html behind-the-curtain-access.html behind-the-curtain-access-v2.js behind-the-curtain-capstone.html behind-the-curtain-symbolic-capstone.html behind-the-curtain-capstone.js power-family-intelligence-layer.js power-family-intelligence-layer.css; do cp "$file" "_site/$file"; done
+          cp index.html _site/index
+          cp start-here.html _site/start-here
           cp behind-the-curtain.html _site/behind-the-curtain
           cp behind-the-curtain-access.html _site/behind-the-curtain-access
           cp behind-the-curtain-capstone.html _site/behind-the-curtain-capstone
@@ -63,12 +67,14 @@ jobs:
           cp search-index.json sitemap.xml llms.txt _site/
       - name: Canonical reconciliation
         run: node scripts/reconcile-power-family-capstone.js
-      - name: Production contract guard
+      - name: Production contract guard and public gateways
         run: node scripts/behind-the-curtain-production-guard.js
       - name: Marker leak test
         run: |
           node scripts/hide-visible-compatibility-markers.js --output
           ! grep -RIl 'preservedaftervisiblede-duplication' _site --include='*.html' --exclude-dir='data'
+          grep -q 'power-family-public-gateway:start' _site/index.html
+          grep -q 'power-family-public-gateway:start' _site/start-here.html
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -77,4 +83,5 @@ jobs:
           path: |
             downloads/power-family-capstone-reconcile.json
             downloads/behind-the-curtain-production-guard.json
+            downloads/power-family-public-gateways.json
           if-no-files-found: warn

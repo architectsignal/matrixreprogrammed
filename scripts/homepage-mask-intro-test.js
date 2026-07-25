@@ -12,6 +12,7 @@ function read(rel) {
 }
 function count(text, token) { return String(text).split(token).length - 1; }
 
+const runtimeVersion = '20260725-video-v4';
 const videoParts = ['assets/matrix-intro-video-1.txt', 'assets/matrix-intro-video-2.txt'];
 const partText = videoParts.map(read);
 if (partText.some(part => part.length < 1000)) fail('one or more video asset parts are unexpectedly small');
@@ -27,6 +28,7 @@ try {
 const html = read('index.html');
 const css = read('homepage-mask-intro.css');
 const js = read('homepage-mask-intro.js');
+const patcher = read('scripts/patch-homepage-mask-intro.js');
 
 for (const [token, expected] of [
   ['data-homepage-mask-intro data-mode="video"', 1],
@@ -39,6 +41,9 @@ for (const [token, expected] of [
   const actual = count(html, token);
   if (actual !== expected) fail(`expected ${expected} occurrence(s) of ${token}, found ${actual}`);
 }
+if (!html.includes(`homepage-mask-intro.css?v=${runtimeVersion}`)) fail('homepage stylesheet is not cache-versioned');
+if (!html.includes(`homepage-mask-intro.js?v=${runtimeVersion}`)) fail('homepage runtime is not cache-versioned');
+if (count(html, runtimeVersion) < 4) fail('homepage does not carry the intro version across overlay and assets');
 
 if (/<img[^>]+assets\/intro-eye\.svg/i.test(html)) fail('legacy eye image is still rendered');
 if (/<img[^>]+assets\/intro-mask\.svg/i.test(html)) fail('legacy mask image is still rendered');
@@ -46,22 +51,43 @@ if (/<div[^>]+homepage-intro__burn/i.test(html)) fail('legacy burn layer is stil
 if (/<div[^>]+homepage-intro__embers/i.test(html)) fail('legacy ember layer is still rendered');
 
 for (const marker of [
-  'matrix-homepage-intro-seen-v3',
+  runtimeVersion,
+  'matrix-homepage-intro-seen-v4',
   'assets/matrix-intro-video-1.txt',
   'assets/matrix-intro-video-2.txt',
-  'data:video/mp4;base64',
+  'URL.createObjectURL',
+  'URL.revokeObjectURL',
+  'new Blob([bytes]',
+  'window.atob',
+  "cache: 'reload'",
   'HTMLVideoElement',
   'video.defaultMuted = true',
   'video.playsInline = true',
   "video.addEventListener('ended'",
   'video-load-error',
+  'video-timeout',
+  'forceReplay',
+  "get('intro') === '1'",
+  'shouldRemember(reason)',
   'Escape',
-  '15000',
+  '12000',
   'prepareWelcomeGate()'
 ]) {
   if (!js.includes(marker)) fail(`runtime is missing video marker: ${marker}`);
 }
-if (!js.includes('sessionStorage')) fail('intro is not limited to one display per session');
+if (js.includes('data:video/mp4;base64')) fail('runtime still relies on a data URI instead of a Blob URL');
+if (!js.includes('sessionStorage')) fail('intro is not limited to one successful display per session');
+if (!js.includes("reason === 'ended' || reason === 'skip' || reason === 'escape'")) fail('failed playback can still be recorded as successfully seen');
+if (!js.includes("intro.classList.add('needs-play')")) fail('reduced-motion and autoplay fallback are missing');
+
+for (const marker of [
+  runtimeVersion,
+  `homepage-mask-intro.css?v=${runtimeVersion}`,
+  `homepage-mask-intro.js?v=${runtimeVersion}`,
+  'data-intro-version'
+]) {
+  if (!patcher.includes(marker)) fail(`patcher is missing cache/version marker: ${marker}`);
+}
 
 for (const marker of [
   '.homepage-mask-intro__video',
@@ -98,8 +124,21 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   mode: 'video',
+  runtimeVersion,
   asset: { parts: videoParts.length, decodedBytes: decoded.length, mp4: decoded.slice(4, 8).toString('ascii') === 'ftyp' },
-  behavior: { mutedAutoplay: true, playsInline: true, skip: true, escape: true, sessionLimited: true, reducedMotionBypass: true, voiceGatePreserved: true },
+  behavior: {
+    mutedAutoplay: true,
+    playsInline: true,
+    blobUrl: true,
+    cacheBusted: true,
+    skip: true,
+    escape: true,
+    successfulPlaybackSessionLimited: true,
+    failedPlaybackRemembered: false,
+    reducedMotionManualPlay: true,
+    forceReplayQuery: '?intro=1',
+    voiceGatePreserved: true
+  },
   membership: { freeTier: true, paidPrices: [3, 6, 9], checkoutDefault: 'server-gated-disabled' },
   failures
 };
@@ -109,4 +148,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`INTRO VIDEO RELEASE FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Homepage video intro test passed (${decoded.length} decoded MP4 bytes); existing voice gate and membership surface verified.`);
+console.log(`Homepage video intro ${runtimeVersion} test passed (${decoded.length} decoded MP4 bytes); cache, playback fallback, voice gate and membership surface verified.`);

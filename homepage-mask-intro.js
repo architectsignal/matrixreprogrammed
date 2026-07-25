@@ -5,14 +5,17 @@
   if (!intro) return;
 
   // Retired release-test markers only: matrix-homepage-intro-seen-v2; eye: 3000; burn: 1100; mask: 3000.
-  const sessionKey = 'matrix-homepage-intro-seen-v3';
+  const runtimeVersion = '20260725-video-v4';
+  const sessionKey = 'matrix-homepage-intro-seen-v4';
   const videoParts = [
-    'assets/matrix-intro-video-1.txt',
-    'assets/matrix-intro-video-2.txt'
+    `assets/matrix-intro-video-1.txt?v=${runtimeVersion}`,
+    `assets/matrix-intro-video-2.txt?v=${runtimeVersion}`
   ];
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
+  const forceReplay = new URLSearchParams(window.location.search).get('intro') === '1';
   const timers = new Set();
   let finished = false;
+  let objectUrl = '';
 
   function later(callback, delay) {
     const id = window.setTimeout(() => {
@@ -29,6 +32,7 @@
   }
 
   function hasSeen() {
+    if (forceReplay) return false;
     try { return sessionStorage.getItem(sessionKey) === 'true'; }
     catch { return false; }
   }
@@ -54,6 +58,10 @@
 
   function removeIntro() {
     clearTimers();
+    if (objectUrl) {
+      URL.revokeObjectURL(objectUrl);
+      objectUrl = '';
+    }
     intro.classList.add('is-removed');
     intro.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('mask-intro-active');
@@ -61,14 +69,26 @@
     document.dispatchEvent(new CustomEvent('matrix:homepage-mask-intro-complete'));
   }
 
+  function shouldRemember(reason) {
+    return reason === 'ended' || reason === 'skip' || reason === 'escape';
+  }
+
   function finish(reason = 'ended') {
     if (finished) return;
     finished = true;
     clearTimers();
-    markSeen();
+    if (shouldRemember(reason)) markSeen();
     intro.dataset.finishReason = reason;
     intro.classList.add('is-dissolving');
     later(removeIntro, reducedMotion ? 120 : 760);
+  }
+
+  function failGracefully(reason, error) {
+    if (finished) return;
+    intro.dataset.error = reason;
+    intro.classList.add('has-error');
+    console.error('[Matrix intro]', reason, error || '');
+    later(() => finish(reason), 900);
   }
 
   function mountVideo() {
@@ -81,14 +101,23 @@
     return stage.querySelector('[data-homepage-intro-video]');
   }
 
+  function base64ToObjectUrl(base64) {
+    const clean = String(base64).replace(/\s+/g, '');
+    if (!clean) throw new Error('Intro video data was empty');
+    const binary = window.atob(clean);
+    const bytes = new Uint8Array(binary.length);
+    for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+    return URL.createObjectURL(new Blob([bytes], { type: 'video/mp4' }));
+  }
+
   async function loadVideoSource() {
     const parts = await Promise.all(videoParts.map(async url => {
-      const response = await fetch(url, { cache: 'force-cache' });
+      const response = await fetch(url, { cache: 'reload', credentials: 'same-origin' });
       if (!response.ok) throw new Error(`Intro video part failed: ${response.status}`);
       return (await response.text()).trim();
     }));
     if (parts.some(part => !part)) throw new Error('Intro video part was empty');
-    return `data:video/mp4;base64,${parts.join('')}`;
+    return base64ToObjectUrl(parts.join(''));
   }
 
   if (hasSeen()) {
@@ -99,6 +128,7 @@
   document.documentElement.classList.add('mask-intro-active');
   intro.setAttribute('aria-hidden', 'false');
   intro.dataset.mode = 'video';
+  intro.dataset.version = runtimeVersion;
   prepareWelcomeGate();
 
   const video = mountVideo();
@@ -108,39 +138,50 @@
   }, { once: true });
 
   if (!(video instanceof HTMLVideoElement)) {
-    finish('video-missing');
+    failGracefully('video-missing');
     return;
   }
 
   video.muted = true;
   video.defaultMuted = true;
   video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
   video.addEventListener('ended', () => finish('ended'), { once: true });
-  video.addEventListener('error', () => finish('video-error'), { once: true });
-
-  if (reducedMotion) {
-    finish('reduced-motion');
-    return;
-  }
+  video.addEventListener('error', () => failGracefully('video-error', video.error), { once: true });
 
   const startPlayback = async () => {
     try {
       await video.play();
-      intro.classList.add('is-playing');
+      intro.classList.add('is-ready', 'is-playing');
       intro.classList.remove('needs-play');
-    } catch {
-      intro.classList.add('needs-play');
+    } catch (error) {
+      intro.classList.add('is-ready', 'needs-play');
+      intro.dataset.autoplay = 'blocked';
+      console.warn('[Matrix intro] autoplay blocked; tap to play', error);
     }
   };
 
   loadVideoSource()
     .then(source => {
-      if (finished) return;
+      if (finished) {
+        URL.revokeObjectURL(source);
+        return;
+      }
+      objectUrl = source;
       video.src = source;
-      video.addEventListener('loadeddata', startPlayback, { once: true });
+      video.addEventListener('loadeddata', () => {
+        intro.classList.add('is-ready');
+        if (reducedMotion) {
+          intro.classList.add('needs-play');
+          video.pause();
+          return;
+        }
+        startPlayback();
+      }, { once: true });
       video.load();
     })
-    .catch(() => finish('video-load-error'));
+    .catch(error => failGracefully('video-load-error', error));
 
   intro.addEventListener('click', event => {
     if (!intro.classList.contains('needs-play')) return;
@@ -149,6 +190,6 @@
   });
 
   later(() => {
-    if (!finished) finish('timeout');
-  }, 15000);
+    if (!finished && !intro.classList.contains('is-ready')) failGracefully('video-timeout');
+  }, 12000);
 })();

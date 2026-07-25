@@ -5,14 +5,15 @@ html.mask-intro-active,html.mask-intro-active body{overflow:hidden;overscroll-be
 .homepage-mask-intro::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.014) 0,rgba(255,255,255,.014) 1px,transparent 1px,transparent 4px),radial-gradient(circle,transparent 36%,rgba(0,0,0,.68) 100%);opacity:.42;mix-blend-mode:screen}
 .homepage-mask-intro__stage{position:relative;z-index:2;width:100%;height:100%;display:grid;place-items:center;background:#000}
 .homepage-intro__symbol,.homepage-intro__burn,.homepage-intro__embers,.homepage-mask-intro__wordmark{display:none!important}
-.homepage-mask-intro__video{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#000;opacity:0;filter:brightness(.96) contrast(1.05);transition:opacity .5s ease}
-.homepage-mask-intro.is-playing .homepage-mask-intro__video,.homepage-mask-intro.needs-play .homepage-mask-intro__video{opacity:1}
-.homepage-mask-intro.needs-play::before{content:"Tap to play";z-index:6;display:grid;place-items:center;color:#fff;font:800 .8rem/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;background:rgba(0,0,0,.28)}
+.homepage-mask-intro__video{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#000;opacity:0;filter:brightness(.96) contrast(1.05);transition:opacity .5s ease,transform .72s ease,filter .72s ease}
+.homepage-mask-intro.is-ready .homepage-mask-intro__video,.homepage-mask-intro.is-playing .homepage-mask-intro__video,.homepage-mask-intro.needs-play .homepage-mask-intro__video{opacity:1}
+.homepage-mask-intro.needs-play::before{content:"Tap to play";position:absolute;inset:0;z-index:6;display:grid;place-items:center;color:#fff;font:800 .8rem/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;background:rgba(0,0,0,.28);pointer-events:none}
+.homepage-mask-intro.has-error::before{content:"Opening the Matrix…";position:absolute;inset:0;z-index:6;display:grid;place-items:center;color:#f0dfab;font:800 .76rem/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;background:#000;pointer-events:none}
 .homepage-mask-intro__controls{position:absolute;left:0;right:0;bottom:0;z-index:8;display:flex;justify-content:flex-end;align-items:center;padding:clamp(.75rem,2vw,1.35rem);background:linear-gradient(180deg,transparent,rgba(0,0,0,.82))}
 .homepage-mask-intro__skip{border:1px solid rgba(216,181,106,.48);border-radius:999px;background:rgba(0,0,0,.7);color:#f0dfab;padding:.62rem .95rem;font:800 .72rem/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 0 18px rgba(216,181,106,.08)}
 .homepage-mask-intro__skip:hover,.homepage-mask-intro__skip:focus-visible{border-color:#d8b56a;background:rgba(45,29,8,.92);color:#fff;outline:2px solid rgba(216,181,106,.42);outline-offset:3px}
 .homepage-mask-intro.is-dissolving{animation:intro-video-dissolve .72s cubic-bezier(.55,0,.8,.2) forwards}
-.homepage-mask-intro.is-dissolving .homepage-mask-intro__video{transform:scale(1.025);filter:blur(8px) brightness(1.35);transition:transform .72s ease,filter .72s ease,opacity .72s ease;opacity:0}
+.homepage-mask-intro.is-dissolving .homepage-mask-intro__video{transform:scale(1.025);filter:blur(8px) brightness(1.35);opacity:0}
 .homepage-mask-intro.is-removed{display:none!important}
 @keyframes intro-video-dissolve{0%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden;pointer-events:none}}
 @media(max-width:700px){.homepage-mask-intro__controls{padding:.75rem}.homepage-mask-intro__skip{font-size:.66rem;padding:.58rem .78rem}}

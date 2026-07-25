@@ -2,38 +2,41 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const excluded = new Set(['.git', 'node_modules', '_site', 'downloads', '.wrangler']);
+const site = path.join(root, '_site');
+const rootExcluded = new Set(['.git', 'node_modules', '_site', 'downloads', '.wrangler']);
+const siteExcluded = new Set([]);
 const currentPm = {
   name: 'Andy Burnham',
   styledName: 'The Rt Hon Andy Burnham MP',
   office: 'Prime Minister of the United Kingdom',
   inOfficeSince: '2026-07-20',
-  checked: '2026-07-24',
+  checked: '2026-07-25',
   source: 'https://www.gov.uk/government/ministers/prime-minister'
 };
 
-function walk(dir, out = []) {
+function walk(dir, excluded, out = []) {
+  if (!fs.existsSync(dir)) return out;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (excluded.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, out);
+    if (entry.isDirectory()) walk(full, excluded, out);
     else out.push(full);
   }
   return out;
 }
 
-function relativeHref(file, target) {
-  const rel = path.relative(path.dirname(file), path.join(root, target)).replace(/\\/g, '/');
+function relativeHref(file, targetRoot, target) {
+  const rel = path.relative(path.dirname(file), path.join(targetRoot, target)).replace(/\\/g, '/');
   return rel || target;
 }
 
-function patchNavigation(file, html) {
+function patchNavigation(file, html, targetRoot) {
   if (!/\.html$/i.test(file) || /contact-the-machine\.html$/i.test(file)) return html;
-  if (/href=["'][^"']*contact-the-machine\.html["']/i.test(html)) return html;
-  const href = relativeHref(file, 'contact-the-machine.html');
+  const href = relativeHref(file, targetRoot, 'contact-the-machine.html');
   const contact = `<a href="${href}">Contact</a>`;
   let changed = false;
   html = html.replace(/(<div\s+class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i, (match, open, body, close) => {
+    if (/href=["'][^"']*contact-the-machine\.html["']/i.test(body)) return match;
     changed = true;
     if (/<a\b[^>]*href=["'][^"']*search\.html["']/i.test(body)) {
       body = body.replace(/(<a\b[^>]*href=["'][^"']*search\.html["'][^>]*>)/i, `${contact}$1`);
@@ -44,7 +47,8 @@ function patchNavigation(file, html) {
   });
   if (!changed) {
     html = html.replace(/(<nav\b[^>]*aria-label=["']Primary navigation["'][^>]*>)([\s\S]*?)(<\/nav>)/i, (match, open, body, close) => {
-      if (/contact-the-machine\.html/i.test(body)) return match;
+      if (/href=["'][^"']*contact-the-machine\.html["']/i.test(body)) return match;
+      changed = true;
       return open + body + contact + close;
     });
   }
@@ -89,44 +93,60 @@ function patchJson(value) {
   return next;
 }
 
-const files = walk(root);
-const navTouched = [];
-const pmTouched = [];
-for (const file of files) {
-  const ext = path.extname(file).toLowerCase();
-  if (!['.html', '.json', '.js', '.md'].includes(ext)) continue;
-  const before = fs.readFileSync(file, 'utf8');
-  let after = before;
-  if (ext === '.html') {
-    const navPatched = patchNavigation(file, after);
-    if (navPatched !== after) navTouched.push(path.relative(root, file).replace(/\\/g, '/'));
-    after = navPatched;
-  }
-  if (ext === '.json') {
-    try {
-      const parsed = JSON.parse(after);
-      const patched = patchJson(parsed);
-      const rendered = JSON.stringify(patched, null, 2) + '\n';
-      if (rendered !== after && /keir starmer|currentPrimeMinister/i.test(after)) {
-        after = rendered;
-        pmTouched.push(path.relative(root, file).replace(/\\/g, '/'));
+function patchTree(baseDir, excluded, targetRoot, label) {
+  const navTouched = [];
+  const pmTouched = [];
+  for (const file of walk(baseDir, excluded)) {
+    const ext = path.extname(file).toLowerCase();
+    if (!['.html', '.json', '.js', '.md'].includes(ext)) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    let after = before;
+    if (ext === '.html') {
+      const navPatched = patchNavigation(file, after, targetRoot);
+      if (navPatched !== after) navTouched.push(path.relative(baseDir, file).replace(/\\/g, '/'));
+      after = navPatched;
+    }
+    if (ext === '.json') {
+      try {
+        const parsed = JSON.parse(after);
+        const patched = patchJson(parsed);
+        const rendered = JSON.stringify(patched, null, 2) + '\n';
+        if (rendered !== after && /keir starmer|currentPrimeMinister/i.test(after)) {
+          after = rendered;
+          pmTouched.push(path.relative(baseDir, file).replace(/\\/g, '/'));
+        }
+      } catch {
+        const patched = patchCurrentPmText(after);
+        if (patched !== after) pmTouched.push(path.relative(baseDir, file).replace(/\\/g, '/'));
+        after = patched;
       }
-    } catch {
+    } else {
       const patched = patchCurrentPmText(after);
-      if (patched !== after) pmTouched.push(path.relative(root, file).replace(/\\/g, '/'));
+      if (patched !== after) pmTouched.push(path.relative(baseDir, file).replace(/\\/g, '/'));
       after = patched;
     }
-  } else {
-    const patched = patchCurrentPmText(after);
-    if (patched !== after) pmTouched.push(path.relative(root, file).replace(/\\/g, '/'));
-    after = patched;
+    if (after !== before) fs.writeFileSync(file, after);
   }
-  if (after !== before) fs.writeFileSync(file, after);
+  return { label, navTouched, pmTouched };
 }
+
+const sourceResult = patchTree(root, rootExcluded, root, 'source');
+const siteResult = fs.existsSync(site) ? patchTree(site, siteExcluded, site, 'deployable') : { label: 'deployable', navTouched: [], pmTouched: [] };
 
 const officeHolderPath = path.join(root, 'data', 'current-uk-prime-minister.json');
 fs.mkdirSync(path.dirname(officeHolderPath), { recursive: true });
 fs.writeFileSync(officeHolderPath, JSON.stringify(currentPm, null, 2) + '\n');
+if (fs.existsSync(site)) {
+  const builtOfficeHolderPath = path.join(site, 'data', 'current-uk-prime-minister.json');
+  fs.mkdirSync(path.dirname(builtOfficeHolderPath), { recursive: true });
+  fs.copyFileSync(officeHolderPath, builtOfficeHolderPath);
+}
+
+const indexPath = path.join(root, 'index.html');
+const builtIndexPath = path.join(site, 'index.html');
+const sourceIndexOk = fs.existsSync(indexPath) && /nav-primary[\s\S]*contact-the-machine\.html/i.test(fs.readFileSync(indexPath, 'utf8'));
+const builtIndexOk = !fs.existsSync(site) || (fs.existsSync(builtIndexPath) && /nav-primary[\s\S]*contact-the-machine\.html/i.test(fs.readFileSync(builtIndexPath, 'utf8')));
+if (!sourceIndexOk || !builtIndexOk) throw new Error('Contact navigation did not survive on the source and deployable homepage');
 
 const reportPath = path.join(root, 'downloads', 'contact-nav-current-pm-report.json');
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -134,9 +154,12 @@ fs.writeFileSync(reportPath, JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   contactRoute: 'contact-the-machine.html',
-  contactNavigationFilesUpdated: navTouched,
+  sourceContactNavigationFilesUpdated: sourceResult.navTouched,
+  deployableContactNavigationFilesUpdated: siteResult.navTouched,
   currentPrimeMinister: currentPm,
-  primeMinisterFilesUpdated: [...new Set(pmTouched)]
+  sourcePrimeMinisterFilesUpdated: [...new Set(sourceResult.pmTouched)],
+  deployablePrimeMinisterFilesUpdated: [...new Set(siteResult.pmTouched)],
+  homepageChecks: { source: sourceIndexOk, deployable: builtIndexOk }
 }, null, 2) + '\n');
 
-console.log(`Contact navigation added to ${navTouched.length} pages; current UK Prime Minister patches applied to ${new Set(pmTouched).size} files.`);
+console.log(`Contact navigation added to ${sourceResult.navTouched.length} source pages and ${siteResult.navTouched.length} deployable pages; current UK Prime Minister patches applied to ${new Set([...sourceResult.pmTouched, ...siteResult.pmTouched]).size} files.`);

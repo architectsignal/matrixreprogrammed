@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
-const report = { ok: true, generatedAt: new Date().toISOString(), patched: [], errors: [] };
+const report = { ok: true, generatedAt: new Date().toISOString(), verified: [], patched: [], errors: [] };
 
 const block = `<!-- power-family-public-gateway:start -->
 <section class="section wrap" id="behind-the-curtain-gateway">
@@ -22,7 +22,8 @@ const block = `<!-- power-family-public-gateway:start -->
 <!-- power-family-public-gateway:end -->`;
 
 function patchFile(file) {
-  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return;
+  if (!fs.existsSync(file)) throw new Error(`missing required gateway surface: ${path.relative(root, file)}`);
+  if (fs.statSync(file).isDirectory()) throw new Error(`gateway surface is a directory: ${path.relative(root, file)}`);
   let html = fs.readFileSync(file, 'utf8');
   const before = html;
   html = html.replace(/<!-- power-family-public-gateway:start -->[\s\S]*?<!-- power-family-public-gateway:end -->/g, '');
@@ -36,13 +37,14 @@ function patchFile(file) {
   for (const marker of ['behind-the-curtain.html','behind-the-curtain-access.html','behind-the-curtain-capstone.html','power-family-public-gateway:start']) {
     if (!html.includes(marker)) throw new Error(`${path.relative(root, file)} missing ${marker}`);
   }
+  report.verified.push(path.relative(root, file).replace(/\\/g, '/'));
 }
 
 try {
   for (const rel of ['index.html','start-here.html']) patchFile(path.join(root, rel));
-  if (fs.existsSync(site)) {
-    for (const rel of ['index.html','index','start-here.html','start-here']) patchFile(path.join(site, rel));
-  }
+  if (!fs.existsSync(site)) throw new Error('_site is missing; public gateway cannot be proven in deploy output');
+  for (const rel of ['index.html','index','start-here.html','start-here']) patchFile(path.join(site, rel));
+  if (report.verified.length !== 6) throw new Error(`expected six verified public gateway surfaces, found ${report.verified.length}`);
 } catch (error) {
   report.ok = false;
   report.errors.push(error.message);
@@ -54,4 +56,4 @@ if (!report.ok) {
   console.error(`Power-Family public gateway patch failed: ${report.errors.join('; ')}`);
   process.exit(1);
 }
-console.log(`Power-Family public gateways verified across ${report.patched.length || 6} source and deploy routes.`);
+console.log(`Power-Family public gateways verified across ${report.verified.length} source and deploy routes; ${report.patched.length} surface(s) patched.`);

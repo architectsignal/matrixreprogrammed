@@ -1,0 +1,108 @@
+name: Production Runtime Contract Rehearsal
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/production-runtime-rehearsal.yml
+      - scripts/finalize-money-intelligence-depth.js
+      - scripts/refresh-money-public-market-rankings.js
+      - scripts/expand-money-research-candidates.js
+      - scripts/patch-behind-the-curtain-access-link.js
+      - scripts/cloudflare-worker-routes-test.js
+      - scripts/recovery-worker-api-contract-test.js
+      - scripts/recovery-d1-rehearsal.py
+      - scripts/d1-export-command-test.js
+      - src/worker-production.js
+      - src/worker-email-lifecycle.js
+      - src/worker-member-experience.js
+      - src/worker-paypal-subscriptions.js
+      - src/worker-paypal-sandbox-rehearsal.js
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-runtime-contract-rehearsal
+  cancel-in-progress: true
+
+jobs:
+  rehearse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+      SOURCE_DOCUMENTS_PER_RUN: '0'
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Build exact production assets without deploying
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          npm run build 2>&1 | tee downloads/runtime-rehearsal-build.log
+
+      - name: Run named runtime and D1 contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          : > downloads/runtime-contracts.log
+          run_check() {
+            local name="$1"
+            shift
+            echo "===== START ${name} =====" | tee -a downloads/runtime-contracts.log
+            if "$@" 2>&1 | tee -a downloads/runtime-contracts.log; then
+              echo "===== PASS ${name} =====" | tee -a downloads/runtime-contracts.log
+            else
+              code=${PIPESTATUS[0]}
+              echo "===== FAIL ${name} exit=${code} =====" | tee -a downloads/runtime-contracts.log
+              exit "$code"
+            fi
+          }
+          run_check forum-persistence node scripts/forum-persistence-d1-test.js
+          run_check worker-routes node scripts/cloudflare-worker-routes-test.js
+          run_check paypal-phase7 node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
+          run_check paypal-phase8 node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+          run_check recovery-worker-api node scripts/recovery-worker-api-contract-test.js
+          run_check recovery-d1 python3 scripts/recovery-d1-rehearsal.py
+          run_check syntax-email node --check src/worker-email-lifecycle.js
+          run_check syntax-member node --check src/worker-member-experience.js
+          run_check syntax-paypal node --check src/worker-paypal-subscriptions.js
+          run_check syntax-paypal-rehearsal node --check src/worker-paypal-sandbox-rehearsal.js
+          run_check syntax-production node --check src/worker-production.js
+          run_check syntax-curtain-guard node --check scripts/behind-the-curtain-production-guard.js
+          run_check syntax-live-curtain node --check scripts/verify-live-behind-the-curtain.js
+          run_check d1-export node scripts/d1-export-command-test.js
+          run_check wrangler-dry-run npx --yes wrangler@latest deploy --dry-run
+
+      - name: Upload rehearsal proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-runtime-rehearsal-${{ github.run_id }}
+          path: |
+            downloads/runtime-rehearsal-build.log
+            downloads/runtime-contracts.log
+            downloads/money-depth-integration-test.json
+            downloads/money-public-market-refresh.json
+            data/money-intelligence-depth-report.json
+            data/money-research-candidate-expansion.json
+            downloads/forum-persistence-d1-test.json
+          if-no-files-found: warn
+          retention-days: 30

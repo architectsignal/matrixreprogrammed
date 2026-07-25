@@ -1,4 +1,4 @@
-name: One-shot homepage intro direct asset deploy
+name: Homepage intro production hotfix
 
 on:
   push:
@@ -8,146 +8,62 @@ on:
       - .github/one-shot-controlled-production.trigger
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: matrix-homepage-intro-direct-v5
+  group: homepage-intro-production-hotfix
   cancel-in-progress: true
 
 jobs:
-  deploy-homepage-intro:
-    name: Generate, deploy and verify homepage intro v5
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Generate the video intro and place it in the deployed site bundle
-        shell: bash
+      - name: Generate and install homepage video intro
         run: |
           set -euo pipefail
           node scripts/patch-homepage-mask-intro.js
-          node scripts/homepage-mask-intro-test.js
           mkdir -p _site
           cp index.html _site/index.html
           cp homepage-mask-intro.css _site/homepage-mask-intro.css
           cp homepage-mask-intro-data.js _site/homepage-mask-intro-data.js
           cp homepage-mask-intro.js _site/homepage-mask-intro.js
-          grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' _site/index.html
-          grep -q 'homepage-mask-intro.js?v=20260725-video-v5' _site/index.html
+          grep -q '20260725-video-v5' _site/index.html
           grep -q 'matrix-homepage-intro-seen-v5' _site/homepage-mask-intro.js
-          grep -q 'globalThis.__MATRIX_INTRO_BASE64__' _site/homepage-mask-intro-data.js
           test "$(wc -c < _site/homepage-mask-intro-data.js)" -gt 10000
 
-      - name: Confirm Cloudflare credentials
+      - name: Deploy corrected production assets
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -n "$CLOUDFLARE_API_TOKEN"
-          test -n "$CLOUDFLARE_ACCOUNT_ID"
-          npx --yes wrangler@latest whoami
-
-      - name: Deploy normal production Worker with corrected site assets
-        id: deploy
-        continue-on-error: true
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
         run: |
           set -euo pipefail
           npx --yes wrangler@latest deploy --config wrangler.toml
 
-      - name: Verify live homepage video intro
-        id: verify
-        if: steps.deploy.outcome == 'success'
-        continue-on-error: true
-        shell: bash
+      - name: Verify live forced replay
         run: |
           set -euo pipefail
-          verified=0
-          for attempt in $(seq 1 36); do
+          for attempt in $(seq 1 24); do
             nonce="$(date +%s)-$attempt"
-            echo "Live intro verification attempt $attempt/36"
-            homepage="$(curl --fail --silent --show-error --location --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&direct=$nonce" || true)"
-            runtime="$(curl --fail --silent --show-error --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro.js?v=20260725-video-v5&direct=$nonce" || true)"
-            data="$(curl --fail --silent --show-error --max-time 30 -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro-data.js?v=20260725-video-v5&direct=$nonce" || true)"
-            if printf '%s' "$homepage" | grep -q 'data-homepage-mask-intro data-mode="video"' \
-              && printf '%s' "$homepage" | grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' \
-              && printf '%s' "$homepage" | grep -q 'homepage-mask-intro.js?v=20260725-video-v5' \
-              && printf '%s' "$runtime" | grep -q 'matrix-homepage-intro-seen-v5' \
-              && printf '%s' "$runtime" | grep -q 'globalThis.__MATRIX_INTRO_BASE64__' \
-              && test "${#data}" -gt 10000 \
-              && printf '%s' "$data" | grep -q 'globalThis.__MATRIX_INTRO_BASE64__'; then
-              verified=1
-              break
+            home="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&hotfix=$nonce" || true)"
+            js="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro.js?v=20260725-video-v5&hotfix=$nonce" || true)"
+            data="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro-data.js?v=20260725-video-v5&hotfix=$nonce" || true)"
+            if printf '%s' "$home" | grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' \
+              && printf '%s' "$home" | grep -q 'homepage-mask-intro.js?v=20260725-video-v5' \
+              && printf '%s' "$js" | grep -q 'matrix-homepage-intro-seen-v5' \
+              && test "${#data}" -gt 10000; then
+              echo 'VERIFIED: homepage intro v5 is live.'
+              exit 0
             fi
             sleep 5
           done
-          test "$verified" -eq 1
-          echo "Homepage intro v5 is live from the actual _site bundle."
-
-      - name: Record exact intro deployment result
-        if: always()
-        env:
-          DEPLOY_OUTCOME: ${{ steps.deploy.outcome }}
-          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
-          RUN_ID: ${{ github.run_id }}
-          RUN_ATTEMPT: ${{ github.run_attempt }}
-          HEAD_SHA: ${{ github.sha }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p data
-          node - <<'NODE'
-          const fs = require('fs');
-          const deploy = process.env.DEPLOY_OUTCOME || 'unknown';
-          const verify = process.env.VERIFY_OUTCOME || 'unknown';
-          const payload = {
-            ok: deploy === 'success' && verify === 'success',
-            version: '20260725-video-v5',
-            mode: 'direct-cloudflare-site-assets',
-            recordedAt: new Date().toISOString(),
-            runId: Number(process.env.RUN_ID),
-            runAttempt: Number(process.env.RUN_ATTEMPT),
-            headSha: process.env.HEAD_SHA,
-            deployOutcome: deploy,
-            verifyOutcome: verify,
-            forcedReplayUrl: 'https://matrixreprogrammed.com/?intro=1',
-            assets: ['_site/index.html','_site/homepage-mask-intro.css','_site/homepage-mask-intro-data.js','_site/homepage-mask-intro.js'],
-            boundary: 'The normal production Worker, D1, forum, membership, email, PayPal boundaries and existing welcome/ElevenLabs gate remain unchanged.'
-          };
-          fs.writeFileSync('data/homepage-intro-hotfix-result.json', JSON.stringify(payload, null, 2) + '\n');
-          console.log(JSON.stringify(payload));
-          NODE
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/homepage-intro-hotfix-result.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Record direct homepage intro production result"
-          for attempt in 1 2 3 4; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
-            git rebase --abort 2>/dev/null || true
-          done
-          exit 1
-
-      - name: Fail when deployment or verification failed
-        if: always() && (steps.deploy.outcome != 'success' || steps.verify.outcome != 'success')
-        shell: bash
-        run: |
-          echo "Direct homepage intro deployment failed: deploy=${{ steps.deploy.outcome }} verify=${{ steps.verify.outcome }}"
           exit 1

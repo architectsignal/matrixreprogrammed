@@ -65,33 +65,48 @@ jobs:
           done
           node - <<'NODE'
           const fs=require('fs');
-          const path=require('path');
           const rows=fs.readFileSync('downloads/power-family-refresh-results.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>{
             const [index,status,...commandParts]=line.split('\t');
             const command=commandParts.join('\t');
             const logPath=`downloads/power-family-refresh-${String(index).padStart(2,'0')}.log`;
             const log=fs.existsSync(logPath)?fs.readFileSync(logPath,'utf8'):'';
-            return {index:Number(index),status:Number(status),command,logTail:log.split(/\n/).slice(-100).join('\n')};
+            return {index:Number(index),status:Number(status),command,logTail:log.split(/\n/).slice(-120).join('\n')};
           });
           const failed=rows.filter(row=>row.status!==0);
           const report={ok:failed.length===0,generatedAt:new Date().toISOString(),commit:process.env.GITHUB_SHA,commands:rows,firstFailure:failed[0]||null};
           fs.mkdirSync('data',{recursive:true});
           fs.writeFileSync('data/power-family-refresh-diagnostic.json',`${JSON.stringify(report,null,2)}\n`);
           NODE
-      - name: Commit diagnostic report
+      - name: Upload refresh diagnostic logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: power-family-refresh-diagnostic-${{ github.run_id }}
+          path: |
+            downloads/power-family-refresh-results.tsv
+            downloads/power-family-refresh-*.log
+            data/power-family-refresh-diagnostic.json
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Commit diagnostic report atomically
         if: always()
         shell: bash
         run: |
           set -euo pipefail
+          test -s data/power-family-refresh-diagnostic.json
+          cp data/power-family-refresh-diagnostic.json /tmp/power-family-refresh-diagnostic.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git pull --rebase origin main
-          git add data/power-family-refresh-diagnostic.json
-          if git diff --cached --quiet; then
-            echo 'Diagnostic report already current.'
-          else
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/power-family-refresh-diagnostic.json data/power-family-refresh-diagnostic.json
+            git add data/power-family-refresh-diagnostic.json
+            if git diff --cached --quiet; then exit 0; fi
             git commit -m 'Record Power-Family refresh diagnostic'
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
       - name: Fail if refresh remains blocked
         run: node -e "const r=require('./data/power-family-refresh-diagnostic.json');if(!r.ok){console.error(r.firstFailure);process.exit(1)}"

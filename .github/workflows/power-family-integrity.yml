@@ -22,6 +22,8 @@ on:
       - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
+      - 'scripts/verify-live-behind-the-curtain.js'
+      - 'scripts/verify-live-behind-the-curtain-v2.js'
       - '.github/workflows/power-family-integrity.yml'
 
 permissions:
@@ -51,6 +53,8 @@ jobs:
           node --check scripts/patch-newsletter-public-page.js
           node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
+          node --check scripts/verify-live-behind-the-curtain.js
+          node --check scripts/verify-live-behind-the-curtain-v2.js
 
       - name: Parse intelligence datasets
         run: |

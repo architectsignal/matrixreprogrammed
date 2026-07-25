@@ -1,8 +1,9 @@
 {
   "confirmation": "DEPLOY MATRIX REPROGRAMMED",
-  "requestedAt": "2026-07-25T11:16:00Z",
+  "requestedAt": "2026-07-25T11:21:00Z",
   "requestedBy": "architectsignal",
-  "purpose": "Deploy the Death Files year-by-year intelligence layer, linked dossiers, automatic cross-site feeds, and case-scoped Signal Drops.",
+  "purpose": "Deploy the latest main branch containing the Death Files year-by-year intelligence layer, linked dossiers, automatic cross-site feeds, case-scoped Signal Drops, and production proof observer.",
   "targetBranch": "main",
-  "releaseCommit": "83e68cd6da40f0d702127914248584317a215306"
+  "releaseCommit": "83e68cd6da40f0d702127914248584317a215306",
+  "requestNonce": "death-files-production-2"
 }

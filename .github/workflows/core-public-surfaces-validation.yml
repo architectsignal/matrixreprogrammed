@@ -29,15 +29,20 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - name: Build deployable site
-        run: npm run build
-      - name: Verify restored public surfaces
+      - name: Preflight verified intro payload
         run: |
           node --check scripts/patch-homepage-mask-intro.js
-          node --check scripts/finalize-core-public-surfaces.js
-          node --check scripts/build-deploy-manifest.js
           node scripts/patch-homepage-mask-intro.js
           node scripts/homepage-mask-intro-test.js
+      - name: Build deployable site
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee /tmp/core-public-surfaces-build.log
+      - name: Verify restored public surfaces
+        run: |
+          node --check scripts/finalize-core-public-surfaces.js
+          node --check scripts/build-deploy-manifest.js
           node scripts/finalize-core-public-surfaces.js
           node - <<'NODE'
           const fs=require('fs');
@@ -51,3 +56,15 @@ jobs:
           if(!deaths.includes('THE DEATH FILES.')) throw new Error('Death Files route missing');
           console.log('Core public surfaces validation passed.');
           NODE
+      - name: Upload exact validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-public-surfaces-validation-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            /tmp/core-public-surfaces-build.log
+            downloads/homepage-mask-intro-report.json
+            downloads/core-public-surfaces-finalize.json
+            downloads/final-production-reconcile.json
+            downloads/final-release-sanitize.json

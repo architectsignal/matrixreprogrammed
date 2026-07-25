@@ -64,7 +64,7 @@ jobs:
           node --check src/intro-video-data.generated.js
           node --check src/worker-production-intro-hotfix.js
           node --check src/worker-production-intro-hotfix-cdn.js
-          grep -q 'generated: true' src/intro-video-data.generated.js
+          grep -q '"generated":true' src/intro-video-data.generated.js
           grep -q 'worker-bundled-payload' src/worker-production-intro-hotfix-cdn.js
 
       - name: Deploy Worker-bundled homepage intro

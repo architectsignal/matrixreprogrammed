@@ -1,0 +1,26 @@
+name: Dispatch Authorized Power-Family Production Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dispatch-power-family-production.yml'
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  dispatch-controlled-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch existing guarded production workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run deploy.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          echo 'Controlled production workflow dispatched for the latest main branch.'

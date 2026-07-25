@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-25T08:50:44.403Z",
+  "checkedAt": "2026-07-25T10:28:59.203Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30151714819,
+  "workflowRunId": 30154518666,
   "runAttempt": 1,
-  "headSha": "93fc43eed21911b19689b2f91bbcda276119c03e",
+  "headSha": "872f9b0479236ca20917c0d7923ab6aeeb392f38",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:50:39.303Z",
+    "generatedAt": "2026-07-25T10:28:54.460Z",
     "actions": [
       {
         "type": "run",
@@ -300,7 +300,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-25T08:50:42.115Z",
+    "checkedAt": "2026-07-25T10:28:56.668Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -315,7 +315,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:50:39.167Z",
+    "generatedAt": "2026-07-25T10:28:54.432Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -336,7 +336,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:50:39.140Z",
+    "generatedAt": "2026-07-25T10:28:54.426Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",

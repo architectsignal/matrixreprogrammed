@@ -2,19 +2,22 @@ import introWorker from './worker-production-intro-hotfix.js';
 import introVideoPart1 from '../assets/matrix-intro-video-1.txt';
 import introVideoPart2 from '../assets/matrix-intro-video-2.txt';
 
-const VERSION = '20260725-video-v7';
-const SESSION_KEY = 'matrix-homepage-intro-seen-v7';
+const VERSION = '20260725-video-v8';
+const SESSION_KEY = 'matrix-homepage-intro-seen-v8';
+const VIDEO_PATH = '/assets/matrix-reprogrammed-intro-v8.mp4';
 const INTRO_VIDEO_PARTS = Object.freeze([introVideoPart1, introVideoPart2]);
 let decodedVideo = null;
 
 const DIRECT_RUNTIME = `(() => {
   'use strict';
-  if (window.__MATRIX_INTRO_DIRECT_V7_ACTIVE__) return;
+  if (window.__MATRIX_INTRO_DIRECT_V8_ACTIVE__) return;
+  window.__MATRIX_INTRO_DIRECT_V8_ACTIVE__ = true;
   window.__MATRIX_INTRO_DIRECT_V7_ACTIVE__ = true;
   window.__MATRIX_INTRO_V6_ACTIVE__ = true;
 
   const VERSION = '${VERSION}';
   const SESSION_KEY = '${SESSION_KEY}';
+  const VIDEO_PATH = '${VIDEO_PATH}';
   const params = new URLSearchParams(location.search);
   const forceReplay = params.get('intro') === '1';
   const reducedMotion = matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
@@ -52,7 +55,7 @@ const DIRECT_RUNTIME = `(() => {
   };
   const fail = (reason, error) => {
     if (finished) return;
-    console.error('[Matrix intro direct v7]', reason, error || '');
+    console.error('[Matrix intro direct v8]', reason, error || '');
     intro.dataset.error = reason;
     intro.classList.add('has-error');
     if (status) status.textContent = 'Opening sequence unavailable — entering Matrix Reprogrammed';
@@ -69,7 +72,7 @@ const DIRECT_RUNTIME = `(() => {
       video.muted = true;
       intro.classList.add('is-ready', 'needs-play');
       if (status) status.textContent = 'Tap ENTER THE MATRIX to play';
-      console.warn('[Matrix intro direct v7] playback requires interaction', error);
+      console.warn('[Matrix intro direct v8] playback requires interaction', error);
     }
   };
   const ready = () => {
@@ -97,7 +100,7 @@ const DIRECT_RUNTIME = `(() => {
   video.addEventListener('canplay', ready, { once: true });
   video.addEventListener('ended', () => finish('ended'), { once: true });
   video.addEventListener('error', () => fail('video-error', video.error), { once: true });
-  video.src = '/_matrix-intro.mp4?v=' + VERSION;
+  video.src = VIDEO_PATH + '?v=' + VERSION;
   video.load();
 
   enter?.addEventListener('click', () => start(true));
@@ -166,6 +169,7 @@ function videoResponse(request) {
 
   const headers = new Headers({
     'content-type': 'video/mp4',
+    'content-disposition': 'inline; filename="matrix-reprogrammed-intro-v8.mp4"',
     'cache-control': 'no-store, max-age=0, must-revalidate',
     'accept-ranges': 'bytes',
     'access-control-allow-origin': '*',
@@ -203,8 +207,8 @@ async function rewriteHomepage(response) {
   return new HTMLRewriter()
     .on('script[data-matrix-intro-v6-runtime]', {
       element(element) {
-        element.setAttribute('src', `/homepage-intro-direct-v7.js?v=${VERSION}`);
-        element.setAttribute('data-matrix-intro-v7-runtime', '');
+        element.setAttribute('src', `/homepage-intro-direct-v8.js?v=${VERSION}`);
+        element.setAttribute('data-matrix-intro-v8-runtime', '');
       }
     })
     .transform(clean);
@@ -214,10 +218,10 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname;
-    if (path === '/homepage-intro-direct-v7.js' || path === '/homepage-intro-hotfix-v6.js') {
+    if (path === '/homepage-intro-direct-v8.js' || path === '/homepage-intro-direct-v7.js' || path === '/homepage-intro-hotfix-v6.js') {
       return textResponse(DIRECT_RUNTIME, 'application/javascript; charset=utf-8', 'worker-direct-runtime');
     }
-    if (path === '/_matrix-intro.mp4') return videoResponse(request);
+    if (path === VIDEO_PATH || path === '/_matrix-intro.mp4') return videoResponse(request);
     if (path === '/_matrix-intro-part/1') return textResponse(introPart(1));
     if (path === '/_matrix-intro-part/2') return textResponse(introPart(2));
 

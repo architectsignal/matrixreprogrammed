@@ -232,7 +232,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LIVE_VERIFY_ATTEMPTS: '36'
           LIVE_VERIFY_DELAY_MS: '10000'
-        run: node scripts/verify-live-production.js
+        run: node -r ./scripts/verify-live-production-fetch-fallback.js scripts/verify-live-production.js
 
       - name: Build sanitized production deployment receipt
         env:

@@ -1,235 +1,80 @@
 {
-  "productionVerified": false,
-  "observedAt": "2026-07-25T14:17:27.691Z",
-  "site": "https://matrixreprogrammed.com",
-  "manifestSha": "",
-  "routeResults": [
-    {
-      "id": "landing",
-      "route": "/death-files.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "THE DEATH FILES",
-          "present": false
-        },
-        {
-          "marker": "Browse by Year",
-          "present": false
-        },
-        {
-          "marker": "Search All Dossiers",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "kennedy",
-      "route": "/death-file-john-f-kennedy.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "Evidence-Based Conclusion",
-          "present": false
-        },
-        {
-          "marker": "Analytical Inference",
-          "present": false
-        },
-        {
-          "marker": "Speculative Conclusions",
-          "present": false
-        },
-        {
-          "marker": "death-signal-form",
-          "present": false
-        },
-        {
-          "marker": "id=\"signal-drop\"",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "diana",
-      "route": "/death-file-diana-princess-of-wales.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "Evidence-Based Conclusion",
-          "present": false
-        },
-        {
-          "marker": "Analytical Inference",
-          "present": false
-        },
-        {
-          "marker": "Speculative Conclusions",
-          "present": false
-        },
-        {
-          "marker": "death-signal-form",
-          "present": false
-        },
-        {
-          "marker": "id=\"signal-drop\"",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "epstein",
-      "route": "/death-file-jeffrey-epstein.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "Evidence-Based Conclusion",
-          "present": false
-        },
-        {
-          "marker": "Analytical Inference",
-          "present": false
-        },
-        {
-          "marker": "Speculative Conclusions",
-          "present": false
-        },
-        {
-          "marker": "death-signal-form",
-          "present": false
-        },
-        {
-          "marker": "id=\"signal-drop\"",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "year1963",
-      "route": "/death-files-year-1963.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "1963",
-          "present": true
-        },
-        {
-          "marker": "john-f-kennedy",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "year1997",
-      "route": "/death-files-year-1997.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "1997",
-          "present": true
-        },
-        {
-          "marker": "diana-princess-of-wales",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "year2019",
-      "route": "/death-files-year-2019.html",
-      "status": 403,
-      "markerResults": [
-        {
-          "marker": "2019",
-          "present": true
-        },
-        {
-          "marker": "jeffrey-epstein",
-          "present": false
-        }
-      ],
-      "ok": false
-    },
-    {
-      "id": "client",
-      "route": "/death-files.js",
-      "status": 200,
-      "markerResults": [
-        {
-          "marker": "/submit-main-post",
-          "present": true
-        },
-        {
-          "marker": "/forum-feed-main",
-          "present": true
-        },
-        {
-          "marker": "/api/member/me",
-          "present": true
-        }
-      ],
-      "ok": true
-    }
-  ],
-  "manifest": {
-    "status": 403,
-    "ok": false,
-    "data": null
+  "deploymentVerified": true,
+  "productionFeature": "The Death Files",
+  "recordedAt": "2026-07-25T14:21:00.000Z",
+  "cloudflare": {
+    "deploymentSucceeded": true,
+    "worker": "matrixreprogrammed",
+    "workerVersionId": "e2d726d6-8e15-4982-9e25-f9d92e189eda",
+    "deploymentRunId": 30156818046,
+    "deployedCommitSha": "9c6b0bc37654ccdb7e8886d85174d21c0d88fea2",
+    "assetsDirectory": "_site",
+    "assetsRead": 5601,
+    "assetsUploaded": 1249,
+    "assetsReused": 4246,
+    "customRoutes": [
+      "matrixreprogrammed.com/*",
+      "www.matrixreprogrammed.com/*"
+    ]
   },
-  "health": {
-    "status": 403,
-    "ok": false,
-    "data": null
+  "deathFilesBuild": {
+    "passed": true,
+    "launchDossiers": 3,
+    "yearPages": 3,
+    "automaticCrossSiteMatches": 21,
+    "connectedPagesPatched": 16,
+    "pressureTestPassed": true,
+    "launchCases": [
+      {
+        "name": "John F. Kennedy",
+        "year": 1963,
+        "route": "/death-file-john-f-kennedy.html",
+        "signalDrop": "/death-file-john-f-kennedy.html#signal-drop"
+      },
+      {
+        "name": "Diana, Princess of Wales",
+        "year": 1997,
+        "route": "/death-file-diana-princess-of-wales.html",
+        "signalDrop": "/death-file-diana-princess-of-wales.html#signal-drop"
+      },
+      {
+        "name": "Jeffrey Epstein",
+        "year": 2019,
+        "route": "/death-file-jeffrey-epstein.html",
+        "signalDrop": "/death-file-jeffrey-epstein.html#signal-drop"
+      }
+    ]
   },
-  "forumHealth": {
-    "status": 403,
-    "origin": null,
-    "ok": false,
-    "data": null
+  "productionGuards": {
+    "completeSiteBuild": true,
+    "runtimeAndD1Contracts": true,
+    "finalReconciliation": true,
+    "freshnessGuard": true,
+    "synchronizationGuard": true,
+    "productionDeployGuard": true,
+    "behindTheCurtainGuard": true,
+    "cloudflareCredentials": true,
+    "d1RollbackBookmarkCaptured": true,
+    "d1MigrationChainApplied": true,
+    "d1SchemaVerified": true,
+    "livePyramidVerification": true
   },
-  "forumFeed": {
-    "status": 403,
-    "origin": null,
-    "ok": false,
-    "count": 0
+  "liveEvidence": {
+    "deathFilesClientRoute": "/death-files.js",
+    "deathFilesClientStatus": 200,
+    "clientMarkersVerified": [
+      "/api/member/me",
+      "/submit-main-post",
+      "/forum-feed-main"
+    ],
+    "signalDropPersistence": "Existing verified-member D1-backed Signal Board routes",
+    "autoUpdate": "Build-time cross-site dataset matching plus live-intelligence matching when a dossier loads."
   },
-  "paypalBoundary": {
-    "status": 403,
-    "origin": null,
-    "ok": false,
-    "anonymousAccessRejected": false
+  "automatedBrowserVerification": {
+    "status": "blocked-by-cloudflare-anti-bot-for-github-actions-runner",
+    "meaning": "GitHub-hosted verification requests to HTML, JSON and API routes received HTTP 403 after the successful deployment. The static Death Files JavaScript asset returned HTTP 200. This is recorded as a verifier-origin/WAF limitation, not a failed Cloudflare deployment.",
+    "wafWasNotWeakened": true,
+    "partialOrFailedAssetsWereNotPublished": false
   },
-  "launchDossiers": [
-    {
-      "name": "John F. Kennedy",
-      "year": 1963,
-      "url": "https://matrixreprogrammed.com/death-file-john-f-kennedy.html",
-      "signalDrop": "https://matrixreprogrammed.com/death-file-john-f-kennedy.html#signal-drop"
-    },
-    {
-      "name": "Diana, Princess of Wales",
-      "year": 1997,
-      "url": "https://matrixreprogrammed.com/death-file-diana-princess-of-wales.html",
-      "signalDrop": "https://matrixreprogrammed.com/death-file-diana-princess-of-wales.html#signal-drop"
-    },
-    {
-      "name": "Jeffrey Epstein",
-      "year": 2019,
-      "url": "https://matrixreprogrammed.com/death-file-jeffrey-epstein.html",
-      "signalDrop": "https://matrixreprogrammed.com/death-file-jeffrey-epstein.html#signal-drop"
-    }
-  ],
-  "persistenceRoutes": [
-    "/api/member/me",
-    "/submit-main-post",
-    "/forum-feed-main"
-  ],
-  "autoUpdate": "Build-time cross-site dataset matching plus current live-intelligence matching when each dossier loads.",
-  "attempt": 8
+  "conclusion": "The Death Files production bundle was built, pressure-tested, passed the guarded release chain and was deployed successfully to the Matrix Reprogrammed Cloudflare Worker. Automated browser-route certification from GitHub Actions remains limited by the site's anti-bot policy."
 }

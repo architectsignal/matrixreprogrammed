@@ -1,4 +1,5 @@
 import introWorker from './worker-production-intro-hotfix.js';
+import { INTRO_VIDEO_PARTS } from './intro-video-data.generated.js';
 
 const VERSION = '20260725-video-v6';
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/architectsignal/matrixreprogrammed@1bdd748d4968ab9b260e6cbc928fb2286139f261/assets';
@@ -17,9 +18,23 @@ function textResponse(body, status = 200, source = 'unavailable') {
   });
 }
 
-function validBody(body) {
-  const clean = String(body || '').trim();
-  return clean.length >= 1000 ? clean : '';
+function validBody(body, part = 0) {
+  const clean = String(body || '').replace(/\s+/g, '');
+  if (clean.length < 1000 || !/^[A-Za-z0-9+/=]+$/.test(clean)) return '';
+  if (part === 1) {
+    try {
+      const prefix = atob(clean.slice(0, Math.min(clean.length, 128)));
+      if (prefix.length < 8 || prefix.slice(4, 8) !== 'ftyp') return '';
+    } catch {
+      return '';
+    }
+  }
+  return clean;
+}
+
+function loadFromWorkerBundle(part) {
+  const body = validBody(INTRO_VIDEO_PARTS?.[part - 1], part);
+  return body ? { body, source: 'worker-bundled-payload' } : null;
 }
 
 async function loadFromCloudflareAssets(part, request, env) {
@@ -33,7 +48,7 @@ async function loadFromCloudflareAssets(part, request, env) {
       redirect: 'follow'
     }));
     if (!response.ok) return null;
-    const body = validBody(await response.text());
+    const body = validBody(await response.text(), part);
     return body ? { body, source: 'cloudflare-assets' } : null;
   } catch {
     return null;
@@ -47,7 +62,7 @@ async function loadFromRemote(base, part, source) {
       headers: { accept: 'text/plain,*/*;q=0.8' }
     });
     if (!response.ok) return null;
-    const body = validBody(await response.text());
+    const body = validBody(await response.text(), part);
     return body ? { body, source } : null;
   } catch {
     return null;
@@ -55,7 +70,8 @@ async function loadFromRemote(base, part, source) {
 }
 
 async function servePart(part, request, env) {
-  const loaded = await loadFromCloudflareAssets(part, request, env)
+  const loaded = loadFromWorkerBundle(part)
+    || await loadFromCloudflareAssets(part, request, env)
     || await loadFromRemote(CDN_BASE, part, 'jsdelivr-cdn')
     || await loadFromRemote(RAW_BASE, part, 'github-raw-fallback');
 

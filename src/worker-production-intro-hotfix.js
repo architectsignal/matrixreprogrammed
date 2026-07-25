@@ -142,8 +142,9 @@ const HOTFIX_JS = `(() => {
 
 const OVERLAY = `<section class="matrix-intro-v6" data-homepage-intro-v6 data-intro-version="${VERSION}" aria-label="Matrix Reprogrammed cinematic opening"><div class="matrix-intro-v6__stage"><video class="matrix-intro-v6__video" muted autoplay playsinline preload="auto" data-intro-video-v6></video><p class="matrix-intro-v6__status" data-intro-status-v6>Loading Matrix Reprogrammed</p><div class="matrix-intro-v6__controls"><button class="matrix-intro-v6__button" type="button" data-intro-enter-v6>Enter the Matrix</button><button class="matrix-intro-v6__button" type="button" data-intro-skip-v6>Skip Intro</button></div></div></section>`;
 
-function textResponse(body, contentType) {
+function textResponse(body, contentType, status = 200) {
   return new Response(body, {
+    status,
     headers: {
       'content-type': `${contentType}; charset=utf-8`,
       'cache-control': 'no-store, max-age=0',
@@ -155,7 +156,7 @@ function textResponse(body, contentType) {
 async function proxyVideoPart(part) {
   const source = `${RAW_BASE}/matrix-intro-video-${part}.txt`;
   const response = await fetch(source, { cf: { cacheTtl: 300, cacheEverything: true } });
-  if (!response.ok) return textResponse(`video part ${part} unavailable`, 'text/plain');
+  if (!response.ok) return textResponse(`video part ${part} unavailable`, 'text/plain', response.status);
   const body = await response.text();
   return textResponse(body, 'text/plain');
 }
@@ -164,6 +165,7 @@ async function transformHomepage(response) {
   const headers = new Headers(response.headers);
   headers.delete('content-length');
   headers.delete('content-encoding');
+  headers.set('content-type', 'text/html; charset=utf-8');
   headers.set('cache-control', 'no-store, max-age=0, must-revalidate');
   headers.set('x-matrix-intro-version', VERSION);
   const cleanResponse = new Response(response.body, { status: response.status, statusText: response.statusText, headers });
@@ -185,9 +187,8 @@ export default {
     if (url.pathname === '/_matrix-intro-part/2') return proxyVideoPart(2);
 
     const response = await productionWorker.fetch(request, env, ctx);
-    const type = response.headers.get('content-type') || '';
     const isHomepage = request.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html');
-    if (isHomepage && response.ok && type.includes('text/html')) return transformHomepage(response);
+    if (isHomepage && response.ok) return transformHomepage(response);
     return response;
   },
   async scheduled(event, env, ctx) {

@@ -8,7 +8,7 @@ on:
       - .github/one-shot-controlled-production.trigger
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: homepage-intro-production-hotfix
@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -49,10 +49,14 @@ jobs:
           const mp4 = Buffer.from(base64, 'base64');
           if (mp4.length < 10000) throw new Error(`Intro MP4 is too small: ${mp4.length}`);
           if (mp4.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Intro payload is not an MP4');
+          fs.mkdirSync('data', { recursive: true });
+          fs.writeFileSync('data/homepage-intro-packaged-bytes.txt', String(mp4.length));
           console.log(`Packaged validated intro MP4: ${mp4.length} bytes`);
           NODE
 
       - name: Deploy self-hosted homepage intro
+        id: deploy_intro
+        continue-on-error: true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -61,6 +65,9 @@ jobs:
           npx --yes wrangler@latest deploy --config wrangler.intro-hotfix.toml
 
       - name: Verify live forced replay and MP4 payload
+        id: verify_intro
+        if: steps.deploy_intro.outcome == 'success'
+        continue-on-error: true
         run: |
           set -euo pipefail
           for attempt in $(seq 1 30); do
@@ -82,6 +89,7 @@ jobs:
                 .replace(/\s+/g, '');
               const mp4 = Buffer.from(base64, 'base64');
               if (mp4.length < 10000 || mp4.slice(4, 8).toString('ascii') !== 'ftyp') process.exit(1);
+              fs.writeFileSync('data/homepage-intro-live-bytes.txt', String(mp4.length));
               console.log(`VERIFIED: live homepage intro payload decodes to MP4 (${mp4.length} bytes).`);
               NODE
               exit 0
@@ -90,3 +98,52 @@ jobs:
           done
           echo 'Homepage intro verification failed.' >&2
           exit 1
+
+      - name: Record exact hotfix result
+        if: always()
+        env:
+          DEPLOY_OUTCOME: ${{ steps.deploy_intro.outcome }}
+          VERIFY_OUTCOME: ${{ steps.verify_intro.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const deployOutcome = process.env.DEPLOY_OUTCOME || 'unknown';
+          const verifyOutcome = process.env.VERIFY_OUTCOME || 'unknown';
+          const packagedBytes = Number(fs.readFileSync('data/homepage-intro-packaged-bytes.txt', 'utf8')) || 0;
+          const liveBytes = fs.existsSync('data/homepage-intro-live-bytes.txt')
+            ? Number(fs.readFileSync('data/homepage-intro-live-bytes.txt', 'utf8')) || 0
+            : 0;
+          const result = {
+            ok: deployOutcome === 'success' && verifyOutcome === 'success' && liveBytes === packagedBytes && liveBytes > 10000,
+            version: '20260725-video-v6',
+            recordedAt: new Date().toISOString(),
+            runId: Number(process.env.RUN_ID || 0),
+            runAttempt: Number(process.env.RUN_ATTEMPT || 0),
+            headSha: process.env.HEAD_SHA || '',
+            deployOutcome,
+            verifyOutcome,
+            packagedBytes,
+            liveBytes,
+            payloadMatches: liveBytes > 0 && liveBytes === packagedBytes,
+            source: 'Cloudflare ASSETS self-hosted video parts',
+            forcedReplayUrl: 'https://matrixreprogrammed.com/?intro=1'
+          };
+          fs.mkdirSync('data', { recursive: true });
+          fs.writeFileSync('data/homepage-intro-hotfix-result.json', JSON.stringify(result, null, 2) + '\n');
+          console.log(JSON.stringify(result));
+          NODE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/homepage-intro-hotfix-result.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record self-hosted homepage intro result'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Fail when deployment or verification failed
+        if: steps.deploy_intro.outcome != 'success' || steps.verify_intro.outcome != 'success'
+        run: exit 1

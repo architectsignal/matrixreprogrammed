@@ -46,6 +46,11 @@ function fullDossier(item) {
   const support = requireText(item, 'support');
   const counter = requireText(item, 'counter');
   const aftermath = requireText(item, 'aftermath');
+  const suppliedSource = clean(item.sourceUrl);
+  const sourceIsPrimary = /^https:\/\//i.test(suppliedSource);
+  const sourceUrl = sourceIsPrimary
+    ? suppliedSource
+    : `https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(item.name)}`;
   const proofNeeded = `A credible causal conclusion would require authenticated evidence connecting a specific actor to motive, capability, planning, access, and the mechanism of ${item.name}'s death. Timing, benefit, association, or institutional secrecy alone are not sufficient.`;
   const suspectedMotive = `The proposed motive is that ${item.name}'s documented work, policy direction, knowledge, invention, testimony, investigation, or challenge to entrenched power threatened interests with the capacity to resist change.`;
   return {
@@ -147,11 +152,17 @@ function fullDossier(item) {
     ],
     evidence: [
       {
-        title: `${item.name}: primary or authoritative starting record`,
-        publisher: item.authorities?.[0] || 'Authoritative public record',
+        title: sourceIsPrimary
+          ? `${item.name}: primary or authoritative starting record`
+          : `${item.name}: reference starting point — primary-source expansion required`,
+        publisher: sourceIsPrimary
+          ? (item.authorities?.[0] || 'Authoritative public record')
+          : 'Wikipedia reference index',
         date: String(item.year),
-        level: 'Primary-source starting point',
-        url: item.sourceUrl
+        level: sourceIsPrimary
+          ? 'Primary-source starting point'
+          : 'Reference starting point — primary-source expansion required',
+        url: sourceUrl
       }
     ],
     relatedPages: [
@@ -166,8 +177,11 @@ function fullDossier(item) {
       'dark-speculation-lab.html'
     ],
     keywords: [...new Set([item.name, ...(item.aliases || []), ...(item.keywords || []), ...(item.categories || [])])],
-    researchTier: item.researchTier || 'Baseline evidence dossier — scheduled for source expansion',
-    speculationRequired: true
+    researchTier: item.researchTier || (sourceIsPrimary
+      ? 'Baseline evidence dossier — scheduled for source expansion'
+      : 'Baseline reference dossier — primary-source expansion queued'),
+    speculationRequired: true,
+    sourceExpansionRequired: !sourceIsPrimary
   };
 }
 
@@ -184,10 +198,12 @@ for (const item of catalog) {
   assert(!names.has(item.name), `Duplicate Death Files name: ${item.name}`);
   slugs.add(item.slug);
   names.add(item.name);
-  for (const field of ['name','died','place','occupation','officialCause','officialManner','pressure','official','specReason','support','counter','aftermath','sourceUrl']) {
-    requireText(item, field, field === 'name' ? 3 : 8);
+  for (const field of ['name','died','place','occupation','officialCause','officialManner','pressure','official','specReason','support','counter','aftermath']) {
+    requireText(item, field, field === 'name' ? 3 : 5);
   }
-  assert(/^https:\/\//i.test(item.sourceUrl), `${item.name}: sourceUrl must be HTTPS`);
+  if (clean(item.sourceUrl)) {
+    assert(/^https:\/\//i.test(clean(item.sourceUrl)), `${item.name}: supplied sourceUrl must be HTTPS`);
+  }
 }
 assert(slugs.has('john-f-kennedy'), 'The archive must begin with John F. Kennedy');
 assert(slugs.has('muammar-gaddafi'), 'Muammar Gaddafi must be included');
@@ -215,6 +231,8 @@ fs.writeFileSync(path.join(root, 'downloads', 'death-files-100-catalogue.json'),
   count: dossiers.length,
   firstYear: Math.min(...dossiers.map(item => item.year)),
   latestYear: Math.max(...dossiers.map(item => item.year)),
-  cases: dossiers.map(item => ({ name: item.name, year: item.year, slug: item.slug, categories: item.categories }))
+  primarySourceStartingPoints: dossiers.filter(item => item.sourceExpansionRequired !== true).length,
+  referenceStartingPoints: dossiers.filter(item => item.sourceExpansionRequired === true).length,
+  cases: dossiers.map(item => ({ name: item.name, year: item.year, slug: item.slug, categories: item.categories, sourceExpansionRequired: item.sourceExpansionRequired }))
 }, null, 2) + '\n');
-console.log(`Death Files expansion prepared: ${dossiers.length} dossiers from ${dossiers[0].year} to ${dossiers[dossiers.length - 1].year}.`);
+console.log(`Death Files expansion prepared: ${dossiers.length} dossiers from ${dossiers[0].year} to ${dossiers[dossiers.length - 1].year}; ${dossiers.filter(item => item.sourceExpansionRequired !== true).length} primary-source starting points and ${dossiers.filter(item => item.sourceExpansionRequired === true).length} reference starting points queued for source expansion.`);

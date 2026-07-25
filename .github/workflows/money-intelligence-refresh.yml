@@ -73,57 +73,85 @@ jobs:
           node scripts/build-detailed-wealth-guides.js
           node scripts/detailed-wealth-guides-test.js
 
-      - name: Commit generated public system
+      - name: Publish generated public system atomically
+        shell: bash
         run: |
           set -euo pipefail
+          files=(
+            data/money-intelligence-registry.json
+            data/money-overlap-graph.json
+            data/money-search-index.json
+            data/money-intelligence-brief-feed.json
+            data/money-entity-crosswalk.json
+            data/money-profile-index.json
+            data/money-relationship-feed.json
+            data/money-timeline-feed.json
+            data/money-intelligence-depth-report.json
+            data/money-research-candidate-expansion.json
+            data/money-top100-research-report.json
+            data/wealth-methods.json
+            data/making-money-core.json
+            data/detailed-wealth-guides.json
+            data/history/money-intelligence
+            follow-the-money
+            making-money/guides
+            downloads/wealth-guides
+            downloads/detailed-wealth-guides-test.json
+            downloads/money-depth-integration-test.json
+            downloads/money-public-market-refresh.json
+            scripts/build-deep-pdf-intelligence.mjs
+            scripts/build-all-branded-download-pdfs.js
+            money-expansion.css
+            money-overlap.css
+            money-category.js
+            making-money-methods.js
+            making-money.js
+            money-command-center.js
+            money-search.html
+            money-search.js
+            money-graph.html
+            money-graph.js
+            money-profile.html
+            money-profile.js
+            money-overlap-profile-enhancer.js
+            follow-the-money.html
+            making-money.html
+            index.html
+            welcome-gate.js
+            daily-command-brief.html
+            daily-brain-brief.html
+            download-center.html
+            newsletter.html
+            optin-center.html
+            src/worker-intelligence-reports.js
+            search-index.json
+          )
+          tar -czf /tmp/money-generated-system.tgz "${files[@]}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            data/money-intelligence-registry.json \
-            data/money-overlap-graph.json \
-            data/money-search-index.json \
-            data/money-intelligence-brief-feed.json \
-            data/money-entity-crosswalk.json \
-            data/money-profile-index.json \
-            data/money-relationship-feed.json \
-            data/money-timeline-feed.json \
-            data/money-intelligence-depth-report.json \
-            data/money-research-candidate-expansion.json \
-            data/money-top100-research-report.json \
-            data/wealth-methods.json \
-            data/making-money-core.json \
-            data/detailed-wealth-guides.json \
-            data/history/money-intelligence \
-            follow-the-money \
-            making-money/guides \
-            downloads/wealth-guides \
-            downloads/detailed-wealth-guides-test.json \
-            downloads/money-depth-integration-test.json \
-            downloads/money-public-market-refresh.json \
-            scripts/build-deep-pdf-intelligence.mjs \
-            scripts/build-all-branded-download-pdfs.js \
-            money-expansion.css money-overlap.css money-category.js making-money-methods.js making-money.js \
-            money-command-center.js money-search.html money-search.js money-graph.html money-graph.js \
-            money-profile.html money-profile.js money-overlap-profile-enhancer.js \
-            follow-the-money.html making-money.html index.html welcome-gate.js \
-            daily-command-brief.html daily-brain-brief.html download-center.html \
-            newsletter.html optin-center.html src/worker-intelligence-reports.js \
-            search-index.json
-          if git diff --cached --quiet; then
-            echo "No generated changes."
-            exit 0
-          fi
-          git commit -m "Refresh complete Top 100 capital universes, profiles and overlap map [deploy]"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
+            git reset --hard origin/main
+            tar -xzf /tmp/money-generated-system.tgz
+            git add "${files[@]}"
+            if git diff --cached --quiet; then
+              echo "No generated changes."
               exit 0
             fi
-            git rebase --abort 2>/dev/null || true
-            echo "Main advanced during money refresh; retrying from the latest branch."
+            git commit -m "Refresh complete Top 100 capital universes, profiles and overlap map [deploy]"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main advanced during money refresh; restoring generated outputs onto the newest main."
           done
-          echo "Unable to publish refreshed money outputs after three attempts."
+          echo "Unable to publish refreshed money outputs after five atomic attempts."
           exit 1
+
+      - name: Restore proof files for artifact upload
+        if: always()
+        shell: bash
+        run: |
+          if [ -f /tmp/money-generated-system.tgz ]; then tar -xzf /tmp/money-generated-system.tgz; fi
 
       - name: Upload wealth and overlap proof
         if: always()

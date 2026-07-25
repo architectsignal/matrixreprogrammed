@@ -1,0 +1,97 @@
+name: Diagnose Power-Family Production Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/power-family-refresh-diagnostic.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  diagnose-refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Run every authorized refresh command independently
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads
+          : > downloads/power-family-refresh-results.tsv
+          commands=(
+            'node scripts/repair-investigation-source-registry.js'
+            'node scripts/run-investigation-machine.js daily'
+            'node scripts/update-live-intel.js'
+            'node scripts/record-live-intel-check.js'
+            'node scripts/update-seven-day-intel.js'
+            'node scripts/build-outcome-briefings.js'
+            'node scripts/build-daily-brain-brief.js'
+            'node scripts/build-investigation-pages.js'
+            'node scripts/build-mission-intelligence-10.js'
+            'node scripts/build-live-intel-machine.js'
+            'node scripts/patch-conclusion-integrity-cards.js'
+            'node scripts/build-behind-the-curtain-tier-registry.js'
+            'node scripts/patch-behind-the-curtain-tier-ui.js'
+            'node scripts/build-behind-the-curtain.js'
+          )
+          index=0
+          for command in "${commands[@]}"; do
+            index=$((index+1))
+            log="downloads/power-family-refresh-$(printf '%02d' "$index").log"
+            echo "===== $command ====="
+            bash -o pipefail -c "$command" >"$log" 2>&1
+            status=$?
+            printf '%s\t%s\t%s\n' "$index" "$status" "$command" >> downloads/power-family-refresh-results.tsv
+            tail -n 80 "$log"
+          done
+          node - <<'NODE'
+          const fs=require('fs');
+          const path=require('path');
+          const rows=fs.readFileSync('downloads/power-family-refresh-results.tsv','utf8').trim().split(/\n/).filter(Boolean).map(line=>{
+            const [index,status,...commandParts]=line.split('\t');
+            const command=commandParts.join('\t');
+            const logPath=`downloads/power-family-refresh-${String(index).padStart(2,'0')}.log`;
+            const log=fs.existsSync(logPath)?fs.readFileSync(logPath,'utf8'):'';
+            return {index:Number(index),status:Number(status),command,logTail:log.split(/\n/).slice(-100).join('\n')};
+          });
+          const failed=rows.filter(row=>row.status!==0);
+          const report={ok:failed.length===0,generatedAt:new Date().toISOString(),commit:process.env.GITHUB_SHA,commands:rows,firstFailure:failed[0]||null};
+          fs.mkdirSync('data',{recursive:true});
+          fs.writeFileSync('data/power-family-refresh-diagnostic.json',`${JSON.stringify(report,null,2)}\n`);
+          NODE
+      - name: Commit diagnostic report
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase origin main
+          git add data/power-family-refresh-diagnostic.json
+          if git diff --cached --quiet; then
+            echo 'Diagnostic report already current.'
+          else
+            git commit -m 'Record Power-Family refresh diagnostic'
+            git push origin HEAD:main
+          fi
+      - name: Fail if refresh remains blocked
+        run: node -e "const r=require('./data/power-family-refresh-diagnostic.json');if(!r.ok){console.error(r.firstFailure);process.exit(1)}"

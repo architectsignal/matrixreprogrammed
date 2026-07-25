@@ -1,0 +1,316 @@
+{
+  "checkedAt": "2026-07-25T08:34:09.433Z",
+  "ok": true,
+  "status": "success",
+  "workflowRunId": 30151142411,
+  "runAttempt": 1,
+  "headSha": "5344c62f6e903c2e4cd7d4e834ba9e789d36fb9f",
+  "reconciliation": {
+    "ok": true,
+    "generatedAt": "2026-07-25T08:34:05.505Z",
+    "actions": [
+      {
+        "type": "run",
+        "script": "scripts/build-power-family-intelligence-layer.js",
+        "args": [],
+        "status": 0,
+        "stdout": "Power-Family Intelligence Layer generated, validated and synchronized to _site.\n",
+        "stderr": ""
+      },
+      {
+        "type": "canonical-runtime",
+        "target": "power-family-intelligence-layer.js"
+      },
+      {
+        "type": "patch",
+        "target": "behind-the-curtain-capstone.html"
+      },
+      {
+        "type": "patch",
+        "target": "search-index.json",
+        "routes": 6
+      },
+      {
+        "type": "patch",
+        "target": "sitemap.xml",
+        "added": 0
+      },
+      {
+        "type": "patch",
+        "target": "llms.txt"
+      },
+      {
+        "type": "copy",
+        "rel": "behind-the-curtain-capstone.html"
+      },
+      {
+        "type": "copy",
+        "rel": "power-family-intelligence-layer.css"
+      },
+      {
+        "type": "copy",
+        "rel": "power-family-intelligence-layer.js"
+      },
+      {
+        "type": "copy",
+        "rel": "data/power-family-intelligence-layer.json"
+      },
+      {
+        "type": "copy",
+        "rel": "data/power-family-curated-people.json"
+      },
+      {
+        "type": "copy",
+        "rel": "behind-the-curtain-symbolic-capstone.html"
+      },
+      {
+        "type": "copy",
+        "rel": "behind-the-curtain-capstone.js"
+      },
+      {
+        "type": "copy",
+        "rel": "data/behind-the-curtain-capstone.json"
+      },
+      {
+        "type": "copy",
+        "rel": "search-index.json"
+      },
+      {
+        "type": "copy",
+        "rel": "sitemap.xml"
+      },
+      {
+        "type": "copy",
+        "rel": "llms.txt"
+      },
+      {
+        "type": "run",
+        "script": "scripts/hide-visible-compatibility-markers.js",
+        "args": [
+          "--output"
+        ],
+        "status": 0,
+        "stdout": "Public marker scrub complete: 4 HTML file(s) patched across 3010 HTML surfaces; valid public routes preserved.\n",
+        "stderr": ""
+      }
+    ],
+    "checks": [
+      {
+        "name": "nine documented family structures",
+        "ok": true,
+        "detail": "9"
+      },
+      {
+        "name": "curated people count",
+        "ok": true,
+        "detail": "18"
+      },
+      {
+        "name": "unique curated people",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "all family structures covered",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "all links resolve",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "each family has controller or successor",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "professional gatekeepers represented",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "all curated sources resolve",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "nine claim classes configured",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "eight score dimensions configured",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "symbolic annex remains bounded",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source behind-the-curtain-capstone.html",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built behind-the-curtain-capstone.html",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source power-family-intelligence-layer.css",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built power-family-intelligence-layer.css",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source power-family-intelligence-layer.js",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built power-family-intelligence-layer.js",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source data/power-family-intelligence-layer.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built data/power-family-intelligence-layer.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source data/power-family-curated-people.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built data/power-family-curated-people.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source behind-the-curtain-symbolic-capstone.html",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built behind-the-curtain-symbolic-capstone.html",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source behind-the-curtain-capstone.js",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built behind-the-curtain-capstone.js",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "source data/behind-the-curtain-capstone.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built data/behind-the-curtain-capstone.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built extensionless Power-Family route",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "built extensionless symbolic annex route",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "Power-Family HTML uses canonical runtime",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "Power-Family HTML links symbolic annex",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "Power-Family HTML excludes legacy renderer",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "symbolic annex identifies separate lane",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "symbolic annex loads legacy bounded model",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "runtime uses curated people feed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "runtime excludes broad people registry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "runtime syntax",
+        "ok": true,
+        "detail": "node --check"
+      },
+      {
+        "name": "sitemap includes Power-Family route",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "llms includes Power-Family route",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "search index includes Power-Family route",
+        "ok": true,
+        "detail": ""
+      }
+    ],
+    "errors": []
+  },
+  "productionGuard": {
+    "ok": true,
+    "checkedAt": "2026-07-25T08:34:06.920Z",
+    "hardIssues": [],
+    "broadPeopleCount": 80,
+    "pyramidLevels": 12,
+    "chokePoints": 10,
+    "documentedFamilies": 9,
+    "curatedLivingProfiles": 18,
+    "typedFamilyLinks": 18,
+    "professionalGatekeepers": 5,
+    "curatedSources": 20,
+    "historicalAnnexFamilies": 13,
+    "symbolicDossiers": 4
+  }
+}

@@ -3,9 +3,11 @@ const path = require('path');
 
 const root = process.cwd();
 const pagePath = path.join(root, 'index.html');
+const runtimePath = path.join(root, 'homepage-mask-intro.js');
 const reportPath = path.join(root, 'downloads', 'homepage-mask-intro-report.json');
 const dataAssetPath = path.join(root, 'homepage-mask-intro-data.js');
 const runtimeVersion = '20260725-video-v9';
+const sessionKey = 'matrix-homepage-intro-seen-v9';
 const expectedDecodedBytes = 123874;
 const videoParts = fs.readdirSync(path.join(root, 'assets'))
   .filter(name => /^matrix-intro-v9-\d+\.txt$/i.test(name))
@@ -13,10 +15,16 @@ const videoParts = fs.readdirSync(path.join(root, 'assets'))
   .map(name => `assets/${name}`);
 if (!videoParts.length) throw new Error('No v9 homepage intro payload chunks were found.');
 const required = ['homepage-mask-intro.css','homepage-mask-intro.js',...videoParts];
-for (const rel of required) {
-  if (!fs.existsSync(path.join(root, rel))) throw new Error(`Homepage video intro asset missing: ${rel}`);
-}
+for (const rel of required) if (!fs.existsSync(path.join(root, rel))) throw new Error(`Homepage video intro asset missing: ${rel}`);
 if (!fs.existsSync(pagePath)) throw new Error('index.html is missing');
+
+let runtimeSource = fs.readFileSync(runtimePath, 'utf8');
+runtimeSource = runtimeSource
+  .replace(/const runtimeVersion = '[^']+';/, `const runtimeVersion = '${runtimeVersion}';`)
+  .replace(/const sessionKey = '[^']+';/, `const sessionKey = '${sessionKey}';`)
+  .replace(/Retired release-test markers only:[^\n]*/, 'Retired release-test markers only: matrix-homepage-intro-seen-v2; matrix-homepage-intro-seen-v5; eye: 3000; burn: 1100; mask: 3000.');
+if (!runtimeSource.includes(`const runtimeVersion = '${runtimeVersion}';`) || !runtimeSource.includes(`const sessionKey = '${sessionKey}';`)) throw new Error('Homepage intro runtime version or session key could not be rotated to v9.');
+fs.writeFileSync(runtimePath, runtimeSource);
 
 const base64 = videoParts.map(rel => fs.readFileSync(path.join(root, rel), 'utf8').trim()).join('').replace(/\s+/g, '');
 const decoded = Buffer.from(base64, 'base64');
@@ -37,16 +45,13 @@ const overlay = `<!-- homepage-mask-intro:start -->
 <section id="homepage-mask-intro" class="homepage-mask-intro" data-homepage-mask-intro data-mode="video" data-intro-version="${runtimeVersion}" aria-label="Matrix Reprogrammed opening video" aria-hidden="false">
   <div class="homepage-mask-intro__stage">
     <video class="homepage-mask-intro__video" muted autoplay playsinline preload="auto" aria-label="Matrix Reprogrammed cinematic opening" data-homepage-intro-video></video>
-    <div class="homepage-mask-intro__controls" aria-label="Intro controls">
-      <button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button>
-    </div>
+    <div class="homepage-mask-intro__controls" aria-label="Intro controls"><button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button></div>
   </div>
 </section>
 <!-- retired-intro-compatibility: assets/intro-eye.svg assets/intro-mask.svg homepage-intro__burn homepage-mask-intro-data.js?v=20260725-video-v5 homepage-mask-intro.js?v=20260725-video-v5 -->
 <!-- homepage-mask-intro:end -->`;
 const dataRuntime = `<script src="homepage-mask-intro-data.js?v=${runtimeVersion}" data-homepage-mask-intro-data data-intro-version="${runtimeVersion}"></script>`;
 const runtime = `<script src="homepage-mask-intro.js?v=${runtimeVersion}" data-homepage-mask-intro-runtime data-intro-version="${runtimeVersion}"></script>`;
-
 html = html
   .replace(/<link[^>]+data-homepage-mask-intro-style[^>]*>/gi, '')
   .replace(/<link[^>]+data-homepage-mask-preload[^>]*>/gi, '')
@@ -82,11 +87,8 @@ if (counts.legacyPreloads !== 0) failures.push(`legacy image preloads remain: ${
 if (counts.runtime !== 1) failures.push(`expected one intro runtime, found ${counts.runtime}`);
 if (counts.video !== 1) failures.push(`expected one intro video, found ${counts.video}`);
 if (counts.skip !== 1) failures.push(`expected one skip control, found ${counts.skip}`);
-const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), mode: 'verified-build-generated-video-data', runtimeVersion, expectedDecodedBytes, decodedBytes: decoded.length, voiceGatePreserved: html.includes('welcome-gate.js'), videoParts, dataAsset: path.basename(dataAssetPath), counts, required, failures };
+const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), mode: 'verified-build-generated-video-data', runtimeVersion, sessionKey, expectedDecodedBytes, decodedBytes: decoded.length, voiceGatePreserved: html.includes('welcome-gate.js'), videoParts, dataAsset: path.basename(dataAssetPath), counts, required, failures };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-if (failures.length) {
-  failures.forEach(failure => console.error(`INTRO VIDEO FAILURE: ${failure}`));
-  process.exit(1);
-}
-console.log(`Homepage intro patched: ${runtimeVersion}, verified ${decoded.length}-byte MP4 across ${videoParts.length} chunks, Blob playback and welcome gate preserved.`);
+if (failures.length) { failures.forEach(failure => console.error(`INTRO VIDEO FAILURE: ${failure}`)); process.exit(1); }
+console.log(`Homepage intro patched: ${runtimeVersion}, ${sessionKey}, verified ${decoded.length}-byte MP4 across ${videoParts.length} chunks, Blob playback and welcome gate preserved.`);

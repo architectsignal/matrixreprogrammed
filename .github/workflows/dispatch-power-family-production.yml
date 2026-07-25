@@ -8,19 +8,134 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
+
+concurrency:
+  group: power-family-production-dispatch
+  cancel-in-progress: false
 
 jobs:
   dispatch-controlled-production:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch existing guarded production workflow
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Dispatch or reuse guarded production workflow
+        id: dispatch
         env:
           GH_TOKEN: ${{ github.token }}
+        shell: bash
         run: |
           set -euo pipefail
-          gh workflow run deploy.yml \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main \
-            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
-          echo 'Controlled production workflow dispatched for the latest main branch.'
+          repo="$GITHUB_REPOSITORY"
+          requested_sha="$(git rev-parse HEAD)"
+          now_epoch="$(date -u +%s)"
+
+          active_run="$(gh api "repos/$repo/actions/workflows/deploy.yml/runs?per_page=20" \
+            --jq '.workflow_runs | map(select(.event == "workflow_dispatch" and (.status == "queued" or .status == "in_progress"))) | sort_by(.created_at) | reverse | .[0] // empty')"
+
+          if [ -n "$active_run" ]; then
+            run_id="$(printf '%s' "$active_run" | jq -r '.id')"
+            echo "Reusing active controlled production run $run_id."
+          else
+            dispatch_epoch="$(date -u +%s)"
+            gh workflow run deploy.yml \
+              --repo "$repo" \
+              --ref main \
+              -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+            echo 'Controlled production workflow dispatched for latest main.'
+
+            run_id=''
+            for attempt in $(seq 1 24); do
+              candidate="$(gh api "repos/$repo/actions/workflows/deploy.yml/runs?per_page=20" \
+                --jq '.workflow_runs | map(select(.event == "workflow_dispatch")) | sort_by(.created_at) | reverse | .[0] // empty')"
+              if [ -n "$candidate" ]; then
+                candidate_created="$(printf '%s' "$candidate" | jq -r '.created_at')"
+                candidate_epoch="$(date -u -d "$candidate_created" +%s)"
+                if [ "$candidate_epoch" -ge $((dispatch_epoch - 30)) ]; then
+                  active_run="$candidate"
+                  run_id="$(printf '%s' "$candidate" | jq -r '.id')"
+                  break
+                fi
+              fi
+              sleep 5
+            done
+            test -n "$run_id" || { echo 'Unable to resolve the newly dispatched production run.'; exit 1; }
+          fi
+
+          run_json="$(gh api "repos/$repo/actions/runs/$run_id")"
+          run_url="$(printf '%s' "$run_json" | jq -r '.html_url')"
+          run_status="$(printf '%s' "$run_json" | jq -r '.status')"
+          run_conclusion="$(printf '%s' "$run_json" | jq -r '.conclusion // ""')"
+          run_created="$(printf '%s' "$run_json" | jq -r '.created_at')"
+          run_head_sha="$(printf '%s' "$run_json" | jq -r '.head_sha')"
+
+          {
+            echo "run_id=$run_id"
+            echo "run_url=$run_url"
+            echo "run_status=$run_status"
+            echo "run_conclusion=$run_conclusion"
+            echo "run_created=$run_created"
+            echo "run_head_sha=$run_head_sha"
+            echo "requested_sha=$requested_sha"
+            echo "recorded_epoch=$now_epoch"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit production dispatch receipt
+        env:
+          RUN_ID: ${{ steps.dispatch.outputs.run_id }}
+          RUN_URL: ${{ steps.dispatch.outputs.run_url }}
+          RUN_STATUS: ${{ steps.dispatch.outputs.run_status }}
+          RUN_CONCLUSION: ${{ steps.dispatch.outputs.run_conclusion }}
+          RUN_CREATED: ${{ steps.dispatch.outputs.run_created }}
+          RUN_HEAD_SHA: ${{ steps.dispatch.outputs.run_head_sha }}
+          REQUESTED_SHA: ${{ steps.dispatch.outputs.requested_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase origin main
+          observed_sha="$(git rev-parse HEAD)"
+          mkdir -p data
+          node - <<'NODE'
+          const fs = require('fs');
+          const payload = {
+            authorized: true,
+            system: 'Behind the Curtain: Power-Family Intelligence Layer',
+            confirmationContract: 'DEPLOY MATRIX REPROGRAMMED',
+            recordedAt: new Date().toISOString(),
+            requestedMainSha: process.env.REQUESTED_SHA,
+            observedMainShaBeforeReceipt: process.env.OBSERVED_SHA,
+            controlledProductionRun: {
+              id: Number(process.env.RUN_ID),
+              url: process.env.RUN_URL,
+              status: process.env.RUN_STATUS,
+              conclusion: process.env.RUN_CONCLUSION || null,
+              createdAt: process.env.RUN_CREATED,
+              headSha: process.env.RUN_HEAD_SHA
+            },
+            deploymentBoundary: 'This receipt proves that the existing guarded production workflow was launched or reused. Production is only considered live after that workflow succeeds and its live verification step passes.'
+          };
+          fs.writeFileSync('data/power-family-production-dispatch.json', `${JSON.stringify(payload, null, 2)}\n`);
+          NODE
+          git add data/power-family-production-dispatch.json
+          if git diff --cached --quiet; then
+            echo 'Production dispatch receipt is already current.'
+          else
+            git commit -m 'Record authorized Power-Family production dispatch'
+            git push origin HEAD:main
+          fi
+        env:
+          RUN_ID: ${{ steps.dispatch.outputs.run_id }}
+          RUN_URL: ${{ steps.dispatch.outputs.run_url }}
+          RUN_STATUS: ${{ steps.dispatch.outputs.run_status }}
+          RUN_CONCLUSION: ${{ steps.dispatch.outputs.run_conclusion }}
+          RUN_CREATED: ${{ steps.dispatch.outputs.run_created }}
+          RUN_HEAD_SHA: ${{ steps.dispatch.outputs.run_head_sha }}
+          REQUESTED_SHA: ${{ steps.dispatch.outputs.requested_sha }}
+          OBSERVED_SHA: ${{ github.sha }}

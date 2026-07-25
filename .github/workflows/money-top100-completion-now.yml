@@ -1,0 +1,135 @@
+name: Complete Money Top 100 Universes Now
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/money-top100-completion-now.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: money-top100-completion-now
+  cancel-in-progress: true
+
+jobs:
+  complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Complete and verify all capital universes
+        id: complete
+        continue-on-error: true
+        shell: bash
+        env:
+          MATRIX_MONEY_REFRESH: '1'
+          MATRIX_MONEY_REQUIRE_LIVE: '1'
+        run: |
+          set -o pipefail
+          mkdir -p downloads data
+          : > downloads/money-top100-completion.log
+          node --check scripts/expand-money-research-candidates.js 2>&1 | tee -a downloads/money-top100-completion.log || exit ${PIPESTATUS[0]}
+          node --check scripts/refresh-money-public-market-rankings.js 2>&1 | tee -a downloads/money-top100-completion.log || exit ${PIPESTATUS[0]}
+          node --check scripts/enrich-money-intelligence-depth.js 2>&1 | tee -a downloads/money-top100-completion.log || exit ${PIPESTATUS[0]}
+          node --check scripts/finalize-money-intelligence-depth.js 2>&1 | tee -a downloads/money-top100-completion.log || exit ${PIPESTATUS[0]}
+          node scripts/finalize-money-intelligence-depth.js 2>&1 | tee -a downloads/money-top100-completion.log
+
+      - name: Record and publish result
+        if: always()
+        shell: bash
+        env:
+          PIPELINE_OUTCOME: ${{ steps.complete.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          TESTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs=require('fs');
+          const read=p=>{try{return JSON.parse(fs.readFileSync(p,'utf8'))}catch{return null}};
+          const integration=read('downloads/money-depth-integration-test.json');
+          const expansion=read('data/money-research-candidate-expansion.json');
+          const depth=read('data/money-intelligence-depth-report.json');
+          const payload={
+            ok:process.env.PIPELINE_OUTCOME==='success'&&integration?.ok===true&&expansion?.ok===true&&depth?.ok===true,
+            observedAt:new Date().toISOString(),
+            runId:Number(process.env.RUN_ID),
+            testedSha:process.env.TESTED_SHA,
+            pipelineOutcome:process.env.PIPELINE_OUTCOME,
+            totalCandidates:depth?.summary?.totalRecords??null,
+            verifiedMeasures:depth?.summary?.verifiedMeasures??null,
+            identityProfiles:depth?.summary?.identityProfiles??null,
+            relationships:depth?.summary?.relationships??null,
+            incompleteCandidates:integration?.incompleteCandidates??null,
+            publicMarketFailures:integration?.publicMarketFailures??null
+          };
+          fs.writeFileSync('data/money-top100-completion-status.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+          cp data/money-top100-completion-status.json /tmp/money-top100-completion-status.json
+          if [ -f downloads/money-top100-completion.log ]; then cp downloads/money-top100-completion.log /tmp/money-top100-completion.log; fi
+          if [ "$PIPELINE_OUTCOME" != success ]; then
+            git reset --hard HEAD
+            mkdir -p data downloads
+            cp /tmp/money-top100-completion-status.json data/money-top100-completion-status.json
+            if [ -f /tmp/money-top100-completion.log ]; then cp /tmp/money-top100-completion.log downloads/money-top100-completion.log; fi
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/money-top100-completion-status.json
+          if [ "$PIPELINE_OUTCOME" = success ]; then
+            git add \
+              data/money-intelligence-registry.json \
+              data/money-overlap-graph.json \
+              data/money-search-index.json \
+              data/money-intelligence-brief-feed.json \
+              data/money-entity-crosswalk.json \
+              data/money-profile-index.json \
+              data/money-relationship-feed.json \
+              data/money-timeline-feed.json \
+              data/money-intelligence-depth-report.json \
+              data/money-research-candidate-expansion.json \
+              data/money-top100-research-report.json \
+              search-index.json \
+              money-profile.html money-profile.js
+          fi
+          git commit -m "Complete and verify all 20 capital Top 100 universes [deploy]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1
+
+      - name: Upload completion proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: money-top100-completion-${{ github.run_id }}
+          path: |
+            downloads/money-top100-completion.log
+            downloads/money-depth-integration-test.json
+            downloads/money-public-market-refresh.json
+            data/money-top100-completion-status.json
+            data/money-research-candidate-expansion.json
+            data/money-intelligence-depth-report.json
+            data/money-overlap-graph.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Fail closed on incomplete result
+        if: always()
+        shell: bash
+        run: |
+          node -e "const x=require('./data/money-top100-completion-status.json');if(!x.ok)process.exit(1)"

@@ -17,6 +17,38 @@ function run(script) {
   });
 }
 
+function removeStaleCapstoneRuntime() {
+  const candidates = [
+    path.join(root, 'behind-the-curtain-capstone.html'),
+    path.join(site, 'behind-the-curtain-capstone.html'),
+    path.join(site, 'behind-the-curtain-capstone')
+  ];
+  let removed = 0;
+  for (const file of candidates) {
+    if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = before
+      .replace(/\s*<script\b[^>]*\bsrc=(['"])(?:\.\/|\/)?search-system\.js(?:\?[^'"]*)?\1[^>]*>\s*<\/script>/gi, '')
+      .replace(/\s*<script\b[^>]*\bsrc=(['"])(?:\.\/|\/)?search-system\.js(?:\?[^'"]*)?\1[^>]*\/?\s*>/gi, '');
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      removed++;
+    }
+    if (/\bsrc=(['"])(?:\.\/|\/)?search-system\.js(?:\?[^'"]*)?\1/i.test(after)) {
+      throw new Error(`Stale search-system.js reference remains in ${path.relative(root, file)}`);
+    }
+    if (!after.includes('power-family-intelligence-layer.js')) {
+      throw new Error(`Canonical Power-Family runtime missing from ${path.relative(root, file)}`);
+    }
+  }
+  return removed;
+}
+
+// Generated pages can be rewritten by legacy builders. Remove the retired Capstone
+// runtime before budgets and fingerprinting so source, extensionless output and HTML
+// output share the same canonical evidence-led client.
+const staleCapstoneReferencesRemoved = removeStaleCapstoneRuntime();
+
 // Cache policy, runtime optimization, performance budgets and asset fingerprinting
 // are one final Cloudflare contract. Standard CI and production therefore test the
 // same deployable bundle rather than relying on production-only reconciliation.
@@ -99,7 +131,7 @@ const unresolved = [];
 const unversioned = [];
 
 function rewriteTag(tag, pageRel, attribute) {
-  return tag.replace(new RegExp(`\\b${attribute}=(['\"])([^'\"]+)\\1`, 'i'), (match, quote, reference) => {
+  return tag.replace(new RegExp(`\\b${attribute}=(['"])([^'"]+)\\1`, 'i'), (match, quote, reference) => {
     const target = resolveLocal(pageRel, reference);
     if (!target) return match;
     const version = assets.get(target);
@@ -142,6 +174,7 @@ const report = {
   pagesScanned,
   pagesChanged,
   referencesVersioned,
+  staleCapstoneReferencesRemoved,
   unresolved: unresolved.slice(0, 200),
   unversioned: unversioned.slice(0, 200),
   unsafeImmutable,
@@ -149,7 +182,7 @@ const report = {
   performanceOwner: 'scripts/apply-runtime-performance-optimizations.js',
   performanceBudget: 'scripts/runtime-performance-budget-test.js',
   cacheBlocksChecked: [...headerBlocks.keys()],
-  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. The exact optimized bundle passes performance budgets before fingerprinting, while unversioned scripts and styles use revalidation rather than year-long immutable caching.'
+  boundary: 'Every local JavaScript and stylesheet reference in Cloudflare output receives a content hash. The retired search-system.js Capstone runtime is removed before validation; the exact optimized bundle passes performance budgets before fingerprinting.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
@@ -159,4 +192,4 @@ if (!report.ok) {
   unversioned.slice(0, 20).forEach(item => console.error(`Unversioned asset reference: ${item.page} -> ${item.reference}`));
   process.exit(1);
 }
-console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted after the optimized bundle passed its performance budget.`);
+console.log(`Cloudflare assets versioned: ${referencesVersioned} reference(s) across ${pagesChanged}/${pagesScanned} page(s); ${assets.size} JS/CSS asset(s) fingerprinted after the optimized bundle passed its performance budget; ${staleCapstoneReferencesRemoved} stale Capstone reference(s) removed.`);

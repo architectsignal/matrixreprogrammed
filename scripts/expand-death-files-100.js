@@ -8,7 +8,8 @@ const parts = [1, 2, 3, 4].map(index => {
   if (!fs.existsSync(file)) throw new Error(`Death Files catalogue segment missing: ${file}`);
   return fs.readFileSync(file, 'utf8').trim();
 });
-const catalog = JSON.parse(zlib.gunzipSync(Buffer.from(parts.join(''), 'base64')).toString('utf8'));
+const payload = JSON.parse(zlib.gunzipSync(Buffer.from(parts.join(''), 'base64')).toString('utf8'));
+const catalog = Array.isArray(payload) ? payload : payload?.cases;
 const nowYear = new Date().getUTCFullYear();
 
 function assert(condition, message) {
@@ -170,7 +171,7 @@ function fullDossier(item) {
   };
 }
 
-assert(Array.isArray(catalog), 'Death Files compact catalogue must be an array');
+assert(Array.isArray(catalog), 'Death Files compact catalogue must contain a cases array');
 assert(catalog.length === 100, `Death Files catalogue must contain exactly 100 cases; found ${catalog.length}`);
 const slugs = new Set();
 const names = new Set();

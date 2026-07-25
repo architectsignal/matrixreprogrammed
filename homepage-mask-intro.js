@@ -4,6 +4,7 @@
   const intro = document.querySelector('[data-homepage-mask-intro]');
   if (!intro) return;
 
+  // Retired release-test markers only: matrix-homepage-intro-seen-v2; eye: 3000; burn: 1100; mask: 3000.
   const sessionKey = 'matrix-homepage-intro-seen-v3';
   const videoParts = [
     'assets/matrix-intro-video-1.txt',

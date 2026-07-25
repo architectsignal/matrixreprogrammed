@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'newsletter.html'
       - 'behind-the-curtain-capstone.html'
       - 'behind-the-curtain-symbolic-capstone.html'
       - 'power-family-intelligence-layer.js'
@@ -17,6 +18,7 @@ on:
       - 'scripts/build-power-family-intelligence-layer.js'
       - 'scripts/power-family-intelligence-layer.runtime.js'
       - 'scripts/reconcile-power-family-capstone.js'
+      - 'scripts/patch-newsletter-public-page.js'
       - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
@@ -46,6 +48,7 @@ jobs:
           node --check behind-the-curtain-capstone.js
           node --check scripts/power-family-intelligence-layer.runtime.js
           node --check scripts/reconcile-power-family-capstone.js
+          node --check scripts/patch-newsletter-public-page.js
           node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
 
@@ -73,6 +76,7 @@ jobs:
           for file in \
             index.html \
             start-here.html \
+            newsletter.html \
             behind-the-curtain.html \
             behind-the-curtain-access.html \
             behind-the-curtain-access-v2.js \
@@ -85,6 +89,7 @@ jobs:
           done
           cp index.html _site/index
           cp start-here.html _site/start-here
+          cp newsletter.html _site/newsletter
           cp behind-the-curtain.html _site/behind-the-curtain
           cp behind-the-curtain-access.html _site/behind-the-curtain-access
           cp behind-the-curtain-capstone.html _site/behind-the-curtain-capstone
@@ -104,10 +109,10 @@ jobs:
       - name: Reconcile canonical Capstones and discovery routes
         run: node scripts/reconcile-power-family-capstone.js
 
-      - name: Run production contract guard and public gateway checks
+      - name: Run production contract guard, newsletter and public gateway checks
         run: node scripts/behind-the-curtain-production-guard.js
 
-      - name: Verify marker cleanup and public gateways
+      - name: Verify marker cleanup and public surfaces
         run: |
           node scripts/hide-visible-compatibility-markers.js --output
           if grep -RIl 'preservedaftervisiblede-duplication' _site --include='*.html' --exclude-dir='data'; then
@@ -116,6 +121,10 @@ jobs:
           fi
           grep -q 'power-family-public-gateway:start' _site/index.html
           grep -q 'power-family-public-gateway:start' _site/start-here.html
+          grep -q 'newsletter-public-value:start' _site/newsletter.html
+          grep -q 'placeholder="Name"' _site/newsletter.html
+          grep -q 'placeholder="you@example.com"' _site/newsletter.html
+          ! grep -q 'reader field=' _site/newsletter.html
 
       - name: Upload integrity reports
         if: always()
@@ -126,6 +135,7 @@ jobs:
             downloads/power-family-capstone-reconcile.json
             downloads/behind-the-curtain-production-guard.json
             downloads/power-family-public-gateways.json
+            downloads/newsletter-public-page-repair.json
           if-no-files-found: warn
           retention-days: 30
 
@@ -151,7 +161,8 @@ jobs:
             headSha:process.env.HEAD_SHA,
             reconciliation:read('downloads/power-family-capstone-reconcile.json'),
             productionGuard:read('downloads/behind-the-curtain-production-guard.json'),
-            publicGateways:read('downloads/power-family-public-gateways.json')
+            publicGateways:read('downloads/power-family-public-gateways.json'),
+            newsletter:read('downloads/newsletter-public-page-repair.json')
           };
           fs.mkdirSync('data',{recursive:true});
           fs.writeFileSync('data/power-family-integrity-status.json',`${JSON.stringify(payload,null,2)}\n`);

@@ -24,7 +24,7 @@ if (decoded.length !== expectedDecodedBytes) throw new Error(`Homepage intro MP4
 if (decoded.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Homepage intro data does not decode to an MP4');
 if (!decoded.includes(Buffer.from('moov')) || !decoded.includes(Buffer.from('mdat'))) throw new Error('Homepage intro MP4 is missing required moov or mdat atoms.');
 const dataAsset = [
-  `/* Matrix Reprogrammed homepage intro video data · ${runtimeVersion} · verified ${expectedDecodedBytes} bytes */`,
+  `/* Matrix Reprogrammed homepage intro video data · ${runtimeVersion} · verified ${expectedDecodedBytes} bytes · compatibility audit 20260725-video-v5 */`,
   `globalThis.__MATRIX_INTRO_BASE64__=${JSON.stringify(base64)};`,
   `globalThis.__MATRIX_INTRO_META__=Object.freeze(${JSON.stringify({ version: runtimeVersion, mime: 'video/mp4', decodedBytes: decoded.length, sourceParts: videoParts.length })});`,
   ''
@@ -42,7 +42,7 @@ const overlay = `<!-- homepage-mask-intro:start -->
     </div>
   </div>
 </section>
-<!-- retired-intro-compatibility: assets/intro-eye.svg assets/intro-mask.svg homepage-intro__burn -->
+<!-- retired-intro-compatibility: assets/intro-eye.svg assets/intro-mask.svg homepage-intro__burn homepage-mask-intro-data.js?v=20260725-video-v5 homepage-mask-intro.js?v=20260725-video-v5 -->
 <!-- homepage-mask-intro:end -->`;
 const dataRuntime = `<script src="homepage-mask-intro-data.js?v=${runtimeVersion}" data-homepage-mask-intro-data data-intro-version="${runtimeVersion}"></script>`;
 const runtime = `<script src="homepage-mask-intro.js?v=${runtimeVersion}" data-homepage-mask-intro-runtime data-intro-version="${runtimeVersion}"></script>`;

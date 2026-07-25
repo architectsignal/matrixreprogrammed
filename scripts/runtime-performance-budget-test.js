@@ -51,10 +51,32 @@ const optimizedPulse = `(() => {
   const cached = cachedStatus(); if (cached) render(cached);
   const schedule = window.requestIdleCallback ? callback => window.requestIdleCallback(callback, { timeout: 1800 }) : callback => window.setTimeout(callback, 450);
   schedule(refresh);
-})();\n`;
+})();
+`;
 const pulseMarkers = ['sessionStorage', 'requestIdleCallback', "cache: 'default'", 'matrix-investigation-pulse-v1'];
 if (!pulseMarkers.every(marker => read('investigation-pulse.js').includes(marker))) write('investigation-pulse.js', optimizedPulse);
 if (fs.existsSync(site)) write('_site/investigation-pulse.js', optimizedPulse);
+
+function compactCanonicalSearchIndex() {
+  if (!exists('search-index.json')) return fail('search-index.json compaction', 'missing');
+  try {
+    const parsed = JSON.parse(read('search-index.json'));
+    if (!Array.isArray(parsed)) throw new Error('root JSON value must be an array');
+    const compact = `${JSON.stringify(parsed)}\n`;
+    write('search-index.json', compact);
+    if (fs.existsSync(site)) {
+      write('_site/search-index.json', compact);
+      const extensionless = path.join(site, 'search-index');
+      if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) write('_site/search-index', compact);
+    }
+    const mebibytes = Buffer.byteLength(compact) / 1024 / 1024;
+    pass('search-index.json compaction', `${parsed.length} records · ${mebibytes.toFixed(2)} MiB`);
+  } catch (error) {
+    fail('search-index.json compaction', error.message);
+  }
+}
+
+compactCanonicalSearchIndex();
 
 for (const relative of ['matrix.js','investigation-pulse.js','search.js','evidence-network-map.js','fixes.css','_headers','scripts/apply-runtime-performance-optimizations.js']) requireFile(relative);
 for (const relative of ['matrix.js','investigation-pulse.js','search.js','evidence-network-map.js','scripts/apply-runtime-performance-optimizations.js']) {
@@ -109,7 +131,8 @@ const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(
   searchStartupPolicy: 'verified fallback routes render immediately; complete index loads on search interaction or URL query',
   networkStartupPolicy: 'graph data loads only when the map approaches the viewport or a map control is used',
   animationPolicy: 'adaptive frame rate, reduced pixel ratio, Save-Data support and visibility pause',
-  pulsePolicy: 'session-cached and refreshed during idle time after every legacy generator'
+  pulsePolicy: 'session-cached and refreshed during idle time after every legacy generator',
+  searchReleaseFormat: 'canonical compact JSON synchronized to Cloudflare output before budget, manifest and deploy checks'
 }};
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/runtime-performance-budget-test.json'), `${JSON.stringify(report, null, 2)}\n`);

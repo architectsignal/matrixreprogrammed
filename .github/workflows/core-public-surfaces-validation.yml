@@ -30,10 +30,12 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Preflight verified intro payload
+        shell: bash
         run: |
-          node --check scripts/patch-homepage-mask-intro.js
-          node scripts/patch-homepage-mask-intro.js
-          node scripts/homepage-mask-intro-test.js
+          set -o pipefail
+          node --check scripts/patch-homepage-mask-intro.js 2>&1 | tee /tmp/intro-preflight.log
+          node scripts/patch-homepage-mask-intro.js 2>&1 | tee -a /tmp/intro-preflight.log
+          node scripts/homepage-mask-intro-test.js 2>&1 | tee -a /tmp/intro-preflight.log
       - name: Build deployable site
         shell: bash
         run: |
@@ -63,6 +65,7 @@ jobs:
           name: core-public-surfaces-validation-${{ github.run_id }}
           if-no-files-found: warn
           path: |
+            /tmp/intro-preflight.log
             /tmp/core-public-surfaces-build.log
             downloads/homepage-mask-intro-report.json
             downloads/core-public-surfaces-finalize.json

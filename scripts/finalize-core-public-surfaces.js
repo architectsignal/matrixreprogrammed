@@ -13,12 +13,7 @@ function run(script, optional = false) {
     if (optional) return false;
     throw new Error(`Required finalizer missing: ${script}`);
   }
-  const result = spawnSync(process.execPath, [file], {
-    cwd: root,
-    encoding: 'utf8',
-    env: process.env,
-    maxBuffer: 1024 * 1024 * 40
-  });
+  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', env: process.env, maxBuffer: 1024 * 1024 * 40 });
   report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-2500), stderr: String(result.stderr || '').slice(-2500) });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
@@ -32,7 +27,7 @@ function copy(relative) {
   const destination = path.join(site, relative);
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   fs.copyFileSync(source, destination);
-  report.copied.push(relative);
+  if (!report.copied.includes(relative)) report.copied.push(relative);
   if (relative.endsWith('.html')) {
     const extensionless = path.join(site, relative.replace(/\.html$/i, ''));
     if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
@@ -52,38 +47,30 @@ function requireText(relative, markers) {
 
 if (!fs.existsSync(site)) throw new Error('_site is missing; run the normal build first');
 
-// Rebuild features that legacy homepage and search generators previously dropped.
+// These are final-release owners. They run after all legacy homepage, search and
+// intelligence generators so no later task can silently remove public features.
 run('scripts/build-death-files.js');
 run('scripts/patch-main-navigation-safety-links.js');
 run('scripts/restore-homepage-navigation.js');
 run('scripts/patch-homepage-construction-banner.js');
 
 const fixed = [
-  'index.html',
-  'start-here.html',
-  'independent-links.html',
-  'data/independent-links-1.json',
-  'data/independent-links-2.json',
-  'data/independent-links-3.json',
-  'data/independent-links-4.json',
-  'death-files.html',
-  'death-files.js',
-  'data/death-files.json',
-  'data/death-files-runtime.json',
-  'homepage-mask-intro.css',
-  'homepage-mask-intro.js',
-  'welcome-gate.css',
-  'welcome-gate.js'
+  'index.html','start-here.html','independent-links.html',
+  'data/independent-links-1.json','data/independent-links-2.json','data/independent-links-3.json','data/independent-links-4.json',
+  'death-files.html','death-files.js','data/death-files.json','data/death-files-runtime.json',
+  'downloads/death-files-index.json','downloads/death-files-index.md',
+  'fixes.css','sitemap.xml',
+  'homepage-mask-intro.css','homepage-mask-intro.js','welcome-gate.css','welcome-gate.js'
 ];
 for (const relative of fixed) copy(relative);
 
 const generatedDeathPages = fs.readdirSync(root)
-  .filter(name => /^death-(?:files-year-|file-).+\.html$/i.test(name))
+  .filter(name => (/^death-files-.+\.html$/i.test(name) || /^death-file-.+\.html$/i.test(name)))
   .sort();
-if (generatedDeathPages.length < 4) throw new Error(`Death Files output is incomplete: ${generatedDeathPages.length} generated pages`);
+if (generatedDeathPages.length < 6) throw new Error(`Death Files output is incomplete: ${generatedDeathPages.length} generated pages`);
 for (const relative of generatedDeathPages) copy(relative);
 
-// Reassert the exact homepage after all final generators and sanitizers.
+// Reassert the exact homepage and Start Here page last.
 copy('index.html');
 copy('start-here.html');
 
@@ -96,11 +83,13 @@ requireText('index.html', [
   'welcome-gate.js'
 ]);
 requireText('independent-links.html', ['TOP 100 INDEPENDENT RESEARCH LINKS.', 'data/independent-links-1.json', 'Expected 100 sources']);
-requireText('death-files.html', ['THE DEATH FILES.', 'data-death-files-index', 'death-files.js']);
+requireText('death-files.html', ['THE DEATH FILES.', 'id="dossiers"', 'death-files.js']);
+requireText('death-files-pattern-lab.html', ['DEATH PATTERN LAB.', 'A cluster is not a conspiracy']);
+requireText('death-files-methodology.html', ['HOW THE DEATH FILES WORK.', 'Three-Layer Conclusion System']);
 requireText('homepage-mask-intro.js', ['forceReplay', "get('intro') === '1'", 'HTMLVideoElement']);
 requireText('welcome-gate.js', ['data-signal-gate']);
 
-for (const relative of ['index.html','independent-links.html','death-files.html']) {
+for (const relative of ['index.html','independent-links.html','death-files.html','death-files-pattern-lab.html','death-files-methodology.html']) {
   const deployed = path.join(site, relative);
   if (!fs.existsSync(deployed)) throw new Error(`Deployable core route missing: _site/${relative}`);
   const text = fs.readFileSync(deployed, 'utf8');
@@ -110,8 +99,8 @@ for (const relative of ['index.html','independent-links.html','death-files.html'
 }
 
 report.ok = true;
-report.deathPages = generatedDeathPages;
+report.deathPages = ['death-files.html', ...generatedDeathPages];
 report.protectedRoutes = ['/','/independent-links.html','/death-files.html', ...generatedDeathPages.map(name => `/${name}`)];
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Core public surfaces finalized: support banner, Top 100 Links, Death Files (${generatedDeathPages.length} pages), intro and welcome gate copied into the exact Cloudflare bundle.`);
+console.log(`Core public surfaces finalized: support banner, Top 100 Links, Death Files (${generatedDeathPages.length + 1} pages), intro and welcome gate copied into the exact Cloudflare bundle.`);

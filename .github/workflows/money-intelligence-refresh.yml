@@ -11,6 +11,7 @@ on:
       - .github/money-intelligence-refresh.trigger
       - scripts/build-money-overlap-map.js
       - scripts/enrich-money-intelligence-depth.js
+      - scripts/expand-money-research-candidates.js
       - scripts/finalize-money-intelligence-depth.js
       - scripts/refresh-money-public-market-rankings.js
       - scripts/money-overlap-map-test.js
@@ -21,6 +22,7 @@ on:
       - src/money-profile.js
       - money-category.js
       - money-search.js
+      - money-overlap-profile-enhancer.js
       - money-overlap.css
       - .github/workflows/money-intelligence-refresh.yml
 
@@ -53,6 +55,7 @@ jobs:
           node --check scripts/build-money-intelligence-expansion.js
           node --check scripts/build-money-overlap-map.js
           node --check scripts/enrich-money-intelligence-depth.js
+          node --check scripts/expand-money-research-candidates.js
           node --check scripts/finalize-money-intelligence-depth.js
           node --check scripts/refresh-money-public-market-rankings.js
           node --check scripts/money-overlap-map-test.js
@@ -62,6 +65,7 @@ jobs:
           node --check src/money-command-center.js
           node --check money-category.js
           node --check money-search.js
+          node --check money-overlap-profile-enhancer.js
           node scripts/build-money-intelligence-expansion.js
           node scripts/money-intelligence-expansion-test.js
           node scripts/finalize-money-intelligence-depth.js
@@ -84,6 +88,7 @@ jobs:
             data/money-relationship-feed.json \
             data/money-timeline-feed.json \
             data/money-intelligence-depth-report.json \
+            data/money-research-candidate-expansion.json \
             data/money-top100-research-report.json \
             data/wealth-methods.json \
             data/making-money-core.json \
@@ -99,7 +104,7 @@ jobs:
             scripts/build-all-branded-download-pdfs.js \
             money-expansion.css money-overlap.css money-category.js making-money-methods.js making-money.js \
             money-command-center.js money-search.html money-search.js money-graph.html money-graph.js \
-            money-profile.html money-profile.js \
+            money-profile.html money-profile.js money-overlap-profile-enhancer.js \
             follow-the-money.html making-money.html index.html welcome-gate.js \
             daily-command-brief.html daily-brain-brief.html download-center.html \
             newsletter.html optin-center.html src/worker-intelligence-reports.js \
@@ -108,7 +113,7 @@ jobs:
             echo "No generated changes."
             exit 0
           fi
-          git commit -m "Refresh quantitative capital rankings, profiles and overlap map [deploy]"
+          git commit -m "Refresh complete Top 100 capital universes, profiles and overlap map [deploy]"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
@@ -131,6 +136,7 @@ jobs:
             downloads/money-public-market-refresh.json
             downloads/wealth-guides/index.json
             data/money-intelligence-depth-report.json
+            data/money-research-candidate-expansion.json
             data/money-overlap-graph.json
             data/money-entity-crosswalk.json
           if-no-files-found: error

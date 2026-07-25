@@ -1,13 +1,15 @@
 (() => {
+  'use strict';
+
   const intro = document.querySelector('[data-homepage-mask-intro]');
   if (!intro) return;
 
-  const sessionKey = 'matrix-homepage-intro-seen-v2';
+  const sessionKey = 'matrix-homepage-intro-seen-v3';
+  const videoParts = [
+    'assets/matrix-intro-video-1.txt',
+    'assets/matrix-intro-video-2.txt'
+  ];
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
-  const timing = reducedMotion
-    ? { eye: 800, burn: 220, mask: 1000, dissolve: 220 }
-    : { eye: 3000, burn: 1100, mask: 3000, dissolve: 1200 };
-
   const timers = new Set();
   let finished = false;
 
@@ -35,6 +37,8 @@
     catch {}
   }
 
+  // This deliberately preserves the separate Matrix Reprogrammed
+  // welcome gate and its optional ElevenLabs voice intro.
   function prepareWelcomeGate() {
     const replay = document.querySelector('[data-replay-gate]');
     const gate = document.querySelector('[data-signal-gate]');
@@ -47,13 +51,6 @@
     }
   }
 
-  function setPhase(phase) {
-    intro.classList.remove('phase-eye', 'phase-burn', 'phase-mask');
-    intro.classList.add(`phase-${phase}`);
-    intro.dataset.phase = phase;
-    document.dispatchEvent(new CustomEvent('matrix:homepage-intro-phase', { detail: { phase } }));
-  }
-
   function removeIntro() {
     clearTimers();
     intro.classList.add('is-removed');
@@ -63,32 +60,34 @@
     document.dispatchEvent(new CustomEvent('matrix:homepage-mask-intro-complete'));
   }
 
-  function finish(reason = 'timer') {
+  function finish(reason = 'ended') {
     if (finished) return;
     finished = true;
     clearTimers();
     markSeen();
     intro.dataset.finishReason = reason;
     intro.classList.add('is-dissolving');
-    later(removeIntro, timing.dissolve + 90);
+    later(removeIntro, reducedMotion ? 120 : 760);
   }
 
-  function startSequence() {
-    setPhase('eye');
-    later(() => setPhase('burn'), timing.eye);
-    later(() => setPhase('mask'), timing.eye + timing.burn);
-    later(() => finish('timer'), timing.eye + timing.burn + timing.mask);
+  function mountVideo() {
+    const stage = intro.querySelector('.homepage-mask-intro__stage') || intro;
+    stage.innerHTML = `
+      <video class="homepage-mask-intro__video" muted autoplay playsinline preload="auto" aria-label="Matrix Reprogrammed cinematic opening" data-homepage-intro-video></video>
+      <div class="homepage-mask-intro__controls" aria-label="Intro controls">
+        <button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button>
+      </div>`;
+    return stage.querySelector('[data-homepage-intro-video]');
   }
 
-  function waitForAssets() {
-    const images = [...intro.querySelectorAll('[data-intro-asset]')];
-    if (!images.length) return Promise.reject(new Error('No intro assets found'));
-    return Promise.all(images.map(image => new Promise(resolve => {
-      if (image.complete && image.naturalWidth > 0) return resolve({ ok: true, image });
-      const done = ok => resolve({ ok, image });
-      image.addEventListener('load', () => done(true), { once: true });
-      image.addEventListener('error', () => done(false), { once: true });
-    })));
+  async function loadVideoSource() {
+    const parts = await Promise.all(videoParts.map(async url => {
+      const response = await fetch(url, { cache: 'force-cache' });
+      if (!response.ok) throw new Error(`Intro video part failed: ${response.status}`);
+      return (await response.text()).trim();
+    }));
+    if (parts.some(part => !part)) throw new Error('Intro video part was empty');
+    return `data:video/mp4;base64,${parts.join('')}`;
   }
 
   if (hasSeen()) {
@@ -98,23 +97,57 @@
 
   document.documentElement.classList.add('mask-intro-active');
   intro.setAttribute('aria-hidden', 'false');
+  intro.dataset.mode = 'video';
   prepareWelcomeGate();
 
+  const video = mountVideo();
   intro.querySelector('[data-mask-intro-skip]')?.addEventListener('click', () => finish('skip'));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !finished) finish('escape');
   }, { once: true });
 
-  waitForAssets()
-    .then(results => {
-      const failures = results.filter(result => !result.ok);
-      if (failures.length === results.length) return finish('asset-error');
-      if (failures.length) intro.dataset.assetWarning = String(failures.length);
-      startSequence();
+  if (!(video instanceof HTMLVideoElement)) {
+    finish('video-missing');
+    return;
+  }
+
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.addEventListener('ended', () => finish('ended'), { once: true });
+  video.addEventListener('error', () => finish('video-error'), { once: true });
+
+  if (reducedMotion) {
+    finish('reduced-motion');
+    return;
+  }
+
+  const startPlayback = async () => {
+    try {
+      await video.play();
+      intro.classList.add('is-playing');
+      intro.classList.remove('needs-play');
+    } catch {
+      intro.classList.add('needs-play');
+    }
+  };
+
+  loadVideoSource()
+    .then(source => {
+      if (finished) return;
+      video.src = source;
+      video.addEventListener('loadeddata', startPlayback, { once: true });
+      video.load();
     })
-    .catch(() => finish('asset-error'));
+    .catch(() => finish('video-load-error'));
+
+  intro.addEventListener('click', event => {
+    if (!intro.classList.contains('needs-play')) return;
+    if (event.target instanceof HTMLButtonElement) return;
+    startPlayback();
+  });
 
   later(() => {
-    if (!intro.dataset.phase && !finished) startSequence();
-  }, 1800);
+    if (!finished) finish('timeout');
+  }, 15000);
 })();

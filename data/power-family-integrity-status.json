@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-25T08:46:39.620Z",
+  "checkedAt": "2026-07-25T08:50:03.045Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30151473747,
+  "workflowRunId": 30151554221,
   "runAttempt": 1,
-  "headSha": "f98dfbc380962a30d7d5d1a210238523e1f9c99c",
+  "headSha": "c045a26d71575dca597cb9c85d43bc61b71ee003",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:46:34.175Z",
+    "generatedAt": "2026-07-25T08:49:58.202Z",
     "actions": [
       {
         "type": "run",
@@ -90,7 +90,7 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 8 HTML file(s) patched across 3010 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public marker scrub complete: 10 HTML file(s) patched across 3010 HTML surfaces; valid public routes preserved.\n",
         "stderr": ""
       }
     ],
@@ -300,7 +300,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-25T08:46:36.831Z",
+    "checkedAt": "2026-07-25T08:50:00.523Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -315,7 +315,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:46:34.142Z",
+    "generatedAt": "2026-07-25T08:49:58.174Z",
     "verified": [
       "index.html",
       "start-here.html",

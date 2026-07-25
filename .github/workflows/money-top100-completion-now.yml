@@ -47,7 +47,7 @@ jobs:
           node --check scripts/finalize-money-intelligence-depth.js 2>&1 | tee -a downloads/money-top100-completion.log || exit ${PIPESTATUS[0]}
           node scripts/finalize-money-intelligence-depth.js 2>&1 | tee -a downloads/money-top100-completion.log
 
-      - name: Record and publish result
+      - name: Record and publish result atomically
         if: always()
         shell: bash
         env:
@@ -77,40 +77,49 @@ jobs:
           };
           fs.writeFileSync('data/money-top100-completion-status.json',`${JSON.stringify(payload,null,2)}\n`);
           NODE
+          files=(data/money-top100-completion-status.json)
+          if [ "$PIPELINE_OUTCOME" = success ]; then
+            files+=(
+              data/money-intelligence-registry.json
+              data/money-overlap-graph.json
+              data/money-search-index.json
+              data/money-intelligence-brief-feed.json
+              data/money-entity-crosswalk.json
+              data/money-profile-index.json
+              data/money-relationship-feed.json
+              data/money-timeline-feed.json
+              data/money-intelligence-depth-report.json
+              data/money-research-candidate-expansion.json
+              data/money-top100-research-report.json
+              search-index.json
+              money-profile.html
+              money-profile.js
+            )
+          fi
+          tar -czf /tmp/money-top100-generated.tgz "${files[@]}"
           cp data/money-top100-completion-status.json /tmp/money-top100-completion-status.json
           if [ -f downloads/money-top100-completion.log ]; then cp downloads/money-top100-completion.log /tmp/money-top100-completion.log; fi
-          if [ "$PIPELINE_OUTCOME" != success ]; then
-            git reset --hard HEAD
-            mkdir -p data downloads
-            cp /tmp/money-top100-completion-status.json data/money-top100-completion-status.json
-            if [ -f /tmp/money-top100-completion.log ]; then cp /tmp/money-top100-completion.log downloads/money-top100-completion.log; fi
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/money-top100-completion-status.json
-          if [ "$PIPELINE_OUTCOME" = success ]; then
-            git add \
-              data/money-intelligence-registry.json \
-              data/money-overlap-graph.json \
-              data/money-search-index.json \
-              data/money-intelligence-brief-feed.json \
-              data/money-entity-crosswalk.json \
-              data/money-profile-index.json \
-              data/money-relationship-feed.json \
-              data/money-timeline-feed.json \
-              data/money-intelligence-depth-report.json \
-              data/money-research-candidate-expansion.json \
-              data/money-top100-research-report.json \
-              search-index.json \
-              money-profile.html money-profile.js
-          fi
-          git commit -m "Complete and verify all 20 capital Top 100 universes [deploy]"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
-            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            tar -xzf /tmp/money-top100-generated.tgz
+            git add "${files[@]}"
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Complete and verify all 20 capital Top 100 universes [deploy]"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Main advanced during capital publication; restoring generated outputs onto the newest main."
           done
           exit 1
+
+      - name: Restore proof files for artifact upload
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p downloads data
+          if [ -f /tmp/money-top100-completion.log ]; then cp /tmp/money-top100-completion.log downloads/money-top100-completion.log; fi
+          if [ -f /tmp/money-top100-completion-status.json ]; then cp /tmp/money-top100-completion-status.json data/money-top100-completion-status.json; fi
 
       - name: Upload completion proof
         if: always()

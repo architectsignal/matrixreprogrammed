@@ -176,6 +176,7 @@ try {
   ];
   releaseFiles.forEach(rel => copy(rel));
   run('scripts/hide-visible-compatibility-markers.js', ['--output']);
+  run('scripts/repair-behind-the-curtain-capstone-wiring.js');
   validateModels();
   validateFiles();
 } catch (error) {

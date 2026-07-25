@@ -1,0 +1,191 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-25",
+  "title": "The Death Files",
+  "subtitle": "Who died. What they knew. Who they knew. What changed.",
+  "boundary": "Inclusion does not imply murder, conspiracy, or wrongdoing by any connected person. Official findings, established evidence, disputed claims, analytical inference, and speculation are displayed separately.",
+  "evidenceLevels": ["Established fact", "Strongly supported", "Official finding", "Official allegation", "Sworn claim", "Credible analytical inference", "Disputed claim", "Unverified allegation", "Deep speculation", "False, misleading, or disproven"],
+  "dossiers": [
+    {
+      "id": "death-john-f-kennedy",
+      "slug": "john-f-kennedy",
+      "name": "John F. Kennedy",
+      "aliases": ["John Fitzgerald Kennedy", "JFK", "President Kennedy"],
+      "year": 1963,
+      "born": "1917-05-29",
+      "died": "1963-11-22",
+      "age": 46,
+      "place": "Dallas, Texas, United States",
+      "nationality": "American",
+      "occupation": "35th President of the United States",
+      "categories": ["Political leader", "Assassination", "State power", "Intelligence records"],
+      "officialCause": "Gunshot wounds",
+      "officialManner": "Homicide",
+      "caseStatus": "Officially resolved; historical findings and records remain actively examined",
+      "investigatingAuthorities": ["Warren Commission", "House Select Committee on Assassinations", "National Archives and Records Administration"],
+      "whyMatters": "Kennedy's assassination changed presidential security, national politics, Cold War history, public trust, and the architecture of government secrecy. The official record continues to expand through document releases.",
+      "cinematicOpening": "At 12:30 p.m. on November 22, 1963, the presidential motorcade entered Dealey Plaza. Within minutes, President John F. Kennedy had been fatally wounded and Dallas had become the centre of an investigation that would outlive nearly everyone present.",
+      "officialAccount": "The Warren Commission concluded that Lee Harvey Oswald fired the shots and acted alone. The later House Select Committee on Assassinations agreed that Oswald fired the shots but criticised aspects of the earlier investigation and concluded that Kennedy was probably assassinated as a result of a conspiracy; it did not identify another gunman or the scope of a conspiracy.",
+      "evidenceConclusion": "The record strongly supports that Kennedy was killed by gunfire in Dealey Plaza and that Oswald was central to the crime. Disagreement persists over whether all relevant actors, intelligence, and institutional failures were fully identified. New releases must be assessed document by document.",
+      "analyticalInference": "The gap between a formally resolved homicide and a still-expanding official archive justifies continuing records analysis, but it does not itself prove a hidden operational sponsor.",
+      "speculation": "Alternative-gunman, intelligence-operation, organised-crime, anti-Castro, pro-Castro, and institutional-cover-up theories must each be tested against authenticated records, ballistics, timelines, witness reliability, provenance, and counter-evidence.",
+      "involvements": [
+        {"label":"Cold War executive power","status":"Established fact","detail":"Kennedy held ultimate executive authority during major Cold War confrontations."},
+        {"label":"National-security oversight","status":"Established fact","detail":"His office directed and interacted with the CIA, FBI, Department of Defense, and State Department."}
+      ],
+      "knowledge": [
+        {"label":"Classified national-security information","status":"Established fact","detail":"The presidency gave Kennedy access to the highest levels of United States national-security information."},
+        {"label":"A specific secret as the murder motive","status":"Unverified allegation","detail":"Such a claim requires evidence connecting knowledge, motive, capability, and action."}
+      ],
+      "relationships": [
+        {"name":"Lee Harvey Oswald","type":"Officially identified assassin","status":"Official finding","boundary":"Oswald was killed before trial; the evidence was assessed by official inquiries rather than a criminal jury."},
+        {"name":"Lyndon B. Johnson","type":"Vice president and constitutional successor","status":"Established fact","boundary":"Succession is a constitutional consequence and is not evidence of involvement."},
+        {"name":"United States Secret Service","type":"Protective institution","status":"Established fact","boundary":"Protection failures do not themselves establish conspiracy."}
+      ],
+      "timeline": [
+        {"date":"1963-11-22 12:30","status":"Established fact","event":"Kennedy was shot while travelling through Dealey Plaza."},
+        {"date":"1963-11-22 13:00","status":"Official finding","event":"Kennedy was pronounced dead at Parkland Memorial Hospital."},
+        {"date":"1964-09-24","status":"Official finding","event":"The Warren Commission delivered its report."},
+        {"date":"1979-03-29","status":"Official finding","event":"The House Select Committee on Assassinations issued its report."},
+        {"date":"2025-03-18","status":"Established fact","event":"The National Archives began a major new release of previously withheld classified records."},
+        {"date":"2026-01-30","status":"Established fact","event":"The National Archives added a further digitised release."}
+      ],
+      "questions": [
+        {"question":"Do newly released records materially alter the strongest established account?","status":"Open evidence review","needed":"Document-level analysis with provenance and comparison to prior releases."},
+        {"question":"Which conspiracy claims survive modern forensic and documentary review?","status":"Unresolved by public consensus","needed":"Theory-by-theory testing rather than cumulative suspicion."}
+      ],
+      "aftermath": ["Lyndon B. Johnson became president.", "Presidential protection procedures came under intense scrutiny.", "Congress created a statutory disclosure regime for assassination records."],
+      "money": [
+        {"label":"Constitutional succession","status":"Established fact","detail":"Executive authority transferred immediately to the vice president."},
+        {"label":"Benefit as proof of responsibility","status":"False inference","detail":"Political or institutional benefit is not evidence of participation in a death."}
+      ],
+      "evidence": [
+        {"title":"Warren Commission: Summary and Conclusions","publisher":"U.S. National Archives","date":"1964","level":"Official finding","url":"https://www.archives.gov/research/jfk/warren-commission-report/chapter-1"},
+        {"title":"House Select Committee: Summary of Findings","publisher":"U.S. National Archives","date":"1979","level":"Official finding","url":"https://www.archives.gov/research/jfk/select-committee-report/summary.html"},
+        {"title":"JFK Records 2025 and 2026 Releases","publisher":"U.S. National Archives","date":"2025-2026","level":"Established fact","url":"https://www.archives.gov/research/jfk/release-2025"}
+      ],
+      "relatedPages": ["authority-intelligence-network.html", "evidence-vault.html", "source-document-vault.html", "network-maps.html", "investigation-machine.html"],
+      "keywords": ["Kennedy", "Oswald", "Dealey Plaza", "Warren Commission", "HSCA", "JFK records", "assassination"]
+    },
+    {
+      "id": "death-diana-princess-of-wales",
+      "slug": "diana-princess-of-wales",
+      "name": "Diana, Princess of Wales",
+      "aliases": ["Princess Diana", "Diana Spencer"],
+      "year": 1997,
+      "born": "1961-07-01",
+      "died": "1997-08-31",
+      "age": 36,
+      "place": "Paris, France",
+      "nationality": "British",
+      "occupation": "Member of the British royal family and humanitarian campaigner",
+      "categories": ["Royal family", "Road death", "Media", "Humanitarian work"],
+      "officialCause": "Injuries sustained in a motor-vehicle collision",
+      "officialManner": "Unlawful killing conclusion at the British inquest, attributed to grossly negligent driving by the driver and pursuing paparazzi vehicles",
+      "caseStatus": "Inquests concluded; extensive evidence archive preserved",
+      "investigatingAuthorities": ["French investigating authorities", "Metropolitan Police Operation Paget", "Coroner's inquests in England"],
+      "whyMatters": "Diana's death transformed debate about press intrusion, royal institutions, road safety, emergency response, and the treatment of public figures.",
+      "cinematicOpening": "In the early hours of August 31, 1997, a Mercedes carrying Diana, Dodi Fayed, Henri Paul, and Trevor Rees-Jones entered the Pont de l'Alma underpass in Paris. The collision became a global event before the evidence had been fully examined.",
+      "officialAccount": "French and British investigations concluded that the crash was caused principally by Henri Paul's impaired and excessive-speed driving, with pursuing paparazzi vehicles also part of the circumstances considered by the British inquest. The jury returned an unlawful-killing conclusion based on grossly negligent driving.",
+      "evidenceConclusion": "The strongest official evidence supports a fatal high-speed collision involving impaired and grossly negligent driving, compounded by the pursuit environment and failure to wear seatbelts. A planned-assassination claim requires stronger evidence than anomaly aggregation.",
+      "analyticalInference": "Media pressure, security decisions, relationships, and official institutions converged in a short final timeline. That convergence warrants reconstruction but is not proof of coordination.",
+      "speculation": "Assassination, intelligence-service, vehicle-interference, medical-treatment, and pregnancy theories must be separated into testable claims and compared against the inquest record and forensic evidence.",
+      "involvements": [
+        {"label":"Humanitarian campaigning","status":"Established fact","detail":"Diana supported landmine clearance and HIV/AIDS awareness."},
+        {"label":"Global media scrutiny","status":"Established fact","detail":"Her private life and movements were subject to exceptional press attention."}
+      ],
+      "knowledge": [
+        {"label":"Royal household experience","status":"Established fact","detail":"Her former position gave her direct experience of royal and state-linked institutions."},
+        {"label":"Secret knowledge as motive","status":"Unverified allegation","detail":"No alleged secret should be treated as motive without authenticated records."}
+      ],
+      "relationships": [
+        {"name":"Dodi Fayed","type":"Companion and fellow victim","status":"Established fact","boundary":"Relevant to the final timeline and travel arrangements."},
+        {"name":"Henri Paul","type":"Driver","status":"Official finding","boundary":"Official findings attributed grossly negligent driving to him; he also died."},
+        {"name":"Trevor Rees-Jones","type":"Bodyguard and surviving occupant","status":"Established fact","boundary":"His injuries affected his memory of the event."}
+      ],
+      "timeline": [
+        {"date":"1997-08-30 late evening","status":"Strongly supported","event":"Diana and Dodi Fayed were at the Ritz Hotel before departing by car."},
+        {"date":"1997-08-31 shortly after midnight","status":"Established fact","event":"The Mercedes crashed in the Pont de l'Alma underpass."},
+        {"date":"2004","status":"Established fact","event":"The Metropolitan Police began Operation Paget."},
+        {"date":"2008-04-07","status":"Official finding","event":"The inquest jury returned an unlawful-killing conclusion."}
+      ],
+      "questions": [
+        {"question":"Which recurring claims are contradicted by the inquest evidence database?","status":"Open public-education task","needed":"Claim-level comparison with transcripts and exhibits."},
+        {"question":"What role did media pursuit and security decisions play in the risk chain?","status":"Substantially documented","needed":"Integrated route, vehicle, speed, impairment, and seatbelt timeline."}
+      ],
+      "aftermath": ["Public mourning altered the relationship between monarchy, media, and public.", "Press and paparazzi practices faced renewed scrutiny.", "Operation Paget examined numerous allegations."],
+      "money": [
+        {"label":"Estate and succession","status":"Established fact","detail":"Inheritance consequences followed the death but do not establish causation."},
+        {"label":"Media economic incentives","status":"Credible analytical inference","detail":"Demand for exclusive images formed part of the pursuit environment; it does not prove a planned killing."}
+      ],
+      "evidence": [
+        {"title":"Diana and Dodi inquest evidence archive","publisher":"The National Archives (UK)","date":"2007-2008","level":"Primary-source archive","url":"https://discovery.nationalarchives.gov.uk/browse/r/h/C16601"},
+        {"title":"FOI release: death of Princess Diana in Paris","publisher":"GOV.UK","date":"2016","level":"Official record","url":"https://www.gov.uk/government/publications/foi-release-death-of-princess-diana-in-paris"}
+      ],
+      "relatedPages": ["track-the-families.html", "institution-tracker.html", "evidence-vault.html", "source-document-vault.html", "network-maps.html"],
+      "keywords": ["Diana", "Princess of Wales", "Dodi Fayed", "Henri Paul", "Pont de l'Alma", "Operation Paget", "inquest"]
+    },
+    {
+      "id": "death-jeffrey-epstein",
+      "slug": "jeffrey-epstein",
+      "name": "Jeffrey Epstein",
+      "aliases": ["Jeffrey Edward Epstein", "Epstein"],
+      "year": 2019,
+      "born": "1953-01-20",
+      "died": "2019-08-10",
+      "age": 66,
+      "place": "Metropolitan Correctional Center, New York City, United States",
+      "nationality": "American",
+      "occupation": "Financier and convicted sex offender",
+      "categories": ["Custodial death", "Sex-trafficking investigation", "Financial networks", "Institutional failure"],
+      "officialCause": "Hanging",
+      "officialManner": "Suicide",
+      "caseStatus": "Death investigation concluded; related records, litigation, and disclosures continue",
+      "investigatingAuthorities": ["New York City Office of Chief Medical Examiner", "Federal Bureau of Investigation", "U.S. Department of Justice Office of the Inspector General"],
+      "whyMatters": "Epstein died while awaiting federal prosecution, ending the criminal case against him personally and intensifying scrutiny of associates, finances, the estate, custodial treatment, and institutional failures.",
+      "cinematicOpening": "At approximately 6:30 a.m. on August 10, 2019, staff at the Metropolitan Correctional Center found Jeffrey Epstein unresponsive in his locked cell. He had been left alone and unmonitored for hours despite recent suicide-watch history.",
+      "officialAccount": "The New York City medical examiner ruled the death a suicide by hanging. The DOJ Inspector General documented numerous serious prison failures and reported that it found no evidence contradicting the FBI's determination that there was no criminality associated with the death.",
+      "evidenceConclusion": "The strongest official evidence supports suicide in a setting of severe and documented custodial failure. Those failures created legitimate suspicion and require accountability, but operational failure is not proof of homicide.",
+      "analyticalInference": "The prison system failed to preserve both a detainee's life and the public's opportunity for a full criminal trial. That institutional failure had consequences independent of any broader theory.",
+      "speculation": "Homicide, assisted-suicide, intelligence-protection, blackmail-network, and evidence-suppression theories require a direct evidentiary chain and cannot be inferred solely from Epstein's connections or the scale of prison failures.",
+      "involvements": [
+        {"label":"Federal sex-trafficking prosecution","status":"Established fact","detail":"Epstein was detained pending trial on federal charges."},
+        {"label":"Network of wealthy and influential contacts","status":"Established fact","detail":"Relationships are documented, but association does not establish criminal knowledge or conduct."},
+        {"label":"Estate and civil litigation","status":"Established fact","detail":"His death shifted accountability efforts toward the estate, institutions, and related proceedings."}
+      ],
+      "knowledge": [
+        {"label":"His own conduct, finances, and relationships","status":"Established fact","detail":"Epstein possessed direct knowledge of his own activities and relationships."},
+        {"label":"A comprehensive blackmail archive","status":"Unverified allegation","detail":"This requires authenticated evidence, provenance, and proof of intended use."}
+      ],
+      "relationships": [
+        {"name":"Federal Bureau of Prisons","type":"Custodial institution","status":"Established fact","boundary":"The OIG documented serious failures; failure is not proof of homicide."},
+        {"name":"Ghislaine Maxwell","type":"Long-term associate later convicted in a related federal case","status":"Established fact","boundary":"The relationship is central to the wider criminal history but is not evidence of involvement in the death."},
+        {"name":"Named social and professional contacts","type":"Varied documented relationships","status":"Relationship-specific evidence required","boundary":"A contact entry, photograph, flight record, or email does not establish participation in abuse or the death."}
+      ],
+      "timeline": [
+        {"date":"2019-07-06","status":"Established fact","event":"Epstein was arrested on federal sex-trafficking charges."},
+        {"date":"2019-08-09 22:40","status":"Official finding","event":"The OIG timeline placed the start of an extended period in which Epstein was alone and unmonitored."},
+        {"date":"2019-08-10 06:30","status":"Official finding","event":"Epstein was discovered hanging in his locked cell."},
+        {"date":"2023-06-27","status":"Official finding","event":"The DOJ Inspector General released its custody and supervision report."},
+        {"date":"2026-01-30","status":"Established fact","event":"The DOJ announced publication of millions of additional responsive pages."}
+      ],
+      "questions": [
+        {"question":"Do later releases contain evidence that changes the death assessment?","status":"Active evidence review","needed":"Authenticated material tied to the death investigation and compared with the OIG record."},
+        {"question":"How did multiple safeguards fail during the final night?","status":"Substantially documented","needed":"Staffing, rounds, cell assignment, linen, camera, access, and supervision viewed as one system."}
+      ],
+      "aftermath": ["The federal criminal prosecution against Epstein personally ended.", "Victims pursued compensation and accountability through the estate and civil litigation.", "The DOJ OIG issued eight institutional recommendations.", "The DOJ Epstein Library continued to expand through July 2026."],
+      "money": [
+        {"label":"Estate administration and victim compensation","status":"Established fact","detail":"The estate became a central route for compensation, litigation, and asset scrutiny."},
+        {"label":"Financial consequence as proof of involvement","status":"False inference","detail":"Benefit or avoided testimony does not identify who caused a death."}
+      ],
+      "evidence": [
+        {"title":"DOJ OIG review of Epstein's custody and supervision","publisher":"U.S. DOJ Office of the Inspector General","date":"2023-06-27","level":"Official investigation","url":"https://oig.justice.gov/reports/investigation-and-review-federal-bureau-prisons-custody-care-and-supervision-jeffrey"},
+        {"title":"DOJ OIG findings press release","publisher":"U.S. DOJ Office of the Inspector General","date":"2023-06-27","level":"Official finding","url":"https://oig.justice.gov/news/doj-oig-releases-report-bops-custody-care-and-supervision-jeffrey-epstein-metropolitan"},
+        {"title":"Department of Justice Epstein Library","publisher":"U.S. Department of Justice","date":"Updated 2026-07-17","level":"Primary-source archive with authenticity warnings","url":"https://www.justice.gov/epstein"},
+        {"title":"DOJ publication of additional responsive pages","publisher":"U.S. Department of Justice","date":"2026-01-30","level":"Official disclosure notice","url":"https://www.justice.gov/opa/pr/department-justice-publishes-35-million-responsive-pages-compliance-epstein-files"}
+      ],
+      "relatedPages": ["epstein-files.html", "epstein-sighting-watch.html", "follow-the-money.html", "track-the-families.html", "institution-tracker.html", "evidence-vault.html", "source-document-vault.html", "network-maps.html", "dark-speculation-lab.html"],
+      "keywords": ["Jeffrey Epstein", "Epstein", "MCC New York", "BOP", "DOJ OIG", "sex trafficking", "estate", "Maxwell"]
+    }
+  ]
+}

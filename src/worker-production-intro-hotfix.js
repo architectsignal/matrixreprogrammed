@@ -178,6 +178,17 @@ async function transformHomepage(response) {
     .transform(cleanResponse);
 }
 
+async function homepageAsset(request, env) {
+  if (!env?.ASSETS || typeof env.ASSETS.fetch !== 'function') return null;
+  const assetUrl = new URL('/index.html', request.url);
+  const assetRequest = new Request(assetUrl.toString(), {
+    method: 'GET',
+    headers: request.headers,
+    redirect: 'follow'
+  });
+  return env.ASSETS.fetch(assetRequest);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -186,10 +197,12 @@ export default {
     if (url.pathname === '/_matrix-intro-part/1') return proxyVideoPart(1);
     if (url.pathname === '/_matrix-intro-part/2') return proxyVideoPart(2);
 
-    const response = await productionWorker.fetch(request, env, ctx);
     const isHomepage = request.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html');
-    if (isHomepage && response.ok) return transformHomepage(response);
-    return response;
+    if (isHomepage) {
+      const response = await homepageAsset(request, env);
+      if (response?.ok) return transformHomepage(response);
+    }
+    return productionWorker.fetch(request, env, ctx);
   },
   async scheduled(event, env, ctx) {
     if (typeof productionWorker.scheduled === 'function') return productionWorker.scheduled(event, env, ctx);

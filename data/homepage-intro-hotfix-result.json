@@ -1,12 +1,12 @@
 {
   "ok": false,
   "version": "20260725-video-v6",
-  "recordedAt": "2026-07-25T18:51:42.109Z",
+  "recordedAt": "2026-07-25T18:57:51.477Z",
   "runId": 30169400182,
-  "runAttempt": 2,
+  "runAttempt": 3,
   "headSha": "04911c54ed8c97c5781e5eec17bb22397d391799",
-  "deployOutcome": "success",
-  "verifyOutcome": "failure",
+  "deployOutcome": "skipped",
+  "verifyOutcome": "skipped",
   "blockingProductionRun": 30161462181,
   "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1",
   "scope": "Isolated homepage intro delivery Worker; existing production API, D1, membership, forum, email and welcome/ElevenLabs gate are delegated unchanged."

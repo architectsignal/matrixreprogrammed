@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-25T10:47:12.182Z",
+  "checkedAt": "2026-07-25T13:05:25.515Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30155060549,
+  "workflowRunId": 30159066469,
   "runAttempt": 1,
-  "headSha": "cc9acf9d7e67fd5047be17b00b410fc4d57a3c97",
+  "headSha": "4edb41e81468ce3335000ff75629e6ddde8ac701",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:47:07.239Z",
+    "generatedAt": "2026-07-25T13:05:20.159Z",
     "actions": [
       {
         "type": "run",
@@ -92,7 +92,15 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 10 HTML file(s) patched across 3010 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public marker scrub complete: 12 HTML file(s) patched across 3010 HTML surfaces; valid public routes preserved.\n",
+        "stderr": ""
+      },
+      {
+        "type": "run",
+        "script": "scripts/repair-behind-the-curtain-capstone-wiring.js",
+        "args": [],
+        "status": 0,
+        "stdout": "Behind the Curtain Capstone wiring restored across 4 source/output target(s).\n",
         "stderr": ""
       }
     ],
@@ -307,7 +315,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-25T10:47:09.547Z",
+    "checkedAt": "2026-07-25T13:05:22.945Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -322,7 +330,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:47:07.215Z",
+    "generatedAt": "2026-07-25T13:05:20.084Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -343,7 +351,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:47:07.210Z",
+    "generatedAt": "2026-07-25T13:05:20.041Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",

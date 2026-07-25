@@ -7,6 +7,11 @@ on:
         description: 'Type DEPLOY MATRIX REPROGRAMMED to authorize the controlled production release'
         required: true
         type: string
+  push:
+    branches:
+      - main
+    paths:
+      - data/production-deploy-request.json
 
 concurrency:
   group: matrixreprogrammed-production
@@ -24,21 +29,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - name: Confirm explicit manual production release
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ "${{ inputs.confirmation }}" != "DEPLOY MATRIX REPROGRAMMED" ]; then
-            echo 'Production release refused: confirmation text did not match.'
-            exit 1
-          fi
-          echo 'Controlled production release explicitly confirmed.'
-
       - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+
+      - name: Confirm explicit production release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            confirmation='${{ inputs.confirmation }}'
+          else
+            confirmation="$(node -e "const request=require('./data/production-deploy-request.json');process.stdout.write(String(request.confirmation||''))")"
+          fi
+          if [ "$confirmation" != "DEPLOY MATRIX REPROGRAMMED" ]; then
+            echo 'Production release refused: confirmation text did not match.'
+            exit 1
+          fi
+          echo 'Controlled production release explicitly confirmed.'
 
       - name: Record exact main commit to deploy
         run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"

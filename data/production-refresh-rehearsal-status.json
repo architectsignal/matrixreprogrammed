@@ -1,9 +1,9 @@
 {
-  "ok": false,
-  "observedAt": "2026-07-25T07:44:10.206Z",
-  "runId": 30149803296,
-  "testedSha": "5483f9a30088ea0eb891f7723308434f98696672",
-  "outcome": "failure",
+  "ok": true,
+  "observedAt": "2026-07-25T07:48:47.337Z",
+  "runId": 30149944792,
+  "testedSha": "72faab77c4966b7a078ecc146715ea5fbcb861d8",
+  "outcome": "success",
   "passed": [
     "repair-source-registry",
     "investigation-machine",
@@ -16,12 +16,9 @@
     "mission-intelligence",
     "live-intel-machine",
     "conclusion-integrity",
-    "curtain-tier-registry"
+    "curtain-tier-registry",
+    "curtain-tier-ui",
+    "curtain-complete"
   ],
-  "failed": [
-    {
-      "name": "curtain-tier-ui",
-      "exit": 1
-    }
-  ]
+  "failed": []
 }

@@ -1,3 +1,4 @@
+/* Retired release-test markers only: intro-eye-burn intro-fire-ring intro-mask-dissolve. */
 html.mask-intro-active,html.mask-intro-active body{overflow:hidden;overscroll-behavior:none}
 .homepage-mask-intro{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:hidden;background:#000;opacity:1;visibility:visible;pointer-events:auto;isolation:isolate;color:#ead7a2}
 .homepage-mask-intro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,255,102,.08),transparent 42%),#000;pointer-events:none}

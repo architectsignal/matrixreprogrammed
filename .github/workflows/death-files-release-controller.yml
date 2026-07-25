@@ -1,0 +1,146 @@
+name: Complete Death Files Production Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/death-files-release-controller.yml
+
+permissions:
+  contents: write
+  actions: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  release-controller:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validate Death Files and guarded deploy contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          node scripts/build-death-files.js
+          node scripts/death-files-pressure-test.js
+          node scripts/behind-the-curtain-living-access-test.js
+          node --check scripts/build-death-files.js
+          test -s death-files.html
+          test -s death-file-jeffrey-epstein.html
+          grep -q 'THE DEATH FILES' death-files.html
+          grep -q 'death-signal-form' death-file-jeffrey-epstein.html
+          grep -q 'Evidence-Based Conclusion' death-file-jeffrey-epstein.html
+
+      - name: Attach to or dispatch the corrected production run
+        id: attach
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          workflow_id="$(gh api "repos/${REPOSITORY}/actions/workflows/deploy.yml" --jq '.id')"
+          cutoff='2026-07-25T11:46:00Z'
+          run_id="$(gh api "repos/${REPOSITORY}/actions/workflows/${workflow_id}/runs?event=workflow_dispatch&branch=main&per_page=20" --jq --arg cutoff "$cutoff" '[.workflow_runs[] | select(.created_at >= $cutoff and (.status == "queued" or .status == "in_progress"))] | sort_by(.created_at) | last | .id // empty')"
+          if [ -z "$run_id" ]; then
+            gh api --method POST -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2022-11-28' "repos/${REPOSITORY}/actions/workflows/${workflow_id}/dispatches" -f ref=main -f 'inputs[confirmation]=DEPLOY MATRIX REPROGRAMMED'
+            for attempt in $(seq 1 24); do
+              sleep 5
+              run_id="$(gh api "repos/${REPOSITORY}/actions/workflows/${workflow_id}/runs?event=workflow_dispatch&branch=main&per_page=20" --jq --arg cutoff "$cutoff" '[.workflow_runs[] | select(.created_at >= $cutoff)] | sort_by(.created_at) | last | .id // empty')"
+              [ -n "$run_id" ] && break
+            done
+          fi
+          test -n "$run_id"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+          echo "Attached to controlled production run $run_id"
+
+      - name: Wait for controlled Cloudflare release
+        id: wait
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ steps.attach.outputs.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 180); do
+            status="$(gh api "repos/${REPOSITORY}/actions/runs/${RUN_ID}" --jq '.status')"
+            conclusion="$(gh api "repos/${REPOSITORY}/actions/runs/${RUN_ID}" --jq '.conclusion // ""')"
+            echo "Run ${RUN_ID}: ${status} ${conclusion}"
+            if [ "$status" = 'completed' ]; then
+              echo "conclusion=$conclusion" >> "$GITHUB_OUTPUT"
+              [ "$conclusion" = 'success' ]
+              exit $?
+            fi
+            sleep 30
+          done
+          echo 'Controlled production run did not complete inside the controller window.'
+          exit 1
+
+      - name: Verify live Death Files routes
+        id: live
+        shell: bash
+        run: |
+          set -euo pipefail
+          verify() {
+            url="$1" marker="$2" output="$3"
+            for attempt in $(seq 1 30); do
+              status="$(curl -L --retry 2 --connect-timeout 15 -A 'Mozilla/5.0 MatrixReprogrammedReleaseVerifier/1.0' -sS -o "$output" -w '%{http_code}' "$url" || true)"
+              if [ "$status" = '200' ] && grep -q "$marker" "$output"; then
+                echo "Verified $url"
+                return 0
+              fi
+              echo "Attempt $attempt: $url returned $status or marker was absent"
+              sleep 10
+            done
+            return 1
+          }
+          verify 'https://matrixreprogrammed.com/death-files.html' 'THE DEATH FILES' /tmp/death-files.html
+          verify 'https://matrixreprogrammed.com/death-file-jeffrey-epstein.html' 'death-signal-form' /tmp/death-file-epstein.html
+          grep -q 'Evidence-Based Conclusion' /tmp/death-file-epstein.html
+          grep -q 'Analytical Inference' /tmp/death-file-epstein.html
+          grep -q 'Speculative Conclusions' /tmp/death-file-epstein.html
+          grep -q 'id="signal-drop"' /tmp/death-file-epstein.html
+
+      - name: Write and commit final production proof
+        env:
+          RUN_ID: ${{ steps.attach.outputs.run_id }}
+          RUN_CONCLUSION: ${{ steps.wait.outputs.conclusion }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p data
+          node - <<'NODE'
+          const fs=require('fs');
+          const data=JSON.parse(fs.readFileSync('data/death-files.json','utf8'));
+          const payload={
+            productionVerified:true,
+            observedAt:new Date().toISOString(),
+            controlledRunId:Number(process.env.RUN_ID),
+            controlledRunConclusion:process.env.RUN_CONCLUSION,
+            releaseHeadSha:require('child_process').execSync('git rev-parse HEAD',{encoding:'utf8'}).trim(),
+            landingUrl:'https://matrixreprogrammed.com/death-files.html',
+            verifiedDossierUrl:'https://matrixreprogrammed.com/death-file-jeffrey-epstein.html',
+            launchDossiers:data.dossiers.map(item=>({name:item.name,year:item.year,url:`https://matrixreprogrammed.com/death-file-${item.slug}.html`,signalDrop:`https://matrixreprogrammed.com/death-file-${item.slug}.html#signal-drop`})),
+            verifiedMarkers:['THE DEATH FILES','death-signal-form','Evidence-Based Conclusion','Analytical Inference','Speculative Conclusions','signal-drop'],
+            persistenceRoutes:['/api/member/me','/submit-main-post','/forum-feed-main'],
+            autoUpdate:'Build-time cross-site dataset matching plus current live-intelligence matching on dossier load.'
+          };
+          fs.writeFileSync('data/death-files-production-proof.json',JSON.stringify(payload,null,2)+'\n');
+          NODE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/death-files-production-proof.json
+          git commit -m 'Confirm Death Files live production release'
+          git push origin main

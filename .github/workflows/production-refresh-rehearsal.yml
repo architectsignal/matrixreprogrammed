@@ -1,0 +1,133 @@
+name: Production Intelligence Refresh Rehearsal
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/production-refresh-rehearsal.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: production-intelligence-refresh-rehearsal
+  cancel-in-progress: true
+
+jobs:
+  rehearse-refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+      FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+      INVESTIGATION_MODE: daily
+      INVESTIGATION_CONCURRENCY: '4'
+      INVESTIGATION_TIMEOUT_MS: '25000'
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run named intelligence refresh commands
+        id: refresh
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          : > downloads/production-refresh-rehearsal.log
+          run_check() {
+            local name="$1"
+            shift
+            echo "===== START ${name} =====" | tee -a downloads/production-refresh-rehearsal.log
+            if "$@" 2>&1 | tee -a downloads/production-refresh-rehearsal.log; then
+              echo "===== PASS ${name} =====" | tee -a downloads/production-refresh-rehearsal.log
+            else
+              code=${PIPESTATUS[0]}
+              echo "===== FAIL ${name} exit=${code} =====" | tee -a downloads/production-refresh-rehearsal.log
+              exit "$code"
+            fi
+          }
+          run_check repair-source-registry node scripts/repair-investigation-source-registry.js
+          run_check investigation-machine node scripts/run-investigation-machine.js daily
+          run_check update-live-intel node scripts/update-live-intel.js
+          run_check record-live-intel node scripts/record-live-intel-check.js
+          run_check update-seven-day-intel node scripts/update-seven-day-intel.js
+          run_check outcome-briefings node scripts/build-outcome-briefings.js
+          run_check daily-brain-brief node scripts/build-daily-brain-brief.js
+          run_check investigation-pages node scripts/build-investigation-pages.js
+          run_check mission-intelligence node scripts/build-mission-intelligence-10.js
+          run_check live-intel-machine node scripts/build-live-intel-machine.js
+          run_check conclusion-integrity node scripts/patch-conclusion-integrity-cards.js
+          run_check curtain-tier-registry node scripts/build-behind-the-curtain-tier-registry.js
+          run_check curtain-tier-ui node scripts/patch-behind-the-curtain-tier-ui.js
+          run_check curtain-complete node scripts/build-behind-the-curtain.js
+
+      - name: Record refresh rehearsal result
+        if: always()
+        shell: bash
+        env:
+          REFRESH_OUTCOME: ${{ steps.refresh.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          TESTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p data downloads
+          node - <<'NODE'
+          const fs=require('fs');
+          const log=fs.existsSync('downloads/production-refresh-rehearsal.log')?fs.readFileSync('downloads/production-refresh-rehearsal.log','utf8'):'';
+          const failed=[...log.matchAll(/===== FAIL ([^ ]+) exit=(\d+) =====/g)].map(match=>({name:match[1],exit:Number(match[2])}));
+          const passed=[...log.matchAll(/===== PASS ([^=]+?) =====/g)].map(match=>match[1].trim());
+          const payload={ok:process.env.REFRESH_OUTCOME==='success'&&failed.length===0,observedAt:new Date().toISOString(),runId:Number(process.env.RUN_ID),testedSha:process.env.TESTED_SHA,outcome:process.env.REFRESH_OUTCOME,passed,failed};
+          fs.writeFileSync('data/production-refresh-rehearsal-status.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+          cp data/production-refresh-rehearsal-status.json /tmp/production-refresh-rehearsal-status.json
+          if [ -f downloads/production-refresh-rehearsal.log ]; then cp downloads/production-refresh-rehearsal.log /tmp/production-refresh-rehearsal.log; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/production-refresh-rehearsal-status.json data/production-refresh-rehearsal-status.json
+            git add data/production-refresh-rehearsal-status.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Record production intelligence refresh rehearsal"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
+
+      - name: Restore rehearsal proof
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p data downloads
+          if [ -f /tmp/production-refresh-rehearsal-status.json ]; then cp /tmp/production-refresh-rehearsal-status.json data/production-refresh-rehearsal-status.json; fi
+          if [ -f /tmp/production-refresh-rehearsal.log ]; then cp /tmp/production-refresh-rehearsal.log downloads/production-refresh-rehearsal.log; fi
+
+      - name: Upload refresh rehearsal proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-refresh-rehearsal-${{ github.run_id }}
+          path: |
+            data/production-refresh-rehearsal-status.json
+            downloads/production-refresh-rehearsal.log
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Fail closed on refresh result
+        if: always()
+        run: node -e "const x=require('./data/production-refresh-rehearsal-status.json');if(!x.ok)process.exit(1)"

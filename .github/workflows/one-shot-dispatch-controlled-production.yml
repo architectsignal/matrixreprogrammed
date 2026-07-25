@@ -19,51 +19,74 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout latest main
+        uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Generate and install homepage video intro
+      - name: Package self-hosted intro payload
         run: |
           set -euo pipefail
-          node scripts/patch-homepage-mask-intro.js
-          mkdir -p _site
-          cp index.html _site/index.html
-          cp homepage-mask-intro.css _site/homepage-mask-intro.css
-          cp homepage-mask-intro-data.js _site/homepage-mask-intro-data.js
-          cp homepage-mask-intro.js _site/homepage-mask-intro.js
-          grep -q '20260725-video-v5' _site/index.html
-          grep -q 'matrix-homepage-intro-seen-v5' _site/homepage-mask-intro.js
-          test "$(wc -c < _site/homepage-mask-intro-data.js)" -gt 10000
+          mkdir -p _site/assets
+          cp assets/matrix-intro-video-1.txt _site/assets/matrix-intro-video-1.txt
+          cp assets/matrix-intro-video-2.txt _site/assets/matrix-intro-video-2.txt
+          node --check src/worker-production-intro-hotfix.js
+          node --check src/worker-production-intro-hotfix-cdn.js
+          test "$(wc -c < _site/assets/matrix-intro-video-1.txt)" -gt 1000
+          test "$(wc -c < _site/assets/matrix-intro-video-2.txt)" -gt 1000
+          node - <<'NODE'
+          const fs = require('fs');
+          const base64 = [1, 2]
+            .map(part => fs.readFileSync(`_site/assets/matrix-intro-video-${part}.txt`, 'utf8').trim())
+            .join('')
+            .replace(/\s+/g, '');
+          const mp4 = Buffer.from(base64, 'base64');
+          if (mp4.length < 10000) throw new Error(`Intro MP4 is too small: ${mp4.length}`);
+          if (mp4.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Intro payload is not an MP4');
+          console.log(`Packaged validated intro MP4: ${mp4.length} bytes`);
+          NODE
 
-      - name: Deploy corrected production assets
+      - name: Deploy self-hosted homepage intro
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest deploy --config wrangler.toml
+          npx --yes wrangler@latest deploy --config wrangler.intro-hotfix.toml
 
-      - name: Verify live forced replay
+      - name: Verify live forced replay and MP4 payload
         run: |
           set -euo pipefail
-          for attempt in $(seq 1 24); do
+          for attempt in $(seq 1 30); do
             nonce="$(date +%s)-$attempt"
             home="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&hotfix=$nonce" || true)"
-            js="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro.js?v=20260725-video-v5&hotfix=$nonce" || true)"
-            data="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro-data.js?v=20260725-video-v5&hotfix=$nonce" || true)"
-            if printf '%s' "$home" | grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' \
-              && printf '%s' "$home" | grep -q 'homepage-mask-intro.js?v=20260725-video-v5' \
-              && printf '%s' "$js" | grep -q 'matrix-homepage-intro-seen-v5' \
-              && test "${#data}" -gt 10000; then
-              echo 'VERIFIED: homepage intro v5 is live.'
+            runtime="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-intro-hotfix-v6.js?v=20260725-video-v6&hotfix=$nonce" || true)"
+            curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/_matrix-intro-part/1?v=20260725-video-v6&hotfix=$nonce" -o /tmp/matrix-intro-part-1.txt || true
+            curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/_matrix-intro-part/2?v=20260725-video-v6&hotfix=$nonce" -o /tmp/matrix-intro-part-2.txt || true
+            if printf '%s' "$home" | grep -q 'data-homepage-intro-v6' \
+              && printf '%s' "$home" | grep -q 'homepage-intro-hotfix-v6.js' \
+              && printf '%s' "$runtime" | grep -q '/_matrix-intro-part/1' \
+              && test -s /tmp/matrix-intro-part-1.txt \
+              && test -s /tmp/matrix-intro-part-2.txt; then
+              node - <<'NODE'
+              const fs = require('fs');
+              const base64 = [1, 2]
+                .map(part => fs.readFileSync(`/tmp/matrix-intro-part-${part}.txt`, 'utf8').trim())
+                .join('')
+                .replace(/\s+/g, '');
+              const mp4 = Buffer.from(base64, 'base64');
+              if (mp4.length < 10000 || mp4.slice(4, 8).toString('ascii') !== 'ftyp') process.exit(1);
+              console.log(`VERIFIED: live homepage intro payload decodes to MP4 (${mp4.length} bytes).`);
+              NODE
               exit 0
             fi
             sleep 5
           done
+          echo 'Homepage intro verification failed.' >&2
           exit 1

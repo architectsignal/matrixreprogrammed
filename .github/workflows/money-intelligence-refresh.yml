@@ -12,6 +12,7 @@ on:
       - scripts/build-money-overlap-map.js
       - scripts/enrich-money-intelligence-depth.js
       - scripts/finalize-money-intelligence-depth.js
+      - scripts/refresh-money-public-market-rankings.js
       - scripts/money-overlap-map-test.js
       - src/money-overlap-graph.html
       - src/money-overlap-graph.js
@@ -53,6 +54,7 @@ jobs:
           node --check scripts/build-money-overlap-map.js
           node --check scripts/enrich-money-intelligence-depth.js
           node --check scripts/finalize-money-intelligence-depth.js
+          node --check scripts/refresh-money-public-market-rankings.js
           node --check scripts/money-overlap-map-test.js
           node --check scripts/build-detailed-wealth-guides.js
           node --check scripts/detailed-wealth-guides-test.js
@@ -92,6 +94,7 @@ jobs:
             downloads/wealth-guides \
             downloads/detailed-wealth-guides-test.json \
             downloads/money-depth-integration-test.json \
+            downloads/money-public-market-refresh.json \
             scripts/build-deep-pdf-intelligence.mjs \
             scripts/build-all-branded-download-pdfs.js \
             money-expansion.css money-overlap.css money-category.js making-money-methods.js making-money.js \
@@ -105,7 +108,7 @@ jobs:
             echo "No generated changes."
             exit 0
           fi
-          git commit -m "Refresh deep capital registry, profiles and overlap map [deploy]"
+          git commit -m "Refresh quantitative capital rankings, profiles and overlap map [deploy]"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
@@ -125,6 +128,7 @@ jobs:
           path: |
             downloads/detailed-wealth-guides-test.json
             downloads/money-depth-integration-test.json
+            downloads/money-public-market-refresh.json
             downloads/wealth-guides/index.json
             data/money-intelligence-depth-report.json
             data/money-overlap-graph.json

@@ -1,15 +1,16 @@
 {
   "ok": false,
-  "version": "20260725-video-v6",
-  "recordedAt": "2026-07-25T19:32:27.665Z",
-  "runId": 30171773442,
+  "version": "20260725-video-v7",
+  "recordedAt": "2026-07-25T19:38:44.908Z",
+  "runId": 30171992625,
   "runAttempt": 1,
-  "headSha": "be55b169142b7b16654e7f84fe58f34bc8ec2d11",
+  "headSha": "9b6667b8ed11365d4078d5177fb807692c346133",
   "deployOutcome": "success",
   "verifyOutcome": "failure",
   "packagedBytes": 15003,
   "liveBytes": 0,
   "payloadMatches": false,
-  "source": "Cloudflare Wrangler Text-module video payload",
-  "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1"
+  "source": "Cloudflare Worker direct video/mp4 endpoint backed by Wrangler Text modules",
+  "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1",
+  "diagnostics": null
 }

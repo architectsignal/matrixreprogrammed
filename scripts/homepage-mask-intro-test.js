@@ -82,8 +82,8 @@ if (!js.includes("intro.classList.add('needs-play')")) fail('reduced-motion and 
 
 for (const marker of [
   runtimeVersion,
-  `homepage-mask-intro.css?v=${runtimeVersion}`,
-  `homepage-mask-intro.js?v=${runtimeVersion}`,
+  'homepage-mask-intro.css?v=${runtimeVersion}',
+  'homepage-mask-intro.js?v=${runtimeVersion}',
   'data-intro-version'
 ]) {
   if (!patcher.includes(marker)) fail(`patcher is missing cache/version marker: ${marker}`);

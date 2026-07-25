@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./expand-death-files-100.js');
 require('./build-death-files.js');
 require('./death-files-pressure-test.js');
 const pulseFile = path.join(root, 'investigation-pulse.js');

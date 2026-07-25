@@ -22,7 +22,7 @@ on:
       - src/worker-paypal-sandbox-rehearsal.js
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: production-runtime-contract-rehearsal
@@ -51,6 +51,8 @@ jobs:
         run: npm ci
 
       - name: Build exact production assets without deploying
+        id: build
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -58,6 +60,9 @@ jobs:
           npm run build 2>&1 | tee downloads/runtime-rehearsal-build.log
 
       - name: Run named runtime and D1 contracts
+        id: contracts
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -91,6 +96,44 @@ jobs:
           run_check d1-export node scripts/d1-export-command-test.js
           run_check wrangler-dry-run npx --yes wrangler@latest deploy --dry-run
 
+      - name: Record rehearsal status on main
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          CONTRACT_OUTCOME: ${{ steps.contracts.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          TESTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          node - <<'NODE'
+          const fs=require('fs');
+          const build=process.env.BUILD_OUTCOME||'not-run';
+          const contracts=process.env.CONTRACT_OUTCOME||'not-run';
+          const payload={
+            ok:build==='success'&&contracts==='success',
+            observedAt:new Date().toISOString(),
+            runId:Number(process.env.RUN_ID),
+            testedSha:process.env.TESTED_SHA,
+            build,
+            contracts,
+            artifactName:`production-runtime-rehearsal-${process.env.RUN_ID}`
+          };
+          fs.writeFileSync('data/production-runtime-rehearsal-status.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/production-runtime-rehearsal-status.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record production runtime rehearsal status"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+          done
+          exit 1
+
       - name: Upload rehearsal proof
         if: always()
         uses: actions/upload-artifact@v4
@@ -103,6 +146,17 @@ jobs:
             downloads/money-public-market-refresh.json
             data/money-intelligence-depth-report.json
             data/money-research-candidate-expansion.json
+            data/production-runtime-rehearsal-status.json
             downloads/forum-persistence-d1-test.json
           if-no-files-found: warn
           retention-days: 30
+
+      - name: Fail closed on rehearsal result
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          CONTRACT_OUTCOME: ${{ steps.contracts.outcome }}
+        run: |
+          test "$BUILD_OUTCOME" = success
+          test "$CONTRACT_OUTCOME" = success

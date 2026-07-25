@@ -1,13 +1,15 @@
 {
   "ok": false,
   "version": "20260725-video-v6",
-  "recordedAt": "2026-07-25T19:02:07.604Z",
-  "runId": 30169400182,
-  "runAttempt": 4,
-  "headSha": "04911c54ed8c97c5781e5eec17bb22397d391799",
+  "recordedAt": "2026-07-25T19:07:18.038Z",
+  "runId": 30170956947,
+  "runAttempt": 1,
+  "headSha": "eabb27331113273ecc068bbe970ba5b6f36b4cb9",
   "deployOutcome": "success",
   "verifyOutcome": "failure",
-  "blockingProductionRun": 30161462181,
-  "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1",
-  "scope": "Isolated homepage intro delivery Worker; existing production API, D1, membership, forum, email and welcome/ElevenLabs gate are delegated unchanged."
+  "packagedBytes": 15003,
+  "liveBytes": 0,
+  "payloadMatches": false,
+  "source": "Cloudflare ASSETS self-hosted video parts",
+  "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1"
 }

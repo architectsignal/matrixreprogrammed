@@ -1,6 +1,18 @@
 {
-  "observedAt": "2026-07-25T07:43:28.884Z",
+  "observedAt": "2026-07-25T08:01:31.676Z",
   "powerFamilyRefreshDiagnostic": [
+    {
+      "id": 30149968686,
+      "name": "Diagnose Power-Family Production Refresh",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-07-25T07:48:19Z",
+      "updatedAt": "2026-07-25T07:51:28Z",
+      "headSha": "b67d266a0eea398bc6021bd16bb23faa53c3cb34",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30149968686",
+      "runAttempt": 1
+    },
     {
       "id": 30149694177,
       "name": "Diagnose Power-Family Production Refresh",
@@ -19,13 +31,13 @@
       "id": 30091864423,
       "name": "Matrix Reprogrammed Controlled Production Deploy",
       "event": "workflow_dispatch",
-      "status": "completed",
-      "conclusion": "failure",
+      "status": "in_progress",
+      "conclusion": null,
       "createdAt": "2026-07-24T12:06:04Z",
-      "updatedAt": "2026-07-25T07:37:12Z",
+      "updatedAt": "2026-07-25T07:54:20Z",
       "headSha": "62ec7fdb25a0bac1d083540c1993e7bf15d18134",
       "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30091864423",
-      "runAttempt": 32
+      "runAttempt": 33
     },
     {
       "id": 30091003163,

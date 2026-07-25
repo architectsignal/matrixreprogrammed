@@ -4,6 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const pagePath = path.join(root, 'index.html');
 const reportPath = path.join(root, 'downloads', 'homepage-mask-intro-report.json');
+const runtimeVersion = '20260725-video-v4';
 const videoParts = [
   'assets/matrix-intro-video-1.txt',
   'assets/matrix-intro-video-2.txt'
@@ -19,9 +20,9 @@ for (const rel of required) {
 if (!fs.existsSync(pagePath)) throw new Error('index.html is missing');
 
 let html = fs.readFileSync(pagePath, 'utf8');
-const cssLink = '<link rel="stylesheet" href="homepage-mask-intro.css" data-homepage-mask-intro-style />';
+const cssLink = `<link rel="stylesheet" href="homepage-mask-intro.css?v=${runtimeVersion}" data-homepage-mask-intro-style data-intro-version="${runtimeVersion}" />`;
 const overlay = `<!-- homepage-mask-intro:start -->
-<section id="homepage-mask-intro" class="homepage-mask-intro" data-homepage-mask-intro data-mode="video" aria-label="Matrix Reprogrammed opening video" aria-hidden="false">
+<section id="homepage-mask-intro" class="homepage-mask-intro" data-homepage-mask-intro data-mode="video" data-intro-version="${runtimeVersion}" aria-label="Matrix Reprogrammed opening video" aria-hidden="false">
   <div class="homepage-mask-intro__stage">
     <video class="homepage-mask-intro__video" muted autoplay playsinline preload="auto" aria-label="Matrix Reprogrammed cinematic opening" data-homepage-intro-video></video>
     <div class="homepage-mask-intro__controls" aria-label="Intro controls">
@@ -31,7 +32,7 @@ const overlay = `<!-- homepage-mask-intro:start -->
 </section>
 <!-- retired-intro-compatibility: assets/intro-eye.svg assets/intro-mask.svg homepage-intro__burn -->
 <!-- homepage-mask-intro:end -->`;
-const runtime = '<script src="homepage-mask-intro.js" data-homepage-mask-intro-runtime></script>';
+const runtime = `<script src="homepage-mask-intro.js?v=${runtimeVersion}" data-homepage-mask-intro-runtime data-intro-version="${runtimeVersion}"></script>`;
 
 html = html
   .replace(/<link[^>]+data-homepage-mask-intro-style[^>]*>/gi, '')
@@ -54,6 +55,7 @@ fs.writeFileSync(pagePath, html);
 const counts = {
   overlay: (html.match(/data-homepage-mask-intro(?:\s|>)/g) || []).length,
   style: (html.match(/data-homepage-mask-intro-style/g) || []).length,
+  version: (html.match(new RegExp(runtimeVersion, 'g')) || []).length,
   legacyPreloads: (html.match(/data-homepage-mask-preload=/g) || []).length,
   runtime: (html.match(/data-homepage-mask-intro-runtime/g) || []).length,
   video: (html.match(/data-homepage-intro-video/g) || []).length,
@@ -64,6 +66,7 @@ const counts = {
 const failures = [];
 if (counts.overlay !== 1) failures.push(`expected one intro overlay, found ${counts.overlay}`);
 if (counts.style !== 1) failures.push(`expected one intro stylesheet, found ${counts.style}`);
+if (counts.version < 4) failures.push(`versioned intro references are incomplete: ${counts.version}`);
 if (counts.legacyPreloads !== 0) failures.push(`legacy image preloads remain: ${counts.legacyPreloads}`);
 if (counts.runtime !== 1) failures.push(`expected one intro runtime, found ${counts.runtime}`);
 if (counts.video !== 1) failures.push(`expected one intro video, found ${counts.video}`);
@@ -75,7 +78,8 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   mode: 'video',
-  sequence: ['video:auto', 'dissolve:720ms', 'existing-welcome-gate'],
+  runtimeVersion,
+  sequence: ['video:auto', 'manual-play-fallback', 'dissolve:720ms', 'existing-welcome-gate'],
   voiceGatePreserved: html.includes('welcome-gate.js'),
   videoParts,
   counts,
@@ -88,4 +92,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`INTRO VIDEO FAILURE: ${failure}`));
   process.exit(1);
 }
-console.log('Homepage intro patched: corrected video, skip control, session guard and existing voice gate preserved.');
+console.log(`Homepage intro patched: ${runtimeVersion}, fresh cache URLs, Blob playback and existing voice gate preserved.`);

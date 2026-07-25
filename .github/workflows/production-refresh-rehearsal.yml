@@ -132,3 +132,5 @@ jobs:
       - name: Fail closed on refresh result
         if: always()
         run: node -e "const x=require('./data/production-refresh-rehearsal-status.json');if(!x.ok)process.exit(1)"
+
+# Diagnostic refresh: canonical deploy failure at run 30156629026.

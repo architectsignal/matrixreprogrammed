@@ -22,7 +22,7 @@ on:
       - '.github/workflows/power-family-integrity.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout current main
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -115,5 +117,46 @@ jobs:
           path: |
             downloads/power-family-capstone-reconcile.json
             downloads/behind-the-curtain-production-guard.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
+
+      - name: Publish integrity status
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          HEAD_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs=require('fs');
+          const read=file=>{try{return JSON.parse(fs.readFileSync(file,'utf8'))}catch{return null}};
+          const payload={
+            checkedAt:new Date().toISOString(),
+            ok:process.env.JOB_STATUS==='success',
+            status:process.env.JOB_STATUS,
+            workflowRunId:Number(process.env.RUN_ID),
+            runAttempt:Number(process.env.RUN_ATTEMPT),
+            headSha:process.env.HEAD_SHA,
+            reconciliation:read('downloads/power-family-capstone-reconcile.json'),
+            productionGuard:read('downloads/behind-the-curtain-production-guard.json')
+          };
+          fs.mkdirSync('data',{recursive:true});
+          fs.writeFileSync('data/power-family-integrity-status.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+          cp data/power-family-integrity-status.json /tmp/power-family-integrity-status.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/power-family-integrity-status.json data/power-family-integrity-status.json
+            git add data/power-family-integrity-status.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Record Power-Family integrity status"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1

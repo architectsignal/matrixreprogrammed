@@ -48,6 +48,11 @@ function ensureOne(file) {
   if (supportLinks !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one GoFundMe support link`);
 }
 
+const moneyDepthBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'finalize-money-intelligence-depth.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
+if (moneyDepthBuild.stdout) process.stdout.write(moneyDepthBuild.stdout);
+if (moneyDepthBuild.stderr) process.stderr.write(moneyDepthBuild.stderr);
+if (moneyDepthBuild.status !== 0) throw new Error('Money intelligence depth and overlap integration failed before homepage finalization');
+
 const structuralPowerBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'build-behind-the-curtain.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
 if (structuralPowerBuild.stdout) process.stdout.write(structuralPowerBuild.stdout);
 if (structuralPowerBuild.stderr) process.stderr.write(structuralPowerBuild.stderr);
@@ -80,8 +85,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   liveRoute: 'live-intel.html',
   supportRoute: supportUrl,
   supportPurpose: 'High-memory GPUs, secure computing infrastructure, storage and evidence-processing capacity',
+  moneyDepthBuild: 'scripts/finalize-money-intelligence-depth.js',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; Behind the Curtain structural-power model rebuilt first.`);
+console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);

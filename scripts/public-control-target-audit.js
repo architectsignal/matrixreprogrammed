@@ -1,7 +1,22 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
+
+// The Power-Family Capstone is a final-release-owned public control surface.
+// Rebuild and synchronize it after all broad generators, immediately before
+// the final control audit, so production cannot package the retired Capstone.
+const powerFamilyBuild = spawnSync(process.execPath, [path.join(root, 'scripts/build-power-family-intelligence-layer.js')], {
+  cwd: root,
+  encoding: 'utf8',
+  env: process.env,
+  maxBuffer: 1024 * 1024 * 20
+});
+if (powerFamilyBuild.stdout) process.stdout.write(powerFamilyBuild.stdout);
+if (powerFamilyBuild.stderr) process.stderr.write(powerFamilyBuild.stderr);
+if (powerFamilyBuild.status !== 0) throw new Error('Power-Family Intelligence Layer final release synchronization failed.');
+
 const base = fs.existsSync(path.join(root, '_site')) ? path.join(root, '_site') : root;
 const ignored = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots']);
 const problems = [];
@@ -58,12 +73,31 @@ for (const file of walk(base)) {
   if (isIndividualPowerDossier(html) && !/power-dossier-runtime\.js/i.test(html)) problems.push(`${rel(file)}: dossier can remain stuck in loading state without resilient runtime`);
 }
 
+const requiredPowerFamilyAssets = [
+  'behind-the-curtain-capstone.html',
+  'power-family-intelligence-layer.css',
+  'power-family-intelligence-layer.js',
+  'data/power-family-intelligence-layer.json'
+];
+for (const relative of requiredPowerFamilyAssets) {
+  const file = path.join(base, relative);
+  if (!fs.existsSync(file)) problems.push(`${relative}: Power-Family release asset is missing`);
+}
+if (fs.existsSync(path.join(base, 'behind-the-curtain-capstone.html'))) {
+  const capstone = fs.readFileSync(path.join(base, 'behind-the-curtain-capstone.html'), 'utf8');
+  for (const marker of ['POWER-FAMILY INTELLIGENCE LAYER', 'id="current-map"', 'id="directory"', 'id="claims"', 'id="questions"']) {
+    if (!capstone.includes(marker)) problems.push(`behind-the-curtain-capstone.html: missing canonical marker ${marker}`);
+  }
+  if (/BLOODLINES · SYMBOLS · THE UNRESOLVED APEX/i.test(capstone)) problems.push('behind-the-curtain-capstone.html: retired symbolic-only Capstone was restored');
+}
+
 const report = {
   ok: problems.length === 0,
   generatedAt: new Date().toISOString(),
   base: path.relative(root, base) || '.',
   pages,
   controls,
+  powerFamilyReleaseSynchronized: true,
   problems,
   warnings
 };
@@ -74,4 +108,4 @@ if (problems.length) {
   problems.forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`PUBLIC CONTROL TARGET AUDIT PASSED: ${pages} pages and ${controls} visible controls checked. Warnings: ${warnings.length}.`);
+console.log(`PUBLIC CONTROL TARGET AUDIT PASSED: ${pages} pages and ${controls} visible controls checked. Power-Family Capstone synchronized. Warnings: ${warnings.length}.`);

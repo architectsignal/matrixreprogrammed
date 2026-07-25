@@ -1,0 +1,77 @@
+name: Observe Production Deploy Runs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/observe-production-deploy-runs.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read controlled production workflow runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/runs?per_page=30" > /tmp/deploy-runs.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const source=JSON.parse(fs.readFileSync('/tmp/deploy-runs.json','utf8'));
+          const runs=(source.workflow_runs||[]).map(run=>({
+            id:run.id,
+            runNumber:run.run_number,
+            runAttempt:run.run_attempt,
+            event:run.event,
+            status:run.status,
+            conclusion:run.conclusion,
+            createdAt:run.created_at,
+            updatedAt:run.updated_at,
+            runStartedAt:run.run_started_at,
+            headSha:run.head_sha,
+            headBranch:run.head_branch,
+            workflowId:run.workflow_id,
+            name:run.name,
+            path:run.path,
+            url:run.html_url
+          }));
+          const payload={
+            observedAt:new Date().toISOString(),
+            active:runs.filter(run=>run.status==='queued'||run.status==='in_progress'||run.status==='waiting'||run.status==='pending'),
+            runs
+          };
+          fs.writeFileSync('data/production-deploy-run-queue.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+
+      - name: Publish queue observation atomically
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/production-deploy-run-queue.json /tmp/production-deploy-run-queue.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/production-deploy-run-queue.json data/production-deploy-run-queue.json
+            git add data/production-deploy-run-queue.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Record production deploy run queue"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1

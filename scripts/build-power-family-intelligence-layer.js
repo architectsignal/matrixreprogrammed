@@ -27,7 +27,15 @@ function write(relativePath, content, base) {
   }
 }
 
-for (const [relativePath, content] of Object.entries(outputs)) {
+function canonicalizeOutput(relativePath, content) {
+  if (relativePath !== 'behind-the-curtain-capstone.html') return content;
+  return String(content)
+    .replace(/\s*<script\s+src=["']search-system\.js["']\s*><\/script>/gi, '')
+    .replace(/\n{3,}/g, '\n\n');
+}
+
+for (const [relativePath, rawContent] of Object.entries(outputs)) {
+  const content = canonicalizeOutput(relativePath, rawContent);
   write(relativePath, content, root);
   if (fs.existsSync(site)) write(relativePath, content, site);
 }
@@ -63,14 +71,20 @@ for (const [relativePath, needles] of contracts) {
       throw new Error(`${relativePath} missing required contract: ${needle}`);
     }
   }
+  if (relativePath === 'behind-the-curtain-capstone.html' && text.includes('search-system.js')) {
+    throw new Error('behind-the-curtain-capstone.html contains obsolete missing runtime search-system.js');
+  }
   if (fs.existsSync(site)) {
     const deployed = fs.readFileSync(path.join(site, relativePath), 'utf8');
     for (const needle of needles) {
       if (!deployed.includes(needle)) throw new Error(`_site/${relativePath} missing required contract: ${needle}`);
+    }
+    if (relativePath === 'behind-the-curtain-capstone.html' && deployed.includes('search-system.js')) {
+      throw new Error('_site/behind-the-curtain-capstone.html contains obsolete missing runtime search-system.js');
     }
   }
 }
 
 JSON.parse(fs.readFileSync(path.join(root, 'data/power-family-intelligence-layer.json'), 'utf8'));
 if (fs.existsSync(site)) JSON.parse(fs.readFileSync(path.join(site, 'data/power-family-intelligence-layer.json'), 'utf8'));
-console.log(`Power-Family Intelligence Layer generated, validated and ${fs.existsSync(site) ? 'synchronized to _site' : 'prepared for the site build'}.`);
+console.log(`Power-Family Intelligence Layer generated, canonicalized, validated and ${fs.existsSync(site) ? 'synchronized to _site' : 'prepared for the site build'}.`);

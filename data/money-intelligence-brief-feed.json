@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T07:24:53.153Z",
+  "updated": "2026-07-25T07:34:42.509Z",
   "title": "Money Intelligence Brief Feed",
   "coverage": [
     {
@@ -27,66 +27,66 @@
     {
       "category": "Top 100 Asset Managers",
       "route": "follow-the-money/asset-managers.html",
-      "candidates": 30,
-      "profiled": 2,
+      "candidates": 100,
+      "profiled": 5,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Sovereign Wealth Funds",
       "route": "follow-the-money/sovereign-wealth-funds.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Pension Funds",
       "route": "follow-the-money/pension-funds.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 1,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Family Offices",
       "route": "follow-the-money/family-offices.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Foundations & Endowments",
       "route": "follow-the-money/foundations.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Publicly Disclosed Trust Structures",
       "route": "follow-the-money/trusts.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
@@ -104,33 +104,33 @@
     {
       "category": "Top 100 Private Equity Firms",
       "route": "follow-the-money/private-equity.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 5,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Hedge Funds",
       "route": "follow-the-money/hedge-funds.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Government Contractors",
       "route": "follow-the-money/government-contractors.html",
-      "candidates": 30,
-      "profiled": 14,
+      "candidates": 100,
+      "profiled": 31,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
@@ -181,44 +181,44 @@
     {
       "category": "Top 100 Defence & Security Companies",
       "route": "follow-the-money/defence-security.html",
-      "candidates": 99,
-      "profiled": 27,
+      "candidates": 100,
+      "profiled": 28,
       "ranked": 99,
       "verified": 99,
-      "research": 0,
+      "research": 1,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Political Money Networks",
       "route": "follow-the-money/political-money.html",
-      "candidates": 30,
-      "profiled": 0,
+      "candidates": 100,
+      "profiled": 1,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Philanthropic Power Networks",
       "route": "follow-the-money/philanthropic-networks.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 0,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     },
     {
       "category": "Top 100 Institutional Asset Owners",
       "route": "follow-the-money/asset-owners.html",
-      "candidates": 30,
+      "candidates": 100,
       "profiled": 1,
       "ranked": 0,
       "verified": 0,
-      "research": 30,
+      "research": 100,
       "target": 100,
       "completionTruth": "candidate-list-partial-verification"
     }
@@ -1958,23 +1958,23 @@
     "money-profile.html"
   ],
   "overlap": {
-    "records": 1159,
+    "records": 2000,
     "categories": 20,
     "jurisdictions": 50,
-    "overlapEntities": 122,
-    "relationshipEdges": 2635,
-    "categoryPairs": 19,
-    "identityProfiles": 236,
+    "overlapEntities": 171,
+    "relationshipEdges": 2639,
+    "categoryPairs": 29,
+    "identityProfiles": 258,
     "verifiedMeasures": 799,
-    "candidates": 1159
+    "candidates": 2000
   },
   "depth": {
-    "generatedAt": "2026-07-25T07:24:53.153Z",
-    "totalRecords": 1159,
+    "generatedAt": "2026-07-25T07:34:42.509Z",
+    "totalRecords": 2000,
     "verifiedMeasures": 799,
-    "identityProfiles": 236,
-    "unresolvedResearchLeads": 923,
-    "relationships": 2635,
-    "centralRegistryMatches": 236
+    "identityProfiles": 258,
+    "unresolvedResearchLeads": 1742,
+    "relationships": 2639,
+    "centralRegistryMatches": 258
   }
 }

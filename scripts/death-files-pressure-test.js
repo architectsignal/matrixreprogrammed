@@ -1,0 +1,8 @@
+const fs=require('fs'),path=require('path'),root=process.cwd();
+const required=['death-files.html','death-files-pattern-lab.html','death-files-methodology.html','death-files.js','data/death-files.json','data/death-files-runtime.json','downloads/death-files-index.json'];
+for(const rel of required){if(!fs.existsSync(path.join(root,rel))){console.error('Archive verification failed: '+rel+' missing');process.exit(1)}}
+const data=JSON.parse(fs.readFileSync(path.join(root,'data','death-files.json'),'utf8'));
+if(!Array.isArray(data.dossiers)||data.dossiers.length<3){console.error('Archive verification failed: launch dossiers missing');process.exit(1)}
+for(const item of data.dossiers){const page=path.join(root,'death-file-'+item.slug+'.html'),year=path.join(root,'death-files-year-'+item.year+'.html');if(!fs.existsSync(page)||!fs.existsSync(year)){console.error('Archive verification failed for '+item.slug);process.exit(1)}const html=fs.readFileSync(page,'utf8');for(const marker of ['Evidence Room','Evidence-Based Conclusion','Analytical Inference','Speculative Conclusions','death-signal-form','death-signal-feed']){if(!html.includes(marker)){console.error('Archive verification failed: '+item.slug+' lacks '+marker);process.exit(1)}}}
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true});fs.writeFileSync(path.join(root,'downloads','death-files-pressure-test.json'),JSON.stringify({ok:true,generatedAt:new Date().toISOString(),dossiers:data.dossiers.length,years:[...new Set(data.dossiers.map(x=>x.year))]},null,2));
+console.log('Death Files pressure test passed: '+data.dossiers.length+' dossiers.');

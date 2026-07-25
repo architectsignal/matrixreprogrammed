@@ -17,6 +17,7 @@ on:
       - 'scripts/build-power-family-intelligence-layer.js'
       - 'scripts/power-family-intelligence-layer.runtime.js'
       - 'scripts/reconcile-power-family-capstone.js'
+      - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
       - '.github/workflows/power-family-integrity.yml'
@@ -45,6 +46,7 @@ jobs:
           node --check behind-the-curtain-capstone.js
           node --check scripts/power-family-intelligence-layer.runtime.js
           node --check scripts/reconcile-power-family-capstone.js
+          node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
 
       - name: Parse intelligence datasets
@@ -69,6 +71,8 @@ jobs:
           set -euo pipefail
           mkdir -p _site/data
           for file in \
+            index.html \
+            start-here.html \
             behind-the-curtain.html \
             behind-the-curtain-access.html \
             behind-the-curtain-access-v2.js \
@@ -79,6 +83,8 @@ jobs:
             power-family-intelligence-layer.css; do
             cp "$file" "_site/$file"
           done
+          cp index.html _site/index
+          cp start-here.html _site/start-here
           cp behind-the-curtain.html _site/behind-the-curtain
           cp behind-the-curtain-access.html _site/behind-the-curtain-access
           cp behind-the-curtain-capstone.html _site/behind-the-curtain-capstone
@@ -98,16 +104,18 @@ jobs:
       - name: Reconcile canonical Capstones and discovery routes
         run: node scripts/reconcile-power-family-capstone.js
 
-      - name: Run production contract guard
+      - name: Run production contract guard and public gateway checks
         run: node scripts/behind-the-curtain-production-guard.js
 
-      - name: Verify no visible compatibility marker leak
+      - name: Verify marker cleanup and public gateways
         run: |
           node scripts/hide-visible-compatibility-markers.js --output
           if grep -RIl 'preservedaftervisiblede-duplication' _site --include='*.html' --exclude-dir='data'; then
             echo 'Visible compatibility marker leak remains.'
             exit 1
           fi
+          grep -q 'power-family-public-gateway:start' _site/index.html
+          grep -q 'power-family-public-gateway:start' _site/start-here.html
 
       - name: Upload integrity reports
         if: always()
@@ -117,6 +125,7 @@ jobs:
           path: |
             downloads/power-family-capstone-reconcile.json
             downloads/behind-the-curtain-production-guard.json
+            downloads/power-family-public-gateways.json
           if-no-files-found: warn
           retention-days: 30
 
@@ -141,7 +150,8 @@ jobs:
             runAttempt:Number(process.env.RUN_ATTEMPT),
             headSha:process.env.HEAD_SHA,
             reconciliation:read('downloads/power-family-capstone-reconcile.json'),
-            productionGuard:read('downloads/behind-the-curtain-production-guard.json')
+            productionGuard:read('downloads/behind-the-curtain-production-guard.json'),
+            publicGateways:read('downloads/power-family-public-gateways.json')
           };
           fs.mkdirSync('data',{recursive:true});
           fs.writeFileSync('data/power-family-integrity-status.json',`${JSON.stringify(payload,null,2)}\n`);

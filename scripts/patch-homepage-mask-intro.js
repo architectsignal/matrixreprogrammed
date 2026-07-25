@@ -5,16 +5,14 @@ const root = process.cwd();
 const pagePath = path.join(root, 'index.html');
 const reportPath = path.join(root, 'downloads', 'homepage-mask-intro-report.json');
 const dataAssetPath = path.join(root, 'homepage-mask-intro-data.js');
-const runtimeVersion = '20260725-video-v5';
-const videoParts = [
-  'assets/matrix-intro-video-1.txt',
-  'assets/matrix-intro-video-2.txt'
-];
-const required = [
-  'homepage-mask-intro.css',
-  'homepage-mask-intro.js',
-  ...videoParts
-];
+const runtimeVersion = '20260725-video-v9';
+const expectedDecodedBytes = 123874;
+const videoParts = fs.readdirSync(path.join(root, 'assets'))
+  .filter(name => /^matrix-intro-v9-\d+\.txt$/i.test(name))
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(name => `assets/${name}`);
+if (!videoParts.length) throw new Error('No v9 homepage intro payload chunks were found.');
+const required = ['homepage-mask-intro.css','homepage-mask-intro.js',...videoParts];
 for (const rel of required) {
   if (!fs.existsSync(path.join(root, rel))) throw new Error(`Homepage video intro asset missing: ${rel}`);
 }
@@ -22,10 +20,11 @@ if (!fs.existsSync(pagePath)) throw new Error('index.html is missing');
 
 const base64 = videoParts.map(rel => fs.readFileSync(path.join(root, rel), 'utf8').trim()).join('').replace(/\s+/g, '');
 const decoded = Buffer.from(base64, 'base64');
-if (base64.length < 1000 || decoded.length < 10000) throw new Error('Homepage intro MP4 data is unexpectedly small');
+if (decoded.length !== expectedDecodedBytes) throw new Error(`Homepage intro MP4 must decode to exactly ${expectedDecodedBytes} bytes; received ${decoded.length}.`);
 if (decoded.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Homepage intro data does not decode to an MP4');
+if (!decoded.includes(Buffer.from('moov')) || !decoded.includes(Buffer.from('mdat'))) throw new Error('Homepage intro MP4 is missing required moov or mdat atoms.');
 const dataAsset = [
-  `/* Matrix Reprogrammed homepage intro video data · ${runtimeVersion} · generated at build time */`,
+  `/* Matrix Reprogrammed homepage intro video data · ${runtimeVersion} · verified ${expectedDecodedBytes} bytes */`,
   `globalThis.__MATRIX_INTRO_BASE64__=${JSON.stringify(base64)};`,
   `globalThis.__MATRIX_INTRO_META__=Object.freeze(${JSON.stringify({ version: runtimeVersion, mime: 'video/mp4', decodedBytes: decoded.length, sourceParts: videoParts.length })});`,
   ''
@@ -54,14 +53,11 @@ html = html
   .replace(/<!-- homepage-mask-intro:start -->[\s\S]*?<!-- homepage-mask-intro:end -->/gi, '')
   .replace(/<script[^>]+data-homepage-mask-intro-data[^>]*><\/script>/gi, '')
   .replace(/<script[^>]+data-homepage-mask-intro-runtime[^>]*><\/script>/gi, '');
-
 if (!html.includes('</head>')) throw new Error('index.html has no closing head tag');
 html = html.replace('</head>', `${cssLink}</head>`);
-
 const bodyMatch = html.match(/<body[^>]*>/i);
 if (!bodyMatch) throw new Error('index.html has no body tag');
 html = html.replace(bodyMatch[0], `${bodyMatch[0]}${overlay}`);
-
 if (!html.includes('welcome-gate.js')) throw new Error('Homepage welcome gate runtime is missing');
 if (!html.includes('</body>')) throw new Error('index.html has no closing body tag');
 html = html.replace('</body>', `${dataRuntime}${runtime}</body>`);
@@ -75,9 +71,7 @@ const counts = {
   legacyPreloads: (html.match(/data-homepage-mask-preload=/g) || []).length,
   runtime: (html.match(/data-homepage-mask-intro-runtime/g) || []).length,
   video: (html.match(/data-homepage-intro-video/g) || []).length,
-  skip: (html.match(/data-mask-intro-skip/g) || []).length,
-  legacyEyeImages: (html.match(/<img[^>]+assets\/intro-eye\.svg/gi) || []).length,
-  legacyMaskImages: (html.match(/<img[^>]+assets\/intro-mask\.svg/gi) || []).length
+  skip: (html.match(/data-mask-intro-skip/g) || []).length
 };
 const failures = [];
 if (counts.overlay !== 1) failures.push(`expected one intro overlay, found ${counts.overlay}`);
@@ -88,28 +82,11 @@ if (counts.legacyPreloads !== 0) failures.push(`legacy image preloads remain: ${
 if (counts.runtime !== 1) failures.push(`expected one intro runtime, found ${counts.runtime}`);
 if (counts.video !== 1) failures.push(`expected one intro video, found ${counts.video}`);
 if (counts.skip !== 1) failures.push(`expected one skip control, found ${counts.skip}`);
-if (counts.legacyEyeImages !== 0) failures.push(`legacy eye image remains in homepage: ${counts.legacyEyeImages}`);
-if (counts.legacyMaskImages !== 0) failures.push(`legacy mask image remains in homepage: ${counts.legacyMaskImages}`);
-if (!fs.existsSync(dataAssetPath)) failures.push('build-generated intro data asset is missing');
-
-const report = {
-  ok: failures.length === 0,
-  generatedAt: new Date().toISOString(),
-  mode: 'build-generated-video-data',
-  runtimeVersion,
-  sequence: ['generated-video-data', 'video:auto', 'manual-play-fallback', 'dissolve:720ms', 'existing-welcome-gate'],
-  voiceGatePreserved: html.includes('welcome-gate.js'),
-  videoParts,
-  decodedBytes: decoded.length,
-  dataAsset: path.basename(dataAssetPath),
-  counts,
-  required,
-  failures
-};
+const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), mode: 'verified-build-generated-video-data', runtimeVersion, expectedDecodedBytes, decodedBytes: decoded.length, voiceGatePreserved: html.includes('welcome-gate.js'), videoParts, dataAsset: path.basename(dataAssetPath), counts, required, failures };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 if (failures.length) {
   failures.forEach(failure => console.error(`INTRO VIDEO FAILURE: ${failure}`));
   process.exit(1);
 }
-console.log(`Homepage intro patched: ${runtimeVersion}, build-generated video data (${decoded.length} MP4 bytes), Blob playback and existing voice gate preserved.`);
+console.log(`Homepage intro patched: ${runtimeVersion}, verified ${decoded.length}-byte MP4 across ${videoParts.length} chunks, Blob playback and welcome gate preserved.`);

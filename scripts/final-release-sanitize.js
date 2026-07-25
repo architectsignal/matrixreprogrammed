@@ -136,6 +136,13 @@ repairHomepageAuthorFacingLabels();
 run('scripts/patch-homepage-construction-banner.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
+
+// Several legacy search generators run during the complete build and may expand
+// the source index after the first Cloudflare compaction. This final owner runs
+// after all content and route audits, consolidates duplicate records by URL,
+// preserves every unique searchable route, and synchronizes root + _site below
+// the unchanged 22 MiB runtime budget.
+run('scripts/compact-cloudflare-search-index.js');
 run('scripts/runtime-performance-budget-test.js');
 
 const report = {
@@ -155,7 +162,7 @@ const report = {
     'geographic-power-atlas.html', 'geographic-power-atlas.js',
     'data/geographic-power-atlas.json', 'data/geographic-power-atlas-data.json',
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
-    'power-dossier-runtime.js', '_site/search-index.json', 'store.html',
+    'power-dossier-runtime.js', 'search-index.json', '_site/search-index.json', 'data/search-facets.json', '_site/data/search-facets.json', 'store.html',
     'card-deck-store.html', 'premium-reports.html', 'paypal-voluntary-support.js',
     'paypal-membership.js', '_site/paypal-membership.js',
     'epstein-upload-check.html', 'wrongdoing-tracker.html', 'intake-fallback.js',
@@ -168,7 +175,9 @@ const report = {
     'weekly-investigation-report.html', 'daily-brain-brief.html', 'outcome-briefings.html',
     'matrix.js', 'investigation-pulse.js', 'search.js', 'evidence-network-map.js', 'fixes.css', '_headers',
     'scripts/apply-runtime-performance-optimizations.js',
+    'scripts/compact-cloudflare-search-index.js',
     'scripts/runtime-performance-budget-test.js',
+    'downloads/cloudflare-search-index-compaction.json',
     'downloads/runtime-performance-optimizations.json',
     'downloads/runtime-performance-budget-test.json',
     'scripts/build-production-deploy-receipt.js',

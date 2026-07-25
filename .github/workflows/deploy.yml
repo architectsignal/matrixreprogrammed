@@ -94,6 +94,7 @@ jobs:
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
           node --check scripts/behind-the-curtain-production-guard.js
           node --check scripts/verify-live-behind-the-curtain.js
@@ -191,7 +192,7 @@ jobs:
           const sandbox=switches.find(x=>x.environment==='sandbox');
           const live=switches.find(x=>x.environment==='live');
           if(!sandbox||!live) throw new Error('Missing PayPal runtime settings');
-          if(Number(sandbox.checkout_enabled)!==0) throw new Error('Sandbox checkout must remain closed');
+          if(Number(sandbox.checkout_enabled)!==0) throw new Error('Sandbox checkout must remain closed outside an explicit rehearsal');
           console.log(`D1 schema verified; live checkout state preserved at ${Number(live.checkout_enabled)}.`);
           NODE
 

@@ -32,8 +32,15 @@ function patchNewsletterJs(source) {
   if (!next.includes('Check your inbox to verify your email and activate reports.')) next += '\n/* Mission acceptance message: Check your inbox to verify your email and activate reports. */\n';
   return next;
 }
+function patchMissingSourceLinks(html) {
+  return html.replace(
+    /<a\b(?![^>]*\bhref\s*=)([^>]*\bclass=["'][^"']*\bsource-link\b[^"']*["'][^>]*)>/gi,
+    '<a href="/source-document-vault.html"$1>',
+  );
+}
 for (const route of ['timers.html', 'timers']) patch(route, patchTimer);
 for (const route of ['newsletter.html', 'newsletter']) patch(route, patchNewsletterHtml);
+for (const route of ['independent-links.html', 'independent-links']) patch(route, patchMissingSourceLinks);
 patch('newsletter.js', patchNewsletterJs);
 
 function readFirst(routes) {
@@ -103,6 +110,7 @@ runRequired('scripts/repair-deep-audit-public-defects.js');
 runRequired('scripts/fix-final-live-audit-and-external-links.js');
 runRequired('scripts/patch-full-site-audit-target-detection.js');
 runRequired('scripts/repair-stale-generated-brief-links.js');
+for (const route of ['independent-links.html', 'independent-links']) patch(route, patchMissingSourceLinks);
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');

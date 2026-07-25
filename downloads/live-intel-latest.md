@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-25T03:36:08.238Z
+Collection completed: 2026-07-25T08:34:12.441Z
 Latest source publication: 2026-07-24T12:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 5
+New items this collection: 1
 
 ## Freshness truth
-5 new source item(s) entered the seven-day window during this collection.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 5
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘Judges should be superhuman’: The invisible burden behind the bench
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168021
   - Source class: primary-or-official

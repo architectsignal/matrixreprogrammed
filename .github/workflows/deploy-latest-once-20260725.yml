@@ -34,3 +34,5 @@ jobs:
             -f ref=main \
             -f 'inputs[confirmation]=DEPLOY MATRIX REPROGRAMMED'
           echo "Canonical guarded deployment dispatched for the latest main branch."
+
+# Dispatch refresh: verified refresh chain at 0101db06.

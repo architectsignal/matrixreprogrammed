@@ -99,7 +99,7 @@ run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/build-production-health.js');
 
 const critical = [
-  'index.html','homepage-mask-intro.css','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
+  'index.html','homepage-mask-intro.css','homepage-mask-intro-data.js','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
   'start-here.html','membership.html','paypal-membership.js','member-login.html','member-dashboard.html','member-dashboard-app.js',
   'forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js',
   'billing-dashboard.html','billing-dashboard.js','admin-payment-dashboard.html','admin-payment-dashboard.js',
@@ -122,7 +122,13 @@ requireMarker('index.html', 'data-homepage-mask-intro');
 requireMarker('index.html', 'assets/intro-eye.svg');
 requireMarker('index.html', 'assets/intro-mask.svg');
 requireMarker('index.html', 'homepage-intro__burn');
-requireMarker('index.html', 'homepage-mask-intro.js');
+requireMarker('index.html', 'homepage-mask-intro-data.js?v=20260725-video-v5');
+requireMarker('index.html', 'homepage-mask-intro.js?v=20260725-video-v5');
+requireMarker('homepage-mask-intro-data.js', 'globalThis.__MATRIX_INTRO_BASE64__');
+requireMarker('homepage-mask-intro-data.js', '20260725-video-v5');
+requireMarker('homepage-mask-intro.js', 'matrix-homepage-intro-seen-v5');
+requireMarker('homepage-mask-intro.js', 'globalThis.__MATRIX_INTRO_BASE64__');
+rejectMarker('homepage-mask-intro.js', 'fetch(');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
 requireMarker('membership.html', 'Free Member');

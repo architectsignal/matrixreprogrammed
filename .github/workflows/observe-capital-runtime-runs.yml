@@ -1,0 +1,57 @@
+name: Observe Capital and Runtime Runs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/observe-capital-runtime-runs.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read latest workflow runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/money-top100-completion-now.yml/runs?per_page=5" > /tmp/money-runs.json
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/production-runtime-rehearsal.yml/runs?per_page=5" > /tmp/runtime-runs.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const compact=payload=>(payload.workflow_runs||[]).map(run=>({id:run.id,name:run.name,event:run.event,status:run.status,conclusion:run.conclusion,createdAt:run.created_at,updatedAt:run.updated_at,headSha:run.head_sha,url:run.html_url,runAttempt:run.run_attempt}));
+          const payload={observedAt:new Date().toISOString(),moneyTop100:compact(JSON.parse(fs.readFileSync('/tmp/money-runs.json','utf8'))),runtimeRehearsal:compact(JSON.parse(fs.readFileSync('/tmp/runtime-runs.json','utf8')))};
+          fs.writeFileSync('data/capital-runtime-run-status.json',`${JSON.stringify(payload,null,2)}\n`);
+          NODE
+
+      - name: Publish observer status atomically
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/capital-runtime-run-status.json /tmp/capital-runtime-run-status.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp /tmp/capital-runtime-run-status.json data/capital-runtime-run-status.json
+            git add data/capital-runtime-run-status.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Record capital and runtime workflow status"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1

@@ -11,6 +11,7 @@ const core=read('data/behind-the-curtain.json');
 const pyramid=read('data/behind-the-curtain-pyramid.json');
 const html=text('behind-the-curtain-access.html');
 const js=text('behind-the-curtain-access-v2.js');
+const bridge=text('scripts/patch-public-static-route-bridge.js');
 assert(families.schemaVersion===1,'Access Layer schema version missing');
 assert(families.families.length>=9,'At least nine documented family structures are required');
 assert(new Set(families.families.map(x=>x.id)).size===families.families.length,'Family IDs must be unique');
@@ -63,7 +64,10 @@ for(const ref of refs){assert(indexes[ref.dataset],`Unknown Pyramid dataset ${re
 for(const source of [...families.sources,...people.sources,...core.sources]){assert(/^https:\/\//.test(source.url),'Every source requires HTTPS');assert(source.establishes&&source.doesNotEstablish,'Every source requires an evidence boundary')}
 for(const required of ['THE PYRAMID','WHO CAN REACH EACH CHOKE POINT','THE DYNASTY FILES','THE INNER COUNCILS','THE LIGHTBRINGER'])assert(html.includes(required),`Missing cinematic page section: ${required}`);
 assert(html.includes('behind-the-curtain-access-v2.js'),'The public page must load the tier-specific renderer');
-assert(js.includes("people:'data/behind-the-curtain-people-registry.json'"),'The renderer must load the independent named-people registry');
+assert(js.includes("people:'/api/public/structural-power/people'"),'The renderer must load the independent named-people registry through the public Worker API');
+assert(js.includes("pyramid:'/api/public/structural-power/pyramid'"),'The renderer must load the Pyramid model through the public Worker API');
+assert(bridge.includes("['/api/public/structural-power/people', '/data/behind-the-curtain-people-registry.json']"),'The public people API must be bound to the validated local registry');
+assert(bridge.includes("['/api/public/structural-power/pyramid', '/data/behind-the-curtain-pyramid.json']"),'The public Pyramid API must be bound to the validated local model');
 assert(js.includes('renderSelectedTier'),'The selected tier must own the main roster grid');
 assert(!js.includes('renderHumanApex'),'The legacy global Top 10 renderer must not survive');
 assert(js.includes('memberQuery')&&js.includes('cross-system-top-10'),'The Human Apex must be dynamically calculated only for Level 11');
@@ -74,4 +78,4 @@ assert(js.includes('data-view-mode')&&js.includes('symbolic'),'Evidence and symb
 assert(js.includes('openProfile')&&js.includes('sourceBlock'),'Named profile drawers and source boundaries are missing');
 const combined=JSON.stringify({families,pyramid,people}).toLowerCase();
 for(const forbidden of ['one family controls the world','secretly controls all','ethnicity controls','lightbringer controls every'])assert(!combined.includes(forbidden),`Unsupported universal-control claim detected: ${forbidden}`);
-console.log(`Behind the Curtain Pyramid PASS: ${pyramid.levels.length} levels, ${people.people.length} named people, ${union.size} unique tier members, ${pyramid.chokePoints.length} choke points, ${families.families.length} dynasties and ${pyramid.hiddenHandHypotheses.length} bounded hidden-hand hypotheses.`);
+console.log(`Behind the Curtain Pyramid PASS: ${pyramid.levels.length} levels, ${people.people.length} named people, ${union.size} unique tier members, ${pyramid.chokePoints.length} choke points, ${families.families.length} dynasties and ${pyramid.hiddenHandHypotheses.length} bounded hidden-hand hypotheses through the Structural Power public API.`);

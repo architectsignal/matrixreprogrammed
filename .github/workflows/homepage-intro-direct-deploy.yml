@@ -1,0 +1,106 @@
+name: Homepage intro direct production deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/homepage-intro-direct.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-intro-direct-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build corrected intro assets into deployed bundle
+        run: |
+          set -euo pipefail
+          node scripts/patch-homepage-mask-intro.js
+          node scripts/homepage-mask-intro-test.js
+          mkdir -p _site
+          cp index.html homepage-mask-intro.css homepage-mask-intro-data.js homepage-mask-intro.js _site/
+          grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' _site/index.html
+          grep -q 'homepage-mask-intro.js?v=20260725-video-v5' _site/index.html
+          grep -q 'matrix-homepage-intro-seen-v5' _site/homepage-mask-intro.js
+          test "$(wc -c < _site/homepage-mask-intro-data.js)" -gt 10000
+
+      - name: Deploy corrected bundle to Cloudflare
+        id: deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          npx --yes wrangler@latest deploy --config wrangler.toml
+
+      - name: Verify forced replay and all intro assets
+        id: verify
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 24); do
+            nonce="$(date +%s)-$attempt"
+            home="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&direct=$nonce" || true)"
+            js="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro.js?v=20260725-video-v5&direct=$nonce" || true)"
+            data="$(curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-mask-intro-data.js?v=20260725-video-v5&direct=$nonce" || true)"
+            if printf '%s' "$home" | grep -q 'data-homepage-mask-intro data-mode="video"' \
+              && printf '%s' "$home" | grep -q 'homepage-mask-intro-data.js?v=20260725-video-v5' \
+              && printf '%s' "$home" | grep -q 'homepage-mask-intro.js?v=20260725-video-v5' \
+              && printf '%s' "$js" | grep -q 'matrix-homepage-intro-seen-v5' \
+              && printf '%s' "$js" | grep -q 'globalThis.__MATRIX_INTRO_BASE64__' \
+              && test "${#data}" -gt 10000 \
+              && printf '%s' "$data" | grep -q 'globalThis.__MATRIX_INTRO_BASE64__'; then
+              echo 'Homepage intro v5 live verification passed.'
+              exit 0
+            fi
+            sleep 5
+          done
+          echo 'Homepage intro v5 live verification failed.'
+          exit 1
+
+      - name: Commit successful production receipt
+        if: success()
+        env:
+          RUN_ID: ${{ github.run_id }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          cat > data/homepage-intro-hotfix-result.json <<EOF
+          {
+            "ok": true,
+            "version": "20260725-video-v5",
+            "mode": "direct-cloudflare-site-assets",
+            "recordedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "runId": ${RUN_ID},
+            "headSha": "${HEAD_SHA}",
+            "deployOutcome": "success",
+            "verifyOutcome": "success",
+            "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1"
+          }
+          EOF
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/homepage-intro-hotfix-result.json
+          git commit -m 'Record verified homepage intro production deployment'
+          git pull --rebase origin main
+          git push origin HEAD:main

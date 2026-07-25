@@ -1,0 +1,27 @@
+{
+  "ok": false,
+  "observedAt": "2026-07-25T07:44:10.206Z",
+  "runId": 30149803296,
+  "testedSha": "5483f9a30088ea0eb891f7723308434f98696672",
+  "outcome": "failure",
+  "passed": [
+    "repair-source-registry",
+    "investigation-machine",
+    "update-live-intel",
+    "record-live-intel",
+    "update-seven-day-intel",
+    "outcome-briefings",
+    "daily-brain-brief",
+    "investigation-pages",
+    "mission-intelligence",
+    "live-intel-machine",
+    "conclusion-integrity",
+    "curtain-tier-registry"
+  ],
+  "failed": [
+    {
+      "name": "curtain-tier-ui",
+      "exit": 1
+    }
+  ]
+}

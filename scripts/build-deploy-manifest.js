@@ -17,14 +17,15 @@ if (fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
   execFileSync(process.execPath, [moneyFinalizer], { cwd: root, stdio: 'inherit', env: process.env });
 }
 
-// These are the final owners of the Power-Family, public gateway and newsletter
-// surfaces. They must run before manifest hashes, freshness checks and sync guards
-// so every later production proof describes the exact bundle sent to Cloudflare.
+// Final owners run immediately before hashes. This prevents any legacy generator
+// from dropping the support banner, protected navigation, Top 100 Links directory,
+// Death Files system, cinematic intro or the existing welcome gate.
 if (fs.existsSync(site)) {
   runFinalizer('reconcile-power-family-capstone.js');
   runFinalizer('patch-newsletter-public-page.js');
   runFinalizer('patch-power-family-public-gateways.js');
   runFinalizer('hide-visible-compatibility-markers.js', ['--output']);
+  runFinalizer('finalize-core-public-surfaces.js');
 }
 
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }
@@ -39,22 +40,21 @@ function timestamp(rel, fields) { const data = json(rel, {}); for (const field o
 
 const commitSha = gitSha();
 const criticalFiles = [
-  'index.html', 'start-here.html', 'newsletter.html', 'live-intel.html', 'daily-power-conclusions.html',
-  'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
-  'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
-  'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'behind-the-curtain.html', 'behind-the-curtain-access.html', 'behind-the-curtain-access-v2.js',
-  'behind-the-curtain-capstone.html', 'power-family-intelligence-layer.js', 'power-family-intelligence-layer.css',
-  'behind-the-curtain-symbolic-capstone.html', 'behind-the-curtain-capstone.js',
-  'data/behind-the-curtain-family-access.json', 'data/behind-the-curtain-pyramid.json',
-  'data/power-family-intelligence-layer.json', 'data/power-family-curated-people.json',
-  'data/behind-the-curtain-capstone.json',
-  'follow-the-money.html', 'making-money.html', 'follow-the-money.js', 'making-money.js', 'money-intelligence.css',
-  'follow-the-money/people/elon-musk.html', 'downloads/wealth-guides/start-from-zero.pdf',
-  'data/follow-the-money-top-100.json', 'data/making-money-core.json',
-  'data/live-intel.json', 'data/daily-power-conclusions.json',
-  'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json',
-  'data/outcome-briefings.json'
+  'index.html','start-here.html','newsletter.html','live-intel.html','daily-power-conclusions.html',
+  'daily-investigation-conclusions.html','weekly-investigation-report.html','daily-brain-brief.html','outcome-briefings.html',
+  'security-privacy.html','dark-web-safety.html','geographic-power-atlas.html','data-lab.html',
+  'independent-links.html','data/independent-links-1.json','data/independent-links-2.json','data/independent-links-3.json','data/independent-links-4.json',
+  'death-files.html','death-files.js','data/death-files.json','data/death-files-runtime.json','death-files-pattern-lab.html','death-files-methodology.html',
+  'homepage-mask-intro.css','homepage-mask-intro-data.js','homepage-mask-intro.js','welcome-gate.css','welcome-gate.js',
+  'behind-the-curtain.html','behind-the-curtain-access.html','behind-the-curtain-access-v2.js',
+  'behind-the-curtain-capstone.html','power-family-intelligence-layer.js','power-family-intelligence-layer.css',
+  'behind-the-curtain-symbolic-capstone.html','behind-the-curtain-capstone.js',
+  'data/behind-the-curtain-family-access.json','data/behind-the-curtain-pyramid.json',
+  'data/power-family-intelligence-layer.json','data/power-family-curated-people.json','data/behind-the-curtain-capstone.json',
+  'follow-the-money.html','making-money.html','follow-the-money.js','making-money.js','money-intelligence.css',
+  'follow-the-money/people/elon-musk.html','downloads/wealth-guides/start-from-zero.pdf',
+  'data/follow-the-money-top-100.json','data/making-money-core.json','data/live-intel.json',
+  'data/daily-power-conclusions.json','data/daily-investigation-conclusions.json','data/daily-brain-brief.json','data/outcome-briefings.json'
 ];
 const manifest = {
   ok: true,
@@ -66,6 +66,14 @@ const manifest = {
   workflowRunId: process.env.GITHUB_RUN_ID || null,
   deploymentTarget: 'Cloudflare Workers static assets',
   cachePolicy: 'Critical HTML, live data and deploy manifest must revalidate or use no-store.',
+  corePublicSurfaces: {
+    supportBanner: true,
+    independentLinks: 100,
+    deathFiles: true,
+    cinematicIntroVersion: '20260725-video-v9',
+    cinematicIntroDecodedBytes: 123874,
+    welcomeGatePreserved: true
+  },
   freshness: {
     liveIntel: timestamp('data/live-intel.json', ['updated']),
     dailyInvestigation: timestamp('data/daily-investigation-conclusions.json', ['generatedAt']),
@@ -75,12 +83,13 @@ const manifest = {
   },
   criticalFiles: Object.fromEntries(criticalFiles.map(rel => [rel, hash(rel)])),
   verificationRoutes: [
-    '/', '/start-here', '/newsletter', '/live-intel', '/daily-power-conclusions', '/daily-investigation-conclusions',
-    '/security-privacy', '/dark-web-safety', '/geographic-power-atlas', '/data-lab', '/evidence-archive',
-    '/behind-the-curtain', '/behind-the-curtain-access', '/behind-the-curtain-capstone', '/behind-the-curtain-symbolic-capstone',
-    '/data/power-family-curated-people.json', '/data/power-family-intelligence-layer.json',
-    '/follow-the-money', '/making-money', '/follow-the-money/people/elon-musk',
-    '/downloads/wealth-guides/start-from-zero.pdf'
+    '/','/start-here','/newsletter','/live-intel','/daily-power-conclusions','/daily-investigation-conclusions',
+    '/security-privacy','/dark-web-safety','/geographic-power-atlas','/data-lab','/evidence-archive',
+    '/independent-links','/death-files','/death-files-pattern-lab','/death-files-methodology',
+    '/homepage-mask-intro-data.js','/homepage-mask-intro.js','/welcome-gate.js',
+    '/behind-the-curtain','/behind-the-curtain-access','/behind-the-curtain-capstone','/behind-the-curtain-symbolic-capstone',
+    '/data/power-family-curated-people.json','/data/power-family-intelligence-layer.json',
+    '/follow-the-money','/making-money','/follow-the-money/people/elon-musk','/downloads/wealth-guides/start-from-zero.pdf'
   ]
 };
 const missingCritical = Object.entries(manifest.criticalFiles).filter(([, value]) => !value).map(([rel]) => rel);
@@ -93,4 +102,4 @@ if (fs.existsSync(site)) {
 }
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deploy-manifest.json'), text);
-console.log(`Deployment manifest built for ${manifest.commitShort} with Power-Family, newsletter and public gateway hashes.`);
+console.log(`Deployment manifest built for ${manifest.commitShort} with protected public surfaces, Power-Family, newsletter and public gateway hashes.`);

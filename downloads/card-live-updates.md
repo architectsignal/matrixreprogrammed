@@ -1,7 +1,7 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-24T19:46:29.276Z
-Live Intel source window: 2026-07-24T19:46:22.809Z
+Generated: 2026-07-25T03:36:20.909Z
+Live Intel source window: 2026-07-25T03:36:08.238Z
 Tracked cards: 877
 Cards with current matched records: 102
 Cards with no new verified record: 775
@@ -709,29 +709,33 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Bill Gates
 - Route: follow-the-money/people/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-21T20:37:00.000Z
+- Current matched records: 2
+- Latest record: 2026-07-23T21:48:41.000Z
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 - 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Gates
 - Route: top-52/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-21T20:37:00.000Z
+- Current matched records: 2
+- Latest record: 2026-07-23T21:48:41.000Z
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 - 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: billionaire-briefs/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-21T20:37:00.000Z
+- Current matched records: 2
+- Latest record: 2026-07-23T21:48:41.000Z
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 - 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: main-players/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-21T20:37:00.000Z
+- Current matched records: 2
+- Latest record: 2026-07-23T21:48:41.000Z
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 - 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Melinda Gates Foundation
@@ -2218,10 +2222,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-23T20:14:15.000Z
+- Latest record: 2026-07-23T21:48:41.000Z
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 - 2026-07-23T20:14:15.000Z — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop — https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
 - 2026-07-23T18:38:38.000Z — Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-- 2026-07-23T16:11:24.000Z — Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS — https://news.google.com/rss/articles/CBMitwFBVV95cUxPZzVPOE1GT19DS1FWRGlIUDJtUFFDRWxVLUFsSjBkRHJwY25GLUdscE4zeWZnRXNWNW5LSlpXdkhXNkZVOTdNU3RCYjZfTTJKdUxvOE5DWVJKVVJpX19IVlBLTWN5d21UV252cVpPRVdVdjNuOUVkM1luSEhXTjE0R1Q0NVZTUFhVbXh3clJBQ3VOU3RRTEpsZUFpUWFIaGpuOTBmcEN5ZThCOXV1MXgxTWpjZHlVRVXSAbcBQVVfeXFMT2c1TzhNRk9fQ0tRVkRpSFAybVBRQ0VsVS1BbEowZERycGNuRi1HbHBOM3lmZ0VzVjVuS0paV3ZIVzZGVTk3TVN0QmI2X00ySnVMbzhOQ1lSSlVSaV9fSFZQS01jeXdtVFdudnFaT0VXVXYzbjlFZDNZbkhIV04xNEdUNDVWU1BYVW14d3JSQUN1TlN0UUxKbGVBaVFhSGhqbjkwZnBDeWU4Qjl1dTF4MU1qY2R5VUVV?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html

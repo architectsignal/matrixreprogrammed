@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-24T19:46:29.192Z
-Live Intel source window: 2026-07-24T19:46:22.809Z
-Latest source publication: 2026-07-23T18:38:38.000Z
+Generated: 2026-07-25T03:36:20.803Z
+Live Intel source window: 2026-07-25T03:36:08.238Z
+Latest source publication: 2026-07-23T21:48:41.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+12 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
+- Published: 2026-07-23T21:48:41.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+
+Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported NewsNation
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
 - Published: 2026-07-23T18:38:38.000Z
@@ -29,7 +39,7 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - Published: 2026-07-23T16:11:24.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxPZzVPOE1GT19DS1FWRGlIUDJtUFFDRWxVLUFsSjBkRHJwY25GLUdscE4zeWZnRXNWNW5LSlpXdkhXNkZVOTdNU3RCYjZfTTJKdUxvOE5DWVJKVVJpX19IVlBLTWN5d21UV252cVpPRVdVdjNuOUVkM1luSEhXTjE0R1Q0NVZTUFhVbXh3clJBQ3VOU3RRTEpsZUFpUWFIaGpuOTBmcEN5ZThCOXV1MXgxTWpjZHlVRVXSAbcBQVVfeXFMT2c1TzhNRk9fQ0tRVkRpSFAybVBRQ0VsVS1BbEowZERycGNuRi1HbHBOM3lmZ0VzVjVuS0paV3ZIVzZGVTk3TVN0QmI2X00ySnVMbzhOQ1lSSlVSaV9fSFZQS01jeXdtVFdudnFaT0VXVXYzbjlFZDNZbkhIV04xNEdUNDVWU1BYVW14d3JSQUN1TlN0UUxKbGVBaVFhSGhqbjkwZnBDeWU4Qjl1dTF4MU1qY2R5VUVV?oc=5
+- URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
 
 Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
 
@@ -122,26 +132,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 
 Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-- Published: 2026-07-17T23:17:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
-
-House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-- Published: 2026-07-17T22:44:14.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-
-Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

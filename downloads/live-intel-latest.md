@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-24T19:46:22.809Z
+Collection completed: 2026-07-25T03:36:08.238Z
 Latest source publication: 2026-07-24T12:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 6
+New items this collection: 5
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+5 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 6
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-24 — ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168021
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — After an Ebola centre was attacked, peacekeepers moved in next door
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168018
   - Source class: primary-or-official
@@ -38,17 +44,35 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: In El Obeid, Sudanese women face drones by day, rape by night, to reach water
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — International Criminal Court Prosecutor Karim Khan dismissed
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168025
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: International Criminal Court Prosecutor Karim Khan dismissed
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168016
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168024
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — Wildfires surge across Europe as Spain and France battle major blazes
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168013
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfires surge across Europe as Spain and France battle major blazes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
+  - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
   - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
@@ -63,7 +87,7 @@ New items this collection: 6
   - Video hook: New public-record signal: Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
-  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxPZzVPOE1GT19DS1FWRGlIUDJtUFFDRWxVLUFsSjBkRHJwY25GLUdscE4zeWZnRXNWNW5LSlpXdkhXNkZVOTdNU3RCYjZfTTJKdUxvOE5DWVJKVVJpX19IVlBLTWN5d21UV252cVpPRVdVdjNuOUVkM1luSEhXTjE0R1Q0NVZTUFhVbXh3clJBQ3VOU3RRTEpsZUFpUWFIaGpuOTBmcEN5ZThCOXV1MXgxTWpjZHlVRVXSAbcBQVVfeXFMT2c1TzhNRk9fQ0tRVkRpSFAybVBRQ0VsVS1BbEowZERycGNuRi1HbHBOM3lmZ0VzVjVuS0paV3ZIVzZGVTk3TVN0QmI2X00ySnVMbzhOQ1lSSlVSaV9fSFZQS01jeXdtVFdudnFaT0VXVXYzbjlFZDNZbkhIV04xNEdUNDVWU1BYVW14d3JSQUN1TlN0UUxKbGVBaVFhSGhqbjkwZnBDeWU4Qjl1dTF4MU1qY2R5VUVV?oc=5
+  - Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
@@ -301,16 +325,4 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Ukraine: UN condemns overnight attack on Kyiv
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
-  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

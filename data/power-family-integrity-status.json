@@ -1,20 +1,20 @@
 {
-  "checkedAt": "2026-07-25T10:31:56.624Z",
+  "checkedAt": "2026-07-25T10:47:12.182Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30154588119,
+  "workflowRunId": 30155060549,
   "runAttempt": 1,
-  "headSha": "12c22412b11492bd899929b8546771fcb12055b1",
+  "headSha": "cc9acf9d7e67fd5047be17b00b410fc4d57a3c97",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:31:52.304Z",
+    "generatedAt": "2026-07-25T10:47:07.239Z",
     "actions": [
       {
         "type": "run",
         "script": "scripts/build-power-family-intelligence-layer.js",
         "args": [],
         "status": 0,
-        "stdout": "Power-Family Intelligence Layer generated, validated and synchronized to _site.\n",
+        "stdout": "Power-Family Intelligence Layer generated, canonicalized, validated and synchronized to _site.\n",
         "stderr": ""
       },
       {
@@ -307,7 +307,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-25T10:31:54.425Z",
+    "checkedAt": "2026-07-25T10:47:09.547Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -322,7 +322,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:31:52.275Z",
+    "generatedAt": "2026-07-25T10:47:07.215Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -343,7 +343,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-07-25T10:31:52.270Z",
+    "generatedAt": "2026-07-25T10:47:07.210Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",

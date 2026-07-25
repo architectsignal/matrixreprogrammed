@@ -16,17 +16,14 @@ global.fetch = async function matrixProductionFetch(input, init = {}) {
   const inheritedHeaders = typeof input === 'object' && input?.headers ? input.headers : undefined;
   const headers = new Headers(init.headers || inheritedHeaders || {});
   headers.set('accept-language', 'en-GB,en;q=0.9');
-  headers.set(
-    'user-agent',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/138.0 Safari/537.36 MatrixProductionVerifier/7.0'
-  );
+  headers.set('user-agent', 'Matrix-Reprogrammed-Production-Verifier/2.0');
 
   if (!headers.has('accept')) {
     headers.set(
       'accept',
       rawUrl.includes('/api/') || rawUrl.endsWith('.json')
         ? 'application/json,text/plain;q=0.9,*/*;q=0.8'
-        : 'text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8'
+        : 'text/html,application/xhtml+xml,application/javascript,application/json;q=0.9,*/*;q=0.8'
     );
   }
 

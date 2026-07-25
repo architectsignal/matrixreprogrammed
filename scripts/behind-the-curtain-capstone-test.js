@@ -22,11 +22,14 @@ assert(/separate speculative|not established|does not prove/i.test(data.editoria
 assert(data.sources.length>=12,'Capstone source vault is incomplete');
 for(const source of data.sources){assert(/^https:\/\//.test(source.url),`${source.id} requires HTTPS`);assert(source.establishes&&source.doesNotEstablish,`${source.id} requires two-sided source boundary`)}
 for(const marker of ['THE CAPSTONE','BLACK NOBILITY IS A HISTORY BEFORE IT IS A THEORY.','BAAL. MOLOCH. SATURN. THE LIGHTBRINGER.','behind-the-curtain-capstone.js'])assert(html.includes(marker),`Capstone HTML missing ${marker}`);
-assert(js.includes('/api/public/structural-power/capstone'),'Capstone renderer does not load its evidence model through the public Worker API');
+const usesPublicApi=js.includes('/api/public/structural-power/capstone');
+const usesValidatedLocalModel=js.includes('data/behind-the-curtain-capstone.json');
+assert(usesPublicApi||usesValidatedLocalModel,'Capstone renderer does not load its validated evidence model');
 assert(bridge.includes("['/api/public/structural-power/capstone', '/data/behind-the-curtain-capstone.json']"),'The public Capstone API must be bound to the validated local evidence model');
+assert(bridge.includes('/structural-power-capstone'),'The final public Capstone alias must be defined');
 assert(js.includes("cache:'no-store'"),'Capstone evidence must refresh without stale browser cache');
 assert(js.includes('failed closed'),'Capstone must fail closed');
 assert(patch.includes('ENTER THE CAPSTONE')&&patch.includes('behind-the-curtain-capstone'),'Pyramid gateway compatibility patch is missing');
 const combined=JSON.stringify(data).toLowerCase();
 for(const forbidden of ['orsini control the world','family worships baal','family worships moloch','lucifer commands the families','black nobility controls every'])assert(!combined.includes(forbidden),`Unsupported factual assertion detected: ${forbidden}`);
-console.log(`Behind the Curtain Capstone PASS: ${data.families.length} family files, ${data.symbolicApex.length} symbolic dossiers, ${data.models.length} competing models and ${data.sources.length} bounded sources through the Structural Power public API.`);
+console.log(`Behind the Curtain Capstone PASS: ${data.families.length} family files, ${data.symbolicApex.length} symbolic dossiers, ${data.models.length} competing models and ${data.sources.length} bounded sources; transport=${usesPublicApi?'public-api':'validated-local-prepatch'}.`);

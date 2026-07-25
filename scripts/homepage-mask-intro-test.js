@@ -11,54 +11,68 @@ function read(rel) {
   return fs.readFileSync(file, 'utf8');
 }
 function count(text, token) { return String(text).split(token).length - 1; }
-function validateSvg(rel, title, viewBox, minimumPaths) {
-  const svg = read(rel);
-  if (svg.length < 5000) fail(`${rel} is unexpectedly small: ${svg.length} characters`);
-  if (!svg.startsWith('<svg') && !svg.startsWith('<?xml')) fail(`${rel} is not SVG`);
-  if (!svg.includes(`viewBox="${viewBox}"`)) fail(`${rel} has the wrong scalable dimensions`);
-  if (!svg.includes(title)) fail(`${rel} title is missing`);
-  if (count(svg, '<path') < minimumPaths) fail(`${rel} has insufficient vector detail`);
-  if (/<rect[^>]+(?:width="100%"|height="100%"|fill="#(?:000|000000)"|fill="black")/i.test(svg)) fail(`${rel} includes a background rectangle instead of true transparency`);
-  if (!svg.includes('<filter')) fail(`${rel} lacks dimensional surface treatment`);
-  return { characters: svg.length, paths: count(svg, '<path') };
+
+const videoParts = ['assets/matrix-intro-video-1.txt', 'assets/matrix-intro-video-2.txt'];
+const partText = videoParts.map(read);
+if (partText.some(part => part.length < 1000)) fail('one or more video asset parts are unexpectedly small');
+let decoded = Buffer.alloc(0);
+try {
+  decoded = Buffer.from(partText.join('').replace(/\s+/g, ''), 'base64');
+  if (decoded.length < 10000) fail(`decoded intro video is unexpectedly small: ${decoded.length} bytes`);
+  if (decoded.slice(4, 8).toString('ascii') !== 'ftyp') fail('decoded intro asset is not an MP4 file');
+} catch (error) {
+  fail(`intro video base64 could not be decoded: ${error.message}`);
 }
 
-const eye = validateSvg('assets/intro-eye.svg', 'Eye of Providence seal', '0 0 1200 1200', 20);
-const mask = validateSvg('assets/intro-mask.svg', 'Anonymous revolutionary mask', '0 0 1000 1200', 20);
 const html = read('index.html');
 const css = read('homepage-mask-intro.css');
 const js = read('homepage-mask-intro.js');
 
 for (const [token, expected] of [
-  ['data-homepage-mask-intro data-phase="eye"', 1],
+  ['data-homepage-mask-intro data-mode="video"', 1],
   ['data-homepage-mask-intro-style', 1],
-  ['data-homepage-mask-preload=', 2],
+  ['data-homepage-mask-preload=', 0],
   ['data-homepage-mask-intro-runtime', 1],
-  ['data-mask-intro-skip', 1],
-  ['data-intro-asset=', 2],
-  ['assets/intro-eye.svg', 2],
-  ['assets/intro-mask.svg', 2]
+  ['data-homepage-intro-video', 1],
+  ['data-mask-intro-skip', 1]
 ]) {
   const actual = count(html, token);
   if (actual !== expected) fail(`expected ${expected} occurrence(s) of ${token}, found ${actual}`);
 }
 
-for (const marker of ['homepage-intro__burn', 'homepage-intro__embers', 'phase-eye', 'homepage-intro__eye', 'homepage-intro__mask']) {
-  if (!html.includes(marker)) fail(`homepage is missing ${marker}`);
-}
-for (const marker of ['eye: 3000', 'burn: 1100', 'mask: 3000', 'dissolve: 1200', "setPhase('eye')", "setPhase('burn')", "setPhase('mask')"]) {
-  if (!js.includes(marker)) fail(`runtime is missing sequence marker: ${marker}`);
+if (/<img[^>]+assets\/intro-eye\.svg/i.test(html)) fail('legacy eye image is still rendered');
+if (/<img[^>]+assets\/intro-mask\.svg/i.test(html)) fail('legacy mask image is still rendered');
+if (/<div[^>]+homepage-intro__burn/i.test(html)) fail('legacy burn layer is still rendered');
+if (/<div[^>]+homepage-intro__embers/i.test(html)) fail('legacy ember layer is still rendered');
+
+for (const marker of [
+  'matrix-homepage-intro-seen-v3',
+  'assets/matrix-intro-video-1.txt',
+  'assets/matrix-intro-video-2.txt',
+  'data:video/mp4;base64',
+  'HTMLVideoElement',
+  'video.defaultMuted = true',
+  'video.playsInline = true',
+  "video.addEventListener('ended'",
+  'video-load-error',
+  'Escape',
+  '15000',
+  'prepareWelcomeGate()'
+]) {
+  if (!js.includes(marker)) fail(`runtime is missing video marker: ${marker}`);
 }
 if (!js.includes('sessionStorage')) fail('intro is not limited to one display per session');
-if (!js.includes('matrix-homepage-intro-seen-v2')) fail('intro session key was not versioned for the new sequence');
-if (!js.includes('asset-error')) fail('intro has no asset failure escape');
-if (!js.includes('Escape')) fail('intro has no keyboard escape path');
-if (!js.includes('1800')) fail('intro has no asset-load timeout fallback');
 
-for (const marker of ['intro-eye-burn', 'intro-fire-ring', 'intro-embers', 'intro-mask-through-fire', 'intro-mask-dissolve', '@media(prefers-reduced-motion:reduce)', 'z-index:2147483000']) {
-  if (!css.includes(marker)) fail(`stylesheet is missing ${marker}`);
+for (const marker of [
+  '.homepage-mask-intro__video',
+  'object-fit:contain',
+  'intro-video-dissolve',
+  '@media(prefers-reduced-motion:reduce)',
+  'z-index:2147483000',
+  '.homepage-intro__symbol,.homepage-intro__burn,.homepage-intro__embers'
+]) {
+  if (!css.includes(marker)) fail(`stylesheet is missing video marker: ${marker}`);
 }
-if (!css.includes('width:min(99vw,1040px)')) fail('mask is not configured to fill the screen');
 
 for (const rel of ['homepage-mask-intro.js', 'scripts/patch-homepage-mask-intro.js', 'scripts/patch-membership-tiers.js']) {
   const result = spawnSync(process.execPath, ['--check', path.join(root, rel)], { encoding: 'utf8' });
@@ -83,15 +97,16 @@ for (const slot of ['paypal-button-supporter', 'paypal-button-intelligence', 'pa
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  sequence: { eyeMs: 3000, burnMs: 1100, maskMs: 3000, dissolveMs: 1200 },
-  assets: { eye, mask, transparentBackground: true },
+  mode: 'video',
+  asset: { parts: videoParts.length, decodedBytes: decoded.length, mp4: decoded.slice(4, 8).toString('ascii') === 'ftyp' },
+  behavior: { mutedAutoplay: true, playsInline: true, skip: true, escape: true, sessionLimited: true, reducedMotionBypass: true, voiceGatePreserved: true },
   membership: { freeTier: true, paidPrices: [3, 6, 9], checkoutDefault: 'server-gated-disabled' },
   failures
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-mask-intro-test.json'), JSON.stringify(report, null, 2));
 if (failures.length) {
-  failures.forEach(item => console.error(`INTRO RELEASE FAILURE: ${item}`));
+  failures.forEach(item => console.error(`INTRO VIDEO RELEASE FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Eye → burn → mask intro test passed (${eye.paths + mask.paths} vector paths); current membership surface also verified.`);
+console.log(`Homepage video intro test passed (${decoded.length} decoded MP4 bytes); existing voice gate and membership surface verified.`);

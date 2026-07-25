@@ -1,0 +1,119 @@
+name: Power-Family Intelligence Integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'behind-the-curtain-capstone.html'
+      - 'behind-the-curtain-symbolic-capstone.html'
+      - 'power-family-intelligence-layer.js'
+      - 'power-family-intelligence-layer.css'
+      - 'behind-the-curtain-capstone.js'
+      - 'data/power-family-intelligence-layer.json'
+      - 'data/power-family-curated-people.json'
+      - 'data/behind-the-curtain-family-access.json'
+      - 'data/behind-the-curtain-capstone.json'
+      - 'scripts/build-power-family-intelligence-layer.js'
+      - 'scripts/power-family-intelligence-layer.runtime.js'
+      - 'scripts/reconcile-power-family-capstone.js'
+      - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/behind-the-curtain-production-guard-v2.js'
+      - '.github/workflows/power-family-integrity.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check power-family-intelligence-layer.js
+          node --check behind-the-curtain-capstone.js
+          node --check scripts/power-family-intelligence-layer.runtime.js
+          node --check scripts/reconcile-power-family-capstone.js
+          node --check scripts/behind-the-curtain-production-guard-v2.js
+
+      - name: Parse intelligence datasets
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const files=[
+            'data/power-family-intelligence-layer.json',
+            'data/power-family-curated-people.json',
+            'data/behind-the-curtain-family-access.json',
+            'data/behind-the-curtain-capstone.json',
+            'data/behind-the-curtain-pyramid.json',
+            'data/behind-the-curtain-people-registry.json'
+          ];
+          for(const file of files) JSON.parse(fs.readFileSync(file,'utf8'));
+          console.log(`Parsed ${files.length} Power-Family and Behind the Curtain datasets.`);
+          NODE
+
+      - name: Prepare focused deploy-bundle fixture
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/data
+          for file in \
+            behind-the-curtain.html \
+            behind-the-curtain-access.html \
+            behind-the-curtain-access-v2.js \
+            behind-the-curtain-capstone.html \
+            behind-the-curtain-symbolic-capstone.html \
+            behind-the-curtain-capstone.js \
+            power-family-intelligence-layer.js \
+            power-family-intelligence-layer.css; do
+            cp "$file" "_site/$file"
+          done
+          cp behind-the-curtain.html _site/behind-the-curtain
+          cp behind-the-curtain-access.html _site/behind-the-curtain-access
+          cp behind-the-curtain-capstone.html _site/behind-the-curtain-capstone
+          cp behind-the-curtain-symbolic-capstone.html _site/behind-the-curtain-symbolic-capstone
+          for file in \
+            data/behind-the-curtain.json \
+            data/behind-the-curtain-pyramid.json \
+            data/behind-the-curtain-people-registry.json \
+            data/behind-the-curtain-family-access.json \
+            data/behind-the-curtain-capstone.json \
+            data/power-family-intelligence-layer.json \
+            data/power-family-curated-people.json; do
+            cp "$file" "_site/$file"
+          done
+          cp search-index.json sitemap.xml llms.txt _site/
+
+      - name: Reconcile canonical Capstones and discovery routes
+        run: node scripts/reconcile-power-family-capstone.js
+
+      - name: Run production contract guard
+        run: node scripts/behind-the-curtain-production-guard.js
+
+      - name: Verify no visible compatibility marker leak
+        run: |
+          node scripts/hide-visible-compatibility-markers.js --output
+          if grep -RIl 'preservedaftervisiblede-duplication' _site --include='*.html' --exclude-dir='data'; then
+            echo 'Visible compatibility marker leak remains.'
+            exit 1
+          fi
+
+      - name: Upload integrity reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: power-family-integrity-${{ github.run_id }}
+          path: |
+            downloads/power-family-capstone-reconcile.json
+            downloads/behind-the-curtain-production-guard.json
+          if-no-files-found: error
+          retention-days: 30

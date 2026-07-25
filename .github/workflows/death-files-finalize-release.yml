@@ -1,0 +1,67 @@
+name: Finalize Death Files Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/death-files-finalize-release.yml
+
+permissions:
+  contents: write
+  actions: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  correct-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Preserve canonical navigation and repair dossier anchors
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build-death-files.js')
+          source=p.read_text()
+          nav="if(!/href=[\"'][^\"']*death-files\\.html/i.test(h))h=h.replace(/(<nav\\b[^>]*class=[\"'][^\"']*\\bnav\\b[^\"']*[\"'][^>]*>)/i,'$1<a href=\"/death-files.html\">Death Files</a>');"
+          source=source.replace(nav,'')
+          old_safe="const safe=u=>/^(https?:\\/\\/|\\/|[a-z0-9][a-z0-9._\\/-]*\\.html(?:[?#].*)?$)/i.test(String(u||''))?String(u):'#';"
+          new_safe="const safe=u=>/^(#[-a-z0-9_:.]+|https?:\\/\\/|\\/|[a-z0-9][a-z0-9._\\/-]*\\.html(?:[?#].*)?$)/i.test(String(u||''))?String(u):'#';"
+          source=source.replace(old_safe,new_safe)
+          if 'href=\"/death-files.html\">Death Files</a>' in source:
+              raise SystemExit('Legacy global navigation injection remains')
+          if '#[-a-z0-9_:.]+' not in source:
+              raise SystemExit('Anchor route repair missing')
+          p.write_text(source)
+          PY
+          node --check scripts/build-death-files.js
+
+      - name: Commit corrected generator
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/build-death-files.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve canonical navigation in Death Files build'
+            git push origin main
+          fi
+
+      - name: Dispatch corrected controlled production deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh workflow run deploy.yml --ref main -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+          echo 'Corrected Death Files release dispatched to the controlled production workflow.'

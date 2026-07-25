@@ -1,0 +1,129 @@
+name: Homepage intro direct MP4 v7
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/homepage-intro-direct-v7.trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-intro-direct-v7-final
+  cancel-in-progress: true
+
+jobs:
+  deploy-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate direct MP4 source and runtime
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          node - <<'NODE'
+          const fs = require('fs');
+          const parts = [1, 2].map(part => fs
+            .readFileSync(`assets/matrix-intro-video-${part}.txt`, 'utf8')
+            .replace(/\s+/g, ''));
+          if (parts.some(part => part.length < 1000 || !/^[A-Za-z0-9+/=]+$/.test(part))) {
+            throw new Error('One or more intro video parts are not valid base64');
+          }
+          const mp4 = Buffer.from(parts.join(''), 'base64');
+          if (mp4.length < 10000 || mp4.subarray(4, 8).toString('ascii') !== 'ftyp') {
+            throw new Error(`Intro source is not a valid MP4: ${mp4.length} bytes`);
+          }
+          fs.writeFileSync('data/homepage-intro-packaged-bytes.txt', String(mp4.length));
+          console.log(`Validated source MP4: ${mp4.length} bytes`);
+          NODE
+          node --check src/worker-production-intro-hotfix-cdn.js
+          node --check scripts/verify-live-homepage-intro-v7.js
+          grep -q "path === '/_matrix-intro.mp4'" src/worker-production-intro-hotfix-cdn.js
+          grep -q 'worker-bundled-mp4' src/worker-production-intro-hotfix-cdn.js
+          grep -q 'homepage-intro-direct-v7.js' src/worker-production-intro-hotfix-cdn.js
+          grep -q 'type = "Text"' wrangler.intro-hotfix.toml
+
+      - name: Deploy direct MP4 intro Worker
+        id: deploy_intro
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest deploy --config wrangler.intro-hotfix.toml
+
+      - name: Verify live homepage, runtime, MP4 and Range response
+        id: verify_intro
+        if: steps.deploy_intro.outcome == 'success'
+        continue-on-error: true
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          INTRO_VERIFY_ATTEMPTS: '30'
+          INTRO_VERIFY_DELAY_MS: '5000'
+        run: node scripts/verify-live-homepage-intro-v7.js
+
+      - name: Record final direct MP4 result
+        if: always()
+        env:
+          DEPLOY_OUTCOME: ${{ steps.deploy_intro.outcome }}
+          VERIFY_OUTCOME: ${{ steps.verify_intro.outcome }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const deployOutcome = process.env.DEPLOY_OUTCOME || 'unknown';
+          const verifyOutcome = process.env.VERIFY_OUTCOME || 'unknown';
+          const readNumber = file => fs.existsSync(file) ? Number(fs.readFileSync(file, 'utf8')) || 0 : 0;
+          const packagedBytes = readNumber('data/homepage-intro-packaged-bytes.txt');
+          const liveBytes = readNumber('data/homepage-intro-live-bytes.txt');
+          let diagnostics = null;
+          try { diagnostics = JSON.parse(fs.readFileSync('data/homepage-intro-live-diagnostics.json', 'utf8')); } catch {}
+          const result = {
+            ok: deployOutcome === 'success' && verifyOutcome === 'success' && diagnostics?.ok === true && packagedBytes === liveBytes && liveBytes > 10000,
+            version: '20260725-video-v7',
+            recordedAt: new Date().toISOString(),
+            runId: Number(process.env.RUN_ID || 0),
+            runAttempt: Number(process.env.RUN_ATTEMPT || 0),
+            headSha: process.env.HEAD_SHA || '',
+            deployOutcome,
+            verifyOutcome,
+            packagedBytes,
+            liveBytes,
+            payloadMatches: liveBytes > 0 && packagedBytes === liveBytes,
+            source: 'Cloudflare Worker direct video/mp4 endpoint backed by Wrangler Text modules',
+            forcedReplayUrl: 'https://matrixreprogrammed.com/?intro=1',
+            diagnostics
+          };
+          fs.writeFileSync('data/homepage-intro-hotfix-result.json', JSON.stringify(result, null, 2) + '\n');
+          console.log(JSON.stringify(result));
+          NODE
+          rm -f data/homepage-intro-packaged-bytes.txt data/homepage-intro-live-bytes.txt data/homepage-intro-live-diagnostics.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/homepage-intro-hotfix-result.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record final direct-MP4 homepage intro result'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Fail when deployment or verification failed
+        if: steps.deploy_intro.outcome != 'success' || steps.verify_intro.outcome != 'success'
+        run: exit 1

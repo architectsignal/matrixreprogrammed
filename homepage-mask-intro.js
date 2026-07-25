@@ -5,12 +5,8 @@
   if (!intro) return;
 
   // Retired release-test markers only: matrix-homepage-intro-seen-v2; eye: 3000; burn: 1100; mask: 3000.
-  const runtimeVersion = '20260725-video-v4';
-  const sessionKey = 'matrix-homepage-intro-seen-v4';
-  const videoParts = [
-    `assets/matrix-intro-video-1.txt?v=${runtimeVersion}`,
-    `assets/matrix-intro-video-2.txt?v=${runtimeVersion}`
-  ];
+  const runtimeVersion = '20260725-video-v5';
+  const sessionKey = 'matrix-homepage-intro-seen-v5';
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
   const forceReplay = new URLSearchParams(window.location.search).get('intro') === '1';
   const timers = new Set();
@@ -56,12 +52,18 @@
     }
   }
 
+  function releaseVideoData() {
+    try { delete globalThis.__MATRIX_INTRO_BASE64__; } catch {}
+    try { delete globalThis.__MATRIX_INTRO_META__; } catch {}
+  }
+
   function removeIntro() {
     clearTimers();
     if (objectUrl) {
       URL.revokeObjectURL(objectUrl);
       objectUrl = '';
     }
+    releaseVideoData();
     intro.classList.add('is-removed');
     intro.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('mask-intro-active');
@@ -102,22 +104,23 @@
   }
 
   function base64ToObjectUrl(base64) {
-    const clean = String(base64).replace(/\s+/g, '');
-    if (!clean) throw new Error('Intro video data was empty');
+    const clean = String(base64 || '').replace(/\s+/g, '');
+    if (clean.length < 1000) throw new Error('Build-generated intro video data is missing or incomplete');
     const binary = window.atob(clean);
     const bytes = new Uint8Array(binary.length);
     for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+    if (bytes.length < 12 || String.fromCharCode(...bytes.slice(4, 8)) !== 'ftyp') {
+      throw new Error('Build-generated intro video data is not an MP4');
+    }
     return URL.createObjectURL(new Blob([bytes], { type: 'video/mp4' }));
   }
 
-  async function loadVideoSource() {
-    const parts = await Promise.all(videoParts.map(async url => {
-      const response = await fetch(url, { cache: 'reload', credentials: 'same-origin' });
-      if (!response.ok) throw new Error(`Intro video part failed: ${response.status}`);
-      return (await response.text()).trim();
-    }));
-    if (parts.some(part => !part)) throw new Error('Intro video part was empty');
-    return base64ToObjectUrl(parts.join(''));
+  function loadVideoSource() {
+    const embedded = globalThis.__MATRIX_INTRO_BASE64__;
+    if (typeof embedded !== 'string') throw new Error('Intro video data runtime did not load');
+    const source = base64ToObjectUrl(embedded);
+    releaseVideoData();
+    return source;
   }
 
   if (hasSeen()) {
@@ -162,26 +165,22 @@
     }
   };
 
-  loadVideoSource()
-    .then(source => {
-      if (finished) {
-        URL.revokeObjectURL(source);
+  try {
+    objectUrl = loadVideoSource();
+    video.src = objectUrl;
+    video.addEventListener('loadeddata', () => {
+      intro.classList.add('is-ready');
+      if (reducedMotion) {
+        intro.classList.add('needs-play');
+        video.pause();
         return;
       }
-      objectUrl = source;
-      video.src = source;
-      video.addEventListener('loadeddata', () => {
-        intro.classList.add('is-ready');
-        if (reducedMotion) {
-          intro.classList.add('needs-play');
-          video.pause();
-          return;
-        }
-        startPlayback();
-      }, { once: true });
-      video.load();
-    })
-    .catch(error => failGracefully('video-load-error', error));
+      startPlayback();
+    }, { once: true });
+    video.load();
+  } catch (error) {
+    failGracefully('video-data-error', error);
+  }
 
   intro.addEventListener('click', event => {
     if (!intro.classList.contains('needs-play')) return;

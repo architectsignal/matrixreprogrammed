@@ -10,6 +10,10 @@ on:
       - 'behind-the-curtain-access.html'
       - 'behind-the-curtain-access.js'
       - 'behind-the-curtain-access-v2.js'
+      - 'behind-the-curtain-capstone.html'
+      - 'power-family-intelligence-layer.js'
+      - 'power-family-intelligence-layer.css'
+      - 'data/power-family-intelligence-layer.json'
       - 'data/behind-the-curtain.json'
       - 'data/behind-the-curtain-pyramid.json'
       - 'data/behind-the-curtain-people-registry.json'
@@ -24,6 +28,8 @@ on:
       - 'data/money-overlap-graph.json'
       - 'data/epstein-relationship-public.json'
       - 'data/investigation-knowledge-graph.json'
+      - 'scripts/build-power-family-intelligence-layer.js'
+      - 'scripts/power-family-payload/**'
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/build-behind-the-curtain-tier-registry.js'
       - 'scripts/seed-behind-the-curtain-data.js'
@@ -40,6 +46,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'behind-the-curtain-capstone.html'
+      - 'power-family-intelligence-layer.js'
+      - 'power-family-intelligence-layer.css'
+      - 'data/power-family-intelligence-layer.json'
       - 'data/behind-the-curtain-pyramid.json'
       - 'data/behind-the-curtain-people-registry.json'
       - 'data/behind-the-curtain-family-access.json'
@@ -53,6 +63,8 @@ on:
       - 'data/money-overlap-graph.json'
       - 'data/epstein-relationship-public.json'
       - 'data/investigation-knowledge-graph.json'
+      - 'scripts/build-power-family-intelligence-layer.js'
+      - 'scripts/power-family-payload/**'
       - 'scripts/build-behind-the-curtain.js'
       - 'scripts/build-behind-the-curtain-tier-registry.js'
       - 'scripts/seed-behind-the-curtain-data.js'
@@ -86,6 +98,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Generate Power-Family Intelligence Layer and Capstone
+        run: node scripts/build-power-family-intelligence-layer.js
       - name: Generate independent tier registry and public interface
         shell: bash
         run: |
@@ -100,6 +114,8 @@ jobs:
           cp /tmp/behind-the-curtain-build.log behind-the-curtain-build.log
           tail -n 200 /tmp/behind-the-curtain-build.log
           exit $status
+      - name: Reassert canonical Capstone after all generators
+        run: node scripts/build-power-family-intelligence-layer.js
       - name: Upload focused build failure diagnostic
         if: failure()
         uses: actions/upload-artifact@v4
@@ -116,6 +132,8 @@ jobs:
             node --check behind-the-curtain.js
             node --check behind-the-curtain-access.js
             node --check behind-the-curtain-access-v2.js
+            node --check power-family-intelligence-layer.js
+            node --check scripts/build-power-family-intelligence-layer.js
             node --check scripts/build-behind-the-curtain.js
             node --check scripts/build-behind-the-curtain-tier-registry.js
             node --check scripts/patch-behind-the-curtain-tier-ui.js
@@ -126,6 +144,7 @@ jobs:
             node --check scripts/behind-the-curtain-test.js
             node --check scripts/behind-the-curtain-access-test.js
             node --check scripts/behind-the-curtain-living-access-test.js
+            node scripts/build-power-family-intelligence-layer.js
             node scripts/behind-the-curtain-test.js
             node scripts/behind-the-curtain-access-test.js
             node scripts/behind-the-curtain-living-access-test.js
@@ -147,7 +166,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js behind-the-curtain-access-v2.js data/behind-the-curtain.json data/behind-the-curtain-pyramid.json data/behind-the-curtain-people-registry.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json data/behind-the-curtain-living-access-intake.json index.html control-structure.html power-atlas.html follow-the-money.html docs/BEHIND_THE_CURTAIN_MASTER.md docs/MATRIX_FEDIVERSE_MASTER.md 2>/dev/null || true
+          git add behind-the-curtain.html behind-the-curtain.js behind-the-curtain-access.html behind-the-curtain-access.js behind-the-curtain-access-v2.js behind-the-curtain-capstone.html power-family-intelligence-layer.js power-family-intelligence-layer.css data/power-family-intelligence-layer.json data/behind-the-curtain.json data/behind-the-curtain-pyramid.json data/behind-the-curtain-people-registry.json data/behind-the-curtain-family-access.json data/behind-the-curtain-continuity-layers.json data/behind-the-curtain-living-access.json data/behind-the-curtain-living-access-history.json data/behind-the-curtain-living-access-intake.json index.html control-structure.html power-atlas.html follow-the-money.html docs/BEHIND_THE_CURTAIN_MASTER.md docs/MATRIX_FEDIVERSE_MASTER.md 2>/dev/null || true
           if git diff --cached --quiet; then
             echo 'Behind the Curtain intelligence is already current.'
           else

@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-25T08:45:54.154Z",
+  "checkedAt": "2026-07-25T08:46:39.620Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30151321197,
+  "workflowRunId": 30151473747,
   "runAttempt": 1,
-  "headSha": "24380c84a88e5737236973d41513e390d26b8c13",
+  "headSha": "f98dfbc380962a30d7d5d1a210238523e1f9c99c",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-25T08:45:49.562Z",
+    "generatedAt": "2026-07-25T08:46:34.175Z",
     "actions": [
       {
         "type": "run",
@@ -300,7 +300,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-25T08:45:51.750Z",
+    "checkedAt": "2026-07-25T08:46:36.831Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -312,5 +312,26 @@
     "curatedSources": 20,
     "historicalAnnexFamilies": 13,
     "symbolicDossiers": 4
+  },
+  "publicGateways": {
+    "ok": true,
+    "generatedAt": "2026-07-25T08:46:34.142Z",
+    "verified": [
+      "index.html",
+      "start-here.html",
+      "_site/index.html",
+      "_site/index",
+      "_site/start-here.html",
+      "_site/start-here"
+    ],
+    "patched": [
+      "index.html",
+      "start-here.html",
+      "_site/index.html",
+      "_site/index",
+      "_site/start-here.html",
+      "_site/start-here"
+    ],
+    "errors": []
   }
 }

@@ -54,8 +54,11 @@ function patchSearchIndex() {
     { url: 'data/power-family-curated-people.json', title: 'Power-Family Curated People Registry', category: 'Machine Data', layer: 'elite-networks', description: 'Machine-readable living family controllers, professional gatekeepers, successors and primary sources.', keywords: ['family controllers','gatekeepers','successors','source ledger'], priority: 94, sourceType: 'json-feed' }
   ];
   routes.forEach(item => ensureSearchRoute(index, item));
-  write('search-index.json', `${JSON.stringify(index, null, 2)}\n`);
-  report.actions.push({ type: 'patch', target: 'search-index.json', routes: routes.length });
+  const compact = `${JSON.stringify(index)}\n`;
+  write('search-index.json', compact);
+  const sizeMiB = Buffer.byteLength(compact) / 1024 / 1024;
+  check('compact search index remains under 22 MiB', sizeMiB <= 22, `${sizeMiB.toFixed(2)} MiB`);
+  report.actions.push({ type: 'patch', target: 'search-index.json', routes: routes.length, format: 'compact', sizeMiB: Number(sizeMiB.toFixed(2)) });
 }
 function patchSitemap() {
   if (!exists('sitemap.xml')) return;

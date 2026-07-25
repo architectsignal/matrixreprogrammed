@@ -1,7 +1,9 @@
 import introWorker from './worker-production-intro-hotfix.js';
-import { INTRO_VIDEO_PARTS } from './intro-video-data.generated.js';
+import introVideoPart1 from '../assets/matrix-intro-video-1.txt';
+import introVideoPart2 from '../assets/matrix-intro-video-2.txt';
 
 const VERSION = '20260725-video-v6';
+const INTRO_VIDEO_PARTS = Object.freeze([introVideoPart1, introVideoPart2]);
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/architectsignal/matrixreprogrammed@1bdd748d4968ab9b260e6cbc928fb2286139f261/assets';
 const RAW_BASE = 'https://raw.githubusercontent.com/architectsignal/matrixreprogrammed/1bdd748d4968ab9b260e6cbc928fb2286139f261/assets';
 
@@ -33,7 +35,7 @@ function validBody(body, part = 0) {
 }
 
 function loadFromWorkerBundle(part) {
-  const body = validBody(INTRO_VIDEO_PARTS?.[part - 1], part);
+  const body = validBody(INTRO_VIDEO_PARTS[part - 1], part);
   return body ? { body, source: 'worker-bundled-payload' } : null;
 }
 

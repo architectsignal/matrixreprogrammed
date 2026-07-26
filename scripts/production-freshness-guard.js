@@ -13,7 +13,7 @@ const eventName = String(process.env.GITHUB_EVENT_NAME || '').toLowerCase();
 const workflowName = String(process.env.GITHUB_WORKFLOW || '');
 const runningInActions = String(process.env.GITHUB_ACTIONS || '').toLowerCase() === 'true';
 const strictWorkflow = String(process.env.MATRIX_REQUIRE_PRODUCTION_FRESHNESS || '').toLowerCase() === '1'
-  || /Matrix Reprogrammed Production Deploy|Production Synchronisation Assurance/i.test(workflowName);
+  || /Matrix Reprogrammed (?:Controlled )?Production Deploy|Production Synchronisation Assurance/i.test(workflowName);
 const localManualRun = !runningInActions && !workflowName;
 const advisoryOnly = !localManualRun && !strictWorkflow;
 

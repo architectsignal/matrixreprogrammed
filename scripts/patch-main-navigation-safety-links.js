@@ -21,7 +21,7 @@ if (!Array.isArray(deathData.dossiers) || deathData.dossiers.length !== 100) {
 if (!fs.existsSync(deathBuilderPath)) throw new Error('Death Files builder is missing before navigation reconciliation.');
 execFileSync(process.execPath, [deathBuilderPath], { cwd: root, stdio: 'inherit', env: process.env });
 if (!fs.existsSync(path.join(root, 'death-files.html'))) throw new Error('Death Files landing page was not generated before navigation reconciliation.');
-const dossierPages = fs.readdirSync(root).filter(name => /^death-file-(?!s).+\.html$/i.test(name));
+const dossierPages = fs.readdirSync(root).filter(name => /^death-file-.+\.html$/i.test(name));
 if (dossierPages.length !== 100) throw new Error(`Expected 100 generated Death Files dossiers before navigation reconciliation; found ${dossierPages.length}.`);
 
 const primaryLinks = [

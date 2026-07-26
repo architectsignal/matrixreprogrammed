@@ -1,186 +1,20 @@
-name: Homepage intro production hotfix
+name: Retired homepage intro dispatcher
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/one-shot-controlled-production.trigger
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: homepage-intro-production-hotfix
-  cancel-in-progress: true
+  group: retired-homepage-intro-dispatcher
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  retired:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Validate direct MP4 intro payload
+      - name: Confirm controlled production boundary
         run: |
-          set -euo pipefail
-          mkdir -p _site/assets data
-          cp assets/matrix-intro-video-1.txt _site/assets/matrix-intro-video-1.txt
-          cp assets/matrix-intro-video-2.txt _site/assets/matrix-intro-video-2.txt
-          node - <<'NODE'
-          const fs = require('fs');
-          const parts = [1, 2].map(part => fs
-            .readFileSync(`assets/matrix-intro-video-${part}.txt`, 'utf8')
-            .replace(/\s+/g, ''));
-          if (parts.some(part => part.length < 1000 || !/^[A-Za-z0-9+/=]+$/.test(part))) {
-            throw new Error('One or more intro video parts are not valid base64');
-          }
-          const mp4 = Buffer.from(parts.join(''), 'base64');
-          if (mp4.length < 10000) throw new Error(`Intro MP4 is too small: ${mp4.length}`);
-          if (mp4.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Intro payload is not an MP4');
-          fs.writeFileSync('data/homepage-intro-packaged-bytes.txt', String(mp4.length));
-          console.log(`Validated direct intro MP4: ${mp4.length} bytes`);
-          NODE
-          node --check src/worker-production-intro-hotfix.js
-          node --check src/worker-production-intro-hotfix-cdn.js
-          grep -q "import introVideoPart1 from '../assets/matrix-intro-video-1.txt'" src/worker-production-intro-hotfix-cdn.js
-          grep -q "import introVideoPart2 from '../assets/matrix-intro-video-2.txt'" src/worker-production-intro-hotfix-cdn.js
-          grep -q "path === '/_matrix-intro.mp4'" src/worker-production-intro-hotfix-cdn.js
-          grep -q 'worker-bundled-mp4' src/worker-production-intro-hotfix-cdn.js
-          grep -q '/_matrix-intro.mp4?v=' src/worker-production-intro-hotfix-cdn.js
-          grep -q 'type = "Text"' wrangler.intro-hotfix.toml
-
-      - name: Deploy direct MP4 homepage intro
-        id: deploy_intro
-        continue-on-error: true
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          set -euo pipefail
-          npx --yes wrangler@latest deploy --config wrangler.intro-hotfix.toml
-
-      - name: Verify live forced replay and direct MP4
-        id: verify_intro
-        if: steps.deploy_intro.outcome == 'success'
-        continue-on-error: true
-        run: |
-          set -euo pipefail
-          for attempt in $(seq 1 30); do
-            nonce="$(date +%s)-$attempt"
-            rm -f /tmp/matrix-home.html /tmp/matrix-runtime.js /tmp/matrix-intro.mp4 /tmp/matrix-intro.headers /tmp/matrix-range.bin /tmp/matrix-range.headers
-            curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/?intro=1&hotfix=$nonce" -o /tmp/matrix-home.html || true
-            curl -fsSL -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/homepage-intro-direct-v7.js?v=20260725-video-v7&hotfix=$nonce" -o /tmp/matrix-runtime.js || true
-            curl -fsSL -D /tmp/matrix-intro.headers -H 'Cache-Control: no-cache' "https://matrixreprogrammed.com/_matrix-intro.mp4?v=20260725-video-v7&hotfix=$nonce" -o /tmp/matrix-intro.mp4 || true
-            curl -fsSL -D /tmp/matrix-range.headers -H 'Cache-Control: no-cache' -H 'Range: bytes=0-99' "https://matrixreprogrammed.com/_matrix-intro.mp4?v=20260725-video-v7&range=$nonce" -o /tmp/matrix-range.bin || true
-            if ATTEMPT="$attempt" node - <<'NODE'
-            const fs = require('fs');
-            const read = path => fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0);
-            const text = path => read(path).toString('utf8');
-            const home = text('/tmp/matrix-home.html');
-            const runtime = text('/tmp/matrix-runtime.js');
-            const headers = text('/tmp/matrix-intro.headers').toLowerCase();
-            const rangeHeaders = text('/tmp/matrix-range.headers').toLowerCase();
-            const mp4 = read('/tmp/matrix-intro.mp4');
-            const range = read('/tmp/matrix-range.bin');
-            const packagedBytes = Number(fs.readFileSync('data/homepage-intro-packaged-bytes.txt', 'utf8')) || 0;
-            const checks = {
-              homeOverlay: home.includes('data-homepage-intro-v6'),
-              homeRuntime: home.includes('homepage-intro-direct-v7.js') || home.includes('homepage-intro-hotfix-v6.js'),
-              runtimeDirectMp4: runtime.includes('/_matrix-intro.mp4?v=') && runtime.includes('matrix-homepage-intro-seen-v7'),
-              mp4Status200: /^http\/\S+ 200\b/im.test(headers),
-              mp4ContentType: /content-type:\s*video\/mp4/i.test(headers),
-              mp4Source: /x-matrix-intro-source:\s*worker-bundled-mp4/i.test(headers),
-              mp4Length: mp4.length === packagedBytes && mp4.length > 10000,
-              mp4Ftyp: mp4.length >= 8 && mp4.subarray(4, 8).toString('ascii') === 'ftyp',
-              rangeStatus206: /^http\/\S+ 206\b/im.test(rangeHeaders),
-              rangeHeader: /content-range:\s*bytes 0-99\/\d+/i.test(rangeHeaders),
-              rangeLength: range.length === 100
-            };
-            const diagnostics = {
-              attempt: Number(process.env.ATTEMPT || 0),
-              checkedAt: new Date().toISOString(),
-              packagedBytes,
-              liveBytes: mp4.length,
-              rangeBytes: range.length,
-              checks,
-              mp4Headers: headers.split(/\r?\n/).filter(line => /^(http\/|content-type:|content-length:|accept-ranges:|x-matrix-intro-)/i.test(line)).slice(0, 20),
-              rangeHeaders: rangeHeaders.split(/\r?\n/).filter(line => /^(http\/|content-range:|content-length:|x-matrix-intro-)/i.test(line)).slice(0, 20)
-            };
-            diagnostics.ok = Object.values(checks).every(Boolean);
-            fs.writeFileSync('data/homepage-intro-live-diagnostics.json', JSON.stringify(diagnostics, null, 2));
-            if (!diagnostics.ok) process.exit(1);
-            fs.writeFileSync('data/homepage-intro-live-bytes.txt', String(mp4.length));
-            console.log(`VERIFIED: live direct MP4 intro (${mp4.length} bytes) with Range support.`);
-            NODE
-            then
-              exit 0
-            fi
-            sleep 5
-          done
-          echo 'Homepage intro direct MP4 verification failed.' >&2
-          exit 1
-
-      - name: Record exact hotfix result
-        if: always()
-        env:
-          DEPLOY_OUTCOME: ${{ steps.deploy_intro.outcome }}
-          VERIFY_OUTCOME: ${{ steps.verify_intro.outcome }}
-          RUN_ID: ${{ github.run_id }}
-          RUN_ATTEMPT: ${{ github.run_attempt }}
-          HEAD_SHA: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          node - <<'NODE'
-          const fs = require('fs');
-          const deployOutcome = process.env.DEPLOY_OUTCOME || 'unknown';
-          const verifyOutcome = process.env.VERIFY_OUTCOME || 'unknown';
-          const packagedBytes = fs.existsSync('data/homepage-intro-packaged-bytes.txt')
-            ? Number(fs.readFileSync('data/homepage-intro-packaged-bytes.txt', 'utf8')) || 0
-            : 0;
-          const liveBytes = fs.existsSync('data/homepage-intro-live-bytes.txt')
-            ? Number(fs.readFileSync('data/homepage-intro-live-bytes.txt', 'utf8')) || 0
-            : 0;
-          let diagnostics = null;
-          try { diagnostics = JSON.parse(fs.readFileSync('data/homepage-intro-live-diagnostics.json', 'utf8')); } catch {}
-          const result = {
-            ok: deployOutcome === 'success' && verifyOutcome === 'success' && liveBytes === packagedBytes && liveBytes > 10000 && diagnostics?.ok === true,
-            version: '20260725-video-v7',
-            recordedAt: new Date().toISOString(),
-            runId: Number(process.env.RUN_ID || 0),
-            runAttempt: Number(process.env.RUN_ATTEMPT || 0),
-            headSha: process.env.HEAD_SHA || '',
-            deployOutcome,
-            verifyOutcome,
-            packagedBytes,
-            liveBytes,
-            payloadMatches: liveBytes > 0 && liveBytes === packagedBytes,
-            source: 'Cloudflare Worker direct video/mp4 endpoint backed by Wrangler Text modules',
-            forcedReplayUrl: 'https://matrixreprogrammed.com/?intro=1',
-            diagnostics
-          };
-          fs.mkdirSync('data', { recursive: true });
-          fs.writeFileSync('data/homepage-intro-hotfix-result.json', JSON.stringify(result, null, 2) + '\n');
-          console.log(JSON.stringify(result));
-          NODE
-          rm -f data/homepage-intro-packaged-bytes.txt data/homepage-intro-live-bytes.txt data/homepage-intro-live-diagnostics.json
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/homepage-intro-hotfix-result.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Record direct-MP4 homepage intro result'
-          git pull --rebase origin main
-          git push origin HEAD:main
-
-      - name: Fail when deployment or verification failed
-        if: steps.deploy_intro.outcome != 'success' || steps.verify_intro.outcome != 'success'
-        run: exit 1
+          echo 'This one-shot homepage intro dispatcher is retired.'
+          echo 'All production releases must use Matrix Reprogrammed Controlled Production Deploy with explicit owner confirmation.'

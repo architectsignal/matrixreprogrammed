@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-07-26T09:00:07.757Z
+Generated: 2026-07-26T09:15:04.670Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -8,15 +8,15 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 
 ## Summary
 
-- sourcesScheduled: 20
-- sourcesFetched: 16
-- sourceFailures: 4
-- changedSources: 9
-- findingsInWindow: 503
-- establishedWrongdoingFindings: 18
+- sourcesScheduled: 12
+- sourcesFetched: 11
+- sourceFailures: 1
+- changedSources: 4
+- findingsInWindow: 860
+- establishedWrongdoingFindings: 0
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
-- meaningfulSourceChanges: 7
+- meaningfulSourceChanges: 8
 
 ## Permanent Evidence Method
 
@@ -24,329 +24,347 @@ Final official records may establish wrongdoing only within their exact scope. C
 
 ## Strongest Findings
 
-### Final Judgment
+### ROGUE VALLEY H2O LLC — Department of Agriculture
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf
-
-### Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf
+Source URL: https://www.usaspending.gov/award/1240BK25P0035
 
-### Final Judgment - Ali Derakhshanfar
+### MINDCUBED LLC — District of Columbia Courts
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf
-
-### Final Judgment - Sal N. Ortiz
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf
+Source URL: https://www.usaspending.gov/award/95C67826P0287
 
-### Final Judgment - Semisub, Inc.
+### FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/judg26592-semisub.pdf
-
-### Final Judgment - Jamey Denise Jackson
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf
+Source URL: https://www.usaspending.gov/award/80SSC026P0003
 
-### Final Judgment
+### SMITHS DETECTION INC. — Court Services and Offender Supervision Agency
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf
-
-### Revised Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf
+Source URL: https://www.usaspending.gov/award/9594CS26F0043
 
-### Final Judgment
+### FCN, INC. — Court Services and Offender Supervision Agency
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf
-
-### Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf
+Source URL: https://www.usaspending.gov/award/9594CS26F0042
 
-### Final Judgment
+### COMCAST GOVERNMENT SERVICES LLC — Department of Defense
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf
-
-### Proposed Final Judgment - Shaukat Shamim
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf
+Source URL: https://www.usaspending.gov/award/HC101326FB686
 
-### Proposed Final Judgment - YouPlus, Inc.
+### OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf
-
-### Final Judgment -Steve Bajic
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26583-bajic.pdf
+Source URL: https://www.usaspending.gov/award/9523ZY26P0022
 
-### Final Judgment -Christopher McKnight
+### HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26583-mcknight.pdf
-
-### Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf
+Source URL: https://www.usaspending.gov/award/80NSSC26P1028
 
-### Final Judgment - Robert Yedid
+### INDUSTRIAL BANK — District of Columbia Courts
 
-Grade: A · Status: established-wrongdoing · Severity: 5
+Grade: B · Status: record-update · Severity: 1
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: USAspending.gov — Recent Contract Awards
 
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
+Conclusion: A dated source update exists and should be compared with prior records.
 
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
 
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf
-
-### Final Judgment - Andrew Kaufman
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.
-
-Mechanism: Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.
-
-Implication: This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
 
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-andrew-kaufman.pdf
+Source URL: https://www.usaspending.gov/award/95C67826P0279
+
+### ANSYS INC — National Aeronautics and Space Administration
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/80TECH26FA179
+
+### REGAN TECHNOLOGIES CORP — Federal Mediation and Conciliation Service
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/93310026P0007
+
+### MVATION WORLDWIDE, INC. — Department of Education
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/91990026F0071
+
+### CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/959P0026P0005
+
+### PANAMERICA COMPUTERS, INC. — Department of Energy
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/89243326FFE400787
+
+### COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/9594CS26F0050
+
+### SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/9594CS26F0044
+
+### SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/95C67826P0296
+
+### HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/95332A26P00013
+
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 

@@ -1,14 +1,14 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-26T07:48:27.287Z",
+  "checkedAt": "2026-07-26T09:15:04.670Z",
   "selectedSources": 12,
-  "fetchedSources": 12,
+  "fetchedSources": 11,
   "skippedSources": 0,
-  "failedSources": 0,
-  "parsedItems": 507,
-  "newOrSeenFindings": 507,
-  "ledgerFindings": 2500,
+  "failedSources": 1,
+  "parsedItems": 368,
+  "newOrSeenFindings": 368,
+  "ledgerFindings": 2868,
   "results": [
     {
       "sourceId": "doj-epstein-disclosures",
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "5982ca39c61e03494665ae91bd73f7dd88941d277a0b9684def82d1a246110f3",
+      "bytes": 2188,
+      "bodyHash": "6e99522e3b32c1035d5f02908260e9678ede0a78a7656fd3a3f904a3a6de525e",
       "itemCount": 1,
       "error": ""
     },
@@ -58,8 +58,8 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
       "bytes": 22804,
-      "bodyHash": "cd6466aa6e21753e3ee1bd3748e53eb00aac00cabeae6799677493ada0ef1791",
-      "itemCount": 40,
+      "bodyHash": "8bc9bc4d77f7790b2a9a83aaf4b9c5bd2a83c3814c761a365831ee9864a00d08",
+      "itemCount": 1,
       "error": ""
     },
     {
@@ -83,8 +83,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "contentType": "application/json; charset=utf-8",
-      "bytes": 157882,
-      "bodyHash": "b658834071806660a99cbb6855a84998c7f8d31568a020d61b5172b68c7e22c0",
+      "bytes": 164368,
+      "bodyHash": "fa28127f749088097d99611aad675d3c05005c03416ccb339b3c81c686037cec",
       "itemCount": 100,
       "error": ""
     },
@@ -92,14 +92,9 @@
       "sourceId": "usaspending-recent-contracts",
       "label": "USAspending.gov — Recent Contract Awards",
       "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "contentType": "application/json",
-      "bytes": 61994,
-      "bodyHash": "df401b913dfa3860fe03bbb29ce36bea9b425b50ada0644419ae5091044f019e",
-      "itemCount": 100,
-      "error": ""
+      "status": "failed-request",
+      "itemCount": 0,
+      "error": "HTTP 405"
     },
     {
       "sourceId": "treasury-ofac-recent-actions",
@@ -109,8 +104,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43519,
-      "bodyHash": "1ba7565fd0284e22c22064a4fb4917faf304b8eb17aaaf68a6f9518102b4259a",
+      "bytes": 43381,
+      "bodyHash": "6fccc0b3b6bde2dd10d9cd237bb634c34d37895a26d2d4364b59bdc3db02d171",
       "itemCount": 18,
       "error": ""
     },
@@ -149,7 +144,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "dbc124b7c7494e1902376b3fd1a9c54bb2a97495dbb216e1b1cc79c11b8d3b33",
+      "bodyHash": "e13a0d3cd3a15653fe04e05407902d9580d77f69b892de63f53a60b704d2172e",
       "itemCount": 15,
       "error": ""
     },

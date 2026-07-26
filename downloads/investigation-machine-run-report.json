@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "mode": "weekly",
-  "checkedAt": "2026-07-26T09:00:07.757Z",
-  "selectedSources": 20,
-  "fetchedSources": 16,
+  "mode": "daily",
+  "checkedAt": "2026-07-26T09:15:04.670Z",
+  "selectedSources": 12,
+  "fetchedSources": 11,
   "skippedSources": 0,
-  "failedSources": 4,
-  "parsedItems": 568,
-  "newOrSeenFindings": 568,
-  "ledgerFindings": 2500,
+  "failedSources": 1,
+  "parsedItems": 368,
+  "newOrSeenFindings": 368,
+  "ledgerFindings": 2868,
   "results": [
     {
       "sourceId": "doj-epstein-disclosures",
@@ -32,7 +32,7 @@
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
       "bytes": 2188,
-      "bodyHash": "a5959a627ad459909ec1b5dd33dd1e094a8f02c23bbfcd0b15b7228f0a991aa4",
+      "bodyHash": "6e99522e3b32c1035d5f02908260e9678ede0a78a7656fd3a3f904a3a6de525e",
       "itemCount": 1,
       "error": ""
     },
@@ -58,8 +58,8 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
       "bytes": 22804,
-      "bodyHash": "e2ef6fed38b7484d86af2994a450a30b7b4f635e3b4a958be0c7e8887c50113c",
-      "itemCount": 40,
+      "bodyHash": "8bc9bc4d77f7790b2a9a83aaf4b9c5bd2a83c3814c761a365831ee9864a00d08",
+      "itemCount": 1,
       "error": ""
     },
     {
@@ -92,14 +92,9 @@
       "sourceId": "usaspending-recent-contracts",
       "label": "USAspending.gov — Recent Contract Awards",
       "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "contentType": "application/json",
-      "bytes": 67322,
-      "bodyHash": "a5f2d3ad33a1eca543a3286f5f6e34fb688f77f071cb2be165cc9f8c86f2b72e",
-      "itemCount": 100,
-      "error": ""
+      "status": "failed-request",
+      "itemCount": 0,
+      "error": "HTTP 405"
     },
     {
       "sourceId": "treasury-ofac-recent-actions",
@@ -110,48 +105,9 @@
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 43381,
-      "bodyHash": "b33e49756b9d21f7bac01edc4f2684cae880fc4d6dbff8b9d3a4d1810e222bd0",
+      "bodyHash": "6fccc0b3b6bde2dd10d9cd237bb634c34d37895a26d2d4364b59bdc3db02d171",
       "itemCount": 18,
       "error": ""
-    },
-    {
-      "sourceId": "fbi-vault-recent",
-      "label": "FBI Vault — Recently Added",
-      "url": "https://vault.fbi.gov/recently-added",
-      "status": "failed",
-      "statusCode": 403,
-      "finalUrl": "https://vault.fbi.gov/recently-added",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 0,
-      "bodyHash": "",
-      "itemCount": 0,
-      "error": "HTTP 403"
-    },
-    {
-      "sourceId": "cia-reading-room",
-      "label": "CIA Freedom of Information Act Electronic Reading Room",
-      "url": "https://www.cia.gov/readingroom/",
-      "status": "failed",
-      "statusCode": null,
-      "finalUrl": "https://www.cia.gov/readingroom/",
-      "contentType": "",
-      "bytes": 0,
-      "bodyHash": "",
-      "itemCount": 0,
-      "error": "fetch failed"
-    },
-    {
-      "sourceId": "gao-reports",
-      "label": "U.S. Government Accountability Office — Reports And Testimonies",
-      "url": "https://www.gao.gov/reports-testimonies",
-      "status": "failed",
-      "statusCode": 403,
-      "finalUrl": "https://www.gao.gov/reports-testimonies",
-      "contentType": "text/html",
-      "bytes": 0,
-      "bodyHash": "",
-      "itemCount": 0,
-      "error": "HTTP 403"
     },
     {
       "sourceId": "house-oversight-releases",
@@ -180,19 +136,6 @@
       "error": ""
     },
     {
-      "sourceId": "icij-offshore-leaks",
-      "label": "ICIJ Offshore Leaks Database",
-      "url": "https://offshoreleaks.icij.org/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://offshoreleaks.icij.org/",
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 19151,
-      "bodyHash": "b744009e0354bb9b39bd37e0af9b940a074aae86c2867a59a5e4330399f9877c",
-      "itemCount": 20,
-      "error": ""
-    },
-    {
       "sourceId": "uk-sfo-news",
       "label": "UK Serious Fraud Office — News And Communications",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
@@ -201,7 +144,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "89f4db2a94dbbce4154f0fa17a690b93b332d5776989608fcfe3ca8cd004cf94",
+      "bodyHash": "e13a0d3cd3a15653fe04e05407902d9580d77f69b892de63f53a60b704d2172e",
       "itemCount": 15,
       "error": ""
     },
@@ -216,58 +159,6 @@
       "bytes": 103517,
       "bodyHash": "d6dfae535ab18a13c8c2d942b6a8e58fd66db555dca505eb6bc9b92f5d4fbd2d",
       "itemCount": 9,
-      "error": ""
-    },
-    {
-      "sourceId": "hatvp-open-data",
-      "label": "France HATVP — Open Data",
-      "url": "https://www.hatvp.fr/open-data/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.hatvp.fr/open-data/",
-      "contentType": "text/html",
-      "bytes": 39818,
-      "bodyHash": "0eae3388e2645705c512d38c6c3ea371d88b3c8820a5c7afbdf66a8670e0a7f2",
-      "itemCount": 3,
-      "error": ""
-    },
-    {
-      "sourceId": "cour-des-comptes-publications",
-      "label": "France Cour des comptes — Publications",
-      "url": "https://www.ccomptes.fr/fr/publications",
-      "status": "failed",
-      "statusCode": null,
-      "finalUrl": "https://www.ccomptes.fr/fr/publications",
-      "contentType": "",
-      "bytes": 0,
-      "bodyHash": "",
-      "itemCount": 0,
-      "error": "fetch failed"
-    },
-    {
-      "sourceId": "fec-updates",
-      "label": "U.S. Federal Election Commission — Updates",
-      "url": "https://www.fec.gov/updates/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.fec.gov/updates/",
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 47526,
-      "bodyHash": "4cf95f3cfb8fcc4bd3fea853989323247cdb13d180ba1df3d464aedac06f2ca1",
-      "itemCount": 18,
-      "error": ""
-    },
-    {
-      "sourceId": "openfec-api",
-      "label": "U.S. Federal Election Commission — Campaign Finance Data",
-      "url": "https://www.fec.gov/data/",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.fec.gov/data/",
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 34824,
-      "bodyHash": "cbf75e5b4bf4a339dd20eb4b091754020d47f6254ce40be3c754f1681052b84b",
-      "itemCount": 20,
       "error": ""
     }
   ],

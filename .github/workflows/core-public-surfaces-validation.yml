@@ -1,0 +1,73 @@
+name: Core Public Surfaces Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/patch-homepage-mask-intro.js'
+      - 'scripts/finalize-core-public-surfaces.js'
+      - 'scripts/build-deploy-manifest.js'
+      - 'scripts/patch-main-navigation-safety-links.js'
+      - 'scripts/restore-homepage-navigation.js'
+      - 'assets/matrix-intro-v9-*.txt'
+      - 'independent-links.html'
+      - 'data/independent-links-*.json'
+      - 'scripts/build-death-files.js'
+      - '.github/workflows/core-public-surfaces-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Preflight verified intro payload
+        shell: bash
+        run: |
+          set -o pipefail
+          node --check scripts/patch-homepage-mask-intro.js 2>&1 | tee /tmp/intro-preflight.log
+          node scripts/patch-homepage-mask-intro.js 2>&1 | tee -a /tmp/intro-preflight.log
+          node scripts/homepage-mask-intro-test.js 2>&1 | tee -a /tmp/intro-preflight.log
+      - name: Build deployable site
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee /tmp/core-public-surfaces-build.log
+      - name: Verify restored public surfaces
+        run: |
+          node --check scripts/finalize-core-public-surfaces.js
+          node --check scripts/build-deploy-manifest.js
+          node scripts/finalize-core-public-surfaces.js
+          node - <<'NODE'
+          const fs=require('fs');
+          const data=fs.readFileSync('homepage-mask-intro-data.js','utf8');
+          if(!data.includes('20260725-video-v9')||!data.includes('"decodedBytes":123874')) throw new Error('Verified v9 intro metadata missing');
+          const home=fs.readFileSync('_site/index.html','utf8');
+          for(const marker of ['matrix-construction-banner','death-files.html','independent-links.html','20260725-video-v9','welcome-gate.js']) if(!home.includes(marker)) throw new Error(`Homepage marker missing: ${marker}`);
+          const links=fs.readFileSync('_site/independent-links.html','utf8');
+          if(!links.includes('TOP 100 INDEPENDENT RESEARCH LINKS.')) throw new Error('Independent Links route missing');
+          const deaths=fs.readFileSync('_site/death-files.html','utf8');
+          if(!deaths.includes('THE DEATH FILES.')) throw new Error('Death Files route missing');
+          console.log('Core public surfaces validation passed.');
+          NODE
+      - name: Upload exact validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-public-surfaces-validation-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            /tmp/intro-preflight.log
+            /tmp/core-public-surfaces-build.log
+            downloads/homepage-mask-intro-report.json
+            downloads/core-public-surfaces-finalize.json
+            downloads/final-production-reconcile.json
+            downloads/final-release-sanitize.json

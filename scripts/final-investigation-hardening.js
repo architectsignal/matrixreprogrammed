@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./expand-death-files-100.js');
 require('./build-death-files.js');
+require('./enhance-death-files-100-ui.js');
 require('./death-files-pressure-test.js');
 const pulseFile = path.join(root, 'investigation-pulse.js');
 const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);

@@ -2,42 +2,42 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const targets = [
-  path.join(root, 'index.html'),
-  path.join(root, '_site', 'index.html')
+const targets = [path.join(root, 'index.html'), path.join(root, '_site', 'index.html'), path.join(root, '_site', 'index')];
+
+const primary = [
+  ['start-here.html','Start Here'],
+  ['books.html','Books'],
+  ['death-files.html','Death Files'],
+  ['independent-links.html','Independent Links'],
+  ['live-intel.html','Live Intel'],
+  ['power-atlas.html','Control System'],
+  ['evidence-vault.html','Evidence'],
+  ['search.html','Search']
 ];
-
-const canonicalNavigation = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary"><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="power-atlas.html">Control System</a><a href="evidence-vault.html">Declassified Files</a><a href="live-intel.html">Live Intel</a><a href="timers.html">Risk Timers</a><a href="security-privacy.html">Security Tools</a><a href="dark-web-safety.html">Dark Web Safety</a><a href="contact-the-machine.html">Contact</a><a href="search.html">Search</a></div><details class="nav-more"><summary>More</summary><div class="nav-drawer"><div class="nav-group"><strong>Live Tracking &amp; Clocks</strong><a href="daily-command-brief.html">Daily Brief</a><a href="timers.html">Risk Timers</a><a href="control-system-tracker.html">Control Tracker</a><a href="control-structure.html">Power Map</a><a href="tracker-dashboard.html">Tracker Dashboard</a><a href="entities.html">Entities</a><a href="investigations.html">Investigations</a><a href="daily-missing-records.html">Missing Records</a><a href="conclusion-engine.html">Conclusion Engine</a><a href="update-monitor.html">Update Monitor</a></div><div class="nav-group"><strong>Research &amp; Evidence</strong><a href="data-lab.html">Public Data Lab</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="evidence-network-map.html">Evidence Network</a><a href="evidence-reader.html">Evidence Reader</a><a href="evidence-timeline.html">Evidence Timeline</a><a href="geographic-power-atlas.html">Geographic Atlas</a><a href="source-document-vault.html">Source Vault</a><a href="network-maps.html">Network Maps</a></div><div class="nav-group"><strong>Community, Books &amp; Membership</strong><a href="book-universe.html">Book Universe</a><a href="forum.html">Signal Board</a><a href="membership.html">Membership</a><a href="subscriber-dashboard.html">Subscriber Dashboard</a><a href="billing-dashboard.html">Billing Dashboard</a><a href="amazon-store-books.html">Amazon Store</a><a href="videos.html">Rumble Channels</a></div><div class="nav-group"><strong>Briefs &amp; Support</strong><a href="optin-center.html">Free Briefs</a><a href="daily-command-brief.html">Today’s Brief</a><a href="newsletter.html">Newsletter</a><a href="download-center.html">Download Center</a><a href="trust-center.html">Trust Center</a><a href="contact-the-machine.html">Contact the Machine</a></div></div></details></nav>`;
-
+const groups = [
+  ['Live Tracking & Clocks', [
+    ['daily-command-brief.html','Daily Brief'],['timers.html','Risk Timers'],['control-system-tracker.html','Control Tracker'],['control-structure.html','Power Map'],['tracker-dashboard.html','Tracker Dashboard'],['entities.html','Entities'],['investigations.html','Investigations'],['daily-missing-records.html','Missing Records'],['conclusion-engine.html','Conclusion Engine'],['update-monitor.html','Update Monitor']
+  ]],
+  ['Research & Evidence', [
+    ['death-files.html','Death Files'],['independent-links.html','Top 100 Independent Links'],['data-lab.html','Public Data Lab'],['research-tools.html','Research Tools'],['evidence-archive.html','Evidence Archive'],['evidence-network-map.html','Evidence Network'],['evidence-reader.html','Evidence Reader'],['evidence-timeline.html','Evidence Timeline'],['geographic-power-atlas.html','Geographic Atlas'],['source-document-vault.html','Source Vault'],['network-maps.html','Network Maps']
+  ]],
+  ['Power, Files & Investigations', [
+    ['behind-the-curtain.html','Behind the Curtain'],['follow-the-money.html','Follow the Money'],['track-the-families.html','Track the Families'],['epstein-files.html','Epstein Files'],['investigation-machine.html','Investigation Machine'],['dark-speculation-lab.html','Dark Speculation Lab']
+  ]],
+  ['Community, Books & Membership', [
+    ['book-universe.html','Book Universe'],['forum.html','Signal Board'],['membership.html','Membership'],['subscriber-dashboard.html','Subscriber Dashboard'],['billing-dashboard.html','Billing Dashboard'],['amazon-store-books.html','Amazon Store'],['videos.html','Rumble Channels']
+  ]],
+  ['Briefs, Safety & Support', [
+    ['security-privacy.html','Security Tools'],['dark-web-safety.html','Dark Web Safety'],['optin-center.html','Free Briefs'],['daily-command-brief.html','Today’s Brief'],['newsletter.html','Newsletter'],['download-center.html','Download Center'],['trust-center.html','Trust Center'],['contact-the-machine.html','Contact the Machine']
+  ]]
+];
+const canonicalNavigation = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primary.map(([href,label])=>`<a href="${href}">${label}</a>`).join('')}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">${groups.map(([title,links])=>`<div class="nav-group"><strong>${title}</strong>${links.map(([href,label])=>`<a href="${href}">${label}</a>`).join('')}</div>`).join('')}</div></details></nav>`;
 const navPattern = /<nav class="nav(?: nav-shell)?"(?: aria-label="Primary navigation")?>[\s\S]*?<\/nav>/i;
-const requiredRoutes = [
-  'timers.html',
-  'daily-command-brief.html',
-  'control-system-tracker.html',
-  'control-structure.html',
-  'tracker-dashboard.html',
-  'entities.html',
-  'investigations.html',
-  'daily-missing-records.html',
-  'conclusion-engine.html',
-  'update-monitor.html',
-  'data-lab.html',
-  'research-tools.html',
-  'evidence-reader.html',
-  'evidence-timeline.html',
-  'source-document-vault.html',
-  'network-maps.html',
-  'membership.html',
-  'billing-dashboard.html',
-  'download-center.html',
-  'security-privacy.html',
-  'dark-web-safety.html',
-  'contact-the-machine.html'
-];
+const requiredRoutes = [...new Set([...primary.map(x=>x[0]), ...groups.flatMap(x=>x[1].map(y=>y[0]))])];
 
 const changed = [];
 for (const target of targets) {
-  if (!fs.existsSync(target)) continue;
+  if (!fs.existsSync(target) || fs.statSync(target).isDirectory()) continue;
   const before = fs.readFileSync(target, 'utf8');
   if (!navPattern.test(before)) throw new Error(`Homepage navigation anchor missing in ${path.relative(root, target)}`);
   const after = before.replace(navPattern, canonicalNavigation);
@@ -50,21 +50,14 @@ for (const target of targets) {
   }
 }
 
-// Final-release owners: correct current office-holder data in source and _site,
-// then install the public static route bridge after every broad generator.
 require('./patch-global-contact-and-current-pm.js');
 require('./patch-public-static-route-bridge.js');
 
-if (!fs.existsSync(path.join(root, 'index.html'))) throw new Error('index.html is required');
-const finalHomepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-for (const route of requiredRoutes) {
-  if (!finalHomepage.includes(`href="${route}"`)) throw new Error(`Homepage navigation verification failed: ${route}`);
-}
-const builtHomepage = path.join(root, '_site', 'index.html');
-if (fs.existsSync(builtHomepage)) {
-  const built = fs.readFileSync(builtHomepage, 'utf8');
+for (const target of targets) {
+  if (!fs.existsSync(target) || fs.statSync(target).isDirectory()) continue;
+  const finalHtml = fs.readFileSync(target, 'utf8');
   for (const route of requiredRoutes) {
-    if (!built.includes(`href="${route}"`)) throw new Error(`Deployable homepage navigation verification failed: ${route}`);
+    if (!finalHtml.includes(`href="${route}"`)) throw new Error(`${path.relative(root,target)} navigation verification failed: ${route}`);
   }
 }
 
@@ -74,11 +67,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   changed,
-  primaryRoutes: ['start-here.html','books.html','power-atlas.html','evidence-vault.html','live-intel.html','timers.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html','search.html'],
-  restoredGroups: ['Live Tracking & Clocks','Research & Evidence','Community, Books & Membership','Briefs & Support'],
+  primaryRoutes: primary.map(x=>x[0]),
+  restoredGroups: groups.map(x=>x[0]),
   requiredRoutes,
+  protectedPublicRoutes: ['death-files.html','independent-links.html'],
   currentPrimeMinisterOwner: 'scripts/patch-global-contact-and-current-pm.js',
   publicStaticRouteOwner: 'scripts/patch-public-static-route-bridge.js'
 }, null, 2)}\n`);
-
-console.log(`Homepage navigation restored with Contact the Machine, Risk Timers and ${requiredRoutes.length} verified operational routes.`);
+console.log(`Homepage navigation restored with Death Files, Independent Links and ${requiredRoutes.length} verified public routes.`);

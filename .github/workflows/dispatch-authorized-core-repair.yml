@@ -1,0 +1,26 @@
+name: Dispatch Authorized Core Repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/authorized-core-repair-deploy.json'
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch controlled production deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST \
+            -H 'Accept: application/vnd.github+json' \
+            "/repos/${GITHUB_REPOSITORY}/actions/workflows/deploy.yml/dispatches" \
+            -f ref='main' \
+            -f 'inputs[confirmation]=DEPLOY MATRIX REPROGRAMMED'
+          echo 'Controlled production deployment dispatched for the merged repair.'

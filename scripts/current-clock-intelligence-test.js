@@ -64,7 +64,20 @@ if (!/cover|policy route|hypothesis/i.test(ageClock?.speculationLayer || '')) is
 if (!/does not prove|not prove|does not establish/i.test(ageClock?.speculationLayer || '')) issues.push('children age-gating speculation boundary missing');
 if (!html.includes('What is happening now') || !html.includes('Documented fact layer') || !html.includes('Speculation / hypothesis layer')) issues.push('timers page missing current fact/speculation interface');
 if (!html.includes('Current-evidence rule:')) issues.push('timers hero missing current-evidence rule');
-if (!homepage.includes('Children’s Digital Identity and Age-Gating Clock') || !homepage.includes('Critical Clocks Over 90%')) issues.push('homepage missing recalibrated critical age-gating clock');
+
+const critical = (wall.clocks || [])
+  .filter(clock => Number(clock.score) > 90)
+  .sort((a, b) => Number(b.score) - Number(a.score) || String(a.title || '').localeCompare(String(b.title || '')));
+const renderedCritical = [...homepage.matchAll(/data-critical-clock="([^"]+)"/g)].map(match => match[1]);
+if (!homepage.includes('All Clocks Over 90%')) issues.push('homepage missing all-over-90 clock heading');
+if (!homepage.includes('Documented / practical') || !homepage.includes('Classified speculation')) issues.push('homepage missing practical/speculation clock boundary');
+if (renderedCritical.length !== critical.length) issues.push(`homepage renders ${renderedCritical.length} over-90 clocks but ${critical.length} are required`);
+for (const clock of critical) {
+  const lane = clock.speculationOnly ? 'speculation' : 'practical';
+  if (!renderedCritical.includes(clock.slug)) issues.push(`homepage missing over-90 clock ${clock.slug}`);
+  if (!homepage.includes(`data-critical-clock="${clock.slug}"`) || !homepage.includes(`data-clock-lane="${lane}"`)) issues.push(`homepage missing ${lane} classification for ${clock.slug}`);
+}
+if (!homepage.includes('data-critical-clock="childrens-digital-identity-age-gating"')) issues.push('homepage missing recalibrated critical age-gating clock');
 if (!Array.isArray(curated.records) || curated.records.length < 25) issues.push('current clock evidence registry is incomplete');
 if (!wall.currentClockPolicy || !wall.currentEvidenceAsOf) issues.push('clock wall missing global current-evidence policy');
 if (Number(wall.currentEvidenceGapCount) !== 0) issues.push(`clock wall still reports ${wall.currentEvidenceGapCount} current evidence gap(s)`);
@@ -80,6 +93,13 @@ const report = {
   currentMultiJurisdictionCount: wall.currentMultiJurisdictionCount,
   registryRecordCount: Array.isArray(curated.records) ? curated.records.length : 0,
   registryCoverage: Object.fromEntries(registryCoverage),
+  homepageCriticalClocks: {
+    expected: critical.length,
+    rendered: renderedCritical.length,
+    practical: critical.filter(clock => !clock.speculationOnly).length,
+    speculation: critical.filter(clock => clock.speculationOnly).length,
+    slugs: critical.map(clock => clock.slug)
+  },
   ageGating: ageClock ? {
     score: ageClock.score,
     status: ageClock.todayStatus,
@@ -97,4 +117,4 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`CURRENT CLOCK INTELLIGENCE TEST PASSED: all ${definitions.length} practical clocks publish current official online evidence; children's age-gating clock is ${ageClock.score}%.`);
+console.log(`CURRENT CLOCK INTELLIGENCE TEST PASSED: all ${definitions.length} practical clocks publish current official online evidence; all ${critical.length} clocks above 90% appear on the homepage; children's age-gating clock is ${ageClock.score}%.`);

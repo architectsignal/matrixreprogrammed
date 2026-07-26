@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const runtime = 'power-dossier-runtime.js';
@@ -31,6 +32,23 @@ function isDossierFile(base, name) {
   const file = path.join(base, name);
   try { return fs.statSync(file).isFile(); } catch { return false; }
 }
+function runRequired(script) {
+  const file = path.join(root, script);
+  if (!fs.existsSync(file)) {
+    failures.push(`${script} missing`);
+    return { status: 1, stdout: '', stderr: 'missing' };
+  }
+  const result = spawnSync(process.execPath, [file], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 1024 * 1024 * 40
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) failures.push(`${script} failed with exit ${result.status}`);
+  return result;
+}
 
 for (const base of roots) {
   for (const name of fs.readdirSync(base).filter(name => isDossierFile(base, name))) {
@@ -50,6 +68,9 @@ for (const base of roots) {
 }
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
+const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
+const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
+
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
@@ -58,6 +79,13 @@ const report = {
   dossierPagesPatched: patched,
   runtime,
   copiedRuntime,
+  criminalConductEngine: {
+    buildStatus: engineBuild.status,
+    pressureTestStatus: engineTest.status,
+    report: 'downloads/criminal-conduct-engine-report.json',
+    reviewQueue: 'downloads/criminal-conduct-review-queue.json',
+    pressureTest: 'downloads/criminal-conduct-engine-pressure-test.json'
+  },
   files,
   failures
 };
@@ -67,4 +95,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations engine built and pressure-tested.`);

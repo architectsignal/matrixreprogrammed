@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "observedAt": "2026-07-26T11:09:19.484Z",
+  "observedAt": "2026-07-26T12:17:53.192Z",
   "production": {
     "conclusion": "failure",
     "createdAt": "2026-07-26T10:46:46Z",
@@ -174,13 +174,13 @@
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30193499650"
       },
       {
-        "conclusion": "",
+        "conclusion": "failure",
         "createdAt": "2026-07-26T04:19:11Z",
         "databaseId": 30187589428,
         "event": "workflow_dispatch",
         "headSha": "eea9d697fbc48fa53780518ad41cd59fd445cd0b",
-        "status": "in_progress",
-        "updatedAt": "2026-07-26T11:00:25Z",
+        "status": "completed",
+        "updatedAt": "2026-07-26T12:15:54Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30187589428"
       },
       {

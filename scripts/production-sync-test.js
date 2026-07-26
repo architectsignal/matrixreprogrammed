@@ -15,6 +15,7 @@ const check = (name, ok) => { if (!ok) failures.push(name); };
 const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
+const refreshRunner = read('scripts/run-production-intelligence-refresh.js');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
 const liveVerifier = read('scripts/verify-live-production.js');
@@ -25,6 +26,12 @@ const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+
 const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
 const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
 const hardFreeze = [canonicalDeploy, fallbackDeploy, dispatchDeploy].every(explicitFreeze);
+const guardedRefreshRunner = canonicalDeploy.includes('run-production-intelligence-refresh.js')
+  && refreshRunner.includes('run-investigation-machine.js')
+  && refreshRunner.includes('update-live-intel.js')
+  && refreshRunner.includes('production-freshness-guard.js')
+  && refreshRunner.includes('MATRIX_REQUIRE_PRODUCTION_FRESHNESS');
+const legacyInlineRefresh = canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js');
 
 if (hardFreeze) {
   check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(canonicalDeploy));
@@ -41,7 +48,7 @@ if (hardFreeze) {
   check('release readiness retains D1 migration chain', ['phase4_email_lifecycle.sql','phase4_email_lifecycle_portability.sql','phase5_member_experience.sql','phase5_member_experience_timestamp_fix.sql','phase6_paypal_subscriptions.sql','phase6_paypal_failure_counter_fix.sql','phase7_paypal_sandbox_rehearsal.sql'].every(name => exists(`migrations/${name}`)));
   check('release readiness retains strict Worker and rollback guard', exists('src/worker-production.js') && exists('scripts/production-deploy-guard.js'));
 } else {
-  check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js'));
+  check('canonical deploy refreshes intelligence through guarded runner or legacy inline chain', guardedRefreshRunner || legacyInlineRefresh);
   check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(canonicalDeploy));
   check('canonical deploy requires exact release confirmation', canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') && canonicalDeploy.includes('Production release refused: confirmation text did not match.'));
   check('canonical deploy queues rather than interrupts migrations', canonicalDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(canonicalDeploy));
@@ -130,4 +137,4 @@ if (failures.length) {
 }
 console.log(hardFreeze
   ? 'Production synchronization assurance passed: all production workflows are hard frozen, mutation-free and deployment readiness remains preserved in Git.'
-  : 'Production synchronization assurance passed: one manually confirmed rollback-protected Cloudflare release, frozen non-mutating fallback, strict read-after-write forums and SDK-free runtime-gated PayPal.');
+  : 'Production synchronization assurance passed: one manually confirmed rollback-protected Cloudflare release, guarded intelligence refresh, frozen non-mutating fallback, strict read-after-write forums and SDK-free runtime-gated PayPal.');

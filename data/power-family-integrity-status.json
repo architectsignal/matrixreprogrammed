@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-26T08:23:56.768Z",
+  "checkedAt": "2026-07-26T12:23:46.647Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30194203686,
+  "workflowRunId": 30201950330,
   "runAttempt": 1,
-  "headSha": "1a5836a86ffe49f37fecbcf9bc6e05caca7a87f4",
+  "headSha": "c9edda81e9f948a2fbc173d407fe2d293845a2df",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-26T08:23:52.178Z",
+    "generatedAt": "2026-07-26T12:23:42.384Z",
     "actions": [
       {
         "type": "run",
@@ -30,7 +30,7 @@
         "target": "search-index.json",
         "routes": 6,
         "format": "compact",
-        "sizeMiB": 0.93
+        "sizeMiB": 0.92
       },
       {
         "type": "patch",
@@ -108,7 +108,7 @@
       {
         "name": "compact search index remains under 22 MiB",
         "ok": true,
-        "detail": "0.93 MiB"
+        "detail": "0.92 MiB"
       },
       {
         "name": "nine documented family structures",
@@ -315,7 +315,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-26T08:23:54.085Z",
+    "checkedAt": "2026-07-26T12:23:44.475Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -330,7 +330,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-26T08:23:52.148Z",
+    "generatedAt": "2026-07-26T12:23:42.268Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -351,7 +351,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-07-26T08:23:52.142Z",
+    "generatedAt": "2026-07-26T12:23:42.236Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",

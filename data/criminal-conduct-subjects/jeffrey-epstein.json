@@ -1,0 +1,74 @@
+{
+  "key": "jeffrey-epstein",
+  "subject": {
+    "name": "Jeffrey Epstein",
+    "aliases": ["Jeffrey Edward Epstein"],
+    "subjectType": "person",
+    "dossierRoute": "death-file-jeffrey-epstein.html",
+    "publicSummary": "Financier and convicted sex offender who died in federal custody in 2019 while facing new federal sex-trafficking charges.",
+    "predatorsInPowerEligible": true,
+    "powerRoles": [
+      {
+        "sector": "finance_asset_control",
+        "title": "Financier",
+        "organization": "Private financial and investment activity",
+        "from": "not stated",
+        "to": "2019-08-10",
+        "status": "historical",
+        "sourceLabel": "DOJ Office of Information Policy court-summary page identifying Epstein as a financier",
+        "sourceUrl": "https://www.justice.gov/oip/radar-online-llc-v-fbi-no-17-3956-2024-wl-3161777-sdny-june-25-2024-gardephe-j",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "epstein-florida-conviction-2008",
+        "category": "conviction_final_judgment",
+        "title": "Florida sex-offense conviction and sex-offender status",
+        "summary": "Justice Department materials identify Epstein as a convicted sex offender and describe the 2006–2008 federal investigation as having been resolved through a non-prosecution agreement and a Florida state plea.",
+        "sourceLabel": "DOJ release identifying Epstein as a convicted sex offender",
+        "sourceUrl": "https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files",
+        "sourceAuthority": "primary_official",
+        "date": "2008-06-30",
+        "jurisdiction": "Florida, United States",
+        "status": "adjudicated; convicted",
+        "outcome": "State plea and conviction; sex-offender status followed.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "The conviction record is adjudicated; no contrary final disposition was located in the reviewed official sources.",
+        "counterEvidence": "The DOJ OPR statement criticizes the federal resolution and victim treatment but does not vacate the state conviction.",
+        "proofNeeded": "A competent court order vacating or reversing the state conviction would change this classification.",
+        "boundary": "This entry is limited to the adjudicated Florida conviction and does not convert association with Epstein into wrongdoing.",
+        "conductDomains": ["child_sexual_abuse", "sexual_offence_other"],
+        "victimClass": ["child"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": []
+      },
+      {
+        "id": "epstein-federal-indictment-2019",
+        "category": "charge_indictment_complaint",
+        "title": "2019 federal sex-trafficking indictment",
+        "summary": "Federal prosecutors charged Epstein with sex trafficking of minors and conspiracy, alleging conduct in New York and Florida involving dozens of underage girls.",
+        "sourceLabel": "U.S. Attorney's Office, Southern District of New York — 2019 charging release",
+        "sourceUrl": "https://www.justice.gov/usao-sdny/pr/jeffrey-epstein-charged-manhattan-federal-court-sex-trafficking-minors",
+        "sourceAuthority": "primary_official",
+        "date": "2019-07-08",
+        "jurisdiction": "Southern District of New York, United States",
+        "status": "closed without adjudication after defendant's death",
+        "outcome": "No trial verdict was reached on these counts; the prosecution ended after Epstein died in custody.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "The charging release expressly states that the indictment contained allegations and that the presumption of innocence applied.",
+        "counterEvidence": "Because Epstein died before trial, the 2019 federal allegations were never adjudicated.",
+        "proofNeeded": "A trial verdict was impossible after the defendant's death; the indictment remains an official allegation, not a conviction.",
+        "boundary": "This entry reports the federal charges only. It does not present the untried counts as proven facts.",
+        "conductDomains": ["child_sexual_exploitation", "child_trafficking", "sexual_abuse"],
+        "victimClass": ["child"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["epstein-florida-conviction-2008"]
+      }
+    ]
+  }
+}

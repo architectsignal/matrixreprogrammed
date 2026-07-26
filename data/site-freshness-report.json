@@ -11,7 +11,7 @@
   "pagesWithMissingRules": 422,
   "autoUpdateEligibleFigures": 2,
   "manualReviewFigures": 108,
-  "missingRuleFigures": 948,
+  "missingRuleFigures": 947,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -2754,11 +2754,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-26T08:39:14.602Z &gt; Latest source publication: 2026-07-24T12:00:00.000Z &gt; State: 1 new item this coll"
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-26T13:56:04.878Z &gt; Latest source publication: 2026-07-24T12:00:00.000Z &gt; State: 1 new item this coll"
         },
         {
           "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-07-26T08:39:14.602Z &gt; Latest source publication: 2026-07-24T12:00:00.000Z &gt; State: 1 new item this collection &gt; Current items: 40 &gt; Successful feeds: 7 /"
+          "context": "TATUS &gt; Collection completed: 2026-07-26T13:56:04.878Z &gt; Latest source publication: 2026-07-24T12:00:00.000Z &gt; State: 1 new item this collection &gt; Current items: 41 &gt; Successful feeds: 7 /"
         },
         {
           "value": "2026",
@@ -3092,7 +3092,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ove. Open JSON Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-26T07:48:57.285Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
+          "context": "ove. Open JSON Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-26T10:45:21.377Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
         },
         {
           "value": "2027",
@@ -3100,19 +3100,19 @@
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 07:48:57.285Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 10:45:21.377Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 07:48:57.285Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 10:45:21.377Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 07:48:57.285Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 10:45:21.377Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 07:48:57.285Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-26 10:45:21.377Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
         }
       ],
       "needsSourceRule": true,
@@ -3844,6 +3844,242 @@
       "percentages": [],
       "money": [
         {
+          "value": "$2.1",
+          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.3",
+          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.1",
+          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$824.8",
+          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$6.3",
+          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$4.8",
+          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$2.1",
+          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.3",
+          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.1",
+          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$824.8",
+          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$6.3",
+          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$4.8",
+          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
           "value": "€100",
           "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
           "classification": "manual-review-only",
@@ -4000,270 +4236,6 @@
         {
           "value": "€20",
           "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$200",
-          "context": "ubstitute Spending.” Medicare Part B spending on skin substitutes grew from approximately $200 million in 2019 to more than $14.4 billion in 2025. During the roundtable, members ... Press Release Chairman",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$14.4",
-          "context": "B spending on skin substitutes grew from approximately $200 million in 2019 to more than $14.4 billion in 2025. During the roundtable, members ... Press Release Chairman Comer Introduces Legislation to St",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "d fraud and abuse of office. 1 min read News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "g the trade of plastics products. 2 min read News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "lters News (903) RSS Showing results 1 to 10 News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "d Resilience Facility (RRF). 2 min read News article 21 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€46.9",
-          "context": "min read News article 14 July 2026 Greece: Searches and seizures in probe into suspected €46.9 million VAT carousel fraud The European Public Prosecutor’s Office (EPPO) in Athens conducted searches and se",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "lters News (903) RSS Showing results 1 to 10 News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€4",
-          "context": "(RRF). 2 min read News article 21 July 2026 Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud On behalf of the European Public Prosecutor’s Office (EPPO) in Bucharest (",
           "classification": "manual-review-only",
           "updatePolicy": "manual-review-only",
           "matchedRules": [
@@ -4561,23 +4533,23 @@
         },
         {
           "value": "2026",
-          "context": "oved document may explain the difference. Additions detected Latest Filings - Sun, 26 Jul 2026 03:48:36 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-2"
+          "context": "oved document may explain the difference. Additions detected Latest Filings - Sun, 26 Jul 2026 06:45:00 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-2"
         },
         {
           "value": "2026",
-          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-26T03:48:36-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&"
+          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-26T06:45:00-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&"
         },
         {
           "value": "2026",
-          "context": "-26T03:48:36-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00"
+          "context": "-26T06:45:00-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00"
         },
         {
           "value": "2026",
-          "context": "; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. (000151651"
+          "context": "; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. Removals d"
         },
         {
           "value": "2008",
-          "context": "1863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. (0001516513) (Issuer) &lt;b&gt;Filed:&lt;/b&gt; 2026"
+          "context": "1863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. Removals detected Latest Filings - Sun, 26 Jul 2026"
         }
       ],
       "needsSourceRule": true,
@@ -20638,15 +20610,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-26T08:39:18.944Z &gt; source window: 2026-07-26T08:39:14.602Z &gt; current leads: 9 &gt; latest publicatio"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-26T13:56:10.022Z &gt; source window: 2026-07-26T13:56:04.878Z &gt; current leads: 10 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-26T08:39:18.944Z &gt; source window: 2026-07-26T08:39:14.602Z &gt; current leads: 9 &gt; latest publication: 2026-07-23T21:48:41.000Z Evidence Boundary"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-26T13:56:10.022Z &gt; source window: 2026-07-26T13:56:04.878Z &gt; current leads: 10 &gt; latest publication: 2026-07-23T21:48:41.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "t; source window: 2026-07-26T08:39:14.602Z &gt; current leads: 9 &gt; latest publication: 2026-07-23T21:48:41.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-07-26T13:56:04.878Z &gt; current leads: 10 &gt; latest publication: 2026-07-23T21:48:41.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
@@ -20678,7 +20650,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 26 Jul 2026, 07:48 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
+          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 26 Jul 2026, 10:44 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
         },
         {
           "value": "2026",
@@ -20689,16 +20661,16 @@
           "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-26 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
         },
         {
-          "value": "2026",
-          "context": "l Judgment Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2028",
+          "context": "LLC — Department of Agriculture Source: USAspending.gov — Recent Contract Awards · 30 Apr 2028, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         },
         {
-          "value": "2026",
-          "context": "W. Rideaux Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2027",
+          "context": "C — District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 12 Jul 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         },
         {
-          "value": "2026",
-          "context": "akhshanfar Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2027",
+          "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         }
       ],
       "needsSourceRule": false,
@@ -21707,7 +21679,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ling or association does not by itself establish misconduct. Current Mission Conclusion · 2026-07-22 What the evidence is pointing toward now The strongest current pattern is practical convergence: standa"
+          "context": "ation is treated as established without supporting evidence. Current Mission Conclusion · 2026-07-22 What the evidence is pointing toward now The strongest current pattern is practical convergence: standa"
         },
         {
           "value": "2026",
@@ -21901,7 +21873,7 @@
         },
         {
           "value": "2026",
-          "context": "on Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 26 Jul 2026, 07:48 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 16 &gt; Source failures: 4 &gt; Finding"
+          "context": "on Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 26 Jul 2026, 10:44 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 11 &gt; Source failures: 1 &gt; Finding"
         },
         {
           "value": "2028",
@@ -24128,7 +24100,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "onclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 26 Jul 2026, 07:48 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
+          "context": "onclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 26 Jul 2026, 10:44 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
         },
         {
           "value": "2026",
@@ -24139,16 +24111,16 @@
           "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-26 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
         },
         {
-          "value": "2026",
-          "context": "l Judgment Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2028",
+          "context": "LLC — Department of Agriculture Source: USAspending.gov — Recent Contract Awards · 30 Apr 2028, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         },
         {
-          "value": "2026",
-          "context": "W. Rideaux Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2027",
+          "context": "C — District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 12 Jul 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         },
         {
-          "value": "2026",
-          "context": "akhshanfar Source: U.S. Securities and Exchange Commission — Litigation Releases · 26 Jul 2026, 07:48 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+          "value": "2027",
+          "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         }
       ],
       "needsSourceRule": false,
@@ -24504,8 +24476,8 @@
     {
       "file": "machine-digest.html",
       "priority": "Medium",
-      "figureCount": 18,
-      "missingRuleCount": 18,
+      "figureCount": 17,
+      "missingRuleCount": 17,
       "autoAllowedCount": 0,
       "manualReviewCount": 0,
       "staticCount": 0,
@@ -24514,7 +24486,7 @@
       "crisisFigures": [
         {
           "value": "2 Lanes",
-          "context": "disclosure Entity Observations ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-r",
+          "context": "s ownership Entity Observations ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-r",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -24528,21 +24500,14 @@
         },
         {
           "value": "2 Lanes",
-          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "2 Lanes",
-          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal",
+          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-reg",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
+          "context": ": federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -24642,11 +24607,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-26T08:38:51.353Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-26T13:55:09.254Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-26T08:38:51.353Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-26T13:55:09.254Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 3 &gt; normalized events: 12 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -46352,10 +46317,6 @@
         {
           "value": "2027",
           "context": "resentatives of Foreign Information Media · documented association · source Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
-        },
-        {
-          "value": "2023",
-          "context": "PGC → Supreme Court of Pennsylvania · score 10 Punxsutawney Hunting Club v. PGC → 23 WAP 2023 · score 10 Missing records Current beneficial ownership and voting-control record where relevant Public contr"
         }
       ],
       "needsSourceRule": false,
@@ -48420,27 +48381,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 07:49:11.259Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-26 10:45:37.029Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         }
       ],
       "needsSourceRule": false,
@@ -48971,7 +48932,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -48991,7 +48952,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49011,7 +48972,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49031,7 +48992,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49079,7 +49040,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49099,7 +49060,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49119,7 +49080,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49159,7 +49120,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -49231,7 +49192,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49251,7 +49212,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -49279,7 +49240,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -49323,7 +49284,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49343,7 +49304,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49363,7 +49324,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -49383,7 +49344,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49403,7 +49364,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -49491,7 +49452,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T08:39:04.422Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-26T13:55:26.546Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -49579,27 +49540,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-26T08:39:04.422Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
-        },
-        {
-          "value": "2021",
-          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candid"
-        },
-        {
-          "value": "2021",
-          "context": "hip signals both exist. Open Brief JSON observed entity · legal record present 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
-        },
-        {
-          "value": "2024",
-          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2024-07773 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candid"
-        },
-        {
-          "value": "2024",
-          "context": "hip signals both exist. Open Brief JSON observed entity · legal record present 2024-07773 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
-        },
-        {
-          "value": "2025",
-          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2025-0045-Appeal. 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relat"
+          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-26T13:55:26.546Z &gt; briefs generated: 17 &gt; pages generated: 17 &gt; style: user friendly &gt; boundar"
         }
       ],
       "needsSourceRule": false,
@@ -49619,27 +49560,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-26T08:39:04.469Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
-        },
-        {
-          "value": "2021",
-          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2021-00294 2021-00294 deserves active public-record review. The score reflects records, categories, relationships"
-        },
-        {
-          "value": "2021",
-          "context": "view Open Exposure Brief JSON critical public-record exposure · charged / sued 2021-00294 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-"
-        },
-        {
-          "value": "2024",
-          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2024-07773 2024-07773 deserves active public-record review. The score reflects records, categories, relationships"
-        },
-        {
-          "value": "2024",
-          "context": "view Open Exposure Brief JSON critical public-record exposure · charged / sued 2024-07773 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-"
-        },
-        {
-          "value": "2025",
-          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2025-0045-Appeal. 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories,"
+          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-26T13:55:26.589Z &gt; profiles: 17 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         }
       ],
       "needsSourceRule": false,
@@ -50793,26 +50714,6 @@
         {
           "value": "2026",
           "context": "usions Weekly Report Source Ledger Evidence Vault Search Every Search Attempt Preserved · 2026-07-26 INVESTIGATION SOURCE LEDGER. Source status, last success, changed content, parsed item count and failur"
-        },
-        {
-          "value": "2026",
-          "context": "Department of Justice — Epstein Disclosures Lane: epstein-disclosure Last attempt: 26 Jul 2026, 07:48 UTC Last success: 26 Jul 2026, 07:48 UTC Items: 80 · Changed: no Open Source Platform primary-official"
-        },
-        {
-          "value": "2026",
-          "context": "osures Lane: epstein-disclosure Last attempt: 26 Jul 2026, 07:48 UTC Last success: 26 Jul 2026, 07:48 UTC Items: 80 · Changed: no Open Source Platform primary-official · fetched U.S. Department of Justice"
-        },
-        {
-          "value": "2026",
-          "context": "S. Department of Justice — Justice News Lane: government-enforcement Last attempt: 26 Jul 2026, 07:48 UTC Last success: 26 Jul 2026, 07:48 UTC Items: 1 · Changed: yes Open Source Platform primary-official"
-        },
-        {
-          "value": "2026",
-          "context": "ws Lane: government-enforcement Last attempt: 26 Jul 2026, 07:48 UTC Last success: 26 Jul 2026, 07:48 UTC Items: 1 · Changed: yes Open Source Platform primary-official · fetched U.S. Department of Justice"
-        },
-        {
-          "value": "2026",
-          "context": "Justice Office of Inspector General — Reports Lane: oversight-audit Last attempt: 26 Jul 2026, 07:48 UTC Last success: 26 Jul 2026, 07:48 UTC Items: 14 · Changed: yes Open Source Platform primary-officia"
         }
       ],
       "needsSourceRule": false,
@@ -51671,27 +51572,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-26T08:39:04.386Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
-        },
-        {
-          "value": "2023",
-          "context": "s not a claim of private coordination. SCORE 10 Punxsutawney Hunting Club v. PGC ↔ 23 WAP 2023 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means repeated"
-        },
-        {
-          "value": "2023",
-          "context": "t is not a claim of private coordination. SCORE 10 Supreme Court of Pennsylvania ↔ 23 WAP 2023 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means repeated"
-        },
-        {
-          "value": "2025",
-          "context": "as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ 2025-0045-Appeal. public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring me"
-        },
-        {
-          "value": "2025",
-          "context": "ords. It is not a claim of private coordination. SCORE 10 Supreme Court of Rhode Island ↔ 2025-0045-Appeal. public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring me"
-        },
-        {
-          "value": "2021",
-          "context": "rance in records. It is not a claim of private coordination. SCORE 10 Sawas v. Elzanaty ↔ 2021-00294 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means rep"
+          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-26T13:55:26.512Z &gt; current records: 12 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
         }
       ],
       "needsSourceRule": false,
@@ -52672,27 +52553,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": ". Open JSON Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-26T07:48:57.255Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
+          "context": ". Open JSON Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-26T10:45:21.347Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 07:48:57.255Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 10:45:21.347Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 07:48:57.255Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 10:45:21.347Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 07:48:57.255Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 10:45:21.347Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 07:48:57.255Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 10:45:21.347Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 07:48:57.255Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-26 10:45:21.347Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         }
       ],
       "needsSourceRule": false,
@@ -54302,7 +54183,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-26T08:39:04.522Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-26T13:55:26.636Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         }
       ],
       "needsSourceRule": false,

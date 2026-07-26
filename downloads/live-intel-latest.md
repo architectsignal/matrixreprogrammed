@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-26T08:39:14.602Z
+Collection completed: 2026-07-26T13:56:04.878Z
 Latest source publication: 2026-07-24T12:00:00.000Z
 Collection status: fresh-items-added
 New items this collection: 1
@@ -98,11 +98,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - KSRO
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNUUJ1QlF0Zm5DOENTS0dXY193V2Joc2Zfeks5Ry10WTk4RFZ2S1g3N2d1ZEtSbDZDR0xEeXg5ZmZTWE05RVZNTGlOWU5ySGFySWlTR2taLWF1WUNnVW5aemJycFJtWHBFejZLVktFU2ZQR2FjMW4xWjVxZVBoZzlDc0JOQXBjRUdsUEk5S2xaUElEMXVOOXdmSjhkZUtCNVB1ZHBRNQ?oc=5
+- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - WSJM
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - KSRO
+  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - WSJM
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Gaza’s food gains could unravel without sustained aid, UN warns
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168006
@@ -205,6 +205,12 @@ New items this collection: 1
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-21 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
   - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5

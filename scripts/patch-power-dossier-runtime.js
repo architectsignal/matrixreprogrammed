@@ -72,7 +72,8 @@ const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
-const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/sync-predators-in-power-output.js');
+const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
+const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power conduct-link failure' } : runRequired('scripts/sync-predators-in-power-output.js');
 const predatorsTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power output failure' } : runRequired('scripts/predators-in-power-pressure-test.js');
 
 const report = {
@@ -94,11 +95,13 @@ const report = {
   },
   predatorsInPower: {
     buildStatus: predatorsBuild.status,
+    conductLinkStatus: predatorsConductLinks.status,
     outputSyncStatus: predatorsSync.status,
     pressureTestStatus: predatorsTest.status,
     page: 'predators-in-power.html',
     data: 'data/predators-in-power.json',
     buildReport: 'downloads/predators-in-power-build-report.json',
+    conductLinksReport: 'downloads/predators-in-power-conduct-links.json',
     outputReport: 'downloads/predators-in-power-output-sync.json',
     pressureTest: 'downloads/predators-in-power-pressure-test.json'
   },
@@ -111,4 +114,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations and Predators in Power engines built, synchronized and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.`);

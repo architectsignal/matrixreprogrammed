@@ -31,7 +31,7 @@ const primaryLinks = [
   ['independent-links.html', 'Independent Links'],
   ['live-intel.html', 'Live Intel'],
   ['power-atlas.html', 'Control System'],
-  ['evidence-vault.html', 'Evidence'],
+  ['evidence-vault.html', 'Declassified Files'],
   ['search.html', 'Search']
 ];
 const primaryHtml = primaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
@@ -119,4 +119,4 @@ const primaryMarkup = (html.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"
 const anchorCount = (primaryMarkup.match(/<a\b[^>]*href=/gi) || []).length;
 if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Final navigation preserved: Death Files generated before QA, Independent Links restored, family tracking routed to the live tracker, and obsolete Capstone search reference removed.');
+console.log('Final navigation preserved: Death Files, Independent Links, Declassified Files, family tracking, safety routes and the corrected Capstone runtime are all present.');

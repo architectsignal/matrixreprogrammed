@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-26T13:56:10.022Z
-Live Intel source window: 2026-07-26T13:56:04.878Z
-Latest source publication: 2026-07-23T21:48:41.000Z
+Generated: 2026-07-26T19:34:11.113Z
+Live Intel source window: 2026-07-26T19:33:58.173Z
+Latest source publication: 2026-07-23T22:12:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-10 current Epstein-lane record leads remain inside the active source window.
+11 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
+- Published: 2026-07-23T22:12:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
+
+Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source New York Post
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
 - Published: 2026-07-23T21:48:41.000Z

@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-26T13:56:04.878Z
-Latest source publication: 2026-07-24T12:00:00.000Z
+Collection completed: 2026-07-26T19:33:58.173Z
+Latest source publication: 2026-07-26T12:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 1
+New items this collection: 6
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+6 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,36 @@ New items this collection: 1
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: After war took her leg, this Ukrainian gymnast refused to give up
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-26 — Gaza: Dialysis patients face grueling hospital journey by donkey cart
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168026
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Gaza: Dialysis patients face grueling hospital journey by donkey cart
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-26 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168028
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-25 — ‘I am somebody’: Street-smart youth take their declaration to the UN
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168015
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘I am somebody’: Street-smart youth take their declaration to the UN
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-25 — UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168027
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
   - Source class: primary-or-official
@@ -73,6 +103,12 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfires surge across Europe as Spain and France battle major blazes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
+  - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
   - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5

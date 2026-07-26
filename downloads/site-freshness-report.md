@@ -11,7 +11,7 @@ Medium priority pages: 1651
 Pages with missing rules: 422
 Auto-update eligible figures: 2
 Manual-review figures: 108
-Missing-rule figures: 947
+Missing-rule figures: 948
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.

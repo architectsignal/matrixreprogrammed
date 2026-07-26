@@ -69,7 +69,12 @@ for (const base of roots) {
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
 const registryCompile = runRequired('scripts/compile-criminal-conduct-registry.js');
-const engineBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after registry compile failure' } : runRequired('scripts/build-criminal-conduct-engine.js');
+const subjectDossierBuild = failures.length
+  ? { status: 1, stdout: '', stderr: 'skipped after registry compile failure' }
+  : runRequired('scripts/build-criminal-conduct-subject-dossiers.js');
+const engineBuild = failures.length
+  ? { status: 1, stdout: '', stderr: 'skipped after registry or subject-dossier failure' }
+  : runRequired('scripts/build-criminal-conduct-engine.js');
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
@@ -88,6 +93,8 @@ const report = {
   criminalConductEngine: {
     registryCompileStatus: registryCompile.status,
     registryCompileReport: 'downloads/criminal-conduct-registry-compile.json',
+    subjectDossierBuildStatus: subjectDossierBuild.status,
+    subjectDossierBuildReport: 'downloads/criminal-conduct-subject-dossiers.json',
     buildStatus: engineBuild.status,
     extensionlessSyncStatus: engineAliasSync.status,
     pressureTestStatus: engineTest.status,
@@ -117,4 +124,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; modular registry compiled; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; modular registry compiled; populated subject dossiers generated; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.`);

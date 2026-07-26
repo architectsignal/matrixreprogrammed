@@ -52,27 +52,14 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
-      - name: Refresh investigation and intelligence data
+      - name: Refresh investigation data or prove current sources are fresh
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           INVESTIGATION_MODE: daily
           INVESTIGATION_CONCURRENCY: '4'
           INVESTIGATION_TIMEOUT_MS: '25000'
-        run: |
-          node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
-          node scripts/update-live-intel.js
-          node scripts/record-live-intel-check.js
-          node scripts/update-seven-day-intel.js
-          node scripts/build-outcome-briefings.js
-          node scripts/build-daily-brain-brief.js
-          node scripts/build-investigation-pages.js
-          node scripts/build-mission-intelligence-10.js
-          node scripts/build-live-intel-machine.js
-          node scripts/patch-conclusion-integrity-cards.js
-          node scripts/build-behind-the-curtain-tier-registry.js
-          node scripts/patch-behind-the-curtain-tier-ui.js
-          node scripts/build-behind-the-curtain.js
+          MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+        run: node scripts/run-production-intelligence-refresh.js
 
       - name: Build complete site and Worker assets
         env:
@@ -245,6 +232,7 @@ jobs:
         with:
           name: production-proof-${{ github.run_id }}
           path: |
+            downloads/production-intelligence-refresh.json
             downloads/production-build.log
             downloads/deploy-manifest.json
             downloads/deploy-health.json

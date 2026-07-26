@@ -247,182 +247,141 @@ function wrongdoingClassification(item) {
     establishes = 'An official body reports an enforcement, sanctions, penalty, settlement or debarment action.';
     boundary = 'A settlement or civil enforcement action may not include an admission of every alleged fact. Read the order and settlement terms.';
   } else if (official && charged) {
-    status = 'official-charge-or-allegation'; evidenceGrade = 'B'; severity = 4;
-    establishes = 'An official record reports a charge, indictment, complaint, arrest or allegation.';
-    boundary = 'A charge or allegation is not proof of guilt. The presumption of innocence and later court outcome must remain visible.';
+    status = 'official-charge-or-allegation'; evidenceGrade = 'A'; severity = 4;
+    establishes = 'An official body reports a charge, indictment, complaint, arrest or allegation.';
+    boundary = 'A charge, indictment, complaint, arrest or allegation is not proof of guilt. Presumption of innocence and later outcomes must be preserved.';
   } else if (official && audit) {
     status = 'official-audit-finding'; evidenceGrade = 'A'; severity = 3;
-    establishes = 'An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern.';
-    boundary = 'An audit finding may describe control failure, waste or misconduct without establishing a criminal offence.';
-  } else if (item.authority === 'document-archive' || release) {
-    status = item.authority === 'document-archive' ? 'leak-or-document-lead' : 'document-release';
-    evidenceGrade = item.authority === 'document-archive' ? 'C' : (official ? 'B' : 'C');
-    severity = matches.length ? 3 : 2;
-    establishes = 'A document source, archive or disclosure page contains a potentially relevant release or change.';
-    boundary = 'The document must be authenticated, dated, contextualised and corroborated before it supports an accusation.';
+    establishes = 'An official inspector-general, audit or oversight record reports a finding within its stated scope.';
+    boundary = 'An audit finding is limited to the reviewed period, programme and evidentiary scope.';
+  } else if (release && matches.length) {
+    status = official ? 'document-release' : 'leak-or-document-lead'; evidenceGrade = official ? 'B' : 'D'; severity = 2;
+    establishes = official ? 'An official source released records relevant to the mission.' : 'A non-official source points to documents or leaked material requiring authentication.';
+    boundary = official ? 'Publication does not prove every interpretation placed on the records.' : 'A leak is a lead, not established fact, until authenticated and corroborated.';
   } else if (matches.length) {
-    status = 'wrongdoing-lead'; evidenceGrade = official ? 'B' : 'C'; severity = 3;
-    establishes = 'The source contains terms associated with misconduct or enforcement and warrants record review.';
-    boundary = 'Keyword matching is triage, not a verdict. The underlying record controls the conclusion.';
+    status = 'wrongdoing-lead'; evidenceGrade = official ? 'B' : 'C'; severity = 2;
+    establishes = 'The source contains language relevant to alleged wrongdoing or oversight failure.';
+    boundary = 'Keyword relevance is not proof. The underlying record must be read and corroborated.';
   }
   return { status, evidenceGrade, severity, wrongdoingIndicators: matches, establishes, boundary };
 }
-function mechanismFor(item) {
-  const lane = laneMap.get(item.lane) || {};
-  const mechanisms = {
-    'epstein-disclosure': 'Track the chain from investigation and court record to disclosure decision, redaction category, file inventory, removal or restoration.',
-    'government-enforcement': 'Track the chain from alleged conduct to investigator, prosecutor or regulator, filed case, adjudication and remedy.',
-    'money-contracts': 'Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.',
-    'declassified-leaks': 'Track provenance, authenticity, date, document chain, named entities, corroborating primary records and counter-records.',
-    'oversight-audit': 'Track authority, scope, finding, responsible office, recommendation, implementation deadline and unresolved record gap.',
-    'international-corruption': 'Track entity, jurisdiction, beneficial ownership, money flow, public office, enforcement authority and cross-border outcome.'
-  };
-  return mechanisms[item.lane] || lane.description || 'Connect the source to the institution, money route, decision, affected public and missing record.';
+function laneFor(source) {
+  return laneMap.get(source.lane) || { id: source.lane, label: source.lane, questions: [], watchTerms: [] };
 }
 function findingFromItem(item) {
-  const classification = wrongdoingClassification(item);
-  const lane = laneMap.get(item.lane) || {};
+  const source = (registry.sources || []).find(entry => entry.id === item.sourceId) || {};
+  const lane = laneFor(source);
+  const classified = wrongdoingClassification({ ...item, authority: source.authority });
+  const score = (classified.severity * 10) + (source.authority === 'primary-official' ? 8 : source.authority === 'primary-official-request' ? 5 : 2) + Math.min(item.keywordMatches.length, 5);
   return {
-    id: item.id,
-    sourceId: item.sourceId,
-    sourceLabel: item.sourceLabel,
-    sourceUrl: item.sourceUrl,
-    itemUrl: item.url,
-    lane: item.lane,
-    laneTitle: lane.title || item.lane,
-    authority: item.authority,
+    id: hash(`${item.sourceId}|${item.id}`).slice(0, 24),
     title: item.title,
     summary: item.summary,
     published: item.published,
-    firstSeen: checkedAt,
-    lastSeen: checkedAt,
-    status: classification.status,
-    evidenceGrade: classification.evidenceGrade,
-    severity: classification.severity,
-    wrongdoingIndicators: classification.wrongdoingIndicators,
-    conclusion: classification.establishes,
-    evidenceBoundary: classification.boundary,
-    mechanism: mechanismFor(item),
-    implication: classification.severity >= 4 ? 'This record may alter an accountability, money, institutional or legal-power map and should be linked to the relevant entity timeline.' : 'This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.',
-    nextRecords: [
-      'Open and preserve the primary document or official case page.',
-      'Identify the named parties, dates, amounts, legal authority and decision-maker.',
-      'Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.',
-      'Add a counter-record or alternative explanation before making a broad conclusion.'
-    ],
-    keywordMatches: item.keywordMatches || [],
-    rawMeta: item.rawMeta || null
+    fetchedAt: item.fetchedAt,
+    lane: source.lane,
+    laneLabel: lane.label,
+    sourceId: source.id,
+    sourceLabel: source.label,
+    sourceAuthority: source.authority,
+    sourceUrl: source.url,
+    itemUrl: item.url,
+    status: classified.status,
+    evidenceGrade: classified.evidenceGrade,
+    severity: classified.severity,
+    score,
+    wrongdoingIndicators: classified.wrongdoingIndicators,
+    keywordMatches: item.keywordMatches,
+    establishes: classified.establishes,
+    boundary: classified.boundary,
+    nextRecords: source.nextRecords || [],
+    questions: lane.questions || []
   };
 }
 async function fetchSource(source) {
-  const missingEnv = requiredEnvironmentMissing(source);
-  if (missingEnv.length) {
-    return { source, status: source.optional ? 'skipped-optional-missing-env' : 'failed-missing-env', error: `Missing environment: ${missingEnv.join(', ')}`, items: [], checkedAt };
+  const missing = requiredEnvironmentMissing(source);
+  if (missing.length) {
+    return { source, status: source.optional ? 'skipped-optional-missing-env' : 'failed-missing-env', error: `Missing ${missing.join(', ')}`, items: [] };
   }
   const url = template(source.url);
-  const headers = {
-    'user-agent': USER_AGENT,
-    'accept': source.type === 'rss' ? 'application/atom+xml,application/rss+xml,text/xml;q=0.9,*/*;q=0.5' : 'application/json,text/html;q=0.9,*/*;q=0.5'
-  };
-  const options = { method: source.type === 'json-post' ? 'POST' : 'GET', headers, redirect: 'follow' };
-  if (source.type === 'json-post') {
-    headers['content-type'] = 'application/json';
-    options.body = JSON.stringify(templateObject(source.payload || {}));
-  }
+  const request = source.request || {};
+  const timeout = Number(source.timeoutMs || process.env.INVESTIGATION_TIMEOUT_MS || 25000);
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), Number(process.env.INVESTIGATION_TIMEOUT_MS || 25000));
-  options.signal = controller.signal;
-  const result = { source, status: 'failed', error: '', statusCode: null, finalUrl: url, contentType: '', bodyHash: '', bytes: 0, items: [], checkedAt };
+  const timer = setTimeout(() => controller.abort(), timeout);
   try {
+    const options = {
+      method: request.method || 'GET',
+      signal: controller.signal,
+      redirect: 'follow',
+      headers: { 'user-agent': USER_AGENT, accept: request.accept || '*/*', ...(templateObject(request.headers || {})) }
+    };
+    if (request.body) {
+      options.body = JSON.stringify(templateObject(request.body));
+      options.headers['content-type'] = options.headers['content-type'] || 'application/json';
+    }
     const response = await fetch(url, options);
-    result.statusCode = response.status;
-    result.finalUrl = response.url || url;
-    result.contentType = response.headers.get('content-type') || '';
+    const contentLength = Number(response.headers.get('content-length') || 0);
+    if (contentLength > MAX_BODY_BYTES) throw new Error(`Body too large: ${contentLength}`);
+    const body = await response.text();
+    if (Buffer.byteLength(body) > MAX_BODY_BYTES) throw new Error(`Body too large after download: ${Buffer.byteLength(body)}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const arrayBuffer = await response.arrayBuffer();
-    if (arrayBuffer.byteLength > MAX_BODY_BYTES) throw new Error(`Response exceeds ${MAX_BODY_BYTES} bytes`);
-    const body = Buffer.from(arrayBuffer).toString('utf8');
-    result.bytes = Buffer.byteLength(body);
-    result.bodyHash = hash(body);
-    if (source.type === 'rss') result.items = parseRss(source, body);
-    else if (source.type === 'json' || source.type === 'json-post') result.items = parseJson(source, JSON.parse(body));
-    else result.items = parseHtml(source, body);
-    result.status = 'fetched';
+    const contentType = response.headers.get('content-type') || '';
+    let items = [];
+    if (/json/i.test(contentType) || source.format === 'json') items = parseJson(source, JSON.parse(body));
+    else if (/xml|rss|atom/i.test(contentType) || source.format === 'rss') items = parseRss(source, body);
+    else items = parseHtml(source, body);
+    return { source, status: 'fetched', statusCode: response.status, finalUrl: response.url, contentType, bytes: Buffer.byteLength(body), bodyHash: hash(body), items };
   } catch (error) {
-    result.error = error.name === 'AbortError' ? 'Timeout' : (error.message || String(error));
+    return { source, status: `failed-${error.name === 'AbortError' ? 'timeout' : 'request'}`, error: error.message, items: [] };
   } finally {
     clearTimeout(timer);
   }
-  return result;
 }
-async function mapLimit(items, limit, fn) {
-  const results = new Array(items.length);
+async function mapLimit(values, limit, mapper) {
+  const results = new Array(values.length);
   let cursor = 0;
   async function worker() {
-    while (true) {
+    while (cursor < values.length) {
       const index = cursor++;
-      if (index >= items.length) return;
-      results[index] = await fn(items[index]);
+      results[index] = await mapper(values[index]);
     }
   }
-  await Promise.all(Array.from({ length: Math.min(limit, Math.max(items.length, 1)) }, worker));
+  await Promise.all(Array.from({ length: Math.max(1, Math.min(limit, values.length || 1)) }, worker));
   return results;
 }
-function mergeLedger(findings) {
-  const map = new Map((priorLedger.findings || []).map(item => [item.id, item]));
-  for (const finding of findings) {
-    const prior = map.get(finding.id);
-    map.set(finding.id, prior ? {
-      ...prior,
-      ...finding,
-      firstSeen: prior.firstSeen || finding.firstSeen,
-      lastSeen: checkedAt,
-      occurrences: Number(prior.occurrences || 1) + 1
-    } : { ...finding, occurrences: 1 });
-  }
-  return [...map.values()]
-    .sort((a, b) => new Date(b.published || b.lastSeen) - new Date(a.published || a.lastSeen))
-    .slice(0, 2500);
-}
-function recent(findings, days) {
-  const cutoff = Date.now() - days * 86400000;
-  return findings.filter(item => new Date(item.published || item.firstSeen || 0).getTime() >= cutoff);
-}
-function rank(findings) {
-  const grade = { A: 30, B: 18, C: 8, D: 0 };
-  return findings.slice().sort((a, b) => {
-    const aTime = new Date(a.published || a.lastSeen || 0).getTime();
-    const bTime = new Date(b.published || b.lastSeen || 0).getTime();
-    return (grade[b.evidenceGrade] + Number(b.severity || 0) * 10 + bTime / 1e12) - (grade[a.evidenceGrade] + Number(a.severity || 0) * 10 + aTime / 1e12);
-  });
+function mergeLedger(current) {
+  const map = new Map((priorLedger.findings || []).map(finding => [finding.id, finding]));
+  for (const finding of current) map.set(finding.id, finding);
+  return [...map.values()].sort((a, b) => new Date(b.published) - new Date(a.published)).slice(0, 5000);
 }
 function sourceState(results) {
-  const sources = { ...(priorState.sources || {}) };
-  for (const result of results) {
-    const prior = sources[result.source.id] || {};
-    sources[result.source.id] = {
-      sourceId: result.source.id,
+  return Object.fromEntries(results.map(result => {
+    const prior = priorState.sources?.[result.source.id] || {};
+    const changed = Boolean(result.bodyHash && result.bodyHash !== prior.bodyHash);
+    return [result.source.id, {
       label: result.source.label,
       lane: result.source.lane,
       authority: result.source.authority,
       url: result.source.url,
-      frequency: result.source.frequency,
-      lastAttempt: checkedAt,
-      lastSuccess: result.status === 'fetched' ? checkedAt : (prior.lastSuccess || null),
+      checkedAt,
       status: result.status,
-      statusCode: result.statusCode,
-      error: result.error || '',
+      statusCode: result.statusCode || null,
       finalUrl: result.finalUrl || result.source.url,
       contentType: result.contentType || '',
       bytes: result.bytes || 0,
       bodyHash: result.bodyHash || prior.bodyHash || '',
-      changed: Boolean(result.bodyHash && prior.bodyHash && result.bodyHash !== prior.bodyHash),
-      firstSnapshot: Boolean(result.bodyHash && !prior.bodyHash),
+      changed,
       itemCount: (result.items || []).length,
-      itemIds: (result.items || []).map(item => item.id).slice(0, 150)
-    };
-  }
-  return sources;
+      error: result.error || ''
+    }];
+  }));
+}
+function recent(findings, days) {
+  const floor = Date.now() - days * 86400000;
+  return findings.filter(finding => new Date(finding.published).getTime() >= floor);
+}
+function rank(findings) {
+  return [...findings].sort((a, b) => b.score - a.score || new Date(b.published) - new Date(a.published));
 }
 function patternSummary(findings) {
   const byLane = {};
@@ -478,6 +437,15 @@ function conclusionProduct(kind, findings, results, state) {
     missingRecords: strongest.slice(0, 20).map(finding => ({ findingId: finding.id, title: finding.title, nextRecords: finding.nextRecords, source: finding.itemUrl })),
     boundary: 'Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.'
   };
+}
+function canUsePriorLedgerForProduction() {
+  const productionWorkflow = /Matrix Reprogrammed Controlled Production Deploy/i.test(String(process.env.GITHUB_WORKFLOW || ''));
+  if (!productionWorkflow) return { ok: false, reason: 'not a production deployment' };
+  const priorTime = Date.parse(priorLedger.updated || '');
+  const ageHours = Number.isFinite(priorTime) ? (Date.now() - priorTime) / 3600000 : Infinity;
+  const findingCount = Array.isArray(priorLedger.findings) ? priorLedger.findings.length : 0;
+  const ok = ageHours >= 0 && ageHours <= 30 && findingCount > 0;
+  return { ok, ageHours, findingCount, reason: ok ? 'fresh prior ledger available' : 'prior ledger is missing, stale or empty' };
 }
 
 (async () => {
@@ -538,7 +506,12 @@ function conclusionProduct(kind, findings, results, state) {
 
   console.log(`Investigation machine ${mode} run complete: ${runReport.fetchedSources}/${runReport.selectedSources} sources fetched, ${runReport.parsedItems} items parsed, ${runReport.ledgerFindings} ledger findings.`);
   if (!runReport.ok) {
-    console.error('No scheduled source was fetched successfully. The previous ledger was preserved, but the run is not healthy.');
+    const fallback = canUsePriorLedgerForProduction();
+    if (fallback.ok) {
+      console.warn(`No scheduled source was fetched successfully, but the prior investigation ledger is ${fallback.ageHours.toFixed(2)} hours old with ${fallback.findingCount} findings. The controlled production deployment may continue; the later strict freshness guard remains authoritative.`);
+      return;
+    }
+    console.error(`No scheduled source was fetched successfully. ${fallback.reason}. The previous ledger was preserved, but the run is not healthy.`);
     process.exit(1);
   }
 })().catch(error => {

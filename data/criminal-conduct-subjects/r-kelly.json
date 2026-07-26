@@ -1,0 +1,74 @@
+{
+  "key": "r-kelly",
+  "subject": {
+    "name": "Robert Sylvester Kelly",
+    "aliases": ["R. Kelly", "Robert Kelly"],
+    "subjectType": "person",
+    "dossierRoute": "dossier-r-kelly.html",
+    "publicSummary": "Recording artist whose fame and entertainment-industry influence formed part of the conduct described in his federal prosecution and sentencing.",
+    "predatorsInPowerEligible": true,
+    "powerRoles": [
+      {
+        "sector": "media_entertainment",
+        "title": "R&B singer and recording artist",
+        "organization": "Music and entertainment industry",
+        "from": "not stated",
+        "to": "2021",
+        "status": "historical",
+        "sourceLabel": "U.S. Attorney's Office charging release identifying Kelly as an R&B singer",
+        "sourceUrl": "https://www.justice.gov/usao-edny/pr/r-kelly-charged-racketeering-including-predicate-acts-coercing-and-transporting-minor",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "r-kelly-edny-conviction-2021",
+        "category": "conviction_final_judgment",
+        "title": "Federal racketeering and Mann Act conviction",
+        "summary": "Kelly was convicted in the Eastern District of New York and sentenced in June 2022 to 30 years. Prosecutors stated that he used fame, money and an inner circle to prey on children and young women.",
+        "sourceLabel": "U.S. Attorney's Office, Eastern District of New York — sentencing remarks",
+        "sourceUrl": "https://www.justice.gov/usao-edny/pr/us-attorney-breon-peaces-remarks-r-kelly-sentencing",
+        "sourceAuthority": "primary_official",
+        "date": "2021-09-27",
+        "jurisdiction": "Eastern District of New York, United States",
+        "status": "adjudicated; convicted; sentenced",
+        "outcome": "Thirty-year federal prison sentence imposed on June 29, 2022.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Kelly denied wrongdoing and pursued direct appellate and Supreme Court review.",
+        "counterEvidence": "His petition for Supreme Court review was denied in 2025 after the Second Circuit decision.",
+        "proofNeeded": "Only a later court order vacating or reversing the conviction would alter this adjudicated classification.",
+        "boundary": "Limited to the offenses adjudicated in the Eastern District of New York case.",
+        "conductDomains": ["child_sexual_exploitation", "sexual_abuse", "grooming"],
+        "victimClass": ["child", "adult"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["r-kelly-supreme-court-review-2025"]
+      },
+      {
+        "id": "r-kelly-supreme-court-review-2025",
+        "category": "exculpatory_disposition",
+        "title": "Supreme Court denied review of federal conviction",
+        "summary": "The Supreme Court docket records a February 12, 2025 Second Circuit decision and the June 23, 2025 denial of Kelly's petition for certiorari.",
+        "sourceLabel": "Supreme Court of the United States docket 24-1172",
+        "sourceUrl": "https://www.supremecourt.gov/docket/docketfiles/html/public/24-1172.html",
+        "sourceAuthority": "primary_official",
+        "date": "2025-06-23",
+        "jurisdiction": "Supreme Court of the United States",
+        "status": "review denied; conviction remains in force",
+        "outcome": "Petition for writ of certiorari denied.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Kelly's appellate challenge and petition remain part of the public record.",
+        "counterEvidence": "Denial of certiorari is not a separate merits adjudication; it leaves the judgment below intact.",
+        "proofNeeded": "A later collateral order could alter the posture.",
+        "boundary": "This record preserves appellate posture and should be read with the conviction record.",
+        "conductDomains": ["child_sexual_exploitation", "sexual_abuse"],
+        "victimClass": ["child", "adult"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["r-kelly-edny-conviction-2021"]
+      }
+    ]
+  }
+}

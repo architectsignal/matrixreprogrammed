@@ -69,7 +69,8 @@ for (const base of roots) {
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
 const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
-const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
+const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
+const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 
 const report = {
   ok: failures.length === 0,
@@ -81,8 +82,10 @@ const report = {
   copiedRuntime,
   criminalConductEngine: {
     buildStatus: engineBuild.status,
+    extensionlessSyncStatus: engineAliasSync.status,
     pressureTestStatus: engineTest.status,
     report: 'downloads/criminal-conduct-engine-report.json',
+    extensionlessReport: 'downloads/criminal-conduct-extensionless-sync.json',
     reviewQueue: 'downloads/criminal-conduct-review-queue.json',
     pressureTest: 'downloads/criminal-conduct-engine-pressure-test.json'
   },
@@ -95,4 +98,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations engine built and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations engine built, synchronized and pressure-tested.`);

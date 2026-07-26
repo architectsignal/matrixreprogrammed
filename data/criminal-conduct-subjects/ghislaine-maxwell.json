@@ -1,0 +1,74 @@
+{
+  "key": "ghislaine-maxwell",
+  "subject": {
+    "name": "Ghislaine Maxwell",
+    "aliases": ["Ghislaine Noelle Marion Maxwell"],
+    "subjectType": "person",
+    "dossierRoute": "dossier-ghislaine-maxwell.html",
+    "publicSummary": "Long-time associate and gatekeeper within Jeffrey Epstein's property and social network; convicted in federal court for facilitating the sexual abuse of minors.",
+    "predatorsInPowerEligible": true,
+    "powerRoles": [
+      {
+        "sector": "other_influential_gatekeeper",
+        "title": "Long-time associate and gatekeeper in Jeffrey Epstein's network",
+        "organization": "Epstein property and social network",
+        "from": "1994",
+        "to": "2004",
+        "status": "historical",
+        "sourceLabel": "U.S. Attorney's Office description of Maxwell's role with Epstein",
+        "sourceUrl": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "maxwell-federal-conviction-2021",
+        "category": "conviction_final_judgment",
+        "title": "Federal conviction for facilitating and participating in sexual abuse of minors",
+        "summary": "A federal jury convicted Maxwell in December 2021. DOJ states that she conspired with Epstein to identify, groom, entice and transport minor girls, some as young as 14, and that she was sentenced to 20 years in June 2022.",
+        "sourceLabel": "U.S. Attorney's Office, Southern District of New York — trafficking and exploitation case summary",
+        "sourceUrl": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+        "sourceAuthority": "primary_official",
+        "date": "2021-12-29",
+        "jurisdiction": "Southern District of New York, United States",
+        "status": "adjudicated; convicted; sentenced",
+        "outcome": "Convicted at trial and sentenced to 20 years in federal prison.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Maxwell denied wrongdoing and challenged her conviction through appeal and a petition for Supreme Court review.",
+        "counterEvidence": "Her appellate arguments were preserved, but the conviction was affirmed and Supreme Court review was denied.",
+        "proofNeeded": "Only a later judicial order granting collateral relief, vacating, or reversing the conviction would change the adjudicated classification.",
+        "boundary": "Limited to Maxwell's own federal conviction and sentence; it does not establish wrongdoing by people merely connected to her or Epstein.",
+        "conductDomains": ["child_sexual_abuse", "child_sexual_exploitation", "grooming", "institutional_facilitation_cover_up"],
+        "victimClass": ["child"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["maxwell-supreme-court-review-2025"]
+      },
+      {
+        "id": "maxwell-supreme-court-review-2025",
+        "category": "exculpatory_disposition",
+        "title": "Appellate review preserved; Supreme Court denied certiorari",
+        "summary": "The Supreme Court docket records the Second Circuit decision, denial of rehearing, and the Supreme Court's October 6, 2025 denial of Maxwell's petition for certiorari.",
+        "sourceLabel": "Supreme Court of the United States docket 24-1073",
+        "sourceUrl": "https://www.supremecourt.gov/docket/docketfiles/html/public/24-1073.html",
+        "sourceAuthority": "primary_official",
+        "date": "2025-10-06",
+        "jurisdiction": "Supreme Court of the United States",
+        "status": "review denied; conviction remains in force",
+        "outcome": "Petition for writ of certiorari denied after the conviction was affirmed below.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Maxwell's petition and appellate arguments are part of the record and should remain available to readers.",
+        "counterEvidence": "Denial of certiorari is not a new merits ruling, but it leaves the lower-court judgment in place.",
+        "proofNeeded": "A later collateral ruling or executive clemency could change the current posture.",
+        "boundary": "This outcome record preserves the defense challenge and current appellate posture; it is not an additional finding of guilt.",
+        "conductDomains": ["child_sexual_abuse", "child_sexual_exploitation"],
+        "victimClass": ["child"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["maxwell-federal-conviction-2021"]
+      }
+    ]
+  }
+}

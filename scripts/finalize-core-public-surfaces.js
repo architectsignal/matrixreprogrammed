@@ -84,7 +84,7 @@ for (const relative of fixed) copy(relative);
 const generatedDeathPages = fs.readdirSync(root)
   .filter(name => (/^death-files-.+\.html$/i.test(name) || /^death-file-.+\.html$/i.test(name)))
   .sort();
-const dossierPages = generatedDeathPages.filter(name => /^death-file-(?!s)/i.test(name));
+const dossierPages = generatedDeathPages.filter(name => /^death-file-.+\.html$/i.test(name));
 if (dossierPages.length !== 100) {
   throw new Error(`Death Files output must contain exactly 100 dossier pages; found ${dossierPages.length}`);
 }

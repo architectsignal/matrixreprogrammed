@@ -7,6 +7,7 @@ const engineReportPath = path.join(root, 'downloads', 'criminal-conduct-engine-r
 const reportPath = path.join(root, 'downloads', 'criminal-conduct-extensionless-sync.json');
 const failures = [];
 const synchronized = [];
+const directoryBackedRoutes = [];
 
 if (!fs.existsSync(engineReportPath)) throw new Error('Missing criminal conduct engine report before extensionless synchronization');
 const engine = JSON.parse(fs.readFileSync(engineReportPath, 'utf8'));
@@ -19,13 +20,21 @@ function syncAlias(base, route, label) {
     failures.push(`${label}/${route} missing`);
     return;
   }
-  if (fs.existsSync(alias) && fs.statSync(alias).isDirectory()) {
-    failures.push(`${label}/${route.replace(/\.html$/i, '')} is a directory and cannot be synchronized`);
-    return;
-  }
   const html = fs.readFileSync(htmlFile, 'utf8');
   if (!html.includes('<!-- criminal-conduct-engine:start -->') || !html.includes('<details class="criminal-conduct-engine">')) {
     failures.push(`${label}/${route} lacks criminal conduct engine before alias synchronization`);
+    return;
+  }
+  if (fs.existsSync(alias) && fs.statSync(alias).isDirectory()) {
+    // A directory-backed public route is a valid route owner and must never be
+    // replaced by a file. The explicit .html dossier remains available, while
+    // Cloudflare preserves the directory namespace for its child pages.
+    directoryBackedRoutes.push({
+      scope: label,
+      htmlRoute: route,
+      directoryRoute: path.relative(base, alias).replace(/\\/g, '/'),
+      htmlEngineVerified: true
+    });
     return;
   }
   fs.mkdirSync(path.dirname(alias), { recursive: true });
@@ -41,6 +50,7 @@ function syncAlias(base, route, label) {
 for (const route of sourceRoutes) {
   const sourceAlias = path.join(root, route.replace(/\.html$/i, ''));
   if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isFile()) syncAlias(root, route, 'source');
+  else if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isDirectory()) syncAlias(root, route, 'source');
   if (fs.existsSync(site)) syncAlias(site, route, 'built');
 }
 
@@ -49,7 +59,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   sourceDossierRoutes: sourceRoutes.length,
   synchronizedCount: synchronized.length,
+  directoryBackedCount: directoryBackedRoutes.length,
   synchronized,
+  directoryBackedRoutes,
   failures
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -58,4 +70,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`CRIMINAL CONDUCT EXTENSIONLESS SYNC FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s).`);
+console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s); ${directoryBackedRoutes.length} directory-backed namespace(s) preserved with their explicit .html dossier verified.`);

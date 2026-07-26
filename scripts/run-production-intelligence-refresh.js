@@ -1,0 +1,105 @@
+const fs = require('fs');
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+const root = process.cwd();
+const downloads = path.join(root, 'downloads');
+fs.mkdirSync(downloads, { recursive: true });
+
+const commands = [
+  ['scripts/repair-investigation-source-registry.js'],
+  ['scripts/run-investigation-machine.js', 'daily'],
+  ['scripts/update-live-intel.js'],
+  ['scripts/record-live-intel-check.js'],
+  ['scripts/update-seven-day-intel.js'],
+  ['scripts/build-outcome-briefings.js'],
+  ['scripts/build-daily-brain-brief.js'],
+  ['scripts/build-investigation-pages.js'],
+  ['scripts/build-mission-intelligence-10.js'],
+  ['scripts/build-live-intel-machine.js'],
+  ['scripts/patch-conclusion-integrity-cards.js'],
+  ['scripts/build-behind-the-curtain-tier-registry.js'],
+  ['scripts/patch-behind-the-curtain-tier-ui.js'],
+  ['scripts/build-behind-the-curtain.js']
+];
+
+const report = {
+  ok: false,
+  generatedAt: new Date().toISOString(),
+  degraded: false,
+  commands: [],
+  freshnessGuard: null
+};
+
+function runNode(script, args = [], extraEnv = {}) {
+  const startedAt = new Date().toISOString();
+  const result = spawnSync(process.execPath, [script, ...args], {
+    cwd: root,
+    encoding: 'utf8',
+    env: { ...process.env, ...extraEnv },
+    maxBuffer: 1024 * 1024 * 100
+  });
+  const stdout = String(result.stdout || '');
+  const stderr = String(result.stderr || '');
+  if (stdout) process.stdout.write(stdout);
+  if (stderr) process.stderr.write(stderr);
+  return {
+    command: [process.execPath, script, ...args].join(' '),
+    script,
+    args,
+    startedAt,
+    completedAt: new Date().toISOString(),
+    status: Number.isInteger(result.status) ? result.status : 1,
+    signal: result.signal || null,
+    error: result.error ? String(result.error.message || result.error) : null,
+    stdoutTail: stdout.slice(-4000),
+    stderrTail: stderr.slice(-4000)
+  };
+}
+
+for (const [script, ...args] of commands) {
+  if (!fs.existsSync(path.join(root, script))) {
+    report.commands.push({
+      command: `${process.execPath} ${script} ${args.join(' ')}`.trim(),
+      script,
+      args,
+      startedAt: new Date().toISOString(),
+      completedAt: new Date().toISOString(),
+      status: 1,
+      signal: null,
+      error: 'script missing',
+      stdoutTail: '',
+      stderrTail: ''
+    });
+    console.error(`Refresh command missing: ${script}`);
+    continue;
+  }
+  console.log(`\n===== PRODUCTION REFRESH: ${script}${args.length ? ` ${args.join(' ')}` : ''} =====`);
+  report.commands.push(runNode(script, args));
+}
+
+const failed = report.commands.filter(item => item.status !== 0);
+report.degraded = failed.length > 0;
+if (failed.length) {
+  console.warn(`Production refresh completed with ${failed.length} failed command(s). Existing source freshness will now decide whether deployment may continue.`);
+  for (const item of failed) console.warn(`- ${item.script}: exit ${item.status}${item.error ? ` (${item.error})` : ''}`);
+}
+
+const freshness = runNode('scripts/production-freshness-guard.js', [], {
+  MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+});
+report.freshnessGuard = freshness;
+report.ok = freshness.status === 0;
+report.completedAt = new Date().toISOString();
+fs.writeFileSync(path.join(downloads, 'production-intelligence-refresh.json'), `${JSON.stringify(report, null, 2)}\n`);
+
+if (freshness.status !== 0) {
+  console.error('Production intelligence refresh cannot continue: the current source datasets did not pass the strict freshness guard.');
+  process.exit(1);
+}
+
+if (failed.length) {
+  console.warn('Strict source freshness passed. Deployment may continue using the current verified source datasets; failed refresh commands are recorded in downloads/production-intelligence-refresh.json.');
+} else {
+  console.log('Production intelligence refresh completed successfully and strict source freshness passed.');
+}

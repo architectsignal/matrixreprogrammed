@@ -18,7 +18,7 @@ global.fetch = async function matrixProductionFetch(input, init = {}) {
   const inheritedHeaders = typeof input === 'object' && input?.headers ? input.headers : undefined;
   const headers = new Headers(init.headers || inheritedHeaders || {});
   headers.set('accept-language', 'en-GB,en;q=0.9');
-  headers.set('user-agent', 'Matrix-Reprogrammed-Production-Verifier/2.0');
+  headers.set('user-agent', 'Matrix-Reprogrammed-Production-Verifier/2.1');
 
   if (!headers.has('accept')) {
     headers.set(
@@ -55,8 +55,8 @@ function runProof(script, maxBuffer = 1024 * 1024 * 30) {
 
 // The existing production verifier is the authoritative Worker, D1, PayPal,
 // email and SHA proof. A successful exit is not allowed to complete until the
-// restored public surfaces and Criminal Conduct & Allegations engine are also
-// proven live and complete across the known dossier inventory.
+// restored public surfaces, Criminal Conduct & Allegations engine, dossier
+// cross-links and Predators in Power page/exports are all proven live.
 const originalExit = process.exit.bind(process);
 let runningSupplementalProofs = false;
 process.exit = function matrixVerifiedExit(code = 0) {
@@ -67,7 +67,9 @@ process.exit = function matrixVerifiedExit(code = 0) {
     const restoredStatus = runProof('scripts/verify-live-restored-surfaces.js');
     if (restoredStatus !== 0) return originalExit(restoredStatus);
     const criminalConductStatus = runProof('scripts/verify-live-criminal-conduct-engine.js', 1024 * 1024 * 50);
-    return originalExit(criminalConductStatus);
+    if (criminalConductStatus !== 0) return originalExit(criminalConductStatus);
+    const predatorsStatus = runProof('scripts/verify-live-predators-in-power.js', 1024 * 1024 * 40);
+    return originalExit(predatorsStatus);
   }
   return originalExit(numeric);
 };

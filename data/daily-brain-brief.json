@@ -594,7 +594,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-25T19:34:13.837Z",
+    "updated": "2026-07-26T03:54:12.140Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -690,7 +690,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -704,7 +704,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -718,7 +718,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -732,7 +732,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -746,7 +746,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -760,7 +760,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-25",
+      "date": "2026-07-26",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -774,9 +774,9 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-25T19:34:28.867Z",
+    "updated": "2026-07-26T03:54:26.054Z",
     "newRecordCount": 0,
-    "changedRecordCount": 0,
+    "changedRecordCount": 6,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
@@ -787,7 +787,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-25T19:34:28.975Z",
+    "updated": "2026-07-26T03:54:26.185Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -821,7 +821,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-25T19:34:29.003Z",
+    "updated": "2026-07-26T03:54:26.220Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

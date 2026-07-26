@@ -1,0 +1,50 @@
+{
+  "key": "elon-musk",
+  "subject": {
+    "name": "Elon Musk",
+    "aliases": [],
+    "subjectType": "person",
+    "dossierRoute": "dossier-elon-musk.html",
+    "publicSummary": "Technology-company executive whose 2018 Tesla communications produced an SEC civil enforcement action and settlement.",
+    "predatorsInPowerEligible": false,
+    "powerRoles": [
+      {
+        "sector": "company_executive",
+        "title": "Chief Executive Officer",
+        "organization": "Tesla, Inc.",
+        "from": "2008",
+        "to": "present",
+        "status": "current",
+        "sourceLabel": "SEC settlement release identifying Musk as Tesla CEO and chairman in 2018",
+        "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2018-226",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "musk-sec-settlement-2018",
+        "category": "civil_regulatory_action",
+        "title": "SEC securities-fraud settlement over Tesla take-private tweets",
+        "summary": "The SEC charged Musk over statements that funding had been secured for a potential Tesla take-private transaction. Musk settled without admitting or denying the allegations, agreed to step down as chairman for three years, accepted communications oversight, and paid a $20 million penalty.",
+        "sourceLabel": "U.S. Securities and Exchange Commission release 2018-226",
+        "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2018-226",
+        "sourceAuthority": "primary_official",
+        "date": "2018-09-29",
+        "jurisdiction": "United States District Court / SEC civil enforcement",
+        "status": "settled without admission or denial",
+        "outcome": "Court-approved civil settlement, governance remedies, and $20 million personal penalty.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Musk settled without admitting or denying the SEC's allegations.",
+        "counterEvidence": "This was a civil securities-enforcement resolution, not a criminal conviction.",
+        "proofNeeded": "A later court order modifying or vacating the consent judgment would change the current disposition.",
+        "boundary": "Do not describe this SEC civil settlement as a criminal conviction or use it to imply unrelated wrongdoing.",
+        "conductDomains": [],
+        "victimClass": [],
+        "predatorsInPowerEligible": false,
+        "linkedRecordIds": []
+      }
+    ]
+  }
+}

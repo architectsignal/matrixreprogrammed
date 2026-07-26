@@ -1,0 +1,74 @@
+{
+  "key": "donald-trump",
+  "subject": {
+    "name": "Donald J. Trump",
+    "aliases": ["Donald Trump", "President Donald J. Trump"],
+    "subjectType": "person",
+    "dossierRoute": "dossier-donald-trump.html",
+    "publicSummary": "45th and 47th President of the United States; subject of a federal civil judgment in Carroll v. Trump that found liability for sexual abuse and defamation.",
+    "predatorsInPowerEligible": true,
+    "powerRoles": [
+      {
+        "sector": "public_office",
+        "title": "45th and 47th President of the United States",
+        "organization": "United States Government",
+        "from": "2017-01-20",
+        "to": "present",
+        "status": "current",
+        "sourceLabel": "Official White House biography",
+        "sourceUrl": "https://www.whitehouse.gov/administration/donald-j-trump/",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "trump-carroll-civil-judgment-2023",
+        "category": "civil_regulatory_action",
+        "title": "Carroll civil judgment for sexual abuse and defamation",
+        "summary": "A federal civil jury found Trump liable for sexually abusing E. Jean Carroll and defaming her, awarding $5 million. The Second Circuit affirmed the judgment in December 2024.",
+        "sourceLabel": "U.S. Courts opinion repository — Carroll v. Trump, No. 23-793",
+        "sourceUrl": "https://www.govinfo.gov/app/details/USCOURTS-ca2-23-00793",
+        "sourceAuthority": "primary_official",
+        "date": "2023-05-09",
+        "jurisdiction": "Southern District of New York / Second Circuit, United States",
+        "status": "civil judgment affirmed; Supreme Court rehearing petition pending as of last check",
+        "outcome": "Civil liability judgment affirmed on appeal; Supreme Court denied certiorari on June 29, 2026, and a rehearing petition was distributed on July 23, 2026.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Trump has denied Carroll's allegation and challenged the judgment through post-trial motions, appeal, and Supreme Court proceedings.",
+        "counterEvidence": "This is a civil finding, not a criminal conviction. The current Supreme Court docket shows a rehearing petition remained pending at the last check.",
+        "proofNeeded": "A Supreme Court rehearing disposition or later court order could change the final appellate posture.",
+        "boundary": "This record must be described as a civil judgment. It does not support labeling Trump criminally convicted of a sexual offense.",
+        "conductDomains": ["sexual_abuse", "sexual_misconduct_noncriminal"],
+        "victimClass": ["adult"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["trump-carroll-supreme-court-2026"]
+      },
+      {
+        "id": "trump-carroll-supreme-court-2026",
+        "category": "exculpatory_disposition",
+        "title": "Supreme Court review posture in Carroll case",
+        "summary": "The Supreme Court docket records denial of certiorari on June 29, 2026, followed by a corrected petition for rehearing filed July 8 and distributed July 23, 2026.",
+        "sourceLabel": "Supreme Court of the United States docket 25-573",
+        "sourceUrl": "https://www.supremecourt.gov/docket/docketfiles/html/public/25-573.html",
+        "sourceAuthority": "primary_official",
+        "date": "2026-07-23",
+        "jurisdiction": "Supreme Court of the United States",
+        "status": "rehearing petition pending at last check",
+        "outcome": "Certiorari denied; rehearing request not yet resolved as of July 26, 2026.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Trump's denial and legal challenges are preserved in the docket and underlying appellate proceedings.",
+        "counterEvidence": "A pending rehearing petition means the Supreme Court posture should be updated when the Court acts.",
+        "proofNeeded": "The final Supreme Court order on rehearing is required to close this review record.",
+        "boundary": "This is a procedural-status record, not a new finding about the underlying conduct.",
+        "conductDomains": ["sexual_abuse", "sexual_misconduct_noncriminal"],
+        "victimClass": ["adult"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["trump-carroll-civil-judgment-2023"]
+      }
+    ]
+  }
+}

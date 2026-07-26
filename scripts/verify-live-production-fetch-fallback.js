@@ -1,3 +1,5 @@
+const path = require('path');
+const { spawnSync } = require('child_process');
 const nativeFetch = global.fetch;
 
 if (typeof nativeFetch !== 'function') {
@@ -36,4 +38,28 @@ global.fetch = async function matrixProductionFetch(input, init = {}) {
 
   clean.searchParams.delete('deployment_check');
   return nativeFetch(clean.toString(), options);
+};
+
+// The existing production verifier is the authoritative Worker, D1, PayPal,
+// email and SHA proof. A successful exit is not allowed to complete until the
+// specific restored public surfaces are also proven live and complete.
+const originalExit = process.exit.bind(process);
+let runningRestoredSurfaceProof = false;
+process.exit = function matrixVerifiedExit(code = 0) {
+  const numeric = Number(code || 0);
+  const productionVerifier = path.basename(String(process.argv[1] || '')) === 'verify-live-production.js';
+  if (numeric === 0 && productionVerifier && !runningRestoredSurfaceProof) {
+    runningRestoredSurfaceProof = true;
+    const verifier = path.join(process.cwd(), 'scripts', 'verify-live-restored-surfaces.js');
+    const result = spawnSync(process.execPath, [verifier], {
+      cwd: process.cwd(),
+      env: process.env,
+      encoding: 'utf8',
+      maxBuffer: 1024 * 1024 * 20
+    });
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.stderr) process.stderr.write(result.stderr);
+    return originalExit(Number.isInteger(result.status) ? result.status : 1);
+  }
+  return originalExit(numeric);
 };

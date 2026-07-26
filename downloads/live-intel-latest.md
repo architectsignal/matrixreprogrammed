@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-26T03:54:52.723Z
+Collection completed: 2026-07-26T08:39:14.602Z
 Latest source publication: 2026-07-24T12:00:00.000Z
 Collection status: fresh-items-added
 New items this collection: 1
@@ -98,11 +98,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - WSJM
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
+- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - KSRO
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNUUJ1QlF0Zm5DOENTS0dXY193V2Joc2Zfeks5Ry10WTk4RFZ2S1g3N2d1ZEtSbDZDR0xEeXg5ZmZTWE05RVZNTGlOWU5ySGFySWlTR2taLWF1WUNnVW5aemJycFJtWHBFejZLVktFU2ZQR2FjMW4xWjVxZVBoZzlDc0JOQXBjRUdsUEk5S2xaUElEMXVOOXdmSjhkZUtCNVB1ZHBRNQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - WSJM
+  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - KSRO
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Gaza’s food gains could unravel without sustained aid, UN warns
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168006
@@ -158,12 +158,6 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
   - Source class: primary-or-official
@@ -211,18 +205,6 @@ New items this collection: 1
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-21 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera
   - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSk91b25JMkVHNFotVDdKX3FWX2tFUUFidzZieTNNcUlReU5ONHU2VTRtb2J0S3A1UFEwU2xscndPX2VCSGJWQkcwRjY1SGZTaEtONlZiN3EwNUE4X0NFcUZHNEhMTG9pUVp1bmNHRUNHUEE4dFJZSmtVM2hDQjg4QmZBTW42dW41OUszRGVuak1OOE1LNUpCVnVnRXh5R0NORFVXS3ZnREF5bVXSAbABQVVfeXFMTnFBV01Na21mSzJRdWEtdno2UndwVktEcDVtbGlNUVg5a3dwLVNLajNCT1lOeGlMUll3d1AxS1pkT1lVS013dmtCRjRmMjBlTXdORnRyMTVRLUxrQi04VExxRHY4eDZYNkxTUmNyRzN1RzVLaThZSVIweUt6YTJVS3FqOHUzZVlyb2VxRWNoenJueFJEZFZsR0ZDT28yNGRNcS0zYmN3V0s2bXd0Y256QW4?oc=5
@@ -283,58 +265,4 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — From the General Assembly to Harlem: Mandela’s call to action endures
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167981
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: From the General Assembly to Harlem: Mandela’s call to action endures
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — Health response brings lifesaving care closer to thousands in Yemen
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167982
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Health response brings lifesaving care closer to thousands in Yemen
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — Middle East: Civilians again under fire as US-Iran strikes continue
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167979
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Middle East: Civilians again under fire as US-Iran strikes continue
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — Moon Day focuses growing concerns around space junk
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167976
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Moon Day focuses growing concerns around space junk
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — Ukraine: Deadly Russian attacks severely damage aid warehouses
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167980
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Ukraine: Deadly Russian attacks severely damage aid warehouses
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-19 — Ukraine: UN condemns overnight attack on Kyiv
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167975
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Ukraine: UN condemns overnight attack on Kyiv
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

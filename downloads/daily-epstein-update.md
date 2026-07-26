@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-26T03:54:58.341Z
-Live Intel source window: 2026-07-26T03:54:52.723Z
+Generated: 2026-07-26T08:39:18.944Z
+Live Intel source window: 2026-07-26T08:39:14.602Z
 Latest source publication: 2026-07-23T21:48:41.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+9 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -45,13 +45,13 @@ Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### House Oversight Committee to interview Epstein’s former private banker - WSJM
-- Published: 2026-07-23T13:04:24.000Z
+### House Oversight Committee to interview Epstein’s former private banker - KSRO
+- Published: 2026-07-23T16:07:19.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
+- URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxNUUJ1QlF0Zm5DOENTS0dXY193V2Joc2Zfeks5Ry10WTk4RFZ2S1g3N2d1ZEtSbDZDR0xEeXg5ZmZTWE05RVZNTGlOWU5ySGFySWlTR2taLWF1WUNnVW5aemJycFJtWHBFejZLVktFU2ZQR2FjMW4xWjVxZVBoZzlDc0JOQXBjRUdsUEk5S2xaUElEMXVOOXdmSjhkZUtCNVB1ZHBRNQ?oc=5
 
-House Oversight Committee to interview Epstein’s former private banker WSJM
+House Oversight Committee to interview Epstein’s former private banker KSRO
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -75,16 +75,6 @@ Former Barclays boss Jes Staley to face US House panel on Epstein Forth.News
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-- Published: 2026-07-22T18:10:00.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-
-Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him Yahoo
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Published: 2026-07-22T11:27:32.000Z
 - Source: Google News / Epstein sighting and alive claims
@@ -92,26 +82,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 
 French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
-- Published: 2026-07-21T20:37:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
-
-Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds The Guardian
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
-- Published: 2026-07-21T18:38:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTGdWVTVoSy10TG9HdnlCNUlkQlZQQVQ1VG5GcmJrM2tyOEtBR25ockxXYUxHRVIxa3lPQzl3U2prWkJob2dKY0ZEdGlLcU1Ua0FreFBvSUNzeGEzcjM1WXY1YjFPbm1hVFNnQ0c3S1VMMXZoeko3QWRMSE9nOWZRRFJGTi1MRU55MG56aVhKWVlrUmtMS3BkTXgtZUxVbkdRdjhucHB3?oc=5
-
-Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz New York Post
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -132,16 +102,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEJaRElPMXBDWHBJMDlsN0otNUV5MlBhOVVHRTRLQ2lXejI4UUxIU0VZdTFTRVZTVTQyVEZfVHRSc3R5MmhNRDB4d09OcjUwQUdicHE0UXMyNV9DU0lHVnVCVEJqNVU3TzZrUURETGdmaEVBa3BheUNITlp4WEVrdlhPREV2bTljb0poNkE5MGZ4cXRUMjZLQ2stYU1oQktnWUpNR0pfa3RvUlExcWVocw?oc=5
 
 Epstein survivors call on Tillis, Cornyn to block Blanche nomination Washington Times
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Published: 2026-07-21T05:00:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-26T03:54:58.441Z
-Live Intel source window: 2026-07-26T03:54:52.723Z
+Generated: 2026-07-26T08:39:19.045Z
+Live Intel source window: 2026-07-26T08:39:14.602Z
 Tracked cards: 879
-Cards with current matched records: 103
-Cards with no new verified record: 776
+Cards with current matched records: 102
+Cards with no new verified record: 777
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -709,34 +709,30 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Bill Gates
 - Route: follow-the-money/people/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
 - 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Gates
 - Route: top-52/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
 - 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: billionaire-briefs/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
 - 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## BILL GATES
 - Route: main-players/bill-gates.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
 - 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-- 2026-07-21T20:37:00.000Z — Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian — https://news.google.com/rss/articles/CBMilwFBVV95cUxPVGRud0ZBVkhWd0p2bnk0VGpTQkFDTUkzOWswRFBUT3Jfcm9ldll4M29CVFZZZ3daUjNBMnNPRVBtLWlrT0lUQzRnR0NveWowNlRvQ1FFcGszT2d2WkxMaGdYT0p3em9fV1VqNjJ5R1BkMHFuWU04eldfVUNVYzBaZ21hXzRkbUJoTHA1dGIzUmREYnFONUEw?oc=5
 
 ## Bill Melinda Gates Foundation
 - Route: institutions/bill-and-melinda-gates-foundation.html
@@ -3581,10 +3577,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## New York City
 - Route: jurisdictions-of-power/new-york-city.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-20T12:00:00.000Z
-- 2026-07-20T12:00:00.000Z — From the General Assembly to Harlem: Mandela’s call to action endures — https://news.un.org/feed/view/en/story/2026/07/1167981
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -4981,20 +4976,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-24T12:00:00.000Z
 - 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
-- 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 2
 - Latest record: 2026-07-24T12:00:00.000Z
 - 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 - 2026-07-21T12:00:00.000Z — Guterres calls for stepping up diplomatic efforts to end US-Iran conflict — https://news.un.org/feed/view/en/story/2026/07/1167989
-- 2026-07-19T12:00:00.000Z — Ukraine: UN condemns overnight attack on Kyiv — https://news.un.org/feed/view/en/story/2026/07/1167975
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html

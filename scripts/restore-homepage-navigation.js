@@ -22,7 +22,7 @@ const groups = [
     ['death-files.html','Death Files'],['independent-links.html','Top 100 Independent Links'],['data-lab.html','Public Data Lab'],['research-tools.html','Research Tools'],['evidence-archive.html','Evidence Archive'],['evidence-network-map.html','Evidence Network'],['evidence-reader.html','Evidence Reader'],['evidence-timeline.html','Evidence Timeline'],['geographic-power-atlas.html','Geographic Atlas'],['source-document-vault.html','Source Vault'],['network-maps.html','Network Maps']
   ]],
   ['Power, Files & Investigations', [
-    ['behind-the-curtain.html','Behind the Curtain'],['follow-the-money.html','Follow the Money'],['track-the-families.html','Track the Families'],['epstein-files.html','Epstein Files'],['investigation-machine.html','Investigation Machine'],['dark-speculation-lab.html','Dark Speculation Lab']
+    ['behind-the-curtain.html','Behind the Curtain'],['follow-the-money.html','Follow the Money'],['elite-family-tracker.html','Track the Families'],['epstein-files.html','Epstein Files'],['investigation-machine.html','Investigation Machine'],['dark-speculation-lab.html','Dark Speculation Lab']
   ]],
   ['Community, Books & Membership', [
     ['book-universe.html','Book Universe'],['forum.html','Signal Board'],['membership.html','Membership'],['subscriber-dashboard.html','Subscriber Dashboard'],['billing-dashboard.html','Billing Dashboard'],['amazon-store-books.html','Amazon Store'],['videos.html','Rumble Channels']
@@ -59,6 +59,7 @@ for (const target of targets) {
   for (const route of requiredRoutes) {
     if (!finalHtml.includes(`href="${route}"`)) throw new Error(`${path.relative(root,target)} navigation verification failed: ${route}`);
   }
+  if (finalHtml.includes('track-the-families.html')) throw new Error(`${path.relative(root,target)} still contains obsolete Track the Families route`);
 }
 
 const reportPath = path.join(root, 'downloads', 'homepage-navigation-repair.json');
@@ -70,8 +71,8 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   primaryRoutes: primary.map(x=>x[0]),
   restoredGroups: groups.map(x=>x[0]),
   requiredRoutes,
-  protectedPublicRoutes: ['death-files.html','independent-links.html'],
+  protectedPublicRoutes: ['death-files.html','independent-links.html','elite-family-tracker.html'],
   currentPrimeMinisterOwner: 'scripts/patch-global-contact-and-current-pm.js',
   publicStaticRouteOwner: 'scripts/patch-public-static-route-bridge.js'
 }, null, 2)}\n`);
-console.log(`Homepage navigation restored with Death Files, Independent Links and ${requiredRoutes.length} verified public routes.`);
+console.log(`Homepage navigation restored with Death Files, Independent Links, the live Family Tracker and ${requiredRoutes.length} verified public routes.`);

@@ -40,26 +40,34 @@ global.fetch = async function matrixProductionFetch(input, init = {}) {
   return nativeFetch(clean.toString(), options);
 };
 
+function runProof(script, maxBuffer = 1024 * 1024 * 30) {
+  const verifier = path.join(process.cwd(), script);
+  const result = spawnSync(process.execPath, [verifier], {
+    cwd: process.cwd(),
+    env: process.env,
+    encoding: 'utf8',
+    maxBuffer
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  return Number.isInteger(result.status) ? result.status : 1;
+}
+
 // The existing production verifier is the authoritative Worker, D1, PayPal,
 // email and SHA proof. A successful exit is not allowed to complete until the
-// specific restored public surfaces are also proven live and complete.
+// restored public surfaces and Criminal Conduct & Allegations engine are also
+// proven live and complete across the known dossier inventory.
 const originalExit = process.exit.bind(process);
-let runningRestoredSurfaceProof = false;
+let runningSupplementalProofs = false;
 process.exit = function matrixVerifiedExit(code = 0) {
   const numeric = Number(code || 0);
   const productionVerifier = path.basename(String(process.argv[1] || '')) === 'verify-live-production.js';
-  if (numeric === 0 && productionVerifier && !runningRestoredSurfaceProof) {
-    runningRestoredSurfaceProof = true;
-    const verifier = path.join(process.cwd(), 'scripts', 'verify-live-restored-surfaces.js');
-    const result = spawnSync(process.execPath, [verifier], {
-      cwd: process.cwd(),
-      env: process.env,
-      encoding: 'utf8',
-      maxBuffer: 1024 * 1024 * 20
-    });
-    if (result.stdout) process.stdout.write(result.stdout);
-    if (result.stderr) process.stderr.write(result.stderr);
-    return originalExit(Number.isInteger(result.status) ? result.status : 1);
+  if (numeric === 0 && productionVerifier && !runningSupplementalProofs) {
+    runningSupplementalProofs = true;
+    const restoredStatus = runProof('scripts/verify-live-restored-surfaces.js');
+    if (restoredStatus !== 0) return originalExit(restoredStatus);
+    const criminalConductStatus = runProof('scripts/verify-live-criminal-conduct-engine.js', 1024 * 1024 * 50);
+    return originalExit(criminalConductStatus);
   }
   return originalExit(numeric);
 };

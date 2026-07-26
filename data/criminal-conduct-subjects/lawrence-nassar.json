@@ -1,0 +1,85 @@
+{
+  "key": "lawrence-nassar",
+  "subject": {
+    "name": "Lawrence Gerard Nassar",
+    "aliases": ["Larry Nassar", "Lawrence Nassar"],
+    "subjectType": "person",
+    "dossierRoute": "dossier-lawrence-nassar.html",
+    "publicSummary": "Former physician and USA Gymnastics official convicted in federal and Michigan courts of child-exploitation and criminal sexual-conduct offenses.",
+    "predatorsInPowerEligible": true,
+    "powerRoles": [
+      {
+        "sector": "healthcare",
+        "title": "Osteopathic physician and associate professor",
+        "organization": "Michigan State University",
+        "from": "1996",
+        "to": "2016",
+        "status": "former",
+        "sourceLabel": "DOJ OIG testimony describing Nassar's employment and medical role",
+        "sourceUrl": "https://oig.justice.gov/news/testimony/statement-michael-e-horowitz-inspector-general-us-department-justice-us-house-1",
+        "lastChecked": "2026-07-26"
+      },
+      {
+        "sector": "sports",
+        "title": "National Medical Coordinator and treating physician",
+        "organization": "USA Gymnastics",
+        "from": "not stated",
+        "to": "2015",
+        "status": "former",
+        "sourceLabel": "DOJ OIG testimony describing Nassar's USA Gymnastics role",
+        "sourceUrl": "https://oig.justice.gov/news/testimony/statement-michael-e-horowitz-inspector-general-us-department-justice-us-house-1",
+        "lastChecked": "2026-07-26"
+      }
+    ],
+    "records": [
+      {
+        "id": "nassar-federal-conviction-2017",
+        "category": "conviction_final_judgment",
+        "title": "Federal child-pornography and obstruction convictions",
+        "summary": "Nassar pleaded guilty to receiving and possessing child pornography and destroying or concealing evidence, and was sentenced to 60 years in federal prison.",
+        "sourceLabel": "U.S. Attorney's Office, Western District of Michigan — federal sentencing release",
+        "sourceUrl": "https://www.justice.gov/usao-wdmi/pr/2017_1207_Nassar",
+        "sourceAuthority": "primary_official",
+        "date": "2017-12-07",
+        "jurisdiction": "Western District of Michigan, United States",
+        "status": "adjudicated; convicted; sentenced",
+        "outcome": "Sixty-year federal prison sentence, consecutive to state sentences.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Nassar entered guilty pleas; no contrary final disposition was located in the reviewed official sources.",
+        "counterEvidence": "The federal judgment covers child-pornography and obstruction offenses; separate state records address hands-on sexual assaults.",
+        "proofNeeded": "A court order vacating or reversing the federal convictions would change this classification.",
+        "boundary": "This record is limited to the federal counts and sentence.",
+        "conductDomains": ["csam_offence", "child_sexual_exploitation"],
+        "victimClass": ["child"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["nassar-michigan-convictions-2017"]
+      },
+      {
+        "id": "nassar-michigan-convictions-2017",
+        "category": "conviction_final_judgment",
+        "title": "Michigan first-degree criminal sexual-conduct convictions",
+        "summary": "DOJ OIG records state that Nassar pleaded guilty in Michigan state court to seven counts of first-degree criminal sexual conduct and that federal and state convictions produced sentences exceeding 100 years.",
+        "sourceLabel": "DOJ Office of Inspector General — testimony summarizing federal and state prosecutions",
+        "sourceUrl": "https://oig.justice.gov/news/testimony/statement-michael-e-horowitz-inspector-general-us-department-justice-us-house-1",
+        "sourceAuthority": "primary_official",
+        "date": "2017-11-22",
+        "jurisdiction": "Michigan, United States",
+        "status": "adjudicated; convicted; sentenced",
+        "outcome": "Guilty pleas to seven first-degree criminal sexual-conduct counts; lengthy consecutive state sentences followed.",
+        "evidenceGrade": "A",
+        "lastChecked": "2026-07-26",
+        "publicationStatus": "approved",
+        "rightOfReply": "Nassar pleaded guilty; victim-impact and sentencing proceedings are part of the public record.",
+        "counterEvidence": "This summary relies on the DOJ OIG's official account and does not reproduce unnecessary victim details.",
+        "proofNeeded": "A later Michigan appellate or post-conviction order altering the judgments would change this classification.",
+        "boundary": "Limited to Nassar's own adjudicated Michigan offenses; institutions and employees require separate evidence and classification.",
+        "conductDomains": ["child_sexual_abuse", "sexual_assault", "sexual_abuse"],
+        "victimClass": ["child", "adult"],
+        "predatorsInPowerEligible": true,
+        "linkedRecordIds": ["nassar-federal-conviction-2017"]
+      }
+    ]
+  }
+}

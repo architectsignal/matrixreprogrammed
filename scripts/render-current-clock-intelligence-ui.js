@@ -7,6 +7,7 @@ const root = process.cwd();
 const wallPath = path.join(root, 'data', 'clock-wall.json');
 const timerPath = path.join(root, 'timers.html');
 const homepagePath = path.join(root, 'index.html');
+const reportPath = path.join(root, 'downloads', 'homepage-critical-clocks.json');
 const wall = JSON.parse(fs.readFileSync(wallPath, 'utf8'));
 
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -30,6 +31,11 @@ function statusClass(value) {
   if (value === 'current-primary-evidence') return 'clock-current-primary';
   if (value === 'current-evidence-gap') return 'clock-current-gap';
   return 'clock-current-limited';
+}
+function clockLane(clock) {
+  return clock.speculationOnly
+    ? { label: 'Classified speculation', className: 'critical-clock-speculation' }
+    : { label: 'Documented / practical', className: 'critical-clock-practical' };
 }
 function matrixRows(clock) {
   const rows = (clock.currentImplementationMatrix || []).slice(0, 8).map(item => {
@@ -79,18 +85,49 @@ for (const clock of wall.clocks || []) {
 }
 fs.writeFileSync(timerPath, html);
 
+const critical = (wall.clocks || [])
+  .filter(clock => Number(clock.score) > 90)
+  .sort((a, b) => Number(b.score) - Number(a.score) || String(a.title || '').localeCompare(String(b.title || '')));
+
 if (fs.existsSync(homepagePath)) {
   let homepage = fs.readFileSync(homepagePath, 'utf8');
   homepage = homepage.replace(/<section id="homepage-critical-clocks"[\s\S]*?<\/section>/g, '');
-  const critical = (wall.clocks || []).filter(clock => !clock.speculationOnly && Number(clock.score) > 90).sort((a, b) => Number(b.score) - Number(a.score));
   if (critical.length) {
-    const cards = critical.map(clock => `<article class="critical-clock-mini"><a href="timers.html#${escapeHtml(clock.slug)}"><span>${escapeHtml(clock.title)}</span><strong>${Number(clock.score)}%</strong><small>${escapeHtml(statusLabel(clock.todayStatus))}</small></a></article>`).join('');
-    const section = `<section id="homepage-critical-clocks" class="section wrap"><div class="eyebrow">Current Evidence Timers</div><h2>Critical Clocks Over 90%</h2><p>Scores are pressure indexes. Open each clock to see current law, implementation, jurisdiction coverage, counter-signals and the separate hypothesis layer.</p><div class="critical-clock-mini-grid">${cards}</div><div class="cta-row"><a class="btn alt" href="timers.html">Open All Mission Timers</a></div><style>.critical-clock-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.75rem}.critical-clock-mini{border:1px solid rgba(216,181,106,.28);border-radius:16px;background:rgba(20,4,4,.78)}.critical-clock-mini a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.35rem 1rem;padding:1rem;text-decoration:none}.critical-clock-mini strong{font-size:1.7rem;color:#f0d28b}.critical-clock-mini small{grid-column:1/-1;opacity:.78}</style></section>`;
+    const cards = critical.map(clock => {
+      const lane = clockLane(clock);
+      return `<article class="critical-clock-mini ${lane.className}" data-critical-clock="${escapeHtml(clock.slug)}" data-clock-lane="${clock.speculationOnly ? 'speculation' : 'practical'}"><a href="timers.html#${escapeHtml(clock.slug)}"><span>${escapeHtml(clock.title)}</span><strong>${Number(clock.score)}%</strong><small><b>${escapeHtml(lane.label)}</b> · ${escapeHtml(statusLabel(clock.todayStatus))}</small></a></article>`;
+    }).join('');
+    const section = `<section id="homepage-critical-clocks" class="section wrap"><div class="eyebrow">High-Pressure Mission Timers</div><h2>All Clocks Over 90%</h2><p>Every clock above 90% is shown here. <strong>Documented / practical</strong> clocks track current public-record implementation. <strong>Classified speculation</strong> clocks measure source pressure around a claim and do not measure truth, guilt or event probability.</p><div class="critical-clock-mini-grid">${cards}</div><div class="cta-row"><a class="btn alt" href="timers.html">Open All Mission Timers</a></div><style>.critical-clock-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.75rem}.critical-clock-mini{border:1px solid rgba(216,181,106,.28);border-radius:16px;background:rgba(20,4,4,.78)}.critical-clock-mini.critical-clock-speculation{border-color:rgba(190,55,55,.48);background:linear-gradient(145deg,rgba(34,3,3,.92),rgba(12,4,4,.94))}.critical-clock-mini a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.35rem 1rem;padding:1rem;text-decoration:none}.critical-clock-mini strong{font-size:1.7rem;color:#f0d28b}.critical-clock-mini small{grid-column:1/-1;opacity:.82}.critical-clock-mini small b{color:#f0d28b}</style></section>`;
     homepage = homepage.includes('<section id="top-moments-now"')
       ? homepage.replace('<section id="top-moments-now"', `${section}<section id="top-moments-now"`)
       : homepage.replace('</main>', `${section}</main>`);
   }
+
+  const rendered = [...homepage.matchAll(/data-critical-clock="([^"]+)"/g)].map(match => match[1]);
+  const expected = critical.map(clock => clock.slug);
+  const missing = expected.filter(slug => !rendered.includes(slug));
+  const unexpected = rendered.filter(slug => !expected.includes(slug));
+  if (rendered.length !== expected.length || missing.length || unexpected.length) {
+    throw new Error(`Homepage critical-clock reconciliation failed: expected ${expected.length}, rendered ${rendered.length}, missing ${missing.join(', ') || 'none'}, unexpected ${unexpected.join(', ') || 'none'}`);
+  }
+  for (const clock of critical) {
+    const lane = clock.speculationOnly ? 'speculation' : 'practical';
+    if (!homepage.includes(`data-critical-clock="${clock.slug}"`) || !homepage.includes(`data-clock-lane="${lane}"`)) {
+      throw new Error(`Homepage critical-clock classification missing for ${clock.slug}`);
+    }
+  }
   fs.writeFileSync(homepagePath, homepage);
 }
 
-console.log(`Current clock UI rendered for ${(wall.clocks || []).length} clocks; ${(wall.clocks || []).filter(clock => !clock.speculationOnly && Number(clock.score) > 90).length} practical clocks above 90%.`);
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+fs.writeFileSync(reportPath, `${JSON.stringify({
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  threshold: '>90',
+  total: critical.length,
+  practical: critical.filter(clock => !clock.speculationOnly).length,
+  speculation: critical.filter(clock => clock.speculationOnly).length,
+  clocks: critical.map(clock => ({ slug: clock.slug, title: clock.title, score: Number(clock.score), lane: clock.speculationOnly ? 'classified-speculation' : 'documented-practical' }))
+}, null, 2)}\n`);
+
+console.log(`Current clock UI rendered for ${(wall.clocks || []).length} clocks; all ${critical.length} clocks above 90% restored to the homepage (${critical.filter(clock => !clock.speculationOnly).length} documented/practical, ${critical.filter(clock => clock.speculationOnly).length} classified speculation).`);

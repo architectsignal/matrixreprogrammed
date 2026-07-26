@@ -1,0 +1,80 @@
+name: Core Public Surfaces Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/finalize-core-public-surfaces.js'
+      - 'scripts/build-deploy-manifest.js'
+      - 'scripts/patch-main-navigation-safety-links.js'
+      - 'scripts/restore-homepage-navigation.js'
+      - 'scripts/expand-death-files-100.js'
+      - 'scripts/build-death-files.js'
+      - 'scripts/death-files-pressure-test.js'
+      - 'data/death-files-catalog.b64.*'
+      - 'data/death-files.json'
+      - 'independent-links.html'
+      - 'data/independent-links-*.json'
+      - '.github/workflows/core-public-surfaces-validation.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Build deployable site
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee /tmp/core-public-surfaces-build.log
+      - name: Verify restored public surfaces
+        run: |
+          node --check scripts/finalize-core-public-surfaces.js
+          node --check scripts/build-deploy-manifest.js
+          node --check scripts/patch-main-navigation-safety-links.js
+          node scripts/finalize-core-public-surfaces.js
+          node - <<'NODE'
+          const fs=require('fs');
+          const data=JSON.parse(fs.readFileSync('data/death-files.json','utf8'));
+          if(!Array.isArray(data.dossiers)||data.dossiers.length!==100) throw new Error(`Expected exactly 100 Death Files dossiers; found ${data.dossiers?.length}`);
+          const dossierPages=fs.readdirSync('_site').filter(name=>/^death-file-.+\.html$/i.test(name));
+          if(dossierPages.length!==100) throw new Error(`Expected exactly 100 deployed dossier pages; found ${dossierPages.length}`);
+          for(const name of dossierPages){
+            const page=fs.readFileSync(`_site/${name}`,'utf8');
+            if(page.includes('[object Object]')) throw new Error(`Literal object placeholder published in ${name}`);
+          }
+          const home=fs.readFileSync('_site/index.html','utf8');
+          for(const marker of ['matrix-construction-banner','UNDER CONSTRUCTION — HELP US BUILD THE MACHINE.','death-files.html','independent-links.html','elite-family-tracker.html']) if(!home.includes(marker)) throw new Error(`Homepage marker missing: ${marker}`);
+          if(home.includes('track-the-families.html')) throw new Error('Homepage still publishes obsolete Track the Families route');
+          const links=fs.readFileSync('_site/independent-links.html','utf8');
+          if(!links.includes('TOP 100 INDEPENDENT RESEARCH LINKS.')) throw new Error('Independent Links route missing');
+          const deaths=fs.readFileSync('_site/death-files.html','utf8');
+          if(!deaths.includes('THE DEATH FILES.')) throw new Error('Death Files route missing');
+          const capstone=fs.readFileSync('_site/behind-the-curtain-capstone.html','utf8');
+          if(capstone.includes('search-system.js')) throw new Error('Capstone still references missing search-system.js');
+          console.log('Core public surfaces validation passed: banner, Top 100 links, family route and 100 readable Death Files dossiers.');
+          NODE
+      - name: Upload exact validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-public-surfaces-validation-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            /tmp/core-public-surfaces-build.log
+            downloads/core-public-surfaces-finalize.json
+            downloads/death-files-pressure-test.json
+            downloads/final-production-reconcile.json
+            downloads/final-release-sanitize.json

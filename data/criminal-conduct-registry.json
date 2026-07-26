@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "updated": "2026-07-26",
-  "purpose": "Editorially approved criminal-conduct, legal-action, allegation and speculation records for person and institution dossiers.",
+  "purpose": "Editorially approved criminal-conduct, legal-action, allegation and speculation records for person and institution dossiers, including the evidence-classified Predators in Power accountability index.",
   "publicationRule": "Only records with publicationStatus=approved are rendered. Automated matches are review candidates only and never publish directly.",
   "rules": [
     "A conviction label requires an adjudicated criminal outcome from an authoritative source.",
@@ -11,7 +11,9 @@
     "Rumor and speculation require an attributable public origin, a reason for inclusion, counter-evidence, proof needed and an explicit not-established boundary.",
     "Association, contact, employment, family relationship, board membership or proximity alone cannot establish wrongdoing.",
     "Anonymous or unsourced allegations must not be published.",
-    "Every record requires a source URL, source label, date, status, evidence grade, last-checked date and boundary statement."
+    "Every record requires a source URL, source label, date, status, evidence grade, last-checked date and boundary statement.",
+    "Predators in Power publication additionally requires explicit record eligibility, qualifying conduct tags, victim class, and at least one independently sourced qualifying power or influence role.",
+    "The Predators in Power page title is an accountability project label, not a blanket legal conclusion about every listed subject."
   ],
   "categories": {
     "conviction_final_judgment": {
@@ -56,6 +58,28 @@
     }
   },
   "subjects": {},
+  "subjectTemplate": {
+    "name": "Exact subject name",
+    "aliases": [],
+    "subjectType": "person",
+    "dossierRoute": "dossier-subject-slug.html",
+    "publicSummary": "Neutral role and relevance summary",
+    "predatorsInPowerEligible": false,
+    "powerRoles": [
+      {
+        "sector": "public_office",
+        "title": "Exact role",
+        "organization": "Organization or institution",
+        "from": "YYYY-MM-DD or not stated",
+        "to": "YYYY-MM-DD, present or not stated",
+        "status": "current, former or historical",
+        "sourceLabel": "Official biography, filing, registry or authoritative source",
+        "sourceUrl": "https://example.invalid/role-source",
+        "lastChecked": "YYYY-MM-DD"
+      }
+    ],
+    "records": []
+  },
   "recordTemplate": {
     "id": "stable-record-id",
     "category": "charge_indictment_complaint",
@@ -74,6 +98,10 @@
     "rightOfReply": "Documented denial, response or not located",
     "counterEvidence": "Material limitation or contrary record",
     "proofNeeded": "What would upgrade or resolve the claim",
-    "boundary": "Category-specific legal and evidentiary boundary"
+    "boundary": "Category-specific legal and evidentiary boundary",
+    "conductDomains": [],
+    "victimClass": [],
+    "predatorsInPowerEligible": false,
+    "linkedRecordIds": []
   }
 }

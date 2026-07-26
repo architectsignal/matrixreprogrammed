@@ -40,6 +40,7 @@ const policy = json(path.join(root, 'data', 'predators-in-power-policy.json'));
 const registry = json(path.join(root, 'data', 'criminal-conduct-registry.json'));
 const payload = json(path.join(root, 'data', 'predators-in-power.json'));
 const build = json(path.join(root, 'downloads', 'predators-in-power-build-report.json'));
+const links = json(path.join(root, 'downloads', 'predators-in-power-conduct-links.json'));
 const sync = json(path.join(root, 'downloads', 'predators-in-power-output-sync.json'));
 
 if (policy.schemaVersion !== 1) fail('policy schemaVersion must be 1');
@@ -53,6 +54,7 @@ if (!payload.boundary?.includes('not a legal finding')) fail('public payload lac
 if (payload.count !== (payload.subjects || []).length) fail('public payload subject count mismatch');
 if (payload.reviewOnlyCandidateCount < 0) fail('review-only candidate count invalid');
 if (!build.ok || build.qualifyingSubjects !== payload.count) fail('build report does not match public payload');
+if (!links.ok || links.checkedCount < 1 || (links.failures || []).length) fail('Criminal Conduct dropdown cross-link report failed');
 if (fs.existsSync(site) && !sync.ok) fail('Cloudflare output synchronization failed');
 
 const ids = new Set();
@@ -87,6 +89,12 @@ for (const relative of ['index.html', 'wrongdoing-tracker.html', 'evidence-vault
   const html = read(file);
   if (!html.includes('<!-- predators-in-power-route:start -->') || !html.includes('predators-in-power.html')) fail(`${relative} missing Predators in Power route block`);
 }
+for (const relative of links.checked || []) {
+  const file = path.join(root, relative.replace(/^_site\//, '_site/'));
+  if (!fs.existsSync(file)) { fail(`${relative} from conduct-link report is missing`); continue; }
+  const html = read(file);
+  if (!html.includes('<!-- predators-in-power-conduct-link:start -->') || !html.includes('Open Predators in Power')) fail(`${relative} missing conduct dropdown cross-link`);
+}
 if (fs.existsSync(site)) {
   checkPage(path.join(site, 'predators-in-power.html'), 'built .html page');
   checkPage(path.join(site, 'predators-in-power'), 'built extensionless page');
@@ -102,6 +110,7 @@ const result = {
   approvedRecords: ids.size,
   conductDomains: Object.keys(policy.conductDomains || {}).length,
   powerSectors: Object.keys(policy.powerSectors || {}).length,
+  conductDropdownLinks: links.checkedCount,
   outputPresent: fs.existsSync(site),
   failures
 };
@@ -112,4 +121,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Predators in Power pressure test passed: ${result.qualifyingSubjects} qualifying subject(s), ${result.approvedRecords} approved record(s), ${result.conductDomains} conduct domains, ${result.powerSectors} power sectors.`);
+console.log(`Predators in Power pressure test passed: ${result.qualifyingSubjects} qualifying subject(s), ${result.approvedRecords} approved record(s), ${result.conductDomains} conduct domains, ${result.powerSectors} power sectors, ${result.conductDropdownLinks} conduct-dropdown link(s).`);

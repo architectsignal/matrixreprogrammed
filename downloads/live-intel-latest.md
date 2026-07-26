@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-25T19:34:34.364Z
+Collection completed: 2026-07-26T03:54:52.723Z
 Latest source publication: 2026-07-24T12:00:00.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection status: fresh-items-added
+New items this collection: 1
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -97,6 +97,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - WSJM
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - WSJM
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Gaza’s food gains could unravel without sustained aid, UN warns
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168006

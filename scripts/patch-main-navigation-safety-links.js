@@ -1,11 +1,28 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const indexPath = path.join(root, 'index.html');
 const startHerePath = path.join(root, 'start-here.html');
 if (!fs.existsSync(indexPath)) throw new Error('index.html not found for primary navigation reconciliation.');
 if (!fs.existsSync(startHerePath)) throw new Error('start-here.html not found for Start Here reconciliation.');
+
+// This navigation patch runs before the repository's final site-QA gate. Build
+// the canonical Death Files routes first so adding their links can never create
+// a temporary broken-link failure during the same production build.
+const deathDataPath = path.join(root, 'data', 'death-files.json');
+const deathBuilderPath = path.join(root, 'scripts', 'build-death-files.js');
+if (!fs.existsSync(deathDataPath)) throw new Error('Canonical Death Files data is missing before navigation reconciliation.');
+const deathData = JSON.parse(fs.readFileSync(deathDataPath, 'utf8'));
+if (!Array.isArray(deathData.dossiers) || deathData.dossiers.length !== 100) {
+  throw new Error(`Navigation release requires exactly 100 Death Files dossiers; found ${deathData.dossiers?.length || 0}.`);
+}
+if (!fs.existsSync(deathBuilderPath)) throw new Error('Death Files builder is missing before navigation reconciliation.');
+execFileSync(process.execPath, [deathBuilderPath], { cwd: root, stdio: 'inherit', env: process.env });
+if (!fs.existsSync(path.join(root, 'death-files.html'))) throw new Error('Death Files landing page was not generated before navigation reconciliation.');
+const dossierPages = fs.readdirSync(root).filter(name => /^death-file-(?!s).+\.html$/i.test(name));
+if (dossierPages.length !== 100) throw new Error(`Expected 100 generated Death Files dossiers before navigation reconciliation; found ${dossierPages.length}.`);
 
 const primaryLinks = [
   ['start-here.html', 'Start Here'],
@@ -32,7 +49,7 @@ const moreGroups = [
     ['death-files.html', 'Death Files'],
     ['behind-the-curtain.html', 'Behind the Curtain'],
     ['follow-the-money.html', 'Follow the Money'],
-    ['track-the-families.html', 'Track the Families'],
+    ['elite-family-tracker.html', 'Track the Families'],
     ['epstein-files.html', 'Epstein Files'],
     ['investigation-machine.html', 'Investigation Machine'],
     ['network-maps.html', 'Network Maps']
@@ -81,11 +98,20 @@ if (!startHere.includes('</main>')) throw new Error('Start Here main element not
 startHere = startHere.replace('</main>', `${safetySection}</main>`);
 fs.writeFileSync(startHerePath, startHere);
 
+// The Capstone's search controls are implemented by its own power-family
+// runtime. Remove the obsolete reference to a file that no longer exists.
+const capstonePath = path.join(root, 'behind-the-curtain-capstone.html');
+if (fs.existsSync(capstonePath)) {
+  let capstone = fs.readFileSync(capstonePath, 'utf8');
+  capstone = capstone.replace(/\s*<script\s+src=["']search-system\.js["']><\/script>/gi, '');
+  fs.writeFileSync(capstonePath, capstone);
+}
+
 for (const [route, label] of primaryLinks) {
   if (!html.includes(`href="${route}">${label}</a>`)) throw new Error(`Homepage primary route missing: ${label}`);
   if (!startHere.includes(`href="${route}">${label}</a>`)) throw new Error(`Start Here primary route missing: ${label}`);
 }
-for (const route of ['death-files.html','independent-links.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html']) {
+for (const route of ['death-files.html','independent-links.html','elite-family-tracker.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html']) {
   if (!html.includes(`href="${route}"`)) throw new Error(`Homepage final navigation missing ${route}`);
   if (!startHere.includes(`href="${route}"`)) throw new Error(`Start Here final navigation missing ${route}`);
 }
@@ -93,4 +119,4 @@ const primaryMarkup = (html.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"
 const anchorCount = (primaryMarkup.match(/<a\b[^>]*href=/gi) || []).length;
 if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Final navigation preserved: Death Files, Independent Links, investigations, safety, support and all core public routes.');
+console.log('Final navigation preserved: Death Files generated before QA, Independent Links restored, family tracking routed to the live tracker, and obsolete Capstone search reference removed.');

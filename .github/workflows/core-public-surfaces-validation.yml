@@ -49,7 +49,7 @@ jobs:
           const fs=require('fs');
           const data=JSON.parse(fs.readFileSync('data/death-files.json','utf8'));
           if(!Array.isArray(data.dossiers)||data.dossiers.length!==100) throw new Error(`Expected exactly 100 Death Files dossiers; found ${data.dossiers?.length}`);
-          const dossierPages=fs.readdirSync('_site').filter(name=>/^death-file-(?!s).+\.html$/i.test(name));
+          const dossierPages=fs.readdirSync('_site').filter(name=>/^death-file-.+\.html$/i.test(name));
           if(dossierPages.length!==100) throw new Error(`Expected exactly 100 deployed dossier pages; found ${dossierPages.length}`);
           for(const name of dossierPages){
             const page=fs.readFileSync(`_site/${name}`,'utf8');

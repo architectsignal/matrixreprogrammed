@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "weekly",
-  "generatedAt": "2026-07-26T09:15:04.670Z",
+  "generatedAt": "2026-07-26T10:44:50.393Z",
   "period": {
-    "start": "2026-07-18T09:15:14.462Z",
-    "end": "2026-07-26T09:15:04.670Z",
+    "start": "2026-07-18T10:44:59.873Z",
+    "end": "2026-07-26T10:44:50.393Z",
     "days": 8
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -21,7 +21,7 @@
     "sourcesScheduled": 12,
     "sourcesFetched": 11,
     "sourceFailures": 1,
-    "changedSources": 4,
+    "changedSources": 5,
     "findingsInWindow": 2868,
     "establishedWrongdoingFindings": 0,
     "officialActionFindings": 1,
@@ -2429,6 +2429,64 @@
       }
     },
     {
+      "id": "source-change-e853e2cce33f37c0619d2433",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-26T10:45:00.360Z",
+      "firstSeen": "2026-07-26T10:45:00.360Z",
+      "lastSeen": "2026-07-26T10:45:00.360Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "weekly-41",
+        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-07-26T10:45:00.360Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+          "data/weekly-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
       "id": "source-change-145721767ca69c32bb4875e5",
       "sourceId": "sec-current-filings",
       "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -2466,7 +2524,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-41",
+        "id": "weekly-42",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -2524,7 +2582,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-42",
+        "id": "weekly-43",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -2582,7 +2640,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-43",
+        "id": "weekly-44",
         "title": "content changed: U.S. Federal Election Commission — Updates",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.fec.gov/updates/",
@@ -2640,7 +2698,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-44",
+        "id": "weekly-45",
         "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
@@ -2698,7 +2756,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-45",
+        "id": "weekly-46",
         "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
@@ -2756,7 +2814,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-46",
+        "id": "weekly-47",
         "title": "content changed: Federal Register — Latest Documents",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
@@ -2814,7 +2872,7 @@
         "content changed"
       ],
       "integrity": {
-        "id": "weekly-47",
+        "id": "weekly-48",
         "title": "content changed: U.S. Treasury OFAC — Recent Actions",
         "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
         "route": "https://ofac.treasury.gov/recent-actions",
@@ -2833,64 +2891,6 @@
           "data/investigation-ledger.json"
         ]
       }
-    },
-    {
-      "id": "source-change-1c352ab364fbfca06ab12a57",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news_en",
-      "lane": "international-corruption",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: European Public Prosecutor's Office — News",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-26T07:48:36.624Z",
-      "firstSeen": "2026-07-26T07:48:36.624Z",
-      "lastSeen": "2026-07-26T07:48:36.624Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-48",
-        "title": "content changed: European Public Prosecutor's Office — News",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.eppo.europa.eu/media/news_en",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-26T07:48:36.624Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.eppo.europa.eu/media/news_en",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
     }
   ],
   "changedSources": [
@@ -2899,15 +2899,31 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-07-26T09:15:04.670Z",
+      "checkedAt": "2026-07-26T10:44:50.393Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2188,
-      "bodyHash": "6e99522e3b32c1035d5f02908260e9678ede0a78a7656fd3a3f904a3a6de525e",
+      "bytes": 2193,
+      "bodyHash": "8802ddcb3610055e1d94ac34419dca4a3941788ef90914339e66d5c9f3edecdb",
       "changed": true,
       "itemCount": 1,
+      "error": ""
+    },
+    {
+      "label": "U.S. Department of Justice Office of Inspector General — Reports",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "url": "https://oig.justice.gov/reports",
+      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://oig.justice.gov/reports",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 62897,
+      "bodyHash": "0a17582f94671c29d29dbfb7c78a93db23f48acefc32016aa69a125d2949b060",
+      "changed": true,
+      "itemCount": 14,
       "error": ""
     },
     {
@@ -2915,13 +2931,13 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-07-26T09:15:04.670Z",
+      "checkedAt": "2026-07-26T10:44:50.393Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
       "bytes": 22804,
-      "bodyHash": "8bc9bc4d77f7790b2a9a83aaf4b9c5bd2a83c3814c761a365831ee9864a00d08",
+      "bodyHash": "36520eeacb30bc5cd04972fde568f6c9897cd84829d2fa34548f7ea4cefc018f",
       "changed": true,
       "itemCount": 1,
       "error": ""
@@ -2931,13 +2947,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-07-26T09:15:04.670Z",
+      "checkedAt": "2026-07-26T10:44:50.393Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43381,
-      "bodyHash": "6fccc0b3b6bde2dd10d9cd237bb634c34d37895a26d2d4364b59bdc3db02d171",
+      "bytes": 43380,
+      "bodyHash": "61ac245b1a17e00a1480379755347313f260a66af034bdd44709305a858af61a",
       "changed": true,
       "itemCount": 18,
       "error": ""
@@ -2947,13 +2963,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-07-26T09:15:04.670Z",
+      "checkedAt": "2026-07-26T10:44:50.393Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "e13a0d3cd3a15653fe04e05407902d9580d77f69b892de63f53a60b704d2172e",
+      "bodyHash": "8285eaeb9c19711c910be9f5e902796c43cad4061fece4c8e63edd1ee32f37bc",
       "changed": true,
       "itemCount": 15,
       "error": ""
@@ -3192,6 +3208,48 @@
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
   "sourceChanges": [
+    {
+      "id": "e853e2cce33f37c0619d2433",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-26T10:45:00.360Z",
+      "detectedAt": "2026-07-26T10:45:00.360Z",
+      "changeType": "content-changed",
+      "previousHash": "ac6586f0a7bf606e39ddb3576dea750b595706a59de447467f149885316c0bec",
+      "currentHash": "d8265d8812c53718b64f1aab1581bba2f4f7ca66bdd8d4cf862b1fc758907434",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sun, 26 Jul 2026 06:45:00 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-26T06:45:00-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "removals": [
+        "Latest Filings - Sun, 26 Jul 2026 05:15:15 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-26T05:15:15-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "145721767ca69c32bb4875e5",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -4651,48 +4709,6 @@
       ],
       "removals": [
         "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ1MDUiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
-      ],
-      "additionCount": 1,
-      "removalCount": 1,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
-    },
-    {
-      "id": "d652e1fa40dcd5dc95de9bb1",
-      "title": "content changed: USAspending.gov — Recent Contract Awards",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-21T07:44:16.592Z",
-      "detectedAt": "2026-07-21T07:44:16.592Z",
-      "changeType": "content-changed",
-      "previousHash": "6330cc14020272b6368be6022ad7137cb59274a2537dccafa45d028c006f3c64",
-      "currentHash": "f809258b500247dfea12ce229f0f321223a565e34ef714a20bbb70782e1c6ea7",
-      "httpStatus": 200,
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "additions": [
-        "\" ], \"page_metadata\": {}, \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"spending_level\": \"awards\" }"
-      ],
-      "removals": [
-        "\" ], \"page_metadata\": {}, \"results\": [], \"spending_level\": \"awards\" }"
       ],
       "additionCount": 1,
       "removalCount": 1,

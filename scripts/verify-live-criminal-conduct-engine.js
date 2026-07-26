@@ -21,7 +21,7 @@ async function fetchText(route) {
         'accept-language': 'en-GB,en;q=0.9',
         'cache-control': 'no-cache',
         pragma: 'no-cache',
-        'user-agent': 'Matrix-Criminal-Conduct-Engine-Verifier/1.0'
+        'user-agent': 'Matrix-Criminal-Conduct-Engine-Verifier/1.1'
       }
     });
     last = { route, url, status: response.status, ok: response.ok, text: await response.text() };
@@ -57,6 +57,9 @@ function pageCheck(response) {
       && text.includes('Association is not wrongdoing.')
       && text.includes('Rumors / Speculation')
       && text.includes('Acquittals / Dismissals / Reversals / Responses')
+      && text.includes('<!-- predators-in-power-conduct-link:start -->')
+      && text.includes('Open Predators in Power')
+      && text.includes('predators-in-power.html')
       && !text.includes('[object Object]')
   };
 }
@@ -103,7 +106,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     fs.writeFileSync(reportPath, `${JSON.stringify(result, null, 2)}\n`);
     if (result.ok) {
-      console.log(`Live Criminal Conduct & Allegations engine verified across ${result.verifiedRoutes} dossier routes on attempt ${attempt}.`);
+      console.log(`Live Criminal Conduct & Allegations engine and Predators in Power links verified across ${result.verifiedRoutes} dossier routes on attempt ${attempt}.`);
       process.exit(0);
     }
     console.log(`Live criminal conduct engine is not fully synchronized yet (${attempt}/${attempts}); ${result.failed?.length ?? 'unknown'} route(s) failing.`);

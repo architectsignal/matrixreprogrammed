@@ -30,9 +30,10 @@ async function request(route, init = {}) {
 
 async function verifyOnce() {
   const failures = [];
-  const [manifestResponse, healthResponse, paypalConfig, paypalIntent, paypalCreate, emailHealth, forumHealth, forumFeed] = await Promise.all([
+  const [manifestResponse, healthResponse, memberMe, paypalConfig, paypalIntent, paypalCreate, emailHealth, forumHealth, forumFeed] = await Promise.all([
     request('/deploy-manifest.json'),
     request('/deploy-health.json'),
+    request('/api/member/me'),
     request('/api/paypal/config'),
     request('/api/paypal/checkout-intent', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tier: 'supporter' }) }),
     request('/api/paypal/subscription/create', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ tier: 'supporter' }) }),
@@ -46,16 +47,31 @@ async function verifyOnce() {
   if (!manifestResponse.ok || manifest?.commitSha !== expectedSha) failures.push({ route: manifestResponse.route, status: manifestResponse.status, reason: 'manifest SHA mismatch' });
   if (!healthResponse.ok || health?.ok !== true || health?.buildSha !== expectedSha || health?.manifestSha !== expectedSha || health?.workerScript !== 'src/worker-production.js') failures.push({ route: healthResponse.route, status: healthResponse.status, reason: 'health SHA or strict Worker mismatch' });
 
+  const memberData = parse(memberMe.text);
+  const memberBoundaryPassed = memberMe.status === 401
+    && memberMe.headers['x-matrix-origin'] === 'cloudflare-worker-member-experience'
+    && memberData?.ok === false
+    && memberData?.authenticated === false;
+  if (!memberBoundaryPassed) failures.push({ route: memberMe.route, status: memberMe.status, reason: 'anonymous member boundary not fail-closed' });
+
+  const paypalChecks = [];
   for (const response of [paypalConfig, paypalIntent, paypalCreate]) {
     const data = parse(response.text);
-    if (response.status !== 401 || response.headers['x-matrix-origin'] !== 'cloudflare-worker-paypal-subscriptions' || data?.ok !== false || data?.authenticated !== false) failures.push({ route: response.route, status: response.status, reason: 'anonymous PayPal boundary not fail-closed' });
+    const passed = response.status === 401
+      && response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
+      && data?.ok === false
+      && data?.authenticated === false;
+    paypalChecks.push({ route: response.route, passed, status: response.status, origin: response.headers['x-matrix-origin'] || null });
+    if (!passed) failures.push({ route: response.route, status: response.status, reason: 'anonymous PayPal boundary not fail-closed' });
   }
 
   const wranglerLog = fs.existsSync(path.join(root, 'downloads', 'wrangler-deploy.log')) ? fs.readFileSync(path.join(root, 'downloads', 'wrangler-deploy.log'), 'utf8') : '';
   const wranglerConfig = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
   if (!/env\.EMAIL_AUTOMATION_ENABLED \("true"\)/.test(wranglerLog) || /env\.EMAIL_AUTOMATION_ENABLED \("false"\)/.test(wranglerLog)) failures.push({ route: 'wrangler-deploy.log', status: 0, reason: 'email automation was not deployed enabled' });
   if (!wranglerConfig.includes('5 6 * * *') || !wranglerConfig.includes('15 7 * * 1')) failures.push({ route: 'wrangler.toml', status: 0, reason: 'daily or weekly email schedule missing' });
-  if (![401, 403, 404].includes(emailHealth.status)) failures.push({ route: emailHealth.route, status: emailHealth.status, reason: 'email admin health is not protected' });
+  const emailData = parse(emailHealth.text);
+  const emailBoundaryPassed = [401, 403, 404].includes(emailHealth.status);
+  if (!emailBoundaryPassed) failures.push({ route: emailHealth.route, status: emailHealth.status, reason: 'email admin health is not protected' });
 
   const forumHealthData = parse(forumHealth.text);
   const forumFeedData = parse(forumFeed.text);
@@ -80,6 +96,7 @@ async function verifyOnce() {
 
   let anonymousWrite = null;
   let afterHealth = null;
+  let anonymousForumWriteRejected = false;
   if (healthReady && feedReady) {
     anonymousWrite = await request('/submit-main-post', {
       method: 'POST',
@@ -92,26 +109,50 @@ async function verifyOnce() {
       })
     });
     const submission = parse(anonymousWrite.text);
-    const rejected = anonymousWrite.status === 401
+    anonymousForumWriteRejected = anonymousWrite.status === 401
       && anonymousWrite.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
       && submission?.ok === false
       && submission?.authenticated === false
       && submission?.saved === false
       && submission?.persistent === true;
-    if (!rejected) failures.push({ route: anonymousWrite.route, status: anonymousWrite.status, reason: 'anonymous forum write was not rejected' });
+    if (!anonymousForumWriteRejected) failures.push({ route: anonymousWrite.route, status: anonymousWrite.status, reason: 'anonymous forum write was not rejected' });
     afterHealth = await request('/forum-health');
     const afterData = parse(afterHealth.text);
     if (!afterHealth.ok || Number(afterData?.storedPostCount) !== storedPostCount) failures.push({ route: afterHealth.route, status: afterHealth.status, reason: 'anonymous verifier changed D1 forum count' });
   }
 
-  const responses = [manifestResponse, healthResponse, paypalConfig, paypalIntent, paypalCreate, emailHealth, forumHealth, forumFeed, anonymousWrite, afterHealth].filter(Boolean);
+  const responses = [manifestResponse, healthResponse, memberMe, paypalConfig, paypalIntent, paypalCreate, emailHealth, forumHealth, forumFeed, anonymousWrite, afterHealth].filter(Boolean);
   return {
     ok: failures.length === 0,
     checkedAt: new Date().toISOString(),
     expectedSha,
-    storedPostCount: Number.isFinite(storedPostCount) ? storedPostCount : null,
+    memberBoundary: {
+      passed: memberBoundaryPassed,
+      status: memberMe.status,
+      origin: memberMe.headers['x-matrix-origin'] || null,
+      authenticated: memberData?.authenticated ?? null
+    },
+    emailBoundary: {
+      passed: emailBoundaryPassed,
+      status: emailHealth.status,
+      origin: emailHealth.headers['x-matrix-origin'] || null,
+      data: emailData
+    },
+    paypalBoundary: {
+      ok: paypalChecks.every(item => item.passed),
+      checks: paypalChecks,
+      anonymousChargePossible: false,
+      config: { status: paypalConfig.status, origin: paypalConfig.headers['x-matrix-origin'] || null },
+      checkout: { status: paypalIntent.status, origin: paypalIntent.headers['x-matrix-origin'] || null },
+      subscriptionCreate: { status: paypalCreate.status, origin: paypalCreate.headers['x-matrix-origin'] || null }
+    },
+    forumPersistence: {
+      ok: healthReady && feedReady && anonymousForumWriteRejected && afterHealth?.ok === true,
+      storedPostCount: Number.isFinite(storedPostCount) ? storedPostCount : null,
+      authoritativeStorage: forumFeedData?.authoritativeStorage || forumHealthData?.authoritativeStorage || null,
+      anonymousWriteRejected: anonymousForumWriteRejected
+    },
     anonymousChargePossible: false,
-    anonymousForumWriteRejected: failures.every(item => item.route !== '/submit-main-post'),
     statuses: Object.fromEntries(responses.map(item => [item.route, item.status])),
     cfRays: responses.map(item => item.headers['cf-ray']).filter(Boolean),
     failures
@@ -127,7 +168,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     fs.writeFileSync(reportPath, `${JSON.stringify(result, null, 2)}\n`);
     if (result.ok) {
-      console.log(`Compact protected-boundary proof passed at ${expectedSha.slice(0, 12)}: PayPal anonymous access denied, email automation enabled/protected and D1 forum read/write boundary verified.`);
+      console.log(`Compact protected-boundary proof passed at ${expectedSha.slice(0, 12)}: member and PayPal anonymous access denied, email automation protected and D1 forum read/write boundary verified.`);
       process.exit(0);
     }
     console.log(`Compact protected-boundary proof not synchronized (${attempt}/${attempts}); ${result.failures?.length ?? 'unknown'} check(s) failing.`);

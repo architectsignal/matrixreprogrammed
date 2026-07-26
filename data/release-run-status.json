@@ -1,15 +1,15 @@
 {
   "ok": false,
-  "observedAt": "2026-07-26T07:32:50.818Z",
+  "observedAt": "2026-07-26T09:04:33.570Z",
   "production": {
-    "conclusion": "failure",
-    "createdAt": "2026-07-26T04:19:11Z",
-    "databaseId": 30187589428,
+    "conclusion": "",
+    "createdAt": "2026-07-26T09:03:59Z",
+    "databaseId": 30195773312,
     "event": "workflow_dispatch",
-    "headSha": "eea9d697fbc48fa53780518ad41cd59fd445cd0b",
-    "status": "completed",
-    "updatedAt": "2026-07-26T04:20:28Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30187589428"
+    "headSha": "b9ec8deb6081437e3663c18662801be4da551418",
+    "status": "in_progress",
+    "updatedAt": "2026-07-26T09:04:03Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195773312"
   },
   "moneyIntelligence": {
     "conclusion": "success",
@@ -43,13 +43,13 @@
   },
   "epsteinAiDetective": {
     "conclusion": "success",
-    "createdAt": "2026-07-26T04:18:35Z",
-    "databaseId": 30187574788,
+    "createdAt": "2026-07-26T09:03:20Z",
+    "databaseId": 30195753586,
     "event": "schedule",
-    "headSha": "e80252081abea7c1ebda9e4c707d65b34e82a21e",
+    "headSha": "f5c07dd537352a8d1a22ad41885ff586e4ad771a",
     "status": "completed",
-    "updatedAt": "2026-07-26T04:19:15Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30187574788"
+    "updatedAt": "2026-07-26T09:04:02Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195753586"
   },
   "cardArtwork": {
     "conclusion": "failure",
@@ -74,13 +74,93 @@
   "recent": {
     "production": [
       {
+        "conclusion": "",
+        "createdAt": "2026-07-26T09:03:59Z",
+        "databaseId": 30195773312,
+        "event": "workflow_dispatch",
+        "headSha": "b9ec8deb6081437e3663c18662801be4da551418",
+        "status": "in_progress",
+        "updatedAt": "2026-07-26T09:04:03Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195773312"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T09:02:03Z",
+        "databaseId": 30195711164,
+        "event": "workflow_dispatch",
+        "headSha": "c07eed43736c661ace34e805f76a24cda45394d2",
+        "status": "completed",
+        "updatedAt": "2026-07-26T09:03:21Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195711164"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T08:40:30Z",
+        "databaseId": 30195047504,
+        "event": "workflow_dispatch",
+        "headSha": "dde24a4795f186083e34c4493ca1b34d3266de28",
+        "status": "completed",
+        "updatedAt": "2026-07-26T08:42:18Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195047504"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T08:39:32Z",
+        "databaseId": 30195017553,
+        "event": "workflow_dispatch",
+        "headSha": "72b6b82061412b0e05a6fe3d7d8ec06a90e26848",
+        "status": "completed",
+        "updatedAt": "2026-07-26T08:41:00Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195017553"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T08:25:53Z",
+        "databaseId": 30194609841,
+        "event": "workflow_dispatch",
+        "headSha": "807f740eed3f5500ecbb2371b76fd67b16d495f0",
+        "status": "completed",
+        "updatedAt": "2026-07-26T08:27:26Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30194609841"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T08:20:10Z",
+        "databaseId": 30194436966,
+        "event": "workflow_dispatch",
+        "headSha": "5d23ace35679004bdd81c3468c7a0fdc44a63660",
+        "status": "completed",
+        "updatedAt": "2026-07-26T08:26:10Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30194436966"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T08:17:01Z",
+        "databaseId": 30194340706,
+        "event": "workflow_dispatch",
+        "headSha": "5d23ace35679004bdd81c3468c7a0fdc44a63660",
+        "status": "completed",
+        "updatedAt": "2026-07-26T08:24:58Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30194340706"
+      },
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-07-26T07:49:57Z",
+        "databaseId": 30193499650,
+        "event": "workflow_dispatch",
+        "headSha": "590da34b2e98bf126117d09b67158ee653ad4bb1",
+        "status": "completed",
+        "updatedAt": "2026-07-26T07:51:14Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30193499650"
+      },
+      {
         "conclusion": "failure",
         "createdAt": "2026-07-26T04:19:11Z",
         "databaseId": 30187589428,
         "event": "workflow_dispatch",
         "headSha": "eea9d697fbc48fa53780518ad41cd59fd445cd0b",
         "status": "completed",
-        "updatedAt": "2026-07-26T04:20:28Z",
+        "updatedAt": "2026-07-26T08:58:25Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30187589428"
       },
       {
@@ -112,86 +192,6 @@
         "status": "completed",
         "updatedAt": "2026-07-25T20:02:12Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30172740099"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T19:36:28Z",
-        "databaseId": 30171941290,
-        "event": "workflow_dispatch",
-        "headSha": "43c9e45d1ee77d8ed26f23a43a1c03b9748cd71b",
-        "status": "completed",
-        "updatedAt": "2026-07-25T19:37:45Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30171941290"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T19:34:49Z",
-        "databaseId": 30171884824,
-        "event": "workflow_dispatch",
-        "headSha": "843dd808a6266fec1f4ea041bafb9870602b6a1e",
-        "status": "completed",
-        "updatedAt": "2026-07-25T19:36:18Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30171884824"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T14:20:59Z",
-        "databaseId": 30161462181,
-        "event": "workflow_dispatch",
-        "headSha": "862b9326c73b7fab768fe81d4622a84dfee6e5a2",
-        "status": "completed",
-        "updatedAt": "2026-07-25T18:19:25Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30161462181"
-      },
-      {
-        "conclusion": "cancelled",
-        "createdAt": "2026-07-25T14:04:16Z",
-        "databaseId": 30160929629,
-        "event": "workflow_dispatch",
-        "headSha": "bde0737c8173a3cbd1a65f7d0dc159f0bed10b50",
-        "status": "completed",
-        "updatedAt": "2026-07-25T14:21:01Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30160929629"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T14:01:39Z",
-        "databaseId": 30160846363,
-        "event": "workflow_dispatch",
-        "headSha": "532a1494456ebae93253533b5f59f527eb89c2d9",
-        "status": "completed",
-        "updatedAt": "2026-07-25T14:28:57Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30160846363"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T11:49:01Z",
-        "databaseId": 30156879018,
-        "event": "workflow_dispatch",
-        "headSha": "cda9ad377a3385bae8e85162e106d59938b0287e",
-        "status": "completed",
-        "updatedAt": "2026-07-25T12:20:33Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30156879018"
-      },
-      {
-        "conclusion": "cancelled",
-        "createdAt": "2026-07-25T11:46:52Z",
-        "databaseId": 30156818046,
-        "event": "workflow_dispatch",
-        "headSha": "80b49b9a184e8eb94f1ab37cc7e52f55f61bac73",
-        "status": "completed",
-        "updatedAt": "2026-07-25T14:04:18Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30156818046"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T11:42:30Z",
-        "databaseId": 30156692342,
-        "event": "workflow_dispatch",
-        "headSha": "89334373646772aefd0e5a9bfaf9390da39c0c14",
-        "status": "completed",
-        "updatedAt": "2026-07-25T11:43:50Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30156692342"
       }
     ],
     "moneyIntelligence": [
@@ -413,6 +413,16 @@
     "epsteinAiDetective": [
       {
         "conclusion": "success",
+        "createdAt": "2026-07-26T09:03:20Z",
+        "databaseId": 30195753586,
+        "event": "schedule",
+        "headSha": "f5c07dd537352a8d1a22ad41885ff586e4ad771a",
+        "status": "completed",
+        "updatedAt": "2026-07-26T09:04:02Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30195753586"
+      },
+      {
+        "conclusion": "success",
         "createdAt": "2026-07-26T04:18:35Z",
         "databaseId": 30187574788,
         "event": "schedule",
@@ -520,16 +530,6 @@
         "status": "completed",
         "updatedAt": "2026-07-23T20:02:44Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30040419495"
-      },
-      {
-        "conclusion": "success",
-        "createdAt": "2026-07-23T14:54:34Z",
-        "databaseId": 30018028560,
-        "event": "schedule",
-        "headSha": "3d336da5a61f57bc5fd1b18c080bcc6d6d314058",
-        "status": "completed",
-        "updatedAt": "2026-07-23T14:55:11Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30018028560"
       }
     ],
     "cardArtwork": [

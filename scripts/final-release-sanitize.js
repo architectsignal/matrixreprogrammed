@@ -63,7 +63,7 @@ for (const relative of [
 run('scripts/sanitize-machine-entity-outputs.js');
 run('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 run('scripts/compact-cloudflare-search-index.js');
-run('scripts/patch-power-dossier-runtime.js');
+run('scripts/run-power-dossier-runtime-compatible.js');
 run('scripts/repair-empty-public-controls.js');
 run('scripts/repair-empty-public-controls.js', ['--output']);
 run('scripts/repair-public-runtime-controls.js');

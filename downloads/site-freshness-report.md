@@ -11,7 +11,7 @@ Medium priority pages: 1696
 Pages with missing rules: 724
 Auto-update eligible figures: 2
 Manual-review figures: 102
-Missing-rule figures: 1544
+Missing-rule figures: 1545
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -32,10 +32,10 @@ Missing-rule figures: 1544
 - _site/live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
+- entity-registry.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/entity-registry.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
-- entity-registry.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/source-changes.html: 40 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - source-changes.html: 40 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-intelligence-network.html: 5 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
@@ -64,10 +64,10 @@ Missing-rule figures: 1544
 - _site/live-intel.html: 8 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
+- entity-registry.html: 7 figure(s) need source rules.
 - _site/daily-brain-brief.html: 6 figure(s) need source rules.
 - _site/entity-registry.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
-- entity-registry.html: 6 figure(s) need source rules.
 - _site/source-changes.html: 4 figure(s) need source rules.
 - source-changes.html: 4 figure(s) need source rules.
 - _site/dossier-pack-intelligence-network.html: 4 figure(s) need source rules.

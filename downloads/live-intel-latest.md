@@ -1,7 +1,7 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-27T10:08:54.365Z
-Latest source publication: 2026-07-27T00:13:58.000Z
+Collection completed: 2026-07-27T15:14:06.590Z
+Latest source publication: 2026-07-27T12:00:00.000Z
 Collection status: fresh-items-added
 New items this collection: 1
 
@@ -26,6 +26,12 @@ New items this collection: 1
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-27 — Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168029
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-27 — Group in Congress pushing for more Epstein transparency - American Press
   - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
   - Source class: primary-or-official

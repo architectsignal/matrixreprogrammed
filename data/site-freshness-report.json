@@ -11,7 +11,7 @@
   "pagesWithMissingRules": 724,
   "autoUpdateEligibleFigures": 2,
   "manualReviewFigures": 102,
-  "missingRuleFigures": 1544,
+  "missingRuleFigures": 1545,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -2779,6 +2779,96 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
+      "file": "entity-registry.html",
+      "priority": "High",
+      "figureCount": 7,
+      "missingRuleCount": 7,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "$2,000",
+          "context": "oordinated action. Contract Contract machine-classified-unreviewed All contributions over $2,000 Roles: contract-or-award-record Evidence references U.S. Federal Election Commission — Campaign Finance Data",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€4",
+          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
+        },
+        {
+          "value": "2026",
+          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "al Register — Latest Documents · Grade A · established-wrongdoing SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: The finding applies only to the co"
+        },
+        {
+          "value": "2026",
+          "context": "ces Federal Register — Latest Documents · Grade B · record-update SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
+        },
+        {
+          "value": "2026",
+          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: This update alone does not establi"
+        },
+        {
+          "value": "2026",
+          "context": "ces Federal Register — Latest Documents · Grade B · record-update SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
       "file": "_site/daily-brain-brief.html",
       "priority": "High",
       "figureCount": 6,
@@ -3014,89 +3104,6 @@
         {
           "value": "2026",
           "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-27 08:50:51.415Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "entity-registry.html",
-      "priority": "High",
-      "figureCount": 6,
-      "missingRuleCount": 6,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$2,000",
-          "context": "oordinated action. Contract Contract machine-classified-unreviewed All contributions over $2,000 Roles: contract-or-award-record Evidence references U.S. Federal Election Commission — Campaign Finance Data",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€4",
-          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€4",
-          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€4",
-          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€4",
-          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€4",
-          "context": "ract Contract machine-classified-unreviewed Romania: EPPO conducts searches in probe into €4 million hospital procurement fraud Roles: contract-or-award-record Evidence references European Public Prosec",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
-        },
-        {
-          "value": "2026",
-          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
-        },
-        {
-          "value": "2026",
-          "context": "al Register — Latest Documents · Grade A · established-wrongdoing SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: The finding applies only to the co"
-        },
-        {
-          "value": "2026",
-          "context": "ces Federal Register — Latest Documents · Grade B · record-update SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
-        },
-        {
-          "value": "2026",
-          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: This update alone does not establi"
-        },
-        {
-          "value": "2026",
-          "context": "ces Federal Register — Latest Documents · Grade B · record-update SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
         }
       ],
       "needsSourceRule": true,
@@ -22990,15 +22997,19 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-27T10:08:54.365Z &gt; Latest source publication: 2026-07-27T00:13:58.000Z &gt; State: 1 new item this coll"
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-27T15:14:06.590Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 1 new item this coll"
         },
         {
           "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-07-27T10:08:54.365Z &gt; Latest source publication: 2026-07-27T00:13:58.000Z &gt; State: 1 new item this collection &gt; Current items: 43 &gt; Successful feeds: 7 /"
+          "context": "TATUS &gt; Collection completed: 2026-07-27T15:14:06.590Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 1 new item this collection &gt; Current items: 44 &gt; Successful feeds: 1 /"
         },
         {
           "value": "2026",
-          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-27 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source Security Council LIVE: Briefin"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-27 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
         },
         {
           "value": "2026",
@@ -23007,10 +23018,6 @@
         {
           "value": "2026",
           "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-26 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-26 · War Machine And Intelligence State · UN News Primary / official source After war took her leg, this U"
         }
       ],
       "needsSourceRule": true,
@@ -37972,15 +37979,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T10:08:59.829Z &gt; source window: 2026-07-27T10:08:54.365Z &gt; current leads: 12 &gt; latest publicati"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T15:14:11.863Z &gt; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T10:08:59.829Z &gt; source window: 2026-07-27T10:08:54.365Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundar"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T15:14:11.863Z &gt; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "; source window: 2026-07-27T10:08:54.365Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
@@ -42910,11 +42917,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-27T10:08:29.535Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-27T15:12:39.332Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-27T10:08:29.535Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-27T15:12:39.332Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -69810,7 +69817,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -69846,7 +69853,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -69882,7 +69889,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -69918,7 +69925,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -69942,7 +69949,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -69962,7 +69969,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -69982,7 +69989,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70002,7 +70009,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70022,7 +70029,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70042,7 +70049,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70062,7 +70069,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -70090,7 +70097,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70110,7 +70117,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70130,7 +70137,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70150,7 +70157,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70170,7 +70177,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -70198,7 +70205,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70218,7 +70225,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -70242,7 +70249,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70262,7 +70269,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -70290,7 +70297,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70310,7 +70317,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -70334,7 +70341,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70354,7 +70361,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70374,7 +70381,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70394,7 +70401,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70414,7 +70421,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70434,7 +70441,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70454,7 +70461,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -70478,7 +70485,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -70502,7 +70509,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70522,7 +70529,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -70546,7 +70553,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -70570,7 +70577,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T10:08:44.368Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70590,7 +70597,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-27T10:08:44.368Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
+          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-27T15:12:53.150Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
         },
         {
           "value": "2021",
@@ -70630,7 +70637,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-27T10:08:44.419Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-27T15:12:53.200Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         },
         {
           "value": "2021",
@@ -72718,7 +72725,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-27T10:08:44.335Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
+          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-27T15:12:53.113Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
         },
         {
           "value": "2023",
@@ -75349,7 +75356,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-27T10:08:44.469Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-27T15:12:53.255Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         }
       ],
       "needsSourceRule": false,

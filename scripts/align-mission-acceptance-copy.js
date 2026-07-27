@@ -101,7 +101,9 @@ runRequired('scripts/disable-production-kv-traffic.js');
 runRequired('scripts/sanitize-machine-entity-outputs.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 if (fs.existsSync(path.join(root, '_site', 'search-index.json'))) runRequired('scripts/compact-cloudflare-search-index.js');
+runRequired('scripts/build-current-office-holder-intelligence.js');
 runRequired('scripts/run-power-dossier-runtime-compatible.js');
+runRequired('scripts/current-office-holder-intelligence-test.js');
 runRequired('scripts/repair-empty-public-controls.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
 runRequired('scripts/repair-public-runtime-controls.js');
@@ -120,4 +122,4 @@ runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, current office-holder intelligence, universal criminal coverage, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);

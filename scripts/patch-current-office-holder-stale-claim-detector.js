@@ -2,10 +2,23 @@
 
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const target = path.join(root, 'scripts', 'build-current-office-holder-intelligence.js');
 if (!fs.existsSync(target)) throw new Error('Missing build-current-office-holder-intelligence.js');
+
+function assertSyntax() {
+  const result = spawnSync(process.execPath, ['--check', target], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 1024 * 1024 * 10
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error('Patched current office-holder intelligence builder failed syntax validation');
+}
 
 const before = fs.readFileSync(target, 'utf8');
 const oldBlock = `for (const base of [root, site]) {
@@ -83,12 +96,19 @@ for (const base of [root, site]) {
 
 if (!before.includes(oldBlock)) {
   if (before.includes('function explicitStaleCurrentClaim(source, holder, alias)')) {
-    console.log('Current office-holder stale-claim detector already uses explicit assertions.');
+    assertSyntax();
+    console.log('Current office-holder stale-claim detector already uses explicit assertions and passes syntax validation.');
     process.exit(0);
   }
   throw new Error('Stale-claim detector replacement anchor not found');
 }
 
-const after = before.replace(oldBlock, newBlock);
+const after = before.replace(oldBlock, () => newBlock);
 fs.writeFileSync(target, after);
-console.log('Current office-holder stale-claim detector narrowed to explicit present-tense office assertions with historical and self-feed exclusions.');
+try {
+  assertSyntax();
+} catch (error) {
+  fs.writeFileSync(target, before);
+  throw error;
+}
+console.log('Current office-holder stale-claim detector narrowed to explicit present-tense office assertions with historical and self-feed exclusions; patched builder syntax validated.');

@@ -101,7 +101,7 @@ runRequired('scripts/disable-production-kv-traffic.js');
 runRequired('scripts/sanitize-machine-entity-outputs.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 if (fs.existsSync(path.join(root, '_site', 'search-index.json'))) runRequired('scripts/compact-cloudflare-search-index.js');
-runRequired('scripts/patch-power-dossier-runtime.js');
+runRequired('scripts/run-power-dossier-runtime-compatible.js');
 runRequired('scripts/repair-empty-public-controls.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
 runRequired('scripts/repair-public-runtime-controls.js');

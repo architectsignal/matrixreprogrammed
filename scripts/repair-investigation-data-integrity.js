@@ -133,7 +133,9 @@ function missionFields(item) {
 }
 
 function completeness(item) {
-  return ['title','itemUrl','sourceUrl','evidenceGrade','status','evidenceBoundary','mechanism','whatWasFound','whyItMatters','howItFits','whatItPointsToward','whatItDoesNotProve'].reduce((score, key) => score + (clean(item[key], 1600) ? 1 : 0) + Math.min(3, array(item.nextRecords).length) + Math.min(2, array(item.sourceRoutes).length);
+  const fieldScore = ['title','itemUrl','sourceUrl','evidenceGrade','status','evidenceBoundary','mechanism','whatWasFound','whyItMatters','howItFits','whatItPointsToward','whatItDoesNotProve']
+    .reduce((score, key) => score + (clean(item[key], 1600) ? 1 : 0), 0);
+  return fieldScore + Math.min(3, array(item.nextRecords).length) + Math.min(2, array(item.sourceRoutes).length);
 }
 function normaliseFinding(raw, index) {
   const item = { ...raw };

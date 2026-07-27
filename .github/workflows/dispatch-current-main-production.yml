@@ -1,0 +1,169 @@
+name: Dispatch Current Main Production
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/dispatch-current-main-production.yml
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: dispatch-current-main-production
+  cancel-in-progress: false
+
+jobs:
+  dispatch-production:
+    name: Dispatch controlled production from current main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Locate and dispatch the guarded production workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TARGET_REF: main
+          CONFIRMATION_TEXT: DEPLOY MATRIX REPROGRAMMED
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t workflows < <(
+            gh api --paginate "repos/${REPOSITORY}/actions/workflows?per_page=100" \
+              --jq '.workflows[] | select(.state == "active") | [.id, .path, .name] | @tsv'
+          )
+
+          selected_id=""
+          selected_path=""
+          selected_yaml=""
+
+          for row in "${workflows[@]}"; do
+            IFS=$'\t' read -r workflow_id workflow_path workflow_name <<<"${row}"
+            [[ "${workflow_path}" == ".github/workflows/dispatch-current-main-production.yml" ]] && continue
+
+            encoded="$(gh api "repos/${REPOSITORY}/contents/${workflow_path}?ref=${TARGET_REF}" --jq '.content' 2>/dev/null || true)"
+            [[ -z "${encoded}" ]] && continue
+            yaml="$(printf '%s' "${encoded}" | tr -d '\n' | base64 --decode)"
+
+            if grep -Fq 'Refresh, build, deploy and prove independent Pyramid' <<<"${yaml}" \
+              && grep -Fq 'workflow_dispatch:' <<<"${yaml}"; then
+              selected_id="${workflow_id}"
+              selected_path="${workflow_path}"
+              selected_yaml="${yaml}"
+              break
+            fi
+          done
+
+          if [[ -z "${selected_id}" ]]; then
+            echo 'Production workflow could not be located by its guarded job name.' >&2
+            exit 1
+          fi
+
+          export SELECTED_YAML="${selected_yaml}"
+          inputs_json="$(python - <<'PY'
+import json
+import os
+import re
+
+text = os.environ['SELECTED_YAML']
+confirmation = os.environ['CONFIRMATION_TEXT']
+lines = text.splitlines()
+
+workflow_dispatch_indent = None
+inputs_indent = None
+input_defs = {}
+current = None
+
+for line in lines:
+    if not line.strip() or line.lstrip().startswith('#'):
+        continue
+    indent = len(line) - len(line.lstrip(' '))
+    stripped = line.strip()
+
+    if stripped == 'workflow_dispatch:':
+        workflow_dispatch_indent = indent
+        inputs_indent = None
+        current = None
+        continue
+
+    if workflow_dispatch_indent is None:
+        continue
+
+    if indent <= workflow_dispatch_indent and stripped != 'workflow_dispatch:':
+        workflow_dispatch_indent = None
+        inputs_indent = None
+        current = None
+        continue
+
+    if stripped == 'inputs:':
+        inputs_indent = indent
+        continue
+
+    if inputs_indent is None:
+        continue
+
+    key_match = re.match(r'^([A-Za-z0-9_-]+):\s*$', stripped)
+    if key_match and indent > inputs_indent:
+        current = key_match.group(1)
+        input_defs[current] = {'indent': indent, 'description': '', 'required': False, 'default': None, 'type': 'string'}
+        continue
+
+    if current is None:
+        continue
+
+    definition = input_defs[current]
+    if indent <= definition['indent']:
+        current = None
+        continue
+
+    field = re.match(r'^(description|required|default|type):\s*(.*)$', stripped)
+    if not field:
+        continue
+    name, value = field.groups()
+    value = value.strip().strip('"\'')
+    if name == 'required':
+        definition[name] = value.lower() == 'true'
+    else:
+        definition[name] = value
+
+inputs = {}
+for key, definition in input_defs.items():
+    haystack = f"{key} {definition.get('description', '')}".lower()
+    if 'confirm' in haystack or ('deploy' in haystack and definition.get('type') != 'boolean'):
+        inputs[key] = confirmation
+        continue
+    if definition.get('default') not in (None, ''):
+        continue
+    if not definition.get('required'):
+        continue
+    input_type = definition.get('type', 'string').lower()
+    if input_type == 'boolean':
+        inputs[key] = 'true'
+    elif 'environment' in haystack:
+        inputs[key] = 'production'
+    elif 'ref' in haystack or 'branch' in haystack:
+        inputs[key] = 'main'
+    else:
+        raise SystemExit(f"Required production input cannot be inferred safely: {key}")
+
+print(json.dumps(inputs, separators=(',', ':')))
+PY
+          )"
+
+          jq -n \
+            --arg ref "${TARGET_REF}" \
+            --argjson inputs "${inputs_json}" \
+            '{ref: $ref, inputs: $inputs}' > dispatch.json
+
+          echo "Dispatching ${selected_path} from ${TARGET_REF}."
+          echo "Resolved inputs: $(jq -c '(.inputs // {}) | with_entries(.value = if (.key | test("confirm|token|secret|password"; "i")) then "[REDACTED]" else .value end)' dispatch.json)"
+
+          gh api \
+            --method POST \
+            "repos/${REPOSITORY}/actions/workflows/${selected_id}/dispatches" \
+            --input dispatch.json
+
+          echo "Controlled production workflow dispatch accepted for ${TARGET_REF}."

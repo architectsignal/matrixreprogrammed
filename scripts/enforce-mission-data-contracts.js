@@ -1,5 +1,9 @@
 'use strict';
 
+// Normalize daily source state and the active investigation ledger before any
+// relationship, clock or conclusion product is allowed to consume them.
+require('./repair-investigation-data-integrity.js');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -129,12 +133,16 @@ if (exists('data/clock-wall.json')) {
   writeJson('data/clock-wall.json', wall);
 }
 
+const repair = readJson('downloads/investigation-data-integrity-repair.json', {});
 const report = {
-  ok: true,
+  ok: repair.ok !== false,
   generatedAt: new Date().toISOString(),
+  investigationData: repair,
   relationshipGraph: { edges: graphEdges, fieldsAddedOrRepaired: graphChanged, boundary: relationshipBoundary },
   clocks: { count: clockCount, fieldsAddedOrRepaired: clockChanged, withoutDirectEvidence: clocksWithoutDirectEvidence, noMovementRule: 'A clock without direct dated evidence must explicitly show no qualifying movement and cannot gain a score increase.' },
   rules: [
+    'Every attempted daily source has a durable last-attempt state.',
+    'The active investigation ledger is unique, bounded and evidence-complete; overflow and invalid-provenance records remain archived.',
     'Every relationship edge states what it records and what it does not prove.',
     'Every clock explains movement, mission meaning, counterpoint and claim boundary.',
     'Missing provenance or missing current evidence is exposed rather than silently filled with an accusation.'
@@ -142,4 +150,5 @@ const report = {
 };
 writeJson('data/mission-data-contract-report.json', report);
 writeJson('downloads/mission-data-contract-report.json', report);
-console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked.`);
+if (!report.ok) throw new Error('Mission data contracts failed because investigation data integrity repair did not complete.');
+console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked; ${repair.ledger?.active || 0} active findings normalized.`);

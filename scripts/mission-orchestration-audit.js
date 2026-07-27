@@ -10,11 +10,17 @@ const read = value => exists(value) ? fs.readFileSync(at(value), 'utf8') : '';
 const readJson = (value, fallback = {}) => { try { return JSON.parse(read(value)); } catch { return fallback; } };
 const clean = (value, max = 3000) => String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 const array = value => Array.isArray(value) ? value : [];
+const validHttp = value => { try { const url = new URL(String(value || '')); return ['http:','https:'].includes(url.protocol); } catch { return false; } };
 
 const standard = readJson('data/mission-orchestration-standard.json', {});
 const watch = readJson('data/daily-watch.json', {});
 const graph = readJson('data/evidence-weighted-relationship-graph.json', { edges: [] });
 const wall = readJson('data/clock-wall.json', { clocks: [] });
+const ledger = readJson('data/investigation-ledger.json', { findings: [] });
+const archive = readJson('data/investigation-ledger-archive.json', { findings: [] });
+const state = readJson('data/investigation-source-state.json', { sources: {} });
+const pull = readJson('data/investigation-source-pulls/daily-latest.json', { results: [] });
+const repair = readJson('downloads/investigation-data-integrity-repair.json', {});
 const publication = readJson('downloads/daily-watch-publication-report.json', {});
 const checks = [];
 const add = (id, ok, detail, fix = '') => checks.push({ id, ok: Boolean(ok), detail, fix });
@@ -22,9 +28,27 @@ const add = (id, ok, detail, fix = '') => checks.push({ id, ok: Boolean(ok), det
 add('authoritative-standard', standard.status === 'authoritative-build-contract', `Standard status: ${standard.status || 'missing'}.`, 'Restore data/mission-orchestration-standard.json and keep it in the authoritative build path.');
 add('required-pipeline', array(standard.requiredPipeline).length >= 10, `${array(standard.requiredPipeline).length} orchestration stages declared.`, 'Require capture, verification, contradiction search, conclusion, propagation, review and versioning.');
 add('required-conclusion-fields', array(standard.requiredConclusionFields).length >= 12, `${array(standard.requiredConclusionFields).length} conclusion fields declared.`, 'Restore the complete plain-language conclusion contract.');
-add('daily-watch-data', watch.ok && watch.person && watch.institution && watch.family, `Daily watch ${watch.ok ? 'exists' : 'is missing or failed'}.`, 'Run scripts/build-daily-watch.js.');
+add('data-integrity-repair', repair.ok === true, `Repair status: ${repair.ok === true ? 'ready' : 'missing or failed'}; active findings: ${repair.ledger?.active || 0}.`, 'Run scripts/repair-investigation-data-integrity.js before conclusions are generated.');
 
+const pullIds = array(pull.results).map(item => item.sourceId).filter(Boolean);
+const missingAttempts = pullIds.filter(id => !state.sources?.[id]?.lastAttempt);
+add('source-attempt-state', missingAttempts.length === 0, `${pullIds.length} attempted source(s); ${missingAttempts.length} missing durable lastAttempt state.`, 'Record lastAttempt for every selected source, including failed fetches.');
+
+const findings = array(ledger.findings);
+const ids = findings.map(item => item.id);
 const required = array(standard.requiredConclusionFields);
+const badFindings = findings.filter(item => {
+  const missionMissing = required.filter(field => {
+    const value = item[field];
+    return Array.isArray(value) ? value.length === 0 : !clean(value, 5000);
+  });
+  return !item.id || !item.title || !validHttp(item.itemUrl || item.sourceUrl) || !item.evidenceGrade || !item.status || !clean(item.evidenceBoundary, 1200) || !clean(item.mechanism, 1600) || array(item.nextRecords).length < 2 || missionMissing.length > 0;
+});
+add('active-ledger-bounded', findings.length > 0 && findings.length <= Number(ledger.activeLimit || 2500) && new Set(ids).size === ids.length, `${findings.length} active finding(s); limit ${ledger.activeLimit || 2500}; duplicate IDs ${ids.length - new Set(ids).size}.`, 'Deduplicate and cap the active ledger while preserving overflow in the archive.');
+add('active-ledger-mission-fields', badFindings.length === 0, `${findings.length} active finding(s) checked; ${badFindings.length} lack provenance, legal/evidence status, mechanism, limitation or full user-friendly conclusion fields.`, 'Run scripts/repair-investigation-data-integrity.js and block publication until every active finding satisfies the full conclusion contract.');
+add('ledger-archive-preserved', exists('data/investigation-ledger-archive.json') && array(archive.findings).length >= 0 && clean(archive.boundary, 1000), `${array(archive.findings).length} archived finding(s) preserved with an archive boundary.`, 'Preserve duplicate, overflow and invalid-provenance records in the historical archive rather than deleting them.');
+
+add('daily-watch-data', watch.ok && watch.person && watch.institution && watch.family, `Daily watch ${watch.ok ? 'exists' : 'is missing or failed'}.`, 'Run scripts/build-daily-watch.js.');
 for (const slot of ['person','institution','family']) {
   const item = watch[slot] || {};
   const missing = required.filter(field => {
@@ -51,10 +75,9 @@ const clocks = array(wall.clocks);
 const badClocks = clocks.filter(clock => !clean(clock.lastMovement, 1000) || !clean(clock.controlSystemMeaning, 1400) || !clean(clock.boundary || clock.evidenceBoundary || clock.claimBoundary, 900) || (!array(clock.evidenceInputs).length && !(clean(clock.noMovementReason, 900) && clock.scoreChanged === false)));
 add('clock-meaning-contracts', clocks.length > 0 && badClocks.length === 0, `${clocks.length} clocks checked; ${badClocks.length} lack evidence inputs or an explicit no-movement state, mission meaning or boundary.`, 'Run scripts/enforce-mission-data-contracts.js after the clock wall is generated.');
 
-const sensitiveText = ['person','institution','family'].map(slot => JSON.stringify(watch[slot] || {})).join(' ').toLowerCase();
-const mentionsChildCrime = /child sexual|child abuse|child exploitation|child trafficking|minor offence|minor offense/.test(sensitiveText);
-const safeguardingComplete = !mentionsChildCrime || (/legal status|convict|charg|court|official/.test(sensitiveText) && /does not prove|not prove/.test(sensitiveText));
-add('sensitive-claim-safeguard', safeguardingComplete, mentionsChildCrime ? 'Child-crime language is present and was checked for legal-status and limitation wording.' : 'No child-crime assertion appears in today’s watch.', 'Do not publish a child-crime flag without exact legal status, source provenance, limitation and editorial review.');
+const sensitiveItems = [...findings.filter(item => item.sensitiveReviewRequired), watch.person, watch.institution, watch.family].filter(Boolean);
+const unsafeSensitive = sensitiveItems.filter(item => /child sexual|child abuse|child exploitation|child trafficking|minor offence|minor offense|csam/i.test(JSON.stringify(item)) && (!/convict|charg|indict|judgment|complaint|investigat|acquit|dismiss|sanction|do-not-publicly-flag/i.test(JSON.stringify(item).toLowerCase()) || !/does not prove|not prove|do not publicly flag/i.test(JSON.stringify(item).toLowerCase())));
+add('sensitive-claim-safeguard', unsafeSensitive.length === 0, `${sensitiveItems.length} sensitive item(s) checked; ${unsafeSensitive.length} lack exact legal-status or public-flag limitation language.`, 'Do not publish a child-crime flag without exact legal status, source provenance, limitation and editorial review.');
 
 const failures = checks.filter(check => !check.ok);
 const report = {
@@ -63,12 +86,12 @@ const report = {
   overall: failures.length ? 'blocked' : 'ready',
   summary: { total: checks.length, passed: checks.length - failures.length, failed: failures.length },
   watch: { date: watch.date, person: watch.person?.name, institution: watch.institution?.name, family: watch.family?.name },
-  dataDepth: { relationshipEdges: edges.length, clocks: clocks.length, badEdges: badEdges.length, badClocks: badClocks.length },
+  dataDepth: { activeFindings: findings.length, archivedFindings: array(archive.findings).length, relationshipEdges: edges.length, clocks: clocks.length, badFindings: badFindings.length, badEdges: badEdges.length, badClocks: badClocks.length },
   checks,
   failures,
   nextPriorities: [
     'Propagate every approved legal-status change to the subject dossier, case page, wrongdoing index, timeline, graph, reports and alerts.',
-    'Index daily-watch.html and its JSON after publication.',
+    'Index daily-watch.html, daily-watch.json and the archived ledger after publication.',
     'Add user follow controls for the three daily entities and notify only on material evidence changes.',
     'Generate a weekly delta showing which watch selections were strengthened, weakened, corrected or disproven.'
   ]
@@ -76,11 +99,11 @@ const report = {
 
 fs.mkdirSync(at('downloads'), { recursive: true });
 fs.writeFileSync(at('downloads/mission-orchestration-audit.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(at('downloads/mission-orchestration-audit.md'), ['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'','## Daily Watch','',`- Person: ${report.watch.person || 'missing'}`,`- Institution: ${report.watch.institution || 'missing'}`,`- Family: ${report.watch.family || 'missing'}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`),'','## Next Priorities','',...report.nextPriorities.map(item => `- ${item}`)].join('\n'));
+fs.writeFileSync(at('downloads/mission-orchestration-audit.md'), ['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'','## Daily Watch','',`- Person: ${report.watch.person || 'missing'}`,`- Institution: ${report.watch.institution || 'missing'}`,`- Family: ${report.watch.family || 'missing'}`,'','## Data Depth','',`- Active findings: ${report.dataDepth.activeFindings}`,`- Archived findings: ${report.dataDepth.archivedFindings}`,`- Relationship edges: ${report.dataDepth.relationshipEdges}`,`- Clocks: ${report.dataDepth.clocks}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`),'','## Next Priorities','',...report.nextPriorities.map(item => `- ${item}`)].join('\n'));
 
 if (failures.length) {
   console.error(`MISSION ORCHESTRATION AUDIT FAILED: ${failures.length} issue(s).`);
   for (const failure of failures) console.error(`- ${failure.id}: ${failure.detail}`);
   process.exit(1);
 }
-console.log(`Mission orchestration audit passed: ${checks.length} checks; ${edges.length} edges; ${clocks.length} clocks.`);
+console.log(`Mission orchestration audit passed: ${checks.length} checks; ${findings.length} active findings; ${edges.length} edges; ${clocks.length} clocks.`);

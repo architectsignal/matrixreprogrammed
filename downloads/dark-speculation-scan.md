@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-27T06:59:32.678Z
+Updated: 2026-07-27T08:04:12.971Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -305,7 +305,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Mind Control
 - Label: internet mythology
-- Matches: 4
+- Matches: 3
 - Boundary: Requires careful sourcing; do not present internet lore as confirmed.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.

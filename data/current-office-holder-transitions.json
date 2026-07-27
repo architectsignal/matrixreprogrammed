@@ -1,5 +1,124 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-07-28T00:00:00+02:00",
-  "transitions": []
+  "policy": {
+    "historicalRecordPreserved": true,
+    "activeAuthorityEdgeMovesToCurrentHolder": true,
+    "clockMovementRequiresSeparateEvidence": true,
+    "boundary": "Office transitions establish who currently holds formal authority. They do not establish policy continuity, personal culpability, hidden control or criminal conduct."
+  },
+  "transitions": [
+    {
+      "id": "uk-prime-minister-2026-07-20",
+      "jurisdiction": "United Kingdom",
+      "office": "Prime Minister",
+      "from": "Keir Starmer",
+      "to": "Andy Burnham",
+      "effectiveDate": "2026-07-20",
+      "sources": [
+        "https://www.gov.uk/government/ministers/prime-minister",
+        "https://www.gov.uk/government/speeches/andy-burnhams-first-speech-as-prime-minister-20-july-2026",
+        "https://www.gov.uk/government/news/ministerial-appointments-july-2026"
+      ],
+      "evidenceClass": "official-transition",
+      "systemEffects": {
+        "dossiers": [
+          "Andy Burnham becomes the current office-holder.",
+          "Keir Starmer remains a former office-holder; historical evidence and dated actions are not rewritten."
+        ],
+        "timelines": [
+          "Close Keir Starmer premiership on 2026-07-20.",
+          "Open Andy Burnham premiership on 2026-07-20."
+        ],
+        "relationshipMaps": [
+          "Move the active UK executive-authority edge to Andy Burnham.",
+          "Retain Keir Starmer historical, party, institutional and relationship edges with former-holder status."
+        ],
+        "clocks": [
+          "Reassess relevant policy and centralisation clocks.",
+          "Do not move a score solely because the office-holder changed."
+        ]
+      },
+      "conclusion": {
+        "found": "The official UK government record identifies Andy Burnham as Prime Minister from 20 July 2026, replacing Keir Starmer.",
+        "lanes": [
+          "current-state integrity",
+          "government authority",
+          "policy continuity"
+        ],
+        "whyItFits": "The Prime Minister controls Cabinet appointments, government priorities and executive coordination, so the transition changes who holds current formal authority.",
+        "effect": "Any page calling Keir Starmer the current Prime Minister is stale. Starmer's earlier actions remain historically relevant and must be dated rather than deleted.",
+        "widerDirection": "The transition creates a new evidence checkpoint for whether policy direction changes, continues or becomes more centralised.",
+        "alternativeExplanation": "A personnel change may produce limited practical change if institutions, legislation, advisers and implementation systems remain stable.",
+        "doesNotProve": "It does not prove continuity, rupture, conspiracy, wrongdoing or that the new Prime Minister controls every institution.",
+        "nextEvidence": [
+          "Cabinet portfolios and special advisers",
+          "first legislative programme and budget",
+          "changes to active policies, contracts and enforcement priorities",
+          "official departmental directions and implementation records"
+        ]
+      }
+    },
+    {
+      "id": "us-president-2025-01-20",
+      "jurisdiction": "United States",
+      "office": "President",
+      "from": "Joe Biden",
+      "to": "Donald J. Trump",
+      "effectiveDate": "2025-01-20",
+      "sources": [
+        "https://www.whitehouse.gov/administration/donald-j-trump/"
+      ],
+      "evidenceClass": "official-transition"
+    },
+    {
+      "id": "germany-chancellor-2025-05-06",
+      "jurisdiction": "Germany",
+      "office": "Federal Chancellor",
+      "from": "Olaf Scholz",
+      "to": "Friedrich Merz",
+      "effectiveDate": "2025-05-06",
+      "sources": [
+        "https://www.bundesregierung.de/breg-en/search/friedrich-merz-2341938"
+      ],
+      "evidenceClass": "official-transition"
+    },
+    {
+      "id": "nato-secretary-general-2024-10-01",
+      "jurisdiction": "NATO",
+      "office": "Secretary General",
+      "from": "Jens Stoltenberg",
+      "to": "Mark Rutte",
+      "effectiveDate": "2024-10-01",
+      "sources": [
+        "https://www.nato.int/en/about-us/organization/nato-structure/nato-secretary-general"
+      ],
+      "evidenceClass": "official-transition"
+    },
+    {
+      "id": "european-council-president-2024-12-01",
+      "jurisdiction": "European Council",
+      "office": "President",
+      "from": "Charles Michel",
+      "to": "António Costa",
+      "effectiveDate": "2024-12-01",
+      "sources": [
+        "https://www.consilium.europa.eu/en/european-council/president/role/"
+      ],
+      "evidenceClass": "official-transition"
+    },
+    {
+      "id": "holy-see-pope-2025-05-08",
+      "jurisdiction": "Holy See",
+      "office": "Pope",
+      "from": "Pope Francis",
+      "to": "Pope Leo XIV",
+      "effectiveDate": "2025-05-08",
+      "ministryInaugurated": "2025-05-18",
+      "sources": [
+        "https://www.vatican.va/content/leo-xiv/en/biography.index.html"
+      ],
+      "evidenceClass": "official-transition"
+    }
+  ]
 }

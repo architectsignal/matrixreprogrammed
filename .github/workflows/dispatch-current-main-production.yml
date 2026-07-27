@@ -14,6 +14,7 @@ on:
 permissions:
   actions: write
   contents: read
+  statuses: write
 
 concurrency:
   group: dispatch-current-main-production
@@ -34,6 +35,34 @@ jobs:
         run: |
           set -euo pipefail
 
+          target_sha=""
+
+          set_dispatch_status() {
+            local state="$1"
+            local description="$2"
+            local target_url="${3:-}"
+            [[ -z "${target_sha}" ]] && return 0
+            if [[ -n "${target_url}" ]]; then
+              gh api --method POST "repos/${REPOSITORY}/statuses/${target_sha}" \
+                -f state="${state}" \
+                -f context='production-dispatcher' \
+                -f description="${description:0:140}" \
+                -f target_url="${target_url}" >/dev/null || true
+            else
+              gh api --method POST "repos/${REPOSITORY}/statuses/${target_sha}" \
+                -f state="${state}" \
+                -f context='production-dispatcher' \
+                -f description="${description:0:140}" >/dev/null || true
+            fi
+          }
+
+          on_error() {
+            local code=$?
+            set_dispatch_status failure 'Production dispatcher failed before creating a verified run'
+            exit "${code}"
+          }
+          trap on_error ERR
+
           request_encoded="$(gh api "repos/${REPOSITORY}/contents/${REQUEST_PATH}?ref=${TARGET_REF}" --jq '.content')"
           request_json="$(printf '%s' "${request_encoded}" | tr -d '\n' | base64 --decode)"
 
@@ -44,7 +73,10 @@ jobs:
           required_commit="$(jq -r '.requiredCommit // empty' <<<"${request_json}")"
           confirmation_text="$(jq -r '.confirmation // empty' <<<"${request_json}")"
 
+          target_sha="$(gh api "repos/${REPOSITORY}/git/ref/heads/${TARGET_REF}" --jq '.object.sha')"
+
           if [[ "${request_active}" != "true" || -z "${request_id}" || -z "${requested_at}" || -z "${active_until}" ]]; then
+            set_dispatch_status success 'No complete active production-dispatch request exists'
             echo 'No complete active production-dispatch request exists.'
             exit 0
           fi
@@ -52,6 +84,7 @@ jobs:
           now_epoch="$(date -u +%s)"
           expiry_epoch="$(date -u -d "${active_until}" +%s)"
           if (( now_epoch > expiry_epoch )); then
+            set_dispatch_status success "Dispatch request ${request_id} expired without a duplicate run"
             echo "Production-dispatch request ${request_id} expired at ${active_until}."
             exit 0
           fi
@@ -61,7 +94,8 @@ jobs:
             exit 1
           fi
 
-          target_sha="$(gh api "repos/${REPOSITORY}/git/ref/heads/${TARGET_REF}" --jq '.object.sha')"
+          set_dispatch_status pending "Resolving guarded production workflow for ${request_id}"
+
           if [[ -n "${required_commit}" ]]; then
             ancestry="$(gh api "repos/${REPOSITORY}/compare/${required_commit}...${target_sha}" --jq '.status')"
             if [[ "${ancestry}" != "ahead" && "${ancestry}" != "identical" ]]; then
@@ -101,12 +135,20 @@ jobs:
             exit 1
           fi
 
-          existing_count="$(
+          find_post_request_run() {
             gh api "repos/${REPOSITORY}/actions/workflows/${selected_id}/runs?event=workflow_dispatch&branch=${TARGET_REF}&per_page=50" \
-              --jq "[.workflow_runs[] | select(.created_at >= \"${requested_at}\")] | length"
-          )"
-          if (( existing_count > 0 )); then
-            echo "A production workflow created after request ${request_id} already exists; no duplicate dispatch."
+              --jq "[.workflow_runs[] | select(.created_at >= \"${requested_at}\")] | sort_by(.created_at) | reverse | .[0] // {}"
+          }
+
+          existing_run="$(find_post_request_run)"
+          existing_id="$(jq -r '.id // empty' <<<"${existing_run}")"
+          if [[ -n "${existing_id}" ]]; then
+            existing_status="$(jq -r '.status // "unknown"' <<<"${existing_run}")"
+            existing_conclusion="$(jq -r '.conclusion // empty' <<<"${existing_run}")"
+            existing_url="$(jq -r '.html_url // empty' <<<"${existing_run}")"
+            label="${existing_status}${existing_conclusion:+/${existing_conclusion}}"
+            set_dispatch_status success "Production run ${existing_id} already exists (${label})" "${existing_url}"
+            echo "A production workflow created after request ${request_id} already exists: ${existing_id} (${label})."
             exit 0
           fi
 
@@ -221,4 +263,23 @@ PY
             "repos/${REPOSITORY}/actions/workflows/${selected_id}/dispatches" \
             --input dispatch.json
 
-          echo "Controlled production workflow dispatch accepted for request ${request_id}."
+          set_dispatch_status pending "Production dispatch accepted for ${request_id}; registering run"
+
+          dispatched_run='{}'
+          for attempt in $(seq 1 12); do
+            sleep 5
+            dispatched_run="$(find_post_request_run)"
+            dispatched_id="$(jq -r '.id // empty' <<<"${dispatched_run}")"
+            [[ -n "${dispatched_id}" ]] && break
+          done
+
+          dispatched_id="$(jq -r '.id // empty' <<<"${dispatched_run}")"
+          if [[ -n "${dispatched_id}" ]]; then
+            dispatched_status="$(jq -r '.status // "queued"' <<<"${dispatched_run}")"
+            dispatched_url="$(jq -r '.html_url // empty' <<<"${dispatched_run}")"
+            set_dispatch_status success "Production run ${dispatched_id} created (${dispatched_status})" "${dispatched_url}"
+            echo "Controlled production run ${dispatched_id} created for request ${request_id}."
+          else
+            set_dispatch_status pending "Dispatch accepted for ${request_id}; run registration pending"
+            echo "Controlled production workflow dispatch accepted for request ${request_id}; run registration pending."
+          fi

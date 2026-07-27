@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2.0.0",
+  "schemaVersion": "2.1.0",
   "title": "Matrix Reprogrammed Master Intelligence Orchestration Standard",
   "status": "authoritative-build-contract",
   "mission": "Collect, verify, classify, connect and explain public-source evidence concerning institutional power, capital control, access, wrongdoing, safeguarding failures and policy convergence while separating fact, allegation, inference and speculation.",
@@ -72,21 +72,58 @@
     "E6": "Final adjudication"
   },
   "dailyWatch": {
+    "publicName": "Daily Intelligence Hit List",
     "requiredSlots": [
       "person",
       "institution",
       "family"
     ],
-    "selectionRule": "Select the entity most materially elevated by today's source-linked evidence. A family may be selected through direct evidence or through a clearly labelled structural overlap between today's leading lane and the family's documented authority, voting control, succession position or institutional access.",
+    "selectionRule": "Select the entity most materially elevated by source-linked evidence. A family may be selected through direct evidence or through a clearly labelled structural overlap between the leading lane and the family's documented authority, voting control, succession position or institutional access.",
+    "stabilityRule": "The three cards do not rotate for novelty or on a calendar. An incumbent remains until a different entity carries direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the configured promotion margin. Ties, minor fluctuations and generic prominence do not trigger replacement.",
+    "defaultPromotionMargin": 14,
+    "replacementAudit": [
+      "incumbent-name",
+      "incumbent-score",
+      "challenger-name",
+      "challenger-score",
+      "new-evidence-routes",
+      "promotion-threshold",
+      "decision-reason",
+      "replacement-date"
+    ],
+    "homepagePosition": "first-substantive-surface-after-intro-and-header",
+    "presentation": "cinematic-high-impact-mobile-first",
+    "requiredDossierSections": [
+      "executive-assessment",
+      "legal-status-convictions-charges-acquittals-and-official-actions",
+      "epstein-and-child-safeguarding-overlaps",
+      "money-ownership-contracts-and-funding",
+      "authority-access-and-institutional-power",
+      "documented-network-connections",
+      "source-linked-timeline",
+      "contradictions-appeals-denials-corrections-and-counter-evidence",
+      "evidence-grades-confidence-and-boundaries",
+      "open-questions",
+      "source-routes"
+    ],
+    "dossierRule": "Each card must expand in place into a complete source-fed dossier assembled from the active investigation ledger, person and institution profiles, family-access records, court and legal-status records, Epstein and safeguarding layers, financial records, timelines, relationship graph, counter-evidence and corrections. Missing records must be shown as gaps rather than filled with inference.",
+    "conversionActions": [
+      "open-full-site-search",
+      "follow-investigation",
+      "submit-signal-drop",
+      "join-membership",
+      "support-the-machine",
+      "view-ranking-history"
+    ],
     "publicationSurfaces": [
       "daily-watch.html",
-      "homepage-command-surface",
+      "homepage-first-post-intro-surface",
       "daily-command-brief",
       "daily-brain-brief",
       "live-intel-and-search-index",
       "weekly-delta-review"
     ],
-    "boundary": "Selection means the entity deserves focused source review today. It is not a guilt ranking, accusation, declaration of hidden control or proof of participation in another person's wrongdoing."
+    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing."
   },
   "childSafeguarding": {
     "priority": "highest",

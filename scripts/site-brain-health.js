@@ -73,10 +73,22 @@ function normalisePrimaryNavigation(file) {
 
 for (const file of ['index.html', '_site/index.html', '_site/index']) normalisePrimaryNavigation(file);
 
-// The deployable search index must be compacted and performance-checked after
-// Cloudflare output exists. This is part of the normal production build, not
-// merely an advisory recovery test.
+// Late legacy generators may reconstruct the search, graph, CSS or deployable
+// HTML after the first optimization pass. Reapply the canonical performance
+// layer at the true end of the build, then validate the exact final output.
 if (exists('_site')) {
+  const optimize = spawnSync(process.execPath, [rel('scripts/apply-runtime-performance-optimizations.js')], {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: 'pipe',
+    timeout: 20 * 60 * 1000
+  });
+  if (optimize.stdout) process.stdout.write(optimize.stdout);
+  if (optimize.stderr) process.stderr.write(optimize.stderr);
+  if (optimize.status !== 0) {
+    fail(`final runtime performance optimization failed with status ${optimize.status}: ${String(optimize.stderr || optimize.stdout || optimize.error || '').slice(-1800)}`);
+  }
+
   const performance = spawnSync(process.execPath, [rel('scripts/runtime-performance-budget-test.js')], {
     cwd: root,
     encoding: 'utf8',
@@ -141,7 +153,7 @@ if (brain) {
     checkedAt: new Date().toISOString(),
     brainVersion: brain.version,
     productionUrl: brain.productionUrl,
-    performanceGate: exists('downloads/runtime-performance-budget-test.json') ? 'executed' : 'not-applicable-without-_site',
+    performanceGate: exists('downloads/runtime-performance-budget-test.json') ? 'executed-after-final-optimization' : 'not-applicable-without-_site',
     primaryNavigation: '8 focused links; Contact remains in More and support routes',
     problems
   };
@@ -157,4 +169,4 @@ if (problems.length) {
 }
 
 console.log('MATRIX SITE BRAIN HEALTH CHECK PASSED');
-console.log('Checked central brain config, eight-link primary navigation, compact search release, runtime performance, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');
+console.log('Checked central brain config, eight-link primary navigation, final runtime optimization, compact search release, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');

@@ -60,13 +60,18 @@ jobs:
           SOURCE_DOCUMENT_TIMEOUT_MS: '40000'
         run: node scripts/harden-source-change-preservation.js weekly
 
-      - name: Rebuild weekly findings, daily brief, search and preservation
+      - name: Rebuild findings, stable hit list, dossiers and search
         run: |
           node scripts/update-live-intel.js
           node scripts/update-seven-day-intel.js
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js
           node scripts/build-investigation-pages.js
+          node scripts/patch-conclusion-integrity-cards.js
+          node scripts/enforce-mission-data-contracts.js
+          node scripts/build-daily-watch.js
+          node scripts/inject-daily-watch-surfaces.js
+          node scripts/mission-orchestration-audit.js
           node scripts/repair-search-system.js
           node scripts/extend-search-with-investigations.js
           node scripts/search-investigation-smoke-test.js
@@ -86,9 +91,12 @@ jobs:
           git config user.name "matrix-investigation-bot"
           git config user.email "actions@github.com"
           git add \
+            data/mission-orchestration-standard.json \
+            data/mission-data-contract-report.json \
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
+            data/investigation-ledger-archive.json \
             data/daily-investigation-conclusions.json \
             data/weekly-investigation-conclusions.json \
             data/investigation-status.json \
@@ -100,8 +108,19 @@ jobs:
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
+            data/daily-watch.json \
+            data/daily-watch-dossiers.json \
+            data/daily-watch-incumbents.json \
+            data/daily-watch-history.json \
+            data/weekly-watch-delta.json \
+            data/evidence-weighted-relationship-graph.json \
+            data/clock-wall.json \
             evidence-archive \
+            index.html \
             investigation-machine.html \
+            daily-watch.html \
+            weekly-watch-delta.html \
+            daily-command-brief.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
             investigation-source-ledger.html \
@@ -109,10 +128,20 @@ jobs:
             investigation-pulse.js \
             daily-brain-brief.html \
             outcome-briefings.html \
+            live-intel.html \
             search.html \
             search.js \
             search-index.json \
             fixes.css \
+            downloads/daily-watch.md \
+            downloads/weekly-watch-delta.md \
+            downloads/daily-watch-publication-report.json \
+            downloads/daily-watch-ranking-decision.json \
+            downloads/daily-watch-history-report.json \
+            downloads/investigation-data-integrity-repair.json \
+            downloads/mission-data-contract-report.json \
+            downloads/mission-orchestration-audit.json \
+            downloads/mission-orchestration-audit.md \
             downloads/daily-investigation-conclusions.md \
             downloads/weekly-investigation-report.md \
             downloads/investigation-source-ledger.md \
@@ -131,7 +160,7 @@ jobs:
             echo "No meaningful weekly investigation changes to commit."
             exit 0
           fi
-          git commit -m "Weekly investigation report $(date -u +%F) [deploy]"
+          git commit -m "Weekly investigation and hit-list reassessment $(date -u +%F) [deploy]"
           git push || (git pull --rebase --autostash origin main && git push)
 
       - name: Upload weekly investigation reports
@@ -141,6 +170,7 @@ jobs:
           name: weekly-investigation-${{ github.run_id }}
           path: |
             downloads/investigation-machine-run-report.json
+            downloads/investigation-data-integrity-repair.json
             downloads/source-change-monitor-report.json
             downloads/source-change-preservation-hardening-report.json
             downloads/source-change-preservation-test.json
@@ -150,6 +180,16 @@ jobs:
             downloads/investigation-source-ledger.md
             downloads/manual-deep-site-audit.json
             downloads/manual-deep-site-audit.md
+            downloads/weekly-watch-delta.md
+            downloads/daily-watch-ranking-decision.json
+            downloads/daily-watch-history-report.json
+            downloads/mission-orchestration-audit.json
+            downloads/mission-orchestration-audit.md
             data/investigation-source-pulls/weekly-latest.json
+            data/daily-watch.json
+            data/daily-watch-dossiers.json
+            data/daily-watch-incumbents.json
+            data/daily-watch-history.json
+            data/weekly-watch-delta.json
           if-no-files-found: ignore
           retention-days: 60

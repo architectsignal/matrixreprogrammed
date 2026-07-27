@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-27T07:04:08.112Z",
+  "generatedAt": "2026-07-27T10:51:31.899Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 31383,
-    "primarySources": 28479,
-    "relationships": 13327
+    "results": 32603,
+    "primarySources": 29551,
+    "relationships": 13915
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "31383 results"
+      "detail": "32603 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "31383/31383"
+      "detail": "32603/32603"
     },
     {
       "name": "normalised field sourceType",
@@ -107,7 +107,7 @@
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-14303f8d986613d83650, relationship-registry.html?relationship=relationship-62d90f54588a2b53b8a3, relationship-registry.html?relationship=relationship-694bf6322740a26d9f15, relationship-registry.html?relationship=relationship-7a3d1d13023a0fc3f481, relationship-registry.html?relationship=relationship-e72edb7f4431b906e29a"
+      "detail": "relationship-registry.html?relationship=relationship-14303f8d986613d83650, relationship-registry.html?relationship=relationship-62d90f54588a2b53b8a3, relationship-registry.html?relationship=relationship-694bf6322740a26d9f15, relationship-registry.html?relationship=relationship-fa0f2fd498848c74e394, relationship-registry.html?relationship=relationship-7a3d1d13023a0fc3f481"
     },
     {
       "name": "query government contracts",
@@ -117,7 +117,7 @@
     {
       "name": "query SEC enforcement",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-13bfebfa7a759d46e626, relationship-registry.html?relationship=relationship-00695e0c9f37cc7a8ba3, relationship-registry.html?relationship=relationship-f94831d2d181f5af911f, relationship-registry.html?relationship=relationship-a909dff5289eae75c787, relationship-registry.html?relationship=relationship-443ebb2e0f7432ffba8e"
+      "detail": "relationship-registry.html?relationship=relationship-13bfebfa7a759d46e626, relationship-registry.html?relationship=relationship-00695e0c9f37cc7a8ba3, relationship-registry.html?relationship=relationship-2d744a1b5004f9177a5b, relationship-registry.html?relationship=relationship-f94831d2d181f5af911f, relationship-registry.html?relationship=relationship-a909dff5289eae75c787"
     },
     {
       "name": "query public corruption conviction",
@@ -142,7 +142,7 @@
     {
       "name": "exact primary SEC record outranks general commentary",
       "ok": true,
-      "detail": "P:relationship-registry.html?relationship=relationship-13bfebfa7a759d46e626, P:relationship-registry.html?relationship=relationship-00695e0c9f37cc7a8ba3, P:relationship-registry.html?relationship=relationship-f94831d2d181f5af911f, P:relationship-registry.html?relationship=relationship-a909dff5289eae75c787, P:relationship-registry.html?relationship=relationship-443ebb2e0f7432ffba8e, P:relationship-registry.html?relationship=relationship-c204aff7d5ca7d16c890, P:relationship-registry.html?relationship=relationship-e07a3042ec1800d48686, P:entity-registry.html#entity-entity-person-2742f885d656a0bee20b"
+      "detail": "P:relationship-registry.html?relationship=relationship-13bfebfa7a759d46e626, P:relationship-registry.html?relationship=relationship-00695e0c9f37cc7a8ba3, P:relationship-registry.html?relationship=relationship-2d744a1b5004f9177a5b, P:relationship-registry.html?relationship=relationship-f94831d2d181f5af911f, P:relationship-registry.html?relationship=relationship-a909dff5289eae75c787, P:relationship-registry.html?relationship=relationship-443ebb2e0f7432ffba8e, P:relationship-registry.html?relationship=relationship-c204aff7d5ca7d16c890, P:relationship-registry.html?relationship=relationship-e07a3042ec1800d48686"
     },
     {
       "name": "dedicated source-change result ranks for missing-record intent",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "31383 vs 31383"
+      "detail": "32603 vs 32603"
     },
     {
       "name": "facet evidenceGrade",

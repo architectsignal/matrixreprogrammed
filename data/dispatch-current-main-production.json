@@ -1,10 +1,12 @@
 {
   "ok": true,
-  "requestedAt": "2026-07-27T23:12:00+02:00",
+  "requestId": "production-20260727-2112z",
+  "requestedAt": "2026-07-27T21:12:00Z",
+  "activeUntil": "2026-07-28T00:30:00Z",
   "requestedBy": "repository owner",
   "targetRef": "main",
   "requiredCommit": "128b73028492bd1e6a5d7e907bbe5f257231dcdb",
   "confirmation": "DEPLOY MATRIX REPROGRAMMED",
-  "triggerMode": "merge push",
-  "reason": "Force a fresh guarded production workflow from current main after direct API commits did not emit an Actions push event."
+  "triggerMode": "scheduled guarded dispatch",
+  "reason": "Start one fresh guarded production workflow from current main. Exit without dispatch if a production workflow created after this request already exists."
 }

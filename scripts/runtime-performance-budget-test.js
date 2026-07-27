@@ -83,29 +83,29 @@ function projectSearchRecord(item) {
   if (!item || typeof item !== 'object') return null;
   const record = {};
   const assignText = (key, value, maximum) => { const text = compactText(value, maximum); if (text) record[key] = text; };
-  assignText('title', item.title, 220);
+  assignText('title', item.title, 200);
   assignText('url', item.url, 900);
   if (!record.title || !record.url) return null;
-  assignText('category', item.category, 140);
-  assignText('layer', item.layer, 100);
-  assignText('description', item.description, 360);
-  assignText('sourceType', item.sourceType, 100);
-  assignText('resultKind', item.resultKind, 80);
-  assignText('sourceAuthority', item.sourceAuthority, 80);
+  assignText('category', item.category, 120);
+  assignText('layer', item.layer, 90);
+  assignText('description', item.description, 280);
+  assignText('sourceType', item.sourceType, 90);
+  assignText('resultKind', item.resultKind, 70);
+  assignText('sourceAuthority', item.sourceAuthority, 70);
   assignText('evidenceGrade', item.evidenceGrade, 8);
-  assignText('factualStatus', item.factualStatus, 100);
-  assignText('statusClass', item.statusClass, 80);
-  assignText('reviewStatus', item.reviewStatus, 80);
-  assignText('jurisdiction', item.jurisdiction, 100);
-  assignText('entityType', item.entityType, 100);
-  assignText('entity', item.entity, 220);
-  assignText('sourceUrl', item.sourceUrl, 900);
+  assignText('factualStatus', item.factualStatus, 90);
+  assignText('statusClass', item.statusClass, 70);
+  assignText('reviewStatus', item.reviewStatus, 70);
+  assignText('jurisdiction', item.jurisdiction, 90);
+  assignText('entityType', item.entityType, 90);
+  assignText('entity', item.entity, 180);
+  assignText('sourceUrl', item.sourceUrl, 800);
   assignText('date', item.date || item.publicationDate || item.retrievalDate, 40);
   for (const [key, value, maxItems, maxLength] of [
-    ['keywords', item.keywords, 18, 90],
-    ['aliases', item.aliases, 20, 120],
-    ['identifiers', item.identifiers, 16, 120],
-    ['exactTerms', item.exactTerms, 20, 120]
+    ['keywords', item.keywords, 14, 80],
+    ['aliases', item.aliases, 14, 100],
+    ['identifiers', item.identifiers, 12, 100],
+    ['exactTerms', item.exactTerms, 14, 100]
   ]) {
     const terms = compactTerms(value, maxItems, maxLength);
     if (terms.length) record[key] = terms;

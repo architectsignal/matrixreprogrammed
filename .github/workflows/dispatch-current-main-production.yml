@@ -7,6 +7,8 @@ on:
     paths:
       - .github/workflows/dispatch-current-main-production.yml
       - data/dispatch-current-main-production.json
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,10 +29,46 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
           TARGET_REF: main
-          CONFIRMATION_TEXT: DEPLOY MATRIX REPROGRAMMED
+          REQUEST_PATH: data/dispatch-current-main-production.json
         shell: bash
         run: |
           set -euo pipefail
+
+          request_encoded="$(gh api "repos/${REPOSITORY}/contents/${REQUEST_PATH}?ref=${TARGET_REF}" --jq '.content')"
+          request_json="$(printf '%s' "${request_encoded}" | tr -d '\n' | base64 --decode)"
+
+          request_active="$(jq -r '.ok // false' <<<"${request_json}")"
+          request_id="$(jq -r '.requestId // empty' <<<"${request_json}")"
+          requested_at="$(jq -r '.requestedAt // empty' <<<"${request_json}")"
+          active_until="$(jq -r '.activeUntil // empty' <<<"${request_json}")"
+          required_commit="$(jq -r '.requiredCommit // empty' <<<"${request_json}")"
+          confirmation_text="$(jq -r '.confirmation // empty' <<<"${request_json}")"
+
+          if [[ "${request_active}" != "true" || -z "${request_id}" || -z "${requested_at}" || -z "${active_until}" ]]; then
+            echo 'No complete active production-dispatch request exists.'
+            exit 0
+          fi
+
+          now_epoch="$(date -u +%s)"
+          expiry_epoch="$(date -u -d "${active_until}" +%s)"
+          if (( now_epoch > expiry_epoch )); then
+            echo "Production-dispatch request ${request_id} expired at ${active_until}."
+            exit 0
+          fi
+
+          if [[ "${confirmation_text}" != "DEPLOY MATRIX REPROGRAMMED" ]]; then
+            echo 'Production dispatch refused: confirmation text does not match.' >&2
+            exit 1
+          fi
+
+          target_sha="$(gh api "repos/${REPOSITORY}/git/ref/heads/${TARGET_REF}" --jq '.object.sha')"
+          if [[ -n "${required_commit}" ]]; then
+            ancestry="$(gh api "repos/${REPOSITORY}/compare/${required_commit}...${target_sha}" --jq '.status')"
+            if [[ "${ancestry}" != "ahead" && "${ancestry}" != "identical" ]]; then
+              echo "Current ${TARGET_REF} does not contain required commit ${required_commit}; status=${ancestry}." >&2
+              exit 1
+            fi
+          fi
 
           mapfile -t workflows < <(
             gh api --paginate "repos/${REPOSITORY}/actions/workflows?per_page=100" \
@@ -63,7 +101,17 @@ jobs:
             exit 1
           fi
 
+          existing_count="$(
+            gh api "repos/${REPOSITORY}/actions/workflows/${selected_id}/runs?event=workflow_dispatch&branch=${TARGET_REF}&per_page=50" \
+              --jq "[.workflow_runs[] | select(.created_at >= \"${requested_at}\")] | length"
+          )"
+          if (( existing_count > 0 )); then
+            echo "A production workflow created after request ${request_id} already exists; no duplicate dispatch."
+            exit 0
+          fi
+
           export SELECTED_YAML="${selected_yaml}"
+          export CONFIRMATION_TEXT="${confirmation_text}"
           inputs_json="$(python - <<'PY'
 import json
 import os
@@ -109,7 +157,13 @@ for line in lines:
     key_match = re.match(r'^([A-Za-z0-9_-]+):\s*$', stripped)
     if key_match and indent > inputs_indent:
         current = key_match.group(1)
-        input_defs[current] = {'indent': indent, 'description': '', 'required': False, 'default': None, 'type': 'string'}
+        input_defs[current] = {
+            'indent': indent,
+            'description': '',
+            'required': False,
+            'default': None,
+            'type': 'string',
+        }
         continue
 
     if current is None:
@@ -159,7 +213,7 @@ PY
             --argjson inputs "${inputs_json}" \
             '{ref: $ref, inputs: $inputs}' > dispatch.json
 
-          echo "Dispatching ${selected_path} from ${TARGET_REF}."
+          echo "Dispatching ${selected_path} from ${TARGET_REF} at ${target_sha}."
           echo "Resolved inputs: $(jq -c '(.inputs // {}) | with_entries(.value = if (.key | test("confirm|token|secret|password"; "i")) then "[REDACTED]" else .value end)' dispatch.json)"
 
           gh api \
@@ -167,4 +221,4 @@ PY
             "repos/${REPOSITORY}/actions/workflows/${selected_id}/dispatches" \
             --input dispatch.json
 
-          echo "Controlled production workflow dispatch accepted for ${TARGET_REF}."
+          echo "Controlled production workflow dispatch accepted for request ${request_id}."

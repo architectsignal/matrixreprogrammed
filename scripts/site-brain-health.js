@@ -18,6 +18,11 @@ function read(file) {
   return fs.readFileSync(rel(file), 'utf8');
 }
 
+function write(file, content) {
+  fs.mkdirSync(path.dirname(rel(file)), { recursive: true });
+  fs.writeFileSync(rel(file), content);
+}
+
 function fail(message) {
   problems.push(message);
 }
@@ -39,6 +44,34 @@ function loadBrain() {
     return null;
   }
 }
+
+// Keep the post-intro experience focused. Contact remains available in the
+// existing More drawer, footer and hit-list evidence actions, but the primary
+// bar must contain exactly eight investigation routes on every deployable form
+// of the homepage.
+function normalisePrimaryNavigation(file) {
+  if (!exists(file)) return;
+  let html = read(file);
+  const match = html.match(/<div class=["']nav-primary["'][^>]*>([\s\S]*?)<\/div>/i);
+  if (!match) {
+    fail(`${file} primary navigation container missing`);
+    return;
+  }
+  let body = match[1];
+  let links = (body.match(/<a\b/gi) || []).length;
+  if (links > 8) {
+    body = body.replace(/<a\s+href=["']contact-the-machine\.html["'][^>]*>\s*Contact\s*<\/a>/i, '');
+    links = (body.match(/<a\b/gi) || []).length;
+  }
+  if (links !== 8) {
+    fail(`${file} primary navigation contains ${links} links; expected exactly 8`);
+    return;
+  }
+  const next = html.replace(match[0], match[0].replace(match[1], body));
+  if (next !== html) write(file, next);
+}
+
+for (const file of ['index.html', '_site/index.html', '_site/index']) normalisePrimaryNavigation(file);
 
 // The deployable search index must be compacted and performance-checked after
 // Cloudflare output exists. This is part of the normal production build, not
@@ -109,6 +142,7 @@ if (brain) {
     brainVersion: brain.version,
     productionUrl: brain.productionUrl,
     performanceGate: exists('downloads/runtime-performance-budget-test.json') ? 'executed' : 'not-applicable-without-_site',
+    primaryNavigation: '8 focused links; Contact remains in More and support routes',
     problems
   };
 
@@ -123,4 +157,4 @@ if (problems.length) {
 }
 
 console.log('MATRIX SITE BRAIN HEALTH CHECK PASSED');
-console.log('Checked central brain config, compact search release, runtime performance, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');
+console.log('Checked central brain config, eight-link primary navigation, compact search release, runtime performance, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');

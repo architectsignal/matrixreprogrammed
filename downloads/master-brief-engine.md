@@ -1,5 +1,5 @@
 # Master Brief Engine
 
-Updated: 2026-07-27T10:08:44.502Z
+Updated: 2026-07-27T15:12:53.291Z
 
 Generated command brief, brief quality, missing records, billionaire tracker, institution tracker, subject briefs, contradiction watch, main-player profiles and entity timelines.

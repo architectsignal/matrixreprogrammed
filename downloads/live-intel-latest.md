@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-26T19:33:58.173Z
-Latest source publication: 2026-07-26T12:00:00.000Z
+Collection completed: 2026-07-27T04:02:26.015Z
+Latest source publication: 2026-07-26T23:43:09.000Z
 Collection status: fresh-items-added
-New items this collection: 6
+New items this collection: 2
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+2 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 6
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-26 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
   - Source class: primary-or-official
@@ -187,6 +193,12 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Examining 2 decades since Jeffrey Epstein's arrest - WPTV
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
+  - Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
   - Source: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5

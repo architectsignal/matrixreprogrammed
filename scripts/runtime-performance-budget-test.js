@@ -54,20 +54,23 @@ const pulseMarkers = ['sessionStorage', 'requestIdleCallback', "cache: 'default'
 if (!pulseMarkers.every(marker => read('investigation-pulse.js').includes(marker))) write('investigation-pulse.js', optimizedPulse);
 if (fs.existsSync(site)) write('_site/investigation-pulse.js', optimizedPulse);
 
-function compactString(value, maximum) {
+function compactText(value, maximum) {
   const text = String(value == null ? '' : value).replace(/\s+/g, ' ').trim();
-  return maximum && text.length > maximum ? `${text.slice(0, maximum - 1).trim()}…` : text;
+  return text.length > maximum ? `${text.slice(0, maximum - 1).trim()}…` : text;
 }
-function compactList(value, maximumItems = 20, maximumLength = 120) {
-  if (!Array.isArray(value)) return value;
+function compactTerms(value, maximumItems, maximumLength) {
+  const input = Array.isArray(value) ? value : value == null || value === '' ? [] : [value];
   const output = [];
   const seen = new Set();
-  for (const item of value) {
-    const next = typeof item === 'object' && item !== null ? item : compactString(item, maximumLength);
-    const key = typeof next === 'object' ? JSON.stringify(next) : String(next).toLowerCase();
-    if (!key || seen.has(key)) continue;
+  for (const raw of input) {
+    const flattened = raw && typeof raw === 'object'
+      ? Object.values(raw).filter(item => ['string','number','boolean'].includes(typeof item)).join(' ')
+      : raw;
+    const term = compactText(flattened, maximumLength);
+    const key = term.toLowerCase();
+    if (!term || seen.has(key)) continue;
     seen.add(key);
-    output.push(next);
+    output.push(term);
     if (output.length >= maximumItems) break;
   }
   return output;
@@ -76,29 +79,47 @@ function newestTime(item) {
   const time = Date.parse(item.date || item.publicationDate || item.retrievalDate || '');
   return Number.isFinite(time) ? time : 0;
 }
+function projectSearchRecord(item) {
+  if (!item || typeof item !== 'object') return null;
+  const record = {};
+  const assignText = (key, value, maximum) => { const text = compactText(value, maximum); if (text) record[key] = text; };
+  assignText('title', item.title, 220);
+  assignText('url', item.url, 900);
+  if (!record.title || !record.url) return null;
+  assignText('category', item.category, 140);
+  assignText('layer', item.layer, 100);
+  assignText('description', item.description, 360);
+  assignText('sourceType', item.sourceType, 100);
+  assignText('resultKind', item.resultKind, 80);
+  assignText('sourceAuthority', item.sourceAuthority, 80);
+  assignText('evidenceGrade', item.evidenceGrade, 8);
+  assignText('factualStatus', item.factualStatus, 100);
+  assignText('statusClass', item.statusClass, 80);
+  assignText('reviewStatus', item.reviewStatus, 80);
+  assignText('jurisdiction', item.jurisdiction, 100);
+  assignText('entityType', item.entityType, 100);
+  assignText('entity', item.entity, 220);
+  assignText('sourceUrl', item.sourceUrl, 900);
+  assignText('date', item.date || item.publicationDate || item.retrievalDate, 40);
+  for (const [key, value, maxItems, maxLength] of [
+    ['keywords', item.keywords, 18, 90],
+    ['aliases', item.aliases, 20, 120],
+    ['identifiers', item.identifiers, 16, 120],
+    ['exactTerms', item.exactTerms, 20, 120]
+  ]) {
+    const terms = compactTerms(value, maxItems, maxLength);
+    if (terms.length) record[key] = terms;
+  }
+  const priority = Number(item.priority || 0);
+  if (Number.isFinite(priority) && priority !== 0) record.priority = priority;
+  if (item.primarySource === true) record.primarySource = true;
+  return record;
+}
 function semanticFindingKey(item) {
   if (String(item.sourceType || '') !== 'investigation-finding') return '';
   return [item.title,item.sourceUrl,item.entity,item.factualStatus,item.evidenceGrade,item.jurisdiction,item.layer]
-    .map(value => compactString(value, 500).toLowerCase()).join('|');
+    .map(value => compactText(value, 500).toLowerCase()).join('|');
 }
-function deployableRecord(raw) {
-  const item = { ...raw };
-  delete item.searchVersion;
-  if (item.primarySource === false) delete item.primarySource;
-  for (const key of ['title','category','layer','description','sourceType','resultKind','statusClass','sourceAuthority','evidenceGrade','factualStatus','reviewStatus','jurisdiction','entityType','entity','date','publicationDate','retrievalDate','sourceUrl','url']) {
-    if (typeof item[key] === 'string') item[key] = compactString(item[key], key === 'description' ? 520 : key === 'title' ? 180 : key === 'sourceUrl' || key === 'url' ? 1200 : 240);
-  }
-  for (const key of ['exactTerms','keywords','aliases','identifiers']) {
-    if (item[key] != null) item[key] = compactList(item[key], key === 'exactTerms' ? 12 : 18, 100);
-    if (Array.isArray(item[key]) && item[key].length === 0) delete item[key];
-  }
-  if (item.description && (item.description === item.title || item.description === item.category)) delete item.description;
-  for (const [key, value] of Object.entries(item)) {
-    if (value == null || value === '' || (Array.isArray(value) && value.length === 0)) delete item[key];
-  }
-  return item;
-}
-
 function compactCanonicalSearchIndex() {
   if (!exists('search-index.json')) return fail('search-index.json compaction', 'missing');
   try {
@@ -107,11 +128,12 @@ function compactCanonicalSearchIndex() {
     const exactSeen = new Set();
     const semanticFindings = new Map();
     const retained = [];
+    let invalid = 0;
     let exactDuplicates = 0;
     let repeatedFindings = 0;
     for (const raw of parsed) {
-      const item = deployableRecord(raw);
-      if (!item.title || !item.url) continue;
+      const item = projectSearchRecord(raw);
+      if (!item) { invalid += 1; continue; }
       const findingKey = semanticFindingKey(item);
       if (findingKey) {
         const prior = semanticFindings.get(findingKey);
@@ -126,6 +148,13 @@ function compactCanonicalSearchIndex() {
     }
     retained.push(...semanticFindings.values());
     retained.sort((a, b) => Number(b.priority || 0) - Number(a.priority || 0) || newestTime(b) - newestTime(a) || String(a.title).localeCompare(String(b.title)));
+    const requiredClasses = {
+      entity: retained.some(item => item.resultKind === 'entity'),
+      relationship: retained.some(item => item.resultKind === 'relationship'),
+      finding: retained.some(item => item.sourceType === 'investigation-finding'),
+      primarySource: retained.some(item => item.primarySource)
+    };
+    if (Object.values(requiredClasses).some(value => !value)) throw new Error(`required search classes missing after projection: ${JSON.stringify(requiredClasses)}`);
     const compact = `${JSON.stringify(retained)}\n`;
     write('search-index.json', compact);
     if (fs.existsSync(site)) {
@@ -134,9 +163,8 @@ function compactCanonicalSearchIndex() {
       if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) write('_site/search-index', compact);
     }
     const mebibytes = Buffer.byteLength(compact) / 1024 / 1024;
-    pass('search-index.json compaction', `${parsed.length} source records -> ${retained.length} deployable records · ${mebibytes.toFixed(2)} MiB · ${repeatedFindings} repeated findings and ${exactDuplicates} exact duplicates removed`);
-    checks.push({ name: 'search-index semantic preservation', ok: retained.some(item => item.resultKind === 'entity') && retained.some(item => item.resultKind === 'relationship') && retained.some(item => item.sourceType === 'investigation-finding') && retained.some(item => item.primarySource), detail: 'entities, relationships, findings and primary sources retained' });
-    if (!checks[checks.length - 1].ok) failures.push('search-index semantic preservation: required search classes were removed');
+    pass('search-index.json compaction', `${parsed.length} source records -> ${retained.length} deployable records · ${mebibytes.toFixed(2)} MiB · ${repeatedFindings} repeated findings, ${exactDuplicates} exact duplicates and ${invalid} invalid records removed`);
+    pass('search-index semantic preservation', 'entities, relationships, findings and primary sources retained');
   } catch (error) {
     fail('search-index.json compaction', error.message);
   }
@@ -198,7 +226,7 @@ const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(
   networkStartupPolicy: 'graph data loads only when the map approaches the viewport or a map control is used',
   animationPolicy: 'adaptive frame rate, reduced pixel ratio, Save-Data support and visibility pause',
   pulsePolicy: 'session-cached and refreshed during idle time after every legacy generator',
-  searchReleaseFormat: 'semantic-deduplicated compact JSON synchronized to Cloudflare output before budget, manifest and deploy checks'
+  searchReleaseFormat: 'browser-field projection plus semantic deduplication synchronized to Cloudflare output before budget, manifest and deploy checks'
 }};
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/runtime-performance-budget-test.json'), `${JSON.stringify(report, null, 2)}\n`);

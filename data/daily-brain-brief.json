@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T08:50:51.415Z",
+  "updated": "2026-07-27T17:29:16.200Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -450,8 +450,6 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -487,17 +485,6 @@
       ],
       "record_types": [
         "rule_or_notice"
-      ]
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
       ]
     },
     {
@@ -587,14 +574,25 @@
       "record_types": [
         "company_registry_snapshot"
       ]
+    },
+    {
+      "id": "microsoft-corp",
+      "name": "MICROSOFT CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-27T15:12:39.332Z",
+    "updated": "2026-07-27T17:29:16.409Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
-    "entityObservationCount": 34,
+    "entityObservationCount": 35,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -770,10 +768,10 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-27T15:12:53.113Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-27T17:29:30.158Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
+    "removedRecordCount": 6,
     "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
@@ -781,9 +779,46 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "United States v. Anten",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Sawas v. Elzanaty",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "People v. Brim",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-27T15:12:53.255Z",
+    "updated": "2026-07-27T17:29:30.316Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -817,7 +852,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-27T15:12:53.291Z",
+    "updated": "2026-07-27T17:29:30.353Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",
@@ -840,7 +875,7 @@
       "confidence": "medium-high",
       "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
       "supportingCount": 5,
-      "freshness": "2026-07-27T08:50:51.415Z",
+      "freshness": "2026-07-27T17:29:16.200Z",
       "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
       "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
       "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -859,7 +894,7 @@
       "confidence": "medium",
       "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
       "supportingCount": 5,
-      "freshness": "2026-07-27T08:50:51.415Z",
+      "freshness": "2026-07-27T17:29:16.200Z",
       "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
       "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
       "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -878,7 +913,7 @@
       "confidence": "medium",
       "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
       "supportingCount": 5,
-      "freshness": "2026-07-27T08:50:51.415Z",
+      "freshness": "2026-07-27T17:29:16.200Z",
       "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
       "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
       "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -897,7 +932,7 @@
       "confidence": "medium",
       "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
       "supportingCount": 5,
-      "freshness": "2026-07-27T08:50:51.415Z",
+      "freshness": "2026-07-27T17:29:16.200Z",
       "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
       "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
       "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -916,7 +951,7 @@
       "confidence": "medium",
       "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
       "supportingCount": 5,
-      "freshness": "2026-07-27T08:50:51.415Z",
+      "freshness": "2026-07-27T17:29:16.200Z",
       "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
       "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
       "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -926,5 +961,178 @@
         "data/probability-lab-core.json"
       ]
     }
-  ]
+  ],
+  "dailyWatch": {
+    "updated": "2026-07-27T17:29:36.861Z",
+    "date": "2026-07-27",
+    "route": "daily-watch.html",
+    "person": {
+      "type": "person",
+      "name": "Bill Gates",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "",
+        "registryType": "",
+        "graphId": "bill-gates",
+        "graphType": "profile route",
+        "reviewStatus": "",
+        "directFreshRecords": 1
+      },
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
+      "whatWasFound": "profile route",
+      "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Information, media and platform access",
+        "Money, banking and payment access"
+      ],
+      "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "moderately-strengthens",
+      "whatItPointsToward": "Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "billionaire-briefs/bill-gates.html",
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5",
+        "data/latest-public-drops.json"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 135,
+      "rankingStatus": "promoted-initial-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "institution": {
+      "type": "institution",
+      "name": "Securities and Exchange Commission",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "entity-governmentagency-23b03f6532d999f0229b",
+        "registryType": "GovernmentAgency",
+        "graphId": "securities-and-exchange-commission",
+        "graphType": "missing record",
+        "reviewStatus": "machine-extracted-unreviewed",
+        "directFreshRecords": 35
+      },
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 35 fresh records plus 38 retained evidence references.",
+      "whatWasFound": "named-in-public-record, refined-from-organization",
+      "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Procurement and public-private implementation"
+      ],
+      "howItFits": "This institution fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "moderately-strengthens",
+      "whatItPointsToward": "Closer examination of how procurement and public-private implementation operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "entity-briefs/securities-and-exchange-commission.html",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "data/daily-investigation-conclusions.json",
+        "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6",
+        "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
+        "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
+        "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
+        "https://www.federalregister.gov/documents/2026/07/27/2026-15052/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-17a-11",
+        "https://www.federalregister.gov/documents/2026/07/24/2026-14979/cboe-clear-us-llc-notice-of-filing-of-an-application-as-amended-for-temporary-registration-as-a",
+        "https://www.federalregister.gov/documents/2026/07/24/2026-14977/self-regulatory-organizations-memx-llc-notice-of-filing-of-partial-amendment-no-1-and-order-granting",
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14956/apogem-capital-llc-et-al",
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14936/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14930/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14929/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c3-3",
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14928/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-608",
+        "https://www.federalregister.gov/documents/2026/07/22/2026-14742/herzfeld-credit-income-fund-et-al"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 143,
+      "rankingStatus": "promoted-initial-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "family": {
+      "type": "family",
+      "name": "Wallenberg family and foundations",
+      "entityResolution": {
+        "status": "resolved-family-access-record",
+        "familyId": "wallenberg",
+        "directFreshRecords": 0
+      },
+      "selectionBasis": "Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.",
+      "whatWasFound": "No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across Industrial ownership, Banking, Defence industry, Telecommunications, Pharmaceuticals, Research funding, Board networks.",
+      "whyItMatters": "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes. Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology.",
+      "investigativeLanes": [
+        "Information, media and platform access",
+        "Money, banking and payment access",
+        "Procurement and public-private implementation",
+        "Power-family succession and institutional access"
+      ],
+      "howItFits": "The family lane tests whether legal succession, voting pools, foundations, holding companies, trustee powers, appointments or repeated gatekeeping preserve institutional access across generations. The mechanism—not the surname—is the evidence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "A focused review of industrial ownership, banking, defence industry, telecommunications and whether documented control rights or appointments connect the family to current policy, capital or infrastructure developments.",
+      "alternativeExplanation": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
+      "whatItDoesNotProve": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
+      "evidenceStrength": "E4–E5 — structural public records; no direct new allegation",
+      "confidence": "high",
+      "sourceRoutes": [
+        "behind-the-curtain-capstone.html",
+        "behind-the-curtain-access.html",
+        "behind-the-curtain-capstone.html#wallenberg-ecosystem",
+        "behind-the-curtain-capstone.html#investor-ownership",
+        "behind-the-curtain-capstone.html#investor-board"
+      ],
+      "nextQuestions": [
+        "Which current decision, transaction or appointment directly involves Wallenberg family and foundations?",
+        "Who holds final voting, trustee or appointment authority?",
+        "Which structures are independently managed or legally constrained?",
+        "What evidence would lower or replace the family-access assessment?"
+      ],
+      "rankingScore": 122,
+      "rankingStatus": "promoted-initial-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing.",
+    "rankingPolicy": {
+      "mode": "stable-incumbent-evidence-promotion",
+      "promotionMargin": 14,
+      "rule": "A card changes only when a different entity has direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the promotion margin. Ties, novelty and minor fluctuations never replace a card.",
+      "decisions": {
+        "person": {
+          "changed": true,
+          "reason": "No valid incumbent existed.",
+          "incumbentScore": 40,
+          "challengerScore": 135,
+          "marginRequired": 14
+        },
+        "institution": {
+          "changed": true,
+          "reason": "No valid incumbent existed.",
+          "incumbentScore": 40,
+          "challengerScore": 143,
+          "marginRequired": 14
+        },
+        "family": {
+          "changed": true,
+          "reason": "No valid incumbent existed.",
+          "incumbentScore": 40,
+          "challengerScore": 122,
+          "marginRequired": 14
+        }
+      }
+    },
+    "dossierRoute": "data/daily-watch-dossiers.json"
+  }
 }

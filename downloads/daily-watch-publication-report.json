@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-27T17:29:37.225Z",
+  "watchDate": "2026-07-27",
+  "pages": [
+    "index.html",
+    "daily-command-brief.html",
+    "daily-brain-brief.html",
+    "live-intel.html"
+  ],
+  "dedicatedPage": "daily-watch.html",
+  "firstPostIntroHomepageSurface": true,
+  "rankingPolicy": {
+    "mode": "stable-incumbent-evidence-promotion",
+    "promotionMargin": 14,
+    "rule": "A card changes only when a different entity has direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the promotion margin. Ties, novelty and minor fluctuations never replace a card.",
+    "decisions": {
+      "person": {
+        "changed": true,
+        "reason": "No valid incumbent existed.",
+        "incumbentScore": 40,
+        "challengerScore": 135,
+        "marginRequired": 14
+      },
+      "institution": {
+        "changed": true,
+        "reason": "No valid incumbent existed.",
+        "incumbentScore": 40,
+        "challengerScore": 143,
+        "marginRequired": 14
+      },
+      "family": {
+        "changed": true,
+        "reason": "No valid incumbent existed.",
+        "incumbentScore": 40,
+        "challengerScore": 122,
+        "marginRequired": 14
+      }
+    }
+  },
+  "dossierTotals": {
+    "person": {
+      "matchedFindings": 0,
+      "legalRecords": 0,
+      "safeguardingOverlaps": 0,
+      "moneyRecords": 0,
+      "authorityRecords": 0,
+      "connections": 3,
+      "contradictionRecords": 0
+    },
+    "institution": {
+      "matchedFindings": 658,
+      "legalRecords": 16,
+      "safeguardingOverlaps": 0,
+      "moneyRecords": 16,
+      "authorityRecords": 16,
+      "connections": 0,
+      "contradictionRecords": 8
+    },
+    "family": {
+      "matchedFindings": 0,
+      "legalRecords": 0,
+      "safeguardingOverlaps": 0,
+      "moneyRecords": 0,
+      "authorityRecords": 0,
+      "connections": 0,
+      "contradictionRecords": 0
+    }
+  },
+  "supportActions": [
+    "GoFundMe",
+    "Membership",
+    "Signal Drop",
+    "Ranking History"
+  ]
+}

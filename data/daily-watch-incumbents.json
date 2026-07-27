@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "updated": "2026-07-27T17:29:36.861Z",
+  "promotionMargin": 14,
+  "slots": {
+    "person": {
+      "item": {
+        "type": "person",
+        "name": "Bill Gates",
+        "entityResolution": {
+          "status": "authoritatively-resolved",
+          "registryId": "",
+          "registryType": "",
+          "graphId": "bill-gates",
+          "graphType": "profile route",
+          "reviewStatus": "",
+          "directFreshRecords": 1
+        },
+        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
+        "whatWasFound": "profile route",
+        "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+        "investigativeLanes": [
+          "Information, media and platform access",
+          "Money, banking and payment access"
+        ],
+        "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+        "effectOnLane": "moderately-strengthens",
+        "whatItPointsToward": "Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+        "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+        "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+        "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+        "confidence": "moderate-to-high",
+        "sourceRoutes": [
+          "billionaire-briefs/bill-gates.html",
+          "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5",
+          "data/latest-public-drops.json"
+        ],
+        "nextQuestions": [
+          "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
+          "Which dated primary record establishes the current action?",
+          "What oversight, competing authority, opt-out or appeal limits the power?",
+          "What new evidence would strengthen, narrow, replace or falsify this position?"
+        ]
+      },
+      "rankingScore": 135,
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "lastDecision": "initial-promotion"
+    },
+    "institution": {
+      "item": {
+        "type": "institution",
+        "name": "Securities and Exchange Commission",
+        "entityResolution": {
+          "status": "authoritatively-resolved",
+          "registryId": "entity-governmentagency-23b03f6532d999f0229b",
+          "registryType": "GovernmentAgency",
+          "graphId": "securities-and-exchange-commission",
+          "graphType": "missing record",
+          "reviewStatus": "machine-extracted-unreviewed",
+          "directFreshRecords": 35
+        },
+        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 35 fresh records plus 38 retained evidence references.",
+        "whatWasFound": "named-in-public-record, refined-from-organization",
+        "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+        "investigativeLanes": [
+          "Procurement and public-private implementation"
+        ],
+        "howItFits": "This institution fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+        "effectOnLane": "moderately-strengthens",
+        "whatItPointsToward": "Closer examination of how procurement and public-private implementation operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+        "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+        "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+        "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+        "confidence": "moderate-to-high",
+        "sourceRoutes": [
+          "entity-briefs/securities-and-exchange-commission.html",
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+          "data/daily-investigation-conclusions.json",
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6",
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15052/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-17a-11",
+          "https://www.federalregister.gov/documents/2026/07/24/2026-14979/cboe-clear-us-llc-notice-of-filing-of-an-application-as-amended-for-temporary-registration-as-a",
+          "https://www.federalregister.gov/documents/2026/07/24/2026-14977/self-regulatory-organizations-memx-llc-notice-of-filing-of-partial-amendment-no-1-and-order-granting",
+          "https://www.federalregister.gov/documents/2026/07/23/2026-14956/apogem-capital-llc-et-al",
+          "https://www.federalregister.gov/documents/2026/07/23/2026-14936/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+          "https://www.federalregister.gov/documents/2026/07/23/2026-14930/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+          "https://www.federalregister.gov/documents/2026/07/23/2026-14929/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c3-3",
+          "https://www.federalregister.gov/documents/2026/07/23/2026-14928/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-608",
+          "https://www.federalregister.gov/documents/2026/07/22/2026-14742/herzfeld-credit-income-fund-et-al"
+        ],
+        "nextQuestions": [
+          "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
+          "Which dated primary record establishes the current action?",
+          "What oversight, competing authority, opt-out or appeal limits the power?",
+          "What new evidence would strengthen, narrow, replace or falsify this position?"
+        ]
+      },
+      "rankingScore": 143,
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "lastDecision": "initial-promotion"
+    },
+    "family": {
+      "item": {
+        "type": "family",
+        "name": "Wallenberg family and foundations",
+        "entityResolution": {
+          "status": "resolved-family-access-record",
+          "familyId": "wallenberg",
+          "directFreshRecords": 0
+        },
+        "selectionBasis": "Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.",
+        "whatWasFound": "No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across Industrial ownership, Banking, Defence industry, Telecommunications, Pharmaceuticals, Research funding, Board networks.",
+        "whyItMatters": "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes. Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology.",
+        "investigativeLanes": [
+          "Information, media and platform access",
+          "Money, banking and payment access",
+          "Procurement and public-private implementation",
+          "Power-family succession and institutional access"
+        ],
+        "howItFits": "The family lane tests whether legal succession, voting pools, foundations, holding companies, trustee powers, appointments or repeated gatekeeping preserve institutional access across generations. The mechanism—not the surname—is the evidence.",
+        "effectOnLane": "adds-context",
+        "whatItPointsToward": "A focused review of industrial ownership, banking, defence industry, telecommunications and whether documented control rights or appointments connect the family to current policy, capital or infrastructure developments.",
+        "alternativeExplanation": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
+        "whatItDoesNotProve": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
+        "evidenceStrength": "E4–E5 — structural public records; no direct new allegation",
+        "confidence": "high",
+        "sourceRoutes": [
+          "behind-the-curtain-capstone.html",
+          "behind-the-curtain-access.html",
+          "behind-the-curtain-capstone.html#wallenberg-ecosystem",
+          "behind-the-curtain-capstone.html#investor-ownership",
+          "behind-the-curtain-capstone.html#investor-board"
+        ],
+        "nextQuestions": [
+          "Which current decision, transaction or appointment directly involves Wallenberg family and foundations?",
+          "Who holds final voting, trustee or appointment authority?",
+          "Which structures are independently managed or legally constrained?",
+          "What evidence would lower or replace the family-access assessment?"
+        ]
+      },
+      "rankingScore": 122,
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "lastDecision": "initial-promotion"
+    }
+  }
+}

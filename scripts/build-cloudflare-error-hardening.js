@@ -136,6 +136,18 @@ function patchHeaders(){
 /*.svg
   Cache-Control: public, max-age=31536000, immutable
 
+/search-index.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/data/evidence-network-map.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+
+/data/*.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+
 /downloads/*.pdf
   Content-Disposition: attachment
   Content-Type: application/pdf

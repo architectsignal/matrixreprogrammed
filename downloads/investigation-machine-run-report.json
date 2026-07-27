@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-27T07:25:21.128Z",
+  "checkedAt": "2026-07-27T08:50:17.090Z",
   "selectedSources": 12,
   "fetchedSources": 11,
   "skippedSources": 0,
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "4a2dd4914266bad6c6b8a69f41c94b7dbfb040afcb8666c4675086ce2e01a446",
+      "bytes": 2188,
+      "bodyHash": "d17501aa78b87083865f545a80a13a60af495f7d549642d31baef52c8b1c6bb2",
       "itemCount": 1,
       "error": ""
     },
@@ -58,7 +58,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
       "bytes": 22804,
-      "bodyHash": "d2bb4e5bc713e51c0e40e76b579c7433a223ba4f2e9d5a0059727cdb15af86b7",
+      "bodyHash": "3640cfbc976b3264a6ce1a38248a836976a25f4b66895bad71bd3f3892d32c5a",
       "itemCount": 1,
       "error": ""
     },
@@ -104,8 +104,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43382,
-      "bodyHash": "0d3ced67422b374f3f5b9e6c4ee2aeac5c1fb78024b6485e05f00c0644cf42bd",
+      "bytes": 43380,
+      "bodyHash": "801b02cc5c189bafeb11147a7752bd31be48ca30e93d6bfb7ff2d2ceed8fba12",
       "itemCount": 18,
       "error": ""
     },
@@ -144,7 +144,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "a24bf16e1b783fbcfbe569b765e43a5f27ff39adb5ec42226ad4ce5d3434ae53",
+      "bodyHash": "f84aeb8c6e0cf38f64b7b3b5d2f6a37582cedae292466b74e72e2c785cc2072a",
       "itemCount": 15,
       "error": ""
     },
@@ -157,7 +157,7 @@
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 103517,
-      "bodyHash": "c1cc24e3958af0e6c589d225daf52cc9342f9948b3b0f3a819b7e0b4ceb41e59",
+      "bodyHash": "b0b559e4a636668b7dd4df38c5dfe42ca20a609c519ac0b51439c1f502ac6054",
       "itemCount": 9,
       "error": ""
     }

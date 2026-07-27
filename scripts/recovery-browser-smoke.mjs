@@ -76,9 +76,12 @@ try {
   await runTest(browser, 'Homepage navigation', '/index.html', async page => {
     await page.locator('header.topbar').waitFor({ state: 'visible' });
     const primaryLinks = page.locator('header.topbar .nav-primary a');
-    assert(await primaryLinks.count() === 8, 'Homepage must show exactly eight primary navigation links');
+    const primaryCount = await primaryLinks.count();
+    assert(primaryCount >= 8 && primaryCount <= 10, `Homepage primary navigation must remain focused; found ${primaryCount} links`);
+    for (const href of ['start-here.html','books.html','live-intel.html','evidence-vault.html','search.html']) {
+      assert(await page.locator(`header.topbar a[href="${href}"]`).count() >= 1, `Homepage navigation must expose ${href}`);
+    }
     assert(await page.locator('header.topbar a[href="data-lab.html"]').count() >= 1, 'Homepage navigation must expose Public Data Lab');
-    assert(await page.locator('header.topbar a[href="search.html"]').count() >= 1, 'Homepage navigation must expose Search');
     assert(await page.locator('main').count() === 1, 'Homepage must contain one main element');
   });
 

@@ -82,34 +82,37 @@ function newestTime(item) {
 function projectSearchRecord(item) {
   if (!item || typeof item !== 'object') return null;
   const record = {};
+  const isFinding = String(item.sourceType || '') === 'investigation-finding';
   const assignText = (key, value, maximum) => { const text = compactText(value, maximum); if (text) record[key] = text; };
-  assignText('title', item.title, 200);
+  assignText('title', item.title, 170);
   assignText('url', item.url, 900);
   if (!record.title || !record.url) return null;
-  assignText('category', item.category, 120);
-  assignText('layer', item.layer, 90);
-  assignText('description', item.description, 280);
-  assignText('sourceType', item.sourceType, 90);
-  assignText('resultKind', item.resultKind, 70);
-  assignText('sourceAuthority', item.sourceAuthority, 70);
+  if (!(isFinding && /^Investigation Finding/i.test(String(item.category || '')))) assignText('category', item.category, 100);
+  assignText('layer', item.layer, 80);
+  assignText('description', item.description, isFinding ? 160 : 240);
+  assignText('sourceType', item.sourceType, 75);
+  assignText('resultKind', item.resultKind, 60);
+  assignText('sourceAuthority', item.sourceAuthority, 60);
   assignText('evidenceGrade', item.evidenceGrade, 8);
-  assignText('factualStatus', item.factualStatus, 90);
-  assignText('statusClass', item.statusClass, 70);
-  assignText('reviewStatus', item.reviewStatus, 70);
-  assignText('jurisdiction', item.jurisdiction, 90);
-  assignText('entityType', item.entityType, 90);
-  assignText('entity', item.entity, 180);
+  assignText('factualStatus', item.factualStatus, 75);
+  assignText('statusClass', item.statusClass, 60);
+  assignText('reviewStatus', item.reviewStatus, 65);
+  assignText('jurisdiction', item.jurisdiction, 70);
+  assignText('entityType', item.entityType, 70);
+  assignText('entity', item.entity, 150);
   assignText('sourceUrl', item.sourceUrl, 800);
-  assignText('date', item.date || item.publicationDate || item.retrievalDate, 40);
+  const date = String(item.date || item.publicationDate || item.retrievalDate || '').slice(0, 10);
+  assignText('date', date, 10);
   for (const [key, value, maxItems, maxLength] of [
-    ['keywords', item.keywords, 14, 80],
-    ['aliases', item.aliases, 14, 100],
-    ['identifiers', item.identifiers, 12, 100],
-    ['exactTerms', item.exactTerms, 14, 100]
+    ['keywords', item.keywords, 9, 70],
+    ['aliases', item.aliases, 9, 85],
+    ['identifiers', item.identifiers, 8, 85],
+    ['exactTerms', item.exactTerms, 8, 85]
   ]) {
     const terms = compactTerms(value, maxItems, maxLength);
     if (terms.length) record[key] = terms;
   }
+  if (record.description && (record.description === record.title || record.description === record.category)) delete record.description;
   const priority = Number(item.priority || 0);
   if (Number.isFinite(priority) && priority !== 0) record.priority = priority;
   if (item.primarySource === true) record.primarySource = true;

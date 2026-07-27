@@ -89,9 +89,8 @@ function rowRoutes(rows) {
 function laneNames(candidate) {
   const text = `${candidate.name} ${candidate.actor?.documentedRole || ''} ${candidate.actor?.roleGroup || ''} ${candidate.actor?.authority || ''} ${candidate.actor?.instrument || ''} ${candidate.actor?.whyItMatters || ''} ${array(candidate.node?.notes).join(' ')} ${array(candidate.entity?.roles).join(' ')}`.toLowerCase();
   const matched = leadingPathways.filter(pathway => words(`${pathway.title} ${pathway.meaning}`).some(token => text.includes(token))).map(pathway => pathway.title);
-  return unique([clean(candidate.actor?.roleGroup, 180), ...matched]).filter(value => value && !/documented person or institution/i.test(value)).slice(0, 4).length
-    ? unique([clean(candidate.actor?.roleGroup, 180), ...matched]).filter(value => value && !/documented person or institution/i.test(value)).slice(0, 4)
-    : leadingPathways.slice(0, 2).map(pathway => pathway.title);
+  const lanes = unique([clean(candidate.actor?.roleGroup, 180), ...matched]).filter(value => value && !/documented person or institution/i.test(value)).slice(0, 4);
+  return lanes.length ? lanes : leadingPathways.slice(0, 2).map(pathway => pathway.title);
 }
 
 function evidenceDate(ref) {
@@ -180,8 +179,8 @@ function slotFrom(candidate, type) {
       directFreshRecords: directCount
     },
     selectionBasis: candidate.directFresh
-      ? `Direct current evidence resolves to this ${type}: ${directCount} fresh source-linked record${directCount === 1 ? '' : 's'} plus ${candidate.refs.length} retained evidence reference${candidate.refs.length === 1 ? '' : 's'}.`
-      : `Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.`,
+      ? `Directly elevated by current source-linked evidence resolving to this ${type}: ${directCount} fresh record${directCount === 1 ? '' : 's'} plus ${candidate.refs.length} retained evidence reference${candidate.refs.length === 1 ? '' : 's'}.`
+      : 'Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.',
     whatWasFound: `${action || 'A documented role or institutional position is present in the linked records.'}${authority ? ` Relevant authority: ${authority}.` : ''}${instrument ? ` Named instrument or record: ${instrument}.` : ''}`,
     whyItMatters: actorMeaning || `The evidence places ${candidate.name} inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.`,
     investigativeLanes: lanes,
@@ -224,7 +223,9 @@ function familySlot(item) {
     type: 'family',
     name: item.name,
     entityResolution: { status: 'resolved-family-access-record', familyId: item.id || '', directFreshRecords: item.directFreshMatch ? 1 : 0 },
-    selectionBasis: item.directFreshMatch ? 'A family name or linked operator appears in current source-linked evidence, and the family has documented authority or access relevant to the leading lanes.' : 'Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.',
+    selectionBasis: item.directFreshMatch
+      ? 'A family name or linked operator appears in current evidence through source-linked records, and the family has documented authority or access relevant to the leading lanes.'
+      : 'Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.',
     whatWasFound: item.directFreshMatch ? `Current evidence intersects with ${item.name}; the standing family-access record documents ${structures.join(', ')}.` : `No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across ${structures.join(', ')}.`,
     whyItMatters: access.join(' ') || `${item.name} has a documented access score of ${item.accessScore}/100 under the published family-access methodology.`,
     investigativeLanes: unique([...leadingPathways.map(pathway => pathway.title), 'Power-family succession and institutional access']).slice(0, 4),

@@ -43,9 +43,10 @@ function ensureOne(file) {
   const banners = (html.match(/id=["']matrix-construction-banner["']/g) || []).length;
   const starts = (html.match(/<!-- construction-banner:start -->/g) || []).length;
   const ends = (html.match(/<!-- construction-banner:end -->/g) || []).length;
-  const supportLinks = (html.match(/https:\/\/gofund\.me\/0a3c74fc9/g) || []).length;
-  if (banners !== 1 || starts !== 1 || ends !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
-  if (supportLinks !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one GoFundMe support link`);
+  const bannerBlocks = html.match(blockPattern) || [];
+  const bannerSupportLinks = bannerBlocks.length === 1 ? (bannerBlocks[0].match(/https:\/\/gofund\.me\/0a3c74fc9/g) || []).length : 0;
+  if (banners !== 1 || starts !== 1 || ends !== 1 || bannerBlocks.length !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
+  if (bannerSupportLinks !== 1) throw new Error(`${path.relative(root, file)} construction banner does not contain exactly one GoFundMe support link`);
 }
 
 const moneyDepthBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'finalize-money-intelligence-depth.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
@@ -85,6 +86,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   liveRoute: 'live-intel.html',
   supportRoute: supportUrl,
   supportPurpose: 'High-memory GPUs, secure computing infrastructure, storage and evidence-processing capacity',
+  supportLinkPolicy: 'Exactly one GoFundMe CTA inside the construction banner; other clearly labelled support routes elsewhere on the homepage are permitted.',
   moneyDepthBuild: 'scripts/finalize-money-intelligence-depth.js',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched

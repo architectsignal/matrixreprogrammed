@@ -19,6 +19,8 @@ on:
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/enforce-mission-data-contracts.js'
       - 'scripts/build-daily-watch.js'
+      - 'scripts/stabilize-daily-watch-and-build-dossiers.js'
+      - 'scripts/build-daily-watch-history.js'
       - 'scripts/inject-daily-watch-surfaces.js'
       - 'scripts/mission-orchestration-audit.js'
       - 'scripts/record-live-intel-check.js'
@@ -84,7 +86,7 @@ jobs:
           SOURCE_DOCUMENT_TIMEOUT_MS: '35000'
         run: node scripts/harden-source-change-preservation.js daily
 
-      - name: Refresh Live Intel and all conclusion surfaces
+      - name: Refresh Live Intel and the stable cinematic hit list
         run: |
           node scripts/update-live-intel.js
           node scripts/record-live-intel-check.js
@@ -122,6 +124,10 @@ jobs:
             data/mission-orchestration-standard.json \
             data/mission-data-contract-report.json \
             data/daily-watch.json \
+            data/daily-watch-dossiers.json \
+            data/daily-watch-incumbents.json \
+            data/daily-watch-history.json \
+            data/weekly-watch-delta.json \
             data/clock-wall.json \
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
@@ -146,6 +152,7 @@ jobs:
             index.html \
             investigation-machine.html \
             daily-watch.html \
+            weekly-watch-delta.html \
             daily-command-brief.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
@@ -161,7 +168,10 @@ jobs:
             search-index.json \
             fixes.css \
             downloads/daily-watch.md \
+            downloads/weekly-watch-delta.md \
             downloads/daily-watch-publication-report.json \
+            downloads/daily-watch-ranking-decision.json \
+            downloads/daily-watch-history-report.json \
             downloads/investigation-data-integrity-repair.json \
             downloads/mission-data-contract-report.json \
             downloads/mission-orchestration-audit.json \
@@ -184,7 +194,7 @@ jobs:
             echo "No meaningful daily investigation changes to commit."
             exit 0
           fi
-          git commit -m "Daily investigation and mission watch $(date -u +%F) [deploy]"
+          git commit -m "Daily investigation and stable hit list $(date -u +%F) [deploy]"
           git push || (git pull --rebase --autostash origin main && git push)
 
       - name: Upload investigation reports
@@ -205,7 +215,10 @@ jobs:
             downloads/conclusion-integrity-report.json
             downloads/production-freshness-guard.json
             downloads/daily-watch.md
+            downloads/weekly-watch-delta.md
             downloads/daily-watch-publication-report.json
+            downloads/daily-watch-ranking-decision.json
+            downloads/daily-watch-history-report.json
             downloads/mission-data-contract-report.json
             downloads/mission-orchestration-audit.json
             downloads/mission-orchestration-audit.md
@@ -213,5 +226,10 @@ jobs:
             data/investigation-source-state.json
             data/investigation-ledger.json
             data/investigation-ledger-archive.json
+            data/daily-watch.json
+            data/daily-watch-dossiers.json
+            data/daily-watch-incumbents.json
+            data/daily-watch-history.json
+            data/weekly-watch-delta.json
           if-no-files-found: ignore
           retention-days: 30

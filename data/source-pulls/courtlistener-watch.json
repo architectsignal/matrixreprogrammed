@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T15:12:39.332Z",
+  "updated": "2026-07-27T19:53:43.242Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -11,9 +11,90 @@
   "itemCount": 6,
   "raw": {
     "count": 23270,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxNTY4MDAwMDAwJnM9MTA4NzU5NzMmdD1vJmQ9MjAyNi0wNy0yNyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxNTY4MDAwMDAwJnM9MTA4NzU5NzcmdD1vJmQ9MjAyNi0wNy0yNyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10935302/united-states-v-anten/",
+        "attorney": "",
+        "caseName": "United States v. Anten",
+        "caseNameFull": "",
+        "citation": [],
+        "citeCount": 0,
+        "cluster_id": 10935302,
+        "court": "Court of Appeals for the Ninth Circuit",
+        "court_citation_string": "9th Cir.",
+        "court_id": "ca9",
+        "court_jurisdiction": "F",
+        "dateArgued": null,
+        "dateFiled": "2026-07-27",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "24-7261",
+        "docket_id": 73674264,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-27T16:01:19.506852Z",
+          "date_created": "2026-07-27T16:01:19.384709Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              102106,
+              220267,
+              355440,
+              584586,
+              767443,
+              768520,
+              813181,
+              1451071,
+              2657479,
+              4557268,
+              8894158,
+              9405083,
+              9422744,
+              9422883,
+              9424007,
+              9434414,
+              9442009,
+              9807826,
+              9908152
+            ],
+            "download_url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/07/27/24-7261.pdf",
+            "id": 11402870,
+            "joined_by_ids": [],
+            "local_path": "pdf/2026/07/27/united_states_v._anten.pdf",
+            "meta": {
+              "timestamp": "2026-07-27T16:02:20.441401Z",
+              "date_created": "2026-07-27T16:01:19.389006Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "3151c0b0be599cbbc710f95f39691ad06f992b5b",
+            "snippet": "                    FOR PUBLICATION\n\n         UNITED STATES COURT OF APPEALS\n              FOR THE NINTH CIRCUIT\n\nUNITED STATES OF AMERICA,                     No. 24-7261\n                                              D.C. No.\n              Plaintiff - Appellee,\n                                              2:24-cr-00002-\n                                              WLH-1\n    v.\n\nMARK WILLIAM ANTEN,\n                                              OPINION\n              Defendant - Appellant.\n\n    ",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11402870
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
       {
         "absolute_url": "/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
         "attorney": "",
@@ -1879,99 +1960,6 @@
         "scdb_id": "",
         "sibling_ids": [
           11343473
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10875973/united-states-v-samuel-harris/",
-        "attorney": "",
-        "caseName": "United States v. Samuel Harris",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10875973,
-        "court": "Court of Appeals for the Sixth Circuit",
-        "court_citation_string": "6th Cir.",
-        "court_id": "ca6",
-        "court_jurisdiction": "F",
-        "dateArgued": "2026-06-04",
-        "dateFiled": "2026-06-16",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "25-5540",
-        "docket_id": 70757009,
-        "judge": "Jeffrey S. Sutton; Danny J. Boggs; Kevin G. Ritz",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-16T21:01:29.304932Z",
-          "date_created": "2026-06-16T21:00:36.053509Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              96744,
-              117889,
-              177064,
-              184169,
-              223683,
-              561846,
-              664669,
-              672326,
-              690313,
-              748784,
-              771624,
-              791155,
-              1190092,
-              1386491,
-              2982871,
-              4398992,
-              4578902,
-              9425185,
-              9432733,
-              9433026,
-              9438755,
-              9477862,
-              9488074,
-              9495712,
-              9813911
-            ],
-            "download_url": "http://www.opn.ca6.uscourts.gov/opinions.pdf/26a0175p-06.pdf",
-            "id": 11343469,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/16/united_states_v._samuel_harris.pdf",
-            "meta": {
-              "timestamp": "2026-06-16T21:10:48.117211Z",
-              "date_created": "2026-06-16T21:00:36.130247Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "f24bcbf136948d210f371e22876f8fb6117cdf3a",
-            "snippet": "                                RECOMMENDED FOR PUBLICATION\n                                Pursuant to Sixth Circuit I.O.P. 32.1(b)\n                                       File Name: 26a0175p.06\n\n                   UNITED STATES COURT OF APPEALS\n                                  FOR THE SIXTH CIRCUIT\n\n\n\n                                                             ┐\n UNITED STATES OF AMERICA,\n                                                             │\n                                    Plaint",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [
-          317,
-          3142
-        ],
-        "panel_names": [
-          "Danny Julian Boggs",
-          "Jeffrey S. Sutton"
-        ],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11343469
         ],
         "source": "C",
         "status": "Published",

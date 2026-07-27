@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T15:12:53.200Z",
+  "updated": "2026-07-27T19:53:57.060Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -7,7 +7,7 @@
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
-      "exposure_score": 368,
+      "exposure_score": 184,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
         "Charged, sued or named in legal action",
@@ -26,32 +26,8 @@
           ]
         },
         {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
           "title": "Sawas v. Elzanaty",
           "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -72,18 +48,6 @@
         },
         {
           "with": "2021-00294",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Matter of Pagliughi",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "2024-07773",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -160,6 +124,67 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "court-of-appeals-for-the-ninth-circuit",
+      "name": "Court of Appeals for the Ninth Circuit",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "United States v. Anten",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "24-7261",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Court of Appeals for the Ninth Circuit."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -406,66 +431,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "2024-07773",
-      "name": "2024-07773",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Matter of Pagliughi",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Appellate Division of the Supreme Court of the State of New York",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch 2024-07773 across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 2024-07773."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "2025-0045-appeal",
       "name": "2025-0045-Appeal.",
       "exposure_score": 179,
@@ -583,6 +548,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "24-7261",
+      "name": "24-7261",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "United States v. Anten",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Court of Appeals for the Ninth Circuit",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 24-7261 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 24-7261."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "24-7261 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -763,66 +788,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "matter-of-pagliughi",
-      "name": "Matter of Pagliughi",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Appellate Division of the Supreme Court of the State of New York",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "2024-07773",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Matter of Pagliughi across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Matter of Pagliughi."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -1063,6 +1028,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "united-states-v-anten",
+      "name": "United States v. Anten",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Court of Appeals for the Ninth Circuit",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "24-7261",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch United States v. Anten across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving United States v. Anten."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "United States v. Anten deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

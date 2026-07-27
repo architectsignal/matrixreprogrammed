@@ -1,10 +1,10 @@
 # Entity Exposure Index
 
-Updated: 2026-07-27T15:12:53.200Z
+Updated: 2026-07-27T19:53:57.060Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
-Score: 368
+Score: 184
 
 Level: critical public-record exposure
 
@@ -21,6 +21,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Ninth Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Court of Appeals for the Second Circuit
 
@@ -62,16 +72,6 @@ Highest evidence: charged / sued
 
 Reading: 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## 2024-07773
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## 2025-0045-Appeal.
 
 Score: 179
@@ -91,6 +91,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: 23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 24-7261
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 24-7261 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## 25-113
 
@@ -121,16 +131,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Matter of Pagliughi
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## People v. Brim
 
@@ -171,6 +171,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## United States v. Anten
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: United States v. Anten deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Homeland Security Department
 

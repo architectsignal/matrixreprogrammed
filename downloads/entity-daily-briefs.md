@@ -1,18 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-27T15:12:53.150Z
+Updated: 2026-07-27T19:53:57.012Z
 
-Briefs generated: 34
-
-## Appellate Division of the Supreme Court of the State of New York
-
-At a glance: Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Briefs generated: 35
 
 ## Centers for Medicare & Medicaid Services
 
@@ -44,16 +34,6 @@ Evidence: legal record present
 
 Watch next: Watch 2021-00294 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 2024-07773
-
-At a glance: 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 2024-07773 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## 2025-0045-Appeal.
 
 At a glance: 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -73,6 +53,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch 23 WAP 2023 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 24-7261
+
+At a glance: 24-7261 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 24-7261 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## 25-113
 
@@ -94,6 +84,16 @@ Evidence: legal record present
 
 Watch next: Watch A170747M across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## Appellate Division of the Supreme Court of the State of New York
+
+At a glance: Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## California Court of Appeal
 
 At a glance: California Court of Appeal is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -103,6 +103,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch California Court of Appeal across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Court of Appeals for the Ninth Circuit
+
+At a glance: Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Court of Appeals for the Second Circuit
 
@@ -133,16 +143,6 @@ Judgement: A source route exists. More records are needed before drawing a stron
 Evidence: documented public-record association
 
 Watch next: Watch Homeland Security Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Matter of Pagliughi
-
-At a glance: Matter of Pagliughi is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Matter of Pagliughi across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## People v. Brim
 
@@ -203,6 +203,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch The New York and Presbyterian Hospital v. New York State Nurses Association across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## United States v. Anten
+
+At a glance: United States v. Anten is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch United States v. Anten across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## AAPL
 

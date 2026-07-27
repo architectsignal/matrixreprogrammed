@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T15:12:53.113Z",
+  "updated": "2026-07-27T19:53:56.974Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -33,6 +33,87 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
+      "id": "court-of-appeals-for-the-ninth-circuit__united-states-v-anten",
+      "from": "United States v. Anten",
+      "to": "Court of Appeals for the Ninth Circuit",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "24-7261__united-states-v-anten",
+      "from": "United States v. Anten",
+      "to": "24-7261",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "24-7261__court-of-appeals-for-the-ninth-circuit",
+      "from": "Court of Appeals for the Ninth Circuit",
+      "to": "24-7261",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
       "id": "punxsutawney-hunting-club-v-pgc__supreme-court-of-pennsylvania",
       "from": "Punxsutawney Hunting Club v. PGC",
       "to": "Supreme Court of Pennsylvania",
@@ -47,7 +128,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10933234-1"
+        "courtlistener-court-records-10933234-2"
       ],
       "control_layers": [
         "courts",
@@ -74,7 +155,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10933234-1"
+        "courtlistener-court-records-10933234-2"
       ],
       "control_layers": [
         "courts",
@@ -101,7 +182,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10933234-1"
+        "courtlistener-court-records-10933234-2"
       ],
       "control_layers": [
         "courts",
@@ -128,7 +209,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-2"
+        "courtlistener-court-records-10928510-3"
       ],
       "control_layers": [
         "courts",
@@ -155,7 +236,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-2"
+        "courtlistener-court-records-10928510-3"
       ],
       "control_layers": [
         "courts",
@@ -182,7 +263,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10928510-2"
+        "courtlistener-court-records-10928510-3"
       ],
       "control_layers": [
         "courts",
@@ -209,7 +290,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-3"
+        "courtlistener-court-records-10919908-4"
       ],
       "control_layers": [
         "courts",
@@ -236,7 +317,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-3"
+        "courtlistener-court-records-10919908-4"
       ],
       "control_layers": [
         "courts",
@@ -263,7 +344,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-3"
+        "courtlistener-court-records-10919908-4"
       ],
       "control_layers": [
         "courts",
@@ -290,7 +371,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-4"
+        "courtlistener-court-records-10919846-5"
       ],
       "control_layers": [
         "courts",
@@ -317,7 +398,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-4"
+        "courtlistener-court-records-10919846-5"
       ],
       "control_layers": [
         "courts",
@@ -344,7 +425,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-4"
+        "courtlistener-court-records-10919846-5"
       ],
       "control_layers": [
         "courts",
@@ -371,7 +452,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-5"
+        "courtlistener-court-records-10917016-6"
       ],
       "control_layers": [
         "courts",
@@ -398,7 +479,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-5"
+        "courtlistener-court-records-10917016-6"
       ],
       "control_layers": [
         "courts",
@@ -425,88 +506,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-5"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york__matter-of-pagliughi",
-      "from": "Matter of Pagliughi",
-      "to": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883674-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "2024-07773__matter-of-pagliughi",
-      "from": "Matter of Pagliughi",
-      "to": "2024-07773",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883674-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "2024-07773__appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "from": "Appellate Division of the Supreme Court of the State of New York",
-      "to": "2024-07773",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883674-6"
+        "courtlistener-court-records-10917016-6"
       ],
       "control_layers": [
         "courts",

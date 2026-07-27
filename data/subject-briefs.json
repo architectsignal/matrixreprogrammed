@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T15:12:53.291Z",
+  "updated": "2026-07-27T19:53:57.151Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -335,6 +335,12 @@
       ],
       "latest_records": [
         {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
           "title": "Punxsutawney Hunting Club v. PGC",
           "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
           "grade": "charged / sued",
@@ -363,15 +369,12 @@
           "url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
           "grade": "charged / sued",
           "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
         }
       ],
       "top_entities": [
+        "United States v. Anten",
+        "Court of Appeals for the Ninth Circuit",
+        "24-7261",
         "Punxsutawney Hunting Club v. PGC",
         "Supreme Court of Pennsylvania",
         "23 WAP 2023",
@@ -386,9 +389,7 @@
         "A170747M",
         "The New York and Presbyterian Hospital v. New York State Nurses Association",
         "Court of Appeals for the Second Circuit",
-        "25-113",
-        "Matter of Pagliughi",
-        "2024-07773"
+        "25-113"
       ],
       "relationship_candidates": [],
       "missing_records": [

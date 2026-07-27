@@ -1,15 +1,9 @@
 {
-  "updated": "2026-07-27T15:12:53.291Z",
+  "updated": "2026-07-27T19:53:57.151Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
-    {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
     {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -29,12 +23,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "2024-07773",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2024-07773.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "2025-0045-Appeal.",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/2025-0045-appeal.html",
@@ -44,6 +32,12 @@
       "entity": "23 WAP 2023",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/23-wap-2023.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "24-7261",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/24-7261.html",
       "type": "entity brief"
     },
     {
@@ -59,9 +53,21 @@
       "type": "entity brief"
     },
     {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "California Court of Appeal",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/california-court-of-appeal.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
       "type": "entity brief"
     },
     {
@@ -80,12 +86,6 @@
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/homeland-security-department.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Matter of Pagliughi",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/matter-of-pagliughi.html",
       "type": "entity brief"
     },
     {
@@ -122,6 +122,12 @@
       "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "United States v. Anten",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/united-states-v-anten.html",
       "type": "entity brief"
     },
     {
@@ -221,6 +227,12 @@
       "type": "record review"
     },
     {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+      "type": "record review"
+    },
+    {
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
@@ -245,12 +257,6 @@
       "type": "record review"
     },
     {
-      "entity": "2024-07773",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/2024-07773.html",
-      "type": "record review"
-    },
-    {
       "entity": "2025-0045-Appeal.",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/2025-0045-appeal.html",
@@ -260,6 +266,12 @@
       "entity": "23 WAP 2023",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/23-wap-2023.html",
+      "type": "record review"
+    },
+    {
+      "entity": "24-7261",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/24-7261.html",
       "type": "record review"
     },
     {
@@ -278,12 +290,6 @@
       "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Matter of Pagliughi",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/matter-of-pagliughi.html",
       "type": "record review"
     },
     {
@@ -308,6 +314,12 @@
       "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "type": "record review"
+    },
+    {
+      "entity": "United States v. Anten",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/united-states-v-anten.html",
       "type": "record review"
     },
     {

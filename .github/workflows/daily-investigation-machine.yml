@@ -16,8 +16,13 @@ on:
       - 'scripts/extend-search-with-investigations.js'
       - 'scripts/repair-investigation-source-registry.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/enforce-mission-data-contracts.js'
+      - 'scripts/build-daily-watch.js'
+      - 'scripts/inject-daily-watch-surfaces.js'
+      - 'scripts/mission-orchestration-audit.js'
       - 'scripts/record-live-intel-check.js'
       - 'scripts/production-freshness-guard.js'
+      - 'data/mission-orchestration-standard.json'
       - 'data/production-freshness-policy.json'
       - 'data/investigation-source-registry.json'
       - 'evidence-archive/**'
@@ -89,6 +94,10 @@ jobs:
           node scripts/build-mission-intelligence-10.js
           node scripts/build-live-intel-machine.js
           node scripts/patch-conclusion-integrity-cards.js
+          node scripts/enforce-mission-data-contracts.js
+          node scripts/build-daily-watch.js
+          node scripts/inject-daily-watch-surfaces.js
+          node scripts/mission-orchestration-audit.js
           node scripts/production-freshness-guard.js
 
       - name: Rebuild and verify search and preservation
@@ -109,6 +118,10 @@ jobs:
           git config user.name "matrix-investigation-bot"
           git config user.email "actions@github.com"
           git add \
+            data/mission-orchestration-standard.json \
+            data/mission-data-contract-report.json \
+            data/daily-watch.json \
+            data/clock-wall.json \
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
@@ -121,12 +134,17 @@ jobs:
             data/source-change-public.json \
             data/source-snapshots \
             data/live-intel.json \
+            data/homepage-command-surface.json \
+            data/daily-command-brief.json \
             data/daily-power-conclusions.json \
             data/evidence-weighted-relationship-graph.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
             evidence-archive \
+            index.html \
             investigation-machine.html \
+            daily-watch.html \
+            daily-command-brief.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
             investigation-source-ledger.html \
@@ -140,6 +158,11 @@ jobs:
             search.js \
             search-index.json \
             fixes.css \
+            downloads/daily-watch.md \
+            downloads/daily-watch-publication-report.json \
+            downloads/mission-data-contract-report.json \
+            downloads/mission-orchestration-audit.json \
+            downloads/mission-orchestration-audit.md \
             downloads/daily-investigation-conclusions.md \
             downloads/weekly-investigation-report.md \
             downloads/investigation-source-ledger.md \
@@ -158,7 +181,7 @@ jobs:
             echo "No meaningful daily investigation changes to commit."
             exit 0
           fi
-          git commit -m "Daily investigation and confidence cards $(date -u +%F) [deploy]"
+          git commit -m "Daily investigation and mission watch $(date -u +%F) [deploy]"
           git push || (git pull --rebase --autostash origin main && git push)
 
       - name: Upload investigation reports
@@ -177,6 +200,11 @@ jobs:
             downloads/investigation-source-ledger.md
             downloads/conclusion-integrity-report.json
             downloads/production-freshness-guard.json
+            downloads/daily-watch.md
+            downloads/daily-watch-publication-report.json
+            downloads/mission-data-contract-report.json
+            downloads/mission-orchestration-audit.json
+            downloads/mission-orchestration-audit.md
             data/investigation-source-pulls/daily-latest.json
           if-no-files-found: ignore
           retention-days: 30

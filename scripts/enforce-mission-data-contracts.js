@@ -135,18 +135,22 @@ if (exists('data/clock-wall.json')) {
 
 // Criminal accountability is a mandatory mission surface. The compact source
 // file is expanded first, then the public index and every individual dossier
-// are regenerated from the same authoritative registry.
+// are regenerated from the same authoritative registry. Finally every other
+// dossier on the site receives the same criminal and safeguarding status lane.
 require('./build-criminal-conduct-registry.js');
 require('./build-predators-in-power.js');
 require('./build-predators-in-power-dossiers.js');
+require('./inject-criminal-status-all-dossiers.js');
 
 const repair = readJson('downloads/investigation-data-integrity-repair.json', {});
 const criminalAccountability = readJson('downloads/criminal-investigations-build-report.json', {});
+const criminalDossierCoverage = readJson('downloads/criminal-status-dossier-coverage.json', {});
 const report = {
-  ok: repair.ok !== false && criminalAccountability.ok !== false,
+  ok: repair.ok !== false && criminalAccountability.ok !== false && criminalDossierCoverage.ok !== false,
   generatedAt: new Date().toISOString(),
   investigationData: repair,
   criminalAccountability,
+  criminalDossierCoverage,
   relationshipGraph: { edges: graphEdges, fieldsAddedOrRepaired: graphChanged, boundary: relationshipBoundary },
   clocks: { count: clockCount, fieldsAddedOrRepaired: clockChanged, withoutDirectEvidence: clocksWithoutDirectEvidence, noMovementRule: 'A clock without direct dated evidence must explicitly show no qualifying movement and cannot gain a score increase.' },
   rules: [
@@ -155,10 +159,12 @@ const report = {
     'Every relationship edge states what it records and what it does not prove.',
     'Every clock explains movement, mission meaning, counterpoint and claim boundary.',
     'Every approved criminal-accountability subject has an exact legal status, complete dossier, conclusion, sources, limitations and current or historical marker.',
+    'Every dossier on the site contains a Criminal & Safeguarding Status panel; no approved match is never described as clearance or exoneration.',
+    'The Predators in Power programme retains a minimum target of 100 evidence-qualified dossiers and reports progress on every build.',
     'Missing provenance or missing current evidence is exposed rather than silently filled with an accusation.'
   ]
 };
 writeJson('data/mission-data-contract-report.json', report);
 writeJson('downloads/mission-data-contract-report.json', report);
-if (!report.ok) throw new Error('Mission data contracts failed because investigation or criminal-accountability data did not complete.');
-console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked; ${repair.ledger?.active || 0} active findings normalized; ${criminalAccountability.subjects || 0} accountability dossiers regenerated.`);
+if (!report.ok) throw new Error('Mission data contracts failed because investigation, criminal-accountability or dossier-coverage data did not complete.');
+console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked; ${repair.ledger?.active || 0} active findings normalized; ${criminalAccountability.subjects || 0} accountability dossiers regenerated; ${criminalDossierCoverage.dossierPagesDetected || 0} dossier pages carry criminal status.`);

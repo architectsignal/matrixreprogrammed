@@ -452,6 +452,7 @@
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -590,7 +591,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-26T19:33:47.103Z",
+    "updated": "2026-07-27T04:00:55.217Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -686,7 +687,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -700,7 +701,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -714,7 +715,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -728,7 +729,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -742,7 +743,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -756,7 +757,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-26",
+      "date": "2026-07-27",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -770,9 +771,9 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-26T19:34:03.672Z",
-    "newRecordCount": 6,
-    "changedRecordCount": 0,
+    "updated": "2026-07-27T04:01:15.549Z",
+    "newRecordCount": 0,
+    "changedRecordCount": 6,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
@@ -781,46 +782,9 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Punxsutawney Hunting Club v. PGC",
-      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Sawas v. Elzanaty",
-      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "People v. Brim",
-      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
-    }
-  ],
+  "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-26T19:34:03.789Z",
+    "updated": "2026-07-27T04:01:15.691Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -854,7 +818,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-26T19:34:03.821Z",
+    "updated": "2026-07-27T04:01:15.729Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

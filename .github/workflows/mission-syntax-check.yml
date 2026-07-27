@@ -1,0 +1,50 @@
+name: Mission Syntax Diagnostics
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/mission-syntax-check.yml'
+      - 'scripts/mission-syntax-check.js'
+      - 'scripts/repair-investigation-data-integrity.js'
+      - 'scripts/enforce-mission-data-contracts.js'
+      - 'scripts/build-daily-watch.js'
+      - 'scripts/stabilize-daily-watch-and-build-dossiers.js'
+      - 'scripts/build-daily-watch-history.js'
+      - 'scripts/inject-daily-watch-surfaces.js'
+      - 'scripts/daily-hit-list-stability-test.js'
+      - 'scripts/mission-orchestration-audit.js'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  syntax:
+    name: Parse every mission and hit-list script
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run per-file parser diagnostics
+        run: node scripts/mission-syntax-check.js
+
+      - name: Upload parser report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mission-syntax-${{ github.run_id }}
+          path: |
+            downloads/mission-syntax-check.json
+            downloads/mission-syntax-check.md
+          if-no-files-found: warn
+          retention-days: 30

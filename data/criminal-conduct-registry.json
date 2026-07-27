@@ -1,1 +1,98 @@
-__PLACEHOLDER__
+{
+  "schemaVersion": 2,
+  "updated": "2026-07-27",
+  "purpose": "Authoritative, editorially approved criminal-conduct, legal-action, official-finding and response records for person and institution dossiers, including the evidence-classified Predators in Power and Criminal Investigations layers.",
+  "publicationRule": "Only records with publicationStatus=approved are rendered. Automated matches, anonymous claims and unsourced allegations remain private review candidates and never publish directly.",
+  "rules": [
+    "A conviction label requires an adjudicated criminal outcome from an authoritative source.",
+    "Charges, indictments, complaints, arrests and investigations are not proof of guilt.",
+    "Civil and regulatory actions must not be described as criminal convictions.",
+    "Dismissals, acquittals, reversals, withdrawals, pardons, denials and right-of-reply statements must remain attached to the claim.",
+    "Association or proximity is neutral unless reliable evidence establishes knowledge, facilitation, concealment, participation, obstruction or another relevant act.",
+    "Anonymous or unsourced allegations must not be published.",
+    "Every record requires provenance, date, legal status, evidence grade, counter-evidence, proof needed and a boundary statement.",
+    "Every existing criminal or safeguarding dossier represented in this registry must be regenerated and audited on every mission build."
+  ],
+  "categories": {
+    "conviction_final_judgment": {
+      "label": "Convictions / Final Criminal Judgments",
+      "classification": "adjudicated_fact",
+      "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record."
+    },
+    "charge_indictment_complaint": {
+      "label": "Charges / Indictments / Criminal Complaints",
+      "classification": "official_allegation",
+      "boundary": "A charge, indictment or complaint is an accusation, not proof of guilt. Presumption of innocence applies unless and until adjudicated."
+    },
+    "investigation_inquiry": {
+      "label": "Investigations / Inquiries",
+      "classification": "official_investigation",
+      "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations."
+    },
+    "civil_regulatory_action": {
+      "label": "Civil / Regulatory / Sanctions Actions",
+      "classification": "official_civil_or_regulatory_record",
+      "boundary": "Civil, regulatory, sanctions and administrative actions are distinct from criminal convictions and may be resolved without admissions."
+    },
+    "substantiated_allegation": {
+      "label": "Substantiated Public Allegations",
+      "classification": "attributed_allegation",
+      "boundary": "The allegation is attributed and supported by identified evidence or an official report but remains distinct from a criminal conviction unless adjudicated."
+    },
+    "suspected_conduct": {
+      "label": "Suspected Conduct / Analytical Hypotheses",
+      "classification": "analytical_inference",
+      "boundary": "This is an evidence-linked analytical hypothesis, not an established fact or legal finding."
+    },
+    "rumor_speculation": {
+      "label": "Rumors / Speculation",
+      "classification": "unverified_claim_or_speculation",
+      "boundary": "Not established. Inclusion records the existence and origin of a public claim, not its truth."
+    },
+    "exculpatory_disposition": {
+      "label": "Acquittals / Dismissals / Reversals / Responses",
+      "classification": "outcome_or_response",
+      "boundary": "This record preserves the outcome, denial, response or exculpatory information and must be read with the underlying allegation."
+    }
+  },
+  "subjects": {},
+  "subjectTemplate": {
+    "name": "Exact subject name",
+    "aliases": [],
+    "subjectType": "person",
+    "dossierRoute": "dossier-subject-slug.html",
+    "historicalCase": false,
+    "legalStatusSummary": "Exact legal status",
+    "publicSummary": "Neutral role and relevance summary",
+    "predatorsInPowerEligible": false,
+    "powerRoles": [],
+    "records": [],
+    "relationships": [],
+    "institutionalFailures": [],
+    "conclusion": {}
+  },
+  "recordTemplate": {
+    "id": "stable-record-id",
+    "category": "charge_indictment_complaint",
+    "title": "Neutral source-faithful title",
+    "summary": "What the source establishes and no more.",
+    "sourceLabel": "Authoritative source",
+    "sourceUrl": "https://example.invalid/original-record",
+    "sourceAuthority": "primary_official",
+    "date": "YYYY-MM-DD",
+    "jurisdiction": "Jurisdiction",
+    "status": "pending or adjudicated",
+    "outcome": "Exact disposition",
+    "evidenceGrade": "A, B, C or D",
+    "lastChecked": "YYYY-MM-DD",
+    "publicationStatus": "approved",
+    "rightOfReply": "Documented response",
+    "counterEvidence": "Material limitation",
+    "proofNeeded": "Next record",
+    "boundary": "Category-specific boundary",
+    "conductDomains": [],
+    "victimClass": [],
+    "predatorsInPowerEligible": false,
+    "linkedRecordIds": []
+  }
+}

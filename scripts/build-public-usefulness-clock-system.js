@@ -1,5 +1,10 @@
 'use strict';
 
+// This is the first authoritative site build command. Repair source-state and
+// active-ledger integrity here so every later dossier, brief, graph, clock,
+// search index and conclusion consumes the same bounded evidence set.
+require('./repair-investigation-data-integrity.js');
+
 const { execFileSync } = require('child_process');
 const path = require('path');
 

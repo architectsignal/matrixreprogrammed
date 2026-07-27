@@ -16,6 +16,8 @@ const strictWorkflow = String(process.env.MATRIX_REQUIRE_PRODUCTION_FRESHNESS ||
   || /Matrix Reprogrammed (?:Controlled )?Production Deploy|Production Synchronisation Assurance/i.test(workflowName);
 const localManualRun = !runningInActions && !workflowName;
 const advisoryOnly = !localManualRun && !strictWorkflow;
+const sourceOnly = String(process.env.MATRIX_FRESHNESS_SOURCE_ONLY || '').toLowerCase() === '1'
+  || String(process.env.MATRIX_FRESHNESS_SCOPE || '').toLowerCase() === 'source';
 
 function readJson(base, rel) {
   const file = path.join(base, rel);
@@ -42,7 +44,7 @@ function checkBase(base, label) {
 }
 
 checkBase(root, 'source');
-if (fs.existsSync(site)) checkBase(site, 'built');
+if (!sourceOnly && fs.existsSync(site)) checkBase(site, 'built');
 const blocking = hard.length > 0 && !advisoryOnly;
 const report = {
   ok: !blocking,
@@ -51,6 +53,8 @@ const report = {
   workflowName: workflowName || 'local',
   strictWorkflow,
   localManualRun,
+  sourceOnly,
+  scopeMode: sourceOnly ? 'prebuild-source-only' : 'source-and-built-output',
   advisoryOnly: advisoryOnly && hard.length > 0,
   checks,
   hardIssues: blocking ? hard : [],
@@ -67,5 +71,5 @@ if (hard.length) {
   console.warn('PRODUCTION FRESHNESS GUARD ADVISORY: stale datasets must be refreshed before a main/production deployment.');
   hard.forEach(issue => console.warn(`- ${issue}`));
 } else {
-  console.log(`Production freshness guard passed: ${checks.length} checks.`);
+  console.log(`Production freshness guard passed: ${checks.length} ${sourceOnly ? 'source' : 'source/output'} checks.`);
 }

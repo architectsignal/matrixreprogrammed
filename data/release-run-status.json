@@ -1,15 +1,15 @@
 {
   "ok": false,
-  "observedAt": "2026-07-27T20:03:42.126Z",
+  "observedAt": "2026-07-27T20:11:31.411Z",
   "production": {
-    "conclusion": "failure",
-    "createdAt": "2026-07-27T19:00:14Z",
-    "databaseId": 30296311736,
+    "conclusion": "",
+    "createdAt": "2026-07-27T20:10:54Z",
+    "databaseId": 30301477348,
     "event": "workflow_dispatch",
-    "headSha": "0990e877d5a5a2be23cfee8fe4ac266c9160d9a3",
-    "status": "completed",
-    "updatedAt": "2026-07-27T19:50:59Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30296311736"
+    "headSha": "5b16eb691257befe03fa97128ef630395def15bd",
+    "status": "in_progress",
+    "updatedAt": "2026-07-27T20:10:59Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30301477348"
   },
   "moneyIntelligence": {
     "conclusion": "success",
@@ -43,13 +43,13 @@
   },
   "epsteinAiDetective": {
     "conclusion": "success",
-    "createdAt": "2026-07-27T18:59:32Z",
-    "databaseId": 30296259127,
-    "event": "push",
-    "headSha": "9a2504664c2da684497d18fd6cbbeb407cc816ba",
+    "createdAt": "2026-07-27T20:10:11Z",
+    "databaseId": 30301424781,
+    "event": "schedule",
+    "headSha": "5b16eb691257befe03fa97128ef630395def15bd",
     "status": "completed",
-    "updatedAt": "2026-07-27T19:00:20Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30296259127"
+    "updatedAt": "2026-07-27T20:10:58Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30301424781"
   },
   "cardArtwork": {
     "conclusion": "failure",
@@ -73,6 +73,16 @@
   },
   "recent": {
     "production": [
+      {
+        "conclusion": "",
+        "createdAt": "2026-07-27T20:10:54Z",
+        "databaseId": 30301477348,
+        "event": "workflow_dispatch",
+        "headSha": "5b16eb691257befe03fa97128ef630395def15bd",
+        "status": "in_progress",
+        "updatedAt": "2026-07-27T20:10:59Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30301477348"
+      },
       {
         "conclusion": "failure",
         "createdAt": "2026-07-27T19:00:14Z",
@@ -182,16 +192,6 @@
         "status": "completed",
         "updatedAt": "2026-07-27T09:17:59Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30251556539"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-27T07:27:18Z",
-        "databaseId": 30246209933,
-        "event": "workflow_dispatch",
-        "headSha": "3afcdcce4afe617439b0bbce6afe80331f8d80a2",
-        "status": "completed",
-        "updatedAt": "2026-07-27T08:12:55Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30246209933"
       }
     ],
     "moneyIntelligence": [
@@ -413,6 +413,16 @@
     "epsteinAiDetective": [
       {
         "conclusion": "success",
+        "createdAt": "2026-07-27T20:10:11Z",
+        "databaseId": 30301424781,
+        "event": "schedule",
+        "headSha": "5b16eb691257befe03fa97128ef630395def15bd",
+        "status": "completed",
+        "updatedAt": "2026-07-27T20:10:58Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30301424781"
+      },
+      {
+        "conclusion": "success",
         "createdAt": "2026-07-27T18:59:32Z",
         "databaseId": 30296259127,
         "event": "push",
@@ -520,16 +530,6 @@
         "status": "completed",
         "updatedAt": "2026-07-25T09:02:36Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30151869160"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-25T08:15:58Z",
-        "databaseId": 30150797966,
-        "event": "push",
-        "headSha": "659652ae73c25a847e81a42884ee290fbc8c22e8",
-        "status": "completed",
-        "updatedAt": "2026-07-25T08:16:36Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30150797966"
       }
     ],
     "cardArtwork": [

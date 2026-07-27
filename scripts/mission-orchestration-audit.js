@@ -11,6 +11,7 @@ const clean = (value, max = 3000) => String(value ?? '').replace(/<[^>]*>/g, ' '
 const array = value => Array.isArray(value) ? value : [];
 const validHttp = value => { try { const url = new URL(String(value || '')); return ['http:','https:'].includes(url.protocol); } catch { return false; } };
 const markerStart = '<!-- daily-mission-watch:start -->';
+const genericOrDocumentTitle = /^(?:the\s+)?(?:first|second|third|final|new|latest|current)\s+(?:phase|release|batch|set|wave)\b|\b(?:files?|library|dataset|document|report|briefing|release|disclosure|archive|index|timeline|dossier|finding|complaint|judgment|notice|case files?)\b/i;
 
 const standard = readJson('data/mission-orchestration-standard.json', {});
 const watch = readJson('data/daily-watch.json', {});
@@ -25,6 +26,7 @@ const archive = readJson('data/investigation-ledger-archive.json', { findings: [
 const state = readJson('data/investigation-source-state.json', { sources: {} });
 const pull = readJson('data/investigation-source-pulls/daily-latest.json', { results: [] });
 const repair = readJson('downloads/investigation-data-integrity-repair.json', {});
+const resolution = readJson('downloads/daily-watch-entity-resolution-report.json', {});
 const publication = readJson('downloads/daily-watch-publication-report.json', {});
 const checks = [];
 const add = (id, ok, detail, fix = '') => checks.push({ id, ok: Boolean(ok), detail, fix });
@@ -35,6 +37,7 @@ add('required-conclusion-fields', array(standard.requiredConclusionFields).lengt
 add('stable-hit-list-standard', /do not rotate|does not rotate/i.test(standard.dailyWatch?.stabilityRule || '') && Number(standard.dailyWatch?.defaultPromotionMargin) > 0, `Promotion margin: ${standard.dailyWatch?.defaultPromotionMargin || 'missing'}.`, 'Lock a positive evidence promotion margin and ban novelty rotation.');
 add('dossier-standard', array(standard.dailyWatch?.requiredDossierSections).length >= 9, `${array(standard.dailyWatch?.requiredDossierSections).length} required dossier sections.`, 'Require legal, safeguarding, money, power, connections, timeline, counter-evidence, sources and next questions.');
 add('data-integrity-repair', repair.ok === true, `Repair status: ${repair.ok === true ? 'ready' : 'missing or failed'}; active findings: ${repair.ledger?.active || 0}.`, 'Run the investigation data repair first.');
+add('authoritative-entity-resolution', resolution.ok === true, `Resolved person=${resolution.selected?.person || 'missing'}; institution=${resolution.selected?.institution || 'missing'}; family=${resolution.selected?.family || 'missing'}.`, 'Run build-daily-watch.js and reject document, report, archive, case or finding titles.');
 
 const pullIds = array(pull.results).map(item => item.sourceId).filter(Boolean);
 const missingAttempts = pullIds.filter(id => !state.sources?.[id]?.lastAttempt);
@@ -59,7 +62,10 @@ for (const slot of ['person','institution','family']) {
   add(`watch-${slot}-rank`, Number(item.rankingScore) > 0 && clean(item.rankingStatus,200), `${slot} score ${item.rankingScore ?? 'missing'}; status ${item.rankingStatus || 'missing'}.`, 'Run the stable ranking and dossier builder.');
   add(`watch-${slot}-sources`, array(item.sourceRoutes).length > 0, `${array(item.sourceRoutes).length} source routes attached.`, 'Attach direct source or explicit missing-record route.');
   add(`watch-${slot}-boundary`, clean(item.whatItDoesNotProve,1000).length > 40, `${slot} limitation ${clean(item.whatItDoesNotProve,1000).length > 40 ? 'present' : 'missing'}.`, 'State what selection does not prove.');
+  add(`watch-${slot}-resolved-class`, clean(item.entityResolution?.status,200).length > 0 && !genericOrDocumentTitle.test(clean(item.name,300)), `${slot} resolution=${item.entityResolution?.status || 'missing'}; name=${item.name || 'missing'}.`, 'Require a registry-resolved entity and reject document-like labels.');
 }
+add('person-class-exact', /resolved/i.test(watch.person?.entityResolution?.status || '') && !genericOrDocumentTitle.test(watch.person?.name || ''), `Person: ${watch.person?.name || 'missing'}.`, 'Only an authoritative Person or verified person-profile node may occupy this slot.');
+add('institution-class-exact', /resolved/i.test(watch.institution?.entityResolution?.status || '') && !genericOrDocumentTitle.test(watch.institution?.name || ''), `Institution: ${watch.institution?.name || 'missing'}.`, 'Only an authoritative organization, company, agency, foundation, trust or contractor may occupy this slot.');
 add('distinct-watch-entities', watch.person?.name !== watch.institution?.name, `Person ${watch.person?.name}; institution ${watch.institution?.name}.`, 'Do not reuse an unresolved entity across slots.');
 add('stable-ranking-policy', watch.rankingPolicy?.mode === 'stable-incumbent-evidence-promotion' && Number(watch.rankingPolicy?.promotionMargin) > 0, `Mode ${watch.rankingPolicy?.mode || 'missing'}; margin ${watch.rankingPolicy?.promotionMargin || 'missing'}.`, 'Use evidence promotion, never daily rotation.');
 add('incumbent-state', ['person','institution','family'].every(slot => incumbents.slots?.[slot]?.item?.name && Number(incumbents.slots?.[slot]?.rankingScore) > 0), 'All three incumbent states checked.', 'Persist incumbent identities, scores and decisions.');
@@ -84,7 +90,6 @@ const dailyPage = read('daily-watch.html');
 add('cinematic-card-ui', /THE DAILY INTELLIGENCE HIT LIST/.test(index) && (index.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3 && /cinematic-daily-hit-list-style/.test(index), `${(index.match(/OPEN COMPLETE DOSSIER/g) || []).length} expandable cards found.`, 'Render all three cinematic cards with expandable dossiers.');
 add('dedicated-dossier-page', /THE DAILY INTELLIGENCE HIT LIST/.test(dailyPage) && (dailyPage.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3, 'Dedicated hit-list page checked.', 'Build daily-watch.html with all dossiers.');
 add('support-conversion', /Support the Machine/.test(index) && /membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /weekly-watch-delta\.html/.test(index), 'Support, membership, Signal Drop and ranking history actions checked.', 'Keep conversion paths visible without hiding evidence boundaries.');
-
 for (const page of ['daily-command-brief.html','live-intel.html']) add(`surface-${page}`, new RegExp(markerStart).test(read(page)), `${page} ${new RegExp(markerStart).test(read(page)) ? 'contains' : 'lacks'} the hit list.`, `Reinject the cinematic surface into ${page}.`);
 
 const edges = array(graph.edges);

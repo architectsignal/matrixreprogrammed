@@ -16,10 +16,12 @@ function absoluteUrl(value) { return /^https?:\/\//i.test(String(value || '')); 
 if (!fs.existsSync(registryPath)) throw new Error('Missing criminal conduct registry before wave hydration.');
 const waveFiles = fs.readdirSync(path.join(root, 'data')).filter(name => /^criminal-conduct-subjects-wave\d+\.json$/i.test(name)).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 const registry = readJson(registryPath);
+registry.subjects = registry.subjects || {};
 const categories = registry.categories || {};
 const failures = [];
 const warnings = [];
 const merged = [];
+const sourceKeys = new Map();
 
 for (const filename of waveFiles) {
   const source = readJson(path.join(root, 'data', filename));
@@ -27,7 +29,21 @@ for (const filename of waveFiles) {
     const key = clean(item.key, 120);
     const name = clean(item.name, 220);
     if (!key || !name) { failures.push(`${filename}: subject missing key or name`); continue; }
-    if (registry.subjects?.[key]) { failures.push(`${filename}: duplicate registry subject key ${key}`); continue; }
+    if (sourceKeys.has(key)) {
+      failures.push(`${filename}: duplicate source subject key ${key}; already declared by ${sourceKeys.get(key)}`);
+      continue;
+    }
+    sourceKeys.set(key, filename);
+
+    const existing = registry.subjects[key];
+    if (existing && existing.sourceWave && existing.sourceWave !== filename) {
+      failures.push(`${filename}: registry subject ${key} is owned by ${existing.sourceWave}`);
+      continue;
+    }
+    if (existing && !existing.sourceWave) {
+      failures.push(`${filename}: subject key ${key} conflicts with a base-registry subject`);
+      continue;
+    }
 
     const powerRoles = array(item.powerRoles).map((role, index) => {
       for (const field of ['sector','title','organization','sourceLabel','sourceUrl']) if (!clean(role[field])) failures.push(`${name}: power role ${index + 1} missing ${field}`);
@@ -56,6 +72,7 @@ for (const filename of waveFiles) {
     if (!records.length) failures.push(`${name}: no approved finding`);
 
     registry.subjects[key] = {
+      sourceWave: filename,
       name,
       aliases:unique(array(item.aliases).map(value => clean(value,220))),
       subjectType:clean(item.subjectType || 'person',80),
@@ -73,7 +90,7 @@ for (const filename of waveFiles) {
       institutionalFailures:unique(array(item.institutionalFailures).map(value => clean(value,1000))),
       conclusion:{ finding:clean(conclusion.finding,1800), lanes:unique(array(conclusion.lanes).map(value => clean(value,120))), whyItMatters:clean(conclusion.whyItMatters,1800), mechanism:clean(conclusion.mechanism,1800), effect:clean(conclusion.effect,1000), widerDirection:clean(conclusion.widerDirection,1800), alternativeExplanation:clean(conclusion.alternativeExplanation,1800), doesNotProve:clean(conclusion.doesNotProve,1800), evidenceStrength:clean(conclusion.evidenceStrength,200), confidence:clean(conclusion.confidence,200), nextQuestions:unique(array(conclusion.nextQuestions).map(value => clean(value,500))) }
     };
-    merged.push({ wave:filename, key, name, records:records.length });
+    merged.push({ wave:filename, key, name, records:records.length, mode:existing ? 'regenerated' : 'added' });
   }
 }
 
@@ -85,5 +102,5 @@ registry.subjectCount = Object.keys(registry.subjects || {}).length;
 registry.approvedFindingCount = Object.values(registry.subjects || {}).reduce((sum, subject) => sum + array(subject.records).filter(record => record.publicationStatus === 'approved').length, 0);
 fs.writeFileSync(registryPath, `${JSON.stringify(registry, null, 2)}\n`);
 fs.mkdirSync(path.dirname(reportPath), { recursive:true });
-fs.writeFileSync(reportPath, `${JSON.stringify({ ok:true, generatedAt:new Date().toISOString(), waveFiles, subjectsMerged:merged.length, totalRegistrySubjects:registry.subjectCount, approvedFindings:registry.approvedFindingCount, merged, warnings }, null, 2)}\n`);
-console.log(`Additional criminal waves hydrated: ${merged.length} subjects from ${waveFiles.length} wave files; registry now contains ${registry.subjectCount}.`);
+fs.writeFileSync(reportPath, `${JSON.stringify({ ok:true, generatedAt:new Date().toISOString(), idempotent:true, waveFiles, subjectsMerged:merged.length, totalRegistrySubjects:registry.subjectCount, approvedFindings:registry.approvedFindingCount, merged, warnings }, null, 2)}\n`);
+console.log(`Additional criminal waves hydrated idempotently: ${merged.length} subjects from ${waveFiles.length} wave files; registry now contains ${registry.subjectCount}.`);

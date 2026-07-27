@@ -19,6 +19,7 @@ const files = [
   'scripts/inject-daily-watch-surfaces.js',
   'scripts/daily-hit-list-stability-test.js',
   'scripts/mission-orchestration-audit.js',
+  'scripts/runtime-performance-budget-test.js',
   'scripts/update-public-usefulness-clock-scores.js',
   'scripts/production-freshness-guard.js'
 ];

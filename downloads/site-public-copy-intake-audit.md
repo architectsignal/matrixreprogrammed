@@ -1,18 +1,21 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-23T06:52:14.703Z
+Updated: 2026-07-27T07:02:13.441Z
 
-Files scanned: 5331
+Files scanned: 5680
 
-High issues: 2878
+High issues: 3171
 
-Review issues: 8
+Review issues: 11
 
-Intake areas: 2758
+Intake areas: 2943
 
-Weak intake areas: 2
+Weak intake areas: 0
 
 ## High Issues
+- .cloudflare/pages-output/data/heroes-fighting-matrix/keys.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- .cloudflare/pages-output/data/heroes-fighting-matrix/shields.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- .cloudflare/pages-output/data/heroes-fighting-matrix/torches.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - SITE_BUILD_STATUS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - SITE_RECOVERY_MASTER.md: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - SITE_RECOVERY_MASTER.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -507,11 +510,6 @@ Weak intake areas: 2
 - _site/data/report-manifests/protected-build-template-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/report-manifests/public-control-target-audit.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/report-manifests/public-output-secret-audit.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/report-manifests/reader-experience-governor-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/report-manifests/release-metadata-routing-patch.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/report-manifests/search-system-repair-report.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/report-manifests/share-kit-black-file-starter.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
-- _site/follow-the-money/making-money.html: boundary=false, action=true, fallback=false
-- follow-the-money/making-money.html: boundary=false, action=true, fallback=false
+None

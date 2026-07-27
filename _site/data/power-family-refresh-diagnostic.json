@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-25T07:51:21.771Z",
+  "commit": "b67d266a0eea398bc6021bd16bb23faa53c3cb34",
+  "commands": [
+    {
+      "index": 1,
+      "status": 0,
+      "command": "node scripts/repair-investigation-source-registry.js",
+      "logTail": "Investigation source registry repaired: 0 field change(s).\n"
+    },
+    {
+      "index": 2,
+      "status": 0,
+      "command": "node scripts/run-investigation-machine.js daily",
+      "logTail": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\nInvestigation machine daily run complete: 12/12 sources fetched, 507 items parsed, 2500 ledger findings.\n"
+    },
+    {
+      "index": 3,
+      "status": 0,
+      "command": "node scripts/update-live-intel.js",
+      "logTail": "Live Intel update complete: 12 fresh items, 40 archived previous items, 6 feeds checked. HTML stripped.\n"
+    },
+    {
+      "index": 4,
+      "status": 0,
+      "command": "node scripts/record-live-intel-check.js",
+      "logTail": "Live Intel successful check recorded at 2026-07-25T07:50:52.280Z; content timestamp remains 2026-07-25T07:50:49.993Z.\n"
+    },
+    {
+      "index": 5,
+      "status": 0,
+      "command": "node scripts/update-seven-day-intel.js",
+      "logTail": "Seven-day intel updater complete: 42 current items, 32 new item(s), 210 fetched records, 7/13 feeds successful, 6 feed error(s).\n"
+    },
+    {
+      "index": 6,
+      "status": 0,
+      "command": "node scripts/build-outcome-briefings.js",
+      "logTail": "Outcome briefings generated: 5 detailed briefs.\n"
+    },
+    {
+      "index": 7,
+      "status": 0,
+      "command": "node scripts/build-daily-brain-brief.js",
+      "logTail": "Machine feed object-name normalization already current; 1 source/output file(s) sanitized.\nMachine Feed Runner complete: 7 lanes, 4 reached, 18 events, 34 observations.\nDaily Brain record-event patch complete: 12 events, 12 observations.\nChange Detection Engine complete: 0 new, 0 changed, 25 relationship candidates.\nGenerated page cleanup entity-briefs: 102 stale or previous file(s) removed.\nEntity Daily Briefs built: 34 briefs.\nGenerated page cleanup entity-exposure: 102 stale or previous file(s) removed.\nEntity Exposure Index built safely: 34 profiles.\nPrivate Contractor Intelligence built: 7 profiles.\nMaster Brief Engine built with rich reader-ready pages, evidence boundaries, records, missing files and watch triggers.\nNested brief link repair complete: 7 file(s), 7 link(s) checked/fixed.\nStale generated brief link repair complete: 0 link(s) in 0 source/output file(s).\nMACHINE FEED RUNNER TEST PASSED\nCHANGE DETECTION ENGINE TEST PASSED\nENTITY DAILY BRIEFS TEST PASSED\nPRIVATE CONTRACTOR INTELLIGENCE TEST PASSED\nMASTER BRIEF ENGINE TEST PASSED\nLiving control interface built: control map linked, brain pulse injected, contractor intelligence and Master Brief Engine integrated.\nDaily brain brief generated: 5 conclusions, 5 signals, 12 missing-record prompts.\n"
+    },
+    {
+      "index": 8,
+      "status": 0,
+      "command": "node scripts/build-investigation-pages.js",
+      "logTail": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\n"
+    },
+    {
+      "index": 9,
+      "status": 0,
+      "command": "node scripts/build-mission-intelligence-10.js",
+      "logTail": "Mission Intelligence 10 built: 131 nodes, 172 edges.\n"
+    },
+    {
+      "index": 10,
+      "status": 0,
+      "command": "node scripts/build-live-intel-machine.js",
+      "logTail": "Live Intel machine built: 42 current items, 32 new this collection, latest source 2026-07-24T12:00:00.000Z.\n"
+    },
+    {
+      "index": 11,
+      "status": 0,
+      "command": "node scripts/patch-conclusion-integrity-cards.js",
+      "logTail": "Conclusion integrity cards built: 75 cards.\n"
+    },
+    {
+      "index": 12,
+      "status": 0,
+      "command": "node scripts/build-behind-the-curtain-tier-registry.js",
+      "logTail": "Tier registry generated: 80 named people, 12 levels and 7 bounded hidden-hand hypotheses.\n"
+    },
+    {
+      "index": 13,
+      "status": 0,
+      "command": "node scripts/patch-behind-the-curtain-tier-ui.js",
+      "logTail": "Behind the Curtain tier interface and Power-Family gateway patched: 1 capstone route(s), 2 Pyramid return route(s), one canonical gateway.\n"
+    },
+    {
+      "index": 14,
+      "status": 0,
+      "command": "node scripts/build-behind-the-curtain.js",
+      "logTail": "Behind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; production remains frozen.\nBehind the Curtain route links already current or unavailable.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\n"
+    }
+  ],
+  "firstFailure": null
+}

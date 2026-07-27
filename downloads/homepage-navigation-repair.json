@@ -1,30 +1,39 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-23T06:54:10.951Z",
+  "generatedAt": "2026-07-27T07:05:21.930Z",
   "changed": [
     "index.html",
-    "_site/index.html"
+    "_site/index.html",
+    "_site/index"
   ],
   "primaryRoutes": [
     "start-here.html",
     "books.html",
+    "death-files.html",
+    "independent-links.html",
+    "live-intel.html",
     "power-atlas.html",
     "evidence-vault.html",
-    "live-intel.html",
-    "timers.html",
-    "security-privacy.html",
-    "dark-web-safety.html",
     "search.html"
   ],
   "restoredGroups": [
     "Live Tracking & Clocks",
     "Research & Evidence",
+    "Power, Files & Investigations",
     "Community, Books & Membership",
-    "Briefs & Support"
+    "Briefs, Safety & Support"
   ],
   "requiredRoutes": [
-    "timers.html",
+    "start-here.html",
+    "books.html",
+    "death-files.html",
+    "independent-links.html",
+    "live-intel.html",
+    "power-atlas.html",
+    "evidence-vault.html",
+    "search.html",
     "daily-command-brief.html",
+    "timers.html",
     "control-system-tracker.html",
     "control-structure.html",
     "tracker-dashboard.html",
@@ -35,14 +44,39 @@
     "update-monitor.html",
     "data-lab.html",
     "research-tools.html",
+    "evidence-archive.html",
+    "evidence-network-map.html",
     "evidence-reader.html",
     "evidence-timeline.html",
+    "geographic-power-atlas.html",
     "source-document-vault.html",
     "network-maps.html",
+    "behind-the-curtain.html",
+    "follow-the-money.html",
+    "elite-family-tracker.html",
+    "epstein-files.html",
+    "investigation-machine.html",
+    "dark-speculation-lab.html",
+    "book-universe.html",
+    "forum.html",
     "membership.html",
+    "subscriber-dashboard.html",
     "billing-dashboard.html",
-    "download-center.html",
+    "amazon-store-books.html",
+    "videos.html",
     "security-privacy.html",
-    "dark-web-safety.html"
-  ]
+    "dark-web-safety.html",
+    "optin-center.html",
+    "newsletter.html",
+    "download-center.html",
+    "trust-center.html",
+    "contact-the-machine.html"
+  ],
+  "protectedPublicRoutes": [
+    "death-files.html",
+    "independent-links.html",
+    "elite-family-tracker.html"
+  ],
+  "currentPrimeMinisterOwner": "scripts/patch-global-contact-and-current-pm.js",
+  "publicStaticRouteOwner": "scripts/patch-public-static-route-bridge.js"
 }

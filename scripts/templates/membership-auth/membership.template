@@ -84,8 +84,8 @@
     const marketingConsent = document.getElementById('member-consent').checked;
     try {
       const response = await fetch('/api/membership/signup', {
-        method: 'POST', headers: {'content-type':'application/json'},
-        body: JSON.stringify({email,name,marketingConsent,consentVersion:'membership-consent-v1',source:'membership-page',sourcePage:'/membership.html'})
+        method: 'POST', credentials:'include', cache:'no-store', headers: {'content-type':'application/json'},
+        body: JSON.stringify({email,name,consent:marketingConsent,marketingConsent,consentVersion:'membership-consent-v1',source:'membership-page',sourcePage:'/membership.html'})
       });
       const data = await response.json();
       if (!response.ok || !data.saved) throw new Error(data.error || data.message || 'Account could not be created.');
@@ -108,7 +108,7 @@
   const setAllPlanMessages = message => Object.values(planUi).forEach(item => { item.status.textContent = message; });
   const readJson = async response => { const text = await response.text(); try { return JSON.parse(text); } catch { throw new Error('The membership service returned an invalid response.'); } };
   const postJson = async (url, body) => {
-    const response = await fetch(url, {method:'POST', headers:{'content-type':'application/json',accept:'application/json'}, body:JSON.stringify(body)});
+    const response = await fetch(url, {method:'POST', credentials:'include', cache:'no-store', headers:{'content-type':'application/json',accept:'application/json'}, body:JSON.stringify(body)});
     const data = await readJson(response);
     if (!response.ok || data.ok === false) throw new Error(data.error || data.message || 'The PayPal membership request failed.');
     return data;
@@ -157,12 +157,22 @@
   };
   const initialisePayPal = async () => {
     try {
-      const response = await fetch('/api/paypal/config', {headers:{accept:'application/json'},cache:'no-store'});
+      const response = await fetch('/api/paypal/config', {credentials:'include',headers:{accept:'application/json'},cache:'no-store'});
       const config = await readJson(response);
       if (response.status === 401) {
         systemStatus.className = 'status pending';
         systemStatus.innerHTML = 'Sign in before choosing a paid plan. <a href="member-login.html">Request a secure login link</a>.';
         setAllPlanMessages('Sign in to activate this plan.');
+        return;
+      }
+      if (config.paidAccess && config.currentSubscription) {
+        systemStatus.className = 'status ok';
+        systemStatus.textContent = 'Your paid membership is active. ';
+        const billingLink = document.createElement('a');
+        billingLink.href = config.billingUrl || 'billing-dashboard.html';
+        billingLink.textContent = 'Manage billing';
+        systemStatus.appendChild(billingLink);
+        setAllPlanMessages('Paid access is already active. Use the billing dashboard to manage or cancel it.');
         return;
       }
       if (!response.ok || !config.configured || !config.clientId) {

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-07-22",
+  "title": "The Long-Duration Continuity Layer",
+  "editorialBoundary": "This model investigates mechanisms that can preserve power longer than individual governments, companies, empires or religious administrations. Longevity is not proof of secret coordination, criminality or a single hidden ruler.",
+  "thesis": "The deepest durable power is rarely a name alone. It is a transferable mechanism: succession rights, property law, archives, credit, appointment authority, coercive institutions, technical standards, land, infrastructure, education, data and legitimacy. Families and individuals matter when they can inherit, appoint, own, veto or reproduce those mechanisms.",
+  "layers": [
+    {
+      "rank": 1,
+      "id": "succession-and-appointment",
+      "name": "Succession and Appointment Rights",
+      "description": "The ability to decide who occupies the next office, board seat, trusteeship, command or leadership role.",
+      "survivalMechanism": "Constitutions, hereditary rules, voting agreements, nomination rights, trustee powers and cadre systems.",
+      "evidenceRequired": ["Legal succession rules","Shareholder or trust instruments","Appointment and removal records","Repeated outcomes across transitions"],
+      "falsePositiveRisk": "Family presence or social access without an enforceable appointment right."
+    },
+    {
+      "rank": 2,
+      "id": "property-and-voting-control",
+      "name": "Property, Voting and Beneficial Control",
+      "description": "Control that survives because assets, votes or veto rights pass through trusts, foundations, holding companies or dynastic ownership vehicles.",
+      "survivalMechanism": "Voting shares, dual-class stock, foundations, trusts, partnerships, land titles and debt covenants.",
+      "evidenceRequired": ["Beneficial ownership records","Voting rights","Board appointment rights","Trust and foundation governance"],
+      "falsePositiveRisk": "Confusing custody, passive investment or assets under management with ownership."
+    },
+    {
+      "rank": 3,
+      "id": "credit-and-liquidity",
+      "name": "Credit, Liquidity and Collateral",
+      "description": "The capacity to finance states, firms and crises or to deny funding when alternatives are limited.",
+      "survivalMechanism": "Central-bank mandates, sovereign debt markets, banking relationships, private credit, collateral rules and lender networks.",
+      "evidenceRequired": ["Loan and underwriting records","Liquidity facilities","Debt covenants","Crisis decisions and beneficiary outcomes"],
+      "falsePositiveRisk": "Assuming every creditor can dictate policy or caused a crisis from which it benefited."
+    },
+    {
+      "rank": 4,
+      "id": "law-and-jurisdiction",
+      "name": "Law, Jurisdiction and Enforcement",
+      "description": "The power to define ownership, contracts, sanctions, liability, market access and the legitimacy of other forms of power.",
+      "survivalMechanism": "Courts, legal codes, treaty systems, regulatory mandates, professional bars and enforcement agencies.",
+      "evidenceRequired": ["Statutes and treaties","Court decisions","Regulatory orders","Jurisdiction and enforcement records"],
+      "falsePositiveRisk": "Treating lawyers, judges or advisers as a single coordinated bloc."
+    },
+    {
+      "rank": 5,
+      "id": "security-and-coercion",
+      "name": "Security, Intelligence and Coercive Continuity",
+      "description": "The institutional ability to gather privileged information, protect systems, impose force or survive political transitions.",
+      "survivalMechanism": "Military commands, intelligence services, police powers, classified networks, alliances and contractor ecosystems.",
+      "evidenceRequired": ["Formal command authority","Budgets and appointments","Treaties and oversight records","Documented operational outcomes"],
+      "falsePositiveRisk": "Inferring command from former service, security clearance or association alone."
+    },
+    {
+      "rank": 6,
+      "id": "infrastructure-and-standards",
+      "name": "Infrastructure, Standards and Technical Dependence",
+      "description": "Control of the rails others must use: payments, cloud, chips, ports, energy, telecoms, identity and technical standards.",
+      "survivalMechanism": "Network effects, patents, specialist knowledge, capital intensity, interoperability rules and long-term contracts.",
+      "evidenceRequired": ["Market concentration","Ownership and operating rights","Standards participation","Demonstrated ability to deny or delay access"],
+      "falsePositiveRisk": "Equating a leading market share with permanent monopoly or total control."
+    },
+    {
+      "rank": 7,
+      "id": "archives-and-information",
+      "name": "Archives, Data and Information Asymmetry",
+      "description": "The ability to preserve, classify, discover, filter or distribute information that shapes decisions and historical memory.",
+      "survivalMechanism": "State archives, intelligence holdings, proprietary datasets, media distribution, search systems and institutional recordkeeping.",
+      "evidenceRequired": ["Custody and access policies","Classification authority","Distribution controls","Documented information advantages"],
+      "falsePositiveRisk": "Assuming possession of information proves manipulation or coordinated censorship."
+    },
+    {
+      "rank": 8,
+      "id": "education-and-credentialing",
+      "name": "Education, Credentialing and Elite Reproduction",
+      "description": "The ability to select, train, certify and network future officials, executives, experts and gatekeepers.",
+      "survivalMechanism": "Universities, fellowships, professional credentials, academies, recruitment pipelines and alumni networks.",
+      "evidenceRequired": ["Appointment pipelines","Funding and governance records","Career outcomes","Selection and credential rules"],
+      "falsePositiveRisk": "Treating shared education or club membership as proof of a conspiracy."
+    },
+    {
+      "rank": 9,
+      "id": "legitimacy-and-sacred-authority",
+      "name": "Legitimacy, Tradition and Sacred Authority",
+      "description": "Narratives and institutions that make rule appear lawful, natural, moral or divinely sanctioned across generations.",
+      "survivalMechanism": "Constitutions, monarchy, civic ritual, religious offices, customary law, philanthropy and cultural institutions.",
+      "evidenceRequired": ["Formal authority and governance","Documented political or legal effects","Succession rules","Resource and appointment control"],
+      "falsePositiveRisk": "Treating a religion, ethnicity or culture as one actor or assuming belief automatically produces political command."
+    },
+    {
+      "rank": 10,
+      "id": "crisis-adaptation",
+      "name": "Crisis Adaptation and Institutional Conversion",
+      "description": "The capacity to survive regime change by converting family, financial or institutional power into a new legal form.",
+      "survivalMechanism": "Diversification, jurisdictional mobility, foundations, corporate restructuring, alliances and professional management.",
+      "evidenceRequired": ["Pre- and post-crisis ownership","Continuity of appointments or assets","Documented restructurings","Survival across regime transitions"],
+      "falsePositiveRisk": "Retrofitting continuity onto unrelated entities that share only a name or symbolism."
+    }
+  ],
+  "investigationQuestions": [
+    "Who can appoint or remove the operator?",
+    "Who owns the voting right rather than merely the economic exposure?",
+    "Who holds the archive, licence, standard, key, collateral or legal jurisdiction?",
+    "What survives when the public leader, government, religion or corporate brand changes?",
+    "Can the mechanism be inherited, delegated or transferred without public attention?",
+    "Which independent institutions can veto or constrain it?",
+    "What documented outcome proves that access became action?",
+    "What evidence would show that the alleged hidden hand is actually fragmented or absent?"
+  ],
+  "evolutionPolicy": {
+    "continuous": true,
+    "inputs": ["appointments","succession events","ownership filings","trust and foundation governance","board changes","court decisions","regulatory actions","declassified records","infrastructure concentration","authenticated communications"],
+    "recalculationTriggers": ["new enforceable right","loss of office","death","resignation","ownership threshold change","new veto right","institutional merger","credible contrary evidence","source correction"],
+    "historicalArchive": "Every published change must preserve the prior mechanism, score, evidence and conclusion."
+  }
+}

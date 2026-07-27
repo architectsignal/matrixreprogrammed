@@ -100,7 +100,7 @@ run('scripts/build-production-health.js');
 
 const critical = [
   'index.html','homepage-mask-intro.css','homepage-mask-intro-data.js','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
-  'start-here.html','membership.html','paypal-membership.js','member-login.html','member-dashboard.html','member-dashboard-app.js',
+  'start-here.html','contact-the-machine.html','contact-the-machine.css','contact-the-machine.js','membership.html','paypal-membership.js','member-login.html','member-dashboard.html','member-dashboard-app.js',
   'forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js',
   'billing-dashboard.html','billing-dashboard.js','admin-payment-dashboard.html','admin-payment-dashboard.js',
   'admin-paypal-rehearsal.html','admin-paypal-rehearsal.js','live-intel.html','daily-power-conclusions.html',

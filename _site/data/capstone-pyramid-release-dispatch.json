@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "releaseId": "capstone-pyramid-v3-20260724",
+  "action": "dispatched-capstone-release-once",
+  "recordedAt": "2026-07-24T12:06:11.034Z",
+  "cutoff": "2026-07-24T12:03:00.000Z",
+  "workflowId": 302110600,
+  "staleRunCancelled": 30091003163,
+  "scope": "Deploy the independent 80-person Pyramid plus the cinematic Capstone covering Black Nobility history, Orsini and related Roman houses, Baal, Moloch, Saturn and the Lightbringer with explicit speculation boundaries.",
+  "run": {
+    "id": 30091864423,
+    "status": "queued",
+    "conclusion": null,
+    "createdAt": "2026-07-24T12:06:04Z",
+    "updatedAt": "2026-07-24T12:06:04Z",
+    "headSha": "62ec7fdb25a0bac1d083540c1993e7bf15d18134",
+    "headBranch": "main",
+    "event": "workflow_dispatch",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30091864423"
+  },
+  "boundary": "Only one workflow-dispatch run after the post-capstone cutoff is allowed. Trigger retries reuse it."
+}

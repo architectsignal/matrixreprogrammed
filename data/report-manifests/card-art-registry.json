@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T06:43:13.337Z",
-  "pageCount": 71,
+  "generatedAt": "2026-07-27T06:51:05.631Z",
+  "pageCount": 73,
   "output": "downloads/card-art-registry.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Card Art Registry",
-    "contentHash": "6af47d25d8707ecde44b38d4ca65316a8c9820ff5273fa10885e946b43ddf53d",
+    "contentHash": "33fd76aae3286fbbd248bf996dc8ef5cc5182122e07de3a5cc032ea499bb9c62",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -82,6 +82,7 @@
       "jensen-huang",
       "daily-revelation-report",
       "b5a32a76f19d554c484e917f",
+      "1ee57e70dacfa67f04323529",
       "d0b647e325275daa6d824a49",
       "bill-gates",
       "brookings-institution",
@@ -108,24 +109,23 @@
       "international-organization-for-standardization",
       "ambani-family",
       "adani-family",
-      "rupert-family",
-      "soros-family"
+      "rupert-family"
     ],
     "metrics": {
       "evidenceCount": 103,
-      "primarySourceCount": 4,
+      "primarySourceCount": 5,
       "disputedClaimCount": 2,
       "newEntityCount": 24,
       "updatedAssessmentCount": 1,
       "relationshipCount": 13,
-      "moneyRecordCount": 72
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Card Art Registry.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Card Art Registry.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -143,7 +143,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Elite Power Theory; Elite Power Theory; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Zuckerberg-Chan family",
+        "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Elite Power Theory; Elite Power Theory; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Daily Revelation Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -166,7 +166,7 @@
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
-          "Zuckerberg-Chan family"
+          "Daily Revelation Report"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -181,6 +181,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:43:13.337Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:51:05.631Z"
   }
 }

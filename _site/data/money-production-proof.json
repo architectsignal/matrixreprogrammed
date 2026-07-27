@@ -1,0 +1,23 @@
+{
+  "ok": false,
+  "workflow": "Matrix Reprogrammed Controlled Production Deploy",
+  "conclusion": "failure",
+  "runId": "30155978940",
+  "runUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30155978940",
+  "deployedHeadSha": "93a353fd288cf3388aa7dab6124e962a3feffa80",
+  "completedAt": "2026-07-25T11:23:57Z",
+  "live": {
+    "ok": false,
+    "checks": [],
+    "routes": [],
+    "error": "live test did not run"
+  },
+  "checkedRoutes": [
+    "/",
+    "/follow-the-money",
+    "/making-money",
+    "/follow-the-money/people/elon-musk",
+    "/data/follow-the-money-top-100.json",
+    "/downloads/wealth-guides/start-from-zero.pdf"
+  ]
+}

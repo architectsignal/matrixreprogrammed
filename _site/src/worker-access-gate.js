@@ -77,7 +77,7 @@ export async function enforceProtectedAssetAccess(request, env, minimumTier = ''
     }, 503);
   }
 
-  const token = cookieValue(request, 'matrix_session');
+  const token = cookieValue(request, 'matrix_session_v2') || cookieValue(request, 'matrix_session');
   if (!token) {
     return json({
       ok: false,

@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-27T07:05:21.928Z",
+  "checks": {
+    "safeHtmlAliases": true,
+    "safeApiRoutes": true,
+    "safePageRoutes": true,
+    "clientUsesApi": true,
+    "cleanQuery": true,
+    "strictOrigin": true,
+    "dispatchBeforeAssetGate": true,
+    "deployableAliases": true
+  },
+  "failures": [],
+  "aliases": {
+    "map": "/structural-power-map.html",
+    "capstone": "/structural-power-capstone.html",
+    "apiRoot": "/api/public/structural-power/"
+  },
+  "linksChanged": {
+    "source": 2,
+    "deployable": 0
+  },
+  "boundary": "Neutral public aliases avoid path-specific Cloudflare interception. The Worker serves only named structural-power HTML and evidence data assets, strips query strings before ASSETS access, and adds a strict origin header."
+}

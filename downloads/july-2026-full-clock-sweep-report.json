@@ -1,0 +1,473 @@
+{
+  "ok": true,
+  "revision": "july-2026-full-clock-sweep-v1",
+  "referenceDate": "2026-07-23",
+  "practical": [
+    {
+      "slug": "free-speech-information-access",
+      "previous": 66,
+      "next": 66,
+      "status": "elevated-platform-and-identity-gating-pressure"
+    },
+    {
+      "slug": "digital-identity-permissioned-access",
+      "previous": 86,
+      "next": 84,
+      "status": "advanced-interoperable-rollout"
+    },
+    {
+      "slug": "emergency-powers-permanence",
+      "previous": 56,
+      "next": 56,
+      "status": "persistent-governance-risk"
+    },
+    {
+      "slug": "cost-of-living-household-survival",
+      "previous": 70,
+      "next": 70,
+      "status": "high-household-pressure"
+    },
+    {
+      "slug": "housing-access-ownership",
+      "previous": 72,
+      "next": 72,
+      "status": "high-affordability-and-credit-pressure"
+    },
+    {
+      "slug": "cash-freedom-payment-exclusion",
+      "previous": 66,
+      "next": 66,
+      "status": "accelerating-digital-payment-transition"
+    },
+    {
+      "slug": "government-transparency-missing-records",
+      "previous": 64,
+      "next": 63,
+      "status": "elevated-disclosure-and-accountability-pressure"
+    },
+    {
+      "slug": "rule-of-law-accountability",
+      "previous": 56,
+      "next": 56,
+      "status": "mixed-accountability-performance"
+    },
+    {
+      "slug": "corporate-state-convergence",
+      "previous": 76,
+      "next": 76,
+      "status": "high-public-private-infrastructure-convergence"
+    },
+    {
+      "slug": "essential-infrastructure-resilience",
+      "previous": 51,
+      "next": 50,
+      "status": "material-regional-risk-with-systemic-counter-signal"
+    },
+    {
+      "slug": "medicine-healthcare-access",
+      "previous": 61,
+      "next": 61,
+      "status": "active-shortage-and-capacity-pressure"
+    },
+    {
+      "slug": "energy-affordability",
+      "previous": 62,
+      "next": 62,
+      "status": "renewed-energy-price-pressure"
+    },
+    {
+      "slug": "water-security",
+      "previous": 65,
+      "next": 65,
+      "status": "high-climate-and-infrastructure-pressure"
+    },
+    {
+      "slug": "supply-chain-fragility",
+      "previous": 66,
+      "next": 64,
+      "status": "elevated-chokepoint-and-input-risk"
+    },
+    {
+      "slug": "election-democratic-integrity",
+      "previous": 56,
+      "next": 56,
+      "status": "elevated-information-and-technology-risk"
+    },
+    {
+      "slug": "ai-employment-displacement",
+      "previous": 63,
+      "next": 63,
+      "status": "rapid-task-and-skill-disruption"
+    },
+    {
+      "slug": "media-ownership-concentration",
+      "previous": 68,
+      "next": 68,
+      "status": "high-concentration-and-distribution-dependence"
+    },
+    {
+      "slug": "childrens-digital-identity-age-gating",
+      "previous": 93,
+      "next": 93,
+      "status": "critical-multi-country-implementation"
+    },
+    {
+      "slug": "sovereign-debt-banking-stress",
+      "previous": 70,
+      "next": 70,
+      "status": "high-debt-and-refinancing-vulnerability"
+    },
+    {
+      "slug": "agricultural-independence",
+      "previous": 66,
+      "next": 66,
+      "status": "high-farm-viability-and-input-pressure"
+    }
+  ],
+  "speculative": [
+    {
+      "slug": "spec-agenda-2030-control-grid",
+      "previous": 43,
+      "next": 42,
+      "status": "implementation-watch",
+      "sources": 2
+    },
+    {
+      "slug": "spec-one-world-currency",
+      "previous": 50,
+      "next": 48,
+      "status": "infrastructure-convergence",
+      "sources": 3
+    },
+    {
+      "slug": "spec-one-world-government-soft-law",
+      "previous": 39,
+      "next": 38,
+      "status": "policy-harmonisation-watch",
+      "sources": 3
+    },
+    {
+      "slug": "spec-digital-id-permission-layer",
+      "previous": 72,
+      "next": 70,
+      "status": "advanced-implementation-watch",
+      "sources": 2
+    },
+    {
+      "slug": "spec-cbdc-social-credit-fusion",
+      "previous": 37,
+      "next": 36,
+      "status": "convergence-risk-not-proven",
+      "sources": 4
+    },
+    {
+      "slug": "spec-climate-lockdown-and-carbon-rationing",
+      "previous": 26,
+      "next": 25,
+      "status": "unsupported-control-extension",
+      "sources": 3
+    },
+    {
+      "slug": "spec-war-as-control-accelerator",
+      "previous": 51,
+      "next": 50,
+      "status": "documented-crisis-power-risk",
+      "sources": 2
+    },
+    {
+      "slug": "spec-health-pass-permanent-infrastructure",
+      "previous": 55,
+      "next": 54,
+      "status": "infrastructure-persistence",
+      "sources": 2
+    },
+    {
+      "slug": "spec-food-land-water-control",
+      "previous": 47,
+      "next": 46,
+      "status": "governance-and-market-convergence",
+      "sources": 2
+    },
+    {
+      "slug": "spec-elite-child-sacrifice",
+      "previous": 4,
+      "next": 4,
+      "status": "evidence-quarantine",
+      "sources": 2
+    },
+    {
+      "slug": "spec-elites-eat-children",
+      "previous": 5,
+      "next": 5,
+      "status": "internet-mythology",
+      "sources": 1
+    },
+    {
+      "slug": "spec-adrenochrome",
+      "previous": 3,
+      "next": 3,
+      "status": "evidence-quarantine",
+      "sources": 1
+    },
+    {
+      "slug": "spec-red-shoes-child-skin",
+      "previous": 7,
+      "next": 7,
+      "status": "symbolic-claim-only",
+      "sources": 1
+    },
+    {
+      "slug": "spec-blackmail-islands",
+      "previous": 60,
+      "next": 60,
+      "status": "documented-abuse-network-blackmail-unresolved",
+      "sources": 1
+    },
+    {
+      "slug": "spec-underground-abuse-facilities",
+      "previous": 16,
+      "next": 15,
+      "status": "case-specific-no-broad-proof",
+      "sources": 2
+    },
+    {
+      "slug": "spec-moloch-worship",
+      "previous": 8,
+      "next": 8,
+      "status": "historical-symbolism-no-current-mechanism",
+      "sources": 1
+    },
+    {
+      "slug": "spec-baal-worship",
+      "previous": 7,
+      "next": 7,
+      "status": "historical-symbolism-no-current-mechanism",
+      "sources": 1
+    },
+    {
+      "slug": "spec-saturn-black-cube",
+      "previous": 5,
+      "next": 5,
+      "status": "internet-symbolism",
+      "sources": 1
+    },
+    {
+      "slug": "spec-demonic-possession-elites",
+      "previous": 3,
+      "next": 3,
+      "status": "paranormal-unverifiable",
+      "sources": 0
+    },
+    {
+      "slug": "spec-archons-loosh",
+      "previous": 2,
+      "next": 2,
+      "status": "paranormal-unverifiable",
+      "sources": 0
+    },
+    {
+      "slug": "spec-reincarnation-trap",
+      "previous": 2,
+      "next": 2,
+      "status": "paranormal-unverifiable",
+      "sources": 0
+    },
+    {
+      "slug": "spec-reptilian-bloodlines",
+      "previous": 2,
+      "next": 2,
+      "status": "paranormal-unverifiable",
+      "sources": 1
+    },
+    {
+      "slug": "spec-grey-aliens-government",
+      "previous": 4,
+      "next": 4,
+      "status": "uap-evidence-does-not-support-control",
+      "sources": 2
+    },
+    {
+      "slug": "spec-dulce-base",
+      "previous": 4,
+      "next": 4,
+      "status": "internet-mythology",
+      "sources": 2
+    },
+    {
+      "slug": "spec-secret-space-program",
+      "previous": 34,
+      "next": 34,
+      "status": "classified-programme-adjacent",
+      "sources": 2
+    },
+    {
+      "slug": "spec-antarctica-hidden-civilization",
+      "previous": 4,
+      "next": 4,
+      "status": "restricted-access-mythology",
+      "sources": 1
+    },
+    {
+      "slug": "spec-mkultra-never-ended",
+      "previous": 28,
+      "next": 28,
+      "status": "historical-program-current-continuation-unproven",
+      "sources": 1
+    },
+    {
+      "slug": "spec-monarch-programming",
+      "previous": 5,
+      "next": 5,
+      "status": "internet-mythology",
+      "sources": 1
+    },
+    {
+      "slug": "spec-predictive-programming",
+      "previous": 8,
+      "next": 8,
+      "status": "pattern-inference-not-foreknowledge",
+      "sources": 0
+    },
+    {
+      "slug": "spec-music-occult-programming",
+      "previous": 9,
+      "next": 9,
+      "status": "aesthetic-symbolism-not-control-proof",
+      "sources": 0
+    },
+    {
+      "slug": "spec-social-media-behaviour-grid",
+      "previous": 69,
+      "next": 68,
+      "status": "documented-behavioural-design",
+      "sources": 2
+    },
+    {
+      "slug": "spec-frequency-mind-control",
+      "previous": 6,
+      "next": 6,
+      "status": "technology-claim-without-deployment-evidence",
+      "sources": 2
+    },
+    {
+      "slug": "spec-project-blue-beam",
+      "previous": 5,
+      "next": 5,
+      "status": "internet-mythology",
+      "sources": 2
+    },
+    {
+      "slug": "spec-fake-messiah-hologram",
+      "previous": 4,
+      "next": 4,
+      "status": "internet-mythology",
+      "sources": 1
+    },
+    {
+      "slug": "spec-controlled-ufo-disclosure",
+      "previous": 54,
+      "next": 52,
+      "status": "disclosure-management-watch",
+      "sources": 3
+    },
+    {
+      "slug": "spec-supply-chain-slavery",
+      "previous": 79,
+      "next": 78,
+      "status": "documented-public-record-fact",
+      "sources": 2
+    },
+    {
+      "slug": "spec-trafficking-corruption",
+      "previous": 59,
+      "next": 58,
+      "status": "documented-case-pattern",
+      "sources": 2
+    },
+    {
+      "slug": "spec-organ-trafficking",
+      "previous": 72,
+      "next": 72,
+      "status": "documented-public-record-fact",
+      "sources": 1
+    },
+    {
+      "slug": "spec-debt-slavery",
+      "previous": 77,
+      "next": 76,
+      "status": "documented-public-record-fact",
+      "sources": 2
+    },
+    {
+      "slug": "spec-adoption-trafficking",
+      "previous": 38,
+      "next": 38,
+      "status": "case-specific-documented-risk",
+      "sources": 2
+    },
+    {
+      "slug": "spec-population-reduction",
+      "previous": 24,
+      "next": 24,
+      "status": "demographic-policy-not-extermination",
+      "sources": 1
+    },
+    {
+      "slug": "spec-forced-sterilisation",
+      "previous": 42,
+      "next": 42,
+      "status": "documented-rights-abuse-case-specific",
+      "sources": 1
+    },
+    {
+      "slug": "spec-bioweapon-release",
+      "previous": 18,
+      "next": 18,
+      "status": "origin-uncertainty-no-control-event-proof",
+      "sources": 2
+    },
+    {
+      "slug": "spec-digital-id-beast-system",
+      "previous": 10,
+      "next": 10,
+      "status": "religious-symbolism-over-real-infrastructure",
+      "sources": 2
+    },
+    {
+      "slug": "spec-smart-cities-open-air-prison",
+      "previous": 41,
+      "next": 40,
+      "status": "surveillance-and-governance-risk-not-prison-proof",
+      "sources": 2
+    },
+    {
+      "slug": "spec-tartaria-reset",
+      "previous": 4,
+      "next": 4,
+      "status": "alternative-history-mythology",
+      "sources": 1
+    },
+    {
+      "slug": "spec-giants-hidden",
+      "previous": 5,
+      "next": 5,
+      "status": "archaeological-claim-unsubstantiated",
+      "sources": 1
+    },
+    {
+      "slug": "spec-vatican-hidden-vaults",
+      "previous": 44,
+      "next": 44,
+      "status": "restricted-archive-real-specific-suppression-unproven",
+      "sources": 1
+    },
+    {
+      "slug": "spec-cataclysm-cycle",
+      "previous": 12,
+      "next": 12,
+      "status": "scientific-risk-coverup-unsubstantiated",
+      "sources": 1
+    }
+  ],
+  "issues": []
+}

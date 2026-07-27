@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:15:20.777Z",
-  "pageCount": 130,
+  "generatedAt": "2026-07-27T06:54:20.800Z",
+  "pageCount": 128,
   "output": "downloads/full-site-audit-target-detection-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 4,
     "title": "Full Site Audit Target Detection Patch",
-    "contentHash": "43382e3385c446e1b40ee1bb2345404db30b6a38adbea3dc1e43e6e9c6409757",
+    "contentHash": "daaef9837cdf1b90585eaacad4fe2715aa1c8f5404c677421f7ae17b1f1bd91c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -14,6 +14,8 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "ec1316fb1fb70c83dc347bb6",
+      "7c05d9244c4620950350cf27",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -31,25 +33,25 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-E76F1740FFF4E811",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "ASC-REVIEW-6318EF16062CE35D",
-      "d0b647e325275daa6d824a49",
-      "58a212e4e1a93007ec5b3d6d",
+      "ASC-REVIEW-CE615863A9722AC5",
+      "ad23fb22757e50c30b3d487c",
+      "594100b62a47db521fe2a128",
+      "9e8903fd8dfa9b54a1d6db30",
       "71e0563ca7b139c37c302956",
-      "ec1316fb1fb70c83dc347bb6",
+      "76a719654ec3312153163154",
+      "5b6b5c0285c3c8742768ea5c",
+      "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "7c05d9244c4620950350cf27",
-      "cee347fbc3752c6e0f890457",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "88ef9baf356c096816236956",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -77,7 +79,7 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-A16F0CE46FC26A15",
+      "ASC-REVIEW-FAA34ACD3ED6CA54",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -138,31 +140,29 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893"
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 132,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 124,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 116,
-      "moneyRecordCount": 116
+      "moneyRecordCount": 114
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:15:20.777Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:54:20.800Z"
   }
 }

@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-23T06:51:35.259Z
+Generated: 2026-07-27T07:01:21.665Z
 
 ## Daily Revelation Report
 
-Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
+Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
 
 Source: daily-command-brief.html
 

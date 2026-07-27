@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-23T06:51:54.314Z",
-  "filesScanned": 535,
+  "updated": "2026-07-27T07:01:49.702Z",
+  "filesScanned": 719,
   "highIssues": 0,
-  "reviewIssues": 12,
+  "reviewIssues": 13,
   "issues": [
     {
       "file": "access-denied.html",
@@ -59,6 +59,11 @@
       "file": "site-population-audit.html",
       "severity": "review",
       "issue": "missing meta description"
+    },
+    {
+      "file": "site-population-audit.html",
+      "severity": "review",
+      "issue": "missing visible boundary"
     },
     {
       "file": "site-quality-report.html",

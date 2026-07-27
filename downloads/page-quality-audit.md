@@ -1,12 +1,12 @@
 # Page Quality Audit
 
-Updated: 2026-07-23T06:51:54.314Z
+Updated: 2026-07-27T07:01:49.702Z
 
-Files scanned: 535
+Files scanned: 719
 
 High issues: 0
 
-Review issues: 12
+Review issues: 13
 
 - review: access-denied.html — missing meta description
 - review: admin-campaign-monitor.html — missing meta description
@@ -19,4 +19,5 @@ Review issues: 12
 - review: intelligence-reports.html — missing meta description
 - review: site-intelligence-system-audit.html — missing meta description
 - review: site-population-audit.html — missing meta description
+- review: site-population-audit.html — missing visible boundary
 - review: site-quality-report.html — missing meta description

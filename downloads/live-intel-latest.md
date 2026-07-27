@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-27T04:02:26.015Z
+Collection completed: 2026-07-27T07:04:42.981Z
 Latest source publication: 2026-07-26T23:43:09.000Z
-Collection status: fresh-items-added
-New items this collection: 2
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-2 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -38,11 +38,11 @@ New items this collection: 2
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: After war took her leg, this Ukrainian gymnast refused to give up
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Gaza: Dialysis patients face grueling hospital journey by donkey cart
+- 2026-07-26 — Gaza: Dialysis patients face gruelling hospital journey by donkey cart
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168026
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaza: Dialysis patients face grueling hospital journey by donkey cart
+  - Video hook: New public-record signal: Gaza: Dialysis patients face gruelling hospital journey by donkey cart
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-26 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168028
@@ -109,6 +109,12 @@ New items this collection: 2
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfires surge across Europe as Spain and France battle major blazes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06
+  - Source: https://vault.fbi.gov/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein-part-06/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
@@ -187,6 +193,120 @@ New items this collection: 2
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: New ECOSOC chief, Secretary-General candidates’ debate, torture in Mali, drowning prevention
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Charles Keating Part 13
+  - Source: https://vault.fbi.gov/charles-keating/charles-keating-part-13/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Charles Keating Part 13
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Frank Capra
+  - Source: https://vault.fbi.gov/frank-capra
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Frank Capra
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Frank Capra (Final)
+  - Source: https://vault.fbi.gov/frank-capra/frank-capra-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Frank Capra (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Jake Guzik
+  - Source: https://vault.fbi.gov/jake-guzik
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Jake Guzik
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Jake Guzik (Final)
+  - Source: https://vault.fbi.gov/jake-guzik/jake-guzik-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Jake Guzik (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Otto Fred Otepka
+  - Source: https://vault.fbi.gov/otto-fred-otepka
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Otto Fred Otepka
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Otto Fred Otepka Part 01
+  - Source: https://vault.fbi.gov/otto-fred-otepka/otto-fred-otepka-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Otto Fred Otepka Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — Otto Fred Otepka Part 02 (Final)
+  - Source: https://vault.fbi.gov/otto-fred-otepka/otto-fred-otepka-part-02-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Otto Fred Otepka Part 02 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International
+  - Source: https://vault.fbi.gov/united-press-international
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 01
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 02
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-02/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 02
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 03
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-03/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 03
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 04
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-04/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 04
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 05
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-05/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 05
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 06
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-06/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 06
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 07
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-07/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 07
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 08
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-08/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 08
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 09
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-09/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 09
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — United Press International Part 10 (Final)
+  - Source: https://vault.fbi.gov/united-press-international/united-press-international-part-10-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: United Press International Part 10 (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Examining 2 decades since Jeffrey Epstein's arrest - WPTV
   - Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5

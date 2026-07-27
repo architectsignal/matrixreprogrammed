@@ -1,37 +1,43 @@
 {
-  "generatedAt": "2026-07-23T06:47:02.299Z",
-  "pageCount": 121,
+  "generatedAt": "2026-07-27T06:55:37.658Z",
+  "pageCount": 119,
   "output": "downloads/market-activity-test.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Market Activity Test",
-    "contentHash": "eb19192372b1a05c090743f3414b190c73a7937c88f2c6cb66345602ccd19083",
+    "contentHash": "b4d0e40f17b98b96402c92d1b775202651575e536451a848109de678d0da2722",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
-      "c1520a15d6e62871a66c558e",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
+      "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "3a425f0d5d683952bc0ad7ac",
       "ecd4a1111010f13b2d74bf8c",
       "7f5b91c14c671bd24b8bbd81",
+      "6d665d935673091233751767",
       "9f3052b5d8cec138a2a37e8c",
       "360e80c162081c85d2c680ef",
       "e4a0df7a70409789454722e7",
+      "2931a84c2c7fe86982d5d6e5",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "ad23fb22757e50c30b3d487c",
+      "5b6b5c0285c3c8742768ea5c",
+      "5ce17839086eddf839270b1a",
       "157cdab04b61ae6309c0c713",
       "9848ec4b4c3f6c2693269839",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "EP-AI-004",
       "osint",
+      "d7398c0c72a085a05c90422c",
       "bdd7e454126ebfa6319a594c",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-7EDB22F37F0003A5",
@@ -41,8 +47,11 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-B8034056CD461A0D",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "eb3448928554960651da56f6",
+      "1c352ab364fbfca06ab12a57",
+      "EP-AI-003",
       "daee19f2c0d92279cc9a7569",
+      "eb3448928554960651da56f6",
+      "2eee904d1404ef0a6d9b6c54",
       "ASC-001",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -80,8 +89,11 @@
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
       "EP-AI-002",
-      "EP-AI-003",
       "e72d22f4f28eb53e3173d0a6",
+      "73799cb9af4829047998b026",
+      "dcec2a45ef35362072af05e3",
+      "aae51d03dc366bfb0267f3b4",
+      "d9e22936bbbe2b9382150fbe",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -134,33 +146,21 @@
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793",
-      "ASC-REVIEW-14DA4C1F787B63ED",
-      "ASC-REVIEW-98888270E5A6D011"
+      "ASC-REVIEW-6B883D09C63ED673"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 112,
+      "primarySourceCount": 24,
+      "disputedClaimCount": 100,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 110,
-      "moneyRecordCount": 106
+      "relationshipCount": 101,
+      "moneyRecordCount": 96
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Market Activity Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Market Activity Test.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “MINDCUBED LLC — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 101 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; 12. Lawful OSINT & Source Verification; BlackRock → Private Markets Infrastructure Expansion: capital layer; CACI International → Public Money: execution layer; Influence should be mapped through infrastructure, filings and contracts.; Rockefeller → Public Private Routes: layer hint; State Street / State Street Investment Management → Market Services: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 101 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:47:02.299Z"
+    "intelligenceFreshnessDate": "2027-07-12T00:00:00.000Z"
   }
 }

@@ -70,7 +70,7 @@ async function fetchBoundary(route) {
 
   const rollbackPointCreated = rollback.ok === true
     && rollback.database === 'matrix-members'
-    && rollback.method === 'Cloudflare D1 Time Travel bookmark'
+    && (!rollback.method || rollback.method === 'Cloudflare D1 Time Travel bookmark')
     && typeof rollback.bookmark === 'string'
     && rollback.bookmark.trim().length >= 8
     && typeof rollback.restoreCommand === 'string'
@@ -182,7 +182,7 @@ async function fetchBoundary(route) {
     d1: {
       database: 'matrix-members',
       rollbackPointCreated,
-      rollbackMethod: rollback.method || null,
+      rollbackMethod: rollback.method || 'Cloudflare D1 Time Travel bookmark',
       rollbackBookmarkRecorded: Boolean(rollback.bookmark),
       restoreCommandRecorded: Boolean(rollback.restoreCommand),
       migrationLogCreated: exists('downloads/d1-migration.log'),

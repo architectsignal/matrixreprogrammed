@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "action": "reused-existing-corrected-run",
+  "recordedAt": "2026-07-24T10:19:41.480Z",
+  "cutoff": "2026-07-24T10:09:00.000Z",
+  "workflowId": 302110600,
+  "supersedesFailedRun": 30083740775,
+  "run": {
+    "id": 30085279942,
+    "status": "in_progress",
+    "conclusion": null,
+    "createdAt": "2026-07-24T10:11:09Z",
+    "updatedAt": "2026-07-24T10:11:14Z",
+    "headSha": "8c26deeadb442ceb238386b9fc45c8b71a9da37b",
+    "headBranch": "main",
+    "event": "workflow_dispatch",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30085279942"
+  },
+  "boundary": "The first authorized run failed before deployment. This records or dispatches one corrected run and reuses it on all later checks."
+}

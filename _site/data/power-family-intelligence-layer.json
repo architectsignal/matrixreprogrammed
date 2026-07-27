@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "title": "Behind the Curtain: Power-Family Intelligence Layer",
+  "asOf": "dynamic_from_source_feeds",
+  "editorialBoundary": "This layer measures documented authority, asset control, institutional access, network centrality, advisory influence, succession position and operational activity. It is not a guilt score and does not infer wrongdoing, secret coordination or total control from family membership, wealth, marriage, attendance or social contact.",
+  "claimClasses": [
+    {
+      "id": "documented_fact",
+      "label": "Documented Fact"
+    },
+    {
+      "id": "official_record",
+      "label": "Official Record"
+    },
+    {
+      "id": "credible_reporting",
+      "label": "Credible Reporting"
+    },
+    {
+      "id": "official_allegation",
+      "label": "Official Allegation"
+    },
+    {
+      "id": "analytical_inference",
+      "label": "Analytical Inference"
+    },
+    {
+      "id": "historical_claim",
+      "label": "Historical Claim"
+    },
+    {
+      "id": "disputed",
+      "label": "Disputed Claim"
+    },
+    {
+      "id": "unverified",
+      "label": "Unverified Claim"
+    },
+    {
+      "id": "deep_speculation",
+      "label": "Deep Speculation"
+    }
+  ],
+  "scoreDimensions": [
+    {
+      "id": "institutionalAuthority",
+      "label": "Institutional Authority",
+      "weight": 1
+    },
+    {
+      "id": "assetControl",
+      "label": "Asset Control",
+      "weight": 1
+    },
+    {
+      "id": "governmentAccess",
+      "label": "Government Access",
+      "weight": 1
+    },
+    {
+      "id": "networkCentrality",
+      "label": "Network Centrality",
+      "weight": 1
+    },
+    {
+      "id": "informationAccess",
+      "label": "Information Access",
+      "weight": 1
+    },
+    {
+      "id": "intergenerationalPosition",
+      "label": "Intergenerational Position",
+      "weight": 1
+    },
+    {
+      "id": "operationalActivity",
+      "label": "Operational Activity",
+      "weight": 1
+    },
+    {
+      "id": "evidenceStrength",
+      "label": "Public-Record Evidence",
+      "weight": 1
+    }
+  ],
+  "powerVectors": [
+    "Banking",
+    "Asset management",
+    "Sovereign wealth",
+    "Central banking",
+    "Government",
+    "Diplomacy",
+    "Intelligence",
+    "Defence",
+    "Energy",
+    "Technology",
+    "Artificial intelligence",
+    "Data infrastructure",
+    "Media",
+    "Telecommunications",
+    "Pharmaceuticals",
+    "Food and agriculture",
+    "Real estate",
+    "Infrastructure",
+    "Law",
+    "Academia",
+    "Think tanks",
+    "Foundations",
+    "Royal networks",
+    "International organisations",
+    "Lobbying",
+    "Political finance",
+    "Cultural influence"
+  ],
+  "lanes": [
+    {
+      "title": "Proven Control",
+      "text": "Legal authority, voting rights, beneficial ownership, trustee powers, executive office and documented appointment rights."
+    },
+    {
+      "title": "Documented Access",
+      "text": "Board overlap, formal advisory position, repeated institutional access, policy participation and verified professional representation."
+    },
+    {
+      "title": "Bounded Inference",
+      "text": "Transparent analysis derived from multiple documented links. It remains an inference and cannot become a factual accusation."
+    }
+  ],
+  "familyPersonLinks": [
+    {
+      "familyId": "house-of-saud",
+      "personId": "mohammed-bin-salman",
+      "relationship": "Current ruling-family executive and sovereign-capital chair",
+      "classification": "documented_fact",
+      "successionStatus": "active_successor"
+    },
+    {
+      "familyId": "al-nahyan",
+      "personId": "mohamed-bin-zayed",
+      "relationship": "Current ruling-family head and federal executive",
+      "classification": "documented_fact",
+      "successionStatus": "incumbent"
+    },
+    {
+      "familyId": "al-maktoum",
+      "personId": "mohammed-bin-rashid-al-maktoum",
+      "relationship": "Current ruling-family executive",
+      "classification": "documented_fact",
+      "successionStatus": "incumbent"
+    },
+    {
+      "familyId": "al-thani",
+      "personId": "tamim-bin-hamad-al-thani",
+      "relationship": "Current ruling-family head",
+      "classification": "documented_fact",
+      "successionStatus": "incumbent"
+    },
+    {
+      "familyId": "wallenberg",
+      "personId": "jacob-wallenberg",
+      "relationship": "Family-linked board and investment-system figure",
+      "classification": "documented_fact",
+      "successionStatus": "active_operator"
+    },
+    {
+      "familyId": "agnelli-elkann",
+      "personId": "john-elkann",
+      "relationship": "Family holding-company and portfolio governance figure",
+      "classification": "documented_fact",
+      "successionStatus": "active_operator"
+    }
+  ],
+  "gatekeeperKeywords": [
+    "chair",
+    "chairman",
+    "chairwoman",
+    "trustee",
+    "chief investment",
+    "chief executive",
+    "director",
+    "governor",
+    "secretary-general",
+    "secretary general",
+    "adviser",
+    "advisor",
+    "counsel",
+    "president",
+    "commissioner"
+  ],
+  "successorStatuses": [
+    "active_successor",
+    "emerging_successor",
+    "active_operator"
+  ],
+  "claims": [
+    {
+      "claim": "A single family bloc commands the major monetary, security, regulatory, technological and capital systems of the world.",
+      "support": "Some dynasties possess explicit state authority or durable corporate voting control.",
+      "against": "The source datasets show fragmented legal mandates, independent institutions, professional management, regulators, counterparties and competing states.",
+      "missing": "Authenticated cross-institution instructions, enforceable control rights or a documented command chain spanning the systems claimed.",
+      "conclusion": "Not established by the current public record.",
+      "confidence": "high",
+      "classification": "unsupported"
+    },
+    {
+      "claim": "Powerful surnames are irrelevant because institutions are impersonal.",
+      "support": "Institutions constrain individuals and often survive changes of leadership.",
+      "against": "Succession law, voting pools, foundations, holding companies and appointments can preserve multigenerational access.",
+      "missing": "Family-by-family control-chain evidence and transaction-level decision records.",
+      "conclusion": "Contradicted where authority or control rights are legally embedded; otherwise case-specific.",
+      "confidence": "high",
+      "classification": "analytical_inference"
+    },
+    {
+      "claim": "Public faces are always less important than hidden operators.",
+      "support": "Trustees, investment officers, senior advisers and board representatives can exercise operational authority without mass visibility.",
+      "against": "Heads of government, ruling monarchs and formal chairs may possess direct authority that cannot be reduced to advisers.",
+      "missing": "Decision records identifying who initiated, approved, blocked or implemented specific actions.",
+      "conclusion": "Sometimes true, never safe as a universal assumption.",
+      "confidence": "high",
+      "classification": "analytical_inference"
+    }
+  ],
+  "unresolvedQuestions": [
+    "Who possesses the final voting authority in each family holding, trust or foundation structure?",
+    "Which trustees can appoint or remove directors, beneficiaries, protectors or investment managers?",
+    "Who appoints the family-office chief executive and investment leadership?",
+    "Which adviser appears repeatedly across major transactions, disputes and succession events?",
+    "Which foundation grants create repeated access to policy-making institutions?",
+    "Which private companies remain beneficially opaque despite public-facing ownership claims?",
+    "Who represents the family during negotiations with governments, regulators or sovereign investors?",
+    "Which publicly active successor is accumulating board, foundation or investment authority?",
+    "Which relationship is merely social, and which produces a measurable decision or transfer of control?",
+    "What evidence would lower the current proximity-to-power score rather than only raise it?"
+  ],
+  "integrationRoutes": [
+    "follow-the-money.html",
+    "behind-the-curtain.html",
+    "behind-the-curtain-access.html",
+    "control-structure.html",
+    "power-atlas.html",
+    "evidence-vault.html",
+    "live-intel.html"
+  ],
+  "monitoringTargets": [
+    "Corporate filings",
+    "Board appointments",
+    "Trustee changes",
+    "Foundation filings",
+    "Political donations",
+    "Lobbying disclosures",
+    "Government appointments",
+    "Major transactions",
+    "Court cases",
+    "Regulatory actions",
+    "Sanctions",
+    "Succession events",
+    "New investment vehicles",
+    "Family-office recruitment",
+    "Public denials and corrections"
+  ],
+  "reviewTriggers": [
+    "Criminal conduct",
+    "Corruption",
+    "Trafficking",
+    "Intelligence activity",
+    "Covert political control",
+    "Market manipulation",
+    "Bribery",
+    "Money laundering",
+    "Blackmail",
+    "Sexual misconduct",
+    "Secret-society membership",
+    "Religious or occult allegation",
+    "War crimes",
+    "Claims of secret control over a government or world event"
+  ]
+}

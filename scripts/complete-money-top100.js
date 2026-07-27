@@ -216,7 +216,8 @@ const researchSets = {
     "Bangladesh Infrastructure Development Fund",
     "India National Investment and Infrastructure Fund",
     "Pakistan Sarmaya-e-Pakistan",
-    "Sri Lanka sovereign investment initiatives"
+    "Sri Lanka sovereign investment initiatives",
+    "Nepal Investment Board sovereign vehicles"
   ],
   "Top 100 Pension Funds": [
     "Government Pension Fund Global",
@@ -1235,7 +1236,8 @@ const researchSets = {
     "TBS Holdings",
     "TV Asahi Holdings",
     "NHK",
-    "CJ ENM"
+    "CJ ENM",
+    "Seven West Media"
   ],
   "Top 100 Technology-Control Companies": [
     "Microsoft",
@@ -1642,7 +1644,8 @@ const researchSets = {
     "National Air Traffic Controllers Association PAC",
     "American Israel Public Affairs Committee network",
     "Council for a Secure America political network",
-    "No Labels political network"
+    "No Labels political network",
+    "National Association of Home Builders BUILD-PAC"
   ],
   "Top 100 Philanthropic Power Networks": [
     "Bill & Melinda Gates Foundation network",

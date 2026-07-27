@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T06:43:06.948Z",
-  "pageCount": 112,
+  "generatedAt": "2026-07-27T06:50:58.704Z",
+  "pageCount": 117,
   "output": "downloads/campaign-crime-state-overlap-push.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Crime-State Overlap Campaign",
-    "contentHash": "faa2c74bfef77c8edd87ce92a8727e62f8c01ca744f00e5ff6b79089be116593",
+    "contentHash": "5a819ff8cac101bc627db3f3d37def1d616e193889e39f8fc2b4daf3d2954d16",
     "sourceIds": [
       "1a15b4fad0b9b574f2d09a70",
       "651712cbd19a0670801dff73",
@@ -77,11 +77,9 @@
       "epstein-files-2026-02-06-newly-released-fbi-logs-raise-questions-over-mystery-orange-blob-spott",
       "epstein-files-2026-02-04-details-of-jeffrey-epstein-post-mortem-released-in-latest-files-bbc",
       "epstein-files-2026-02-03-newly-released-ghoulish-pics-show-jeffrey-epstein-s-body-as-emts-perfo",
-      "d0b647e325275daa6d824a49",
       "55a324e4bddcaa4ce8c4586e",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
-      "cee347fbc3752c6e0f890457",
       "war-machine-2026-07-22-a6c25a9b",
       "6188547d91106e0f9d3bce50",
       "epstein-files-2026-06-25-release-unredacted-epstein-files-or-explain-why-you-can-t-judge-tells-",
@@ -127,9 +125,11 @@
       "88ef9baf356c096816236956",
       "3c9c23f7f9a1cec81ef90f59",
       "356f10eff5c6f147fc33ebeb",
+      "war-machine-2026-07-26-262b52a7",
+      "declassified-files-2026-07-24-c827955e",
+      "war-machine-2026-07-23-ad2616fe",
       "war-machine-2026-07-20-a5d16392",
       "war-machine-2026-07-20-abd16d04",
-      "war-machine-2026-07-17-aed171bd",
       "epstein-files-2026-06-26-5-questions-keeping-the-epstein-files-alive-newsweek",
       "epstein-files-2026-06-26-leon-black-tells-house-panel-epstein-duped-him-as-judge-orders-doj-to-",
       "epstein-files-2026-06-25-lawmakers-to-question-leon-black-about-epstein-ties-as-maxwell-pushes-",
@@ -150,28 +150,28 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 7,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 5,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 21,
-      "moneyRecordCount": 28
+      "relationshipCount": 23,
+      "moneyRecordCount": 29
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Crime-State Overlap Campaign beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Crime-State Overlap Campaign.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Security Council met Wednesday in New York to debate critical minerals — the lithium, cobalt and copper powering the clean energy transition. Demand is set to triple by 2030. The question: will this mineral wealth build peace and prosperity, or fund conflict and corruption? Follow live updates throughout the day below and go here for full coverage from across the UN. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 21 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Crime Network Starter Brief; War Machine Campaign; Follow The Money Watch; Intelligence Network Share Kit; War Machine Share Kit; Intelligence Dossiers Offer; Intelligence Network Pack; War Machine Pack",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 21 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Crime Network Starter Brief",
           "War Machine Campaign",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-26T12:00:00.000Z"
   }
 }

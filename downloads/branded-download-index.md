@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-23T06:50:27.755Z
+Updated: 2026-07-27T06:59:30.174Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -69,16 +69,21 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Case Status Dashboard: downloads/case-status-dashboard.pdf
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf
 - WWIII Escalation Clock: downloads/clock-wall.pdf
+- Cloudflare Canonical Member Origin: downloads/cloudflare-canonical-member-origin.pdf
 - Cloudflare Investigation Graph Projection: downloads/cloudflare-investigation-graph-projection.pdf
 - Cloudflare Search Index Compaction: downloads/cloudflare-search-index-compaction.pdf
 - Cloudflare Worker Routes Test: downloads/cloudflare-worker-routes-test.pdf
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf
 - Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf
 - Conclusion Integrity Report: downloads/conclusion-integrity-report.pdf
+- Contact Nav Current Pm Report: downloads/contact-nav-current-pm-report.pdf
+- Contact The Machine Build: downloads/contact-the-machine-build.pdf
 - Control Brain V2: downloads/control-brain-v2.pdf
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf
+- Current Clock Intelligence Test: downloads/current-clock-intelligence-test.pdf
+- Current Clock Intelligence: downloads/current-clock-intelligence.pdf
 - Current Controlled Deploy Runs: downloads/current-controlled-deploy-runs.pdf
 - Current Intelligence Finalization: downloads/current-intelligence-finalization.pdf
 - Current Live Intel Runs: downloads/current-live-intel-runs.pdf
@@ -95,6 +100,9 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf
+- Death Files 100 Catalogue: downloads/death-files-100-catalogue.pdf
+- The Death Files: downloads/death-files-index.pdf
+- Death Files Pressure Test: downloads/death-files-pressure-test.pdf
 - Deep Audit Member Posting Contract: downloads/deep-audit-member-posting-contract.pdf
 - Deep Audit Public Defect Repair: downloads/deep-audit-public-defect-repair.pdf
 - Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf
@@ -171,16 +179,23 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Generated Site Repair Report: downloads/generated-site-repair-report.pdf
 - Geographic Power Atlas Runtime Test: downloads/geographic-power-atlas-runtime-test.pdf
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf
+- Heroes Fighting the Matrix — Source Ledger: downloads/heroes-fighting-matrix-source-ledger.pdf
 - AI Detective — Epstein Files: downloads/homepage-ai-detective-route.pdf
 - Homepage Command Builder Shell Patch: downloads/homepage-command-builder-shell-patch.pdf
+- Homepage Construction Banner: downloads/homepage-construction-banner.pdf
+- Homepage Critical Clocks: downloads/homepage-critical-clocks.pdf
 - Homepage Mission Normalization: downloads/homepage-mission-normalization.pdf
 - Homepage Navigation Repair: downloads/homepage-navigation-repair.pdf
+- Homepage Video Intro Release: downloads/homepage-video-intro-release.pdf
 - Idempotent Forum Controlled Deploy: downloads/idempotent-forum-controlled-deploy.pdf
 - Matrix Reprogrammed Intel Drop Vault: downloads/intel-drop-vault.pdf
 - Intel Vault: downloads/intel-vault.pdf
 - Internal Report Manifest Cleanup: downloads/internal-report-manifest-cleanup.pdf
 - Investigation Machine Run Report: downloads/investigation-machine-run-report.pdf
 - Investigation Source Ledger: downloads/investigation-source-ledger.pdf
+- July 2026 All Clock Sweep Test: downloads/july-2026-all-clock-sweep-test.pdf
+- July 2026 Clock Coverage: downloads/july-2026-clock-coverage.pdf
+- July 2026 Full Clock Sweep Report: downloads/july-2026-full-clock-sweep-report.pdf
 - Late Generated Shared Runtime Patch: downloads/late-generated-shared-runtime-patch.pdf
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf
 - The Black File Starter Brief: downloads/lead-magnet-black-file-brief.pdf
@@ -208,6 +223,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Master Evidence Source Registry: downloads/master-evidence-source-registry.pdf
 - Member Forum Integration Patch: downloads/member-forum-integration-patch.pdf
 - Member Forum Integration Test: downloads/member-forum-integration-test.pdf
+- Member Login Paypal Newsletter Patch: downloads/member-login-paypal-newsletter-patch.pdf
 - Membership Access Copy Report: downloads/membership-access-copy-report.pdf
 - Membership Auth Patch Report: downloads/membership-auth-patch-report.pdf
 - Membership Auth Ui Patch: downloads/membership-auth-ui-patch.pdf
@@ -221,6 +237,9 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Mission Intelligence 10: downloads/mission-intelligence-10.pdf
 - Mission Source Priority Index: downloads/mission-source-priority-index.pdf
 - Monetisation Dashboard: downloads/monetisation-dashboard.pdf
+- Money Depth Integration Test: downloads/money-depth-integration-test.pdf
+- Money Graph Root Data Patch: downloads/money-graph-root-data-patch.pdf
+- Money Public Market Refresh: downloads/money-public-market-refresh.pdf
 - Network Search: downloads/network-search.pdf
 - Newsletter Consent Patch: downloads/newsletter-consent-patch.pdf
 - Newsletter Worker Patch Report: downloads/newsletter-worker-patch-report.pdf
@@ -282,6 +301,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Reader Experience Governor: downloads/reader-experience-governor-report.pdf
 - Reader Page Repair: downloads/reader-page-repair.pdf
 - Recovery Worker Api Contract Test: downloads/recovery-worker-api-contract-test.pdf
+- Release Audit Hard Issue Repair: downloads/release-audit-hard-issue-repair.pdf
 - Release Forum Contract Reconciliation: downloads/release-forum-contract-reconciliation.pdf
 - Release Metadata Routing Patch: downloads/release-metadata-routing-patch.pdf
 - Release Regression Finalize: downloads/release-regression-finalize.pdf

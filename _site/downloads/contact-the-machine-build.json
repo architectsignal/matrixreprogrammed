@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-27T06:49:39.295Z",
+  "checks": {
+    "worker import": true,
+    "worker route": true,
+    "worker origin guard": true,
+    "homepage route": true,
+    "page": true,
+    "style": true,
+    "client": true,
+    "intake worker": true,
+    "ciphertext forwarded": true,
+    "key download action": true,
+    "no missing policy route": true,
+    "no API href": true,
+    "cloudflare required": true,
+    "reconcile critical": true,
+    "receipt rollback compatible": true
+  },
+  "failures": [],
+  "pgp": {
+    "recipient": "matrixreprogrammed@proton.me",
+    "clientSide": true,
+    "serverReceives": "armoured ciphertext only",
+    "protonDelivery": "ciphertext forwarded intact; no plaintext forwarded",
+    "library": "OpenPGP.js 6.3.1 pinned"
+  },
+  "storage": "Cloudflare D1 contact_submissions",
+  "notification": "Brevo carries metadata for ordinary signals and ciphertext-only content for PGP signals"
+}

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-23T06:42:17.607Z
+Updated: 2026-07-27T06:50:04.297Z
 Items: 12
 
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
@@ -76,6 +76,11 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-24 — After an Ebola centre was attacked, peacekeepers moved in next door
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168018
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-06-17 — Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
   - Evidence: Seven-day public-record lead
@@ -91,18 +96,13 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-08 — Bill Gates to testify on Epstein relationship Wednesday - The Center Square
-  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPczZUcGdUVGRLUDlwdjQyTGN5V3drNTZyTE01SXdfb3dHWEpqZWwtbkJtV0Vjakh6aGNBQ0w5Yng0b3hzUGNJMFQ4NlFEVlZaTnpOSXR1RU80OVBCcy0weXBFNnNnOU8xeUtYUWpKQ2d3dGVjeUxYejduYTFJRFk4N1Z6SFQxdGxadkpTWHdXdFF3WFdK0gGaAUFVX3lxTE96aHg1c21EWjhlazd5Wmlpa1RERkw1c3B0RG9DSEZISE9IQ0FGOWlCR0RaLUwyMDE3U0NidEx0TFljclN0QUI5OE00cE85bDZxVnp0NVRJV2dyYTRMYjM1UU0ybkFJcTQ0LWFabVJOYVp5T201QW0tVDFOYjhNdWdKV2JGQjVBVFN0Q3Y4WFRyWUVteUFTTnlQQXc?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-21 — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167992
+- 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-17 — Baristas behind bars: Thai prisoners brew a path back to daily life
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167954
+- 2026-07-21 — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1167992
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -134,12 +134,12 @@ Items: 12
 - Google News / control structure: South Africa boosts Smart ID adoption through expanded bank network - Biometric Update — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
 - UN News: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — https://news.un.org/feed/view/en/story/2026/07/1167972
+- UN News: After an Ebola centre was attacked, peacekeepers moved in next door — https://news.un.org/feed/view/en/story/2026/07/1168018
 - Google News / crime state overlap: Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP — https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
 - Google News / Epstein timeline and files: Democrats to call on Vance to testify to House committee over Epstein files - The Guardian — https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells US House ‘I have never victimized anyone’ in Epstein testimony - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNaWpGR1luRUZpVHdCYzlYTEJWZVpVSFhBUzlLdnFIREtQRUZOc1ZTQndnem12cE43elNxeGpIOTFWdk5fQkpfRmktTnczZFNYN0o4X0lCb0NKdmdFcnRRZUxsRko3bmtRNDBhQk4yWWlabnE5akxmS2ZaOXAtanF5eFpuWXBuRi1JY2ZkcA?oc=5
-- Google News / Epstein timeline and files: Bill Gates to testify on Epstein relationship Wednesday - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxPczZUcGdUVGRLUDlwdjQyTGN5V3drNTZyTE01SXdfb3dHWEpqZWwtbkJtV0Vjakh6aGNBQ0w5Yng0b3hzUGNJMFQ4NlFEVlZaTnpOSXR1RU80OVBCcy0weXBFNnNnOU8xeUtYUWpKQ2d3dGVjeUxYejduYTFJRFk4N1Z6SFQxdGxadkpTWHdXdFF3WFdK0gGaAUFVX3lxTE96aHg1c21EWjhlazd5Wmlpa1RERkw1c3B0RG9DSEZISE9IQ0FGOWlCR0RaLUwyMDE3U0NidEx0TFljclN0QUI5OE00cE85bDZxVnp0NVRJV2dyYTRMYjM1UU0ybkFJcTQ0LWFabVJOYVp5T201QW0tVDFOYjhNdWdKV2JGQjVBVFN0Q3Y4WFRyWUVteUFTTnlQQXc?oc=5
+- UN News: ‘Judges should be superhuman’: The invisible burden behind the bench — https://news.un.org/feed/view/en/story/2026/07/1168023
 - UN News: World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
-- UN News: Baristas behind bars: Thai prisoners brew a path back to daily life — https://news.un.org/feed/view/en/story/2026/07/1167954
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 
 ## Book Routes

@@ -1,6 +1,6 @@
 # Mission Intelligence 10
 
-Generated: 2026-07-23T06:51:39.434Z
+Generated: 2026-07-27T07:01:27.294Z
 
 ## Conclusions
 - Strongest route today: World Economic Forum is the strongest current map node because it has the highest combined route, evidence and brain score. (institution-briefs/world-economic-forum.html)

@@ -1,16 +1,298 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-27T04:02:29.701Z
-Live Intel source window: 2026-07-27T04:02:26.015Z
-Tracked cards: 879
+Generated: 2026-07-27T07:01:19.604Z
+Live Intel source window: 2026-07-27T07:01:07.067Z
+Tracked cards: 935
 Cards with current matched records: 105
-Cards with no new verified record: 774
+Cards with no new verified record: 830
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
 
 ## ${esc(card.name)}
 - Route: heroes-fighting-matrix-card.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1963
+- Route: death-files-year-1963.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1965
+- Route: death-files-year-1965.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1968
+- Route: death-files-year-1968.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1969
+- Route: death-files-year-1969.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1972
+- Route: death-files-year-1972.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1973
+- Route: death-files-year-1973.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1974
+- Route: death-files-year-1974.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1975
+- Route: death-files-year-1975.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1976
+- Route: death-files-year-1976.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1977
+- Route: death-files-year-1977.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1978
+- Route: death-files-year-1978.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1980
+- Route: death-files-year-1980.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1981
+- Route: death-files-year-1981.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1982
+- Route: death-files-year-1982.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1984
+- Route: death-files-year-1984.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1986
+- Route: death-files-year-1986.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1987
+- Route: death-files-year-1987.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1988
+- Route: death-files-year-1988.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1989
+- Route: death-files-year-1989.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1990
+- Route: death-files-year-1990.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1991
+- Route: death-files-year-1991.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1993
+- Route: death-files-year-1993.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1995
+- Route: death-files-year-1995.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1996
+- Route: death-files-year-1996.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1997
+- Route: death-files-year-1997.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1998
+- Route: death-files-year-1998.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 1999
+- Route: death-files-year-1999.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2000
+- Route: death-files-year-2000.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2002
+- Route: death-files-year-2002.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2003
+- Route: death-files-year-2003.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2004
+- Route: death-files-year-2004.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2005
+- Route: death-files-year-2005.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2006
+- Route: death-files-year-2006.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2007
+- Route: death-files-year-2007.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2008
+- Route: death-files-year-2008.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2009
+- Route: death-files-year-2009.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2010
+- Route: death-files-year-2010.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2011
+- Route: death-files-year-2011.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2012
+- Route: death-files-year-2012.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2013
+- Route: death-files-year-2013.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2015
+- Route: death-files-year-2015.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2016
+- Route: death-files-year-2016.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2017
+- Route: death-files-year-2017.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2018
+- Route: death-files-year-2018.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2019
+- Route: death-files-year-2019.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2020
+- Route: death-files-year-2020.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2021
+- Route: death-files-year-2021.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -35,6 +317,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 1
 - Latest record: none in current window
 - undated — 2021-00294 — Entity Observation
+
+## 2022
+- Route: death-files-year-2022.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2023
+- Route: death-files-year-2023.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2024
+- Route: death-files-year-2024.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## 2024-07773
 - Route: entity-timelines/2024-07773.html
@@ -819,6 +1119,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## BLOODLINE AND DYNASTY CLAIMS
+- Route: dark-speculation-bloodline-dynasty-claims.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Bloomberg family
 - Route: power-families/bloomberg-family.html
 - Status: no-new-verified-record-in-current-window
@@ -1475,6 +1781,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## David Solomon
 - Route: top-52/david-solomon.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## DEATH FILE: JEFFREY EPSTEIN
+- Route: death-file-jeffrey-epstein.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## DEATH FILE: MUAMMAR GADDAFI
+- Route: death-file-muammar-gaddafi.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## DEATH FILE: ROBERT F. KENNEDY
+- Route: death-file-robert-f-kennedy.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -4743,6 +5067,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## THE DEATH FILES.
+- Route: death-files.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## THE EPSTEIN EMAIL NETWORK
 - Route: epstein-email-network.html
 - Status: no-new-verified-record-in-current-window
@@ -4794,6 +5124,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 1
 - Latest record: 2026-07-26T12:00:00.000Z
 - 2026-07-26T12:00:00.000Z — After war took her leg, this Ukrainian gymnast refused to give up — https://news.un.org/feed/view/en/story/2026/07/1168020
+
+## THE OWL SYMBOLISM NETWORK
+- Route: dark-speculation-owl-symbolism-network.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## THE PUBLIC-RECORD MAP OF HIDDEN POWER.
 - Route: power-atlas.html

@@ -1,16 +1,40 @@
 {
-  "generatedAt": "2026-07-23T06:46:47.661Z",
-  "pageCount": 76,
+  "generatedAt": "2026-07-27T06:55:21.767Z",
+  "pageCount": 86,
   "output": "downloads/living-intelligence-regression-test.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Living Intelligence Regression Test",
-    "contentHash": "0e28c394265a9b7c61d2a601c27e72b371f5b25fcb9ecb057ea0f0cffac0fe35",
+    "contentHash": "7fee2a9ac0563ca00301d556d6303783a3948a547dce4c4a3b6ac1c1a46cc1ab",
     "sourceIds": [
-      "us-doj",
-      "gao-hq",
+      "b4cb47ea50dc901364239e9f",
       "360e80c162081c85d2c680ef",
+      "declassified-files-2026-07-24-c827955e",
+      "declassified-files-2026-07-23-7b43a9b4",
+      "declassified-files-2026-07-23-fa922faa",
+      "declassified-files-2026-07-23-85ec568c",
+      "declassified-files-2026-07-23-90bd79dc",
+      "declassified-files-2026-07-23-7eb1900a",
+      "declassified-files-2026-07-23-493c0cbf",
+      "declassified-files-2026-07-23-f62b87a1",
+      "declassified-files-2026-07-23-71203b01",
+      "declassified-files-2026-07-23-55829d5e",
+      "declassified-files-2026-07-23-670b739b",
+      "declassified-files-2026-07-23-b397fa50",
+      "declassified-files-2026-07-23-4ca5fddd",
+      "declassified-files-2026-07-23-f3f4de32",
+      "declassified-files-2026-07-23-534fbf8f",
+      "declassified-files-2026-07-23-55e56994",
+      "declassified-files-2026-07-23-9e3d6831",
+      "declassified-files-2026-07-23-b2a9e7b6",
+      "declassified-files-2026-07-23-a8b27523",
+      "declassified-files-2026-07-23-72e6ea02",
+      "b9006a5edc55cc88bfccd04a",
+      "06baa45bea3e2e15eb80eff9",
+      "a8d2d3bf834ea59c6a49b8ea",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "9b6a36dc8fbb0fb10a2c4c7b",
+      "d91969cf88008135217d911c",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -22,14 +46,10 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
       "bf041695a279c3dc5412cdf4",
-      "9848ec4b4c3f6c2693269839",
-      "58a212e4e1a93007ec5b3d6d",
-      "c1520a15d6e62871a66c558e",
-      "sec-hq",
-      "us-treasury",
-      "fbi-hq",
-      "cia-hq",
-      "eu-commission",
+      "ad23fb22757e50c30b3d487c",
+      "1c352ab364fbfca06ab12a57",
+      "us-doj",
+      "gao-hq",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -126,27 +146,7 @@
       "private-equity-carlyle-group",
       "private-equity-tpg",
       "private-equity-cvc-capital-partners",
-      "private-equity-eqt",
-      "private-equity-thoma-bravo",
-      "private-equity-advent-international",
-      "private-equity-bain-capital",
-      "private-equity-warburg-pincus",
-      "private-equity-general-atlantic",
-      "private-equity-silver-lake",
-      "private-equity-vista-equity-partners",
-      "private-equity-hellman-friedman",
-      "private-equity-clayton-dubilier-rice",
-      "private-equity-permira",
-      "private-equity-cinven",
-      "private-equity-leonard-green-partners",
-      "private-equity-francisco-partners",
-      "private-equity-ares-management",
-      "private-equity-brookfield-asset-management",
-      "private-equity-partners-group",
-      "private-equity-ardian",
-      "private-equity-pai-partners",
-      "private-equity-bc-partners",
-      "private-equity-apax-partners"
+      "private-equity-eqt"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 10,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
-      "moneyRecordCount": 128
+      "relationshipCount": 38,
+      "moneyRecordCount": 110
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 130 A/B-grade public-record items are materially relevant to Living Intelligence Regression Test.",
-        "evidence": "United States Department of Justice (data/geographic-power-atlas-data.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Congressional hearings and records (data/atlas-layers.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06; Charles Keating Part 13; Frank Capra; Frank Capra (Final); Jake Guzik; Jake Guzik (Final); Otto Fred Otepka; Otto Fred Otepka Part 01",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06",
+          "Charles Keating Part 13",
+          "Frank Capra",
+          "Frank Capra (Final)",
+          "Jake Guzik",
+          "Jake Guzik (Final)",
+          "Otto Fred Otepka",
+          "Otto Fred Otepka Part 01"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-24T04:00:00.000Z"
   }
 }

@@ -1,0 +1,92 @@
+{
+  "ok": false,
+  "version": "20260725-video-v7",
+  "recordedAt": "2026-07-25T19:46:50.641Z",
+  "runId": 30172180671,
+  "runAttempt": 1,
+  "headSha": "5be6b75b66bba11785f29246cdbad8cade7ea3a0",
+  "deployOutcome": "success",
+  "verifyOutcome": "failure",
+  "packagedBytes": 15003,
+  "liveBytes": 0,
+  "payloadMatches": false,
+  "source": "Cloudflare Worker direct video/mp4 endpoint backed by Wrangler Text modules",
+  "forcedReplayUrl": "https://matrixreprogrammed.com/?intro=1",
+  "diagnostics": {
+    "ok": false,
+    "attempt": 30,
+    "checkedAt": "2026-07-25T19:46:50.591Z",
+    "siteUrl": "https://matrixreprogrammed.com",
+    "version": "20260725-video-v7",
+    "packagedBytes": 15003,
+    "liveBytes": 5738,
+    "rangeBytes": 5735,
+    "checks": {
+      "homeStatus": false,
+      "homeOverlay": false,
+      "homeRuntime": false,
+      "runtimeStatus": true,
+      "runtimeJavascript": true,
+      "runtimeVersion": true,
+      "runtimeDirectMp4": true,
+      "mp4Status": false,
+      "mp4ContentType": false,
+      "mp4Source": false,
+      "mp4Version": false,
+      "mp4Length": false,
+      "mp4Ftyp": false,
+      "rangeStatus": false,
+      "rangeHeader": false,
+      "rangeLength": false,
+      "rangeSource": false
+    },
+    "responses": {
+      "home": {
+        "status": 403,
+        "url": "https://matrixreprogrammed.com/?intro=1&verify=1785008810561-g8sef2kl728",
+        "bytes": 5630,
+        "headers": {
+          "cf-ray": "a20dac4a1afdce50-SJC",
+          "content-type": "text/html; charset=UTF-8"
+        },
+        "error": ""
+      },
+      "runtime": {
+        "status": 200,
+        "url": "https://matrixreprogrammed.com/homepage-intro-direct-v7.js?v=20260725-video-v7&verify=1785008810562-qkzx73pus7h",
+        "bytes": 4071,
+        "headers": {
+          "cache-control": "no-store, max-age=0, must-revalidate",
+          "cf-ray": "a20dac4a19c8ed36-SJC",
+          "content-type": "application/javascript; charset=utf-8",
+          "x-matrix-intro-source": "worker-direct-runtime",
+          "x-matrix-intro-version": "20260725-video-v7"
+        },
+        "error": ""
+      },
+      "mp4": {
+        "status": 403,
+        "url": "https://matrixreprogrammed.com/_matrix-intro.mp4?v=20260725-video-v7&verify=1785008810563-dk1xxsy1ri5",
+        "bytes": 5738,
+        "headers": {
+          "cf-ray": "a20dac4a1b81456e-SJC",
+          "content-type": "text/html; charset=UTF-8"
+        },
+        "signature": "3c21444f4354595045206874",
+        "error": ""
+      },
+      "range": {
+        "status": 403,
+        "url": "https://matrixreprogrammed.com/_matrix-intro.mp4?v=20260725-video-v7&verify=1785008810563-cx530jrg9v",
+        "bytes": 5735,
+        "headers": {
+          "cf-ray": "a20dac4a1dc8f973-SJC",
+          "content-length": "5735",
+          "content-type": "text/html; charset=UTF-8"
+        },
+        "signature": "3c21444f4354595045206874",
+        "error": ""
+      }
+    }
+  }
+}

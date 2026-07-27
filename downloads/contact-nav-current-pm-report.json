@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-27T07:05:21.644Z",
+  "contactRoute": "contact-the-machine.html",
+  "sourceContactNavigationFilesUpdated": [
+    "index.html",
+    "membership.html",
+    "research-tools.html",
+    "search.html",
+    "start-here.html"
+  ],
+  "deployableContactNavigationFilesUpdated": [
+    "index.html",
+    "membership.html",
+    "research-tools.html",
+    "search.html",
+    "start-here.html"
+  ],
+  "currentPrimeMinister": {
+    "name": "Andy Burnham",
+    "styledName": "The Rt Hon Andy Burnham MP",
+    "office": "Prime Minister of the United Kingdom",
+    "inOfficeSince": "2026-07-20",
+    "checked": "2026-07-25",
+    "source": "https://www.gov.uk/government/ministers/prime-minister"
+  },
+  "sourcePrimeMinisterFilesUpdated": [
+    "data/atlas-lane-populations.json"
+  ],
+  "deployablePrimeMinisterFilesUpdated": [
+    "data/atlas-lane-populations.json"
+  ],
+  "homepageChecks": {
+    "source": true,
+    "deployable": true
+  }
+}

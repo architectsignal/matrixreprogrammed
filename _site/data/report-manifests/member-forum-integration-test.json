@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:16:39.437Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-27T06:55:42.638Z",
+  "pageCount": 125,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 1,
+    "version": 4,
     "title": "Member Forum Integration Test",
-    "contentHash": "f112acd425c227c6dbd853b5a8e21f55a282e7ac701b27b2309d4bf9e0885d90",
+    "contentHash": "10e78e4b7d3b9f2c5ac3b4919664f2f5c909fe75fce5ee48cf4587a0525a0f23",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
@@ -28,15 +28,33 @@
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5AE5A3805582A7F2",
-      "eb3448928554960651da56f6",
       "71e0563ca7b139c37c302956",
+      "157cdab04b61ae6309c0c713",
+      "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
-      "declassified-files-2026-07-17-fc270d9d",
-      "declassified-files-2026-07-17-caa99125",
-      "declassified-files-2026-07-17-ecb37135",
-      "declassified-files-2026-07-16-8543057f",
-      "declassified-files-2026-07-16-be26496c",
-      "declassified-files-2026-07-16-1d338aee",
+      "war-machine-2026-07-24-192b3e30",
+      "declassified-files-2026-07-24-c827955e",
+      "declassified-files-2026-07-23-7b43a9b4",
+      "declassified-files-2026-07-23-fa922faa",
+      "declassified-files-2026-07-23-85ec568c",
+      "declassified-files-2026-07-23-90bd79dc",
+      "declassified-files-2026-07-23-7eb1900a",
+      "declassified-files-2026-07-23-493c0cbf",
+      "declassified-files-2026-07-23-f62b87a1",
+      "declassified-files-2026-07-23-71203b01",
+      "declassified-files-2026-07-23-55829d5e",
+      "declassified-files-2026-07-23-670b739b",
+      "declassified-files-2026-07-23-b397fa50",
+      "declassified-files-2026-07-23-4ca5fddd",
+      "declassified-files-2026-07-23-f3f4de32",
+      "declassified-files-2026-07-23-534fbf8f",
+      "declassified-files-2026-07-23-55e56994",
+      "declassified-files-2026-07-23-9e3d6831",
+      "declassified-files-2026-07-23-b2a9e7b6",
+      "declassified-files-2026-07-23-a8b27523",
+      "declassified-files-2026-07-23-72e6ea02",
+      "b4cb47ea50dc901364239e9f",
+      "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -123,53 +141,35 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-E15C61351A146B26",
+      "ASC-REVIEW-A587A49D50D6CDC2",
+      "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
-      "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3",
-      "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332"
+      "ASC-REVIEW-21C56289EDA1B8BD"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 130,
+      "primarySourceCount": 25,
+      "disputedClaimCount": 113,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 134,
-      "moneyRecordCount": 127
+      "relationshipCount": 131,
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Henry Lucas (data/latest-public-drops.json); Henry Lucas Part 01 (data/latest-public-drops.json); Henry Lucas Part 02 (Final) (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json); Charles Keating Part 13 (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Henry Lucas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Henry Lucas This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 134 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 134 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-24T12:00:00.000Z"
   }
 }

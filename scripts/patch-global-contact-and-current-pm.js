@@ -57,9 +57,9 @@ function patchNavigation(file, html, targetRoot) {
 
 function patchCurrentPmText(text) {
   const replacements = [
-    [/current\s+(?:UK|British|United Kingdom)\s+Prime Minister\s+(?:Sir\s+)?Keir Starmer/gi, `current UK Prime Minister ${currentPm.name}`],
-    [/(?:UK|British|United Kingdom)\s+Prime Minister\s+(?:Sir\s+)?Keir Starmer\s+\(current\)/gi, `UK Prime Minister ${currentPm.name} (current)`],
-    [/current\s+Prime Minister\s+(?:Sir\s+)?Keir Starmer/gi, `current Prime Minister ${currentPm.name}`],
+    [/current\s+(?:UK|British|United Kingdom)\s+Prime Minister\s+(?:Sir\s+)?Andy Burnham/gi, `current UK Prime Minister ${currentPm.name}`],
+    [/(?:UK|British|United Kingdom)\s+Prime Minister\s+(?:Sir\s+)?Andy Burnham\s+\(current\)/gi, `UK Prime Minister ${currentPm.name} (current)`],
+    [/current\s+Prime Minister\s+(?:Sir\s+)?Andy Burnham/gi, `current Prime Minister ${currentPm.name}`],
     [/Prime Minister\s+(?:Sir\s+)?Keir Starmer\s+since\s+5\s+July\s+2024/gi, `Prime Minister ${currentPm.name} since 20 July 2026`],
     [/The Rt Hon Sir Keir Starmer KCB KC MP(?=[^\n]{0,140}\bcurrent\b[^\n]{0,140}\bPrime Minister\b)/gi, currentPm.styledName],
     [/(\bcurrent(?:ly)?\b[^.\n]{0,120}\bPrime Minister\b[^.\n]{0,60})\bKeir Starmer\b/gi, `$1${currentPm.name}`],

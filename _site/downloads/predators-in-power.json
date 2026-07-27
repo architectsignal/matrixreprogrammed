@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-27T07:05:23.500Z",
+  "title": "Predators in Power",
+  "purpose": "Define the evidence, conduct and influence criteria for the Predators in Power intelligence page without converting allegations, office-holding or association into a verdict.",
+  "eligibilityRule": "A published subject requires at least one editorially approved qualifying conduct record and at least one independently sourced qualifying power or influence role. Automated matches, anonymous claims and unsourced rumors never publish directly.",
+  "rankingRule": "Do not create a predator score. Sort by legal/evidence lane, then most recent record date, while preserving exculpatory outcomes and responses.",
+  "boundary": "The page title names an accountability project, not a legal finding about every listed subject. Each record retains its own legal and evidence classification. Charges, investigations and allegations are not convictions. Acquittals, dismissals, reversals, denials and right of reply remain visible.",
+  "count": 0,
+  "reviewOnlyCandidateCount": 0,
+  "conductDomains": {
+    "rape": "Rape or equivalent penetrative sexual offence",
+    "sexual_assault": "Sexual assault or equivalent non-consensual sexual offence",
+    "sexual_abuse": "Sexual abuse not otherwise classified",
+    "indecent_assault": "Indecent assault or jurisdictional equivalent",
+    "child_sexual_abuse": "Sexual abuse of a child",
+    "child_sexual_exploitation": "Commercial or non-commercial sexual exploitation of a child",
+    "child_trafficking": "Trafficking of a child for sexual exploitation or other exploitation",
+    "grooming": "Criminal grooming or solicitation of a child",
+    "csam_offence": "Creation, possession, distribution or facilitation of child sexual abuse material",
+    "child_abduction": "Abduction, kidnapping or unlawful confinement of a child",
+    "child_abuse_nonsexual": "Physical or psychological abuse of a child",
+    "child_endangerment_neglect": "Criminal child endangerment, cruelty or neglect",
+    "child_homicide": "Homicide or unlawful killing of a child",
+    "institutional_facilitation_cover_up": "Documented facilitation, concealment, obstruction or institutional failure connected to sexual offences or crimes against children",
+    "sexual_offence_other": "Other criminal sexual offence",
+    "sexual_misconduct_noncriminal": "Attributed sexual-misconduct allegation or civil finding that is not presented as a criminal conviction"
+  },
+  "powerSectors": {
+    "public_office": "Elected or appointed public office",
+    "government_senior_official": "Senior government, diplomatic or regulatory authority",
+    "political_party_leadership": "Political-party leadership, campaign command or major political gatekeeping",
+    "company_board": "Company chair, director or board-level authority",
+    "company_executive": "Founder, owner, chief executive or C-suite authority",
+    "company_management": "Senior or operational management with authority over staff, assets or access",
+    "finance_asset_control": "Banking, investment, trust, family-office, asset-control or capital-allocation authority",
+    "religious_institution": "Religious leadership or institutional authority",
+    "education": "School, university, academy or education-system authority",
+    "healthcare": "Healthcare, care-home, medical or therapeutic authority",
+    "law_enforcement_military": "Police, prosecution, intelligence, security or military authority",
+    "media_entertainment": "Media ownership, publishing, broadcasting, entertainment or celebrity influence",
+    "sports": "Sports governance, ownership, coaching or major athletic influence",
+    "charity_foundation": "Charity, NGO, foundation or philanthropic authority",
+    "royal_aristocratic": "Royal, aristocratic or hereditary institutional influence",
+    "union_professional_body": "Union, guild, professional-body or licensing authority",
+    "lobbyist_adviser_donor": "Major donor, lobbyist, adviser, strategist or political access broker",
+    "technology_platform": "Technology-platform, data, communications or algorithmic-distribution authority",
+    "other_influential_gatekeeper": "Other documented authority, fame, access, succession, patronage or gatekeeping influence"
+  },
+  "categories": {
+    "conviction_final_judgment": {
+      "label": "Convictions / Final Criminal Judgments",
+      "classification": "adjudicated_fact",
+      "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record."
+    },
+    "charge_indictment_complaint": {
+      "label": "Charges / Indictments / Criminal Complaints",
+      "classification": "official_allegation",
+      "boundary": "A charge, indictment or complaint is an accusation, not proof of guilt. Presumption of innocence applies unless and until adjudicated."
+    },
+    "investigation_inquiry": {
+      "label": "Investigations / Inquiries",
+      "classification": "official_investigation",
+      "boundary": "An investigation or inquiry does not establish that wrongdoing occurred or that the subject committed it."
+    },
+    "civil_regulatory_action": {
+      "label": "Civil / Regulatory / Sanctions Actions",
+      "classification": "official_civil_or_regulatory_record",
+      "boundary": "Civil, regulatory, sanctions and administrative actions are distinct from criminal convictions and may be resolved without admissions."
+    },
+    "substantiated_allegation": {
+      "label": "Substantiated Public Allegations",
+      "classification": "attributed_allegation",
+      "boundary": "The allegation is attributed and sourced but remains an allegation unless an adjudicative record establishes it."
+    },
+    "suspected_conduct": {
+      "label": "Suspected Conduct / Analytical Hypotheses",
+      "classification": "analytical_inference",
+      "boundary": "This is an evidence-linked analytical hypothesis, not an established fact or legal finding."
+    },
+    "rumor_speculation": {
+      "label": "Rumors / Speculation",
+      "classification": "unverified_claim_or_speculation",
+      "boundary": "Not established. Inclusion records the existence and origin of a public claim, not its truth."
+    },
+    "exculpatory_disposition": {
+      "label": "Acquittals / Dismissals / Reversals / Responses",
+      "classification": "outcome_or_response",
+      "boundary": "This record preserves the outcome, denial, response or exculpatory information and must be read with the underlying allegation."
+    }
+  },
+  "subjects": []
+}

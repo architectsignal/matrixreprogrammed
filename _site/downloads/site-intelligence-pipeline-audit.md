@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-22T06:23:00.984Z
+Updated: 2026-07-27T07:02:40.712Z
 Overall: working-with-gaps
 Green: 41 · Amber: 2 · Red: 0
 
@@ -12,7 +12,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Collect · collect-source-pulls:** Source-pull index exists.
 - **GREEN · Collect · freshness-curated-drops:** Curated source file age: 0 day(s). Fix: Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.
 - **GREEN · Collect · freshness-seven-day-feed:** Seven-day feed file age: 0 day(s). Fix: Run RSS/public-source intake every day and archive items automatically after seven days.
-- **GREEN · Collect · fresh-current-news:** 63 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
+- **GREEN · Collect · fresh-current-news:** 69 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
 - **GREEN · Classify · classification-system:** Information-gathering operating model exists.
 - **GREEN · Grade · interpretation-standard:** Reader score and evidence interpretation standard exists.
 - **GREEN · Grade · source-registry:** Master evidence source registry exists.
@@ -36,18 +36,18 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.
 - **GREEN · Clocks · timer-page:** Clean timer page exists.
 - **GREEN · Clocks · clock-score-integrity:** 0 clock score mismatch(es) exist between canonical source and visual synthesis. Fix: Never add display bonuses or recalculate scores in the presentation layer.
-- **AMBER · Clocks · clock-depth:** 54 clock(s) lack movement, mission relevance, boundary or direct evidence input. Fix: Keep the card clean but require the deeper tab to contain those fields.
+- **AMBER · Clocks · clock-depth:** 50 clock(s) lack movement, mission relevance, boundary or direct evidence input. Fix: Keep the card clean but require the deeper tab to contain those fields.
 - **GREEN · Clocks · source-to-clock-links:** 0 timer-link slug(s) are present in current drops; 0 do not resolve. Fix: Reject source drops that reference a nonexistent clock slug.
 - **GREEN · Publish · homepage-command-data:** Homepage command-surface data exists.
 - **GREEN · Publish · homepage:** Homepage exists.
-- **GREEN · Publish · homepage-clock-sync:** Homepage displays 1 critical clock(s); canonical synthesis requires 1. Fix: Build the homepage from data/clock-wall.json only and use a strict greater-than-90 threshold.
+- **GREEN · Publish · homepage-clock-sync:** Homepage displays 2 critical clock(s); canonical synthesis requires 2. Fix: Build the homepage from data/clock-wall.json only and use a strict greater-than-90 threshold.
 - **GREEN · Publish · homepage-news-freshness:** 0 stale homepage news item(s) exist. Fix: Show only items published inside seven days; show an empty-state message rather than stale content.
 - **GREEN · Publish · homepage-conclusion-layer:** Homepage evidence conclusion, labelled speculation and counterpoint are checked together. Fix: Block homepage publication if any of these three fields is missing.
 - **GREEN · Automate · build-order-build-mission-brief-conclusions.js:** build-mission-brief-conclusions.js is included in the authoritative build path. Fix: Add build-mission-brief-conclusions.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-build-homepage-command-surface.js:** build-homepage-command-surface.js is included in the authoritative build path. Fix: Add build-homepage-command-surface.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-site-intelligence-pipeline-audit.js:** site-intelligence-pipeline-audit.js is included in the authoritative build path. Fix: Add site-intelligence-pipeline-audit.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-patch-login-email-delivery.js:** patch-login-email-delivery.js is included in the authoritative build path. Fix: Add patch-login-email-delivery.js after legacy generators and before Cloudflare output.
-- **GREEN · Automate · daily-automation:** 128 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
+- **GREEN · Automate · daily-automation:** 156 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
 - **GREEN · Automate · weekly-automation:** Workflow files were scanned for weekly synthesis scheduling. Fix: Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.
 
 ## New Clock Ideas

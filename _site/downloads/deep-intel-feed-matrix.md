@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-22T06:21:50.509Z
+Generated: 2026-07-27T07:01:27.283Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-22T06:21:50.509Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post — live-intel.html
-- 72 — President Clinton’s ‘Body Man’s’ Epstein Testimony Released - LAmag — live-intel.html
-- 72 — External review finds no wrongdoing in Gates Foundation–Epstein links - Al Jazeera — live-intel.html
-- 72 — Epstein survivors call on Tillis, Cornyn to block Blanche nomination - Washington Times — live-intel.html
-- 72 — ‘Business as usual is a business of death’: UN adopts road safety pledge over US objection — live-intel.html
+- 72 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review — live-intel.html
+- 72 — After war took her leg, this Ukrainian gymnast refused to give up — live-intel.html
+- 72 — Gaza: Dialysis patients face gruelling hospital journey by donkey cart — live-intel.html
+- 72 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods — live-intel.html
+- 72 — ‘I am somebody’: Street-smart youth take their declaration to the UN — live-intel.html

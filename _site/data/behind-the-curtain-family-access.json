@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-07-22",
+  "title": "The Access Layer: Families, Dynasties and Continuity Networks",
+  "editorialBoundary": "This dataset measures documented access, authority, voting control, appointment power and institutional continuity. It does not infer criminality, secret coordination or total control from a surname, marriage, wealth, philanthropy or social contact.",
+  "finalConclusion": "The strongest documented family control is found where law or corporate governance explicitly preserves hereditary office, voting rights, board influence or foundation ownership. Royal dynasties can hold formal state authority. Corporate dynasties can preserve strategic control through voting shares, foundations and holding companies. The evidence does not show that one family or coordinated family bloc controls the monetary, security, regulatory, technological and financial systems of the world. Those systems are governed through overlapping offices, boards, member states, regulators, professional networks and capital structures. Families matter most where succession and control rights are legally embedded; elsewhere, access is real but fragmented, conditional and contestable.",
+  "scoreDimensions": {
+    "formalAuthority": 20,
+    "votingOrOwnershipControl": 20,
+    "appointmentPower": 15,
+    "capitalAccess": 15,
+    "institutionalContinuity": 15,
+    "crossSectorReach": 10,
+    "evidenceConfidence": 5
+  },
+  "families": [
+    {
+      "rank": 1,
+      "id": "house-of-saud",
+      "name": "House of Saud",
+      "type": "Hereditary ruling dynasty",
+      "jurisdictions": ["Saudi Arabia"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 95,
+      "dimensions": {"formalAuthority":100,"votingOrOwnershipControl":82,"appointmentPower":100,"capitalAccess":96,"institutionalContinuity":98,"crossSectorReach":96,"evidenceConfidence":98},
+      "documentedAccess": [
+        "Saudi governance is legally monarchical and succession is limited to descendants of the founder King Abdulaziz.",
+        "The King directs state policy and senior appointments are made by royal order.",
+        "Senior members of the dynasty occupy central executive, energy, defence and state-governance positions."
+      ],
+      "structuresReached": ["Executive government","Senior appointments","Energy policy","Security and defence","Sovereign capital","Foreign policy"],
+      "constraints": ["Religious, bureaucratic and elite-coalition legitimacy","State institutions and administrative capacity","International alliances, markets and security dependencies","Internal succession rules and royal-family bargaining"],
+      "strongestCounterargument": "Formal dynastic authority is exceptionally high, but that does not make the family autonomous from state bureaucracy, oil markets, domestic legitimacy, international security relationships or global financial infrastructure.",
+      "unsupportedClaim": "The record does not establish that the House of Saud commands non-Saudi central banks, Western governments or a unified global system.",
+      "sourceIds": ["saudi-basic-law","saudi-government-mechanism","saudi-royal-orders"]
+    },
+    {
+      "rank": 2,
+      "id": "al-nahyan",
+      "name": "Al Nahyan family",
+      "type": "Hereditary ruling dynasty",
+      "jurisdictions": ["Abu Dhabi","United Arab Emirates"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 93,
+      "dimensions": {"formalAuthority":98,"votingOrOwnershipControl":84,"appointmentPower":96,"capitalAccess":98,"institutionalContinuity":97,"crossSectorReach":94,"evidenceConfidence":98},
+      "documentedAccess": [
+        "The ruler of Abu Dhabi sits on the UAE Federal Supreme Council, the federation's highest constitutional authority.",
+        "The UAE presidency is currently held by the ruler of Abu Dhabi, and substantive Supreme Council decisions require the votes of Abu Dhabi and Dubai.",
+        "Abu Dhabi retains extensive local jurisdiction and is the centre of major sovereign-capital and security institutions."
+      ],
+      "structuresReached": ["Federal executive authority","Abu Dhabi government","Sovereign investment","Energy","Defence and security","Federal appointments"],
+      "constraints": ["Federal bargaining with the six other emirates","Constitutional division between federal and emirate powers","Global energy, finance and alliance dependencies","Institutional management rather than personal direction of every asset"],
+      "strongestCounterargument": "The family has documented constitutional and capital access, but the UAE is a federation and major institutions retain professional management, legal mandates and external dependencies.",
+      "unsupportedClaim": "The evidence does not show that every Abu Dhabi investment or UAE policy is personally directed by one family member or a single concealed command centre.",
+      "sourceIds": ["uae-supreme-council","uae-local-governments","uae-constitution"]
+    },
+    {
+      "rank": 3,
+      "id": "al-maktoum",
+      "name": "Al Maktoum family",
+      "type": "Hereditary ruling dynasty",
+      "jurisdictions": ["Dubai","United Arab Emirates"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 88,
+      "dimensions": {"formalAuthority":95,"votingOrOwnershipControl":76,"appointmentPower":92,"capitalAccess":91,"institutionalContinuity":96,"crossSectorReach":93,"evidenceConfidence":98},
+      "documentedAccess": [
+        "Dubai is a hereditary sheikhdom whose ruler sits on the Federal Supreme Council.",
+        "The ruler of Dubai is the UAE Vice President and Prime Minister.",
+        "Substantive federal decisions require a majority that includes both Abu Dhabi and Dubai."
+      ],
+      "structuresReached": ["Dubai government","Federal cabinet","Trade and logistics","Aviation","Financial free zones","Real estate and infrastructure"],
+      "constraints": ["Federal balance with Abu Dhabi and other emirates","International trade and capital-market exposure","Corporate and regulatory governance","Dependence on global logistics, tourism and finance"],
+      "strongestCounterargument": "Dubai's commercial reach is large, but its authority is constitutionally shared and its economic model is highly exposed to international markets and federal coordination.",
+      "unsupportedClaim": "Commercial prominence and family rule do not establish command over global finance, media or technology systems.",
+      "sourceIds": ["uae-supreme-council","uae-local-governments","uae-federal-laws"]
+    },
+    {
+      "rank": 4,
+      "id": "al-thani",
+      "name": "Al Thani family",
+      "type": "Hereditary ruling dynasty",
+      "jurisdictions": ["Qatar"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 86,
+      "dimensions": {"formalAuthority":98,"votingOrOwnershipControl":78,"appointmentPower":96,"capitalAccess":94,"institutionalContinuity":97,"crossSectorReach":87,"evidenceConfidence":97},
+      "documentedAccess": [
+        "Qatar's constitutional succession provisions establish hereditary rule within the Al Thani family.",
+        "The Amir is the head of state and succession is constitutionally structured.",
+        "The ruling structure has access to executive appointments, sovereign capital, energy strategy and foreign policy."
+      ],
+      "structuresReached": ["Executive government","Sovereign investment","Gas and energy strategy","Foreign policy","Media and soft power","Senior appointments"],
+      "constraints": ["Small-state dependence on external security and markets","Professional management of sovereign and commercial entities","Regional diplomacy and alliance pressures","Constitutional and administrative institutions"],
+      "strongestCounterargument": "The family's domestic authority is explicit, but Qatar's international leverage remains dependent on energy markets, alliances, host-state agreements and institutional execution.",
+      "unsupportedClaim": "The record does not establish that Qatari investments or media relationships amount to control of foreign governments.",
+      "sourceIds": ["qatar-constitution","qatar-system-government","qatar-constitution-commentary"]
+    },
+    {
+      "rank": 5,
+      "id": "wallenberg",
+      "name": "Wallenberg family and foundations",
+      "type": "Foundation-centred industrial dynasty",
+      "jurisdictions": ["Sweden","Europe","Global portfolio"],
+      "classification": "documented_fact",
+      "confidence": "high",
+      "accessScore": 83,
+      "dimensions": {"formalAuthority":28,"votingOrOwnershipControl":94,"appointmentPower":84,"capitalAccess":91,"institutionalContinuity":99,"crossSectorReach":96,"evidenceConfidence":98},
+      "documentedAccess": [
+        "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026.",
+        "The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes.",
+        "Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology."
+      ],
+      "structuresReached": ["Industrial ownership","Banking","Defence industry","Telecommunications","Pharmaceuticals","Research funding","Board networks"],
+      "constraints": ["Swedish and EU law and regulation","Independent boards and executives","Public shareholders and fiduciary duties","Portfolio companies' separate governance","No constitutional state authority"],
+      "strongestCounterargument": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
+      "unsupportedClaim": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
+      "sourceIds": ["wallenberg-ecosystem","investor-ownership","investor-board"]
+    },
+    {
+      "rank": 6,
+      "id": "agnelli-elkann",
+      "name": "Agnelli–Elkann descendants",
+      "type": "Family holding-company control structure",
+      "jurisdictions": ["Italy","Netherlands","Global portfolio"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 80,
+      "dimensions": {"formalAuthority":18,"votingOrOwnershipControl":99,"appointmentPower":86,"capitalAccess":91,"institutionalContinuity":97,"crossSectorReach":91,"evidenceConfidence":99},
+      "documentedAccess": [
+        "Giovanni Agnelli B.V., owned by descendants of Fiat founder Giovanni Agnelli, held 83.97 percent of Exor voting rights at 31 December 2025.",
+        "The stated purpose of the family vehicle is to preserve unity and continuity of its controlling interest in Exor.",
+        "Exor's portfolio creates board and capital access across automotive, luxury, healthcare, media and investment assets."
+      ],
+      "structuresReached": ["Automotive","Luxury goods","Healthcare","Media","Professional sport","Investment capital","Board appointments"],
+      "constraints": ["Public-company and Dutch governance law","Independent boards and minority shareholders","Market performance and financing","Regulators and national governments","No direct authority over monetary or security systems"],
+      "strongestCounterargument": "The family has unusually clear voting control over Exor, but portfolio-company control varies by stake, governance agreement and jurisdiction.",
+      "unsupportedClaim": "Exor control does not prove control of the Italian government, European regulators or all companies linked to the family.",
+      "sourceIds": ["exor-ownership","exor-faq","exor-agm-2026"]
+    },
+    {
+      "rank": 7,
+      "id": "moller",
+      "name": "Møller family foundations and holding structure",
+      "type": "Foundation and holding-company maritime dynasty",
+      "jurisdictions": ["Denmark","Global logistics"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 78,
+      "dimensions": {"formalAuthority":12,"votingOrOwnershipControl":98,"appointmentPower":82,"capitalAccess":88,"institutionalContinuity":99,"crossSectorReach":78,"evidenceConfidence":99},
+      "documentedAccess": [
+        "A.P. Møller Holding held 52.50 percent of votes in A.P. Møller–Mærsk as of June 2026.",
+        "The family foundation and support foundation held additional substantial voting positions.",
+        "The structure preserves long-term influence over a company embedded in global shipping, ports and logistics."
+      ],
+      "structuresReached": ["Container shipping","Ports and terminals","Global logistics","Maritime infrastructure","Industrial investment"],
+      "constraints": ["Competition and maritime regulation","Customer and trade-cycle exposure","Independent company management","Geopolitical and shipping-route risk","No direct state authority"],
+      "strongestCounterargument": "Voting control over Maersk is clear, but influence is concentrated in logistics rather than a comprehensive cross-system command structure.",
+      "unsupportedClaim": "Control of a major shipping group does not establish control of world trade, ports owned by others or government policy.",
+      "sourceIds": ["maersk-major-shareholders","maersk-holding-transfer","maersk-agm"]
+    },
+    {
+      "rank": 8,
+      "id": "hoffmann-oeri",
+      "name": "Hoffmann–Oeri founding-family pool",
+      "type": "Pooled-voting pharmaceutical dynasty",
+      "jurisdictions": ["Switzerland","Global healthcare"],
+      "classification": "documented_fact",
+      "confidence": "very_high",
+      "accessScore": 75,
+      "dimensions": {"formalAuthority":8,"votingOrOwnershipControl":98,"appointmentPower":83,"capitalAccess":89,"institutionalContinuity":99,"crossSectorReach":71,"evidenceConfidence":99},
+      "documentedAccess": [
+        "A shareholder group with pooled voting rights owned 64.97 percent of Roche's issued voting shares at the end of 2025.",
+        "Representatives of the family shareholder pool sit on Roche's board.",
+        "Roche publicly describes the founder-family shareholder structure as supporting long-term continuity."
+      ],
+      "structuresReached": ["Pharmaceuticals","Biotechnology","Diagnostics","Healthcare research","Board governance"],
+      "constraints": ["Swiss and international medicines regulation","Clinical evidence and patent law","Independent management and board duties","Public markets and healthcare payers","Concentration mainly in one corporate group"],
+      "strongestCounterargument": "The voting pool has clear corporate control, but Roche's scientific, regulatory and commercial decisions remain institutionally constrained.",
+      "unsupportedClaim": "Family voting control at Roche does not prove control over global medicine regulation, public-health agencies or healthcare systems.",
+      "sourceIds": ["roche-voting-pool","roche-board","roche-pool-continuity"]
+    },
+    {
+      "rank": 9,
+      "id": "heineken",
+      "name": "Heineken family control structure",
+      "type": "Family-controlled holding-company structure",
+      "jurisdictions": ["Netherlands","Global consumer markets"],
+      "classification": "documented_fact",
+      "confidence": "high",
+      "accessScore": 71,
+      "dimensions": {"formalAuthority":5,"votingOrOwnershipControl":95,"appointmentPower":78,"capitalAccess":86,"institutionalContinuity":98,"crossSectorReach":64,"evidenceConfidence":97},
+      "documentedAccess": [
+        "L'Arche Green N.V., which anchors the Heineken control structure, is owned 88.98 percent by the Heineken family.",
+        "Heineken Holding states that its ownership structure exists to preserve continuity, independence and stability of the group.",
+        "The structure supports long-term family influence over one of the world's largest brewing groups."
+      ],
+      "structuresReached": ["Global beverages","Distribution","Consumer brands","Corporate boards","Long-term family capital"],
+      "constraints": ["Competition and alcohol regulation","Public shareholders and board duties","Consumer markets and distributors","Concentration in one industry","No formal governmental authority"],
+      "strongestCounterargument": "The family has a strong continuity structure, but its reach is commercial and sector-specific rather than systemic across finance, security or law.",
+      "unsupportedClaim": "Control of a global consumer company does not amount to control of governments, media systems or public policy.",
+      "sourceIds": ["heineken-ownership","heineken-purpose","heineken-agm"]
+    }
+  ],
+  "historicalArchitects": [
+    {
+      "name": "Rothschild banking houses",
+      "documentedHistory": "Distinct Rothschild family banking houses played important roles in nineteenth-century sovereign finance, railways and cross-border capital markets.",
+      "presentAssessment": "Modern Rothschild-branded businesses are separate regulated entities. Historical significance and family continuity justify investigation, but do not establish control of central banks, governments or a unified global financial system today.",
+      "classification": "plausible_structural_inference"
+    },
+    {
+      "name": "Rockefeller family and philanthropic institutions",
+      "documentedHistory": "Rockefeller wealth and foundations materially influenced twentieth-century philanthropy, education, medicine, public health and policy research.",
+      "presentAssessment": "Institution-building influence is documented. Claims that the family currently commands the US government, global health system or all foundation networks require evidence that has not been established.",
+      "classification": "strongly_supported_assessment"
+    },
+    {
+      "name": "Warburg banking family",
+      "documentedHistory": "Members of the Warburg family held significant banking and policy roles in Europe and the United States during the development of modern finance.",
+      "presentAssessment": "Historical access is relevant to institutional history, but does not establish hereditary present-day control of the Federal Reserve or international banking.",
+      "classification": "strongly_supported_assessment"
+    },
+    {
+      "name": "Medici and Fugger houses",
+      "documentedHistory": "These families illustrate pre-modern combinations of banking, sovereign finance, office, patronage and dynastic power that helped shape later financial and political institutions.",
+      "presentAssessment": "They are historical models, not current power holders. Their value is explanatory: durable power can be built by controlling credit, appointments, information and succession before modern bureaucratic states exist.",
+      "classification": "documented_fact"
+    }
+  ],
+  "structureAccessMatrix": [
+    {"structure":"US dollar monetary and sanctions system","formalControllers":["US Congress","US Treasury","Federal Reserve statutory bodies","Courts and executive authorities within defined powers"],"familyAccess":"No family has documented legal control. Families may gain access through elected office, regulated financial institutions, advisory networks, donations, ownership or professional relationships, but these routes are fragmented and contestable.","confidence":"high"},
+    {"structure":"Chinese party-state strategic system","formalControllers":["Chinese Communist Party leadership institutions","State Council and state organs","Central Military Commission"],"familyAccess":"Elite family background may affect informal networks, but the system is formally party-institutional rather than a legally hereditary family structure. Claims about specific families require high-grade evidence.","confidence":"moderate"},
+    {"structure":"US security and alliance system","formalControllers":["President and executive branch","Congress","Department of Defense","Intelligence agencies","Alliance governments"],"familyAccess":"Private families may gain contractor, donor, advisory or social access. No family has demonstrated ownership of the system; authority is divided by law, budget, classification and institutional command.","confidence":"high"},
+    {"structure":"EU regulatory and Eurosystem power","formalControllers":["EU institutions","ECB statutory bodies","Member-state governments","National regulators and courts"],"familyAccess":"Families can influence companies, lobbying, foundations or political networks, but no hereditary family control is established over the EU or Eurosystem.","confidence":"high"},
+    {"structure":"Cloud and AI compute gatekeepers","formalControllers":["Controlling shareholders where present","Corporate boards and executives","Major customers and capital providers","Competition, security and sector regulators"],"familyAccess":"Founder families or trusts may retain voting control in specific companies. This grants company-level power, not ownership of the entire compute ecosystem.","confidence":"high"},
+    {"structure":"Global payment, messaging, settlement and custody rails","formalControllers":["Member institutions","Boards and management","Central banks and financial regulators","Contractual and technical governance bodies"],"familyAccess":"Banking families may have historical or firm-level access, but modern rails are multi-institutional. A claim of family command requires documented voting, appointment or contractual authority.","confidence":"high"},
+    {"structure":"Advanced semiconductor chokepoints","formalControllers":["Corporate boards and controlling shareholders","State export-control authorities","Specialist equipment and foundry management","Major customers and industrial-policy bodies"],"familyAccess":"Founding families can matter inside individual firms, but state export controls, technical expertise and interdependent supply chains prevent simple family ownership of the whole system.","confidence":"high"},
+    {"structure":"Global financial standard-setting networks","formalControllers":["Member central banks and regulators","National implementation authorities","Technical committees and secretariats"],"familyAccess":"Professional and financial networks can shape consultation, but family control is not established. Standards depend on member-state adoption.","confidence":"high"},
+    {"structure":"IMF-centred sovereign crisis finance","formalControllers":["Member-state quota governance","Executive Board","Management and staff within the Articles of Agreement"],"familyAccess":"Families may influence member governments or financial advisers, but no family owns or legally controls the IMF.","confidence":"high"},
+    {"structure":"Nonbank capital-allocation complex","formalControllers":["Asset-manager boards and executives","Fund trustees and fiduciaries","Pension boards","Insurers, regulators and asset owners"],"familyAccess":"Private investment families and family offices can control large pools, but the wider system is dispersed across fiduciaries, institutions and beneficiaries.","confidence":"high"}
+  ],
+  "sources": [
+    {"id":"saudi-basic-law","publisher":"Saudi Shura Council","title":"The Basic Law of Government","url":"https://www.shura.gov.sa/wps/wcm/connect/ShuraEn/internet/Laws%2Band%2BRegulations/The%2BBasic%2BLaw%2BOf%2BGovernment","establishes":"The legal framework of monarchical government.","doesNotEstablish":"Control over foreign institutions or every state decision."},
+    {"id":"saudi-government-mechanism","publisher":"Saudi National Platform","title":"Government Work Mechanism","url":"https://my.gov.sa/en/content/govmechanism","establishes":"Succession is limited to descendants of the founder and the King directs national affairs.","doesNotEstablish":"Personal management of every ministry, company or investment."},
+    {"id":"saudi-royal-orders","publisher":"Saudi Press Agency","title":"Three Royal Orders Issued","url":"https://www.spa.gov.sa/2387811","establishes":"Royal-order appointment of the prime minister and cabinet members.","doesNotEstablish":"Authority outside Saudi law and institutions."},
+    {"id":"uae-supreme-council","publisher":"UAE Government","title":"The Federal Supreme Council","url":"https://u.ae/about-the-uae/the-uae-government/the-federal-supreme-council","establishes":"The rulers form the highest constitutional authority and Abu Dhabi and Dubai votes are required for substantive decisions.","doesNotEstablish":"Unlimited personal control over all emirate or federal institutions."},
+    {"id":"uae-local-governments","publisher":"UAE Government","title":"The local governments of the seven emirates","url":"https://u.ae/en/about-the-uae/the-uae-government/the-local-governments-of-the-seven-emirates","establishes":"Each emirate is a hereditary sheikhdom with local jurisdiction.","doesNotEstablish":"Unified family control across all seven emirates."},
+    {"id":"uae-constitution","publisher":"UAE Government","title":"The Constitution of the UAE","url":"https://u.ae/about-the-uae/the-constitution-of-the-uae","establishes":"The allocation of federal and emirate powers.","doesNotEstablish":"That constitutional office equals ownership of every public asset."},
+    {"id":"uae-federal-laws","publisher":"UAE Government","title":"Issuing federal laws and decrees","url":"https://u.ae/en/information-and-services/justice-safety-and-the-law/how-are-uae-laws-issued-and-how-to-find-them/issuing-federal-laws-and-decrees","establishes":"The President and Supreme Council roles in federal lawmaking.","doesNotEstablish":"Power outside constitutional process."},
+    {"id":"qatar-constitution","publisher":"Qatar Government Communications Office","title":"The Constitution","url":"https://www.gco.gov.qa/en/state-of-qatar/the-constitution/","establishes":"The constitutional and institutional framework of Qatar.","doesNotEstablish":"Control over foreign governments or all investments."},
+    {"id":"qatar-system-government","publisher":"Qatar Ministry of Foreign Affairs","title":"The System of Government","url":"https://mofa.gov.qa/en/state-of-qatar/political-system/the-system-of-government","establishes":"The development of executive authority and succession arrangements.","doesNotEstablish":"That every state-linked entity is personally directed."},
+    {"id":"qatar-constitution-commentary","publisher":"Qatar Supreme Judiciary Council","title":"Constitutional commentary on Article 8","url":"https://encyclop.sjc.gov.qa/lawlib/Images/court_constitutional/laws/Constitution/1.htm","establishes":"Hereditary rule within the Al Thani family line.","doesNotEstablish":"Authority beyond Qatar's constitutional system."},
+    {"id":"wallenberg-ecosystem","publisher":"Wallenberg.com","title":"The ecosystem","url":"https://www.wallenberg.com/en/ecosystem","establishes":"Foundation ownership, Investor and FAM roles and portfolio reach.","doesNotEstablish":"Control of the Swedish state or every portfolio company."},
+    {"id":"investor-ownership","publisher":"Investor AB","title":"Ownership structure","url":"https://www.investorab.com/investors-media/the-investor-share/ownership-structure/","establishes":"The Wallenberg foundations' documented voting positions in Investor AB.","doesNotEstablish":"Operational control of every investee decision."},
+    {"id":"investor-board","publisher":"Investor AB","title":"Board of Directors","url":"https://www.investorab.com/about-investor/board-management/board-of-directors","establishes":"Family representation on Investor's board.","doesNotEstablish":"Secret coordination with governments or unrelated institutions."},
+    {"id":"exor-ownership","publisher":"Exor","title":"Ownership structure","url":"https://www.exor.com/pages/investors-media/shareholders-corner/ownership-structure","establishes":"Giovanni Agnelli B.V.'s economic and voting control of Exor at year-end 2025.","doesNotEstablish":"Control of governments or every portfolio company."},
+    {"id":"exor-faq","publisher":"Exor","title":"Frequently Asked Questions","url":"https://exor.com/pages/frequently-asked-questions","establishes":"Exor is majority owned and controlled by the Agnelli descendants' vehicle.","doesNotEstablish":"Authority outside corporate governance."},
+    {"id":"exor-agm-2026","publisher":"Exor","title":"Exor Shareholders Approve All Resolutions at AGM","url":"https://www.exor.com/press-releases/2026-05-20/exor-shareholders-approve-all-resolutions-agm","establishes":"Current governance and board-election process.","doesNotEstablish":"That the controlling shareholder directs every board decision."},
+    {"id":"maersk-major-shareholders","publisher":"A.P. Møller–Mærsk","title":"Major Shareholders","url":"https://investor.maersk.com/stock/major-shareholders","establishes":"Current voting and capital positions of the holding company and foundations.","doesNotEstablish":"Control over all global logistics or trade."},
+    {"id":"maersk-holding-transfer","publisher":"A.P. Møller–Mærsk","title":"Major shareholder announcement","url":"https://investor.maersk.com/news-releases/news-release-details/major-shareholder-announcement","establishes":"The transfer of controlling shares into A.P. Møller Holding.","doesNotEstablish":"State authority or control of external ports and carriers."},
+    {"id":"maersk-agm","publisher":"A.P. Møller–Mærsk","title":"Annual General Meeting 2026","url":"https://investor.maersk.com/governance/annual-meeting","establishes":"Current shareholder-governance process.","doesNotEstablish":"Personal family operation of the company."},
+    {"id":"roche-voting-pool","publisher":"Roche","title":"Share and bond information","url":"https://www.roche.com/investors/bonds","establishes":"The founder-family pool's 64.97 percent voting position at the end of 2025.","doesNotEstablish":"Control over regulators or health systems."},
+    {"id":"roche-board","publisher":"Roche","title":"Board of Directors","url":"https://www.roche.com/about/governance/board-of-directors","establishes":"Family-pool representatives on the board.","doesNotEstablish":"That representatives dictate every scientific or commercial decision."},
+    {"id":"roche-pool-continuity","publisher":"Roche","title":"Investor governance statement","url":"https://sp-coc.roche.com/en/investors.html","establishes":"Roche's description of the founder-family pool as enabling a long-term perspective.","doesNotEstablish":"Power outside Roche's corporate structure."},
+    {"id":"heineken-ownership","publisher":"Heineken Holding","title":"Our ownership structure","url":"https://www.heinekenholding.com/our-company/our-ownership-structure","establishes":"The Heineken family's ownership of L'Arche Green.","doesNotEstablish":"Control over governments or the broader consumer economy."},
+    {"id":"heineken-purpose","publisher":"Heineken Holding","title":"Our company","url":"https://www.heinekenholding.com/our-company","establishes":"The continuity and independence purpose of the holding structure.","doesNotEstablish":"Total family direction of all operations."},
+    {"id":"heineken-agm","publisher":"Heineken Holding","title":"Annual General Meeting 2026","url":"https://www.heinekenholding.com/governance/agm","establishes":"Current shareholder-governance documents and voting process.","doesNotEstablish":"Authority beyond the corporate group."}
+  ]
+}

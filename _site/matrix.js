@@ -1,6 +1,36 @@
 (() => {
   'use strict';
 
+  function installIndependentLinksNavigation() {
+    const href = 'independent-links.html';
+    const navs = Array.from(document.querySelectorAll('.nav-primary'));
+    navs.forEach((nav) => {
+      if (nav.querySelector(`a[href="${href}"]`)) return;
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = 'Independent Links';
+      link.dataset.globalIndependentLinks = 'true';
+      const searchLink = nav.querySelector('a[href="search.html"]');
+      if (searchLink) nav.insertBefore(link, searchLink);
+      else nav.appendChild(link);
+    });
+
+    const researchGroups = Array.from(document.querySelectorAll('.nav-group')).filter((group) => {
+      const heading = group.querySelector('strong');
+      return heading && /research|evidence/i.test(heading.textContent || '');
+    });
+    researchGroups.forEach((group) => {
+      if (group.querySelector(`a[href="${href}"]`)) return;
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = 'Independent Links';
+      link.dataset.globalIndependentLinks = 'true';
+      group.appendChild(link);
+    });
+  }
+
+  installIndependentLinksNavigation();
+
   const canvas = document.getElementById('matrix');
   const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;
   if (!canvas || !ctx) return;

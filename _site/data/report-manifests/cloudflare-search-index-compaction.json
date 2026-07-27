@@ -1,32 +1,33 @@
 {
-  "generatedAt": "2026-07-22T06:12:33.150Z",
-  "pageCount": 118,
+  "generatedAt": "2026-07-27T06:51:24.130Z",
+  "pageCount": 116,
   "output": "downloads/cloudflare-search-index-compaction.pdf",
   "report": {
-    "version": 1,
+    "version": 4,
     "title": "Cloudflare Search Index Compaction",
-    "contentHash": "a72b460b85c0edd5d247cf4e3657b382b1fc8859aceb1a5f588a30cee914dc11",
+    "contentHash": "5b300e0ee53d761d8bb0fe972397285016759866b240c62d224449336d91b7b3",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
-      "58a212e4e1a93007ec5b3d6d",
       "9e8903fd8dfa9b54a1d6db30",
+      "88ef9baf356c096816236956",
+      "ad23fb22757e50c30b3d487c",
+      "594100b62a47db521fe2a128",
+      "ec1316fb1fb70c83dc347bb6",
+      "76a719654ec3312153163154",
+      "5b6b5c0285c3c8742768ea5c",
+      "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "88ef9baf356c096816236956",
-      "d0b647e325275daa6d824a49",
-      "26b90533dbf7d2ed42f02de6",
-      "c1520a15d6e62871a66c558e",
-      "594100b62a47db521fe2a128",
-      "71e0563ca7b139c37c302956",
-      "ec1316fb1fb70c83dc347bb6",
-      "76a719654ec3312153163154",
-      "a5e5d4ec4df4352ea242ea3f",
-      "7f5b91c14c671bd24b8bbd81",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
-      "cee347fbc3752c6e0f890457",
+      "26b90533dbf7d2ed42f02de6",
+      "71e0563ca7b139c37c302956",
+      "157cdab04b61ae6309c0c713",
+      "c1520a15d6e62871a66c558e",
+      "a5e5d4ec4df4352ea242ea3f",
+      "7f5b91c14c671bd24b8bbd81",
       "eb3448928554960651da56f6",
       "7dcf4ef18ea1f86d01068773",
       "ecd4a1111010f13b2d74bf8c",
@@ -41,10 +42,21 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-21E454816F050A34",
-      "ff1a3a77816af400f09ab95e",
-      "fbfb678d637444fe7b488644",
+      "2931a84c2c7fe86982d5d6e5",
+      "92adb9d59689b41e578a7a5e",
+      "1c352ab364fbfca06ab12a57",
       "daee19f2c0d92279cc9a7569",
       "008875ef7bf45eb14dccb254",
+      "41af4eba97b7eb1c0afb301f",
+      "c0a5a2caaede97acebdb74f9",
+      "1ee57e70dacfa67f04323529",
+      "d7398c0c72a085a05c90422c",
+      "2760ff41834220099bdf6f88",
+      "5ce17839086eddf839270b1a",
+      "1abf4240a692c2dda1388443",
+      "9848ec4b4c3f6c2693269839",
+      "ff1a3a77816af400f09ab95e",
+      "fbfb678d637444fe7b488644",
       "3a612824bd2383e3b7554062",
       "def94e0a086f2eac4c5ad91a",
       "41238c8b70e678402d643e26",
@@ -118,7 +130,7 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-B2E7D62740B52D54",
+      "ASC-REVIEW-7757E49DD8F6D264",
       "ASC-REVIEW-D5386E9017A18F49",
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-CBB7EB7E52CE7014",
@@ -134,33 +146,21 @@
       "ASC-REVIEW-FF2029A261CA3CAD",
       "ASC-REVIEW-35409BA5B302BB83",
       "ASC-REVIEW-7EFB3EFB7EE261FF",
-      "ASC-REVIEW-8F2468497DC18A3E",
-      "ASC-REVIEW-8EDA87E9301AAFAE",
-      "ASC-REVIEW-2F809A60275611A5",
-      "ASC-REVIEW-5F18C934E1FFBBB4",
-      "ASC-REVIEW-385C8E133B9E3CEA",
-      "ASC-REVIEW-C341FD7E06960AED",
-      "ASC-REVIEW-5D75F861BBF77D9D",
-      "d652e1fa40dcd5dc95de9bb1",
-      "553ca36157c97552aafe2abb",
-      "pdf-cloudflare-search-index-compaction-afc08e611d63",
-      "9f3052b5d8cec138a2a37e8c",
-      "72ef7895f95288946ccb3cff",
-      "9f77464e401ac59ad1adb812"
+      "ASC-REVIEW-8F2468497DC18A3E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 19,
-      "disputedClaimCount": 102,
+      "primarySourceCount": 31,
+      "disputedClaimCount": 94,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 107,
-      "moneyRecordCount": 108
+      "relationshipCount": 99,
+      "moneyRecordCount": 100
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Cloudflare Search Index Compaction.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Cloudflare Search Index Compaction.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 99 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 99 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T06:12:33.150Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:51:24.130Z"
   }
 }

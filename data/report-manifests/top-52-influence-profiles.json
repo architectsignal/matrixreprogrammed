@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T06:50:02.461Z",
+  "generatedAt": "2026-07-27T06:59:01.943Z",
   "pageCount": 109,
   "output": "downloads/top-52-influence-profiles.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Top 52 Influence Profiles",
-    "contentHash": "ff67a50027e49779acc7ba3bac21cf1640a7a6eeda0517f9e1b19286cc8f804c",
+    "contentHash": "589c7e38ae0ce098ea4867a76a7a8d9ba322071383ff5e4fea7a467fb10647ce",
     "sourceIds": [
       "people-of-interest",
       "larry-fink",
@@ -82,6 +82,7 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-54C7773F8BEDE2F4",
+      "daily-revelation-report",
       "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
@@ -103,7 +104,6 @@
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
       "institutions",
-      "daily-revelation-report",
       "360e80c162081c85d2c680ef",
       "9b9816cd15ea0d816c77affa",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -137,30 +137,30 @@
       "ASC-REVIEW-1EA1A54BAAF5A93D",
       "ASC-REVIEW-44CBDE6F2AE4CA62",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "eb3448928554960651da56f6",
       "billionaire-elon-musk",
-      "EP-AI-001",
       "72ef7895f95288946ccb3cff",
+      "eb3448928554960651da56f6",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
-      "ASC-REVIEW-A6F3D2598C5BA884"
+      "ASC-REVIEW-A6F3D2598C5BA884",
+      "ASC-REVIEW-7729CF4536080393"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 2,
-      "disputedClaimCount": 66,
+      "disputedClaimCount": 67,
       "newEntityCount": 24,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 78
+      "relationshipCount": 75,
+      "moneyRecordCount": 79
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Top 52 Influence Profiles.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Elite Power Theory; Elite Power Theory; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:50:02.461Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:59:01.943Z"
   }
 }

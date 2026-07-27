@@ -188,7 +188,7 @@ ensureArchiveSearchMarker(path.join(out, 'search'));
 
 const requiredFiles = [
   'index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel',
-  'research-tools.html','research-tools','research-tools.js','security-privacy.html','security-privacy','security-privacy.js','dark-web-safety.html','dark-web-safety','dark-web-safety.js','data/security-privacy-tools.json','data/dark-web-safety.json',
+  'research-tools.html','research-tools','research-tools.js','contact-the-machine.html','contact-the-machine','contact-the-machine.css','contact-the-machine.js','security-privacy.html','security-privacy','security-privacy.js','dark-web-safety.html','dark-web-safety','dark-web-safety.js','data/security-privacy-tools.json','data/dark-web-safety.json',
   'market-activity.html','market-activity','market-activity.js','market-watchlist.html','market-watchlist','market-watchlist.js','data/market-activity.json','downloads/market-activity.csv',
   'evidence-reader.html','evidence-reader','evidence-reader.js','data/evidence-reader-manifest.json','evidence-timeline.html','evidence-timeline','evidence-timeline.js','data/evidence-timeline.json',
   'evidence-archive.html','evidence-archive','evidence-archive.js','evidence-citation.js','source-change-diff.js','replay/sw.js','data/evidence-archive-policy.json','data/evidence-archive-manifest.json','data/evidence-integrity-manifest.json','data/evidence-integrity-manifest.sigstore.json','data/evidence-citations.json',

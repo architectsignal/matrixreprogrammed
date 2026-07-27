@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-23T06:51:54.057Z
+Updated: 2026-07-27T07:01:49.439Z
 
-Inputs: 2780
+Inputs: 2782
 
-Routed sources: 2780
+Routed sources: 2782
 
 Conclusions: 14
 
-Missing-record queue: 2780
+Missing-record queue: 2782
 
 ## Conclusions
 ### Institution dossier
@@ -55,6 +55,28 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### Power Families / Black Nobility
+Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### Health/biosecurity route
+Conclusion: 5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Think Tanks dossier
 Conclusion: 5 source route(s) currently point to Think Tanks dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -88,32 +110,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Health/biosecurity route
-Conclusion: 5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.
+### Controlled Opposition / media route
+Conclusion: 5 source route(s) currently point to Controlled Opposition / media route. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Secret Societies dossier
-Conclusion: 5 source route(s) currently point to Secret Societies dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Secret Societies dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Jurisdictions of Power dossier
-Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Controlled Opposition / media route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -143,10 +143,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Controlled Opposition / media route
-Conclusion: 5 source route(s) currently point to Controlled Opposition / media route. Treat this as an update-priority cluster, not proof of a final claim.
+### Secret Societies dossier
+Conclusion: 5 source route(s) currently point to Secret Societies dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Controlled Opposition / media route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Secret Societies dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -154,10 +154,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Power Families / Black Nobility
-Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
+### Jurisdictions of Power dossier
+Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

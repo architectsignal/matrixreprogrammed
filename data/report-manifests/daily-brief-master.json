@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-23T06:43:51.038Z",
-  "pageCount": 104,
+  "generatedAt": "2026-07-27T06:51:54.722Z",
+  "pageCount": 107,
   "output": "downloads/daily-brief-master.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Deep Daily Control Brief",
-    "contentHash": "d64211a789918f405ffd12c25095f74b9907d5b7ebc133cd1f7b5f107b0d83ea",
+    "contentHash": "fa3304c3de38ee7baca9157ef65c5a184b100ed2668757424f22c2554761ff2d",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
       "bb5dfe90c29929d84ce60e6d",
       "f17e0de0ef7b66aa842ac3a1",
-      "65debd126cdfa5f7547a3eca",
-      "3c9c23f7f9a1cec81ef90f59",
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
+      "65debd126cdfa5f7547a3eca",
+      "3c9c23f7f9a1cec81ef90f59",
       "institutions",
       "bf773d3ec83b9b3768dfce6b",
       "8a10f165e16d0f8648cb8ec4",
@@ -83,6 +83,7 @@
       "72ef7895f95288946ccb3cff",
       "008875ef7bf45eb14dccb254",
       "41772e5c9af7970ddd7d5aac",
+      "ASC-REVIEW-ED6591FF0C00507A",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-19181472DB04522E",
@@ -90,6 +91,9 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "360e80c162081c85d2c680ef",
+      "ASC-REVIEW-DE01B541C1E6F51C",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-06A7D981E8AF743C",
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -105,6 +109,15 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "c1520a15d6e62871a66c558e",
+      "ASC-REVIEW-6B9A792BD16666C3",
+      "ASC-REVIEW-64E0D2BCFC6FF23D",
+      "ASC-REVIEW-47F2C521B4EF726E",
+      "ASC-REVIEW-AF18512452F699D2",
+      "ASC-REVIEW-603BC290D10E2D53",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-5A694C702AD437BB",
+      "ASC-REVIEW-70AD36F3F75D37F7",
+      "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
@@ -112,7 +125,6 @@
       "ASC-REVIEW-B8034056CD461A0D",
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "d0b647e325275daa6d824a49",
       "elite-control-infrastructure",
       "8e1ff4bf5c6107eafebec31b",
       "contractor-blackwater-xe-academi-constellis-lineage",
@@ -120,49 +132,37 @@
       "contractor-caci-international",
       "institution-united-nations",
       "7f5b91c14c671bd24b8bbd81",
-      "cee347fbc3752c6e0f890457",
       "ASC-002",
       "ASC-004",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "ASC-REVIEW-3266CA18BAEC4ACB",
-      "ASC-REVIEW-DF9D7EABC07B3635",
-      "ASC-REVIEW-D3C6DB16A89DBA51",
-      "ASC-REVIEW-DAC9306D89683C63",
-      "ASC-REVIEW-D2F6E9BE7B7B66ED",
-      "ASC-REVIEW-8EDA87E9301AAFAE",
-      "ASC-REVIEW-2F809A60275611A5",
-      "ASC-REVIEW-5F18C934E1FFBBB4",
-      "ASC-REVIEW-385C8E133B9E3CEA",
-      "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-5AE5A3805582A7F2",
-      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "7bf58b4062bae3da680c4bf1",
-      "9848ec4b4c3f6c2693269839",
-      "contractor-booz-allen-hamilton",
-      "contractor-palantir-government-platforms",
-      "billionaire-jeff-bezos",
-      "billionaire-bill-gates",
-      "OB-004"
+      "ASC-REVIEW-9A9799A9A37BB837",
+      "ASC-REVIEW-87F3003854489813",
+      "ASC-REVIEW-FCEFDBDA93429C4F",
+      "ASC-REVIEW-05E559B745692B7C",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-BAEE9285BEA5587C",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-36153B86F83F5B52",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-8FC95E6CC8F8F440",
+      "ASC-REVIEW-4DC96EE1DF7B7C16",
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 45,
-      "newEntityCount": 51,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 52,
+      "newEntityCount": 33,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 57,
-      "moneyRecordCount": 59
+      "relationshipCount": 63,
+      "moneyRecordCount": 42
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Deep Daily Control Brief.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Deep Daily Control Brief.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Elite Power Theory; Elite Power Theory; Media / Narrative Theory; Media / Narrative Theory; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record",
+        "inference": "The indexed set contains 63 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Elite Power Theory; Elite Power Theory; Media / Narrative Theory; Media / Narrative Theory; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Daily Revelation Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 63 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Elite Power Theory",
@@ -203,7 +203,7 @@
           "Media / Narrative Theory",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
-          "Matrix Reprogrammed Canonical Intelligence Record"
+          "Daily Revelation Report"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:43:51.038Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:51:54.722Z"
   }
 }

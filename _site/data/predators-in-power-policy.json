@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-26",
+  "title": "Predators in Power",
+  "purpose": "Define the evidence, conduct and influence criteria for the Predators in Power intelligence page without converting allegations, office-holding or association into a verdict.",
+  "eligibilityRule": "A published subject requires at least one editorially approved qualifying conduct record and at least one independently sourced qualifying power or influence role. Automated matches, anonymous claims and unsourced rumors never publish directly.",
+  "conductDomains": {
+    "rape": "Rape or equivalent penetrative sexual offence",
+    "sexual_assault": "Sexual assault or equivalent non-consensual sexual offence",
+    "sexual_abuse": "Sexual abuse not otherwise classified",
+    "indecent_assault": "Indecent assault or jurisdictional equivalent",
+    "child_sexual_abuse": "Sexual abuse of a child",
+    "child_sexual_exploitation": "Commercial or non-commercial sexual exploitation of a child",
+    "child_trafficking": "Trafficking of a child for sexual exploitation or other exploitation",
+    "grooming": "Criminal grooming or solicitation of a child",
+    "csam_offence": "Creation, possession, distribution or facilitation of child sexual abuse material",
+    "child_abduction": "Abduction, kidnapping or unlawful confinement of a child",
+    "child_abuse_nonsexual": "Physical or psychological abuse of a child",
+    "child_endangerment_neglect": "Criminal child endangerment, cruelty or neglect",
+    "child_homicide": "Homicide or unlawful killing of a child",
+    "institutional_facilitation_cover_up": "Documented facilitation, concealment, obstruction or institutional failure connected to sexual offences or crimes against children",
+    "sexual_offence_other": "Other criminal sexual offence",
+    "sexual_misconduct_noncriminal": "Attributed sexual-misconduct allegation or civil finding that is not presented as a criminal conviction"
+  },
+  "powerSectors": {
+    "public_office": "Elected or appointed public office",
+    "government_senior_official": "Senior government, diplomatic or regulatory authority",
+    "political_party_leadership": "Political-party leadership, campaign command or major political gatekeeping",
+    "company_board": "Company chair, director or board-level authority",
+    "company_executive": "Founder, owner, chief executive or C-suite authority",
+    "company_management": "Senior or operational management with authority over staff, assets or access",
+    "finance_asset_control": "Banking, investment, trust, family-office, asset-control or capital-allocation authority",
+    "religious_institution": "Religious leadership or institutional authority",
+    "education": "School, university, academy or education-system authority",
+    "healthcare": "Healthcare, care-home, medical or therapeutic authority",
+    "law_enforcement_military": "Police, prosecution, intelligence, security or military authority",
+    "media_entertainment": "Media ownership, publishing, broadcasting, entertainment or celebrity influence",
+    "sports": "Sports governance, ownership, coaching or major athletic influence",
+    "charity_foundation": "Charity, NGO, foundation or philanthropic authority",
+    "royal_aristocratic": "Royal, aristocratic or hereditary institutional influence",
+    "union_professional_body": "Union, guild, professional-body or licensing authority",
+    "lobbyist_adviser_donor": "Major donor, lobbyist, adviser, strategist or political access broker",
+    "technology_platform": "Technology-platform, data, communications or algorithmic-distribution authority",
+    "other_influential_gatekeeper": "Other documented authority, fame, access, succession, patronage or gatekeeping influence"
+  },
+  "publicationLanes": [
+    "conviction_final_judgment",
+    "charge_indictment_complaint",
+    "investigation_inquiry",
+    "civil_regulatory_action",
+    "substantiated_allegation",
+    "suspected_conduct",
+    "rumor_speculation",
+    "exculpatory_disposition"
+  ],
+  "rankingRule": "Do not create a predator score. Sort by legal/evidence lane, then most recent record date, while preserving exculpatory outcomes and responses.",
+  "victimSafetyRules": [
+    "Never publish the identity, address, school, medical information or identifying detail of a child victim unless already lawfully public and editorially necessary; default to omission.",
+    "Never accept, store, link to or reproduce illegal sexual imagery or child sexual abuse material.",
+    "Do not publish explicit descriptions that are unnecessary to establish the legal record.",
+    "Use survivor-respecting language and avoid blaming, sensationalising or turning allegations into entertainment.",
+    "Signal drops enter pending review and cannot alter a public dossier until source, identity, legal posture, disposition and right of reply are checked."
+  ],
+  "subjectEligibilityTemplate": {
+    "predatorsInPowerEligible": true,
+    "dossierRoute": "dossier-subject-slug.html",
+    "powerRoles": [
+      {
+        "sector": "public_office",
+        "title": "Exact role",
+        "organization": "Organization or institution",
+        "from": "YYYY-MM-DD or not stated",
+        "to": "YYYY-MM-DD, present or not stated",
+        "status": "current, former or historical",
+        "sourceLabel": "Official biography, filing, registry or authoritative source",
+        "sourceUrl": "https://example.invalid/role-source",
+        "lastChecked": "YYYY-MM-DD"
+      }
+    ]
+  },
+  "recordEligibilityTemplate": {
+    "conductDomains": ["sexual_assault"],
+    "victimClass": ["adult"],
+    "predatorsInPowerEligible": true
+  }
+}

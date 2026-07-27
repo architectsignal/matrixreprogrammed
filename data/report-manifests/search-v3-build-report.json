@@ -1,20 +1,31 @@
 {
-  "generatedAt": "2026-07-23T06:48:47.493Z",
-  "pageCount": 69,
+  "generatedAt": "2026-07-27T06:57:39.203Z",
+  "pageCount": 75,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Search V3 Build Report",
-    "contentHash": "8fdcff65405da6afb1234aaf950c68631b53ae184ffff845963097b266de2fb8",
+    "contentHash": "4ef647c1ca2af89366b8e20a1dcbf876db5aad0b09ab7b6c0825f09e6094a68e",
     "sourceIds": [
       "ecd4a1111010f13b2d74bf8c",
+      "b4cb47ea50dc901364239e9f",
+      "9b6a36dc8fbb0fb10a2c4c7b",
+      "d91969cf88008135217d911c",
+      "5b02847b05c9c34963d8a042",
+      "16397649363c800fecf2bfd0",
       "1769af26a7bda813406cd8f5",
       "360e80c162081c85d2c680ef",
-      "b6167e00f2c7dd4f8856503f",
-      "9848ec4b4c3f6c2693269839",
-      "58a212e4e1a93007ec5b3d6d",
-      "eb3448928554960651da56f6",
-      "c1520a15d6e62871a66c558e",
+      "2482c3e0241c7c7679a18cd1",
+      "06baa45bea3e2e15eb80eff9",
+      "companies-aapl:federal-register-latest",
+      "technology-control-aapl:federal-register-latest",
+      "e457b31e704efd10ec987a59",
+      "f3676fb7b03d3ee0516f2a19",
+      "3d3e57be0bd7b5d58b2f1fc8",
+      "62ef00886878edb710a5fd60",
+      "62231a08b90f027815e7bc01",
+      "ad23fb22757e50c30b3d487c",
+      "1c352ab364fbfca06ab12a57",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -135,18 +146,7 @@
       "private-equity-new-mountain-capital",
       "private-equity-insight-partners",
       "private-equity-hg",
-      "hedge-funds-bridgewater-associates",
-      "hedge-funds-man-group",
-      "hedge-funds-millennium-management",
-      "hedge-funds-citadel",
-      "hedge-funds-d-e-shaw",
-      "hedge-funds-elliott-investment-management",
-      "hedge-funds-two-sigma-investments",
-      "hedge-funds-davidson-kempner-capital-management",
-      "hedge-funds-farallon-capital-management",
-      "hedge-funds-marshall-wace",
-      "hedge-funds-brevan-howard",
-      "hedge-funds-balyasny-asset-management"
+      "hedge-funds-bridgewater-associates"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 0,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 9,
-      "moneyRecordCount": 133
+      "relationshipCount": 11,
+      "moneyRecordCount": 128
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 138 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Consent of and Final Judgment as to Gautam Adani (data/weekly-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json); GAO assessment of directed-energy weapons and deployment limitations (data/clock-wall.json); GAO assessment of directed-energy weapons and deployment limitations (data/global-risk-clocks.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Consent of and Final Judgment as to Gautam Adani,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 9 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Duquesne Family Office; L Catterton family capital routes; Walton Family Foundation; Sainsbury Family Charitable Funds; Crown Estate ownership trust routes; Employee Ownership Trust register watch; Rockefeller Family Fund",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Duquesne Family Office; L Catterton family capital routes; Walton Family Foundation; Sainsbury Family Charitable Funds; Crown Estate ownership trust routes",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 9 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
+          "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
           "Duquesne Family Office",
           "L Catterton family capital routes",
           "Walton Family Foundation",
           "Sainsbury Family Charitable Funds",
-          "Crown Estate ownership trust routes",
-          "Employee Ownership Trust register watch",
-          "Rockefeller Family Fund"
+          "Crown Estate ownership trust routes"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-22T07:44:13.840Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

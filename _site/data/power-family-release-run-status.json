@@ -1,0 +1,151 @@
+{
+  "observedAt": "2026-07-25T08:01:31.676Z",
+  "powerFamilyRefreshDiagnostic": [
+    {
+      "id": 30149968686,
+      "name": "Diagnose Power-Family Production Refresh",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-07-25T07:48:19Z",
+      "updatedAt": "2026-07-25T07:51:28Z",
+      "headSha": "b67d266a0eea398bc6021bd16bb23faa53c3cb34",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30149968686",
+      "runAttempt": 1
+    },
+    {
+      "id": 30149694177,
+      "name": "Diagnose Power-Family Production Refresh",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-25T07:39:31Z",
+      "updatedAt": "2026-07-25T07:41:28Z",
+      "headSha": "7c4ab3f41efb00fb5cb821f1ef5d7dc7686ca556",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30149694177",
+      "runAttempt": 1
+    }
+  ],
+  "controlledProduction": [
+    {
+      "id": 30091864423,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "in_progress",
+      "conclusion": null,
+      "createdAt": "2026-07-24T12:06:04Z",
+      "updatedAt": "2026-07-25T07:54:20Z",
+      "headSha": "62ec7fdb25a0bac1d083540c1993e7bf15d18134",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30091864423",
+      "runAttempt": 33
+    },
+    {
+      "id": 30091003163,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "createdAt": "2026-07-24T11:51:28Z",
+      "updatedAt": "2026-07-24T12:03:19Z",
+      "headSha": "ce25bee0912a1ffbdd6db5b579bccaa58c0a3e97",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30091003163",
+      "runAttempt": 1
+    },
+    {
+      "id": 30085279942,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-07-24T10:11:09Z",
+      "updatedAt": "2026-07-24T10:27:59Z",
+      "headSha": "8c26deeadb442ceb238386b9fc45c8b71a9da37b",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30085279942",
+      "runAttempt": 1
+    },
+    {
+      "id": 30083740775,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-24T09:45:39Z",
+      "updatedAt": "2026-07-24T10:45:08Z",
+      "headSha": "19be406f0db5f54ce367586ec1f8b4b71e9b78da",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30083740775",
+      "runAttempt": 2
+    },
+    {
+      "id": 30081702617,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-24T09:12:12Z",
+      "updatedAt": "2026-07-24T09:33:36Z",
+      "headSha": "c5acaf6b1659f15622718f734942d6e34736c0e5",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30081702617",
+      "runAttempt": 1
+    },
+    {
+      "id": 30081570983,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-24T09:10:03Z",
+      "updatedAt": "2026-07-24T09:22:26Z",
+      "headSha": "8e0b1644277fb213c83f14231e683305c4002918",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30081570983",
+      "runAttempt": 1
+    },
+    {
+      "id": 30018071575,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-07-23T14:55:07Z",
+      "updatedAt": "2026-07-23T15:11:50Z",
+      "headSha": "b8fc602dde47caa8b6bfc734f33617891fee8934",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30018071575",
+      "runAttempt": 1
+    },
+    {
+      "id": 30016471211,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-23T14:34:41Z",
+      "updatedAt": "2026-07-23T14:42:31Z",
+      "headSha": "26afe67a23248139ef317f169114862598b4e3af",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30016471211",
+      "runAttempt": 1
+    },
+    {
+      "id": 30016203190,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-23T14:31:15Z",
+      "updatedAt": "2026-07-23T14:32:40Z",
+      "headSha": "f4f25783945a40af8ad59c4fd6276256770d3a38",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30016203190",
+      "runAttempt": 1
+    },
+    {
+      "id": 30002078911,
+      "name": "Matrix Reprogrammed Controlled Production Deploy",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "failure",
+      "createdAt": "2026-07-23T11:09:45Z",
+      "updatedAt": "2026-07-23T13:36:50Z",
+      "headSha": "84696052724b358339be2c8d9f4878c9660c1179",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30002078911",
+      "runAttempt": 7
+    }
+  ]
+}

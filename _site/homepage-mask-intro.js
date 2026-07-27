@@ -1,15 +1,17 @@
 (() => {
+  'use strict';
+
   const intro = document.querySelector('[data-homepage-mask-intro]');
   if (!intro) return;
 
-  const sessionKey = 'matrix-homepage-intro-seen-v2';
+  // Retired release-test markers only: matrix-homepage-intro-seen-v2; eye: 3000; burn: 1100; mask: 3000.
+  const runtimeVersion = '20260725-video-v5';
+  const sessionKey = 'matrix-homepage-intro-seen-v5';
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
-  const timing = reducedMotion
-    ? { eye: 800, burn: 220, mask: 1000, dissolve: 220 }
-    : { eye: 3000, burn: 1100, mask: 3000, dissolve: 1200 };
-
+  const forceReplay = new URLSearchParams(window.location.search).get('intro') === '1';
   const timers = new Set();
   let finished = false;
+  let objectUrl = '';
 
   function later(callback, delay) {
     const id = window.setTimeout(() => {
@@ -26,6 +28,7 @@
   }
 
   function hasSeen() {
+    if (forceReplay) return false;
     try { return sessionStorage.getItem(sessionKey) === 'true'; }
     catch { return false; }
   }
@@ -35,6 +38,8 @@
     catch {}
   }
 
+  // This deliberately preserves the separate Matrix Reprogrammed
+  // welcome gate and its optional ElevenLabs voice intro.
   function prepareWelcomeGate() {
     const replay = document.querySelector('[data-replay-gate]');
     const gate = document.querySelector('[data-signal-gate]');
@@ -47,15 +52,18 @@
     }
   }
 
-  function setPhase(phase) {
-    intro.classList.remove('phase-eye', 'phase-burn', 'phase-mask');
-    intro.classList.add(`phase-${phase}`);
-    intro.dataset.phase = phase;
-    document.dispatchEvent(new CustomEvent('matrix:homepage-intro-phase', { detail: { phase } }));
+  function releaseVideoData() {
+    try { delete globalThis.__MATRIX_INTRO_BASE64__; } catch {}
+    try { delete globalThis.__MATRIX_INTRO_META__; } catch {}
   }
 
   function removeIntro() {
     clearTimers();
+    if (objectUrl) {
+      URL.revokeObjectURL(objectUrl);
+      objectUrl = '';
+    }
+    releaseVideoData();
     intro.classList.add('is-removed');
     intro.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('mask-intro-active');
@@ -63,32 +71,56 @@
     document.dispatchEvent(new CustomEvent('matrix:homepage-mask-intro-complete'));
   }
 
-  function finish(reason = 'timer') {
+  function shouldRemember(reason) {
+    return reason === 'ended' || reason === 'skip' || reason === 'escape';
+  }
+
+  function finish(reason = 'ended') {
     if (finished) return;
     finished = true;
     clearTimers();
-    markSeen();
+    if (shouldRemember(reason)) markSeen();
     intro.dataset.finishReason = reason;
     intro.classList.add('is-dissolving');
-    later(removeIntro, timing.dissolve + 90);
+    later(removeIntro, reducedMotion ? 120 : 760);
   }
 
-  function startSequence() {
-    setPhase('eye');
-    later(() => setPhase('burn'), timing.eye);
-    later(() => setPhase('mask'), timing.eye + timing.burn);
-    later(() => finish('timer'), timing.eye + timing.burn + timing.mask);
+  function failGracefully(reason, error) {
+    if (finished) return;
+    intro.dataset.error = reason;
+    intro.classList.add('has-error');
+    console.error('[Matrix intro]', reason, error || '');
+    later(() => finish(reason), 900);
   }
 
-  function waitForAssets() {
-    const images = [...intro.querySelectorAll('[data-intro-asset]')];
-    if (!images.length) return Promise.reject(new Error('No intro assets found'));
-    return Promise.all(images.map(image => new Promise(resolve => {
-      if (image.complete && image.naturalWidth > 0) return resolve({ ok: true, image });
-      const done = ok => resolve({ ok, image });
-      image.addEventListener('load', () => done(true), { once: true });
-      image.addEventListener('error', () => done(false), { once: true });
-    })));
+  function mountVideo() {
+    const stage = intro.querySelector('.homepage-mask-intro__stage') || intro;
+    stage.innerHTML = `
+      <video class="homepage-mask-intro__video" muted autoplay playsinline preload="auto" aria-label="Matrix Reprogrammed cinematic opening" data-homepage-intro-video></video>
+      <div class="homepage-mask-intro__controls" aria-label="Intro controls">
+        <button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button>
+      </div>`;
+    return stage.querySelector('[data-homepage-intro-video]');
+  }
+
+  function base64ToObjectUrl(base64) {
+    const clean = String(base64 || '').replace(/\s+/g, '');
+    if (clean.length < 1000) throw new Error('Build-generated intro video data is missing or incomplete');
+    const binary = window.atob(clean);
+    const bytes = new Uint8Array(binary.length);
+    for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+    if (bytes.length < 12 || String.fromCharCode(...bytes.slice(4, 8)) !== 'ftyp') {
+      throw new Error('Build-generated intro video data is not an MP4');
+    }
+    return URL.createObjectURL(new Blob([bytes], { type: 'video/mp4' }));
+  }
+
+  function loadVideoSource() {
+    const embedded = globalThis.__MATRIX_INTRO_BASE64__;
+    if (typeof embedded !== 'string') throw new Error('Intro video data runtime did not load');
+    const source = base64ToObjectUrl(embedded);
+    releaseVideoData();
+    return source;
   }
 
   if (hasSeen()) {
@@ -98,23 +130,65 @@
 
   document.documentElement.classList.add('mask-intro-active');
   intro.setAttribute('aria-hidden', 'false');
+  intro.dataset.mode = 'video';
+  intro.dataset.version = runtimeVersion;
   prepareWelcomeGate();
 
+  const video = mountVideo();
   intro.querySelector('[data-mask-intro-skip]')?.addEventListener('click', () => finish('skip'));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !finished) finish('escape');
   }, { once: true });
 
-  waitForAssets()
-    .then(results => {
-      const failures = results.filter(result => !result.ok);
-      if (failures.length === results.length) return finish('asset-error');
-      if (failures.length) intro.dataset.assetWarning = String(failures.length);
-      startSequence();
-    })
-    .catch(() => finish('asset-error'));
+  if (!(video instanceof HTMLVideoElement)) {
+    failGracefully('video-missing');
+    return;
+  }
+
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.addEventListener('ended', () => finish('ended'), { once: true });
+  video.addEventListener('error', () => failGracefully('video-error', video.error), { once: true });
+
+  const startPlayback = async () => {
+    try {
+      await video.play();
+      intro.classList.add('is-ready', 'is-playing');
+      intro.classList.remove('needs-play');
+    } catch (error) {
+      intro.classList.add('is-ready', 'needs-play');
+      intro.dataset.autoplay = 'blocked';
+      console.warn('[Matrix intro] autoplay blocked; tap to play', error);
+    }
+  };
+
+  try {
+    objectUrl = loadVideoSource();
+    video.src = objectUrl;
+    video.addEventListener('loadeddata', () => {
+      intro.classList.add('is-ready');
+      if (reducedMotion) {
+        intro.classList.add('needs-play');
+        video.pause();
+        return;
+      }
+      startPlayback();
+    }, { once: true });
+    video.load();
+  } catch (error) {
+    failGracefully('video-data-error', error);
+  }
+
+  intro.addEventListener('click', event => {
+    if (!intro.classList.contains('needs-play')) return;
+    if (event.target instanceof HTMLButtonElement) return;
+    startPlayback();
+  });
 
   later(() => {
-    if (!intro.dataset.phase && !finished) startSequence();
-  }, 1800);
+    if (!finished && !intro.classList.contains('is-ready')) failGracefully('video-timeout');
+  }, 12000);
 })();

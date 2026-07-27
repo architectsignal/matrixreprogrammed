@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-23T06:54:10.818Z",
+  "generatedAt": "2026-07-27T07:05:08.891Z",
   "phase": 7,
   "name": "PayPal sandbox rehearsal",
-  "deploymentMode": "hard-freeze",
+  "deploymentMode": "deployment-enabled",
   "checks": [
     {
       "name": "migration contains CREATE TABLE IF NOT EXISTS paypal_sandbox_rehearsal_runs",
@@ -181,22 +181,22 @@
       "detail": ""
     },
     {
-      "name": "canonical production deployment is explicitly hard frozen",
+      "name": "canonical deployment applies Phase 7 migration",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "hard freeze contains no executable Wrangler deployment command",
+      "name": "canonical deployment syntax-checks rehearsal Worker",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "Phase 7 rehearsal assets remain build-tested while deployment is frozen",
+      "name": "canonical deployment runs Phase 7 test",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "hard freeze preserves live state by performing no migration or checkout mutation",
+      "name": "canonical deployment closes sandbox while preserving live state",
       "ok": true,
       "detail": ""
     },
@@ -208,7 +208,7 @@
     {
       "name": "sandbox gate opens only for active timed run",
       "ok": true,
-      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-23T07:09:10.818Z\"}}"
+      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-27T07:20:08.891Z\"}}"
     },
     {
       "name": "sandbox rehearsal gate does not control live routing",
@@ -217,5 +217,5 @@
     }
   ],
   "failures": [],
-  "safetyBoundary": "Production deployment is hard frozen. Rehearsal code and migration remain validated in Git; sandbox checkout stays closed and no workflow may mutate live or sandbox state."
+  "safetyBoundary": "Sandbox checkout is allowed only during an active timed rehearsal. Cloudflare owns the current environment and credentials; deployment keeps sandbox closed and preserves the independently authorized live D1 switch."
 }

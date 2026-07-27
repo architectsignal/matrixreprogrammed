@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-22T06:12:06.967Z",
-  "pageCount": 114,
+  "generatedAt": "2026-07-27T06:50:58.704Z",
+  "pageCount": 117,
   "output": "downloads/campaign-crime-state-overlap-push.pdf",
   "report": {
-    "version": 1,
+    "version": 4,
     "title": "Crime-State Overlap Campaign",
-    "contentHash": "4c7b2cba07ae1429e110e8e1a6a8e311dba62b11ed33922111074c92b0001692",
+    "contentHash": "5a819ff8cac101bc627db3f3d37def1d616e193889e39f8fc2b4daf3d2954d16",
     "sourceIds": [
       "1a15b4fad0b9b574f2d09a70",
       "651712cbd19a0670801dff73",
@@ -46,13 +46,11 @@
       "535d2f595c3ec1621e13dd0f",
       "67f26a2a1ba1e136d90bd1ad",
       "cab66e2bb53cf082d241d7e1",
-      "594100b62a47db521fe2a128",
       "232955cb3e08720ec29ae560",
       "72ef7895f95288946ccb3cff",
       "dc8b9d14c64a9a003f090a3b",
       "3d951509a532bc401f8f77b7",
       "afadbf6ad0a6e1ce37d8a4bf",
-      "34805734b1ad3b73f0ede0d8",
       "crime-state-overlap-2026-06-09-alex-saab-profile-insight-crime",
       "crime-state-overlap-2026-05-28-task-force-investigation-prompts-indictment-of-five-suspected-human-tr",
       "crime-state-overlap-2026-05-26-the-most-notorious-mexican-officials-accused-of-organized-crime-insigh",
@@ -75,14 +73,14 @@
       "crime-state-overlap-2025-08-28-organized-crime-infiltrates-brazilian-fuel-market-valor-international",
       "crime-state-overlap-2025-08-13-den-of-thieves-mapping-organized-crime-in-the-south-caucasus-global-in",
       "3a425f0d5d683952bc0ad7ac",
-      "war-machine-2026-07-15-aacf2cda",
       "epstein-files-2026-02-22-israeli-with-links-to-epstein-claims-ignorance-of-crimes-the-jerusalem",
       "epstein-files-2026-02-06-newly-released-fbi-logs-raise-questions-over-mystery-orange-blob-spott",
       "epstein-files-2026-02-04-details-of-jeffrey-epstein-post-mortem-released-in-latest-files-bbc",
       "epstein-files-2026-02-03-newly-released-ghoulish-pics-show-jeffrey-epstein-s-body-as-emts-perfo",
-      "d0b647e325275daa6d824a49",
       "55a324e4bddcaa4ce8c4586e",
-      "cee347fbc3752c6e0f890457",
+      "76a719654ec3312153163154",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "war-machine-2026-07-22-a6c25a9b",
       "6188547d91106e0f9d3bce50",
       "epstein-files-2026-06-25-release-unredacted-epstein-files-or-explain-why-you-can-t-judge-tells-",
       "epstein-files-2026-06-25-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
@@ -127,6 +125,9 @@
       "88ef9baf356c096816236956",
       "3c9c23f7f9a1cec81ef90f59",
       "356f10eff5c6f147fc33ebeb",
+      "war-machine-2026-07-26-262b52a7",
+      "declassified-files-2026-07-24-c827955e",
+      "war-machine-2026-07-23-ad2616fe",
       "war-machine-2026-07-20-a5d16392",
       "war-machine-2026-07-20-abd16d04",
       "epstein-files-2026-06-26-5-questions-keeping-the-epstein-files-alive-newsweek",
@@ -145,33 +146,32 @@
       "epstein-files-2026-06-07-last-guard-to-see-jeffrey-epstein-alive-testifies-he-received-special-",
       "epstein-files-2026-06-06-former-us-ag-pam-bondi-todd-blanche-oversaw-release-of-epstein-files-j",
       "epstein-files-2026-06-05-bondi-says-blanche-was-in-charge-of-epstein-files-release-spectrum-new",
-      "epstein-files-2026-06-05-pam-bondi-claims-todd-blanche-was-in-charge-of-entire-release-of-epste",
-      "epstein-files-2026-06-05-former-officer-says-she-was-not-the-figure-seen-near-jeffrey-epstein-s"
+      "epstein-files-2026-06-05-pam-bondi-claims-todd-blanche-was-in-charge-of-entire-release-of-epste"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 7,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 5,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 20,
+      "relationshipCount": 23,
       "moneyRecordCount": 29
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Crime-State Overlap Campaign beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Crime-State Overlap Campaign.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "When a 12-story apartment building pancaked in La Guaira, Venezuela, following two powerful earthquakes late last month, panic ensued to save people injured or trapped under the rubble. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Crime Network Starter Brief; War Machine Campaign; Follow The Money Watch; Intelligence Network Share Kit; War Machine Share Kit; Intelligence Dossiers Offer; Intelligence Network Pack; War Machine Pack",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Crime Network Starter Brief",
           "War Machine Campaign",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-20T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-26T12:00:00.000Z"
   }
 }

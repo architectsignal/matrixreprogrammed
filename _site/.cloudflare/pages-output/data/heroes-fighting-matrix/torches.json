@@ -1,0 +1,210 @@
+[
+  {
+    "rank": 3,
+    "id": "julian-assange",
+    "name": "Julian Assange",
+    "suit": "TORCHES",
+    "score": 96,
+    "confidence": "high",
+    "lane": "Radical transparency and document publishing",
+    "contribution": "Founded WikiLeaks and built a globally influential model for publishing leaked primary documents.",
+    "whyIncluded": "The contribution is structural: a publishing mechanism designed to move suppressed records into public view.",
+    "sources": [
+      {"label": "WikiLeaks", "url": "https://wikileaks.org/What-is-WikiLeaks.html", "type": "primary"},
+      {"label": "Freedom of the Press Foundation", "url": "https://freedom.press/", "type": "context"}
+    ],
+    "caveat": "Inclusion concerns publishing architecture and public-record impact, not endorsement of every publication choice, political position or alleged act."
+  },
+  {
+    "rank": 13,
+    "id": "chelsea-manning",
+    "name": "Chelsea Manning",
+    "suit": "TORCHES",
+    "score": 88,
+    "confidence": "high",
+    "lane": "Military and diplomatic disclosure",
+    "contribution": "Disclosed a large body of military and diplomatic records that drove global debate about war, secrecy and accountability.",
+    "whyIncluded": "The record set became a major public evidence route into state conduct and the human consequences of conflict.",
+    "sources": [
+      {"label": "Chelsea Manning", "url": "https://www.chelseamanning.com/", "type": "primary"},
+      {"label": "Freedom of the Press Foundation", "url": "https://freedom.press/", "type": "context"}
+    ],
+    "caveat": "Inclusion recognises disclosure impact and personal risk; it does not resolve every legal or ethical argument about the release."
+  },
+  {
+    "rank": 14,
+    "id": "laura-poitras",
+    "name": "Laura Poitras",
+    "suit": "TORCHES",
+    "score": 87,
+    "confidence": "high",
+    "lane": "Investigative documentary and source protection",
+    "contribution": "Documentary journalist whose work helped bring mass-surveillance evidence to a global audience and who supports press-freedom infrastructure.",
+    "whyIncluded": "She translated complex primary evidence into durable public understanding while maintaining a strong source-protection focus.",
+    "sources": [
+      {"label": "Freedom of the Press Foundation board", "url": "https://freedom.press/about/board/", "type": "primary"},
+      {"label": "Praxis Films", "url": "https://www.praxisfilms.org/", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises journalism and source-protection work, not endorsement of every editorial interpretation."
+  },
+  {
+    "rank": 30,
+    "id": "frances-haugen",
+    "name": "Frances Haugen",
+    "suit": "TORCHES",
+    "score": 78,
+    "confidence": "high",
+    "lane": "Platform accountability disclosures",
+    "contribution": "Released internal Facebook records and testified publicly about platform incentives, safety and governance.",
+    "whyIncluded": "The disclosures created a documentary route into how a major platform assessed harms and trade-offs internally.",
+    "sources": [
+      {"label": "Frances Haugen", "url": "https://www.franceshaugen.com/", "type": "primary"},
+      {"label": "U.S. Senate testimony", "url": "https://www.commerce.senate.gov/2021/10/protecting-kids-online-internet-privacy-and-manipulative-marketing", "type": "official"}
+    ],
+    "caveat": "Inclusion recognises disclosure and testimony; it does not mean every interpretation of the documents is proven."
+  },
+  {
+    "rank": 31,
+    "id": "thomas-drake",
+    "name": "Thomas Drake",
+    "suit": "TORCHES",
+    "score": 78,
+    "confidence": "high",
+    "lane": "Intelligence-community whistleblowing",
+    "contribution": "Former NSA official who raised concerns about surveillance, waste and constitutional risk.",
+    "whyIncluded": "His case is a major route into the costs and legal hazards faced by national-security whistleblowers.",
+    "sources": [
+      {"label": "Government Accountability Project", "url": "https://whistleblower.org/whistleblower-profiles/thomas-drake/", "type": "authoritative"},
+      {"label": "National Whistleblower Center", "url": "https://www.whistleblowers.org/", "type": "context"}
+    ],
+    "caveat": "Inclusion recognises documented whistleblowing and public-interest debate, not every claim made by supporters or critics."
+  },
+  {
+    "rank": 32,
+    "id": "john-kiriakou",
+    "name": "John Kiriakou",
+    "suit": "TORCHES",
+    "score": 77,
+    "confidence": "high",
+    "lane": "CIA torture-program disclosure",
+    "contribution": "Former CIA officer who publicly confirmed aspects of the agency's post-9/11 torture program and later advocated for whistleblowers.",
+    "whyIncluded": "His disclosures created a public route into secret detention, interrogation policy and accountability.",
+    "sources": [
+      {"label": "Government Accountability Project", "url": "https://whistleblower.org/whistleblower-profiles/john-kiriakou/", "type": "authoritative"},
+      {"label": "John Kiriakou", "url": "https://johnkiriakou.com/", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises disclosure impact and personal consequences; it does not endorse every later statement."
+  },
+  {
+    "rank": 33,
+    "id": "william-binney",
+    "name": "William Binney",
+    "suit": "TORCHES",
+    "score": 77,
+    "confidence": "medium-high",
+    "lane": "NSA surveillance criticism",
+    "contribution": "Former NSA technical director who became a prominent critic of mass-surveillance systems and intelligence oversight failures.",
+    "whyIncluded": "His technical background made him an important public source on how surveillance systems can expand beyond targeted collection.",
+    "sources": [
+      {"label": "Government Accountability Project", "url": "https://whistleblower.org/", "type": "context"},
+      {"label": "VIPS archive", "url": "https://consortiumnews.com/vips-memos/", "type": "context"}
+    ],
+    "caveat": "Some public claims remain disputed. Inclusion recognises documented service, dissent and public testimony, not acceptance of every technical or political conclusion."
+  },
+  {
+    "rank": 34,
+    "id": "katharine-gun",
+    "name": "Katharine Gun",
+    "suit": "TORCHES",
+    "score": 76,
+    "confidence": "high",
+    "lane": "Iraq-war surveillance disclosure",
+    "contribution": "Leaked a request connected to surveillance of UN delegations during the diplomatic build-up to the Iraq war.",
+    "whyIncluded": "Her action created a direct documentary route into the pressure surrounding international war authorisation.",
+    "sources": [
+      {"label": "Freedom of the Press Foundation", "url": "https://freedom.press/", "type": "context"},
+      {"label": "Government Accountability Project", "url": "https://whistleblower.org/", "type": "context"}
+    ],
+    "caveat": "Inclusion recognises a documented disclosure and personal risk, not endorsement of every interpretation of the Iraq-war debate."
+  },
+  {
+    "rank": 35,
+    "id": "glenn-greenwald",
+    "name": "Glenn Greenwald",
+    "suit": "TORCHES",
+    "score": 76,
+    "confidence": "medium-high",
+    "lane": "Adversarial journalism and surveillance reporting",
+    "contribution": "Journalist centrally involved in publishing the Snowden archive and known for adversarial reporting on state and media power.",
+    "whyIncluded": "His work helped translate surveillance records into sustained public debate and legal scrutiny.",
+    "sources": [
+      {"label": "System Update", "url": "https://systemupdate.tv/", "type": "primary"},
+      {"label": "Freedom of the Press Foundation", "url": "https://freedom.press/", "type": "context"}
+    ],
+    "caveat": "Inclusion recognises documented reporting impact; it does not endorse every opinion, alliance or later editorial judgment."
+  },
+  {
+    "rank": 36,
+    "id": "seymour-hersh",
+    "name": "Seymour Hersh",
+    "suit": "TORCHES",
+    "score": 75,
+    "confidence": "medium-high",
+    "lane": "Long-form national-security investigation",
+    "contribution": "Investigative journalist with a decades-long record of reporting on military, intelligence and government misconduct.",
+    "whyIncluded": "His career demonstrates the role of protected sources and persistent investigation in challenging official narratives.",
+    "sources": [
+      {"label": "Seymour Hersh publication", "url": "https://seymourhersh.substack.com/", "type": "primary"},
+      {"label": "Pulitzer Prize", "url": "https://www.pulitzer.org/winners/seymour-m-hersh", "type": "authoritative"}
+    ],
+    "caveat": "Individual reports vary in verification and dispute. Inclusion recognises career impact, not automatic acceptance of every story."
+  },
+  {
+    "rank": 37,
+    "id": "matt-taibbi",
+    "name": "Matt Taibbi",
+    "suit": "TORCHES",
+    "score": 75,
+    "confidence": "medium-high",
+    "lane": "Independent media and platform-file reporting",
+    "contribution": "Journalist covering financial power, media incentives, censorship disputes and internal platform records.",
+    "whyIncluded": "His work supplies a public route into institutional media behaviour and content-moderation controversies.",
+    "sources": [
+      {"label": "Racket News", "url": "https://www.racket.news/", "type": "primary"},
+      {"label": "Racket about", "url": "https://www.racket.news/about", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises reporting and public reach; it does not endorse every framing, source choice or political conclusion."
+  },
+  {
+    "rank": 38,
+    "id": "michael-shellenberger",
+    "name": "Michael Shellenberger",
+    "suit": "TORCHES",
+    "score": 74,
+    "confidence": "medium-high",
+    "lane": "Independent reporting on censorship and institutions",
+    "contribution": "Founder of Public and a prominent writer on censorship, institutional failure and government-platform relationships.",
+    "whyIncluded": "His outlet explicitly emphasises subscriber funding, source protection and reporting on powerful institutions.",
+    "sources": [
+      {"label": "Public about", "url": "https://www.public.news/about", "type": "primary"},
+      {"label": "Michael Shellenberger", "url": "https://substack.com/@shellenberger", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises documented reporting and public debate; it does not endorse every claim or policy position."
+  },
+  {
+    "rank": 39,
+    "id": "sarah-harrison",
+    "name": "Sarah Harrison",
+    "suit": "TORCHES",
+    "score": 74,
+    "confidence": "medium-high",
+    "lane": "Source support and leak publishing",
+    "contribution": "WikiLeaks journalist and editor known for supporting high-risk sources and publication work.",
+    "whyIncluded": "Source protection and logistical support are essential parts of transparency infrastructure but are often less visible than publication itself.",
+    "sources": [
+      {"label": "WikiLeaks", "url": "https://wikileaks.org/", "type": "primary"},
+      {"label": "Courage Foundation", "url": "https://couragefound.org/", "type": "primary"}
+    ],
+    "caveat": "Inclusion recognises public source-support and publishing work; it does not settle every legal or ethical dispute involving WikiLeaks."
+  }
+]

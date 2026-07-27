@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-27T07:00:57.439Z",
+  "practicalClockCount": 20,
+  "currentEvidenceAsOf": "2026-07-23T14:30:00.000Z",
+  "currentEvidenceGapCount": 0,
+  "currentPrimaryCoverageCount": 20,
+  "currentMultiJurisdictionCount": 18,
+  "registryRecordCount": 35,
+  "registryCoverage": {
+    "free-speech-information-access": 6,
+    "digital-identity-permissioned-access": 10,
+    "emergency-powers-permanence": 1,
+    "cost-of-living-household-survival": 3,
+    "housing-access-ownership": 2,
+    "cash-freedom-payment-exclusion": 2,
+    "government-transparency-missing-records": 2,
+    "rule-of-law-accountability": 5,
+    "corporate-state-convergence": 5,
+    "essential-infrastructure-resilience": 4,
+    "medicine-healthcare-access": 1,
+    "energy-affordability": 5,
+    "water-security": 2,
+    "supply-chain-fragility": 4,
+    "election-democratic-integrity": 2,
+    "ai-employment-displacement": 2,
+    "media-ownership-concentration": 3,
+    "childrens-digital-identity-age-gating": 8,
+    "sovereign-debt-banking-stress": 4,
+    "agricultural-independence": 3
+  },
+  "homepageCriticalClocks": {
+    "expected": 2,
+    "rendered": 2,
+    "practical": 2,
+    "speculation": 0,
+    "slugs": [
+      "childrens-digital-identity-age-gating",
+      "surveillance-state"
+    ]
+  },
+  "ageGating": {
+    "score": 93,
+    "status": "current-multi-jurisdiction-implementation",
+    "officialEvidence": 8,
+    "implementationSignals": 9,
+    "laws": 3,
+    "jurisdictions": [
+      "United Kingdom",
+      "France",
+      "Australia",
+      "European Union",
+      "Denmark",
+      "Greece",
+      "Italy",
+      "Spain"
+    ]
+  },
+  "issues": []
+}

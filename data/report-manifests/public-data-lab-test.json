@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T06:48:16.110Z",
+  "generatedAt": "2026-07-27T06:57:03.318Z",
   "pageCount": 128,
   "output": "downloads/public-data-lab-test.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Public Data Lab Test",
-    "contentHash": "bbbaa39efc391a39969094be87b18699aedb3751d4ccd5765fac3cb8315bf1ea",
+    "contentHash": "4c5b1dccd43f6eaa1f5c1e1ebd4bccbf1cfa7657844d00a42b2c589eae0997f8",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "osint",
@@ -37,6 +37,7 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "EP-AI-003",
       "EP-AI-004",
       "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-68286C2A2CB861AF",
       "ASC-REVIEW-2527E3DEA85AE958",
       "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3"
+      "ASC-REVIEW-1C806B2577C4D44C"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 130,
+      "disputedClaimCount": 129,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 132,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:48:16.110Z"
+    "intelligenceFreshnessDate": "2026-07-27T06:57:03.318Z"
   }
 }

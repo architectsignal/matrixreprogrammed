@@ -1,6 +1,6 @@
 # Card Download Manifest
 
-Updated: 2026-07-22T06:22:11.870Z
+Updated: 2026-07-27T07:01:49.014Z
 
 Decks: 9
 
@@ -14,7 +14,7 @@ Missing routes/assets: 0
 
 Unmatched stored images: 0
 
-## Top 52 Persons of Interest
+## Top 52 Puppets of Interest
 - 1. Elon Musk — assets/top-52/cards/elon-musk.svg — real-art-live — top-52/elon-musk.html — source route: billionaire-briefs/elon-musk.html
 - 2. Jeff Bezos — assets/top-52/cards/jeff-bezos.svg — placeholder-svg — top-52/jeff-bezos.html — source route: billionaire-briefs/jeff-bezos.html
 - 3. World Health Organization — assets/top-52/cards/world-health-organization.svg — placeholder-svg — top-52/world-health-organization.html — source route: institution-briefs/world-health-organization.html

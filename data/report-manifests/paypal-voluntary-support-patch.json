@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-07-23T06:47:46.216Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-27T06:56:30.632Z",
+  "pageCount": 130,
   "output": "downloads/paypal-voluntary-support-patch.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Paypal Voluntary Support Patch",
-    "contentHash": "7b56d67bd010355d9205c5a296894ed878523cfe6ec70974538107c57623f9b9",
+    "contentHash": "cd59725ec650e3b02feffdd743a85ad9c057c19f055fb5ab16a7fcda4153cdc3",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "1769af26a7bda813406cd8f5",
       "ASC-REVIEW-45635942D9BD8BFF",
+      "02a4d3de860d06619024f48c",
       "ASC-001",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -21,7 +22,6 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-9348EFDAAAC19C62",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B6BEE1135257F502",
@@ -31,12 +31,26 @@
       "ASC-REVIEW-C2A19D091C2D1254",
       "ASC-REVIEW-FF5E6B71C62F4EBB",
       "ASC-REVIEW-BC9A7DE25FDF5F78",
-      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "360e80c162081c85d2c680ef",
       "bdd7e454126ebfa6319a594c",
       "88ef9baf356c096816236956",
+      "4c372edcf20b760ae3305f10",
+      "7c212daa6802e36f4fe4f000",
+      "e86287f396e1ee800a7ee796",
+      "64655043524cba9e6a679f8d",
+      "fafa3982950de0fd589ad0d0",
+      "2482c3e0241c7c7679a18cd1",
+      "324cbe2d95e1cfa996c79119",
+      "5151c3a9f6b60883b360a522",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "ASC-REVIEW-FCEFDBDA93429C4F",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-57EDEB5DFEAC6956",
+      "ASC-REVIEW-04E1CD15682BDB86",
+      "ASC-REVIEW-321848A1083FB3CE",
+      "ASC-REVIEW-95DEAFF6FF08FD3D",
+      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -65,13 +79,10 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-131C0E5550327B37",
-      "ASC-REVIEW-09ACD9715E501825",
-      "ASC-REVIEW-1DEA85B53498EF4A",
-      "ASC-REVIEW-86E5F84065E82718",
-      "ASC-REVIEW-E418D481FC89E768",
-      "ASC-REVIEW-6CA3C5666C487CEE",
-      "ASC-REVIEW-76AAD83597F51FBE",
+      "ASC-REVIEW-4D43B792A3A9872B",
+      "ASC-REVIEW-4977B61988022C21",
+      "ASC-REVIEW-05FC2F477D6537BF",
+      "ASC-REVIEW-FAA34ACD3ED6CA54",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -81,6 +92,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -99,6 +111,7 @@
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-8E73BF5B8CE21686",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
@@ -133,43 +146,30 @@
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
       "ASC-REVIEW-8FE8E072E8149C71",
-      "ASC-REVIEW-D63BAC3D4EA4E2FC",
-      "ASC-REVIEW-FB46D93D6179DCC7",
-      "ASC-REVIEW-376546BBB3F711C2",
-      "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2"
+      "ASC-REVIEW-D63BAC3D4EA4E2FC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 130,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 123,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 133,
-      "moneyRecordCount": 124
+      "relationshipCount": 126,
+      "moneyRecordCount": 114
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Paypal Voluntary Support Patch.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Paypal Voluntary Support Patch.",
+        "evidence": "SATCOM DIRECT GOVERNMENT, LLC — Department of Defense (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ANSYS INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 133 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 126 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Follow The Money Watch; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 133 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 126 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Follow The Money Watch",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-11-12T00:00:00.000Z"
   }
 }

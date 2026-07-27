@@ -20,33 +20,33 @@ The reader gets a complete navigation map rather than a random pile of pages.
 
 ## Last 7 Days Intelligence Window
 
-- 2026-07-22 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWFhazkxRlk0eGJMWHlqZjNyZ01JVnJ4Z3JLaEhtWTVHUlp0SmZ5cDVLR2xIRVRBb0phcFBheG44cTFORV9ma1Rla1RnUmt5UkYtaHhWVVJNYmdZNzdmU0diOUo0SlgwM05jbWtNT1p1TkhVMFZvSFM1Vm9XNUZLZGIta3RFY2U2dEQyOE8zcEFIUGVWZWc?oc=5
-  - Evidence: Seven-day public-record lead
+- 2026-07-26 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
+  - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Critical minerals: The hidden resources powering the clean energy future
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167990
+- 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167996
+- 2026-07-26 — Gaza: Dialysis patients face gruelling hospital journey by donkey cart
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168026
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — From lithium to nickel: How the UN is helping countries make the most of critical minerals
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167994
+- 2026-07-26 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168028
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Nicaragua continues to weaken political freedoms, UN warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167999
+- 2026-07-25 — ‘I am somebody’: Street-smart youth take their declaration to the UN
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168015
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167995
+- 2026-07-25 — UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168027
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

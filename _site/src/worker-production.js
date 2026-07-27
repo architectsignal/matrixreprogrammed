@@ -1,6 +1,7 @@
 import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes, processOutbox } from './worker-email-lifecycle.js';
 import intelligenceReportWorker, { isIntelligenceReportRoute } from './worker-intelligence-reports.js';
+import contactWorker, { contactRoutes } from './worker-contact-intake.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
@@ -46,6 +47,24 @@ const authRoutes = new Set([
   '/api/auth/verify',
   '/api/auth/logout',
   '/api/auth/health'
+]);
+
+const publicStaticAssetRoutes = new Map([
+  ['/behind-the-curtain-access', '/behind-the-curtain-access.html'],
+  ['/behind-the-curtain-access.html', '/behind-the-curtain-access.html'],
+  ['/behind-the-curtain-capstone', '/behind-the-curtain-capstone.html'],
+  ['/behind-the-curtain-capstone.html', '/behind-the-curtain-capstone.html'],
+  ['/structural-power-map', '/structural-power-map.html'],
+  ['/structural-power-map.html', '/structural-power-map.html'],
+  ['/structural-power-capstone', '/structural-power-capstone.html'],
+  ['/structural-power-capstone.html', '/structural-power-capstone.html'],
+  ['/api/public/structural-power/people', '/data/behind-the-curtain-people-registry.json'],
+  ['/api/public/structural-power/pyramid', '/data/behind-the-curtain-pyramid.json'],
+  ['/api/public/structural-power/capstone', '/data/behind-the-curtain-capstone.json'],
+  ['/api/public/structural-power/core', '/data/behind-the-curtain.json'],
+  ['/api/public/structural-power/families', '/data/behind-the-curtain-family-access.json'],
+  ['/api/public/structural-power/history', '/data/behind-the-curtain-living-access-history.json'],
+  ['/api/public/structural-power/continuity', '/data/behind-the-curtain-continuity-layers.json']
 ]);
 
 const jsonHeaders = {
@@ -95,6 +114,40 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
     detail: String(detail || '').slice(0, 300),
     checkedAt: new Date().toISOString()
   }, null, 2), { status: 503, headers: jsonHeaders });
+}
+
+async function servePublicStaticAsset(request, env, assetPath) {
+  if (!env?.ASSETS || typeof env.ASSETS.fetch !== 'function') {
+    return unavailable('assets-binding-unavailable', assetPath, 'asset-gate');
+  }
+  const assetUrl = new URL(request.url);
+  assetUrl.pathname = assetPath;
+  assetUrl.search = '';
+  const accept = assetPath.endsWith('.json')
+    ? 'application/json, text/plain;q=0.9, */*;q=0.8'
+    : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8';
+  const assetRequest = new Request(assetUrl.toString(), {
+    method: 'GET',
+    headers: {
+      Accept: accept,
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
+      'User-Agent': 'Mozilla/5.0 (compatible; MatrixPublicRouteBridge/2.0)'
+    }
+  });
+  const response = await env.ASSETS.fetch(assetRequest);
+  const headers = new Headers(response.headers);
+  headers.set('Cache-Control', 'no-store');
+  headers.set('X-Content-Type-Options', 'nosniff');
+  headers.set('X-Frame-Options', 'SAMEORIGIN');
+  headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  headers.set('X-Matrix-Origin', 'cloudflare-worker-public-static-assets');
+  headers.set('X-Matrix-Public-Alias', assetPath);
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
 }
 
 function sandboxCheckoutClosed(reason = 'sandbox-checkout-requires-active-rehearsal') {
@@ -175,6 +228,15 @@ async function validateIntelligenceReportResponse(response) {
   return response;
 }
 
+async function validateContactResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-contact-intake') {
+    return unavailable('non-authoritative-contact-response-blocked', `Origin was ${origin || 'missing'}`, 'contact');
+  }
+  return response;
+}
+
+
 async function validateMemberResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-member-experience') {
@@ -217,9 +279,22 @@ async function validateRehearsalResponse(response) {
 
 export default {
   async fetch(request, env, ctx) {
-    const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+    const requestUrl = new URL(request.url);
+    if (requestUrl.hostname.toLowerCase() === 'www.matrixreprogrammed.com') {
+      requestUrl.hostname = 'matrixreprogrammed.com';
+      return Response.redirect(requestUrl.toString(), 308);
+    }
+    const path = requestUrl.pathname.replace(/\/+$/, '') || '/';
 
     if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);
+
+    if ((request.method === 'GET' || request.method === 'HEAD') && publicStaticAssetRoutes.has(path)) {
+      try {
+        return await servePublicStaticAsset(request, env, publicStaticAssetRoutes.get(path));
+      } catch (error) {
+        return unavailable('public-static-asset-exception', error?.message || error, 'asset-gate');
+      }
+    }
 
     const minimumTier = protectedAssetTier(path);
     if (minimumTier) {
@@ -237,6 +312,15 @@ export default {
         return validateIntelligenceReportResponse(await intelligenceReportWorker.fetch(request, env, ctx));
       } catch (error) {
         return unavailable('intelligence-report-worker-exception', error?.message || error, 'member');
+      }
+    }
+
+    if (contactRoutes.has(path)) {
+      if (!hasD1(env) && path !== '/api/contact/pgp-key' && path !== '/api/contact/config') return unavailable('members-db-binding-unavailable', '', 'contact');
+      try {
+        return validateContactResponse(await contactWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('contact-worker-exception', error?.message || error, 'contact');
       }
     }
 

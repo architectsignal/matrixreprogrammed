@@ -1,11 +1,11 @@
 # Live Machine Status
 
-Generated: 2026-07-22T06:21:44.703Z
+Generated: 2026-07-27T07:01:21.118Z
 
-- Live Intel updated: 2026-07-22T06:21:31.095Z
-- Live Intel items: 63
-- Tracked cards: 874
-- Cards with current records: 102
-- Cards with no new verified record: 772
+- Live Intel updated: 2026-07-27T07:01:07.067Z
+- Live Intel items: 69
+- Tracked cards: 936
+- Cards with current records: 105
+- Cards with no new verified record: 831
 - Andrew Tate tracked: true
 - Status: machine-dependants-generated

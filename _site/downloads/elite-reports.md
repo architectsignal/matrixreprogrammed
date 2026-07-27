@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-22T06:21:45.212Z
+Generated: 2026-07-27T07:01:21.665Z
 
 ## Daily Revelation Report
 
-Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post
+Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
 
 Source: daily-command-brief.html
 

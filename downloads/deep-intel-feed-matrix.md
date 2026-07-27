@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-23T06:51:39.425Z
+Generated: 2026-07-27T07:01:27.283Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-23T06:51:39.425Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — Jeffrey Epstein-Linked Model Scout Found Dead Before Investigators Could Question Him - Yahoo — live-intel.html
-- 72 — Critical minerals: The hidden resources powering the clean energy future — live-intel.html
-- 72 — Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors — live-intel.html
-- 72 — From lithium to nickel: How the UN is helping countries make the most of critical minerals — live-intel.html
-- 72 — Nicaragua continues to weaken political freedoms, UN warns — live-intel.html
+- 72 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review — live-intel.html
+- 72 — After war took her leg, this Ukrainian gymnast refused to give up — live-intel.html
+- 72 — Gaza: Dialysis patients face gruelling hospital journey by donkey cart — live-intel.html
+- 72 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods — live-intel.html
+- 72 — ‘I am somebody’: Street-smart youth take their declaration to the UN — live-intel.html

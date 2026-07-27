@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "runId": 30091003163,
+  "action": "already-ended-without-success",
+  "recordedAt": "2026-07-24T12:05:25.098Z",
+  "initial": {
+    "status": "completed",
+    "conclusion": "cancelled"
+  },
+  "final": {
+    "status": "completed",
+    "conclusion": "cancelled",
+    "updatedAt": "2026-07-24T12:03:19Z"
+  },
+  "reason": "The run checked out before the capstone page, evidence model, Pyramid gateway and capstone release guards were committed.",
+  "boundary": "A cancelled or failed run before Wrangler deployment is not an actual Cloudflare production deployment."
+}

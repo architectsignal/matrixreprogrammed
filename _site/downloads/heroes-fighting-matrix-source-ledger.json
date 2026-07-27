@@ -1,0 +1,40 @@
+{
+  "deckId": "heroes-fighting-matrix",
+  "title": "Heroes Fighting the Matrix — Source Ledger",
+  "cardCount": 52,
+  "editorialBoundary": "Documented public contribution is not total endorsement. Pending cases, allegations and disputed claims remain labelled.",
+  "canonicalRecords": [
+    {
+      "suit": "KEYS",
+      "cardCount": 13,
+      "source": "../data/heroes-fighting-matrix/keys.json",
+      "focus": "Decentralised infrastructure and open protocols"
+    },
+    {
+      "suit": "SHIELDS",
+      "cardCount": 13,
+      "source": "../data/heroes-fighting-matrix/shields.json",
+      "focus": "Privacy, encryption and civil-liberties defence"
+    },
+    {
+      "suit": "TORCHES",
+      "cardCount": 13,
+      "source": "../data/heroes-fighting-matrix/torches.json",
+      "focus": "Whistleblowing, investigation and public evidence"
+    },
+    {
+      "suit": "SWORDS",
+      "cardCount": 13,
+      "source": "../data/heroes-fighting-matrix/swords.json",
+      "focus": "Direct public resistance and anti-establishment influence"
+    }
+  ],
+  "publicLedger": "../heroes-fighting-matrix-research-ledger.html",
+  "method": [
+    "Infrastructure and deployed tools outrank rhetoric alone.",
+    "Primary and authoritative sources are preferred.",
+    "Personal risk, durability and real-world adoption affect rank.",
+    "Contested figures retain explicit legal and editorial caveats.",
+    "Each source proves only what it records."
+  ]
+}

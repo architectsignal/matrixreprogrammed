@@ -11,6 +11,14 @@ on:
       - 'scripts/run-investigation-machine.js'
       - 'scripts/monitor-source-changes.js'
       - 'scripts/harden-source-change-preservation.js'
+      - 'scripts/repair-investigation-data-integrity.js'
+      - 'scripts/enforce-mission-data-contracts.js'
+      - 'scripts/build-daily-watch.js'
+      - 'scripts/stabilize-daily-watch-and-build-dossiers.js'
+      - 'scripts/build-daily-watch-history.js'
+      - 'scripts/inject-daily-watch-surfaces.js'
+      - 'scripts/daily-hit-list-stability-test.js'
+      - 'scripts/mission-orchestration-audit.js'
       - 'scripts/update-public-usefulness-clock-scores.js'
       - 'scripts/build-public-usefulness-clock-system.js'
       - 'scripts/production-freshness-guard.js'
@@ -18,6 +26,7 @@ on:
       - 'scripts/production-deploy-guard.js'
       - 'scripts/auto-update-contract-test.js'
       - 'scripts/auto-update-system-deep-test.js'
+      - 'data/mission-orchestration-standard.json'
       - 'data/investigation-source-registry.json'
       - 'data/production-freshness-policy.json'
       - 'package.json'
@@ -45,7 +54,7 @@ env:
 
 jobs:
   deep-test:
-    name: Live ingestion, idempotency, fault injection, rebuild and synchronization
+    name: Live ingestion, stable rankings, dossiers, fault injection and synchronization
     runs-on: ubuntu-latest
     timeout-minutes: 120
 
@@ -71,6 +80,14 @@ jobs:
           node --check scripts/run-investigation-machine.js
           node --check scripts/monitor-source-changes.js
           node --check scripts/harden-source-change-preservation.js
+          node --check scripts/repair-investigation-data-integrity.js
+          node --check scripts/enforce-mission-data-contracts.js
+          node --check scripts/build-daily-watch.js
+          node --check scripts/stabilize-daily-watch-and-build-dossiers.js
+          node --check scripts/build-daily-watch-history.js
+          node --check scripts/inject-daily-watch-surfaces.js
+          node --check scripts/daily-hit-list-stability-test.js
+          node --check scripts/mission-orchestration-audit.js
           node --check scripts/update-public-usefulness-clock-scores.js
           node --check scripts/production-freshness-guard.js
 
@@ -119,6 +136,14 @@ jobs:
           node scripts/source-change-preservation-hardening-test.js
           node scripts/final-investigation-hardening.js
           node scripts/build-public-usefulness-clock-system.js
+          node scripts/enforce-mission-data-contracts.js
+          node scripts/build-daily-watch.js
+          node scripts/inject-daily-watch-surfaces.js
+          node scripts/repair-search-system.js
+          node scripts/mission-orchestration-audit.js
+
+      - name: Prove hit-list stability and complete dossier reconstruction
+        run: node scripts/daily-hit-list-stability-test.js
 
       - name: Verify live data, evidence ledger, clock safeguards and public surfaces
         run: node scripts/auto-update-system-deep-test.js verify
@@ -159,6 +184,12 @@ jobs:
           node scripts/source-change-preservation-hardening-test.js
           node scripts/final-investigation-hardening.js
           node scripts/build-public-usefulness-clock-system.js
+          node scripts/enforce-mission-data-contracts.js
+          node scripts/build-daily-watch.js
+          node scripts/inject-daily-watch-surfaces.js
+          node scripts/repair-search-system.js
+          node scripts/mission-orchestration-audit.js
+          node scripts/daily-hit-list-stability-test.js
 
       - name: Enforce strict source freshness before full build
         env:
@@ -173,6 +204,11 @@ jobs:
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
+
+      - name: Verify stable hit list after complete legacy build chain
+        run: |
+          node scripts/mission-orchestration-audit.js
+          node scripts/daily-hit-list-stability-test.js
 
       - name: Reconcile deployable output after every legacy generator
         env:
@@ -204,6 +240,17 @@ jobs:
             downloads/auto-update-deep-test-*.json
             downloads/auto-update-deep-test-*.md
             downloads/investigation-machine-run-report.json
+            downloads/investigation-data-integrity-repair.json
+            downloads/mission-data-contract-report.json
+            downloads/daily-watch.md
+            downloads/weekly-watch-delta.md
+            downloads/daily-watch-publication-report.json
+            downloads/daily-watch-ranking-decision.json
+            downloads/daily-watch-history-report.json
+            downloads/daily-hit-list-stability-test.json
+            downloads/daily-hit-list-stability-test.md
+            downloads/mission-orchestration-audit.json
+            downloads/mission-orchestration-audit.md
             downloads/source-change-monitor-report.json
             downloads/source-change-preservation-hardening-report.json
             downloads/source-change-preservation-test.json
@@ -217,8 +264,16 @@ jobs:
             downloads/conclusion-integrity-report.json
             data/investigation-source-pulls/daily-latest.json
             data/investigation-status.json
+            data/investigation-source-state.json
+            data/investigation-ledger.json
+            data/investigation-ledger-archive.json
             data/source-change-ledger.json
             data/global-risk-clocks.json
             data/clock-wall.json
+            data/daily-watch.json
+            data/daily-watch-dossiers.json
+            data/daily-watch-incumbents.json
+            data/daily-watch-history.json
+            data/weekly-watch-delta.json
           if-no-files-found: warn
           retention-days: 60

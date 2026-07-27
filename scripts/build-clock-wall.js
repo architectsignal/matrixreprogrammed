@@ -125,3 +125,8 @@ if (fs.existsSync(path.join(root, 'scripts', 'public-usefulness-clocks.js'))) {
   require('./enrich-public-usefulness-clock-evidence.js');
   require('./render-public-usefulness-clock-wall.js');
 }
+
+// The enrich/render phase may rebuild the clock JSON after the earlier mission
+// contract pass. Enforce the final movement/meaning boundary at the true end of
+// the generator so the production audit sees the deployable state.
+require('./enforce-clock-meaning-contracts.js');

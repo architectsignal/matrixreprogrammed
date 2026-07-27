@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const file = path.join(process.cwd(), 'data', 'investigation-source-registry.json');
+const root = process.cwd();
+const file = path.join(root, 'data', 'investigation-source-registry.json');
 if (!fs.existsSync(file)) {
   console.error('Missing data/investigation-source-registry.json');
   process.exit(1);
@@ -43,4 +44,39 @@ for (const source of registry.sources || []) {
 registry.updated = new Date().toISOString().slice(0, 10);
 registry.securityBoundary = 'Public source registries and generated reports must not contain API keys, tokens, passwords, webhook secrets or secret-bearing request URLs.';
 fs.writeFileSync(file, JSON.stringify(registry, null, 2) + '\n');
-console.log(`Investigation source registry repaired: ${changed} field change(s).`);
+
+// Fail-closed collection rule: when every scheduled source fails, record the
+// outage and rebuild the public status pages from the prior evidence, but do
+// not rewrite, re-sort or refresh the authoritative evidence ledger. This
+// prevents an outage from looking like a successful evidence refresh.
+const machineFile = path.join(root, 'scripts', 'run-investigation-machine.js');
+let machineChanged = 0;
+if (fs.existsSync(machineFile)) {
+  let machine = fs.readFileSync(machineFile, 'utf8');
+  const replacements = [
+    [
+      '  const mergedFindings = mergeLedger(currentFindings);',
+      "  const runHealthy = results.some(result => result.status === 'fetched');\n  const mergedFindings = runHealthy ? mergeLedger(currentFindings) : [...(priorLedger.findings || [])];"
+    ],
+    [
+      '  fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2));',
+      "  if (runHealthy) fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2));"
+    ],
+    [
+      "    ok: results.some(result => result.status === 'fetched'),",
+      '    ok: runHealthy,'
+    ]
+  ];
+  for (const [before, after] of replacements) {
+    if (machine.includes(after)) continue;
+    if (!machine.includes(before)) {
+      console.error(`Investigation outage-preservation patch target missing: ${before}`);
+      process.exit(1);
+    }
+    machine = machine.replace(before, after);
+    machineChanged += 1;
+  }
+  fs.writeFileSync(machineFile, machine);
+}
+
+console.log(`Investigation source registry repaired: ${changed} field change(s); outage preservation patch: ${machineChanged} change(s).`);

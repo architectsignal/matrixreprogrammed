@@ -1,48 +1,48 @@
 {
   "ok": true,
-  "updated": "2026-07-27T07:01:21.447Z",
+  "updated": "dynamic_on_build",
   "title": "Information Gathering And Conclusion System",
-  "mission": "Turn public-source leads into useful, evidence-bounded conclusions that help readers understand power, policy, money, identity, institutions, missing records and convergence routes without confusing speculation for proof.",
+  "mission": "Turn public-source leads into useful, evidence-bounded conclusions that help readers understand power, policy, money, identity, institutions, wrongdoing, safeguarding failures, missing records and convergence routes without confusing speculation or association for proof.",
   "pipeline": [
     {
       "id": "collect",
       "title": "Collect",
-      "rule": "Gather source links, official pages, filings, public records, archives, reader leads, card forum submissions and daily public drops."
+      "rule": "Gather source links, official pages, filings, public records, archives, reader leads, card forum submissions and daily public drops while preserving the original source and metadata."
     },
     {
       "id": "classify",
       "title": "Classify",
-      "rule": "Tag each item by lane, actor, jurisdiction, date, evidence level, source class, affected deck/cards and missing records."
+      "rule": "Tag each item by lane, actor, jurisdiction, date, evidence level, legal status, source class, affected dossiers, decks, clocks and missing records."
     },
     {
       "id": "grade",
       "title": "Grade Evidence",
-      "rule": "Separate official records, primary documents, reliable reporting, commentary, speculation, contradiction and unsupported claims."
+      "rule": "Separate official records, primary documents, final adjudication, charges, reliable reporting, documented association, commentary, inference, speculation, contradiction and unsupported claims."
     },
     {
       "id": "crosscheck",
       "title": "Cross-check",
-      "rule": "Compare against counter-sources, corrections, older records, duplicate claims, outdated pages and source conflicts."
+      "rule": "Compare against counter-sources, corrections, appeals, acquittals, dismissals, older records, duplicate claims, outdated pages, chronology problems, identity conflicts and alternative explanations."
     },
     {
       "id": "connect",
       "title": "Connect",
-      "rule": "Route source material to clocks, cards, policies, institutions, people, think tanks, books, videos and user briefs."
+      "rule": "Resolve entities and route source material to every affected person, family, company, institution, case, clock, card, policy, timeline, relationship, report and alert."
     },
     {
       "id": "conclude",
       "title": "Conclude",
-      "rule": "Produce conclusion, why it matters, evidence boundary, confidence, missing record, and next action."
+      "rule": "Explain what was found, why it matters, which lanes apply, the mechanism, effect on each lane, wider direction, alternative explanation, limitation, evidence strength, confidence, sources and next questions."
     },
     {
       "id": "publish",
       "title": "Publish",
-      "rule": "Expose the conclusion through Daily Brief, Live Intel, card dossiers, risk clocks, search routes and downloads."
+      "rule": "Propagate the approved conclusion through dossiers, Daily Watch, Daily Brief, Live Intel, cards, graphs, clocks, search, reports, downloads, alerts and the public change log."
     },
     {
       "id": "review",
       "title": "Review",
-      "rule": "Re-check stale conclusions, process reader corrections and downgrade or archive unsupported items."
+      "rule": "Re-check stale conclusions, process reader corrections and right of reply, preserve version history and downgrade, correct, disprove, archive or reopen items when the evidence changes."
     }
   ],
   "evidenceLevels": [
@@ -53,39 +53,68 @@
     },
     {
       "level": 2,
-      "label": "Public mention",
-      "meaning": "Speech, article, webpage, interview, report or claim with a visible source."
+      "label": "Documented mention or association",
+      "meaning": "A visible communication, relationship, meeting, transaction, role or public claim is documented, but wrongdoing is not established."
     },
     {
       "level": 3,
-      "label": "Primary source",
-      "meaning": "Official page, filing, legislation, public record, court material, regulator notice or original document."
+      "label": "Credible secondary evidence",
+      "meaning": "Supported by reliable reporting or multiple credible secondary sources."
     },
     {
       "level": 4,
-      "label": "Implementation",
-      "meaning": "Procurement, pilot, legal mandate, enforcement action, operational rollout or signed agreement."
+      "label": "Primary source or implementation",
+      "meaning": "Official page, filing, legislation, court record, contract, procurement, pilot, enforcement action, operational rollout or signed agreement."
     },
     {
       "level": 5,
-      "label": "Convergence",
-      "meaning": "Two or more systems connect, such as ID plus payments, health plus travel, AI plus public services."
+      "label": "Official finding or convergence",
+      "meaning": "An official determination or documented connection between multiple systems, such as identity plus payments, health plus travel, or data plus public-service decisions."
     },
     {
       "level": 6,
-      "label": "Lock-in signal",
-      "meaning": "Opt-out becomes difficult, access becomes conditional, or infrastructure becomes unavoidable."
+      "label": "Final adjudication or lock-in signal",
+      "meaning": "A final judicial outcome, formal admission, or documented condition in which access becomes difficult to avoid, reverse or appeal."
     }
   ],
   "conclusionTemplate": [
-    "Conclusion",
+    "What was found",
     "Why it matters",
-    "Evidence boundary",
-    "Confidence level",
-    "What would change the conclusion",
-    "Missing records",
-    "Next action",
-    "Linked pages/cards/clocks"
+    "Investigative lanes",
+    "How it fits and the documented mechanism",
+    "Effect on each lane",
+    "What it points toward",
+    "Alternative explanation",
+    "What it does not prove",
+    "Evidence strength",
+    "Confidence",
+    "Source routes",
+    "Next questions and missing records"
+  ],
+  "dailyWatch": {
+    "slots": [
+      "Person to Watch Today",
+      "Institution to Watch Today",
+      "Family to Watch Today"
+    ],
+    "selectionRule": "Select the entities most materially elevated by current source-linked evidence. Structural family relevance must be clearly distinguished from direct current evidence.",
+    "publicationRule": "Publish to the dedicated Daily Watch page, homepage, Daily Command Brief, Daily Brain Brief, Live Intel, search and weekly delta review.",
+    "boundary": "Selection means focused research priority, not guilt, accusation, hidden control or participation in another person’s wrongdoing."
+  },
+  "propagationTargets": [
+    "person dossiers",
+    "family dossiers",
+    "company and institution profiles",
+    "court cases and wrongdoing indexes",
+    "timelines and maps",
+    "relationship and financial graphs",
+    "Follow the Money",
+    "Behind the Curtain",
+    "Epstein Relationship Intelligence",
+    "Agenda 2030 and risk clocks",
+    "Daily Watch, Live Intel and briefs",
+    "search, reports, watchlists and alerts",
+    "claim ledger, corrections and version history"
   ],
   "sitewideFeeds": {
     "latestDrops": 24,
@@ -100,10 +129,13 @@
     "No [object Object] visible in public pages.",
     "No internal author notes, debug text or prompt text visible to users.",
     "No source link, no ledger entry.",
-    "No conclusion without an evidence boundary.",
-    "No score movement without a dated source route.",
-    "No relationship entry presented as guilt or proof.",
-    "Every intake area needs action, boundary and correction route.",
-    "Every public brief needs next action and missing-record path."
+    "No conclusion without an evidence boundary, counterpoint and falsifier.",
+    "No score movement without a dated source route affecting the exact measured variable.",
+    "No relationship entry presented as guilt, knowledge, motive or control beyond the documented mechanism.",
+    "No undefined use of the phrase the agenda.",
+    "No public child-crime flag without exact legal status, provenance and editorial review.",
+    "Every verified legal-status change propagates to all affected dossiers, cases, timelines, graphs, indexes, briefs and alerts.",
+    "Every public brief needs a plain-language meaning, next action and missing-record path.",
+    "Every Daily Watch slot must explain why today, how it fits, what it strengthens, what it points toward and what it does not prove."
   ]
 }

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "2.1.0",
+  "title": "Matrix Reprogrammed Master Intelligence Orchestration Standard",
+  "status": "authoritative-build-contract",
+  "mission": "Collect, verify, classify, connect and explain public-source evidence concerning institutional power, capital control, access, wrongdoing, safeguarding failures and policy convergence while separating fact, allegation, inference and speculation.",
+  "coreRule": "No relevant discovery may remain trapped in one page, feed, dossier or database. Every verified discovery must be routed to every affected entity, relationship, timeline, investigation lane, clock, report, alert and correction history.",
+  "requiredPipeline": [
+    "capture-original-source",
+    "safety-and-privacy-screening",
+    "relevance-and-lane-classification",
+    "entity-resolution",
+    "legal-and-evidence-status-classification",
+    "contradiction-and-counter-evidence-search",
+    "relationship-and-mechanism-mapping",
+    "user-friendly-conclusion",
+    "cross-site-propagation",
+    "human-review-for-sensitive-claims",
+    "publication-and-notification",
+    "versioning-corrections-and-reassessment"
+  ],
+  "requiredConclusionFields": [
+    "whatWasFound",
+    "whyItMatters",
+    "investigativeLanes",
+    "howItFits",
+    "effectOnLane",
+    "whatItPointsToward",
+    "alternativeExplanation",
+    "whatItDoesNotProve",
+    "evidenceStrength",
+    "confidence",
+    "sourceRoutes",
+    "nextQuestions"
+  ],
+  "effectLabels": [
+    "strongly-strengthens",
+    "moderately-strengthens",
+    "slightly-strengthens",
+    "adds-context",
+    "new-investigative-lead",
+    "mixed-or-complicating",
+    "slightly-weakens",
+    "moderately-weakens",
+    "strongly-contradicts",
+    "insufficient-evidence"
+  ],
+  "claimStatuses": [
+    "documented-fact",
+    "official-finding",
+    "final-adjudication",
+    "conviction-under-appeal",
+    "charged-or-indicted",
+    "officially-investigated",
+    "civil-proceeding",
+    "credible-reporting",
+    "documented-association",
+    "analytical-inference",
+    "unverified-allegation",
+    "deep-speculation",
+    "disputed",
+    "contradicted",
+    "disproven",
+    "acquitted-or-dismissed"
+  ],
+  "evidenceClasses": {
+    "E0": "Unsupported",
+    "E1": "Unverified claim",
+    "E2": "Documented association",
+    "E3": "Credible secondary evidence",
+    "E4": "Primary-source evidence",
+    "E5": "Official finding",
+    "E6": "Final adjudication"
+  },
+  "dailyWatch": {
+    "publicName": "Daily Intelligence Hit List",
+    "requiredSlots": [
+      "person",
+      "institution",
+      "family"
+    ],
+    "selectionRule": "Select the entity most materially elevated by source-linked evidence. A family may be selected through direct evidence or through a clearly labelled structural overlap between the leading lane and the family's documented authority, voting control, succession position or institutional access.",
+    "stabilityRule": "The three cards do not rotate for novelty or on a calendar. An incumbent remains until a different entity carries direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the configured promotion margin. Ties, minor fluctuations and generic prominence do not trigger replacement.",
+    "defaultPromotionMargin": 14,
+    "replacementAudit": [
+      "incumbent-name",
+      "incumbent-score",
+      "challenger-name",
+      "challenger-score",
+      "new-evidence-routes",
+      "promotion-threshold",
+      "decision-reason",
+      "replacement-date"
+    ],
+    "homepagePosition": "first-substantive-surface-after-intro-and-header",
+    "presentation": "cinematic-high-impact-mobile-first",
+    "requiredDossierSections": [
+      "executive-assessment",
+      "legal-status-convictions-charges-acquittals-and-official-actions",
+      "epstein-and-child-safeguarding-overlaps",
+      "money-ownership-contracts-and-funding",
+      "authority-access-and-institutional-power",
+      "documented-network-connections",
+      "source-linked-timeline",
+      "contradictions-appeals-denials-corrections-and-counter-evidence",
+      "evidence-grades-confidence-and-boundaries",
+      "open-questions",
+      "source-routes"
+    ],
+    "dossierRule": "Each card must expand in place into a complete source-fed dossier assembled from the active investigation ledger, person and institution profiles, family-access records, court and legal-status records, Epstein and safeguarding layers, financial records, timelines, relationship graph, counter-evidence and corrections. Missing records must be shown as gaps rather than filled with inference.",
+    "conversionActions": [
+      "open-full-site-search",
+      "follow-investigation",
+      "submit-signal-drop",
+      "join-membership",
+      "support-the-machine",
+      "view-ranking-history"
+    ],
+    "publicationSurfaces": [
+      "daily-watch.html",
+      "homepage-first-post-intro-surface",
+      "daily-command-brief",
+      "daily-brain-brief",
+      "live-intel-and-search-index",
+      "weekly-delta-review"
+    ],
+    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing."
+  },
+  "childSafeguarding": {
+    "priority": "highest",
+    "publicFlagThreshold": [
+      "court-judgment",
+      "formal-criminal-charge",
+      "official-law-enforcement-statement",
+      "government-or-regulatory-inquiry",
+      "filed-civil-complaint",
+      "on-record-credible-reporting-reviewed-by-editor"
+    ],
+    "rules": [
+      "Protect minors and victims.",
+      "Never publish illegal or graphic abuse material.",
+      "Never convert association with a convicted person into guilt.",
+      "State the exact offense and exact legal status.",
+      "Unverified user submissions remain private review leads.",
+      "Escalate credible immediate danger through lawful safeguarding channels."
+    ]
+  },
+  "relationshipRule": "Every edge must include relationship type, evidence grade or status, source route and an explicit boundary explaining what the relationship does not prove.",
+  "powerRule": "Never say an entity controls a system without identifying the supported mechanism, such as ownership, voting rights, appointment authority, trustee power, regulation, funding, procurement dependency, data ownership, access control or documented gatekeeping.",
+  "agendaRule": "Never use the phrase 'the agenda' without naming the official programme, inferred direction or speculative theory and explaining the documentary connection, implementation mechanism, beneficiary, authority gained, autonomy potentially lost, competing explanation and falsifier.",
+  "clockRule": "A clock may move only on dated, source-linked evidence affecting the exact variable it measures. Every clock must explain the latest movement, control-system meaning, counterpoint, boundary and source inputs, or explicitly state that no qualifying movement occurred.",
+  "propagationTargets": [
+    "person-dossiers",
+    "family-dossiers",
+    "company-and-institution-profiles",
+    "court-case-pages",
+    "wrongdoing-indexes",
+    "investigation-lanes",
+    "agenda-and-risk-clocks",
+    "timelines",
+    "relationship-and-financial-graphs",
+    "maps",
+    "claim-ledger",
+    "daily-and-weekly-briefs",
+    "homepage",
+    "search",
+    "watchlists-and-user-alerts",
+    "correction-and-version-history"
+  ],
+  "editorialBoundary": "The platform investigates and informs. It does not encourage harassment, vigilantism or guilt by association. Supporting and contradicting evidence, acquittals, dismissals, corrections, right of reply and evidence gaps must remain visible."
+}

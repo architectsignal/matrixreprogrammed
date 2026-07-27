@@ -10,6 +10,7 @@ const need = (condition, message) => { if (!condition) issues.push(message); };
 const read = name => fs.existsSync(at(name)) ? fs.readFileSync(at(name), 'utf8') : '';
 const readJson = name => { try { return JSON.parse(read(name)); } catch { return {}; } };
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[character]);
+const plainText = value => String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
 
 require('./patch-daily-control-brief-delivery.js');
 require('./build-homepage-command-surface.js');
@@ -100,12 +101,13 @@ for (const clock of wall.clocks || []) {
 }
 
 const homepage = read('index.html');
-const genericPhrases = [
-  'other documented institutional actor', 'documented person or institution', 'Named actor map pending',
-  '>increased position<', '>reduced position<', '>exited position<', '>new position<', '>mentions<',
-  '>Final Judgment<', '>View files<'
-];
-for (const phrase of genericPhrases) need(!homepage.toLowerCase().includes(phrase.toLowerCase()), `homepage contains forbidden actor placeholder: ${phrase}`);
+const forbiddenActorNames = /^(?:increased position|reduced position|exited position|new position|mentions?|open-market or private sale|open market sale|private sale|final judgment|view files?|open files?|read more|source|filing|document|record|update|changed|position|transaction|judgment)$/i;
+const placeholderActorNames = /other documented institutional actor|documented person or institution|named actor map pending/i;
+const actorNames = [...homepage.matchAll(/<article class="actor-intel-card"[\s\S]*?<h4>([\s\S]*?)<\/h4>/gi)].map(match => plainText(match[1]));
+need(actorNames.length > 0, 'homepage has no named actor intelligence cards');
+for (const name of actorNames) {
+  need(Boolean(name) && !forbiddenActorNames.test(name) && !placeholderActorNames.test(name), `homepage actor card contains forbidden placeholder name: ${name || '(blank)'}`);
+}
 need((homepage.match(/class="actor-intel-card"/g) || []).length > 0, 'homepage has no named actor intelligence cards');
 need(homepage.includes('Documented action or role:'), 'homepage actor cards lack documented actions');
 need(homepage.includes('Why it matters:'), 'homepage actor cards lack significance analysis');

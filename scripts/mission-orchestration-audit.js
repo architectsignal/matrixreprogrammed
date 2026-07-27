@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-
 const root = process.cwd();
 const at = value => path.join(root, value);
 const exists = value => fs.existsSync(at(value));
@@ -14,6 +13,10 @@ const validHttp = value => { try { const url = new URL(String(value || '')); ret
 
 const standard = readJson('data/mission-orchestration-standard.json', {});
 const watch = readJson('data/daily-watch.json', {});
+const dossiers = readJson('data/daily-watch-dossiers.json', {});
+const incumbents = readJson('data/daily-watch-incumbents.json', {});
+const history = readJson('data/daily-watch-history.json', {});
+const weeklyDelta = readJson('data/weekly-watch-delta.json', {});
 const graph = readJson('data/evidence-weighted-relationship-graph.json', { edges: [] });
 const wall = readJson('data/clock-wall.json', { clocks: [] });
 const ledger = readJson('data/investigation-ledger.json', { findings: [] });
@@ -25,85 +28,79 @@ const publication = readJson('downloads/daily-watch-publication-report.json', {}
 const checks = [];
 const add = (id, ok, detail, fix = '') => checks.push({ id, ok: Boolean(ok), detail, fix });
 
-add('authoritative-standard', standard.status === 'authoritative-build-contract', `Standard status: ${standard.status || 'missing'}.`, 'Restore data/mission-orchestration-standard.json and keep it in the authoritative build path.');
+add('authoritative-standard', standard.status === 'authoritative-build-contract', `Standard status: ${standard.status || 'missing'}.`, 'Restore the authoritative mission standard.');
 add('required-pipeline', array(standard.requiredPipeline).length >= 10, `${array(standard.requiredPipeline).length} orchestration stages declared.`, 'Require capture, verification, contradiction search, conclusion, propagation, review and versioning.');
-add('required-conclusion-fields', array(standard.requiredConclusionFields).length >= 12, `${array(standard.requiredConclusionFields).length} conclusion fields declared.`, 'Restore the complete plain-language conclusion contract.');
-add('data-integrity-repair', repair.ok === true, `Repair status: ${repair.ok === true ? 'ready' : 'missing or failed'}; active findings: ${repair.ledger?.active || 0}.`, 'Run scripts/repair-investigation-data-integrity.js before conclusions are generated.');
+add('required-conclusion-fields', array(standard.requiredConclusionFields).length >= 12, `${array(standard.requiredConclusionFields).length} conclusion fields declared.`, 'Restore the full conclusion contract.');
+add('stable-hit-list-standard', /do not rotate|does not rotate/i.test(standard.dailyWatch?.stabilityRule || '') && Number(standard.dailyWatch?.defaultPromotionMargin) > 0, `Promotion margin: ${standard.dailyWatch?.defaultPromotionMargin || 'missing'}.`, 'Lock a positive evidence promotion margin and ban novelty rotation.');
+add('dossier-standard', array(standard.dailyWatch?.requiredDossierSections).length >= 9, `${array(standard.dailyWatch?.requiredDossierSections).length} required dossier sections.`, 'Require legal, safeguarding, money, power, connections, timeline, counter-evidence, sources and next questions.');
+add('data-integrity-repair', repair.ok === true, `Repair status: ${repair.ok === true ? 'ready' : 'missing or failed'}; active findings: ${repair.ledger?.active || 0}.`, 'Run the investigation data repair first.');
 
 const pullIds = array(pull.results).map(item => item.sourceId).filter(Boolean);
 const missingAttempts = pullIds.filter(id => !state.sources?.[id]?.lastAttempt);
-add('source-attempt-state', missingAttempts.length === 0, `${pullIds.length} attempted source(s); ${missingAttempts.length} missing durable lastAttempt state.`, 'Record lastAttempt for every selected source, including failed fetches.');
+add('source-attempt-state', missingAttempts.length === 0, `${pullIds.length} attempted sources; ${missingAttempts.length} missing durable attempt state.`, 'Record all attempts, including failures.');
 
 const findings = array(ledger.findings);
 const ids = findings.map(item => item.id);
 const required = array(standard.requiredConclusionFields);
 const badFindings = findings.filter(item => {
-  const missionMissing = required.filter(field => {
-    const value = item[field];
-    return Array.isArray(value) ? value.length === 0 : !clean(value, 5000);
-  });
-  return !item.id || !item.title || !validHttp(item.itemUrl || item.sourceUrl) || !item.evidenceGrade || !item.status || !clean(item.evidenceBoundary, 1200) || !clean(item.mechanism, 1600) || array(item.nextRecords).length < 2 || missionMissing.length > 0;
+  const missing = required.filter(field => Array.isArray(item[field]) ? item[field].length === 0 : !clean(item[field], 5000));
+  return !item.id || !item.title || !validHttp(item.itemUrl || item.sourceUrl) || !item.evidenceGrade || !item.status || !clean(item.evidenceBoundary,1200) || !clean(item.mechanism,1600) || array(item.nextRecords).length < 2 || missing.length;
 });
-add('active-ledger-bounded', findings.length > 0 && findings.length <= Number(ledger.activeLimit || 2500) && new Set(ids).size === ids.length, `${findings.length} active finding(s); limit ${ledger.activeLimit || 2500}; duplicate IDs ${ids.length - new Set(ids).size}.`, 'Deduplicate and cap the active ledger while preserving overflow in the archive.');
-add('active-ledger-mission-fields', badFindings.length === 0, `${findings.length} active finding(s) checked; ${badFindings.length} lack provenance, legal/evidence status, mechanism, limitation or full user-friendly conclusion fields.`, 'Run scripts/repair-investigation-data-integrity.js and block publication until every active finding satisfies the full conclusion contract.');
-add('ledger-archive-preserved', exists('data/investigation-ledger-archive.json') && array(archive.findings).length >= 0 && clean(archive.boundary, 1000), `${array(archive.findings).length} archived finding(s) preserved with an archive boundary.`, 'Preserve duplicate, overflow and invalid-provenance records in the historical archive rather than deleting them.');
+add('active-ledger-bounded', findings.length > 0 && findings.length <= Number(ledger.activeLimit || 2500) && new Set(ids).size === ids.length, `${findings.length} active findings; ${ids.length - new Set(ids).size} duplicate IDs.`, 'Deduplicate and cap the active ledger while preserving archive history.');
+add('active-ledger-mission-fields', badFindings.length === 0, `${badFindings.length} active findings fail provenance, legal status, mechanism, boundary or conclusion fields.`, 'Block publication until every active finding satisfies the contract.');
+add('ledger-archive-preserved', exists('data/investigation-ledger-archive.json') && clean(archive.boundary,1000), `${array(archive.findings).length} archived findings retained.`, 'Preserve overflow, duplicates and invalid-provenance history.');
 
-add('daily-watch-data', watch.ok && watch.person && watch.institution && watch.family, `Daily watch ${watch.ok ? 'exists' : 'is missing or failed'}.`, 'Run scripts/build-daily-watch.js.');
+add('daily-watch-data', watch.ok && watch.person && watch.institution && watch.family, `Watch status: ${watch.ok ? 'ready' : 'missing'}.`, 'Build all three slots.');
 for (const slot of ['person','institution','family']) {
   const item = watch[slot] || {};
-  const missing = required.filter(field => {
-    const value = item[field];
-    return Array.isArray(value) ? value.length === 0 : !clean(value, 5000);
-  });
-  add(`watch-${slot}-fields`, missing.length === 0, `${slot} watch: ${item.name || 'missing name'}; missing fields: ${missing.join(', ') || 'none'}.`, `Populate every required conclusion field for the ${slot} watch.`);
-  add(`watch-${slot}-sources`, array(item.sourceRoutes).length > 0, `${array(item.sourceRoutes).length} source route(s) attached to ${slot} watch.`, 'Attach a direct evidence route or an explicit missing-record route.');
-  add(`watch-${slot}-boundary`, clean(item.whatItDoesNotProve, 1000).length > 40, `${slot} watch ${clean(item.whatItDoesNotProve, 1000).length > 40 ? 'contains' : 'lacks'} an explicit limitation.`, 'State what the selection does not prove.');
+  const missing = required.filter(field => Array.isArray(item[field]) ? item[field].length === 0 : !clean(item[field],5000));
+  add(`watch-${slot}-fields`, missing.length === 0, `${slot}: ${item.name || 'missing'}; missing ${missing.join(', ') || 'none'}.`, `Complete every conclusion field for ${slot}.`);
+  add(`watch-${slot}-rank`, Number(item.rankingScore) > 0 && clean(item.rankingStatus,200), `${slot} score ${item.rankingScore ?? 'missing'}; status ${item.rankingStatus || 'missing'}.`, 'Run the stable ranking and dossier builder.');
+  add(`watch-${slot}-sources`, array(item.sourceRoutes).length > 0, `${array(item.sourceRoutes).length} source routes attached.`, 'Attach direct source or explicit missing-record route.');
+  add(`watch-${slot}-boundary`, clean(item.whatItDoesNotProve,1000).length > 40, `${slot} limitation ${clean(item.whatItDoesNotProve,1000).length > 40 ? 'present' : 'missing'}.`, 'State what selection does not prove.');
 }
-add('distinct-watch-entities', watch.person?.name !== watch.institution?.name, `Person: ${watch.person?.name || 'missing'}; institution: ${watch.institution?.name || 'missing'}.`, 'Do not publish the same unresolved entity in both slots.');
-add('family-selection-boundary', /structural watch|direct/i.test(watch.family?.selectionBasis || ''), `Family selection basis: ${clean(watch.family?.selectionBasis, 320) || 'missing'}.`, 'State whether the family is elevated by direct current evidence or structural lane overlap.');
-add('publication-surfaces', publication.ok && array(publication.pages).length >= 3, `${array(publication.pages).length} public daily-watch surfaces patched.`, 'Publish the watch to the homepage, Daily Brief and Live Intel at minimum.');
+add('distinct-watch-entities', watch.person?.name !== watch.institution?.name, `Person ${watch.person?.name}; institution ${watch.institution?.name}.`, 'Do not reuse an unresolved entity across slots.');
+add('stable-ranking-policy', watch.rankingPolicy?.mode === 'stable-incumbent-evidence-promotion' && Number(watch.rankingPolicy?.promotionMargin) > 0, `Mode ${watch.rankingPolicy?.mode || 'missing'}; margin ${watch.rankingPolicy?.promotionMargin || 'missing'}.`, 'Use evidence promotion, never daily rotation.');
+add('incumbent-state', ['person','institution','family'].every(slot => incumbents.slots?.[slot]?.item?.name && Number(incumbents.slots?.[slot]?.rankingScore) > 0), 'All three incumbent states checked.', 'Persist incumbent identities, scores and decisions.');
+add('family-selection-boundary', /structural watch|direct|current evidence/i.test(watch.family?.selectionBasis || ''), `Family basis: ${clean(watch.family?.selectionBasis,320) || 'missing'}.`, 'Distinguish direct evidence from structural lane overlap.');
 
-for (const page of ['index.html','daily-command-brief.html','live-intel.html']) {
-  add(`surface-${page}`, /<!-- daily-mission-watch:start -->/.test(read(page)), `${page} ${/<!-- daily-mission-watch:start -->/.test(read(page)) ? 'contains' : 'does not contain'} the daily watch.`, `Run scripts/inject-daily-watch-surfaces.js after all legacy generators for ${page}.`);
+const dossierSections = ['legalAndWrongdoingRecord','epsteinAndChildSafeguardingOverlaps','moneyOwnershipAndContracts','authorityAccessAndInstitutions','documentedConnections','timeline','contradictionsAndCounterEvidence','openQuestions','sourceRoutes'];
+for (const slot of ['person','institution','family']) {
+  const dossier = dossiers[slot] || {};
+  const missing = dossierSections.filter(field => !Array.isArray(dossier[field]));
+  add(`dossier-${slot}-structure`, dossier.name === watch[slot]?.name && missing.length === 0 && clean(dossier.dossierBoundary,1000), `${slot} dossier ${dossier.name || 'missing'}; missing arrays ${missing.join(', ') || 'none'}.`, 'Build the complete dropdown dossier from site records.');
+  add(`dossier-${slot}-assessment`, ['whatWasFound','whyItMatters','howItFits','whatItPointsToward','alternativeExplanation','whatItDoesNotProve'].every(field => clean(dossier.executiveAssessment?.[field],1800)), `${slot} executive assessment checked.`, 'Explain evidence, mechanism, direction, alternative and limitation.');
 }
+add('history-and-weekly-delta', history.ok && weeklyDelta.ok && array(history.entries).length > 0, `${array(history.entries).length} history entries; weekly delta ${weeklyDelta.ok ? 'ready' : 'missing'}.`, 'Retain ranking history and weekly changes.');
+add('publication-surfaces', publication.ok && array(publication.pages).length >= 3 && publication.firstPostIntroHomepageSurface === true, `${array(publication.pages).length} public surfaces; first-post-intro ${publication.firstPostIntroHomepageSurface}.`, 'Publish first beneath the homepage header and across Daily Brief and Live Intel.');
+
+const index = read('index.html');
+const headerEnd = index.search(/<\/header>/i);
+const marker = index.indexOf(markerStart);
+const construction = index.indexOf('<!-- construction-banner:start -->');
+add('homepage-first-hook', headerEnd >= 0 && marker > headerEnd && (construction < 0 || marker < construction), `headerEnd=${headerEnd}; hitList=${marker}; nextLegacyPanel=${construction}.`, 'Inject immediately after the header, before construction and all feature panels.');
+const dailyPage = read('daily-watch.html');
+add('cinematic-card-ui', /THE DAILY INTELLIGENCE HIT LIST/.test(index) && (index.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3 && /cinematic-daily-hit-list-style/.test(index), `${(index.match(/OPEN COMPLETE DOSSIER/g) || []).length} expandable cards found.`, 'Render all three cinematic cards with expandable dossiers.');
+add('dedicated-dossier-page', /THE DAILY INTELLIGENCE HIT LIST/.test(dailyPage) && (dailyPage.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3, 'Dedicated hit-list page checked.', 'Build daily-watch.html with all dossiers.');
+add('support-conversion', /Support the Machine/.test(index) && /membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /weekly-watch-delta\.html/.test(index), 'Support, membership, Signal Drop and ranking history actions checked.', 'Keep conversion paths visible without hiding evidence boundaries.');
+
+for (const page of ['daily-command-brief.html','live-intel.html']) add(`surface-${page}`, page.includes('index') || new RegExp(markerStart).test(read(page)), `${page} ${new RegExp(markerStart).test(read(page)) ? 'contains' : 'lacks'} the hit list.`, `Reinject the cinematic surface into ${page}.`);
 
 const edges = array(graph.edges);
-const badEdges = edges.filter(edge => !clean(edge.relationshipType || edge.type || edge.predicate, 200) || !clean(edge.evidenceGrade || edge.grade || edge.status, 200) || !clean(edge.evidenceBoundary || edge.boundary, 800) || (!array(edge.sourceRoutes).length && !clean(edge.sourceRoute || edge.evidenceRoute || edge.route || edge.missingSourceReason, 800)));
-add('relationship-contracts', edges.length > 0 && badEdges.length === 0, `${edges.length} edges checked; ${badEdges.length} violate relationship evidence contracts.`, 'Run scripts/enforce-mission-data-contracts.js and restore missing provenance.');
-
+const badEdges = edges.filter(edge => !clean(edge.relationshipType || edge.type || edge.predicate,200) || !clean(edge.evidenceGrade || edge.grade || edge.status,200) || !clean(edge.evidenceBoundary || edge.boundary,800) || (!array(edge.sourceRoutes).length && !clean(edge.sourceRoute || edge.evidenceRoute || edge.route || edge.missingSourceReason,800)));
+add('relationship-contracts', edges.length > 0 && badEdges.length === 0, `${edges.length} edges; ${badEdges.length} contract failures.`, 'Restore type, grade, source and boundary for each edge.');
 const clocks = array(wall.clocks);
-const badClocks = clocks.filter(clock => !clean(clock.lastMovement, 1000) || !clean(clock.controlSystemMeaning, 1400) || !clean(clock.boundary || clock.evidenceBoundary || clock.claimBoundary, 900) || (!array(clock.evidenceInputs).length && !(clean(clock.noMovementReason, 900) && clock.scoreChanged === false)));
-add('clock-meaning-contracts', clocks.length > 0 && badClocks.length === 0, `${clocks.length} clocks checked; ${badClocks.length} lack evidence inputs or an explicit no-movement state, mission meaning or boundary.`, 'Run scripts/enforce-mission-data-contracts.js after the clock wall is generated.');
+const badClocks = clocks.filter(clock => !clean(clock.lastMovement,1000) || !clean(clock.controlSystemMeaning,1400) || !clean(clock.boundary || clock.evidenceBoundary || clock.claimBoundary,900) || (!array(clock.evidenceInputs).length && !(clean(clock.noMovementReason,900) && clock.scoreChanged === false)));
+add('clock-meaning-contracts', clocks.length > 0 && badClocks.length === 0, `${clocks.length} clocks; ${badClocks.length} contract failures.`, 'Require evidence movement or explicit no-movement state.');
 
-const sensitiveItems = [...findings.filter(item => item.sensitiveReviewRequired), watch.person, watch.institution, watch.family].filter(Boolean);
-const unsafeSensitive = sensitiveItems.filter(item => /child sexual|child abuse|child exploitation|child trafficking|minor offence|minor offense|csam/i.test(JSON.stringify(item)) && (!/convict|charg|indict|judgment|complaint|investigat|acquit|dismiss|sanction|do-not-publicly-flag/i.test(JSON.stringify(item).toLowerCase()) || !/does not prove|not prove|do not publicly flag/i.test(JSON.stringify(item).toLowerCase())));
-add('sensitive-claim-safeguard', unsafeSensitive.length === 0, `${sensitiveItems.length} sensitive item(s) checked; ${unsafeSensitive.length} lack exact legal-status or public-flag limitation language.`, 'Do not publish a child-crime flag without exact legal status, source provenance, limitation and editorial review.');
+const sensitive = [...findings.filter(item => item.sensitiveReviewRequired),watch.person,watch.institution,watch.family].filter(Boolean);
+const unsafe = sensitive.filter(item => /child sexual|child abuse|child exploitation|child trafficking|minor offence|minor offense|csam/i.test(JSON.stringify(item)) && (!/convict|charg|indict|judgment|complaint|investigat|acquit|dismiss|sanction|do-not-publicly-flag/i.test(JSON.stringify(item).toLowerCase()) || !/does not prove|not prove|do not publicly flag/i.test(JSON.stringify(item).toLowerCase())));
+add('sensitive-claim-safeguard', unsafe.length === 0, `${sensitive.length} sensitive items; ${unsafe.length} unsafe.`, 'Require exact status, provenance, limitation and review.');
 
 const failures = checks.filter(check => !check.ok);
-const report = {
-  ok: failures.length === 0,
-  generatedAt: new Date().toISOString(),
-  overall: failures.length ? 'blocked' : 'ready',
-  summary: { total: checks.length, passed: checks.length - failures.length, failed: failures.length },
-  watch: { date: watch.date, person: watch.person?.name, institution: watch.institution?.name, family: watch.family?.name },
-  dataDepth: { activeFindings: findings.length, archivedFindings: array(archive.findings).length, relationshipEdges: edges.length, clocks: clocks.length, badFindings: badFindings.length, badEdges: badEdges.length, badClocks: badClocks.length },
-  checks,
-  failures,
-  nextPriorities: [
-    'Propagate every approved legal-status change to the subject dossier, case page, wrongdoing index, timeline, graph, reports and alerts.',
-    'Index daily-watch.html, daily-watch.json and the archived ledger after publication.',
-    'Add user follow controls for the three daily entities and notify only on material evidence changes.',
-    'Generate a weekly delta showing which watch selections were strengthened, weakened, corrected or disproven.'
-  ]
-};
-
-fs.mkdirSync(at('downloads'), { recursive: true });
-fs.writeFileSync(at('downloads/mission-orchestration-audit.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(at('downloads/mission-orchestration-audit.md'), ['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'','## Daily Watch','',`- Person: ${report.watch.person || 'missing'}`,`- Institution: ${report.watch.institution || 'missing'}`,`- Family: ${report.watch.family || 'missing'}`,'','## Data Depth','',`- Active findings: ${report.dataDepth.activeFindings}`,`- Archived findings: ${report.dataDepth.archivedFindings}`,`- Relationship edges: ${report.dataDepth.relationshipEdges}`,`- Clocks: ${report.dataDepth.clocks}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`),'','## Next Priorities','',...report.nextPriorities.map(item => `- ${item}`)].join('\n'));
-
-if (failures.length) {
-  console.error(`MISSION ORCHESTRATION AUDIT FAILED: ${failures.length} issue(s).`);
-  for (const failure of failures) console.error(`- ${failure.id}: ${failure.detail}`);
-  process.exit(1);
-}
-console.log(`Mission orchestration audit passed: ${checks.length} checks; ${findings.length} active findings; ${edges.length} edges; ${clocks.length} clocks.`);
+const report = { ok:failures.length === 0,generatedAt:new Date().toISOString(),overall:failures.length ? 'blocked' : 'ready',summary:{total:checks.length,passed:checks.length-failures.length,failed:failures.length},watch:{date:watch.date,person:watch.person?.name,institution:watch.institution?.name,family:watch.family?.name,promotionMargin:watch.rankingPolicy?.promotionMargin},dataDepth:{activeFindings:findings.length,archivedFindings:array(archive.findings).length,relationshipEdges:edges.length,clocks:clocks.length,badFindings:badFindings.length,badEdges:badEdges.length,badClocks:badClocks.length},checks,failures };
+fs.mkdirSync(at('downloads'),{recursive:true});
+fs.writeFileSync(at('downloads/mission-orchestration-audit.json'),JSON.stringify(report,null,2));
+fs.writeFileSync(at('downloads/mission-orchestration-audit.md'),['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'',`Person: ${report.watch.person}`,`Institution: ${report.watch.institution}`,`Family: ${report.watch.family}`,`Promotion margin: ${report.watch.promotionMargin}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`)].join('\n'));
+if (failures.length) { console.error(`MISSION ORCHESTRATION AUDIT FAILED: ${failures.length}`); for (const failure of failures) console.error(`- ${failure.id}: ${failure.detail}`); process.exit(1); }
+console.log(`Mission orchestration audit passed: ${checks.length} checks; stable cinematic dossiers ready.`);

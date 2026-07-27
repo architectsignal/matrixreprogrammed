@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const brainPath = path.join(root, 'data', 'site-brain.json');
@@ -36,6 +37,23 @@ function loadBrain() {
   } catch (error) {
     fail(`data/site-brain.json invalid JSON: ${error.message}`);
     return null;
+  }
+}
+
+// The deployable search index must be compacted and performance-checked after
+// Cloudflare output exists. This is part of the normal production build, not
+// merely an advisory recovery test.
+if (exists('_site')) {
+  const performance = spawnSync(process.execPath, [rel('scripts/runtime-performance-budget-test.js')], {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: 'pipe',
+    timeout: 20 * 60 * 1000
+  });
+  if (performance.stdout) process.stdout.write(performance.stdout);
+  if (performance.stderr) process.stderr.write(performance.stderr);
+  if (performance.status !== 0) {
+    fail(`runtime performance and search compaction gate failed with status ${performance.status}: ${String(performance.stderr || performance.stdout || performance.error || '').slice(-1800)}`);
   }
 }
 
@@ -90,6 +108,7 @@ if (brain) {
     checkedAt: new Date().toISOString(),
     brainVersion: brain.version,
     productionUrl: brain.productionUrl,
+    performanceGate: exists('downloads/runtime-performance-budget-test.json') ? 'executed' : 'not-applicable-without-_site',
     problems
   };
 
@@ -104,4 +123,4 @@ if (problems.length) {
 }
 
 console.log('MATRIX SITE BRAIN HEALTH CHECK PASSED');
-console.log('Checked central brain config, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');
+console.log('Checked central brain config, compact search release, runtime performance, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');

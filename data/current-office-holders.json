@@ -9,5 +9,166 @@
     "automaticClockMovement": false,
     "boundary": "A change of office-holder changes current authority and access. It does not by itself prove wrongdoing, continuity of policy, conspiracy, motive or control. Clock scores move only when separate evidence supports a directional change."
   },
-  "holders": []
+  "holders": [
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Prime Minister",
+      "name": "Andy Burnham",
+      "styledName": "The Rt Hon Andy Burnham MP",
+      "currentSince": "2026-07-20",
+      "predecessor": "Keir Starmer",
+      "predecessorFrom": "2024-07-05",
+      "predecessorTo": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/ministers/prime-minister",
+      "transitionSourceUrl": "https://www.gov.uk/government/speeches/andy-burnhams-first-speech-as-prime-minister-20-july-2026",
+      "staleCurrentAliases": ["Keir Starmer", "Sir Keir Starmer", "The Rt Hon Sir Keir Starmer KCB KC MP"],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Chancellor of the Exchequer",
+      "name": "John Healey",
+      "styledName": "The Rt Hon John Healey MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Secretary of State for Foreign, Commonwealth and Development Affairs",
+      "name": "Ed Miliband",
+      "styledName": "The Rt Hon Ed Miliband MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "First Secretary of State and Minister for the Cabinet Office",
+      "name": "Louise Haigh",
+      "styledName": "The Rt Hon Louise Haigh MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Secretary of State for Health and Social Care",
+      "name": "Yvette Cooper",
+      "styledName": "The Rt Hon Yvette Cooper MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Secretary of State for Housing, Communities and Local Government",
+      "name": "Angela Rayner",
+      "styledName": "The Rt Hon Angela Rayner MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Secretary of State for Business, Innovation, Science and Trade",
+      "name": "Jonathan Reynolds",
+      "styledName": "The Rt Hon Jonathan Reynolds MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Kingdom",
+      "office": "Secretary of State for Education",
+      "name": "Lucy Powell",
+      "styledName": "The Rt Hon Lucy Powell MP",
+      "currentSince": "2026-07-20",
+      "sourceUrl": "https://www.gov.uk/government/news/ministerial-appointments-july-2026",
+      "evidenceClass": "official-appointment",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United States",
+      "office": "President",
+      "name": "Donald J. Trump",
+      "currentSince": "2025-01-20",
+      "predecessor": "Joe Biden",
+      "predecessorTo": "2025-01-20",
+      "sourceUrl": "https://www.whitehouse.gov/administration/donald-j-trump/",
+      "staleCurrentAliases": ["Joe Biden", "Joseph R. Biden Jr."],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "France",
+      "office": "President of the Republic",
+      "name": "Emmanuel Macron",
+      "currentSince": "2017-05-14",
+      "sourceUrl": "https://www.elysee.fr/en/french-presidency/the-presidents-of-the-republic",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "Germany",
+      "office": "Federal Chancellor",
+      "name": "Friedrich Merz",
+      "currentSince": "2025-05-06",
+      "predecessor": "Olaf Scholz",
+      "predecessorTo": "2025-05-06",
+      "sourceUrl": "https://www.bundesregierung.de/breg-en/federal-cabinet/2343412-2343412",
+      "staleCurrentAliases": ["Olaf Scholz"],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "NATO",
+      "office": "Secretary General",
+      "name": "Mark Rutte",
+      "currentSince": "2024-10-01",
+      "predecessor": "Jens Stoltenberg",
+      "predecessorTo": "2024-10-01",
+      "sourceUrl": "https://www.nato.int/en/about-us/organization/who-we-are/nato-secretaries-general/mark-rutte",
+      "staleCurrentAliases": ["Jens Stoltenberg"],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "United Nations",
+      "office": "Secretary-General",
+      "name": "António Guterres",
+      "currentSince": "2017-01-01",
+      "sourceUrl": "https://www.un.org/sg/en/content/sg/biography",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "European Commission",
+      "office": "President",
+      "name": "Ursula von der Leyen",
+      "currentSince": "2019-12-01",
+      "sourceUrl": "https://commission.europa.eu/about/organisation/president_en",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "Holy See",
+      "office": "Pope",
+      "name": "Leo XIV",
+      "styledName": "Pope Leo XIV",
+      "currentSince": "2025-05-18",
+      "predecessor": "Pope Francis",
+      "sourceUrl": "https://www.vatican.va/content/vatican/en/holy-father/leone-xiv.html",
+      "staleCurrentAliases": ["Pope Francis", "Francis"],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    }
+  ]
 }

@@ -28,7 +28,8 @@ const report = {
   generatedAt: new Date().toISOString(),
   degraded: false,
   commands: [],
-  freshnessGuard: null
+  freshnessGuard: null,
+  freshnessScope: 'prebuild-source-only'
 };
 
 function runNode(script, args = [], extraEnv = {}) {
@@ -85,8 +86,12 @@ if (failed.length) {
   for (const item of failed) console.warn(`- ${item.script}: exit ${item.status}${item.error ? ` (${item.error})` : ''}`);
 }
 
+// This gate runs before the complete site build, so it validates refreshed
+// source datasets only. The canonical post-build freshness step later checks
+// both source and _site output and remains the final deployment authority.
 const freshness = runNode('scripts/production-freshness-guard.js', [], {
-  MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+  MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1',
+  MATRIX_FRESHNESS_SOURCE_ONLY: '1'
 });
 report.freshnessGuard = freshness;
 report.ok = freshness.status === 0;
@@ -94,12 +99,12 @@ report.completedAt = new Date().toISOString();
 fs.writeFileSync(path.join(downloads, 'production-intelligence-refresh.json'), `${JSON.stringify(report, null, 2)}\n`);
 
 if (freshness.status !== 0) {
-  console.error('Production intelligence refresh cannot continue: the current source datasets did not pass the strict freshness guard.');
+  console.error('Production intelligence refresh cannot continue: the current source datasets did not pass the strict prebuild freshness guard.');
   process.exit(1);
 }
 
 if (failed.length) {
   console.warn('Strict source freshness passed. Deployment may continue using the current verified source datasets; failed refresh commands are recorded in downloads/production-intelligence-refresh.json.');
 } else {
-  console.log('Production intelligence refresh completed successfully and strict source freshness passed.');
+  console.log('Production intelligence refresh completed successfully and strict prebuild source freshness passed.');
 }

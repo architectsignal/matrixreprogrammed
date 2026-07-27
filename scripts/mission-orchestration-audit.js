@@ -10,6 +10,7 @@ const readJson = (value, fallback = {}) => { try { return JSON.parse(read(value)
 const clean = (value, max = 3000) => String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 const array = value => Array.isArray(value) ? value : [];
 const validHttp = value => { try { const url = new URL(String(value || '')); return ['http:','https:'].includes(url.protocol); } catch { return false; } };
+const markerStart = '<!-- daily-mission-watch:start -->';
 
 const standard = readJson('data/mission-orchestration-standard.json', {});
 const watch = readJson('data/daily-watch.json', {});
@@ -84,7 +85,7 @@ add('cinematic-card-ui', /THE DAILY INTELLIGENCE HIT LIST/.test(index) && (index
 add('dedicated-dossier-page', /THE DAILY INTELLIGENCE HIT LIST/.test(dailyPage) && (dailyPage.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3, 'Dedicated hit-list page checked.', 'Build daily-watch.html with all dossiers.');
 add('support-conversion', /Support the Machine/.test(index) && /membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /weekly-watch-delta\.html/.test(index), 'Support, membership, Signal Drop and ranking history actions checked.', 'Keep conversion paths visible without hiding evidence boundaries.');
 
-for (const page of ['daily-command-brief.html','live-intel.html']) add(`surface-${page}`, page.includes('index') || new RegExp(markerStart).test(read(page)), `${page} ${new RegExp(markerStart).test(read(page)) ? 'contains' : 'lacks'} the hit list.`, `Reinject the cinematic surface into ${page}.`);
+for (const page of ['daily-command-brief.html','live-intel.html']) add(`surface-${page}`, new RegExp(markerStart).test(read(page)), `${page} ${new RegExp(markerStart).test(read(page)) ? 'contains' : 'lacks'} the hit list.`, `Reinject the cinematic surface into ${page}.`);
 
 const edges = array(graph.edges);
 const badEdges = edges.filter(edge => !clean(edge.relationshipType || edge.type || edge.predicate,200) || !clean(edge.evidenceGrade || edge.grade || edge.status,200) || !clean(edge.evidenceBoundary || edge.boundary,800) || (!array(edge.sourceRoutes).length && !clean(edge.sourceRoute || edge.evidenceRoute || edge.route || edge.missingSourceReason,800)));

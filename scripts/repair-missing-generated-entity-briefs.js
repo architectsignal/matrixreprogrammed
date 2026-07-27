@@ -23,17 +23,21 @@ function walkHtml(dir, out = []) {
   }
   return out;
 }
+
 function titleFromSlug(slug) {
   return slug.split('-').filter(Boolean).map(word => word.length <= 3 && /^[a-z]+$/.test(word) ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
+
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 }
+
 function page(title, slug) {
   const safeTitle = escapeHtml(title);
   const safeSlug = escapeHtml(slug);
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>${safeTitle} | Entity Evidence Gap | Matrix Reprogrammed</title><meta name="description" content="Evidence-gap brief for ${safeTitle}: the route is preserved while the primary public record is being verified."/><link rel="stylesheet" href="../styles.css"/><link rel="stylesheet" href="../reader-experience.css"/></head><body><canvas id="matrix"></canvas><div class="page"><header class="wrap topbar"><a class="brand" href="../index.html"><img src="../sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="../daily-power-conclusions.html">Conclusions</a><a href="../daily-missing-records.html">Missing Records</a><a href="../evidence-vault.html">Evidence</a><a href="../predators-in-power.html">Predators in Power</a><a href="../search.html">Search</a></nav></header><main data-entity-dossier="true"><section class="hero wrap"><div class="eyebrow">Entity Dossier / Evidence Gap</div><h1>${safeTitle}</h1><p class="lead">This entity route was referenced by a generated intelligence brief before a complete primary-record dossier was available. The route is preserved so the evidence gap is visible rather than becoming a broken link.</p><div class="cta-row"><a class="btn" href="../daily-missing-records.html">Open Missing Records</a><a class="btn alt" href="../evidence-vault.html">Search Evidence</a><a class="btn alt" href="../research-tools.html">Research Tools</a></div></section><section class="section wrap"><div class="grid"><article class="card"><h2>What is established</h2><p>The site currently has a generated reference to this named entity in a missing-record or intelligence route.</p></article><article class="card"><h2>What is not established</h2><p>This placeholder brief does not establish wrongdoing, control, responsibility, association, motive or the accuracy of any unverified claim.</p></article><article class="card"><h2>Record required</h2><p>Confirm the primary official page, filing, docket, decision, award notice, registry record or authenticated archive item before upgrading this route.</p></article></div><p class="mini"><strong>Route key:</strong> ${safeSlug}. <strong>Boundary:</strong> a preserved route is an evidence-management control, not an accusation or conclusion.</p></section></main><footer class="footer wrap"><p>Public-record first. Evidence before inference.</p></footer></div><script src="../matrix.js"></script></body></html>\n`;
 }
+
 function markEntityDossier(file) {
   if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return;
   const before = fs.readFileSync(file, 'utf8');
@@ -44,6 +48,7 @@ function markEntityDossier(file) {
     marked.push(path.relative(root, file).replace(/\\/g, '/'));
   }
 }
+
 function runRequired(script) {
   const result = spawnSync(process.execPath, [path.join(root, script)], { cwd: root, encoding: 'utf8', env: process.env, maxBuffer: 1024 * 1024 * 50 });
   engineCommands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-1500), stderr: String(result.stderr || '').slice(-1500) });
@@ -87,18 +92,7 @@ for (const [relative] of required) {
 }
 
 if (!failures.length) {
-  for (const script of [
-    'scripts/build-criminal-conduct-engine.js',
-    'scripts/sync-criminal-conduct-extensionless.js',
-    'scripts/patch-criminal-conduct-predators-link.js',
-    'scripts/criminal-conduct-engine-pressure-test.js',
-    'scripts/build-predators-in-power.js',
-    'scripts/sync-predators-in-power-output.js',
-    'scripts/predators-in-power-pressure-test.js'
-  ]) {
-    runRequired(script);
-    if (failures.length) break;
-  }
+  runRequired('scripts/run-power-dossier-runtime-compatible.js');
 }
 
 const report = {

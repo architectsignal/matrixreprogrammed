@@ -1,14 +1,14 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-26T10:44:50.393Z",
+  "checkedAt": "2026-07-27T07:25:21.128Z",
   "selectedSources": 12,
   "fetchedSources": 11,
   "skippedSources": 0,
   "failedSources": 1,
   "parsedItems": 368,
   "newOrSeenFindings": 368,
-  "ledgerFindings": 2868,
+  "ledgerFindings": 3129,
   "results": [
     {
       "sourceId": "doj-epstein-disclosures",
@@ -32,7 +32,7 @@
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
       "bytes": 2193,
-      "bodyHash": "8802ddcb3610055e1d94ac34419dca4a3941788ef90914339e66d5c9f3edecdb",
+      "bodyHash": "4a2dd4914266bad6c6b8a69f41c94b7dbfb040afcb8666c4675086ce2e01a446",
       "itemCount": 1,
       "error": ""
     },
@@ -45,7 +45,7 @@
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62897,
-      "bodyHash": "0a17582f94671c29d29dbfb7c78a93db23f48acefc32016aa69a125d2949b060",
+      "bodyHash": "42073dbcbff3a4cc8c8a34aba99f54aee78260c85f1f93df501515a5222f81ff",
       "itemCount": 14,
       "error": ""
     },
@@ -58,7 +58,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
       "bytes": 22804,
-      "bodyHash": "36520eeacb30bc5cd04972fde568f6c9897cd84829d2fa34548f7ea4cefc018f",
+      "bodyHash": "d2bb4e5bc713e51c0e40e76b579c7433a223ba4f2e9d5a0059727cdb15af86b7",
       "itemCount": 1,
       "error": ""
     },
@@ -104,8 +104,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43380,
-      "bodyHash": "61ac245b1a17e00a1480379755347313f260a66af034bdd44709305a858af61a",
+      "bytes": 43382,
+      "bodyHash": "0d3ced67422b374f3f5b9e6c4ee2aeac5c1fb78024b6485e05f00c0644cf42bd",
       "itemCount": 18,
       "error": ""
     },
@@ -144,7 +144,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "8285eaeb9c19711c910be9f5e902796c43cad4061fece4c8e63edd1ee32f37bc",
+      "bodyHash": "a24bf16e1b783fbcfbe569b765e43a5f27ff39adb5ec42226ad4ce5d3434ae53",
       "itemCount": 15,
       "error": ""
     },
@@ -157,7 +157,7 @@
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 103517,
-      "bodyHash": "d6dfae535ab18a13c8c2d942b6a8e58fd66db555dca505eb6bc9b92f5d4fbd2d",
+      "bodyHash": "c1cc24e3958af0e6c589d225daf52cc9342f9948b3b0f3a819b7e0b4ceb41e59",
       "itemCount": 9,
       "error": ""
     }

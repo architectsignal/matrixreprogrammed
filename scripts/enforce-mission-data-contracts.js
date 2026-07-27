@@ -133,11 +133,20 @@ if (exists('data/clock-wall.json')) {
   writeJson('data/clock-wall.json', wall);
 }
 
+// Criminal accountability is a mandatory mission surface. The compact source
+// file is expanded first, then the public index and every individual dossier
+// are regenerated from the same authoritative registry.
+require('./build-criminal-conduct-registry.js');
+require('./build-predators-in-power.js');
+require('./build-predators-in-power-dossiers.js');
+
 const repair = readJson('downloads/investigation-data-integrity-repair.json', {});
+const criminalAccountability = readJson('downloads/criminal-investigations-build-report.json', {});
 const report = {
-  ok: repair.ok !== false,
+  ok: repair.ok !== false && criminalAccountability.ok !== false,
   generatedAt: new Date().toISOString(),
   investigationData: repair,
+  criminalAccountability,
   relationshipGraph: { edges: graphEdges, fieldsAddedOrRepaired: graphChanged, boundary: relationshipBoundary },
   clocks: { count: clockCount, fieldsAddedOrRepaired: clockChanged, withoutDirectEvidence: clocksWithoutDirectEvidence, noMovementRule: 'A clock without direct dated evidence must explicitly show no qualifying movement and cannot gain a score increase.' },
   rules: [
@@ -145,10 +154,11 @@ const report = {
     'The active investigation ledger is unique, bounded and evidence-complete; overflow and invalid-provenance records remain archived.',
     'Every relationship edge states what it records and what it does not prove.',
     'Every clock explains movement, mission meaning, counterpoint and claim boundary.',
+    'Every approved criminal-accountability subject has an exact legal status, complete dossier, conclusion, sources, limitations and current or historical marker.',
     'Missing provenance or missing current evidence is exposed rather than silently filled with an accusation.'
   ]
 };
 writeJson('data/mission-data-contract-report.json', report);
 writeJson('downloads/mission-data-contract-report.json', report);
-if (!report.ok) throw new Error('Mission data contracts failed because investigation data integrity repair did not complete.');
-console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked; ${repair.ledger?.active || 0} active findings normalized.`);
+if (!report.ok) throw new Error('Mission data contracts failed because investigation or criminal-accountability data did not complete.');
+console.log(`Mission data contracts enforced: ${graphEdges} graph edges checked; ${clockCount} clocks checked; ${repair.ledger?.active || 0} active findings normalized; ${criminalAccountability.subjects || 0} accountability dossiers regenerated.`);

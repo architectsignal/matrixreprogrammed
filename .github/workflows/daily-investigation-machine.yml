@@ -15,6 +15,7 @@ on:
       - 'scripts/build-cloudflare-output.js'
       - 'scripts/extend-search-with-investigations.js'
       - 'scripts/repair-investigation-source-registry.js'
+      - 'scripts/repair-investigation-data-integrity.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/enforce-mission-data-contracts.js'
       - 'scripts/build-daily-watch.js'
@@ -125,6 +126,7 @@ jobs:
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
+            data/investigation-ledger-archive.json \
             data/daily-investigation-conclusions.json \
             data/weekly-investigation-conclusions.json \
             data/investigation-status.json \
@@ -160,6 +162,7 @@ jobs:
             fixes.css \
             downloads/daily-watch.md \
             downloads/daily-watch-publication-report.json \
+            downloads/investigation-data-integrity-repair.json \
             downloads/mission-data-contract-report.json \
             downloads/mission-orchestration-audit.json \
             downloads/mission-orchestration-audit.md \
@@ -191,6 +194,7 @@ jobs:
           name: daily-investigation-${{ github.run_id }}
           path: |
             downloads/investigation-machine-run-report.json
+            downloads/investigation-data-integrity-repair.json
             downloads/source-change-monitor-report.json
             downloads/source-change-preservation-hardening-report.json
             downloads/source-change-preservation-test.json
@@ -206,5 +210,8 @@ jobs:
             downloads/mission-orchestration-audit.json
             downloads/mission-orchestration-audit.md
             data/investigation-source-pulls/daily-latest.json
+            data/investigation-source-state.json
+            data/investigation-ledger.json
+            data/investigation-ledger-archive.json
           if-no-files-found: ignore
           retention-days: 30

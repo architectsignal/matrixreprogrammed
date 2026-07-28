@@ -76,4 +76,5 @@ writeEverywhere('downloads/public-consequence-due-index-report.json', `${JSON.st
   freeTierBudget: manifest.freeTierBudget
 }, null, 2)}\n`);
 
+require('./harden-consequence-tracking-runtime.js');
 console.log(`Public Consequence Due Index built: ${manifest.count} active contracts, bounded to ${MAX_ACTIVE_MANIFEST} for Cloudflare Free.`);

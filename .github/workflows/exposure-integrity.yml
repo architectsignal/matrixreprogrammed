@@ -18,9 +18,14 @@ on:
       - 'scripts/search-first-accountability-home-pressure-test.js'
       - 'scripts/run-public-consequence-contracts.js'
       - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-due-index.js'
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'scripts/public-consequence-tracker-pressure-test.js'
       - 'public-consequence-contracts.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-production.js'
+      - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
@@ -42,9 +47,14 @@ on:
       - 'scripts/search-first-accountability-home-pressure-test.js'
       - 'scripts/run-public-consequence-contracts.js'
       - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-due-index.js'
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'scripts/public-consequence-tracker-pressure-test.js'
       - 'public-consequence-contracts.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-production.js'
+      - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -79,9 +89,13 @@ jobs:
           node --check scripts/search-first-accountability-home-pressure-test.js
           node --check scripts/run-public-consequence-contracts.js
           node --check scripts/build-public-consequence-contracts.js
+          node --check scripts/build-public-consequence-due-index.js
           node --check scripts/finalize-public-consequence-runtime.js
           node --check scripts/public-consequence-contracts-pressure-test.js
+          node --check scripts/public-consequence-tracker-pressure-test.js
           node --check public-consequence-contracts.js
+          node --check src/worker-consequence-tracker.js
+          node --check src/worker-production.js
 
       - name: Build dossier accountability inputs
         run: node scripts/build-dossier-accountability-overlays.js
@@ -102,13 +116,17 @@ jobs:
       - name: Run fail-closed Exposure Integrity pressure test
         run: node scripts/exposure-integrity-pressure-test.js
 
-      - name: Build search-first homepage, Open Question Ledger and Accountability Twins
+      - name: Build search-first homepage and Open Question Ledger
         run: |
           node scripts/finalize-search-first-accountability-home.js
           node scripts/refine-accountability-question-ledger.js
+          node scripts/search-first-accountability-home-pressure-test.js
 
-      - name: Run fail-closed accountability homepage pressure test
-        run: node scripts/search-first-accountability-home-pressure-test.js
+      - name: Build Accountability Twins and bounded due index
+        run: |
+          node scripts/run-public-consequence-contracts.js
+          node scripts/build-public-consequence-due-index.js
+          node scripts/public-consequence-tracker-pressure-test.js
 
       - name: Upload Exposure Integrity and future-accountability proof
         if: always()
@@ -122,6 +140,7 @@ jobs:
             data/cinematic-hit-list.json
             data/accountability-question-ledger.json
             data/public-consequence-contracts.json
+            data/public-consequence-due-index.json
             downloads/exposure-integrity-report.json
             downloads/exposure-integrity-pressure-test.json
             downloads/exposure-integrity-input-report.json
@@ -133,6 +152,8 @@ jobs:
             downloads/public-consequence-contracts-report.json
             downloads/public-consequence-contracts-pressure-test.json
             downloads/public-consequence-contracts.csv
+            downloads/public-consequence-due-index-report.json
+            downloads/public-consequence-tracker-pressure-test.json
             hit-list.html
             predators-in-power.html
             index.html

@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - '.github/accountability-innovation-release.trigger'
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - synchronize
@@ -75,7 +75,7 @@ jobs:
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const targetSha = context.eventName === 'pull_request_target'
+            const targetSha = context.eventName === 'pull_request'
               ? context.payload.pull_request.base.sha
               : context.sha;
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
@@ -128,7 +128,7 @@ jobs:
             };
             fs.mkdirSync('downloads', { recursive: true });
             fs.writeFileSync('downloads/accountability-innovation-production-dispatch.json', JSON.stringify(receipt, null, 2) + '\n');
-            if (context.eventName === 'pull_request_target') {
+            if (context.eventName === 'pull_request') {
               await github.rest.issues.createComment({
                 owner,
                 repo,

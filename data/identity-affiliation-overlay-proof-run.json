@@ -1,6 +1,6 @@
 {
-  "ok": null,
-  "status": "in_progress",
+  "ok": false,
+  "status": "failure",
   "runId": 30347368615,
   "runAttempt": 1,
   "workflow": "Focused Identity Overlay Live Proof",
@@ -8,5 +8,10 @@
   "releaseSha": "28f3423471112b6529640cf1b17f9f7cc227c156",
   "releaseWorkerVersion": "d7f814a8-ae27-4581-bd74-c905d5f42b3c",
   "startedAt": "2026-07-28T09:38:46.287Z",
-  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30347368615"
+  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30347368615",
+  "completedAt": "2026-07-28T09:41:00.206Z",
+  "liveSha": null,
+  "proofFile": "data/identity-affiliation-overlay-live-proof.json",
+  "failedChecks": [],
+  "error": "proof file missing"
 }

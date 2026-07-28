@@ -12,6 +12,8 @@ on:
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
+      - 'scripts/finalize-search-first-accountability-home.js'
+      - 'scripts/search-first-accountability-home-pressure-test.js'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
@@ -27,6 +29,8 @@ on:
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
+      - 'scripts/finalize-search-first-accountability-home.js'
+      - 'scripts/search-first-accountability-home-pressure-test.js'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -46,7 +50,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Syntax-check Exposure Integrity scripts
+      - name: Syntax-check Exposure Integrity and accountability homepage scripts
         run: |
           node --check scripts/build-exposure-integrity-engine.js
           node --check scripts/run-exposure-integrity-engine.js
@@ -56,6 +60,8 @@ jobs:
           node --check scripts/finalize-exposure-clean-routes.js
           node --check scripts/exposure-integrity-predators-link.js
           node --check scripts/exposure-integrity-pressure-test.js
+          node --check scripts/finalize-search-first-accountability-home.js
+          node --check scripts/search-first-accountability-home-pressure-test.js
 
       - name: Build dossier accountability inputs
         run: node scripts/build-dossier-accountability-overlays.js
@@ -76,7 +82,13 @@ jobs:
       - name: Run fail-closed Exposure Integrity pressure test
         run: node scripts/exposure-integrity-pressure-test.js
 
-      - name: Upload Exposure Integrity proof
+      - name: Build search-first homepage and Open Question Ledger
+        run: node scripts/finalize-search-first-accountability-home.js
+
+      - name: Run fail-closed accountability homepage pressure test
+        run: node scripts/search-first-accountability-home-pressure-test.js
+
+      - name: Upload Exposure Integrity and accountability homepage proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -86,9 +98,16 @@ jobs:
             data/exposure-integrity-engine.json
             data/exposure-evidence-ledger.json
             data/cinematic-hit-list.json
+            data/accountability-question-ledger.json
             downloads/exposure-integrity-report.json
             downloads/exposure-integrity-pressure-test.json
             downloads/exposure-integrity-input-report.json
             downloads/exposure-predators-hit-list-link.json
+            downloads/search-first-accountability-home-report.json
+            downloads/search-first-accountability-home-pressure-test.json
             hit-list.html
             predators-in-power.html
+            index.html
+            accountability-home.css
+            accountability-home.js
+            search-query-handoff.js

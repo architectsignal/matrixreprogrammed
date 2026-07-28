@@ -1,0 +1,179 @@
+name: Dispatch Exposure Integrity Production Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/dispatch-exposure-integrity-production.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: exposure-integrity-production-dispatch
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  dispatch-controlled-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate Exposure Integrity release in isolated worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s data/exposure-integrity-policy.json
+          test -s data/criminal-conduct-registry.json
+          test -s data/epstein-dossier-overlap-registry.json
+          test -s data/dark-speculation-claims.json
+          test -s data/evidence-weighted-relationship-graph.json
+          test -s data/clock-wall.json
+          test -s scripts/build-dossier-accountability-overlays.js
+          test -s scripts/prepare-exposure-integrity-inputs.js
+          test -s scripts/run-exposure-integrity-engine.js
+          test -s scripts/finalize-exposure-integrity-engine.js
+          test -s scripts/dedupe-exposure-integrity-records.js
+          test -s scripts/finalize-exposure-clean-routes.js
+          test -s scripts/exposure-integrity-pressure-test.js
+          grep -q "run-exposure-integrity-engine.js" scripts/align-mission-acceptance-copy.js
+          grep -q "dedupe-exposure-integrity-records.js" scripts/align-mission-acceptance-copy.js
+          for script in \
+            scripts/build-exposure-integrity-engine.js \
+            scripts/prepare-exposure-integrity-inputs.js \
+            scripts/run-exposure-integrity-engine.js \
+            scripts/finalize-exposure-integrity-engine.js \
+            scripts/dedupe-exposure-integrity-records.js \
+            scripts/finalize-exposure-clean-routes.js \
+            scripts/exposure-integrity-pressure-test.js; do
+            node --check "$script"
+          done
+          git worktree add --detach /tmp/exposure-integrity-release HEAD
+          cd /tmp/exposure-integrity-release
+          node scripts/build-dossier-accountability-overlays.js
+          node scripts/prepare-exposure-integrity-inputs.js
+          node scripts/run-exposure-integrity-engine.js
+          node scripts/finalize-exposure-integrity-engine.js
+          node scripts/dedupe-exposure-integrity-records.js
+          node scripts/finalize-exposure-clean-routes.js
+          node scripts/exposure-integrity-pressure-test.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const engine = JSON.parse(fs.readFileSync('data/exposure-integrity-engine.json', 'utf8'));
+          const ledger = JSON.parse(fs.readFileSync('data/exposure-evidence-ledger.json', 'utf8'));
+          const hit = JSON.parse(fs.readFileSync('data/cinematic-hit-list.json', 'utf8'));
+          if (!engine.ok) throw new Error('Exposure Integrity Engine did not report a passing state.');
+          if (!Number.isInteger(ledger.count) || ledger.count < 1) throw new Error('Canonical evidence ledger is empty.');
+          if (!Number.isInteger(hit.count) || hit.count < 1) throw new Error('Cinematic Hit List is empty.');
+          const keys = ledger.entries.map(entry => `${entry.entityId}:${entry.recordId}`);
+          if (new Set(keys).size !== keys.length) throw new Error('Duplicate canonical ledger keys remain.');
+          if (!fs.existsSync('hit-list') || !fs.existsSync('hit-list.html')) throw new Error('Clean and .html Hit List routes are not both generated.');
+          console.log(`Exposure Integrity release validated: ${ledger.count} canonical evidence records and ${hit.count} Hit List entries.`);
+          NODE
+
+      - name: Dispatch controlled production workflow exactly once
+        id: dispatch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const cutoff = new Date('2026-07-28T14:09:00Z');
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow deploy.yml was not found.');
+              return;
+            }
+            const recentRun = async () => {
+              const runs = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: target.id,
+                event: 'workflow_dispatch',
+                branch: 'main',
+                per_page: 30
+              });
+              return (runs.data.workflow_runs || [])
+                .filter(run => new Date(run.created_at) >= cutoff)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            };
+            let run = await recentRun();
+            let action = 'reused-existing-exposure-integrity-release';
+            if (!run) {
+              action = 'dispatched-exposure-integrity-release-once';
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: target.id,
+                ref: 'main',
+                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+              });
+              for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await recentRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Production dispatch was accepted but its workflow run could not be resolved.');
+              return;
+            }
+            const payload = {
+              ok: true,
+              releaseId: 'exposure-integrity-hit-list-20260728',
+              action,
+              dispatcherRunId: Number(process.env.GITHUB_RUN_ID),
+              productionRunId: run.id,
+              productionRunNumber: run.run_number,
+              status: run.status,
+              conclusion: run.conclusion,
+              event: run.event,
+              headBranch: run.head_branch,
+              headSha: run.head_sha,
+              createdAt: run.created_at,
+              updatedAt: run.updated_at,
+              url: run.html_url,
+              targetFeatureCommit: '0eb5ed14dc16d736878f033cda4ab3de3c8ad308',
+              targetAuthorizationCommit: '22f34098a020a4112fd98cc968e0ee4d8d5519b0',
+              recordedAt: new Date().toISOString(),
+              boundary: 'Exactly one controlled production workflow-dispatch run created after the Exposure Integrity release cutoff is used. Later reruns of this dispatcher reuse that run rather than creating a duplicate.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/exposure-integrity-production-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
+
+      - name: Record exact production run identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/exposure-integrity-production-dispatch.json
+          if git diff --cached --quiet; then
+            echo 'Exposure Integrity production dispatch receipt is already current.'
+            exit 0
+          fi
+          git commit -m 'Record Exposure Integrity production dispatch'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          echo 'Could not push Exposure Integrity production dispatch receipt.'
+          exit 1

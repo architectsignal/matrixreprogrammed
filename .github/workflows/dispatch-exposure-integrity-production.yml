@@ -1,4 +1,4 @@
-name: Verify Deployed Exposure Integrity Release
+name: Dispatch Corrected Exposure Integrity Production Retry
 
 on:
   push:
@@ -9,21 +9,20 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
-  group: exposure-integrity-production-verification
-  cancel-in-progress: true
+  group: exposure-integrity-production-retry-dispatch
+  cancel-in-progress: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  EXPECTED_DEPLOY_SHA: 'fed6cd7dace100af92ec94e3f17036d444cc6ffa'
-  SITE_URL: 'https://matrixreprogrammed.com'
 
 jobs:
-  verify-deployed-release:
+  dispatch-controlled-production-retry:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -32,51 +31,114 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Syntax-check focused verification
+      - name: Validate persistent Predators in Power repair
+        shell: bash
         run: |
-          node --check scripts/verify-live-behind-the-curtain.js
-          node --check scripts/verify-live-behind-the-curtain-v2.js
+          set -euo pipefail
+          test -s scripts/exposure-integrity-predators-link.js
+          test -s scripts/align-mission-acceptance-copy.js
+          test -s scripts/verify-live-exposure-integrity.js
+          test -s data/exposure-integrity-policy.json
+          grep -q "exposure-integrity-predators-link.js" scripts/align-mission-acceptance-copy.js
+          node --check scripts/exposure-integrity-predators-link.js
+          node --check scripts/align-mission-acceptance-copy.js
           node --check scripts/verify-live-exposure-integrity.js
+          node scripts/exposure-integrity-predators-link.js
+          grep -q 'href="/hit-list.html"' predators-in-power.html
+          grep -q 'Connected Exposure Integrity System' predators-in-power.html
+          test -s downloads/exposure-predators-hit-list-link.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('downloads/exposure-predators-hit-list-link.json', 'utf8'));
+          if (!report.ok) throw new Error('Predators in Power Hit List repair did not pass.');
+          if (!report.connectedRoutes.includes('/hit-list.html')) throw new Error('Hit List route missing from repair report.');
+          console.log('Persistent Predators in Power Hit List repair validated.');
+          NODE
 
-      - name: Verify bounded legacy routes and newsletter runtime
-        env:
-          PYRAMID_VERIFY_ATTEMPTS: '3'
-          PYRAMID_VERIFY_DELAY_MS: '3000'
-        run: node scripts/verify-live-behind-the-curtain.js
-
-      - name: Verify exact deployed Exposure Integrity release
-        env:
-          EXPOSURE_LIVE_ATTEMPTS: '8'
-          EXPOSURE_LIVE_DELAY_MS: '5000'
-        run: node scripts/verify-live-exposure-integrity.js
-
-      - name: Upload focused production proof
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Dispatch controlled production workflow exactly once
+        id: dispatch
+        uses: actions/github-script@v7
         with:
-          name: deployed-exposure-integrity-proof-${{ github.run_id }}
-          if-no-files-found: warn
-          path: |
-            downloads/live-behind-the-curtain-verification.json
-            downloads/live-exposure-integrity-verification.json
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const cutoff = new Date('2026-07-28T15:02:00Z');
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow deploy.yml was not found.');
+              return;
+            }
+            const recentRun = async () => {
+              const runs = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: target.id,
+                event: 'workflow_dispatch',
+                branch: 'main',
+                per_page: 30
+              });
+              return (runs.data.workflow_runs || [])
+                .filter(run => new Date(run.created_at) >= cutoff)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            };
+            let run = await recentRun();
+            let action = 'reused-existing-corrected-exposure-release';
+            if (!run) {
+              action = 'dispatched-corrected-exposure-release-once';
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: target.id,
+                ref: 'main',
+                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+              });
+              for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await recentRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Corrected production dispatch was accepted but its workflow run could not be resolved.');
+              return;
+            }
+            const payload = {
+              ok: true,
+              releaseId: 'exposure-integrity-predators-link-repair-20260728',
+              action,
+              dispatcherRunId: Number(process.env.GITHUB_RUN_ID),
+              productionRunId: run.id,
+              productionRunNumber: run.run_number,
+              status: run.status,
+              conclusion: run.conclusion,
+              event: run.event,
+              headBranch: run.head_branch,
+              headSha: run.head_sha,
+              createdAt: run.created_at,
+              updatedAt: run.updated_at,
+              url: run.html_url,
+              targetRepairCommit: '2fdb0bb1759701aae6fb56d15db0e02303941e6f',
+              targetAuthorizationCommit: '1028489387d25f617981ecf4254d5ada04203b18',
+              recordedAt: new Date().toISOString(),
+              boundary: 'Exactly one corrected controlled production run created after the retry cutoff is used. Later reruns reuse that run rather than creating a duplicate.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/exposure-integrity-predators-production-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
 
-      - name: Record successful production proof
-        if: success()
+      - name: Record corrected production run identity
+        shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add downloads/live-behind-the-curtain-verification.json downloads/live-exposure-integrity-verification.json
+          git add data/exposure-integrity-predators-production-dispatch.json
           if git diff --cached --quiet; then
-            echo 'Focused production proof is already current.'
+            echo 'Corrected production dispatch receipt is already current.'
             exit 0
           fi
-          git commit -m 'Record deployed Exposure Integrity proof'
+          git commit -m 'Record corrected Exposure Integrity production dispatch'
           for attempt in 1 2 3 4; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then
@@ -85,5 +147,5 @@ jobs:
             git rebase --abort || true
             sleep $((attempt * 2))
           done
-          echo 'Could not record focused production proof.'
+          echo 'Could not push corrected production dispatch receipt.'
           exit 1

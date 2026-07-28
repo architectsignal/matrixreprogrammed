@@ -1,15 +1,15 @@
 {
   "ok": false,
-  "observedAt": "2026-07-28T12:11:38.028Z",
+  "observedAt": "2026-07-28T14:42:14.017Z",
   "production": {
-    "conclusion": "failure",
-    "createdAt": "2026-07-28T10:37:40Z",
-    "databaseId": 30351503610,
+    "conclusion": "",
+    "createdAt": "2026-07-28T14:12:30Z",
+    "databaseId": 30367217535,
     "event": "workflow_dispatch",
-    "headSha": "6c82f7bdf11a30f9f89b0367aae5e5bd26e4b49b",
-    "status": "completed",
-    "updatedAt": "2026-07-28T12:08:05Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30351503610"
+    "headSha": "7882f630654b91d07297873f8bb697cbf964f867",
+    "status": "in_progress",
+    "updatedAt": "2026-07-28T14:12:44Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30367217535"
   },
   "moneyIntelligence": {
     "conclusion": "success",
@@ -73,6 +73,16 @@
   },
   "recent": {
     "production": [
+      {
+        "conclusion": "",
+        "createdAt": "2026-07-28T14:12:30Z",
+        "databaseId": 30367217535,
+        "event": "workflow_dispatch",
+        "headSha": "7882f630654b91d07297873f8bb697cbf964f867",
+        "status": "in_progress",
+        "updatedAt": "2026-07-28T14:12:44Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30367217535"
+      },
       {
         "conclusion": "failure",
         "createdAt": "2026-07-28T10:37:40Z",
@@ -182,16 +192,6 @@
         "status": "completed",
         "updatedAt": "2026-07-28T03:52:58Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30326491071"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-07-28T03:34:47Z",
-        "databaseId": 30326304155,
-        "event": "workflow_dispatch",
-        "headSha": "bc2fbea6917fae254c820a6e6234336ae0ead488",
-        "status": "completed",
-        "updatedAt": "2026-07-28T04:01:42Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30326304155"
       }
     ],
     "moneyIntelligence": [

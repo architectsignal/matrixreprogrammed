@@ -1,0 +1,107 @@
+name: Record Predators Repair Production Run
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/record-predators-production-run.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: record-predators-repair-production-run
+  cancel-in-progress: true
+
+jobs:
+  record-production-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Resolve corrected controlled production run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const cutoff = new Date('2026-07-28T15:02:00Z');
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow was not found.');
+              return;
+            }
+            let resolved = null;
+            for (let attempt = 1; attempt <= 60; attempt += 1) {
+              const runs = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: target.id,
+                event: 'workflow_dispatch',
+                branch: 'main',
+                per_page: 50
+              });
+              resolved = (runs.data.workflow_runs || [])
+                .filter(run => new Date(run.created_at) >= cutoff)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+              if (resolved) break;
+              await new Promise(resolve => setTimeout(resolve, 10000));
+            }
+            if (!resolved) {
+              core.setFailed('No corrected controlled production run was found after the retry cutoff.');
+              return;
+            }
+            const payload = {
+              ok: resolved.status === 'completed' && resolved.conclusion === 'success',
+              workflowId: target.id,
+              workflowName: target.name,
+              productionRunId: resolved.id,
+              productionRunNumber: resolved.run_number,
+              status: resolved.status,
+              conclusion: resolved.conclusion,
+              event: resolved.event,
+              headBranch: resolved.head_branch,
+              headSha: resolved.head_sha,
+              createdAt: resolved.created_at,
+              updatedAt: resolved.updated_at,
+              url: resolved.html_url,
+              observedAt: new Date().toISOString(),
+              cutoff: cutoff.toISOString(),
+              boundary: 'Read-only resolution of the latest controlled production workflow-dispatch run after the Predators Hit List repair cutoff. This workflow cannot create or rerun a deployment.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/predators-repair-production-run.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`Resolved controlled production run ${resolved.id}: ${resolved.status}/${resolved.conclusion || 'pending'}, head ${resolved.head_sha}.`);
+
+      - name: Commit production run receipt
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/predators-repair-production-run.json
+          if git diff --cached --quiet; then
+            echo 'Production run receipt is already current.'
+            exit 0
+          fi
+          git commit -m 'Record Predators repair production run'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          echo 'Could not push production run receipt.'
+          exit 1

@@ -1,0 +1,71 @@
+name: Accountability Review Inbox Gate
+
+on:
+  pull_request:
+    paths:
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
+      - 'scripts/finalize-accountability-review-inbox.js'
+      - 'scripts/accountability-review-inbox-pressure-test.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - 'src/worker-consequence-evidence.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-production.js'
+      - '.github/workflows/accountability-review-inbox.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
+      - 'scripts/finalize-accountability-review-inbox.js'
+      - 'scripts/accountability-review-inbox-pressure-test.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - 'src/worker-consequence-evidence.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-production.js'
+      - '.github/workflows/accountability-review-inbox.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  human-review-inbox:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check review and evidence runtime
+        run: |
+          node --check accountability-review-inbox.js
+          node --check scripts/finalize-accountability-review-inbox.js
+          node --check scripts/accountability-review-inbox-pressure-test.js
+          node --check src/worker-consequence-evidence.js
+          node --check src/worker-consequence-tracker.js
+          node --check src/worker-production.js
+
+      - name: Build and pressure-test human review workflow
+        run: |
+          node scripts/finalize-accountability-review-inbox.js
+          node scripts/accountability-review-inbox-pressure-test.js
+
+      - name: Upload human review proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accountability-review-inbox-proof-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            accountability-review-inbox.html
+            accountability-review-inbox.js
+            review-dashboard.html
+            downloads/accountability-review-inbox-report.json
+            downloads/accountability-review-inbox-pressure-test.json

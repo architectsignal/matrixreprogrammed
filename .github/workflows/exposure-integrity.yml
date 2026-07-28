@@ -9,9 +9,31 @@ on:
       - 'data/dark-speculation-claims.json'
       - 'data/evidence-weighted-relationship-graph.json'
       - 'data/clock-wall.json'
+      - 'data/latest-public-drops.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
+      - 'scripts/finalize-search-first-accountability-home.js'
+      - 'scripts/refine-accountability-question-ledger.js'
+      - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/run-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-due-index.js'
+      - 'scripts/finalize-public-consequence-runtime.js'
+      - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'scripts/public-consequence-tracker-pressure-test.js'
+      - 'scripts/install-consequence-evidence-worker.js'
+      - 'scripts/finalize-accountability-tracker-runtime.js'
+      - 'scripts/accountability-tracker-pressure-test.js'
+      - 'public-consequence-contracts.js'
+      - 'accountability-tracker-runtime.js'
+      - 'accountability-tracker-runtime.css'
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-consequence-evidence.js'
+      - 'src/worker-production.js'
+      - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
@@ -24,9 +46,31 @@ on:
       - 'data/dark-speculation-claims.json'
       - 'data/evidence-weighted-relationship-graph.json'
       - 'data/clock-wall.json'
+      - 'data/latest-public-drops.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
+      - 'scripts/finalize-search-first-accountability-home.js'
+      - 'scripts/refine-accountability-question-ledger.js'
+      - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/run-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/build-public-consequence-due-index.js'
+      - 'scripts/finalize-public-consequence-runtime.js'
+      - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'scripts/public-consequence-tracker-pressure-test.js'
+      - 'scripts/install-consequence-evidence-worker.js'
+      - 'scripts/finalize-accountability-tracker-runtime.js'
+      - 'scripts/accountability-tracker-pressure-test.js'
+      - 'public-consequence-contracts.js'
+      - 'accountability-tracker-runtime.js'
+      - 'accountability-tracker-runtime.css'
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
+      - 'src/worker-consequence-tracker.js'
+      - 'src/worker-consequence-evidence.js'
+      - 'src/worker-production.js'
+      - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -46,7 +90,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Syntax-check Exposure Integrity scripts
+      - name: Syntax-check Exposure Integrity and accountability scripts
         run: |
           node --check scripts/build-exposure-integrity-engine.js
           node --check scripts/run-exposure-integrity-engine.js
@@ -56,6 +100,24 @@ jobs:
           node --check scripts/finalize-exposure-clean-routes.js
           node --check scripts/exposure-integrity-predators-link.js
           node --check scripts/exposure-integrity-pressure-test.js
+          node --check scripts/finalize-search-first-accountability-home.js
+          node --check scripts/refine-accountability-question-ledger.js
+          node --check scripts/search-first-accountability-home-pressure-test.js
+          node --check scripts/run-public-consequence-contracts.js
+          node --check scripts/build-public-consequence-contracts.js
+          node --check scripts/build-public-consequence-due-index.js
+          node --check scripts/finalize-public-consequence-runtime.js
+          node --check scripts/public-consequence-contracts-pressure-test.js
+          node --check scripts/public-consequence-tracker-pressure-test.js
+          node --check scripts/install-consequence-evidence-worker.js
+          node --check scripts/finalize-accountability-tracker-runtime.js
+          node --check scripts/accountability-tracker-pressure-test.js
+          node --check public-consequence-contracts.js
+          node --check accountability-tracker-runtime.js
+          node --check accountability-review-inbox.js
+          node --check src/worker-consequence-tracker.js
+          node --check src/worker-consequence-evidence.js
+          node --check src/worker-production.js
 
       - name: Build dossier accountability inputs
         run: node scripts/build-dossier-accountability-overlays.js
@@ -76,7 +138,22 @@ jobs:
       - name: Run fail-closed Exposure Integrity pressure test
         run: node scripts/exposure-integrity-pressure-test.js
 
-      - name: Upload Exposure Integrity proof
+      - name: Build search-first homepage and Open Question Ledger
+        run: |
+          node scripts/finalize-search-first-accountability-home.js
+          node scripts/refine-accountability-question-ledger.js
+          node scripts/search-first-accountability-home-pressure-test.js
+
+      - name: Build and test persistent Accountability Twins
+        run: |
+          node scripts/run-public-consequence-contracts.js
+          node scripts/build-public-consequence-due-index.js
+          node scripts/public-consequence-tracker-pressure-test.js
+          node scripts/install-consequence-evidence-worker.js
+          node scripts/finalize-accountability-tracker-runtime.js
+          node scripts/accountability-tracker-pressure-test.js
+
+      - name: Upload Exposure Integrity and future-accountability proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -86,9 +163,35 @@ jobs:
             data/exposure-integrity-engine.json
             data/exposure-evidence-ledger.json
             data/cinematic-hit-list.json
+            data/accountability-question-ledger.json
+            data/public-consequence-contracts.json
+            data/public-consequence-due-index.json
             downloads/exposure-integrity-report.json
             downloads/exposure-integrity-pressure-test.json
             downloads/exposure-integrity-input-report.json
             downloads/exposure-predators-hit-list-link.json
+            downloads/search-first-accountability-home-report.json
+            downloads/accountability-question-ledger-refinement.json
+            downloads/search-first-accountability-home-pressure-test.json
+            downloads/public-consequence-selection-report.json
+            downloads/public-consequence-contracts-report.json
+            downloads/public-consequence-contracts-pressure-test.json
+            downloads/public-consequence-contracts.csv
+            downloads/public-consequence-due-index-report.json
+            downloads/public-consequence-tracker-pressure-test.json
+            downloads/consequence-evidence-worker-install.json
+            downloads/accountability-tracker-runtime-report.json
+            downloads/accountability-tracker-pressure-test.json
             hit-list.html
             predators-in-power.html
+            index.html
+            accountability-home.css
+            accountability-home.js
+            search-query-handoff.js
+            public-consequence-contracts.html
+            public-consequence-contracts.css
+            public-consequence-contracts.js
+            accountability-tracker-runtime.js
+            accountability-tracker-runtime.css
+            accountability-review-inbox.html
+            accountability-review-inbox.js

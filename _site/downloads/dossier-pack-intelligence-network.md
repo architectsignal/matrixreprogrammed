@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-27T06:50:04.297Z
+Updated: 2026-07-28T06:09:28.757Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -56,6 +56,11 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
+- 2026-07-27 — Cyberattacks and the digital divide are creating new barriers to HIV services
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168030
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Security Council LIVE: How to turn preventive diplomacy rhetoric into action
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168005
   - Evidence: Primary or official public-record lead
@@ -66,18 +71,13 @@ Items: 12
   - Evidence: News/source-watch item
   - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
   - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+- 2026-07-27 — Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168029
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict?
   - Source: https://news.un.org/feed/view/en/story/2026/07/1167995
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167984
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167972
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -101,16 +101,16 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-21 — UN refugee agency reports 144 migrants dead or missing off Mauritanian coast
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167985
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-20 — ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167978
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -130,17 +130,17 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
+- UN News: Cyberattacks and the digital divide are creating new barriers to HIV services — https://news.un.org/feed/view/en/story/2026/07/1168030
 - UN News: Security Council LIVE: How to turn preventive diplomacy rhetoric into action — https://news.un.org/feed/view/en/story/2026/07/1168005
 - Google News / Epstein timeline and files: Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
+- UN News: Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports — https://news.un.org/feed/view/en/story/2026/07/1168029
 - UN News: Security Council LIVE: Can critical minerals fuel peace and prosperity instead of conflict? — https://news.un.org/feed/view/en/story/2026/07/1167995
-- UN News: Security Council LIVE: Spotlight on Syria as Guterres heads to Damascus — https://news.un.org/feed/view/en/story/2026/07/1167984
-- UN News: LIVE: Haiti endures violence and hunger, but hopes grow for a more secure future — https://news.un.org/feed/view/en/story/2026/07/1167972
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
 - UN News: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict — https://news.un.org/feed/view/en/story/2026/07/1168024
-- UN News: UN refugee agency reports 144 migrants dead or missing off Mauritanian coast — https://news.un.org/feed/view/en/story/2026/07/1167985
-- UN News: ‘I consider it a miracle’: Pregnant woman pulled from post-quake rubble in Venezuela — https://news.un.org/feed/view/en/story/2026/07/1167978
+- Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
 
 ## Book Routes
 

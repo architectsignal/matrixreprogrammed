@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-23T06:54:12.087Z",
+  "generatedAt": "2026-07-27T07:05:24.650Z",
   "roots": [
     ".",
     "_site"
@@ -9,6 +9,27 @@
   "dossierPagesPatched": 0,
   "runtime": "power-dossier-runtime.js",
   "copiedRuntime": false,
+  "criminalConductEngine": {
+    "buildStatus": 0,
+    "extensionlessSyncStatus": 0,
+    "pressureTestStatus": 0,
+    "report": "downloads/criminal-conduct-engine-report.json",
+    "extensionlessReport": "downloads/criminal-conduct-extensionless-sync.json",
+    "reviewQueue": "downloads/criminal-conduct-review-queue.json",
+    "pressureTest": "downloads/criminal-conduct-engine-pressure-test.json"
+  },
+  "predatorsInPower": {
+    "buildStatus": 0,
+    "conductLinkStatus": 0,
+    "outputSyncStatus": 0,
+    "pressureTestStatus": 0,
+    "page": "predators-in-power.html",
+    "data": "data/predators-in-power.json",
+    "buildReport": "downloads/predators-in-power-build-report.json",
+    "conductLinksReport": "downloads/predators-in-power-conduct-links.json",
+    "outputReport": "downloads/predators-in-power-output-sync.json",
+    "pressureTest": "downloads/predators-in-power-pressure-test.json"
+  },
   "files": [
     "dossier-alex-karp.html",
     "dossier-elon-musk.html",

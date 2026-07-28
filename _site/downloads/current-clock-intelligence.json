@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-27T07:00:56.932Z",
+  "generatedAt": "2026-07-28T06:23:17.713Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
@@ -17,7 +17,7 @@
       "score": 76,
       "todayStatus": "current-secondary-evidence-only",
       "scoreConfidence": "limited",
-      "currentEvidenceCount": 5,
+      "currentEvidenceCount": 4,
       "officialCount": 0,
       "implementationCount": 0,
       "lawCount": 0,
@@ -31,7 +31,7 @@
       "scoreConfidence": "medium",
       "currentEvidenceCount": 5,
       "officialCount": 5,
-      "implementationCount": 4,
+      "implementationCount": 2,
       "lawCount": 0,
       "jurisdictions": []
     },
@@ -41,8 +41,8 @@
       "score": 92,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 6,
-      "officialCount": 6,
+      "currentEvidenceCount": 5,
+      "officialCount": 5,
       "implementationCount": 2,
       "lawCount": 0,
       "jurisdictions": []
@@ -65,9 +65,9 @@
       "score": 86,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 6,
-      "officialCount": 6,
-      "implementationCount": 2,
+      "currentEvidenceCount": 5,
+      "officialCount": 5,
+      "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
     },
@@ -77,9 +77,9 @@
       "score": 72,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 4,
-      "officialCount": 4,
-      "implementationCount": 3,
+      "currentEvidenceCount": 5,
+      "officialCount": 5,
+      "implementationCount": 2,
       "lawCount": 0,
       "jurisdictions": []
     },
@@ -89,8 +89,8 @@
       "score": 30,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 7,
-      "officialCount": 1,
+      "currentEvidenceCount": 9,
+      "officialCount": 2,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -113,8 +113,8 @@
       "score": 60,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 6,
-      "officialCount": 5,
+      "currentEvidenceCount": 5,
+      "officialCount": 3,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -137,8 +137,8 @@
       "score": 65,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 5,
-      "officialCount": 5,
+      "currentEvidenceCount": 4,
+      "officialCount": 4,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -317,7 +317,7 @@
     {
       "slug": "essential-infrastructure-resilience",
       "title": "Essential Infrastructure Resilience Clock",
-      "score": 51,
+      "score": 50,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
       "currentEvidenceCount": 5,
@@ -389,10 +389,10 @@
     {
       "slug": "supply-chain-fragility",
       "title": "Supply-Chain Fragility Clock",
-      "score": 66,
+      "score": 64,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
-      "currentEvidenceCount": 7,
+      "currentEvidenceCount": 6,
       "officialCount": 4,
       "implementationCount": 3,
       "lawCount": 0,
@@ -516,7 +516,7 @@
     {
       "slug": "spec-agenda-2030-control-grid",
       "title": "Agenda 2030 as a control-grid blueprint Clock",
-      "score": 43,
+      "score": 42,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -528,7 +528,7 @@
     {
       "slug": "spec-one-world-currency",
       "title": "One-world currency through CBDC and tokenized finance Clock",
-      "score": 50,
+      "score": 48,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 3,
@@ -540,7 +540,7 @@
     {
       "slug": "spec-one-world-government-soft-law",
       "title": "One-world government through soft law and policy harmonisation Clock",
-      "score": 39,
+      "score": 38,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 3,
@@ -552,7 +552,7 @@
     {
       "slug": "spec-digital-id-permission-layer",
       "title": "Digital ID as the permission layer Clock",
-      "score": 72,
+      "score": 70,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 5,
@@ -564,7 +564,7 @@
     {
       "slug": "spec-cbdc-social-credit-fusion",
       "title": "CBDC plus digital ID plus social-credit-style compliance Clock",
-      "score": 37,
+      "score": 36,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 4,
@@ -576,7 +576,7 @@
     {
       "slug": "spec-climate-lockdown-and-carbon-rationing",
       "title": "Climate lockdowns / carbon rationing / mobility control Clock",
-      "score": 26,
+      "score": 25,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 3,
@@ -588,7 +588,7 @@
     {
       "slug": "spec-war-as-control-accelerator",
       "title": "War and crisis as control-system accelerator Clock",
-      "score": 51,
+      "score": 50,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -600,7 +600,7 @@
     {
       "slug": "spec-health-pass-permanent-infrastructure",
       "title": "Health passes becoming permanent identity infrastructure Clock",
-      "score": 55,
+      "score": 54,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -612,7 +612,7 @@
     {
       "slug": "spec-food-land-water-control",
       "title": "Food, land and water as control infrastructure Clock",
-      "score": 47,
+      "score": 46,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -684,7 +684,7 @@
     {
       "slug": "spec-underground-abuse-facilities",
       "title": "Underground abuse facilities Clock",
-      "score": 16,
+      "score": 15,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -876,7 +876,7 @@
     {
       "slug": "spec-social-media-behaviour-grid",
       "title": "Social media as behavioural control grid Clock",
-      "score": 69,
+      "score": 68,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -924,7 +924,7 @@
     {
       "slug": "spec-controlled-ufo-disclosure",
       "title": "Staged UFO disclosure as control event Clock",
-      "score": 54,
+      "score": 52,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -936,7 +936,7 @@
     {
       "slug": "spec-supply-chain-slavery",
       "title": "Modern slavery hidden in supply chains Clock",
-      "score": 79,
+      "score": 78,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -948,7 +948,7 @@
     {
       "slug": "spec-trafficking-corruption",
       "title": "Human trafficking protected by corruption Clock",
-      "score": 59,
+      "score": 58,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -972,7 +972,7 @@
     {
       "slug": "spec-debt-slavery",
       "title": "Debt slavery / migrant labour exploitation Clock",
-      "score": 77,
+      "score": 76,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,
@@ -1044,7 +1044,7 @@
     {
       "slug": "spec-smart-cities-open-air-prison",
       "title": "Smart cities as open-air prisons Clock",
-      "score": 41,
+      "score": 40,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 2,

@@ -1,12 +1,12 @@
 # Live Machine Dependants Test
 
-Generated: 2026-07-27T04:02:32.196Z
+Generated: 2026-07-28T03:34:37.803Z
 
 - Result: PASS
-- Live Intel: 2026-07-27T04:02:26.015Z
-- Daily Epstein: 2026-07-27T04:02:29.598Z
-- Card feed: 2026-07-27T04:02:29.701Z
-- Tracked cards: 880
+- Live Intel: 2026-07-28T03:34:28.745Z
+- Daily Epstein: 2026-07-28T03:34:34.844Z
+- Card feed: 2026-07-28T03:34:34.951Z
+- Tracked cards: 945
 - Andrew Tate routes: controlled-opposition/andrew-tate.html, card-artwork-batches/batch-006.html, card-artwork-batches.html, controlled-opposition-deck.html
 
 - PASS — Live Intel has a valid source-window timestamp

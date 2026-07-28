@@ -1,23 +1,24 @@
 {
-  "generatedAt": "2026-07-27T06:57:18.309Z",
-  "pageCount": 113,
+  "generatedAt": "2026-07-28T06:19:04.194Z",
+  "pageCount": 115,
   "output": "downloads/public-weekly-signup-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Public Weekly Signup Report",
-    "contentHash": "60b8bf8dd06be59ec7e1515548a1ee523ac0aa71d9444d1c0953661e8dbd6d18",
+    "contentHash": "86e9ebf165c6d56a39ac7aa6abb8bd95ff97cfab458e939a6dc63a24d63e2334",
     "sourceIds": [
       "2931a84c2c7fe86982d5d6e5",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
-      "ASC-REVIEW-4D43B792A3A9872B",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-45ACC28AC220EA79",
       "26b90533dbf7d2ed42f02de6",
+      "5594665950812895f468c11d",
       "6d665d935673091233751767",
       "ad23fb22757e50c30b3d487c",
       "3a425f0d5d683952bc0ad7ac",
@@ -39,11 +40,11 @@
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
       "b079bec5bc869b0463d0584c",
+      "9b821ddb272b0fb297d39550",
       "ASC-001",
       "ASC-REVIEW-70AD36F3F75D37F7",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-C06BEA89A8588561",
-      "ASC-REVIEW-3B61EAB39C318DF1",
       "ASC-REVIEW-9B01C094346A78B0",
       "1769af26a7bda813406cd8f5",
       "9848ec4b4c3f6c2693269839",
@@ -51,6 +52,8 @@
       "7dcf4ef18ea1f86d01068773",
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
+      "2482c3e0241c7c7679a18cd1",
+      "96c24b16f820cebf7d9a03fe",
       "b4cb47ea50dc901364239e9f",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
@@ -102,11 +105,12 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-8E73BF5B8CE21686",
+      "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
@@ -121,11 +125,12 @@
       "ASC-REVIEW-7421E53AAC7B41C5",
       "ASC-REVIEW-AADA0932ADD32C2D",
       "ASC-REVIEW-35C38F1DE24759B3",
+      "49679b1ed63de244c1cf19f9",
+      "d5adf164b612fd92a1dca692",
       "e853e2cce33f37c0619d2433",
       "145721767ca69c32bb4875e5",
       "46042e30fdcccc9e94aee0af",
       "92adb9d59689b41e578a7a5e",
-      "1c352ab364fbfca06ab12a57",
       "daily-revelation-report",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
@@ -141,26 +146,21 @@
       "family-offices-hillspire",
       "family-offices-bayshore-global-management",
       "family-offices-euclidean-capital",
-      "family-offices-wildcat-capital-management",
-      "family-offices-tengelmann-twenty-one",
-      "family-offices-athos-service",
-      "family-offices-waycrosse",
-      "family-offices-msd-capital",
-      "family-offices-yard-ventures"
+      "family-offices-wildcat-capital-management"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 48,
+      "primarySourceCount": 47,
       "disputedClaimCount": 84,
-      "newEntityCount": 18,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 44
+      "relationshipCount": 74,
+      "moneyRecordCount": 40
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Public Weekly Signup Report.",
-        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 47 A/B-grade public-record items are materially relevant to Public Weekly Signup Report.",
+        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Federal Election Commission — Updates; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions",
+        "inference": "The indexed set contains 74 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Federal Election Commission — Updates; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,15 +194,15 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 74 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: Federal Register — Latest Documents",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Federal Election Commission — Updates",
-          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Treasury OFAC — Recent Actions"
         ],
         "counterEvidence": [
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

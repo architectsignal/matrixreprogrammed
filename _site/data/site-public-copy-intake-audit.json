@@ -2,13 +2,13 @@
   "title": "Site Public Copy And Intake Audit",
   "summary": {
     "ok": false,
-    "intakeOk": true,
-    "updated": "2026-07-27T07:02:13.441Z",
-    "filesScanned": 5680,
-    "highIssues": 3171,
-    "reviewIssues": 11,
-    "intakeAreas": 2943,
-    "weakIntakeAreas": 0
+    "intakeOk": false,
+    "updated": "2026-07-28T06:24:35.073Z",
+    "filesScanned": 6050,
+    "highIssues": 3550,
+    "reviewIssues": 15,
+    "intakeAreas": 3102,
+    "weakIntakeAreas": 1
   },
   "issues": [
     {
@@ -56,6 +56,30 @@
     {
       "severity": "high",
       "file": "SITE_RECOVERY_MASTER.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/.cloudflare/pages-output/data/heroes-fighting-matrix/keys.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "review",
+      "file": "_site/.cloudflare/pages-output/data/heroes-fighting-matrix/keys.json",
+      "pattern": "/TODO/i",
+      "note": "Review whether this text is intentionally visible."
+    },
+    {
+      "severity": "high",
+      "file": "_site/.cloudflare/pages-output/data/heroes-fighting-matrix/shields.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/.cloudflare/pages-output/data/heroes-fighting-matrix/torches.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -398,6 +422,12 @@
     {
       "severity": "high",
       "file": "_site/automation/social-access-and-publishing-plan.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/behind-the-curtain.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1519,12 +1549,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/daily-epstein-update.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/daily-investigation-conclusions.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1543,13 +1567,133 @@
     },
     {
       "severity": "high",
+      "file": "_site/dark-speculation-33-club.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-all-seeing-eye-network.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-black-eye-club.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-bloodline-dynasty-claims.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-bohemian-grove.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-celebrity-humiliation-ritual.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-checkerboard-pattern.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/dark-speculation-forum.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
+      "file": "_site/dark-speculation-hand-signs-gesture-archive.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-hidden-in-plain-sight.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/dark-speculation-lab.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-masked-balls-ritual-galas.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-moloch-claim.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-monarch-butterfly-pattern.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-one-eye-covered-eye.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-owl-symbolism-network.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-panda-eyes-claim.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-public-injury-initiation.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-red-carpet-symbolism.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-red-shoe-club.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-saturn-black-cube.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-speculation-white-rabbit-network.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1616,6 +1760,48 @@
     {
       "severity": "high",
       "file": "_site/data/authority-clusters.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-capstone.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-continuity-layers.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-family-access.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-living-access.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-people-registry.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain-pyramid.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/behind-the-curtain.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1795,6 +1981,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/current-clock-evidence.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/daily-brain-brief.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1808,12 +2000,6 @@
     {
       "severity": "high",
       "file": "_site/data/daily-command-brief.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/daily-epstein-update.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1837,6 +2023,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/dark-speculation-clubs.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/dark-speculation-expansion.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1844,6 +2036,18 @@
     {
       "severity": "high",
       "file": "_site/data/dark-web-safety.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/death-files-runtime.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/death-files.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2155,6 +2359,30 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/heroes-fighting-matrix/keys.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "review",
+      "file": "_site/data/heroes-fighting-matrix/keys.json",
+      "pattern": "/TODO/i",
+      "note": "Review whether this text is intentionally visible."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/heroes-fighting-matrix/shields.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/heroes-fighting-matrix/torches.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/history/money-intelligence/2026-07-20.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2173,6 +2401,30 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-07-23.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-07-25.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-07-26.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-07-27.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/homepage-command-surface.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2186,6 +2438,30 @@
     {
       "severity": "high",
       "file": "_site/data/illuminati-secret-society-theory.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/independent-links-1.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/independent-links-2.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/independent-links-3.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/independent-links-4.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2263,7 +2539,31 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/investigation-source-state.json",
+      "file": "_site/data/july-2026-practical-clock-sweep.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/july-2026-speculative-assessments-control-system.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/july-2026-speculative-assessments-elite-occult.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/july-2026-speculative-assessments-exploitation-medical-history.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/july-2026-speculative-assessments-metaphysical-uap.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2282,12 +2582,6 @@
     {
       "severity": "high",
       "file": "_site/data/kdp_asin_map.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/latest-public-drops.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2461,7 +2755,19 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/money-entity-crosswalk.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/money-intelligence-brief-feed.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/money-intelligence-depth-report.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2479,7 +2785,37 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/money-profile-index.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/money-relationship-feed.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/money-research-candidate-expansion.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/money-search-index.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/money-timeline-feed.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/money-top100-research-report.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2593,6 +2929,30 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/power-family-curated-people.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/power-family-intelligence-layer.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/predators-in-power-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/predators-in-power.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/probability-lab-core.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2649,366 +3009,6 @@
       "severity": "high",
       "file": "_site/data/public-interest-anti-corruption-charter.json",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/public-record-intake.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/reader-conclusions-layer.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/reader-interpretation-standard.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/record-events.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/record-intake-queue-batch-001.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/relationship-registry.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/ai-speculative-conclusions-policy.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/brevo-operational-readiness.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-black-file-launch.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-crime-state-overlap-push.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-intelligence-dossiers-push.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-symbolic-power-push.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-trust-evidence-push.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/campaign-war-machine-push.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/claim-classifier.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/commercial-strategy-visibility.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/conclusion-depth-audit.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/convergence-control-lenses.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/current-live-intel-runs.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/daily-brief-master.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/daily-command-brief.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/deep-intel-feed-matrix.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/deploy-status.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/dossier-pack-black-file-starter.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/dossier-pack-crime-state-overlap.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/dossier-pack-symbolic-power.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/dossier-pack-trust-evidence.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/dossier-pack-war-machine.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/downloads-index.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/entity-exposure-index.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/epstein-evidence-watch.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/epstein-network-deep-dive.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/epstein-source-watch.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/evidence-badge-route-restore.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/final-public-editorial-hardening.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/generated-site-repair-report.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/homepage-command-builder-shell-patch.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/intel-drop-vault.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/intel-vault.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/latest-public-drops.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/lead-magnet-black-file-brief.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/lead-magnet-crime-network-brief.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/live-machine-dependants-test.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/live-verifier-intelligence-routes-patch.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/login-email-resend-test.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/machine-entity-output-sanitizer-output.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/machine-feed-object-name-patch.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/machine-intelligence.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/manual-deep-site-audit.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-crime-dossiers.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-dog-architect-collector.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-full-archive.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-intelligence-dossiers.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-starter-library.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-trust-before-darkness.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/offer-trust-evidence-kit.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/premier-resource-route-restore.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/protected-build-template-report.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/public-control-target-audit.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/report-manifests/public-output-secret-audit.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
@@ -3652,6 +3652,34 @@
     },
     {
       "file": "_site/aviation-evidence-policy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/behind-the-curtain-access.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/behind-the-curtain-capstone.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/behind-the-curtain-symbolic-capstone.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/behind-the-curtain.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4942,168 +4970,168 @@
       "file": "_site/card-artwork-batches/batch-001.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-002.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-003.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-004.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-005.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-006.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-007.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-008.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-009.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-010.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-011.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-012.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-013.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-014.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-015.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-016.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-017.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-018.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-019.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-020.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-021.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-022.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-023.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
       "file": "_site/card-artwork-batches/batch-024.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
@@ -5199,6 +5227,13 @@
     },
     {
       "file": "_site/conclusions-engine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contact-the-machine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5688,6 +5723,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/corrections-policy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/crime-dossiers.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5786,6 +5828,55 @@
       "status": "ok"
     },
     {
+      "file": "_site/dark-speculation-33-club.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-all-seeing-eye-network.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-black-eye-club.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-bloodline-dynasty-claims.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-bohemian-grove.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-celebrity-humiliation-ritual.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-checkerboard-pattern.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/dark-speculation-forum.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5793,7 +5884,98 @@
       "status": "ok"
     },
     {
+      "file": "_site/dark-speculation-hand-signs-gesture-archive.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-hidden-in-plain-sight.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/dark-speculation-lab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-masked-balls-ritual-galas.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-moloch-claim.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-monarch-butterfly-pattern.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-one-eye-covered-eye.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-owl-symbolism-network.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-panda-eyes-claim.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-public-injury-initiation.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-red-carpet-symbolism.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-red-shoe-club.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-saturn-black-cube.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/dark-speculation-white-rabbit-network.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5843,6 +6025,1077 @@
     },
     {
       "file": "_site/data-lab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-aaron-swartz.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-alberto-nisman.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-aldo-moro.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-alexander-litvinenko.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-alexei-navalny.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-alfred-herrhausen.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-anna-politkovskaya.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-arshad-sharif.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-barry-seal.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-benazir-bhutto.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-berta-caceres.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-beverly-eckert.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-boris-berezovsky.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-boris-nemtsov.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-bruce-ivins.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-carlos-pizarro-leongomez.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-chico-mendes.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-daniel-pearl.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-danny-casolaro.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-daphne-caruana-galizia.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-david-kelly.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-deborah-jeane-palfrey.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-diana-princess-of-wales.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-don-bolles.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-dorothy-kilgallen.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-ebrahim-raisi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-edmond-safra.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-eduardo-frei-montalva.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-fred-hampton.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-gareth-williams.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-gary-webb.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-georgi-markov.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-gerald-bull.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-hale-boggs.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-harvey-milk.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-hrant-dink.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-hugo-chavez.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-indira-gandhi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jaime-roldos-aguilera.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jamal-khashoggi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-james-le-mesurier.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jan-kuciak.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jeffrey-epstein.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jimmy-hoffa.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-john-f-kennedy-jr.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-john-f-kennedy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-john-garang.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-john-mcafee.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-john-paisley.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-jovenel-moise.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-karen-silkwood.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-ken-saro-wiwa.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-kim-jong-nam.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-lasantha-wickrematunge.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-lech-kaczynski.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-luis-carlos-galan.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-malcolm-x.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-marie-colvin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-marielle-franco.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-mark-lombardi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-martin-luther-king-jr.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-michael-connell.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-michael-hastings.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-michele-sindona.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-mikhail-lesin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-mko-abiola.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-mohsen-fakhrizadeh.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-muammar-gaddafi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-muhammad-zia-ul-haq.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-nancy-schaefer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-olof-palme.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-omar-torrijos.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-orlando-letelier.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-oscar-romero.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-pablo-neruda.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-paul-wellstone.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-peter-r-de-vries.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-rafik-hariri.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-robert-f-kennedy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-robert-maxwell.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-roberto-calvi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-ron-brown.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-salvador-allende.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-samora-machel.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-sergei-magnitsky.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-seth-rich.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-shinzo-abe.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-shireen-abu-akleh.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-stanley-meyer.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-steve-biko.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-thomas-sankara.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-tom-ogle.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-ugur-mumcu.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-veronica-guerin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-vince-foster.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-william-colby.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-yasser-arafat.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-yevgeny-prigozhin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-yitzhak-rabin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-file-zoran-djindjic.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-methodology.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-pattern-lab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1963.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1965.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1968.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1969.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1972.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1973.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1974.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1975.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1976.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1977.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1978.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1980.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1981.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1982.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1984.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1986.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1987.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1988.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1989.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1990.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1991.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1993.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1995.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1996.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1997.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1998.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-1999.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2000.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2002.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2003.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2004.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2005.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2006.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2007.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2008.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2009.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2010.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2011.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2012.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2013.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2015.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2016.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2017.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2018.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2019.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2020.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2021.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2022.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2023.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files-year-2024.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/death-files.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7942,6 +9195,27 @@
       "status": "ok"
     },
     {
+      "file": "_site/heroes-fighting-matrix-card.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/heroes-fighting-matrix-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/heroes-fighting-matrix-research-ledger.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/human-cost-hub.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7950,6 +9224,13 @@
     },
     {
       "file": "_site/illuminati-secret-society-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/independent-links.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9566,6 +10847,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/money-profile.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/money-search.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10665,6 +11953,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/predators-in-power.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/prediction-engine.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -11282,10 +12577,10 @@
     },
     {
       "file": "_site/site-population-audit.html",
-      "hasBoundary": true,
-      "hasAction": true,
+      "hasBoundary": false,
+      "hasAction": false,
       "hasFallback": false,
-      "status": "ok"
+      "status": "review"
     },
     {
       "file": "_site/site-quality-report.html",
@@ -11456,6 +12751,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/src/money-profile.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/start-here.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -11471,6 +12773,13 @@
     },
     {
       "file": "_site/structural-power-capstone.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/structural-power-map.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -15341,6 +16650,13 @@
       "status": "ok"
     },
     {
+      "file": "daily-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "dark-psychology.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16846,48 +18162,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/2021-00294.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/2024-07773.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/2025-0045-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/23-wap-2023.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/25-113.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/a170747m.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/aapl.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16916,13 +18190,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/apple-inc.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16944,28 +18211,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/california-court-of-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -16987,13 +18233,6 @@
     },
     {
       "file": "entity-briefs/homeland-security-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/matter-of-pagliughi.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17035,27 +18274,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/sawas-v-elzanaty.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/securities-and-exchange-commission.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -17063,70 +18281,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/supreme-court-of-pennsylvania.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/supreme-court-of-rhode-island.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-daily-briefs.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/2021-00294.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/2024-07773.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/2025-0045-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/23-wap-2023.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/25-113.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/a170747m.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17161,13 +18316,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/apple-inc.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -17189,28 +18337,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/california-court-of-appeal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17232,13 +18359,6 @@
     },
     {
       "file": "entity-exposure/homeland-security-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/matter-of-pagliughi.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17280,49 +18400,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/sawas-v-elzanaty.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/securities-and-exchange-commission.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/supreme-court-of-pennsylvania.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/supreme-court-of-rhode-island.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17365,6 +18443,13 @@
     },
     {
       "file": "entity-timelines/23-wap-2023.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/24-7261.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17526,6 +18611,13 @@
     },
     {
       "file": "entity-timelines/connecticut-appellate-court.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/court-of-appeals-for-the-ninth-circuit.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17834,6 +18926,13 @@
     },
     {
       "file": "entity-timelines/united-states-agency-for-global-media.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/united-states-v-anten.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -21669,6 +22768,13 @@
       "status": "ok"
     },
     {
+      "file": "predators-in-power.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "prediction-engine.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -23595,6 +24701,13 @@
     },
     {
       "file": "weekly-investigation-report.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "weekly-watch-delta.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

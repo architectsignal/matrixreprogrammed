@@ -1,0 +1,256 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-28T06:27:43.293Z",
+  "checks": [
+    {
+      "name": "search-index.json compaction",
+      "ok": true,
+      "detail": "32677 source records -> 31010 deployable records · 20.75 MiB · 1667 repeated findings, 0 exact duplicates and 0 invalid records removed"
+    },
+    {
+      "name": "search-index semantic preservation",
+      "ok": true,
+      "detail": "entities, relationships, findings and primary sources retained"
+    },
+    {
+      "name": "file matrix.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file investigation-pulse.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file search.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file evidence-network-map.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file fixes.css",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file _headers",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "file scripts/apply-runtime-performance-optimizations.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "investigation-pulse.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "search.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "evidence-network-map.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "scripts/apply-runtime-performance-optimizations.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "matrix.js visibilitychange",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js navigator.connection",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js saveData",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js hardwareConcurrency",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js requestAnimationFrame",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "matrix.js document.hidden",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "investigation-pulse.js sessionStorage",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_site/investigation-pulse.js sessionStorage",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "investigation-pulse.js requestIdleCallback",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_site/investigation-pulse.js requestIdleCallback",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "investigation-pulse.js cache: 'default'",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_site/investigation-pulse.js cache: 'default'",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "investigation-pulse.js matrix-investigation-pulse-v1",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_site/investigation-pulse.js matrix-investigation-pulse-v1",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js matrix-search-performance-v1",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js cache:'default'",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js ensureFullIndex",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js Verified starter routes ready",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js HTML returned instead of JSON",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "evidence-network-map.js matrix-network-performance-v1",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "evidence-network-map.js cache: 'default'",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "evidence-network-map.js IntersectionObserver",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "evidence-network-map.js rootMargin",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "evidence-network-map.js startLoad",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "fixes.css content visibility performance layer",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_headers /search-index.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_headers /data/evidence-network-map.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_headers /data/*.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "_headers stale-while-revalidate",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search-index.json size",
+      "ok": true,
+      "detail": "20.75 MiB <= 22 MiB"
+    },
+    {
+      "name": "data/evidence-network-map.json size",
+      "ok": true,
+      "detail": "21.40 MiB <= 25 MiB"
+    },
+    {
+      "name": "deployable HTML inspected",
+      "ok": true,
+      "detail": "3361 routes"
+    },
+    {
+      "name": "offscreen image lazy-loading",
+      "ok": true,
+      "detail": "960/960"
+    },
+    {
+      "name": "iframe lazy-loading",
+      "ok": true,
+      "detail": "0/0"
+    }
+  ],
+  "failures": [],
+  "budgets": {
+    "searchIndexMebibytes": 20.75,
+    "evidenceNetworkMebibytes": 21.4,
+    "searchStartupPolicy": "verified fallback routes render immediately; complete index loads on search interaction or URL query",
+    "networkStartupPolicy": "graph data loads only when the map approaches the viewport or a map control is used",
+    "animationPolicy": "adaptive frame rate, reduced pixel ratio, Save-Data support and visibility pause",
+    "pulsePolicy": "session-cached and refreshed during idle time after every legacy generator",
+    "searchReleaseFormat": "browser-field projection plus semantic deduplication synchronized to Cloudflare output before budget, manifest and deploy checks"
+  }
+}

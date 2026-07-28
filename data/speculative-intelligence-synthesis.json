@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-07-27T07:04:50.444Z",
+  "updated": "2026-07-28T06:27:24.574Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 47093,
+    "recordsInspected": 47151,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -224,8 +224,8 @@
           }
         ],
         "timerUpdateRule": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access. Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available.",
-        "evidenceFingerprint": "4f164fbaf9b93a8d09d053b95e3bc94ee1b15e68b4c3cfe2375f3095b2ad4998",
-        "lastEvidenceChangeAt": "2026-07-27T06:49:46.268Z",
+        "evidenceFingerprint": "6ca121682761bd68c8c47ce3a0cdf180fa5c812a6776233d35d6cefe25a5d9fa",
+        "lastEvidenceChangeAt": "2026-07-28T06:09:11.079Z",
         "automaticUpdateStatus": "evidence-unchanged-score-held",
         "scoreLabel": "Pressure index — not event probability",
         "scoreType": "pressureIndex",
@@ -274,123 +274,183 @@
         "evidenceInputs": [
           {
             "title": "Children’s Digital Identity and Age-Gating Clock",
-            "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
             "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 8
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards",
-            "summary": "The Commission says its age-verification solution became feature-ready in April 2026. Proof of age can be issued from national eIDs, passports, identity cards, banking apps or offline activation, while the design aims to disclose only the required age threshold.",
             "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
             "published": "2026-04-29T00:00:00.000Z",
             "evidenceLevel": "Official EU technical blueprint · implementation-ready",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 6
-          },
-          {
-            "title": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards",
-            "summary": "The Commission says its age-verification solution became feature-ready in April 2026. Proof of age can be issued from national eIDs, passports, identity cards, banking apps or offline activation, while the design aims to disclose only the required age threshold.",
-            "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
-            "published": "2026-04-29T00:00:00.000Z",
-            "evidenceLevel": "Official EU technical blueprint · implementation-ready",
-            "confidence": "",
-            "sourceFile": "data/current-clock-evidence.json",
-            "matchScore": 6
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Surveillance State Clock",
-            "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
             "route": "surveillance-hub.html",
+            "sourceRoute": "surveillance-hub.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "Active",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 6
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Digital Identity and Permissioned Access Clock",
-            "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
             "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 6
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "UK age checks are deployed at unprecedented scale under the Online Safety Act",
-            "summary": "Ofcom's July 2026 statutory report states that many services are required to use highly effective age assurance and that age checks have been deployed at unprecedented scale.",
             "route": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
+            "sourceRoute": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
             "published": "2026-07-15T00:00:00.000Z",
             "evidenceLevel": "Official regulator · statutory report · active enforcement",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 5
-          },
-          {
-            "title": "UK age checks are deployed at unprecedented scale under the Online Safety Act",
-            "summary": "Ofcom's July 2026 statutory report states that many services are required to use highly effective age assurance and that age checks have been deployed at unprecedented scale.",
-            "route": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
-            "published": "2026-07-15T00:00:00.000Z",
-            "evidenceLevel": "Official regulator · statutory report · active enforcement",
-            "confidence": "",
-            "sourceFile": "data/current-clock-evidence.json",
-            "matchScore": 5
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "EU age-verification app rollout and EUDI Wallet compatibility",
-            "summary": "",
             "route": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
             "published": "2026-04-29",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/july-2026-speculative-source-catalog.json",
-            "matchScore": 4
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Age verification / online access laws",
-            "summary": "",
             "route": "policy/age-verification-online-access-laws.html",
+            "sourceRoute": "policy/age-verification-online-access-laws.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/card-intelligence-feed.json",
-            "matchScore": 4
-          },
-          {
-            "title": "Age verification / online access laws",
-            "summary": "",
-            "route": "policy/age-verification-online-access-laws.html",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "no-new-verified-record-in-current-window",
-            "sourceFile": "data/card-live-updates.json",
-            "matchScore": 4
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Current strongest public signal",
-            "summary": "Children’s Digital Identity and Age-Gating Clock is currently the strongest pressure signal at 93/100.",
             "route": "",
+            "sourceRoute": "",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "medium",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 4
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Children’s Digital Identity and Age-Gating Clock",
-            "summary": "",
             "route": "timers.html#childrens-digital-identity-age-gating",
+            "sourceRoute": "timers.html#childrens-digital-identity-age-gating",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/daily-command-brief.json",
-            "matchScore": 4
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+          },
+          {
+            "title": "Australia's under-16 social-media account restriction is in force",
+            "route": "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
+            "sourceRoute": "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
+            "published": "2026-06-18T00:00:00.000Z",
+            "evidenceLevel": "Official regulator · law in force · active compliance",
+            "claimBoundary": "This proves mandatory age restriction and age-assurance deployment in Australia. It does not prove that the stated child-safety purpose is a covert digital-ID plan."
+          },
+          {
+            "title": "Australia updates the platform definition used by its social-media minimum-age law",
+            "route": "https://www.infrastructure.gov.au/department/media/news/updates-social-media-minimum-age-rules",
+            "sourceRoute": "https://www.infrastructure.gov.au/department/media/news/updates-social-media-minimum-age-rules",
+            "published": "2026-03-27T00:00:00.000Z",
+            "evidenceLevel": "Official government · implementing rules updated",
+            "claimBoundary": "The update demonstrates continuing implementation, not a finding about hidden motive."
+          },
+          {
+            "title": "EU urges Member States to make a common age-verification app available by the end of 2026",
+            "route": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+            "published": "2026-04-29T00:00:00.000Z",
+            "evidenceLevel": "Official EU recommendation · deployment deadline",
+            "claimBoundary": "Wallet compatibility is documented infrastructure convergence. It does not prove that child safety is merely a cover or that the wallet will become compulsory for all online activity."
+          },
+          {
+            "title": "Denmark, France, Greece, Italy and Spain are adopting customised versions of the EU age-verification solution",
+            "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+            "published": "2026-04-29T00:00:00.000Z",
+            "evidenceLevel": "Official EU rollout record · multi-jurisdiction adoption",
+            "claimBoundary": "Common architecture across several countries proves policy and technical convergence, not a secret unified identity mandate."
+          },
+          {
+            "title": "France enacted a digital-majority framework requiring parental consent below 15 and technical verification",
+            "route": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047799537",
+            "sourceRoute": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047799537",
+            "published": "2026-07-15T00:00:00.000Z",
+            "evidenceLevel": "Official legislation · enacted framework",
+            "claimBoundary": "The statute is real, but practical enforcement and compatibility with EU law must be tracked separately from the enacted text."
+          },
+          {
+            "title": "EU protection-of-minors guidelines and age-verification prototype establish a common DSA implementation route",
+            "route": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-guidelines-and-age-verification-app-prototype-safer-online-space-children",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-guidelines-and-age-verification-app-prototype-safer-online-space-children",
+            "published": "2025-07-14T00:00:00.000Z",
+            "evidenceLevel": "Official EU regulatory guidance · technical prototype",
+            "claimBoundary": "The DSA route establishes common compliance expectations but the guidelines themselves do not prove a universal compulsory identity system."
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "security-privacy.html",
+            "sourceRoute": "security-privacy.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "surveillance-hub.html",
+            "sourceRoute": "surveillance-hub.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
+            "sourceRoute": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "policy/age-verification-online-access-laws.html",
+            "sourceRoute": "policy/age-verification-online-access-laws.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "timers.html#childrens-digital-identity-age-gating",
+            "sourceRoute": "timers.html#childrens-digital-identity-age-gating",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "evidence-vault.html",
+            "sourceRoute": "evidence-vault.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "search.html",
+            "sourceRoute": "search.html",
+            "evidenceLevel": "source-linked record"
           }
         ],
         "sourceRoutes": [
@@ -415,10 +475,10 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-27T07:04:43.780Z",
+        "generatedAt": "2026-07-28T06:27:17.870Z",
         "previousAutomaticScore": 93,
         "automaticScoreMovement": 0,
-        "automaticUpdateReason": "Evidence change: 8 fresh records, 7 primary/official, 5 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+        "automaticUpdateReason": "Evidence change: 10 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
         "automaticEvidenceGate": {
           "claimClass": "",
           "mode": "standard-evidence-gated",
@@ -427,10 +487,10 @@
           "requirement": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access."
         },
         "automaticEvidenceCounts": {
-          "total": 11,
-          "fresh": 8,
-          "primaryOrOfficial": 7,
-          "implementation": 5,
+          "total": 16,
+          "fresh": 10,
+          "primaryOrOfficial": 9,
+          "implementation": 7,
           "counterSignals": 0,
           "caseRecords": 0,
           "authenticatedMechanisms": 0
@@ -475,7 +535,8 @@
         "supportStandard": "",
         "falsificationTest": "",
         "riskRating": "",
-        "sourceClaimSlug": ""
+        "sourceClaimSlug": "",
+        "counterpoint": "Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available."
       },
       {
         "slug": "surveillance-state",
@@ -608,163 +669,213 @@
         "evidenceInputs": [
           {
             "title": "Surveillance State Clock",
-            "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
             "route": "surveillance-hub.html",
+            "sourceRoute": "surveillance-hub.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "Active",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 82
-          },
-          {
-            "title": "Surveillance State Clock",
-            "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
-            "route": "surveillance-hub.html",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "Active",
-            "sourceFile": "data/speculative-intelligence-synthesis.json",
-            "matchScore": 82
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Machine Convergence",
-            "summary": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is nego",
             "route": "black-file.html",
+            "sourceRoute": "black-file.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "Classified",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 66
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "CBDC Rollout Clock",
-            "summary": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-0",
             "route": "surveillance-hub.html",
+            "sourceRoute": "surveillance-hub.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "Active",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 29
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "AI Breakout Clock",
-            "summary": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August",
             "route": "answer-engine.html",
+            "sourceRoute": "answer-engine.html",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "High",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 20
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Digital Identity and Permissioned Access Clock",
-            "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
             "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 16
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
             "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
             "published": "2026-07-07T00:00:00.000Z",
             "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 15
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
             "route": "",
+            "sourceRoute": "",
             "published": "",
             "evidenceLevel": "3",
-            "confidence": "medium",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 15
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
             "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+            "sourceRoute": "https://www.who.int/health-topics/who-pandemic-agreement",
             "published": "2026-07-06T00:00:00.000Z",
             "evidenceLevel": "Official WHO treaty/implementation-process lane",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 14
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Children’s Digital Identity and Age-Gating Clock",
-            "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
             "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 14
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
             "route": "",
+            "sourceRoute": "",
             "published": "",
             "evidenceLevel": "3",
-            "confidence": "medium",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 14
-          },
-          {
-            "title": "Children’s Digital Identity and Age-Gating Clock",
-            "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
-            "route": "control-system-tracker.html#digital-id",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
-            "sourceFile": "data/speculative-intelligence-synthesis.json",
-            "matchScore": 14
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-            "summary": "",
             "route": "answer-engine.html",
+            "sourceRoute": "answer-engine.html",
             "published": "2026-07-07T00:00:00.000Z",
             "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
-            "confidence": "",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 13
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Conditional-access systems may become increasingly interconnected",
-            "summary": "Digital identity, payment, health, mobility and platform-status systems may become sufficiently linked that a decision in one domain affects access in another.",
             "route": "",
+            "sourceRoute": "",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "[object Object]",
-            "sourceFile": "data/ai-speculative-conclusions.json",
-            "matchScore": 12
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
             "title": "Palantir government platforms → Surveillance: execution layer",
-            "summary": "Speculatively, the graph hint in “Palantir government platforms → Surveillance: execution layer — palantir-government-platforms.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
             "route": "",
+            "sourceRoute": "",
             "published": "",
-            "evidenceLevel": "",
-            "confidence": "[object Object]",
-            "sourceFile": "data/ai-speculative-conclusions.json",
-            "matchScore": 12
+            "evidenceLevel": "source-linked record",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
-            "title": "Conditional-access systems may become increasingly interconnected",
-            "summary": "Digital identity, payment, health, mobility and platform-status systems may become sufficiently linked that a decision in one domain affects access in another.",
-            "route": "",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "[object Object]",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 12
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "route": "control-system-tracker.html#health-and-biosecurity",
+            "sourceRoute": "control-system-tracker.html#health-and-biosecurity",
+            "published": "2026-07-06T00:00:00.000Z",
+            "evidenceLevel": "Official WHO treaty/implementation-process lane",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+          },
+          {
+            "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+            "route": "control-system-tracker.html#programmable-money",
+            "sourceRoute": "control-system-tracker.html#programmable-money",
+            "published": "2026-07-08T00:00:00.000Z",
+            "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "surveillance-hub.html",
+            "sourceRoute": "surveillance-hub.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html",
+            "sourceRoute": "control-system-tracker.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "answer-engine.html",
+            "sourceRoute": "answer-engine.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#health-and-biosecurity",
+            "sourceRoute": "control-system-tracker.html#health-and-biosecurity",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#programmable-money",
+            "sourceRoute": "control-system-tracker.html#programmable-money",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#agenda-2030-and-global-standards",
+            "sourceRoute": "control-system-tracker.html#agenda-2030-and-global-standards",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#digital-id",
+            "sourceRoute": "control-system-tracker.html#digital-id",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#security-and-war-powers",
+            "sourceRoute": "control-system-tracker.html#security-and-war-powers",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#speech-and-platform-governance",
+            "sourceRoute": "control-system-tracker.html#speech-and-platform-governance",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "control-system-tracker.html#migration-borders-and-population-systems",
+            "sourceRoute": "control-system-tracker.html#migration-borders-and-population-systems",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "black-file.html",
+            "sourceRoute": "black-file.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "sourceRoute": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+            "sourceRoute": "https://www.who.int/health-topics/who-pandemic-agreement",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "evidence-vault.html",
+            "sourceRoute": "evidence-vault.html",
+            "evidenceLevel": "source-linked record"
+          },
+          {
+            "title": "Linked evidence record",
+            "route": "search.html",
+            "sourceRoute": "search.html",
+            "evidenceLevel": "source-linked record"
           }
         ],
         "sourceRoutes": [
@@ -799,11 +910,12 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-27T07:04:43.780Z",
+        "generatedAt": "2026-07-28T06:27:17.870Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
-        "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
+        "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
+        "counterpoint": "The concern weakens when participation remains optional, systems remain separated and reversible, competition and offline alternatives exist, and effective oversight, appeal and deletion rights are demonstrated."
       }
     ],
     "conclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Children’s Digital Identity and Age-Gating Clock is the highest canonical pressure index at 93%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage."
@@ -815,10 +927,24 @@
     "confidenceMeaning": "Support for the observed convergence pattern, not probability that a scenario will occur.",
     "pathways": [
       {
+        "id": "procurement-vendors",
+        "title": "Procurement and public-private implementation",
+        "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
+        "signalCount": 14417,
+        "actors": [
+          "Consolidated Sanctions List (Non-SDN Lists)",
+          "Skip to main content",
+          "ATT MOBILITY LLC — Department of Defense",
+          "Attorney Review Protocol for Epstein Files",
+          "First Phase of Declassified Epstein Files",
+          "Federal Bureau of Investigation (FBI)"
+        ]
+      },
+      {
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 14057,
+        "signalCount": 13809,
         "actors": [
           "Information and narrative control",
           "Search Full Library"
@@ -828,52 +954,35 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 10182,
-        "actors": [
-          "Money, currency and access"
-        ]
-      },
-      {
-        "id": "procurement-vendors",
-        "title": "Procurement and public-private implementation",
-        "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 6712,
-        "actors": [
-          "ATT MOBILITY LLC — Department of Defense",
-          "4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer)"
-        ]
+        "signalCount": 12496,
+        "actors": []
       },
       {
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 4113,
+        "signalCount": 6015,
         "actors": [
-          "Skip to main content",
           "Global governance convergence",
-          "ATT MOBILITY LLC — Department of Defense",
-          "DOJ Disclosures",
-          "Epstein Library",
-          "Facebook"
+          "ATT MOBILITY LLC — Department of Defense"
         ]
       },
       {
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 3935,
+        "signalCount": 3569,
         "actors": [
           "Exercise or conversion of derivative security",
           "Identity, surveillance and access",
-          "Customs and Border Protection (CBP)",
-          "Security and emergency power"
+          "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
         ]
       },
       {
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 3110,
+        "signalCount": 2738,
         "actors": [
           "Identity, surveillance and access"
         ]
@@ -882,14 +991,16 @@
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 2672,
-        "actors": []
+        "signalCount": 2331,
+        "actors": [
+          "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
+        ]
       },
       {
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 803,
+        "signalCount": 587,
         "actors": [
           "Identity, surveillance and access"
         ]
@@ -1034,12 +1145,29 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Skip to main content",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Consolidated Sanctions List (Non-SDN Lists)",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
+        "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 32,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Skip to main content",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
         "whyItMatters": "This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 29,
@@ -1069,23 +1197,6 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Consolidated Sanctions List (Non-SDN Lists)",
-        "documentedRole": "Finding",
-        "roleGroup": "documented person or institution",
-        "authority": "",
-        "instrument": "",
-        "action": "Finding",
-        "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 26,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
         "name": "ATT MOBILITY LLC — Department of Defense",
         "documentedRole": "Contract",
         "roleGroup": "public authority and regulation",
@@ -1103,13 +1214,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "DOJ Disclosures",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Attorney Review Protocol for Epstein Files",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 22,
         "sources": [
@@ -1120,81 +1231,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Epstein Library",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "First Phase of Declassified Epstein Files",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 22,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Facebook",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 22,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "House Disclosures",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 22,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "LinkedIn",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places LinkedIn inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 22,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Search Full Library",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 22,
         "sources": [
@@ -1206,14 +1249,14 @@
       },
       {
         "name": "Federal Bureau of Investigation (FBI)",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 20,
+        "records": 21,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1239,13 +1282,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Attorney Review Protocol for Epstein Files",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Default Judgment",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
         "sources": [
@@ -1256,13 +1299,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "BOP Video Footage",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Facebook",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
         "sources": [
@@ -1273,13 +1316,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Customs and Border Protection (CBP)",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Final Judgment - Bongiorno",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
         "sources": [
@@ -1290,13 +1333,13 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Federal Bureau of Prisons (BOP)",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Final Judgment - Chad J. Miller",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Federal Bureau of Prisons (BOP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
         "sources": [
@@ -1307,13 +1350,47 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "First Phase of Declassified Epstein Files",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Final Judgment - Jeffrey Puzzullo",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Jeffrey Puzzullo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 19,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Suzee Han",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 19,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Titanium Capital LLC",
+        "documentedRole": "Contract",
+        "roleGroup": "corporate ownership and capital",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
         "sources": [
@@ -1325,11 +1402,11 @@
       },
       {
         "name": "Florida",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Florida inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
@@ -1341,12 +1418,29 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Maxwell Proffer",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "name": "Judgment - Gerard Ryan",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
+        "whyItMatters": "This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 19,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Maxwell Proffer",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
         "whyItMatters": "This record places Maxwell Proffer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
@@ -1359,11 +1453,11 @@
       },
       {
         "name": "Memoranda and Correspondence",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Memoranda and Correspondence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
         "records": 19,
@@ -1375,170 +1469,15 @@
         "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
       },
       {
-        "name": "Money, currency and access",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "money, banking and payment infrastructure",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 17,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Security and emergency power",
-        "documentedRole": "Documented in the linked public record",
-        "roleGroup": "security, intelligence and emergency power",
-        "authority": "",
-        "instrument": "",
-        "action": "Documented in the linked public record",
-        "whyItMatters": "This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 16,
-        "sources": [
-          "data/clock-wall.json",
-          "data/global-risk-clocks.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Default Judgment",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Final Judgment - Bongiorno",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Final Judgment - Chad J. Miller",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Final Judgment - Jeffrey Puzzullo",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Final Judgment - Jeffrey Puzzullo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Final Judgment - Suzee Han",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Final Judgment - Titanium Capital LLC",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Judgment - Gerard Ryan",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 15,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer)",
+        "name": "Search Full Library",
         "documentedRole": "Contract",
-        "roleGroup": "corporate ownership and capital",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
         "action": "Contract",
-        "whyItMatters": "This record places 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "whyItMatters": "This record places Search Full Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 19,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1548,14 +1487,65 @@
       },
       {
         "name": "Amended Judgment - Spartan Trading Company, LLC",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "corporate ownership and capital",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Audit of the Broward Sheriff&#039;s Office Equitable Sharing Program Activities, Broward County, Florida",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Audit of the Broward Sheriff&#039;s Office Equitable Sharing Program Activities, Broward County, Florida inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners",
+        "documentedRole": "Contract",
+        "roleGroup": "health and biosecurity systems",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Biden Family Investigation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Biden Family Investigation inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1565,31 +1555,14 @@
       },
       {
         "name": "Consent Motion for Entry of Final Judgment",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
-        "sources": [
-          "data/entity-registry.json"
-        ],
-        "summaries": [],
-        "specificity": 9,
-        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-      },
-      {
-        "name": "Consent Motion for Final Judgments",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
-        "authority": "",
-        "instrument": "",
-        "action": "CourtCase",
-        "whyItMatters": "This record places Consent Motion for Final Judgments inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-        "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1599,14 +1572,14 @@
       },
       {
         "name": "Consent of and Final Judgment as to Gautam Adani",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Consent of and Final Judgment as to Gautam Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1616,14 +1589,14 @@
       },
       {
         "name": "Consent of and Final Judgment as to Sagar Adani",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1633,14 +1606,14 @@
       },
       {
         "name": "Final Judgment - Andrew Kaufman",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Andrew Kaufman inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1650,14 +1623,14 @@
       },
       {
         "name": "Final Judgment - Arthur",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Arthur inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1667,14 +1640,14 @@
       },
       {
         "name": "Final Judgment - Bin Hao",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Bin Hao inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1684,14 +1657,14 @@
       },
       {
         "name": "Final Judgment - Brent Cranmer",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Brent Cranmer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1701,14 +1674,14 @@
       },
       {
         "name": "Final Judgment - Daniel McCormick",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Daniel McCormick inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1718,14 +1691,14 @@
       },
       {
         "name": "Final Judgment - DaveGlo Investment Group, Inc.",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "corporate ownership and capital",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - DaveGlo Investment Group, Inc. inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1735,14 +1708,14 @@
       },
       {
         "name": "Final Judgment - David P. Ortiz",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - David P. Ortiz inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1752,14 +1725,14 @@
       },
       {
         "name": "Final Judgment - Eliseo Jojo Prisno",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Eliseo Jojo Prisno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],
@@ -1769,14 +1742,150 @@
       },
       {
         "name": "Final Judgment - Estate of Richard Myre",
-        "documentedRole": "CourtCase",
-        "roleGroup": "public authority and regulation",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
         "authority": "",
         "instrument": "",
-        "action": "CourtCase",
+        "action": "Contract",
         "whyItMatters": "This record places Final Judgment - Estate of Richard Myre inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
         "sourceRoute": "daily-command-brief.html",
-        "records": 14,
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Flagg",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Flagg inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Geoffrey Allen Wall",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Geoffrey Allen Wall inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Henry Abdo",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Henry Abdo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Jeffrey De Laveaga",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Jeffrey De Laveaga inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Lloyd",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Lloyd inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Mark Jacobs",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Mark Jacobs inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Michael Bowen",
+        "documentedRole": "Contract",
+        "roleGroup": "documented person or institution",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - Michael Bowen inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "specificity": 9,
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - P/E Capital Investment Management Partners",
+        "documentedRole": "Contract",
+        "roleGroup": "corporate ownership and capital",
+        "authority": "",
+        "instrument": "",
+        "action": "Contract",
+        "whyItMatters": "This record places Final Judgment - P/E Capital Investment Management Partners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+        "sourceRoute": "daily-command-brief.html",
+        "records": 18,
         "sources": [
           "data/entity-registry.json"
         ],

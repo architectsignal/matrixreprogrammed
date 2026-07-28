@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-28T06:24:50.874Z",
+  "selected": {
+    "person": "Defendant Kidd",
+    "institution": "Securities and Exchange Commission",
+    "family": "Wallenberg family and foundations"
+  },
+  "candidateCounts": {
+    "person": 70,
+    "institution": 3450,
+    "family": 9
+  },
+  "invalidatedIncumbents": [],
+  "forbiddenExamples": [
+    "document titles",
+    "release titles",
+    "case titles",
+    "archive labels",
+    "generic findings"
+  ],
+  "boundary": "Entity resolution verifies identity class only. It does not establish wrongdoing or the truth of every linked claim."
+}

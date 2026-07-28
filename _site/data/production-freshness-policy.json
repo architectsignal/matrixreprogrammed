@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "generatedFor": "Matrix Reprogrammed production deployment",
   "defaultMaxFutureMinutes": 15,
   "datasets": [
@@ -40,6 +40,12 @@
       "maxAgeHours": 30,
       "minimumArray": "strongestFindings",
       "minimumCount": 0
+    },
+    {
+      "id": "daily-intelligence-hit-list",
+      "file": "data/daily-watch.json",
+      "timestampFields": ["updated"],
+      "maxAgeHours": 30
     },
     {
       "id": "daily-power-conclusions",

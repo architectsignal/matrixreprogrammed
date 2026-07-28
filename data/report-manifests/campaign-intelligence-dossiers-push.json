@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T06:50:59.997Z",
-  "pageCount": 113,
+  "generatedAt": "2026-07-28T06:10:35.641Z",
+  "pageCount": 112,
   "output": "downloads/campaign-intelligence-dossiers-push.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Intelligence Dossiers Campaign",
-    "contentHash": "c7f190764b93d315cb1bc9d6ec044695ec978a9959f41ffbde0861496b6d52da",
+    "contentHash": "72af0a303e1fba67a68fe7eaf9917bb386d7d0029a9d9340c0e9c930cf0e7641",
     "sourceIds": [
       "8277ac276bab9b050504a33f",
       "c773a9b56feb9b238da1ce66",
@@ -85,7 +85,6 @@
       "55a324e4bddcaa4ce8c4586e",
       "360e80c162081c85d2c680ef",
       "aa45c75a112060231ce901ba",
-      "declassified-files-2026-07-24-c827955e",
       "declassified-files-2026-07-23-7b43a9b4",
       "declassified-files-2026-07-23-fa922faa",
       "declassified-files-2026-07-23-85ec568c",
@@ -146,21 +145,22 @@
       "8a388409c7e1203c78157fcc",
       "9e8903fd8dfa9b54a1d6db30",
       "843bf0e89d5e2c3d8673724c",
-      "76a719654ec3312153163154"
+      "88ef9baf356c096816236956",
+      "34805734b1ad3b73f0ede0d8"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 21,
+      "primarySourceCount": 20,
       "disputedClaimCount": 4,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 34,
-      "moneyRecordCount": 19
+      "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Intelligence Dossiers Campaign.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Intelligence Dossiers Campaign.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Charles Keating Part 13,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Charles Keating Part 13 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-24T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-23T11:00:00.000Z"
   }
 }

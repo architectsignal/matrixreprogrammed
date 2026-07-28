@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-23T06:46:48.685Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-28T06:16:25.223Z",
+  "pageCount": 130,
   "output": "downloads/login-email-resend-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Login Email Resend Test",
-    "contentHash": "637658670fe2cddec65355cc22a66b748f20c52eaf16f50a7654eef367eb9183",
+    "contentHash": "849d0c8c76311b1f33fb1294f287a356cd5d7182164d2e4f3186f4f26426c512",
     "sourceIds": [
+      "9b821ddb272b0fb297d39550",
       "ASC-REVIEW-9F5E6DCB06093895",
       "ASC-REVIEW-45FC68BFE6057AEE",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-7527D6692621D585",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-52C3694FF95479F1",
-      "ASC-REVIEW-3EB368ED00ADD23E",
-      "ASC-REVIEW-C47A1B7DA11B68C4"
+      "ASC-REVIEW-3EB368ED00ADD23E"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 140,
-      "newEntityCount": 0,
+      "disputedClaimCount": 139,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 138,
-      "moneyRecordCount": 138
+      "relationshipCount": 137,
+      "moneyRecordCount": 137
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “BlackRock → Public Company Ownership Concentration: capital layer,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Speculatively, the graph hint in “BlackRock → Public Company Ownership Concentration: capital layer — blackrock.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 138 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "BlackRock → Public Company Ownership Concentration: capital layer; Vanguard → Ownership Concentration Across Public Companies: capital layer; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Defense And Diplomacy: overlap hint; Bilderberg Meeting → Media: overlap hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 138 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "BlackRock → Public Company Ownership Concentration: capital layer",
           "Vanguard → Ownership Concentration Across Public Companies: capital layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:46:48.685Z"
+    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
   }
 }

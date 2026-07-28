@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-27T06:59:34.040Z
+Generated: 2026-07-28T06:21:53.516Z
 
 ## Open Routes
 
@@ -11,11 +11,51 @@ Generated: 2026-07-27T06:59:34.040Z
 
 ## Latest Drops
 
+### Conflict and crisis put six World Heritage sites at risk
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168031
+Armed conflict, insecurity and environmental pressures are threatening ancient cities, historic castles and one of the world&#039;s greatest wildlife migrations.
+### Cyberattacks and the digital divide are creating new barriers to HIV services
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168030
+Cyberattacks, data breaches, online harassment and other forms of technology-facilitated violence are becoming significant obstacles to HIV prevention and treatment, according to a UNAIDS specialist who says digital security has become inseparable from the fight against the epidemic itself.
+### Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168035
+The United Nations continues to monitor developments in the Occupied Palestinian Territory amid rising violence and greater restrictions in the occupied West Bank.
+### High prices and funding cuts stall HIV prevention revolution
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168033
+The AIDS epidemic could stage a comeback amid unequal access to breakthrough prevention medicines and a sharp decline in global funding, according to a UN report released on Monday ahead of the opening of the 26th International AIDS Conference in Rio de Janeiro, Brazil.
+### Lebanon: Israeli strikes ‘could amount to international crimes,’ warns Türk
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168034
+UN Human Rights Chief Volker Türk expressed concern about ongoing displacement and destruction caused by Israeli strikes against Lebanon as he concluded a two-day visit to the country on Monday.
+### Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-27T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168029
+The UN Security Council met on Monday at Ukraine’s request, following recent large-scale Russian attacks on Kyiv and elsewhere. At least one civilian was killed and more than a dozen wounded in an overnight strike on the capital on 19 July that also damaged homes and civilian infrastructure. Ukrainian authorities described it as one of the largest and most intense attacks since the invasion began. Follow live updates below.
+### Group in Congress pushing for more Epstein transparency - American Press
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-27T00:13:58.000Z
+- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
+Group in Congress pushing for more Epstein transparency American Press
 ### Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-26T23:43:09.000Z
 - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
 Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Eurasia Review
+### Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-26T19:01:07.000Z
+- Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections Daily Maverick
 ### After war took her leg, this Ukrainian gymnast refused to give up
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-26T12:00:00.000Z
@@ -71,43 +111,3 @@ Member States of the International Criminal Court dismissed its Prosecutor Karim
 - Date: 2026-07-24T12:00:00.000Z
 - Source: https://news.un.org/feed/view/en/story/2026/07/1168016
 As fighting intensifies in the Middle East, the United Nations on Friday warned against further escalation in the US-Iran war and the risks to global shipping amid the fight over control of the Strait of Hormuz.
-### Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-24T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168024
-The world needs more critical minerals than ever before for electric vehicles, wind turbines, solar panels, batteries and smartphones.
-### Wildfires surge across Europe as Spain and France battle major blazes
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-24T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168013
-The amount of land burned by wildfires across Europe has increased by 57 per cent in four years, according to new data from the World Health Organization (WHO) in Europe.
-### Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-24T04:00:00.000Z
-- Source: https://vault.fbi.gov/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein-part-06/view
-Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06
-### Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-23T22:12:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
-Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source New York Post
-### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-23T21:48:41.000Z
-- Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported NewsNation
-### Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-23T20:14:15.000Z
-- Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
-Trump authorizes use of AI for defense supply chain mapping DefenseScoop
-### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-23T18:38:38.000Z
-- Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
-### Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-23T16:11:24.000Z
-- Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
-Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS

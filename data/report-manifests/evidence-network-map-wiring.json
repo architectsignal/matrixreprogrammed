@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-27T06:53:52.136Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-28T06:14:28.386Z",
+  "pageCount": 127,
   "output": "downloads/evidence-network-map-wiring.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Evidence Network Map Wiring",
-    "contentHash": "e6240763ccef17a06a413a895f59d3cba1598f48ae8dcd7ab3d0b24d836721cd",
+    "contentHash": "62133832363eccd22e8aff6ceaeb633bb220ba604a840ce695130f7dcde2a26c",
     "sourceIds": [
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -17,6 +18,7 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "9b821ddb272b0fb297d39550",
       "declassified-files-2026-07-24-c827955e",
       "declassified-files-2026-07-23-7b43a9b4",
       "declassified-files-2026-07-23-fa922faa",
@@ -37,11 +39,13 @@
       "declassified-files-2026-07-23-b2a9e7b6",
       "declassified-files-2026-07-23-a8b27523",
       "declassified-files-2026-07-23-72e6ea02",
+      "96c24b16f820cebf7d9a03fe",
       "crime-state-overlap-2025-11-18-organised-crime-index-2025-south-africa-a-continental-hotspot-for-crim",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -70,10 +74,8 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-4D43B792A3A9872B",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -98,6 +100,7 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -143,24 +146,21 @@
       "ASC-REVIEW-0F86A972B08C9E18",
       "ASC-REVIEW-00A30F616825A65E",
       "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F"
+      "ASC-REVIEW-36CFBB8E5F6A4E74"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 20,
-      "disputedClaimCount": 119,
-      "newEntityCount": 0,
+      "primarySourceCount": 21,
+      "disputedClaimCount": 117,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 140,
-      "moneyRecordCount": 111
+      "relationshipCount": 137,
+      "moneyRecordCount": 109
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
+        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/latest-public-drops.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 140 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 140 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
           "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "CACI International → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-24T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
   }
 }

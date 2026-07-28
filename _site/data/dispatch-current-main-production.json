@@ -1,0 +1,12 @@
+{
+  "ok": false,
+  "requestId": "production-20260727-2112z",
+  "requestedAt": "2026-07-27T21:12:00Z",
+  "closedAt": "2026-07-27T22:15:00Z",
+  "requestedBy": "repository owner",
+  "targetRef": "main",
+  "requiredCommit": "128b73028492bd1e6a5d7e907bbe5f257231dcdb",
+  "confirmation": "DEPLOY MATRIX REPROGRAMMED",
+  "triggerMode": "closed; deployment transferred to guarded workflow rerun",
+  "reason": "Prevent duplicate dispatch while rerunning the existing controlled production workflow, which checks out latest main."
+}

@@ -1,18 +1,12 @@
 # Elite Reports
 
-Generated: 2026-07-27T07:01:21.665Z
+Generated: 2026-07-28T06:23:43.085Z
 
 ## Daily Revelation Report
 
-Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
+Conflict and crisis put six World Heritage sites at risk
 
 Source: daily-command-brief.html
-
-## Appellate Division of the Supreme Court of the State of New York — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
 
 ## Centers for Medicare & Medicaid Services — Entity Report
 
@@ -26,43 +20,49 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 2021-00294 — Entity Report
+## Homeland Security Department — Entity Report
+
+A source route exists. More records are needed before drawing a stronger conclusion.
+
+Source: entity-daily-briefs.html
+
+## AAPL — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 2024-07773 — Entity Report
+## Alphabet Inc. — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 2025-0045-Appeal. — Entity Report
+## AMAZON COM INC — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 23 WAP 2023 — Entity Report
+## AMZN — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 25-113 — Entity Report
+## Apple Inc. — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## A170747M — Entity Report
+## AVGO — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## California Court of Appeal — Entity Report
+## Broadcom Inc. — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

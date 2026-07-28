@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-07-27T06:56:56.511Z",
+  "generatedAt": "2026-07-28T06:18:36.615Z",
   "pageCount": 134,
   "output": "downloads/production-receipt-email-safety-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Production Receipt Email Safety Patch",
-    "contentHash": "f50d7355ff29200339e49c6e1e8b48f8f4f67629a50d514807b0002bce40a712",
+    "contentHash": "be37a5b70f0b2cdad37e9e481763dae3719de9b3794fffaf8fa5b1ad490b34a4",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
-      "ASC-REVIEW-4D43B792A3A9872B",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -61,7 +61,7 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -73,6 +73,7 @@
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
       "ecd4a1111010f13b2d74bf8c",
+      "2482c3e0241c7c7679a18cd1",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-598A8E78B2ED4662",
       "ASC-REVIEW-85693397F53B02BA",
@@ -94,7 +95,6 @@
       "ASC-REVIEW-B0625D388FF0BBB5",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -150,26 +150,26 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 129,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 128,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 114,
-      "moneyRecordCount": 69
+      "relationshipCount": 115,
+      "moneyRecordCount": 70
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
         "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,30 +179,30 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Federal Election Commission — Updates; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions",
+        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Federal Election Commission — Updates; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: Federal Register — Latest Documents",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Federal Election Commission — Updates",
-          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Treasury OFAC — Recent Actions"
         ],
         "counterEvidence": [
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

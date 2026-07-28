@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-27T07:04:57.594Z",
+  "generatedAt": "2026-07-28T06:27:32.467Z",
   "events": [
     {
       "id": "political-money-national-republican-senatorial-committee:fec-updates",
@@ -36,7 +36,7 @@
       "category": "companies",
       "type": "source-linked",
       "title": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14957/foreign-trade-zone-ftz-72-authorization-of-production-activity-general-electric-company-commercial",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14955/foreign-trade-zone-ftz-93-authorization-of-production-activity-general-electric-company-commercial",
       "evidenceGrade": "B",
       "establishes": "A dated source update exists and should be compared with prior records.",
       "doesNotEstablish": "This update alone does not establish wrongdoing, intent or coordinated action."
@@ -49,7 +49,7 @@
       "category": "companies",
       "type": "source-linked",
       "title": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14955/foreign-trade-zone-ftz-93-authorization-of-production-activity-general-electric-company-commercial",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14957/foreign-trade-zone-ftz-72-authorization-of-production-activity-general-electric-company-commercial",
       "evidenceGrade": "B",
       "establishes": "A dated source update exists and should be compared with prior records.",
       "doesNotEstablish": "This update alone does not establish wrongdoing, intent or coordinated action."
@@ -101,7 +101,7 @@
       "category": "defence-security",
       "type": "source-linked",
       "title": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14957/foreign-trade-zone-ftz-72-authorization-of-production-activity-general-electric-company-commercial",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14955/foreign-trade-zone-ftz-93-authorization-of-production-activity-general-electric-company-commercial",
       "evidenceGrade": "B",
       "establishes": "A dated source update exists and should be compared with prior records.",
       "doesNotEstablish": "This update alone does not establish wrongdoing, intent or coordinated action."
@@ -114,7 +114,7 @@
       "category": "defence-security",
       "type": "source-linked",
       "title": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14955/foreign-trade-zone-ftz-93-authorization-of-production-activity-general-electric-company-commercial",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14957/foreign-trade-zone-ftz-72-authorization-of-production-activity-general-electric-company-commercial",
       "evidenceGrade": "B",
       "establishes": "A dated source update exists and should be compared with prior records.",
       "doesNotEstablish": "This update alone does not establish wrongdoing, intent or coordinated action."
@@ -2304,6 +2304,32 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "companies-orcl:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-orcl",
+      "entity": "Oracle",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-orcl:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-orcl",
+      "entity": "Oracle",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "companies-ms:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-ms",
@@ -2356,32 +2382,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "companies-orcl:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-orcl",
-      "entity": "Oracle",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-orcl:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-orcl",
-      "entity": "Oracle",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "companies-nvs:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-nvs",
@@ -2408,6 +2408,32 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "companies-rtx:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-rtx",
+      "entity": "RTX",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-rtx:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-rtx",
+      "entity": "RTX",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "companies-nflx:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-nflx",
@@ -2425,32 +2451,6 @@
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-nflx",
       "entity": "Netflix",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-rtx:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-rtx",
-      "entity": "RTX",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-rtx:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-rtx",
-      "entity": "RTX",
       "category": "companies",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -2535,32 +2535,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-panw:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-panw",
-      "entity": "Palo Alto Networks",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-panw:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-panw",
-      "entity": "Palo Alto Networks",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -2587,6 +2561,32 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position new position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-panw:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-panw",
+      "entity": "Palo Alto Networks",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-panw:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-panw",
+      "entity": "Palo Alto Networks",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -2694,6 +2694,110 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "companies-tmo:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-tmo",
+      "entity": "Thermo Fisher Scientific",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-tmo:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-tmo",
+      "entity": "Thermo Fisher Scientific",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-amgn:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-amgn",
+      "entity": "Amgen",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-amgn:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-amgn",
+      "entity": "Amgen",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-pep:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-pep",
+      "entity": "Pepsico",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-pep:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-pep",
+      "entity": "Pepsico",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-tmus:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-tmus",
+      "entity": "T-Mobile US",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-tmus:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "companies-tmus",
+      "entity": "T-Mobile US",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "companies-sndk:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-sndk",
@@ -2720,84 +2824,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "companies-tmo:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-tmo",
-      "entity": "Thermo Fisher Scientific",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-tmo:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-tmo",
-      "entity": "Thermo Fisher Scientific",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-amgn:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-amgn",
-      "entity": "Amgen",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-amgn:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-amgn",
-      "entity": "Amgen",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-tmus:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-tmus",
-      "entity": "T-Mobile US",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-tmus:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-tmus",
-      "entity": "T-Mobile US",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "companies-tte:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "companies-tte",
@@ -2819,71 +2845,6 @@
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-aph:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-aph",
-      "entity": "Amphenol",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-nee:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-nee",
-      "entity": "Nextera Energy",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-nee:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-nee",
-      "entity": "Nextera Energy",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-pep:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-pep",
-      "entity": "Pepsico",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-pep:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "companies-pep",
-      "entity": "Pepsico",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
@@ -3864,19 +3825,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "property-cci:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "property-cci",
-      "entity": "Crown Castle",
-      "category": "property",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "property-exr:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "property-exr",
@@ -3887,6 +3835,19 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "property-cci:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "property-cci",
+      "entity": "Crown Castle",
+      "category": "property",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -3916,19 +3877,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "property-invh:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "property-invh",
-      "entity": "Invitation Homes",
-      "category": "property",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "property-kim:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "property-kim",
@@ -3939,6 +3887,19 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "property-invh:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "property-invh",
+      "entity": "Invitation Homes",
+      "category": "property",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -4124,10 +4085,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "property-stag:sec-form13f",
+      "id": "property-mac:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "property-stag",
-      "entity": "STAG Industrial",
+      "entityId": "property-mac",
+      "entity": "Macerich",
       "category": "property",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4137,10 +4098,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "property-mac:sec-form13f",
+      "id": "property-stag:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "property-mac",
-      "entity": "Macerich",
+      "entityId": "property-stag",
+      "entity": "STAG Industrial",
       "category": "property",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4215,32 +4176,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "media-psky:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "media-psky",
-      "entity": "Paramount Skydance",
-      "category": "media",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "media-psky:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "media-psky",
-      "entity": "Paramount Skydance",
-      "category": "media",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "media-llyva:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "media-llyva",
@@ -4262,6 +4197,32 @@
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "media-psky:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "media-psky",
+      "entity": "Paramount Skydance",
+      "category": "media",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "media-psky:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "media-psky",
+      "entity": "Paramount Skydance",
+      "category": "media",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
@@ -4345,10 +4306,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "media-schl:sec-form13f",
+      "id": "media-djco:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "media-schl",
-      "entity": "Scholastic",
+      "entityId": "media-djco",
+      "entity": "Daily Journal",
       "category": "media",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4358,10 +4319,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "media-djco:sec-form13f",
+      "id": "media-schl:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "media-djco",
-      "entity": "Daily Journal",
+      "entityId": "media-schl",
+      "entity": "Scholastic",
       "category": "media",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4891,6 +4852,32 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "technology-control-now:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-now",
+      "entity": "ServiceNow",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-now:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-now",
+      "entity": "ServiceNow",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "technology-control-eqix:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "technology-control-eqix",
@@ -4917,10 +4904,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-now:sec-form13f",
+      "id": "technology-control-snow:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-now",
-      "entity": "ServiceNow",
+      "entityId": "technology-control-snow",
+      "entity": "Snowflake",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4930,10 +4917,36 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-now:sec-form13f",
+      "id": "technology-control-snow:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-now",
-      "entity": "ServiceNow",
+      "entityId": "technology-control-snow",
+      "entity": "Snowflake",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-adbe:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-adbe",
+      "entity": "Adobe",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-adbe:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-adbe",
+      "entity": "Adobe",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -4956,32 +4969,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-snow:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-snow",
-      "entity": "Snowflake",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "technology-control-snow:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-snow",
-      "entity": "Snowflake",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "technology-control-meli:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "technology-control-meli",
@@ -4990,32 +4977,6 @@
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "technology-control-adbe:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-adbe",
-      "entity": "Adobe",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "technology-control-adbe:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-adbe",
-      "entity": "Adobe",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
@@ -5268,45 +5229,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-alab:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-alab",
-      "entity": "Astera Labs",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "technology-control-alab:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-alab",
-      "entity": "Astera Labs",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "technology-control-umc:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "technology-control-umc",
-      "entity": "United Microelectronics",
-      "category": "technology-control",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "technology-control-ebay:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "technology-control-ebay",
@@ -5330,6 +5252,58 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position new position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-alab:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-alab",
+      "entity": "Astera Labs",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-alab:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-alab",
+      "entity": "Astera Labs",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-xyz:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-xyz",
+      "entity": "Block",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "technology-control-umc:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "technology-control-umc",
+      "entity": "United Microelectronics",
+      "category": "technology-control",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -5658,6 +5632,19 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "energy-resources-bkr:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "energy-resources-bkr",
+      "entity": "Baker Hughes",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "energy-resources-sre:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "energy-resources-sre",
@@ -5697,19 +5684,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "energy-resources-bkr:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "energy-resources-bkr",
-      "entity": "Baker Hughes",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "energy-resources-lng:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "energy-resources-lng",
@@ -5733,32 +5707,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "energy-resources-vst:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "energy-resources-vst",
-      "entity": "Vistra",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "energy-resources-vst:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "energy-resources-vst",
-      "entity": "Vistra",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -5788,6 +5736,32 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "energy-resources-vst:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "energy-resources-vst",
+      "entity": "Vistra",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "energy-resources-vst:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "energy-resources-vst",
+      "entity": "Vistra",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "energy-resources-xel:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "energy-resources-xel",
@@ -5811,19 +5785,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "energy-resources-pcg:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "energy-resources-pcg",
-      "entity": "PG&E Corporation",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -5853,6 +5814,19 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "energy-resources-pcg:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "energy-resources-pcg",
+      "entity": "PG&E Corporation",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "energy-resources-wec:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
       "entityId": "energy-resources-wec",
@@ -5863,19 +5837,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "energy-resources-vg:sec-form13f",
-      "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "energy-resources-vg",
-      "entity": "Venture Global",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -5902,6 +5863,19 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "energy-resources-vg:sec-form13f",
+      "date": "2026-05-15T00:00:00.000Z",
+      "entityId": "energy-resources-vg",
+      "entity": "Venture Global",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -6373,10 +6347,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "defence-security-rdw:sec-form13f",
+      "id": "defence-security-lunr:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "defence-security-rdw",
-      "entity": "Redwire",
+      "entityId": "defence-security-lunr",
+      "entity": "Intuitive Machines",
       "category": "defence-security",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -6386,10 +6360,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "defence-security-lunr:sec-form13f",
+      "id": "defence-security-rdw:sec-form13f",
       "date": "2026-05-15T00:00:00.000Z",
-      "entityId": "defence-security-lunr",
-      "entity": "Intuitive Machines",
+      "entityId": "defence-security-rdw",
+      "entity": "Redwire",
       "category": "defence-security",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -6659,6 +6633,19 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "companies-orcl:sec-form13f",
+      "date": "2026-05-13T00:00:00.000Z",
+      "entityId": "companies-orcl",
+      "entity": "Oracle",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "companies-ms:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "companies-ms",
@@ -6685,16 +6672,16 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "companies-orcl:sec-form13f",
+      "id": "companies-rtx:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "companies-orcl",
-      "entity": "Oracle",
+      "entityId": "companies-rtx",
+      "entity": "RTX",
       "category": "companies",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
       "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -6708,19 +6695,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-rtx:sec-form13f",
-      "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "companies-rtx",
-      "entity": "RTX",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -6763,19 +6737,6 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "companies-panw:sec-form13f",
-      "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "companies-panw",
-      "entity": "Palo Alto Networks",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "companies-azn:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "companies-azn",
@@ -6786,6 +6747,19 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
       "evidenceGrade": "A",
       "establishes": "The manager's reported quarter-end position exited position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "companies-panw:sec-form13f",
+      "date": "2026-05-13T00:00:00.000Z",
+      "entityId": "companies-panw",
+      "entity": "Palo Alto Networks",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -6867,6 +6841,19 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "companies-pep:sec-form13f",
+      "date": "2026-05-13T00:00:00.000Z",
+      "entityId": "companies-pep",
+      "entity": "Pepsico",
+      "category": "companies",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "companies-tmus:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "companies-tmus",
@@ -6884,32 +6871,6 @@
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "companies-tte",
       "entity": "TotalEnergies",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-nee:sec-form13f",
-      "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "companies-nee",
-      "entity": "Nextera Energy",
-      "category": "companies",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "companies-pep:sec-form13f",
-      "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "companies-pep",
-      "entity": "Pepsico",
       "category": "companies",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -7595,10 +7556,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-meli:sec-form13f",
+      "id": "technology-control-adbe:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "technology-control-meli",
-      "entity": "MercadoLibre",
+      "entityId": "technology-control-adbe",
+      "entity": "Adobe",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -7608,10 +7569,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-adbe:sec-form13f",
+      "id": "technology-control-meli:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "technology-control-adbe",
-      "entity": "Adobe",
+      "entityId": "technology-control-meli",
+      "entity": "MercadoLibre",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -7699,10 +7660,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-alab:sec-form13f",
+      "id": "technology-control-ebay:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "technology-control-alab",
-      "entity": "Astera Labs",
+      "entityId": "technology-control-ebay",
+      "entity": "eBay",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -7712,10 +7673,10 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "technology-control-ebay:sec-form13f",
+      "id": "technology-control-alab:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "technology-control-ebay",
-      "entity": "eBay",
+      "entityId": "technology-control-alab",
+      "entity": "Astera Labs",
       "category": "technology-control",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",
@@ -7868,6 +7829,19 @@
       "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "energy-resources-bkr:sec-form13f",
+      "date": "2026-05-13T00:00:00.000Z",
+      "entityId": "energy-resources-bkr",
+      "entity": "Baker Hughes",
+      "category": "energy-resources",
+      "type": "source-linked",
+      "title": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "evidenceGrade": "A",
+      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "energy-resources-mplx:sec-form13f",
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "energy-resources-mplx",
@@ -7885,19 +7859,6 @@
       "date": "2026-05-13T00:00:00.000Z",
       "entityId": "energy-resources-fang",
       "entity": "Diamondback Energy",
-      "category": "energy-resources",
-      "type": "source-linked",
-      "title": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "evidenceGrade": "A",
-      "establishes": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "doesNotEstablish": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "energy-resources-bkr:sec-form13f",
-      "date": "2026-05-13T00:00:00.000Z",
-      "entityId": "energy-resources-bkr",
-      "entity": "Baker Hughes",
       "category": "energy-resources",
       "type": "source-linked",
       "title": "SEC Form 13F comparison 2026-03-31",

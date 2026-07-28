@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T06:59:00.810Z",
-  "pageCount": 72,
+  "generatedAt": "2026-07-28T06:21:10.142Z",
+  "pageCount": 73,
   "output": "downloads/top-52-generated-art.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Top 52 Generated Card Artwork",
-    "contentHash": "c03b9bba0a59595e1c4345b6c5121086efe333390a7229f2e676b40ebeef689b",
+    "contentHash": "adccaeca1fc4c3609992d0b114458624a8a25576cce14811bd4fb4e80bf82642",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -60,13 +60,11 @@
       "bezos-family",
       "zuckerberg-chan-family",
       "cook-islands",
-      "594100b62a47db521fe2a128",
       "ec1316fb1fb70c83dc347bb6",
       "72ef7895f95288946ccb3cff",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
       "mukesh-ambani",
       "xi-jinping",
       "narendra-modi",
@@ -89,7 +87,9 @@
       "mackenzie-scott",
       "priscilla-chan",
       "3a7327ba910394688b625251",
+      "203490b609adba41312c7609",
       "07d8034669799aad27a25029",
+      "7b119327320ea81d940de97f",
       "larry-ellison",
       "trilateral-commission",
       "brookings-institution",
@@ -132,7 +132,7 @@
     ],
     "metrics": {
       "evidenceCount": 122,
-      "primarySourceCount": 2,
+      "primarySourceCount": 4,
       "disputedClaimCount": 1,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -141,10 +141,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Top 52 Generated Card Artwork.",
-        "evidence": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/clock-wall.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/global-risk-clocks.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Top 52 Generated Card Artwork.",
+        "evidence": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/clock-wall.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/conclusion-engine.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/global-risk-clocks.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/speculative-intelligence-synthesis.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-27T06:59:30.174Z
+Updated: 2026-07-28T06:21:49.377Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -68,6 +68,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Card Live Intelligence Updates: downloads/card-live-updates.pdf
 - Case Status Dashboard: downloads/case-status-dashboard.pdf
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf
+- Clock Meaning Contract Report: downloads/clock-meaning-contract-report.pdf
 - WWIII Escalation Clock: downloads/clock-wall.pdf
 - Cloudflare Canonical Member Origin: downloads/cloudflare-canonical-member-origin.pdf
 - Cloudflare Investigation Graph Projection: downloads/cloudflare-investigation-graph-projection.pdf
@@ -82,6 +83,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf
+- Criminal Conduct Engine Pressure Test: downloads/criminal-conduct-engine-pressure-test.pdf
+- Criminal Conduct Engine Report: downloads/criminal-conduct-engine-report.pdf
+- Criminal Conduct Extensionless Sync: downloads/criminal-conduct-extensionless-sync.pdf
+- Criminal Conduct Review Queue: downloads/criminal-conduct-review-queue.pdf
 - Current Clock Intelligence Test: downloads/current-clock-intelligence-test.pdf
 - Current Clock Intelligence: downloads/current-clock-intelligence.pdf
 - Current Controlled Deploy Runs: downloads/current-controlled-deploy-runs.pdf
@@ -98,9 +103,15 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf
 - Daily Epstein Update: downloads/daily-epstein-update.pdf
 - Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf
+- Daily Watch History Report: downloads/daily-watch-history-report.pdf
+- Daily Watch Publication Report: downloads/daily-watch-publication-report.pdf
+- Daily Watch Ranking Decision: downloads/daily-watch-ranking-decision.pdf
+- Daily Intelligence Hit List: downloads/daily-watch.pdf
+- Dark Speculation Club Investigations: downloads/dark-speculation-club-investigations.pdf
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf
 - Death Files 100 Catalogue: downloads/death-files-100-catalogue.pdf
+- Death Files 100 Ui Enhancement: downloads/death-files-100-ui-enhancement.pdf
 - The Death Files: downloads/death-files-index.pdf
 - Death Files Pressure Test: downloads/death-files-pressure-test.pdf
 - Deep Audit Member Posting Contract: downloads/deep-audit-member-posting-contract.pdf
@@ -156,6 +167,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Evidence Network Map Wiring: downloads/evidence-network-map-wiring.pdf
 - Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf
 - Evidence Task Engine: downloads/evidence-task-engine.pdf
+- Final Contact Worker: downloads/final-contact-worker.pdf
 - Final Forum Controlled Deploy: downloads/final-forum-controlled-deploy.pdf
 - Final Investigation Hardening: downloads/final-investigation-hardening.pdf
 - Final Live Audit And External Links: downloads/final-live-audit-and-external-links.pdf
@@ -191,6 +203,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Matrix Reprogrammed Intel Drop Vault: downloads/intel-drop-vault.pdf
 - Intel Vault: downloads/intel-vault.pdf
 - Internal Report Manifest Cleanup: downloads/internal-report-manifest-cleanup.pdf
+- Investigation Data Integrity Repair: downloads/investigation-data-integrity-repair.pdf
 - Investigation Machine Run Report: downloads/investigation-machine-run-report.pdf
 - Investigation Source Ledger: downloads/investigation-source-ledger.pdf
 - July 2026 All Clock Sweep Test: downloads/july-2026-all-clock-sweep-test.pdf
@@ -233,8 +246,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Membership Tiers Report: downloads/membership-tiers-report.pdf
 - Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf
 - Mission Acceptance Copy Alignment: downloads/mission-acceptance-copy-alignment.pdf
+- Mission Data Contract Report: downloads/mission-data-contract-report.pdf
 - Mission Health Audit: downloads/mission-health-audit.pdf
 - Mission Intelligence 10: downloads/mission-intelligence-10.pdf
+- Mission Orchestration Audit: downloads/mission-orchestration-audit.pdf
 - Mission Source Priority Index: downloads/mission-source-priority-index.pdf
 - Monetisation Dashboard: downloads/monetisation-dashboard.pdf
 - Money Depth Integration Test: downloads/money-depth-integration-test.pdf
@@ -272,6 +287,11 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf
 - Power Dossier Runtime Report: downloads/power-dossier-runtime-report.pdf
+- Predators In Power Build Report: downloads/predators-in-power-build-report.pdf
+- Predators In Power Conduct Links: downloads/predators-in-power-conduct-links.pdf
+- Predators In Power Output Sync: downloads/predators-in-power-output-sync.pdf
+- Predators In Power Pressure Test: downloads/predators-in-power-pressure-test.pdf
+- Predators in Power: downloads/predators-in-power.pdf
 - Premier Resource Route Restore: downloads/premier-resource-route-restore.pdf
 - Site Pressure Test Report: downloads/pressure-test-site-report.pdf
 - Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf
@@ -292,6 +312,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Public Runtime Controls Output: downloads/public-runtime-controls-output.pdf
 - Public Runtime Controls: downloads/public-runtime-controls.pdf
 - Public Site Error Repair: downloads/public-site-error-repair.pdf
+- Public Static Route Bridge: downloads/public-static-route-bridge.pdf
 - Public Utility Dedupe Output: downloads/public-utility-dedupe-output.pdf
 - Public Utility Dedupe: downloads/public-utility-dedupe.pdf
 - Public Visibility Report: downloads/public-visibility-report.pdf
@@ -449,5 +470,6 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Wealth Pdf Layout Wiring: downloads/wealth-pdf-layout-wiring.pdf
 - Weekly Investigation Report: downloads/weekly-investigation-report.pdf
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf
+- Weekly Mission Watch Delta: downloads/weekly-watch-delta.pdf
 - Worker Api Contract Hardening: downloads/worker-api-contract-hardening.pdf
 - Wrongdoing Tracker / Public-Record Case Engine: downloads/wrongdoing-tracker.pdf

@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-28T06:24:45.230Z",
+  "mode": "single-authoritative-hydration-with-verification-only",
+  "idempotent": true,
+  "waveFiles": [
+    "criminal-conduct-subjects-wave2.json",
+    "criminal-conduct-subjects-wave3.json"
+  ],
+  "subjectsVerified": 13,
+  "totalRegistrySubjects": 20,
+  "approvedFindings": 32,
+  "verified": [
+    {
+      "wave": "criminal-conduct-subjects-wave2.json",
+      "key": "keith-raniere",
+      "name": "Keith Raniere",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave2.json",
+      "key": "r-kelly",
+      "name": "R. Kelly",
+      "approvedRecords": 3
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave2.json",
+      "key": "anthony-weiner",
+      "name": "Anthony Weiner",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave2.json",
+      "key": "ralph-shortey",
+      "name": "Ralph Shortey",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave2.json",
+      "key": "lawrence-ray",
+      "name": "Lawrence Ray",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "george-nader",
+      "name": "George A. Nader",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "joel-greenberg",
+      "name": "Joel Micah Greenberg",
+      "approvedRecords": 2
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "robert-hadden",
+      "name": "Robert Hadden",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "huw-edwards",
+      "name": "Huw Edwards",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "adam-taylor-nca",
+      "name": "Adam Taylor",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "abdul-halim-khan",
+      "name": "Abdul Halim Khan",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "david-james-clarke",
+      "name": "David James Clarke",
+      "approvedRecords": 1
+    },
+    {
+      "wave": "criminal-conduct-subjects-wave3.json",
+      "key": "conor-mcgrath",
+      "name": "Conor McGrath",
+      "approvedRecords": 1
+    }
+  ],
+  "rule": "Numbered source waves are hydrated exactly once by build-criminal-conduct-registry.js; this pass only verifies ownership and approved records."
+}

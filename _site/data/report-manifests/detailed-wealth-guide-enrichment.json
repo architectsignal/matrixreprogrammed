@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T06:52:27.825Z",
-  "pageCount": 136,
+  "generatedAt": "2026-07-28T06:12:43.112Z",
+  "pageCount": 135,
   "output": "downloads/detailed-wealth-guide-enrichment.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Detailed Wealth Guide Enrichment",
-    "contentHash": "c7c3d091e790f35a946750ad8cbb40cb72b7420790dc34877344f6f56d3ad076",
+    "contentHash": "2eebb97faefeb80f0230a32653ea5fa7cf3be711b141636d88c938c2f215f558",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -23,10 +23,14 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "3a425f0d5d683952bc0ad7ac",
+      "96c24b16f820cebf7d9a03fe",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -56,10 +60,8 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-4D43B792A3A9872B",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -84,7 +86,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-3B61EAB39C318DF1",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -145,33 +146,32 @@
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958"
+      "ASC-REVIEW-68286C2A2CB861AF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 140,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 138,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 132,
+      "relationshipCount": 131,
       "moneyRecordCount": 123
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Detailed Wealth Guide Enrichment beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Detailed Wealth Guide Enrichment.",
+        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Speculatively, the graph hint in “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer — blackwater-constellis-lineage.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Administration for Children and Families (ACF) is requesting a 3-year extension of the Guidance for the Tribal Temporary Assistance for Needy Families (TANF) Program, Form 123 (Office of Management and Budget (0970-0157, expiration date: August 31, 2026). While the statutory requirements remain unchanged, ACF is proposing revisions to the instructions for clarification and to ensure they are as clear and streamlined as possible. ACF estimates a 33 percent reduction in response time with the proposed revisions to the instructions. A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:52:27.825Z"
+    "intelligenceFreshnessDate": "2026-07-21T00:00:00.000Z"
   }
 }

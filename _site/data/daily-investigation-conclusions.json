@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-07-26T10:44:50.393Z",
+  "generatedAt": "2026-07-27T17:28:43.661Z",
   "period": {
-    "start": "2026-07-24T10:44:59.869Z",
-    "end": "2026-07-26T10:44:50.393Z",
+    "start": "2026-07-25T17:28:51.928Z",
+    "end": "2026-07-27T17:28:43.661Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -22,63 +22,63 @@
     "sourcesFetched": 11,
     "sourceFailures": 1,
     "changedSources": 5,
-    "findingsInWindow": 860,
+    "findingsInWindow": 1081,
     "establishedWrongdoingFindings": 0,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0,
-    "meaningfulSourceChanges": 9
+    "meaningfulSourceChanges": 12
   },
   "topConclusion": "The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.",
   "patterns": {
     "byLane": {
-      "money-contracts": 125,
-      "oversight-audit": 226,
-      "international-corruption": 107,
-      "government-enforcement": 156,
-      "declassified-leaks": 86,
-      "epstein-disclosure": 160
+      "money-contracts": 85,
+      "international-corruption": 150,
+      "government-enforcement": 234,
+      "oversight-audit": 243,
+      "declassified-leaks": 129,
+      "epstein-disclosure": 240
     },
     "byStatus": {
-      "record-update": 550,
-      "official-audit-finding": 23,
-      "document-release": 25,
-      "established-wrongdoing": 136,
-      "official-enforcement": 38,
-      "wrongdoing-lead": 44,
-      "leak-or-document-lead": 44
+      "record-update": 648,
+      "official-audit-finding": 34,
+      "established-wrongdoing": 204,
+      "official-enforcement": 58,
+      "wrongdoing-lead": 66,
+      "document-release": 26,
+      "leak-or-document-lead": 45
     },
     "topWrongdoingIndicators": [
       {
         "term": "fraud",
-        "count": 48
+        "count": 72
       },
       {
         "term": "sanction",
-        "count": 38
+        "count": 58
       },
       {
         "term": "procurement fraud",
-        "count": 4
+        "count": 6
       },
       {
         "term": "convicted",
-        "count": 2
+        "count": 3
       },
       {
         "term": "misconduct",
-        "count": 2
+        "count": 3
       },
       {
         "term": "bribery",
-        "count": 2
+        "count": 3
       },
       {
         "term": "corruption",
-        "count": 2
+        "count": 3
       },
       {
         "term": "money laundering",
-        "count": 2
+        "count": 3
       }
     ]
   },
@@ -141,7 +141,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/1240BK25P0035",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "73799cb9af4829047998b026",
@@ -198,7 +224,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95C67826P0287",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "dcec2a45ef35362072af05e3",
@@ -255,7 +307,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/80SSC026P0003",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "aa125ed22fe885dd57f96c32",
@@ -312,7 +390,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0043",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "f73c11ef3163b1800592aabe",
@@ -369,7 +473,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0042",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "4c372edcf20b760ae3305f10",
@@ -426,7 +556,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/HC101326FB686",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "b49c319c09a07b245b24f74a",
@@ -483,7 +639,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9523ZY26P0022",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "1583ed9e90a5874047a33041",
@@ -540,7 +722,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/80NSSC26P1028",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "ec968f2ec6ba82128b4cd91b",
@@ -597,7 +805,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95C67826P0279",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "7c212daa6802e36f4fe4f000",
@@ -654,7 +888,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/80TECH26FA179",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "e28738303cb279558b7a88c0",
@@ -711,7 +971,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/93310026P0007",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "e4e58bed8a2ad4ff1aa59afe",
@@ -768,7 +1054,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/91990026F0071",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "e86287f396e1ee800a7ee796",
@@ -825,7 +1137,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/959P0026P0005",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "baa43ec6d7327777ba931c2c",
@@ -882,7 +1220,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/89243326FFE400787",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "64655043524cba9e6a679f8d",
@@ -939,7 +1303,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0050",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "fafa3982950de0fd589ad0d0",
@@ -996,7 +1386,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0044",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "4a8dd46bd8d4335f061e03ac",
@@ -1053,7 +1469,33 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95C67826P0296",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "d2f7882f509480d63c31702f",
@@ -1112,7 +1554,185 @@
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      }
+      },
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95332A26P00013",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "source-change-ea906ec638c352f7dced1c63",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-27T17:28:52.106Z",
+      "firstSeen": "2026-07-27T17:28:52.106Z",
+      "lastSeen": "2026-07-27T17:28:52.106Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-5594665950812895f468c11d",
+      "sourceId": "treasury-ofac-recent-actions",
+      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
+      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
+      "itemUrl": "https://ofac.treasury.gov/recent-actions",
+      "lane": "international-corruption",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-27T17:28:52.106Z",
+      "firstSeen": "2026-07-27T17:28:52.106Z",
+      "lastSeen": "2026-07-27T17:28:52.106Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-49679b1ed63de244c1cf19f9",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-27T08:50:27.138Z",
+      "firstSeen": "2026-07-27T08:50:27.138Z",
+      "lastSeen": "2026-07-27T08:50:27.138Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-d5adf164b612fd92a1dca692",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-07-27T07:25:32.191Z",
+      "firstSeen": "2026-07-27T07:25:32.191Z",
+      "lastSeen": "2026-07-27T07:25:32.191Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
     },
     {
       "id": "source-change-e853e2cce33f37c0619d2433",
@@ -1265,158 +1885,6 @@
         "hash",
         "content changed"
       ]
-    },
-    {
-      "id": "source-change-8399c1d3bf659fd96cfa664c",
-      "sourceId": "sec-current-filings",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "lane": "money-contracts",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-26T07:48:36.624Z",
-      "firstSeen": "2026-07-26T07:48:36.624Z",
-      "lastSeen": "2026-07-26T07:48:36.624Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-6d665d935673091233751767",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "lane": "government-enforcement",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-26T07:48:36.624Z",
-      "firstSeen": "2026-07-26T07:48:36.624Z",
-      "lastSeen": "2026-07-26T07:48:36.624Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-92adb9d59689b41e578a7a5e",
-      "sourceId": "federal-register-latest",
-      "sourceLabel": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "itemUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "lane": "oversight-audit",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: Federal Register — Latest Documents",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-26T07:48:36.624Z",
-      "firstSeen": "2026-07-26T07:48:36.624Z",
-      "lastSeen": "2026-07-26T07:48:36.624Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-ad23fb22757e50c30b3d487c",
-      "sourceId": "treasury-ofac-recent-actions",
-      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
-      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
-      "itemUrl": "https://ofac.treasury.gov/recent-actions",
-      "lane": "international-corruption",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-26T07:48:36.624Z",
-      "firstSeen": "2026-07-26T07:48:36.624Z",
-      "lastSeen": "2026-07-26T07:48:36.624Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
     }
   ],
   "changedSources": [
@@ -1425,13 +1893,13 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "checkedAt": "2026-07-27T17:28:43.661Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "8802ddcb3610055e1d94ac34419dca4a3941788ef90914339e66d5c9f3edecdb",
+      "bytes": 2194,
+      "bodyHash": "8345fd6af4c9faf3ec184bed94e224431efbed71de0b8ff51d08b3dcd118b5ce",
       "changed": true,
       "itemCount": 1,
       "error": ""
@@ -1441,13 +1909,13 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://oig.justice.gov/reports",
-      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "checkedAt": "2026-07-27T17:28:43.661Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62897,
-      "bodyHash": "0a17582f94671c29d29dbfb7c78a93db23f48acefc32016aa69a125d2949b060",
+      "bodyHash": "df54b504a69e7e90d801f10e9c9022532df236381176ecd0c49824769d41c1b7",
       "changed": true,
       "itemCount": 14,
       "error": ""
@@ -1457,13 +1925,13 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "checkedAt": "2026-07-27T17:28:43.661Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 22804,
-      "bodyHash": "36520eeacb30bc5cd04972fde568f6c9897cd84829d2fa34548f7ea4cefc018f",
+      "bytes": 23813,
+      "bodyHash": "8a74f9d01056e8e4a1559a0c4fb69201dbac1151e481bcd0a70db440c33116c2",
       "changed": true,
       "itemCount": 1,
       "error": ""
@@ -1473,15 +1941,15 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "checkedAt": "2026-07-27T17:28:43.661Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43380,
-      "bodyHash": "61ac245b1a17e00a1480379755347313f260a66af034bdd44709305a858af61a",
+      "bytes": 43508,
+      "bodyHash": "3dfb2d037a900dee5c2ae8e0f399c73b3206cdac8143e7021d91cf5c60619d4a",
       "changed": true,
-      "itemCount": 18,
+      "itemCount": 19,
       "error": ""
     },
     {
@@ -1489,13 +1957,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-07-26T10:44:50.393Z",
+      "checkedAt": "2026-07-27T17:28:43.661Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101945,
-      "bodyHash": "8285eaeb9c19711c910be9f5e902796c43cad4061fece4c8e63edd1ee32f37bc",
+      "bodyHash": "0b56f47874275aea36162c598094d5139368a38f936a67bda87682259ad59a8d",
       "changed": true,
       "itemCount": 15,
       "error": ""
@@ -1712,6 +2180,191 @@
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
   "sourceChanges": [
+    {
+      "id": "ea906ec638c352f7dced1c63",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-27T17:28:52.106Z",
+      "detectedAt": "2026-07-27T17:28:52.106Z",
+      "changeType": "content-changed",
+      "previousHash": "4ad9eeea8dea24939cc2dea2e08409a27e2f791b2faea913a6851134818e0fcf",
+      "currentHash": "9bc11ce7a82d4a1afe7d4a68b67515d9d237b956be889d9a689e48ed23aa2564",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 27 Jul 2026 13:28:52 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T13:28:52-04:00 424B2 - UBS AG (0001114446) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036419 <b>Size:</b> 699 KB 2026-07-27T13:27:03-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036419 13F-HR - NOTTINGHAM ADVISORS, INC.",
+        "(0001093276) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001093276-26-000013 <b>Size:</b> 73 KB 2026-07-27T13:27:00-04:00 urn:tag:sec.gov,2008:accession-number=0001093276-26-000013 D - Eval Ventures Alpha 1, LP (0002122972) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002122972-26-000002 <b>Size:</b> 8 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:26:37-04:00 urn:tag:sec.gov,2008:accession-number=0002122972-26-000002 D - Eterna Capital Partners LP - Series Alpha BG (0002139187) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002139187-26-000001 <b>Size:</b> 6 KB 2026-07-27T13:26:10-04:00 urn:tag:sec.gov,2008:accession-number=0002139187-26-000001 13F-HR - Miramar Capital, LLC (0001767812) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001767812-26-000004 <b>Size:</b> 31 KB 2026-07-27T13:26:04-04:00 urn:tag:sec.gov,2008:accession-number=0001767812-26-000004 N-PX - Mallini Complete Financial Planning LLC (0002049540) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002049540-26-000005 <b>Size:</b> 3 KB 2026-07-27T13:25:26-04:00 urn:tag:sec.gov,2008:accession-number=0002049540-26-000005 D - Parliament Capital Series III, LLC - Series O (0002145186) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002145186-26-000001 <b>Size:</b> 9 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:25:02-04:00 urn:tag:sec.gov,2008:accession-number=0002145186-26-000001 SCHEDULE 13G - KEYSTONE CAPITAL PARTNERS, LLC (0001865973) (Filed by) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081732 <b>Size:</b> 18 KB 2026-07-27T13:24:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081732 SCHEDULE 13G - Onconetix, Inc.",
+        "(0001782107) (Subject) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081732 <b>Size:</b> 18 KB 2026-07-27T13:24:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081732 24F-2NT - BLACKROCK EQUITY DIVIDEND FUND (0000814507) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028404 <b>Size:</b> 5 KB 2026-07-27T13:24:05-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028404 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036418 <b>Size:</b> 607 KB 2026-07-27T13:23:09-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036418 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036418 <b>Size:</b> 607 KB 2026-07-27T13:23:09-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036418 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036417 <b>Size:</b> 435 KB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036417 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036417 <b>Size:</b> 435 KB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036417 485BPOS - FIDELITY SUMMER STREET TRUST (0000225322) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000225322-26-000191 <b>Size:</b> 19 MB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0000225322-26-000191 485BPOS - FIDELITY SUMMER STREET TRUST (0000225322) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000225322-26-000191 <b>Size:</b> 19 MB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0000225322-26-000191 D/A - Kairos Energy Metals, LP (0001983332) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001983332-26-000001 <b>Size:</b> 7 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:22:31-04:00 urn:tag:sec.gov,2008:accession-number=0001983332-26-000001 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036416 <b>Size:</b> 504 KB 2026-07-27T13:22:05-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036416 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036416 <b>Size:</b> 504 KB 2026-07-27T13:22:05-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036416 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036415 <b>Size:</b> 487 KB 2026-07-27T13:21:30-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036415 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036415 <b>Size:</b> 487 KB 2026-07-27T13:21:30-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036415 N-CSRS - Federated Hermes Strategic Dividend Growth Fund, Inc.",
+        "(0000799704) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001623632-26-001069 <b>Size:</b> 3 MB 2026-07-27T13:20:59-04:00 urn:tag:sec.gov,2008:accession-number=0001623632-26-001069 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036414 <b>Size:</b> 487 KB 2026-07-27T13:20:53-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036414 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036414 <b>Size:</b> 487 KB 2026-07-27T13:20:53-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036414 N-PX - KERR FINANCIAL PLANNING Corp (0002095947) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002095947-26-000007 <b>Size:</b> 3 KB 2026-07-27T13:20:52-04:00 urn:tag:sec.gov,2008:accession-number=0002095947-26-000007 D - MCB The Enolia Student Housing DST (0002142377) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002142377-26-000001 <b>Size:</b> 8 KB 2026-07-27T13:20:49-04:00 urn:tag:sec.gov,2008:accession-number=0002142377-26-000001 13F-NT - HSBC Bank Bermuda Ltd (0001581175) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001581175-26-000003 <b>Size:</b> 2 KB 2026-07-27T13:18:49-04:00 urn:tag:sec.gov,2008:accession-number=0001581175-26-000003 13F-HR - LGL PARTNERS, LLC (0001653202) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001653202-26-000003 <b>Size:</b> 36 KB 2026-07-27T13:17:35-04:00 urn:tag:sec.gov,2008:accession-number=0001653202-26-000003 D - LRI Vision Partners Fund III, L.P.",
+        "(0002146550) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002146550-26-000001 <b>Size:</b> 7 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:17:04-04:00 urn:tag:sec.gov,2008:accession-number=0002146550-26-000001 24F-2NT - BLACKROCK EMERGING MARKETS FUND, INC.",
+        "(0000849402) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028403 <b>Size:</b> 5 KB 2026-07-27T13:16:44-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028403 424B2 - ROYAL BANK OF CANADA (0001000275) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000950103-26-011189 <b>Size:</b> 276 KB 2026-07-27T13:16:26-04:00 urn:tag:sec.gov,2008:accession-number=0000950103-26-011189 D - Willow Tree Fund II-CV, LP (0002112208) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000929638-26-002735 <b>Size:</b> 13 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:15:26-04:00 urn:tag:sec.gov,2008:accession-number=0000929638-26-002735 485BPOS - Franklin Templeton ETF Trust (0001655589) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001655589-26-000973 <b>Size:</b> 69 MB 2026-07-27T13:14:11-04:00 urn:tag:sec.gov,2008:accession-number=0001655589-26-000973 485BPOS - Franklin Templeton ETF Trust (0001655589) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001655589-26-000973 <b>Size:</b> 69 MB 2026-07-27T13:14:11-04:00 urn:tag:sec.gov,2008:accession-number=0001655589-26-000973 144 - BIERMAN JAMES L (0001189534) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001959173-26-005380 <b>Size:</b> 4 KB 2026-07-27T13:13:52-04:00 urn:tag:sec.gov,2008:accession-number=0001959173-26-005380 144 - TENET HEALTHCARE CORP (0000070318) (Subject) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001959173-26-005380 <b>Size:</b> 4 KB 2026-07-27T13:13:52-04:00 urn:tag:sec.gov,2008:accession-number=0001959173-26-005380 D - Willow Tree Fund II-CV (Offshore), LP (0002114954) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000929638-26-002734 <b>Size:</b> 13 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:13:10-04:00 urn:tag:sec.gov,2008:accession-number=0000929638-26-002734 424B2 - BofA Finance LLC (0001682472) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001918704-26-021293 <b>Size:</b> 793 KB 2026-07-27T13:12:40-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021293 424B2 - BANK OF AMERICA CORP /DE/ (0000070858) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001918704-26-021293 <b>Size:</b> 793 KB 2026-07-27T13:12:40-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021293 24F-2NT - BlackRock Unconstrained Equity Fund (0001324285) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028402 <b>Size:</b> 5 KB 2026-07-27T13:10:42-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028402"
+      ],
+      "removals": [
+        "Latest Filings - Mon, 27 Jul 2026 04:50:27 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T04:50:27-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc.",
+        "(0001516513) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Sams Louise S (0001796961) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024451 <b>Size:</b> 5 KB 2026-07-24T21:51:18-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024451 4 - Loop Industries, Inc.",
+        "(0001504678) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024451 <b>Size:</b> 5 KB 2026-07-24T21:51:18-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024451 4 - Auguste Laurent (0002029554) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024449 <b>Size:</b> 6 KB 2026-07-24T21:49:20-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024449 4 - Loop Industries, Inc.",
+        "(0001504678) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024449 <b>Size:</b> 6 KB 2026-07-24T21:49:20-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024449 4 - Stubina Jay Howard (0001706802) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024447 <b>Size:</b> 5 KB 2026-07-24T21:46:30-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024447 4 - Loop Industries, Inc.",
+        "(0001504678) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024447 <b>Size:</b> 5 KB 2026-07-24T21:46:30-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024447 4 - Hasiba Adam (0001814687) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001193125-26-316589 <b>Size:</b> 4 KB 2026-07-24T21:45:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-316589 4 - ONESPAWORLD HOLDINGS Ltd (0001758488) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001193125-26-316589 <b>Size:</b> 4 KB 2026-07-24T21:45:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-316589 4 - Sellyn Laurence G.",
+        "(0001737294) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024445 <b>Size:</b> 5 KB 2026-07-24T21:44:04-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024445 4 - Loop Industries, Inc.",
+        "(0001504678) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024445 <b>Size:</b> 5 KB 2026-07-24T21:44:04-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024445 4 - Singh Harmit J (0001472176) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001999371-26-015876 <b>Size:</b> 41 KB 2026-07-24T21:42:41-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-015876 4 - LEVI STRAUSS & CO (0000094845) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001999371-26-015876 <b>Size:</b> 41 KB 2026-07-24T21:42:41-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-015876 4 - HAQ MAHMUD UL (0001611078) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001493152-26-034656 <b>Size:</b> 5 KB 2026-07-24T21:30:01-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034656 4 - CareCloud, Inc.",
+        "(0001582982) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001493152-26-034656 <b>Size:</b> 5 KB 2026-07-24T21:30:01-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034656 4 - SELWYN JOFFE (0001160863) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029655 <b>Size:</b> 6 KB 2026-07-24T21:18:21-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029655 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029655 <b>Size:</b> 6 KB 2026-07-24T21:18:21-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029655 4 - Shah Kamlesh (0001794944) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029654 <b>Size:</b> 6 KB 2026-07-24T21:18:20-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029654 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029654 <b>Size:</b> 6 KB 2026-07-24T21:18:20-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029654 4 - Stone Juliet Lynn (0001788343) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029653 <b>Size:</b> 6 KB 2026-07-24T21:18:19-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029653 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029653 <b>Size:</b> 6 KB 2026-07-24T21:18:19-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029653 4 - Burlingame Glenn Daniel (0002066535) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029652 <b>Size:</b> 4 KB 2026-07-24T21:18:18-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029652 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029652 <b>Size:</b> 4 KB 2026-07-24T21:18:18-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029652 4 - Schooner Douglas Earl (0001437437) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029651 <b>Size:</b> 6 KB 2026-07-24T21:18:17-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029651 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029651 <b>Size:</b> 6 KB 2026-07-24T21:18:17-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029651 4 - Lee David Sung (0001437480) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029650 <b>Size:</b> 6 KB 2026-07-24T21:18:15-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029650 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029650 <b>Size:</b> 6 KB 2026-07-24T21:18:15-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029650 4 - Demopulos Gregory A MD (0001472160) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024443 <b>Size:</b> 5 KB 2026-07-24T21:17:50-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024443 4 - OMEROS CORP (0001285819) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024443 <b>Size:</b> 5 KB 2026-07-24T21:17:50-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024443 SCHEDULE 13G/A - TCG Crossover GP II, LLC (0001969280) (Filed by) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001193125-26-316577 <b>Size:</b> 18 KB 2026-07-24T21:15:02-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-316577 SCHEDULE 13G/A - Surrozen, Inc./DE (0001824893) (Subject) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001193125-26-316577 <b>Size:</b> 18 KB 2026-07-24T21:15:02-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-316577 SCHEDULE 13D/A - Gossamer Bio, Inc.",
+        "(0001728117) (Subject) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001104659-26-086735 <b>Size:</b> 70 KB 2026-07-24T21:14:46-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-086735 SCHEDULE 13D/A - D.",
+        "(0001009268) (Filed by) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001104659-26-086735 <b>Size:</b> 70 KB 2026-07-24T21:14:46-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-086735 4 - Cook Jamie Leigh (0002141696) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029643 <b>Size:</b> 4 KB 2026-07-24T21:14:02-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029643 4 - MOTORCAR PARTS OF AMERICA INC (0000918251) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001140361-26-029643 <b>Size:</b> 4 KB 2026-07-24T21:14:02-04:00 urn:tag:sec.gov,2008:accession-number=0001140361-26-029643 4 - Cancelmo Peter B (0001778968) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024441 <b>Size:</b> 5 KB 2026-07-24T21:13:42-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024441 4 - OMEROS CORP (0001285819) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024441 <b>Size:</b> 5 KB 2026-07-24T21:13:42-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024441 4 - Borges David J.",
+        "(0002005787) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024439 <b>Size:</b> 5 KB 2026-07-24T21:11:31-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024439 4 - OMEROS CORP (0001285819) (Issuer) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001437749-26-024439 <b>Size:</b> 5 KB 2026-07-24T21:11:31-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-024439"
+      ],
+      "additionCount": 6,
+      "removalCount": 11,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "5594665950812895f468c11d",
+      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+      "sourceId": "treasury-ofac-recent-actions",
+      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
+      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-27T17:28:52.106Z",
+      "detectedAt": "2026-07-27T17:28:52.106Z",
+      "changeType": "content-changed",
+      "previousHash": "c8d9b2666eb8670cab556c5575e9b20991ca3823a0d9c9f6c8acb3089f372b9d",
+      "currentHash": "59fb0179fd237c2c1e9333e26d7e0b794646161da7973086b9fe8ce4af98c112",
+      "httpStatus": 200,
+      "finalUrl": "https://ofac.treasury.gov/recent-actions",
+      "additions": [
+        "Department of the Treasury Read the latest Treasury news Office of Foreign Assets Control A Part of Treasury's Office of Terrorism and Financial Intelligence MENU About OFAC Recent Actions Sanctions Lists Sanctions List Service Specially Designated Nationals (SDN) List Consolidated Sanctions List (Non-SDN Lists) Other OFAC Sanctions Lists Sanctions List Search Sanctions Programs Russia-related Sanctions Iran Sanctions North Korea Sanctions Cuba Sanctions Counter Narcotics Sanctions Cyber-related Sanctions Venezuela-related Sanctions Complete List of Sanctions Programs and Country Information Submit a Report Contact Us Search Enter Search Term(s): Breadcrumb Home Recent Actions Specially Designated Nationals List (SDN List) Consolidated Sanctions List (Non-SDN Lists) Additional Sanctions Lists Search OFAC&#039;s Sanctions Lists Sanctions Programs and Country Information Recent Actions OFAC License Application Page Additional OFAC Resources Frequently Asked Questions Civil Penalties and Enforcement Information OFAC Reporting System Selected General Licenses Issued by OFAC Contact OFAC Recent Actions Displaying 1 - 10 of 3135 results.",
+        "Sanctions List Removals; Sanctions List Updates July 27, 2026 - Sanctions List Updates Iran-related Designations; Issuance of Amended Russia-related General License and Frequently Asked Questions; Issuance of Amended Venezuela-related Frequently Asked Question; Publication of Regulatory Amendments July 24, 2026 - Sanctions List Updates Counter Terrorism Designations; Counter Narcotics Designations; Cuba Designations; Belarus-related Designation Removal; Issuance of Cuba-related General Licenses July 23, 2026 - Sanctions List Updates Russia-related Designations Updates July 20, 2026 - Sanctions List Updates Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran-related Designations; Iran-related and Counter Terrorism Designation Update; Issuance of Iran-related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "removals": [
+        "Department of the Treasury Read the latest Treasury news Office of Foreign Assets Control A Part of Treasury's Office of Terrorism and Financial Intelligence MENU About OFAC Recent Actions Sanctions Lists Sanctions List Service Specially Designated Nationals (SDN) List Consolidated Sanctions List (Non-SDN Lists) Other OFAC Sanctions Lists Sanctions List Search Sanctions Programs Russia-related Sanctions Iran Sanctions North Korea Sanctions Cuba Sanctions Counter Narcotics Sanctions Cyber-related Sanctions Venezuela-related Sanctions Complete List of Sanctions Programs and Country Information Submit a Report Contact Us Search Enter Search Term(s): Breadcrumb Home Recent Actions Specially Designated Nationals List (SDN List) Consolidated Sanctions List (Non-SDN Lists) Additional Sanctions Lists Search OFAC&#039;s Sanctions Lists Sanctions Programs and Country Information Recent Actions OFAC License Application Page Additional OFAC Resources Frequently Asked Questions Civil Penalties and Enforcement Information OFAC Reporting System Selected General Licenses Issued by OFAC Contact OFAC Recent Actions Displaying 1 - 10 of 3134 results.",
+        "Iran-related Designations; Issuance of Amended Russia-related General License and Frequently Asked Questions; Issuance of Amended Venezuela-related Frequently Asked Question; Publication of Regulatory Amendments July 24, 2026 - Sanctions List Updates Counter Terrorism Designations; Counter Narcotics Designations; Cuba Designations; Belarus-related Designation Removal; Issuance of Cuba-related General Licenses July 23, 2026 - Sanctions List Updates Russia-related Designations Updates July 20, 2026 - Sanctions List Updates Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran-related Designations; Iran-related and Counter Terrorism Designation Update; Issuance of Iran-related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Issuance of Democratic Republic of the Congo-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "additionCount": 2,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "49679b1ed63de244c1cf19f9",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-27T08:50:27.138Z",
+      "detectedAt": "2026-07-27T08:50:27.138Z",
+      "changeType": "content-changed",
+      "previousHash": "a513d7fa50dccef8bb981026dcdda907889117aa9d408fa8e8ea7bfc52562634",
+      "currentHash": "4ad9eeea8dea24939cc2dea2e08409a27e2f791b2faea913a6851134818e0fcf",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 27 Jul 2026 04:50:27 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T04:50:27-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "removals": [
+        "Latest Filings - Mon, 27 Jul 2026 03:25:32 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T03:25:32-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "d5adf164b612fd92a1dca692",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-27T07:25:32.191Z",
+      "detectedAt": "2026-07-27T07:25:32.191Z",
+      "changeType": "content-changed",
+      "previousHash": "d8265d8812c53718b64f1aab1581bba2f4f7ca66bdd8d4cf862b1fc758907434",
+      "currentHash": "a513d7fa50dccef8bb981026dcdda907889117aa9d408fa8e8ea7bfc52562634",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 27 Jul 2026 03:25:32 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T03:25:32-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "removals": [
+        "Latest Filings - Sun, 26 Jul 2026 06:45:00 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-26T06:45:00-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) <b>Filed:</b> 2026-07-24 <b>AccNo:</b> 0001863328-26-000002 <b>Size:</b> 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "e853e2cce33f37c0619d2433",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -2107,50 +2760,9 @@
       "evidenceGrade": "B",
       "factualStatus": "source-change-observation",
       "status": "source-change"
-    },
-    {
-      "id": "1c352ab364fbfca06ab12a57",
-      "title": "content changed: European Public Prosecutor's Office — News",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "lane": "international-corruption",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-26T07:48:36.624Z",
-      "detectedAt": "2026-07-26T07:48:36.624Z",
-      "changeType": "content-changed",
-      "previousHash": "147f603d65e41f832c110f204ba27d5f4a45c522cb20bb7aeeed6a835199fcab",
-      "currentHash": "75c94ee87bf883e107c5839e58a8b8b020d63ad153f67ae9d640a87cca8deb32",
-      "httpStatus": 200,
-      "finalUrl": "https://www.eppo.europa.eu/media/news_en",
-      "additions": [
-        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Vacancies Working for the EPPO Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Italy) has obtained the conviction of ten defendants by the Tribunal of Nola in a VAT fraud case involving the trade of plastics products."
-      ],
-      "removals": [
-        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Finance Procurement See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Working for the EPPO Vacancies Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Italy) has obtained the conviction of ten defendants by the Tribunal of Nola in a VAT fraud case involving the trade of plastics products."
-      ],
-      "additionCount": 1,
-      "removalCount": 1,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
     }
   ],
-  "sourceChangeConclusion": "9 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
-  "integrityVersion": 1
+  "sourceChangeConclusion": "12 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
+  "integrityVersion": 1,
+  "conclusionContractVersion": "2.1.0"
 }

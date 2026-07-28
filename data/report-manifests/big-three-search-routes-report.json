@@ -1,25 +1,26 @@
 {
-  "generatedAt": "2026-07-27T06:50:45.070Z",
-  "pageCount": 123,
+  "generatedAt": "2026-07-28T06:10:17.293Z",
+  "pageCount": 124,
   "output": "downloads/big-three-search-routes-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Big Three Search Routes Report",
-    "contentHash": "616f39050da89dd705d6b205654ecdbaa1b1b147d6cec3ae93e27ee4a96ef20d",
+    "contentHash": "3690bc101e408474c743e0f233f9df5331872f557805e690027abcf9658b5f40",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
       "05e609f8ccfd225cfc787019",
+      "9b821ddb272b0fb297d39550",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
       "26b90533dbf7d2ed42f02de6",
+      "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "sec-edgar-core",
       "contractor-blackwater-xe-academi-constellis-lineage",
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
@@ -31,10 +32,11 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
       "larry-fink",
       "e4a0df7a70409789454722e7",
       "41772e5c9af7970ddd7d5aac",
+      "2482c3e0241c7c7679a18cd1",
+      "source-change-d5adf164b612fd92a1dca692",
       "f3676fb7b03d3ee0516f2a19",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -88,7 +90,20 @@
       "b7e4a66335a706ef5097117f",
       "sundar-pichai",
       "alex-karp",
+      "f3ee44803d1400a96da6d472",
+      "1627734cba53ae944ce56fa9",
+      "603b714a5abe917f3094b455",
+      "source-change-ea906ec638c352f7dced1c63",
+      "source-change-5594665950812895f468c11d",
+      "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-e853e2cce33f37c0619d2433",
+      "source-change-145721767ca69c32bb4875e5",
+      "source-change-46042e30fdcccc9e94aee0af",
+      "source-change-2931a84c2c7fe86982d5d6e5",
+      "d109ec07bc6a6ad42558195d",
       "b4cb47ea50dc901364239e9f",
+      "a71a8be091652489b843ecf6",
+      "f669b33c49b63e787cde3008",
       "e805b452c79a5e047b4b9d86",
       "d1c1c70d50c6f88dc57bc978",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -96,6 +111,7 @@
       "5b02847b05c9c34963d8a042",
       "16397649363c800fecf2bfd0",
       "ASC-REVIEW-9A9799A9A37BB837",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -130,37 +146,21 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-6FEEE1F638ADFCD6",
-      "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-8274DB7F7415A742",
-      "ASC-REVIEW-D74AE4AD0CA9732B",
-      "ASC-REVIEW-B5A7582A4286A663",
-      "ASC-REVIEW-16C81ABB8280B33F"
+      "ASC-REVIEW-26C98CAD8AA9CE0A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 20,
-      "disputedClaimCount": 88,
-      "newEntityCount": 28,
+      "primarySourceCount": 36,
+      "disputedClaimCount": 73,
+      "newEntityCount": 30,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 101
+      "relationshipCount": 83,
+      "moneyRecordCount": 85
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC EDGAR / ownership / proxy-vote records (data/deep-intel-feed-matrix.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC EDGAR / ownership / proxy-vote records (data/deep-intel-feed-matrix.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 83 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; SEC EDGAR / ownership / proxy-vote records; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 83 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "SEC EDGAR / ownership / proxy-vote records",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

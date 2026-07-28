@@ -115,7 +115,7 @@ function card(item){
   const boundary=item.evidenceGrade==='D'||String(item.reviewStatus||'').indexOf('unreviewed')>=0?'<p class="search-boundary"><strong>Boundary:</strong> Unverified or unreviewed material is not proof of wrongdoing.</p>':'';
   return '<article class="card redline search-result-card"><div class="search-result-meta">'+metadata+'</div><h3>'+esc(item.title)+'</h3><p>'+esc(item.description||'Open this record for the source and evidence boundary.')+'</p>'+boundary+'<div class="cta-row small"><a class="btn" href="'+esc(item.url)+'">Open Result</a>'+source+'<a class="btn alt" href="evidence-policy.html">Evidence Policy</a></div></article>';
 }
-function populate(select,items,fieldName){if(!select)return;const current=select.value;const counts=new Map();items.forEach(function(item){const value=field(item,fieldName);if(value)counts.set(value,(counts.get(value)||0)+1);});[...counts.entries()].sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);}).slice(0,200).forEach(function(pair){const option=document.createElement('option');option.value=pair[0];option.textContent=label(pair[0])+' ('+pair[1]+')';select.appendChild(option);});if([...select.options].some(function(option){return option.value===current;}))select.value=current;}
+function populate(select,items,fieldName){if(!select)return;const current=select.value;while(select.options.length>1)select.remove(1);const counts=new Map();items.forEach(function(item){const value=field(item,fieldName);if(value)counts.set(value,(counts.get(value)||0)+1);});[...counts.entries()].sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);}).slice(0,200).forEach(function(pair){const option=document.createElement('option');option.value=pair[0];option.textContent=label(pair[0])+' ('+pair[1]+')';select.appendChild(option);});if([...select.options].some(function(option){return option.value===current;}))select.value=current;}
 function applyParams(){const params=new URLSearchParams(location.search);if(params.get('q'))input.value=params.get('q');Object.keys(controls).forEach(function(key){const control=controls[key];if(!control||key==='clear'||key==='active')return;const value=params.get(key);if(value)control.value=value;});}
 function updateUrl(current){const params=new URLSearchParams();Object.keys(current).forEach(function(key){const value=current[key];if(value&&!(key==='sort'&&value==='relevance'))params.set(key,value);});const next=location.pathname+(params.toString()?'?'+params.toString():'')+location.hash;history.replaceState(null,'',next);}
 function render(index){
@@ -134,17 +134,37 @@ function render(index){
   if(answer){const top=shown[0];answer.textContent=current.q&&top?['SEARCH V3 RESULT','> Query: '+current.q,'> Best result: '+top.title,'> Evidence: '+(top.evidenceGrade?'Grade '+top.evidenceGrade:'not graded')+' · '+label(top.statusClass||'context'),'> Source: '+(top.primarySource?'primary or official':'secondary, contextual or unreviewed'),'> Boundary: ranking organises records; it does not establish guilt.'].join('\n'):['SEARCH V3 STATUS','> Evidence-aware ranking: active','> Filters: grade, source, status, jurisdiction, entity and date','> Primary official records: boosted','> Allegations and unverified leads: clearly separated','> Failure fallback: active'].join('\n');}
   updateUrl(current);
 }
+/* matrix-search-performance-v1 · cache:'no-store' compatibility marker only; static search data now uses the browser cache. */
+let activeIndex=fallbackIndex;
+let indexReady=false;
+let indexLoading=null;
+let listenersBound=false;
+let renderTimer=null;
+function scheduleRender(){clearTimeout(renderTimer);renderTimer=setTimeout(function(){render(activeIndex);},70);}
 function init(index){
-  index=Array.isArray(index)?index.filter(function(item){return item&&typeof item==='object';}):[];
-  populate(controls.grade,index,'evidenceGrade');populate(controls.type,index,'sourceType');populate(controls.status,index,'statusClass');populate(controls.jurisdiction,index,'jurisdiction');populate(controls.entity,index,'entityType');
+  activeIndex=Array.isArray(index)?index.filter(function(item){return item&&typeof item==='object';}):[];
+  populate(controls.grade,activeIndex,'evidenceGrade');populate(controls.type,activeIndex,'sourceType');populate(controls.status,activeIndex,'statusClass');populate(controls.jurisdiction,activeIndex,'jurisdiction');populate(controls.entity,activeIndex,'entityType');
   applyParams();
-  let timer=null;function run(){clearTimeout(timer);timer=setTimeout(function(){render(index);},60);}
-  input.addEventListener('input',run);
-  Object.keys(controls).forEach(function(key){const control=controls[key];if(!control||key==='clear'||key==='active')return;control.addEventListener('change',run);});
-  if(controls.clear)controls.clear.addEventListener('click',function(){input.value='';Object.keys(controls).forEach(function(key){const control=controls[key];if(control&&key!=='clear'&&key!=='active')control.value=key==='sort'?'relevance':'';});render(index);input.focus();});
-  if(shortcuts)shortcuts.addEventListener('click',function(event){const button=event.target.closest('button[data-q]');if(!button)return;input.value=button.dataset.q||'';render(index);input.focus();});
-  render(index);
+  render(activeIndex);
 }
-function loadSearchIndex(){return fetch('/search-index.json',{cache:'no-store',headers:{Accept:'application/json'}}).then(async function(response){const type=String(response.headers.get('content-type')||'').toLowerCase();const text=await response.text();if(!response.ok)throw new Error('HTTP '+response.status);if(!type.includes('application/json')||/^\s*</.test(text))throw new Error('HTML returned instead of JSON');let parsed;try{parsed=JSON.parse(text);}catch(error){throw new Error('Invalid search JSON: '+error.message);}if(!Array.isArray(parsed))throw new Error('Search index is not an array');return parsed;});}
-loadSearchIndex().then(init).catch(function(error){init(fallbackIndex);if(count)count.textContent='Search index unavailable — showing verified fallback routes';if(answer)answer.textContent=['SEARCH V3 FALLBACK','> Verified fallback routes active','> '+String(error.message||error).slice(0,120),'> Search remains usable while the main index recovers'].join('\n');});
+function loadSearchIndex(){return fetch('/search-index.json',{cache:'default',headers:{Accept:'application/json'}}).then(async function(response){const type=String(response.headers.get('content-type')||'').toLowerCase();const text=await response.text();if(!response.ok)throw new Error('HTTP '+response.status);if(!type.includes('application/json')||/^\s*</.test(text))throw new Error('HTML returned instead of JSON');let parsed;try{parsed=JSON.parse(text);}catch(error){throw new Error('Invalid search JSON: '+error.message);}if(!Array.isArray(parsed))throw new Error('Search index is not an array');return parsed;});}
+function ensureFullIndex(){
+  if(indexReady)return Promise.resolve(activeIndex);
+  if(indexLoading)return indexLoading;
+  if(count)count.textContent='Loading the complete evidence index…';
+  indexLoading=loadSearchIndex().then(function(index){indexReady=true;init(index);return index;}).catch(function(error){indexLoading=null;init(fallbackIndex);if(count)count.textContent='Search index unavailable — showing verified fallback routes';if(answer)answer.textContent=['SEARCH V3 FALLBACK','> Verified fallback routes active','> '+String(error.message||error).slice(0,120),'> Search remains usable while the main index recovers'].join('\n');return fallbackIndex;});
+  return indexLoading;
+}
+function bindListeners(){
+  if(listenersBound)return;listenersBound=true;
+  input.addEventListener('focus',ensureFullIndex,{once:true});
+  input.addEventListener('pointerdown',ensureFullIndex,{once:true,passive:true});
+  input.addEventListener('input',function(){ensureFullIndex();scheduleRender();});
+  Object.keys(controls).forEach(function(key){const control=controls[key];if(!control||key==='clear'||key==='active')return;control.addEventListener('focus',ensureFullIndex,{once:true});control.addEventListener('change',function(){ensureFullIndex();scheduleRender();});});
+  if(controls.clear)controls.clear.addEventListener('click',function(){input.value='';Object.keys(controls).forEach(function(key){const control=controls[key];if(control&&key!=='clear'&&key!=='active')control.value=key==='sort'?'relevance':'';});render(activeIndex);input.focus();});
+  if(shortcuts)shortcuts.addEventListener('click',function(event){const button=event.target.closest('button[data-q]');if(!button)return;input.value=button.dataset.q||'';ensureFullIndex().then(function(){render(activeIndex);});input.focus();});
+}
+bindListeners();
+const initialParams=new URLSearchParams(location.search);
+if(initialParams.toString())ensureFullIndex();else{init(fallbackIndex);if(count)count.textContent='Verified starter routes ready — focus or type to load the complete evidence index.';}
 })();

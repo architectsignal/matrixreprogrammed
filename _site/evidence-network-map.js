@@ -241,7 +241,7 @@
   async function load() {
     setStatus('Loading structured evidence graph…', 'pending');
     try {
-      const response = await fetch('/data/evidence-network-map.json', { cache: 'no-store', headers: { accept: 'application/json' } });
+      const response = await fetch('/data/evidence-network-map.json', { cache: 'default', headers: { accept: 'application/json' } });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       graph = await response.json();
       if (!graph?.elements?.nodes?.length || !graph?.elements?.edges?.length) throw new Error('No sourced relationships were generated.');
@@ -263,11 +263,20 @@
     }
   }
 
+  let loadStarted = false;
+  function startLoad() {
+    if (loadStarted) return;
+    loadStarted = true;
+    load();
+  }
+
   Object.values(controls).forEach(control => control?.addEventListener(control === controls.query ? 'input' : 'change', () => {
+    startLoad();
     edgeLimit = INITIAL_EDGE_LIMIT;
     refreshGraph({ requestedLayout: 'grid' });
   }));
   q('#map-reset').onclick = () => {
+    startLoad();
     if (controls.query) controls.query.value='';
     if (controls.mode) controls.mode.value='core';
     if (controls.relationship) controls.relationship.value='';
@@ -299,5 +308,17 @@
     writeUrl();
     if (pathStart && pathEnd) findPath(); else setStatus(`${button.dataset.pathAction === 'start' ? 'Path start' : 'Path end'} selected. Select the other endpoint.`, 'ok');
   });
-  load();
+  /* matrix-network-performance-v1 */
+  if (location.search) startLoad();
+  else if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      startLoad();
+    }, { rootMargin: '650px 0px' });
+    observer.observe(map);
+    setStatus('Interactive graph ready to load when this section enters view…', 'pending');
+  } else {
+    window.setTimeout(startLoad, 700);
+  }
 })();

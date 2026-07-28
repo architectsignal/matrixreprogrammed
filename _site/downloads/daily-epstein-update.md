@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-27T07:01:19.581Z
-Live Intel source window: 2026-07-27T07:01:07.067Z
-Latest source publication: 2026-07-26T23:43:09.000Z
+Generated: 2026-07-28T06:23:41.245Z
+Live Intel source window: 2026-07-28T06:23:28.829Z
+Latest source publication: 2026-07-27T00:13:58.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -15,6 +15,16 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## Current Record Leads
 
+### Group in Congress pushing for more Epstein transparency - American Press
+- Published: 2026-07-27T00:13:58.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
+
+Group in Congress pushing for more Epstein transparency American Press
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
 - Published: 2026-07-26T23:43:09.000Z
 - Source: Google News / Epstein timeline and files
@@ -25,13 +35,13 @@ Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Euras
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
-- Published: 2026-07-23T22:12:00.000Z
+### Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
+- Published: 2026-07-26T19:01:07.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
+- URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
 
-Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source New York Post
+Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections Daily Maverick
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -62,16 +72,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
 
 Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### House Oversight Committee to interview Epstein’s former private banker - WSJM
-- Published: 2026-07-23T13:04:24.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
-
-House Oversight Committee to interview Epstein’s former private banker WSJM
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

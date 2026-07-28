@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-27T07:01:49.702Z",
-  "filesScanned": 719,
+  "updated": "2026-07-28T06:24:10.637Z",
+  "filesScanned": 722,
   "highIssues": 0,
-  "reviewIssues": 13,
+  "reviewIssues": 16,
   "issues": [
     {
       "file": "access-denied.html",
@@ -41,6 +41,16 @@
       "issue": "missing meta description"
     },
     {
+      "file": "daily-watch.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "daily-watch.html",
+      "severity": "review",
+      "issue": "missing H1"
+    },
+    {
       "file": "institution-profile.html",
       "severity": "review",
       "issue": "missing meta description"
@@ -67,6 +77,11 @@
     },
     {
       "file": "site-quality-report.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "weekly-watch-delta.html",
       "severity": "review",
       "issue": "missing meta description"
     }

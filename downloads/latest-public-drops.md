@@ -1,9 +1,93 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-27T07:01:07.176Z
+Updated: 2026-07-28T06:23:28.943Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## Conflict and crisis put six World Heritage sites at risk
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168031
+- Timers: none
+
+Armed conflict, insecurity and environmental pressures are threatening ancient cities, historic castles and one of the world&#039;s greatest wildlife migrations.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Cyberattacks and the digital divide are creating new barriers to HIV services
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168030
+- Timers: none
+
+Cyberattacks, data breaches, online harassment and other forms of technology-facilitated violence are becoming significant obstacles to HIV prevention and treatment, according to a UNAIDS specialist who says digital security has become inseparable from the fight against the epidemic itself.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168035
+- Timers: none
+
+The United Nations continues to monitor developments in the Occupied Palestinian Territory amid rising violence and greater restrictions in the occupied West Bank.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## High prices and funding cuts stall HIV prevention revolution
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168033
+- Timers: none
+
+The AIDS epidemic could stage a comeback amid unequal access to breakthrough prevention medicines and a sharp decline in global funding, according to a UN report released on Monday ahead of the opening of the 26th International AIDS Conference in Rio de Janeiro, Brazil.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Lebanon: Israeli strikes ‘could amount to international crimes,’ warns Türk
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168034
+- Timers: none
+
+UN Human Rights Chief Volker Türk expressed concern about ongoing displacement and destruction caused by Israeli strikes against Lebanon as he concluded a two-day visit to the country on Monday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
+
+- Date: 2026-07-27
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168029
+- Timers: none
+
+The UN Security Council met on Monday at Ukraine’s request, following recent large-scale Russian attacks on Kyiv and elsewhere. At least one civilian was killed and more than a dozen wounded in an overnight strike on the capital on 19 July that also damaged homes and civilian infrastructure. Ukrainian authorities described it as one of the largest and most intense attacks since the invasion began. Follow live updates below.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Group in Congress pushing for more Epstein transparency - American Press
+
+- Date: 2026-07-27
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
+- Timers: none
+
+Group in Congress pushing for more Epstein transparency American Press
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
 ## Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
 
@@ -14,6 +98,18 @@ These are dated public-source leads, not proof of wrongdoing. Every item must pr
 - Timers: none
 
 Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Eurasia Review
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
+
+- Date: 2026-07-26
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+- Timers: none
+
+Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections Daily Maverick
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -196,99 +292,3 @@ Boundary: A released file is a source fragment. It needs date, origin, context, 
 Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source New York Post
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
-
-- Date: 2026-07-23
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Primary or official public-record lead
-- Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
-- Timers: none
-
-Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported NewsNation
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
-
-- Date: 2026-07-23
-- Lane: War Machine And Intelligence State
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
-- Timers: none
-
-Trump authorizes use of AI for defense supply chain mapping DefenseScoop
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-
-- Date: 2026-07-23
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Primary or official public-record lead
-- Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-- Timers: none
-
-Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
-
-- Date: 2026-07-23
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Primary or official public-record lead
-- Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
-- Timers: none
-
-Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## House Oversight Committee to interview Epstein’s former private banker - WSJM
-
-- Date: 2026-07-23
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Primary or official public-record lead
-- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxQbm5Jdmw3WjlmU2l1NURROFZLR242RUhZVzhkMjV4ODhuZFZvSWI4YXJ0SmNmVk1VTGVQT1BqWHhyUUc4VmE2a01lUks0VkJWWmpkR29jRlNQalE0ZF91WE5TZ056VmpjemRUbzlMdWEzaFI5Z0VtZDB6RFVkeTkyX3J4QWtXMUtJT1pYZml3eXIweUxSWkkybG9iVFBmQXV2Z2ROUQ?oc=5
-- Timers: none
-
-House Oversight Committee to interview Epstein’s former private banker WSJM
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Gaza’s food gains could unravel without sustained aid, UN warns
-
-- Date: 2026-07-23
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168006
-- Timers: none
-
-Food security and child nutrition have improved across the Gaza Strip largely due to a scale-up in humanitarian assistance and commercial traffic, but progress remains fragile and could quickly reverse without sustained access, funding and recovery support.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Iran urged to stop protest-related executions
-
-- Date: 2026-07-23
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168009
-- Timers: none
-
-Independent UN human rights investigators on Thursday called for Iran to immediately halt the execution of 10 men who took part in a protest in the central city of Isfahan earlier this year, warning that some of their relatives have already been called for final visits.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Satellites can now spot methane leaks in real time – but most go unfixed
-
-- Date: 2026-07-23
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168007
-- Timers: none
-
-Satellites can now spot major methane leaks from space within days. Yet only 13 per cent of those alerts lead to any response from the governments or companies responsible.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

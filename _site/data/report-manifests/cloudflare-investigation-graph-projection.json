@@ -1,15 +1,19 @@
 {
-  "generatedAt": "2026-07-27T06:51:22.816Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-28T06:11:04.939Z",
+  "pageCount": 136,
   "output": "downloads/cloudflare-investigation-graph-projection.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Cloudflare Investigation Graph Projection",
-    "contentHash": "1137e1a5512ac2a36d685e6c8afaf1453b751235f7cd722b7688fe09d7d3d005",
+    "contentHash": "5a6c3fdeae47251cf8fea3cfc440a805610e8c775756acb68fb6619f30ed7fa2",
     "sourceIds": [
+      "9b821ddb272b0fb297d39550",
+      "2482c3e0241c7c7679a18cd1",
       "b4cb47ea50dc901364239e9f",
+      "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -61,10 +65,15 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
+      "source-change-d5adf164b612fd92a1dca692",
+      "60be8541e1c1d21d8b2d19fd",
       "388b609fd969af10879c06f9",
       "908ab494a2aa89988319060d",
       "9cbfbb0859bcf2cc4da3c75f",
       "ac5e3b2c3de8adeda6f57707",
+      "a71a8be091652489b843ecf6",
+      "de2b96c84f46cb60ca59fe4f",
+      "3c922aeb68ebddd6e5818930",
       "4230305352f457f0cfcd2c1c",
       "f028e09fbaa2ebdfeb532e99",
       "f3676fb7b03d3ee0516f2a19",
@@ -72,6 +81,7 @@
       "62ef00886878edb710a5fd60",
       "b4fcc071c3571934356677d1",
       "9608f4f55e479a241a11ee44",
+      "4fc2f377f4969f7074a7e989",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -111,10 +121,11 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -135,32 +146,21 @@
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
-      "ASC-REVIEW-686B68808D58A838",
-      "ASC-REVIEW-E0C2B02D28255CC3",
-      "ASC-REVIEW-4E0C4B2A65FF8D42",
-      "ASC-REVIEW-995324D0659C1960",
-      "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-927E79836853DFAE",
-      "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-4D43B792A3A9872B",
-      "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54"
+      "ASC-REVIEW-686B68808D58A838"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 53,
-      "disputedClaimCount": 87,
-      "newEntityCount": 0,
+      "primarySourceCount": 61,
+      "disputedClaimCount": 78,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 95,
-      "moneyRecordCount": 48
+      "relationshipCount": 88,
+      "moneyRecordCount": 44
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Cloudflare Investigation Graph Projection.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 61 A/B-grade public-record items are materially relevant to Cloudflare Investigation Graph Projection.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “AARO FY2025 Consolidated Annual Report on UAP,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Supporting record for the July 2026 assessment: Official UAP investigation and unresolved reports have increased, but AARO does not report evidence that non-human beings control governments.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

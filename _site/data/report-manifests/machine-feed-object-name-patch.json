@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T06:55:32.425Z",
-  "pageCount": 137,
+  "generatedAt": "2026-07-28T06:16:36.762Z",
+  "pageCount": 136,
   "output": "downloads/machine-feed-object-name-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Machine Feed Object Name Patch",
-    "contentHash": "74ecce97af9498907368c06099f70d88adcb2bf38dfbc2404310adcf00e9c81c",
+    "contentHash": "5a686f6df6a5631d75897a19ca1fb57b77a9fc3417f0b93e1eedd81813e76270",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -14,14 +14,15 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-45ACC28AC220EA79",
+      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "3a425f0d5d683952bc0ad7ac",
+      "9b821ddb272b0fb297d39550",
       "ASC-REVIEW-8FC95E6CC8F8F440",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -46,10 +47,12 @@
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-70AD36F3F75D37F7",
       "ASC-REVIEW-71771BB07AA72BD1",
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -60,18 +63,17 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-4D43B792A3A9872B",
+      "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-D6AE4E2DB500BB21",
+      "ASC-REVIEW-09AE97E87425D94A",
       "ASC-REVIEW-60F9D3A21D35583E",
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
-      "ASC-REVIEW-17EAF4AC47F2CCB1",
       "71e0563ca7b139c37c302956",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -94,7 +96,6 @@
       "ASC-REVIEW-B0625D388FF0BBB5",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -130,8 +131,8 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-C06BEA89A8588561",
+      "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-99F8A859BC016D7E",
-      "ASC-REVIEW-E4DE89A4B85F814E",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -141,21 +142,20 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-132F1165BCAFF798",
-      "ASC-REVIEW-676D0168C06458FA"
+      "ASC-REVIEW-676D0168C06458FA",
+      "ASC-REVIEW-B3E7B22DBE204184"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 135,
-      "newEntityCount": 0,
+      "disputedClaimCount": 134,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 105,
-      "moneyRecordCount": 58
+      "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Brain Brief,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "[object Object]",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:55:32.425Z"
+    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
   }
 }

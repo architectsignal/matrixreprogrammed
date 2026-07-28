@@ -60,7 +60,2440 @@
       "boundary": "This record preserves the outcome, denial, response, pending review or exculpatory information and must be read with the underlying allegation or judgment."
     }
   },
-  "subjects": {},
+  "subjects": {
+    "keith-raniere": {
+      "name": "Keith Raniere",
+      "aliases": [
+        "Keith Allen Raniere",
+        "Vanguard",
+        "Grandmaster"
+      ],
+      "subjectType": "person",
+      "slug": "keith-raniere",
+      "dossierRoute": "dossier-keith-raniere.html",
+      "historicalCase": false,
+      "caseEra": "Federal conviction 2019; sentence 2020",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Convicted by a federal jury in 2019 of racketeering, racketeering conspiracy, sex trafficking, attempted sex trafficking, sex-trafficking conspiracy, forced-labor conspiracy and wire-fraud conspiracy; sentenced to 120 years in 2020.",
+      "publicSummary": "Founder and controlling leader of NXIVM, whose organizational authority, inner-circle hierarchy, financial leverage and collection of damaging collateral were used in a criminal enterprise that included sex trafficking, forced labor and the sexual exploitation of a child.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave2.json",
+      "powerRoles": [
+        {
+          "sector": "company_executive",
+          "title": "Founder and controlling leader",
+          "organization": "NXIVM",
+          "from": "1998",
+          "to": "2018",
+          "status": "former",
+          "sourceLabel": "DOJ Raniere sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/nxivm-leader-keith-raniere-sentenced-120-years-prison-racketeering-and-sex-trafficking",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "other_influential_gatekeeper",
+          "title": "Head of DOS hierarchy inside NXIVM",
+          "organization": "DOS / The Vow",
+          "from": "2015",
+          "to": "2018",
+          "status": "former",
+          "sourceLabel": "DOJ Raniere conviction statement",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/jury-finds-nxivm-leader-keith-raniere-guilty-all-counts",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "raniere-conviction-sentence-2020",
+          "category": "conviction_final_judgment",
+          "title": "Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses",
+          "summary": "The Justice Department states that a federal jury convicted Raniere of all seven counts, including sex-trafficking and forced-labor offenses. Trial findings included sexual exploitation of a child and possession of child pornography, and the court sentenced him to 120 years.",
+          "sourceLabel": "EDNY: NXIVM leader sentenced to 120 years",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/nxivm-leader-keith-raniere-sentenced-120-years-prison-racketeering-and-sex-trafficking",
+          "sourceAuthority": "primary_official",
+          "date": "2020-10-27",
+          "jurisdiction": "United States federal court, Eastern District of New York",
+          "status": "adjudicated",
+          "outcome": "Jury conviction and 120-year federal prison sentence.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Raniere denied wrongdoing and exercised trial and appellate rights.",
+          "counterEvidence": "The conviction establishes Raniere's crimes and the racketeering enterprise proved at trial. It does not make every NXIVM participant, donor, attendee or social contact criminally responsible.",
+          "proofNeeded": "Maintain judgment, restitution orders and final appellate status, and classify every co-defendant by their own adjudicated conduct.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_exploitation",
+            "child_sexual_abuse",
+            "csam_offence",
+            "sexual_offence_other"
+          ],
+          "victimClass": [
+            "women",
+            "minor girl",
+            "NXIVM members"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "NXIVM executive board, DOS masters and financial supporters",
+          "relationshipType": "hierarchical organizational control and separately adjudicated co-defendant roles",
+          "dateRange": "1998–2018",
+          "sourceLabel": "DOJ NXIVM conviction record",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/jury-finds-nxivm-leader-keith-raniere-guilty-all-counts",
+          "evidenceGrade": "A",
+          "boundary": "Raniere's conviction establishes his control and offenses. Each other participant requires a separate record distinguishing guilty pleas, convictions, employment, membership, support and ordinary attendance."
+        }
+      ],
+      "institutionalFailures": [
+        "A self-help and executive-training structure concentrated authority around one leader while discouraging external scrutiny.",
+        "Collateral, hierarchy, financial dependence and status rewards were used to control members and suppress disclosure."
+      ],
+      "conclusion": {
+        "finding": "Raniere's conviction establishes an organization in which concentrated personal authority, coercive hierarchy and reputational control became mechanisms for sex trafficking, forced labor and child exploitation.",
+        "lanes": [
+          "child exploitation",
+          "coercive control",
+          "organizational power",
+          "financial leverage",
+          "institutional concealment"
+        ],
+        "whyItMatters": "The case demonstrates how a polished leadership and self-improvement structure can mask operational coercion and criminal exploitation.",
+        "mechanism": "Centralized authority, master-slave hierarchy, damaging collateral, financial dependence, isolation and status incentives reduced victims' ability to resist or report abuse.",
+        "effect": "Strongly strengthens the coercive-gatekeeper and concentrated-authority lanes.",
+        "widerDirection": "Investigate organizations where one leader controls advancement, reputation, intimate information, money and access without independent safeguards.",
+        "alternativeExplanation": "Many members may have joined for ordinary professional or personal-development reasons and had no knowledge of criminal conduct.",
+        "doesNotProve": "It does not prove every NXIVM member, course participant, donor or celebrity contact knew of or participated in the crimes.",
+        "evidenceStrength": "E6 final federal conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which leaders had direct operational knowledge?",
+          "How was collateral stored and enforced?",
+          "Which financial and legal systems protected the hierarchy?"
+        ]
+      }
+    },
+    "r-kelly": {
+      "name": "R. Kelly",
+      "aliases": [
+        "Robert Sylvester Kelly",
+        "Robert Kelly"
+      ],
+      "subjectType": "person",
+      "slug": "r-kelly",
+      "dossierRoute": "dossier-r-kelly.html",
+      "historicalCase": false,
+      "caseEra": "Federal convictions 2021–2022; sentences 2022–2023; Supreme Court review denied 2024–2025",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Serving federal sentences after convictions in New York and Illinois. The Illinois jury convicted him on child-pornography production and minor-enticement counts while acquitting him and two co-defendants on other counts. Supreme Court review of both federal cases was denied.",
+      "publicSummary": "Recording artist and business leader whose fame, money, touring operation and inner circle were used to recruit, control and exploit girls and young women, including minors, according to federal convictions.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave2.json",
+      "powerRoles": [
+        {
+          "sector": "media_entertainment",
+          "title": "International recording artist and celebrity",
+          "organization": "R. Kelly music career",
+          "from": "1990s",
+          "to": "2019",
+          "status": "former",
+          "sourceLabel": "DOJ Illinois sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/robert-kelly-sentenced-20-years",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "company_executive",
+          "title": "Leader of music-business and entourage enterprise",
+          "organization": "R. Kelly business and touring operation",
+          "from": "1990s",
+          "to": "2019",
+          "status": "former",
+          "sourceLabel": "DOJ Eastern District sentencing remarks",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/us-attorney-breon-peaces-remarks-r-kelly-sentencing",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "r-kelly-illinois-conviction-2022",
+          "category": "conviction_final_judgment",
+          "title": "Federal jury conviction for producing child pornography and enticing minors",
+          "summary": "A federal jury convicted Kelly on three counts of producing child pornography and three counts of enticing a minor to engage in sexual activity. DOJ stated that the evidence showed sexual activity with girls beginning when they were 14, 15 and 16 and recordings of some abuse.",
+          "sourceLabel": "Northern District of Illinois conviction statement",
+          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/recording-artist-r-kelly-convicted-federal-child-pornography-and-exploitation-charges",
+          "sourceAuthority": "primary_official",
+          "date": "2022-09-14",
+          "jurisdiction": "United States federal court, Northern District of Illinois",
+          "status": "adjudicated",
+          "outcome": "Convicted on six counts; sentenced in 2023 to 20 years, mostly concurrent with the New York sentence.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Kelly denied wrongdoing and pursued appeals and petitions for Supreme Court review.",
+          "counterEvidence": "The same jury acquitted Kelly on seven other counts and acquitted both co-defendants. Those acquittals must remain visible and cannot be treated as convictions.",
+          "proofNeeded": "Maintain the judgment, sentencing record and appellate dispositions for both federal cases.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "child_sexual_exploitation",
+            "csam_offence",
+            "grooming"
+          ],
+          "victimClass": [
+            "minor girls",
+            "young women"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "r-kelly-illinois-acquittals-2022",
+          "category": "exculpatory_disposition",
+          "title": "Illinois jury returned acquittals on seven additional counts and acquitted two co-defendants",
+          "summary": "The Illinois jury acquitted Kelly on seven charged counts, including obstruction and additional child-pornography or enticement counts, and acquitted Derrel McDavid and Milton Brown of all charges against them.",
+          "sourceLabel": "Northern District of Illinois verdict statement",
+          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/recording-artist-r-kelly-convicted-federal-child-pornography-and-exploitation-charges",
+          "sourceAuthority": "primary_official",
+          "date": "2022-09-14",
+          "jurisdiction": "United States federal court, Northern District of Illinois",
+          "status": "adjudicated",
+          "outcome": "Not-guilty verdicts on seven Kelly counts and all counts against two co-defendants.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The acquittals are final trial outcomes on the specified counts.",
+          "counterEvidence": "They do not reverse the six Illinois convictions or the separate New York conviction.",
+          "proofNeeded": "Keep acquitted and convicted counts visibly separated.",
+          "boundary": "This record preserves the outcome, denial, response, pending review or exculpatory information and must be read with the underlying allegation or judgment.",
+          "conductDomains": [
+            "child_sexual_exploitation",
+            "csam_offence",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "minor girls",
+            "young women"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "r-kelly-appellate-finality-2025",
+          "category": "exculpatory_disposition",
+          "title": "Supreme Court denied review of both federal convictions",
+          "summary": "Supreme Court dockets show certiorari was denied in October 2024 for the Illinois case and June 2025 for the New York case, leaving the lower-court judgments in place.",
+          "sourceLabel": "U.S. Supreme Court docket 24-1172",
+          "sourceUrl": "https://www.supremecourt.gov/search.aspx?filename=%2Fdocket%2Fdocketfiles%2Fhtml%2Fpublic%2F24-1172.html",
+          "sourceAuthority": "primary_official",
+          "date": "2025-06-23",
+          "jurisdiction": "United States",
+          "status": "closed",
+          "outcome": "Certiorari denied; federal convictions remain in force.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Kelly continued to contest the judgments through appellate review.",
+          "counterEvidence": "Denial of certiorari is not a new factual finding and does not endorse every lower-court rationale; it leaves the judgments undisturbed.",
+          "proofNeeded": "Monitor any collateral proceedings or sentence changes.",
+          "boundary": "This record preserves the outcome, denial, response, pending review or exculpatory information and must be read with the underlying allegation or judgment.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "child_sexual_exploitation",
+            "csam_offence",
+            "sexual_offence_other"
+          ],
+          "victimClass": [
+            "minor girls",
+            "women"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Managers, employees, entourage and victim-intimidation defendants",
+          "relationshipType": "business, operational and separately prosecuted relationships",
+          "dateRange": "1990s–2022",
+          "sourceLabel": "DOJ R. Kelly sentencing remarks",
+          "sourceUrl": "https://www.justice.gov/usao-edny/pr/us-attorney-breon-peaces-remarks-r-kelly-sentencing",
+          "evidenceGrade": "A",
+          "boundary": "The convictions establish Kelly's crimes. Each employee, manager, adviser or associate must be assessed separately; two Illinois co-defendants were acquitted, while other individuals were convicted in separate intimidation cases."
+        }
+      ],
+      "institutionalFailures": [
+        "Celebrity status and control of access created an environment in which young fans and aspiring performers could be isolated and made dependent.",
+        "Witness intimidation and reputation pressure complicated disclosure and accountability; separate defendants were convicted for attacks on or harassment of victims."
+      ],
+      "conclusion": {
+        "finding": "Kelly's federal convictions establish that fame, business control and an inner-circle structure were used to recruit and exploit minors and young women over an extended period.",
+        "lanes": [
+          "child exploitation",
+          "celebrity access",
+          "coercive control",
+          "entourage gatekeeping",
+          "witness intimidation"
+        ],
+        "whyItMatters": "It shows how entertainment power can create access, dependency and a protective operational environment around abuse.",
+        "mechanism": "Celebrity aspiration, controlled travel and housing, staff access, rules, threats, financial dependence and intimidation isolated victims and protected the enterprise.",
+        "effect": "Strongly strengthens celebrity-power and operational-gatekeeper lanes.",
+        "widerDirection": "Investigate how managers, security, venues, labels, lawyers and other gatekeepers respond to repeated warning signals.",
+        "alternativeExplanation": "Some employees and associates may have performed ordinary work without knowledge of criminal conduct, and two charged co-defendants were acquitted.",
+        "doesNotProve": "It does not prove guilt of every manager, employee, performer, label executive, fan or celebrity who interacted with Kelly.",
+        "evidenceStrength": "E6 federal convictions with visible acquittals",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which operational roles were proven versus alleged?",
+          "Which institutions received warnings?",
+          "What controls could have prevented isolated access to minors?"
+        ]
+      }
+    },
+    "anthony-weiner": {
+      "name": "Anthony Weiner",
+      "aliases": [
+        "Anthony David Weiner"
+      ],
+      "subjectType": "person",
+      "slug": "anthony-weiner",
+      "dossierRoute": "dossier-anthony-weiner.html",
+      "historicalCase": false,
+      "caseEra": "Federal guilty plea and sentence 2017",
+      "lifeStatus": "living; sentence completed",
+      "legalStatusSummary": "Pleaded guilty in federal court in 2017 to transferring obscene material to a minor and was sentenced to 21 months in prison and three years of supervised release.",
+      "publicSummary": "Former U.S. representative and New York mayoral candidate whose political profile and online access overlapped with a federal offense involving a 15-year-old girl.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave2.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "United States Representative for New York",
+          "organization": "U.S. House of Representatives",
+          "from": "1999",
+          "to": "2011",
+          "status": "former",
+          "sourceLabel": "DOJ Weiner sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/anthony-weiner-sentenced-21-months-prison-transferring-obscene-material-minor",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "political_party_leadership",
+          "title": "Candidate for Mayor of New York City",
+          "organization": "2013 New York mayoral campaign",
+          "from": "2013",
+          "to": "2013",
+          "status": "former",
+          "sourceLabel": "DOJ Weiner sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/anthony-weiner-sentenced-21-months-prison-transferring-obscene-material-minor",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "weiner-federal-conviction-2017",
+          "category": "conviction_final_judgment",
+          "title": "Guilty plea and sentence for transferring obscene material to a minor",
+          "summary": "Weiner pleaded guilty to transferring obscene material to a girl he knew was 15 years old. DOJ stated that he used online messaging and video applications and asked the minor to engage in sexually explicit behavior.",
+          "sourceLabel": "SDNY: Anthony Weiner sentenced",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/anthony-weiner-sentenced-21-months-prison-transferring-obscene-material-minor",
+          "sourceAuthority": "primary_official",
+          "date": "2017-09-25",
+          "jurisdiction": "United States federal court, Southern District of New York",
+          "status": "adjudicated",
+          "outcome": "21 months in prison and three years of supervised release.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Weiner pleaded guilty and accepted responsibility in federal court.",
+          "counterEvidence": "The conviction is limited to the charged online conduct and does not establish unrelated criminal activity or wrongdoing by political colleagues.",
+          "proofNeeded": "Maintain the plea, judgment and registration or supervision consequences.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "grooming",
+            "sexual_offence_other"
+          ],
+          "victimClass": [
+            "15-year-old girl"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "U.S. Congress and New York political networks",
+          "relationshipType": "former elected office and campaign access",
+          "dateRange": "1999–2013",
+          "sourceLabel": "DOJ Weiner sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/anthony-weiner-sentenced-21-months-prison-transferring-obscene-material-minor",
+          "evidenceGrade": "A",
+          "boundary": "Political office explains public power and access. It does not establish knowledge, facilitation or responsibility by colleagues, staff, donors or family members."
+        }
+      ],
+      "institutionalFailures": [
+        "Public status and direct social-media access enabled private contact without institutional oversight."
+      ],
+      "conclusion": {
+        "finding": "Weiner's conviction establishes a child-related online offense committed by a former federal elected official with substantial public visibility.",
+        "lanes": [
+          "child safeguarding",
+          "political power",
+          "online access",
+          "reputation and accountability"
+        ],
+        "whyItMatters": "The case shows that public office and high visibility do not reduce the need for clear legal-status tracking and online safeguarding.",
+        "mechanism": "Direct private messaging bypassed public and institutional scrutiny while the subject retained name recognition and political access.",
+        "effect": "Strongly strengthens the online-access and power-accountability lanes.",
+        "widerDirection": "Track whether institutions respond consistently when current or former officeholders face child-related convictions.",
+        "alternativeExplanation": "The offense arose from individual online conduct rather than an institutional or coordinated network.",
+        "doesNotProve": "It does not prove political colleagues, staff, donors or family members knew of or facilitated the offense.",
+        "evidenceStrength": "E6 federal conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "What safeguarding and disclosure rules apply to campaigns and public officials?",
+          "Were any official systems or staff resources involved?",
+          "How are completed sentences and ongoing legal consequences displayed accurately?"
+        ]
+      }
+    },
+    "ralph-shortey": {
+      "name": "Ralph Shortey",
+      "aliases": [
+        "Ralph Allan Lee Shortey"
+      ],
+      "subjectType": "person",
+      "slug": "ralph-shortey",
+      "dossierRoute": "dossier-ralph-shortey.html",
+      "historicalCase": false,
+      "caseEra": "Federal guilty plea 2017; sentence 2018",
+      "lifeStatus": "living and incarcerated or under federal sentence",
+      "legalStatusSummary": "Former Oklahoma state senator who pleaded guilty to child sex trafficking and was sentenced in 2018 to 15 years in federal prison and ten years of supervised release.",
+      "publicSummary": "Former state senator whose elected authority and political network overlapped with a federal child-sex-trafficking conviction committed while he held office.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave2.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Oklahoma State Senator",
+          "organization": "Oklahoma Senate",
+          "from": "2010",
+          "to": "2017",
+          "status": "former",
+          "sourceLabel": "DOJ Shortey restitution statement",
+          "sourceUrl": "https://www.justice.gov/usao-wdok/pr/former-oklahoma-state-senator-ordered-pay-over-125000-child-victim",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "shortey-child-sex-trafficking-2018",
+          "category": "conviction_final_judgment",
+          "title": "Federal child-sex-trafficking conviction and 15-year sentence",
+          "summary": "Shortey pleaded guilty to soliciting a minor to engage in a commercial sex act while serving as an Oklahoma state senator. The federal court sentenced him to 15 years and later ordered more than $125,000 in restitution to the victim.",
+          "sourceLabel": "Western District of Oklahoma sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-wdok/pr/former-oklahoma-state-senator-sentenced-fifteen-years-child-sex-trafficking",
+          "sourceAuthority": "primary_official",
+          "date": "2018-09-17",
+          "jurisdiction": "United States federal court, Western District of Oklahoma",
+          "status": "adjudicated",
+          "outcome": "15 years in prison, ten years supervised release and victim restitution.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Shortey pleaded guilty to the child-sex-trafficking count.",
+          "counterEvidence": "Other child-pornography counts in the indictment were dismissed under the plea agreement and must not be labeled convictions.",
+          "proofNeeded": "Keep the convicted count, dismissed counts, sentence and restitution order separately classified.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_trafficking",
+            "child_sexual_exploitation",
+            "grooming"
+          ],
+          "victimClass": [
+            "minor boy"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Oklahoma Senate and political organizations",
+          "relationshipType": "elected office and political access",
+          "dateRange": "2010–2017",
+          "sourceLabel": "DOJ Shortey restitution statement",
+          "sourceUrl": "https://www.justice.gov/usao-wdok/pr/former-oklahoma-state-senator-ordered-pay-over-125000-child-victim",
+          "evidenceGrade": "A",
+          "boundary": "The conviction establishes Shortey's conduct while in office. It does not prove colleagues or political organizations knew of or participated in the crime."
+        }
+      ],
+      "institutionalFailures": [
+        "The offense occurred while Shortey held elected office, raising questions about screening, reporting and rapid institutional response without establishing legislative involvement."
+      ],
+      "conclusion": {
+        "finding": "Shortey's conviction establishes child sex trafficking by a serving state senator.",
+        "lanes": [
+          "child trafficking",
+          "political power",
+          "public trust",
+          "institutional accountability"
+        ],
+        "whyItMatters": "It is a direct example of a person holding legislative authority committing a serious child-exploitation offense.",
+        "mechanism": "Private access and personal conduct operated outside ordinary legislative oversight while public office supplied status and credibility.",
+        "effect": "Strongly strengthens the predators-in-public-office lane.",
+        "widerDirection": "Examine whether political institutions have clear procedures for safeguarding reports, suspension, evidence preservation and public legal-status updates.",
+        "alternativeExplanation": "The evidence establishes individual criminal conduct, not a legislative or party network.",
+        "doesNotProve": "It does not prove other senators, party officials, staff or donors knew of or facilitated the offense.",
+        "evidenceStrength": "E6 federal conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "When did institutions first receive warning signs?",
+          "What procedures triggered resignation and evidence preservation?",
+          "How are dismissed counts kept separate from the conviction?"
+        ]
+      }
+    },
+    "lawrence-ray": {
+      "name": "Lawrence Ray",
+      "aliases": [
+        "Larry Ray",
+        "Lawrence Grecco"
+      ],
+      "subjectType": "person",
+      "slug": "lawrence-ray",
+      "dossierRoute": "dossier-lawrence-ray.html",
+      "historicalCase": false,
+      "caseEra": "Federal conviction 2022; sentence 2023",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Convicted by a federal jury on all counts presented, including racketeering, extortion, sex trafficking, forced labor, money laundering and tax offenses; sentenced to 60 years in federal prison in 2023.",
+      "publicSummary": "Leader of a coercive enterprise that developed around students and graduates connected to Sarah Lawrence College, using psychological control, violence, forced labor, extortion and sex trafficking.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave2.json",
+      "powerRoles": [
+        {
+          "sector": "other_influential_gatekeeper",
+          "title": "Leader of a coercive criminal enterprise controlling students and associates",
+          "organization": "Lawrence Ray enterprise",
+          "from": "2010",
+          "to": "2020",
+          "status": "former",
+          "sourceLabel": "DOJ Lawrence Ray sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/lawrence-ray-sentenced-years-long-predatory-crimes-against-students-sarah-lawrence",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "lawrence-ray-conviction-sentence-2023",
+          "category": "conviction_final_judgment",
+          "title": "Federal conviction and 60-year sentence for sex trafficking, extortion and forced labor",
+          "summary": "A federal jury convicted Ray on every count presented after evidence that he used violence, threats and psychological abuse to control victims, extorted money, forced labor and caused a victim to engage in commercial sex acts.",
+          "sourceLabel": "SDNY: Lawrence Ray sentenced",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/lawrence-ray-sentenced-years-long-predatory-crimes-against-students-sarah-lawrence",
+          "sourceAuthority": "primary_official",
+          "date": "2023-01-20",
+          "jurisdiction": "United States federal court, Southern District of New York",
+          "status": "adjudicated",
+          "outcome": "60-year federal prison sentence.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Ray denied wrongdoing and exercised his trial rights.",
+          "counterEvidence": "The conviction establishes Ray's enterprise and offenses. It does not establish culpability by every college employee, student, relative or acquaintance.",
+          "proofNeeded": "Maintain the judgment, restitution record and separately adjudicated roles of associates.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "sexual_offence_other",
+            "sexual_abuse",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "college students",
+            "young adults",
+            "women"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Sarah Lawrence students and graduates",
+          "relationshipType": "access through daughter's dorm and subsequent coercive control",
+          "dateRange": "2010–2020",
+          "sourceLabel": "DOJ Lawrence Ray conviction statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/lawrence-ray-convicted-racketeering-violent-assault-extortion-sex-trafficking-forced",
+          "evidenceGrade": "A",
+          "boundary": "The college connection explains initial access. It does not establish that the college authorized Ray's conduct or that all students and staff knew what occurred."
+        }
+      ],
+      "institutionalFailures": [
+        "An adult without a formal college role gained sustained access to students through a residential setting and developed coercive authority outside normal safeguards.",
+        "Victims were isolated through psychological manipulation, violence, debt claims and reputational threats."
+      ],
+      "conclusion": {
+        "finding": "Ray's conviction establishes that informal access and coercive personal authority can develop into a long-running trafficking and forced-labor enterprise even without formal office.",
+        "lanes": [
+          "sex trafficking",
+          "coercive control",
+          "education access",
+          "financial exploitation",
+          "reputation threats"
+        ],
+        "whyItMatters": "The case expands the site's definition of power beyond formal titles to documented control over housing, money, information and personal freedom.",
+        "mechanism": "Psychological conditioning, threats, fabricated debts, violence, isolation and control of victims' labor and sexual activity created practical domination.",
+        "effect": "Strongly strengthens the coercive-control and informal-gatekeeper lanes.",
+        "widerDirection": "Examine how residential and educational communities detect outsiders who gain unchecked authority over vulnerable adults.",
+        "alternativeExplanation": "Ray did not hold formal authority at Sarah Lawrence, and the college connection alone does not establish institutional facilitation.",
+        "doesNotProve": "It does not prove the college, its employees, all students or Ray's wider acquaintances knew of or participated in the crimes.",
+        "evidenceStrength": "E6 federal conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "What warnings reached the college or families?",
+          "Which associates handled money or coercive tasks?",
+          "What residential safeguards could have interrupted access earlier?"
+        ]
+      }
+    },
+    "george-nader": {
+      "name": "George A. Nader",
+      "aliases": [
+        "George Nader",
+        "George Aref Nader"
+      ],
+      "subjectType": "person",
+      "slug": "george-nader",
+      "dossierRoute": "dossier-george-nader.html",
+      "historicalCase": false,
+      "caseEra": "Child-exploitation guilty plea and sentence 2020; separate foreign-contribution sentence 2023",
+      "lifeStatus": "living and incarcerated or under federal sentence",
+      "legalStatusSummary": "Pleaded guilty in 2020 to transporting a 14-year-old boy for illegal sexual conduct and possessing child sexual abuse material; sentenced to 10 years in federal prison. DOJ also records a prior 1991 child-pornography transportation conviction.",
+      "publicSummary": "Businessman and adviser to senior United Arab Emirates officials whose documented access to political and diplomatic networks overlapped with federal child-exploitation convictions.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "government_senior_official",
+          "title": "Adviser to senior United Arab Emirates government officials",
+          "organization": "Senior UAE government networks",
+          "from": "not stated",
+          "to": "2018 or later",
+          "status": "former",
+          "sourceLabel": "DOJ foreign-contribution sentencing statement",
+          "sourceUrl": "https://www.justice.gov/archives/opa/pr/businessman-sentenced-35m-foreign-conduit-contribution-scheme",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "lobbyist_adviser_donor",
+          "title": "International businessman and political-access intermediary",
+          "organization": "Private business and political network",
+          "from": "not stated",
+          "to": "not stated",
+          "status": "former",
+          "sourceLabel": "DOJ foreign-contribution sentencing statement",
+          "sourceUrl": "https://www.justice.gov/archives/opa/pr/businessman-sentenced-35m-foreign-conduit-contribution-scheme",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "nader-child-exploitation-sentence-2020",
+          "category": "conviction_final_judgment",
+          "title": "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
+          "summary": "Nader admitted arranging to transport a 14-year-old boy from Europe to the United States for illegal sexual conduct and possessing or accessing child sexual abuse videos. The court sentenced him to 10 years and ordered restitution.",
+          "sourceLabel": "Eastern District of Virginia: child-exploitation sentence",
+          "sourceUrl": "https://www.justice.gov/usao-edva/pr/man-sentenced-prison-child-exploitation-crimes",
+          "sourceAuthority": "primary_official",
+          "date": "2020-06-26",
+          "jurisdiction": "United States federal court, Eastern District of Virginia",
+          "status": "adjudicated",
+          "outcome": "Ten years in federal prison, $25,000 fine and $150,000 restitution to a minor victim.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Nader pleaded guilty to both child-exploitation counts.",
+          "counterEvidence": "The conviction establishes Nader's own conduct. His governmental and political contacts are relevant to access but do not establish their knowledge or participation.",
+          "proofNeeded": "Maintain the plea, judgment, restitution order and 1991 conviction record separately.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_exploitation",
+            "csam_offence"
+          ],
+          "victimClass": [
+            "14-year-old boy",
+            "children depicted in CSAM"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Senior UAE officials and United States political committees",
+          "relationshipType": "documented advisory, financial and political-access relationships",
+          "dateRange": "2010s",
+          "sourceLabel": "DOJ foreign-contribution sentencing statement",
+          "sourceUrl": "https://www.justice.gov/archives/opa/pr/businessman-sentenced-35m-foreign-conduit-contribution-scheme",
+          "evidenceGrade": "A",
+          "boundary": "The DOJ record documents Nader's advisory and political-access role. It does not establish that senior officials, candidates or committee personnel knew of his child-exploitation conduct."
+        }
+      ],
+      "institutionalFailures": [
+        "A person with a prior child-pornography conviction later retained access to senior officials and high-level political networks.",
+        "The case raises screening and due-diligence questions without proving that connected institutions knew the full criminal history."
+      ],
+      "conclusion": {
+        "finding": "Nader's convictions establish serious child-exploitation conduct by a businessman with documented access to senior foreign officials and American political networks.",
+        "lanes": [
+          "child exploitation",
+          "political access",
+          "diplomatic networks",
+          "due diligence",
+          "elite gatekeeping"
+        ],
+        "whyItMatters": "The overlap makes criminal-history screening and institutional knowledge a legitimate investigative question rather than treating access as proof of complicity.",
+        "mechanism": "International business, advisory status, financial transfers and political introductions created high-level access despite a prior relevant conviction.",
+        "effect": "Strongly strengthens the access-screening and institutional-due-diligence lanes.",
+        "widerDirection": "Investigate what vetting was performed, who knew of prior convictions and whether access continued after warnings became available.",
+        "alternativeExplanation": "Officials and political contacts may have known Nader only through business or policy work and may not have known his criminal history.",
+        "doesNotProve": "It does not prove any UAE official, political candidate, donor, committee or associate knew of or facilitated child exploitation.",
+        "evidenceStrength": "E6 federal convictions",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Who performed background checks?",
+          "When did connected institutions learn of the convictions?",
+          "Did criminal-history knowledge affect access decisions?"
+        ]
+      }
+    },
+    "joel-greenberg": {
+      "name": "Joel Micah Greenberg",
+      "aliases": [
+        "Joel Greenberg"
+      ],
+      "subjectType": "person",
+      "slug": "joel-greenberg",
+      "dossierRoute": "dossier-joel-greenberg.html",
+      "historicalCase": false,
+      "caseEra": "Federal guilty plea 2021; sentence 2022",
+      "lifeStatus": "living and incarcerated or under federal sentence",
+      "legalStatusSummary": "Former elected Seminole County Tax Collector who pleaded guilty to six federal offenses, including sex trafficking of a child, identity theft, fraud, stalking and conspiracy; sentenced to 11 years in federal prison.",
+      "publicSummary": "Former county tax collector whose elected authority and control of a public office overlapped with a child-sex-trafficking conviction and multiple public-corruption and fraud offenses.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Seminole County Tax Collector",
+          "organization": "Seminole County Tax Collector's Office",
+          "from": "2017",
+          "to": "2020",
+          "status": "former",
+          "sourceLabel": "DOJ Greenberg guilty-plea statement",
+          "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/former-seminole-county-tax-collector-joel-micah-greenberg-pleads-guilty-multiple",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "greenberg-guilty-plea-2021",
+          "category": "conviction_final_judgment",
+          "title": "Federal guilty plea included sex trafficking of a child",
+          "summary": "Greenberg pleaded guilty to sex trafficking of a child, producing a false identification document, aggravated identity theft, wire fraud, stalking and conspiracy. The plea established his own conduct across child exploitation and abuse of public resources.",
+          "sourceLabel": "Middle District of Florida: Greenberg guilty plea",
+          "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/former-seminole-county-tax-collector-joel-micah-greenberg-pleads-guilty-multiple",
+          "sourceAuthority": "primary_official",
+          "date": "2021-05-17",
+          "jurisdiction": "United States federal court, Middle District of Florida",
+          "status": "adjudicated",
+          "outcome": "Guilty plea to six federal offenses; later sentenced to 11 years in federal prison.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Greenberg entered guilty pleas and cooperated with federal authorities.",
+          "counterEvidence": "The plea establishes Greenberg's crimes, not automatic criminal responsibility for every politician, employee, consultant or associate he knew.",
+          "proofNeeded": "Maintain the plea agreement, judgment, sentence and cooperation-related filings.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_trafficking",
+            "child_sexual_exploitation",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "minor victim",
+            "public and identity-theft victims"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "greenberg-sentence-2022",
+          "category": "conviction_final_judgment",
+          "title": "Eleven-year federal sentence recorded by DOJ",
+          "summary": "The Middle District of Florida's official fraud-enforcement results record an 11-year federal sentence for Greenberg's conspiracy and other offenses.",
+          "sourceLabel": "DOJ Middle District COVID-fraud enforcement results",
+          "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/over-100-defendants-federally-charged-fraud-related-covid-19-pandemic",
+          "sourceAuthority": "primary_official",
+          "date": "2022-12-01",
+          "jurisdiction": "United States federal court, Middle District of Florida",
+          "status": "adjudicated",
+          "outcome": "Eleven years in federal prison.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The sentence followed Greenberg's guilty plea and cooperation.",
+          "counterEvidence": "The aggregate sentence covered multiple offenses and should not be described as punishment solely for the trafficking count.",
+          "proofNeeded": "Link the exact judgment and allocation of sentence to each count.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_trafficking",
+            "child_sexual_exploitation",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "minor victim",
+            "taxpayers",
+            "identity-theft victims"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Seminole County political, contractor and public-office network",
+          "relationshipType": "elected authority, staffing, contracting and separately prosecuted corruption relationships",
+          "dateRange": "2016–2021",
+          "sourceLabel": "DOJ Greenberg guilty-plea statement",
+          "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/former-seminole-county-tax-collector-joel-micah-greenberg-pleads-guilty-multiple",
+          "evidenceGrade": "A",
+          "boundary": "Each official, contractor and political associate must be assessed by their own conduct. Greenberg's plea does not establish that all connected people knew of child trafficking or other crimes."
+        }
+      ],
+      "institutionalFailures": [
+        "An elected official controlled public staffing, contracts, identity records and institutional credibility while committing multiple crimes.",
+        "The case demonstrates how public-office authority can combine personal exploitation, fraud and intimidation."
+      ],
+      "conclusion": {
+        "finding": "Greenberg's guilty plea establishes child sex trafficking and other crimes by an elected public official who controlled a county office and public resources.",
+        "lanes": [
+          "child trafficking",
+          "public office",
+          "corruption",
+          "identity systems",
+          "institutional accountability"
+        ],
+        "whyItMatters": "It is a direct example of official authority and public systems overlapping with child exploitation and personal criminal conduct.",
+        "mechanism": "Elected authority, control of staff and records, access to public resources and political relationships increased practical leverage and reduced ordinary scrutiny.",
+        "effect": "Strongly strengthens the predators-in-public-office and abuse-of-authority lanes.",
+        "widerDirection": "Examine access logs, staffing decisions, public-resource use and who received warnings while separating every associate's legal status.",
+        "alternativeExplanation": "The plea establishes Greenberg's individual enterprise and does not by itself establish a wider political trafficking network.",
+        "doesNotProve": "It does not prove every politician, employee, contractor or social associate knew of or participated in child trafficking or corruption.",
+        "evidenceStrength": "E6 federal guilty plea and sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which public resources were used in the offenses?",
+          "Who received warning signs and when?",
+          "Which connected individuals were charged, convicted, acquitted or never accused?"
+        ]
+      }
+    },
+    "robert-hadden": {
+      "name": "Robert Hadden",
+      "aliases": [
+        "Dr. Robert Hadden"
+      ],
+      "subjectType": "person",
+      "slug": "robert-hadden",
+      "dossierRoute": "dossier-robert-hadden.html",
+      "historicalCase": false,
+      "caseEra": "Federal conviction and sentence 2023",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Convicted by a federal jury in 2023 of inducing four victims to travel interstate for unlawful sexual activity and sentenced to 20 years in prison. Federal prosecutors proved he sexually abused dozens of patients over approximately 25 years under the guise of medical examinations.",
+      "publicSummary": "Former obstetrician and gynecologist whose medical authority and hospital affiliation gave repeated private access to patients in vulnerable clinical settings.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "healthcare",
+          "title": "Obstetrician and gynecologist",
+          "organization": "Columbia University Medical Center and affiliated practices",
+          "from": "1987",
+          "to": "2012",
+          "status": "former",
+          "sourceLabel": "DOJ Hadden sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/former-obstetriciangynecologist-robert-hadden-sentenced-20-years-prison-sexually",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "hadden-federal-conviction-sentence-2023",
+          "category": "conviction_final_judgment",
+          "title": "Federal conviction and 20-year sentence for sexually abusing patients",
+          "summary": "A federal jury convicted Hadden of inducing four victims to travel interstate to his Manhattan medical offices for unlawful sexual activity. Prosecutors proved a wider pattern of sexual abuse of dozens of patients under the guise of medical examinations.",
+          "sourceLabel": "Southern District of New York: Hadden sentenced",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/former-obstetriciangynecologist-robert-hadden-sentenced-20-years-prison-sexually",
+          "sourceAuthority": "primary_official",
+          "date": "2023-07-25",
+          "jurisdiction": "United States federal court, Southern District of New York",
+          "status": "adjudicated",
+          "outcome": "Twenty years in federal prison and lifetime supervised release.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Hadden denied the federal charges and exercised his trial rights.",
+          "counterEvidence": "The federal judgment establishes Hadden's crimes. Institutional knowledge, civil liability and individual staff responsibility require separate evidence and legal records.",
+          "proofNeeded": "Maintain the federal judgment, sentencing record and institution-specific civil and regulatory outcomes.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "sexual_assault",
+            "sexual_abuse"
+          ],
+          "victimClass": [
+            "female patients",
+            "adult patients"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Columbia University Medical Center and affiliated medical practices",
+          "relationshipType": "employment, credentials and clinical access",
+          "dateRange": "1987–2012",
+          "sourceLabel": "DOJ Hadden sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/former-obstetriciangynecologist-robert-hadden-sentenced-20-years-prison-sexually",
+          "evidenceGrade": "A",
+          "boundary": "Employment and affiliation explain Hadden's access. Responsibility of institutions or individual colleagues must be established through separate official, civil or regulatory records."
+        }
+      ],
+      "institutionalFailures": [
+        "Medical credentials and examination-room privacy created repeated unsupervised access to vulnerable patients.",
+        "The duration of the proven conduct raises questions about complaint handling, supervision and institutional knowledge that require record-specific analysis."
+      ],
+      "conclusion": {
+        "finding": "Hadden's conviction establishes long-running sexual abuse carried out through trusted medical authority and private clinical access.",
+        "lanes": [
+          "medical authority",
+          "sexual abuse",
+          "institutional safeguarding",
+          "professional gatekeeping"
+        ],
+        "whyItMatters": "The case shows how professional expertise can convert ordinary patient trust into repeated access and silence.",
+        "mechanism": "Clinical authority, examination privacy, credential-based trust and fragmented complaint handling reduced patients' ability to challenge or expose conduct.",
+        "effect": "Strongly strengthens the healthcare-authority and institutional-safeguarding lanes.",
+        "widerDirection": "Investigate chaperone policies, complaint escalation, licensing actions and what institutions knew at each stage.",
+        "alternativeExplanation": "The conviction establishes Hadden's conduct; it does not by itself determine civil or criminal responsibility of every affiliated institution or employee.",
+        "doesNotProve": "It does not prove all colleagues, administrators or institutions knew of or facilitated the abuse.",
+        "evidenceStrength": "E6 federal conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "When were complaints first documented?",
+          "Which supervisors or licensing bodies received them?",
+          "What safeguards changed after disclosure?"
+        ]
+      }
+    },
+    "huw-edwards": {
+      "name": "Huw Edwards",
+      "aliases": [
+        "Huw Edwards, former BBC presenter"
+      ],
+      "subjectType": "person",
+      "slug": "huw-edwards",
+      "dossierRoute": "dossier-huw-edwards.html",
+      "historicalCase": false,
+      "caseEra": "Guilty pleas and sentence 2024",
+      "lifeStatus": "living; suspended sentence imposed",
+      "legalStatusSummary": "Former BBC news presenter who pleaded guilty to three counts of making indecent images of children and received a six-month custodial sentence suspended for two years in September 2024.",
+      "publicSummary": "Former national news presenter whose broadcasting prominence and public trust overlapped with convictions involving indecent images of children received through private messaging.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "media_entertainment",
+          "title": "BBC news presenter and national broadcaster",
+          "organization": "BBC",
+          "from": "1984",
+          "to": "2024",
+          "status": "former",
+          "sourceLabel": "CPS Huw Edwards sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/ex-broadcaster-sentenced-possessing-indecent-images-children",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "huw-edwards-iico-conviction-2024",
+          "category": "conviction_final_judgment",
+          "title": "Guilty pleas to three indecent-image offenses",
+          "summary": "Edwards pleaded guilty to three counts of making indecent images of children. The CPS stated that 41 images were identified, including Category A, B and C material received through WhatsApp.",
+          "sourceLabel": "CPS: ex-broadcaster sentenced",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/ex-broadcaster-sentenced-possessing-indecent-images-children",
+          "sourceAuthority": "primary_official",
+          "date": "2024-09-16",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Six-month jail sentence suspended for two years, costs and ancillary consequences.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Edwards pleaded guilty to all three counts.",
+          "counterEvidence": "The conviction concerns receipt and making of indecent images under the relevant law. It does not establish contact offending or wrongdoing by BBC colleagues.",
+          "proofNeeded": "Maintain charge wording, sentencing order and any later regulatory or employment outcomes separately.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "csam_offence"
+          ],
+          "victimClass": [
+            "children depicted in indecent images"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "BBC and national broadcasting establishment",
+          "relationshipType": "employment, public prominence and institutional reputation",
+          "dateRange": "1984–2024",
+          "sourceLabel": "CPS Huw Edwards sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/ex-broadcaster-sentenced-possessing-indecent-images-children",
+          "evidenceGrade": "A",
+          "boundary": "Broadcasting employment and prominence establish public influence. They do not prove the BBC or colleagues knew of or facilitated the offense."
+        }
+      ],
+      "institutionalFailures": [
+        "The conviction raises questions about reputational-risk response and timing of institutional knowledge, which must be answered from employment and investigation records rather than assumed."
+      ],
+      "conclusion": {
+        "finding": "Edwards's guilty pleas establish indecent-image offenses by a nationally prominent broadcaster trusted in a major public-information role.",
+        "lanes": [
+          "child safeguarding",
+          "media influence",
+          "public trust",
+          "digital access"
+        ],
+        "whyItMatters": "The case shows why criminal-status information must propagate into influential media dossiers without turning professional association into guilt.",
+        "mechanism": "Private digital messaging enabled offending outside the visible professional role while national prominence increased reputational stakes for institutions.",
+        "effect": "Strongly strengthens the public-trust and media-accountability lanes.",
+        "widerDirection": "Track when institutions learned of investigations, what safeguarding or employment actions followed and how public statements matched the legal record.",
+        "alternativeExplanation": "The offense was private individual conduct and the conviction does not establish institutional involvement.",
+        "doesNotProve": "It does not prove BBC executives, presenters, colleagues or professional contacts knew of or facilitated the offense, nor that contact abuse occurred.",
+        "evidenceStrength": "E6 guilty pleas and sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "When did the employer receive verified information?",
+          "What internal policies governed suspension and disclosure?",
+          "Were public statements corrected as the legal status changed?"
+        ]
+      }
+    },
+    "adam-taylor-nca": {
+      "name": "Adam Taylor",
+      "aliases": [
+        "Adam Taylor, former NCA officer"
+      ],
+      "subjectType": "person",
+      "slug": "adam-taylor-nca",
+      "dossierRoute": "dossier-adam-taylor-nca.html",
+      "historicalCase": false,
+      "caseEra": "Guilty pleas and sentence 2024",
+      "lifeStatus": "living; custodial sentence imposed",
+      "legalStatusSummary": "Former National Crime Agency intelligence officer who pleaded guilty to six charges including misconduct in public office, making indecent images of children and possessing extreme pornography; sentenced to 18 months in August 2024.",
+      "publicSummary": "Former national law-enforcement intelligence officer who used a work device to access and download child sexual abuse material, according to the CPS conviction and sentencing record.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Intelligence officer",
+          "organization": "National Crime Agency",
+          "from": "not stated",
+          "to": "2022",
+          "status": "former",
+          "sourceLabel": "CPS Adam Taylor sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-national-crime-agency-officer-jailed-over-indecent-images-children",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "adam-taylor-nca-conviction-2024",
+          "category": "conviction_final_judgment",
+          "title": "Conviction for indecent images and misconduct in public office",
+          "summary": "Taylor pleaded guilty to six charges after investigators established that he used a work device to access, view and download indecent images of children and child sexual abuse material.",
+          "sourceLabel": "CPS: former NCA officer jailed",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-national-crime-agency-officer-jailed-over-indecent-images-children",
+          "sourceAuthority": "primary_official",
+          "date": "2024-08-02",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Eighteen months' imprisonment, sexual-harm order and sex-offender notification requirements.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Taylor pleaded guilty to the charged offenses.",
+          "counterEvidence": "The conviction establishes Taylor's misuse of office and devices. It does not establish that other NCA personnel knew of or participated in the conduct.",
+          "proofNeeded": "Maintain exact counts, sentencing order and NCA disciplinary findings.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "csam_offence"
+          ],
+          "victimClass": [
+            "children depicted in CSAM"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "National Crime Agency",
+          "relationshipType": "law-enforcement employment and access to government systems",
+          "dateRange": "before 2022",
+          "sourceLabel": "CPS Adam Taylor sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-national-crime-agency-officer-jailed-over-indecent-images-children",
+          "evidenceGrade": "A",
+          "boundary": "Employment explains authority and the misuse of a work device. It does not prove institutional knowledge or a wider law-enforcement network."
+        }
+      ],
+      "institutionalFailures": [
+        "A law-enforcement intelligence officer used an official work device for offending, demonstrating the need for effective device monitoring, internal reporting and anti-corruption controls."
+      ],
+      "conclusion": {
+        "finding": "Taylor's conviction establishes child-abuse-image offending and misconduct in public office by a national law-enforcement intelligence officer.",
+        "lanes": [
+          "child safeguarding",
+          "law-enforcement authority",
+          "system access",
+          "internal oversight"
+        ],
+        "whyItMatters": "It shows that people tasked with intelligence and enforcement can misuse trusted access, making independent internal controls essential.",
+        "mechanism": "Official employment, work-device access and professional trust created opportunity that required detection by anti-corruption systems.",
+        "effect": "Strongly strengthens the trusted-system-access and internal-oversight lanes.",
+        "widerDirection": "Audit privileged-device monitoring, reporting channels, evidence preservation and disciplinary escalation in security institutions.",
+        "alternativeExplanation": "The evidence establishes individual misuse and the NCA's anti-corruption unit investigated it; it does not establish institutional complicity.",
+        "doesNotProve": "It does not prove other NCA officers, managers or partner agencies knew of or facilitated the offenses.",
+        "evidenceStrength": "E6 guilty pleas and sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "What monitoring detected the conduct?",
+          "Were warning signs missed earlier?",
+          "What controls were changed after the case?"
+        ]
+      }
+    },
+    "abdul-halim-khan": {
+      "name": "Abdul Halim Khan",
+      "aliases": [
+        "Abdul Khan",
+        "former East London imam"
+      ],
+      "subjectType": "person",
+      "slug": "abdul-halim-khan",
+      "dossierRoute": "dossier-abdul-halim-khan.html",
+      "historicalCase": false,
+      "caseEra": "Conviction and life sentence 2026",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Former East London imam convicted in February 2026 of 21 offenses including rape, sexual assault and child sexual offenses against seven women and girls; sentenced in May 2026 to life imprisonment with a minimum term of 20 years.",
+      "publicSummary": "Former religious leader who used spiritual authority, community trust and threats involving supernatural harm to manipulate and silence women and teenage girls over more than a decade.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "religious_institution",
+          "title": "Imam and trusted religious leader",
+          "organization": "East London mosque and local Muslim community",
+          "from": "2004 or earlier",
+          "to": "2015 or later",
+          "status": "former",
+          "sourceLabel": "CPS Abdul Halim Khan sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-imam-jailed-sexually-abusing-seven-women-and-girls",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "abdul-halim-khan-conviction-2026",
+          "category": "conviction_final_judgment",
+          "title": "Twenty-one convictions for rape, sexual assault and child sexual offenses",
+          "summary": "Khan was convicted of 21 offenses against seven women and girls, three of whom were young teenagers. The CPS stated that he used religious authority and claims of spiritual harm to isolate, manipulate and silence victims.",
+          "sourceLabel": "CPS: former imam jailed",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-imam-jailed-sexually-abusing-seven-women-and-girls",
+          "sourceAuthority": "primary_official",
+          "date": "2026-05-14",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Life imprisonment with a minimum term of 20 years.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Khan contested the allegations at trial and was convicted by a jury.",
+          "counterEvidence": "The conviction establishes Khan's crimes and abuse of authority; it does not implicate the mosque, faith community or other religious leaders without separate evidence.",
+          "proofNeeded": "Maintain verdict counts, sentencing order and any institution-specific safeguarding findings.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "rape",
+            "sexual_assault",
+            "child_sexual_abuse",
+            "grooming"
+          ],
+          "victimClass": [
+            "women",
+            "teenage girls",
+            "community members"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "East London mosque and local Muslim community",
+          "relationshipType": "religious leadership, pastoral trust and community access",
+          "dateRange": "2004–2015 offending period",
+          "sourceLabel": "CPS Abdul Halim Khan sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-imam-jailed-sexually-abusing-seven-women-and-girls",
+          "evidenceGrade": "A",
+          "boundary": "Religious role explains access and coercive authority. It does not establish knowledge or participation by the mosque, congregation or wider faith community."
+        }
+      ],
+      "institutionalFailures": [
+        "Religious authority and private spiritual counselling created isolated access to victims.",
+        "Fear of family harm and supernatural threats delayed disclosure, illustrating barriers that ordinary complaint systems may not recognize."
+      ],
+      "conclusion": {
+        "finding": "Khan's conviction establishes sustained sexual violence enabled by trusted religious authority and spiritual coercion.",
+        "lanes": [
+          "child safeguarding",
+          "religious authority",
+          "coercive control",
+          "community gatekeeping",
+          "sexual violence"
+        ],
+        "whyItMatters": "The case shows how belief, pastoral trust and fear can become practical mechanisms of control over victims.",
+        "mechanism": "Religious status, isolated meetings, supernatural threats and community respect suppressed resistance and reporting.",
+        "effect": "Strongly strengthens the religious-authority and coercive-control lanes.",
+        "widerDirection": "Develop safeguarding systems able to recognize spiritual threats, confidential pastoral access and culturally specific barriers to disclosure.",
+        "alternativeExplanation": "The conviction concerns one offender and does not establish that the institution or wider religion enabled or approved his conduct.",
+        "doesNotProve": "It does not prove mosque officials, congregants or other religious leaders knew of or facilitated the crimes.",
+        "evidenceStrength": "E6 jury convictions and life sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Were concerns raised within the community?",
+          "What safeguarding rules governed private meetings?",
+          "How can victims report without fear of communal or spiritual retaliation?"
+        ]
+      }
+    },
+    "david-james-clarke": {
+      "name": "David James Clarke",
+      "aliases": [
+        "David Clarke",
+        "former Newlands School teacher"
+      ],
+      "subjectType": "person",
+      "slug": "david-james-clarke",
+      "dossierRoute": "dossier-david-james-clarke.html",
+      "historicalCase": false,
+      "caseEra": "Conviction and sentence 2026 for historical offenses",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Former private-school teacher convicted of 45 child sexual abuse offenses and sentenced to 26 years in June 2026. The convictions included indecent assault, gross indecency with a child, buggery and making indecent images of children.",
+      "publicSummary": "Former teacher and photography-club leader who used educational authority and an isolated darkroom to abuse pupils in his care.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "education",
+          "title": "Teacher and photography-club leader",
+          "organization": "Newlands School, Seaford",
+          "from": "not stated",
+          "to": "historical offending period",
+          "status": "former",
+          "sourceLabel": "CPS David James Clarke sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-private-school-teacher-jailed-multiple-non-recent-sexual-assaults",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "david-james-clarke-conviction-2026",
+          "category": "conviction_final_judgment",
+          "title": "Forty-five child sexual abuse convictions and 26-year sentence",
+          "summary": "Clarke was convicted of 45 offenses involving 14 children. The CPS stated that he used a photography club and darkroom to isolate boys and escalate abuse, while also using threats and bribes.",
+          "sourceLabel": "CPS: former private-school teacher jailed",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-private-school-teacher-jailed-multiple-non-recent-sexual-assaults",
+          "sourceAuthority": "primary_official",
+          "date": "2026-06-01",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Twenty-six years' imprisonment.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Clarke contested charges at trial and was convicted.",
+          "counterEvidence": "The convictions establish Clarke's conduct. They do not establish knowledge or culpability of every teacher, administrator or former pupil.",
+          "proofNeeded": "Maintain count-by-count verdicts, sentencing order and any institutional-review findings.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "indecent_assault",
+            "csam_offence",
+            "grooming"
+          ],
+          "victimClass": [
+            "boys",
+            "school pupils",
+            "children in residential education"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Newlands School and photography club",
+          "relationshipType": "teaching authority, extracurricular control and isolated access",
+          "dateRange": "historical offending period",
+          "sourceLabel": "CPS David James Clarke sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/cps/news/former-private-school-teacher-jailed-multiple-non-recent-sexual-assaults",
+          "evidenceGrade": "A",
+          "boundary": "The school role and club explain access. Institutional responsibility or knowledge requires separate official findings and cannot be inferred from employment alone."
+        }
+      ],
+      "institutionalFailures": [
+        "A teacher controlled an extracurricular space where pupils could be isolated away from ordinary observation.",
+        "Residential and authority dynamics made resistance and disclosure difficult for children far from home."
+      ],
+      "conclusion": {
+        "finding": "Clarke's convictions establish systematic child sexual abuse carried out through teaching authority and control of an isolated extracurricular setting.",
+        "lanes": [
+          "child safeguarding",
+          "education authority",
+          "isolated access",
+          "grooming",
+          "institutional oversight"
+        ],
+        "whyItMatters": "The case demonstrates that apparently beneficial clubs and specialist spaces can become access mechanisms when one adult controls participation and privacy.",
+        "mechanism": "Teacher authority, a darkroom outside normal visibility, threats, bribes and pupil dependence enabled repeated abuse.",
+        "effect": "Strongly strengthens the education-access and safeguarding-failure lanes.",
+        "widerDirection": "Audit one-adult extracurricular spaces, residential-school reporting and historic complaint preservation.",
+        "alternativeExplanation": "The convictions establish individual offending; they do not by themselves determine what school leaders knew at the time.",
+        "doesNotProve": "It does not prove every colleague, administrator or institution knew of or facilitated the abuse.",
+        "evidenceStrength": "E6 jury convictions and sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "What supervision governed the darkroom?",
+          "Were concerns recorded or transferred?",
+          "Which reforms address isolated extracurricular access?"
+        ]
+      }
+    },
+    "conor-mcgrath": {
+      "name": "Conor McGrath",
+      "aliases": [
+        "Conor McGrath, former councillor"
+      ],
+      "subjectType": "person",
+      "slug": "conor-mcgrath",
+      "dossierRoute": "dossier-conor-mcgrath.html",
+      "historicalCase": false,
+      "caseEra": "Guilty pleas and sentence 2026",
+      "lifeStatus": "living; suspended custodial sentence imposed",
+      "legalStatusSummary": "Former councillor who pleaded guilty in March 2026 to three counts of making indecent images of children and received an eight-month prison sentence suspended for two years in April 2026.",
+      "publicSummary": "Former local elected representative whose public role overlapped with convictions involving more than 500 indecent images of children, including Category A material.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects-wave3.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Local councillor",
+          "organization": "Local government in Hertfordshire",
+          "from": "not stated",
+          "to": "before 2026 sentence",
+          "status": "former",
+          "sourceLabel": "CPS Conor McGrath sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/thames-and-chiltern/news/former-councillor-sentenced-possessing-hundreds-indecent-images-children",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "conor-mcgrath-iico-conviction-2026",
+          "category": "conviction_final_judgment",
+          "title": "Guilty pleas involving more than 500 indecent images of children",
+          "summary": "McGrath pleaded guilty to making 77 Category A, 109 Category B and 329 Category C indecent images of children found on his devices.",
+          "sourceLabel": "CPS: former councillor sentenced",
+          "sourceUrl": "https://www.cps.gov.uk/thames-and-chiltern/news/former-councillor-sentenced-possessing-hundreds-indecent-images-children",
+          "sourceAuthority": "primary_official",
+          "date": "2026-04-17",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Eight-month prison sentence suspended for two years and ten-year sexual-harm-prevention order.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "McGrath pleaded guilty to all three counts.",
+          "counterEvidence": "The conviction concerns image offenses. It does not establish contact abuse, use of council systems or wrongdoing by political colleagues.",
+          "proofNeeded": "Maintain exact plea, sentencing order and council resignation or disciplinary records separately.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "csam_offence"
+          ],
+          "victimClass": [
+            "children depicted in indecent images"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Local government and political colleagues",
+          "relationshipType": "elected public office and institutional reputation",
+          "dateRange": "before 2026",
+          "sourceLabel": "CPS Conor McGrath sentencing statement",
+          "sourceUrl": "https://www.cps.gov.uk/thames-and-chiltern/news/former-councillor-sentenced-possessing-hundreds-indecent-images-children",
+          "evidenceGrade": "A",
+          "boundary": "Office explains public trust and access. It does not establish that council colleagues or political organizations knew of or facilitated the offense."
+        }
+      ],
+      "institutionalFailures": [
+        "The case requires clear propagation of criminal status into public-office dossiers and transparent separation of private offending from any proven use of public systems."
+      ],
+      "conclusion": {
+        "finding": "McGrath's guilty pleas establish child-abuse-image offenses by a former local elected representative.",
+        "lanes": [
+          "child safeguarding",
+          "public office",
+          "digital offending",
+          "institutional accountability"
+        ],
+        "whyItMatters": "It shows why current legal outcomes must automatically update political profiles rather than remaining isolated in court reporting.",
+        "mechanism": "Private-device offending occurred alongside a public-trust role, creating reputational and safeguarding obligations for political institutions once verified.",
+        "effect": "Strongly strengthens the public-office legal-status and accountability lanes.",
+        "widerDirection": "Track when councils and parties receive verified information, what suspension or removal rules apply and whether public records are corrected promptly.",
+        "alternativeExplanation": "The conviction is evidence of individual private conduct, not a council or party network.",
+        "doesNotProve": "It does not prove contact abuse, use of public-office resources or knowledge by colleagues and institutions.",
+        "evidenceStrength": "E6 guilty pleas and sentence",
+        "confidence": "very high",
+        "nextQuestions": [
+          "When did the council learn of the investigation?",
+          "Were public devices or systems examined?",
+          "How were role and safeguarding decisions documented?"
+        ]
+      }
+    },
+    "jimmy-savile": {
+      "name": "Jimmy Savile",
+      "aliases": [
+        "Sir Jimmy Savile",
+        "James Wilson Vincent Savile"
+      ],
+      "subjectType": "person",
+      "slug": "jimmy-savile",
+      "dossierRoute": "dossier-jimmy-savile.html",
+      "historicalCase": true,
+      "caseEra": "1926–2011; official investigations published after death",
+      "lifeStatus": "deceased",
+      "legalStatusSummary": "Deceased before criminal prosecution. Multiple official investigations documented sexual abuse and serious institutional failures; there was no criminal trial or conviction.",
+      "publicSummary": "British broadcaster and charity fundraiser whose fame and institutional access placed him inside the BBC, NHS hospitals and Broadmoor. Posthumous official investigations documented abuse of children and adults and failures that enabled access.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "media_entertainment",
+          "title": "National broadcaster and television personality",
+          "organization": "BBC",
+          "from": "1958",
+          "to": "2011",
+          "status": "historical",
+          "sourceLabel": "IICSA health-sector summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/inquiry/interim/current-practice-tackle-child-sexual-abuse/health-sector.html",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "healthcare",
+          "title": "Volunteer, fundraiser and unusually trusted institutional visitor",
+          "organization": "NHS hospitals and Broadmoor Hospital",
+          "from": "not stated",
+          "to": "2011",
+          "status": "historical",
+          "sourceLabel": "UK Government collection of Savile investigations",
+          "sourceUrl": "https://www.gov.uk/government/collections/nhs-and-department-of-health-investigations-into-jimmy-savile",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "other_influential_gatekeeper",
+          "title": "OBE and Knight Bachelor recipient",
+          "organization": "UK honours system",
+          "from": "1971",
+          "to": "2011",
+          "status": "historical",
+          "sourceLabel": "IICSA review of Savile honours",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/westminster/part-i-honours-system/i3-particular-cases",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "savile-health-investigations-2014",
+          "category": "investigation_inquiry",
+          "title": "Official health investigations documented abuse and enabling access",
+          "summary": "Government and NHS investigations reported that Savile sexually abused adults and children in health settings and that inadequate procedures enabled him to occupy positions of authority and access vulnerable people.",
+          "sourceLabel": "UK Government: Jimmy Savile NHS investigations",
+          "sourceUrl": "https://www.gov.uk/government/news/jimmy-savile-nhs-investigations",
+          "sourceAuthority": "primary_official",
+          "date": "2014-06-26",
+          "jurisdiction": "England",
+          "status": "closed",
+          "outcome": "Official institutional findings published; no criminal adjudication because Savile died in 2011.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Savile died before the allegations resulted in a criminal case and therefore provided no trial response.",
+          "counterEvidence": "Institution-specific reports varied in what could be established. The findings do not prove every colleague, supporter, hospital worker or public figure knew about the abuse.",
+          "proofNeeded": "Preserve complaint chronologies and identify who received warnings and what action followed.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "sexual_assault",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "children",
+            "adults",
+            "patients"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "savile-broadmoor-2014",
+          "category": "investigation_inquiry",
+          "title": "Broadmoor investigation examined Savile's access and abuse",
+          "summary": "The Department of Health commissioned an investigation into Savile's association with Broadmoor Hospital, including the authority and access he obtained there.",
+          "sourceLabel": "UK Government: Broadmoor investigation",
+          "sourceUrl": "https://www.gov.uk/government/publications/jimmy-savile-investigation-broadmoor-hospital",
+          "sourceAuthority": "primary_official",
+          "date": "2014-06-26",
+          "jurisdiction": "England",
+          "status": "closed",
+          "outcome": "Official investigation published.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "No criminal response was possible after Savile's death.",
+          "counterEvidence": "The report concerns Broadmoor and must not be generalized to every institution or associate.",
+          "proofNeeded": "Link each established incident and warning to the exact report section and institution response.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "sexual_assault",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "children",
+            "adults",
+            "patients"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "UK honours system",
+          "relationshipType": "honours and public legitimacy",
+          "dateRange": "1971–2011",
+          "sourceLabel": "IICSA honours review",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/westminster/part-i-honours-system/i3-particular-cases",
+          "evidenceGrade": "A",
+          "boundary": "The OBE and knighthood document public recognition and legitimacy. They do not show that the monarch, honours officials or other recipients knew of Savile's abuse."
+        }
+      ],
+      "institutionalFailures": [
+        "Inadequate safeguarding and governance allowed unusual access to patients and institutional authority.",
+        "Warnings and allegations were not assembled into an effective cross-institution response while Savile was alive."
+      ],
+      "conclusion": {
+        "finding": "Official investigations show that Savile used celebrity, charity status and trusted institutional access to reach vulnerable people across multiple settings.",
+        "lanes": [
+          "child safeguarding",
+          "institutional failure",
+          "media influence",
+          "healthcare access"
+        ],
+        "whyItMatters": "The case demonstrates how reputation and cross-institution access can neutralize scrutiny and fragment warnings.",
+        "mechanism": "Celebrity legitimacy, fundraising value, honours, informal authority and weak information-sharing created access without proportionate oversight.",
+        "effect": "Strongly strengthens the institutional-access and safeguarding-failure lanes.",
+        "widerDirection": "Investigate how institutions transfer trust to famous or well-connected individuals and whether complaints are joined across organizations.",
+        "alternativeExplanation": "Some failures arose from poor historic safeguarding systems and siloed records rather than a coordinated protection network.",
+        "doesNotProve": "It does not prove that every colleague, royal, politician, broadcaster, hospital worker or charity supporter knew of or facilitated his crimes.",
+        "evidenceStrength": "E5 official findings",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which warnings reached senior decision-makers?",
+          "Which access privileges were renewed?",
+          "Where did information-sharing fail?"
+        ]
+      }
+    },
+    "peter-ball": {
+      "name": "Peter Ball",
+      "aliases": [
+        "Bishop Peter Ball"
+      ],
+      "subjectType": "person",
+      "slug": "peter-ball",
+      "dossierRoute": "dossier-peter-ball.html",
+      "historicalCase": true,
+      "caseEra": "1932–2019",
+      "lifeStatus": "deceased",
+      "legalStatusSummary": "Convicted in 2015 after pleading guilty to two indecent assaults and misconduct in public office. IICSA later documented Church failures and prominent support after his earlier caution.",
+      "publicSummary": "Former Bishop of Gloucester whose clerical authority gave him access to vulnerable young men. His case documents how prominent supporters and royal proximity could create pressure around institutional decisions.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "religious_institution",
+          "title": "Bishop of Gloucester; formerly Bishop of Lewes",
+          "organization": "Church of England",
+          "from": "1977",
+          "to": "1993",
+          "status": "historical",
+          "sourceLabel": "IICSA Peter Ball background",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/anglican-church/part-introduction/a1-background-investigation.html",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "peter-ball-conviction-2015",
+          "category": "conviction_final_judgment",
+          "title": "Guilty pleas to indecent assaults and misconduct in public office",
+          "summary": "IICSA records that Ball pleaded guilty in 2015 to two indecent assaults and misconduct in public office arising from deliberate manipulation of vulnerable young men.",
+          "sourceLabel": "IICSA Anglican Church investigation background",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/anglican-church/part-introduction/a1-background-investigation.html",
+          "sourceAuthority": "primary_official",
+          "date": "2015-10-07",
+          "jurisdiction": "England and Wales",
+          "status": "adjudicated",
+          "outcome": "Guilty pleas and sentence imposed.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The guilty pleas are Ball's formal admissions to the specified offenses.",
+          "counterEvidence": "The conviction establishes the charged conduct, not every allegation or the knowledge of every supporter.",
+          "proofNeeded": "Maintain sentencing judgment and charge particulars.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "indecent_assault",
+            "sexual_abuse",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "young men",
+            "vulnerable adults",
+            "persons under religious authority"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "peter-ball-iicsa-support-2019",
+          "category": "investigation_inquiry",
+          "title": "IICSA found serious Church failures and examined prominent support",
+          "summary": "IICSA concluded that Church safeguarding failed and that prominent individuals wrote to police, prosecutors and the Church in support of Ball without knowing all the facts.",
+          "sourceLabel": "IICSA Peter Ball conclusions",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/anglican-chichester-peter-ball/conclusions-and-recommendations/conclusions.html",
+          "sourceAuthority": "primary_official",
+          "date": "2019-05-09",
+          "jurisdiction": "England and Wales",
+          "status": "closed",
+          "outcome": "Official inquiry findings published.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The Prince of Wales told the Inquiry he did not understand the nature or extent of the allegations and did not seek to influence the police investigation.",
+          "counterEvidence": "Support or correspondence does not establish knowledge or criminal complicity. IICSA described the Prince's actions as misguided and potentially influential, not criminal.",
+          "proofNeeded": "Classify each letter, meeting and Church decision by date, recipient, knowledge and effect.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "institutional_facilitation_cover_up",
+            "sexual_abuse"
+          ],
+          "victimClass": [
+            "young men",
+            "persons under religious authority"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Charles, then Prince of Wales",
+          "relationshipType": "documented personal support and institutional communications",
+          "dateRange": "1990s–2000s",
+          "sourceLabel": "IICSA Peter Ball conclusions",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/anglican-chichester-peter-ball/conclusions-and-recommendations/conclusions.html",
+          "evidenceGrade": "A",
+          "boundary": "Ball sought to use the relationship; the Prince and staff spoke with Church figures and the Duchy bought property to rent to Ball and his brother. The Prince said he lacked full knowledge and did not seek to influence the criminal investigation. This does not prove complicity."
+        }
+      ],
+      "institutionalFailures": [
+        "Church safeguarding structures were inadequate and allowed Ball to regain ministry-related access.",
+        "Prominent character references and informal access created pressure despite incomplete knowledge."
+      ],
+      "conclusion": {
+        "finding": "A convicted bishop used religious authority and elite access while institutions and prominent supporters failed to apply adequate safeguarding skepticism.",
+        "lanes": [
+          "child safeguarding",
+          "religious authority",
+          "elite access",
+          "institutional failure"
+        ],
+        "whyItMatters": "The case shows a documented mechanism by which status and high-level relationships can influence or appear to influence institutional responses.",
+        "mechanism": "Clerical authority, private correspondence, character references, royal proximity and weak Church governance reinforced credibility after serious allegations.",
+        "effect": "Strongly strengthens institutional-deference and gatekeeper-failure lanes.",
+        "widerDirection": "Examine who intervenes after allegations, what they knew and whether intervention changed access or accountability.",
+        "alternativeExplanation": "Some supporters may have acted from genuine but mistaken belief without access to the evidence.",
+        "doesNotProve": "It does not prove the Prince of Wales or every supporter knew of the offenses, facilitated them or obstructed justice.",
+        "evidenceStrength": "E6 conviction plus E5 inquiry",
+        "confidence": "very high",
+        "nextQuestions": [
+          "What decisions followed each intervention?",
+          "Which supporters knew allegation details?",
+          "How did Ball regain access?"
+        ]
+      }
+    },
+    "cyril-smith": {
+      "name": "Cyril Smith",
+      "aliases": [
+        "Sir Cyril Smith"
+      ],
+      "subjectType": "person",
+      "slug": "cyril-smith",
+      "dossierRoute": "dossier-cyril-smith.html",
+      "historicalCase": true,
+      "caseEra": "1928–2010",
+      "lifeStatus": "deceased",
+      "legalStatusSummary": "Never convicted. IICSA documented predatory activities, admissions and major institutional failures while also finding the 1969–70 Lancashire Police investigation was thorough rather than a police cover-up.",
+      "publicSummary": "Former Rochdale mayor and MP whose local and national prominence overlapped with repeated allegations involving vulnerable boys and flawed prosecution decisions.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Member of Parliament for Rochdale; former Mayor and councillor",
+          "organization": "UK Parliament and Rochdale local government",
+          "from": "1952",
+          "to": "1992",
+          "status": "historical",
+          "sourceLabel": "IICSA Cambridge House executive summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/cambridge-house-knowl-view-rochdale/executive-summary.html",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "cyril-smith-iicsa-2018",
+          "category": "investigation_inquiry",
+          "title": "IICSA documented predatory activities and institutional failures",
+          "summary": "IICSA reported that Smith had ready access to boys at Cambridge House, described conduct presented as medical examinations despite lacking medical qualifications, and found flawed prosecution decisions and institutional failures.",
+          "sourceLabel": "IICSA Cambridge House executive summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/cambridge-house-knowl-view-rochdale/executive-summary.html",
+          "sourceAuthority": "primary_official",
+          "date": "2018-04-12",
+          "jurisdiction": "England",
+          "status": "closed",
+          "outcome": "Official inquiry findings published; no criminal conviction.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Smith died before the modern investigations concluded and there was no criminal trial.",
+          "counterEvidence": "IICSA found the 1969–70 Lancashire Police investigation was thorough and not a cover-up; the DPP took the contrary prosecution decision. Not every later decision was attributed to political pressure.",
+          "proofNeeded": "Preserve the police file, DPP reasoning, CPS reviews and institutional knowledge chronology.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "indecent_assault",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "boys",
+            "children in institutional care"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "cyril-smith-westminster-2020",
+          "category": "investigation_inquiry",
+          "title": "Westminster inquiry examined political and policing responses",
+          "summary": "IICSA documented examples of deference and failure while rejecting the broader claim that it had established an organised Westminster paedophile network.",
+          "sourceLabel": "IICSA Westminster executive summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/westminster/executive-summary",
+          "sourceAuthority": "primary_official",
+          "date": "2020-02-25",
+          "jurisdiction": "United Kingdom",
+          "status": "closed",
+          "outcome": "Official inquiry findings published.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "No criminal adjudication occurred.",
+          "counterEvidence": "The inquiry did not establish a single organised Westminster network.",
+          "proofNeeded": "Connect each alleged intervention to a named document, witness and outcome.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "boys",
+            "children"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Liberal Party and political establishment",
+          "relationshipType": "candidate selection, parliamentary standing and institutional response",
+          "dateRange": "1960s–1992",
+          "sourceLabel": "IICSA Westminster executive summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/westminster/executive-summary",
+          "evidenceGrade": "A",
+          "boundary": "Political standing and party knowledge are relevant to institutional response. They do not establish that every party member knew the facts or participated in abuse or concealment."
+        }
+      ],
+      "institutionalFailures": [
+        "DPP and later CPS decisions failed to prosecute despite evidence police considered sufficient.",
+        "Political and local prominence created deference in some settings.",
+        "Care institutions failed to protect vulnerable boys."
+      ],
+      "conclusion": {
+        "finding": "Official inquiries show that Smith's political prominence coexisted with credible evidence of abuse and repeated institutional failures to act.",
+        "lanes": [
+          "child safeguarding",
+          "political access",
+          "prosecution failure",
+          "institutional deference"
+        ],
+        "whyItMatters": "The case shows how public standing can affect allegation handling without proving a coordinated cover-up.",
+        "mechanism": "Local influence, party advancement, prosecution decisions and fragmented safeguarding allowed risk information to remain unresolved.",
+        "effect": "Strongly strengthens institutional-deference and missed-prosecution lanes.",
+        "widerDirection": "Audit historical non-prosecution decisions where status, delay or institutional reputation entered the reasoning.",
+        "alternativeExplanation": "Some failures arose from historic evidential standards and fragmented records rather than direct interference.",
+        "doesNotProve": "It does not prove every police officer or politician participated in a cover-up, nor an organised Westminster network.",
+        "evidenceStrength": "E5 official inquiry",
+        "confidence": "high",
+        "nextQuestions": [
+          "Who received the police file?",
+          "How did knowledge affect candidate selection and honours?",
+          "Which later allegations could have been joined earlier?"
+        ]
+      }
+    },
+    "greville-janner": {
+      "name": "Greville Janner",
+      "aliases": [
+        "Lord Janner of Braunstone",
+        "Greville Ewan Janner"
+      ],
+      "subjectType": "person",
+      "slug": "greville-janner",
+      "dossierRoute": "dossier-greville-janner.html",
+      "historicalCase": true,
+      "caseEra": "1928–2015",
+      "lifeStatus": "deceased",
+      "legalStatusSummary": "Charged in 2015 with 22 offences relating to nine complainants, found unfit to plead, and died before a trial of the facts. No criminal conviction or civil finding determined the truth of the allegations.",
+      "publicSummary": "Former MP and peer whose case exposed serious failures in police, prosecution and institutional handling while never reaching an adjudicated determination of the allegations.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Member of Parliament and later life peer",
+          "organization": "UK Parliament and House of Lords",
+          "from": "1970",
+          "to": "2015",
+          "status": "historical",
+          "sourceLabel": "IICSA Lord Janner background",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/lord-janner/part-introduction/a1-background-investigation.html",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "janner-charges-2015",
+          "category": "charge_indictment_complaint",
+          "title": "2015 criminal charges relating to nine complainants",
+          "summary": "IICSA records that Janner was charged in June 2015 with 22 offences relating to nine complainants. He was found unfit to plead and died before the planned trial of the facts.",
+          "sourceLabel": "IICSA criminal proceedings in 2015",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/lord-janner/part-b-police-investigations-and-reviews/b4-criminal-proceedings-2015.html",
+          "sourceAuthority": "primary_official",
+          "date": "2015-06-29",
+          "jurisdiction": "England and Wales",
+          "status": "closed",
+          "outcome": "Proceedings ended after Janner's death; no verdict and no trial-of-facts determination.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Janner denied wrongdoing. He was never convicted and the allegations were not adjudicated.",
+          "counterEvidence": "The charges are official allegations, not proof. IICSA explicitly did not determine whether the alleged abuse occurred.",
+          "proofNeeded": "Preserve charge particulars, fitness rulings and the status of each allegation.",
+          "boundary": "A charge, indictment or complaint is an accusation, not proof of guilt. Presumption of innocence applies unless and until adjudicated.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "indecent_assault"
+          ],
+          "victimClass": [
+            "boys",
+            "children in care"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "janner-iicsa-2022",
+          "category": "investigation_inquiry",
+          "title": "IICSA found serious institutional-response failures",
+          "summary": "IICSA identified serious flaws including under-resourcing, withheld witness statements and unsound decisions in some police and CPS investigations.",
+          "sourceLabel": "IICSA Lord Janner executive summary",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/lord-janner/executive-summary.html",
+          "sourceAuthority": "primary_official",
+          "date": "2022-10-19",
+          "jurisdiction": "England and Wales",
+          "status": "closed",
+          "outcome": "Official inquiry findings on institutional responses; no finding on the truth of allegations.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The inquiry did not determine whether Janner committed the alleged abuse.",
+          "counterEvidence": "IICSA found some earlier non-charge decisions were not unreasonable and did not find improper pressure in every investigation.",
+          "proofNeeded": "Map each police and CPS decision separately.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "boys",
+            "children in care"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Labour Party and peerage process",
+          "relationshipType": "political career and institutional response",
+          "dateRange": "1970–2015",
+          "sourceLabel": "IICSA Lord Janner investigation",
+          "sourceUrl": "https://www.iicsa.org.uk/reports-recommendations/publications/investigation/lord-janner",
+          "evidenceGrade": "A",
+          "boundary": "Political office and party relationships explain access and institutional context. They do not prove party colleagues knew the allegations or interfered with investigations."
+        }
+      ],
+      "institutionalFailures": [
+        "Operation Magnolia was under-resourced and key witness statements were withheld from CPS consideration.",
+        "Some police and CPS decisions were unsound or strategically flawed.",
+        "The case never reached factual adjudication before Janner's death."
+      ],
+      "conclusion": {
+        "finding": "The Janner case documents a powerful politician facing serious charges after decades of flawed institutional responses, but without a final determination of guilt.",
+        "lanes": [
+          "child safeguarding",
+          "political access",
+          "police and prosecution failure",
+          "institutional accountability"
+        ],
+        "whyItMatters": "It shows why institutional failures can be examined even when death or incapacity prevents a criminal trial.",
+        "mechanism": "Under-resourcing, poor evidence handling, delayed reviews and deference allowed allegations to remain unresolved.",
+        "effect": "Strongly strengthens the institutional-failure lane while leaving personal guilt legally unresolved.",
+        "widerDirection": "Review historic decisions transparently while preserving complainant evidence and exculpatory limitations.",
+        "alternativeExplanation": "Some decisions reflected the applicable law and evidence rather than improper influence.",
+        "doesNotProve": "It does not prove Janner committed the alleged offenses or that political colleagues obstructed justice.",
+        "evidenceStrength": "E4 charges plus E5 inquiry",
+        "confidence": "high for institutional failures; unresolved for alleged conduct",
+        "nextQuestions": [
+          "Which evidence was withheld and why?",
+          "Which decisions were reasonable under the law?",
+          "What reforms prevent similar fragmentation?"
+        ]
+      }
+    },
+    "jeffrey-epstein": {
+      "name": "Jeffrey Epstein",
+      "aliases": [
+        "Jeffrey Edward Epstein"
+      ],
+      "subjectType": "person",
+      "slug": "jeffrey-epstein",
+      "dossierRoute": "dossier-jeffrey-epstein-criminal.html",
+      "historicalCase": true,
+      "caseEra": "1953–2019",
+      "lifeStatus": "deceased",
+      "legalStatusSummary": "Pleaded guilty in Florida in 2008 to offenses including procuring a person under 18 for prostitution and was designated a sex offender. Federal sex-trafficking charges filed in 2019 were dismissed after his death without trial.",
+      "publicSummary": "Financier whose wealth, properties, employees and elite social access formed the infrastructure around a documented child-related sex-offense conviction and later unadjudicated federal trafficking allegations.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "finance_asset_control",
+          "title": "Financier and private wealth manager",
+          "organization": "Private financial and investment network",
+          "from": "not stated",
+          "to": "2019",
+          "status": "historical",
+          "sourceLabel": "DOJ reference to Epstein as a deceased financier",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/recidivist-defendant-charged-connection-million-dollar-fraud-scheme-targeting-senior",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "epstein-florida-plea-2008",
+          "category": "conviction_final_judgment",
+          "title": "2008 Florida guilty plea and sex-offender designation",
+          "summary": "Official records document Epstein's guilty plea to Florida offenses including procuring a person under 18 for prostitution and his designation as a sex offender.",
+          "sourceLabel": "DOJ disclosed 2008 plea record",
+          "sourceUrl": "https://www.justice.gov/epstein/files/DataSet%208/EFTA00013890.pdf",
+          "sourceAuthority": "primary_official",
+          "date": "2008-06-30",
+          "jurisdiction": "Florida, United States",
+          "status": "adjudicated",
+          "outcome": "Guilty plea, custodial sentence and sex-offender registration consequences.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The guilty plea is Epstein's formal admission to the exact Florida offenses.",
+          "counterEvidence": "The conviction does not adjudicate every later allegation or establish criminal knowledge by every associate.",
+          "proofNeeded": "Maintain certified plea, sentencing and registration records.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_exploitation",
+            "sexual_offence_other"
+          ],
+          "victimClass": [
+            "minor girls"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "epstein-sdny-charges-2019",
+          "category": "charge_indictment_complaint",
+          "title": "2019 federal sex-trafficking charges",
+          "summary": "Federal prosecutors charged Epstein with sex trafficking of minors and conspiracy, alleging conduct in New York and Florida involving dozens of underage girls.",
+          "sourceLabel": "SDNY: Epstein charged",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/jeffrey-epstein-charged-manhattan-federal-court-sex-trafficking-minors",
+          "sourceAuthority": "primary_official",
+          "date": "2019-07-08",
+          "jurisdiction": "United States federal court, SDNY",
+          "status": "dismissed",
+          "outcome": "Charges dismissed after Epstein died; no trial or verdict.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Epstein died before a completed trial.",
+          "counterEvidence": "The indictment contained allegations and the presumption of innocence applied. Dismissal followed death, not acquittal on the merits.",
+          "proofNeeded": "Keep indictment allegations distinct from the 2008 conviction and claims about associates.",
+          "boundary": "A charge, indictment or complaint is an accusation, not proof of guilt. Presumption of innocence applies unless and until adjudicated.",
+          "conductDomains": [
+            "child_trafficking",
+            "child_sexual_exploitation",
+            "child_sexual_abuse"
+          ],
+          "victimClass": [
+            "minor girls"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "epstein-opr-review-2020",
+          "category": "investigation_inquiry",
+          "title": "DOJ review found poor judgment in the 2006–08 federal resolution",
+          "summary": "DOJ OPR found no professional misconduct by federal prosecutors but found the non-prosecution agreement reflected poor judgment and victims were not treated with expected forthrightness and sensitivity.",
+          "sourceLabel": "DOJ OPR statement",
+          "sourceUrl": "https://www.justice.gov/archives/opa/pr/statement-doj-office-professional-responsibility-report-jeffrey-epstein-2006-2008",
+          "sourceAuthority": "primary_official",
+          "date": "2020-11-12",
+          "jurisdiction": "United States",
+          "status": "closed",
+          "outcome": "Official professional-responsibility review published.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The review did not find professional misconduct under the applicable standards.",
+          "counterEvidence": "Poor judgment and victim-treatment failures are not proof of a corrupt conspiracy or criminal protection arrangement.",
+          "proofNeeded": "Preserve the full report, agreement negotiations and victim-notification chronology.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "institutional_facilitation_cover_up",
+            "child_sexual_exploitation"
+          ],
+          "victimClass": [
+            "minor victims"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Employees, recruiters and social associates",
+          "relationshipType": "documented network roles of varying evidential status",
+          "dateRange": "1990s–2019",
+          "sourceLabel": "SDNY Epstein case page",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/programs/victim-witness-services/united-states-v-jeffrey-epstein-19-cr-490-rmb",
+          "evidenceGrade": "A",
+          "boundary": "Each person must be classified separately as convicted participant, charged person, employee, witness, social associate, contact or merely mentioned. Contact with Epstein does not prove knowledge or participation."
+        }
+      ],
+      "institutionalFailures": [
+        "The 2006–08 federal resolution drew an official finding of poor judgment and inadequate treatment of victims.",
+        "The 2019 case ended without trial after Epstein's death, leaving many allegations unadjudicated."
+      ],
+      "conclusion": {
+        "finding": "Epstein combined private wealth, property access and elite social reach with a child-related sex-offense conviction and later federal trafficking allegations.",
+        "lanes": [
+          "child exploitation",
+          "trafficking",
+          "financial access",
+          "elite networks",
+          "institutional accountability"
+        ],
+        "whyItMatters": "The case tests whether money, gatekeepers and social access expanded opportunity and reduced scrutiny.",
+        "mechanism": "Wealth, private properties, employees, recruiters, travel and elite introductions created access and insulation.",
+        "effect": "Strongly strengthens the convicted-offender and institutional-failure lanes; the 2019 allegations remain unadjudicated against Epstein.",
+        "widerDirection": "Map recruiters, employees, financial facilitators, property managers and institutions role by role rather than by association.",
+        "alternativeExplanation": "Many contacts may have had ordinary social or business relationships and no knowledge of criminal conduct.",
+        "doesNotProve": "It does not prove everyone in an address book, photograph, email, flight log or social circle knew of or participated in crimes.",
+        "evidenceStrength": "E6 conviction; E4 federal charges; E5 OPR review",
+        "confidence": "very high for conviction; unadjudicated for 2019 allegations",
+        "nextQuestions": [
+          "Who performed operational recruitment?",
+          "Which institutions received warnings?",
+          "Which financial and property records establish facilitation?"
+        ]
+      }
+    },
+    "ghislaine-maxwell": {
+      "name": "Ghislaine Maxwell",
+      "aliases": [
+        "Ghislaine Noelle Marion Maxwell"
+      ],
+      "subjectType": "person",
+      "slug": "ghislaine-maxwell",
+      "dossierRoute": "dossier-ghislaine-maxwell-criminal.html",
+      "historicalCase": false,
+      "caseEra": "Conviction 2021; sentence 2022; appellate review completed",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Convicted by a federal jury in 2021 for conspiring with Jeffrey Epstein to sexually abuse minors and related offenses; sentenced to 20 years in 2022. The conviction was affirmed and Supreme Court review was denied in 2025.",
+      "publicSummary": "Convicted operational gatekeeper in Epstein's abuse network whose social access, introductions and recruitment activity connected elite environments to the criminal scheme established at trial.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "other_influential_gatekeeper",
+          "title": "Social and operational gatekeeper in Jeffrey Epstein's network",
+          "organization": "Epstein-Maxwell network",
+          "from": "1994",
+          "to": "2004",
+          "status": "historical",
+          "sourceLabel": "DOJ Maxwell conviction summary",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "maxwell-conviction-2021",
+          "category": "conviction_final_judgment",
+          "title": "Federal jury convicted Maxwell of conspiring to sexually abuse minors",
+          "summary": "A federal jury convicted Maxwell in December 2021 on multiple counts arising from her role with Epstein, including conspiracy offenses involving minor victims.",
+          "sourceLabel": "SDNY verdict statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/statement-us-attorney-damian-williams-verdict-us-v-ghislaine-maxwell",
+          "sourceAuthority": "primary_official",
+          "date": "2021-12-29",
+          "jurisdiction": "United States federal court, SDNY",
+          "status": "adjudicated",
+          "outcome": "Jury conviction; 20-year sentence imposed June 2022.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Maxwell denied the allegations and exercised trial and appellate rights.",
+          "counterEvidence": "The conviction establishes her own offenses and role; it does not establish criminal conduct by every person she or Epstein knew.",
+          "proofNeeded": "Preserve verdict, judgment, sentencing transcript and appellate dispositions.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "child_sexual_exploitation",
+            "grooming"
+          ],
+          "victimClass": [
+            "minor girls"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "maxwell-appeal-2025",
+          "category": "exculpatory_disposition",
+          "title": "Appellate challenges concluded without reversal",
+          "summary": "The Second Circuit affirmed Maxwell's judgment and the U.S. Supreme Court denied certiorari in October 2025, leaving the conviction in place.",
+          "sourceLabel": "U.S. Supreme Court docket 24-1073",
+          "sourceUrl": "https://www.supremecourt.gov/search.aspx?filename=%2Fdocket%2Fdocketfiles%2Fhtml%2Fpublic%2F24-1073.html",
+          "sourceAuthority": "primary_official",
+          "date": "2025-10-06",
+          "jurisdiction": "United States",
+          "status": "closed",
+          "outcome": "Certiorari denied; conviction remains in force.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Maxwell continued to dispute the conviction through appellate process.",
+          "counterEvidence": "Denial of certiorari is not a separate endorsement of every lower-court rationale, but it leaves the judgment intact.",
+          "proofNeeded": "Continue tracking collateral proceedings or sentence changes.",
+          "boundary": "This record preserves the outcome, denial, response, pending review or exculpatory information and must be read with the underlying allegation or judgment.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "child_sexual_exploitation",
+            "grooming"
+          ],
+          "victimClass": [
+            "minor girls"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "Jeffrey Epstein",
+          "relationshipType": "convicted co-conspirator relationship and operational partnership",
+          "dateRange": "1994–2004 conduct period established at trial",
+          "sourceLabel": "DOJ Maxwell conviction summary",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+          "evidenceGrade": "A",
+          "boundary": "The conviction establishes Maxwell's own role. Other people connected socially or professionally require separate evidence."
+        }
+      ],
+      "institutionalFailures": [
+        "The proven scheme operated for years through private residences, social access and recruitment.",
+        "Wider network relationships remain distinct from the conduct adjudicated at trial."
+      ],
+      "conclusion": {
+        "finding": "Maxwell's conviction establishes that an elite social gatekeeper actively recruited and groomed minors within Epstein's network.",
+        "lanes": [
+          "child exploitation",
+          "grooming",
+          "elite access",
+          "network gatekeeping"
+        ],
+        "whyItMatters": "It provides an adjudicated example of introductions and social authority functioning as operational components of abuse.",
+        "mechanism": "Trust-building, recruitment, normalization, access to private properties and coordination with Epstein.",
+        "effect": "Strongly strengthens the operational-gatekeeper lane.",
+        "widerDirection": "Separate proven operational actors from social contacts and investigate each intermediary independently.",
+        "alternativeExplanation": "Some wider associates may have interacted socially without knowledge of the crimes.",
+        "doesNotProve": "It does not prove guilt of people who merely attended events, corresponded or appeared in records.",
+        "evidenceStrength": "E6 final conviction",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which staff had operational roles?",
+          "Which property and travel records corroborate events?",
+          "Which institutions received warnings?"
+        ]
+      }
+    },
+    "larry-nassar": {
+      "name": "Larry Nassar",
+      "aliases": [
+        "Lawrence Gerard Nassar",
+        "Dr. Lawrence Nassar"
+      ],
+      "subjectType": "person",
+      "slug": "larry-nassar",
+      "dossierRoute": "dossier-larry-nassar.html",
+      "historicalCase": false,
+      "caseEra": "Convictions 2017–2018",
+      "lifeStatus": "living and incarcerated",
+      "legalStatusSummary": "Convicted in federal court of child-sexual-abuse-material and obstruction offenses and in Michigan state court after guilty pleas to ten counts of first-degree criminal sexual conduct; serving lengthy consecutive sentences.",
+      "publicSummary": "Former USA Gymnastics national medical coordinator and Michigan State University physician whose medical and sporting authority gave repeated access to young athletes and whose case exposed major institutional and FBI failures.",
+      "predatorsInPowerEligible": true,
+      "sourceFile": "data/criminal-conduct-subjects.json",
+      "powerRoles": [
+        {
+          "sector": "sports",
+          "title": "National Medical Coordinator and treating physician",
+          "organization": "USA Gymnastics",
+          "from": "not stated",
+          "to": "2015",
+          "status": "former",
+          "sourceLabel": "DOJ OIG Nassar report",
+          "sourceUrl": "https://oig.justice.gov/reports/investigation-and-review-federal-bureau-investigations-handling-allegations-sexual-abuse",
+          "lastChecked": "2026-07-27"
+        },
+        {
+          "sector": "healthcare",
+          "title": "Osteopathic sports physician",
+          "organization": "Michigan State University",
+          "from": "not stated",
+          "to": "2016",
+          "status": "former",
+          "sourceLabel": "Michigan LARA license revocation",
+          "sourceUrl": "https://www.michigan.gov/lara/news-releases/2018/04/06/lara-permanently-revokes-nassars-medical-license-issues-largest-fine-in-department-history",
+          "lastChecked": "2026-07-27"
+        }
+      ],
+      "records": [
+        {
+          "id": "nassar-state-convictions-2018",
+          "category": "conviction_final_judgment",
+          "title": "Michigan guilty pleas and sentences for first-degree criminal sexual conduct",
+          "summary": "Michigan official records state that Nassar pleaded guilty to seven first-degree criminal sexual conduct counts in Ingham County and three in Eaton County, receiving sentences of 40–175 years and 40–125 years.",
+          "sourceLabel": "Michigan Attorney General case summary",
+          "sourceUrl": "https://www.michigan.gov/ag/news/press-releases/2020/08/04/kathie-klages-sentenced-for-lying-to-authorities-in-larry-nassar-investigation",
+          "sourceAuthority": "primary_official",
+          "date": "2018-02-05",
+          "jurisdiction": "Michigan, United States",
+          "status": "adjudicated",
+          "outcome": "Ten state felony convictions and lengthy prison sentences.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Nassar entered guilty pleas and later pursued sentencing-related appeals.",
+          "counterEvidence": "The convictions establish Nassar's conduct, not automatic knowledge or culpability by every coach, doctor or administrator.",
+          "proofNeeded": "Maintain certified judgments and final appellate status for each county case.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "child_sexual_abuse",
+            "sexual_assault"
+          ],
+          "victimClass": [
+            "girls",
+            "young women",
+            "athletes",
+            "patients"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "nassar-federal-conviction-2017",
+          "category": "conviction_final_judgment",
+          "title": "Federal conviction and 60-year sentence for CSAM and obstruction",
+          "summary": "Nassar pleaded guilty to receiving and possessing child pornography and destroying or concealing evidence, and was sentenced to 60 years in federal prison.",
+          "sourceLabel": "U.S. Attorney WDMI: Nassar sentenced",
+          "sourceUrl": "https://www.justice.gov/usao-wdmi/pr/2017_1207_Nassar",
+          "sourceAuthority": "primary_official",
+          "date": "2017-12-07",
+          "jurisdiction": "United States federal court, Western District of Michigan",
+          "status": "adjudicated",
+          "outcome": "60-year federal sentence consecutive to state sentences.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "Nassar pleaded guilty under a plea agreement.",
+          "counterEvidence": "The federal case concerns CSAM and obstruction; sexual-assault convictions were entered in state court.",
+          "proofNeeded": "Keep federal and state conduct separated and cross-linked.",
+          "boundary": "Limited to the exact offense, defendant, court, jurisdiction and disposition stated in the final record.",
+          "conductDomains": [
+            "csam_offence",
+            "institutional_facilitation_cover_up"
+          ],
+          "victimClass": [
+            "children"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        },
+        {
+          "id": "nassar-fbi-oig-2021",
+          "category": "investigation_inquiry",
+          "title": "DOJ OIG documented FBI handling failures",
+          "summary": "The DOJ Inspector General found failures in the FBI's handling of sexual-abuse allegations reported by USA Gymnastics, including delays and inaccurate statements by officials.",
+          "sourceLabel": "DOJ OIG Nassar report",
+          "sourceUrl": "https://oig.justice.gov/reports/investigation-and-review-federal-bureau-investigations-handling-allegations-sexual-abuse",
+          "sourceAuthority": "primary_official",
+          "date": "2021-07-14",
+          "jurisdiction": "United States",
+          "status": "closed",
+          "outcome": "Official inspector-general findings published.",
+          "evidenceGrade": "A",
+          "lastChecked": "2026-07-27",
+          "publicationStatus": "approved",
+          "rightOfReply": "The OIG report includes agency responses and distinguishes individual conduct findings.",
+          "counterEvidence": "Institutional failures do not establish that every FBI, MSU or USA Gymnastics employee knew or intentionally concealed abuse.",
+          "proofNeeded": "Map report dates, referrals, interviews, delays and subsequent victims against exact findings.",
+          "boundary": "An investigation or inquiry records the scope and findings of the named official process. It does not substitute for a criminal conviction and must be read with the report's limitations.",
+          "conductDomains": [
+            "institutional_facilitation_cover_up",
+            "child_sexual_abuse"
+          ],
+          "victimClass": [
+            "girls",
+            "young women",
+            "athletes"
+          ],
+          "predatorsInPowerEligible": true,
+          "linkedRecordIds": []
+        }
+      ],
+      "relationships": [
+        {
+          "entity": "USA Gymnastics, Michigan State University and FBI",
+          "relationshipType": "institutional authority and response chain",
+          "dateRange": "1990s–2021 review",
+          "sourceLabel": "DOJ OIG Nassar investigation",
+          "sourceUrl": "https://oig.justice.gov/reports/investigation-and-review-federal-bureau-investigations-handling-allegations-sexual-abuse",
+          "evidenceGrade": "A",
+          "boundary": "Institutions and officials must be assessed by documented roles and acts. Employment or membership alone does not prove knowledge or concealment."
+        }
+      ],
+      "institutionalFailures": [
+        "Medical authority and treatment settings gave Nassar repeated unsupervised access.",
+        "DOJ OIG documented serious FBI handling failures after allegations were reported.",
+        "The Kathie Klages conviction was reversed and cannot be used as settled proof of MSU knowledge in 1997."
+      ],
+      "conclusion": {
+        "finding": "Nassar used medical and sporting authority to abuse patients and athletes over many years while institutions failed to stop him promptly.",
+        "lanes": [
+          "child safeguarding",
+          "medical authority",
+          "sports governance",
+          "law-enforcement failure"
+        ],
+        "whyItMatters": "The case shows how professional expertise and institutional prestige can create repeated private access and suppress doubt.",
+        "mechanism": "Medical trust, treatment privacy, elite-sport hierarchy, fragmented complaints and delayed law-enforcement action.",
+        "effect": "Strongly strengthens authority-access and institutional-failure lanes.",
+        "widerDirection": "Points toward mandatory cross-institution reporting, independent chaperoning and accountability for delayed referrals.",
+        "alternativeExplanation": "Not every delay was intentional concealment; some reflected poor procedures, disbelief or jurisdictional confusion.",
+        "doesNotProve": "It does not prove every coach, administrator, physician or agent knew of the abuse.",
+        "evidenceStrength": "E6 convictions plus E5 inspector-general findings",
+        "confidence": "very high",
+        "nextQuestions": [
+          "Which complaints reached which officials?",
+          "What access controls failed?",
+          "Which later victims could have been protected?"
+        ]
+      }
+    }
+  },
   "subjectTemplate": {
     "name": "Exact subject name",
     "aliases": [],
@@ -99,5 +2532,12 @@
     "victimClass": [],
     "predatorsInPowerEligible": false,
     "linkedRecordIds": []
-  }
+  },
+  "sourceFiles": [
+    "data/criminal-conduct-subjects-wave2.json",
+    "data/criminal-conduct-subjects-wave3.json",
+    "data/criminal-conduct-subjects.json"
+  ],
+  "subjectCount": 20,
+  "approvedFindingCount": 32
 }

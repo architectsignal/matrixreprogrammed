@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-27T06:56:13.225Z",
-  "pageCount": 115,
+  "generatedAt": "2026-07-28T06:17:32.967Z",
+  "pageCount": 117,
   "output": "downloads/offer-intelligence-dossiers.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Intelligence Dossiers Offer",
-    "contentHash": "5816eb455e50b7791425c5c5df68b52152fedc15dfa50a8761ce28c571a3ceb5",
+    "contentHash": "e97b4548d4be41defa74dfd475dc76afe17e5ec73241cbe1f7f1b29e04685cb8",
     "sourceIds": [
       "ad283f9945fc2a5c7c0facc5",
       "c773a9b56feb9b238da1ce66",
@@ -72,7 +72,6 @@
       "280c0d2d4b2108c9fbea4d8e",
       "8a388409c7e1203c78157fcc",
       "9c2ed866829ec14701b4f6aa",
-      "declassified-files-2026-07-24-c827955e",
       "declassified-files-2026-07-23-7b43a9b4",
       "declassified-files-2026-07-23-fa922faa",
       "declassified-files-2026-07-23-85ec568c",
@@ -136,31 +135,32 @@
       "16b845aacad691a1299d5faa",
       "1769af26a7bda813406cd8f5",
       "651712cbd19a0670801dff73",
-      "war-machine-2026-07-26-262b52a7",
-      "war-machine-2026-07-25-a923d21b",
-      "war-machine-2026-07-24-1d2b447c",
-      "war-machine-2026-07-24-af23db8d",
+      "war-machine-2026-07-27-1728fc73",
       "war-machine-2026-07-23-ae261891",
+      "war-machine-2026-07-22-a6c25a9b",
       "control-system-2026-06-25-south-africa-boosts-smart-id-adoption-through-expanded-bank-network-bi",
       "war-machine-2026-06-04-is-the-u-s-involved-in-israel-s-war-on-lebanon-the-american-conservati",
       "war-machine-2026-06-01-the-permanent-war-government-who-s-really-calling-the-shots-in-washing",
       "war-machine-2026-05-29-who-s-really-calling-the-shots-in-washington-counterpunch-org",
       "war-machine-2026-05-28-the-permanent-war-government-who-s-really-calling-the-shots-in-washing",
-      "war-machine-2026-05-21-one-fifth-of-spacex-revenue-comes-from-uncle-sam-the-defense-contracto"
+      "war-machine-2026-05-21-one-fifth-of-spacex-revenue-comes-from-uncle-sam-the-defense-contracto",
+      "war-machine-2026-05-05-the-pentagon-wants-innovation-small-nimble-businesses-want-to-deliver-",
+      "war-machine-2026-05-04-as-us-military-goes-full-speed-ahead-on-ai-how-is-it-being-used-abc-ne",
+      "war-machine-2026-04-24-what-recent-wars-mean-for-u-s-india-defense-cooperation-the-heritage-f"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 20,
+      "primarySourceCount": 19,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
-      "moneyRecordCount": 18
+      "relationshipCount": 37,
+      "moneyRecordCount": 19
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Intelligence Dossiers Offer.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/live-intel.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Intelligence Dossiers Offer.",
+        "evidence": "Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json); Otto Fred Otepka (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Charles Keating Part 13,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Charles Keating Part 13 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Dossiers Offer; Crime Network Starter Brief; Intelligence Network Pack; Intelligence Network Share Kit; War Machine Campaign; Senate passes $901 billion defense bill that pushes Hegseth for boat strike video - Federal News Network; Operation Condor: A Network of Transnational Repression 50 Years Later - National Security Archive; Organised Crime Index 2025: South Africa a continental hotspot for criminal networks - Mail & Guardian",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Dossiers Offer",
           "Crime Network Starter Brief",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-26T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-27T12:00:00.000Z"
   }
 }

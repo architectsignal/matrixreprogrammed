@@ -1,29 +1,43 @@
 {
-  "generatedAt": "2026-07-27T06:56:04.246Z",
-  "pageCount": 72,
+  "generatedAt": "2026-07-28T06:17:21.935Z",
+  "pageCount": 74,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Money Public Market Refresh",
-    "contentHash": "da584c344cb18fb4f9d60d429ddaeb24663e66b6c4daa0f90b48ae5a20cceb6d",
+    "contentHash": "71b014fb27950c57637a09f0609df8230440d961af18d0afe013f9bc50062054",
     "sourceIds": [
-      "ad23fb22757e50c30b3d487c",
+      "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "26b90533dbf7d2ed42f02de6",
-      "6d665d935673091233751767",
+      "5594665950812895f468c11d",
+      "ad23fb22757e50c30b3d487c",
+      "investment-vehicles-ivv",
       "5b6b5c0285c3c8742768ea5c",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
+      "9b821ddb272b0fb297d39550",
+      "a71a8be091652489b843ecf6",
+      "6d665d935673091233751767",
+      "3a425f0d5d683952bc0ad7ac",
       "energy-resources",
       "defence-security-bksy",
+      "companies-nvda",
+      "companies-msft",
+      "companies-amzn",
+      "companies-meta",
       "157cdab04b61ae6309c0c713",
       "9848ec4b4c3f6c2693269839",
       "7dcf4ef18ea1f86d01068773",
       "b7e4a66335a706ef5097117f",
+      "gautam-adani",
+      "2482c3e0241c7c7679a18cd1",
+      "c0853ec69475b3c8f3ee1900",
+      "d109ec07bc6a6ad42558195d",
+      "dc2f3889b62662fc764e782f",
       "56d03242af4d235549963dd3",
       "technology-control-pltr:sec-form4",
       "technology-control-nvda:sec-form4",
@@ -36,8 +50,9 @@
       "ASC-REVIEW-6B9A792BD16666C3",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-B8034056CD461A0D",
-      "1c352ab364fbfca06ab12a57",
-      "3a425f0d5d683952bc0ad7ac",
+      "5295a33003172878f9880122",
+      "contractor-caci-international",
+      "contractor-saic-leidos-lineage",
       "media",
       "technology-control",
       "defence-security",
@@ -95,36 +110,21 @@
       "technology-control-lrcx",
       "technology-control-2454-tw",
       "energy-resources-2222-sr",
-      "energy-resources-xom",
-      "energy-resources-cvx",
-      "energy-resources-gev",
-      "energy-resources-shel",
-      "energy-resources-0857-hk",
-      "energy-resources-tte",
-      "energy-resources-nee",
-      "energy-resources-ibe-mc",
-      "energy-resources-enr-f",
-      "energy-resources-601088-ss",
-      "energy-resources-cop",
-      "energy-resources-0883-hk",
-      "energy-resources-enb",
-      "energy-resources-pbr",
-      "energy-resources-enel-mi",
-      "energy-resources-bp"
+      "energy-resources-xom"
     ],
     "metrics": {
       "evidenceCount": 104,
-      "primarySourceCount": 57,
+      "primarySourceCount": 62,
       "disputedClaimCount": 3,
-      "newEntityCount": 0,
+      "newEntityCount": 4,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 10,
-      "moneyRecordCount": 84
+      "relationshipCount": 14,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 57 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -132,8 +132,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 Rule of Law Report says media-market concentration and editorial independence concerns persist,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission reports ongoing EMFA implementation and continuing concerns over media-market concentration, public-service-media independence, journalist safety and state-advertising transparency.",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -143,8 +143,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 10 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; CARAHSOFT TECHNOLOGY CORP — Department of Energy; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies; Palo Alto Networks; Energy industry PAC networks",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; CARAHSOFT TECHNOLOGY CORP — Department of Energy; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; CACI International — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -158,16 +158,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 10 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
+          "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
           "CARAHSOFT TECHNOLOGY CORP — Department of Energy",
           "CACI International → Defense Technology: execution layer",
           "State Street / State Street Investment Management → Market Services: capital layer",
-          "Top 100 Technology-Control Companies",
-          "Top 100 Defence & Security Companies",
-          "Palo Alto Networks",
-          "Energy industry PAC networks"
+          "CACI International — Contractor Power Report",
+          "SAIC / Leidos lineage — Contractor Power Report"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -182,6 +182,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

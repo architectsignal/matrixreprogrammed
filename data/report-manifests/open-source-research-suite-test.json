@@ -1,20 +1,22 @@
 {
-  "generatedAt": "2026-07-27T06:56:18.009Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-28T06:17:38.837Z",
+  "pageCount": 138,
   "output": "downloads/open-source-research-suite-test.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Open Source Research Suite Test",
-    "contentHash": "3b16f96fde319e4df178b90c35696ccd84041e326df7ca1231c278ad7a1a354f",
+    "contentHash": "0de52f7d4d6abbdea9c76f097437e6e43c282da5d95f5a1617d24cd1a897f62f",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
+      "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
-      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "40dd9b6b261ef87e0cbe3fa6",
+      "d31a6a41fe959f0f805ddbf2",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-B27EAD89E5D764C1",
@@ -29,15 +31,13 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-FD93E5BB51075631",
       "ASC-REVIEW-2CE1A691C8D09631",
-      "ASC-REVIEW-132F1165BCAFF798",
       "ASC-REVIEW-676D0168C06458FA",
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-8E73BF5B8CE21686",
+      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-8F441C443ED90227",
@@ -51,7 +51,6 @@
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-AADA0932ADD32C2D",
       "26b90533dbf7d2ed42f02de6",
-      "594100b62a47db521fe2a128",
       "1769af26a7bda813406cd8f5",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
@@ -60,7 +59,20 @@
       "a5e5d4ec4df4352ea242ea3f",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
+      "73799cb9af4829047998b026",
+      "dcec2a45ef35362072af05e3",
+      "ec968f2ec6ba82128b4cd91b",
+      "aae51d03dc366bfb0267f3b4",
+      "96c24b16f820cebf7d9a03fe",
+      "a6047accfb9754d2159cff7c",
+      "b2832d1240dab63cee199e13",
+      "c89c1f9c412b4a4675d2dcd5",
+      "d109ec07bc6a6ad42558195d",
+      "fb14cb098c01ee873c839ab8",
+      "4ea32d0f43e7509849e25947",
+      "73e72fa8e421ec8895b64979",
+      "873f62785565d1c38dc6c8ff",
+      "cb3bccd8cebcadd72cbfe66b",
       "ASC-REVIEW-8FC95E6CC8F8F440",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -112,6 +124,7 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -133,43 +146,30 @@
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-0F0776894447C197",
-      "ASC-REVIEW-6E0BEE85BA956CBF",
-      "ASC-REVIEW-F9B27A08465F560B",
-      "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-53BD0E17B018491C",
-      "ASC-REVIEW-0177F61D444ED739",
-      "ASC-REVIEW-FE9A5B02284E30E4",
-      "ASC-REVIEW-9B9644A27C9A796C",
-      "ASC-REVIEW-5D6BEB26E7D5659F",
-      "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-4C256A755BDBA2D3",
-      "ASC-REVIEW-90FA3F8805F271FF",
-      "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-8FE8E072E8149C71"
+      "ASC-REVIEW-0F0776894447C197"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 124,
+      "primarySourceCount": 18,
+      "disputedClaimCount": 110,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 110,
-      "moneyRecordCount": 110
+      "relationshipCount": 104,
+      "moneyRecordCount": 99
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
+        "evidence": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Texas Parks and Wildlife Department Fisheries Research (data/investigation-ledger-archive.json); Research Track Assessment for Longfin Inshore Squid; Public Meeting (data/investigation-ledger-archive.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The most defensible current assessment is based on “MINDCUBED LLC — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; Bilderberg Meeting → Policy Networks: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
+        "inference": "The indexed set contains 104 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Research Track Assessment for Longfin Inshore Squid; Public Meeting; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; Bilderberg Meeting → Policy Networks: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 104 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
+          "Research Track Assessment for Longfin Inshore Squid; Public Meeting",
           "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
           "Bilderberg Meeting → Policy Networks: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:56:18.009Z"
+    "intelligenceFreshnessDate": "2027-07-12T00:00:00.000Z"
   }
 }

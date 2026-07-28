@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-07-27T06:52:25.399Z",
-  "pageCount": 124,
+  "generatedAt": "2026-07-28T06:12:40.246Z",
+  "pageCount": 123,
   "output": "downloads/deploy-status-current-mission-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Deploy Status Current Mission Patch",
-    "contentHash": "358d348595feaf5f76d61e338af27b136005c57c66ab9190ff02dcfe43e9bfec",
+    "contentHash": "3dd34cf0b4ab53476e5a5687f9a7120a89b8c0b7cdc5ac4c3b7a6cbfccd72ce6",
     "sourceIds": [
+      "ASC-REVIEW-5C5C06E1BEAB6D4A",
+      "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
-      "ASC-REVIEW-24C0B4AEB2210BAE",
       "ASC-REVIEW-4977B61988022C21",
-      "ASC-REVIEW-05FC2F477D6537BF",
       "26b90533dbf7d2ed42f02de6",
       "d7398c0c72a085a05c90422c",
       "5ce17839086eddf839270b1a",
@@ -33,20 +34,27 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-4D43B792A3A9872B",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-21E454816F050A34",
+      "5594665950812895f468c11d",
       "2931a84c2c7fe86982d5d6e5",
       "6d665d935673091233751767",
       "ad23fb22757e50c30b3d487c",
-      "1c352ab364fbfca06ab12a57",
       "3a425f0d5d683952bc0ad7ac",
+      "1c352ab364fbfca06ab12a57",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "declassified-files-2026-07-24-c827955e",
+      "source-change-ea906ec638c352f7dced1c63",
+      "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-d5adf164b612fd92a1dca692",
+      "9b821ddb272b0fb297d39550",
+      "source-change-e853e2cce33f37c0619d2433",
+      "source-change-145721767ca69c32bb4875e5",
+      "source-change-46042e30fdcccc9e94aee0af",
+      "source-change-2931a84c2c7fe86982d5d6e5",
       "declassified-files-2026-07-23-7b43a9b4",
       "declassified-files-2026-07-23-fa922faa",
       "declassified-files-2026-07-23-85ec568c",
@@ -68,6 +76,7 @@
       "declassified-files-2026-07-23-72e6ea02",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "f669b33c49b63e787cde3008",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -104,7 +113,6 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-CB219B546C9C0D99",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -138,28 +146,20 @@
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-927E79836853DFAE",
-      "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-C06BEA89A8588561",
-      "ASC-REVIEW-99F8A859BC016D7E",
-      "ASC-REVIEW-E4DE89A4B85F814E",
-      "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D"
+      "ASC-REVIEW-17CC1B265DD7385B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 100,
-      "newEntityCount": 0,
+      "primarySourceCount": 46,
+      "disputedClaimCount": 91,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 109,
-      "moneyRecordCount": 46
+      "relationshipCount": 103,
+      "moneyRecordCount": 41
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
+        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Charles Keating Part 13,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Charles Keating Part 13 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 109 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Federal Election Commission — Updates; content changed: U.S. Securities and Exchange Commission — Litigation Releases; AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission; FCN, INC. — Commodity Futures Trading Commission",
+        "inference": "The indexed set contains 103 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Federal Election Commission — Updates; AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 109 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 103 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Federal Election Commission — Updates",
-          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-          "AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission",
-          "FCN, INC. — Commodity Futures Trading Commission"
+          "AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-24T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-27T17:28:52.106Z"
   }
 }

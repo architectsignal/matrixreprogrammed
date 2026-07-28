@@ -1,42 +1,42 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-27T10:28:28.939Z",
+  "generatedAt": "2026-07-28T06:26:17.289Z",
   "schemaVersion": "1.1.0",
   "totals": {
-    "entities": 6808,
-    "relationships": 9676,
-    "findings": 3129,
+    "entities": 6319,
+    "relationships": 8873,
+    "findings": 2500,
     "documents": 76,
-    "missingRecords": 64
+    "missingRecords": 66
   },
   "countsByType": {
     "Person": 24,
-    "Organization": 102,
-    "Company": 160,
-    "GovernmentAgency": 599,
+    "Organization": 92,
+    "Company": 149,
+    "GovernmentAgency": 535,
     "Contractor": 37,
     "Foundation": 19,
-    "Trust": 7,
-    "Contract": 365,
+    "Trust": 6,
+    "Contract": 874,
     "Payment": 42,
     "Sanction": 130,
-    "CourtCase": 1171,
-    "Investigation": 687,
+    "CourtCase": 1035,
+    "Investigation": 543,
     "Document": 76,
-    "Finding": 3129,
-    "MissingRecord": 64,
+    "Finding": 2500,
+    "MissingRecord": 66,
     "Source": 20,
-    "LegalAuthority": 176,
+    "LegalAuthority": 171,
     "Decision": 0,
     "PublicGroup": 0
   },
   "countsByRelationship": {
-    "published": 3129,
+    "published": 2500,
     "operatedBy": 20,
     "retrievedFrom": 76,
     "supports": 76,
-    "mentions": 3958,
-    "subjectOf": 2353,
+    "mentions": 3553,
+    "subjectOf": 2582,
     "affiliatedWith": 0,
     "owns": 0,
     "contractsWith": 0,
@@ -50,7 +50,7 @@
     "affects": 0,
     "overseenBy": 0,
     "missingFrom": 0,
-    "changedAt": 64,
+    "changedAt": 66,
     "reportedTransaction": 0,
     "reportedPositionChange": 0,
     "relatedTo": 0
@@ -65,5 +65,5 @@
     "relationship-registry.html"
   ],
   "software": "Node.js with FollowTheMoney-compatible concepts; no paid service or external database required.",
-  "refinedAt": "2026-07-27T10:28:30.001Z"
+  "refinedAt": "2026-07-28T06:26:18.375Z"
 }

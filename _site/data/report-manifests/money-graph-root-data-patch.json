@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-27T06:56:03.548Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-28T06:17:21.132Z",
+  "pageCount": 130,
   "output": "downloads/money-graph-root-data-patch.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Money Graph Root Data Patch",
-    "contentHash": "d308bfd0c6d207dcfa319a0eaad884d16d68fd668cbe6b050e6767d6e4123c28",
+    "contentHash": "16c5122fd9443fb3d5220035febbb2f015aba27e4a0ef3e7f4791c185b6bc8e5",
     "sourceIds": [
+      "9b821ddb272b0fb297d39550",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-9E85403F3389F334",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-C7A00AFA602DD2A9",
       "ASC-REVIEW-C2A19D091C2D1254",
       "ASC-REVIEW-FF5E6B71C62F4EBB",
-      "ASC-REVIEW-BC9A7DE25FDF5F78",
-      "ASC-REVIEW-3266CA18BAEC4ACB"
+      "ASC-REVIEW-BC9A7DE25FDF5F78"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 140,
-      "newEntityCount": 0,
+      "disputedClaimCount": 139,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 140,
-      "moneyRecordCount": 140
+      "relationshipCount": 139,
+      "moneyRecordCount": 139
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Bernard Arnault → Media And Culture Influence Routes: ecosystem hint,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Speculatively, the graph hint in “Bernard Arnault → Media And Culture Influence Routes: ecosystem hint — bernard-arnault.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 140 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 139 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 140 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 139 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "BlackRock → Aladdin Risk And Portfolio Platform: capital layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:56:03.548Z"
+    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
   }
 }

@@ -1,12 +1,21 @@
 {
-  "generatedAt": "2026-07-23T06:48:49.667Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-28T06:19:32.524Z",
+  "pageCount": 133,
   "output": "downloads/search-v3-deploy-size-repair.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Search V3 Deploy Size Repair",
-    "contentHash": "23235118aa7c7180a60f70576e40c3345854e06858789f46be6c1ee31dd1f909",
+    "contentHash": "887c33884f53f79802f16e61ce57da61a32f94e7258bcca10d528d0f80b87b52",
     "sourceIds": [
+      "source-change-ea906ec638c352f7dced1c63",
+      "source-change-5594665950812895f468c11d",
+      "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-d5adf164b612fd92a1dca692",
+      "source-change-e853e2cce33f37c0619d2433",
+      "source-change-145721767ca69c32bb4875e5",
+      "source-change-46042e30fdcccc9e94aee0af",
+      "source-change-2931a84c2c7fe86982d5d6e5",
+      "2482c3e0241c7c7679a18cd1",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -27,6 +36,10 @@
       "ASC-REVIEW-D86EBD209FFF875A",
       "ASC-REVIEW-A5C911DFEE587573",
       "26b90533dbf7d2ed42f02de6",
+      "ec968f2ec6ba82128b4cd91b",
+      "e86287f396e1ee800a7ee796",
+      "02a4d3de860d06619024f48c",
+      "603b714a5abe917f3094b455",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -133,45 +146,32 @@
       "ASC-REVIEW-C2C7140B7B6F51FF",
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-3B7DCAEF5ABCE701",
-      "ASC-REVIEW-3C0E3174433D0A74",
-      "ASC-REVIEW-954EF610F9B32B24",
-      "ASC-REVIEW-CA2354BF2081EB62",
-      "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585",
-      "ASC-REVIEW-D6340B09DE08EAC5",
-      "ASC-REVIEW-52C3694FF95479F1"
+      "ASC-REVIEW-68286C2A2CB861AF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 139,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 126,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 139,
-      "moneyRecordCount": 139
+      "relationshipCount": 129,
+      "moneyRecordCount": 128
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Search V3 Deploy Size Repair beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Search V3 Deploy Size Repair.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 96,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Bernard Arnault → Media And Culture Influence Routes: ecosystem hint,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Speculatively, the graph hint in “Bernard Arnault → Media And Culture Influence Routes: ecosystem hint — bernard-arnault.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 139 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
+        "inference": "The indexed set contains 129 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 139 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 129 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer"
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-23T06:48:49.667Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

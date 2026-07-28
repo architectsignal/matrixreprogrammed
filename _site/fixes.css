@@ -35,3 +35,11 @@ a,.btn,.nav a,.source-list{overflow-wrap:anywhere;word-break:break-word}
 
 /* death-files-100-analysis */
 .death-speculation-analysis{border-top:1px solid rgba(183,25,25,.55);border-bottom:1px solid rgba(183,25,25,.3)}.death-speculation-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.death-counter-evidence{border:1px solid rgba(90,145,210,.5)}.death-proof-required{border:1px solid rgba(216,181,106,.55)}.death-source-status .card{max-width:950px}.death-selection-principle .grid{align-items:stretch}
+
+/* matrix-runtime-performance-v1 */
+@supports (content-visibility:auto){
+  main > section.section{content-visibility:auto;contain-intrinsic-size:1px 760px}
+  .grid > article.card{content-visibility:auto;contain-intrinsic-size:1px 420px}
+  .hero,.topbar,.reader-governor-strip,.page-guide{content-visibility:visible}
+}
+img{height:auto}

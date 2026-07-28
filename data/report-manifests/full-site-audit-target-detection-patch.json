@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-07-27T06:54:20.800Z",
-  "pageCount": 128,
+  "generatedAt": "2026-07-28T06:15:04.364Z",
+  "pageCount": 129,
   "output": "downloads/full-site-audit-target-detection-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Full Site Audit Target Detection Patch",
-    "contentHash": "daaef9837cdf1b90585eaacad4fe2715aa1c8f5404c677421f7ae17b1f1bd91c",
+    "contentHash": "512297a3ce2bbc278dc2a2aed01b24de91fda22fdaeb487577f56c2ad392d8b5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
+      "2482c3e0241c7c7679a18cd1",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -16,6 +17,7 @@
       "ASC-REVIEW-20316213EFD183CC",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
+      "96c24b16f820cebf7d9a03fe",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -34,15 +36,14 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
+      "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
-      "594100b62a47db521fe2a128",
-      "9e8903fd8dfa9b54a1d6db30",
       "71e0563ca7b139c37c302956",
       "76a719654ec3312153163154",
       "5b6b5c0285c3c8742768ea5c",
@@ -50,8 +51,14 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "c5d9edd2562c4c00e3ddfdfb",
-      "88ef9baf356c096816236956",
-      "34805734b1ad3b73f0ede0d8",
+      "aa125ed22fe885dd57f96c32",
+      "4c372edcf20b760ae3305f10",
+      "d3589cf045e6d530b37381a9",
+      "source-change-d5adf164b612fd92a1dca692",
+      "4ea32d0f43e7509849e25947",
+      "73e72fa8e421ec8895b64979",
+      "a6a8845fcd8980df6fe58516",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -79,7 +86,7 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-FAA34ACD3ED6CA54",
+      "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -139,39 +146,32 @@
       "ASC-REVIEW-B1D0DFCBB6CF0079",
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
-      "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-8FE8E072E8149C71",
-      "ASC-REVIEW-D63BAC3D4EA4E2FC",
-      "ASC-REVIEW-FB46D93D6179DCC7",
-      "ASC-REVIEW-376546BBB3F711C2",
-      "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18"
+      "ASC-REVIEW-D33599099BE12C6C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 124,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 119,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 116,
-      "moneyRecordCount": 114
+      "relationshipCount": 110,
+      "moneyRecordCount": 107
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 116 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 116 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer"
+          "Booz Allen Hamilton → Consulting: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:54:20.800Z"
+    "intelligenceFreshnessDate": "2027-02-23T00:00:00.000Z"
   }
 }

@@ -1,8 +1,8 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-27T07:02:40.712Z
-Overall: working-with-gaps
-Green: 41 · Amber: 2 · Red: 0
+Updated: 2026-07-28T06:25:10.570Z
+Overall: fully-working
+Green: 43 · Amber: 0 · Red: 0
 
 ## Checks
 
@@ -12,15 +12,15 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Collect · collect-source-pulls:** Source-pull index exists.
 - **GREEN · Collect · freshness-curated-drops:** Curated source file age: 0 day(s). Fix: Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.
 - **GREEN · Collect · freshness-seven-day-feed:** Seven-day feed file age: 0 day(s). Fix: Run RSS/public-source intake every day and archive items automatically after seven days.
-- **GREEN · Collect · fresh-current-news:** 69 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
+- **GREEN · Collect · fresh-current-news:** 67 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
 - **GREEN · Classify · classification-system:** Information-gathering operating model exists.
 - **GREEN · Grade · interpretation-standard:** Reader score and evidence interpretation standard exists.
 - **GREEN · Grade · source-registry:** Master evidence source registry exists.
 - **GREEN · Classify · pipeline-completeness:** 8 collection-to-review pipeline step(s) are declared. Fix: Require collect, classify, grade, cross-check, connect, conclude, publish and review stages.
 - **GREEN · Grade · evidence-levels:** 6 evidence/implementation level(s) are declared. Fix: Ensure implementation, convergence and lock-in cannot be inferred from source volume alone.
 - **GREEN · Connect · relationship-graph:** Evidence-weighted relationship graph exists.
-- **GREEN · Connect · graph-population:** Relationship graph contains 120 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
-- **AMBER · Connect · graph-boundaries:** 172 relationship edge(s) lack an explicit grade or boundary field. Fix: Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge.
+- **GREEN · Connect · graph-population:** Relationship graph contains 111 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
+- **GREEN · Connect · graph-boundaries:** 0 relationship edge(s) lack an explicit grade or boundary field. Fix: Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge.
 - **GREEN · Conclude · daily-conclusions:** Daily power conclusions exists.
 - **GREEN · Conclude · conclusion-engine:** Conclusion engine exists.
 - **GREEN · Conclude · daily-command-json:** Daily Command Brief data exists.
@@ -30,13 +30,13 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Conclude · daily-counterpoint:** Daily Command Brief contains its counterpoint. Fix: Generate counterpoint from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-practicalMeaning:** Daily Command Brief contains its practical meaning. Fix: Generate practical meaning from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-conclusionBoundary:** Daily Command Brief contains its claim boundary. Fix: Generate claim boundary from current evidence and canonical timers on every build.
-- **GREEN · Publish · brief-coverage:** 73 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
+- **GREEN · Publish · brief-coverage:** 56 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
 - **GREEN · Conclude · conclusion-engine-population:** 5 conclusion-engine item(s) exist. Fix: Do not publish an empty conclusion engine.
 - **GREEN · Clocks · clock-source:** Canonical risk-clock source exists.
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.
 - **GREEN · Clocks · timer-page:** Clean timer page exists.
 - **GREEN · Clocks · clock-score-integrity:** 0 clock score mismatch(es) exist between canonical source and visual synthesis. Fix: Never add display bonuses or recalculate scores in the presentation layer.
-- **AMBER · Clocks · clock-depth:** 50 clock(s) lack movement, mission relevance, boundary or direct evidence input. Fix: Keep the card clean but require the deeper tab to contain those fields.
+- **GREEN · Clocks · clock-depth:** 0 clock(s) lack movement, mission relevance, boundary or direct evidence input. Fix: Keep the card clean but require the deeper tab to contain those fields.
 - **GREEN · Clocks · source-to-clock-links:** 0 timer-link slug(s) are present in current drops; 0 do not resolve. Fix: Reject source drops that reference a nonexistent clock slug.
 - **GREEN · Publish · homepage-command-data:** Homepage command-surface data exists.
 - **GREEN · Publish · homepage:** Homepage exists.
@@ -47,7 +47,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Automate · build-order-build-homepage-command-surface.js:** build-homepage-command-surface.js is included in the authoritative build path. Fix: Add build-homepage-command-surface.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-site-intelligence-pipeline-audit.js:** site-intelligence-pipeline-audit.js is included in the authoritative build path. Fix: Add site-intelligence-pipeline-audit.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-patch-login-email-delivery.js:** patch-login-email-delivery.js is included in the authoritative build path. Fix: Add patch-login-email-delivery.js after legacy generators and before Cloudflare output.
-- **GREEN · Automate · daily-automation:** 156 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
+- **GREEN · Automate · daily-automation:** 157 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
 - **GREEN · Automate · weekly-automation:** Workflow files were scanned for weekly synthesis scheduling. Fix: Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.
 
 ## New Clock Ideas

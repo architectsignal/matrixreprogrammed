@@ -454,7 +454,8 @@ function canUsePriorLedgerForProduction() {
   const results = await mapLimit(selected, Number(process.env.INVESTIGATION_CONCURRENCY || 4), fetchSource);
   const fetchedItems = results.flatMap(result => result.items || []);
   const currentFindings = fetchedItems.map(findingFromItem);
-  const mergedFindings = mergeLedger(currentFindings);
+  const runHealthy = results.some(result => result.status === 'fetched');
+  const mergedFindings = runHealthy ? mergeLedger(currentFindings) : [...(priorLedger.findings || [])];
   const sources = sourceState(results);
   const state = { updated: checkedAt, lastMode: mode, sources };
   const ledger = {
@@ -465,13 +466,13 @@ function canUsePriorLedgerForProduction() {
     findings: mergedFindings
   };
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
-  fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2));
+  if (runHealthy) fs.writeFileSync(ledgerPath, JSON.stringify(ledger, null, 2));
   const daily = conclusionProduct('daily', mergedFindings, results, sources);
   const weekly = conclusionProduct('weekly', mergedFindings, results, sources);
   fs.writeFileSync(path.join(dataDir, 'daily-investigation-conclusions.json'), JSON.stringify(daily, null, 2));
   fs.writeFileSync(path.join(dataDir, 'weekly-investigation-conclusions.json'), JSON.stringify(weekly, null, 2));
   const runReport = {
-    ok: results.some(result => result.status === 'fetched'),
+    ok: runHealthy,
     mode,
     checkedAt,
     selectedSources: selected.length,

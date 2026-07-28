@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-27T07:01:21.447Z",
+  "updated": "2026-07-28T06:23:42.872Z",
   "title": "Conclusion Engine",
   "boundary": "Conclusions are evidence-bounded editorial outputs. They must not turn speculation, association or source proximity into proof.",
   "conclusions": [
@@ -22,7 +22,7 @@
     },
     {
       "title": "Best source intake priority",
-      "conclusion": "The highest-priority source drop is Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review.",
+      "conclusion": "The highest-priority source drop is Conflict and crisis put six World Heritage sites at risk.",
       "why": "Fresh dated source drops are the cleanest way to keep clocks, cards and briefs current.",
       "boundary": "A source drop is a lead until it has been classified, cross-checked and connected to a conclusion.",
       "confidence": "medium",
@@ -247,8 +247,8 @@
         }
       ],
       "timerUpdateRule": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access. Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available.",
-      "evidenceFingerprint": "4f164fbaf9b93a8d09d053b95e3bc94ee1b15e68b4c3cfe2375f3095b2ad4998",
-      "lastEvidenceChangeAt": "2026-07-27T06:49:46.268Z",
+      "evidenceFingerprint": "6ca121682761bd68c8c47ce3a0cdf180fa5c812a6776233d35d6cefe25a5d9fa",
+      "lastEvidenceChangeAt": "2026-07-28T06:09:11.079Z",
       "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -281,8 +281,28 @@
           "published": "",
           "evidenceLevel": "",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 58
+        },
+        {
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
           "sourceFile": "data/speculative-intelligence-synthesis.json",
           "matchScore": 58
+        },
+        {
+          "title": "Current strongest public signal",
+          "summary": "Children’s Digital Identity and Age-Gating Clock is currently the strongest pressure signal at 93/100.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 18
         },
         {
           "title": "CBDC Rollout Clock",
@@ -325,6 +345,16 @@
           "matchScore": 14
         },
         {
+          "title": "Digital Identity and Permissioned Access Clock",
+          "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 14
+        },
+        {
           "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
           "summary": "The European Commission says Member States will make wallets available to citizens, residents and businesses by the end of 2026. More than 550 companies and public authorities across 26 Member States and associated countries have participated in large-scale pilots.",
           "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
@@ -345,6 +375,16 @@
           "matchScore": 13
         },
         {
+          "title": "France enacted a digital-majority framework requiring parental consent below 15 and technical verification",
+          "summary": "France's digital-majority law requires social-network providers to refuse registration by children under 15 without parental consent and provides for certified technical solutions to verify age and parental authorisation, subject to implementation and European-law constraints.",
+          "route": "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047799537",
+          "published": "2026-07-15T00:00:00.000Z",
+          "evidenceLevel": "Official legislation · enacted framework",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 12
+        },
+        {
           "title": "EU remote-onboarding standards for digital identity wallets entered implementing law in April 2026",
           "summary": "Commission Implementing Regulation (EU) 2026/798 sets reference standards and specifications for remote onboarding to European Digital Identity Wallets at high assurance levels.",
           "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0798",
@@ -353,6 +393,26 @@
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 12
+        },
+        {
+          "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
+          "summary": "The European Commission says Member States will make wallets available to citizens, residents and businesses by the end of 2026. More than 550 companies and public authorities across 26 Member States and associated countries have participated in large-scale pilots.",
+          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+          "published": "2026-06-26T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation page · statutory rollout",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 11
+        },
+        {
+          "title": "EU urges Member States to make a common age-verification app available by the end of 2026",
+          "summary": "The European Commission adopted a recommendation on 29 April 2026 urging Member States to accelerate rollout of the EU age-verification app. The app may operate independently or be integrated into a European Digital Identity Wallet.",
+          "route": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
+          "published": "2026-04-29T00:00:00.000Z",
+          "evidenceLevel": "Official EU recommendation · deployment deadline",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 11
         },
         {
           "title": "EU protection-of-minors guidelines and age-verification prototype establish a common DSA implementation route",
@@ -373,66 +433,6 @@
           "confidence": "Classified",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 11
-        },
-        {
-          "title": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards",
-          "summary": "The Commission says its age-verification solution became feature-ready in April 2026. Proof of age can be issued from national eIDs, passports, identity cards, banking apps or offline activation, while the design aims to disclose only the required age threshold.",
-          "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
-          "published": "2026-04-29T00:00:00.000Z",
-          "evidenceLevel": "Official EU technical blueprint · implementation-ready",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 10
-        },
-        {
-          "title": "Access infrastructure is a measurable power layer.",
-          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 10
-        },
-        {
-          "title": "Access infrastructure is a measurable power layer.",
-          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/conclusions-engine-batch-001.json",
-          "matchScore": 10
-        },
-        {
-          "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
-          "summary": "The ECB published draft rulebook version 0.91 in July 2026. It says the digital euro would be distributed through banks, work online and offline, and could be ready for potential issuance in 2029 if legislation is adopted in 2026.",
-          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
-          "published": "2026-07-17T00:00:00.000Z",
-          "evidenceLevel": "Official central-bank project update · rulebook and pilot preparation",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 9
-        },
-        {
-          "title": "UK age checks are deployed at unprecedented scale under the Online Safety Act",
-          "summary": "Ofcom's July 2026 statutory report states that many services are required to use highly effective age assurance and that age checks have been deployed at unprecedented scale.",
-          "route": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
-          "published": "2026-07-15T00:00:00.000Z",
-          "evidenceLevel": "Official regulator · statutory report · active enforcement",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Okta and Palo Alto Networks integrate enterprise digital identity, cybersecurity tools - Biometric Update",
-          "summary": "Okta and Palo Alto Networks integrate enterprise digital identity, cybersecurity tools Biometric Update",
-          "route": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc0luRU9wa05iVmoyRkRiY2tWUTF6RU5UaDAtZmFCMjdocm9QWldLeHNNbGh1VEVSZXpLbWo2RlNiaEhuTVVySW4xbzdWR0VlMHdMV2VlTWI1ellIYmJ1eG9ONldEeGRUT2RaRXFUd24ySDFqWTdUczNiLTlUR1NfZVN4U1gwYUhpQkdOR3ZPOXlnRUtwOUJDZGRhT3lMRHRoU001YW9JQXFNWlhKQlJjN3ZvS0hPbDhrYUF5Z0pNTDZkQQ?oc=5",
-          "published": "2025-07-16T07:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 9
         }
       ],
       "sourceRoutes": [
@@ -449,8 +449,6 @@
         "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0798",
         "black-file.html",
-        "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
-        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPc0luRU9wa05iVmoyRkRiY2tWUTF6RU5UaDAtZmFCMjdocm9QWldLeHNNbGh1VEVSZXpLbWo2RlNiaEhuTVVySW4xbzdWR0VlMHdMV2VlTWI1ellIYmJ1eG9ONldEeGRUT2RaRXFUd24ySDFqWTdUczNiLTlUR1NfZVN4U1gwYUhpQkdOR3ZPOXlnRUtwOUJDZGRhT3lMRHRoU001YW9JQXFNWlhKQlJjN3ZvS0hPbDhrYUF5Z0pNTDZkQQ?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -464,10 +462,10 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-27T07:01:07.557Z",
+      "generatedAt": "2026-07-28T06:23:29.305Z",
       "previousAutomaticScore": 93,
       "automaticScoreMovement": 0,
-      "automaticUpdateReason": "Evidence change: 8 fresh records, 7 primary/official, 5 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+      "automaticUpdateReason": "Evidence change: 10 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
         "mode": "standard-evidence-gated",
@@ -476,10 +474,10 @@
         "requirement": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access."
       },
       "automaticEvidenceCounts": {
-        "total": 11,
-        "fresh": 8,
-        "primaryOrOfficial": 7,
-        "implementation": 5,
+        "total": 16,
+        "fresh": 10,
+        "primaryOrOfficial": 9,
+        "implementation": 7,
         "counterSignals": 0,
         "caseRecords": 0,
         "authenticatedMechanisms": 0
@@ -605,7 +603,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -694,6 +692,16 @@
           "matchScore": 20
         },
         {
+          "title": "Digital Identity and Permissioned Access Clock",
+          "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 16
+        },
+        {
           "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
           "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
           "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
@@ -719,6 +727,16 @@
           "route": "https://www.who.int/health-topics/who-pandemic-agreement",
           "published": "2026-07-06T00:00:00.000Z",
           "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 14
+        },
+        {
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 14
@@ -782,26 +800,6 @@
           "confidence": "[object Object]",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 12
-        },
-        {
-          "title": "Palantir government platforms → Surveillance: execution layer",
-          "summary": "Speculatively, the graph hint in “Palantir government platforms → Surveillance: execution layer — palantir-government-platforms.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "[object Object]",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 12
-        },
-        {
-          "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
-          "summary": "The European Commission says Member States will make wallets available to citizens, residents and businesses by the end of 2026. More than 550 companies and public authorities across 26 Member States and associated countries have participated in large-scale pilots.",
-          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
-          "published": "2026-06-26T00:00:00.000Z",
-          "evidenceLevel": "Official EU implementation page · statutory rollout",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 11
         }
       ],
       "sourceRoutes": [
@@ -818,7 +816,6 @@
         "black-file.html",
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
         "https://www.who.int/health-topics/who-pandemic-agreement",
-        "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "evidence-vault.html",
         "search.html"
       ],
@@ -837,7 +834,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-27T07:01:07.557Z",
+      "generatedAt": "2026-07-28T06:23:29.305Z",
       "id": "surveillance-state",
       "name": "Surveillance State Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -870,7 +867,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 9 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high.",
       "readerQuestion": "What documented change would make AI Breakout Clock more or less important?",
       "missionThemes": [
@@ -981,8 +978,28 @@
           "published": "2026-05-28T00:00:00.000Z",
           "evidenceLevel": "Official EU cybersecurity assessment",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 7
+        },
+        {
+          "title": "ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2",
+          "summary": "The May 2026 NIS360 assessment found improved cybersecurity maturity while sector criticality remained high, reflecting active NIS2 implementation and continuing infrastructure exposure.",
+          "route": "https://www.enisa.europa.eu/news/nis360-the-bigger-picture-on-maturity-and-criticality-of-nis-critical-sectors",
+          "published": "2026-05-28T00:00:00.000Z",
+          "evidenceLevel": "Official EU cybersecurity assessment",
+          "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 7
+        },
+        {
+          "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
+          "summary": "The ECB published draft rulebook version 0.91 in July 2026. It says the digital euro would be distributed through banks, work online and offline, and could be ready for potential issuance in 2029 if legislation is adopted in 2026.",
+          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official central-bank project update · rulebook and pilot preparation",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 6
         },
         {
           "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
@@ -1001,6 +1018,16 @@
           "published": "2027-07-12T00:00:00.000Z",
           "evidenceLevel": "B",
           "confidence": "record-update",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 5
+        },
+        {
+          "title": "MINDCUBED LLC — District of Columbia Courts",
+          "summary": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts",
+          "route": "",
+          "published": "2027-07-12T00:00:00.000Z",
+          "evidenceLevel": "B",
+          "confidence": "moderate-to-high",
           "sourceFile": "data/daily-investigation-conclusions.json",
           "matchScore": 5
         },
@@ -1010,8 +1037,18 @@
           "route": "",
           "published": "2027-07-12T00:00:00.000Z",
           "evidenceLevel": "B",
-          "confidence": "record-update",
+          "confidence": "moderate-to-high",
           "sourceFile": "data/weekly-investigation-conclusions.json",
+          "matchScore": 5
+        },
+        {
+          "title": "2026 Rule of Law Report says media-market concentration and editorial independence concerns persist",
+          "summary": "The Commission reports ongoing EMFA implementation and continuing concerns over media-market concentration, public-service-media independence, journalist safety and state-advertising transparency.",
+          "route": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official EU multi-country monitoring",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 5
         },
         {
@@ -1023,46 +1060,6 @@
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 5
-        },
-        {
-          "title": "CBDC Rollout Clock",
-          "summary": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-0",
-          "route": "surveillance-hub.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "Active",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 5
-        },
-        {
-          "title": "INDUSTRIAL BANK — District of Columbia Courts",
-          "summary": "CONTRACT NO. DCSC-25-SAS-116 (REPAIR & SUPPORT SERVICES FOR COURTWIDE PUBLIC USE AUTOMATED TELLER MACHINE). EXERCISE OF OPTION YEAR 1 BEGINNING SEPTEMBER 30, 2026, THROUGH SEPTEMBER 29, 2027. OPTION YEAR 1 CONTRACT PRICE IS $10,990.20. · Amount: 10990.2 · Sub-agency: District of Columbia Courts",
-          "route": "",
-          "published": "2026-09-30T00:00:00.000Z",
-          "evidenceLevel": "B",
-          "confidence": "record-update",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "INDUSTRIAL BANK — District of Columbia Courts",
-          "summary": "CONTRACT NO. DCSC-25-SAS-116 (REPAIR & SUPPORT SERVICES FOR COURTWIDE PUBLIC USE AUTOMATED TELLER MACHINE). EXERCISE OF OPTION YEAR 1 BEGINNING SEPTEMBER 30, 2026, THROUGH SEPTEMBER 29, 2027. OPTION YEAR 1 CONTRACT PRICE IS $10,990.20. · Amount: 10990.2 · Sub-agency: District of Columbia Courts",
-          "route": "",
-          "published": "2026-09-30T00:00:00.000Z",
-          "evidenceLevel": "B",
-          "confidence": "record-update",
-          "sourceFile": "data/weekly-investigation-conclusions.json",
-          "matchScore": 4
-        },
-        {
-          "title": "AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission",
-          "summary": "UIPATH, A ROBOTIC PROCESS AUTOMATION (RPA) TOOL. · Amount: 23217.09 · Sub-agency: Commodity Futures Trading Commission",
-          "route": "",
-          "published": "2026-08-13T00:00:00.000Z",
-          "evidenceLevel": "B",
-          "confidence": "record-update",
-          "sourceFile": "data/weekly-investigation-conclusions.json",
-          "matchScore": 4
         }
       ],
       "sourceRoutes": [
@@ -1086,7 +1083,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-27T07:01:07.557Z",
+      "generatedAt": "2026-07-28T06:23:29.305Z",
       "id": "ai-breakout",
       "name": "AI Breakout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1145,7 +1142,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -1249,6 +1246,16 @@
           "published": "2026-07-17T00:00:00.000Z",
           "evidenceLevel": "Official central-bank project update · rulebook and pilot preparation",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 14
+        },
+        {
+          "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
+          "summary": "The ECB published draft rulebook version 0.91 in July 2026. It says the digital euro would be distributed through banks, work online and offline, and could be ready for potential issuance in 2029 if legislation is adopted in 2026.",
+          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official central-bank project update · rulebook and pilot preparation",
+          "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 14
         },
@@ -1261,6 +1268,16 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 14
+        },
+        {
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 11
         },
         {
           "title": "Children’s Digital Identity and Age-Gating Clock",
@@ -1299,6 +1316,16 @@
           "published": "2026-06-26T00:00:00.000Z",
           "evidenceLevel": "Official EU implementation page · statutory rollout",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 9
+        },
+        {
+          "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
+          "summary": "The European Commission says Member States will make wallets available to citizens, residents and businesses by the end of 2026. More than 550 companies and public authorities across 26 Member States and associated countries have participated in large-scale pilots.",
+          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+          "published": "2026-06-26T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation page · statutory rollout",
+          "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 9
         },
@@ -1309,38 +1336,8 @@
           "published": "2026-04-29T00:00:00.000Z",
           "evidenceLevel": "Official EU recommendation · deployment deadline",
           "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 8
-        },
-        {
-          "title": "Access infrastructure is a measurable power layer.",
-          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 8
-        },
-        {
-          "title": "Access infrastructure is a measurable power layer.",
-          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/conclusions-engine-batch-001.json",
-          "matchScore": 8
-        },
-        {
-          "title": "Digital euro clears key European Parliament hurdle",
-          "summary": "The ECB secured key parliamentary backing for the digital euro, with negotiations expected to proceed and a pilot reported for 2027 before a possible 2029 rollout.",
-          "route": "https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/",
-          "published": "2026-06-23T12:00:00.000Z",
-          "evidenceLevel": "CBDC legislative-process / pilot-lane update",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 7
         }
       ],
       "sourceRoutes": [
@@ -1354,7 +1351,6 @@
         "deep-intel-feed.html",
         "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
-        "https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1370,7 +1366,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-27T07:01:07.557Z",
+      "generatedAt": "2026-07-28T06:23:29.305Z",
       "id": "cbdc-rollout",
       "name": "CBDC Rollout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1607,8 +1603,8 @@
         }
       ],
       "timerUpdateRule": "Raise when identity becomes mandatory for a major service or integrates with payments, travel, health, work, benefits, age verification or speech. Lower when anonymous, offline or non-digital alternatives are legally protected and practically usable.",
-      "evidenceFingerprint": "90d8c137d03e59bfd50bc07aaeb0a3af200a46c2847847ff79a1528cf7a7b9b4",
-      "lastEvidenceChangeAt": "2026-07-27T07:00:50.011Z",
+      "evidenceFingerprint": "998f44d94638703c7a267970efae82fd5f683b716586a1063519b75cb9a047f9",
+      "lastEvidenceChangeAt": "2026-07-28T06:23:11.010Z",
       "automaticUpdateStatus": "evidence-changed-score-updated",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -1616,7 +1612,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "10 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 15 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "10 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 12 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -1634,6 +1630,16 @@
         "Independent systems remain optional, decentralised, interoperable and subject to effective appeal or democratic oversight."
       ],
       "evidenceInputs": [
+        {
+          "title": "Digital Identity and Permissioned Access Clock",
+          "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 33
+        },
         {
           "title": "Surveillance State Clock",
           "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
@@ -1663,6 +1669,16 @@
           "confidence": "Classified",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 15
+        },
+        {
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "summary": "Tracks the rapid conversion of child-online-safety policy into mandatory age assurance, account restrictions, parental-authorisation systems, biometric or document-based age estimation and reusable proof-of-age infrastructure. Current evidence includes an Australian under-16 restriction in force, UK age assurance operating at scale, French digital-majority legislation and an EU verification app designed for national rollout and European Digital Identity Wallet compatibility.",
+          "route": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 14
         },
         {
           "title": "CBDC Rollout Clock",
@@ -1695,6 +1711,16 @@
           "matchScore": 12
         },
         {
+          "title": "Current strongest public signal",
+          "summary": "Children’s Digital Identity and Age-Gating Clock is currently the strongest pressure signal at 93/100.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 12
+        },
+        {
           "title": "Access infrastructure is a measurable power layer.",
           "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
           "route": "",
@@ -1718,10 +1744,20 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-07-27T07:00:06.126Z",
+          "published": "2026-07-28T06:22:26.724Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
+          "matchScore": 11
+        },
+        {
+          "title": "Digital identity and payment rails become more linked to access control",
+          "summary": "[object Object],[object Object]",
+          "route": "",
+          "published": "2026-07-27T07:00:06.126Z",
+          "evidenceLevel": "",
+          "confidence": "low-medium",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 11
         },
         {
@@ -1753,46 +1789,6 @@
           "confidence": "[object Object]",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 11
-        },
-        {
-          "title": "EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards",
-          "summary": "The Commission says its age-verification solution became feature-ready in April 2026. Proof of age can be issued from national eIDs, passports, identity cards, banking apps or offline activation, while the design aims to disclose only the required age threshold.",
-          "route": "https://digital-strategy.ec.europa.eu/en/factpages/blueprint-age-verification-solution-help-protect-minors-online",
-          "published": "2026-04-29T00:00:00.000Z",
-          "evidenceLevel": "Official EU technical blueprint · implementation-ready",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 10
-        },
-        {
-          "title": "EU urges Member States to make a common age-verification app available by the end of 2026",
-          "summary": "The European Commission adopted a recommendation on 29 April 2026 urging Member States to accelerate rollout of the EU age-verification app. The app may operate independently or be integrated into a European Digital Identity Wallet.",
-          "route": "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
-          "published": "2026-04-29T00:00:00.000Z",
-          "evidenceLevel": "Official EU recommendation · deployment deadline",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 9
-        },
-        {
-          "title": "EU protection-of-minors guidelines and age-verification prototype establish a common DSA implementation route",
-          "summary": "The European Commission issued protection-of-minors guidelines and an age-verification prototype under the Digital Services Act, creating a common compliance and technical route for platforms operating across the EU.",
-          "route": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-guidelines-and-age-verification-app-prototype-safer-online-space-children",
-          "published": "2025-07-14T00:00:00.000Z",
-          "evidenceLevel": "Official EU regulatory guidance · technical prototype",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Digital identity and public-service dependency lane added",
-          "summary": "Identity, wallet and public-service routes can now feed the forecast engine once records confirm scope and requirements.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "review lane",
-          "confidence": "",
-          "sourceFile": "data/probability-signal-feed-004.json",
-          "matchScore": 9
         }
       ],
       "sourceRoutes": [
@@ -1821,10 +1817,10 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-27T07:01:07.557Z",
+      "generatedAt": "2026-07-28T06:23:29.305Z",
       "previousAutomaticScore": 84,
       "automaticScoreMovement": 2,
-      "automaticUpdateReason": "Evidence change: 12 fresh records, 9 primary/official, 6 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+      "automaticUpdateReason": "Evidence change: 15 fresh records, 12 primary/official, 8 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
         "mode": "standard-evidence-gated",
@@ -1834,9 +1830,9 @@
       },
       "automaticEvidenceCounts": {
         "total": 21,
-        "fresh": 12,
-        "primaryOrOfficial": 9,
-        "implementation": 6,
+        "fresh": 15,
+        "primaryOrOfficial": 12,
+        "implementation": 8,
         "counterSignals": 0,
         "caseRecords": 0,
         "authenticatedMechanisms": 0
@@ -1866,35 +1862,14 @@
   ],
   "topDrops": [
     {
-      "id": "epstein-files-2026-07-26-c2235314",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "sourceLabel": "Google News / Epstein timeline and files",
-      "title": "Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5",
-      "published": "2026-07-26T23:43:09.000Z",
-      "summary": "Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Eurasia Review",
-      "evidenceLevel": "Primary or official public-record lead",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-      "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "videoRoute": "videos.html",
-      "bookRoute": "book-black-file.html",
-      "offerRoute": "offer-starter-library.html",
-      "optinRoute": "optin-black-file-brief.html",
-      "timerLinks": [],
-      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
-    },
-    {
-      "id": "war-machine-2026-07-26-1e2b460f",
+      "id": "war-machine-2026-07-27-1928ff99",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
       "sourceLabel": "UN News",
-      "title": "After war took her leg, this Ukrainian gymnast refused to give up",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1168020",
-      "published": "2026-07-26T12:00:00.000Z",
-      "summary": "When 10-year-old Ukrainian gymnast Sasha Paskal stepped onto the stage in New York&#039;s Times Square this week, she carried a message far bigger than her performance.",
+      "title": "Conflict and crisis put six World Heritage sites at risk",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168031",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "Armed conflict, insecurity and environmental pressures are threatening ancient cities, historic castles and one of the world&#039;s greatest wildlife migrations.",
       "evidenceLevel": "Primary or official public-record lead",
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
       "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
@@ -1908,14 +1883,14 @@
       "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
     },
     {
-      "id": "war-machine-2026-07-26-1c2b42e9",
+      "id": "war-machine-2026-07-27-1828fe06",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
       "sourceLabel": "UN News",
-      "title": "Gaza: Dialysis patients face gruelling hospital journey by donkey cart",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1168026",
-      "published": "2026-07-26T12:00:00.000Z",
-      "summary": "Shortly before sunrise, Palestinian Fathi Hajji begins an arduous thrice-weekly journey to Nasser Hospital in Khan Younis in the war-ravaged Gaza Strip.",
+      "title": "Cyberattacks and the digital divide are creating new barriers to HIV services",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168030",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "Cyberattacks, data breaches, online harassment and other forms of technology-facilitated violence are becoming significant obstacles to HIV prevention and treatment, according to a UNAIDS specialist who says digital security has become inseparable from the fight against the epidemic itself.",
       "evidenceLevel": "Primary or official public-record lead",
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
       "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
@@ -1929,14 +1904,14 @@
       "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
     },
     {
-      "id": "war-machine-2026-07-26-262b52a7",
+      "id": "war-machine-2026-07-27-1d2905e5",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
       "sourceLabel": "UN News",
-      "title": "Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1168028",
-      "published": "2026-07-26T12:00:00.000Z",
-      "summary": "A country long known as a meeting point of civilizations, Syria stands once again at a crossroads.",
+      "title": "Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168035",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "The United Nations continues to monitor developments in the Occupied Palestinian Territory amid rising violence and greater restrictions in the occupied West Bank.",
       "evidenceLevel": "Primary or official public-record lead",
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
       "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
@@ -1950,14 +1925,14 @@
       "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
     },
     {
-      "id": "war-machine-2026-07-25-a923d21b",
+      "id": "war-machine-2026-07-27-1728fc73",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
       "sourceLabel": "UN News",
-      "title": "‘I am somebody’: Street-smart youth take their declaration to the UN",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1168015",
-      "published": "2026-07-25T12:00:00.000Z",
-      "summary": "When Samantha Richards and Angela Hifume walked into the Hall of Flags at United Nations Headquarters last week, they carried more than a folder of paper. They carried the voices of hundreds of street-connected children who had never expected anyone to listen.",
+      "title": "High prices and funding cuts stall HIV prevention revolution",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168033",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "The AIDS epidemic could stage a comeback amid unequal access to breakthrough prevention medicines and a sharp decline in global funding, according to a UN report released on Monday ahead of the opening of the 26th International AIDS Conference in Rio de Janeiro, Brazil.",
       "evidenceLevel": "Primary or official public-record lead",
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
       "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
@@ -1971,14 +1946,35 @@
       "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
     },
     {
-      "id": "war-machine-2026-07-25-1b2b4156",
+      "id": "war-machine-2026-07-27-1c290452",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
       "sourceLabel": "UN News",
-      "title": "UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1168027",
-      "published": "2026-07-25T12:00:00.000Z",
-      "summary": "Syria has an opportunity not only to recover from conflict but to build “a future that is more stable, more inclusive and more prosperous for all Syrians”, UN Secretary-General António Guterres said in Damascus on Saturday as he began a landmark visit to the country.",
+      "title": "Lebanon: Israeli strikes ‘could amount to international crimes,’ warns Türk",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168034",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "UN Human Rights Chief Volker Türk expressed concern about ongoing displacement and destruction caused by Israeli strikes against Lebanon as he concluded a two-day visit to the country on Monday.",
+      "evidenceLevel": "Primary or official public-record lead",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+      "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
+      "optinRoute": "optin-intelligence-files-brief.html",
+      "timerLinks": [],
+      "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source."
+    },
+    {
+      "id": "war-machine-2026-07-27-252b5114",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "sourceLabel": "UN News",
+      "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1168029",
+      "published": "2026-07-27T12:00:00.000Z",
+      "summary": "The UN Security Council met on Monday at Ukraine’s request, following recent large-scale Russian attacks on Kyiv and elsewhere. At least one civilian was killed and more than a dozen wounded in an overnight strike on the capital on 19 July that also damaged homes and civilian infrastructure. Ukrainian authorities described it as one of the largest and most intense attacks since the invasion began. Follow live updates below.",
       "evidenceLevel": "Primary or official public-record lead",
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
       "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",

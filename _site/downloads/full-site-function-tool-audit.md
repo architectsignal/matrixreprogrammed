@@ -1,18 +1,18 @@
 # Full Site Function and Tool Audit
 
-Generated: 2026-07-23T06:54:40.444Z
+Generated: 2026-07-27T07:05:54.003Z
 Mode: postbuild-cloudflare-output
 Status: PASS
 
 ## Coverage
 
-- html: 3005
-- js: 79
-- json: 922
-- links: 131578
-- localFetches: 34
-- forms: 101
-- buttons: 2176
+- html: 3377
+- js: 93
+- json: 1034
+- links: 145996
+- localFetches: 49
+- forms: 307
+- buttons: 2464
 - criticalTools: 31
 
 ## Hard Issues
@@ -21,9 +21,17 @@ Status: PASS
 
 ## Warnings
 
+- .cloudflare/pages-output/living-pulse.js: fetch target not found data/daily-brain-brief.json
+- heroes-fighting-matrix-card: missing local target ${esc(source.url)}
+- heroes-fighting-matrix-card.html: missing local target ${esc(source.url)}
+- heroes-fighting-matrix-research-ledger: missing local target ${esc(source.url)}
+- heroes-fighting-matrix-research-ledger.html: missing local target ${esc(source.url)}
 - src/money-command-center.js: fetch target not found data/money-intelligence-registry.json
 - src/money-command-center.js: fetch target not found data/money-overlap-graph.json
 - src/money-overlap-graph.js: fetch target not found data/money-overlap-graph.json
 - src/money-overlap-graph.js: fetch target not found data/money-intelligence-registry.json
+- src/money-profile.js: fetch target not found data/money-profile-index.json
+- src/money-profile.js: fetch target not found data/money-relationship-feed.json
+- src/money-profile.js: fetch target not found data/money-intelligence-registry.json
 
 Boundary: Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, supported MapLibre browser-bundle wiring, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require live environment verification.

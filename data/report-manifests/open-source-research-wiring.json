@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-07-27T06:56:18.768Z",
-  "pageCount": 127,
+  "generatedAt": "2026-07-28T06:17:39.717Z",
+  "pageCount": 129,
   "output": "downloads/open-source-research-wiring.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Open Source Research Wiring",
-    "contentHash": "d34d19a8faca257fe05e3d6ca11e0eca49a296decd086830cd838f8c617f4bcc",
+    "contentHash": "446911f43b2f72b9c8590fd0fda07981a8b6904eb73bc57db35bf8d0f588fcbd",
     "sourceIds": [
+      "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
@@ -37,6 +38,19 @@
       "7dcf4ef18ea1f86d01068773",
       "7f5b91c14c671bd24b8bbd81",
       "88ef9baf356c096816236956",
+      "2482c3e0241c7c7679a18cd1",
+      "3eaa75f65471d76ff2f30231",
+      "4033c5d131c2818b1231813b",
+      "766c7577ad2f2c6146482898",
+      "88780e987ae8758d90e927f0",
+      "995c14f7f8b33a3a62438171",
+      "source-change-d5adf164b612fd92a1dca692",
+      "0b48ddbdf00a62328ef878ff",
+      "6dd604f3b6f69be6f232c5ff",
+      "9d41d19f82ae59a0312ac75a",
+      "d9bff117c0197d71854cdb83",
+      "fe111e88710a84d6b32e57e5",
+      "40dd9b6b261ef87e0cbe3fa6",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -132,35 +146,21 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF"
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 10,
-      "disputedClaimCount": 127,
+      "primarySourceCount": 14,
+      "disputedClaimCount": 113,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 125,
-      "moneyRecordCount": 122
+      "relationshipCount": 112,
+      "moneyRecordCount": 109
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
+        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 125 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 112 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 125 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 112 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T06:56:18.768Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

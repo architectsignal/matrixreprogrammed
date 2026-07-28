@@ -1,7 +1,7 @@
 import { memberSessionContext } from './worker-member-experience.js';
 
 const ORIGIN = 'cloudflare-worker-consequence-tracker';
-const DAILY_CRON = '5 6 * * *';
+const DAILY_CRON = '25 5 * * *';
 const MAX_MANIFEST_CONTRACTS = 12;
 const MAX_DUE_PER_RUN = 4;
 const MAX_MEMBER_EVENTS = 50;

@@ -44,6 +44,20 @@ function patch(relative, transform) {
     if (after !== before) fs.writeFileSync(file, after);
   }
 }
+function walkHtml(base, visit) {
+  if (!fs.existsSync(base)) return;
+  const ignored = new Set(['node_modules', '.git']);
+  const stack = [base];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      if (ignored.has(entry.name)) continue;
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) stack.push(full);
+      else if (entry.isFile() && /\.html?$/i.test(entry.name)) visit(full);
+    }
+  }
+}
 
 const policy = readJson('data/exposure-integrity-policy.json');
 const ledger = readJson('data/exposure-evidence-ledger.json');
@@ -97,13 +111,24 @@ for (const relative of ['hit-list.html', 'cinematic-hit-list.html']) {
   patch(relative, html => html
     .replace(/data-classification="fact_corroborated"/g, 'data-classification="analytical_inference"')
     .replace(/Corroborated documented fact · claim under test/g, 'Analytical inference · claim under test')
-    .replace(/Review date pending/g, generatedDate));
+    .replace(/Review date pending/g, generatedDate)
+    .replace(/href="\/?corrections\.html"/g, 'href="/trust-corrections.html"'));
 }
 
 const routeBlock = `${HIT_START}<section class="section wrap exposure-entry"><article class="card redline"><span class="label">Connected investigation system</span><h2>Evidence feeds the Hit List, dossiers and timers</h2><p>Open the cinematic entry point to see what is documented, what is alleged, what remains unproven, which records are missing and where the investigation goes next.</p><div class="cta-row"><a class="btn" href="/hit-list.html">Open the Hit List</a><a class="btn alt" href="/timers.html">Follow the Timers</a><a class="btn alt" href="/source-document-vault.html">Verify Sources</a></div></article></section>${HIT_END}`;
 for (const relative of ['subject-index.html','predators-in-power.html','dark-speculation-lab.html','evidence-vault.html','wrongdoing-tracker.html','live-intel.html']) patch(relative, html => replaceBlock(html, routeBlock));
 
+let correctionRoutesRepaired = 0;
+for (const base of [root, outputRoot]) walkHtml(base, file => {
+  const before = fs.readFileSync(file, 'utf8');
+  const after = before.replace(/href="\/?corrections\.html"/g, 'href="/trust-corrections.html"');
+  if (after !== before) {
+    fs.writeFileSync(file, after);
+    correctionRoutesRepaired += 1;
+  }
+});
+
 for (const relative of ['data/exposure-evidence-ledger.json','data/cinematic-hit-list.json','data/exposure-integrity-engine.json','downloads/exposure-integrity-report.json','hit-list.html','cinematic-hit-list.html','subject-index.html','predators-in-power.html','dark-speculation-lab.html','evidence-vault.html','wrongdoing-tracker.html','live-intel.html']) copyToOutput(relative);
 
 if (!engine.ok) throw new Error(`Exposure Integrity finalization failed: ${JSON.stringify(engine.criticalFailures || [])}`);
-console.log(`Exposure Integrity finalization passed: ${downgradedGenericDarkClaims} generic Dark Files lane(s) retained as inference, all Hit List entries have review dates and investigation actions, and six core investigation surfaces link to the cinematic entry point.`);
+console.log(`Exposure Integrity finalization passed: ${downgradedGenericDarkClaims} generic Dark Files lane(s) retained as inference, all Hit List entries have review dates and investigation actions, six core investigation surfaces link to the cinematic entry point, and ${correctionRoutesRepaired} correction route file(s) were repaired.`);

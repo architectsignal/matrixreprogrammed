@@ -69,7 +69,8 @@ for (const base of roots) {
 
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
-const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
+const officialWaveMerge = runRequired('scripts/merge-predators-official-wave4.js');
+const engineBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after official wave failure' } : runRequired('scripts/build-criminal-conduct-engine.js');
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
@@ -91,6 +92,8 @@ const report = {
   runtime,
   copiedRuntime,
   criminalConductEngine: {
+    officialWaveMergeStatus: officialWaveMerge.status,
+    officialWaveReport: 'downloads/predators-in-power-official-wave4-merge.json',
     buildStatus: engineBuild.status,
     extensionlessSyncStatus: engineAliasSync.status,
     pressureTestStatus: engineTest.status,
@@ -137,4 +140,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; official 2026 Predators wave, Criminal Conduct & Allegations, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);

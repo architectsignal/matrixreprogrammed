@@ -58,6 +58,22 @@ Evidence age is never a truth score. Historical facts do not become false becaus
 
 The static build must say when source availability has **not** been checked and when human re-verification has **not** occurred. It must never manufacture those assurances.
 
+### Power Diff
+
+Every reverse-search record receives a normalized current snapshot and fingerprint. Power Diff can classify later field-level changes as:
+
+- Added
+- Changed
+- Ended
+- Disputed
+- Corrected
+
+The first trustworthy run establishes a baseline only. It must report **no historical change** when no genuine earlier snapshot exists. A later comparison may use only a preserved prior snapshot, never an invented or reconstructed past presented as certain.
+
+A removed record must retain its previous fingerprint, show that the current record is absent and require human review. Absence may reflect correction, consolidation, expiry, route changes or a build defect and must not be described as concealment without evidence.
+
+A field difference is not automatically material, causal or evidence of wrongdoing. Each change remains attached to its accountability record, responsibility chain, freshness review, correction route and evidence boundary.
+
 ## Operating boundary
 
 The system must distinguish documented fact, official allegation, documented association, analytical inference, unverified claim and speculation. Proximity is never guilt. Every significant conclusion must explain what the evidence establishes, what it does not establish, credible alternatives and what evidence would change the judgement.

@@ -13,15 +13,15 @@ let source = fs.readFileSync(sourcePath, 'utf8');
 const original = source;
 
 source = source
-  .replace('...entity.notes, ...entity.aliases, powerMechanismFor(entity)', '...array(entity.notes), ...array(entity.aliases), powerMechanismFor(entity)')
-  .replace('entity.powerRoles.length || entity.nodeScore >= 60', 'array(entity.powerRoles).length || entity.nodeScore >= 60');
+  .replace(/\.\.\.entity\.notes\b/g, '...array(entity.notes)')
+  .replace(/\.\.\.entity\.aliases\b/g, '...array(entity.aliases)')
+  .replace(/entity\.powerRoles\.length\b/g, 'array(entity.powerRoles).length');
 
-if (source === original) {
-  if (!source.includes('...array(entity.notes), ...array(entity.aliases)')) {
-    throw new Error('Exposure engine optional-array hardening target was not found');
-  }
+if (source === original && !source.includes('...array(entity.notes)') && !source.includes('...array(entity.aliases)')) {
+  throw new Error('Exposure engine optional-array hardening target was not found');
 }
 if (/\.\.\.entity\.(?:notes|aliases)\b/.test(source)) throw new Error('Unsafe optional entity-array spread remains in Exposure Integrity Engine');
+if (/entity\.powerRoles\.length\b/.test(source)) throw new Error('Unsafe optional power-role length access remains in Exposure Integrity Engine');
 
 fs.mkdirSync(runtimeDir, { recursive: true });
 fs.writeFileSync(runtimePath, source);
@@ -30,4 +30,4 @@ try {
 } finally {
   try { fs.unlinkSync(runtimePath); } catch {}
 }
-console.log('Exposure Integrity runtime wrapper completed with optional entity arrays normalized.');
+console.log('Exposure Integrity runtime wrapper completed with all optional entity arrays normalized.');

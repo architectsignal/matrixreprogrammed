@@ -9,12 +9,15 @@ on:
       - 'data/dark-speculation-claims.json'
       - 'data/evidence-weighted-relationship-graph.json'
       - 'data/clock-wall.json'
+      - 'data/latest-public-drops.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - 'scripts/finalize-search-first-accountability-home.js'
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/public-consequence-contracts-pressure-test.js'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
@@ -27,12 +30,15 @@ on:
       - 'data/dark-speculation-claims.json'
       - 'data/evidence-weighted-relationship-graph.json'
       - 'data/clock-wall.json'
+      - 'data/latest-public-drops.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - 'scripts/finalize-search-first-accountability-home.js'
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/public-consequence-contracts-pressure-test.js'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -52,7 +58,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Syntax-check Exposure Integrity and accountability homepage scripts
+      - name: Syntax-check Exposure Integrity and accountability scripts
         run: |
           node --check scripts/build-exposure-integrity-engine.js
           node --check scripts/run-exposure-integrity-engine.js
@@ -65,6 +71,8 @@ jobs:
           node --check scripts/finalize-search-first-accountability-home.js
           node --check scripts/refine-accountability-question-ledger.js
           node --check scripts/search-first-accountability-home-pressure-test.js
+          node --check scripts/build-public-consequence-contracts.js
+          node --check scripts/public-consequence-contracts-pressure-test.js
 
       - name: Build dossier accountability inputs
         run: node scripts/build-dossier-accountability-overlays.js
@@ -85,7 +93,7 @@ jobs:
       - name: Run fail-closed Exposure Integrity pressure test
         run: node scripts/exposure-integrity-pressure-test.js
 
-      - name: Build search-first homepage and Open Question Ledger
+      - name: Build search-first homepage, Open Question Ledger and Accountability Twins
         run: |
           node scripts/finalize-search-first-accountability-home.js
           node scripts/refine-accountability-question-ledger.js
@@ -93,7 +101,7 @@ jobs:
       - name: Run fail-closed accountability homepage pressure test
         run: node scripts/search-first-accountability-home-pressure-test.js
 
-      - name: Upload Exposure Integrity and accountability homepage proof
+      - name: Upload Exposure Integrity and future-accountability proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -104,6 +112,7 @@ jobs:
             data/exposure-evidence-ledger.json
             data/cinematic-hit-list.json
             data/accountability-question-ledger.json
+            data/public-consequence-contracts.json
             downloads/exposure-integrity-report.json
             downloads/exposure-integrity-pressure-test.json
             downloads/exposure-integrity-input-report.json
@@ -111,9 +120,14 @@ jobs:
             downloads/search-first-accountability-home-report.json
             downloads/accountability-question-ledger-refinement.json
             downloads/search-first-accountability-home-pressure-test.json
+            downloads/public-consequence-contracts-report.json
+            downloads/public-consequence-contracts-pressure-test.json
+            downloads/public-consequence-contracts.csv
             hit-list.html
             predators-in-power.html
             index.html
             accountability-home.css
             accountability-home.js
             search-query-handoff.js
+            public-consequence-contracts.html
+            public-consequence-contracts.css

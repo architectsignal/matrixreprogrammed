@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "publicationRule": "Official-source child-offence records involving documented positions of authority. Charges remain accusations; a guilty plea or verdict is classified separately from sentencing; present employment or office is never inferred when an official status source is absent.",
+  "subjects": [
+    {
+      "key": "jeffrey-nowak",
+      "name": "Jeffrey Nowak",
+      "aliases": [],
+      "dossierRoute": "dossier-jeffrey-nowak.html",
+      "lifeStatus": "living; federal case pending at last official check",
+      "legalStatusSummary": "Federally charged in July 2026 with receipt and possession of child sexual abuse material. The charges are accusations and no final adjudication is stated.",
+      "publicSummary": "Diocese of Buffalo priest on administrative leave since 2019, charged in a federal child sexual abuse material case in July 2026.",
+      "powerRoles": [
+        {
+          "sector": "religious",
+          "title": "Priest",
+          "organization": "Diocese of Buffalo",
+          "from": "not stated",
+          "to": "present administrative-leave status stated in 2026 charging record",
+          "status": "administrative leave",
+          "sourceLabel": "DOJ criminal complaint statement identifying priest and leave status",
+          "sourceUrl": "https://www.justice.gov/usao-wdny/pr/priest-administrative-leave-arrested-charged-receipt-and-possession-child-pornography",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "nowak-federal-complaint-2026",
+          "category": "charge_indictment_complaint",
+          "title": "Federal complaint alleging receipt and possession of child sexual abuse material",
+          "summary": "A federal complaint charged Nowak with receipt and possession of child sexual abuse material. DOJ stated that he had been on administrative leave from the Diocese of Buffalo since 2019 and described a reopened investigation following an international law-enforcement referral.",
+          "sourceLabel": "Western District of New York charging statement",
+          "sourceUrl": "https://www.justice.gov/usao-wdny/pr/priest-administrative-leave-arrested-charged-receipt-and-possession-child-pornography",
+          "date": "2026-07-08",
+          "jurisdiction": "United States federal court, Western District of New York",
+          "status": "charged; case pending at last official check",
+          "outcome": "No final adjudication stated in the cited complaint announcement.",
+          "domains": ["csam_offence", "child_sexual_exploitation"],
+          "victims": ["children depicted in alleged CSAM"],
+          "rightOfReply": "The complaint is an accusation. Nowak is presumed innocent unless and until proven guilty.",
+          "counterEvidence": "DOJ stated that an earlier investigation was closed in 2023 after no child pornography was found in a search of the referenced email account; the later case arose after a separate 2025 referral and 2026 search.",
+          "proofNeeded": "Preserve the complaint, docket, device-forensics evidence, any suppression rulings, plea or trial outcome, dismissal or acquittal, and final institutional status.",
+          "boundary": "Limited to the allegations, procedural history and administrative-leave status stated in the official federal record. A charge is not proof of guilt."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record establishes a pending federal CSAM prosecution involving a religious leader whose institutional authority had already been suspended through administrative leave.",
+        "lanes": ["child safeguarding", "religious authority", "institutional response", "digital evidence"],
+        "whyItMatters": "The case requires separate tracking of criminal allegations, prior institutional action, the earlier closed investigation and the later reopened investigation.",
+        "mechanism": "The alleged conduct involved online storage and communications; no current pastoral access is established by the cited record.",
+        "effect": "Strengthens the suspended-power category and the requirement to preserve counter-evidence and procedural history.",
+        "alternativeExplanation": "The new allegations may be contested, and the earlier search did not locate the alleged material described in the later case.",
+        "doesNotProve": "It does not prove guilt, diocesan knowledge of the alleged 2025–2026 conduct, or institutional facilitation.",
+        "evidenceStrength": "E4 official federal complaint with explicit counter-evidence and role status",
+        "confidence": "high for charge and leave status; no conclusion on guilt",
+        "nextQuestions": ["What is the federal docket disposition?", "What final canonical or employment action is documented?", "How did the later evidence differ from the earlier closed investigation?"]
+      }
+    },
+    {
+      "key": "miguel-adrian-gonzalez",
+      "name": "Miguel Adrian Gonzalez",
+      "aliases": ["Miguel Gonzalez"],
+      "dossierRoute": "dossier-miguel-adrian-gonzalez.html",
+      "lifeStatus": "living; detained and federal case pending at last official check",
+      "legalStatusSummary": "Federally indicted in November 2025 on sixteen child sexual exploitation counts. The indictment contains allegations, not a conviction.",
+      "publicSummary": "CEO of a Los Angeles childcare company, camp counselor and private babysitter charged with using positions of authority to exploit children in his care.",
+      "powerRoles": [
+        {
+          "sector": "business_corporate",
+          "title": "Chief Executive Officer",
+          "organization": "Let's Play LA LLC",
+          "from": "at least during the alleged 2021–2025 conduct",
+          "to": "corporate status after detention not established by cited record",
+          "status": "status pending official corporate verification",
+          "sourceLabel": "DOJ indictment statement identifying childcare-company CEO role",
+          "sourceUrl": "https://www.justice.gov/usao-cdca/pr/ceo-la-based-childcare-company-and-camp-counselor-charged-more-dozen-child-sexual",
+          "lastChecked": "2026-07-28"
+        },
+        {
+          "sector": "education_youth_services",
+          "title": "Camp Counselor and Private Babysitter",
+          "organization": "Childcare and youth-service roles identified in federal indictment announcement",
+          "from": "at least 2021",
+          "to": "2025",
+          "status": "former or inactive following detention; exact contractual status not stated",
+          "sourceLabel": "DOJ indictment statement identifying childcare authority",
+          "sourceUrl": "https://www.justice.gov/usao-cdca/pr/ceo-la-based-childcare-company-and-camp-counselor-charged-more-dozen-child-sexual",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "gonzalez-federal-indictment-2025",
+          "category": "charge_indictment_complaint",
+          "title": "Sixteen-count federal child sexual exploitation indictment",
+          "summary": "A federal grand jury charged Gonzalez with sixteen offenses, including obtaining custody of minors with intent to produce CSAM, production, distribution, receipt and possession. DOJ alleged that he used childcare, babysitting and camp-counselor positions to exploit at least six children.",
+          "sourceLabel": "Central District of California indictment statement",
+          "sourceUrl": "https://www.justice.gov/usao-cdca/pr/ceo-la-based-childcare-company-and-camp-counselor-charged-more-dozen-child-sexual",
+          "date": "2025-11-25",
+          "jurisdiction": "United States federal court, Central District of California",
+          "status": "indicted; detained; case pending at last official check",
+          "outcome": "No final adjudication stated in the cited indictment announcement.",
+          "domains": ["child_sexual_abuse", "child_sexual_exploitation", "csam_offence", "grooming"],
+          "victims": ["at least six children under his care or supervision"],
+          "rightOfReply": "The indictment contains allegations only. Gonzalez is presumed innocent unless and until proven guilty.",
+          "counterEvidence": "The cited announcement states the government's allegations and detention posture but does not establish guilt or the final status of the company.",
+          "proofNeeded": "Track the federal and related state dockets, plea or trial outcome, final corporate records, victim restitution and any regulatory or licensing review.",
+          "boundary": "Limited to the allegations and authority roles stated in the official indictment announcement. A charge is not proof of guilt."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record alleges direct use of childcare authority and custody access in a federal child-exploitation case.",
+        "lanes": ["child safeguarding", "private childcare authority", "corporate responsibility", "custody access"],
+        "whyItMatters": "Unlike a case involving unrelated private conduct, the indictment expressly connects the alleged mechanism to positions of childcare trust and supervision.",
+        "mechanism": "The government alleges that babysitting and childcare access enabled custody, production and abuse; the allegations remain unproven until adjudication.",
+        "effect": "Strongly raises the private youth-services safeguarding lane while preserving charge-versus-conviction boundaries.",
+        "alternativeExplanation": "The allegations may be contested or narrowed at trial, and the company's current status is not established in the cited source.",
+        "doesNotProve": "It does not prove guilt, knowledge by every employee or parent, or liability of unrelated childcare providers.",
+        "evidenceStrength": "E4 official federal indictment",
+        "confidence": "high for indictment and authority-at-charge; no conclusion on guilt",
+        "nextQuestions": ["What is the current federal and state docket status?", "What licensing or corporate action followed?", "Were institutional safeguarding failures independently documented?"]
+      }
+    },
+    {
+      "key": "gabriel-perez-air-force",
+      "name": "Gabriel Perez",
+      "aliases": [],
+      "dossierRoute": "dossier-gabriel-perez-air-force.html",
+      "lifeStatus": "living; convicted and awaiting sentencing at last official check",
+      "legalStatusSummary": "Convicted by a federal jury in July 2026 of attempted enticement and coercion of a minor and attempted transfer of obscene material to a minor; sentencing was scheduled for December 2026.",
+      "publicSummary": "United States Air Force captain at the time of the proven 2024 conduct, convicted in a federal child-exploitation case.",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Captain",
+          "organization": "United States Air Force",
+          "from": "before or during August 2024",
+          "to": "current military status after conviction not stated",
+          "status": "role at offense; present status unverified",
+          "sourceLabel": "DOJ conviction statement identifying Air Force rank at conduct",
+          "sourceUrl": "https://www.justice.gov/usao-nj/pr/air-force-captain-convicted-child-exploitation-offenses",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "perez-air-force-federal-conviction-2026",
+          "category": "conviction_final_judgment",
+          "title": "Federal jury conviction for attempted child enticement and transfer of obscene material",
+          "summary": "A federal jury convicted Perez of attempted enticement and coercion of a minor and attempted transfer of obscene material to a minor. DOJ stated that he was a United States Air Force captain when he communicated with an undercover officer posing as a fourteen-year-old girl.",
+          "sourceLabel": "District of New Jersey conviction statement",
+          "sourceUrl": "https://www.justice.gov/usao-nj/pr/air-force-captain-convicted-child-exploitation-offenses",
+          "date": "2026-07-17",
+          "jurisdiction": "United States federal court, District of New Jersey",
+          "status": "convicted; sentencing pending at last official check",
+          "outcome": "Jury verdict on two offenses; sentencing scheduled for December 9, 2026 in the cited record.",
+          "domains": ["child_sexual_exploitation", "grooming"],
+          "victims": ["undercover officer posing as a fourteen-year-old child"],
+          "rightOfReply": "Perez exercised his trial rights and retains applicable post-trial and appellate rights.",
+          "counterEvidence": "The intended minor was an undercover officer rather than an actual child; the offenses were attempts. That limits victim classification but does not negate the jury verdict.",
+          "proofNeeded": "Preserve the judgment, sentence, military administrative disposition and appellate status.",
+          "boundary": "Limited to the exact attempted offenses, jury verdict and rank-at-conduct stated in the official record. Current military status is not inferred."
+        }
+      ],
+      "conclusion": {
+        "finding": "A final jury verdict establishes attempted child-exploitation offenses by a person who held commissioned military authority during the conduct.",
+        "lanes": ["child safeguarding", "military authority", "online enticement", "institutional discipline"],
+        "whyItMatters": "Commissioned rank carries public authority and institutional trust, but military status after conviction requires a separate official record.",
+        "mechanism": "The proven conduct involved online communications with an undercover persona rather than documented use of military systems.",
+        "effect": "Strengthens the military-authority lane and the requirement to distinguish rank-at-offense from present status.",
+        "alternativeExplanation": "No actual child communicated with Perez in the charged interaction, and the case may be subject to post-trial or appellate challenge.",
+        "doesNotProve": "It does not prove misuse of military systems, knowledge by colleagues or current Air Force status.",
+        "evidenceStrength": "E6 federal jury conviction",
+        "confidence": "very high for verdict and rank-at-conduct; unresolved for current military status",
+        "nextQuestions": ["What sentence was imposed?", "What military administrative action followed?", "What is the appellate status?"]
+      }
+    },
+    {
+      "key": "otilio-green",
+      "name": "Otilio Green",
+      "aliases": [],
+      "dossierRoute": "dossier-otilio-green.html",
+      "lifeStatus": "living; pleaded guilty and awaiting sentencing at last official check",
+      "legalStatusSummary": "Pleaded guilty in February 2026 to receipt of child sexual abuse material. DOJ described him as a former Yale police officer.",
+      "publicSummary": "Former Yale University police officer who pleaded guilty to a federal child-exploitation offense.",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Police Officer",
+          "organization": "Yale University Police Department",
+          "from": "at least two years before April 2025 arrest",
+          "to": "before February 2026 guilty plea",
+          "status": "former",
+          "sourceLabel": "DOJ guilty-plea statement identifying former officer status",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/former-police-officer-pleads-guilty-federal-child-exploitation-offense",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "green-federal-guilty-plea-2026",
+          "category": "canonical_penal_judgment",
+          "title": "Federal guilty plea to receipt of child sexual abuse material",
+          "summary": "Green pleaded guilty to receipt of child sexual abuse material. DOJ stated that he had used online platforms to receive numerous abusive images and videos and that he was formerly employed as an officer with the Yale University Police Department.",
+          "sourceLabel": "District of Connecticut guilty-plea statement",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/former-police-officer-pleads-guilty-federal-child-exploitation-offense",
+          "date": "2026-02-27",
+          "jurisdiction": "United States federal court, District of Connecticut",
+          "status": "guilty plea accepted; sentencing pending at last official check",
+          "outcome": "Pleaded guilty to receipt of child sexual abuse material; sentence not stated in the cited plea announcement.",
+          "domains": ["csam_offence", "child_sexual_exploitation"],
+          "victims": ["children depicted in CSAM"],
+          "rightOfReply": "Green entered a guilty plea with counsel and retains applicable sentencing and appellate rights.",
+          "counterEvidence": "The cited record does not state that police systems, authority or access were used to commit the offense.",
+          "proofNeeded": "Preserve the judgment, sentence, restitution, employment disposition and appellate status.",
+          "boundary": "Limited to the accepted guilty plea and former employment status in the official record. It does not establish institutional knowledge or misuse of police systems."
+        }
+      ],
+      "conclusion": {
+        "finding": "An accepted guilty plea establishes a federal child-exploitation offense by a former university police officer.",
+        "lanes": ["child safeguarding", "law enforcement authority", "university policing", "digital evidence"],
+        "whyItMatters": "The case involves a former trusted officer, but the official plea record does not connect the offense to police systems or university access.",
+        "mechanism": "The admitted conduct involved online platforms and stored material.",
+        "effect": "Strengthens the former-law-enforcement accountability lane while limiting institutional inference.",
+        "alternativeExplanation": "The offending may have been wholly separate from his professional role.",
+        "doesNotProve": "It does not prove Yale knowledge, institutional facilitation or abuse of police authority.",
+        "evidenceStrength": "E5 accepted federal guilty plea",
+        "confidence": "very high for plea and former role",
+        "nextQuestions": ["What sentence and restitution were imposed?", "Was any institutional review published?", "What is the final employment record?"]
+      }
+    },
+    {
+      "key": "alexander-aiello",
+      "name": "Alexander Aiello",
+      "aliases": [],
+      "dossierRoute": "dossier-alexander-aiello.html",
+      "lifeStatus": "living; federal case pending at last official check",
+      "legalStatusSummary": "Federally charged in May 2025 with receipt of child sexual abuse material. The charge remains an accusation unless and until adjudicated.",
+      "publicSummary": "Gloucester Police Department patrol officer charged in a federal CSAM case; later employment status is not established by the cited charging record.",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Patrol Officer",
+          "organization": "Gloucester Police Department",
+          "from": "not stated",
+          "to": "employment status after May 2025 charge not established",
+          "status": "status pending official employment verification",
+          "sourceLabel": "DOJ charging statement identifying patrol-officer employment",
+          "sourceUrl": "https://www.justice.gov/usao-ma/pr/gloucester-police-officer-charged-child-pornography-offense",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "aiello-federal-charge-2025",
+          "category": "charge_indictment_complaint",
+          "title": "Federal charge for receipt of child sexual abuse material",
+          "summary": "A federal complaint charged Aiello with receipt of child sexual abuse material. DOJ identified him as a Gloucester Police Department patrol officer and alleged that devices seized from his residence contained evidence connected to a dark-web CSAM platform.",
+          "sourceLabel": "District of Massachusetts charging statement",
+          "sourceUrl": "https://www.justice.gov/usao-ma/pr/gloucester-police-officer-charged-child-pornography-offense",
+          "date": "2025-05-09",
+          "jurisdiction": "United States federal court, District of Massachusetts",
+          "status": "charged; final disposition not stated in cited record",
+          "outcome": "No final adjudication stated in the cited charging announcement.",
+          "domains": ["csam_offence", "child_sexual_exploitation"],
+          "victims": ["children depicted in alleged CSAM"],
+          "rightOfReply": "The charge is an accusation. Aiello is presumed innocent unless and until proven guilty.",
+          "counterEvidence": "The cited source describes preliminary device examination and charging allegations, not a conviction or final employment action.",
+          "proofNeeded": "Obtain the federal docket, final disposition and an official employment-status source.",
+          "boundary": "Limited to the allegations and role-at-charge in the official federal record. A charge is not proof of guilt, and current employment is not inferred."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record establishes a pending CSAM charge involving a patrol officer employed at the time of charging.",
+        "lanes": ["child safeguarding", "law enforcement authority", "dark-web investigation", "employment accountability"],
+        "whyItMatters": "Public-trust employment makes accurate role-status and disposition tracking necessary.",
+        "mechanism": "The alleged conduct involved private devices and online access; no misuse of police systems is established.",
+        "effect": "Adds a role-at-charge case while correctly withholding current-status classification.",
+        "alternativeExplanation": "The allegations may be contested or disproved.",
+        "doesNotProve": "It does not prove guilt, department knowledge or misuse of official authority.",
+        "evidenceStrength": "E4 official federal charge",
+        "confidence": "high for charge and role-at-charge; unresolved for guilt and current employment",
+        "nextQuestions": ["What is the docket outcome?", "What official employment action occurred?", "Was any departmental review published?"]
+      }
+    },
+    {
+      "key": "isaac-nielsen",
+      "name": "Isaac Nielsen",
+      "aliases": [],
+      "dossierRoute": "dossier-isaac-nielsen.html",
+      "lifeStatus": "living; federal case pending at last official check",
+      "legalStatusSummary": "Federally charged in December 2025 with distribution and possession of child sexual abuse material. The allegations remain pending unless and until adjudicated.",
+      "publicSummary": "Roanoke Rapids police officer employed by the department at arrest, charged in a federal child-exploitation case; later employment status is not established by the cited record.",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Police Officer",
+          "organization": "Roanoke Rapids Police Department",
+          "from": "not stated",
+          "to": "employment status after December 2025 arrest not established",
+          "status": "status pending official employment verification",
+          "sourceLabel": "DOJ charging statement identifying employment at arrest",
+          "sourceUrl": "https://www.justice.gov/usao-ednc/pr/roanoke-rapids-police-officer-arrested-and-charged-child-exploitation-offenses",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "nielsen-federal-charge-2025",
+          "category": "charge_indictment_complaint",
+          "title": "Federal child-exploitation complaint involving alleged distribution of CSAM",
+          "summary": "Federal authorities charged Nielsen after an undercover investigation. DOJ stated that he was employed by the Roanoke Rapids Police Department at arrest and alleged distribution of child sexual abuse material and online statements concerning sexual contact with children.",
+          "sourceLabel": "Eastern District of North Carolina charging statement",
+          "sourceUrl": "https://www.justice.gov/usao-ednc/pr/roanoke-rapids-police-officer-arrested-and-charged-child-exploitation-offenses",
+          "date": "2025-12-05",
+          "jurisdiction": "United States federal court, Eastern District of North Carolina",
+          "status": "charged; final disposition not stated in cited record",
+          "outcome": "No final adjudication stated in the cited charging announcement.",
+          "domains": ["csam_offence", "child_sexual_exploitation", "suspected_conduct"],
+          "victims": ["children depicted in alleged CSAM"],
+          "rightOfReply": "The complaint contains allegations. Nielsen is presumed innocent unless and until proven guilty.",
+          "counterEvidence": "The cited source does not state a conviction, final employment action or use of police systems.",
+          "proofNeeded": "Obtain the docket, final legal disposition and an official department employment record.",
+          "boundary": "Limited to the allegations and employment-at-arrest stated in the official federal record. A charge is not proof of guilt."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record establishes a pending child-exploitation prosecution involving a person employed as a police officer at arrest.",
+        "lanes": ["child safeguarding", "law enforcement authority", "online distribution", "employment accountability"],
+        "whyItMatters": "The case requires prompt tracking of legal disposition and institutional employment action without assuming guilt or department knowledge.",
+        "mechanism": "The allegations concern online communications and alleged distribution; no official-system misuse is established.",
+        "effect": "Strengthens the role-at-charge lane and highlights missing current-status evidence.",
+        "alternativeExplanation": "The allegations may be challenged or disproved, and later employment status may have changed.",
+        "doesNotProve": "It does not prove guilt, misuse of authority or institutional facilitation.",
+        "evidenceStrength": "E4 official federal complaint",
+        "confidence": "high for charge and employment-at-arrest; unresolved for guilt and current status",
+        "nextQuestions": ["What is the federal docket outcome?", "What official employment action followed?", "Did any internal review identify documented control failures?"]
+      }
+    }
+  ]
+}

@@ -43,10 +43,10 @@ if (!failures.length) {
   }
 
   const worker = read('src/worker-consequence-tracker.js');
-  for (const marker of ["DAILY_CRON = '25 5 * * *'",'MAX_MANIFEST_CONTRACTS = 12','MAX_DUE_PER_RUN = 4','perFollowerWrites: 0','aiInferenceInsideWorker: false','consequence_contract_versions','consequence_review_queue','consequence_events','member_entity_follows','locked-primary-decision-record']) {
+  for (const marker of ["DAILY_CRON = '25 5 * * *'",'MAX_MANIFEST_CONTRACTS = 12','MAX_DUE_PER_RUN = 4','perFollowerWrites: 0','aiInferenceInsideWorker: false','consequence_contract_versions','consequence_review_queue','consequence_events','member_entity_follows','locked-primary-decision-record','UPDATE consequence_contracts SET active=0']) {
     if (!worker.includes(marker)) fail(`Tracker runtime missing ${marker}`);
   }
-  const estimatedMaximumQueries = 6 + (12 * 2) + 1 + (4 * 3);
+  const estimatedMaximumQueries = 7 + (12 * 2) + 1 + (4 * 3);
   if (estimatedMaximumQueries > 50) fail(`Estimated D1 query count ${estimatedMaximumQueries} exceeds the Workers Free per-invocation limit`);
 
   const production = read('src/worker-production.js');
@@ -78,7 +78,7 @@ const report = {
     scheduledRunsPerDay: 1,
     maximumManifestContracts: 12,
     maximumDuePerRun: 4,
-    estimatedMaximumD1QueriesPerRun: 43,
+    estimatedMaximumD1QueriesPerRun: 44,
     isolatedCron: '25 5 * * *',
     configuredCronSlots: 4,
     availableCronSlots: 1,

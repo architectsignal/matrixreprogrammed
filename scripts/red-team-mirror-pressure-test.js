@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 require('./install-red-team-mirror.js');
+require('./finalize-red-team-mirror-routes.js');
 
 const root = process.cwd();
 const failures = [];
@@ -24,6 +25,7 @@ const powerDiff = json('data/power-diff.json');
 const page = read('red-team-mirror.html');
 const client = read('red-team-mirror.js');
 const css = read('red-team-mirror.css');
+const currentIds = new Set((reverseIndex.records || []).map(item => String(item.id || '')));
 
 if (!Array.isArray(ledger.mirrors) || ledger.mirrors.length < 1) fail('Red-Team Mirror ledger has no mirrors');
 if (!String(ledger.boundary || '').includes('must not invent counter-evidence or manufacture false balance')) fail('Red-Team Mirror lacks the no-false-balance boundary');
@@ -56,7 +58,11 @@ if (!css.includes('.red-team-challenge') || !css.includes('@media')) fail('Red-T
 if (!(reverseIndex.records || []).every(item => String(item.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-'))) fail('Reverse Accountability records are not linked to Red-Team Mirror');
 if (!(chains.chains || []).every(item => String(item.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-'))) fail('Power Supply Chains are not linked to Red-Team Mirror');
 if (!(halfLife.entries || []).every(item => String(item.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-'))) fail('Evidence Half-Life records are not linked to Red-Team Mirror');
-if (!(powerDiff.entries || []).every(item => String(item.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-'))) fail('Power Diff records are not linked to Red-Team Mirror');
+for (const entry of powerDiff.entries || []) {
+  const isCurrent = currentIds.has(String(entry.sourceRecordId || ''));
+  if (isCurrent && !String(entry.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-')) fail(`${entry.id || 'Power Diff entry'} current record lacks Red-Team Mirror route`);
+  if (!isCurrent && entry.redTeamMirrorRoute) fail(`${entry.id || 'Power Diff entry'} historical-only record links to a nonexistent Red-Team Mirror`);
+}
 if (/\beval\s*\(|new Function\s*\(/.test(client)) fail('Red-Team Mirror client contains unsafe dynamic code execution');
 
 if (failures.length) {
@@ -72,6 +78,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'red-team-mirror-pressure-test.jso
   mirrorCount: ledger.mirrors.length,
   noAutomatedVerdicts: true,
   noInventedCounterEvidence: true,
-  noForcedFalseBalance: true
+  noForcedFalseBalance: true,
+  historicalOnlyRoutesBlocked: true
 }, null, 2) + '\n');
 console.log(`Red-Team Mirror pressure test passed with ${ledger.mirrors.length} records and no automated verdicts.`);

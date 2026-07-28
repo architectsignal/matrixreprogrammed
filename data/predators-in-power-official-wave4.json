@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "publicationRule": "These subjects are sourced only from official government, prosecution, court or institution records. Charges remain accusations and are never presented as convictions. Power-role status is separately classified and dated.",
+  "subjects": [
+    {
+      "key": "kevin-phillip-hedgpeth",
+      "name": "Kevin Phillip Hedgpeth",
+      "aliases": ["Kevin Hedgpeth"],
+      "dossierRoute": "dossier-kevin-phillip-hedgpeth.html",
+      "lifeStatus": "living; federal case pending at last official check",
+      "legalStatusSummary": "Federally charged in April 2026 with possession and production of child sexual abuse material. The accusations remain pending unless and until adjudicated.",
+      "publicSummary": "Former Hanahan mayor pro tem and city council member charged in a federal child-exploitation case. Official city election records show the council seat was vacant and filled through a July 2026 special election.",
+      "powerRoles": [
+        {
+          "sector": "public_office",
+          "title": "Mayor Pro Tem and City Council Member",
+          "organization": "City of Hanahan, South Carolina",
+          "from": "not stated",
+          "to": "2026",
+          "status": "former",
+          "sourceLabel": "DOJ charging statement identifying public office",
+          "sourceUrl": "https://www.justice.gov/usao-sc/pr/hanahan-city-councilman-and-mayor-pro-tem-arrested-possession-production-child-sexual",
+          "statusSourceLabel": "City of Hanahan certified special-election result for vacant council seat",
+          "statusSourceUrl": "https://www.cityofhanahan.com/citycouncil/page/official-results-july-14-2026-hanahan-special-election",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "hedgpeth-federal-charges-2026",
+          "category": "charge_indictment_complaint",
+          "title": "Federal charges for possession and production of child sexual abuse material",
+          "summary": "A federal criminal complaint identified Hedgpeth as Hanahan mayor pro tem and a city council member and charged him with possession and production of child sexual abuse material. The charging statement described alleged payments to accounts associated with minors or suspected of selling content.",
+          "sourceLabel": "District of South Carolina charging statement",
+          "sourceUrl": "https://www.justice.gov/usao-sc/pr/hanahan-city-councilman-and-mayor-pro-tem-arrested-possession-production-child-sexual",
+          "date": "2026-04-14",
+          "jurisdiction": "United States federal court, District of South Carolina",
+          "status": "charged; case pending at last official check",
+          "outcome": "No final adjudication stated in the cited charging record.",
+          "domains": ["child_sexual_exploitation", "csam_offence"],
+          "victims": ["minors", "suspected child-exploitation victims"],
+          "rightOfReply": "The charges are accusations. Hedgpeth is presumed innocent unless and until proven guilty in court.",
+          "counterEvidence": "The charging document does not establish guilt, and the official source expressly preserves the presumption of innocence.",
+          "proofNeeded": "Maintain the indictment, court docket, plea or trial outcome, sentencing record if any, and any dismissal or acquittal.",
+          "boundary": "Limited to the allegations in the cited federal charging record. A charge is not proof of guilt."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record establishes a child-exploitation prosecution involving a person who held municipal legislative and mayor-pro-tem authority when charged, followed by a documented vacancy in that council seat.",
+        "lanes": ["child safeguarding", "public office", "digital payments", "official accountability"],
+        "whyItMatters": "The case tests whether public institutions rapidly separate active authority from a serious pending safeguarding prosecution while preserving due process.",
+        "mechanism": "The alleged conduct involved online access and payments; the public-power relevance comes from the separately documented municipal office.",
+        "effect": "Strengthens the need for current/former status tracking and charge-versus-conviction separation.",
+        "widerDirection": "Track court disposition, municipal ethics and vacancy procedures, and whether public access or systems played any documented role.",
+        "alternativeExplanation": "The allegations may be contested or disproved; a vacant seat does not establish guilt.",
+        "doesNotProve": "It does not prove guilt, institutional knowledge, facilitation by colleagues, or wrongdoing by the City of Hanahan.",
+        "evidenceStrength": "E4 official federal charge plus official city vacancy evidence",
+        "confidence": "high for charge and former-role status; no conclusion on guilt",
+        "nextQuestions": ["What is the current federal docket status?", "Was any employment or ethics review published?", "What final disposition follows?"]
+      }
+    },
+    {
+      "key": "brandon-mcgibbon",
+      "name": "Brandon McGibbon",
+      "aliases": [],
+      "dossierRoute": "dossier-brandon-mcgibbon.html",
+      "lifeStatus": "living; federal case pending at last official check",
+      "legalStatusSummary": "Federally indicted in May 2026 on five child-exploitation counts involving three minor victims. The charges remain accusations unless and until adjudicated.",
+      "publicSummary": "San Diego police officer charged in a federal child-exploitation case. The cited official record identifies his police role at charging, but does not establish his later employment status.",
+      "powerRoles": [
+        {
+          "sector": "law_enforcement_military",
+          "title": "Police Officer",
+          "organization": "San Diego Police Department",
+          "from": "not stated",
+          "to": "employment status after 2026-05-22 not established by cited record",
+          "status": "status pending official employment verification",
+          "sourceLabel": "DOJ indictment statement identifying police role",
+          "sourceUrl": "https://www.justice.gov/usao-sdca/pr/police-officer-charged-child-exploitation-crimes-involving-multiple-minor-victims",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "mcgibbon-federal-indictment-2026",
+          "category": "charge_indictment_complaint",
+          "title": "Federal indictment on five child-exploitation counts involving three minors",
+          "summary": "A federal grand jury indictment charged McGibbon with attempted receipt and production of child sexual abuse material and attempted enticement and coercion involving three minor victims. DOJ identified him as a San Diego police officer.",
+          "sourceLabel": "Southern District of California indictment statement",
+          "sourceUrl": "https://www.justice.gov/usao-sdca/pr/police-officer-charged-child-exploitation-crimes-involving-multiple-minor-victims",
+          "date": "2026-05-22",
+          "jurisdiction": "United States federal court, Southern District of California",
+          "status": "indicted; case pending at last official check",
+          "outcome": "No final adjudication stated in the cited indictment announcement.",
+          "domains": ["child_sexual_exploitation", "csam_offence", "grooming"],
+          "victims": ["three minors"],
+          "rightOfReply": "The indictment contains allegations only. McGibbon is presumed innocent unless and until proven guilty.",
+          "counterEvidence": "The official announcement expressly states that the charges are accusations and does not state a conviction or final employment disposition.",
+          "proofNeeded": "Obtain the court docket and final disposition, plus an official San Diego employment-status record before classifying the role as current, suspended or former.",
+          "boundary": "Limited to the allegations in the cited federal indictment. A charge is not proof of guilt."
+        }
+      ],
+      "conclusion": {
+        "finding": "The official record establishes a pending federal child-exploitation prosecution involving a person identified as a police officer at the time of charging.",
+        "lanes": ["child safeguarding", "law enforcement authority", "online access", "institutional accountability"],
+        "whyItMatters": "Police authority involves public trust, access and safeguarding duties, making exact legal and employment-status tracking essential.",
+        "mechanism": "The alleged conduct involved online communications and attempted exploitation; no misuse of police systems is established by the cited announcement.",
+        "effect": "Strengthens the need to separate role-at-charge from verified present employment status.",
+        "widerDirection": "Seek official employment action, internal review and final court disposition without assuming institutional complicity.",
+        "alternativeExplanation": "The accusations may be contested or disproved, and the cited source does not establish later employment status.",
+        "doesNotProve": "It does not prove guilt, misuse of police authority, knowledge by colleagues or liability of the department.",
+        "evidenceStrength": "E4 official federal indictment",
+        "confidence": "high for indictment and role-at-charge; unresolved for guilt and current employment",
+        "nextQuestions": ["What is the official employment status?", "What is the federal docket disposition?", "Did an official internal review identify any institutional failures?"]
+      }
+    },
+    {
+      "key": "rodger-githens",
+      "name": "Rodger Githens",
+      "aliases": [],
+      "dossierRoute": "dossier-rodger-githens.html",
+      "lifeStatus": "living and federally incarcerated",
+      "legalStatusSummary": "Convicted in May 2026 and sentenced in July 2026 to 222 months for attempted enticement of a minor and receipt and distribution of child sexual abuse material.",
+      "publicSummary": "Former university professor and higher-education consultant convicted and sentenced in a federal child-exploitation case.",
+      "powerRoles": [
+        {
+          "sector": "education",
+          "title": "University Professor and Higher-Education Consultant",
+          "organization": "Local university and other colleges or universities identified generally in the official record",
+          "from": "not stated",
+          "to": "before 2026 conviction",
+          "status": "former",
+          "sourceLabel": "DOJ conviction and sentencing statements",
+          "sourceUrl": "https://www.justice.gov/usao-edca/pr/former-university-professor-sentenced-child-sexual-exploitation-offenses",
+          "lastChecked": "2026-07-28"
+        }
+      ],
+      "findings": [
+        {
+          "id": "githens-federal-conviction-sentence-2026",
+          "category": "conviction_final_judgment",
+          "title": "Federal conviction and 222-month sentence for attempted child enticement and CSAM offenses",
+          "summary": "After a stipulated bench trial, Githens was found guilty of attempted enticement of a minor and receipt and distribution of child sexual abuse material. In July 2026 the court sentenced him to 222 months in prison and ten years of supervised release.",
+          "sourceLabel": "Eastern District of California sentencing statement",
+          "sourceUrl": "https://www.justice.gov/usao-edca/pr/former-university-professor-sentenced-child-sexual-exploitation-offenses",
+          "date": "2026-07-24",
+          "jurisdiction": "United States federal court, Eastern District of California",
+          "status": "adjudicated and sentenced",
+          "outcome": "222 months in prison, ten years of supervised release, registration requirements and financial penalties stated by DOJ.",
+          "domains": ["child_sexual_exploitation", "csam_offence", "grooming"],
+          "victims": ["fictional seven-year-old presented by an undercover agent", "children depicted in CSAM"],
+          "rightOfReply": "Githens exercised trial rights through a stipulated bench trial and retains applicable appellate rights.",
+          "counterEvidence": "The enticement count involved an undercover operation and a fictional child, while the separate CSAM offenses involved actual abusive material. The conviction does not implicate students, colleagues or institutions without separate evidence.",
+          "proofNeeded": "Maintain the judgment, restitution determination and final appellate status.",
+          "boundary": "Limited to the exact offenses, defendant, court, jurisdiction and disposition in the cited final record."
+        }
+      ],
+      "conclusion": {
+        "finding": "The final federal record establishes child-exploitation offenses committed by a person who previously held educational authority and consulting access in higher education.",
+        "lanes": ["child safeguarding", "education authority", "online exploitation", "institutional access"],
+        "whyItMatters": "Educational authority can create trust and access, but the cited case does not state that institutional systems or students were used in the offenses.",
+        "mechanism": "The proven conduct involved online communications and child sexual abuse material rather than a documented institutional channel.",
+        "effect": "Strengthens the education-sector accountability lane while preserving the boundary between personal offending and institutional responsibility.",
+        "widerDirection": "Check whether employers received warnings, conducted reviews or changed safeguarding controls, but publish only documented findings.",
+        "alternativeExplanation": "The offenses may have been entirely outside his professional roles; the cited record does not establish institutional facilitation.",
+        "doesNotProve": "It does not prove abuse of students, knowledge by colleagues or wrongdoing by any university or client institution.",
+        "evidenceStrength": "E6 final federal conviction and sentence",
+        "confidence": "very high",
+        "nextQuestions": ["What appellate proceedings remain?", "Did any institution publish a safeguarding review?", "Were professional-access controls changed?"]
+      }
+    }
+  ]
+}

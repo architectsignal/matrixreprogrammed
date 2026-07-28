@@ -18,16 +18,18 @@
     {
       "id": "reverse-accountability-search",
       "name": "Reverse Accountability Search",
-      "status": "in-build",
+      "status": "functional-foundation",
       "purpose": "Let a reader begin with a consequence, cost, closure, restriction, contract, policy outcome or lived problem and trace backwards to implementation, decisions, authority, money, beneficiaries, affected groups and unresolved questions.",
-      "uniqueBehavior": "The user does not need to know the powerful person or institution before beginning the investigation."
+      "uniqueBehavior": "The user does not need to know the powerful person or institution before beginning the investigation.",
+      "currentCapability": "Searches current Accountability Twins and public-source leads, renders a six-step backwards evidence path and links each result to its responsibility chain."
     },
     {
       "id": "power-supply-chain",
       "name": "Power Supply Chain",
-      "status": "locked-next",
+      "status": "functional-foundation",
       "purpose": "Map who proposed, drafted, promoted, authorised, funded, implemented and benefited from an exercise of power, while distinguishing authority from access or association.",
-      "uniqueBehavior": "Responsibility is represented as an evidence-classified chain of authority and implementation rather than a generic social network."
+      "uniqueBehavior": "Responsibility is represented as an evidence-classified chain of authority and implementation rather than a generic social network.",
+      "currentCapability": "Builds ten-stage chains for every reverse-search record, visibly preserves unresolved stages and blocks authority claims based only on access, association or proximity."
     },
     {
       "id": "evidence-half-life",

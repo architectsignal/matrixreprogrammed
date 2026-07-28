@@ -1,0 +1,153 @@
+name: Reverse Accountability Platform Gate
+
+# Validates the permanent accountability innovation charter, voiced mission intro, reverse search, Power Supply Chain, Evidence Half-Life, Power Diff and Red-Team Mirror.
+on:
+  pull_request:
+    paths:
+      - 'data/accountability-innovation-roadmap.json'
+      - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
+      - 'reverse-accountability-search.js'
+      - 'reverse-accountability-search.css'
+      - 'power-supply-chain.js'
+      - 'power-supply-chain.css'
+      - 'evidence-half-life.js'
+      - 'evidence-half-life.css'
+      - 'power-diff.js'
+      - 'power-diff.css'
+      - 'red-team-mirror.js'
+      - 'red-team-mirror.css'
+      - 'scripts/install-reverse-accountability-platform.js'
+      - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/install-power-supply-chain.js'
+      - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/install-evidence-half-life.js'
+      - 'scripts/evidence-half-life-pressure-test.js'
+      - 'scripts/install-power-diff.js'
+      - 'scripts/power-diff-pressure-test.js'
+      - 'scripts/install-red-team-mirror.js'
+      - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/finalize-accountability-innovation-links.js'
+      - 'scripts/red-team-mirror-pressure-test.js'
+      - 'scripts/finalize-accountability-mission-intro.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - '.github/workflows/reverse-accountability-platform.yml'
+  push:
+    branches:
+      - 'agent/reverse-accountability-platform'
+    paths:
+      - 'data/accountability-innovation-roadmap.json'
+      - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
+      - 'reverse-accountability-search.js'
+      - 'reverse-accountability-search.css'
+      - 'power-supply-chain.js'
+      - 'power-supply-chain.css'
+      - 'evidence-half-life.js'
+      - 'evidence-half-life.css'
+      - 'power-diff.js'
+      - 'power-diff.css'
+      - 'red-team-mirror.js'
+      - 'red-team-mirror.css'
+      - 'scripts/install-reverse-accountability-platform.js'
+      - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/install-power-supply-chain.js'
+      - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/install-evidence-half-life.js'
+      - 'scripts/evidence-half-life-pressure-test.js'
+      - 'scripts/install-power-diff.js'
+      - 'scripts/power-diff-pressure-test.js'
+      - 'scripts/install-red-team-mirror.js'
+      - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/finalize-accountability-innovation-links.js'
+      - 'scripts/red-team-mirror-pressure-test.js'
+      - 'scripts/finalize-accountability-mission-intro.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - '.github/workflows/reverse-accountability-platform.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reverse-accountability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check syntax
+        run: |
+          node --check scripts/install-reverse-accountability-platform.js
+          node --check scripts/reverse-accountability-platform-pressure-test.js
+          node --check reverse-accountability-search.js
+          node --check scripts/install-power-supply-chain.js
+          node --check scripts/power-supply-chain-pressure-test.js
+          node --check power-supply-chain.js
+          node --check scripts/install-evidence-half-life.js
+          node --check scripts/evidence-half-life-pressure-test.js
+          node --check evidence-half-life.js
+          node --check scripts/install-power-diff.js
+          node --check scripts/power-diff-pressure-test.js
+          node --check power-diff.js
+          node --check scripts/install-red-team-mirror.js
+          node --check scripts/finalize-red-team-mirror-routes.js
+          node --check scripts/finalize-accountability-innovation-links.js
+          node --check scripts/red-team-mirror-pressure-test.js
+          node --check red-team-mirror.js
+          node --check scripts/finalize-accountability-mission-intro.js
+          node --check scripts/align-mission-acceptance-copy.js
+
+      - name: Build Reverse Accountability Search and voiced mission intro
+        run: node scripts/install-reverse-accountability-platform.js
+
+      - name: Run fail-closed combined product gate
+        run: node scripts/reverse-accountability-platform-pressure-test.js
+
+      - name: Upload proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reverse-accountability-proof-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            data/accountability-innovation-roadmap.json
+            data/reverse-accountability-index.json
+            data/power-supply-chain.json
+            data/evidence-half-life.json
+            data/power-diff-current.json
+            data/power-diff.json
+            data/red-team-mirror.json
+            downloads/reverse-accountability-platform-report.json
+            downloads/reverse-accountability-platform-pressure-test.json
+            downloads/power-supply-chain-report.json
+            downloads/power-supply-chain-pressure-test.json
+            downloads/evidence-half-life-report.json
+            downloads/evidence-half-life-pressure-test.json
+            downloads/power-diff-report.json
+            downloads/power-diff-pressure-test.json
+            downloads/red-team-mirror-report.json
+            downloads/red-team-mirror-route-finalization.json
+            downloads/red-team-mirror-pressure-test.json
+            downloads/accountability-innovation-link-finalization.json
+            reverse-accountability-search.html
+            reverse-accountability-search.js
+            reverse-accountability-search.css
+            power-supply-chain.html
+            power-supply-chain.js
+            power-supply-chain.css
+            evidence-half-life.html
+            evidence-half-life.js
+            evidence-half-life.css
+            power-diff.html
+            power-diff.js
+            power-diff.css
+            red-team-mirror.html
+            red-team-mirror.js
+            red-team-mirror.css
+            welcome-gate.js
+            index.html

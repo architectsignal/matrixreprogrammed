@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 3378
-Flagged pages: 2941
-High priority pages: 1243
-Medium priority pages: 1696
+Scanned pages: 3389
+Flagged pages: 2946
+High priority pages: 1245
+Medium priority pages: 1699
 Pages with missing rules: 724
 Auto-update eligible figures: 2
 Manual-review figures: 102
-Missing-rule figures: 1545
+Missing-rule figures: 1543
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -37,13 +37,13 @@ Missing-rule figures: 1545
 - _site/entity-registry.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/source-changes.html: 40 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- source-changes.html: 40 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-intelligence-network.html: 5 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-intelligence-network.html: 5 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/death-file-alexei-navalny.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/death-file-anna-politkovskaya.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/death-file-boris-nemtsov.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/death-file-sergei-magnitsky.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- _site/intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -69,7 +69,6 @@ Missing-rule figures: 1545
 - _site/entity-registry.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
 - _site/source-changes.html: 4 figure(s) need source rules.
-- source-changes.html: 4 figure(s) need source rules.
 - _site/dossier-pack-intelligence-network.html: 4 figure(s) need source rules.
 - dossier-pack-intelligence-network.html: 4 figure(s) need source rules.
 - _site/death-file-alexei-navalny.html: 4 figure(s) need source rules.
@@ -86,6 +85,7 @@ Missing-rule figures: 1545
 - intel-archive.html: 4 figure(s) need source rules.
 - making-money.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
+- _site/admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-27T15:14:11.967Z
-Live Intel source window: 2026-07-27T15:14:06.590Z
-Tracked cards: 935
-Cards with current matched records: 102
-Cards with no new verified record: 833
+Generated: 2026-07-28T03:34:34.951Z
+Live Intel source window: 2026-07-28T03:34:28.745Z
+Tracked cards: 944
+Cards with current matched records: 103
+Cards with no new verified record: 841
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -338,24 +338,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2024-07773
 - Route: entity-timelines/2024-07773.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — 2024-07773 — Entity Observation
 
 ## 2024-07773
 - Route: entity-briefs/2024-07773.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — 2024-07773 — Entity Observation
 
 ## 2024-07773
 - Route: entity-exposure/2024-07773.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — 2024-07773 — Entity Observation
 
 ## 2025-0045-APPEAL.
 - Route: entity-timelines/2025-0045-appeal.html
@@ -398,6 +395,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 1
 - Latest record: none in current window
 - undated — 23 WAP 2023 — Entity Observation
+
+## 24-7261
+- Route: entity-timelines/24-7261.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-7261 — Entity Observation
+
+## 24-7261
+- Route: entity-briefs/24-7261.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-7261 — Entity Observation
+
+## 24-7261
+- Route: entity-exposure/24-7261.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-7261 — Entity Observation
 
 ## 25-113
 - Route: entity-timelines/25-113.html
@@ -1683,6 +1701,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## COURT OF APPEALS FOR THE NINTH CIRCUIT
+- Route: entity-timelines/court-of-appeals-for-the-ninth-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE NINTH CIRCUIT
+- Route: entity-briefs/court-of-appeals-for-the-ninth-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE NINTH CIRCUIT
+- Route: entity-exposure/court-of-appeals-for-the-ninth-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
+
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-second-circuit.html
 - Status: current-records-matched
@@ -2539,7 +2578,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Latest record: 2026-07-27T00:13:58.000Z
 - 2026-07-27T00:13:58.000Z — Group in Congress pushing for more Epstein transparency - American Press — https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
 - 2026-07-26T23:43:09.000Z — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review — https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
-- 2026-07-26T19:01:07.000Z — Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick — https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -3534,24 +3573,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MATTER OF PAGLIUGHI
 - Route: entity-timelines/matter-of-pagliughi.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Matter of Pagliughi — Entity Observation
 
 ## MATTER OF PAGLIUGHI
 - Route: entity-briefs/matter-of-pagliughi.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Matter of Pagliughi — Entity Observation
 
 ## MATTER OF PAGLIUGHI
 - Route: entity-exposure/matter-of-pagliughi.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Matter of Pagliughi — Entity Observation
 
 ## Mauritius
 - Route: jurisdictions-of-power/mauritius.html
@@ -4507,10 +4543,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## REPUBLIC OF RWANDA
 - Route: entity-timelines/republic-of-rwanda.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-21T12:00:00.000Z
-- 2026-07-21T12:00:00.000Z — World News in Brief: Sexual violence in DR Congo, deaths in Ukraine and Russia, crime in Southeast Asia — https://news.un.org/feed/view/en/story/2026/07/1167992
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Reuters
 - Route: institutions/reuters.html
@@ -5066,10 +5101,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## THE DEATH FILES.
 - Route: death-files.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-26T19:01:07.000Z
-- 2026-07-26T19:01:07.000Z — Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick — https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## THE EPSTEIN EMAIL NETWORK
 - Route: epstein-email-network.html
@@ -5313,16 +5347,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-25T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-07-27T12:00:00.000Z
+- 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
 - 2026-07-25T12:00:00.000Z — ‘I am somebody’: Street-smart youth take their declaration to the UN — https://news.un.org/feed/view/en/story/2026/07/1168015
 - 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-25T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-07-27T12:00:00.000Z
+- 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
 - 2026-07-25T12:00:00.000Z — ‘I am somebody’: Street-smart youth take their declaration to the UN — https://news.un.org/feed/view/en/story/2026/07/1168015
 - 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 
@@ -5331,6 +5367,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
+
+## UNITED STATES V. ANTEN
+- Route: entity-timelines/united-states-v-anten.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
+
+## UNITED STATES V. ANTEN
+- Route: entity-briefs/united-states-v-anten.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
+
+## UNITED STATES V. ANTEN
+- Route: entity-exposure/united-states-v-anten.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
 
 ## UPGRADE TARGETS.
 - Route: upgrade-targets.html

@@ -4,14 +4,14 @@
   "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
   "sourceRulesUpdated": "2026-06-24",
   "sourceRuleCount": 8,
-  "scannedPages": 3378,
-  "flaggedPages": 2941,
-  "highPriorityPages": 1243,
-  "mediumPriorityPages": 1696,
+  "scannedPages": 3389,
+  "flaggedPages": 2946,
+  "highPriorityPages": 1245,
+  "mediumPriorityPages": 1699,
   "pagesWithMissingRules": 724,
   "autoUpdateEligibleFigures": 2,
   "manualReviewFigures": 102,
-  "missingRuleFigures": 1545,
+  "missingRuleFigures": 1543,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -3053,28 +3053,28 @@
         },
         {
           "value": "2 Lanes",
-          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "2 Lanes",
-          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal",
+          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-reg",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
+          "context": ": federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register-policy Evidence And Confidence Layer DAILY BRAIN CONFIDENCE CARDS The daily synthesis is se",
+          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings Evidence And Con",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "ssion Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings Evidence And Confidence Layer DAILY BRAIN CONFIDENCE CARDS The daily synthesis is separate",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -3083,27 +3083,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ove. Open JSON Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-27T08:50:51.415Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
-        },
-        {
-          "value": "2027",
-          "context": "r_notice Open source route documented association · federal-register-policy Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+          "context": "RAMMED Matrix Brain Outcomes Snapshot Records Control Map LIVE EVIDENCE PRIORITY SYSTEM · 2026-07-27 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-27 08:50:51.415Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Arthur This source belongs in the government-enforcement lane because it"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-27 08:50:51.415Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-arthur.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-27 08:50:51.415Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Titanium Capital LLC This source belongs in the government-enforcement l"
         },
         {
           "value": "2026",
-          "context": "s: 5 signals, 14 scenarios and 5 outcome briefs. Supporting records/signals: 5 Freshness: 2026-07-27 08:50:51.415Z Scoring or decision rule: Synthesis of outcome, probability, signal, policy, reserve and"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Jeffrey Puzzullo This source belongs in the government-enforcement lane"
         }
       ],
       "needsSourceRule": true,
@@ -3826,728 +3826,6 @@
         {
           "value": "2008",
           "context": "1863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. Removals detected Latest Filings - Sun, 26 Jul 2026"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "source-changes.html",
-      "priority": "High",
-      "figureCount": 40,
-      "missingRuleCount": 4,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 20,
-      "staticCount": 16,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$2.1",
-          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$1.3",
-          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$1.1",
-          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            }
-          ]
-        },
-        {
-          "value": "$824.8",
-          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            }
-          ]
-        },
-        {
-          "value": "$6.3",
-          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$4.8",
-          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$2.1",
-          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$1.3",
-          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$1.1",
-          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            }
-          ]
-        },
-        {
-          "value": "$824.8",
-          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            }
-          ]
-        },
-        {
-          "value": "$6.3",
-          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$4.8",
-          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "avated fraud and abuse of office. 1 min read News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€100",
-          "context": "d fraud and abuse of office. 1 min read News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "g the trade of plastics products. 2 min read News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "€20",
-          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
-          "classification": "manual-review-only",
-          "updatePolicy": "manual-review-only",
-          "matchedRules": [
-            {
-              "id": "crime-state-figures",
-              "label": "Crime, cartels, money laundering, and prosecution figures",
-              "updatePolicy": "manual-review-only",
-              "sourceType": "court-or-official-release-required",
-              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
-            },
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        }
-      ],
-      "crisisFigures": [
-        {
-          "value": "1 Page",
-          "context": "he Congo-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "o-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "e and Frequently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "requently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "e and Frequently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "requently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "ded Iran-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "n-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "ected fraud involving funding from the Recovery and Resilience Facility (RRF). 5 min read 1 Page 1 2 3 ... Removals detected News - The independent public prosecution office of the EU - European Union Skip",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "1 Page",
-          "context": "g the trade of small electronic goods and the laundering of criminal proceeds. 2 min read 1 Page 1 2 3 ... Next record required Open the current source and identify the exact added, removed or altered recor",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "1 Page",
-          "context": "mout; Ali El Siblani; Ali Jawad; Rabih Rakha Release No. LR-26491 Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11916 items Return to top SEC homepage About the SEC Budget &",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "li El Siblani; Ali Jawad; Rabih Rakha Release No. LR-26491 Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11916 items Return to top SEC homepage About the SEC Budget &amp; Pe",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "026 Joel Castellanos Release No. LR-26490 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11915 items Return to top SEC homepage About the SEC Budget &",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "l Castellanos Release No. LR-26490 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11915 items Return to top SEC homepage About the SEC Budget &amp; Pe",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "ded Iran-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "n-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "port of Blocked Property July 01, 2026 - Regulations and Guidance Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "2 Page",
-          "context": "Blocked Property July 01, 2026 - Regulations and Guidance Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "1 Page",
-          "context": "stigation into an alleged organised fraud scheme involving agricultural funds. 2 min read 1 Page 1 2 3 ... Removals detected News - The independent public prosecution office of the EU - European Union Skip",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "1 Page",
-          "context": "Reserve, a mechanism under the EU&amp;#039;s Common Agricultural Policy (CAP). 3 min read 1 Page 1 2 3 ... Next record required Open the current source and identify the exact added, removed or altered recor",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "wrongdoing, concealment or intent. Public JSON Daily Conclusions GRADE B content changed 2026-07-27 U.S. Securities and Exchange Commission — Current EDGAR Filings What is established: The normalized con"
-        },
-        {
-          "value": "2026",
-          "context": "oved document may explain the difference. Additions detected Latest Filings - Mon, 27 Jul 2026 04:50:27 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-2"
-        },
-        {
-          "value": "2026",
-          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T04:50:27-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&"
-        },
-        {
-          "value": "2026",
-          "context": "-27T04:50:27-04:00 4 - Tangney Jeffrey (0001863328) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00"
-        },
-        {
-          "value": "2026",
-          "context": "; 2026-07-24 &lt;b&gt;AccNo:&lt;/b&gt; 0001863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. Removals d"
-        },
-        {
-          "value": "2008",
-          "context": "1863328-26-000002 &lt;b&gt;Size:&lt;/b&gt; 5 KB 2026-07-24T21:59:37-04:00 urn:tag:sec.gov,2008:accession-number=0001863328-26-000002 4 - Doximity, Inc. Removals detected Latest Filings - Mon, 27 Jul 2026"
         }
       ],
       "needsSourceRule": true,
@@ -11678,6 +10956,744 @@
         {
           "value": "2023",
           "context": "ly check, so the Gaza Health Ministry reported death-toll lane remains above 73,000 since 2023-10-07. This is a reported ministry count, not an independently verified combatant/civilian classification. Th"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "source-changes.html",
+      "priority": "High",
+      "figureCount": 40,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 20,
+      "staticCount": 18,
+      "percentages": [],
+      "money": [
+        {
+          "value": "$2.1",
+          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.3",
+          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.1",
+          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$824.8",
+          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$6.3",
+          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$4.8",
+          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$2.1",
+          "context": "onth Campaign Activity of the 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and pol",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.3",
+          "context": "he 2025-2026 Election Cycle Congressional candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (P",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1.1",
+          "context": "candidates collected $2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 b",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$824.8",
+          "context": "2.1 billion and disbursed $1.3 billion, political parties received $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "$6.3",
+          "context": "ived $1.1 billion and spent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 Fr",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$4.8",
+          "context": "pent $824.8 million, and political action committees (PACs) raised $6.3 billion and spent $4.8 billion, … Read more Press release in: Campaign finance data summaries July 9, 2026 From: Information Divisio",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€100",
+          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€100",
+          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€100",
+          "context": "News (904) RSS Showing results 1 to 10 News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€20",
+          "context": "avated fraud and abuse of office. 1 min read News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€20",
+          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€100",
+          "context": "d fraud and abuse of office. 1 min read News article 22 July 2026 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade The European Public Prosecutor’s Office (EPPO) in Turin (Ital",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€20",
+          "context": "g the trade of plastics products. 2 min read News article 21 July 2026 Italy: EPPO seizes €20 million in probe into suspected RRF fraud involving fake training courses The European Public Prosecutor’s Of",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "€20",
+          "context": "courses The European Public Prosecutor’s Office (EPPO) in Milan (Italy) has seized around €20 million held in bank accounts and insurance policies linked to five companies, as part of an ongoing investig",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            },
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        }
+      ],
+      "crisisFigures": [
+        {
+          "value": "1 Page",
+          "context": "an-related General License July 10, 2026 - Sanctions List Updates Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "ted General License July 10, 2026 - Sanctions List Updates Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "he Congo-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "o-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "he Congo-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "o-related General License July 10, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "e and Frequently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "requently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "e and Frequently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "requently Asked Questions July 08, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "ded Iran-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "n-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "ected fraud involving funding from the Recovery and Resilience Facility (RRF). 5 min read 1 Page 1 2 3 ... Removals detected News - The independent public prosecution office of the EU - European Union Skip",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Page",
+          "context": "g the trade of small electronic goods and the laundering of criminal proceeds. 2 min read 1 Page 1 2 3 ... Next record required Open the current source and identify the exact added, removed or altered recor",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Page",
+          "context": "mout; Ali El Siblani; Ali Jawad; Rabih Rakha Release No. LR-26491 Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11916 items Return to top SEC homepage About the SEC Budget &",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "li El Siblani; Ali Jawad; Rabih Rakha Release No. LR-26491 Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11916 items Return to top SEC homepage About the SEC Budget &amp; Pe",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "026 Joel Castellanos Release No. LR-26490 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11915 items Return to top SEC homepage About the SEC Budget &",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "l Castellanos Release No. LR-26490 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &amp;hellip; 120 Next Last 1 to 100 of 11915 items Return to top SEC homepage About the SEC Budget &amp; Pe",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "1 Page",
+          "context": "ded Iran-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Mis",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "2 Page",
+          "context": "n-related General License July 07, 2026 - General Licenses Pagination Current page 1 Page 2 Page 3 &amp;hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellane",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "wrongdoing, concealment or intent. Public JSON Daily Conclusions GRADE B content changed 2026-07-27 U.S. Securities and Exchange Commission — Current EDGAR Filings What is established: The normalized con"
+        },
+        {
+          "value": "2026",
+          "context": "oved document may explain the difference. Additions detected Latest Filings - Mon, 27 Jul 2026 13:28:52 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-2"
+        },
+        {
+          "value": "2026",
+          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T13:28:52-04:00 424B2 - UBS AG (0001114446) (Filer) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-27 &lt;b&gt;AccNo:"
+        },
+        {
+          "value": "2026",
+          "context": "v 2026-07-27T13:28:52-04:00 424B2 - UBS AG (0001114446) (Filer) &lt;b&gt;Filed:&lt;/b&gt; 2026-07-27 &lt;b&gt;AccNo:&lt;/b&gt; 0001839882-26-036419 &lt;b&gt;Size:&lt;/b&gt; 699 KB 2026-07-27T13:27:03-04:0"
+        },
+        {
+          "value": "2026",
+          "context": "2026-07-27 &lt;b&gt;AccNo:&lt;/b&gt; 0001839882-26-036419 &lt;b&gt;Size:&lt;/b&gt; 699 KB 2026-07-27T13:27:03-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036419 13F-HR - NOTTINGHAM ADVISORS,"
+        },
+        {
+          "value": "2008",
+          "context": "39882-26-036419 &lt;b&gt;Size:&lt;/b&gt; 699 KB 2026-07-27T13:27:03-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036419 13F-HR - NOTTINGHAM ADVISORS, INC. (0001093276) (Filer) &lt;b&gt;Filed:"
         }
       ],
       "needsSourceRule": true,
@@ -22997,27 +23013,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-27T15:14:06.590Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 1 new item this coll"
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-07-28T03:34:28.745Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 3 new items this col"
         },
         {
           "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-07-27T15:14:06.590Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 1 new item this collection &gt; Current items: 44 &gt; Successful feeds: 1 /"
+          "context": "TATUS &gt; Collection completed: 2026-07-28T03:34:28.745Z &gt; Latest source publication: 2026-07-27T12:00:00.000Z &gt; State: 3 new items this collection &gt; Current items: 44 &gt; Successful feeds: 7 /"
         },
         {
           "value": "2026",
-          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source Security Council LIVE: Briefin"
+          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source Conflict and crisis put six Wo"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-27 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source Cyberattacks and the digital d"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-26 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source Guterres: Fast-tracking West B"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-26 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-27 · War Machine And Intelligence State · UN News Primary / official source High prices and funding cuts s"
         }
       ],
       "needsSourceRule": true,
@@ -37979,15 +37995,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T15:14:11.863Z &gt; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publicati"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-28T03:34:34.844Z &gt; source window: 2026-07-28T03:34:28.745Z &gt; current leads: 10 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-27T15:14:11.863Z &gt; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundar"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-07-28T03:34:34.844Z &gt; source window: 2026-07-28T03:34:28.745Z &gt; current leads: 10 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "; source window: 2026-07-27T15:14:06.590Z &gt; current leads: 12 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-07-28T03:34:28.745Z &gt; current leads: 10 &gt; latest publication: 2026-07-27T00:13:58.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
@@ -37999,7 +38015,7 @@
         },
         {
           "value": "2026",
-          "context": "Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick Published: 2026-07-26T19:01:07.000Z Source: Google News / Epstein timeline and files Death of Epstein’s ‘Girl Scout’ Daniel S"
+          "context": "w left out his personal emails — here’s what we know | Unreported - NewsNation Published: 2026-07-23T21:48:41.000Z Source: Google News / Epstein timeline and files Bill Gates’ Epstein review left out his"
         }
       ],
       "needsSourceRule": false,
@@ -38019,15 +38035,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 27 Jul 2026, 08:50 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
+          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 27 Jul 2026, 17:28 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
         },
         {
           "value": "2026",
-          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-27 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
+          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-28 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
         },
         {
           "value": "2026",
-          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-27 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
+          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-28 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
         },
         {
           "value": "2028",
@@ -38040,6 +38056,46 @@
         {
           "value": "2027",
           "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "daily-watch.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "PROGRAMMED Ranking History Daily Brief Live Intel Support LIVE EVIDENCE PRIORITY SYSTEM · 2026-07-27 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+        },
+        {
+          "value": "2026",
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Arthur This source belongs in the government-enforcement lane because it"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-arthur.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Titanium Capital LLC This source belongs in the government-enforcement l"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Jeffrey Puzzullo This source belongs in the government-enforcement lane"
         }
       ],
       "needsSourceRule": false,
@@ -39755,27 +39811,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ble reports. Read Today’s Brief Open Power Map Search a Name Current Mission Conclusion · 2026-07-27 What the evidence is pointing toward now The strongest current pattern is practical convergence: standa"
+          "context": "wsletter Download Center Trust Center Contact the Machine LIVE EVIDENCE PRIORITY SYSTEM · 2026-07-27 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
         },
         {
           "value": "2026",
-          "context": "ance State Clock 92% Seven-day window only Latest news and source changes Open Live Intel 2026-07-26 Google News / Epstein timeline and files Bipartisan Group In Congress Demands Greater Transparency On E"
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Arthur This source belongs in the government-enforcement lane because it"
         },
         {
           "value": "2026",
-          "context": "findings from claims, contact records, settlements, and commentary. Open Analysis Source 2026-07-26 UN News After war took her leg, this Ukrainian gymnast refused to give up When 10-year-old Ukrainian gy"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-arthur.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-"
         },
         {
           "value": "2026",
-          "context": "e class, and do not share a claim stronger than the record supports. Open Analysis Source 2026-07-26 UN News Gaza: Dialysis patients face gruelling hospital journey by donkey cart Shortly before sunrise,"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Titanium Capital LLC This source belongs in the government-enforcement l"
         },
         {
           "value": "2026",
-          "context": "e class, and do not share a claim stronger than the record supports. Open Analysis Source 2026-07-26 UN News Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods A country long known"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-"
         },
         {
           "value": "2026",
-          "context": "e class, and do not share a claim stronger than the record supports. Open Analysis Source 2026-07-25 UN News ‘I am somebody’: Street-smart youth take their declaration to the UN When Samantha Richards and"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-07-27T17:28:43.661Z Final Judgment - Jeffrey Puzzullo This source belongs in the government-enforcement lane"
         }
       ],
       "needsSourceRule": false,
@@ -39990,27 +40046,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ly Report Source Ledger Evidence Vault Search Living Public-Record Investigation System · 2026-07-27 INTELLIGENT INVESTIGATION MACHINE. Daily and weekly searches across government platforms, official enfo"
+          "context": "ly Report Source Ledger Evidence Vault Search Living Public-Record Investigation System · 2026-07-28 INTELLIGENT INVESTIGATION MACHINE. Daily and weekly searches across government platforms, official enfo"
         },
         {
           "value": "2026",
-          "context": "on Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 27 Jul 2026, 08:50 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 11 &gt; Source failures: 1 &gt; Finding"
+          "context": "on Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 27 Jul 2026, 17:29 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 11 &gt; Source failures: 1 &gt; Finding"
         },
         {
-          "value": "2028",
-          "context": "LLC — Department of Agriculture Source: USAspending.gov — Recent Contract Awards · 30 Apr 2028, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+          "value": "2026",
+          "context": "t - Arthur Source: U.S. Securities and Exchange Commission — Litigation Releases · 27 Jul 2026, 17:28 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
-          "value": "2027",
-          "context": "C — District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 12 Jul 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+          "value": "2026",
+          "context": "apital LLC Source: U.S. Securities and Exchange Commission — Litigation Releases · 27 Jul 2026, 17:28 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
-          "value": "2027",
-          "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+          "value": "2026",
+          "context": "y Puzzullo Source: U.S. Securities and Exchange Commission — Litigation Releases · 27 Jul 2026, 17:28 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
-          "value": "2027",
-          "context": "and Offender Supervision Agency Source: USAspending.gov — Recent Contract Awards · 23 Feb 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+          "value": "2026",
+          "context": "nt Cranmer Source: U.S. Securities and Exchange Commission — Litigation Releases · 27 Jul 2026, 17:28 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         }
       ],
       "needsSourceRule": false,
@@ -42403,15 +42459,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "onclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 27 Jul 2026, 08:50 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
+          "context": "onclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 27 Jul 2026, 17:28 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
         },
         {
           "value": "2026",
-          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-27 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
+          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-28 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
         },
         {
           "value": "2026",
-          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-27 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
+          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-28 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
         },
         {
           "value": "2028",
@@ -42424,6 +42480,34 @@
         {
           "value": "2027",
           "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "weekly-watch-delta.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "Matrix Reprogrammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-27 to 2026-07-27 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family"
+        },
+        {
+          "value": "2026",
+          "context": "ammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-27 to 2026-07-27 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family research prio"
+        },
+        {
+          "value": "2026",
+          "context": "or AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor&#39;s votes"
         }
       ],
       "needsSourceRule": false,
@@ -42803,21 +42887,14 @@
         },
         {
           "value": "2 Lanes",
-          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "2 Lanes",
-          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal",
+          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-reg",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
+          "context": ": federal-register-policy ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -42901,14 +42978,21 @@
         },
         {
           "value": "1 Lanes",
-          "context": "TION AMZN Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings MATRIX REPROGRAMMED — public",
+          "context": "TION AMZN Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION United Sta",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "TION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings MATRIX REPROGRAMMED — public records feed the machine.",
+          "context": "TION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION United States v. Anten Mentions: 1 Lanes: courtlistener-court-records M",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION United States v. Anten Mentions: 1 Lanes: courtlistener-court-records MATRIX REPROGRAMMED — public records feed the machine.",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -42917,11 +43001,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-27T15:12:39.332Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-07-28T03:34:02.435Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-27T15:12:39.332Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+          "context": "ex MACHINE DIGEST &gt; updated: 2026-07-28T03:34:02.435Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -69588,27 +69672,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 08:51:08.078Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 131 Freshness: 2026-07-27 17:29:31.140Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         }
       ],
       "needsSourceRule": false,
@@ -69817,7 +69901,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -69889,7 +69973,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -69925,11 +70009,31 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
           "context": "ecord page, PDF, docket, filing, award notice or registry record. Watch Next Watch 23 WAP 2023 across courtlistener-court-records. Check whether new courtlistener-court-records records repeat this name. B"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/24-7261.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -69949,7 +70053,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -69969,7 +70073,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -69989,7 +70093,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70009,7 +70113,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70029,7 +70133,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70049,7 +70153,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70069,15 +70173,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
-          "context": "i — charged / sued Connections Sawas v. Elzanaty — score 10 — public-record co-occurrence 2021-00294 — score 10 — public-record co-occurrence Matter of Pagliughi — score 10 — public-record co-occurrence 2"
-        },
-        {
-          "value": "2024",
-          "context": "public-record co-occurrence Matter of Pagliughi — score 10 — public-record co-occurrence 2024-07773 — score 10 — public-record co-occurrence Missing Records Confirm the primary record page, PDF, docket,"
+          "context": "y — charged / sued Connections Sawas v. Elzanaty — score 10 — public-record co-occurrence 2021-00294 — score 10 — public-record co-occurrence Missing Records Confirm the primary record page, PDF, docket,"
         }
       ],
       "needsSourceRule": false,
@@ -70097,7 +70197,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70117,7 +70217,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70137,7 +70237,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70157,7 +70257,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70177,7 +70277,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -70186,6 +70286,26 @@
         {
           "value": "2027",
           "context": "als and Opportunities To Apply for Available Slots — documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70205,7 +70325,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70225,7 +70345,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -70249,7 +70369,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70269,7 +70389,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -70297,7 +70417,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70341,7 +70461,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70361,7 +70481,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70381,7 +70501,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70401,7 +70521,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70421,7 +70541,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70441,7 +70561,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70461,7 +70581,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -70485,7 +70605,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -70509,7 +70629,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -70529,7 +70649,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -70553,7 +70673,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2025",
@@ -70577,7 +70697,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-27T15:12:53.150Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/united-states-v-anten.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-28T03:34:19.015Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -70597,7 +70737,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-27T15:12:53.150Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
+          "context": "records and watch next. Briefs JSON Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-28T03:34:19.015Z &gt; briefs generated: 35 &gt; pages generated: 35 &gt; style: user friendly &gt; boundar"
         },
         {
           "value": "2021",
@@ -70608,16 +70748,16 @@
           "context": "hip signals both exist. Open Brief JSON observed entity · legal record present 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
         },
         {
-          "value": "2024",
-          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2024-07773 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candid"
-        },
-        {
-          "value": "2024",
-          "context": "hip signals both exist. Open Brief JSON observed entity · legal record present 2024-07773 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
+          "value": "2025",
+          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2025-0045-Appeal. 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relat"
         },
         {
           "value": "2025",
-          "context": "d relationship signals both exist. Open Brief JSON observed entity · legal record present 2025-0045-Appeal. 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relat"
+          "context": "nals both exist. Open Brief JSON observed entity · legal record present 2025-0045-Appeal. 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate("
+        },
+        {
+          "value": "2023",
+          "context": "ionship signals both exist. Open Brief JSON observed entity · legal record present 23 WAP 2023 23 WAP 2023 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s"
         }
       ],
       "needsSourceRule": false,
@@ -70637,7 +70777,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-27T15:12:53.200Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-07-28T03:34:19.065Z &gt; profiles: 35 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         },
         {
           "value": "2021",
@@ -70648,16 +70788,16 @@
           "context": "view Open Exposure Brief JSON critical public-record exposure · charged / sued 2021-00294 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-"
         },
         {
-          "value": "2024",
-          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2024-07773 2024-07773 deserves active public-record review. The score reflects records, categories, relationships"
-        },
-        {
-          "value": "2024",
-          "context": "view Open Exposure Brief JSON critical public-record exposure · charged / sued 2024-07773 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-"
+          "value": "2025",
+          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2025-0045-Appeal. 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories,"
         },
         {
           "value": "2025",
-          "context": "date for review Open Exposure Brief JSON critical public-record exposure · charged / sued 2025-0045-Appeal. 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories,"
+          "context": "en Exposure Brief JSON critical public-record exposure · charged / sued 2025-0045-Appeal. 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or m"
+        },
+        {
+          "value": "2023",
+          "context": "r review Open Exposure Brief JSON critical public-record exposure · charged / sued 23 WAP 2023 23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or mi"
         }
       ],
       "needsSourceRule": false,
@@ -71866,7 +72006,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "usions Weekly Report Source Ledger Evidence Vault Search Every Search Attempt Preserved · 2026-07-27 INVESTIGATION SOURCE LEDGER. Source status, last success, changed content, parsed item count and failur"
+          "context": "usions Weekly Report Source Ledger Evidence Vault Search Every Search Attempt Preserved · 2026-07-28 INVESTIGATION SOURCE LEDGER. Source status, last success, changed content, parsed item count and failur"
+        },
+        {
+          "value": "2026",
+          "context": "Department of Justice — Epstein Disclosures Lane: epstein-disclosure Last attempt: 27 Jul 2026, 17:28 UTC Last success: First scheduled source run pending Items: 80 · Changed: no Open Source Platform prim"
+        },
+        {
+          "value": "2026",
+          "context": "S. Department of Justice — Justice News Lane: government-enforcement Last attempt: 27 Jul 2026, 17:28 UTC Last success: First scheduled source run pending Items: 1 · Changed: yes Open Source Platform prim"
+        },
+        {
+          "value": "2026",
+          "context": "Justice Office of Inspector General — Reports Lane: oversight-audit Last attempt: 27 Jul 2026, 17:28 UTC Last success: First scheduled source run pending Items: 14 · Changed: yes Open Source Platform pri"
+        },
+        {
+          "value": "2026",
+          "context": "nd Exchange Commission — Current EDGAR Filings Lane: money-contracts Last attempt: 27 Jul 2026, 17:28 UTC Last success: First scheduled source run pending Items: 1 · Changed: yes Open Source Platform prim"
+        },
+        {
+          "value": "2026",
+          "context": "change Commission — Litigation Releases Lane: government-enforcement Last attempt: 27 Jul 2026, 17:28 UTC Last success: First scheduled source run pending Items: 77 · Changed: no Open Source Platform prim"
         }
       ],
       "needsSourceRule": false,
@@ -72725,7 +72885,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-27T15:12:53.113Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
+          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-28T03:34:18.977Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 0 &gt; changed recor"
         },
         {
           "value": "2023",
@@ -73711,27 +73871,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": ". Open JSON Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-27T08:50:51.382Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
+          "context": ". Open JSON Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-27T17:29:16.165Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 08:50:51.382Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 17:29:16.165Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 08:50:51.382Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 17:29:16.165Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 08:50:51.382Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 17:29:16.165Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 08:50:51.382Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 17:29:16.165Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 08:50:51.382Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-07-27 17:29:16.165Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         }
       ],
       "needsSourceRule": false,
@@ -75356,7 +75516,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-27T15:12:53.255Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-28T03:34:19.125Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         }
       ],
       "needsSourceRule": false,

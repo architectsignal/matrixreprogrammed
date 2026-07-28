@@ -1,0 +1,112 @@
+name: Verify Live Dossier Accountability
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/verify-dossier-accountability-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-live-dossier-accountability
+  cancel-in-progress: false
+
+jobs:
+  verify-live-dossiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Verify both Gates dossiers, coverage and deployed SHA
+        shell: bash
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_SHA: 3e0e8886f5012cad070b7ebb760b7ea9c53cb533
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          nonce="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          fetch() {
+            local route="$1"
+            local output="$2"
+            local url="${SITE_URL}${route}?livecheck=${nonce}"
+            local status
+            status=$(curl --http1.1 --silent --show-error --location \
+              --retry 3 --retry-delay 4 --retry-all-errors \
+              --connect-timeout 20 --max-time 60 \
+              --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/150 Safari/537.36 MatrixLiveVerification/1.0' \
+              --header 'Accept: text/html,application/json;q=0.9,*/*;q=0.8' \
+              --header 'Accept-Language: en-GB,en;q=0.9' \
+              --header 'Cache-Control: no-cache' \
+              --header 'Pragma: no-cache' \
+              --header 'Referer: https://matrixreprogrammed.com/' \
+              --output "$output" --write-out '%{http_code}' "$url")
+            echo "$route $status $(wc -c < "$output") bytes"
+            test "$status" = '200'
+            sleep 4
+          }
+          fetch '/top-52/bill-gates.html' proof/gates-card.html
+          fetch '/billionaire-briefs/bill-gates.html' proof/gates-brief.html
+          fetch '/data/dossier-accountability-coverage.json' proof/coverage.json
+          fetch '/deploy-health.json' proof/deploy-health.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const expected=process.env.EXPECTED_SHA;
+          const card=fs.readFileSync('proof/gates-card.html','utf8');
+          const brief=fs.readFileSync('proof/gates-brief.html','utf8');
+          for(const [name,html] of [['top-52 Gates dossier',card],['billionaire Gates dossier',brief]]) {
+            for(const marker of [
+              'Epstein Relationship Intelligence',
+              'Meetings and philanthropic-fundraising discussions',
+              '2011–2014',
+              'Gates acknowledges repeated meetings',
+              'Criminal &amp; Safeguarding Status'
+            ]) {
+              if(!html.includes(marker)) throw new Error(`${name} missing marker: ${marker}`);
+            }
+            if(!html.includes('data-epstein-overlap-match="approved-registry-subject"')) throw new Error(`${name} does not show approved Epstein match`);
+          }
+          const coverage=JSON.parse(fs.readFileSync('proof/coverage.json','utf8'));
+          if(!coverage.ok) throw new Error('Live dossier accountability report is not ok');
+          if((coverage.missingPanels||[]).length) throw new Error(`Missing panels: ${coverage.missingPanels.length}`);
+          if((coverage.gatesFailures||[]).length) throw new Error(`Gates failures: ${coverage.gatesFailures.join(',')}`);
+          if((coverage.approvedRouteFailures||[]).length) throw new Error(`Approved route failures: ${coverage.approvedRouteFailures.join(',')}`);
+          if(Number(coverage.outputDossierPagesDetected||0)<600) throw new Error(`Unexpected output dossier count: ${coverage.outputDossierPagesDetected}`);
+          if(Number(coverage.totalEpsteinRelationshipsPreserved||0)<800) throw new Error(`Existing Epstein relationships not preserved: ${coverage.totalEpsteinRelationshipsPreserved}`);
+          const health=JSON.parse(fs.readFileSync('proof/deploy-health.json','utf8'));
+          if(health.buildSha!==expected || health.manifestSha!==expected || health.manifestMatches!==true) {
+            throw new Error(`Live SHA mismatch: build=${health.buildSha} manifest=${health.manifestSha} expected=${expected}`);
+          }
+          const result={
+            ok:true,
+            checkedAt:new Date().toISOString(),
+            expectedSha:expected,
+            liveBuildSha:health.buildSha,
+            liveManifestSha:health.manifestSha,
+            outputDossiers:coverage.outputDossierPagesDetected,
+            sourceAndOutputChecks:coverage.dossierPagesDetected,
+            missingPanels:coverage.missingPanels.length,
+            gatesFailures:coverage.gatesFailures.length,
+            approvedRouteFailures:coverage.approvedRouteFailures.length,
+            criminalMatchedPages:coverage.criminalMatchedPages,
+            epsteinMatchedPages:coverage.epsteinMatchedPages,
+            epsteinRelationshipsPreserved:coverage.totalEpsteinRelationshipsPreserved,
+            gatesCardVerified:true,
+            gatesBriefVerified:true,
+            boundary:'Documented contact and legal records are displayed with exact status, source links, counter-evidence and not-established limits; association alone is not guilt.'
+          };
+          fs.writeFileSync('proof/live-dossier-accountability-verification.json',JSON.stringify(result,null,2)+'\n');
+          console.log(JSON.stringify(result,null,2));
+          NODE
+
+      - name: Upload focused live proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-dossier-accountability-proof-${{ github.run_id }}
+          path: proof/
+          if-no-files-found: error
+          retention-days: 60

@@ -68,4 +68,5 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   ]
 }, null, 2)}\n`);
 require('./daily-control-brief-email-test.js');
+require('./install-consequence-evidence-worker.js');
 console.log(`Daily Control Brief email renderer ${finalSource !== before ? 'upgraded' : 'already current'} (${contractMarkers.length} contract markers verified).`);

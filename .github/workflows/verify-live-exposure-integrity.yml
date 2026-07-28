@@ -1,4 +1,4 @@
-name: Verify Live Exposure Integrity Release
+name: Verify Corrected Live Exposure Integrity Release
 
 on:
   push:
@@ -12,18 +12,18 @@ permissions:
   contents: write
 
 concurrency:
-  group: verify-live-exposure-integrity-release
+  group: verify-corrected-live-exposure-integrity-release
   cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  EXPECTED_DEPLOY_SHA: 'fed6cd7dace100af92ec94e3f17036d444cc6ffa'
+  EXPECTED_DEPLOY_SHA: '77f2e5595b6a837e21872c8184982223d677bb3b'
   SITE_URL: 'https://matrixreprogrammed.com'
 
 jobs:
   verify-live-release:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -43,13 +43,17 @@ jobs:
           node --check scripts/verify-live-behind-the-curtain-v2.js
           node --check scripts/verify-live-exposure-integrity.js
 
-      - name: Verify bounded Behind-the-Curtain and newsletter routes
+      - name: Verify bounded legacy routes
+        id: legacy
+        continue-on-error: true
         env:
           PYRAMID_VERIFY_ATTEMPTS: '3'
           PYRAMID_VERIFY_DELAY_MS: '3000'
         run: node scripts/verify-live-behind-the-curtain.js
 
       - name: Verify exact live Exposure Integrity release
+        id: exposure
+        continue-on-error: true
         env:
           EXPOSURE_LIVE_ATTEMPTS: '8'
           EXPOSURE_LIVE_DELAY_MS: '5000'
@@ -59,31 +63,63 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: live-exposure-integrity-proof-${{ github.run_id }}
+          name: corrected-live-exposure-proof-${{ github.run_id }}
           if-no-files-found: warn
           path: |
             downloads/live-behind-the-curtain-verification.json
             downloads/live-exposure-integrity-verification.json
 
-      - name: Record successful focused proof
-        if: success()
+      - name: Record proof through GitHub contents API
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          LEGACY_OUTCOME: ${{ steps.legacy.outcome }}
+          EXPOSURE_OUTCOME: ${{ steps.exposure.outcome }}
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const readJson = path => {
+              try { return JSON.parse(fs.readFileSync(path, 'utf8')); }
+              catch (error) { return { ok: false, missing: true, error: error.message }; }
+            };
+            const legacy = readJson('downloads/live-behind-the-curtain-verification.json');
+            const exposure = readJson('downloads/live-exposure-integrity-verification.json');
+            const payload = {
+              ok: process.env.LEGACY_OUTCOME === 'success' && process.env.EXPOSURE_OUTCOME === 'success' && legacy.ok === true && exposure.ok === true,
+              workflowRunId: Number(process.env.GITHUB_RUN_ID),
+              workflowRunNumber: Number(process.env.GITHUB_RUN_NUMBER),
+              expectedDeploySha: process.env.EXPECTED_DEPLOY_SHA,
+              legacyOutcome: process.env.LEGACY_OUTCOME,
+              exposureOutcome: process.env.EXPOSURE_OUTCOME,
+              legacy,
+              exposure,
+              recordedAt: new Date().toISOString(),
+              boundary: 'Verification-only proof of the already deployed Cloudflare release. This workflow cannot deploy, migrate D1 or change runtime settings.'
+            };
+            const path = 'data/final-predators-live-proof.json';
+            const content = Buffer.from(JSON.stringify(payload, null, 2) + '\n').toString('base64');
+            for (let attempt = 1; attempt <= 8; attempt += 1) {
+              let sha;
+              try {
+                const current = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+                if (!Array.isArray(current.data)) sha = current.data.sha;
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+              try {
+                await github.rest.repos.createOrUpdateFileContents({ owner, repo, path, message: 'Record final corrected Exposure Integrity live proof', content, branch: 'main', ...(sha ? { sha } : {}) });
+                core.info(`Recorded final live proof: ${payload.ok ? 'PASS' : 'FAIL'}.`);
+                break;
+              } catch (error) {
+                if (![409, 422].includes(error.status) || attempt === 8) throw error;
+                await new Promise(resolve => setTimeout(resolve, attempt * 2000));
+              }
+            }
+
+      - name: Fail if either verification did not pass
+        if: always()
         run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add downloads/live-behind-the-curtain-verification.json downloads/live-exposure-integrity-verification.json
-          if git diff --cached --quiet; then
-            echo 'Focused live proof is already current.'
-            exit 0
-          fi
-          git commit -m 'Record live Exposure Integrity verification'
-          for attempt in 1 2 3 4; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort || true
-            sleep $((attempt * 2))
-          done
-          echo 'Could not record focused live proof.'
-          exit 1
+          test '${{ steps.legacy.outcome }}' = 'success'
+          test '${{ steps.exposure.outcome }}' = 'success'

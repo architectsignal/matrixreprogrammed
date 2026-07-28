@@ -96,5 +96,4 @@ writeEverywhere('downloads/accountability-question-ledger-refinement.json', {
 });
 console.log(`Accountability Question Ledger refined: ${ledger.count} questions, ${cleanedSubjects} imported subject names cleaned, ${directRoutes} with dossier/source routes, ${timerOnlyRoutes} with timer routes.`);
 
-require('./build-public-consequence-contracts.js');
-require('./public-consequence-contracts-pressure-test.js');
+require('./run-public-consequence-contracts.js');

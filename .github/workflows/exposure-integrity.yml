@@ -16,6 +16,7 @@ on:
       - 'scripts/finalize-search-first-accountability-home.js'
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/run-public-consequence-contracts.js'
       - 'scripts/build-public-consequence-contracts.js'
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
@@ -39,6 +40,7 @@ on:
       - 'scripts/finalize-search-first-accountability-home.js'
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
+      - 'scripts/run-public-consequence-contracts.js'
       - 'scripts/build-public-consequence-contracts.js'
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
@@ -75,6 +77,7 @@ jobs:
           node --check scripts/finalize-search-first-accountability-home.js
           node --check scripts/refine-accountability-question-ledger.js
           node --check scripts/search-first-accountability-home-pressure-test.js
+          node --check scripts/run-public-consequence-contracts.js
           node --check scripts/build-public-consequence-contracts.js
           node --check scripts/finalize-public-consequence-runtime.js
           node --check scripts/public-consequence-contracts-pressure-test.js
@@ -126,6 +129,7 @@ jobs:
             downloads/search-first-accountability-home-report.json
             downloads/accountability-question-ledger-refinement.json
             downloads/search-first-accountability-home-pressure-test.json
+            downloads/public-consequence-selection-report.json
             downloads/public-consequence-contracts-report.json
             downloads/public-consequence-contracts-pressure-test.json
             downloads/public-consequence-contracts.csv

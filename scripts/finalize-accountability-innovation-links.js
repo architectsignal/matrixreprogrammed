@@ -139,8 +139,8 @@ patch('red-team-mirror.js', source => {
   return next;
 });
 
-const linkedFiles = ['reverse-accountability-search.js', 'power-supply-chain.js', 'evidence-half-life.js', 'power-diff.js', 'red-team-mirror.js'];
-for (const relative of linkedFiles) {
+const upstreamToRedTeam = ['reverse-accountability-search.js', 'power-supply-chain.js', 'evidence-half-life.js', 'power-diff.js'];
+for (const relative of upstreamToRedTeam) {
   for (const base of roots) {
     const file = path.join(base, relative);
     if (!fs.existsSync(file)) continue;
@@ -148,6 +148,15 @@ for (const relative of linkedFiles) {
     if (!source.includes('red-team-mirror.html') || !source.includes('Challenge the case')) {
       throw new Error(`${path.relative(root, file)} is not connected to Red-Team Mirror`);
     }
+  }
+}
+
+const answerClockSources = [...upstreamToRedTeam, 'red-team-mirror.js'];
+for (const relative of answerClockSources) {
+  for (const base of roots) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file)) continue;
+    const source = fs.readFileSync(file, 'utf8');
     if (!source.includes('public-answer-clock.html') || !source.includes('Open answer clock')) {
       throw new Error(`${path.relative(root, file)} is not connected to Public Answer Clock`);
     }

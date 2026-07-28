@@ -1,4 +1,5 @@
 name: Dispatch Dossier Accountability Production Release
+# Explicit second push activates this dispatcher after installation on the default branch.
 
 on:
   push:

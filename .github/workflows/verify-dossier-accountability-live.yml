@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: verify-live-dossier-accountability
@@ -21,6 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Verify both Gates dossiers, coverage and deployed SHA
         shell: bash
         env:
@@ -28,7 +35,7 @@ jobs:
           EXPECTED_SHA: 3e0e8886f5012cad070b7ebb760b7ea9c53cb533
         run: |
           set -euo pipefail
-          mkdir -p proof
+          mkdir -p proof data
           nonce="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           fetch() {
             local route="$1"
@@ -36,7 +43,7 @@ jobs:
             local url="${SITE_URL}${route}?livecheck=${nonce}"
             local status
             status=$(curl --http1.1 --silent --show-error --location \
-              --retry 3 --retry-delay 4 --retry-all-errors \
+              --retry 3 --retry-delay 6 --retry-all-errors \
               --connect-timeout 20 --max-time 60 \
               --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/150 Safari/537.36 MatrixLiveVerification/1.0' \
               --header 'Accept: text/html,application/json;q=0.9,*/*;q=0.8' \
@@ -47,7 +54,7 @@ jobs:
               --output "$output" --write-out '%{http_code}' "$url")
             echo "$route $status $(wc -c < "$output") bytes"
             test "$status" = '200'
-            sleep 4
+            sleep 8
           }
           fetch '/top-52/bill-gates.html' proof/gates-card.html
           fetch '/billionaire-briefs/bill-gates.html' proof/gates-brief.html
@@ -84,6 +91,7 @@ jobs:
           const result={
             ok:true,
             checkedAt:new Date().toISOString(),
+            focusedVerificationRunId:Number(process.env.GITHUB_RUN_ID),
             expectedSha:expected,
             liveBuildSha:health.buildSha,
             liveManifestSha:health.manifestSha,
@@ -99,9 +107,29 @@ jobs:
             gatesBriefVerified:true,
             boundary:'Documented contact and legal records are displayed with exact status, source links, counter-evidence and not-established limits; association alone is not guilt.'
           };
-          fs.writeFileSync('proof/live-dossier-accountability-verification.json',JSON.stringify(result,null,2)+'\n');
-          console.log(JSON.stringify(result,null,2));
+          const text=JSON.stringify(result,null,2)+'\n';
+          fs.writeFileSync('proof/live-dossier-accountability-verification.json',text);
+          fs.writeFileSync('data/live-dossier-accountability-verification.json',text);
+          console.log(text);
           NODE
+
+      - name: Commit focused live proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/live-dossier-accountability-verification.json
+          git commit -m 'Record live dossier accountability verification'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          exit 1
 
       - name: Upload focused live proof
         if: always()

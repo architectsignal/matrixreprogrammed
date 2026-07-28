@@ -6,6 +6,7 @@ const path = require('path');
 const root = process.cwd();
 const dataDir = path.join(root, 'data');
 const registryPath = path.join(dataDir, 'criminal-conduct-registry.json');
+const policyPath = path.join(dataDir, 'predators-in-power-policy.json');
 const reportPath = path.join(root, 'downloads', 'predators-in-power-official-wave4-merge.json');
 const compositePath = path.join(root, 'downloads', 'predators-in-power-official-composite-registry.json');
 const site = path.join(root, '_site');
@@ -16,20 +17,34 @@ const wavePaths = fs.readdirSync(dataDir)
 
 if (!wavePaths.length) throw new Error('No data/predators-in-power-official-wave*.json files found');
 if (!fs.existsSync(registryPath)) throw new Error('Missing data/criminal-conduct-registry.json');
+if (!fs.existsSync(policyPath)) throw new Error('Missing data/predators-in-power-policy.json');
 const waves = wavePaths.map(file => ({
   file,
   relative: path.relative(root, file).replace(/\\/g, '/'),
   payload: JSON.parse(fs.readFileSync(file, 'utf8'))
 }));
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+const predatorsPolicy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const failures = [];
 const added = [];
 const updated = [];
 const dossiersCreated = [];
 const mergedSubjects = [];
+const vocabularyNormalisations = [];
 
 if (Number(registry.schemaVersion || 0) < 1 || !registry.categories || !registry.subjects) throw new Error('Invalid criminal conduct registry');
 for (const wave of waves) if (!Array.isArray(wave.payload.subjects)) failures.push(`${wave.relative}: invalid official wave subjects`);
+
+const sectorAliases = {
+  religious: 'religious_institution',
+  business_corporate: 'company_executive',
+  education_youth_services: 'education'
+};
+const domainAliases = {
+  suspected_conduct: null
+};
+const controlledSectors = new Set(Object.keys(predatorsPolicy.powerSectors || {}));
+const controlledDomains = new Set(Object.keys(predatorsPolicy.conductDomains || {}));
 
 function esc(value = '') {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
@@ -40,7 +55,33 @@ function normalize(value = '') {
 function unique(values = []) { return [...new Set(values.filter(Boolean))]; }
 function absolute(value = '') { return /^https:\/\//i.test(String(value || '')); }
 function roleKey(role) { return normalize(`${role.title}|${role.organization}|${role.from}|${role.to}|${role.status}`); }
-function recordFromFinding(finding, checkedAt) {
+function normaliseSector(value, subjectName) {
+  const original = String(value || '').trim();
+  const mapped = sectorAliases[original] || original;
+  if (mapped !== original) vocabularyNormalisations.push({ subject: subjectName, field: 'powerRole.sector', from: original, to: mapped });
+  return mapped;
+}
+function normaliseDomains(values, subjectName, recordId) {
+  const output = [];
+  for (const raw of values || []) {
+    const original = String(raw || '').trim();
+    const mapped = Object.prototype.hasOwnProperty.call(domainAliases, original) ? domainAliases[original] : original;
+    if (mapped !== original) vocabularyNormalisations.push({ subject: subjectName, recordId, field: 'conductDomains', from: original, to: mapped || '(removed legal-lane token)' });
+    if (mapped) output.push(mapped);
+  }
+  return unique(output);
+}
+function normaliseSubject(subject) {
+  return {
+    ...subject,
+    powerRoles: (subject.powerRoles || []).map(role => ({ ...role, sector: normaliseSector(role.sector, subject.name) })),
+    findings: (subject.findings || []).map(finding => ({
+      ...finding,
+      domains: normaliseDomains(finding.domains || [], subject.name, finding.id)
+    }))
+  };
+}
+function recordFromFinding(finding, checkedAt, subjectName) {
   const category = registry.categories[finding.category];
   if (!category) throw new Error(`Unknown criminal category ${finding.category}`);
   return {
@@ -62,7 +103,7 @@ function recordFromFinding(finding, checkedAt) {
     counterEvidence: finding.counterEvidence,
     proofNeeded: finding.proofNeeded,
     boundary: finding.boundary || category.boundary,
-    conductDomains: unique(finding.domains || []),
+    conductDomains: normaliseDomains(finding.domains || [], subjectName, finding.id),
     victimClass: unique(finding.victims || []),
     predatorsInPowerEligible: true,
     linkedRecordIds: []
@@ -78,6 +119,7 @@ function validateSubject(subject, sourceFile) {
     for (const field of ['sector', 'title', 'organization', 'status', 'sourceLabel', 'sourceUrl']) {
       if (!String(role[field] || '').trim()) failures.push(`${sourceFile}/${subject.name}: role ${index + 1} missing ${field}`);
     }
+    if (role.sector && !controlledSectors.has(role.sector)) failures.push(`${sourceFile}/${subject.name}: role ${index + 1} has unknown controlled sector ${role.sector}`);
     if (role.sourceUrl && !absolute(role.sourceUrl)) failures.push(`${sourceFile}/${subject.name}: role ${index + 1} source is not HTTPS`);
     if (role.statusSourceUrl && !absolute(role.statusSourceUrl)) failures.push(`${sourceFile}/${subject.name}: status source is not HTTPS`);
   }
@@ -85,6 +127,7 @@ function validateSubject(subject, sourceFile) {
     for (const field of ['id', 'category', 'title', 'summary', 'sourceLabel', 'sourceUrl', 'date', 'jurisdiction', 'status', 'rightOfReply', 'counterEvidence', 'proofNeeded', 'boundary']) {
       if (!String(finding[field] || '').trim()) failures.push(`${sourceFile}/${subject.name}/${finding.id || '(no id)'} missing ${field}`);
     }
+    for (const domain of finding.domains || []) if (!controlledDomains.has(domain)) failures.push(`${sourceFile}/${subject.name}/${finding.id}: unknown controlled conduct domain ${domain}`);
     if (finding.sourceUrl && !absolute(finding.sourceUrl)) failures.push(`${sourceFile}/${subject.name}/${finding.id}: source is not HTTPS`);
     if (!registry.categories[finding.category]) failures.push(`${sourceFile}/${subject.name}/${finding.id}: unknown category ${finding.category}`);
   }
@@ -115,13 +158,14 @@ function writeDossier(subject) {
 }
 
 for (const wave of waves) {
-  for (const subject of wave.payload.subjects || []) validateSubject(subject, wave.relative);
+  wave.payload.subjects = (wave.payload.subjects || []).map(normaliseSubject);
+  for (const subject of wave.payload.subjects) validateSubject(subject, wave.relative);
 }
 if (failures.length) throw new Error(`Official Predators wave validation failed: ${failures.join('; ')}`);
 
 for (const wave of waves) {
   for (const subject of wave.payload.subjects) {
-    const records = subject.findings.map(finding => recordFromFinding(finding, wave.payload.updated));
+    const records = subject.findings.map(finding => recordFromFinding(finding, wave.payload.updated, subject.name));
     const incoming = {
       name: subject.name,
       aliases: unique(subject.aliases || []),
@@ -173,6 +217,7 @@ fs.writeFileSync(compositePath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   sources: waves.map(wave => wave.relative),
   subjects: mergedSubjects,
+  vocabularyNormalisations,
   registry
 }, null, 2)}\n`);
 
@@ -185,9 +230,10 @@ const report = {
   added,
   updated,
   dossiersCreated,
+  vocabularyNormalisations,
   subjectsMerged: mergedSubjects.length,
   recordsMerged: mergedSubjects.reduce((sum, subject) => sum + subject.records.length, 0),
   boundaries: waves.map(wave => ({ source: wave.relative, boundary: wave.payload.publicationRule }))
 };
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Official Predators waves merged: ${waves.length} source wave(s), ${added.length} added, ${updated.length} updated, ${report.recordsMerged} official record(s), ${dossiersCreated.length} dossier surface(s).`);
+console.log(`Official Predators waves merged: ${waves.length} source wave(s), ${added.length} added, ${updated.length} updated, ${report.recordsMerged} official record(s), ${dossiersCreated.length} dossier surface(s), ${vocabularyNormalisations.length} controlled-vocabulary normalisation(s).`);

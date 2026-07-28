@@ -31,7 +31,9 @@ const required = [
   'data/cinematic-hit-list.json',
   'data/accountability-question-ledger.json',
   'downloads/search-first-accountability-home-report.json',
-  'scripts/finalize-search-first-accountability-home.js'
+  'downloads/accountability-question-ledger-refinement.json',
+  'scripts/finalize-search-first-accountability-home.js',
+  'scripts/refine-accountability-question-ledger.js'
 ];
 for (const relative of required) if (!exists(relative)) fail(`Missing required output ${relative}`);
 
@@ -40,7 +42,7 @@ function checkSyntax(relative) {
   const result = spawnSync(process.execPath, ['--check', file(relative)], { cwd: root, encoding: 'utf8' });
   if (result.status !== 0) fail(`${relative} syntax failed: ${result.stderr || result.stdout}`);
 }
-for (const relative of ['accountability-home.js','search-query-handoff.js','scripts/finalize-search-first-accountability-home.js','scripts/search-first-accountability-home-pressure-test.js']) checkSyntax(relative);
+for (const relative of ['accountability-home.js','search-query-handoff.js','scripts/finalize-search-first-accountability-home.js','scripts/refine-accountability-question-ledger.js','scripts/search-first-accountability-home-pressure-test.js']) checkSyntax(relative);
 
 function checkHomepage(base = root) {
   const label = path.relative(root, base) || '.';
@@ -83,6 +85,7 @@ if (!failures.length) {
   if (ledger.count !== array(ledger.questions).length) fail('Open Question Ledger count mismatch');
   if (!ledger.count) fail('Open Question Ledger is empty');
   if (!clean(ledger.proposition).includes('public list of the questions')) fail('Open Question Ledger proposition is missing');
+  if (!clean(ledger.questionQualityRule).includes('grammatical')) fail('Open Question Ledger quality rule is missing');
   const ids = new Set();
   for (const question of array(ledger.questions)) {
     if (!clean(question.id)) fail('Question missing id');
@@ -90,12 +93,18 @@ if (!failures.length) {
     ids.add(question.id);
     for (const field of ['subjectId','subject','question','status','evidenceClassification','whatIsKnown','responseStatus','lastReviewed']) if (!clean(question[field])) fail(`${question.id || 'question'} missing ${field}`);
     if (!array(question.whatIsNotProven).length) fail(`${question.id} missing what-is-not-proven boundary`);
-    if (!array(question.dossierRoutes).length && !array(question.sourceRoutes).length) warn(`${question.id} has no direct dossier or source route`);
+    if (!/[?]$/.test(clean(question.question))) fail(`${question.id} does not end as a question`);
+    if (/\.\?$|;\?$|,\?$/.test(clean(question.question))) fail(`${question.id} contains malformed trailing punctuation`);
+    if (/:\s*(?:maintain|obtain|verify|restore|request|secure|publish|locate|identify|confirm|authenticate|collect|compare|trace|review|document|find|add|attach|preserve|release|check|establish)\b/i.test(clean(question.question))) fail(`${question.id} still exposes an instruction fragment as a question`);
+    const actionRoutes = [...array(question.dossierRoutes), ...array(question.sourceRoutes), ...array(question.timerRoutes)];
+    if (!actionRoutes.length) warn(`${question.id} has no dossier, source or timer route`);
   }
 
   const report = json('downloads/search-first-accountability-home-report.json');
   if (!report.ok) fail('Homepage finalizer report is not OK');
   if (Number(report.accountabilityQuestions || 0) !== ledger.count) fail('Homepage report question count mismatch');
+  const refinement = json('downloads/accountability-question-ledger-refinement.json');
+  if (!refinement.ok || Number(refinement.questions || 0) !== ledger.count) fail('Question refinement report mismatch');
 }
 
 if (exists('_site')) {

@@ -3,6 +3,7 @@ import emailWorker, { emailRoutes, processOutbox } from './worker-email-lifecycl
 import intelligenceReportWorker, { isIntelligenceReportRoute } from './worker-intelligence-reports.js';
 import contactWorker, { contactRoutes } from './worker-contact-intake.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
+import consequenceTrackerWorker, { isConsequenceTrackerRoute } from './worker-consequence-tracker.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
 import rehearsalWorker, {
@@ -236,11 +237,18 @@ async function validateContactResponse(response) {
   return response;
 }
 
-
 async function validateMemberResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-member-experience') {
     return unavailable('non-authoritative-member-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
+async function validateConsequenceTrackerResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-consequence-tracker') {
+    return unavailable('non-authoritative-consequence-tracker-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
   }
   return response;
 }
@@ -303,6 +311,15 @@ export default {
         if (denied) return denied;
       } catch (error) {
         return unavailable('protected-asset-gate-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
+    if (isConsequenceTrackerRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateConsequenceTrackerResponse(await consequenceTrackerWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('consequence-tracker-worker-exception', error?.message || error, 'member');
       }
     }
 
@@ -408,7 +425,8 @@ export default {
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),
       bootstrapWorker.scheduled(event, env, ctx),
-      rehearsalWorker.scheduled(event, env, ctx)
+      rehearsalWorker.scheduled(event, env, ctx),
+      consequenceTrackerWorker.scheduled(event, env, ctx)
     ]);
   }
 };

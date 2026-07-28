@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "name": "Matrix Reprogrammed Rumour and Speculation Ledger",
+  "mission": "Record what people are saying so claims can be tested, supported, contradicted or disproved instead of being silently discarded. Inclusion records the existence of a claim; it never establishes that the claim is true.",
+  "intakeRule": "Every relevant rumour, speculation, theory, community submission, attributed allegation and machine-generated hypothesis must receive a stable claim ID and enter the intelligence system unless it is duplicate spam, unintelligible, unlawful private data, victim-identifying material or content that cannot safely be retained.",
+  "publicSurfaces": {
+    "attributedPublicRumor": "Show the subject name, exact or faithful claim summary, original public source, source author or publisher, first-seen date, verification state, counter-evidence, response, what is not proven and evidence needed next.",
+    "anonymousOrUntraceableRumor": "Show a redacted public card with a stable rumour ID, claim summary, origin type, first-seen date, verification state and evidence needed. Remove the target name and direct identifiers from the public card while retaining the private target mapping for investigation.",
+    "machineHypothesis": "Show as MACHINE-GENERATED SPECULATION, identify the data pattern that caused it, display alternative explanations and tests, and prevent it from being phrased as an allegation or fact."
+  },
+  "requiredFields": [
+    "claimId",
+    "claimType",
+    "exactClaimOrFaithfulSummary",
+    "targetOrPrivateTargetMapping",
+    "sourceType",
+    "sourceLabel",
+    "sourceUrlWhenAvailable",
+    "firstSeen",
+    "verificationState",
+    "supportingIndicators",
+    "contraryEvidence",
+    "rightOfReplyOrResponse",
+    "whatItDoesNotProve",
+    "evidenceNeededNext",
+    "versionHistory"
+  ],
+  "verificationStates": [
+    "submitted-unverified",
+    "publicly-circulating",
+    "under-source-check",
+    "unsupported",
+    "contradicted",
+    "partially-corroborated",
+    "corroborated-not-proven",
+    "disproved",
+    "promoted-to-attributed-allegation",
+    "promoted-to-official-proceeding",
+    "promoted-to-verified-evidence"
+  ],
+  "displayRules": [
+    "Every card must display RUMOUR — NOT VERIFIED, SPECULATION — NOT VERIFIED or MACHINE-GENERATED SPECULATION above the claim.",
+    "Rumour cards must use a visually separate lane from convictions, charges, official findings and verified evidence.",
+    "A claim must never be rewritten into stronger language than the source used.",
+    "The existence or repetition of a rumour is not corroboration.",
+    "Association, proximity, photographs, meetings, donations, friendship, family relationship or shared events do not establish wrongdoing.",
+    "Denials, dismissals, acquittals, corrections, contrary records and disproving evidence must be attached with equal prominence.",
+    "The original claim remains in version history after contradiction or disproval so users can see how the investigation changed."
+  ],
+  "scoring": {
+    "verifiedEvidenceWeight": 0,
+    "criminalityWeight": 0,
+    "guiltWeight": 0,
+    "clockMovementWeight": 0,
+    "researchPriorityAllowed": true,
+    "researchPriorityFactors": [
+      "source traceability",
+      "claim specificity",
+      "independent source diversity",
+      "documentary hooks",
+      "testability",
+      "contrary evidence",
+      "potential public-interest significance"
+    ]
+  },
+  "promotionRule": "A rumour moves to a stronger evidence lane only when the requirements of that stronger lane are independently satisfied. Repetition, virality or AI confidence cannot promote a claim.",
+  "conclusionRule": "Every rumour conclusion must explain what is being claimed, who originated or repeated it, why it may be relevant, what supports it, what weakens it, plausible alternatives, what it does not prove, current confidence and the evidence needed to prove or disprove it.",
+  "privacyAndSafety": [
+    "Do not publish victim or minor identities, private addresses, private contact details, medical records, sexual images or unlawfully obtained private material.",
+    "Anonymous serious allegations about identifiable living people remain publicly redacted until an attributable public source or completed editorial and legal review supports naming the target.",
+    "The public ledger may state that an anonymous claim exists without exposing the private target mapping.",
+    "Provide correction, right-of-reply and removal-review routes without erasing the version history of the investigation."
+  ],
+  "boundary": "The ledger exists to investigate claims in public, not to certify rumours as truth. Visibility is not verification, repetition is not corroboration and a research lead is not a verdict."
+}

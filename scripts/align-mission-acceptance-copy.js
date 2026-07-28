@@ -5,6 +5,8 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const roots = [root, path.join(root, '_site')].filter((value, index, all) => all.indexOf(value) === index && fs.existsSync(value));
 const touched = [];
+const execution = [];
+const executionPath = path.join(root, 'downloads', 'mission-alignment-execution.json');
 
 function patch(relative, transform) {
   for (const base of roots) {
@@ -55,13 +57,27 @@ function readFirst(routes) {
   }
   return '';
 }
+function writeExecution(ok = true, failure = null) {
+  fs.mkdirSync(path.dirname(executionPath), { recursive: true });
+  fs.writeFileSync(executionPath, `${JSON.stringify({ ok, generatedAt: new Date().toISOString(), execution, failure }, null, 2)}\n`);
+}
 function runRequired(script, args = []) {
+  const command = [script, ...args].join(' ');
   const result = spawnSync(process.execPath, [path.join(root, script), ...args], {
     cwd: root, encoding: 'utf8', env: process.env, maxBuffer: 1024 * 1024 * 30
   });
+  const entry = {
+    command,
+    status: result.status,
+    signal: result.signal || null,
+    stdoutTail: String(result.stdout || '').slice(-4000),
+    stderrTail: String(result.stderr || '').slice(-4000)
+  };
+  execution.push(entry);
+  writeExecution(result.status === 0, result.status === 0 ? null : entry);
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
-  if (result.status !== 0) throw new Error(`${script} ${args.join(' ')} failed`);
+  if (result.status !== 0) throw new Error(`${command} failed`);
 }
 function copyToOutput(relative) {
   const source = path.join(root, relative);
@@ -92,6 +108,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
 
+runRequired('scripts/fix-final-release-audit-defects.js');
 runRequired('scripts/repair-investigation-source-registry.js');
 copyToOutput('data/investigation-source-registry.json');
 runRequired('scripts/patch-machine-feed-object-names.js');
@@ -101,7 +118,6 @@ runRequired('scripts/disable-production-kv-traffic.js');
 runRequired('scripts/sanitize-machine-entity-outputs.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 if (fs.existsSync(path.join(root, '_site', 'search-index.json'))) runRequired('scripts/compact-cloudflare-search-index.js');
-runRequired('scripts/run-power-dossier-runtime-compatible.js');
 runRequired('scripts/repair-empty-public-controls.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
 runRequired('scripts/repair-public-runtime-controls.js');
@@ -121,11 +137,21 @@ runRequired('scripts/dedupe-exposure-integrity-records.js');
 runRequired('scripts/finalize-exposure-clean-routes.js');
 runRequired('scripts/exposure-integrity-predators-link.js');
 runRequired('scripts/exposure-integrity-pressure-test.js');
+
+// Exposure cleanup owns the general generated namespaces. Rebuild current/former office-holder
+// dossiers afterwards so those evidence-classified routes are final, then re-run universal
+// criminal coverage across the resulting complete dossier surface.
+runRequired('scripts/build-current-office-holder-intelligence.js');
+runRequired('scripts/run-power-dossier-runtime-compatible.js');
+runRequired('scripts/current-office-holder-intelligence-test.js');
+
 for (const route of ['independent-links.html', 'independent-links']) patch(route, patchMissingSourceLinks);
 for (const route of ['index.html', 'index']) patch(route, patchObsoleteFamilyRoute);
+runRequired('scripts/fix-final-release-audit-defects.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
+writeExecution(true, null);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair, dossier Epstein/criminal accountability overlays, Exposure Integrity Engine, persistent Predators in Power Hit List routing, cinematic Hit List and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, current office-holder intelligence, universal criminal coverage, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair, dossier Epstein/criminal accountability overlays, Exposure Integrity Engine, persistent Predators in Power Hit List routing, release audit path resolution, public H1 contracts, capstone anchors, cinematic Hit List and full tool audit passed.`);

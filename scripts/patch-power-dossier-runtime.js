@@ -66,15 +66,23 @@ for (const base of roots) {
     if (!after.includes(`<script src="${runtime}"></script>`)) failures.push(`${path.relative(root, file)} missing resilient dossier runtime`);
   }
 }
+
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
-const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
+const officialWaveMerge = runRequired('scripts/merge-predators-official-wave4.js');
+const engineBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after official wave failure' } : runRequired('scripts/build-criminal-conduct-engine.js');
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
-const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
+const predatorsRumorPatch = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/patch-predators-rumor-ledger.js');
+const predatorsExpansionBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after rumor-ledger patch failure' } : runRequired('scripts/expand-predators-in-power.js');
+const predatorsExpansionDom = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators expansion build failure' } : runRequired('scripts/fix-predators-expansion-dom-ready.js');
+const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power expansion failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
 const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power conduct-link failure' } : runRequired('scripts/sync-predators-in-power-output.js');
 const predatorsTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power output failure' } : runRequired('scripts/predators-in-power-pressure-test.js');
+const predatorsExpansionTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after base Predators pressure test failure' } : runRequired('scripts/predators-in-power-expansion-test.js');
+const universalCoverage = failures.length ? { status: 1, stdout: '', stderr: 'skipped after core dossier engines failed' } : runRequired('scripts/enforce-universal-criminal-dossier-coverage.js');
+const universalCoverageTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after universal coverage build failure' } : runRequired('scripts/universal-criminal-dossier-coverage-test.js');
 
 const report = {
   ok: failures.length === 0,
@@ -85,6 +93,8 @@ const report = {
   runtime,
   copiedRuntime,
   criminalConductEngine: {
+    officialWaveMergeStatus: officialWaveMerge.status,
+    officialWaveReport: 'downloads/predators-in-power-official-wave4-merge.json',
     buildStatus: engineBuild.status,
     extensionlessSyncStatus: engineAliasSync.status,
     pressureTestStatus: engineTest.status,
@@ -95,15 +105,33 @@ const report = {
   },
   predatorsInPower: {
     buildStatus: predatorsBuild.status,
+    rumorLedgerPatchStatus: predatorsRumorPatch.status,
+    expansionBuildStatus: predatorsExpansionBuild.status,
+    expansionDomStatus: predatorsExpansionDom.status,
     conductLinkStatus: predatorsConductLinks.status,
     outputSyncStatus: predatorsSync.status,
     pressureTestStatus: predatorsTest.status,
+    expansionPressureTestStatus: predatorsExpansionTest.status,
     page: 'predators-in-power.html',
     data: 'data/predators-in-power.json',
     buildReport: 'downloads/predators-in-power-build-report.json',
+    expansionReport: 'downloads/predators-in-power-expansion-report.json',
+    currentPowerData: 'downloads/predators-in-power-current-power.json',
+    childFocusData: 'downloads/predators-in-power-child-focus.json',
+    claimsReviewData: 'downloads/predators-in-power-claims-review.json',
+    expandedCsv: 'downloads/predators-in-power-expanded.csv',
     conductLinksReport: 'downloads/predators-in-power-conduct-links.json',
     outputReport: 'downloads/predators-in-power-output-sync.json',
-    pressureTest: 'downloads/predators-in-power-pressure-test.json'
+    pressureTest: 'downloads/predators-in-power-pressure-test.json',
+    expansionPressureTest: 'downloads/predators-in-power-expansion-test.json',
+    contract: 'Every approved child-focused conduct record with a separately sourced power role must appear. Every relevant rumor or speculation record must enter the separate public ledger: named when publicly attributable, redacted when anonymous or untraceable. Rumors carry zero verified-evidence or guilt weight.'
+  },
+  universalCriminalDossierCoverage: {
+    buildStatus: universalCoverage.status,
+    pressureTestStatus: universalCoverageTest.status,
+    report: 'downloads/universal-criminal-dossier-coverage.json',
+    pressureTest: 'downloads/universal-criminal-dossier-coverage-test.json',
+    contract: 'Every qualifying dossier is independently detected and contains either editorially approved records or an explicit no-verified-match boundary.'
   },
   files,
   failures
@@ -114,4 +142,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; official 2026 Predators wave, Criminal Conduct & Allegations, public rumor/speculation ledger, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);

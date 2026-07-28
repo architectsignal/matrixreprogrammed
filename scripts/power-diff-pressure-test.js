@@ -34,14 +34,21 @@ if (!ledger.baselineAvailable && ledger.entries.some(item => item.status !== 'ba
 if (!ledger.baselineAvailable && ledger.materialDiffCount !== 0) fail('Power Diff claimed material changes without a baseline');
 
 for (const entry of ledger.entries || []) {
-  if (!entry.id || !entry.sourceRecordId || !entry.title || !entry.currentFingerprint) fail('Power Diff entry is missing identity or fingerprint');
+  if (!entry.id || !entry.sourceRecordId || !entry.title) fail('Power Diff entry is missing identity');
   if (!allowedStatuses.has(entry.status)) fail(`${entry.id || 'entry'} has invalid status ${entry.status}`);
+  if (entry.status === 'record-ended-or-removed') {
+    if (!entry.previousFingerprint || entry.currentFingerprint) fail(`${entry.id || 'entry'} removed record has invalid fingerprint state`);
+    if (!(entry.changes || []).some(change => change.type === 'ended')) fail(`${entry.id || 'entry'} removed record lacks an ended change`);
+  } else if (!entry.currentFingerprint) {
+    fail(`${entry.id || 'entry'} current record is missing its fingerprint`);
+  }
   if (entry.status === 'baseline-established' && (entry.changes || []).length) fail(`${entry.id || 'entry'} has changes despite being baseline-only`);
   for (const change of entry.changes || []) {
     if (!allowedChangeTypes.has(change.type)) fail(`${entry.id || 'entry'} has invalid change type ${change.type}`);
     if (!change.field) fail(`${entry.id || 'entry'} has a change without a field`);
   }
-  if (!String(entry.evidenceBoundary || '').includes('not guilt')) fail(`${entry.id || 'entry'} lacks the diff evidence boundary`);
+  if (!String(entry.evidenceBoundary || '').includes('not guilt') && entry.status !== 'record-ended-or-removed') fail(`${entry.id || 'entry'} lacks the diff evidence boundary`);
+  if (entry.status === 'record-ended-or-removed' && !String(entry.evidenceBoundary || '').includes('must not be interpreted as proof of concealment')) fail(`${entry.id || 'entry'} lacks the removed-record boundary`);
 }
 
 for (const marker of ['POWER', 'data-power-diff-search', 'data-power-diff-filter', 'does not invent a past']) {
@@ -70,6 +77,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'power-diff-pressure-test.json'), 
   baselineAvailable: ledger.baselineAvailable,
   materialDiffCount: ledger.materialDiffCount,
   noInventedHistory: true,
+  removedRecordFingerprintRule: true,
   allowedChangeTypes: [...allowedChangeTypes]
 }, null, 2) + '\n');
 console.log(`Power Diff pressure test passed with ${ledger.entries.length} records; baseline available: ${ledger.baselineAvailable}.`);

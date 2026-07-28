@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "purpose": "Expand Predators in Power into a current-status, child-safeguarding and legal-posture intelligence layer without converting office, association, rumors or unresolved allegations into guilt.",
+  "childFocusDomains": [
+    "child_sexual_abuse",
+    "child_sexual_exploitation",
+    "child_trafficking",
+    "grooming",
+    "csam_offence",
+    "child_abduction",
+    "child_abuse_nonsexual",
+    "child_endangerment_neglect",
+    "child_homicide",
+    "institutional_facilitation_cover_up"
+  ],
+  "currentRoleStatuses": [
+    "current",
+    "present",
+    "acting",
+    "suspended",
+    "administrative leave",
+    "on leave"
+  ],
+  "formerRoleStatuses": [
+    "former",
+    "historical",
+    "resigned",
+    "removed",
+    "retired",
+    "incarcerated"
+  ],
+  "tabs": [
+    {"id":"all","label":"All Verified Records"},
+    {"id":"current-power","label":"Current / Suspended Power"},
+    {"id":"former-power","label":"Former / Historical Power"},
+    {"id":"convictions","label":"Convictions / Final Judgments"},
+    {"id":"charges","label":"Charges / Official Proceedings"},
+    {"id":"claims-review","label":"Claims Under Review"}
+  ],
+  "currentStatusRule": "A subject is shown as currently in power only when a separately sourced role record identifies a current, acting, suspended or on-leave position and was checked within the configured freshness window. A role held when charged but later resigned is shown as former, with both dates and sources preserved.",
+  "coverageRule": "Every editorially approved child-focused conduct record with a separately sourced qualifying power role must appear in the expanded output or cause the build to fail. Manual eligibility flags cannot silently omit a qualifying subject.",
+  "claimsReviewRule": "Anonymous claims, social-media rumors, guilt by association and unsupported child-offence insinuations about living people are not published as named subjects. A named non-adjudicated claim requires an attributable source, exact claim wording, evidence analysis, documented response or right of reply, counter-evidence, proof needed, editorial approval and legal review. Machine matches remain private.",
+  "livingPersonClaimRequirements": [
+    "publicationStatus must be approved",
+    "legalReviewStatus must be approved",
+    "source must be attributable and independently accessible",
+    "the record must quote or accurately summarize the actual public claim without embellishment",
+    "right of reply, denial, dismissal, acquittal and counter-evidence must remain attached",
+    "the record must state what is not proven",
+    "association, friendship, photographs, meetings, donations or shared events cannot establish child offending"
+  ],
+  "freshnessDays": 120,
+  "boundary": "The expanded page is an evidence-classified accountability index. Conviction, charge, inquiry, civil finding, attributed allegation, analytical hypothesis and rumor are different states. Charges are not convictions. A power role is not wrongdoing. A claim-under-review tab records editorial process, not guilt."
+}

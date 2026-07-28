@@ -1,4 +1,4 @@
-name: Record Corrected Exposure Integrity Dispatcher Run
+name: Record Predators Hit List Repair Dispatcher Run
 
 on:
   push:
@@ -24,18 +24,18 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Resolve corrected Exposure Integrity dispatcher
+      - name: Resolve Predators Hit List repair dispatcher
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const expectedHeadSha = '63026d0c9e31a1c793d8c21505ced87248855364';
+            const expectedHeadSha = '4aa3645b73177ac90ee90210c939da6c0d214ddd';
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
-            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/dispatch-exposure-integrity-production.yml');
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/dispatch-predators-hit-list-repair.yml');
             if (!target) {
-              core.setFailed('Corrected Exposure Integrity dispatcher workflow was not found.');
+              core.setFailed('Predators Hit List repair dispatcher workflow was not found.');
               return;
             }
             let resolved = null;
@@ -46,7 +46,7 @@ jobs:
               await new Promise(resolve => setTimeout(resolve, 10000));
             }
             if (!resolved) {
-              core.setFailed('Corrected dispatcher run could not be resolved.');
+              core.setFailed('Predators Hit List repair dispatcher run could not be resolved.');
               return;
             }
             const payload = {
@@ -65,19 +65,19 @@ jobs:
               recordedAt: new Date().toISOString()
             };
             fs.mkdirSync('data', { recursive: true });
-            fs.writeFileSync('data/corrected-exposure-dispatcher-run.json', JSON.stringify(payload, null, 2) + '\n');
-            core.info(`Corrected dispatcher ${resolved.id}: ${resolved.status}/${resolved.conclusion || 'pending'}`);
+            fs.writeFileSync('data/predators-hit-list-dispatcher-run.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`Predators Hit List dispatcher ${resolved.id}: ${resolved.status}/${resolved.conclusion || 'pending'}`);
 
       - name: Commit dispatcher receipt
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/corrected-exposure-dispatcher-run.json
+          git add data/predators-hit-list-dispatcher-run.json
           if git diff --cached --quiet; then
             exit 0
           fi
-          git commit -m 'Record corrected Exposure Integrity dispatcher run'
+          git commit -m 'Record Predators Hit List repair dispatcher run'
           for attempt in 1 2 3 4; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

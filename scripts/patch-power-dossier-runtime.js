@@ -73,9 +73,12 @@ const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
-const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
+const predatorsExpansionBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/expand-predators-in-power.js');
+const predatorsExpansionDom = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators expansion build failure' } : runRequired('scripts/fix-predators-expansion-dom-ready.js');
+const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power expansion failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
 const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power conduct-link failure' } : runRequired('scripts/sync-predators-in-power-output.js');
 const predatorsTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power output failure' } : runRequired('scripts/predators-in-power-pressure-test.js');
+const predatorsExpansionTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after base Predators pressure test failure' } : runRequired('scripts/predators-in-power-expansion-test.js');
 const universalCoverage = failures.length ? { status: 1, stdout: '', stderr: 'skipped after core dossier engines failed' } : runRequired('scripts/enforce-universal-criminal-dossier-coverage.js');
 const universalCoverageTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after universal coverage build failure' } : runRequired('scripts/universal-criminal-dossier-coverage-test.js');
 
@@ -98,15 +101,25 @@ const report = {
   },
   predatorsInPower: {
     buildStatus: predatorsBuild.status,
+    expansionBuildStatus: predatorsExpansionBuild.status,
+    expansionDomStatus: predatorsExpansionDom.status,
     conductLinkStatus: predatorsConductLinks.status,
     outputSyncStatus: predatorsSync.status,
     pressureTestStatus: predatorsTest.status,
+    expansionPressureTestStatus: predatorsExpansionTest.status,
     page: 'predators-in-power.html',
     data: 'data/predators-in-power.json',
     buildReport: 'downloads/predators-in-power-build-report.json',
+    expansionReport: 'downloads/predators-in-power-expansion-report.json',
+    currentPowerData: 'downloads/predators-in-power-current-power.json',
+    childFocusData: 'downloads/predators-in-power-child-focus.json',
+    claimsReviewData: 'downloads/predators-in-power-claims-review.json',
+    expandedCsv: 'downloads/predators-in-power-expanded.csv',
     conductLinksReport: 'downloads/predators-in-power-conduct-links.json',
     outputReport: 'downloads/predators-in-power-output-sync.json',
-    pressureTest: 'downloads/predators-in-power-pressure-test.json'
+    pressureTest: 'downloads/predators-in-power-pressure-test.json',
+    expansionPressureTest: 'downloads/predators-in-power-expansion-test.json',
+    contract: 'Every approved child-focused conduct record with a separately sourced power role must appear. Current power requires a fresh sourced role. Unsupported living-person claims remain private unless editorial and legal review approve a fully bounded attributable record.'
   },
   universalCriminalDossierCoverage: {
     buildStatus: universalCoverage.status,
@@ -124,4 +137,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations, Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);

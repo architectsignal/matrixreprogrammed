@@ -9,6 +9,10 @@ const installPatches = [
     failure: 'Rumour-ledger replacement hardening failed during install'
   },
   {
+    file: 'fix-office-holder-entity-brief-ownership.js',
+    failure: 'Office-holder canonical entity-brief ownership repair failed during install'
+  },
+  {
     file: 'patch-current-office-holder-stale-claim-detector.js',
     failure: 'Current office-holder stale-claim detector repair failed during install'
   },

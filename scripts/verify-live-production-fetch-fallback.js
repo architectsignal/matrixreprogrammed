@@ -20,6 +20,7 @@ const blockingSleep = ms => {
 };
 
 function browserHeaders(rawUrl, init = {}, inheritedHeaders) {
+  const urlText = String(rawUrl);
   const headers = new Headers(init.headers || inheritedHeaders || {});
   headers.set('accept-language', 'en-GB,en;q=0.9');
   headers.set('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36');
@@ -28,14 +29,14 @@ function browserHeaders(rawUrl, init = {}, inheritedHeaders) {
   if (!headers.has('accept')) {
     headers.set(
       'accept',
-      rawUrl.includes('/api/') || rawUrl.endsWith('.json') || rawUrl.includes('.json?')
+      urlText.includes('/api/') || urlText.endsWith('.json') || urlText.includes('.json?')
         ? 'application/json,text/plain;q=0.9,*/*;q=0.8'
-        : rawUrl.endsWith('.csv') || rawUrl.includes('.csv?')
+        : urlText.endsWith('.csv') || urlText.includes('.csv?')
           ? 'text/csv,text/plain;q=0.9,*/*;q=0.8'
           : 'text/html,application/xhtml+xml,application/javascript,application/json;q=0.9,image/avif,image/webp,*/*;q=0.8'
     );
   }
-  if (!rawUrl.includes('/api/') && !/\.(?:json|csv|js|css|svg|png|jpe?g|webp|pdf)(?:\?|$)/i.test(rawUrl)) {
+  if (!urlText.includes('/api/') && !/\.(?:json|csv|js|css|svg|png|jpe?g|webp|pdf)(?:\?|$)/i.test(urlText)) {
     headers.set('upgrade-insecure-requests', '1');
     headers.set('sec-fetch-dest', 'document');
     headers.set('sec-fetch-mode', 'navigate');

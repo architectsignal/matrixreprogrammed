@@ -28,6 +28,8 @@ on:
       - 'public-consequence-contracts.js'
       - 'accountability-tracker-runtime.js'
       - 'accountability-tracker-runtime.css'
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
       - 'src/worker-consequence-tracker.js'
       - 'src/worker-consequence-evidence.js'
       - 'src/worker-production.js'
@@ -63,6 +65,8 @@ on:
       - 'public-consequence-contracts.js'
       - 'accountability-tracker-runtime.js'
       - 'accountability-tracker-runtime.css'
+      - 'accountability-review-inbox.html'
+      - 'accountability-review-inbox.js'
       - 'src/worker-consequence-tracker.js'
       - 'src/worker-consequence-evidence.js'
       - 'src/worker-production.js'
@@ -110,6 +114,7 @@ jobs:
           node --check scripts/accountability-tracker-pressure-test.js
           node --check public-consequence-contracts.js
           node --check accountability-tracker-runtime.js
+          node --check accountability-review-inbox.js
           node --check src/worker-consequence-tracker.js
           node --check src/worker-consequence-evidence.js
           node --check src/worker-production.js
@@ -188,3 +193,5 @@ jobs:
             public-consequence-contracts.js
             accountability-tracker-runtime.js
             accountability-tracker-runtime.css
+            accountability-review-inbox.html
+            accountability-review-inbox.js

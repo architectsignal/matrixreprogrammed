@@ -1,8 +1,9 @@
 (() => {
   'use strict';
 
-  const VERSION = '1.0.0';
-  const DATA_URL = 'data/identity-affiliation-overlay.json?v=1.0.0';
+  const VERSION = '1.0.1';
+  const ENGINE_BASE = new URL('.', document.currentScript?.src || document.baseURI);
+  const DATA_URL = new URL('data/identity-affiliation-overlay.json?v=1.0.1', ENGINE_BASE).href;
   const state = {
     config: null,
     records: [],
@@ -16,6 +17,12 @@
   })[char]);
 
   const slug = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+  function routeUrl(path, params = {}) {
+    const url = new URL(path, ENGINE_BASE);
+    Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, String(value)));
+    return url.href;
+  }
 
   function pageContext() {
     const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -194,7 +201,7 @@
       <section class="iao-section" data-iao-section="affiliation"><h3>Documented identity and institutional affiliation</h3><p class="iao-muted">Family background, personal belief, adult practice and formal institutional membership remain separate fields.</p>${affiliationRows(record)}</section>
       <section class="iao-section" data-iao-section="claims"><h3>Claims tested</h3>${claimRows(record)}</section>
       <section class="iao-section" data-iao-section="sources"><h3>Source provenance</h3>${sourceRows(record)}</section>
-      <footer class="iao-footer"><a href="contact-the-machine.html?topic=evidence&subject=${encodeURIComponent(record.subject)}">Drop evidence</a><a href="contact-the-machine.html?topic=correction&subject=${encodeURIComponent(record.subject)}">Correction / right of reply</a><span>Engine v${VERSION}</span></footer>
+      <footer class="iao-footer"><a href="${esc(routeUrl('contact-the-machine.html', { topic: 'evidence', subject: record.subject }))}">Drop evidence</a><a href="${esc(routeUrl('contact-the-machine.html', { topic: 'correction', subject: record.subject }))}">Correction / right of reply</a><span>Engine v${VERSION}</span></footer>
     </div>`;
   }
 

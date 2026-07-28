@@ -25,11 +25,21 @@ const dashboardApp = read('member-dashboard-app.js');
 const billingDashboard = read('billing-dashboard.js');
 const emailStatus = read('email-status.html');
 const cloudflareBuild = read('scripts/build-cloudflare-output.js');
+const workerFirstConfig = wrangler.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
+const workerFirstForAll = workerFirstConfig === 'true';
+const workerFirstForProtectedRoutes = [
+  '"/api/*"',
+  '"/.netlify/functions/*"',
+  '"/downloads/the-black-file-matrix-reprogrammed.pdf"',
+  '"/downloads/supporter*"',
+  '"/downloads/intelligence-*"',
+  '"/downloads/research*"'
+].every(pattern => workerFirstConfig.includes(pattern));
 
 check('Cloudflare production worker is authoritative', wrangler.includes('main = "src/worker-production.js"'), 'wrangler.toml must deploy src/worker-production.js');
 check('Cloudflare Assets are authoritative', wrangler.includes('[assets]') && wrangler.includes('directory = "./_site"') && wrangler.includes('binding = "ASSETS"'), 'Cloudflare Assets must serve _site');
 check('Cloudflare D1 membership database is bound', wrangler.includes('binding = "MEMBERS_DB"') && wrangler.includes('database_name = "matrix-members"'), 'MEMBERS_DB must remain the membership authority');
-check('Worker runs before assets', wrangler.includes('run_worker_first = true'), 'Authenticated and protected routes must reach the Worker before static assets');
+check('Worker runs before protected assets', workerFirstForAll || workerFirstForProtectedRoutes, 'Authenticated API and protected download patterns must reach the Worker before static assets, while ordinary public assets may remain direct');
 check('Production router dispatches email lifecycle', production.includes('emailRoutes.has(path)') && production.includes('validateEmailResponse'), 'Newsletter, welcome and campaign routes must use worker-email-lifecycle.js');
 check('Production router dispatches PayPal lifecycle', production.includes('isPayPalRoute(path)') && production.includes('validatePayPalResponse'), 'PayPal routes must use worker-paypal-subscriptions.js');
 check('Production router dispatches member experience', production.includes('isMemberExperienceRoute(path)') && production.includes('validateMemberResponse'), 'Dashboard routes must use worker-member-experience.js');

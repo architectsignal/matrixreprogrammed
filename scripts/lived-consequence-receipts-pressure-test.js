@@ -58,7 +58,8 @@ if (/\blocalStorage\b|\bsessionStorage\b/.test(client)) fail('Lived Consequence 
 if (/\beval\s*\(|new Function\s*\(/.test(client)) fail('Lived Consequence Receipts client contains unsafe dynamic code execution');
 if (!client.includes('clearSensitiveFields')) fail('Lived Consequence Receipts does not clear sensitive fields after confirmed storage');
 if (!client.includes('form.elements.lawful.checked') || !client.includes('form.elements.redacted.checked') || !client.includes('form.elements.individualBoundary.checked')) fail('Lived Consequence Receipts does not enforce required consent boundaries');
-if (!installer.includes('Raw submissions never published automatically') && !installer.includes('raw submissions remain private')) fail('Lived Consequence Receipts installer does not preserve the private/public boundary');
+const installerLower = installer.toLowerCase();
+if (!installerLower.includes('raw submissions remain private') && !installerLower.includes('raw submissions never published automatically')) fail('Lived Consequence Receipts installer does not preserve the private/public boundary');
 if (!css.includes('.receipt-consents') || !css.includes('@media')) fail('Lived Consequence Receipts CSS is incomplete or not responsive');
 
 const currentRoute = item => String(item.livedConsequenceReceiptsRoute || '').startsWith('lived-consequence-receipts.html?record=');

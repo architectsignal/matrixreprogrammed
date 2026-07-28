@@ -28,6 +28,7 @@
   function chainMarkup(chain) {
     const questions = Array.isArray(chain.unansweredQuestions) ? chain.unansweredQuestions : [];
     const sourceUrl = chain.source?.url || '';
+    const halfLifeRoute = chain.evidenceHalfLifeRoute || `evidence-half-life.html#half-life-${encodeURIComponent(chain.sourceRecordId || '')}`;
     return `<article class="power-chain-card" id="${escapeHtml(chain.id)}">
       <div class="power-chain-card-meta"><span>${escapeHtml(chain.laneTitle || chain.lane || 'Public accountability')}</span><span>${escapeHtml(chain.source?.classification || 'public-source lead')}</span></div>
       <h2>${escapeHtml(chain.title)}</h2>
@@ -40,6 +41,7 @@
       <div class="power-chain-actions">
         <a class="primary" href="${escapeHtml(chain.accountabilityRoute || 'public-consequence-contracts.html')}">Open accountability record</a>
         <a href="${escapeHtml(chain.reverseSearchRoute || 'reverse-accountability-search.html')}">Open reverse search</a>
+        <a href="${escapeHtml(halfLifeRoute)}">Review evidence freshness</a>
         ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" rel="noopener noreferrer">Open original source</a>` : ''}
         <a href="contact-the-machine.html?type=evidence">Help resolve a missing stage</a>
       </div>

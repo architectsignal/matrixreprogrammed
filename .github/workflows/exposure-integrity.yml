@@ -22,8 +22,14 @@ on:
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
       - 'scripts/public-consequence-tracker-pressure-test.js'
+      - 'scripts/install-consequence-evidence-worker.js'
+      - 'scripts/finalize-accountability-tracker-runtime.js'
+      - 'scripts/accountability-tracker-pressure-test.js'
       - 'public-consequence-contracts.js'
+      - 'accountability-tracker-runtime.js'
+      - 'accountability-tracker-runtime.css'
       - 'src/worker-consequence-tracker.js'
+      - 'src/worker-consequence-evidence.js'
       - 'src/worker-production.js'
       - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
@@ -51,8 +57,14 @@ on:
       - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
       - 'scripts/public-consequence-tracker-pressure-test.js'
+      - 'scripts/install-consequence-evidence-worker.js'
+      - 'scripts/finalize-accountability-tracker-runtime.js'
+      - 'scripts/accountability-tracker-pressure-test.js'
       - 'public-consequence-contracts.js'
+      - 'accountability-tracker-runtime.js'
+      - 'accountability-tracker-runtime.css'
       - 'src/worker-consequence-tracker.js'
+      - 'src/worker-consequence-evidence.js'
       - 'src/worker-production.js'
       - 'wrangler.toml'
       - '.github/workflows/exposure-integrity.yml'
@@ -93,8 +105,13 @@ jobs:
           node --check scripts/finalize-public-consequence-runtime.js
           node --check scripts/public-consequence-contracts-pressure-test.js
           node --check scripts/public-consequence-tracker-pressure-test.js
+          node --check scripts/install-consequence-evidence-worker.js
+          node --check scripts/finalize-accountability-tracker-runtime.js
+          node --check scripts/accountability-tracker-pressure-test.js
           node --check public-consequence-contracts.js
+          node --check accountability-tracker-runtime.js
           node --check src/worker-consequence-tracker.js
+          node --check src/worker-consequence-evidence.js
           node --check src/worker-production.js
 
       - name: Build dossier accountability inputs
@@ -122,11 +139,14 @@ jobs:
           node scripts/refine-accountability-question-ledger.js
           node scripts/search-first-accountability-home-pressure-test.js
 
-      - name: Build Accountability Twins and bounded due index
+      - name: Build and test persistent Accountability Twins
         run: |
           node scripts/run-public-consequence-contracts.js
           node scripts/build-public-consequence-due-index.js
           node scripts/public-consequence-tracker-pressure-test.js
+          node scripts/install-consequence-evidence-worker.js
+          node scripts/finalize-accountability-tracker-runtime.js
+          node scripts/accountability-tracker-pressure-test.js
 
       - name: Upload Exposure Integrity and future-accountability proof
         if: always()
@@ -154,6 +174,9 @@ jobs:
             downloads/public-consequence-contracts.csv
             downloads/public-consequence-due-index-report.json
             downloads/public-consequence-tracker-pressure-test.json
+            downloads/consequence-evidence-worker-install.json
+            downloads/accountability-tracker-runtime-report.json
+            downloads/accountability-tracker-pressure-test.json
             hit-list.html
             predators-in-power.html
             index.html
@@ -163,3 +186,5 @@ jobs:
             public-consequence-contracts.html
             public-consequence-contracts.css
             public-consequence-contracts.js
+            accountability-tracker-runtime.js
+            accountability-tracker-runtime.css

@@ -115,6 +115,7 @@ runRequired('scripts/patch-full-site-audit-target-detection.js');
 runRequired('scripts/repair-stale-generated-brief-links.js');
 runRequired('scripts/build-dossier-accountability-overlays.js');
 runRequired('scripts/build-exposure-integrity-engine.js');
+runRequired('scripts/finalize-exposure-integrity-engine.js');
 runRequired('scripts/exposure-integrity-pressure-test.js');
 for (const route of ['independent-links.html', 'independent-links']) patch(route, patchMissingSourceLinks);
 for (const route of ['index.html', 'index']) patch(route, patchObsoleteFamilyRoute);

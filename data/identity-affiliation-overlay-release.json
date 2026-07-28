@@ -1,0 +1,23 @@
+{
+  "release": "identity-affiliation-ownership-overlay",
+  "engineVersion": "1.0.1",
+  "requestedAt": "2026-07-28T08:40:42Z",
+  "requestedLocalTime": "2026-07-28T10:40:42+02:00",
+  "target": "production",
+  "scope": [
+    "site-wide dossier overlay",
+    "identity and affiliation evidence classification",
+    "legal ownership and voting-control separation",
+    "Epstein starter profile",
+    "Tom Cruise starter profile",
+    "John Travolta starter profile",
+    "Orsini claim tests"
+  ],
+  "verificationRequired": [
+    "production build passes",
+    "Cloudflare publish succeeds",
+    "live matrix.js loads overlay runtime",
+    "live overlay JSON is reachable",
+    "nested dossier asset paths resolve"
+  ]
+}

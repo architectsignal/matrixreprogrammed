@@ -34,6 +34,26 @@ function patchAuditResolver() {
   if (!ok) failures.push('audit-site root-relative resolver was not corrected');
 }
 
+function patchFinalReconcileHook() {
+  const file = path.join(root, 'scripts', 'final-production-reconcile.js');
+  if (!fs.existsSync(file)) {
+    failures.push('scripts/final-production-reconcile.js is missing');
+    return;
+  }
+  const before = fs.readFileSync(file, 'utf8');
+  let after = before;
+  const hook = "run('scripts/fix-final-release-audit-defects.js');";
+  const sanitize = "run('scripts/final-release-sanitize.js');";
+  if (!after.includes(hook)) {
+    if (after.includes(sanitize)) after = after.replace(sanitize, `${hook}\n${sanitize}`);
+    else failures.push('final-production-reconcile.js has no sanitation hook');
+  }
+  writeIfChanged(file, before, after);
+  const ok = after.includes(hook) && after.indexOf(hook) < after.indexOf(sanitize);
+  checks.push({ name: 'final reconciliation audit repair hook', ok });
+  if (!ok) failures.push('final reconciliation audit repair hook was not installed');
+}
+
 function insertAfterHeader(html, block) {
   if (/<\/header>/i.test(html)) return html.replace(/<\/header>/i, match => `${match}${block}`);
   if (/<main\b[^>]*>/i.test(html)) return html.replace(/<main\b[^>]*>/i, match => `${match}${block}`);
@@ -91,6 +111,7 @@ function readFirst(relative) {
 }
 
 patchAuditResolver();
+patchFinalReconcileHook();
 patchRoute('daily-watch.html', html => ensureH1(html, 'DAILY INTELLIGENCE HIT LIST.', 'Daily Intelligence'));
 patchRoute('heroes-fighting-matrix-card.html', html => ensureH1(html, 'HEROES FIGHTING THE MATRIX.', 'Public-Interest Profiles'));
 patchRoute('behind-the-curtain-capstone.html', ensureCapstoneAnchors);
@@ -124,4 +145,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`FINAL RELEASE AUDIT DEFECT: ${item}`));
   process.exit(1);
 }
-console.log(`Final release audit defects repaired: ${[...new Set(changed)].length} file(s) updated; root-relative links, H1 contracts and capstone anchors verified.`);
+console.log(`Final release audit defects repaired: ${[...new Set(changed)].length} file(s) updated; root-relative links, final reconciliation hook, H1 contracts and capstone anchors verified.`);

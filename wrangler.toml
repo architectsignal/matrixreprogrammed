@@ -17,7 +17,9 @@ routes = [
 ]
 
 [triggers]
-crons = ["5 6 * * *", "15 7 * * 1", "35 * * * *"]
+# Four of the five Workers Free cron slots are used. The 05:25 UTC trigger is isolated for
+# the bounded consequence tracker so its D1 query budget cannot combine with email/report jobs.
+crons = ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]
 
 [vars]
 EMAIL_AUTOMATION_ENABLED = "true"

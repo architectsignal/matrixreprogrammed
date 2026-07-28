@@ -7,6 +7,7 @@ require('./power-supply-chain-pressure-test.js');
 require('./evidence-half-life-pressure-test.js');
 require('./power-diff-pressure-test.js');
 require('./red-team-mirror-pressure-test.js');
+require('./public-answer-clock-pressure-test.js');
 require('./finalize-accountability-innovation-links.js');
 
 const root = process.cwd();
@@ -48,11 +49,12 @@ const powerChain = json('data/power-supply-chain.json');
 const halfLife = json('data/evidence-half-life.json');
 const powerDiff = json('data/power-diff.json');
 const redTeam = json('data/red-team-mirror.json');
+const answerClocks = json('data/public-answer-clocks.json');
 
 for (const marker of ['START WITH', 'data-reverse-search-form', 'data-reverse-search-results', mission, 'Search the consequence. Trace the power. Follow the outcome.']) {
   if (!page.includes(marker)) fail(`Reverse search page missing ${marker}`);
 }
-for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome', 'Trace responsibility chain', 'See what changed', 'Challenge the case']) {
+for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome', 'Trace responsibility chain', 'See what changed', 'Challenge the case', 'Open answer clock']) {
   if (!client.includes(marker)) fail(`Reverse search client missing ${marker}`);
 }
 if (!css.includes('.reverse-path-step') || !css.includes('@media')) fail('Reverse search CSS is incomplete or not responsive');
@@ -66,6 +68,7 @@ if (!Array.isArray(powerChain.chains) || powerChain.chains.length !== index.reco
 if (!Array.isArray(halfLife.entries) || halfLife.entries.length !== index.records.length) fail('Evidence Half-Life is not synchronized with Reverse Accountability Search');
 if (!Array.isArray(powerDiff.entries) || powerDiff.entries.filter(item => item.status !== 'record-ended-or-removed').length !== index.records.length) fail('Power Diff is not synchronized with Reverse Accountability Search');
 if (!Array.isArray(redTeam.mirrors) || redTeam.mirrors.length !== index.records.length) fail('Red-Team Mirror is not synchronized with Reverse Accountability Search');
+if (!Array.isArray(answerClocks.clocks) || answerClocks.clocks.length !== index.records.length) fail('Public Answer Clock is not synchronized with Reverse Accountability Search');
 
 for (const record of index.records || []) {
   if (!record.id || !record.title || !record.consequenceSummary) fail('Reverse accountability record is missing identity or consequence summary');
@@ -79,6 +82,7 @@ for (const record of index.records || []) {
   if (!String(record.evidenceHalfLifeRoute || '').startsWith('evidence-half-life.html#half-life-')) fail(`${record.id || 'record'} has no Evidence Half-Life route`);
   if (!String(record.powerDiffRoute || '').startsWith('power-diff.html#diff-')) fail(`${record.id || 'record'} has no Power Diff route`);
   if (!String(record.redTeamMirrorRoute || '').startsWith('red-team-mirror.html#red-team-')) fail(`${record.id || 'record'} has no Red-Team Mirror route`);
+  if (!String(record.publicAnswerClockRoute || '').startsWith('public-answer-clock.html#answer-clock-')) fail(`${record.id || 'record'} has no Public Answer Clock route`);
 }
 
 if (/\beval\s*\(|new Function\s*\(/.test(client)) fail('Reverse search client contains unsafe dynamic code execution');
@@ -100,10 +104,12 @@ fs.writeFileSync(path.join(root, 'downloads', 'reverse-accountability-platform-p
   powerDiffBaselineAvailable: powerDiff.baselineAvailable,
   redTeamMirrorCount: redTeam.mirrors.length,
   noAutomatedVerdicts: redTeam.mirrors.every(item => item.publicJudgement === 'none-generated'),
+  publicAnswerClockCount: answerClocks.clocks.length,
+  runningAnswerClocks: answerClocks.runningCount,
   lockedSystems: requiredSystems,
   missionVoice: true,
   homepageEntry: true,
   simpleHomepageProtected: true,
   innovationLinksFinalized: true
 }, null, 2) + '\n');
-console.log(`Reverse Accountability platform pressure test passed with ${index.records.length} synchronized records through Red-Team Mirror and all eight systems locked.`);
+console.log(`Reverse Accountability platform pressure test passed with ${index.records.length} synchronized records through Public Answer Clock and all eight systems locked.`);

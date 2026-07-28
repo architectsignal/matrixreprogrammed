@@ -48,6 +48,40 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
 }, null, 2)}\n`);
 console.log(`Homepage AI detective route ${changed.length ? `updated ${changed.join(', ')}` : 'already current'}.`);
 
+function collisionSafeDedupeIds(html) {
+  const used = new Set();
+  const counters = new Map();
+  return String(html).split(/(<script\b[\s\S]*?<\/script>)/gi).map((part, index) => {
+    if (index % 2) return part;
+    return part.replace(/\bid\s*=\s*(["'])([^"']+)\1/gi, (match, quote, id) => {
+      if (!used.has(id)) {
+        used.add(id);
+        counters.set(id, 1);
+        return match;
+      }
+      let count = Math.max(2, (counters.get(id) || 1) + 1);
+      let candidate = `${id}--dedup-${count}`;
+      while (used.has(candidate)) {
+        count += 1;
+        candidate = `${id}--dedup-${count}`;
+      }
+      counters.set(id, count);
+      used.add(candidate);
+      return `id=${quote}${candidate}${quote}`;
+    });
+  }).join('');
+}
+
+for (const relative of ['download-center.html', 'black-file.html']) {
+  for (const base of [root, path.join(root, '_site')]) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file)) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = collisionSafeDedupeIds(before);
+    if (after !== before) fs.writeFileSync(file, after);
+  }
+}
+
 const repairScript = path.join(root, 'scripts', 'repair-release-audit-hard-issues.js');
 if (!fs.existsSync(repairScript)) throw new Error('Release audit hard-issue repair script is missing');
 const repair = spawnSync(process.execPath, [repairScript], {

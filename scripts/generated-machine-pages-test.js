@@ -18,6 +18,11 @@ function listFiles(directory) {
 
 function stem(name) { return name.replace(/\.html$/i, ''); }
 function isHtmlOrAlias(name) { return name.endsWith('.html') || !path.extname(name); }
+function slug(value = '') {
+  return String(value || '').toLowerCase().normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ')
+    .trim().replace(/\s+/g, '-').replace(/^-+|-+$/g, '') || 'unknown-office-holder';
+}
 
 function auditNamespace({ name, relativeDir, expectedIds, generatedPredicate = isHtmlOrAlias }) {
   const expected = new Set(expectedIds.filter(Boolean));
@@ -45,13 +50,19 @@ const daily = readJson('data/entity-daily-briefs.json', { briefs: [] });
 const exposure = readJson('data/entity-exposure-index.json', { profiles: [] });
 const elite = readJson('data/elite-reports.json', { reports: [] });
 const officeHolderRefresh = readJson('downloads/current-office-holder-evidence-refresh.json', { generatedDossiers: [] });
+const officeHolderRegistry = readJson('data/current-office-holders.json', { holders: [] });
 
 const dailyIds = (Array.isArray(daily.briefs) ? daily.briefs : []).slice(0, 120).map(item => String(item?.id || '').trim()).filter(Boolean);
-const officeHolderBriefIds = (Array.isArray(officeHolderRefresh.generatedDossiers) ? officeHolderRefresh.generatedDossiers : [])
+const officeHolderReportIds = (Array.isArray(officeHolderRefresh.generatedDossiers) ? officeHolderRefresh.generatedDossiers : [])
   .map(relative => String(relative || '').replace(/\\/g, '/'))
   .filter(relative => /^entity-briefs\/[^/]+\.html$/i.test(relative))
   .map(relative => stem(path.basename(relative)))
   .filter(Boolean);
+const officeHolderRegistryIds = (Array.isArray(officeHolderRegistry.holders) ? officeHolderRegistry.holders : [])
+  .flatMap(holder => [holder?.name, holder?.predecessor])
+  .map(slug)
+  .filter(Boolean);
+const officeHolderBriefIds = [...new Set([...officeHolderReportIds, ...officeHolderRegistryIds])];
 const entityBriefIds = [...new Set([...dailyIds, ...officeHolderBriefIds])];
 const exposureIds = (Array.isArray(exposure.profiles) ? exposure.profiles : []).slice(0, 120).map(item => String(item?.id || '').trim()).filter(Boolean);
 const eliteIds = (Array.isArray(elite.reports) ? elite.reports : []).map(item => String(item?.id || '').trim()).filter(Boolean);
@@ -59,7 +70,8 @@ const eliteIds = (Array.isArray(elite.reports) ? elite.reports : []).map(item =>
 if (!dailyIds.length) failures.push('Entity Daily Brief index has no page IDs.');
 if (!exposureIds.length) failures.push('Entity Exposure index has no page IDs.');
 if (!eliteIds.length) failures.push('Elite Reports index has no page IDs.');
-if (officeHolderBriefIds.length && officeHolderBriefIds.length !== new Set(officeHolderBriefIds).size) failures.push('Office-holder generated dossier inventory contains duplicate IDs.');
+if (!officeHolderRegistryIds.length) failures.push('Current office-holder registry has no dossier owner IDs.');
+if (officeHolderBriefIds.length !== new Set(officeHolderBriefIds).size) failures.push('Office-holder dossier ownership contains duplicate IDs.');
 
 for (const [label, ids] of [['Entity Daily Brief', dailyIds], ['Entity Exposure', exposureIds], ['Elite Report', eliteIds]]) {
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -77,10 +89,12 @@ const report = {
   inventory,
   ownership: {
     dailyEntityBriefs: dailyIds.length,
+    currentOfficeHolderRegistryBriefs: officeHolderRegistryIds.length,
+    currentOfficeHolderRunBriefs: officeHolderReportIds.length,
     currentOfficeHolderBriefs: officeHolderBriefIds.length,
     combinedEntityBriefs: entityBriefIds.length
   },
-  boundary: 'Generated entity briefs, current office-holder briefs, entity exposure pages and elite reports must exactly match their current JSON or build reports. The Cloudflare bundle must include both .html and extensionless aliases, with no ghost pages from earlier build passes.'
+  boundary: 'Generated entity briefs, current office-holder briefs, entity exposure pages and elite reports must exactly match their canonical registries or build reports. Repeat builds may report zero newly generated office-holder dossiers while the canonical registry continues to own those routes. The Cloudflare bundle must include both .html and extensionless aliases, with no ghost pages from earlier build passes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'generated-machine-pages-test.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -90,4 +104,4 @@ if (!report.ok) {
   failures.slice(0, 200).forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`Generated machine pages test passed: ${dailyIds.length} daily entity briefs + ${officeHolderBriefIds.length} office-holder briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output.`);
+console.log(`Generated machine pages test passed: ${dailyIds.length} daily entity briefs + ${officeHolderBriefIds.length} registry-owned office-holder briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output.`);

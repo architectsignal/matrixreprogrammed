@@ -1,6 +1,6 @@
 name: Reverse Accountability Platform Gate
 
-# Validates the permanent accountability innovation charter, voiced mission intro, reverse search, Power Supply Chain, Evidence Half-Life and Power Diff.
+# Validates the permanent accountability innovation charter, voiced mission intro, reverse search, Power Supply Chain, Evidence Half-Life, Power Diff and Red-Team Mirror.
 on:
   pull_request:
     paths:
@@ -14,6 +14,8 @@ on:
       - 'evidence-half-life.css'
       - 'power-diff.js'
       - 'power-diff.css'
+      - 'red-team-mirror.js'
+      - 'red-team-mirror.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
       - 'scripts/install-power-supply-chain.js'
@@ -22,6 +24,9 @@ on:
       - 'scripts/evidence-half-life-pressure-test.js'
       - 'scripts/install-power-diff.js'
       - 'scripts/power-diff-pressure-test.js'
+      - 'scripts/install-red-team-mirror.js'
+      - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/red-team-mirror-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
@@ -39,6 +44,8 @@ on:
       - 'evidence-half-life.css'
       - 'power-diff.js'
       - 'power-diff.css'
+      - 'red-team-mirror.js'
+      - 'red-team-mirror.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
       - 'scripts/install-power-supply-chain.js'
@@ -47,6 +54,9 @@ on:
       - 'scripts/evidence-half-life-pressure-test.js'
       - 'scripts/install-power-diff.js'
       - 'scripts/power-diff-pressure-test.js'
+      - 'scripts/install-red-team-mirror.js'
+      - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/red-team-mirror-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
@@ -82,6 +92,10 @@ jobs:
           node --check scripts/install-power-diff.js
           node --check scripts/power-diff-pressure-test.js
           node --check power-diff.js
+          node --check scripts/install-red-team-mirror.js
+          node --check scripts/finalize-red-team-mirror-routes.js
+          node --check scripts/red-team-mirror-pressure-test.js
+          node --check red-team-mirror.js
           node --check scripts/finalize-accountability-mission-intro.js
           node --check scripts/align-mission-acceptance-copy.js
 
@@ -104,6 +118,7 @@ jobs:
             data/evidence-half-life.json
             data/power-diff-current.json
             data/power-diff.json
+            data/red-team-mirror.json
             downloads/reverse-accountability-platform-report.json
             downloads/reverse-accountability-platform-pressure-test.json
             downloads/power-supply-chain-report.json
@@ -112,6 +127,9 @@ jobs:
             downloads/evidence-half-life-pressure-test.json
             downloads/power-diff-report.json
             downloads/power-diff-pressure-test.json
+            downloads/red-team-mirror-report.json
+            downloads/red-team-mirror-route-finalization.json
+            downloads/red-team-mirror-pressure-test.json
             reverse-accountability-search.html
             reverse-accountability-search.js
             reverse-accountability-search.css
@@ -124,5 +142,8 @@ jobs:
             power-diff.html
             power-diff.js
             power-diff.css
+            red-team-mirror.html
+            red-team-mirror.js
+            red-team-mirror.css
             welcome-gate.js
             index.html

@@ -129,9 +129,12 @@ runRequired('scripts/search-first-accountability-home-pressure-test.js');
 runRequired('scripts/run-public-consequence-contracts.js');
 runRequired('scripts/build-public-consequence-due-index.js');
 runRequired('scripts/public-consequence-tracker-pressure-test.js');
+runRequired('scripts/install-consequence-evidence-worker.js');
+runRequired('scripts/finalize-accountability-tracker-runtime.js');
+runRequired('scripts/accountability-tracker-pressure-test.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair, dossier Epstein/criminal accountability overlays, Exposure Integrity Engine, persistent Predators in Power Hit List routing, cinematic Hit List, search-first accountability homepage, refined Open Question Ledger, Accountability Twins and the bounded Cloudflare Free consequence tracker passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair, dossier Epstein/criminal accountability overlays, Exposure Integrity Engine, persistent Predators in Power Hit List routing, cinematic Hit List, search-first accountability homepage, refined Open Question Ledger, Accountability Twins, bounded daily tracking, classified evidence, reviewed outcomes and live D1 status passed.`);

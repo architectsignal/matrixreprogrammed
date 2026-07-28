@@ -3,9 +3,20 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
-const staleClaimPatch = path.resolve(__dirname, 'patch-current-office-holder-stale-claim-detector.js');
-if (fs.existsSync(staleClaimPatch)) {
-  const result = spawnSync(process.execPath, [staleClaimPatch], {
+const installPatches = [
+  {
+    file: 'patch-current-office-holder-stale-claim-detector.js',
+    failure: 'Current office-holder stale-claim detector repair failed during install'
+  },
+  {
+    file: 'patch-release-audit-global-id-dedupe.js',
+    failure: 'Release-audit duplicate-ID allocator repair failed during install'
+  }
+];
+for (const patch of installPatches) {
+  const file = path.resolve(__dirname, patch.file);
+  if (!fs.existsSync(file)) continue;
+  const result = spawnSync(process.execPath, [file], {
     cwd: root,
     encoding: 'utf8',
     env: process.env,
@@ -13,7 +24,7 @@ if (fs.existsSync(staleClaimPatch)) {
   });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
-  if (result.status !== 0) throw new Error('Current office-holder stale-claim detector repair failed during install');
+  if (result.status !== 0) throw new Error(patch.failure);
 }
 
 const workflow = String(process.env.GITHUB_WORKFLOW || '');

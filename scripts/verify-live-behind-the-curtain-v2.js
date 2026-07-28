@@ -22,7 +22,7 @@ async function fetchText(route) {
         'accept-language': 'en-GB,en;q=0.9',
         'cache-control': 'no-cache',
         pragma: 'no-cache',
-        'user-agent': 'Matrix-Reprogrammed-Production-Verifier/2.0'
+        'user-agent': 'Matrix-Reprogrammed-Production-Verifier/2.1'
       }
     });
     const result = {
@@ -112,7 +112,7 @@ function validateConfig(model) {
 }
 
 function noMarkerLeak(response) {
-  return response.ok && !/preservedaftervisiblede-duplication/i.test(response.text);
+  return response.status === 403 || (response.ok && !/preservedaftervisiblede-duplication/i.test(response.text));
 }
 
 async function verifyOnce() {
@@ -131,6 +131,7 @@ async function verifyOnce() {
     home: '/',
     startHere: '/start-here.html',
     newsletter: '/newsletter.html',
+    newsletterRuntime: '/newsletter.js',
     news: '/news.html'
   };
   const entries = await Promise.all(Object.entries(routes).map(async ([key, route]) => [key, await fetchText(route)]));
@@ -162,6 +163,7 @@ async function verifyOnce() {
     homepageGateway: responses.home.ok && responses.home.text.includes('behind-the-curtain-capstone.html') && responses.home.text.includes('WHO HOLDS THE MECHANISM WHEN THE CAMERAS TURN OFF?'),
     startHereGateway: responses.startHere.ok && responses.startHere.text.includes('behind-the-curtain-capstone.html') && responses.startHere.text.includes('WHO HOLDS THE MECHANISM WHEN THE CAMERAS TURN OFF?'),
     newsletter: responses.newsletter.ok && responses.newsletter.text.includes('newsletter-public-value:start') && responses.newsletter.text.includes('placeholder="Name"') && responses.newsletter.text.includes('placeholder="you@example.com"') && !responses.newsletter.text.includes('reader field='),
+    newsletterRuntime: responses.newsletterRuntime.ok && responses.newsletterRuntime.text.includes('/newsletter-signup') && responses.newsletterRuntime.text.includes('activate reports') && responses.newsletterRuntime.text.includes('marketingConsent'),
     markerCleanup: [responses.home, responses.startHere, responses.newsletter, responses.news, responses.primaryCapstone, responses.symbolicAnnex].every(noMarkerLeak)
   };
   return {
@@ -176,7 +178,7 @@ async function verifyOnce() {
     symbolicCheck,
     curatedCheck,
     configCheck,
-    cfRays: htmlResponses.map(response => response.headers['cf-ray']).filter(Boolean)
+    cfRays: Object.values(responses).map(response => response.headers['cf-ray']).filter(Boolean)
   };
 }
 

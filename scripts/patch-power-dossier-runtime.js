@@ -74,7 +74,8 @@ const engineBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped 
 const engineAliasSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine build failure' } : runRequired('scripts/sync-criminal-conduct-extensionless.js');
 const engineTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after engine or alias failure' } : runRequired('scripts/criminal-conduct-engine-pressure-test.js');
 const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after criminal conduct engine failure' } : runRequired('scripts/build-predators-in-power.js');
-const predatorsExpansionBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/expand-predators-in-power.js');
+const predatorsRumorPatch = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/patch-predators-rumor-ledger.js');
+const predatorsExpansionBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipped after rumor-ledger patch failure' } : runRequired('scripts/expand-predators-in-power.js');
 const predatorsExpansionDom = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators expansion build failure' } : runRequired('scripts/fix-predators-expansion-dom-ready.js');
 const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power expansion failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
 const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power conduct-link failure' } : runRequired('scripts/sync-predators-in-power-output.js');
@@ -104,6 +105,7 @@ const report = {
   },
   predatorsInPower: {
     buildStatus: predatorsBuild.status,
+    rumorLedgerPatchStatus: predatorsRumorPatch.status,
     expansionBuildStatus: predatorsExpansionBuild.status,
     expansionDomStatus: predatorsExpansionDom.status,
     conductLinkStatus: predatorsConductLinks.status,
@@ -122,7 +124,7 @@ const report = {
     outputReport: 'downloads/predators-in-power-output-sync.json',
     pressureTest: 'downloads/predators-in-power-pressure-test.json',
     expansionPressureTest: 'downloads/predators-in-power-expansion-test.json',
-    contract: 'Every approved child-focused conduct record with a separately sourced power role must appear. Current power requires a fresh sourced role. Unsupported living-person claims remain private unless editorial and legal review approve a fully bounded attributable record.'
+    contract: 'Every approved child-focused conduct record with a separately sourced power role must appear. Every relevant rumor or speculation record must enter the separate public ledger: named when publicly attributable, redacted when anonymous or untraceable. Rumors carry zero verified-evidence or guilt weight.'
   },
   universalCriminalDossierCoverage: {
     buildStatus: universalCoverage.status,
@@ -140,4 +142,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; official 2026 Predators wave, Criminal Conduct & Allegations, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; official 2026 Predators wave, Criminal Conduct & Allegations, public rumor/speculation ledger, expanded Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and independently pressure-tested.`);

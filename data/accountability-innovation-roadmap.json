@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "status": "permanent-product-requirement",
+  "lockedAt": "2026-07-28T19:00:00.000Z",
+  "mission": "Matrix Reprogrammed is a public accountability system where anyone can search a consequence, trace it backwards through decisions, authority and money, follow the unanswered questions, and return to see what actually happened.",
+  "publicPromise": "Search the consequence. Trace the power. Follow the outcome.",
+  "buildOrder": [
+    "reverse-accountability-search",
+    "power-supply-chain",
+    "evidence-half-life",
+    "power-diff",
+    "red-team-mirror",
+    "public-answer-clock",
+    "missing-record-missions",
+    "lived-consequence-receipts"
+  ],
+  "systems": [
+    {
+      "id": "reverse-accountability-search",
+      "name": "Reverse Accountability Search",
+      "status": "in-build",
+      "purpose": "Let a reader begin with a consequence, cost, closure, restriction, contract, policy outcome or lived problem and trace backwards to implementation, decisions, authority, money, beneficiaries, affected groups and unresolved questions.",
+      "uniqueBehavior": "The user does not need to know the powerful person or institution before beginning the investigation."
+    },
+    {
+      "id": "power-supply-chain",
+      "name": "Power Supply Chain",
+      "status": "locked-next",
+      "purpose": "Map who proposed, drafted, promoted, authorised, funded, implemented and benefited from an exercise of power, while distinguishing authority from access or association.",
+      "uniqueBehavior": "Responsibility is represented as an evidence-classified chain of authority and implementation rather than a generic social network."
+    },
+    {
+      "id": "evidence-half-life",
+      "name": "Evidence Half-Life",
+      "status": "locked-next",
+      "purpose": "Track when supporting records were last verified, whether they remain accessible and whether ownership, office, law or material context has changed.",
+      "uniqueBehavior": "Claims lose prominence or receive a recall notice when their evidence becomes stale, unavailable or contradicted."
+    },
+    {
+      "id": "power-diff",
+      "name": "Power Diff",
+      "status": "locked-next",
+      "purpose": "Show a Git-style record of what was added, changed, ended, disputed or corrected in a power record since the previous version.",
+      "uniqueBehavior": "Readers can see the exact material change rather than rereading an entire dossier."
+    },
+    {
+      "id": "red-team-mirror",
+      "name": "Red-Team Mirror",
+      "status": "locked-next",
+      "purpose": "Generate the strongest evidence-based case supporting and challenging every significant conclusion before publication.",
+      "uniqueBehavior": "The investigation system must attempt to disprove its own preferred conclusion and publish the strongest plausible alternative explanation."
+    },
+    {
+      "id": "public-answer-clock",
+      "name": "Public Answer Clock",
+      "status": "locked-next",
+      "purpose": "Keep a precise public-interest question attached to the permanent record, including who was asked, when it was delivered, whether a response arrived and what remains unanswered.",
+      "uniqueBehavior": "The question remains live and followable after the news cycle ends; non-response is never treated as proof of wrongdoing."
+    },
+    {
+      "id": "missing-record-missions",
+      "name": "Missing Record Missions",
+      "status": "locked-next",
+      "purpose": "Convert evidence gaps into specific public research missions naming the record needed, likely custodian, jurisdiction, search terms, request route and resolution status.",
+      "uniqueBehavior": "Readers contribute to defined evidence gaps instead of posting unstructured speculation."
+    },
+    {
+      "id": "lived-consequence-receipts",
+      "name": "Lived Consequence Receipts",
+      "status": "locked-next",
+      "purpose": "Allow privacy-protected submissions showing how a decision affected real people through bills, notices, correspondence, service changes or other verifiable records.",
+      "uniqueBehavior": "Individual receipts remain clearly classified and can reveal corroborated patterns without pretending that one submission proves a general outcome."
+    }
+  ],
+  "nonNegotiableRules": [
+    "Facts, official allegations, documented associations, inference, rumours and speculation must remain separately classified.",
+    "Association, proximity and network membership must never be converted into guilt.",
+    "Every material conclusion must state what the evidence establishes, what it does not establish, alternative explanations and what evidence would change the conclusion.",
+    "No automated outcome verdict may be published without accepted evidence and named human review.",
+    "Corrections, counter-evidence, right of reply and version history remain attached to the public record.",
+    "Privacy-protected lived evidence must be redacted, consent-bounded and separately classified from general statistical evidence."
+  ]
+}

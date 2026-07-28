@@ -3,6 +3,7 @@
 const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
+require('./harden-consequence-tracking-runtime.js');
 const workerFile=path.join(root,'src','worker-production.js');
 if(!fs.existsSync(workerFile))throw new Error('src/worker-production.js is required');
 let source=fs.readFileSync(workerFile,'utf8');

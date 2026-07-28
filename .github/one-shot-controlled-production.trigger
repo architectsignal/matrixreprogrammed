@@ -1,7 +1,7 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-25T21:38:00+02:00
-Target: homepage intro v7 served as one direct Cloudflare Worker video/mp4 endpoint backed by Wrangler Text modules
-Authorization: one isolated Cloudflare production deployment of the simplified intro Worker
-Required proof: forced replay homepage loads the direct v7 runtime, /_matrix-intro.mp4 returns the exact 15,003-byte MP4 with video/mp4 headers and Range support, and the workflow commits full diagnostics with the SHA-matched result
-Purpose: remove browser Base64 reconstruction, Blob playback, split-route assembly, asset fallback and CDN dependencies that caused “Opening sequence unavailable”
-Nonce: homepage-intro-direct-mp4-v7-20260725-2138-paris
+Requested: 2026-07-28T12:30:16+02:00
+Target: latest main containing the site-wide evidence-bounded Epstein Relationship Intelligence and Criminal & Safeguarding dossier overlays, including documented Bill Gates overlap on both Gates routes
+Authorization: exactly one controlled Cloudflare production deployment
+Required proof: complete site build, fail-closed dossier accountability coverage, preservation of the existing Epstein relationship dataset, D1 rollback bookmark and idempotent migrations, Cloudflare Worker deployment, exact live SHA, both Gates dossiers showing the approved 2011-2014 relationship record, every detected dossier showing Epstein and criminal status panels, and protected forum, membership, PayPal and email boundaries
+Purpose: deploy commit 39ff6061430c4ec43e17003a1ac7ee3d53530f29 and verify the live dossier coverage without duplicating a release
+Nonce: dossier-epstein-criminal-accountability-2026-07-28T12:30:16+02:00

@@ -74,6 +74,24 @@ A removed record must retain its previous fingerprint, show that the current rec
 
 A field difference is not automatically material, causal or evidence of wrongdoing. Each change remains attached to its accountability record, responsibility chain, freshness review, correction route and evidence boundary.
 
+### Red-Team Mirror
+
+Every current reverse-search record receives a structured mirror containing:
+
+- The proposition under test
+- The strongest support actually attached to the record
+- What each supporting point establishes
+- What each supporting point does **not** establish
+- Genuine evidence gaps, freshness concerns and explicit falsifiers
+- The strongest responsible alternative explanation supported by the current limits
+- The evidence that would materially change the assessment
+
+Red-Team Mirror must never invent counter-evidence to make both columns appear equal. When no accepted counter-evidence is attached, it must say so and require an active search rather than treating absence as proof that no challenge exists.
+
+The mirror produces no numerical balance score and no automated public judgement. It is a pre-publication reasoning and challenge layer. Named human review remains responsible for any public conclusion.
+
+Historical-only Power Diff entries do not receive a Red-Team Mirror route when the current proposition no longer exists. Their change history remains visible in Power Diff and requires separate human review.
+
 ## Operating boundary
 
 The system must distinguish documented fact, official allegation, documented association, analytical inference, unverified claim and speculation. Proximity is never guilt. Every significant conclusion must explain what the evidence establishes, what it does not establish, credible alternatives and what evidence would change the judgement.

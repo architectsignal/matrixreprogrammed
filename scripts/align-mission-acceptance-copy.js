@@ -115,7 +115,7 @@ runRequired('scripts/patch-full-site-audit-target-detection.js');
 runRequired('scripts/repair-stale-generated-brief-links.js');
 runRequired('scripts/build-dossier-accountability-overlays.js');
 runRequired('scripts/prepare-exposure-integrity-inputs.js');
-runRequired('scripts/build-exposure-integrity-engine.js');
+runRequired('scripts/run-exposure-integrity-engine.js');
 runRequired('scripts/finalize-exposure-integrity-engine.js');
 runRequired('scripts/finalize-exposure-clean-routes.js');
 runRequired('scripts/exposure-integrity-pressure-test.js');

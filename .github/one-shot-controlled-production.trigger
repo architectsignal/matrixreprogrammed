@@ -1,7 +1,7 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-28T16:08:04+02:00
-Target: latest main commit 0eb5ed14dc16d736878f033cda4ab3de3c8ad308 containing the Exposure Integrity Engine, canonical evidence ledger, evidence-classified cinematic Hit List, dossier and timer routing, cross-registry provenance merging and fail-closed integrity gate
-Authorization: exactly one controlled Cloudflare production deployment
-Required proof: complete site build, Exposure Integrity Gate pass, canonical evidence-ledger deduplication, generated /hit-list and /hit-list.html routes, searchable and responsive Hit List controls, working dossier, timer, source, correction and missing-record routes, no unsupported claim upgraded to fact, quarantined unsourced graph relationships excluded from timer movement, D1 rollback bookmark and idempotent migrations, Cloudflare Worker deployment, exact live SHA, and protected forum, membership, PayPal and email boundaries
-Purpose: deploy the merged user-friendly Exposure Integrity and Hit List upgrade, verify all generated routes and evidence boundaries live, and refuse partial or duplicate release
-Nonce: exposure-integrity-hit-list-2026-07-28T16:08:04+02:00
+Requested: 2026-07-28T17:03:34+02:00
+Target: latest main containing the persistent Predators in Power to Exposure Integrity Hit List route, repaired live verifiers, canonical evidence ledger, cinematic Hit List, dossier routing and timer routing
+Authorization: exactly one controlled Cloudflare production deployment retry
+Required proof: complete site build, Exposure Integrity pressure test, persistent Predators in Power Hit List marker in source and Cloudflare output, both /hit-list and /hit-list.html live, 84 or more canonical evidence records, 275 or more Hit List entries, zero sensitive-record failures, D1 rollback bookmark and idempotent migrations, exact live deploy-manifest SHA, working dossier/timer/source/correction links, D1 forum health, and protected PayPal and email boundaries
+Purpose: repair the single missing Predators in Power to Hit List link found by focused live verification, preserve all evidence classifications and publish no duplicate or partial release
+Nonce: exposure-integrity-predators-link-repair-2026-07-28T17:03:34+02:00

@@ -33,6 +33,7 @@ process.exit = function matrixBehindCurtainVerifiedExit(code = 0) {
         'symbolicAnnex',
         'home',
         'newsletter',
+        'news',
         'hitListHtml',
         'hitListClean',
         'evidenceLedger',
@@ -77,6 +78,9 @@ process.exit = function matrixBehindCurtainVerifiedExit(code = 0) {
         newsletter: [
           ['newsletterRuntime', 'startHereGateway']
         ],
+        news: [
+          ['startHereGateway', 'pyramidData', 'symbolicData']
+        ],
         hitListHtml: [
           ['hitListClean', 'evidenceLedger', 'integrityEngine', 'hitListData']
         ],
@@ -95,7 +99,7 @@ process.exit = function matrixBehindCurtainVerifiedExit(code = 0) {
       };
 
       const boundedBlockedSet = blocked.length > 0
-        && blocked.length <= 5
+        && blocked.length <= 6
         && blocked.every(key => allowedBlocked.has(key));
       const statusesBounded = Object.entries(statuses).every(([key, status]) => {
         const value = Number(status);
@@ -123,6 +127,7 @@ process.exit = function matrixBehindCurtainVerifiedExit(code = 0) {
         'symbolicAnnex',
         'home',
         'newsletter',
+        'news',
         'hitListHtml',
         'hitListClean'
       ].includes(key));

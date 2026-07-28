@@ -21,7 +21,7 @@
       "status": "functional-foundation",
       "purpose": "Let a reader begin with a consequence, cost, closure, restriction, contract, policy outcome or lived problem and trace backwards to implementation, decisions, authority, money, beneficiaries, affected groups and unresolved questions.",
       "uniqueBehavior": "The user does not need to know the powerful person or institution before beginning the investigation.",
-      "currentCapability": "Searches current Accountability Twins and public-source leads, renders a six-step backwards evidence path and links each result to its responsibility chain, freshness review and change log."
+      "currentCapability": "Searches current Accountability Twins and public-source leads, renders a six-step backwards evidence path and links each result to its responsibility chain, freshness review, change log and Red-Team Mirror."
     },
     {
       "id": "power-supply-chain",
@@ -29,7 +29,7 @@
       "status": "functional-foundation",
       "purpose": "Map who proposed, drafted, promoted, authorised, funded, implemented and benefited from an exercise of power, while distinguishing authority from access or association.",
       "uniqueBehavior": "Responsibility is represented as an evidence-classified chain of authority and implementation rather than a generic social network.",
-      "currentCapability": "Builds ten-stage chains for every reverse-search record, visibly preserves unresolved stages, blocks authority claims based only on access, association or proximity and links to freshness and diff review."
+      "currentCapability": "Builds ten-stage chains for every reverse-search record, visibly preserves unresolved stages, blocks authority claims based only on access, association or proximity and links to freshness, diff and Red-Team review."
     },
     {
       "id": "evidence-half-life",
@@ -37,7 +37,7 @@
       "status": "functional-foundation",
       "purpose": "Track when supporting records were last anchored, whether they remain accessible and whether ownership, office, law or material context must be re-verified.",
       "uniqueBehavior": "Records receive review dates and evidence recall notices when current applicability is overdue or cannot be established, without treating age as falsity.",
-      "currentCapability": "Creates a synchronized review ledger for every reverse-search record with provisional baseline, review class, next review date, source-availability boundary, recall notice and exact Power Diff route."
+      "currentCapability": "Creates a synchronized review ledger for every reverse-search record with provisional baseline, review class, next review date, source-availability boundary, recall notice and exact Power Diff and Red-Team routes."
     },
     {
       "id": "power-diff",
@@ -50,9 +50,10 @@
     {
       "id": "red-team-mirror",
       "name": "Red-Team Mirror",
-      "status": "locked-next",
+      "status": "functional-foundation",
       "purpose": "Generate the strongest evidence-based case supporting and challenging every significant conclusion before publication.",
-      "uniqueBehavior": "The investigation system must attempt to disprove its own preferred conclusion and publish the strongest plausible alternative explanation."
+      "uniqueBehavior": "The investigation system must attempt to disprove its own preferred conclusion and publish the strongest plausible alternative explanation.",
+      "currentCapability": "Builds a synchronized mirror for every current reverse-search record, separating attached support, genuine challenges, explicit falsifiers, alternative explanations and evidence that would change the assessment. It generates no score or public verdict and never invents counter-evidence for false balance."
     },
     {
       "id": "public-answer-clock",
@@ -83,6 +84,7 @@
     "No automated outcome verdict may be published without accepted evidence and named human review.",
     "Evidence age must never be treated as a truth score; it triggers review of source availability and current applicability.",
     "Power Diff must never claim historical change without a genuine prior snapshot; field differences are not automatically important, causal or evidence of wrongdoing.",
+    "Red-Team Mirror must not invent counter-evidence, manufacture false balance, score the case or publish an automated judgement.",
     "Corrections, counter-evidence, right of reply and version history remain attached to the public record.",
     "Privacy-protected lived evidence must be redacted, consent-bounded and separately classified from general statistical evidence."
   ]

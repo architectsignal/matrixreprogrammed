@@ -1,20 +1,20 @@
 {
   "ok": true,
   "releaseId": "exposure-integrity-hit-list-20260728",
-  "action": "dispatched-exposure-integrity-release-once",
-  "dispatcherRunId": 30367107292,
+  "action": "reused-existing-exposure-integrity-release",
+  "dispatcherRunId": 30367304260,
   "productionRunId": 30367217535,
   "productionRunNumber": 1326,
-  "status": "queued",
+  "status": "in_progress",
   "conclusion": null,
   "event": "workflow_dispatch",
   "headBranch": "main",
   "headSha": "7882f630654b91d07297873f8bb697cbf964f867",
   "createdAt": "2026-07-28T14:12:30Z",
-  "updatedAt": "2026-07-28T14:12:30Z",
+  "updatedAt": "2026-07-28T14:12:44Z",
   "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30367217535",
   "targetFeatureCommit": "0eb5ed14dc16d736878f033cda4ab3de3c8ad308",
   "targetAuthorizationCommit": "22f34098a020a4112fd98cc968e0ee4d8d5519b0",
-  "recordedAt": "2026-07-28T14:12:37.264Z",
-  "boundary": "Exactly one controlled production workflow-dispatch run created after the Exposure Integrity release cutoff is used. Later reruns of this dispatcher reuse that run rather than creating a duplicate."
+  "recordedAt": "2026-07-28T14:14:40.632Z",
+  "boundary": "Exactly one controlled production workflow-dispatch run created after the Exposure Integrity release cutoff is used. Later reruns reuse that run rather than creating a duplicate."
 }

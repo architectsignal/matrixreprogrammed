@@ -22,7 +22,7 @@ env:
 jobs:
   dispatch-controlled-production:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Validate Exposure Integrity release in isolated worktree
+      - name: Validate Exposure Integrity release request
         shell: bash
         run: |
           set -euo pipefail
@@ -41,13 +41,14 @@ jobs:
           test -s data/dark-speculation-claims.json
           test -s data/evidence-weighted-relationship-graph.json
           test -s data/clock-wall.json
-          test -s scripts/build-dossier-accountability-overlays.js
+          test -s scripts/build-exposure-integrity-engine.js
           test -s scripts/prepare-exposure-integrity-inputs.js
           test -s scripts/run-exposure-integrity-engine.js
           test -s scripts/finalize-exposure-integrity-engine.js
           test -s scripts/dedupe-exposure-integrity-records.js
           test -s scripts/finalize-exposure-clean-routes.js
           test -s scripts/exposure-integrity-pressure-test.js
+          test -s .github/workflows/exposure-integrity.yml
           grep -q "run-exposure-integrity-engine.js" scripts/align-mission-acceptance-copy.js
           grep -q "dedupe-exposure-integrity-records.js" scripts/align-mission-acceptance-copy.js
           for script in \
@@ -60,27 +61,15 @@ jobs:
             scripts/exposure-integrity-pressure-test.js; do
             node --check "$script"
           done
-          git worktree add --detach /tmp/exposure-integrity-release HEAD
-          cd /tmp/exposure-integrity-release
-          node scripts/build-dossier-accountability-overlays.js
-          node scripts/prepare-exposure-integrity-inputs.js
-          node scripts/run-exposure-integrity-engine.js
-          node scripts/finalize-exposure-integrity-engine.js
-          node scripts/dedupe-exposure-integrity-records.js
-          node scripts/finalize-exposure-clean-routes.js
-          node scripts/exposure-integrity-pressure-test.js
           node - <<'NODE'
           const fs = require('fs');
-          const engine = JSON.parse(fs.readFileSync('data/exposure-integrity-engine.json', 'utf8'));
-          const ledger = JSON.parse(fs.readFileSync('data/exposure-evidence-ledger.json', 'utf8'));
-          const hit = JSON.parse(fs.readFileSync('data/cinematic-hit-list.json', 'utf8'));
-          if (!engine.ok) throw new Error('Exposure Integrity Engine did not report a passing state.');
-          if (!Number.isInteger(ledger.count) || ledger.count < 1) throw new Error('Canonical evidence ledger is empty.');
-          if (!Number.isInteger(hit.count) || hit.count < 1) throw new Error('Cinematic Hit List is empty.');
-          const keys = ledger.entries.map(entry => `${entry.entityId}:${entry.recordId}`);
-          if (new Set(keys).size !== keys.length) throw new Error('Duplicate canonical ledger keys remain.');
-          if (!fs.existsSync('hit-list') || !fs.existsSync('hit-list.html')) throw new Error('Clean and .html Hit List routes are not both generated.');
-          console.log(`Exposure Integrity release validated: ${ledger.count} canonical evidence records and ${hit.count} Hit List entries.`);
+          const policy = JSON.parse(fs.readFileSync('data/exposure-integrity-policy.json', 'utf8'));
+          const required = ['fact_adjudicated','fact_official_record','fact_corroborated','official_allegation','attributed_allegation','documented_association','analytical_inference','rumour','speculation','unsupported_or_debunked'];
+          for (const lane of required) {
+            if (!policy.classificationLanes?.[lane]?.label || !policy.classificationLanes?.[lane]?.rule) throw new Error(`Missing evidence lane: ${lane}`);
+          }
+          if (!String(policy.hitListBoundary || '').includes('not a threat list')) throw new Error('Hit List safety boundary is missing.');
+          console.log('Exposure Integrity release request validated.');
           NODE
 
       - name: Dispatch controlled production workflow exactly once
@@ -149,7 +138,7 @@ jobs:
               targetFeatureCommit: '0eb5ed14dc16d736878f033cda4ab3de3c8ad308',
               targetAuthorizationCommit: '22f34098a020a4112fd98cc968e0ee4d8d5519b0',
               recordedAt: new Date().toISOString(),
-              boundary: 'Exactly one controlled production workflow-dispatch run created after the Exposure Integrity release cutoff is used. Later reruns of this dispatcher reuse that run rather than creating a duplicate.'
+              boundary: 'Exactly one controlled production workflow-dispatch run created after the Exposure Integrity release cutoff is used. Later reruns reuse that run rather than creating a duplicate.'
             };
             fs.mkdirSync('data', { recursive: true });
             fs.writeFileSync('data/exposure-integrity-production-dispatch.json', JSON.stringify(payload, null, 2) + '\n');

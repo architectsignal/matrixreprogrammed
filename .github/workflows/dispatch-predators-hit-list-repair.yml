@@ -1,0 +1,129 @@
+name: Dispatch Predators Hit List Repair Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/dispatch-predators-hit-list-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: predators-hit-list-repair-dispatch
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  dispatch-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate repair before dispatch
+        run: |
+          set -euo pipefail
+          node --check scripts/exposure-integrity-predators-link.js
+          node --check scripts/align-mission-acceptance-copy.js
+          grep -q 'exposure-integrity-predators-link.js' scripts/align-mission-acceptance-copy.js
+          node scripts/exposure-integrity-predators-link.js
+          grep -q 'href="/hit-list.html"' predators-in-power.html
+          grep -q 'Connected Exposure Integrity System' predators-in-power.html
+          node - <<'NODE'
+          const fs = require('fs');
+          const gate = JSON.parse(fs.readFileSync('data/exposure-integrity-main-gate-run.json', 'utf8'));
+          if (!gate.ok || gate.conclusion !== 'success') throw new Error('Main Exposure Integrity Gate is not green.');
+          const report = JSON.parse(fs.readFileSync('downloads/exposure-predators-hit-list-link.json', 'utf8'));
+          if (!report.ok) throw new Error('Predators in Power link repair failed.');
+          console.log('Predators Hit List repair and green integrity gate confirmed.');
+          NODE
+
+      - name: Dispatch or reuse exactly one corrected production run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const cutoff = new Date('2026-07-28T15:02:00Z');
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow deploy.yml was not found.');
+              return;
+            }
+            const resolveRun = async () => {
+              const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, event: 'workflow_dispatch', branch: 'main', per_page: 30 });
+              return (runs.data.workflow_runs || [])
+                .filter(run => new Date(run.created_at) >= cutoff)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            };
+            let run = await resolveRun();
+            let action = 'reused-existing-predators-hit-list-repair-run';
+            if (!run) {
+              action = 'dispatched-predators-hit-list-repair-once';
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' } });
+              for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await resolveRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Corrected production run could not be resolved after dispatch.');
+              return;
+            }
+            const payload = {
+              ok: true,
+              releaseId: 'predators-hit-list-repair-20260728',
+              action,
+              dispatcherRunId: Number(process.env.GITHUB_RUN_ID),
+              productionRunId: run.id,
+              productionRunNumber: run.run_number,
+              status: run.status,
+              conclusion: run.conclusion,
+              event: run.event,
+              headBranch: run.head_branch,
+              headSha: run.head_sha,
+              createdAt: run.created_at,
+              updatedAt: run.updated_at,
+              url: run.html_url,
+              gateRunId: 30371200868,
+              targetRepairCommit: '2fdb0bb1759701aae6fb56d15db0e02303941e6f',
+              authorizationCommit: '1028489387d25f617981ecf4254d5ada04203b18',
+              recordedAt: new Date().toISOString(),
+              boundary: 'One corrected production run after the retry cutoff. Existing matching run is reused; no duplicate run is created.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/predators-hit-list-production-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
+
+      - name: Commit exact run receipt
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/predators-hit-list-production-dispatch.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Record Predators Hit List repair deployment'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          exit 1

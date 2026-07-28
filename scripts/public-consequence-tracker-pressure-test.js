@@ -43,19 +43,27 @@ if (!failures.length) {
   }
 
   const worker = read('src/worker-consequence-tracker.js');
-  for (const marker of ['MAX_MANIFEST_CONTRACTS = 12','MAX_DUE_PER_RUN = 4','perFollowerWrites: 0','aiInferenceInsideWorker: false','consequence_contract_versions','consequence_review_queue','consequence_events','member_entity_follows','locked-primary-decision-record']) {
+  for (const marker of ["DAILY_CRON = '25 5 * * *'",'MAX_MANIFEST_CONTRACTS = 12','MAX_DUE_PER_RUN = 4','perFollowerWrites: 0','aiInferenceInsideWorker: false','consequence_contract_versions','consequence_review_queue','consequence_events','member_entity_follows','locked-primary-decision-record']) {
     if (!worker.includes(marker)) fail(`Tracker runtime missing ${marker}`);
   }
   const estimatedMaximumQueries = 6 + (12 * 2) + 1 + (4 * 3);
   if (estimatedMaximumQueries > 50) fail(`Estimated D1 query count ${estimatedMaximumQueries} exceeds the Workers Free per-invocation limit`);
 
   const production = read('src/worker-production.js');
-  if (!production.includes("from './worker-consequence-tracker.js'") || !production.includes('consequenceTrackerWorker.scheduled')) fail('Production Worker does not own the consequence tracker');
+  if (!production.includes("from './worker-consequence-tracker.js'") || !production.includes("CONSEQUENCE_TRACKER_CRON = '25 5 * * *'")) fail('Production Worker does not own the isolated consequence tracker');
+  const isolatedBlock = /if\s*\(event\?\.cron\s*===\s*CONSEQUENCE_TRACKER_CRON\)\s*\{[\s\S]*?consequenceTrackerWorker\.scheduled[\s\S]*?return;[\s\S]*?\}/.test(production);
+  if (!isolatedBlock) fail('Tracker cron is not isolated from email, reporting and payment scheduled work');
+  const scheduledTail = production.slice(production.indexOf('async scheduled'));
+  const trackerCalls = (scheduledTail.match(/consequenceTrackerWorker\.scheduled/g) || []).length;
+  if (trackerCalls !== 1) fail('Consequence tracker must run only in its isolated cron branch');
 
   const wrangler = read('wrangler.toml');
   if (/run_worker_first\s*=\s*true/.test(wrangler)) fail('All static traffic still invokes the Worker');
   if (!wrangler.includes('run_worker_first = [') || !wrangler.includes('"/api/*"')) fail('Selective Worker-first asset routing is missing');
-  if ((wrangler.match(/crons\s*=\s*\[/g) || []).length !== 1) fail('Tracker added a second cron declaration instead of reusing the existing schedule');
+  const cronLine = (wrangler.match(/crons\s*=\s*\[[^\]]+\]/) || [''])[0];
+  const cronCount = (cronLine.match(/"[^"]+"/g) || []).length;
+  if (!cronLine.includes('"25 5 * * *"')) fail('Dedicated consequence tracker cron is missing');
+  if (cronCount > 5) fail(`Configured cron count ${cronCount} exceeds Workers Free limit of five`);
 
   const report = json('downloads/public-consequence-due-index-report.json');
   if (!report.ok || Number(report.indexedContracts) !== contracts.length) fail('Due-index report mismatch');
@@ -71,6 +79,9 @@ const report = {
     maximumManifestContracts: 12,
     maximumDuePerRun: 4,
     estimatedMaximumD1QueriesPerRun: 43,
+    isolatedCron: '25 5 * * *',
+    configuredCronSlots: 4,
+    availableCronSlots: 1,
     perFollowerWrites: 0,
     staticAssetsInvokeWorker: false
   }

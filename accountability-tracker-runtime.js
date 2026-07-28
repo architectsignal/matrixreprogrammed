@@ -23,7 +23,7 @@
     }
   }
   fetch('/api/public/consequence-contracts?limit=100',{headers:{Accept:'application/json'},cache:'no-store'}).then(async response=>{
-    if(!response.ok)throw new Error('Live tracker unavailable');const data=await response.json();const byId=new Map((data.items||[]).map(item=>[item.id,item]));
+    if(!response.ok)throw new Error('Live tracker unavailable');const data=await response.json();if(!(data.items||[]).length)throw new Error('Live tracker not synchronized');const byId=new Map(data.items.map(item=>[item.id,item]));
     for(const card of cards){const contract=byId.get(card.id);if(contract)updateCard(card,contract);}
     document.documentElement.dataset.accountabilityTracker='connected';
   }).catch(()=>{document.documentElement.dataset.accountabilityTracker='static-fallback';});

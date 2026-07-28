@@ -1,0 +1,72 @@
+name: Reverse Accountability Platform Gate
+
+on:
+  pull_request:
+    paths:
+      - 'data/accountability-innovation-roadmap.json'
+      - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
+      - 'reverse-accountability-search.js'
+      - 'reverse-accountability-search.css'
+      - 'scripts/install-reverse-accountability-platform.js'
+      - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - '.github/workflows/reverse-accountability-platform.yml'
+  push:
+    branches:
+      - 'agent/reverse-accountability-platform'
+    paths:
+      - 'data/accountability-innovation-roadmap.json'
+      - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
+      - 'reverse-accountability-search.js'
+      - 'reverse-accountability-search.css'
+      - 'scripts/install-reverse-accountability-platform.js'
+      - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/align-mission-acceptance-copy.js'
+      - '.github/workflows/reverse-accountability-platform.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reverse-accountability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check syntax
+        run: |
+          node --check scripts/install-reverse-accountability-platform.js
+          node --check scripts/reverse-accountability-platform-pressure-test.js
+          node --check reverse-accountability-search.js
+          node --check scripts/align-mission-acceptance-copy.js
+
+      - name: Build Reverse Accountability Search and voiced mission intro
+        run: node scripts/install-reverse-accountability-platform.js
+
+      - name: Run fail-closed product gate
+        run: node scripts/reverse-accountability-platform-pressure-test.js
+
+      - name: Upload proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reverse-accountability-proof-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            data/accountability-innovation-roadmap.json
+            data/reverse-accountability-index.json
+            downloads/reverse-accountability-platform-report.json
+            downloads/reverse-accountability-platform-pressure-test.json
+            reverse-accountability-search.html
+            reverse-accountability-search.js
+            reverse-accountability-search.css
+            welcome-gate.js
+            index.html

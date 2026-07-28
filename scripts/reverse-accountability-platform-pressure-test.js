@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+require('./finalize-accountability-mission-intro.js');
 
 const root = process.cwd();
 const failures = [];
@@ -48,6 +49,7 @@ for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountabilit
 if (!css.includes('.reverse-path-step') || !css.includes('@media')) fail('Reverse search CSS is incomplete or not responsive');
 if (!intro.includes(mission)) fail('Approved mission is not present in the spoken intro lines');
 if (!intro.includes('/intro-voice') || !intro.includes('browserSpeechFallback')) fail('Intro no longer retains ElevenLabs and browser voice fallback');
+if (!intro.includes("if (!document.body.classList.contains('accountability-home')) mountHomepageCommandRail();")) fail('Legacy command rail is not blocked on the simple homepage');
 if (!homepage.includes('data-signal-gate') || !homepage.includes('welcome-gate.js')) fail('Search-first homepage does not include the mission intro');
 if (!homepage.includes('reverse-accountability-search.html')) fail('Homepage does not link to Reverse Accountability Search');
 if (!Array.isArray(index.records) || index.records.length < 1) fail('Reverse accountability index has no records');
@@ -76,6 +78,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'reverse-accountability-platform-p
   recordCount: index.records.length,
   lockedSystems: requiredSystems,
   missionVoice: true,
-  homepageEntry: true
+  homepageEntry: true,
+  simpleHomepageProtected: true
 }, null, 2) + '\n');
 console.log(`Reverse Accountability Search pressure test passed with ${index.records.length} records and all eight systems locked.`);

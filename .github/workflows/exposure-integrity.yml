@@ -11,9 +11,11 @@ on:
       - 'data/clock-wall.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
+      - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
+      - main
       - 'agent/elite-exposure-integrity-v2'
     paths:
       - 'data/exposure-integrity-policy.json'
@@ -24,6 +26,7 @@ on:
       - 'data/clock-wall.json'
       - 'scripts/*exposure-integrity*.js'
       - 'scripts/build-dossier-accountability-overlays.js'
+      - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -51,6 +54,7 @@ jobs:
           node --check scripts/finalize-exposure-integrity-engine.js
           node --check scripts/dedupe-exposure-integrity-records.js
           node --check scripts/finalize-exposure-clean-routes.js
+          node --check scripts/exposure-integrity-predators-link.js
           node --check scripts/exposure-integrity-pressure-test.js
 
       - name: Build dossier accountability inputs
@@ -67,6 +71,7 @@ jobs:
           node scripts/finalize-exposure-integrity-engine.js
           node scripts/dedupe-exposure-integrity-records.js
           node scripts/finalize-exposure-clean-routes.js
+          node scripts/exposure-integrity-predators-link.js
 
       - name: Run fail-closed Exposure Integrity pressure test
         run: node scripts/exposure-integrity-pressure-test.js
@@ -84,4 +89,6 @@ jobs:
             downloads/exposure-integrity-report.json
             downloads/exposure-integrity-pressure-test.json
             downloads/exposure-integrity-input-report.json
+            downloads/exposure-predators-hit-list-link.json
             hit-list.html
+            predators-in-power.html

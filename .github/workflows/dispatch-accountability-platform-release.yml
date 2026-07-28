@@ -1,5 +1,6 @@
 name: Dispatch Accountability Platform Release
 
+# Revision 2: explicit trigger after workflow registration on main.
 on:
   push:
     branches:

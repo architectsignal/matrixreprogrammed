@@ -1,6 +1,6 @@
 name: Reverse Accountability Platform Gate
 
-# Validates the permanent accountability innovation charter, voiced mission intro and reverse search path.
+# Validates the permanent accountability innovation charter, voiced mission intro, reverse search and Power Supply Chain.
 on:
   pull_request:
     paths:
@@ -8,8 +8,13 @@ on:
       - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
       - 'reverse-accountability-search.js'
       - 'reverse-accountability-search.css'
+      - 'power-supply-chain.js'
+      - 'power-supply-chain.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/install-power-supply-chain.js'
+      - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
   push:
@@ -20,8 +25,13 @@ on:
       - 'docs/ACCOUNTABILITY_INNOVATION_CHARTER.md'
       - 'reverse-accountability-search.js'
       - 'reverse-accountability-search.css'
+      - 'power-supply-chain.js'
+      - 'power-supply-chain.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
+      - 'scripts/install-power-supply-chain.js'
+      - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
   workflow_dispatch:
@@ -47,12 +57,16 @@ jobs:
           node --check scripts/install-reverse-accountability-platform.js
           node --check scripts/reverse-accountability-platform-pressure-test.js
           node --check reverse-accountability-search.js
+          node --check scripts/install-power-supply-chain.js
+          node --check scripts/power-supply-chain-pressure-test.js
+          node --check power-supply-chain.js
+          node --check scripts/finalize-accountability-mission-intro.js
           node --check scripts/align-mission-acceptance-copy.js
 
       - name: Build Reverse Accountability Search and voiced mission intro
         run: node scripts/install-reverse-accountability-platform.js
 
-      - name: Run fail-closed product gate
+      - name: Run fail-closed combined product gate
         run: node scripts/reverse-accountability-platform-pressure-test.js
 
       - name: Upload proof
@@ -64,10 +78,16 @@ jobs:
           path: |
             data/accountability-innovation-roadmap.json
             data/reverse-accountability-index.json
+            data/power-supply-chain.json
             downloads/reverse-accountability-platform-report.json
             downloads/reverse-accountability-platform-pressure-test.json
+            downloads/power-supply-chain-report.json
+            downloads/power-supply-chain-pressure-test.json
             reverse-accountability-search.html
             reverse-accountability-search.js
             reverse-accountability-search.css
+            power-supply-chain.html
+            power-supply-chain.js
+            power-supply-chain.css
             welcome-gate.js
             index.html

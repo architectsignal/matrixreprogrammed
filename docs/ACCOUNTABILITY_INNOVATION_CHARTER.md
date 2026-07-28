@@ -12,7 +12,7 @@ This charter is a permanent product requirement. It must guide homepage design, 
 
 1. **Reverse Accountability Search** — begin with a consequence or lived problem and trace backwards to implementation, decisions, authority, money and unresolved questions.
 2. **Power Supply Chain** — map who proposed, drafted, promoted, authorised, funded, implemented and benefited, while distinguishing authority from access and association.
-3. **Evidence Half-Life** — re-verify evidence over time and issue recall notices when records become stale, unavailable or contradicted.
+3. **Evidence Half-Life** — re-verify evidence over time and issue recall notices when current applicability is overdue, unavailable or contradicted.
 4. **Power Diff** — show exactly what was added, changed, ended, disputed or corrected since the previous version.
 5. **Red-Team Mirror** — publish the strongest evidence-based case supporting and challenging each significant conclusion.
 6. **Public Answer Clock** — keep a precise public-interest question, delivery history and response status attached to the permanent record.
@@ -41,6 +41,22 @@ Every reverse-search record receives a responsibility chain with these separate 
 10. Measured outcome
 
 Unknown stages must remain visibly unresolved and classified as missing records. A meeting, friendship, donation, shared board, network link or documented access must not be displayed as decision authority unless a separate record proves the relevant legal, contractual, financial or delegated role.
+
+### Evidence Half-Life
+
+Every reverse-search record receives a time-aware evidence review containing:
+
+- The source or action date used as the provisional baseline
+- Why that baseline was selected
+- The review class and interval
+- The next required review date
+- Whether the source was actually checked for availability
+- Whether current applicability received human re-verification
+- A visible evidence recall notice when review is overdue or no reliable date exists
+
+Evidence age is never a truth score. Historical facts do not become false because time passes. The system uses age only to identify changing claims that need re-verification, such as current office, ownership, law, policy, contracts, prices and implementation status.
+
+The static build must say when source availability has **not** been checked and when human re-verification has **not** occurred. It must never manufacture those assurances.
 
 ## Operating boundary
 

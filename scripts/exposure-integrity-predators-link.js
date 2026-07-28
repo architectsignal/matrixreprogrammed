@@ -12,6 +12,11 @@ const targets = ['predators-in-power.html', 'predators-in-power'];
 const touched = [];
 const failures = [];
 
+// Final production reconciliation can invoke the canonical builder after the
+// normal postbuild. Patch that builder first so every later regeneration emits
+// the Exposure Integrity routes itself rather than relying only on this page pass.
+require('./patch-predators-builder-hit-list.js');
+
 function removeExisting(html) {
   const start = html.indexOf(START);
   const end = html.indexOf(END);
@@ -58,12 +63,18 @@ for (const base of [root, outputRoot]) {
 
 if (!targets.some(relative => fs.existsSync(path.join(root, relative)))) failures.push('Predators in Power source route is missing');
 
+const builderSource = fs.readFileSync(path.join(root, 'scripts', 'build-predators-in-power.js'), 'utf8');
+if (!builderSource.includes('exposure-integrity-canonical-predators-link') || !builderSource.includes('href="/hit-list.html"')) {
+  failures.push('Canonical Predators builder is not patched to preserve the Hit List route during final reconciliation');
+}
+
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   touched,
   requiredRoute: '/hit-list.html',
   connectedRoutes: ['/hit-list.html', '/timers.html', '/source-document-vault.html', '/trust-corrections.html'],
+  canonicalBuilderPatched: failures.every(item => !item.includes('Canonical Predators builder')),
   failures,
   boundary: 'The Hit List is an investigative-priority and navigation surface, not a guilt score or threat list. Predators in Power retains its separate legal and evidence lanes.'
 };
@@ -75,4 +86,4 @@ if (fs.existsSync(outputRoot)) {
   fs.copyFileSync(reportPath, out);
 }
 if (!report.ok) throw new Error(`Predators in Power Hit List linking failed: ${failures.join('; ')}`);
-console.log(`Predators in Power Hit List route verified across ${touched.length} changed file(s).`);
+console.log(`Predators in Power Hit List route verified across ${touched.length} changed file(s); canonical generator patch confirmed.`);

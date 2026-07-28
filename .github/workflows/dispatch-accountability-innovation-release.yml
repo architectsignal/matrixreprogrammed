@@ -20,6 +20,7 @@ on:
 permissions:
   actions: write
   contents: read
+  issues: write
 
 concurrency:
   group: accountability-innovation-release-dispatch
@@ -127,6 +128,23 @@ jobs:
             };
             fs.mkdirSync('downloads', { recursive: true });
             fs.writeFileSync('downloads/accountability-innovation-production-dispatch.json', JSON.stringify(receipt, null, 2) + '\n');
+            if (context.eventName === 'pull_request_target') {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: context.payload.pull_request.number,
+                body: [
+                  '### Controlled production deployment dispatched',
+                  '',
+                  `- Production run: **${run.id}** (run #${run.run_number})`,
+                  `- Status when resolved: **${run.status}**`,
+                  `- Target main SHA: \`${targetSha}\``,
+                  `- Workflow: ${run.html_url}`,
+                  '',
+                  'This receipt confirms dispatch only. The site is not considered deployed until the controlled workflow completes and the live routes are independently verified.'
+                ].join('\n')
+              });
+            }
             core.info(`${action}: controlled production run ${run.id} for ${targetSha}.`);
 
       - name: Upload dispatch receipt

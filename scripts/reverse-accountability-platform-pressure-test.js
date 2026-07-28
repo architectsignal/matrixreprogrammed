@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 require('./finalize-accountability-mission-intro.js');
+require('./power-supply-chain-pressure-test.js');
 
 const root = process.cwd();
 const failures = [];
@@ -39,11 +40,12 @@ const css = read('reverse-accountability-search.css');
 const intro = read('welcome-gate.js');
 const homepage = read('index.html');
 const index = json('data/reverse-accountability-index.json');
+const powerChain = json('data/power-supply-chain.json');
 
 for (const marker of ['START WITH', 'data-reverse-search-form', 'data-reverse-search-results', mission, 'Search the consequence. Trace the power. Follow the outcome.']) {
   if (!page.includes(marker)) fail(`Reverse search page missing ${marker}`);
 }
-for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome']) {
+for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome', 'Trace responsibility chain']) {
   if (!client.includes(marker)) fail(`Reverse search client missing ${marker}`);
 }
 if (!css.includes('.reverse-path-step') || !css.includes('@media')) fail('Reverse search CSS is incomplete or not responsive');
@@ -53,6 +55,7 @@ if (!intro.includes("if (!document.body.classList.contains('accountability-home'
 if (!homepage.includes('data-signal-gate') || !homepage.includes('welcome-gate.js')) fail('Search-first homepage does not include the mission intro');
 if (!homepage.includes('reverse-accountability-search.html')) fail('Homepage does not link to Reverse Accountability Search');
 if (!Array.isArray(index.records) || index.records.length < 1) fail('Reverse accountability index has no records');
+if (!Array.isArray(powerChain.chains) || powerChain.chains.length !== index.records.length) fail('Power Supply Chain is not synchronized with Reverse Accountability Search');
 
 for (const record of index.records || []) {
   if (!record.id || !record.title || !record.consequenceSummary) fail('Reverse accountability record is missing identity or consequence summary');
@@ -62,6 +65,7 @@ for (const record of index.records || []) {
   }
   if (!record.evidenceBoundary) fail(`${record.id || 'record'} is missing an evidence boundary`);
   if (!Array.isArray(record.unansweredQuestions) || !record.unansweredQuestions.length) fail(`${record.id || 'record'} has no unanswered question`);
+  if (!String(record.powerSupplyChainRoute || '').startsWith('power-supply-chain.html#power-chain-')) fail(`${record.id || 'record'} has no Power Supply Chain route`);
 }
 
 if (/\beval\s*\(|new Function\s*\(/.test(client)) fail('Reverse search client contains unsafe dynamic code execution');
@@ -76,9 +80,10 @@ fs.writeFileSync(path.join(root, 'downloads', 'reverse-accountability-platform-p
   ok: true,
   checkedAt: new Date().toISOString(),
   recordCount: index.records.length,
+  powerChainCount: powerChain.chains.length,
   lockedSystems: requiredSystems,
   missionVoice: true,
   homepageEntry: true,
   simpleHomepageProtected: true
 }, null, 2) + '\n');
-console.log(`Reverse Accountability Search pressure test passed with ${index.records.length} records and all eight systems locked.`);
+console.log(`Reverse Accountability Search pressure test passed with ${index.records.length} records, synchronized Power Supply Chains and all eight systems locked.`);

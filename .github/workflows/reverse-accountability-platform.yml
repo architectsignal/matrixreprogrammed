@@ -1,6 +1,6 @@
 name: Reverse Accountability Platform Gate
 
-# Validates the permanent accountability innovation charter, voiced mission intro, reverse search and Power Supply Chain.
+# Validates the permanent accountability innovation charter, voiced mission intro, reverse search, Power Supply Chain and Evidence Half-Life.
 on:
   pull_request:
     paths:
@@ -10,10 +10,14 @@ on:
       - 'reverse-accountability-search.css'
       - 'power-supply-chain.js'
       - 'power-supply-chain.css'
+      - 'evidence-half-life.js'
+      - 'evidence-half-life.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
       - 'scripts/install-power-supply-chain.js'
       - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/install-evidence-half-life.js'
+      - 'scripts/evidence-half-life-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
@@ -27,10 +31,14 @@ on:
       - 'reverse-accountability-search.css'
       - 'power-supply-chain.js'
       - 'power-supply-chain.css'
+      - 'evidence-half-life.js'
+      - 'evidence-half-life.css'
       - 'scripts/install-reverse-accountability-platform.js'
       - 'scripts/reverse-accountability-platform-pressure-test.js'
       - 'scripts/install-power-supply-chain.js'
       - 'scripts/power-supply-chain-pressure-test.js'
+      - 'scripts/install-evidence-half-life.js'
+      - 'scripts/evidence-half-life-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
       - '.github/workflows/reverse-accountability-platform.yml'
@@ -60,6 +68,9 @@ jobs:
           node --check scripts/install-power-supply-chain.js
           node --check scripts/power-supply-chain-pressure-test.js
           node --check power-supply-chain.js
+          node --check scripts/install-evidence-half-life.js
+          node --check scripts/evidence-half-life-pressure-test.js
+          node --check evidence-half-life.js
           node --check scripts/finalize-accountability-mission-intro.js
           node --check scripts/align-mission-acceptance-copy.js
 
@@ -79,15 +90,21 @@ jobs:
             data/accountability-innovation-roadmap.json
             data/reverse-accountability-index.json
             data/power-supply-chain.json
+            data/evidence-half-life.json
             downloads/reverse-accountability-platform-report.json
             downloads/reverse-accountability-platform-pressure-test.json
             downloads/power-supply-chain-report.json
             downloads/power-supply-chain-pressure-test.json
+            downloads/evidence-half-life-report.json
+            downloads/evidence-half-life-pressure-test.json
             reverse-accountability-search.html
             reverse-accountability-search.js
             reverse-accountability-search.css
             power-supply-chain.html
             power-supply-chain.js
             power-supply-chain.css
+            evidence-half-life.html
+            evidence-half-life.js
+            evidence-half-life.css
             welcome-gate.js
             index.html

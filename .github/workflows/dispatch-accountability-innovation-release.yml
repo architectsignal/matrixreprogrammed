@@ -1,0 +1,126 @@
+name: Dispatch Accountability Innovation Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/accountability-innovation-release.trigger'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: accountability-innovation-release-dispatch
+  cancel-in-progress: false
+
+jobs:
+  validate-and-dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout exact main head
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate merged accountability innovation platform
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s data/accountability-innovation-roadmap.json
+          test -s docs/ACCOUNTABILITY_INNOVATION_CHARTER.md
+          test -s scripts/install-reverse-accountability-platform.js
+          test -s scripts/reverse-accountability-platform-pressure-test.js
+          test -s scripts/install-power-supply-chain.js
+          test -s scripts/install-evidence-half-life.js
+          test -s scripts/install-power-diff.js
+          test -s scripts/install-red-team-mirror.js
+          test -s scripts/install-public-answer-clock.js
+          test -s scripts/install-missing-record-missions.js
+          test -s scripts/install-lived-consequence-receipts.js
+          test -s scripts/finalize-accountability-innovation-discovery.js
+          node --check scripts/reverse-accountability-platform-pressure-test.js
+          node --check scripts/finalize-accountability-innovation-links.js
+          node --check scripts/finalize-accountability-innovation-discovery.js
+          node scripts/install-reverse-accountability-platform.js
+          node scripts/reverse-accountability-platform-pressure-test.js
+          node scripts/finalize-accountability-innovation-discovery.js
+          grep -q 'eight-functional-foundations-in-guarded-validation' data/accountability-innovation-roadmap.json
+          grep -q 'accountability-innovation-discovery:start' index.html
+          grep -q 'Matrix Reprogrammed is a public accountability system where anyone can search a consequence' welcome-gate.js
+
+      - name: Dispatch exactly one controlled production deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const targetSha = context.sha;
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow deploy.yml was not found.');
+              return;
+            }
+            const resolveRun = async () => {
+              const response = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, event: 'workflow_dispatch', branch: 'main', per_page: 50 });
+              return (response.data.workflow_runs || [])
+                .filter(run => run.head_sha === targetSha)
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            };
+            let run = await resolveRun();
+            let action = 'reused-existing-controlled-run';
+            if (!run) {
+              action = 'dispatched-controlled-run';
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: target.id,
+                ref: 'main',
+                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+              });
+              for (let attempt = 0; attempt < 60 && !run; attempt += 1) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await resolveRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Controlled production run could not be resolved after dispatch.');
+              return;
+            }
+            const receipt = {
+              ok: true,
+              releaseId: 'accountability-innovation-eight-system-20260728',
+              action,
+              dispatcherRunId: Number(process.env.GITHUB_RUN_ID),
+              productionRunId: run.id,
+              productionRunNumber: run.run_number,
+              productionStatus: run.status,
+              productionConclusion: run.conclusion,
+              targetSha,
+              productionHeadSha: run.head_sha,
+              url: run.html_url,
+              recordedAt: new Date().toISOString(),
+              boundary: 'The existing controlled deploy workflow remains responsible for the complete build, D1 rollback bookmark, idempotent migrations, Cloudflare deployment, exact live SHA and protected-route verification.'
+            };
+            fs.mkdirSync('downloads', { recursive: true });
+            fs.writeFileSync('downloads/accountability-innovation-production-dispatch.json', JSON.stringify(receipt, null, 2) + '\n');
+            core.info(`${action}: controlled production run ${run.id} for ${targetSha}.`);
+
+      - name: Upload dispatch receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accountability-innovation-production-dispatch-${{ github.run_id }}
+          if-no-files-found: warn
+          path: downloads/accountability-innovation-production-dispatch.json

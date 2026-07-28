@@ -66,6 +66,7 @@ for (const base of roots) {
     if (!after.includes(`<script src="${runtime}"></script>`)) failures.push(`${path.relative(root, file)} missing resilient dossier runtime`);
   }
 }
+
 if (fs.existsSync(output) && !fs.existsSync(path.join(output, runtime))) failures.push(`_site/${runtime} missing from Cloudflare output`);
 
 const engineBuild = runRequired('scripts/build-criminal-conduct-engine.js');
@@ -75,6 +76,8 @@ const predatorsBuild = failures.length ? { status: 1, stdout: '', stderr: 'skipp
 const predatorsConductLinks = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power build failure' } : runRequired('scripts/link-predators-in-power-from-conduct-engine.js');
 const predatorsSync = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power conduct-link failure' } : runRequired('scripts/sync-predators-in-power-output.js');
 const predatorsTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after Predators in Power output failure' } : runRequired('scripts/predators-in-power-pressure-test.js');
+const universalCoverage = failures.length ? { status: 1, stdout: '', stderr: 'skipped after core dossier engines failed' } : runRequired('scripts/enforce-universal-criminal-dossier-coverage.js');
+const universalCoverageTest = failures.length ? { status: 1, stdout: '', stderr: 'skipped after universal coverage build failure' } : runRequired('scripts/universal-criminal-dossier-coverage-test.js');
 
 const report = {
   ok: failures.length === 0,
@@ -105,6 +108,13 @@ const report = {
     outputReport: 'downloads/predators-in-power-output-sync.json',
     pressureTest: 'downloads/predators-in-power-pressure-test.json'
   },
+  universalCriminalDossierCoverage: {
+    buildStatus: universalCoverage.status,
+    pressureTestStatus: universalCoverageTest.status,
+    report: 'downloads/universal-criminal-dossier-coverage.json',
+    pressureTest: 'downloads/universal-criminal-dossier-coverage-test.json',
+    contract: 'Every qualifying dossier is independently detected and contains either editorially approved records or an explicit no-verified-match boundary.'
+  },
   files,
   failures
 };
@@ -114,4 +124,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`POWER DOSSIER RUNTIME FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} HTML/extensionless page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.`);
+console.log(`Power dossier runtime wired across source and Cloudflare output: ${files.length} legacy power-dossier page(s), ${patched} newly patched, runtime copy ${copiedRuntime ? 'updated' : 'current'}; Criminal Conduct & Allegations, Predators in Power and universal every-dossier coverage built, cross-linked, synchronized and pressure-tested.`);

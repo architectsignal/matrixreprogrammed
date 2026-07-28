@@ -44,21 +44,29 @@ function auditNamespace({ name, relativeDir, expectedIds, generatedPredicate = i
 const daily = readJson('data/entity-daily-briefs.json', { briefs: [] });
 const exposure = readJson('data/entity-exposure-index.json', { profiles: [] });
 const elite = readJson('data/elite-reports.json', { reports: [] });
+const officeHolderRefresh = readJson('downloads/current-office-holder-evidence-refresh.json', { generatedDossiers: [] });
 
 const dailyIds = (Array.isArray(daily.briefs) ? daily.briefs : []).slice(0, 120).map(item => String(item?.id || '').trim()).filter(Boolean);
+const officeHolderBriefIds = (Array.isArray(officeHolderRefresh.generatedDossiers) ? officeHolderRefresh.generatedDossiers : [])
+  .map(relative => String(relative || '').replace(/\\/g, '/'))
+  .filter(relative => /^entity-briefs\/[^/]+\.html$/i.test(relative))
+  .map(relative => stem(path.basename(relative)))
+  .filter(Boolean);
+const entityBriefIds = [...new Set([...dailyIds, ...officeHolderBriefIds])];
 const exposureIds = (Array.isArray(exposure.profiles) ? exposure.profiles : []).slice(0, 120).map(item => String(item?.id || '').trim()).filter(Boolean);
 const eliteIds = (Array.isArray(elite.reports) ? elite.reports : []).map(item => String(item?.id || '').trim()).filter(Boolean);
 
 if (!dailyIds.length) failures.push('Entity Daily Brief index has no page IDs.');
 if (!exposureIds.length) failures.push('Entity Exposure index has no page IDs.');
 if (!eliteIds.length) failures.push('Elite Reports index has no page IDs.');
+if (officeHolderBriefIds.length && officeHolderBriefIds.length !== new Set(officeHolderBriefIds).size) failures.push('Office-holder generated dossier inventory contains duplicate IDs.');
 
 for (const [label, ids] of [['Entity Daily Brief', dailyIds], ['Entity Exposure', exposureIds], ['Elite Report', eliteIds]]) {
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (duplicates.length) failures.push(`${label} index contains duplicate IDs: ${[...new Set(duplicates)].join(', ')}`);
 }
 
-auditNamespace({ name: 'entityBriefs', relativeDir: 'entity-briefs', expectedIds: dailyIds });
+auditNamespace({ name: 'entityBriefs', relativeDir: 'entity-briefs', expectedIds: entityBriefIds });
 auditNamespace({ name: 'entityExposure', relativeDir: 'entity-exposure', expectedIds: exposureIds });
 auditNamespace({ name: 'eliteReports', relativeDir: 'reports', expectedIds: eliteIds, generatedPredicate: isGeneratedEliteReport });
 
@@ -67,7 +75,12 @@ const report = {
   generatedAt: new Date().toISOString(),
   failures,
   inventory,
-  boundary: 'Generated entity briefs, entity exposure pages and elite reports must exactly match their current JSON indexes. The Cloudflare bundle must include both .html and extensionless aliases, with no ghost pages from earlier build passes.'
+  ownership: {
+    dailyEntityBriefs: dailyIds.length,
+    currentOfficeHolderBriefs: officeHolderBriefIds.length,
+    combinedEntityBriefs: entityBriefIds.length
+  },
+  boundary: 'Generated entity briefs, current office-holder briefs, entity exposure pages and elite reports must exactly match their current JSON or build reports. The Cloudflare bundle must include both .html and extensionless aliases, with no ghost pages from earlier build passes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'generated-machine-pages-test.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -77,4 +90,4 @@ if (!report.ok) {
   failures.slice(0, 200).forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`Generated machine pages test passed: ${dailyIds.length} entity briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output.`);
+console.log(`Generated machine pages test passed: ${dailyIds.length} daily entity briefs + ${officeHolderBriefIds.length} office-holder briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output.`);

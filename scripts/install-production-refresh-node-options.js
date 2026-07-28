@@ -1,5 +1,35 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
+
+const root = process.cwd();
+const installPatches = [
+  {
+    file: 'patch-current-office-holder-stale-claim-detector.js',
+    failure: 'Current office-holder stale-claim detector repair failed during install'
+  },
+  {
+    file: 'patch-release-audit-global-id-dedupe.js',
+    failure: 'Release-audit duplicate-ID allocator repair failed during install'
+  },
+  {
+    file: 'fix-final-release-audit-defects.js',
+    failure: 'Final release audit defect repair failed during install'
+  }
+];
+for (const patch of installPatches) {
+  const file = path.resolve(__dirname, patch.file);
+  if (!fs.existsSync(file)) continue;
+  const result = spawnSync(process.execPath, [file], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 1024 * 1024 * 10
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(patch.failure);
+}
 
 const workflow = String(process.env.GITHUB_WORKFLOW || '');
 const githubPath = String(process.env.GITHUB_PATH || '');
@@ -8,7 +38,6 @@ if (!/Matrix Reprogrammed Controlled Production Deploy/i.test(workflow) || !gith
   process.exit(0);
 }
 
-const root = process.cwd();
 const preload = path.resolve(__dirname, 'production-refresh-soft-fail.cjs');
 if (!fs.existsSync(preload)) throw new Error(`Missing production refresh preload: ${preload}`);
 const binDir = path.join(root, '.matrix-production-bin');
@@ -33,7 +62,7 @@ const targets = [
   'build-behind-the-curtain.js'
 ];
 const casePattern = targets.join('|');
-const script = `#!/usr/bin/env bash\nset -u\nREAL_NODE=${JSON.stringify(realNode)}\nPRELOAD=${JSON.stringify(preload)}\nfirst=\${1:-}\nbase=\$(basename \"\$first\")\nif [[ \"\${GITHUB_WORKFLOW:-}\" == \"Matrix Reprogrammed Controlled Production Deploy\" && \"\${INVESTIGATION_MODE:-}\" == \"daily\" ]]; then\n  case \"\$base\" in\n    ${casePattern}) exec \"\$REAL_NODE\" --require \"\$PRELOAD\" \"\$@\" ;;\n  esac\nfi\nexec \"\$REAL_NODE\" \"\$@\"\n`;
+const script = `#!/usr/bin/env bash\nset -u\nREAL_NODE=${JSON.stringify(realNode)}\nPRELOAD=${JSON.stringify(preload)}\nfirst=\${1:-}\nbase=\$(basename "\$first")\nif [[ "\${GITHUB_WORKFLOW:-}" == "Matrix Reprogrammed Controlled Production Deploy" && "\${INVESTIGATION_MODE:-}" == "daily" ]]; then\n  case "\$base" in\n    ${casePattern}) exec "\$REAL_NODE" --require "\$PRELOAD" "\$@" ;;\n  esac\nfi\nexec "\$REAL_NODE" "\$@"\n`;
 fs.writeFileSync(launcher, script, { mode: 0o755 });
 fs.chmodSync(launcher, 0o755);
 fs.appendFileSync(githubPath, `${binDir}\n`);

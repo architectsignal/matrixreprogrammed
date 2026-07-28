@@ -20,6 +20,8 @@ import {
   protectedAssetTier
 } from './worker-access-gate.js';
 
+const CONSEQUENCE_TRACKER_CRON = '25 5 * * *';
+
 const forumRoutes = new Set([
   '/forum-health',
   '/forum-feed',
@@ -421,12 +423,15 @@ export default {
 
   async scheduled(event, env, ctx) {
     if (!hasD1(env)) return;
+    if (event?.cron === CONSEQUENCE_TRACKER_CRON) {
+      await consequenceTrackerWorker.scheduled(event, env, ctx);
+      return;
+    }
     await queuePendingVerifiedSelfReports(env, { limit: 100 });
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),
       bootstrapWorker.scheduled(event, env, ctx),
-      rehearsalWorker.scheduled(event, env, ctx),
-      consequenceTrackerWorker.scheduled(event, env, ctx)
+      rehearsalWorker.scheduled(event, env, ctx)
     ]);
   }
 };

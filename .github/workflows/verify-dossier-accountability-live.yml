@@ -1,4 +1,5 @@
 name: Verify Live Dossier Accountability
+# Focused low-volume check avoids the broad crawler's Cloudflare rate-limit false negative.
 
 on:
   push:

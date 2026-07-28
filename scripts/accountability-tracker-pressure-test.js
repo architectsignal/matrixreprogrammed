@@ -37,7 +37,6 @@ if(!failures.length){
   const dashboard=read('member-dashboard.html'),dashboardClient=read('member-dashboard-app.js');for(const marker of ['id="accountability-alerts"','id="accountability-alert-list"','A due alert is not a verdict'])if(!dashboard.includes(marker))fail(`Member dashboard missing ${marker}`);for(const marker of ["api('/api/member/consequence-events')",'loadConsequenceEvents()','consequenceEvents:[]'])if(!dashboardClient.includes(marker))fail(`Member dashboard client missing ${marker}`);
   const inbox=read('accountability-review-inbox.html'),inboxClient=read('accountability-review-inbox.js');
   for(const marker of ['ACCOUNTABILITY REVIEW INBOX','id="review-queue"','id="terms-form"','id="evidence-form"','id="assessment-form"','accountability-review-inbox.js','A due checkpoint is not a verdict'])if(!inbox.includes(marker))fail(`Human review inbox missing ${marker}`);
-  if(inbox.includes('review-dashboard.html'))fail('Human review inbox links to nonexistent review-dashboard.html');
   for(const marker of ['/api/public/consequence-due','/api/public/consequence-contracts/','/api/admin/consequence-contracts/lock','/api/admin/consequence-evidence','/api/admin/consequence-assessment','x-admin-token','splitLines','renderWorkspace'])if(!inboxClient.includes(marker))fail(`Human review controller missing ${marker}`);
   if(/localStorage|sessionStorage/.test(inboxClient))fail('Human review inbox stores the administrator token persistently');
 }

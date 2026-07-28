@@ -85,7 +85,7 @@ for (const relative of refresh.generatedDossiers || []) {
   coveredNames.add(normalize(name));
   if (!html.includes('data-current-office-holder-dossier="true"')) failures.push(`${relative} missing office-holder dossier marker`);
   if (!html.includes('data-criminal-dossier-coverage="true"')) failures.push(`${relative} missing universal criminal-investigation coverage`);
-  if (!/No verified criminal or safeguarding match is currently attached\.|class="criminal-conduct-record"/.test(html)) failures.push(`${relative} missing criminal evidence or explicit no-match state`);
+  if (!/No verified criminal or safeguarding match is currently attached\.|No sourced conduct record is currently attached\.|class="criminal-conduct-record"/.test(html)) failures.push(`${relative} missing criminal evidence or explicit no-match state`);
 }
 
 for (const match of refresh.dossierMatches || []) {

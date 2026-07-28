@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "scope": "identity-affiliation-ownership-overlay deployment and public asset availability",
+  "status": "deployed_and_overlay_live",
+  "recordedAt": "2026-07-28T10:04:00Z",
+  "production": {
+    "workflowRunId": 30343634776,
+    "releaseSha": "28f3423471112b6529640cf1b17f9f7cc227c156",
+    "liveManifestShaObserved": "b136022d6665cdfcf0a90532db8e833d563c5f3f",
+    "cloudflareWorkerVersionId": "d7f814a8-ae27-4581-bd74-c905d5f42b3c",
+    "fullSiteBuild": "success",
+    "runtimeAndD1Contracts": "success",
+    "cloudflareDeployment": "success",
+    "initialLiveVerification": "success"
+  },
+  "liveOverlayProof": {
+    "checkedAt": "2026-07-28T10:01:19.337Z",
+    "matrixRuntimeStatus": 200,
+    "overlayJavascriptStatus": 200,
+    "overlayStylesStatus": 200,
+    "overlayDataStatus": 200,
+    "nestedDossierStatus": 200,
+    "runtimeLoadsOverlay": true,
+    "runtimeUsesStableBase": true,
+    "overlayJavascriptLive": true,
+    "overlayStylesLive": true,
+    "overlayDataLive": true,
+    "starterRecordsPresent": true,
+    "nestedDossierLoadsSharedRuntime": true,
+    "recordIds": [
+      "jeffrey-epstein",
+      "tom-cruise",
+      "john-travolta",
+      "orsini-family"
+    ]
+  },
+  "extendedProtectedBoundaryProbe": {
+    "status": "waf_blocked_from_github_runner",
+    "httpStatus": 403,
+    "affectedRoutes": [
+      "homepage",
+      "deploy-health",
+      "forum-health",
+      "forum-feed",
+      "anonymous-forum-write-test",
+      "PayPal protected endpoints",
+      "email administration health"
+    ],
+    "interpretation": "The focused GitHub-runner probe could not re-certify these protected routes because Cloudflare returned uniform HTTP 403 responses. This is not evidence that the public overlay assets failed; those assets and the nested dossier returned HTTP 200 in the same proof run.",
+    "deploymentImpact": "none"
+  },
+  "editorialBoundary": "The overlay records documented identity, background, formal affiliation, legal ownership and voting control as separate evidence fields. It does not infer religion or ethnicity from names, appearance, nationality or association, and identity alone is not treated as evidence of wrongdoing or coordinated control."
+}

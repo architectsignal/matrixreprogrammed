@@ -1,0 +1,89 @@
+name: Verify Live Exposure Integrity Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/verify-live-exposure-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-live-exposure-integrity-release
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  EXPECTED_DEPLOY_SHA: 'fed6cd7dace100af92ec94e3f17036d444cc6ffa'
+  SITE_URL: 'https://matrixreprogrammed.com'
+
+jobs:
+  verify-live-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check repaired verifiers
+        run: |
+          node --check scripts/verify-live-behind-the-curtain.js
+          node --check scripts/verify-live-behind-the-curtain-v2.js
+          node --check scripts/verify-live-exposure-integrity.js
+
+      - name: Verify bounded Behind-the-Curtain and newsletter routes
+        env:
+          PYRAMID_VERIFY_ATTEMPTS: '3'
+          PYRAMID_VERIFY_DELAY_MS: '3000'
+        run: node scripts/verify-live-behind-the-curtain.js
+
+      - name: Verify exact live Exposure Integrity release
+        env:
+          EXPOSURE_LIVE_ATTEMPTS: '8'
+          EXPOSURE_LIVE_DELAY_MS: '5000'
+        run: node scripts/verify-live-exposure-integrity.js
+
+      - name: Upload focused live proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-exposure-integrity-proof-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            downloads/live-behind-the-curtain-verification.json
+            downloads/live-exposure-integrity-verification.json
+
+      - name: Record successful focused proof
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/live-behind-the-curtain-verification.json downloads/live-exposure-integrity-verification.json
+          if git diff --cached --quiet; then
+            echo 'Focused live proof is already current.'
+            exit 0
+          fi
+          git commit -m 'Record live Exposure Integrity verification'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          echo 'Could not record focused live proof.'
+          exit 1

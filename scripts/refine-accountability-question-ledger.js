@@ -22,6 +22,16 @@ function writeEverywhere(relative, value) {
   }
 }
 
+function patchEverywhere(relative, transform) {
+  for (const base of roots) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file)) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = transform(before);
+    if (after !== before) fs.writeFileSync(file, after);
+  }
+}
+
 function questionFor(entry) {
   const name = clean(entry.name, 220);
   const missing = stripEnd(array(entry.missingRecords)[0]);
@@ -53,6 +63,7 @@ for (const question of array(ledger.questions)) {
 
 ledger.count = array(ledger.questions).length;
 ledger.refinedAt = new Date().toISOString();
+ledger.operatingRule = 'Every question retains what is known, what is not proven, which records are needed, whether a response has been received, and what evidence would change the conclusion.';
 ledger.questionQualityRule = 'Questions must be grammatical, end with a question mark, avoid instruction fragments, and retain at least one dossier, source or timer route where available.';
 ledger.routeCoverage = {
   directDossierOrSource: directRoutes,
@@ -60,11 +71,15 @@ ledger.routeCoverage = {
   noMappedRoute: ledger.count - directRoutes - timerOnlyRoutes
 };
 writeEverywhere('data/accountability-question-ledger.json', ledger);
+patchEverywhere('index.html', html => html
+  .replace('How did the public conclusion change over time?', 'What evidence would change the conclusion?')
+  .replace('and how the answer changes over time.', 'and what evidence would change the conclusion.'));
 writeEverywhere('downloads/accountability-question-ledger-refinement.json', {
   ok: true,
   generatedAt: ledger.refinedAt,
   questions: ledger.count,
   routeCoverage: ledger.routeCoverage,
-  qualityRule: ledger.questionQualityRule
+  qualityRule: ledger.questionQualityRule,
+  operatingRule: ledger.operatingRule
 });
 console.log(`Accountability Question Ledger refined: ${ledger.count} questions, ${directRoutes} with dossier/source routes, ${timerOnlyRoutes} with timer routes.`);

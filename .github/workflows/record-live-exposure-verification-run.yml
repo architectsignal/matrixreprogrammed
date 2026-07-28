@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Resolve focused verification run
+      - name: Resolve verification-only production proof run
         uses: actions/github-script@v7
         with:
           script: |
@@ -32,25 +32,26 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
-            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/verify-live-exposure-integrity.yml');
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/dispatch-exposure-integrity-production.yml');
             if (!target) {
-              core.setFailed('Focused Exposure Integrity verification workflow was not found.');
+              core.setFailed('Verification-only Exposure Integrity workflow was not found.');
               return;
             }
             let resolved = null;
-            for (let attempt = 1; attempt <= 24 && !resolved; attempt += 1) {
+            for (let attempt = 1; attempt <= 30; attempt += 1) {
               const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, branch: 'main', per_page: 20 });
               resolved = (runs.data.workflow_runs || [])
                 .filter(run => new Date(run.created_at) >= new Date('2026-07-28T14:43:00Z'))
                 .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
-              if (!resolved) await new Promise(resolve => setTimeout(resolve, 5000));
+              if (resolved && resolved.status === 'completed') break;
+              await new Promise(resolve => setTimeout(resolve, 10000));
             }
             if (!resolved) {
-              core.setFailed('Focused verification run could not be resolved.');
+              core.setFailed('Verification-only run could not be resolved.');
               return;
             }
             const payload = {
-              ok: true,
+              ok: resolved.status === 'completed' && resolved.conclusion === 'success',
               workflowId: target.id,
               workflowName: target.name,
               runId: resolved.id,
@@ -66,7 +67,7 @@ jobs:
             };
             fs.mkdirSync('data', { recursive: true });
             fs.writeFileSync('data/live-exposure-verification-run.json', JSON.stringify(payload, null, 2) + '\n');
-            core.info(`Focused verification run ${resolved.id}: ${resolved.status}/${resolved.conclusion || 'pending'}`);
+            core.info(`Verification-only run ${resolved.id}: ${resolved.status}/${resolved.conclusion || 'pending'}`);
 
       - name: Commit run receipt
         run: |

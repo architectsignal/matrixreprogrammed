@@ -77,6 +77,7 @@
     const sourceUrl = record.source && record.source.url ? record.source.url : '';
     const evidenceRoute = record.source && record.source.evidenceRoute ? record.source.evidenceRoute : 'evidence-vault.html';
     const contractRoute = record.route || 'public-consequence-contracts.html';
+    const powerChainRoute = record.powerSupplyChainRoute || `power-supply-chain.html#power-chain-${encodeURIComponent(record.id || '')}`;
     return `<article class="reverse-result-card" id="${escapeHtml(record.id)}">
       <div class="reverse-result-meta"><span>Path ${rank}</span><span>${escapeHtml(record.laneTitle || record.lane || 'Public accountability')}</span></div>
       <h2>${escapeHtml(record.title)}</h2>
@@ -89,6 +90,7 @@
       <p class="reverse-boundary"><strong>Evidence boundary:</strong> ${escapeHtml(record.evidenceBoundary || 'This result is a route into the public record, not proof of wrongdoing or causation.')}</p>
       <div class="reverse-actions">
         <a class="primary" href="${escapeHtml(contractRoute)}">Open accountability record</a>
+        <a href="${escapeHtml(powerChainRoute)}">Trace responsibility chain</a>
         ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" rel="noopener noreferrer">Open original source</a>` : ''}
         <a href="${escapeHtml(evidenceRoute)}">Inspect evidence</a>
         <a href="member-login.html?return=${encodeURIComponent('/member-dashboard.html#follows')}">Follow the outcome</a>

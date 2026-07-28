@@ -29,10 +29,18 @@
     const changes = Array.isArray(entry.changes) ? entry.changes : [];
     const isHistoricalOnly = entry.status === 'record-ended-or-removed';
     const recordId = encodeURIComponent(entry.sourceRecordId || '');
-    const redTeamAction = isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.redTeamMirrorRoute || `red-team-mirror.html#red-team-${recordId}`)}">Challenge the case</a>`;
-    const answerClockAction = isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.publicAnswerClockRoute || `public-answer-clock.html#answer-clock-${recordId}`)}">Open answer clock</a>`;
-    const missingMissionAction = isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.missingRecordMissionsRoute || 'missing-record-missions.html')}">Solve missing records</a>`;
-    const livedReceiptAction = isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.livedConsequenceReceiptsRoute || `lived-consequence-receipts.html?record=${recordId}#submit`)}">Submit a lived receipt</a>`;
+    const redTeamAction = entry.redTeamMirrorRoute
+      ? (isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.redTeamMirrorRoute)}">Challenge the case</a>`)
+      : (isHistoricalOnly ? '' : `<a href="red-team-mirror.html#red-team-${recordId}">Challenge the case</a>`);
+    const answerClockAction = entry.publicAnswerClockRoute
+      ? (isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.publicAnswerClockRoute)}">Open answer clock</a>`)
+      : (isHistoricalOnly ? '' : `<a href="public-answer-clock.html#answer-clock-${recordId}">Open answer clock</a>`);
+    const missingMissionAction = entry.missingRecordMissionsRoute
+      ? (isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.missingRecordMissionsRoute)}">Solve missing records</a>`)
+      : (isHistoricalOnly ? '' : '<a href="missing-record-missions.html">Solve missing records</a>');
+    const livedReceiptAction = entry.livedConsequenceReceiptsRoute
+      ? (isHistoricalOnly ? '' : `<a href="${escapeHtml(entry.livedConsequenceReceiptsRoute)}">Submit a lived receipt</a>`)
+      : (isHistoricalOnly ? '' : `<a href="lived-consequence-receipts.html?record=${recordId}#submit">Submit a lived receipt</a>`);
     const changeBlock = changes.length
       ? `<ol class="power-diff-changes">${changes.map(changeMarkup).join('')}</ol>`
       : `<div class="power-diff-no-change"><strong>${entry.status === 'baseline-established' ? 'BASELINE ESTABLISHED' : 'NO MATERIAL CHANGE'}</strong><p>${escapeHtml(entry.summary || '')}</p></div>`;

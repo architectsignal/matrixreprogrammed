@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:59:43.333Z",
+  "generatedAt": "2026-07-28T07:58:46.410Z",
   "overall": "ready",
   "summary": {
     "total": 50,
@@ -16,7 +16,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 630,
+    "archivedFindings": 978,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -87,7 +87,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "630 archived findings retained.",
+      "detail": "978 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -273,7 +273,7 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "headerEnd=5447; hitList=5456; nextLegacyPanel=-1.",
+      "detail": "headerEnd=5689; hitList=5698; nextLegacyPanel=133195.",
       "fix": "Inject immediately after the header, before construction and all feature panels."
     },
     {
@@ -321,7 +321,7 @@
     {
       "id": "sensitive-claim-safeguard",
       "ok": true,
-      "detail": "18 sensitive items; 0 unsafe.",
+      "detail": "15 sensitive items; 0 unsafe.",
       "fix": "Require exact status, provenance, limitation and review."
     }
   ],

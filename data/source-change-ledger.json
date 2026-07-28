@@ -1,9 +1,161 @@
 {
-  "updated": "2026-07-27T17:28:52.106Z",
+  "updated": "2026-07-28T07:58:01.352Z",
   "mode": "daily",
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
-  "changeCount": 66,
+  "changeCount": 69,
   "changes": [
+    {
+      "id": "a812104d556e1c07b8205441",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-28T07:58:01.352Z",
+      "changeType": "content-changed",
+      "previousHash": "9bc11ce7a82d4a1afe7d4a68b67515d9d237b956be889d9a689e48ed23aa2564",
+      "currentHash": "6efae5684f87c5438e871931c67c2f25b8c6642d43c96d52d763eb09f5309848",
+      "rawHash": "6a1051d88d2501ac4fa4cdd58e87eef5b2c2a386d66f992c3f093800144a1596",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Tue, 28 Jul 2026 03:58:01 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-28T03:58:01-04:00 4 - White Lion Capital LLC (0001952614) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001193125-26-318582 <b>Size:</b> 9 KB 2026-07-27T21:58:55-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-318582 4 - ACTELIS NETWORKS INC (0001141284) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001193125-26-318582 <b>Size:</b> 9 KB 2026-07-27T21:58:55-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-318582 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034910 <b>Size:</b> 5 KB 2026-07-27T21:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034910 4 - MCKENZIE OBIE (0001953904) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034910 <b>Size:</b> 5 KB 2026-07-27T21:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034910 4 - Chalom Joseph (0002079719) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034909 <b>Size:</b> 5 KB 2026-07-27T21:52:19-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034909 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034909 <b>Size:</b> 5 KB 2026-07-27T21:52:19-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034909 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034908 <b>Size:</b> 5 KB 2026-07-27T21:51:20-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034908 4 - Bernhard Leslie (0001333581) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034908 <b>Size:</b> 5 KB 2026-07-27T21:51:20-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034908 4 - Camarda Michael D (0002133186) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034905 <b>Size:</b> 5 KB 2026-07-27T21:50:32-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034905 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034905 <b>Size:</b> 5 KB 2026-07-27T21:50:32-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034905 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034902 <b>Size:</b> 5 KB 2026-07-27T21:49:52-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034902 4 - GUTKOWSKI ROBERT M (0001032469) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034902 <b>Size:</b> 5 KB 2026-07-27T21:49:52-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034902 4 - Sharplink, Inc.",
+        "(0001981535) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034901 <b>Size:</b> 5 KB 2026-07-27T21:49:15-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034901 4 - DeLucia Robert Michael (0001399454) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001493152-26-034901 <b>Size:</b> 5 KB 2026-07-27T21:49:15-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-034901 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002192 <b>Size:</b> 5 KB 2026-07-27T21:42:29-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002192 4 - LAWRY SETH W (0001058827) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002192 <b>Size:</b> 5 KB 2026-07-27T21:42:29-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002192 4 - Scribe Therapeutics, Inc.",
+        "(0001853921) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001781292-26-000007 <b>Size:</b> 12 KB 2026-07-27T21:42:12-04:00 urn:tag:sec.gov,2008:accession-number=0001781292-26-000007 4 - Lucas Svetlana (0001781292) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001781292-26-000007 <b>Size:</b> 12 KB 2026-07-27T21:42:12-04:00 urn:tag:sec.gov,2008:accession-number=0001781292-26-000007 4 - Fair James Thomas (0002032514) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002191 <b>Size:</b> 5 KB 2026-07-27T21:41:31-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002191 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002191 <b>Size:</b> 5 KB 2026-07-27T21:41:31-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002191 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002190 <b>Size:</b> 5 KB 2026-07-27T21:40:32-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002190 4 - Finnerty Sheila A (0001876532) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002190 <b>Size:</b> 5 KB 2026-07-27T21:40:32-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002190 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002189 <b>Size:</b> 5 KB 2026-07-27T21:39:39-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002189 4 - Roos Jason T (0001828764) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002189 <b>Size:</b> 5 KB 2026-07-27T21:39:39-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002189 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002188 <b>Size:</b> 7 KB 2026-07-27T21:38:32-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002188 4 - Koester Michael E (0001315794) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002188 <b>Size:</b> 7 KB 2026-07-27T21:38:32-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002188 4 - Sternberg Matthew David (0002008628) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001628280-26-049906 <b>Size:</b> 7 KB 2026-07-27T21:38:12-04:00 urn:tag:sec.gov,2008:accession-number=0001628280-26-049906 4 - Accelerant Holdings (0001997350) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001628280-26-049906 <b>Size:</b> 7 KB 2026-07-27T21:38:12-04:00 urn:tag:sec.gov,2008:accession-number=0001628280-26-049906 4 - 5C Lending Partners Corp.",
+        "(0001998387) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002187 <b>Size:</b> 7 KB 2026-07-27T21:37:15-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002187 4 - Connolly Thomas (0001776597) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000930413-26-002187 <b>Size:</b> 7 KB 2026-07-27T21:37:15-04:00 urn:tag:sec.gov,2008:accession-number=0000930413-26-002187 4 - ROTHBLATT MARTINE A (0001106578) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001106578-26-000107 <b>Size:</b> 31 KB 2026-07-27T21:36:09-04:00 urn:tag:sec.gov,2008:accession-number=0001106578-26-000107 4 - UNITED THERAPEUTICS Corp (0001082554) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001106578-26-000107 <b>Size:</b> 31 KB 2026-07-27T21:36:09-04:00 urn:tag:sec.gov,2008:accession-number=0001106578-26-000107 3 - Catalyst Sponsor LLC (0002146403) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081950 <b>Size:</b> 6 KB 2026-07-27T21:30:33-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081950 3 - Catalyst Acquisition Corp.",
+        "(0002104391) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081950 <b>Size:</b> 6 KB 2026-07-27T21:30:33-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081950 4 - GEYGAN JEFFREY RICHART (0001733547) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001193125-26-318556 <b>Size:</b> 8 KB 2026-07-27T21:30:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-318556 4 - Loop Industries, Inc.",
+        "(0001504678) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001193125-26-318556 <b>Size:</b> 8 KB 2026-07-27T21:30:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-318556 4 - Oakes Benjamin L.",
+        "(0002127814) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002127814-26-000004 <b>Size:</b> 10 KB 2026-07-27T21:26:14-04:00 urn:tag:sec.gov,2008:accession-number=0002127814-26-000004 4 - Scribe Therapeutics, Inc.",
+        "(0001853921) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002127814-26-000004 <b>Size:</b> 10 KB 2026-07-27T21:26:14-04:00 urn:tag:sec.gov,2008:accession-number=0002127814-26-000004 4 - Scribe Therapeutics, Inc.",
+        "(0001853921) (Issuer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001282930-26-000004 <b>Size:</b> 5 KB 2026-07-27T21:25:02-04:00 urn:tag:sec.gov,2008:accession-number=0001282930-26-000004 4 - GORDON CARL L (0001282930) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001282930-26-000004 <b>Size:</b> 5 KB 2026-07-27T21:25:02-04:00 urn:tag:sec.gov,2008:accession-number=0001282930-26-000004"
+      ],
+      "removals": [
+        "Latest Filings - Mon, 27 Jul 2026 13:28:52 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-27T13:28:52-04:00 424B2 - UBS AG (0001114446) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036419 <b>Size:</b> 699 KB 2026-07-27T13:27:03-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036419 13F-HR - NOTTINGHAM ADVISORS, INC.",
+        "(0001093276) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001093276-26-000013 <b>Size:</b> 73 KB 2026-07-27T13:27:00-04:00 urn:tag:sec.gov,2008:accession-number=0001093276-26-000013 D - Eval Ventures Alpha 1, LP (0002122972) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002122972-26-000002 <b>Size:</b> 8 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:26:37-04:00 urn:tag:sec.gov,2008:accession-number=0002122972-26-000002 D - Eterna Capital Partners LP - Series Alpha BG (0002139187) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002139187-26-000001 <b>Size:</b> 6 KB 2026-07-27T13:26:10-04:00 urn:tag:sec.gov,2008:accession-number=0002139187-26-000001 13F-HR - Miramar Capital, LLC (0001767812) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001767812-26-000004 <b>Size:</b> 31 KB 2026-07-27T13:26:04-04:00 urn:tag:sec.gov,2008:accession-number=0001767812-26-000004 N-PX - Mallini Complete Financial Planning LLC (0002049540) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002049540-26-000005 <b>Size:</b> 3 KB 2026-07-27T13:25:26-04:00 urn:tag:sec.gov,2008:accession-number=0002049540-26-000005 D - Parliament Capital Series III, LLC - Series O (0002145186) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002145186-26-000001 <b>Size:</b> 9 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:25:02-04:00 urn:tag:sec.gov,2008:accession-number=0002145186-26-000001 SCHEDULE 13G - KEYSTONE CAPITAL PARTNERS, LLC (0001865973) (Filed by) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081732 <b>Size:</b> 18 KB 2026-07-27T13:24:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081732 SCHEDULE 13G - Onconetix, Inc.",
+        "(0001782107) (Subject) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001213900-26-081732 <b>Size:</b> 18 KB 2026-07-27T13:24:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-081732 24F-2NT - BLACKROCK EQUITY DIVIDEND FUND (0000814507) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028404 <b>Size:</b> 5 KB 2026-07-27T13:24:05-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028404 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036418 <b>Size:</b> 607 KB 2026-07-27T13:23:09-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036418 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036418 <b>Size:</b> 607 KB 2026-07-27T13:23:09-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036418 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036417 <b>Size:</b> 435 KB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036417 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036417 <b>Size:</b> 435 KB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036417 485BPOS - FIDELITY SUMMER STREET TRUST (0000225322) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000225322-26-000191 <b>Size:</b> 19 MB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0000225322-26-000191 485BPOS - FIDELITY SUMMER STREET TRUST (0000225322) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000225322-26-000191 <b>Size:</b> 19 MB 2026-07-27T13:22:41-04:00 urn:tag:sec.gov,2008:accession-number=0000225322-26-000191 D/A - Kairos Energy Metals, LP (0001983332) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001983332-26-000001 <b>Size:</b> 7 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) 2026-07-27T13:22:31-04:00 urn:tag:sec.gov,2008:accession-number=0001983332-26-000001 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036416 <b>Size:</b> 504 KB 2026-07-27T13:22:05-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036416 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036416 <b>Size:</b> 504 KB 2026-07-27T13:22:05-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036416 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036415 <b>Size:</b> 487 KB 2026-07-27T13:21:30-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036415 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036415 <b>Size:</b> 487 KB 2026-07-27T13:21:30-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036415 N-CSRS - Federated Hermes Strategic Dividend Growth Fund, Inc.",
+        "(0000799704) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001623632-26-001069 <b>Size:</b> 3 MB 2026-07-27T13:20:59-04:00 urn:tag:sec.gov,2008:accession-number=0001623632-26-001069 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036414 <b>Size:</b> 487 KB 2026-07-27T13:20:53-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036414 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001839882-26-036414 <b>Size:</b> 487 KB 2026-07-27T13:20:53-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-036414 N-PX - KERR FINANCIAL PLANNING Corp (0002095947) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002095947-26-000007 <b>Size:</b> 3 KB 2026-07-27T13:20:52-04:00 urn:tag:sec.gov,2008:accession-number=0002095947-26-000007 D - MCB The Enolia Student Housing DST (0002142377) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002142377-26-000001 <b>Size:</b> 8 KB 2026-07-27T13:20:49-04:00 urn:tag:sec.gov,2008:accession-number=0002142377-26-000001 13F-NT - HSBC Bank Bermuda Ltd (0001581175) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001581175-26-000003 <b>Size:</b> 2 KB 2026-07-27T13:18:49-04:00 urn:tag:sec.gov,2008:accession-number=0001581175-26-000003 13F-HR - LGL PARTNERS, LLC (0001653202) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001653202-26-000003 <b>Size:</b> 36 KB 2026-07-27T13:17:35-04:00 urn:tag:sec.gov,2008:accession-number=0001653202-26-000003 D - LRI Vision Partners Fund III, L.P.",
+        "(0002146550) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0002146550-26-000001 <b>Size:</b> 7 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.1: Section 3(c)(1) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:17:04-04:00 urn:tag:sec.gov,2008:accession-number=0002146550-26-000001 24F-2NT - BLACKROCK EMERGING MARKETS FUND, INC.",
+        "(0000849402) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028403 <b>Size:</b> 5 KB 2026-07-27T13:16:44-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028403 424B2 - ROYAL BANK OF CANADA (0001000275) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000950103-26-011189 <b>Size:</b> 276 KB 2026-07-27T13:16:26-04:00 urn:tag:sec.gov,2008:accession-number=0000950103-26-011189 D - Willow Tree Fund II-CV, LP (0002112208) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000929638-26-002735 <b>Size:</b> 13 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:15:26-04:00 urn:tag:sec.gov,2008:accession-number=0000929638-26-002735 485BPOS - Franklin Templeton ETF Trust (0001655589) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001655589-26-000973 <b>Size:</b> 69 MB 2026-07-27T13:14:11-04:00 urn:tag:sec.gov,2008:accession-number=0001655589-26-000973 485BPOS - Franklin Templeton ETF Trust (0001655589) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001655589-26-000973 <b>Size:</b> 69 MB 2026-07-27T13:14:11-04:00 urn:tag:sec.gov,2008:accession-number=0001655589-26-000973 144 - BIERMAN JAMES L (0001189534) (Reporting) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001959173-26-005380 <b>Size:</b> 4 KB 2026-07-27T13:13:52-04:00 urn:tag:sec.gov,2008:accession-number=0001959173-26-005380 144 - TENET HEALTHCARE CORP (0000070318) (Subject) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001959173-26-005380 <b>Size:</b> 4 KB 2026-07-27T13:13:52-04:00 urn:tag:sec.gov,2008:accession-number=0001959173-26-005380 D - Willow Tree Fund II-CV (Offshore), LP (0002114954) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000929638-26-002734 <b>Size:</b> 13 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-27T13:13:10-04:00 urn:tag:sec.gov,2008:accession-number=0000929638-26-002734 424B2 - BofA Finance LLC (0001682472) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001918704-26-021293 <b>Size:</b> 793 KB 2026-07-27T13:12:40-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021293 424B2 - BANK OF AMERICA CORP /DE/ (0000070858) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0001918704-26-021293 <b>Size:</b> 793 KB 2026-07-27T13:12:40-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021293 24F-2NT - BlackRock Unconstrained Equity Fund (0001324285) (Filer) <b>Filed:</b> 2026-07-27 <b>AccNo:</b> 0000940400-26-028402 <b>Size:</b> 5 KB 2026-07-27T13:10:42-04:00 urn:tag:sec.gov,2008:accession-number=0000940400-26-028402"
+      ],
+      "additionCount": 19,
+      "removalCount": 6,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-28T07:58:01.352Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
+    {
+      "id": "6852525bfb3f4d4c67a81fcb",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-28T07:58:01.352Z",
+      "changeType": "content-changed",
+      "previousHash": "1bae5f4e0c88afb54347751bb5edd645ba7d74bc30622de4d02bc7c02297ab1b",
+      "currentHash": "c81cd888b8eb9d7512e5e67b1919365f7a9e400cb2de64d759f18ec7140b97d6",
+      "rawHash": "97e4af57345bf82a8e8ede2399683e0de1c843bf241299c7c543c90cd992b05d",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODUxMTA0MDAwMDAsIjIwMjYtMTUxMzQiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQ4NTEyMDAwMDAsIjIwMjYtMTUwNDgiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: Federal Register — Latest Documents",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-28T07:58:01.352Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
+    {
+      "id": "d10a3c874af4d2b467263ee1",
+      "sourceId": "treasury-ofac-recent-actions",
+      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
+      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-28T07:58:01.352Z",
+      "changeType": "content-changed",
+      "previousHash": "59fb0179fd237c2c1e9333e26d7e0b794646161da7973086b9fe8ce4af98c112",
+      "currentHash": "19b06569135707785840b654cd3246d53852ed0bcc34ab3662b9cf9bc44ad728",
+      "rawHash": "227d7908198e92bf53fd621b800d465a096eed275899d5387eda28caf263e7fd",
+      "httpStatus": 200,
+      "finalUrl": "https://ofac.treasury.gov/recent-actions",
+      "additions": [
+        "Sanctions List Removals; Sanctions List Updates July 27, 2026 - Sanctions List Updates Iran-related Designations; Issuance of Amended Russia-related General License and Frequently Asked Questions; Issuance of Amended Venezuela-related Frequently Asked Question; Publication of Regulatory Amendments July 24, 2026 - Sanctions List Updates Counter Terrorism Designations; Counter Narcotics Designations; Cuba Designations; Belarus-related Designation Removal; Issuance of Cuba-related General Licenses July 23, 2026 - Sanctions List Updates Russia-related Designations Updates July 20, 2026 - Sanctions List Updates Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran -related Designations; Iran -related and Counter Terrorism Designation Update; Issuance of Iran -related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "removals": [
+        "Sanctions List Removals; Sanctions List Updates July 27, 2026 - Sanctions List Updates Iran-related Designations; Issuance of Amended Russia-related General License and Frequently Asked Questions; Issuance of Amended Venezuela-related Frequently Asked Question; Publication of Regulatory Amendments July 24, 2026 - Sanctions List Updates Counter Terrorism Designations; Counter Narcotics Designations; Cuba Designations; Belarus-related Designation Removal; Issuance of Cuba-related General Licenses July 23, 2026 - Sanctions List Updates Russia-related Designations Updates July 20, 2026 - Sanctions List Updates Issuance of Venezuela-related Frequently Asked Question July 17, 2026 - Regulations and Guidance Hong Kong-related Designations Updates and Removals July 17, 2026 - Sanctions List Updates Non-Proliferation Designations; Counter Terrorism Designations July 15, 2026 - Sanctions List Updates Iran-related Designations; Iran-related and Counter Terrorism Designation Update; Issuance of Iran-related General License July 14, 2026 - Sanctions List Updates Cyber-related Designations; Cuba Designations; Issuance of Cuba-related Frequently Asked Question July 13, 2026 - Sanctions List Updates Iran-related and Counter Terrorism Designations; Issuance of Iran-related General License July 10, 2026 - Sanctions List Updates Pagination Current page 1 Page 2 Page 3 &hellip; 314 Next Filter by Category All Recent Actions Enforcement Actions General Licenses Miscellaneous Regulations and Guidance Sanctions List Updates Search All Recent Actions (enter keywords) Start Date (format: MM/DD/YYYY) End Date (format: MM/DD/YYYY) Search by Year (format: YYYY) Sign up for OFAC Recent Actions e-mail updates Office of Terrorism and Financial Intelligence Additional Resources Privacy Act Small Business Contacts Budget and Performance TreasuryDirect.gov Securities/Bonds Freedom of Information Act (FOIA) No FEAR Act Data Whistleblower Protection Helpful OFAC Links Sign Up For OFAC E-mail Alerts Contact OFAC Dealing with an \"OFAC Alert\" List of Country-related Sanctions Appeal an OFAC designation or other listing Other Government Sites USA.gov USAJOBS.gov OPM.gov MyMoney.gov Data.gov Footer Privacy Policy Google Privacy Site Policies and Notices Accessibility"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-28T07:58:01.352Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
     {
       "id": "ea906ec638c352f7dced1c63",
       "sourceId": "sec-current-filings",

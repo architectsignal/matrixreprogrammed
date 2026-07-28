@@ -14,6 +14,7 @@ const files = {
   child: path.join(root, 'downloads', 'predators-in-power-child-focus.json'),
   claims: path.join(root, 'downloads', 'predators-in-power-claims-review.json'),
   page: path.join(root, 'predators-in-power.html'),
+  patch: path.join(root, 'scripts', 'patch-predators-rumor-ledger.js'),
   output: path.join(root, 'downloads', 'predators-in-power-expansion-test.json')
 };
 const failures = [];
@@ -34,6 +35,7 @@ function statusMatches(value, allowed) {
   const token = normalize(value);
   return allowed.some(item => token === normalize(item) || token.includes(normalize(item)));
 }
+function hasText(value) { return Boolean(String(value || '').trim()); }
 
 const payload = readJson(files.payload);
 const registry = readJson(files.registry);
@@ -44,15 +46,24 @@ const current = readJson(files.current);
 const child = readJson(files.child);
 const claims = readJson(files.claims);
 const page = fs.existsSync(files.page) ? fs.readFileSync(files.page, 'utf8') : '';
+const patch = fs.existsSync(files.patch) ? fs.readFileSync(files.patch, 'utf8') : '';
 const childDomains = new Set(policy.childFocusDomains || []);
 
 if (!report.ok) failures.push('expansion build report is not ok');
 if (Number(payload.schemaVersion || 0) < 2) failures.push('expanded Predators payload must use schemaVersion >= 2');
 if (!payload.expansion) failures.push('expanded Predators payload missing expansion metadata');
 if (!Array.isArray(payload.subjects) || !payload.subjects.length) failures.push('expanded Predators payload has no subjects');
+if (Number(policy.schemaVersion || 0) < 2) failures.push('rumor-ledger policy must use schemaVersion >= 2');
+for (const field of ['siteWideRumorPrinciple', 'claimsReviewRule', 'publicRumorRule', 'anonymousRumorRule', 'scoringRule']) {
+  if (!hasText(policy[field])) failures.push(`rumor-ledger policy missing ${field}`);
+}
 if (current.count !== (current.subjects || []).length) failures.push('current-power output count mismatch');
 if (child.count !== (child.subjects || []).length) failures.push('child-focus output count mismatch');
-if ((claims.publicClaims || []).length !== claims.publicApprovedClaimCount) failures.push('claims-review public count mismatch');
+if ((claims.publicClaims || []).length !== Number(claims.publicApprovedClaimCount || 0)) failures.push('claims-review public suspected-conduct count mismatch');
+if ((claims.namedRumors || []).length !== Number(claims.namedRumorCount || 0)) failures.push('named rumor count mismatch');
+if ((claims.anonymizedRumors || []).length !== Number(claims.anonymizedRumorCount || 0)) failures.push('anonymized rumor count mismatch');
+if (Number(claims.totalRumorCount || 0) !== Number(claims.namedRumorCount || 0) + Number(claims.anonymizedRumorCount || 0)) failures.push('total rumor count mismatch');
+if (!patch.includes('function rumorLedgerEligible(record)') || !patch.includes('zero verified-evidence weight')) failures.push('rumor-ledger patch contract is missing');
 
 const published = new Map((payload.subjects || []).map(subject => [normalize(subject.name), subject]));
 const qualifying = [];
@@ -65,6 +76,7 @@ for (const [key, subject] of Object.entries(registry.subjects || {})) {
 }
 for (const name of qualifying) if (!published.has(normalize(name))) failures.push(`qualifying child-focused subject omitted: ${name}`);
 
+let payloadRumorRecords = 0;
 for (const subject of payload.subjects || []) {
   if (!['current', 'former', 'unknown'].includes(subject.powerStatus)) failures.push(`${subject.name}: invalid powerStatus ${subject.powerStatus}`);
   if (!Array.isArray(subject.legalGroups)) failures.push(`${subject.name}: legalGroups missing`);
@@ -84,23 +96,47 @@ for (const subject of payload.subjects || []) {
   }
 
   for (const record of childRecords) {
-    if (['suspected_conduct', 'rumor_speculation'].includes(record.category)) {
-      if (record.legalReviewStatus !== 'approved') failures.push(`${subject.name}/${record.id}: living-person child claim lacks approved legal review`);
+    if (record.category === 'suspected_conduct' && record.publicationStatus === 'approved') {
+      if (record.legalReviewStatus !== 'approved') failures.push(`${subject.name}/${record.id}: published suspected-conduct claim lacks approved legal review`);
       for (const field of ['sourceUrl', 'sourceLabel', 'rightOfReply', 'counterEvidence', 'proofNeeded', 'boundary']) {
-        if (!String(record[field] || '').trim()) failures.push(`${subject.name}/${record.id}: reviewed claim missing ${field}`);
+        if (!hasText(record[field])) failures.push(`${subject.name}/${record.id}: reviewed suspected-conduct claim missing ${field}`);
       }
-      if (!absolute(record.sourceUrl)) failures.push(`${subject.name}/${record.id}: reviewed claim source is not HTTPS`);
+      if (!absolute(record.sourceUrl)) failures.push(`${subject.name}/${record.id}: reviewed suspected-conduct source is not HTTPS`);
     }
+    if (record.category === 'rumor_speculation') payloadRumorRecords++;
   }
 }
 
 for (const item of claims.publicClaims || []) {
   const record = item.record || {};
-  if (!['suspected_conduct', 'rumor_speculation'].includes(record.category)) failures.push(`${item.subject}: claims-review output contains non-claim lane`);
-  if (record.publicationStatus !== 'approved' || record.legalReviewStatus !== 'approved') failures.push(`${item.subject}: public claim lacks editorial and legal approval`);
-  if (!absolute(record.sourceUrl)) failures.push(`${item.subject}: public claim source is not HTTPS`);
+  if (record.category !== 'suspected_conduct') failures.push(`${item.subject}: public approved-claim output contains a non-suspected lane`);
+  if (record.publicationStatus !== 'approved' || record.legalReviewStatus !== 'approved') failures.push(`${item.subject}: public suspected-conduct claim lacks editorial and legal approval`);
+  if (!absolute(record.sourceUrl)) failures.push(`${item.subject}: public suspected-conduct source is not HTTPS`);
 }
-if ('candidates' in claims) failures.push('public claims-review output must not expose private candidate records');
+
+for (const item of claims.namedRumors || []) {
+  const record = item.record || {};
+  if (!hasText(item.subject)) failures.push('named rumor missing subject');
+  if (record.category !== 'rumor_speculation') failures.push(`${item.subject || '(unnamed)'}: named rumor has wrong category`);
+  if (!absolute(record.sourceUrl) || !hasText(record.sourceLabel)) failures.push(`${item.subject || '(unnamed)'}: named rumor lacks attributable public source`);
+  for (const field of ['summary', 'verificationState', 'rightOfReply', 'counterEvidence', 'proofNeeded', 'boundary']) {
+    if (!hasText(record[field])) failures.push(`${item.subject || '(unnamed)'}/${record.id || '(no id)'}: named rumor missing ${field}`);
+  }
+}
+
+for (const item of claims.anonymizedRumors || []) {
+  for (const forbidden of ['subject', 'name', 'person', 'target', 'privateSubject']) {
+    if (forbidden in item) failures.push(`anonymized rumor ${item.rumorId || '(no id)'} exposes ${forbidden}`);
+  }
+  if (item.targetStatus !== 'identity withheld pending attribution') failures.push(`anonymized rumor ${item.rumorId || '(no id)'} missing identity-withheld status`);
+  for (const field of ['rumorId', 'title', 'summary', 'sourceLabel', 'verificationState', 'proofNeeded', 'boundary']) {
+    if (!hasText(item[field])) failures.push(`anonymized rumor ${item.rumorId || '(no id)'} missing ${field}`);
+  }
+}
+
+if (Number(claims.totalRumorCount || 0) < payloadRumorRecords) failures.push('rumor ledger omits rumor records already attached to published subjects');
+if ('candidates' in claims) failures.push('public rumor-ledger output must not expose private candidate records');
+if (Number(report.totalRumors || 0) !== Number(claims.totalRumorCount || 0)) failures.push('build report rumor total does not match public rumor ledger');
 
 for (const marker of [
   '<!-- predators-in-power-expansion:start -->',
@@ -109,6 +145,9 @@ for (const marker of [
   'data-pip-tab="convictions"',
   'data-pip-tab="charges"',
   'data-pip-tab="claims-review"',
+  'Rumour / Speculation Ledger',
+  'RUMOUR — NOT VERIFIED',
+  'Total rumours retained:',
   'downloads/predators-in-power-current-power.json',
   'downloads/predators-in-power-child-focus.json',
   'downloads/predators-in-power-claims-review.json',
@@ -116,7 +155,7 @@ for (const marker of [
 ]) {
   if (!page.includes(marker)) failures.push(`Predators page missing ${marker}`);
 }
-if (!page.includes('Unsupported rumors, anonymous claims, association-based insinuations and machine matches remain unpublished.')) failures.push('claims-review exclusion boundary missing from page');
+if (page.includes('Unsupported rumors, anonymous claims, association-based insinuations and machine matches remain unpublished.')) failures.push('obsolete rumor-exclusion boundary remains on page');
 
 const result = {
   ok: failures.length === 0,
@@ -126,6 +165,9 @@ const result = {
   currentPowerSubjects: current.count,
   childFocusedSubjects: child.count,
   publicApprovedClaims: claims.publicApprovedClaimCount,
+  namedRumors: claims.namedRumorCount,
+  anonymizedRumors: claims.anonymizedRumorCount,
+  totalRumors: claims.totalRumorCount,
   privateReviewCandidates: claims.privateReviewCandidateCount,
   autoAddedSubjects: report.autoAddedSubjects || [],
   failures,
@@ -138,4 +180,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Predators in Power expansion test passed: ${result.totalSubjects} verified subject(s), ${result.qualifyingChildRegistrySubjects} qualifying child-focused registry subject(s), ${result.currentPowerSubjects} current/suspended power subject(s), ${result.publicApprovedClaims} legally reviewed public claim(s).`);
+console.log(`Predators in Power expansion test passed: ${result.totalSubjects} verified subject(s), ${result.qualifyingChildRegistrySubjects} qualifying child-focused registry subject(s), ${result.currentPowerSubjects} current/suspended power subject(s), ${result.publicApprovedClaims} legally reviewed suspected-conduct claim(s), and ${result.totalRumors} retained rumor/speculation ledger record(s).`);

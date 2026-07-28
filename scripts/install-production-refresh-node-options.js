@@ -11,6 +11,10 @@ const installPatches = [
   {
     file: 'patch-release-audit-global-id-dedupe.js',
     failure: 'Release-audit duplicate-ID allocator repair failed during install'
+  },
+  {
+    file: 'fix-final-release-audit-defects.js',
+    failure: 'Final release audit defect repair failed during install'
   }
 ];
 for (const patch of installPatches) {

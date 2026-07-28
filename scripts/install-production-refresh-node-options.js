@@ -5,6 +5,10 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const installPatches = [
   {
+    file: 'fix-predators-rumor-patcher-replacement.js',
+    failure: 'Rumour-ledger replacement hardening failed during install'
+  },
+  {
     file: 'patch-current-office-holder-stale-claim-detector.js',
     failure: 'Current office-holder stale-claim detector repair failed during install'
   },

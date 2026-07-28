@@ -18,11 +18,12 @@ for(const base of roots){
   }
   if(base!==root)for(const relative of assets)fs.copyFileSync(path.join(root,relative),path.join(base,relative));
 }
+require('./add-accountability-alerts-dashboard.js');
 fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
-const report={ok:true,generatedAt:new Date().toISOString(),patchedPages:patched,assets};
+const report={ok:true,generatedAt:new Date().toISOString(),patchedPages:patched,assets,memberDashboardAlerts:true};
 fs.writeFileSync(path.join(root,'downloads','accountability-tracker-runtime-report.json'),`${JSON.stringify(report,null,2)}\n`);
 if(fs.existsSync(outputRoot)){
   fs.mkdirSync(path.join(outputRoot,'downloads'),{recursive:true});
   fs.copyFileSync(path.join(root,'downloads','accountability-tracker-runtime-report.json'),path.join(outputRoot,'downloads','accountability-tracker-runtime-report.json'));
 }
-console.log(`Accountability tracker public runtime finalized across ${patched} page copy/copies.`);
+console.log(`Accountability tracker public runtime finalized across ${patched} page copy/copies with member dashboard alerts.`);

@@ -1,0 +1,87 @@
+name: Exposure Integrity Gate
+
+on:
+  pull_request:
+    paths:
+      - 'data/exposure-integrity-policy.json'
+      - 'data/criminal-conduct-registry.json'
+      - 'data/epstein-dossier-overlap-registry.json'
+      - 'data/dark-speculation-claims.json'
+      - 'data/evidence-weighted-relationship-graph.json'
+      - 'data/clock-wall.json'
+      - 'scripts/*exposure-integrity*.js'
+      - 'scripts/build-dossier-accountability-overlays.js'
+      - '.github/workflows/exposure-integrity.yml'
+  push:
+    branches:
+      - 'agent/elite-exposure-integrity-v2'
+    paths:
+      - 'data/exposure-integrity-policy.json'
+      - 'data/criminal-conduct-registry.json'
+      - 'data/epstein-dossier-overlap-registry.json'
+      - 'data/dark-speculation-claims.json'
+      - 'data/evidence-weighted-relationship-graph.json'
+      - 'data/clock-wall.json'
+      - 'scripts/*exposure-integrity*.js'
+      - 'scripts/build-dossier-accountability-overlays.js'
+      - '.github/workflows/exposure-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exposure-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check Exposure Integrity scripts
+        run: |
+          node --check scripts/build-exposure-integrity-engine.js
+          node --check scripts/run-exposure-integrity-engine.js
+          node --check scripts/prepare-exposure-integrity-inputs.js
+          node --check scripts/finalize-exposure-integrity-engine.js
+          node --check scripts/dedupe-exposure-integrity-records.js
+          node --check scripts/finalize-exposure-clean-routes.js
+          node --check scripts/exposure-integrity-pressure-test.js
+
+      - name: Build dossier accountability inputs
+        run: node scripts/build-dossier-accountability-overlays.js
+
+      - name: Prepare canonical registries
+        run: node scripts/prepare-exposure-integrity-inputs.js
+
+      - name: Generate evidence ledger and Hit List
+        run: node scripts/run-exposure-integrity-engine.js
+
+      - name: Finalize user-facing classifications and routes
+        run: |
+          node scripts/finalize-exposure-integrity-engine.js
+          node scripts/dedupe-exposure-integrity-records.js
+          node scripts/finalize-exposure-clean-routes.js
+
+      - name: Run fail-closed Exposure Integrity pressure test
+        run: node scripts/exposure-integrity-pressure-test.js
+
+      - name: Upload Exposure Integrity proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: exposure-integrity-proof-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            data/exposure-integrity-engine.json
+            data/exposure-evidence-ledger.json
+            data/cinematic-hit-list.json
+            downloads/exposure-integrity-report.json
+            downloads/exposure-integrity-pressure-test.json
+            downloads/exposure-integrity-input-report.json
+            hit-list.html

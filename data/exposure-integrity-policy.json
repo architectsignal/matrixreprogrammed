@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "title": "Exposure Integrity Engine",
+  "purpose": "Turn public records, allegations, rumours, speculation, entity relationships and power mechanisms into a user-friendly investigative system without presenting proximity, repetition or inference as proof.",
+  "coreFlow": [
+    "source",
+    "evidence ledger",
+    "entity resolution",
+    "relationship classification",
+    "bounded conclusion",
+    "dossier update",
+    "timer route",
+    "cinematic hit list"
+  ],
+  "classificationLanes": {
+    "fact_adjudicated": {
+      "label": "Adjudicated fact",
+      "rule": "Final criminal judgment, final civil finding, authenticated court order or equivalent adjudicated record supports the exact statement."
+    },
+    "fact_official_record": {
+      "label": "Documented official record",
+      "rule": "An official filing, regulator record, contract, registry, transcript, legislation, audit or authenticated primary record supports the exact statement."
+    },
+    "fact_corroborated": {
+      "label": "Corroborated documented fact",
+      "rule": "Multiple independent reliable sources support the same bounded statement where the primary record is unavailable or incomplete."
+    },
+    "official_allegation": {
+      "label": "Official allegation",
+      "rule": "A charge, indictment, complaint, official investigation or named legal filing makes the allegation. It is not a finding of guilt."
+    },
+    "attributed_allegation": {
+      "label": "Attributed allegation",
+      "rule": "A named person, report or publication makes the allegation and the origin is traceable. It is not established fact."
+    },
+    "documented_association": {
+      "label": "Documented association",
+      "rule": "A meeting, message, payment, appointment, trip, photograph, membership or other contact is documented. Association alone does not establish knowledge, coordination or wrongdoing."
+    },
+    "analytical_inference": {
+      "label": "Analytical inference",
+      "rule": "A stated reasoning chain connects documented facts, with alternatives, counter-evidence and falsifiers shown."
+    },
+    "rumour": {
+      "label": "Rumour",
+      "rule": "A circulating claim has a traceable origin but insufficient evidence. Repetition does not upgrade it."
+    },
+    "speculation": {
+      "label": "Speculation",
+      "rule": "A hypothesis or possibility is explored without enough evidence to call it fact."
+    },
+    "unsupported_or_debunked": {
+      "label": "Unsupported, contradicted or debunked",
+      "rule": "The claim lacks a reliable evidence chain, conflicts with stronger evidence or has been materially disproved."
+    }
+  },
+  "sensitiveClaimRules": [
+    "Child abuse, trafficking, sexual offences, homicide and other serious criminal claims about a named person must display the exact legal or evidence lane before the allegation text.",
+    "No automated system may upgrade a named criminal allegation to fact from association, keyword overlap, source volume or network proximity.",
+    "Convictions, charges, investigations, civil findings, attributed allegations, rumours and speculation must remain visually and structurally separate.",
+    "Victim identities and identifying details about children are omitted by default.",
+    "Illegal material is never accepted, stored, linked or reproduced.",
+    "Acquittals, dismissals, reversals, denials, corrections and right of reply remain attached to the relevant record."
+  ],
+  "hitListBoundary": "The Hit List is an investigative-priority and navigation surface, not a threat list, guilt ranking or call for harassment. Inclusion means the entity has documented power relevance, an evidence-backed accountability record, a significant unresolved evidence gap or a clearly labelled public claim requiring investigation.",
+  "hitListRequiredFields": [
+    "name",
+    "entityType",
+    "primaryClassification",
+    "plainEnglishReason",
+    "powerMechanism",
+    "documentedEvidence",
+    "allegationsOrHypotheses",
+    "doesNotProve",
+    "missingRecords",
+    "dossierRoutes",
+    "timerRoutes",
+    "sourceRoutes",
+    "lastReviewed"
+  ],
+  "timerRules": [
+    "A timer moves only when dated evidence matches the timer's published raise or lower rule.",
+    "A rumour, speculation card or unsupported graph edge may create a research route but cannot move a timer by itself.",
+    "Every timer movement must retain the source route, prior score, new score, reason, counter-signal and date."
+  ],
+  "dossierRules": [
+    "Every dossier should display documented facts before allegations or speculation.",
+    "Every material claim should show what supports it, what it does not prove, counter-evidence, missing records and what would change the conclusion.",
+    "No-match panels mean no approved record is currently mapped; they are not clearance or exoneration.",
+    "New evidence must update the existing entity record rather than create disconnected duplicate profiles."
+  ],
+  "agentContract": {
+    "allowedAutonomousActions": [
+      "collect public sources",
+      "extract entities and dates",
+      "suggest duplicate matches",
+      "classify source type",
+      "draft bounded claims",
+      "identify contradictions",
+      "propose relationship edges",
+      "propose timer routes",
+      "propose missing-record requests"
+    ],
+    "forbiddenAutonomousUpgrades": [
+      "turn association into guilt",
+      "turn a rumour into fact",
+      "infer criminal conduct from religion, ethnicity, surname, symbolism or social proximity",
+      "expose private victim information",
+      "publish illegal material",
+      "change a timer without a dated source-linked trigger"
+    ],
+    "requiredFindingFields": [
+      "findingId",
+      "entityIds",
+      "classification",
+      "claimText",
+      "sourceUrls",
+      "sourceAuthority",
+      "publishedOrEffectiveDate",
+      "establishes",
+      "doesNotEstablish",
+      "counterEvidence",
+      "missingEvidence",
+      "dossierRoutes",
+      "timerRoutes",
+      "confidence",
+      "agentId",
+      "generatedAt"
+    ]
+  },
+  "userExperienceRules": [
+    "Lead with a short plain-English conclusion.",
+    "Use visible labels and avoid unexplained evidence codes.",
+    "Every priority card must link to a dossier, timer, source or missing-record action.",
+    "Mobile and keyboard navigation must remain usable.",
+    "Empty states must explain what is missing and what the reader can do next."
+  ]
+}

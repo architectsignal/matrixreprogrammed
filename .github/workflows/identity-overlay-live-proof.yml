@@ -1,0 +1,187 @@
+name: Repair Live Verifier and Prove Identity Overlay
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/identity-overlay-live-proof.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  DEPLOYED_SHA: '28f3423471112b6529640cf1b17f9f7cc227c156'
+
+jobs:
+  repair-and-prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Repair URL handling in live verifier fallback
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const file = 'scripts/verify-live-production-fetch-fallback.js';
+          let text = fs.readFileSync(file, 'utf8');
+          const signature = 'function browserHeaders(rawUrl, init = {}, inheritedHeaders) {';
+          const start = text.indexOf(signature);
+          const endMarker = '\n}\n\nfunction normalizedUrl';
+          const end = text.indexOf(endMarker, start);
+          if (start < 0 || end < 0) throw new Error('browserHeaders block was not found');
+          let block = text.slice(start, end + 2);
+          if (!block.includes('const urlText = String(rawUrl);')) {
+            block = block.replace(signature, `${signature}\n  const urlText = String(rawUrl);`);
+          }
+          block = block
+            .replace(/rawUrl\.includes/g, 'urlText.includes')
+            .replace(/rawUrl\.endsWith/g, 'urlText.endsWith')
+            .replace(/\.test\(rawUrl\)/g, '.test(urlText)');
+          text = `${text.slice(0, start)}${block}${text.slice(end + 2)}`;
+          fs.writeFileSync(file, text);
+          NODE
+          node --check scripts/verify-live-production-fetch-fallback.js
+
+      - name: Commit permanent verifier repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/verify-live-production-fetch-fallback.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Fix URL normalization in live production verifier'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          else
+            echo 'Live verifier repair already current.'
+          fi
+
+      - name: Prove exact deployed production release
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOYED_SHA }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_VERIFY_ATTEMPTS: '6'
+          LIVE_VERIFY_DELAY_MS: '10000'
+          MATRIX_FULL_LIVE_VERIFY_ATTEMPTS: '6'
+          MATRIX_FULL_LIVE_VERIFY_DELAY_MS: '10000'
+        run: node -r ./scripts/verify-live-production-fetch-fallback.js scripts/verify-live-production.js
+
+      - name: Prove live identity overlay assets and nested loading
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOYED_SHA }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const site = String(process.env.SITE_URL).replace(/\/$/, '');
+          const expectedSha = process.env.DEPLOY_COMMIT_SHA;
+          const fetchText = async path => {
+            const join = path.includes('?') ? '&' : '?';
+            const response = await fetch(`${site}${path}${join}identity_overlay_proof=${Date.now()}`, {
+              redirect: 'follow',
+              headers: {
+                'cache-control': 'no-cache',
+                pragma: 'no-cache',
+                'user-agent': 'MatrixIdentityOverlayVerifier/1.0'
+              }
+            });
+            return {status: response.status, ok: response.ok, text: await response.text()};
+          };
+          (async () => {
+            const [runtime, overlayJs, overlayCss, overlayData, nested, healthResponse, manifestResponse] = await Promise.all([
+              fetchText('/matrix.js'),
+              fetchText('/identity-affiliation-overlay.js?v=1.0.1'),
+              fetchText('/identity-affiliation-overlay.css?v=1.0.1'),
+              fetchText('/data/identity-affiliation-overlay.json?v=1.0.1'),
+              fetchText('/controlled-opposition/andrew-tate.html'),
+              fetchText('/deploy-health.json'),
+              fetchText('/deploy-manifest.json')
+            ]);
+            const data = JSON.parse(overlayData.text);
+            const health = JSON.parse(healthResponse.text);
+            const manifest = JSON.parse(manifestResponse.text);
+            const ids = new Set((data.records || []).map(record => record.id));
+            const checks = {
+              runtimeLoadsOverlay: runtime.ok && runtime.text.includes('identity-affiliation-overlay.js?v=1.0.1'),
+              runtimeUsesStableBase: runtime.ok && runtime.text.includes('MATRIX_RUNTIME_BASE'),
+              overlayJavascriptLive: overlayJs.ok && overlayJs.text.includes('MatrixIdentityOverlay') && overlayJs.text.includes('ENGINE_BASE'),
+              overlayStylesLive: overlayCss.ok && overlayCss.text.length > 1000,
+              overlayDataLive: overlayData.ok && data.title === 'Identity, Affiliation & Ownership Evidence Overlay',
+              starterRecordsPresent: ['jeffrey-epstein', 'tom-cruise', 'john-travolta', 'orsini-family'].every(id => ids.has(id)),
+              nestedDossierLive: nested.ok && nested.text.includes('matrix.js'),
+              exactHealthSha: healthResponse.ok && health.buildSha === expectedSha && health.manifestMatches === true,
+              exactManifestSha: manifestResponse.ok && manifest.commitSha === expectedSha
+            };
+            const proof = {
+              ok: Object.values(checks).every(Boolean),
+              checkedAt: new Date().toISOString(),
+              site,
+              expectedSha,
+              deployedVersionId: 'd7f814a8-ae27-4581-bd74-c905d5f42b3c',
+              checks,
+              statuses: {
+                matrix: runtime.status,
+                overlayJavascript: overlayJs.status,
+                overlayStyles: overlayCss.status,
+                overlayData: overlayData.status,
+                nestedDossier: nested.status,
+                deployHealth: healthResponse.status,
+                deployManifest: manifestResponse.status
+              },
+              recordIds: [...ids],
+              healthSha: health.buildSha || null,
+              manifestSha: manifest.commitSha || null
+            };
+            fs.mkdirSync('data', {recursive: true});
+            fs.mkdirSync('downloads', {recursive: true});
+            fs.writeFileSync('data/identity-affiliation-overlay-live-proof.json', `${JSON.stringify(proof, null, 2)}\n`);
+            fs.writeFileSync('downloads/identity-affiliation-overlay-live-proof.json', `${JSON.stringify(proof, null, 2)}\n`);
+            console.log(JSON.stringify(proof, null, 2));
+            if (!proof.ok) process.exit(1);
+          })().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Record successful live proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/identity-affiliation-overlay-live-proof.json
+          git commit -m 'Record live identity overlay production proof'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload verification proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: identity-overlay-live-proof-${{ github.run_id }}
+          path: |
+            downloads/live-production-verification.json
+            downloads/live-protected-boundaries-compact.json
+            downloads/live-release-surfaces-compact.json
+            downloads/identity-affiliation-overlay-live-proof.json
+          if-no-files-found: error
+          retention-days: 60

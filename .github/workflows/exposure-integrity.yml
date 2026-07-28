@@ -17,7 +17,9 @@ on:
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
       - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'public-consequence-contracts.js'
       - '.github/workflows/exposure-integrity.yml'
   push:
     branches:
@@ -38,7 +40,9 @@ on:
       - 'scripts/refine-accountability-question-ledger.js'
       - 'scripts/search-first-accountability-home-pressure-test.js'
       - 'scripts/build-public-consequence-contracts.js'
+      - 'scripts/finalize-public-consequence-runtime.js'
       - 'scripts/public-consequence-contracts-pressure-test.js'
+      - 'public-consequence-contracts.js'
       - '.github/workflows/exposure-integrity.yml'
   workflow_dispatch:
 
@@ -72,7 +76,9 @@ jobs:
           node --check scripts/refine-accountability-question-ledger.js
           node --check scripts/search-first-accountability-home-pressure-test.js
           node --check scripts/build-public-consequence-contracts.js
+          node --check scripts/finalize-public-consequence-runtime.js
           node --check scripts/public-consequence-contracts-pressure-test.js
+          node --check public-consequence-contracts.js
 
       - name: Build dossier accountability inputs
         run: node scripts/build-dossier-accountability-overlays.js
@@ -131,3 +137,4 @@ jobs:
             search-query-handoff.js
             public-consequence-contracts.html
             public-consequence-contracts.css
+            public-consequence-contracts.js

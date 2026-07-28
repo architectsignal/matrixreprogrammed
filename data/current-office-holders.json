@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "checkedAt": "2026-07-28T00:00:00+02:00",
   "policy": {
-    "scope": "High-impact public offices that materially affect Matrix Reprogrammed dossiers, clocks, timelines, relationship maps and daily conclusions.",
+    "scope": "High-impact public offices that materially affect Matrix Reprogrammed dossiers, clocks, timelines, relationship maps, daily conclusions and criminal-investigation context.",
     "primarySourceRequired": true,
     "historicalNamesPreserved": true,
     "currentStatusMustBeDated": true,
@@ -165,7 +165,63 @@
       "office": "President",
       "name": "Ursula von der Leyen",
       "currentSince": "2019-12-01",
+      "termThrough": "2029",
       "sourceUrl": "https://commission.europa.eu/about/organisation/president_en",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "European Council",
+      "office": "President",
+      "name": "António Costa",
+      "currentSince": "2024-12-01",
+      "predecessor": "Charles Michel",
+      "predecessorTo": "2024-12-01",
+      "sourceUrl": "https://www.consilium.europa.eu/en/european-council/president/role/",
+      "staleCurrentAliases": [
+        "Charles Michel"
+      ],
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "European Central Bank",
+      "office": "President",
+      "name": "Christine Lagarde",
+      "currentSince": "2019-11-01",
+      "sourceUrl": "https://www.ecb.europa.eu/ecb/decisions/html/cvlagarde.en.html",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "International Monetary Fund",
+      "office": "Managing Director and Chair of the Executive Board",
+      "name": "Kristalina Georgieva",
+      "currentSince": "2019-10-01",
+      "currentTermSince": "2024-10-01",
+      "termThrough": "2029-09-30",
+      "sourceUrl": "https://www.imf.org/en/about/factsheets/sheets/2022/md-selection-process/qandas",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "World Bank Group",
+      "office": "President",
+      "name": "Ajay Banga",
+      "currentSince": "2023-06-02",
+      "termThrough": "2028-06-01",
+      "sourceUrl": "https://www.worldbank.org/ext/en/who-we-are/leadership/ajay-banga",
+      "evidenceClass": "official-current-role",
+      "confidence": "confirmed"
+    },
+    {
+      "jurisdiction": "World Health Organization",
+      "office": "Director-General",
+      "name": "Tedros Adhanom Ghebreyesus",
+      "currentSince": "2017-07-01",
+      "currentTermSince": "2022-08-16",
+      "termThrough": "2027-08-15",
+      "sourceUrl": "https://www.who.int/about/governance/election-of-the-who-director-general",
       "evidenceClass": "official-current-role",
       "confidence": "confirmed"
     },
@@ -174,7 +230,8 @@
       "office": "Pope",
       "name": "Leo XIV",
       "styledName": "Pope Leo XIV",
-      "currentSince": "2025-05-18",
+      "currentSince": "2025-05-08",
+      "ministryInaugurated": "2025-05-18",
       "predecessor": "Pope Francis",
       "sourceUrl": "https://www.vatican.va/content/vatican/en/holy-father/leone-xiv.html",
       "staleCurrentAliases": [

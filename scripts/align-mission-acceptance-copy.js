@@ -117,6 +117,7 @@ runRequired('scripts/build-dossier-accountability-overlays.js');
 runRequired('scripts/prepare-exposure-integrity-inputs.js');
 runRequired('scripts/run-exposure-integrity-engine.js');
 runRequired('scripts/finalize-exposure-integrity-engine.js');
+runRequired('scripts/dedupe-exposure-integrity-records.js');
 runRequired('scripts/finalize-exposure-clean-routes.js');
 runRequired('scripts/exposure-integrity-pressure-test.js');
 for (const route of ['independent-links.html', 'independent-links']) patch(route, patchMissingSourceLinks);

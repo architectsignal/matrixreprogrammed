@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accountability Review Inbox | Matrix Reprogrammed</title>
+  <meta name="description" content="Internal review inbox for due Accountability Twin checkpoints, evidence collection and reviewed outcomes.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>
+    .review-shell{max-width:1500px;margin:0 auto;padding:1rem}.review-toolbar,.review-layout,.review-grid{display:grid;gap:1rem}.review-toolbar{grid-template-columns:minmax(250px,1fr) auto;align-items:end}.review-layout{grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr)}.review-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}.review-panel{border:1px solid rgba(216,181,106,.28);border-radius:20px;padding:1rem;background:linear-gradient(145deg,rgba(16,9,3,.98),rgba(0,0,0,.96))}.review-panel h2,.review-panel h3{margin-top:0}.review-queue{display:grid;gap:.65rem;max-height:76vh;overflow:auto}.review-item{width:100%;text-align:left;border:1px solid rgba(216,181,106,.22);border-radius:14px;background:rgba(216,181,106,.045);padding:.8rem;color:inherit;cursor:pointer}.review-item:hover,.review-item[aria-current="true"]{border-color:rgba(216,181,106,.72);background:rgba(216,181,106,.11)}.review-item strong,.review-item span,.review-item small{display:block}.review-item span{color:#d8b56a;margin:.25rem 0}.review-item small{color:#aa9d83}.review-status{display:flex;flex-wrap:wrap;gap:.45rem;margin:.55rem 0}.review-status span{border:1px solid rgba(216,181,106,.24);border-radius:999px;padding:.25rem .55rem;font-size:.78rem}.review-status .due{border-color:rgba(255,110,80,.55);color:#ffb09f}.review-status .ready{border-color:rgba(120,210,140,.5);color:#b9e6bd}.review-steps{counter-reset:step;display:grid;gap:1rem}.review-step{counter-increment:step;border-top:1px solid rgba(216,181,106,.2);padding-top:1rem}.review-step>h3:before{content:counter(step) '. ';color:#d8b56a}.review-form{display:grid;gap:.75rem}.review-form label{display:grid;gap:.3rem;font-weight:700}.review-form input,.review-form textarea,.review-form select{width:100%;box-sizing:border-box}.review-form textarea{min-height:92px}.review-actions{display:flex;flex-wrap:wrap;gap:.55rem}.review-links{display:flex;flex-wrap:wrap;gap:.55rem;margin:.65rem 0}.review-message{min-height:1.4rem;color:#d8b56a}.review-help{border-left:3px solid #d8b56a;padding:.7rem 1rem;background:rgba(216,181,106,.06)}.review-empty{color:#aa9d83;padding:1rem}.evidence-choice{display:grid;gap:.5rem}.evidence-choice label{font-weight:400;border:1px solid rgba(216,181,106,.18);border-radius:10px;padding:.55rem}.evidence-choice small{display:block;color:#aa9d83;margin-top:.25rem}.danger-note{color:#ffb09f}.muted{color:#aa9d83}@media(max-width:980px){.review-layout,.review-toolbar{grid-template-columns:1fr}.review-queue{max-height:none}}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="page review-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a>
+      <nav class="nav"><a href="review-dashboard.html">Review Dashboard</a><a href="public-consequence-contracts.html">Public Twins</a><a href="evidence-vault.html">Evidence Vault</a></nav>
+    </header>
+
+    <main class="section">
+      <p class="eyebrow">HUMAN CONTROL LAYER</p>
+      <h1>ACCOUNTABILITY REVIEW INBOX</h1>
+      <p class="lead">One place to see what is due, what evidence is missing, where to review it and which gates must be completed before an outcome can be published.</p>
+
+      <section class="review-panel review-help">
+        <strong>Required order:</strong> select a due checkpoint, verify and lock the original decision terms, add evidence that states both what it establishes and what it does not establish, then publish a reviewed assessment. A due checkpoint is not a verdict.
+      </section>
+
+      <section class="review-toolbar review-panel" aria-label="Review controls">
+        <label>Administrator token
+          <input id="admin-token" type="password" autocomplete="off" placeholder="Held in memory only; never stored by this page">
+        </label>
+        <div class="review-actions"><button id="refresh-inbox" class="btn" type="button">Refresh Inbox</button><button id="clear-token" class="btn alt" type="button">Clear Token</button></div>
+      </section>
+
+      <div class="review-layout section">
+        <aside class="review-panel">
+          <div class="member-head"><div><h2>Due checkpoints</h2><p class="muted">Highest-priority items appear first.</p></div><span id="due-count" class="label">0</span></div>
+          <div id="review-queue" class="review-queue"><p class="review-empty">Loading due checkpoints…</p></div>
+        </aside>
+
+        <section class="review-panel" aria-live="polite">
+          <div id="review-empty"><h2>Select a checkpoint</h2><p class="muted">The item will open with its source trail, missing evidence and exact review forms.</p></div>
+          <div id="review-workspace" hidden>
+            <p class="eyebrow" id="workspace-lane">ACCOUNTABILITY TWIN</p>
+            <h2 id="workspace-title"></h2>
+            <div id="workspace-status" class="review-status"></div>
+            <p id="workspace-question" class="lead"></p>
+            <div class="review-links">
+              <a id="workspace-public" class="btn alt" target="_blank" rel="noopener">Open Public Twin</a>
+              <a id="workspace-source" class="btn alt" target="_blank" rel="noopener">Open Original Source</a>
+              <a id="workspace-evidence" class="btn alt" target="_blank" rel="noopener">Open Evidence Route</a>
+            </div>
+            <div class="review-grid">
+              <article><h3>What is due</h3><p id="workspace-due"></p></article>
+              <article><h3>Current state</h3><p id="workspace-state"></p></article>
+              <article><h3>Evidence boundary</h3><p id="workspace-boundary"></p></article>
+            </div>
+
+            <div class="review-steps section">
+              <section class="review-step" id="terms-step">
+                <h3>Lock the original terms</h3>
+                <p class="muted">Use the primary decision, order, filing, contract, vote or official announcement. Do not infer the actor, authority or promised benefit.</p>
+                <form id="terms-form" class="review-form">
+                  <label>Responsible actor<input name="responsibleActor" required maxlength="300"></label>
+                  <label>Authority basis<textarea name="authorityBasis" required></textarea></label>
+                  <label>Stated rationale<textarea name="statedRationale" required></textarea></label>
+                  <label>Claimed public benefit<textarea name="claimedPublicBenefit" required></textarea></label>
+                  <label>Measurable success criteria, one per line<textarea name="measurableSuccess" required></textarea></label>
+                  <label>Primary source URLs, one per line<textarea name="primarySourceUrls" required></textarea></label>
+                  <label>Reviewer name<input name="reviewedBy" required maxlength="180"></label>
+                  <button class="btn" type="submit">Lock Primary Terms</button>
+                  <p class="review-message" data-message="terms"></p>
+                </form>
+              </section>
+
+              <section class="review-step" id="evidence-step">
+                <h3>Add checkpoint evidence</h3>
+                <p class="muted">Add primary and counter-evidence. Every item must explicitly state its limits.</p>
+                <form id="evidence-form" class="review-form">
+                  <label>Evidence class<select name="evidenceClass" required><option value="official_record">Official record</option><option value="court_record">Court record</option><option value="regulator_record">Regulator record</option><option value="corporate_filing">Corporate filing</option><option value="budget_contract">Budget or contract</option><option value="corroborated_reporting">Corroborated reporting</option><option value="counter_evidence">Counter-evidence</option><option value="right_of_reply">Right of reply</option></select></label>
+                  <label>Evidence title<input name="title" required maxlength="500"></label>
+                  <label>Source URL<input name="sourceUrl" type="url" required></label>
+                  <label>Published date<input name="publishedAt" type="date"></label>
+                  <label>What this establishes<textarea name="establishes" required></textarea></label>
+                  <label>What this does not establish<textarea name="doesNotEstablish" required></textarea></label>
+                  <label>Local evidence route<input name="evidenceRoute" value="/evidence-vault.html"></label>
+                  <label>Submitted by<input name="submittedBy" required maxlength="180"></label>
+                  <button class="btn" type="submit">Accept Evidence</button>
+                  <p class="review-message" data-message="evidence"></p>
+                </form>
+              </section>
+
+              <section class="review-step" id="assessment-step">
+                <h3>Draft or publish the outcome</h3>
+                <p class="danger-note">Publishing is blocked until the original terms are locked and every selected evidence item is accepted for this checkpoint.</p>
+                <form id="assessment-form" class="review-form">
+                  <label>Overall finding<select name="overallFinding" required><option value="too-early">Too early</option><option value="insufficient-evidence">Insufficient evidence</option><option value="supported">Supported</option><option value="partially-supported">Partially supported</option><option value="not-supported">Not supported</option><option value="mixed">Mixed</option><option value="not-implemented">Not implemented</option></select></label>
+                  <label>Implementation status<textarea name="implementationStatus" required></textarea></label>
+                  <label>Public benefit status<textarea name="publicBenefitStatus" required></textarea></label>
+                  <label>Money and beneficiary status<textarea name="moneyBeneficiaryStatus" required></textarea></label>
+                  <label>Affected groups status<textarea name="affectedGroupsStatus" required></textarea></label>
+                  <label>Confidence, 0–100<input name="confidence" type="number" min="0" max="100" value="50" required></label>
+                  <label>Plain-language conclusion<textarea name="summary" required></textarea></label>
+                  <label>Alternative explanations, one per line<textarea name="alternativeExplanations"></textarea></label>
+                  <label>Falsifiers tested, one per line<textarea name="falsifiersTested"></textarea></label>
+                  <fieldset><legend>Accepted evidence used</legend><div id="assessment-evidence" class="evidence-choice"><p class="muted">Add accepted evidence before drafting an assessment.</p></div></fieldset>
+                  <label>Evidence route<input name="evidenceRoute" value="/evidence-vault.html"></label>
+                  <label>Publication status<select name="publicationStatus"><option value="draft">Draft for editorial review</option><option value="published">Publish reviewed outcome</option></select></label>
+                  <label>Named reviewer<input name="reviewedBy" maxlength="180"></label>
+                  <button class="btn" type="submit">Save Assessment</button>
+                  <p class="review-message" data-message="assessment"></p>
+                </form>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="accountability-review-inbox.js"></script>
+  <script src="analytics.js"></script>
+  <script src="matrix.js"></script>
+</body>
+</html>

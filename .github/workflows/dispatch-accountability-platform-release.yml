@@ -1,0 +1,140 @@
+name: Dispatch Accountability Platform Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/dispatch-accountability-platform-release.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: accountability-platform-release-dispatch
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  TARGET_FEATURE_COMMIT: 'a1776eb78655a2d505383fef3fc108eec864bdd5'
+
+jobs:
+  dispatch-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate accountability platform before dispatch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor "$TARGET_FEATURE_COMMIT" HEAD
+          test -s accountability-review-inbox.html
+          test -s accountability-review-inbox.js
+          test -s accountability-home.js
+          test -s accountability-home.css
+          test -s public-consequence-contracts.html
+          test -s src/worker-consequence-tracker.js
+          test -s src/worker-consequence-evidence.js
+          node --check accountability-review-inbox.js
+          node --check scripts/finalize-accountability-review-inbox.js
+          node --check scripts/accountability-review-inbox-pressure-test.js
+          node --check scripts/accountability-tracker-pressure-test.js
+          node --check src/worker-consequence-tracker.js
+          node --check src/worker-consequence-evidence.js
+          node --check src/worker-production.js
+          node scripts/finalize-accountability-review-inbox.js
+          node scripts/accountability-review-inbox-pressure-test.js
+          grep -q 'POWER SHOULD HAVE A PUBLIC MEMORY' index.html
+          grep -q 'THE ACCOUNTABILITY HIT LIST' index.html
+          grep -q 'ACCOUNTABILITY REVIEW INBOX' accountability-review-inbox.html
+          grep -q '25 5 \* \* \*' wrangler.toml
+
+      - name: Dispatch exactly one controlled production run
+        uses: actions/github-script@v7
+        env:
+          TARGET_FEATURE_COMMIT: ${{ env.TARGET_FEATURE_COMMIT }}
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const started = new Date(context.payload.head_commit?.timestamp || new Date().toISOString());
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const target = workflows.data.workflows.find(workflow => workflow.path === '.github/workflows/deploy.yml' || workflow.name === 'Matrix Reprogrammed Controlled Production Deploy');
+            if (!target) {
+              core.setFailed('Controlled production workflow deploy.yml was not found.');
+              return;
+            }
+            const resolveRun = async () => {
+              const runs = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: target.id, event: 'workflow_dispatch', branch: 'main', per_page: 30 });
+              return (runs.data.workflow_runs || [])
+                .filter(run => new Date(run.created_at) >= new Date(started.getTime() - 30000))
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
+            };
+            let run = await resolveRun();
+            let action = 'reused-existing-accountability-platform-run';
+            if (!run) {
+              action = 'dispatched-accountability-platform-once';
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: target.id, ref: 'main', inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' } });
+              for (let attempt = 1; attempt <= 30 && !run; attempt += 1) {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                run = await resolveRun();
+              }
+            }
+            if (!run) {
+              core.setFailed('Controlled production run could not be resolved after dispatch.');
+              return;
+            }
+            const payload = {
+              ok: true,
+              releaseId: 'search-first-accountability-platform-20260728',
+              action,
+              dispatcherRunId: Number(process.env.GITHUB_RUN_ID),
+              productionRunId: run.id,
+              productionRunNumber: run.run_number,
+              status: run.status,
+              conclusion: run.conclusion,
+              event: run.event,
+              headBranch: run.head_branch,
+              headSha: run.head_sha,
+              createdAt: run.created_at,
+              updatedAt: run.updated_at,
+              url: run.html_url,
+              targetFeatureCommit: process.env.TARGET_FEATURE_COMMIT,
+              dispatcherCommit: context.sha,
+              recordedAt: new Date().toISOString(),
+              boundary: 'Exactly one controlled production deployment is dispatched for the merged search-first accountability platform. The deploy workflow remains responsible for complete build, D1 rollback proof, migration, Cloudflare release and live verification.'
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/accountability-platform-production-dispatch.json', JSON.stringify(payload, null, 2) + '\n');
+            core.info(`${action}: production run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
+
+      - name: Commit exact production run receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/accountability-platform-production-dispatch.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Record accountability platform production deployment'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 2))
+          done
+          exit 1

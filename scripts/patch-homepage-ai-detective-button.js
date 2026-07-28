@@ -48,6 +48,18 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
 }, null, 2)}\n`);
 console.log(`Homepage AI detective route ${changed.length ? `updated ${changed.join(', ')}` : 'already current'}.`);
 
+const globalIdPatch = path.join(root, 'scripts', 'patch-release-audit-global-id-dedupe.js');
+if (!fs.existsSync(globalIdPatch)) throw new Error('Collision-safe release-audit ID patch is missing');
+const patchResult = spawnSync(process.execPath, [globalIdPatch], {
+  cwd: root,
+  encoding: 'utf8',
+  env: process.env,
+  maxBuffer: 20 * 1024 * 1024
+});
+if (patchResult.stdout) process.stdout.write(patchResult.stdout);
+if (patchResult.stderr) process.stderr.write(patchResult.stderr);
+if (patchResult.status !== 0) throw new Error('Collision-safe release-audit ID patch failed before hard-issue repair');
+
 const repairScript = path.join(root, 'scripts', 'repair-release-audit-hard-issues.js');
 if (!fs.existsSync(repairScript)) throw new Error('Release audit hard-issue repair script is missing');
 const repair = spawnSync(process.execPath, [repairScript], {

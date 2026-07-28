@@ -31,6 +31,25 @@
 
   installIndependentLinksNavigation();
 
+  function installIdentityAffiliationOverlay() {
+    if (!document.querySelector('link[data-matrix-identity-overlay]')) {
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = 'identity-affiliation-overlay.css?v=1.0.0';
+      stylesheet.dataset.matrixIdentityOverlay = 'true';
+      document.head.appendChild(stylesheet);
+    }
+    if (!document.querySelector('script[data-matrix-identity-overlay]') && !window.MatrixIdentityOverlay) {
+      const script = document.createElement('script');
+      script.src = 'identity-affiliation-overlay.js?v=1.0.0';
+      script.defer = true;
+      script.dataset.matrixIdentityOverlay = 'true';
+      document.head.appendChild(script);
+    }
+  }
+
+  installIdentityAffiliationOverlay();
+
   const canvas = document.getElementById('matrix');
   const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;
   if (!canvas || !ctx) return;

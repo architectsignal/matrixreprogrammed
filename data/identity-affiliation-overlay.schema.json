@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matrixreprogrammed.com/data/identity-affiliation-overlay.schema.json",
+  "title": "Matrix Identity, Affiliation & Ownership Overlay Record",
+  "type": "object",
+  "required": ["id", "subject", "subjectType", "status", "conclusion"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "subject": {"type": "string", "minLength": 1},
+    "subjectType": {"type": "string", "minLength": 1},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "match": {
+      "type": "object",
+      "properties": {"paths": {"type": "array", "items": {"type": "string"}}},
+      "additionalProperties": false
+    },
+    "status": {"type": "string"},
+    "verifiedAt": {"type": ["string", "null"], "format": "date"},
+    "conclusion": {"type": "string", "minLength": 1},
+    "identityAffiliation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "classification", "assessment", "scope", "confidence"],
+        "properties": {
+          "label": {"type": "string"},
+          "classification": {"type": "string"},
+          "confidence": {"type": "string"},
+          "scope": {"type": "string"},
+          "assessment": {"type": "string"},
+          "boundary": {"type": "string"},
+          "sourceIds": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "required": ["summary", "entries"],
+      "properties": {
+        "summary": {"type": "string"},
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["owner", "classification", "basis"],
+            "properties": {
+              "owner": {"type": "string"},
+              "classification": {"type": "string"},
+              "basis": {"type": "string"},
+              "economicPct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+              "votingPct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+              "sourceIds": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "claimTests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "classification", "support", "against", "missing", "conclusion"],
+        "properties": {
+          "claim": {"type": "string"},
+          "classification": {"type": "string"},
+          "confidence": {"type": "string"},
+          "support": {"type": "string"},
+          "against": {"type": "string"},
+          "missing": {"type": "string"},
+          "conclusion": {"type": "string"},
+          "sourceIds": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidenceGaps": {"type": "array", "items": {"type": "string"}},
+    "sourceIds": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

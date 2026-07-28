@@ -16,6 +16,7 @@
     const recall = entry.recallNotice ? `<div class="half-life-recall"><strong>Evidence recall notice</strong><p>${escapeHtml(entry.recallNotice)}</p></div>` : '';
     const questions = Array.isArray(entry.reviewQuestions) ? entry.reviewQuestions : [];
     const sourceUrl = entry.source?.url || '';
+    const powerDiffRoute = entry.powerDiffRoute || `power-diff.html#diff-${encodeURIComponent(entry.sourceRecordId || '')}`;
     return `<article class="half-life-card state-${escapeHtml(entry.freshnessState || '')}" id="${escapeHtml(entry.id)}">
       <div class="half-life-card-meta"><span>${escapeHtml(entry.laneTitle || entry.lane || 'Public accountability')}</span><strong>${escapeHtml(String(entry.freshnessState || '').replace(/-/g, ' '))}</strong></div>
       <h2>${escapeHtml(entry.title)}</h2>
@@ -31,6 +32,7 @@
       <div class="half-life-actions">
         <a class="primary" href="${escapeHtml(entry.accountabilityRoute || 'public-consequence-contracts.html')}">Open accountability record</a>
         <a href="${escapeHtml(entry.powerSupplyChainRoute || 'power-supply-chain.html')}">Open Power Supply Chain</a>
+        <a href="${escapeHtml(powerDiffRoute)}">See what changed</a>
         ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" rel="noopener noreferrer">Check original source</a>` : ''}
         <a href="contact-the-machine.html?type=correction">Submit updated evidence</a>
       </div>

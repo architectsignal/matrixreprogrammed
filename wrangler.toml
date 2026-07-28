@@ -18,6 +18,7 @@ routes = [
 
 [triggers]
 crons = ["5 6 * * *", "15 7 * * 1", "35 * * * *"]
+
 [vars]
 EMAIL_AUTOMATION_ENABLED = "true"
 EMAIL_TRANSACTIONAL_ENABLED = "true"
@@ -38,7 +39,42 @@ ENABLE_KV_COMPATIBILITY_MIRROR = "false"
 [assets]
 directory = "./_site"
 binding = "ASSETS"
-run_worker_first = true
+# Static HTML, CSS, JS, images, JSON and public downloads are served directly and do not consume
+# the Workers Free 100,000-request daily quota. Only dynamic, authenticated or protected routes
+# enter the Worker before asset lookup.
+run_worker_first = [
+  "/api/*",
+  "/.netlify/functions/*",
+  "/newsletter-signup",
+  "/subscribe-newsletter",
+  "/forum-*",
+  "/submit-*",
+  "/report-*",
+  "/downloads/forum-posts*",
+  "/downloads/the-black-file-matrix-reprogrammed.pdf",
+  "/downloads/seven-day-intel.json",
+  "/downloads/intel-vault.*",
+  "/downloads/timer-synthesis.md",
+  "/downloads/probability-snapshot.md",
+  "/downloads/supporter*",
+  "/downloads/weekly-*",
+  "/downloads/signal-drop*",
+  "/downloads/source-drop-bundle*",
+  "/downloads/daily-*",
+  "/downloads/intelligence-*",
+  "/downloads/in-depth-report*",
+  "/downloads/elite-report*",
+  "/downloads/member-report*",
+  "/downloads/research*",
+  "/downloads/full-dossier*",
+  "/downloads/citation*",
+  "/downloads/bibliography*",
+  "/downloads/evidence-path*",
+  "/downloads/source-pack*",
+  "/downloads/research-bundle*",
+  "/downloads/data-export*",
+  "/downloads/network-export*"
+]
 
 # Compatibility mirror and recovery source for historical forum posts.
 [[kv_namespaces]]

@@ -1,0 +1,271 @@
+{
+  "ok": false,
+  "workflowRunId": 30374617866,
+  "workflowRunNumber": 2,
+  "expectedDeploySha": "77f2e5595b6a837e21872c8184982223d677bb3b",
+  "legacyOutcome": "success",
+  "exposureOutcome": "failure",
+  "legacy": {
+    "ok": true,
+    "wafBlocked": false,
+    "checkedAt": "2026-07-28T15:42:56.193Z",
+    "siteUrl": "https://matrixreprogrammed.com",
+    "statuses": {
+      "pyramidHtml": 200,
+      "pyramidJs": 200,
+      "peopleApi": 200,
+      "pyramidApi": 200,
+      "symbolicApi": 200,
+      "primaryCapstone": 200,
+      "primaryRuntime": 200,
+      "curatedData": 200,
+      "configData": 200,
+      "symbolicAnnex": 200,
+      "symbolicRuntime": 200,
+      "home": 200,
+      "startHere": 200,
+      "newsletter": 200,
+      "newsletterRuntime": 200,
+      "news": 200
+    },
+    "routeChecks": {
+      "pyramidHtml": true,
+      "pyramidRenderer": true,
+      "peopleData": true,
+      "pyramidData": true,
+      "primaryCapstone": true,
+      "primaryRuntime": true,
+      "curatedData": true,
+      "configData": true,
+      "symbolicAnnex": true,
+      "symbolicRenderer": true,
+      "symbolicData": true,
+      "homepageGateway": true,
+      "startHereGateway": true,
+      "newsletter": true,
+      "newsletterRuntime": true,
+      "markerCleanup": true
+    },
+    "peopleCheck": {
+      "ok": true,
+      "issues": [],
+      "counts": {
+        "public-stage": 13,
+        "permanent-system": 15,
+        "money-gatekeepers": 17,
+        "ownership-infrastructure": 17,
+        "intelligence-security": 16,
+        "policy-architects": 21,
+        "connectors": 13
+      },
+      "uniquePeople": 80,
+      "totalPeople": 80
+    },
+    "pyramidCheck": {
+      "ok": true,
+      "issues": [],
+      "levels": 12,
+      "chokePoints": 10,
+      "hypotheses": 7
+    },
+    "symbolicCheck": {
+      "ok": true,
+      "issues": [],
+      "families": 13,
+      "symbols": 4,
+      "models": 5
+    },
+    "curatedCheck": {
+      "ok": true,
+      "issues": [],
+      "people": 18,
+      "links": 18,
+      "gatekeepers": 5,
+      "sources": 20
+    },
+    "configCheck": {
+      "ok": true,
+      "issues": [],
+      "scoreDimensions": 8,
+      "claimClasses": 9
+    },
+    "cfRays": [
+      "a224ff208d88feee-IAD",
+      "a224ff2099fb9c54-IAD",
+      "a224ff208b29a16b-IAD",
+      "a224ff208cf105e0-IAD",
+      "a224ff208c3a7411-IAD",
+      "a224ff208f608245-IAD",
+      "a224ff209dcaf42c-IAD",
+      "a224ff208d0e8ca0-IAD",
+      "a224ff208f8f2009-IAD",
+      "a224ff208cef2ff2-IAD",
+      "a224ff2089f7f322-IAD",
+      "a224ff2089c33e6c-IAD",
+      "a224ff208fe3adb7-IAD",
+      "a224ff209e33c54f-IAD",
+      "a224ff2089b40585-IAD",
+      "a224ff209fb7dbb8-IAD"
+    ],
+    "attempt": 2
+  },
+  "exposure": {
+    "ok": false,
+    "checkedAt": "2026-07-28T15:43:41.741Z",
+    "siteUrl": "https://matrixreprogrammed.com",
+    "expectedSha": "77f2e5595b6a837e21872c8184982223d677bb3b",
+    "manifestSha": "77f2e5595b6a837e21872c8184982223d677bb3b",
+    "workerVersionEvidence": "77f2e5595b6a837e21872c8184982223d677bb3b",
+    "checks": {
+      "manifest": true,
+      "health": true,
+      "evidenceLedger": true,
+      "integrityEngine": true,
+      "hitListData": true,
+      "hitListRoute": true,
+      "linkedPages": false,
+      "newsletter": true,
+      "protectedBoundaries": true
+    },
+    "statuses": {
+      "manifest": 200,
+      "health": 200,
+      "hitListHtml": 200,
+      "hitListClean": 200,
+      "evidenceLedger": 200,
+      "integrityEngine": 200,
+      "hitListData": 200,
+      "home": 200,
+      "timers": 200,
+      "subjectIndex": 200,
+      "predators": 200,
+      "darkFiles": 200,
+      "corrections": 200,
+      "gatesTop52": 200,
+      "gatesBillionaire": 200,
+      "newsletter": 200,
+      "newsletterRuntime": 200
+    },
+    "cfRays": {
+      "manifest": "a22500365a2c1877-IAD",
+      "health": "a22500364916e06b-IAD",
+      "hitListHtml": "a22500364a50241d-IAD",
+      "hitListClean": "a22500364990e611-IAD",
+      "evidenceLedger": "a22500364dad389c-IAD",
+      "integrityEngine": "a22500364884e5b4-IAD",
+      "hitListData": "a22500364ae8e5b6-IAD",
+      "home": "a2250036489056cd-IAD",
+      "timers": "a22500364ab38bc3-IAD",
+      "subjectIndex": "a22500364a5c1ff7-IAD",
+      "predators": "a22500364b637081-IAD",
+      "darkFiles": "a225003658a8dfee-IAD",
+      "corrections": "a22500365b70821a-IAD",
+      "gatesTop52": "a22500364cb8f4e3-IAD",
+      "gatesBillionaire": "a22500365d912720-IAD",
+      "newsletter": "a22500364cc51de9-IAD",
+      "newsletterRuntime": "a22500360eac73eb-IAD"
+    },
+    "hitListRouteProof": {
+      "hitListHtmlOk": true,
+      "hitListCleanOk": true,
+      "hitListWafBounded": false
+    },
+    "linkedPages": {
+      "home": true,
+      "timers": true,
+      "subjectIndex": true,
+      "predators": false,
+      "darkFiles": true,
+      "corrections": true,
+      "gatesTop52": true,
+      "gatesBillionaire": true
+    },
+    "newsletterProof": {
+      "newsletterHtmlOk": true,
+      "newsletterRuntimeOk": true,
+      "newsletterWafBounded": false
+    },
+    "ledgerCheck": {
+      "ok": true,
+      "failures": [],
+      "count": 84
+    },
+    "engineCheck": {
+      "ok": true,
+      "failures": [],
+      "summary": {
+        "evidenceLedgerEntries": 84,
+        "hitListEntries": 275,
+        "graphNodes": 120,
+        "graphEdges": 172,
+        "unresolvedGraphEdges": 172,
+        "sensitiveRecordFailures": 0,
+        "orphanDossierRoutes": 0,
+        "entriesWithoutAction": 0,
+        "clocksAvailable": 81,
+        "genericDarkClaimsDowngraded": 3,
+        "duplicateLedgerRecordsMerged": 1
+      }
+    },
+    "hitListCheck": {
+      "ok": true,
+      "failures": [],
+      "count": 275
+    },
+    "protectedBoundaries": {
+      "ok": true,
+      "forum": {
+        "ok": true,
+        "status": 200,
+        "origin": "cloudflare-worker-forum-d1",
+        "data": {
+          "ok": true,
+          "backend": "src/worker-forum-persistence.js",
+          "d1Binding": "MEMBERS_DB",
+          "d1Connected": true,
+          "schemaReady": true,
+          "authoritativeStorage": "Cloudflare D1 MEMBERS_DB.forum_posts",
+          "kvBinding": "disabled in production",
+          "storedPostCount": 303,
+          "boardCounts": {
+            "main": 223,
+            "speculation": 40,
+            "epstein-alive": 40
+          },
+          "kvMigration": {
+            "migrated": 0,
+            "completedAt": "2026-07-12T19:43:28.311Z"
+          },
+          "persistent": true,
+          "postingAccess": "verified-free-member-session",
+          "readingAccess": "public",
+          "indexSelfHealing": "D1 authoritative; KV compatibility mirror disabled by default",
+          "deployedFrom": "GitHub main",
+          "checkedAt": "2026-07-28T15:43:41.706Z"
+        }
+      },
+      "paypal": {
+        "ok": true,
+        "status": 401,
+        "origin": "cloudflare-worker-paypal-subscriptions",
+        "data": {
+          "ok": false,
+          "authenticated": false,
+          "error": "Access denied",
+          "requiredTier": "registered",
+          "currentTier": "anonymous",
+          "upgradeUrl": "/membership.html"
+        }
+      },
+      "email": {
+        "ok": true,
+        "status": 403,
+        "origin": "cloudflare-worker-email-lifecycle"
+      }
+    },
+    "boundary": "A Cloudflare 403 is accepted only for the newsletter or both equivalent Hit List HTML routes when a CF-Ray is present and independent live runtime/data proof passes. No data, manifest, health or protected-boundary failure is downgraded.",
+    "attempt": 8
+  },
+  "recordedAt": "2026-07-28T15:43:42.453Z",
+  "boundary": "Verification-only proof of the already deployed Cloudflare release. This workflow cannot deploy, migrate D1 or change runtime settings."
+}

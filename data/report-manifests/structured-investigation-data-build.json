@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-28T06:20:50.805Z",
-  "pageCount": 136,
+  "generatedAt": "2026-07-28T06:56:05.091Z",
+  "pageCount": 132,
   "output": "downloads/structured-investigation-data-build.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Structured Investigation Data Build",
-    "contentHash": "d65bf109afe936e1d1a189dfc44ffc08cbd5f23c82df02abed1c17f46b683a5c",
+    "contentHash": "15d37e5007e6a1a833f0b53ff426bceb46527e04e83a706254f07765bc397e01",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
       "2482c3e0241c7c7679a18cd1",
@@ -19,11 +19,15 @@
       "d648ce395c11435d30796fee",
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-B27EAD89E5D764C1",
-      "ASC-REVIEW-C954C3B615AAFE11",
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-B3E7B22DBE204184",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-BE1B684AF263961C",
+      "f8da9551192fb7f98b4efa86",
+      "45f5269389def99607b5a517",
+      "d23398b8ca4c7124399c9504",
+      "2529322b7b5345fd6f575174",
+      "4961972398d896435d33f3f7",
+      "275d6c3caca158f7a3e15780",
       "a27dd3c9a4cf6bbd952989d3",
       "aa125ed22fe885dd57f96c32",
       "f73c11ef3163b1800592aabe",
@@ -64,6 +68,7 @@
       "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
+      "ASC-REVIEW-C954C3B615AAFE11",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
@@ -82,6 +87,7 @@
       "ASC-REVIEW-6A0A0F4FE014BB42",
       "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-46CE2621F44A480F",
+      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-9CFCEB6F6A8D7BF8",
@@ -104,7 +110,15 @@
       "ASC-REVIEW-D9DFFA52C027F054",
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
+      "4ae6a940305d15da61333450",
+      "19ae23289f4be13ad5f7e317",
+      "7f0eb9ddb996aecbeeda522d",
+      "6f6462b75cdb929e0acbcde7",
+      "deb382cdbfe57b57793d739e",
+      "9e8310c49b990aa62d2b0921",
+      "594100b62a47db521fe2a128",
       "EP-AI-004",
+      "34805734b1ad3b73f0ede0d8",
       "dcec2a45ef35362072af05e3",
       "b49c319c09a07b245b24f74a",
       "7c212daa6802e36f4fe4f000",
@@ -132,30 +146,16 @@
       "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-603BC290D10E2D53",
-      "ASC-REVIEW-E9C1CB1EA7466DB2",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-06A7D981E8AF743C",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-8FC95E6CC8F8F440",
-      "ASC-REVIEW-4DC96EE1DF7B7C16",
-      "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-57EDEB5DFEAC6956",
-      "ASC-REVIEW-B0625D388FF0BBB5",
-      "ASC-REVIEW-FD0A239668DFAAD5",
-      "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-CAEF74273342914C",
-      "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-385C8E133B9E3CEA",
-      "ASC-REVIEW-5D75F861BBF77D9D"
+      "ASC-REVIEW-E9C1CB1EA7466DB2"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 40,
-      "disputedClaimCount": 96,
+      "disputedClaimCount": 82,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 63,
-      "moneyRecordCount": 26
+      "relationshipCount": 49,
+      "moneyRecordCount": 24
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 63 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Structured Investigation Schema; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; MINDCUBED LLC — District of Columbia Courts; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 63 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Structured Investigation Schema",
           "Follow The Money Watch",

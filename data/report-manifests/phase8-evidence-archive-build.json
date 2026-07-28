@@ -1,14 +1,13 @@
 {
-  "generatedAt": "2026-07-28T06:18:01.741Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-28T06:52:56.858Z",
+  "pageCount": 130,
   "output": "downloads/phase8-evidence-archive-build.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase8 Evidence Archive Build",
-    "contentHash": "49dca1d18f7dd43555c0264b0a093e098e242dbc319a31d0c7a5fc832253be62",
+    "contentHash": "ed281753e6a89cc81a2e9474df25c919f8d3d9cfafe026301a8328f87b04285d",
     "sourceIds": [
       "88780e987ae8758d90e927f0",
-      "source-change-d5adf164b612fd92a1dca692",
       "d9bff117c0197d71854cdb83",
       "3f8bcacb0d33e21fab751828",
       "8858c90093a92f549bb57c7f",
@@ -23,6 +22,7 @@
       "ba4fefe5fea9094e08f398c6",
       "bfe25e91d95d817a93f1d345",
       "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-d5adf164b612fd92a1dca692",
       "source-change-e853e2cce33f37c0619d2433",
       "0b48ddbdf00a62328ef878ff",
       "3256f4ad100f217eaf00adaf",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 50 A/B-grade public-record items are materially relevant to Phase8 Evidence Archive Build.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); Agency Information Collection Activities: Requests for Comments; Clearance of Renewed Approval of Information Collection: Monitoring, Reporting, and Verification (MRV) Program for Annex 16, Volume IV of the Convention on Civil Aviation (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "evidence": "Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); Agency Information Collection Activities: Requests for Comments; Clearance of Renewed Approval of Information Collection: Monitoring, Reporting, and Verification (MRV) Program for Annex 16, Volume IV of the Convention on Civil Aviation (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",

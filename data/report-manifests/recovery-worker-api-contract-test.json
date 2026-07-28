@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-28T06:19:12.990Z",
-  "pageCount": 141,
+  "generatedAt": "2026-07-28T06:54:15.154Z",
+  "pageCount": 140,
   "output": "downloads/recovery-worker-api-contract-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Recovery Worker Api Contract Test",
-    "contentHash": "0d4e00723ebe65ad0472a2abdfe05816955171ec40d0c9cc4bb0253f739f836d",
+    "contentHash": "0f0328775d893c8e34b1afc5d33f47b1ed729b4801447461d9eb10ed3b0949cc",
     "sourceIds": [
       "ASC-REVIEW-B27EAD89E5D764C1",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "2482c3e0241c7c7679a18cd1",
       "a6047accfb9754d2159cff7c",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -35,6 +35,7 @@
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-6A0A0F4FE014BB42",
+      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-46CE2621F44A480F",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -88,7 +89,6 @@
       "dc2f3889b62662fc764e782f",
       "e50ee77aa62b005d32344370",
       "e54e6d8fad24017a16b47e06",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -128,7 +128,6 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-F5CA53DC99863DAC",
@@ -146,21 +145,22 @@
       "a27dd3c9a4cf6bbd952989d3",
       "dcec2a45ef35362072af05e3",
       "aa125ed22fe885dd57f96c32",
-      "f73c11ef3163b1800592aabe"
+      "f73c11ef3163b1800592aabe",
+      "4c372edcf20b760ae3305f10"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 34,
-      "disputedClaimCount": 104,
+      "primarySourceCount": 35,
+      "disputedClaimCount": 103,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 66,
+      "relationshipCount": 65,
       "moneyRecordCount": 32
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Recovery Worker Api Contract Test.",
-        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Privacy Act of 1974; System of Records (data/investigation-ledger-archive.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json)",
+        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Recovery Worker Api Contract Test.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Privacy Act of 1974; System of Records (data/investigation-ledger-archive.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 66 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 65 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 66 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 65 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Booz Allen Hamilton → Ai Data: execution layer",

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:25:10.749Z",
+  "generatedAt": "2026-07-28T06:59:43.333Z",
   "overall": "ready",
   "summary": {
     "total": 50,
@@ -63,7 +63,7 @@
     {
       "id": "authoritative-entity-resolution",
       "ok": true,
-      "detail": "Resolved person=Defendant Kidd; institution=Securities and Exchange Commission; family=Wallenberg family and foundations.",
+      "detail": "Resolved person=Defendant Kidd; institution=Securities and Exchange Commission; family=Al Thani family.",
       "fix": "Run build-daily-watch.js and reject document, report, archive, case or finding titles."
     },
     {
@@ -165,7 +165,7 @@
     {
       "id": "watch-family-rank",
       "ok": true,
-      "detail": "family score 122; status retained-current-leader.",
+      "detail": "family score 122; status incumbent-held-position.",
       "fix": "Run the stable ranking and dossier builder."
     },
     {

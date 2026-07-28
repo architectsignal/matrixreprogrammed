@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:10:16.712Z",
-  "pageCount": 110,
+  "generatedAt": "2026-07-28T06:44:11.434Z",
+  "pageCount": 107,
   "output": "downloads/big-three-asset-managers.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Big Three Asset Manager Tracker",
-    "contentHash": "3e8e087f5aea5f5c4800b383d0285abefb4346e249fe18d2d76d7cb6cbf1186a",
+    "contentHash": "d05591e16c42bc6e66327181aa2dadd399d6b5dd31e84ec90ce6258a75bf0bb2",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "blackrock",
@@ -15,26 +15,30 @@
       "vanguard",
       "9f3052b5d8cec138a2a37e8c",
       "008875ef7bf45eb14dccb254",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "72ef7895f95288946ccb3cff",
       "e4a0df7a70409789454722e7",
       "360e80c162081c85d2c680ef",
       "41772e5c9af7970ddd7d5aac",
       "6d665d935673091233751767",
-      "65debd126cdfa5f7547a3eca",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "7fc07964a27914afe516c45b",
-      "3c9c23f7f9a1cec81ef90f59",
+      "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
       "157cdab04b61ae6309c0c713",
-      "3a425f0d5d683952bc0ad7ac",
+      "3c9c23f7f9a1cec81ef90f59",
       "7dcf4ef18ea1f86d01068773",
       "larry-fink",
       "ecd4a1111010f13b2d74bf8c",
       "d109ec07bc6a6ad42558195d",
       "ASC-REVIEW-D3C6DB16A89DBA51",
+      "9cb9631a2f2749b86bc69e0a",
+      "45f5269389def99607b5a517",
+      "74fb2863cc9a8120f3c68b67",
+      "4961972398d896435d33f3f7",
+      "3a425f0d5d683952bc0ad7ac",
       "6510364e9b1a1504b9f99521",
       "1ee57e70dacfa67f04323529",
       "b2832d1240dab63cee199e13",
@@ -42,8 +46,9 @@
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-7B1A15ED77443F13",
+      "eda53ad65d382819ea249e14",
       "5295a33003172878f9880122",
-      "daily-revelation-report",
+      "4e5cc6449bcc7ddf1c878ee0",
       "c1520a15d6e62871a66c558e",
       "270841af2bd81407a26bed0b",
       "jerome-powell",
@@ -65,6 +70,7 @@
       "ASC-REVIEW-D86EBD209FFF875A",
       "7a0ce047ee750826a59e7474",
       "2931a84c2c7fe86982d5d6e5",
+      "daily-revelation-report",
       "9848ec4b4c3f6c2693269839",
       "klaus-schwab",
       "jamie-dimon",
@@ -110,9 +116,7 @@
       "9f27e4d750de830ccb16df4b",
       "contractor-blackwater-xe-academi-constellis-lineage",
       "billionaire-peter-thiel",
-      "ca5f30bd425897b0a2d24282",
       "9e8903fd8dfa9b54a1d6db30",
-      "c8803902a0ab06e78b2a16fa",
       "companies-aapl",
       "76a719654ec3312153163154",
       "d7398c0c72a085a05c90422c",
@@ -139,24 +143,20 @@
       "jens-stoltenberg",
       "alex-karp",
       "rupert-murdoch",
-      "laurene-powell-jobs",
-      "mackenzie-scott",
-      "priscilla-chan",
-      "dcec2a45ef35362072af05e3",
-      "4c372edcf20b760ae3305f10"
+      "laurene-powell-jobs"
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 43,
+      "primarySourceCount": 41,
       "disputedClaimCount": 20,
       "newEntityCount": 27,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 33,
-      "moneyRecordCount": 29
+      "relationshipCount": 31,
+      "moneyRecordCount": 27
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Big Three Asset Manager Tracker.",
+        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Big Three Asset Manager Tracker.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -176,7 +176,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 33 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; BlackRock; State Street / State Street Investment Management; Vanguard; Matrix Reprogrammed Canonical Intelligence Record; State Street / State Street Investment Management → Proxy Voting Stewardship: capital layer; Public Hearing on Improving America's Maritime Seapower; BlackRock → Private Markets Infrastructure Expansion: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -191,7 +191,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 33 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "BlackRock",
@@ -215,6 +215,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2027-04-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-29T00:00:00.000Z"
   }
 }

@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-07-28T06:11:52.601Z",
-  "pageCount": 137,
+  "generatedAt": "2026-07-28T06:46:08.656Z",
+  "pageCount": 136,
   "output": "downloads/daily-control-brief-email-test.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Daily Control Brief Email Test",
-    "contentHash": "5aeaeb2a8f092562701e04ee425002a96f0fd83df499db8613da545e5da70f5b",
+    "contentHash": "efb453c3fdb1ffe0693551ff1c8e0b22377a3d30ecf633489868a2991cb9a72f",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-FCEFDBDA93429C4F",
@@ -38,8 +39,9 @@
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
+      "45f5269389def99607b5a517",
+      "4961972398d896435d33f3f7",
       "766c7577ad2f2c6146482898",
-      "9b821ddb272b0fb297d39550",
       "0b48ddbdf00a62328ef878ff",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -144,13 +146,11 @@
       "d9bff117c0197d71854cdb83",
       "dbae8223b12dacc607b93da6",
       "96c24b16f820cebf7d9a03fe",
-      "c0853ec69475b3c8f3ee1900",
-      "d109ec07bc6a6ad42558195d",
-      "c2e8bb37e4365771f0ace74c"
+      "c0853ec69475b3c8f3ee1900"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
+      "primarySourceCount": 3,
       "disputedClaimCount": 108,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Daily Control Brief Email Test.",
-        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json); Agency Information Collection Extension (data/investigation-ledger-archive.json); Press Release Burchett Opens Hearing on Extreme Political Activism at the Smithsonian’s National Museum of American History July 21, 2026 WASHINGTON—Subcommittee on Delivering on Government Efficiency Chairman Tim Burchett (R-Tenn.) delivered opening remarks a (data/investigation-ledger-archive.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Daily Control Brief Email Test.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

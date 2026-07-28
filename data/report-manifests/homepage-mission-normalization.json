@@ -1,23 +1,17 @@
 {
-  "generatedAt": "2026-07-28T06:15:25.239Z",
+  "generatedAt": "2026-07-28T06:50:02.906Z",
   "pageCount": 135,
   "output": "downloads/homepage-mission-normalization.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Homepage Mission Normalization",
-    "contentHash": "cf97e734ad8843c7b145b52218e752060fd067eea51d45d63a02ebc064837f9f",
+    "contentHash": "7851ce3b418340d87eafe8692e77006ef0ccc5437fae1461872232c7663bc4a5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "source-change-d5adf164b612fd92a1dca692",
+      "43ba47db9b71dc20b9cfcfb0",
+      "3a425f0d5d683952bc0ad7ac",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "9b821ddb272b0fb297d39550",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -32,10 +26,15 @@
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-21E454816F050A34",
       "daily-revelation-report",
-      "3a425f0d5d683952bc0ad7ac",
-      "source-change-5594665950812895f468c11d",
+      "source-change-ea906ec638c352f7dced1c63",
+      "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-d5adf164b612fd92a1dca692",
+      "source-change-e853e2cce33f37c0619d2433",
+      "source-change-145721767ca69c32bb4875e5",
+      "source-change-46042e30fdcccc9e94aee0af",
+      "source-change-2931a84c2c7fe86982d5d6e5",
       "96c24b16f820cebf7d9a03fe",
-      "ASC-REVIEW-7A271098BC2FC4DF",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -94,7 +93,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-22BBAF16578AD07C",
@@ -146,7 +144,9 @@
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D"
+      "ASC-REVIEW-D177A29CF338E56D",
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 125,
       "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 113,
-      "moneyRecordCount": 115
+      "relationshipCount": 114,
+      "moneyRecordCount": 118
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 113 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 113 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T17:28:52.106Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

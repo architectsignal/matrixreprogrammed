@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:19:36.196Z",
-  "pageCount": 130,
+  "generatedAt": "2026-07-28T06:54:42.481Z",
+  "pageCount": 129,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Search V3 Runtime Report",
-    "contentHash": "52dd53c142de6d9f1143a1642c9c542dc467ae3ddc7298ed7fc61d34d21ce803",
+    "contentHash": "b379ade28adf082f61aad5133389915cc282274e9dd63ce31110b2a896fdb3c8",
     "sourceIds": [
       "96c24b16f820cebf7d9a03fe",
       "3f8bcacb0d33e21fab751828",
@@ -29,6 +29,9 @@
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "594100b62a47db521fe2a128",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
+      "76a719654ec3312153163154",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
@@ -36,6 +39,9 @@
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "511ed227bb4be58b582ebb8d",
+      "c5d9edd2562c4c00e3ddfdfb",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
@@ -76,14 +82,6 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
       "0bf52fe6a03ee6f9ce748cfc",
       "1b9c755080780008daa49299",
       "38e78607200a84a4f8c1d274",
@@ -146,20 +144,22 @@
       "d109ec07bc6a6ad42558195d",
       "eecf3b08118f808caa1aeff2",
       "ef65a8e715cba9c0907e9650",
-      "6e8d7f6e1b9edb08c79ff031"
+      "6e8d7f6e1b9edb08c79ff031",
+      "b7c76c0e9330bc11c220dab6",
+      "e27966faf2dd785ae81a1f50"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 76,
+      "primarySourceCount": 70,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 15,
-      "moneyRecordCount": 15
+      "relationshipCount": 18,
+      "moneyRecordCount": 17
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 76 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
+        "conclusion": "The indexed record establishes that 70 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
         "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Texas Parks and Wildlife Department Fisheries Research (data/investigation-ledger-archive.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Search Full Library (data/investigation-ledger-archive.json); Agency Information Collection Activities: Requests for Comments; Clearance of Renewed Approval of Information Collection: Monitoring, Reporting, and Verification (MRV) Program for Annex 16, Volume IV of the Convention on Civil Aviation (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 15 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; SIGHTLINE ANALYTICS, INC. — Department of Energy",
+        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 15 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
+          "Illuminati / Secret Society Theory",
+          "Illuminati / Secret Society Theory",
           "MINDCUBED LLC — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
           "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
-          "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
-          "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
-          "SIGHTLINE ANALYTICS, INC. — Department of Energy"
+          "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-07-28T06:13:53.272Z",
-  "pageCount": 128,
+  "generatedAt": "2026-07-28T06:48:21.795Z",
+  "pageCount": 126,
   "output": "downloads/epstein-missing-records.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Epstein Missing Records",
-    "contentHash": "4dcf9be91c5f9bb09b30c03876cd0c1e1248ce9efa86cf63cd7b25213de57c68",
+    "contentHash": "c897aabad881f06280f24729f0096af09195e3f34115bf0b8a5c8d308cce8ad0",
     "sourceIds": [
       "ep-missing-001",
       "26b90533dbf7d2ed42f02de6",
       "72ef7895f95288946ccb3cff",
       "declassified-files-2026-07-24-c827955e",
       "9f77464e401ac59ad1adb812",
-      "daily-revelation-report",
       "427112f8caefe9864f862332",
       "58879e1a205c98e55a73a768",
       "82f4a85fc086f04033fcb6cd",
@@ -86,7 +85,6 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "source-change-d5adf164b612fd92a1dca692",
       "0bf52fe6a03ee6f9ce748cfc",
       "1b9c755080780008daa49299",
       "209e67b46f51f93812bf5c47",
@@ -146,20 +144,22 @@
       "553013b57113089c9566d4e3",
       "5fcc138c2598d40bf7f03cf6",
       "66748e62ec6587c945ecdf46",
-      "688a8128a9374c31b7d1b59c"
+      "688a8128a9374c31b7d1b59c",
+      "6af33539dc86f9740ebcfe96",
+      "6eac1246a26fcbb8f623922c"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 47,
+      "primarySourceCount": 46,
       "disputedClaimCount": 1,
-      "newEntityCount": 18,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 14,
       "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 47 A/B-grade public-record items are materially relevant to Epstein Missing Records.",
+        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Epstein Missing Records.",
         "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/latest-public-drops.json); House Disclosures (data/investigation-ledger-archive.json); Small Business Investment Company (“SBIC”) Program: SBA Model Form of Agreement for Limited Partnership SBICs (data/investigation-ledger-archive.json); Agency Information Collection Extension (data/investigation-ledger-archive.json); House Disclosures (data/investigation-ledger-archive.json); House Disclosures (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

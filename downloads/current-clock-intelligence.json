@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:23:17.713Z",
+  "generatedAt": "2026-07-28T07:02:29.074Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
       "slug": "childrens-digital-identity-age-gating",
-      "previous": 93,
+      "previous": 95,
       "next": 93,
       "revision": "2026-07-23-global-age-gating-recalibration-v1"
     }
@@ -15,10 +15,10 @@
       "slug": "wwiii-escalation",
       "title": "WWIII Escalation Clock",
       "score": 76,
-      "todayStatus": "current-secondary-evidence-only",
-      "scoreConfidence": "limited",
+      "todayStatus": "current-primary-evidence",
+      "scoreConfidence": "medium",
       "currentEvidenceCount": 4,
-      "officialCount": 0,
+      "officialCount": 1,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -89,7 +89,7 @@
       "score": 30,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 9,
+      "currentEvidenceCount": 10,
       "officialCount": 2,
       "implementationCount": 1,
       "lawCount": 0,
@@ -113,8 +113,8 @@
       "score": 60,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 5,
-      "officialCount": 3,
+      "currentEvidenceCount": 6,
+      "officialCount": 4,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -276,7 +276,7 @@
     {
       "slug": "rule-of-law-accountability",
       "title": "Rule of Law and Institutional Accountability Clock",
-      "score": 56,
+      "score": 58,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
       "currentEvidenceCount": 5,

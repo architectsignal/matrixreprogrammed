@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:17:56.932Z",
-  "pageCount": 141,
+  "generatedAt": "2026-07-28T06:52:51.824Z",
+  "pageCount": 137,
   "output": "downloads/phase1-live-email-verifier-patch.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase1 Live Email Verifier Patch",
-    "contentHash": "2b1043b85324b10672096653c7d958aeb3e4669b2c8058c1d6318a16d218e084",
+    "contentHash": "03ff3579f603d207db4c979d3b91033ba5466bff833655940a382cbc0177f4cd",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -15,6 +15,8 @@
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
       "dcec2a45ef35362072af05e3",
       "1583ed9e90a5874047a33041",
       "7c212daa6802e36f4fe4f000",
@@ -24,6 +26,7 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "EP-AI-002",
       "1769af26a7bda813406cd8f5",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
@@ -58,14 +61,6 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
       "ASC-REVIEW-86C9D5939E18DD15",
       "ASC-REVIEW-7A271098BC2FC4DF",
@@ -98,9 +93,12 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "a76edf5945d2f4910bd413ef",
+      "18930d440aed009547436b81",
       "EP-AI-004",
-      "3a425f0d5d683952bc0ad7ac",
+      "9f77464e401ac59ad1adb812",
       "360e80c162081c85d2c680ef",
+      "43ba47db9b71dc20b9cfcfb0",
       "9da4920d9ef475bdd4c68fb8",
       "b2832d1240dab63cee199e13",
       "0bc08af58d89b5635a6e1c49",
@@ -109,6 +107,7 @@
       "8858c90093a92f549bb57c7f",
       "85520e019b70f975e8a39066",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "r-kelly-illinois-conviction-2022",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-FCEFDBDA93429C4F",
       "ASC-REVIEW-05E559B745692B7C",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
-      "ASC-REVIEW-E0C2B02D28255CC3"
+      "ASC-REVIEW-E0C2B02D28255CC3",
+      "ASC-REVIEW-4E0C4B2A65FF8D42"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 58,
-      "disputedClaimCount": 77,
-      "newEntityCount": 0,
+      "primarySourceCount": 51,
+      "disputedClaimCount": 78,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 81,
-      "moneyRecordCount": 55
+      "relationshipCount": 82,
+      "moneyRecordCount": 56
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 58 A/B-grade public-record items are materially relevant to Phase1 Live Email Verifier Patch.",
+        "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Phase1 Live Email Verifier Patch.",
         "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ANSYS INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Influence should be mapped through infrastructure, filings and contracts.",

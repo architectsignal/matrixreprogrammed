@@ -1,23 +1,30 @@
 {
-  "generatedAt": "2026-07-28T06:20:33.296Z",
-  "pageCount": 134,
+  "generatedAt": "2026-07-28T06:55:45.986Z",
+  "pageCount": 124,
   "output": "downloads/source-change-preservation-hardening-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Source Change Preservation Hardening Test",
-    "contentHash": "f274b91588c63b4218bbdd38c82dfeee14b60ad85491fac7827112ed045145f2",
+    "contentHash": "aa9c3dccf2a2f68e9ab5158b1bcc3cb2c8eccf3af1913342b112044b6090006c",
     "sourceIds": [
+      "26b90533dbf7d2ed42f02de6",
+      "ecd4a1111010f13b2d74bf8c",
+      "43ba47db9b71dc20b9cfcfb0",
       "96c24b16f820cebf7d9a03fe",
       "d109ec07bc6a6ad42558195d",
       "3f8bcacb0d33e21fab751828",
-      "ecd4a1111010f13b2d74bf8c",
+      "companies-aapl",
+      "41af4eba97b7eb1c0afb301f",
+      "ff1a3a77816af400f09ab95e",
+      "def94e0a086f2eac4c5ad91a",
+      "b079bec5bc869b0463d0584c",
+      "2482c3e0241c7c7679a18cd1",
       "25388814d0c3fcc05059fd9a",
       "3eaa75f65471d76ff2f30231",
       "3efd4e97dc1a92bbfd979de1",
       "650e97434b7ccd9c0eb410bc",
       "766c7577ad2f2c6146482898",
       "ba4fefe5fea9094e08f398c6",
-      "9b821ddb272b0fb297d39550",
       "0b48ddbdf00a62328ef878ff",
       "1e668e544955983a228eb69c",
       "3256f4ad100f217eaf00adaf",
@@ -44,16 +51,23 @@
       "dc2f3889b62662fc764e782f",
       "e50ee77aa62b005d32344370",
       "f8b39c9cbd401c9ccdfd153a",
-      "26b90533dbf7d2ed42f02de6",
+      "f8da9551192fb7f98b4efa86",
+      "275d6c3caca158f7a3e15780",
       "5594665950812895f468c11d",
-      "companies-aapl",
-      "41af4eba97b7eb1c0afb301f",
-      "ff1a3a77816af400f09ab95e",
-      "def94e0a086f2eac4c5ad91a",
-      "b079bec5bc869b0463d0584c",
-      "2482c3e0241c7c7679a18cd1",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
+      "2931a84c2c7fe86982d5d6e5",
+      "ad23fb22757e50c30b3d487c",
+      "72ef7895f95288946ccb3cff",
+      "5b6b5c0285c3c8742768ea5c",
+      "5ce17839086eddf839270b1a",
+      "58a212e4e1a93007ec5b3d6d",
+      "c1520a15d6e62871a66c558e",
+      "a42c91c655cd066504ed6515",
+      "a5e5d4ec4df4352ea242ea3f",
+      "7f5b91c14c671bd24b8bbd81",
+      "b7e4a66335a706ef5097117f",
+      "511ed227bb4be58b582ebb8d",
+      "360e80c162081c85d2c680ef",
+      "73799cb9af4829047998b026",
       "091ac07c58474b2d6c6a999b",
       "18b821b36c9ec5ad03c9f7a3",
       "1fce9f60e0ebf5c75dacff37",
@@ -132,35 +146,21 @@
       "18dab135a2ca6481156cb7c7",
       "71e25dea3e9a64a178423a91",
       "a6ad229ff54796f8762d279f",
-      "ae384b0360569b458ce75741",
-      "b1deda8d342847c7caa54972",
-      "a324bf01b60380907aef2e89",
-      "a6047accfb9754d2159cff7c",
-      "aa8de96c23cab420cfe61b09",
-      "aaa41b575f9ad9ad0e28023c",
-      "abba0d7e13ad3937f6691d8e",
-      "abc6dee0bd5f0a1250cd6ca6",
-      "ad03f2c4759586faeaf259b6",
-      "b0e536d3d2f665dc2d44fad2",
-      "b2832d1240dab63cee199e13",
-      "b42e84e9195a4d76493ab92d",
-      "b697d66c12caffd112d6625a",
-      "b89d4d61447483a71a17d890",
-      "b9c997378982810f13c6adb2"
+      "ae384b0360569b458ce75741"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
-      "disputedClaimCount": 1,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 0,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 13,
-      "moneyRecordCount": 9
+      "relationshipCount": 12,
+      "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Source Change Preservation Hardening Test.",
-        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Agency Information Collection Extension (data/investigation-ledger-archive.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); Recharter for the Advisory Commission on Childhood Vaccines (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json); Review of the Commission's Assessment and Collection of Regulatory Fees for Fiscal Year 2025 (data/investigation-ledger-archive.json)",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Source Change Preservation Hardening Test.",
+        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Agency Information Collection Extension (data/investigation-ledger-archive.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Privacy Act of 1974; System of Records; Public Hearing on Improving America's Maritime Seapower; Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Custom Search Vault 7: Brutal Kangaroo Today, June 22nd 2017, WikiLeaks publishes documents from the CIA project Brutal Kangaroo, that targets closed networks by air gap jumping using thumbdrives. 22 June 2017; Custom Search Vault 7: Pandemic Today, June 1st 2017, WikiLeaks publishes documents from the \"Pandemic\", a persistent implant for Microsoft Windows machines that share files in a local network. 01 June 2017; Custom Search Vault 7: UCL / Raytheon Today, July 19th 2017, WikiLeaks publishes documents from the CIA contractor Raytheon Blackbird Technologies for the \"UMBRAGE Component Library\" project. 19 July 2017",
+        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Privacy Act of 1974; System of Records; Public Hearing on Improving America's Maritime Seapower; Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; MINDCUBED LLC — District of Columbia Courts; Custom Search Vault 7: Brutal Kangaroo Today, June 22nd 2017, WikiLeaks publishes documents from the CIA project Brutal Kangaroo, that targets closed networks by air gap jumping using thumbdrives. 22 June 2017; Custom Search Vault 7: Pandemic Today, June 1st 2017, WikiLeaks publishes documents from the \"Pandemic\", a persistent implant for Microsoft Windows machines that share files in a local network. 01 June 2017",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 13 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Privacy Act of 1974; System of Records",
           "Public Hearing on Improving America's Maritime Seapower",
           "Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania",
           "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
-          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
+          "MINDCUBED LLC — District of Columbia Courts",
           "Custom Search Vault 7: Brutal Kangaroo Today, June 22nd 2017, WikiLeaks publishes documents from the CIA project Brutal Kangaroo, that targets closed networks by air gap jumping using thumbdrives. 22 June 2017",
-          "Custom Search Vault 7: Pandemic Today, June 1st 2017, WikiLeaks publishes documents from the \"Pandemic\", a persistent implant for Microsoft Windows machines that share files in a local network. 01 June 2017",
-          "Custom Search Vault 7: UCL / Raytheon Today, July 19th 2017, WikiLeaks publishes documents from the CIA contractor Raytheon Blackbird Technologies for the \"UMBRAGE Component Library\" project. 19 July 2017"
+          "Custom Search Vault 7: Pandemic Today, June 1st 2017, WikiLeaks publishes documents from the \"Pandemic\", a persistent implant for Microsoft Windows machines that share files in a local network. 01 June 2017"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2027-07-12T00:00:00.000Z"
   }
 }

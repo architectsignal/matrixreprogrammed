@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:19:38.381Z",
-  "pageCount": 128,
+  "generatedAt": "2026-07-28T06:54:44.990Z",
+  "pageCount": 126,
   "output": "downloads/sec-filing-feed.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "SEC Filing Feed",
-    "contentHash": "372e87eba9511499d7d0cd74886b84a7db94407da4bef5d84ed3938e405c0a50",
+    "contentHash": "7609469e7db5274648540d40938bd808d64393e7ebafb59c51195de2fbc6f3a9",
     "sourceIds": [
       "79ea408cdb375b45f1060e6c",
       "41772e5c9af7970ddd7d5aac",
@@ -13,9 +13,12 @@
       "9f3052b5d8cec138a2a37e8c",
       "008875ef7bf45eb14dccb254",
       "9b9816cd15ea0d816c77affa",
-      "3a425f0d5d683952bc0ad7ac",
+      "daily-revelation-report",
+      "43ba47db9b71dc20b9cfcfb0",
       "ddaf82ee4b91e882b1cfd144",
-      "9b821ddb272b0fb297d39550",
+      "594100b62a47db521fe2a128",
+      "3a425f0d5d683952bc0ad7ac",
+      "34805734b1ad3b73f0ede0d8",
       "a92c6f4ff46c6756386b1be4",
       "ae2de9b1a8af9117322a1607",
       "e01676bd55bd8ffd0e6cae0c",
@@ -37,7 +40,6 @@
       "fa534d43c41489f712bd05b7",
       "cb73c796932dd18343e650d5",
       "fccfcea7dd11ece6529bd04b",
-      "missing-records-report",
       "ec1316fb1fb70c83dc347bb6",
       "72ef7895f95288946ccb3cff",
       "companies-msft",
@@ -62,7 +64,7 @@
       "b51529ec66f7fb45c15bd28d",
       "26b90533dbf7d2ed42f02de6",
       "6d665d935673091233751767",
-      "594100b62a47db521fe2a128",
+      "missing-records-report",
       "9e8903fd8dfa9b54a1d6db30",
       "companies-meta",
       "76a719654ec3312153163154",
@@ -71,7 +73,6 @@
       "a5e5d4ec4df4352ea242ea3f",
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
-      "34805734b1ad3b73f0ede0d8",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "aa125ed22fe885dd57f96c32",
@@ -103,7 +104,6 @@
       "2eee904d1404ef0a6d9b6c54",
       "ce7d01ec7360da30cb531416",
       "02a4d3de860d06619024f48c",
-      "source-change-d5adf164b612fd92a1dca692",
       "9da4920d9ef475bdd4c68fb8",
       "aaa41b575f9ad9ad0e28023c",
       "b2832d1240dab63cee199e13",
@@ -136,30 +136,30 @@
       "f8b39c9cbd401c9ccdfd153a",
       "f8ea8e95ac2211b1392d4fa9",
       "faf0c0c4faba8dbfcf3ce2d8",
+      "d0b647e325275daa6d824a49",
       "2931a84c2c7fe86982d5d6e5",
       "companies-aapl",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "5a6e7289054e52bb115d24a8",
       "511ed227bb4be58b582ebb8d",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af"
+      "cee347fbc3752c6e0f890457",
+      "0bf52fe6a03ee6f9ce748cfc",
+      "58879e1a205c98e55a73a768",
+      "95d08890dfe05fbd7dbcdb7a"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 113,
-      "disputedClaimCount": 4,
-      "newEntityCount": 14,
+      "primarySourceCount": 107,
+      "disputedClaimCount": 6,
+      "newEntityCount": 22,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 17,
-      "moneyRecordCount": 21
+      "relationshipCount": 18,
+      "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 113 A/B-grade public-record items are materially relevant to SEC Filing Feed.",
+        "conclusion": "The indexed record establishes that 107 A/B-grade public-record items are materially relevant to SEC Filing Feed.",
         "evidence": "4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - ImageneBio, Inc. (0001835579) (Issuer) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json); 4 - Fasanella David (0001751608) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; USCIS Immigration Fees and Related Procedures Required by H.R.1 Reconciliation Bill; Correction; Privacy Act of 1974; System of Records; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",

@@ -1618,7 +1618,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-5594665950812895f468c11d",
@@ -1656,7 +1679,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "international-corruption"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://ofac.treasury.gov/recent-actions"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-49679b1ed63de244c1cf19f9",
@@ -1694,7 +1740,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-d5adf164b612fd92a1dca692",
@@ -1732,7 +1801,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-e853e2cce33f37c0619d2433",
@@ -1770,7 +1862,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-145721767ca69c32bb4875e5",
@@ -1808,7 +1923,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-46042e30fdcccc9e94aee0af",
@@ -1846,7 +1984,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-2931a84c2c7fe86982d5d6e5",
@@ -1884,7 +2045,30 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.fec.gov/updates/"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     }
   ],
   "changedSources": [

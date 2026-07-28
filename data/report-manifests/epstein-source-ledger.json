@@ -1,24 +1,20 @@
 {
-  "generatedAt": "2026-07-28T06:14:16.829Z",
-  "pageCount": 120,
+  "generatedAt": "2026-07-28T06:48:47.343Z",
+  "pageCount": 118,
   "output": "downloads/epstein-source-ledger.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Epstein Source Ledger",
-    "contentHash": "42abb13c98a41d8284c6d9d4affbd6be437726ac45dff70ebdab7301a3487852",
+    "contentHash": "1202b0b7d52592bef5bca1ec337a0d962c75fa1897b4651516acf07fb7e979d6",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
-      "d0b647e325275daa6d824a49",
       "9f3052b5d8cec138a2a37e8c",
-      "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
-      "3c9c23f7f9a1cec81ef90f59",
-      "cee347fbc3752c6e0f890457",
       "ecd4a1111010f13b2d74bf8c",
       "41772e5c9af7970ddd7d5aac",
       "8f9535190d08d76011b6d574",
@@ -26,12 +22,15 @@
       "b0bc5bb08386785c28b2bbff",
       "83ef6f58803306735c007289",
       "ASC-REVIEW-B27EAD89E5D764C1",
-      "daily-revelation-report",
+      "45f5269389def99607b5a517",
+      "4961972398d896435d33f3f7",
+      "594100b62a47db521fe2a128",
       "3a425f0d5d683952bc0ad7ac",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
+      "34805734b1ad3b73f0ede0d8",
       "e4a0df7a70409789454722e7",
       "9d1ace4e43843dbbe0750aad",
       "a324bf01b60380907aef2e89",
@@ -45,23 +44,29 @@
       "6e65848475641115a57f0fa8",
       "b4cb47ea50dc901364239e9f",
       "cf467db509437fdae7aae4f2",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-C954C3B615AAFE11",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-676D0168C06458FA",
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-6DE76C80FA805761",
       "ASC-REVIEW-AADA0932ADD32C2D",
+      "d0b647e325275daa6d824a49",
+      "a354895c18c7e12ab408462d",
       "5295a33003172878f9880122",
+      "665a5072d96b9757a6ee9d2d",
+      "daily-revelation-report",
+      "65debd126cdfa5f7547a3eca",
       "e72d22f4f28eb53e3173d0a6",
       "008875ef7bf45eb14dccb254",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
+      "3c9c23f7f9a1cec81ef90f59",
+      "cee347fbc3752c6e0f890457",
       "EFS-001-R006",
+      "43ba47db9b71dc20b9cfcfb0",
       "3e848c4175d62ac171e724d4",
       "603faac26f57d46d4fec485f",
       "995c14f7f8b33a3a62438171",
@@ -141,25 +146,20 @@
       "39d8402f1b17796e651a49e9",
       "39deb13af51921e192c53c69",
       "3a330e00ebe1d867c53f5718",
-      "3f343a6dc2e8ccc3d597117f",
-      "415e59c933e413e48a8bf7ef",
-      "4830ac305ce2865fcf7886d1",
-      "4843243a220b147925e64e62",
-      "4c7765744aee8a7cbb11c8fd",
-      "4f67b08069d34bd5975ef02f"
+      "3f343a6dc2e8ccc3d597117f"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 79,
-      "disputedClaimCount": 16,
-      "newEntityCount": 18,
+      "primarySourceCount": 74,
+      "disputedClaimCount": 14,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 9,
-      "moneyRecordCount": 9
+      "relationshipCount": 8,
+      "moneyRecordCount": 11
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Epstein Source Ledger.",
+        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Epstein Source Ledger.",
         "evidence": "Australia's under-16 social-media account restriction is in force (data/clock-wall.json); Australia's under-16 social-media account restriction is in force (data/conclusion-engine.json); Australia's under-16 social-media account restriction is in force (data/global-risk-clocks.json); Australia's under-16 social-media account restriction is in force (data/speculative-intelligence-synthesis.json); House Disclosures (data/investigation-ledger-archive.json); Change in Bank Control Notices; Acquisitions of Shares of a Bank or Bank Holding Company (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 9 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Safety Zones; Delaware River Dredging, Marcus Hook, PA; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; LinkedIn; Agricultural Advisory Committee",
+        "inference": "The indexed set contains 8 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Safety Zones; Delaware River Dredging, Marcus Hook, PA; LinkedIn; Agricultural Advisory Committee; Bessie Coleman Women in Aviation (BCWA) Advisory Committee",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 9 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 8 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Safety Zones; Delaware River Dredging, Marcus Hook, PA",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "LinkedIn",
-          "Agricultural Advisory Committee"
+          "Agricultural Advisory Committee",
+          "Bessie Coleman Women in Aviation (BCWA) Advisory Committee"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T17:28:43.661Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

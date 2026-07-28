@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:16:23.078Z",
+  "generatedAt": "2026-07-28T06:51:06.932Z",
   "pageCount": 134,
   "output": "downloads/live-verifier-intelligence-routes-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Live Verifier Intelligence Routes Patch",
-    "contentHash": "727b1a10520aa74ce65331c658a99660d80c7bbfdfead764997005a4cb2a2047",
+    "contentHash": "3474a7a2555bf856006c13cd5bf720514053edbdfefa266bdc1eb3cced77a637",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "EP-AI-004",
@@ -22,7 +22,7 @@
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
       "72ef7895f95288946ccb3cff",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-4977B61988022C21",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
@@ -31,13 +31,6 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "EP-AI-002",
       "EP-AI-003",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-FCEFDBDA93429C4F",
       "ASC-REVIEW-05E559B745692B7C",
@@ -78,7 +71,6 @@
       "ASC-REVIEW-21E454816F050A34",
       "3a425f0d5d683952bc0ad7ac",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-5594665950812895f468c11d",
       "a92c6f4ff46c6756386b1be4",
       "ddaf82ee4b91e882b1cfd144",
       "e01676bd55bd8ffd0e6cae0c",
@@ -146,23 +138,31 @@
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-D13048D78F8EA6E3"
+      "ASC-REVIEW-D13048D78F8EA6E3",
+      "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-676D0168C06458FA",
+      "ASC-REVIEW-B3E7B22DBE204184",
+      "ASC-REVIEW-26C98CAD8AA9CE0A",
+      "ASC-REVIEW-D921C72A4BA2FDF3",
+      "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-CBBDD69F69C1121D",
+      "ASC-REVIEW-6FEEE1F638ADFCD6"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 15,
-      "disputedClaimCount": 118,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 126,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 104,
-      "moneyRecordCount": 58
+      "relationshipCount": 109,
+      "moneyRecordCount": 64
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Live Verifier Intelligence Routes Patch.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Live Verifier Intelligence Routes Patch.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json); 4 - Fasanella David (0001751608) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 104 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 109 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Top contractor lane; content changed: U.S. Federal Election Commission — Updates; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Professional and institutional intermediaries may be more informative than raw contact lists; ANSYS INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 104 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 109 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

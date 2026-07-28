@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-28T06:14:42.744Z",
+  "generatedAt": "2026-07-28T06:49:15.957Z",
   "pageCount": 125,
   "output": "downloads/final-public-editorial-hardening.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Final Public Editorial Hardening",
-    "contentHash": "b86ca56e6f337e3e1d28cf96bd07e48698c580b11e2190d889150237eb44a487",
+    "contentHash": "4b8be7184fcb9a1ee4f67ea0292256a171394112571a16679fcdc82a68b9798e",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "9f3052b5d8cec138a2a37e8c",
-      "3a425f0d5d683952bc0ad7ac",
       "008875ef7bf45eb14dccb254",
       "CON-101",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
@@ -22,10 +22,8 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "65debd126cdfa5f7547a3eca",
-      "c1520a15d6e62871a66c558e",
-      "3c9c23f7f9a1cec81ef90f59",
-      "9b821ddb272b0fb297d39550",
+      "594100b62a47db521fe2a128",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-FCEFDBDA93429C4F",
@@ -46,6 +44,7 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
       "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
@@ -54,8 +53,10 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "58a212e4e1a93007ec5b3d6d",
+      "d0b647e325275daa6d824a49",
+      "c1520a15d6e62871a66c558e",
       "7f5b91c14c671bd24b8bbd81",
+      "cee347fbc3752c6e0f890457",
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-598A8E78B2ED4662",
       "ASC-REVIEW-85693397F53B02BA",
@@ -88,8 +89,7 @@
       "9e8903fd8dfa9b54a1d6db30",
       "76a719654ec3312153163154",
       "9f77464e401ac59ad1adb812",
-      "a4c15f7c3d808369b294115e",
-      "eb3448928554960651da56f6",
+      "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
@@ -118,12 +118,14 @@
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-F530B7C452E8CBB2",
-      "594100b62a47db521fe2a128",
+      "65debd126cdfa5f7547a3eca",
       "ec1316fb1fb70c83dc347bb6",
+      "a4c15f7c3d808369b294115e",
       "5b6b5c0285c3c8742768ea5c",
       "157cdab04b61ae6309c0c713",
+      "eb3448928554960651da56f6",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
+      "3c9c23f7f9a1cec81ef90f59",
       "ASC-001",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-D23512B8758FE6BB",
       "ASC-REVIEW-9F5E6DCB06093895",
-      "ASC-REVIEW-CAEF74273342914C",
-      "ASC-REVIEW-747FA1D74D7A92E3",
-      "ASC-REVIEW-2EAAC7D7DF8B957D"
+      "ASC-REVIEW-CAEF74273342914C"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 105,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 93,
-      "moneyRecordCount": 50
+      "relationshipCount": 91,
+      "moneyRecordCount": 48
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Final Public Editorial Hardening.",
-        "evidence": "Access infrastructure is a measurable power layer. (data/conclusions-engine-batch-001.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json)",
+        "evidence": "Access infrastructure is a measurable power layer. (data/conclusions-engine-batch-001.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 93 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Access infrastructure is a measurable power layer.; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Top contractor lane; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; ANSYS INC — National Aeronautics and Space Administration; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Access infrastructure is a measurable power layer.; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; Top contractor lane; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; ANSYS INC — National Aeronautics and Space Administration; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 93 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Access infrastructure is a measurable power layer.",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "MINDCUBED LLC — District of Columbia Courts",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Top contractor lane",
           "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
           "ANSYS INC — National Aeronautics and Space Administration",
-          "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency"
+          "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+          "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

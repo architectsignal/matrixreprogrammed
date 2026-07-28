@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:19:17.981Z",
-  "pageCount": 124,
+  "generatedAt": "2026-07-28T06:54:20.030Z",
+  "pageCount": 128,
   "output": "downloads/release-regression-finalize.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Release Regression Finalize",
-    "contentHash": "abdbb6d9933903826a88d4583ceb6e3e59e1ae13d15c1a95f54fad12ac75c698",
+    "contentHash": "a78fdc1f68224f51c58bebb060daa9eefb7a209d713468653db50e2a8c2ba9ea",
     "sourceIds": [
       "2482c3e0241c7c7679a18cd1",
       "declassified-files-2026-07-23-7b43a9b4",
@@ -13,20 +13,6 @@
       "declassified-files-2026-07-23-85ec568c",
       "declassified-files-2026-07-23-90bd79dc",
       "declassified-files-2026-07-23-7eb1900a",
-      "declassified-files-2026-07-23-493c0cbf",
-      "declassified-files-2026-07-23-f62b87a1",
-      "declassified-files-2026-07-23-71203b01",
-      "declassified-files-2026-07-23-55829d5e",
-      "declassified-files-2026-07-23-670b739b",
-      "declassified-files-2026-07-23-b397fa50",
-      "declassified-files-2026-07-23-4ca5fddd",
-      "declassified-files-2026-07-23-f3f4de32",
-      "declassified-files-2026-07-23-534fbf8f",
-      "declassified-files-2026-07-23-55e56994",
-      "declassified-files-2026-07-23-9e3d6831",
-      "declassified-files-2026-07-23-b2a9e7b6",
-      "declassified-files-2026-07-23-a8b27523",
-      "declassified-files-2026-07-23-72e6ea02",
       "96c24b16f820cebf7d9a03fe",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
@@ -49,11 +35,13 @@
       "ASC-REVIEW-21E454816F050A34",
       "360e80c162081c85d2c680ef",
       "EFS-001-R006",
+      "43ba47db9b71dc20b9cfcfb0",
       "1b9c755080780008daa49299",
       "38e78607200a84a4f8c1d274",
       "53ecbc453e4e5c65ce62d8d3",
       "9f7e46bd0788ea0658ca3cb6",
       "f14145374aecab9e81579c07",
+      "f8282c39e73330693c2bbcc9",
       "0a52841c5baabb7bbda93cfa",
       "1e73e4da788d02a86e8867f4",
       "38a8210c759119a6439ba32c",
@@ -124,6 +112,21 @@
       "d91969cf88008135217d911c",
       "declassified-files-2026-01-01-uk-considered-military-overthrow-of-depressingly-healthy-robert-mugabe",
       "declassified-files-2025-10-22-archive-of-colombia-s-former-intelligence-agency-to-be-declassified-co",
+      "hadden-federal-conviction-sentence-2023",
+      "janner-iicsa-2022",
+      "nassar-fbi-oig-2021",
+      "greenberg-guilty-plea-2021",
+      "epstein-opr-review-2020",
+      "cyril-smith-westminster-2020",
+      "peter-ball-iicsa-support-2019",
+      "shortey-child-sex-trafficking-2018",
+      "cyril-smith-iicsa-2018",
+      "nassar-state-convictions-2018",
+      "weiner-federal-conviction-2017",
+      "peter-ball-conviction-2015",
+      "janner-charges-2015",
+      "savile-health-investigations-2014",
+      "savile-broadmoor-2014",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -143,23 +146,20 @@
       "ASC-REVIEW-36153B86F83F5B52",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-47F2C521B4EF726E",
-      "ASC-REVIEW-8B36B00ED92DCB72",
-      "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
-      "ASC-REVIEW-E9C1CB1EA7466DB2"
+      "ASC-REVIEW-8B36B00ED92DCB72"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 65,
-      "disputedClaimCount": 42,
-      "newEntityCount": 0,
+      "primarySourceCount": 67,
+      "disputedClaimCount": 39,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 66,
+      "relationshipCount": 53,
       "moneyRecordCount": 19
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 65 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
+        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
         "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 66 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Charles Keating Part 13; Frank Capra; Frank Capra (Final); Jake Guzik; Jake Guzik (Final); Otto Fred Otepka; Otto Fred Otepka Part 01",
+        "inference": "The indexed set contains 53 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Charles Keating Part 13; Frank Capra; Frank Capra (Final); Jake Guzik; Jake Guzik (Final); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 66 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 53 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Charles Keating Part 13",
@@ -202,8 +202,8 @@
           "Frank Capra (Final)",
           "Jake Guzik",
           "Jake Guzik (Final)",
-          "Otto Fred Otepka",
-          "Otto Fred Otepka Part 01"
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

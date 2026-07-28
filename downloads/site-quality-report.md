@@ -2,12 +2,13 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 720
-Weak pages: 13
+Scanned pages: 741
+Weak pages: 14
 
 ## Weakest Pages
 - 45/100 — newsletter.html: Thin copy: 67 visible words; Missing evidence route; Missing book/store route; Missing Rumble/video route
 - 60/100 — market-activity.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i; Visible scaffold/internal copy: /builder/i; Dynamic figures need visible source panel: $1,246,437, $490,779, $226,588, $48,251, $147,600
+- 60/100 — site-population-audit.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — claim-classifier.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — dark-speculation-lab.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i; Visible scaffold/internal copy: /builder/i
@@ -65,7 +66,6 @@ Weak pages: 13
 - 84/100 — news.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — path-evidence-trust.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

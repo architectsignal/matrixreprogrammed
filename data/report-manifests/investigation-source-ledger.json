@@ -1,19 +1,17 @@
 {
-  "generatedAt": "2026-07-28T06:15:40.446Z",
-  "pageCount": 124,
+  "generatedAt": "2026-07-28T06:50:19.689Z",
+  "pageCount": 127,
   "output": "downloads/investigation-source-ledger.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Investigation Source Ledger",
-    "contentHash": "8358db20a34b7416e857368698add9c0f711e46d49d7c187655e071bac657614",
+    "contentHash": "547f272fe1cd20171e9903dad68fed3978ca5a5f591cc6b6c64f8d88d30807f9",
     "sourceIds": [
       "6d665d935673091233751767",
+      "43ba47db9b71dc20b9cfcfb0",
       "2931a84c2c7fe86982d5d6e5",
-      "9b821ddb272b0fb297d39550",
       "ecadede6696db6c7c3e6b7ec",
       "1769af26a7bda813406cd8f5",
-      "fe3f3107cffaf5599a7b09f9",
-      "085baf8dafdf6692a4203706",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "2482c3e0241c7c7679a18cd1",
@@ -36,13 +34,8 @@
       "5ce17839086eddf839270b1a",
       "58a212e4e1a93007ec5b3d6d",
       "9d13cbe9989a1430580de2ff",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
+      "c59bd028e66abe69d1373742",
       "6e1b16a4906354292a8d2261",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
       "e052537d78ff67ae84cd8d73",
       "2437ea8eb72519ae5be1ce23",
       "288aa1ab188bc28dca9356a4",
@@ -146,20 +139,27 @@
       "4bad0a987954e03a46e0b11c",
       "4ea32d0f43e7509849e25947",
       "4ed8207dc748202a2172a144",
-      "62b19634320ee92920f1b80e"
+      "62b19634320ee92920f1b80e",
+      "6ba93ed93c5bcf7e9a10fd6b",
+      "72e8bc0dfa52f7aeb8f93f17",
+      "79dd418a536207482d37afb6",
+      "9f2a0006feab2f86d3939825",
+      "a6a8845fcd8980df6fe58516",
+      "ab7ccf7f6ca88a9847d5d777",
+      "ae3869ea4ca95a280d853bd1"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 130,
-      "disputedClaimCount": 3,
+      "primarySourceCount": 131,
+      "disputedClaimCount": 4,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 20,
-      "moneyRecordCount": 14
+      "relationshipCount": 22,
+      "moneyRecordCount": 13
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 130 A/B-grade public-record items are materially relevant to Investigation Source Ledger.",
+        "conclusion": "The indexed record establishes that 131 A/B-grade public-record items are materially relevant to Investigation Source Ledger.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Securities and Exchange Commission; Follow The Money Watch; Securities and Exchange Commission; Securities and Exchange Commission; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Securities and Exchange Commission; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; Securities and Exchange Commission",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Securities and Exchange Commission; Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Securities and Exchange Commission; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; Securities and Exchange Commission; Securities and Exchange Commission; Lamb Meat; Institution of Investigation, Scheduling of Public Hearings, and Determination That the Investigation Is Extraordinarily Complicated",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Securities and Exchange Commission",
           "Follow The Money Watch",
-          "Securities and Exchange Commission",
-          "Securities and Exchange Commission",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Securities and Exchange Commission",
           "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
-          "Securities and Exchange Commission"
+          "Securities and Exchange Commission",
+          "Securities and Exchange Commission",
+          "Lamb Meat; Institution of Investigation, Scheduling of Public Hearings, and Determination That the Investigation Is Extraordinarily Complicated"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

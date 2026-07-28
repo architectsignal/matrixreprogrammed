@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-28T06:27:32.467Z",
+  "generatedAt": "2026-07-28T07:01:31.247Z",
   "summary": {
-    "generatedAt": "2026-07-28T06:27:32.467Z",
+    "generatedAt": "2026-07-28T07:01:31.247Z",
     "totalRecords": 2000,
     "verifiedMeasures": 799,
     "identityProfiles": 258,
     "unresolvedResearchLeads": 1742,
-    "relationships": 2640,
+    "relationships": 2641,
     "centralRegistryMatches": 258
   },
   "records": [
@@ -742,8 +742,8 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-0941-hk",
-      "name": "China Mobile",
+      "moneyRecordId": "companies-0857-hk",
+      "name": "PetroChina",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -752,8 +752,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-0857-hk",
-      "name": "PetroChina",
+      "moneyRecordId": "companies-0941-hk",
+      "name": "China Mobile",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -772,16 +772,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-axp",
-      "name": "American Express",
-      "category": "companies",
-      "centralEntityId": "market-company-american-express-co-fee91de61cd46fad",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "companies-ihc-ae",
       "name": "International Holding Company",
       "category": "companies",
@@ -790,6 +780,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-axp",
+      "name": "American Express",
+      "category": "companies",
+      "centralEntityId": "market-company-american-express-co-fee91de61cd46fad",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-c",
@@ -842,16 +842,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-tmo",
-      "name": "Thermo Fisher Scientific",
-      "category": "companies",
-      "centralEntityId": "market-company-thermo-fisher-scientific-inc-c9053d9727f8e6b1",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "companies-cba-ax",
       "name": "Commonwealth Bank",
       "category": "companies",
@@ -860,6 +850,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-tmo",
+      "name": "Thermo Fisher Scientific",
+      "category": "companies",
+      "centralEntityId": "market-company-thermo-fisher-scientific-inc-c9053d9727f8e6b1",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-ibm",
@@ -8712,16 +8712,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-ebo-f",
-      "name": "Erste Group Bank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-stt",
       "name": "State Street Corporation",
       "category": "banks",
@@ -8730,6 +8720,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "banks-ebo-f",
+      "name": "Erste Group Bank",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "banks-601211-ss",
@@ -8832,8 +8832,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-bbca-jk",
-      "name": "Bank Central Asia",
+      "moneyRecordId": "banks-qnbk-qa",
+      "name": "QNB (Qatar National Bank)",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8842,8 +8842,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-qnbk-qa",
-      "name": "QNB (Qatar National Bank)",
+      "moneyRecordId": "banks-bbca-jk",
+      "name": "Bank Central Asia",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12382,8 +12382,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-azrg-ta",
-      "name": "Azrieli Group",
+      "moneyRecordId": "property-dlf-ns",
+      "name": "DLF",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12392,8 +12392,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-dlf-ns",
-      "name": "DLF",
+      "moneyRecordId": "property-azrg-ta",
+      "name": "Azrieli Group",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13792,8 +13792,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-0511-hk",
-      "name": "Television Broadcasts (TVB)",
+      "moneyRecordId": "media-plby",
+      "name": "PLBY Group (Playboy)",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13802,8 +13802,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-plby",
-      "name": "PLBY Group (Playboy)",
+      "moneyRecordId": "media-0511-hk",
+      "name": "Television Broadcasts (TVB)",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13922,8 +13922,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-gtpl-ns",
-      "name": "GTPL Hathway",
+      "moneyRecordId": "media-hmvl-ns",
+      "name": "Hindustan Media Ventures",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13932,8 +13932,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-hmvl-ns",
-      "name": "Hindustan Media Ventures",
+      "moneyRecordId": "media-gtpl-ns",
+      "name": "GTPL Hathway",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14562,16 +14562,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-688256-ss",
-      "name": "Cambricon Technologies",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "technology-control-6861-t",
       "name": "Keyence",
       "category": "technology-control",
@@ -14614,6 +14604,16 @@
     {
       "moneyRecordId": "technology-control-spot",
       "name": "Spotify",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "technology-control-688256-ss",
+      "name": "Cambricon Technologies",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14762,8 +14762,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-ntes",
-      "name": "NetEase",
+      "moneyRecordId": "technology-control-6981-t",
+      "name": "Murata Manufacturing (Murata Seisakusho)",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14772,8 +14772,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-6981-t",
-      "name": "Murata Manufacturing (Murata Seisakusho)",
+      "moneyRecordId": "technology-control-ntes",
+      "name": "NetEase",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14862,16 +14862,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-2513-hk",
-      "name": "Z.AI",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "technology-control-tel",
       "name": "TE Connectivity",
       "category": "technology-control",
@@ -14880,6 +14870,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "technology-control-2513-hk",
+      "name": "Z.AI",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-lite",
@@ -14902,8 +14902,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-688012-ss",
-      "name": "AMEC",
+      "moneyRecordId": "technology-control-keys",
+      "name": "Keysight",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14912,8 +14912,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-keys",
-      "name": "Keysight",
+      "moneyRecordId": "technology-control-688012-ss",
+      "name": "AMEC",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15582,8 +15582,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "energy-resources-dvn",
-      "name": "Devon Energy",
+      "moneyRecordId": "energy-resources-373220-ks",
+      "name": "LG Energy Solution",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15592,8 +15592,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-373220-ks",
-      "name": "LG Energy Solution",
+      "moneyRecordId": "energy-resources-dvn",
+      "name": "Devon Energy",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15932,8 +15932,8 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "energy-resources-orsted-co",
-      "name": "Ørsted",
+      "moneyRecordId": "energy-resources-600188-ss",
+      "name": "Yankuang Energy (Yanzhou Coal Mining)",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15942,8 +15942,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-600188-ss",
-      "name": "Yankuang Energy (Yanzhou Coal Mining)",
+      "moneyRecordId": "energy-resources-orsted-co",
+      "name": "Ørsted",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16362,6 +16362,16 @@
       "sourceCount": 1
     },
     {
+      "moneyRecordId": "defence-security-272210-ks",
+      "name": "Hanwha Systems",
+      "category": "defence-security",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "defence-security-mro-l",
       "name": "Melrose Industries",
       "category": "defence-security",
@@ -16380,16 +16390,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "defence-security-272210-ks",
-      "name": "Hanwha Systems",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "defence-security-pl",

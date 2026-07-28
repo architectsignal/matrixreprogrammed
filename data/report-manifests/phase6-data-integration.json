@@ -1,27 +1,25 @@
 {
-  "generatedAt": "2026-07-28T06:17:58.037Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-28T06:52:53.038Z",
+  "pageCount": 132,
   "output": "downloads/phase6-data-integration.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase6 Data Integration",
-    "contentHash": "889bc19b0b09ea43c4e9e3baba0c448160e3436840467a3f98fb75366a517a65",
+    "contentHash": "f49cefe75f47389e2a3c91d49550f62d6ea35cdd8c8dda451610676bf794831d",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "companies-amzn",
       "companies-meta",
       "investment-vehicles-ivv",
       "2482c3e0241c7c7679a18cd1",
+      "43ba47db9b71dc20b9cfcfb0",
       "companies-aapl",
       "companies-avgo",
-      "9b821ddb272b0fb297d39550",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-44F136F26F8A52B2",
       "daee19f2c0d92279cc9a7569",
       "companies-nvda",
       "companies-msft",
       "market_activity",
-      "source-change-d5adf164b612fd92a1dca692",
       "a92c6f4ff46c6756386b1be4",
       "ddaf82ee4b91e882b1cfd144",
       "e01676bd55bd8ffd0e6cae0c",
@@ -32,7 +30,6 @@
       "4ea32d0f43e7509849e25947",
       "companies-amzn:sec-form4",
       "technology-control-amzn:sec-form4",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -59,6 +56,7 @@
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-6A0A0F4FE014BB42",
+      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-46CE2621F44A480F",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -141,13 +139,15 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d"
+      "b2e5546afe19e8935256e341",
+      "ca599bfb5b7e56b19781206d",
+      "a03cb38ae282e5ec17e1a40f",
+      "ab108ebd283e8eefcff03651"
     ],
     "metrics": {
       "evidenceCount": 136,
-      "primarySourceCount": 60,
-      "disputedClaimCount": 66,
+      "primarySourceCount": 61,
+      "disputedClaimCount": 65,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 31,
@@ -155,8 +155,8 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 60 A/B-grade public-record items are materially relevant to Phase6 Data Integration.",
-        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json)",
+        "conclusion": "The indexed record establishes that 61 A/B-grade public-record items are materially relevant to Phase6 Data Integration.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json); 4 - Fasanella David (0001751608) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -176,7 +176,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer; Matrix Reprogrammed Structured Investigation Schema; Privacy Act of 1974; System of Records; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer; Matrix Reprogrammed Structured Investigation Schema; Privacy Act of 1974; System of Records; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -197,9 +197,9 @@
           "State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer",
           "Matrix Reprogrammed Structured Investigation Schema",
           "Privacy Act of 1974; System of Records",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-07-28T06:17:58.834Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-28T06:52:53.921Z",
+  "pageCount": 130,
   "output": "downloads/phase6-worker-patch.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase6 Worker Patch",
-    "contentHash": "75be628d29b53452319fc325ac28b3204e23e8e9a680efb4a8cf0d058398ca6e",
+    "contentHash": "9b37711957afec7e37bfb321f7df0cbf3c74a3225f4918eb92bf2f8fcdbfc5a6",
     "sourceIds": [
       "2482c3e0241c7c7679a18cd1",
+      "43ba47db9b71dc20b9cfcfb0",
       "a92c6f4ff46c6756386b1be4",
       "ddaf82ee4b91e882b1cfd144",
       "e01676bd55bd8ffd0e6cae0c",
@@ -54,7 +55,6 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "9b821ddb272b0fb297d39550",
       "ca599bfb5b7e56b19781206d",
       "d33105b0a193330bee0fd2dc",
       "df4f424ec8c6a57259e36b0d",
@@ -109,7 +109,6 @@
       "f8b39c9cbd401c9ccdfd153a",
       "97e44302e0679572f7e1c2ca",
       "bd69840631331253087b86af",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-6DE76C80FA805761",
@@ -117,8 +116,6 @@
       "1769af26a7bda813406cd8f5",
       "companies-amzn",
       "companies-meta",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
       "1b9c755080780008daa49299",
       "38e78607200a84a4f8c1d274",
       "53ecbc453e4e5c65ce62d8d3",
@@ -146,12 +143,15 @@
       "9d8843b9e0bbd387dad98561",
       "9e108a167c9adc257b7e2690",
       "a0158238b8879f2888e968f8",
-      "a03b35de59259dc80d7bf4d7"
+      "a03b35de59259dc80d7bf4d7",
+      "a0f75b2b590d669e9fe42644",
+      "a15c16ad31df3a2e73d5e547",
+      "a3021eed383957661bdb7c60"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 111,
-      "disputedClaimCount": 6,
+      "primarySourceCount": 112,
+      "disputedClaimCount": 5,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 22,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 111 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
+        "conclusion": "The indexed record establishes that 112 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
         "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json); 4 - Fasanella David (0001751608) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

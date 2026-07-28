@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-28T06:25:10.749Z
+Generated: 2026-07-28T06:59:43.333Z
 Overall: ready
 Passed: 50/50
 
@@ -17,7 +17,7 @@ Promotion margin: 14
 - **PASS · stable-hit-list-standard:** Promotion margin: 14.
 - **PASS · dossier-standard:** 11 required dossier sections.
 - **PASS · data-integrity-repair:** Repair status: ready; active findings: 2500.
-- **PASS · authoritative-entity-resolution:** Resolved person=Defendant Kidd; institution=Securities and Exchange Commission; family=Wallenberg family and foundations.
+- **PASS · authoritative-entity-resolution:** Resolved person=Defendant Kidd; institution=Securities and Exchange Commission; family=Al Thani family.
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
@@ -34,7 +34,7 @@ Promotion margin: 14
 - **PASS · watch-institution-boundary:** institution limitation present.
 - **PASS · watch-institution-resolved-class:** institution resolution=authoritatively-resolved; name=Securities and Exchange Commission.
 - **PASS · watch-family-fields:** family: Wallenberg family and foundations; missing none.
-- **PASS · watch-family-rank:** family score 122; status retained-current-leader.
+- **PASS · watch-family-rank:** family score 122; status incumbent-held-position.
 - **PASS · watch-family-sources:** 5 source routes attached.
 - **PASS · watch-family-boundary:** family limitation present.
 - **PASS · watch-family-resolved-class:** family resolution=resolved-family-access-record; name=Wallenberg family and foundations.

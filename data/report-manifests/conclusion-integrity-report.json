@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:11:12.490Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-28T06:45:13.134Z",
+  "pageCount": 131,
   "output": "downloads/conclusion-integrity-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Conclusion Integrity Report",
-    "contentHash": "88f649c1219f7400502986e9063b5c8ae10fe3fcfc2c5e04ac5f1a351b458cd7",
+    "contentHash": "f2e6b8c46ed3dd25f164155393a36dc9a4770bad2544c8b5b02865a6f738f100",
     "sourceIds": [
       "2482c3e0241c7c7679a18cd1",
       "a92c6f4ff46c6756386b1be4",
@@ -16,7 +16,8 @@
       "f7663de6f4002d27437baf04",
       "96c24b16f820cebf7d9a03fe",
       "d109ec07bc6a6ad42558195d",
-      "9b821ddb272b0fb297d39550",
+      "peter-ball-iicsa-support-2019",
+      "43ba47db9b71dc20b9cfcfb0",
       "ca599bfb5b7e56b19781206d",
       "df4f424ec8c6a57259e36b0d",
       "a03cb38ae282e5ec17e1a40f",
@@ -57,6 +58,18 @@
       "fc9a38c873035b26cbda0eed",
       "bd69840631331253087b86af",
       "epstein-nda-settlement-protection-lane-2026-06-26",
+      "huw-edwards-iico-conviction-2024",
+      "hadden-federal-conviction-sentence-2023",
+      "janner-iicsa-2022",
+      "r-kelly-illinois-acquittals-2022",
+      "nassar-fbi-oig-2021",
+      "epstein-opr-review-2020",
+      "cyril-smith-westminster-2020",
+      "cyril-smith-iicsa-2018",
+      "peter-ball-conviction-2015",
+      "janner-charges-2015",
+      "savile-health-investigations-2014",
+      "savile-broadmoor-2014",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -133,33 +146,20 @@
       "b2875d19c3be403fce2ba0ba",
       "da91434a107ba770f5202940",
       "e2585507fa207f42431f0141",
-      "e374f0be493cde82b7119e54",
-      "eaecf0227ecb2a73b6f696c4",
-      "ef4c6a37fd1a29fd0365b1e5",
-      "f64c0ff6aa3a54f248bde857",
-      "0a52841c5baabb7bbda93cfa",
-      "1e73e4da788d02a86e8867f4",
-      "38a8210c759119a6439ba32c",
-      "6eac1246a26fcbb8f623922c",
-      "cfc2d2bcf888bef286dc454c",
-      "declassified-files-2026-07-24-c827955e",
-      "declassified-files-2026-07-23-7b43a9b4",
-      "declassified-files-2026-07-23-fa922faa",
-      "declassified-files-2026-07-23-85ec568c",
-      "declassified-files-2026-07-23-90bd79dc"
+      "e374f0be493cde82b7119e54"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 96,
+      "primarySourceCount": 104,
       "disputedClaimCount": 14,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 29,
-      "moneyRecordCount": 40
+      "relationshipCount": 28,
+      "moneyRecordCount": 37
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 96 A/B-grade public-record items are materially relevant to Conclusion Integrity Report.",
+        "conclusion": "The indexed record establishes that 104 A/B-grade public-record items are materially relevant to Conclusion Integrity Report.",
         "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 3 - Donaldson Ross M. (0002144075) (Reporting) (data/investigation-ledger-archive.json); 4 - Lally Robert B (0002126940) (Reporting) (data/investigation-ledger-archive.json); 4 - Tomasello Vickie (0001990830) (Reporting) (data/investigation-ledger-archive.json); 4 - Harrison Timothy C (0001586195) (Reporting) (data/investigation-ledger-archive.json); 4 - Fasanella David (0001751608) (Reporting) (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 29 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; LinkedIn; LinkedIn; Privacy Act of 1974; System of Records; Public Hearing on Improving America's Maritime Seapower; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; LinkedIn; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+        "inference": "The indexed set contains 28 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; LinkedIn; LinkedIn; Privacy Act of 1974; System of Records; Public Hearing on Improving America's Maritime Seapower; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; LinkedIn; Westminster inquiry examined political and policing responses",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 29 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 28 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "LinkedIn",
@@ -203,7 +203,7 @@
           "Public Hearing on Improving America's Maritime Seapower",
           "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
           "LinkedIn",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
+          "Westminster inquiry examined political and policing responses"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

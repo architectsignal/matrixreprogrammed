@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:17:50.575Z",
+  "generatedAt": "2026-07-28T06:52:44.857Z",
   "pageCount": 129,
   "output": "downloads/paypal-membership-patch-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Paypal Membership Patch Report",
-    "contentHash": "3c3dbfc38b4a2354d9e06b5656432153498bf33b1ea43f638812a0a67a8ffcbb",
+    "contentHash": "ad48f61435778bc7eb74ad5f475e8031b315702bcf6325dbc5e6b9ab990dade2",
     "sourceIds": [
       "96c24b16f820cebf7d9a03fe",
       "8858c90093a92f549bb57c7f",
@@ -74,6 +74,7 @@
       "64655043524cba9e6a679f8d",
       "324cbe2d95e1cfa996c79119",
       "02a4d3de860d06619024f48c",
+      "43ba47db9b71dc20b9cfcfb0",
       "9782a53bc15327162002306a",
       "9ae9024e77b5861c21c09d8a",
       "9d00828d344d104ab400748d",
@@ -145,21 +146,20 @@
       "1175db1378e21073a4dcb09a",
       "11a142bfd74a3be267fdc3f5",
       "157b4433d26f691b9ee5cec8",
-      "1e0dae5598c95ef3ceca59a9",
-      "21376cbc694a50dc80e2269a"
+      "1e0dae5598c95ef3ceca59a9"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 140,
+      "primarySourceCount": 139,
       "disputedClaimCount": 5,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 16,
       "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 140 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
+        "conclusion": "The indexed record establishes that 139 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
         "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Agency Information Collection Activities: Requests for Comments; Clearance of Renewed Approval of Information Collection: Monitoring, Reporting, and Verification (MRV) Program for Annex 16, Volume IV of the Convention on Civil Aviation (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json); Agency Information Collection Extension (data/investigation-ledger-archive.json); Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Survey of Housing Starts, Sales, and Completions (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

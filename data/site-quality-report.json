@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-28T06:22:02.015Z",
+  "generatedAt": "2026-07-28T06:57:18.563Z",
   "policy": "Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.",
-  "scannedPages": 720,
-  "weakPages": 13,
+  "scannedPages": 741,
+  "weakPages": 14,
   "pages": [
     {
       "file": "newsletter.html",
@@ -55,6 +55,26 @@
         "$4,550,000"
       ],
       "jsonLinks": 1
+    },
+    {
+      "file": "site-population-audit.html",
+      "title": "Site Population Audit",
+      "grade": 60,
+      "words": 395,
+      "links": 2,
+      "issues": [
+        "Missing book/store route",
+        "Missing Rumble/video route",
+        "Missing free brief/opt-in route",
+        "Intel/evidence page missing Live Intel route",
+        "Weak navigation/link depth: 2 links"
+      ],
+      "strengths": [
+        "Useful copy depth: 395 words",
+        "Evidence route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
     },
     {
       "file": "claim-classifier.html",
@@ -120,7 +140,7 @@
       "file": "institution-profile.html",
       "title": "Institution Deck Profile Router",
       "grade": 68,
-      "words": 799,
+      "words": 826,
       "links": 15,
       "issues": [
         "Missing book/store route",
@@ -129,7 +149,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 799 words",
+        "Useful copy depth: 826 words",
         "Evidence route present"
       ],
       "figures": [],
@@ -158,7 +178,7 @@
       "file": "subject-dog-architect.html",
       "title": "D.O.G The Architect Initiation Map",
       "grade": 68,
-      "words": 1068,
+      "words": 1086,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -167,7 +187,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1068 words",
+        "Useful copy depth: 1086 words",
         "Evidence route present",
         "Book/store route present",
         "Opt-in route present"
@@ -199,7 +219,7 @@
       "file": "subject-freemasonry-symbol-system.html",
       "title": "Freemasonry Symbol System Map",
       "grade": 68,
-      "words": 1128,
+      "words": 1188,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -208,7 +228,7 @@
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 1128 words",
+        "Useful copy depth: 1188 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -347,7 +367,7 @@
       "file": "subject-crime-state-overlap.html",
       "title": "Crime-State Overlap Brief",
       "grade": 76,
-      "words": 1187,
+      "words": 1165,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -355,7 +375,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 1187 words",
+        "Useful copy depth: 1165 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -366,7 +386,7 @@
       "file": "subject-intelligence-network.html",
       "title": "Intelligence Network Starter File",
       "grade": 76,
-      "words": 1243,
+      "words": 1221,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -374,7 +394,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 1243 words",
+        "Useful copy depth: 1221 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -385,7 +405,7 @@
       "file": "subject-nasa-hidden-architecture.html",
       "title": "NASA Hidden Architecture File",
       "grade": 76,
-      "words": 904,
+      "words": 1151,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
@@ -393,7 +413,7 @@
         "Missing free brief/opt-in route"
       ],
       "strengths": [
-        "Useful copy depth: 904 words",
+        "Useful copy depth: 1151 words",
         "Evidence route present",
         "Book/store route present"
       ],
@@ -649,14 +669,14 @@
       "file": "daily-watch.html",
       "title": "daily watch",
       "grade": 84,
-      "words": 7163,
-      "links": 247,
+      "words": 7814,
+      "links": 249,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 8 conviction"
       ],
       "strengths": [
-        "Useful copy depth: 7163 words",
+        "Useful copy depth: 7814 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -915,14 +935,14 @@
       "file": "dossier-pack-intelligence-network.html",
       "title": "Intelligence Network Pack",
       "grade": 84,
-      "words": 2723,
+      "words": 2708,
       "links": 121,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 2723 words",
+        "Useful copy depth: 2708 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -995,14 +1015,14 @@
       "file": "entity-registry.html",
       "title": "ENTITY REGISTRY",
       "grade": 84,
-      "words": 22118,
-      "links": 589,
+      "words": 22878,
+      "links": 584,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 22118 words",
+        "Useful copy depth: 22878 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1010,12 +1030,9 @@
       ],
       "figures": [
         "$2,000",
-        "€4",
-        "€4",
-        "€4",
-        "€4",
-        "€4",
-        "€4"
+        "$100",
+        "3.5 Million",
+        "3.5 Million"
       ],
       "jsonLinks": 1
     },
@@ -1148,14 +1165,14 @@
       "file": "index.html",
       "title": "Welcome To Matrix Reprogrammed",
       "grade": 84,
-      "words": 1361,
+      "words": 1357,
       "links": 117,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /source pathway/i"
       ],
       "strengths": [
-        "Useful copy depth: 1361 words",
+        "Useful copy depth: 1357 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1365,14 +1382,14 @@
       "file": "relationship-registry.html",
       "title": "RELATIONSHIP REGISTRY",
       "grade": 84,
-      "words": 54828,
+      "words": 54887,
       "links": 839,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i",
         "Visible scaffold/internal copy: /Phase \\d+/i"
       ],
       "strengths": [
-        "Useful copy depth: 54828 words",
+        "Useful copy depth: 54887 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -1444,19 +1461,21 @@
       "file": "source-cards.html",
       "title": "SOURCE CARDS.",
       "grade": 84,
-      "words": 5331,
+      "words": 5552,
       "links": 132,
       "issues": [
         "Missing Rumble/video route",
         "Intel/evidence page missing Live Intel route"
       ],
       "strengths": [
-        "Useful copy depth: 5331 words",
+        "Useful copy depth: 5552 words",
         "Evidence route present",
         "Book/store route present",
         "Opt-in route present"
       ],
-      "figures": [],
+      "figures": [
+        "2.1 million"
+      ],
       "jsonLinks": 1
     },
     {
@@ -1719,13 +1738,13 @@
       "file": "amazon-store-books.html",
       "title": "THE BOOK WALL.",
       "grade": 92,
-      "words": 1144,
+      "words": 1171,
       "links": 62,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1144 words",
+        "Useful copy depth: 1171 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -2669,13 +2688,13 @@
       "file": "black-file-theory.html",
       "title": "BLACK FILE / MISSING RECORD THEORY.",
       "grade": 92,
-      "words": 902,
+      "words": 881,
       "links": 40,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 902 words",
+        "Useful copy depth: 881 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -2688,13 +2707,13 @@
       "file": "black-file.html",
       "title": "THE BLACK FILE",
       "grade": 92,
-      "words": 1697,
+      "words": 1724,
       "links": 90,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1697 words",
+        "Useful copy depth: 1724 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -2973,13 +2992,13 @@
       "file": "book-crime-dossiers.html",
       "title": "The Crime Dossiers",
       "grade": 92,
-      "words": 1069,
+      "words": 1096,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1069 words",
+        "Useful copy depth: 1096 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -3467,13 +3486,13 @@
       "file": "book-dog-the-architect.html",
       "title": "D.O.G The Architect",
       "grade": 92,
-      "words": 1092,
+      "words": 1119,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1092 words",
+        "Useful copy depth: 1119 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -3581,13 +3600,13 @@
       "file": "book-freemasons-degree-1.html",
       "title": "FREEMASONS DEGREE 1 THE TEMPLE OF LIGHT",
       "grade": 92,
-      "words": 1235,
+      "words": 1262,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1235 words",
+        "Useful copy depth: 1262 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -3733,13 +3752,13 @@
       "file": "book-intelligence-dossiers.html",
       "title": "The Intelligence Dossiers",
       "grade": 92,
-      "words": 1094,
+      "words": 1121,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1094 words",
+        "Useful copy depth: 1121 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4018,13 +4037,13 @@
       "file": "book-masons-united-nations.html",
       "title": "Masons in the United Nations",
       "grade": 92,
-      "words": 1066,
+      "words": 1093,
       "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1066 words",
+        "Useful copy depth: 1093 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4550,13 +4569,13 @@
       "file": "brief-quality-report.html",
       "title": "BRIEF QUALITY REPORT",
       "grade": 92,
-      "words": 373,
-      "links": 55,
+      "words": 806,
+      "links": 73,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 373 words",
+        "Useful copy depth: 806 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4721,13 +4740,13 @@
       "file": "card-artwork-queue.html",
       "title": "NEXT CARD ARTWORK QUEUE.",
       "grade": 92,
-      "words": 1793,
+      "words": 1820,
       "links": 42,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1793 words",
+        "Useful copy depth: 1820 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4791,13 +4810,13 @@
       "file": "card-dossier-standard.html",
       "title": "CARD DOSSIER STANDARD.",
       "grade": 92,
-      "words": 572,
-      "links": 52,
+      "words": 655,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 572 words",
+        "Useful copy depth: 655 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4905,13 +4924,13 @@
       "file": "codex.html",
       "title": "THE CODEX",
       "grade": 92,
-      "words": 1104,
+      "words": 1131,
       "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1104 words",
+        "Useful copy depth: 1131 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4924,13 +4943,13 @@
       "file": "conclusion-engine.html",
       "title": "CONCLUSION ENGINE.",
       "grade": 92,
-      "words": 690,
+      "words": 687,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 690 words",
+        "Useful copy depth: 687 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -4943,13 +4962,13 @@
       "file": "conclusions-engine.html",
       "title": "CONCLUSIONS ENGINE.",
       "grade": 92,
-      "words": 905,
+      "words": 909,
       "links": 64,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 905 words",
+        "Useful copy depth: 909 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5000,13 +5019,13 @@
       "file": "control-brain.html",
       "title": "CONTROL BRAIN V2.",
       "grade": 92,
-      "words": 1938,
+      "words": 1927,
       "links": 74,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1938 words",
+        "Useful copy depth: 1927 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5019,13 +5038,13 @@
       "file": "control-map-daily.html",
       "title": "DAILY / WEEKLY VISUAL CONTROL MAP",
       "grade": 92,
-      "words": 661,
+      "words": 660,
       "links": 84,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 661 words",
+        "Useful copy depth: 660 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5186,6 +5205,25 @@
       "jsonLinks": 0
     },
     {
+      "file": "criminal-investigations.html",
+      "title": "CRIMINAL INVESTIGATIONS.",
+      "grade": 92,
+      "words": 2703,
+      "links": 60,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2703 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
       "file": "cross-reference-map.html",
       "title": "CROSS-REFERENCE MAP.",
       "grade": 92,
@@ -5329,13 +5367,13 @@
       "file": "daily-epstein-update.html",
       "title": "DAILY EPSTEIN UPDATE.",
       "grade": 92,
-      "words": 1074,
-      "links": 49,
+      "words": 1309,
+      "links": 63,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1074 words",
+        "Useful copy depth: 1309 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5367,13 +5405,13 @@
       "file": "daily-missing-records.html",
       "title": "DAILY MISSING RECORDS",
       "grade": 92,
-      "words": 1278,
-      "links": 104,
+      "words": 1865,
+      "links": 118,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1278 words",
+        "Useful copy depth: 1865 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5386,20 +5424,20 @@
       "file": "daily-power-conclusions.html",
       "title": "DAILY POWER CONCLUSIONS",
       "grade": 92,
-      "words": 1213,
-      "links": 54,
+      "words": 1291,
+      "links": 88,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1213 words",
+        "Useful copy depth: 1291 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
       "figures": [],
-      "jsonLinks": 2
+      "jsonLinks": 4
     },
     {
       "file": "dark-psychology.html",
@@ -5538,13 +5576,13 @@
       "file": "death-file-aaron-swartz.html",
       "title": "DEATH FILE: AARON SWARTZ",
       "grade": 92,
-      "words": 2169,
+      "words": 2194,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2169 words",
+        "Useful copy depth: 2194 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5560,13 +5598,13 @@
       "file": "death-file-alberto-nisman.html",
       "title": "DEATH FILE: ALBERTO NISMAN",
       "grade": 92,
-      "words": 2408,
+      "words": 2421,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2408 words",
+        "Useful copy depth: 2421 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5582,13 +5620,13 @@
       "file": "death-file-aldo-moro.html",
       "title": "DEATH FILE: ALDO MORO",
       "grade": 92,
-      "words": 2040,
+      "words": 2067,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2040 words",
+        "Useful copy depth: 2067 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5604,13 +5642,13 @@
       "file": "death-file-alexander-litvinenko.html",
       "title": "DEATH FILE: ALEXANDER LITVINENKO",
       "grade": 92,
-      "words": 2042,
+      "words": 2069,
       "links": 50,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2042 words",
+        "Useful copy depth: 2069 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5626,13 +5664,13 @@
       "file": "death-file-alexei-navalny.html",
       "title": "DEATH FILE: ALEXEI NAVALNY",
       "grade": 92,
-      "words": 2445,
+      "words": 2507,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2445 words",
+        "Useful copy depth: 2507 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5640,8 +5678,7 @@
       ],
       "figures": [
         "2024 DEATH",
-        "2024 Case",
-        "2.1 million"
+        "2024 Case"
       ],
       "jsonLinks": 0
     },
@@ -5649,13 +5686,13 @@
       "file": "death-file-alfred-herrhausen.html",
       "title": "DEATH FILE: ALFRED HERRHAUSEN",
       "grade": 92,
-      "words": 2313,
+      "words": 2333,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2313 words",
+        "Useful copy depth: 2333 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5671,13 +5708,13 @@
       "file": "death-file-anna-politkovskaya.html",
       "title": "DEATH FILE: ANNA POLITKOVSKAYA",
       "grade": 92,
-      "words": 2389,
+      "words": 2407,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2389 words",
+        "Useful copy depth: 2407 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5694,13 +5731,13 @@
       "file": "death-file-arshad-sharif.html",
       "title": "DEATH FILE: ARSHAD SHARIF",
       "grade": 92,
-      "words": 2552,
+      "words": 2492,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2552 words",
+        "Useful copy depth: 2492 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5716,13 +5753,13 @@
       "file": "death-file-barry-seal.html",
       "title": "DEATH FILE: BARRY SEAL",
       "grade": 92,
-      "words": 2076,
+      "words": 2103,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2076 words",
+        "Useful copy depth: 2103 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5738,13 +5775,13 @@
       "file": "death-file-benazir-bhutto.html",
       "title": "DEATH FILE: BENAZIR BHUTTO",
       "grade": 92,
-      "words": 2166,
+      "words": 2193,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2166 words",
+        "Useful copy depth: 2193 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5760,13 +5797,13 @@
       "file": "death-file-berta-caceres.html",
       "title": "DEATH FILE: BERTA CÁCERES",
       "grade": 92,
-      "words": 2142,
+      "words": 2169,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2142 words",
+        "Useful copy depth: 2169 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5782,13 +5819,13 @@
       "file": "death-file-beverly-eckert.html",
       "title": "DEATH FILE: BEVERLY ECKERT",
       "grade": 92,
-      "words": 2017,
+      "words": 2044,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2017 words",
+        "Useful copy depth: 2044 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5804,13 +5841,13 @@
       "file": "death-file-boris-berezovsky.html",
       "title": "DEATH FILE: BORIS BEREZOVSKY",
       "grade": 92,
-      "words": 2075,
+      "words": 2102,
       "links": 50,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2075 words",
+        "Useful copy depth: 2102 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5826,13 +5863,13 @@
       "file": "death-file-boris-nemtsov.html",
       "title": "DEATH FILE: BORIS NEMTSOV",
       "grade": 92,
-      "words": 2407,
+      "words": 2430,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2407 words",
+        "Useful copy depth: 2430 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5849,13 +5886,13 @@
       "file": "death-file-bruce-ivins.html",
       "title": "DEATH FILE: BRUCE IVINS",
       "grade": 92,
-      "words": 2044,
+      "words": 2071,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2044 words",
+        "Useful copy depth: 2071 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5871,13 +5908,13 @@
       "file": "death-file-carlos-pizarro-leongomez.html",
       "title": "DEATH FILE: CARLOS PIZARRO LEONGÓMEZ",
       "grade": 92,
-      "words": 2185,
+      "words": 2212,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2185 words",
+        "Useful copy depth: 2212 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5893,13 +5930,13 @@
       "file": "death-file-chico-mendes.html",
       "title": "DEATH FILE: CHICO MENDES",
       "grade": 92,
-      "words": 2448,
+      "words": 2462,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2448 words",
+        "Useful copy depth: 2462 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5907,7 +5944,8 @@
       ],
       "figures": [
         "1988 DEATH",
-        "1988 Case"
+        "1988 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -5915,13 +5953,13 @@
       "file": "death-file-daniel-pearl.html",
       "title": "DEATH FILE: DANIEL PEARL",
       "grade": 92,
-      "words": 2373,
-      "links": 55,
+      "words": 2301,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2373 words",
+        "Useful copy depth: 2301 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5937,13 +5975,13 @@
       "file": "death-file-danny-casolaro.html",
       "title": "DEATH FILE: DANNY CASOLARO",
       "grade": 92,
-      "words": 2316,
-      "links": 53,
+      "words": 2244,
+      "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2316 words",
+        "Useful copy depth: 2244 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5959,13 +5997,13 @@
       "file": "death-file-daphne-caruana-galizia.html",
       "title": "DEATH FILE: DAPHNE CARUANA GALIZIA",
       "grade": 92,
-      "words": 2425,
-      "links": 55,
+      "words": 2353,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2425 words",
+        "Useful copy depth: 2353 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -5981,13 +6019,13 @@
       "file": "death-file-david-kelly.html",
       "title": "DEATH FILE: DAVID KELLY",
       "grade": 92,
-      "words": 2193,
+      "words": 2220,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2193 words",
+        "Useful copy depth: 2220 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6003,13 +6041,13 @@
       "file": "death-file-deborah-jeane-palfrey.html",
       "title": "DEATH FILE: DEBORAH JEANE PALFREY",
       "grade": 92,
-      "words": 2042,
+      "words": 2069,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2042 words",
+        "Useful copy depth: 2069 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6025,13 +6063,13 @@
       "file": "death-file-diana-princess-of-wales.html",
       "title": "DEATH FILE: DIANA, PRINCESS OF WALES",
       "grade": 92,
-      "words": 2444,
+      "words": 2316,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2444 words",
+        "Useful copy depth: 2316 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6047,13 +6085,13 @@
       "file": "death-file-don-bolles.html",
       "title": "DEATH FILE: DON BOLLES",
       "grade": 92,
-      "words": 2374,
-      "links": 55,
+      "words": 2302,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2374 words",
+        "Useful copy depth: 2302 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6069,13 +6107,13 @@
       "file": "death-file-dorothy-kilgallen.html",
       "title": "DEATH FILE: DOROTHY KILGALLEN",
       "grade": 92,
-      "words": 2356,
-      "links": 53,
+      "words": 2284,
+      "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2356 words",
+        "Useful copy depth: 2284 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6091,13 +6129,13 @@
       "file": "death-file-ebrahim-raisi.html",
       "title": "DEATH FILE: EBRAHIM RAISI",
       "grade": 92,
-      "words": 2460,
+      "words": 2476,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2460 words",
+        "Useful copy depth: 2476 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6113,13 +6151,13 @@
       "file": "death-file-edmond-safra.html",
       "title": "DEATH FILE: EDMOND SAFRA",
       "grade": 92,
-      "words": 2213,
-      "links": 53,
+      "words": 2179,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2213 words",
+        "Useful copy depth: 2179 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6135,13 +6173,13 @@
       "file": "death-file-eduardo-frei-montalva.html",
       "title": "DEATH FILE: EDUARDO FREI MONTALVA",
       "grade": 92,
-      "words": 2258,
+      "words": 2285,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2258 words",
+        "Useful copy depth: 2285 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6157,13 +6195,13 @@
       "file": "death-file-fred-hampton.html",
       "title": "DEATH FILE: FRED HAMPTON",
       "grade": 92,
-      "words": 2063,
+      "words": 2090,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2063 words",
+        "Useful copy depth: 2090 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6179,13 +6217,13 @@
       "file": "death-file-gareth-williams.html",
       "title": "DEATH FILE: GARETH WILLIAMS",
       "grade": 92,
-      "words": 2029,
+      "words": 2056,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2029 words",
+        "Useful copy depth: 2056 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6201,13 +6239,13 @@
       "file": "death-file-gary-webb.html",
       "title": "DEATH FILE: GARY WEBB",
       "grade": 92,
-      "words": 2291,
+      "words": 2317,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2291 words",
+        "Useful copy depth: 2317 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6215,7 +6253,8 @@
       ],
       "figures": [
         "2004 DEATH",
-        "2004 Case"
+        "2004 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -6223,13 +6262,13 @@
       "file": "death-file-georgi-markov.html",
       "title": "DEATH FILE: GEORGI MARKOV",
       "grade": 92,
-      "words": 2221,
+      "words": 2246,
       "links": 59,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2221 words",
+        "Useful copy depth: 2246 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6245,13 +6284,13 @@
       "file": "death-file-gerald-bull.html",
       "title": "DEATH FILE: GERALD BULL",
       "grade": 92,
-      "words": 2304,
+      "words": 2331,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2304 words",
+        "Useful copy depth: 2331 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6267,13 +6306,13 @@
       "file": "death-file-hale-boggs.html",
       "title": "DEATH FILE: HALE BOGGS",
       "grade": 92,
-      "words": 2328,
+      "words": 2435,
       "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2328 words",
+        "Useful copy depth: 2435 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6289,13 +6328,13 @@
       "file": "death-file-harvey-milk.html",
       "title": "DEATH FILE: HARVEY MILK",
       "grade": 92,
-      "words": 2242,
-      "links": 52,
+      "words": 2146,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2242 words",
+        "Useful copy depth: 2146 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6311,13 +6350,13 @@
       "file": "death-file-hrant-dink.html",
       "title": "DEATH FILE: HRANT DINK",
       "grade": 92,
-      "words": 2336,
-      "links": 56,
+      "words": 2264,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2336 words",
+        "Useful copy depth: 2264 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6333,13 +6372,13 @@
       "file": "death-file-hugo-chavez.html",
       "title": "DEATH FILE: HUGO CHÁVEZ",
       "grade": 92,
-      "words": 2269,
+      "words": 2296,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2269 words",
+        "Useful copy depth: 2296 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6355,13 +6394,13 @@
       "file": "death-file-indira-gandhi.html",
       "title": "DEATH FILE: INDIRA GANDHI",
       "grade": 92,
-      "words": 2317,
-      "links": 57,
+      "words": 2333,
+      "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2317 words",
+        "Useful copy depth: 2333 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6377,13 +6416,13 @@
       "file": "death-file-jaime-roldos-aguilera.html",
       "title": "DEATH FILE: JAIME ROLDÓS AGUILERA",
       "grade": 92,
-      "words": 2174,
+      "words": 2201,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2174 words",
+        "Useful copy depth: 2201 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6399,13 +6438,13 @@
       "file": "death-file-jamal-khashoggi.html",
       "title": "DEATH FILE: JAMAL KHASHOGGI",
       "grade": 92,
-      "words": 2409,
-      "links": 55,
+      "words": 2337,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2409 words",
+        "Useful copy depth: 2337 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6421,13 +6460,13 @@
       "file": "death-file-james-le-mesurier.html",
       "title": "DEATH FILE: JAMES LE MESURIER",
       "grade": 92,
-      "words": 2237,
-      "links": 54,
+      "words": 2234,
+      "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2237 words",
+        "Useful copy depth: 2234 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6443,13 +6482,13 @@
       "file": "death-file-jan-kuciak.html",
       "title": "DEATH FILE: JAN KUCIAK",
       "grade": 92,
-      "words": 2449,
+      "words": 2401,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2449 words",
+        "Useful copy depth: 2401 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6465,13 +6504,13 @@
       "file": "death-file-jeffrey-epstein.html",
       "title": "DEATH FILE: JEFFREY EPSTEIN",
       "grade": 92,
-      "words": 2341,
+      "words": 2340,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2341 words",
+        "Useful copy depth: 2340 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6487,13 +6526,13 @@
       "file": "death-file-jimmy-hoffa.html",
       "title": "DEATH FILE: JIMMY HOFFA",
       "grade": 92,
-      "words": 2323,
+      "words": 2296,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2323 words",
+        "Useful copy depth: 2296 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6509,13 +6548,13 @@
       "file": "death-file-john-f-kennedy-jr.html",
       "title": "DEATH FILE: JOHN F. KENNEDY JR.",
       "grade": 92,
-      "words": 2038,
+      "words": 2065,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2038 words",
+        "Useful copy depth: 2065 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6531,13 +6570,13 @@
       "file": "death-file-john-f-kennedy.html",
       "title": "DEATH FILE: JOHN F. KENNEDY",
       "grade": 92,
-      "words": 2382,
+      "words": 2408,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2382 words",
+        "Useful copy depth: 2408 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6545,7 +6584,8 @@
       ],
       "figures": [
         "1963 DEATH",
-        "1963 Case"
+        "1963 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -6553,13 +6593,13 @@
       "file": "death-file-john-garang.html",
       "title": "DEATH FILE: JOHN GARANG",
       "grade": 92,
-      "words": 2294,
-      "links": 53,
+      "words": 2258,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2294 words",
+        "Useful copy depth: 2258 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6575,13 +6615,13 @@
       "file": "death-file-john-mcafee.html",
       "title": "DEATH FILE: JOHN MCAFEE",
       "grade": 92,
-      "words": 2047,
+      "words": 2074,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2047 words",
+        "Useful copy depth: 2074 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6597,13 +6637,13 @@
       "file": "death-file-john-paisley.html",
       "title": "DEATH FILE: JOHN PAISLEY",
       "grade": 92,
-      "words": 2310,
+      "words": 2336,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2310 words",
+        "Useful copy depth: 2336 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6611,7 +6651,8 @@
       ],
       "figures": [
         "1978 DEATH",
-        "1978 Case"
+        "1978 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -6619,13 +6660,13 @@
       "file": "death-file-jovenel-moise.html",
       "title": "DEATH FILE: JOVENEL MOÏSE",
       "grade": 92,
-      "words": 2185,
-      "links": 51,
+      "words": 2269,
+      "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2185 words",
+        "Useful copy depth: 2269 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6641,13 +6682,13 @@
       "file": "death-file-karen-silkwood.html",
       "title": "DEATH FILE: KAREN SILKWOOD",
       "grade": 92,
-      "words": 2418,
+      "words": 2459,
       "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2418 words",
+        "Useful copy depth: 2459 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6663,13 +6704,13 @@
       "file": "death-file-ken-saro-wiwa.html",
       "title": "DEATH FILE: KEN SARO-WIWA",
       "grade": 92,
-      "words": 2269,
+      "words": 2296,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2269 words",
+        "Useful copy depth: 2296 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6685,13 +6726,13 @@
       "file": "death-file-kim-jong-nam.html",
       "title": "DEATH FILE: KIM JONG-NAM",
       "grade": 92,
-      "words": 2309,
+      "words": 2336,
       "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2309 words",
+        "Useful copy depth: 2336 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6707,13 +6748,13 @@
       "file": "death-file-lasantha-wickrematunge.html",
       "title": "DEATH FILE: LASANTHA WICKREMATUNGE",
       "grade": 92,
-      "words": 2374,
-      "links": 55,
+      "words": 2302,
+      "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2374 words",
+        "Useful copy depth: 2302 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6729,13 +6770,13 @@
       "file": "death-file-lech-kaczynski.html",
       "title": "DEATH FILE: LECH KACZYŃSKI",
       "grade": 92,
-      "words": 2384,
+      "words": 2435,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2384 words",
+        "Useful copy depth: 2435 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6743,8 +6784,7 @@
       ],
       "figures": [
         "2010 DEATH",
-        "2010 Case",
-        "2.1 million"
+        "2010 Case"
       ],
       "jsonLinks": 0
     },
@@ -6752,13 +6792,13 @@
       "file": "death-file-luis-carlos-galan.html",
       "title": "DEATH FILE: LUIS CARLOS GALÁN",
       "grade": 92,
-      "words": 2342,
+      "words": 2371,
       "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2342 words",
+        "Useful copy depth: 2371 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6774,13 +6814,13 @@
       "file": "death-file-malcolm-x.html",
       "title": "DEATH FILE: MALCOLM X",
       "grade": 92,
-      "words": 2293,
+      "words": 2320,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2293 words",
+        "Useful copy depth: 2320 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6796,13 +6836,13 @@
       "file": "death-file-marie-colvin.html",
       "title": "DEATH FILE: MARIE COLVIN",
       "grade": 92,
-      "words": 2408,
+      "words": 2362,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2408 words",
+        "Useful copy depth: 2362 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6818,13 +6858,13 @@
       "file": "death-file-marielle-franco.html",
       "title": "DEATH FILE: MARIELLE FRANCO",
       "grade": 92,
-      "words": 2226,
-      "links": 54,
+      "words": 2333,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2226 words",
+        "Useful copy depth: 2333 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6840,13 +6880,13 @@
       "file": "death-file-mark-lombardi.html",
       "title": "DEATH FILE: MARK LOMBARDI",
       "grade": 92,
-      "words": 2175,
+      "words": 2202,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2175 words",
+        "Useful copy depth: 2202 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6862,13 +6902,13 @@
       "file": "death-file-martin-luther-king-jr.html",
       "title": "DEATH FILE: MARTIN LUTHER KING JR.",
       "grade": 92,
-      "words": 2303,
+      "words": 2330,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2303 words",
+        "Useful copy depth: 2330 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6884,13 +6924,13 @@
       "file": "death-file-michael-connell.html",
       "title": "DEATH FILE: MICHAEL CONNELL",
       "grade": 92,
-      "words": 1989,
-      "links": 49,
+      "words": 2187,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1989 words",
+        "Useful copy depth: 2187 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6906,13 +6946,13 @@
       "file": "death-file-michael-hastings.html",
       "title": "DEATH FILE: MICHAEL HASTINGS",
       "grade": 92,
-      "words": 2222,
+      "words": 2249,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2222 words",
+        "Useful copy depth: 2249 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6928,13 +6968,13 @@
       "file": "death-file-michele-sindona.html",
       "title": "DEATH FILE: MICHELE SINDONA",
       "grade": 92,
-      "words": 2148,
-      "links": 53,
+      "words": 2114,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2148 words",
+        "Useful copy depth: 2114 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6950,13 +6990,13 @@
       "file": "death-file-mikhail-lesin.html",
       "title": "DEATH FILE: MIKHAIL LESIN",
       "grade": 92,
-      "words": 2013,
+      "words": 2040,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2013 words",
+        "Useful copy depth: 2040 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6972,13 +7012,13 @@
       "file": "death-file-mko-abiola.html",
       "title": "DEATH FILE: M.K.O. ABIOLA",
       "grade": 92,
-      "words": 2233,
+      "words": 2260,
       "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2233 words",
+        "Useful copy depth: 2260 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -6994,13 +7034,13 @@
       "file": "death-file-mohsen-fakhrizadeh.html",
       "title": "DEATH FILE: MOHSEN FAKHRIZADEH",
       "grade": 92,
-      "words": 2013,
+      "words": 2040,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2013 words",
+        "Useful copy depth: 2040 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7016,13 +7056,13 @@
       "file": "death-file-muammar-gaddafi.html",
       "title": "DEATH FILE: MUAMMAR GADDAFI",
       "grade": 92,
-      "words": 2398,
-      "links": 57,
+      "words": 2373,
+      "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2398 words",
+        "Useful copy depth: 2373 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7038,13 +7078,13 @@
       "file": "death-file-muhammad-zia-ul-haq.html",
       "title": "DEATH FILE: MUHAMMAD ZIA-UL-HAQ",
       "grade": 92,
-      "words": 2198,
+      "words": 2225,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2198 words",
+        "Useful copy depth: 2225 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7060,13 +7100,13 @@
       "file": "death-file-nancy-schaefer.html",
       "title": "DEATH FILE: NANCY SCHAEFER",
       "grade": 92,
-      "words": 2182,
+      "words": 2209,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2182 words",
+        "Useful copy depth: 2209 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7082,13 +7122,13 @@
       "file": "death-file-olof-palme.html",
       "title": "DEATH FILE: OLOF PALME",
       "grade": 92,
-      "words": 2024,
-      "links": 49,
+      "words": 2090,
+      "links": 50,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2024 words",
+        "Useful copy depth: 2090 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7104,13 +7144,13 @@
       "file": "death-file-omar-torrijos.html",
       "title": "DEATH FILE: OMAR TORRIJOS",
       "grade": 92,
-      "words": 2288,
+      "words": 2314,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2288 words",
+        "Useful copy depth: 2314 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7118,7 +7158,8 @@
       ],
       "figures": [
         "1981 DEATH",
-        "1981 Case"
+        "1981 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -7126,13 +7167,13 @@
       "file": "death-file-orlando-letelier.html",
       "title": "DEATH FILE: ORLANDO LETELIER",
       "grade": 92,
-      "words": 2223,
-      "links": 59,
+      "words": 2241,
+      "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2223 words",
+        "Useful copy depth: 2241 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7148,13 +7189,13 @@
       "file": "death-file-oscar-romero.html",
       "title": "DEATH FILE: ÓSCAR ROMERO",
       "grade": 92,
-      "words": 2371,
+      "words": 2379,
       "links": 54,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2371 words",
+        "Useful copy depth: 2379 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7170,13 +7211,13 @@
       "file": "death-file-pablo-neruda.html",
       "title": "DEATH FILE: PABLO NERUDA",
       "grade": 92,
-      "words": 2067,
+      "words": 2094,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2067 words",
+        "Useful copy depth: 2094 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7192,13 +7233,13 @@
       "file": "death-file-paul-wellstone.html",
       "title": "DEATH FILE: PAUL WELLSTONE",
       "grade": 92,
-      "words": 1988,
+      "words": 2015,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1988 words",
+        "Useful copy depth: 2015 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7214,13 +7255,13 @@
       "file": "death-file-peter-r-de-vries.html",
       "title": "DEATH FILE: PETER R. DE VRIES",
       "grade": 92,
-      "words": 2460,
+      "words": 2417,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2460 words",
+        "Useful copy depth: 2417 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7236,13 +7277,13 @@
       "file": "death-file-rafik-hariri.html",
       "title": "DEATH FILE: RAFIK HARIRI",
       "grade": 92,
-      "words": 2308,
+      "words": 2331,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2308 words",
+        "Useful copy depth: 2331 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7258,13 +7299,13 @@
       "file": "death-file-robert-f-kennedy.html",
       "title": "DEATH FILE: ROBERT F. KENNEDY",
       "grade": 92,
-      "words": 2318,
+      "words": 2344,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2318 words",
+        "Useful copy depth: 2344 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7272,7 +7313,8 @@
       ],
       "figures": [
         "1968 DEATH",
-        "1968 Case"
+        "1968 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -7280,13 +7322,13 @@
       "file": "death-file-robert-maxwell.html",
       "title": "DEATH FILE: ROBERT MAXWELL",
       "grade": 92,
-      "words": 2014,
+      "words": 2041,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2014 words",
+        "Useful copy depth: 2041 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7302,13 +7344,13 @@
       "file": "death-file-roberto-calvi.html",
       "title": "DEATH FILE: ROBERTO CALVI",
       "grade": 92,
-      "words": 2176,
-      "links": 53,
+      "words": 2142,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2176 words",
+        "Useful copy depth: 2142 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7324,13 +7366,13 @@
       "file": "death-file-ron-brown.html",
       "title": "DEATH FILE: RON BROWN",
       "grade": 92,
-      "words": 2238,
+      "words": 2335,
       "links": 59,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2238 words",
+        "Useful copy depth: 2335 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7346,13 +7388,13 @@
       "file": "death-file-salvador-allende.html",
       "title": "DEATH FILE: SALVADOR ALLENDE",
       "grade": 92,
-      "words": 2314,
+      "words": 2340,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2314 words",
+        "Useful copy depth: 2340 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7360,7 +7402,8 @@
       ],
       "figures": [
         "1973 DEATH",
-        "1973 Case"
+        "1973 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -7368,13 +7411,13 @@
       "file": "death-file-samora-machel.html",
       "title": "DEATH FILE: SAMORA MACHEL",
       "grade": 92,
-      "words": 2177,
+      "words": 2204,
       "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2177 words",
+        "Useful copy depth: 2204 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7390,13 +7433,13 @@
       "file": "death-file-sergei-magnitsky.html",
       "title": "DEATH FILE: SERGEI MAGNITSKY",
       "grade": 92,
-      "words": 2418,
+      "words": 2490,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2418 words",
+        "Useful copy depth: 2490 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7404,8 +7447,7 @@
       ],
       "figures": [
         "2009 DEATH",
-        "2009 Case",
-        "2.1 million"
+        "2009 Case"
       ],
       "jsonLinks": 0
     },
@@ -7413,13 +7455,13 @@
       "file": "death-file-seth-rich.html",
       "title": "DEATH FILE: SETH RICH",
       "grade": 92,
-      "words": 2355,
+      "words": 2322,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2355 words",
+        "Useful copy depth: 2322 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7435,13 +7477,13 @@
       "file": "death-file-shinzo-abe.html",
       "title": "DEATH FILE: SHINZO ABE",
       "grade": 92,
-      "words": 2342,
-      "links": 55,
+      "words": 2371,
+      "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2342 words",
+        "Useful copy depth: 2371 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7457,13 +7499,13 @@
       "file": "death-file-shireen-abu-akleh.html",
       "title": "DEATH FILE: SHIREEN ABU AKLEH",
       "grade": 92,
-      "words": 2357,
-      "links": 54,
+      "words": 2285,
+      "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2357 words",
+        "Useful copy depth: 2285 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7479,13 +7521,13 @@
       "file": "death-file-stanley-meyer.html",
       "title": "DEATH FILE: STANLEY MEYER",
       "grade": 92,
-      "words": 2408,
+      "words": 2437,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2408 words",
+        "Useful copy depth: 2437 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7501,13 +7543,13 @@
       "file": "death-file-steve-biko.html",
       "title": "DEATH FILE: STEVE BIKO",
       "grade": 92,
-      "words": 1994,
+      "words": 2021,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1994 words",
+        "Useful copy depth: 2021 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7523,13 +7565,13 @@
       "file": "death-file-thomas-sankara.html",
       "title": "DEATH FILE: THOMAS SANKARA",
       "grade": 92,
-      "words": 2256,
+      "words": 2283,
       "links": 52,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2256 words",
+        "Useful copy depth: 2283 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7545,13 +7587,13 @@
       "file": "death-file-tom-ogle.html",
       "title": "DEATH FILE: TOM OGLE",
       "grade": 92,
-      "words": 2341,
+      "words": 2305,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2341 words",
+        "Useful copy depth: 2305 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7567,13 +7609,13 @@
       "file": "death-file-ugur-mumcu.html",
       "title": "DEATH FILE: UĞUR MUMCU",
       "grade": 92,
-      "words": 2362,
-      "links": 56,
+      "words": 2290,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2362 words",
+        "Useful copy depth: 2290 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7589,13 +7631,13 @@
       "file": "death-file-veronica-guerin.html",
       "title": "DEATH FILE: VERONICA GUERIN",
       "grade": 92,
-      "words": 2395,
+      "words": 2352,
       "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2395 words",
+        "Useful copy depth: 2352 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7611,13 +7653,13 @@
       "file": "death-file-vince-foster.html",
       "title": "DEATH FILE: VINCE FOSTER",
       "grade": 92,
-      "words": 1985,
+      "words": 2012,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1985 words",
+        "Useful copy depth: 2012 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7633,13 +7675,13 @@
       "file": "death-file-william-colby.html",
       "title": "DEATH FILE: WILLIAM COLBY",
       "grade": 92,
-      "words": 2317,
+      "words": 2343,
       "links": 58,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2317 words",
+        "Useful copy depth: 2343 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7647,7 +7689,8 @@
       ],
       "figures": [
         "1996 DEATH",
-        "1996 Case"
+        "1996 Case",
+        "1 Death"
       ],
       "jsonLinks": 0
     },
@@ -7655,13 +7698,13 @@
       "file": "death-file-yasser-arafat.html",
       "title": "DEATH FILE: YASSER ARAFAT",
       "grade": 92,
-      "words": 2016,
-      "links": 49,
+      "words": 2082,
+      "links": 50,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2016 words",
+        "Useful copy depth: 2082 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7677,13 +7720,13 @@
       "file": "death-file-yevgeny-prigozhin.html",
       "title": "DEATH FILE: YEVGENY PRIGOZHIN",
       "grade": 92,
-      "words": 2118,
+      "words": 2145,
       "links": 50,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2118 words",
+        "Useful copy depth: 2145 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7699,13 +7742,13 @@
       "file": "death-file-yitzhak-rabin.html",
       "title": "DEATH FILE: YITZHAK RABIN",
       "grade": 92,
-      "words": 1984,
+      "words": 2011,
       "links": 49,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1984 words",
+        "Useful copy depth: 2011 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -7721,13 +7764,13 @@
       "file": "death-file-zoran-djindjic.html",
       "title": "DEATH FILE: ZORAN ĐINĐIĆ",
       "grade": 92,
-      "words": 2221,
+      "words": 2248,
       "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2221 words",
+        "Useful copy depth: 2248 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8833,13 +8876,13 @@
       "file": "deep-intel-feed.html",
       "title": "DEEP INTEL FEED MATRIX.",
       "grade": 92,
-      "words": 1009,
+      "words": 963,
       "links": 83,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1009 words",
+        "Useful copy depth: 963 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8930,16 +8973,56 @@
       "jsonLinks": 0
     },
     {
-      "file": "dossier-alex-karp.html",
-      "title": "Loading dossier...",
+      "file": "dossier-abdul-halim-khan.html",
+      "title": "ABDUL HALIM KHAN",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1793,
+      "links": 51,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1793 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-adam-taylor-nca.html",
+      "title": "ADAM TAYLOR",
+      "grade": 92,
+      "words": 1702,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1702 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2024. Case"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-alex-karp.html",
+      "title": "Loading dossier...",
+      "grade": 92,
+      "words": 1143,
+      "links": 60,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8947,18 +9030,96 @@
       ],
       "figures": [],
       "jsonLinks": 1
+    },
+    {
+      "file": "dossier-anthony-weiner.html",
+      "title": "ANTHONY WEINER",
+      "grade": 92,
+      "words": 1752,
+      "links": 52,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1752 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-conor-mcgrath.html",
+      "title": "CONOR MCGRATH",
+      "grade": 92,
+      "words": 1693,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1693 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2026. Case"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-cyril-smith.html",
+      "title": "CYRIL SMITH",
+      "grade": 92,
+      "words": 2026,
+      "links": 53,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2026 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-david-james-clarke.html",
+      "title": "DAVID JAMES CLARKE",
+      "grade": 92,
+      "words": 1725,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1725 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
     },
     {
       "file": "dossier-elon-musk.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8966,18 +9127,105 @@
       ],
       "figures": [],
       "jsonLinks": 1
+    },
+    {
+      "file": "dossier-george-nader.html",
+      "title": "GEORGE A. NADER",
+      "grade": 92,
+      "words": 1850,
+      "links": 52,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1850 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "$25,000",
+        "$150,000",
+        "1991 conviction",
+        "$25,000",
+        "$150,000",
+        "1991 conviction"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-ghislaine-maxwell-criminal.html",
+      "title": "GHISLAINE MAXWELL",
+      "grade": 92,
+      "words": 1957,
+      "links": 53,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1957 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2025. Case"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-greville-janner.html",
+      "title": "GREVILLE JANNER",
+      "grade": 92,
+      "words": 2030,
+      "links": 53,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2030 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-huw-edwards.html",
+      "title": "HUW EDWARDS",
+      "grade": 92,
+      "words": 1721,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1721 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2024. Case"
+      ],
+      "jsonLinks": 0
     },
     {
       "file": "dossier-jeff-bezos.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -8985,18 +9233,41 @@
       ],
       "figures": [],
       "jsonLinks": 1
+    },
+    {
+      "file": "dossier-jeffrey-epstein-criminal.html",
+      "title": "JEFFREY EPSTEIN",
+      "grade": 92,
+      "words": 2300,
+      "links": 55,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2300 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2008 conviction",
+        "2019 case",
+        "2008 conviction"
+      ],
+      "jsonLinks": 0
     },
     {
       "file": "dossier-jensen-huang.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9006,16 +9277,75 @@
       "jsonLinks": 1
     },
     {
-      "file": "dossier-larry-ellison.html",
-      "title": "Loading dossier...",
+      "file": "dossier-jimmy-savile.html",
+      "title": "JIMMY SAVILE",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 2125,
+      "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 2125 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-joel-greenberg.html",
+      "title": "JOEL MICAH GREENBERG",
+      "grade": 92,
+      "words": 2115,
+      "links": 53,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2115 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-keith-raniere.html",
+      "title": "KEITH RANIERE",
+      "grade": 92,
+      "words": 1853,
+      "links": 52,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1853 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2020. Case"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-larry-ellison.html",
+      "title": "Loading dossier...",
+      "grade": 92,
+      "words": 1143,
+      "links": 60,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9028,13 +9358,13 @@
       "file": "dossier-larry-fink.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1033,
-      "links": 57,
+      "words": 1142,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1033 words",
+        "Useful copy depth: 1142 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9042,18 +9372,58 @@
       ],
       "figures": [],
       "jsonLinks": 1
+    },
+    {
+      "file": "dossier-larry-nassar.html",
+      "title": "LARRY NASSAR",
+      "grade": 92,
+      "words": 2324,
+      "links": 56,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2324 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-lawrence-ray.html",
+      "title": "LAWRENCE RAY",
+      "grade": 92,
+      "words": 1789,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1789 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "2023. Case"
+      ],
+      "jsonLinks": 0
     },
     {
       "file": "dossier-mark-zuckerberg.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9063,16 +9433,95 @@
       "jsonLinks": 1
     },
     {
-      "file": "dossier-sam-altman.html",
-      "title": "Loading dossier...",
+      "file": "dossier-peter-ball.html",
+      "title": "PETER BALL",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 2070,
+      "links": 53,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 2070 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-r-kelly.html",
+      "title": "R. KELLY",
+      "grade": 92,
+      "words": 2578,
+      "links": 56,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 2578 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-ralph-shortey.html",
+      "title": "RALPH SHORTEY",
+      "grade": 92,
+      "words": 1718,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1718 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [
+        "$125,000",
+        "$125,000"
+      ],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-robert-hadden.html",
+      "title": "ROBERT HADDEN",
+      "grade": 92,
+      "words": 1772,
+      "links": 51,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1772 words",
+        "Evidence route present",
+        "Book/store route present",
+        "Video route present",
+        "Opt-in route present"
+      ],
+      "figures": [],
+      "jsonLinks": 0
+    },
+    {
+      "file": "dossier-sam-altman.html",
+      "title": "Loading dossier...",
+      "grade": 92,
+      "words": 1143,
+      "links": 60,
+      "issues": [
+        "Visible scaffold/internal copy: /Reader path/i"
+      ],
+      "strengths": [
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9085,13 +9534,13 @@
       "file": "dossier-satya-nadella.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9104,13 +9553,13 @@
       "file": "dossier-sundar-pichai.html",
       "title": "Loading dossier...",
       "grade": 92,
-      "words": 1034,
-      "links": 57,
+      "words": 1143,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1034 words",
+        "Useful copy depth: 1143 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9161,13 +9610,13 @@
       "file": "elite-reports.html",
       "title": "ELITE REPORTS.",
       "grade": 92,
-      "words": 1463,
+      "words": 1455,
       "links": 95,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1463 words",
+        "Useful copy depth: 1455 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9198,13 +9647,13 @@
       "file": "emergency-power-theory.html",
       "title": "EMERGENCY POWER THEORY.",
       "grade": 92,
-      "words": 853,
-      "links": 40,
+      "words": 1481,
+      "links": 42,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 853 words",
+        "Useful copy depth: 1481 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9236,51 +9685,51 @@
       "file": "entity-daily-briefs.html",
       "title": "ENTITY DAILY BRIEFS.",
       "grade": 92,
-      "words": 942,
-      "links": 72,
+      "words": 1955,
+      "links": 108,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 942 words",
+        "Useful copy depth: 1955 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
       "figures": [],
-      "jsonLinks": 18
+      "jsonLinks": 36
     },
     {
       "file": "entity-exposure-index.html",
       "title": "ENTITY EXPOSURE INDEX.",
       "grade": 92,
-      "words": 1019,
-      "links": 72,
+      "words": 1963,
+      "links": 108,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1019 words",
+        "Useful copy depth: 1963 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
       "figures": [],
-      "jsonLinks": 18
+      "jsonLinks": 36
     },
     {
       "file": "entity-relationship-map.html",
       "title": "ENTITY RELATIONSHIP MAP.",
       "grade": 92,
-      "words": 973,
-      "links": 39,
+      "words": 1083,
+      "links": 42,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 973 words",
+        "Useful copy depth: 1083 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -9293,13 +9742,13 @@
       "file": "entity-timelines.html",
       "title": "ENTITY TIMELINES",
       "grade": 92,
-      "words": 470,
-      "links": 61,
+      "words": 523,
+      "links": 73,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 470 words",
+        "Useful copy depth: 523 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10495,13 +10944,13 @@
       "file": "institution-deck.html",
       "title": "INSTITUTION DECK.",
       "grade": 92,
-      "words": 2084,
+      "words": 2111,
       "links": 198,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2084 words",
+        "Useful copy depth: 2111 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10514,13 +10963,13 @@
       "file": "institutional-capture-theory.html",
       "title": "INSTITUTIONAL CAPTURE THEORY.",
       "grade": 92,
-      "words": 936,
+      "words": 947,
       "links": 40,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 936 words",
+        "Useful copy depth: 947 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10576,13 +11025,13 @@
       "file": "intel-vault.html",
       "title": "INTEL VAULT.",
       "grade": 92,
-      "words": 28637,
-      "links": 950,
+      "words": 28580,
+      "links": 940,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 28637 words",
+        "Useful copy depth: 28580 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10598,13 +11047,13 @@
       "file": "intelligence-dossiers.html",
       "title": "THE INTELLIGENCE DOSSIERS",
       "grade": 92,
-      "words": 1125,
+      "words": 1152,
       "links": 55,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1125 words",
+        "Useful copy depth: 1152 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10769,13 +11218,13 @@
       "file": "live-intel.html",
       "title": "LIVE INTEL.",
       "grade": 92,
-      "words": 18869,
-      "links": 534,
+      "words": 14712,
+      "links": 402,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 18869 words",
+        "Useful copy depth: 14712 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10790,13 +11239,13 @@
       "file": "machine-digest.html",
       "title": "MACHINE DIGEST.",
       "grade": 92,
-      "words": 753,
-      "links": 51,
+      "words": 876,
+      "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 753 words",
+        "Useful copy depth: 876 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -10809,13 +11258,13 @@
       "file": "machine-intelligence.html",
       "title": "MACHINE INTELLIGENCE.",
       "grade": 92,
-      "words": 383,
-      "links": 39,
+      "words": 994,
+      "links": 45,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 383 words",
+        "Useful copy depth: 994 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -11775,13 +12224,13 @@
       "file": "power-conclusions.html",
       "title": "POWER CONCLUSIONS.",
       "grade": 92,
-      "words": 891,
+      "words": 895,
       "links": 57,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 891 words",
+        "Useful copy depth: 895 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -11853,13 +12302,13 @@
       "file": "power-structure-map.html",
       "title": "POWER MAP.",
       "grade": 92,
-      "words": 1715,
-      "links": 146,
+      "words": 1418,
+      "links": 133,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1715 words",
+        "Useful copy depth: 1418 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -11877,19 +12326,25 @@
       "file": "predators-in-power.html",
       "title": "PREDATORS IN POWER.",
       "grade": 92,
-      "words": 1495,
-      "links": 40,
+      "words": 8840,
+      "links": 119,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1495 words",
+        "Useful copy depth: 8840 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
         "Opt-in route present"
       ],
-      "figures": [],
+      "figures": [
+        "2008 conviction",
+        "$25,000",
+        "$150,000",
+        "1991 conviction",
+        "$125,000"
+      ],
       "jsonLinks": 1
     },
     {
@@ -11985,13 +12440,13 @@
       "file": "public-record-dossiers.html",
       "title": "DOSSIERS & PUBLIC RECORD",
       "grade": 92,
-      "words": 1109,
+      "words": 1136,
       "links": 56,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1109 words",
+        "Useful copy depth: 1136 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -12080,13 +12535,13 @@
       "file": "review-dashboard.html",
       "title": "REVIEW DASHBOARD.",
       "grade": 92,
-      "words": 2969,
+      "words": 2992,
       "links": 102,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2969 words",
+        "Useful copy depth: 2992 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -12416,13 +12871,13 @@
       "file": "site-brain-router.html",
       "title": "SITE BRAIN ROUTER.",
       "grade": 92,
-      "words": 2236,
+      "words": 2263,
       "links": 42,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 2236 words",
+        "Useful copy depth: 2263 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -12492,13 +12947,13 @@
       "file": "source-changes.html",
       "title": "SOURCE CHANGE LEDGER",
       "grade": 92,
-      "words": 46824,
-      "links": 170,
+      "words": 46828,
+      "links": 171,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 46824 words",
+        "Useful copy depth: 46828 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -13601,13 +14056,13 @@
       "file": "videos.html",
       "title": "TURN THE FILES INTO TRANSMISSIONS.",
       "grade": 92,
-      "words": 1208,
+      "words": 1235,
       "links": 65,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 1208 words",
+        "Useful copy depth: 1235 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -13696,13 +14151,13 @@
       "file": "wrongdoing-tracker.html",
       "title": "WRONGDOING TRACKER.",
       "grade": 92,
-      "words": 503,
-      "links": 58,
+      "words": 532,
+      "links": 60,
       "issues": [
         "Visible scaffold/internal copy: /Reader path/i"
       ],
       "strengths": [
-        "Useful copy depth: 503 words",
+        "Useful copy depth: 532 words",
         "Evidence route present",
         "Book/store route present",
         "Video route present",
@@ -14258,23 +14713,6 @@
       ],
       "figures": [],
       "jsonLinks": 10
-    },
-    {
-      "file": "site-population-audit.html",
-      "title": "Site Population Audit",
-      "grade": 100,
-      "words": 496,
-      "links": 8,
-      "issues": [],
-      "strengths": [
-        "Useful copy depth: 496 words",
-        "Evidence route present",
-        "Book/store route present",
-        "Video route present",
-        "Opt-in route present"
-      ],
-      "figures": [],
-      "jsonLinks": 0
     }
   ]
 }

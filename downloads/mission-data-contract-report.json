@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:24:45.520Z",
+  "generatedAt": "2026-07-28T06:59:22.517Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-07-28T06:24:44.951Z",
+    "generatedAt": "2026-07-28T06:59:22.083Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
@@ -27,7 +27,7 @@
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-07-28T06:24:45.249Z",
+    "generatedAt": "2026-07-28T06:59:22.301Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,14 +60,14 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-07-28T06:24:45.485Z",
+    "generatedAt": "2026-07-28T06:59:22.487Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
     "remainingToTarget": 80,
     "targetReached": false,
-    "dossierPagesDetected": 196,
-    "registryMatchedPages": 20,
+    "dossierPagesDetected": 216,
+    "registryMatchedPages": 40,
     "noApprovedMatchPages": 176,
     "missingNativeRoutes": [],
     "missingPanels": [],
@@ -559,12 +559,66 @@
         "statusPanelPresent": true
       },
       {
+        "route": "_site/dossier-abdul-halim-khan.html",
+        "title": "ABDUL HALIM KHAN",
+        "matchedSubject": "Abdul Halim Khan",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-abdul-halim-khan.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-adam-taylor-nca.html",
+        "title": "ADAM TAYLOR",
+        "matchedSubject": "Adam Taylor",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-adam-taylor-nca.html",
+        "statusPanelPresent": true
+      },
+      {
         "route": "_site/dossier-alex-karp.html",
         "title": "Loading dossier...",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
         "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-anthony-weiner.html",
+        "title": "ANTHONY WEINER",
+        "matchedSubject": "Anthony Weiner",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-anthony-weiner.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-conor-mcgrath.html",
+        "title": "CONOR MCGRATH",
+        "matchedSubject": "Conor McGrath",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-conor-mcgrath.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-cyril-smith.html",
+        "title": "CYRIL SMITH",
+        "matchedSubject": "Cyril Smith",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-cyril-smith.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-david-james-clarke.html",
+        "title": "DAVID JAMES CLARKE",
+        "matchedSubject": "David James Clarke",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-david-james-clarke.html",
         "statusPanelPresent": true
       },
       {
@@ -577,6 +631,42 @@
         "statusPanelPresent": true
       },
       {
+        "route": "_site/dossier-george-nader.html",
+        "title": "GEORGE A. NADER",
+        "matchedSubject": "George A. Nader",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-george-nader.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-ghislaine-maxwell-criminal.html",
+        "title": "GHISLAINE MAXWELL",
+        "matchedSubject": "Ghislaine Maxwell",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-ghislaine-maxwell-criminal.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-greville-janner.html",
+        "title": "GREVILLE JANNER",
+        "matchedSubject": "Greville Janner",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-greville-janner.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-huw-edwards.html",
+        "title": "HUW EDWARDS",
+        "matchedSubject": "Huw Edwards",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-huw-edwards.html",
+        "statusPanelPresent": true
+      },
+      {
         "route": "_site/dossier-jeff-bezos.html",
         "title": "Loading dossier...",
         "matchedSubject": "",
@@ -586,12 +676,48 @@
         "statusPanelPresent": true
       },
       {
+        "route": "_site/dossier-jeffrey-epstein-criminal.html",
+        "title": "JEFFREY EPSTEIN",
+        "matchedSubject": "Jeffrey Epstein",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-jeffrey-epstein-criminal.html",
+        "statusPanelPresent": true
+      },
+      {
         "route": "_site/dossier-jensen-huang.html",
         "title": "Loading dossier...",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
         "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-jimmy-savile.html",
+        "title": "JIMMY SAVILE",
+        "matchedSubject": "Jimmy Savile",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-jimmy-savile.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-joel-greenberg.html",
+        "title": "JOEL MICAH GREENBERG",
+        "matchedSubject": "Joel Micah Greenberg",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-joel-greenberg.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-keith-raniere.html",
+        "title": "KEITH RANIERE",
+        "matchedSubject": "Keith Raniere",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-keith-raniere.html",
         "statusPanelPresent": true
       },
       {
@@ -610,6 +736,24 @@
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
         "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-larry-nassar.html",
+        "title": "LARRY NASSAR",
+        "matchedSubject": "Larry Nassar",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-larry-nassar.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-lawrence-ray.html",
+        "title": "LAWRENCE RAY",
+        "matchedSubject": "Lawrence Ray",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-lawrence-ray.html",
         "statusPanelPresent": true
       },
       {
@@ -673,6 +817,42 @@
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
         "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-peter-ball.html",
+        "title": "PETER BALL",
+        "matchedSubject": "Peter Ball",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-peter-ball.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-r-kelly.html",
+        "title": "R. KELLY",
+        "matchedSubject": "R. Kelly",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-r-kelly.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-ralph-shortey.html",
+        "title": "RALPH SHORTEY",
+        "matchedSubject": "Ralph Shortey",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-ralph-shortey.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-robert-hadden.html",
+        "title": "ROBERT HADDEN",
+        "matchedSubject": "Robert Hadden",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-robert-hadden.html",
         "statusPanelPresent": true
       },
       {
@@ -1747,8 +1927,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-aapl.html",
-        "title": "AAPL — ENTITY REPORT",
+        "route": "reports/entity-2021-00294.html",
+        "title": "2021-00294 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1756,8 +1936,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-alphabet-inc.html",
-        "title": "ALPHABET INC. — ENTITY REPORT",
+        "route": "reports/entity-2025-0045-appeal.html",
+        "title": "2025-0045-APPEAL. — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1765,8 +1945,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-amazon-com-inc.html",
-        "title": "AMAZON COM INC — ENTITY REPORT",
+        "route": "reports/entity-23-wap-2023.html",
+        "title": "23 WAP 2023 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1774,8 +1954,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-amzn.html",
-        "title": "AMZN — ENTITY REPORT",
+        "route": "reports/entity-24-7261.html",
+        "title": "24-7261 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1783,8 +1963,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-apple-inc.html",
-        "title": "APPLE INC. — ENTITY REPORT",
+        "route": "reports/entity-25-113.html",
+        "title": "25-113 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1792,8 +1972,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-avgo.html",
-        "title": "AVGO — ENTITY REPORT",
+        "route": "reports/entity-a170747m.html",
+        "title": "A170747M — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1801,8 +1981,17 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-broadcom-inc.html",
-        "title": "BROADCOM INC. — ENTITY REPORT",
+        "route": "reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+        "title": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "reports/entity-california-court-of-appeal.html",
+        "title": "CALIFORNIA COURT OF APPEAL — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1826,21 +2015,12 @@
         "approvedRecords": 0,
         "criminalDossierRoute": "",
         "statusPanelPresent": true
-      },
-      {
-        "route": "reports/entity-homeland-security-department.html",
-        "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
       }
     ]
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-07-28T06:24:45.230Z",
+    "generatedAt": "2026-07-28T06:59:22.287Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -1934,10 +2114,10 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-07-28T06:24:45.520Z",
+    "generatedAt": "2026-07-28T06:59:22.516Z",
     "target": 100,
     "approvedDossiers": 20,
-    "dossierPagesChecked": 196,
+    "dossierPagesChecked": 216,
     "failures": []
   },
   "relationshipGraph": {

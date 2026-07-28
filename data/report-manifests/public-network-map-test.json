@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-07-28T06:18:49.928Z",
-  "pageCount": 135,
+  "generatedAt": "2026-07-28T06:53:49.947Z",
+  "pageCount": 134,
   "output": "downloads/public-network-map-test.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Public Network Map Test",
-    "contentHash": "c2c4bb7a575be100f2f4ecd428586f5434d3caa9d1b1c998e367c15ed071dfb9",
+    "contentHash": "9c70499bdc9b79ac4f2a43eadc6bbcc449835ecce3055acffcc7dc0e5c22c868",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
+      "45f5269389def99607b5a517",
+      "4961972398d896435d33f3f7",
       "5295a33003172878f9880122",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-F26BA2899C21B0EA",
@@ -50,6 +52,9 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -94,7 +99,6 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -142,20 +146,16 @@
       "ASC-REVIEW-00A30F616825A65E",
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25"
+      "ASC-REVIEW-B4A3ADF8C6D010A1"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 138,
-      "newEntityCount": 0,
+      "disputedClaimCount": 133,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 122,
-      "moneyRecordCount": 122
+      "relationshipCount": 118,
+      "moneyRecordCount": 118
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Matrix Reprogrammed Structured Investigation Schema,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 122 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Structured Investigation Schema; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Breakspear → Name Lineage: layer hint; Influence should be mapped through infrastructure, filings and contracts.; SAIC / Leidos lineage → Intelligence: execution layer; BlackRock → Private Markets Infrastructure Expansion: capital layer; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 122 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Structured Investigation Schema",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-28T06:18:49.928Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-28T06:23:58.878Z",
+  "updated": "2026-07-28T06:58:45.801Z",
   "title": "Deep Daily Control Brief",
   "boundary": "This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.",
   "mainConclusion": {
@@ -306,14 +306,6 @@
       "why": "active watch"
     },
     {
-      "name": "Warren Buffett",
-      "type": "profile route",
-      "score": 100,
-      "route": "billionaire-briefs/warren-buffett.html",
-      "layer": "capital-and-ownership",
-      "why": "active watch"
-    },
-    {
       "name": "Blackwater / Xe / Academi / Constellis lineage",
       "type": "contractor route",
       "score": 100,
@@ -334,6 +326,14 @@
       "type": "contractor route",
       "score": 100,
       "route": "contractor-briefs/caci-intelligence-contractor.html",
+      "layer": "execution-and-contracts",
+      "why": "seed contractor profile"
+    },
+    {
+      "name": "Booz Allen Hamilton",
+      "type": "contractor route",
+      "score": 100,
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "layer": "execution-and-contracts",
       "why": "seed contractor profile"
     }

@@ -1,14 +1,20 @@
 {
-  "generatedAt": "2026-07-28T06:16:48.678Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-28T06:51:36.739Z",
+  "pageCount": 129,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Member Forum Integration Test",
-    "contentHash": "a61f511d2b6b6d91914665f58f033745701d1404f230a6a2dd89a100c3429706",
+    "contentHash": "8c2984166745ce91bad44f4a91d84b5b20c55ab913c950043b452842a1897af7",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
+      "43ba47db9b71dc20b9cfcfb0",
+      "declassified-files-2026-07-23-7b43a9b4",
+      "declassified-files-2026-07-23-fa922faa",
+      "declassified-files-2026-07-23-85ec568c",
+      "declassified-files-2026-07-23-90bd79dc",
+      "declassified-files-2026-07-23-7eb1900a",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -32,31 +38,15 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
-      "9b821ddb272b0fb297d39550",
       "war-machine-2026-07-24-192b3e30",
       "declassified-files-2026-07-24-c827955e",
-      "declassified-files-2026-07-23-7b43a9b4",
-      "declassified-files-2026-07-23-fa922faa",
-      "declassified-files-2026-07-23-85ec568c",
-      "declassified-files-2026-07-23-90bd79dc",
-      "declassified-files-2026-07-23-7eb1900a",
-      "declassified-files-2026-07-23-493c0cbf",
-      "declassified-files-2026-07-23-f62b87a1",
-      "declassified-files-2026-07-23-71203b01",
-      "declassified-files-2026-07-23-55829d5e",
-      "declassified-files-2026-07-23-670b739b",
-      "declassified-files-2026-07-23-b397fa50",
-      "declassified-files-2026-07-23-4ca5fddd",
-      "declassified-files-2026-07-23-f3f4de32",
-      "declassified-files-2026-07-23-534fbf8f",
-      "declassified-files-2026-07-23-55e56994",
-      "declassified-files-2026-07-23-9e3d6831",
-      "declassified-files-2026-07-23-b2a9e7b6",
-      "declassified-files-2026-07-23-a8b27523",
-      "declassified-files-2026-07-23-72e6ea02",
       "b4cb47ea50dc901364239e9f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "abdul-halim-khan-conviction-2026",
+      "raniere-conviction-sentence-2020",
+      "peter-ball-conviction-2015",
+      "savile-health-investigations-2014",
       "ASC-REVIEW-9A9799A9A37BB837",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -104,7 +94,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-8274DB7F7415A742",
@@ -146,21 +135,32 @@
       "ASC-REVIEW-D33599099BE12C6C",
       "ASC-REVIEW-A587A49D50D6CDC2",
       "ASC-REVIEW-8FE8E072E8149C71",
-      "ASC-REVIEW-D63BAC3D4EA4E2FC"
+      "ASC-REVIEW-D63BAC3D4EA4E2FC",
+      "ASC-REVIEW-FB46D93D6179DCC7",
+      "ASC-REVIEW-376546BBB3F711C2",
+      "ASC-REVIEW-21C56289EDA1B8BD",
+      "ASC-REVIEW-11446D58C9F4E2B6",
+      "ASC-REVIEW-0F86A972B08C9E18",
+      "ASC-REVIEW-00A30F616825A65E",
+      "ASC-REVIEW-7640579815B0B893",
+      "ASC-REVIEW-36CFBB8E5F6A4E74",
+      "ASC-REVIEW-B4A3ADF8C6D010A1",
+      "ASC-REVIEW-D177A29CF338E56D",
+      "ASC-REVIEW-8EBEC47E70E33B9F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 25,
-      "disputedClaimCount": 112,
+      "primarySourceCount": 16,
+      "disputedClaimCount": 121,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 129,
-      "moneyRecordCount": 105
+      "relationshipCount": 126,
+      "moneyRecordCount": 117
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/latest-public-drops.json); Charles Keating Part 13 (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json); Jake Guzik (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 129 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
+        "inference": "The indexed set contains 126 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Charles Keating Part 13; Frank Capra; Frank Capra (Final); Jake Guzik; Jake Guzik (Final); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 129 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 126 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
+          "Charles Keating Part 13",
+          "Frank Capra",
+          "Frank Capra (Final)",
+          "Jake Guzik",
+          "Jake Guzik (Final)",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

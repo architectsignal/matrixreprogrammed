@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-28T06:15:38.265Z",
+  "generatedAt": "2026-07-28T06:50:17.304Z",
   "pageCount": 123,
   "output": "downloads/investigation-machine-run-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Investigation Machine Run Report",
-    "contentHash": "33d79bdf56e693257cb68332bc24333e447abf2ceb5e89459ccfe2556d5d0be7",
+    "contentHash": "9326b51a3e32013bb5921fd0fb92043740e1a19735553595a6815e485bfce350",
     "sourceIds": [
       "6d665d935673091233751767",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "e02a1ce20d58ff6feb7b8b60",
       "736b12ca41b73bfb36734aa9",
       "16d57474d0349f3a9d67dc86",
@@ -18,8 +18,6 @@
       "2931a84c2c7fe86982d5d6e5",
       "ad23fb22757e50c30b3d487c",
       "ecadede6696db6c7c3e6b7ec",
-      "fe3f3107cffaf5599a7b09f9",
-      "085baf8dafdf6692a4203706",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
       "9d0cf694c0c2e7c8947c7596",
@@ -28,7 +26,6 @@
       "984f07ac5df515aeee1a2490",
       "157cdab04b61ae6309c0c713",
       "2e778d2911668beb55daae9c",
-      "source-change-ea906ec638c352f7dced1c63",
       "c0853ec69475b3c8f3ee1900",
       "dc2f3889b62662fc764e782f",
       "b523e96a626434c3e787e968",
@@ -36,11 +33,6 @@
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "2482c3e0241c7c7679a18cd1",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
       "96c24b16f820cebf7d9a03fe",
       "9da4920d9ef475bdd4c68fb8",
       "b697d66c12caffd112d6625a",
@@ -55,6 +47,7 @@
       "887ca5edaddf799d8d2637b7",
       "def94e0a086f2eac4c5ad91a",
       "c4eecd1ac128b2a9a3ae0b79",
+      "c59bd028e66abe69d1373742",
       "6e1b16a4906354292a8d2261",
       "a03cb38ae282e5ec17e1a40f",
       "a92c6f4ff46c6756386b1be4",
@@ -94,6 +87,7 @@
       "588c2545deb217aa53a6e55a",
       "4c372edcf20b760ae3305f10",
       "9980b775b42bb1e51c0a035e",
+      "source-change-ea906ec638c352f7dced1c63",
       "ab108ebd283e8eefcff03651",
       "ae2de9b1a8af9117322a1607",
       "a08dc51d51cb842202810fae",
@@ -146,20 +140,26 @@
       "eaa5debcd3ea9cf082d6ae85",
       "ec8e4797748df464d64c7332",
       "f8b39c9cbd401c9ccdfd153a",
-      "f8ea8e95ac2211b1392d4fa9"
+      "f8ea8e95ac2211b1392d4fa9",
+      "faf0c0c4faba8dbfcf3ce2d8",
+      "fbc1b2c32c08ca4876d98e14",
+      "fbdeb7800a73f851fddb7152",
+      "8f56453cd8b5991ae3da0a12",
+      "49679b1ed63de244c1cf19f9",
+      "d5adf164b612fd92a1dca692"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 133,
+      "primarySourceCount": 134,
       "disputedClaimCount": 3,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 23,
-      "moneyRecordCount": 13
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 133 A/B-grade public-record items are materially relevant to Investigation Machine Run Report.",
+        "conclusion": "The indexed record establishes that 134 A/B-grade public-record items are materially relevant to Investigation Machine Run Report.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); U.S. Securities and Exchange Commission — Current EDGAR Filings (data/investigation-source-state.json); U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Securities and Exchange Commission; Agricultural Advisory Committee",
+        "supportingEvidence": "Securities and Exchange Commission; Securities and Exchange Commission; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Securities and Exchange Commission; Securities and Exchange Commission; Agricultural Advisory Committee; Public Hearing on Improving America's Maritime Seapower",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -198,12 +198,12 @@
         "supportingIndicators": [
           "Securities and Exchange Commission",
           "Securities and Exchange Commission",
-          "Securities and Exchange Commission",
-          "Securities and Exchange Commission",
           "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Securities and Exchange Commission",
-          "Agricultural Advisory Committee"
+          "Securities and Exchange Commission",
+          "Agricultural Advisory Committee",
+          "Public Hearing on Improving America's Maritime Seapower"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

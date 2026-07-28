@@ -1,20 +1,22 @@
 {
-  "generatedAt": "2026-07-28T06:15:33.937Z",
+  "generatedAt": "2026-07-28T06:50:12.520Z",
   "pageCount": 122,
   "output": "downloads/intel-vault.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Intel Vault",
-    "contentHash": "6c59ceea3d566460dfc27a2c22ff64482afeafba56f67592f91620f82892b19c",
+    "contentHash": "ae50151d77e3d37113eb5808996d3d2e46afff41d45c2302ef38ef2d22b28e85",
     "sourceIds": [
       "epstein-files-2026-07-17-132a5637",
       "epstein-files-2026-07-17-19447bcb",
+      "epstein-files-2026-07-23-f9f578dd",
+      "epstein-files-2026-07-23-ea1d50fb",
+      "epstein-files-2026-07-23-8df56b2b",
       "epstein-files-2026-07-23-814f17d3",
       "epstein-files-2026-07-21-1ce52b71",
       "epstein-files-2026-07-13-23a27e17",
-      "epstein-files-2026-07-26-d58763cc",
+      "epstein-files-2026-07-21-f91827d0",
       "epstein-files-2026-07-15-22cacf3f",
-      "epstein-files-2026-07-27-aa804171",
       "epstein-files-2026-07-23-002073cb",
       "epstein-files-2026-07-21-853016c4",
       "epstein-files-2026-07-21-603faa94",
@@ -144,9 +146,7 @@
       "epstein-files-2026-05-19-former-n-y-corrections-officer-says-epstein-received-special-treatment",
       "epstein-files-2026-05-13-jeffrey-epstein-oversight-government-reform-rev-com",
       "epstein-files-2026-05-07-jeffrey-epstein-s-last-words-before-death-revealed-for-the-first-time-",
-      "epstein-files-2026-05-06-judge-releases-possible-epstein-suicide-note-allegedly-discovered-befo",
-      "epstein-files-2026-05-06-howard-lutnick-evasive-during-epstein-testimony-house-democrats-say-nb",
-      "epstein-files-2026-05-05-jeffrey-epstein-probe-returns-to-palm-beach-convening-survivors-witnes"
+      "epstein-files-2026-05-06-judge-releases-possible-epstein-suicide-note-allegedly-discovered-befo"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 1,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 26,
-      "moneyRecordCount": 3
+      "relationshipCount": 28,
+      "moneyRecordCount": 5
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 26 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News; Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS; Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News; Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post; Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters; Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick; Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC; Group in Congress pushing for more Epstein transparency - American Press",
+        "inference": "The indexed set contains 28 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News; Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS; Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation; Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos; Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS; Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News; Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post; Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 26 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 28 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News",
           "Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS",
+          "Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation",
+          "Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos",
+          "Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS",
           "Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News",
           "Powerful House panel threatens to subpoena former Epstein lawyer Alan Dershowitz - New York Post",
-          "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters",
-          "Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick",
-          "Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC",
-          "Group in Congress pushing for more Epstein transparency - American Press"
+          "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T00:13:58.000Z"
+    "intelligenceFreshnessDate": "2026-07-23T21:48:41.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:17:27.441Z",
-  "pageCount": 142,
+  "generatedAt": "2026-07-28T06:52:19.335Z",
+  "pageCount": 141,
   "output": "downloads/newsletter-worker-patch-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Newsletter Worker Patch Report",
-    "contentHash": "48447f8e96d42a84ecae0fbcc014e3a4b14475d9eb256125567494aad98cb8cc",
+    "contentHash": "83c0ea62239534eee41362e55ea12a13403e91eb6e470cad0f2a09bf484c4540",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "96c24b16f820cebf7d9a03fe",
@@ -78,6 +78,7 @@
       "7c212daa6802e36f4fe4f000",
       "3238162301d466634ccd3040",
       "2482c3e0241c7c7679a18cd1",
+      "43ba47db9b71dc20b9cfcfb0",
       "3eaa75f65471d76ff2f30231",
       "766c7577ad2f2c6146482898",
       "0b48ddbdf00a62328ef878ff",
@@ -145,21 +146,20 @@
       "b51529ec66f7fb45c15bd28d",
       "cf1d51f295b35464b6075cf3",
       "d31a6a41fe959f0f805ddbf2",
-      "e54e6d8fad24017a16b47e06",
-      "f8b39c9cbd401c9ccdfd153a"
+      "e54e6d8fad24017a16b47e06"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 78,
+      "primarySourceCount": 77,
       "disputedClaimCount": 46,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 43,
       "moneyRecordCount": 29
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 78 A/B-grade public-record items are materially relevant to Newsletter Worker Patch Report.",
+        "conclusion": "The indexed record establishes that 77 A/B-grade public-record items are materially relevant to Newsletter Worker Patch Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Bessie Coleman Women in Aviation (BCWA) Advisory Committee (data/investigation-ledger-archive.json); Reporting and Recordkeeping Requirements Under OMB Review (data/investigation-ledger-archive.json); Reporting and Recordkeeping Requirements Under OMB Review (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

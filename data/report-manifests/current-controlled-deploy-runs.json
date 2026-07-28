@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:11:35.764Z",
-  "pageCount": 113,
+  "generatedAt": "2026-07-28T06:45:49.454Z",
+  "pageCount": 115,
   "output": "downloads/current-controlled-deploy-runs.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Current Controlled Deploy Runs",
-    "contentHash": "9282d5d18675bbc88265683a09e08bca11a2024536eb0d3823e2c1b178a8f14b",
+    "contentHash": "c2d8b253ccd64c7b111d2e16acc7825a033861f5769b7ca99b8bdceeefa01a2f",
     "sourceIds": [
       "30091864423",
       "30156692342",
@@ -53,6 +53,9 @@
       "71e0563ca7b139c37c302956",
       "7f5b91c14c671bd24b8bbd81",
       "3f8bcacb0d33e21fab751828",
+      "peter-ball-iicsa-support-2019",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
       "157cdab04b61ae6309c0c713",
       "360e80c162081c85d2c680ef",
       "c4e5fb5547d6f5648745a001",
@@ -117,26 +120,11 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "source-change-5594665950812895f468c11d",
       "declassified-files-2026-07-23-7b43a9b4",
       "declassified-files-2026-07-23-fa922faa",
       "declassified-files-2026-07-23-85ec568c",
       "declassified-files-2026-07-23-90bd79dc",
       "declassified-files-2026-07-23-7eb1900a",
-      "declassified-files-2026-07-23-493c0cbf",
-      "declassified-files-2026-07-23-f62b87a1",
-      "declassified-files-2026-07-23-71203b01",
-      "declassified-files-2026-07-23-55829d5e",
-      "declassified-files-2026-07-23-670b739b",
-      "declassified-files-2026-07-23-b397fa50",
-      "declassified-files-2026-07-23-4ca5fddd",
-      "declassified-files-2026-07-23-f3f4de32",
-      "declassified-files-2026-07-23-534fbf8f",
-      "declassified-files-2026-07-23-55e56994",
-      "declassified-files-2026-07-23-9e3d6831",
-      "declassified-files-2026-07-23-b2a9e7b6",
-      "declassified-files-2026-07-23-a8b27523",
-      "declassified-files-2026-07-23-72e6ea02",
       "a92c6f4ff46c6756386b1be4",
       "ddaf82ee4b91e882b1cfd144",
       "e01676bd55bd8ffd0e6cae0c",
@@ -146,21 +134,33 @@
       "96c24b16f820cebf7d9a03fe",
       "b2832d1240dab63cee199e13",
       "c0853ec69475b3c8f3ee1900",
-      "074289b3aace6f816f126a25"
+      "074289b3aace6f816f126a25",
+      "0ab4c9f02823ce8c40d4df7c",
+      "0cec6b27195e1828cffd3c33",
+      "0eaeca6d427e881b87829e43",
+      "0f5f2830658a8e2673a82c05",
+      "1175db1378e21073a4dcb09a",
+      "11a142bfd74a3be267fdc3f5",
+      "157b4433d26f691b9ee5cec8",
+      "1e0dae5598c95ef3ceca59a9",
+      "21376cbc694a50dc80e2269a",
+      "25faa2683c1dc21ad3c0cde7",
+      "266a24cb389b3580ddb4a912",
+      "2fcb572f9106335f4f83b7f8"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 95,
+      "primarySourceCount": 93,
       "disputedClaimCount": 1,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 36,
-      "moneyRecordCount": 17
+      "relationshipCount": 22,
+      "moneyRecordCount": 18
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 95 A/B-grade public-record items are materially relevant to Current Controlled Deploy Runs.",
-        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Skip to main content (data/investigation-ledger-archive.json)",
+        "conclusion": "The indexed record establishes that 93 A/B-grade public-record items are materially relevant to Current Controlled Deploy Runs.",
+        "evidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json); IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Diagnose Power-Family Production Refresh; Diagnose Power-Family Production Refresh; Production Runtime Contract Rehearsal; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Production Runtime Contract Rehearsal",
           "Production Runtime Contract Rehearsal",

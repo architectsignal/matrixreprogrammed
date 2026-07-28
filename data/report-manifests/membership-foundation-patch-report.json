@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:16:57.472Z",
-  "pageCount": 130,
+  "generatedAt": "2026-07-28T06:51:46.491Z",
+  "pageCount": 129,
   "output": "downloads/membership-foundation-patch-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Membership Foundation Patch Report",
-    "contentHash": "85445ec8509b996603e6b71a5302848c10361cd6ff80013bc14def0bab530d33",
+    "contentHash": "c145e9a03b9e74ad5e8a60cae3a6ce2f8573df19523ffd733d58e3dc9d9d4ca0",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "157cdab04b61ae6309c0c713",
@@ -30,6 +30,7 @@
       "1583ed9e90a5874047a33041",
       "7c212daa6802e36f4fe4f000",
       "3238162301d466634ccd3040",
+      "43ba47db9b71dc20b9cfcfb0",
       "c0853ec69475b3c8f3ee1900",
       "d109ec07bc6a6ad42558195d",
       "40dd9b6b261ef87e0cbe3fa6",
@@ -38,6 +39,7 @@
       "b40abe70e618aec03736f0cd",
       "dc2f3889b62662fc764e782f",
       "f8b39c9cbd401c9ccdfd153a",
+      "savile-health-investigations-2014",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -128,6 +130,8 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
+      "d23398b8ca4c7124399c9504",
+      "2529322b7b5345fd6f575174",
       "26b90533dbf7d2ed42f02de6",
       "2931a84c2c7fe86982d5d6e5",
       "daee19f2c0d92279cc9a7569",
@@ -142,24 +146,20 @@
       "73799cb9af4829047998b026",
       "aa125ed22fe885dd57f96c32",
       "f73c11ef3163b1800592aabe",
-      "4c372edcf20b760ae3305f10",
-      "b49c319c09a07b245b24f74a",
-      "ec968f2ec6ba82128b4cd91b",
-      "e28738303cb279558b7a88c0",
-      "e4e58bed8a2ad4ff1aa59afe"
+      "4c372edcf20b760ae3305f10"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
+      "primarySourceCount": 41,
       "disputedClaimCount": 93,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 59,
-      "moneyRecordCount": 14
+      "moneyRecordCount": 13
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Membership Foundation Patch Report.",
+        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Membership Foundation Patch Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Recharter for the Advisory Commission on Childhood Vaccines (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Bessie Coleman Women in Aviation (BCWA) Advisory Committee; Privacy Act of 1974; System of Records; Research Track Assessment for Longfin Inshore Squid; Public Meeting; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education; ANSYS INC — National Aeronautics and Space Administration",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Bessie Coleman Women in Aviation (BCWA) Advisory Committee; Privacy Act of 1974; System of Records; Research Track Assessment for Longfin Inshore Squid; Public Meeting; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; Official health investigations documented abuse and enabling access; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -202,8 +202,8 @@
           "Privacy Act of 1974; System of Records",
           "Research Track Assessment for Longfin Inshore Squid; Public Meeting",
           "Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees",
-          "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
-          "ANSYS INC — National Aeronautics and Space Administration"
+          "Official health investigations documented abuse and enabling access",
+          "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

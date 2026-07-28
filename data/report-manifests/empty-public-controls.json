@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-07-28T06:13:25.144Z",
-  "pageCount": 145,
+  "generatedAt": "2026-07-28T06:47:50.880Z",
+  "pageCount": 141,
   "output": "downloads/empty-public-controls.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Empty Public Controls",
-    "contentHash": "649979429013f91954eb8b6e7f6e8e32f3552be34835c2899fc77d699664d430",
+    "contentHash": "920f0b69604205edc90585b2a772f4730d97c842bcd5ac356dd82e028e749814",
     "sourceIds": [
       "96c24b16f820cebf7d9a03fe",
       "26b90533dbf7d2ed42f02de6",
       "abba0d7e13ad3937f6691d8e",
       "ASC-REVIEW-5AE5A3805582A7F2",
+      "54197b23c792a122f53a863b",
+      "f44c3c7309a5f0779a57e655",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
@@ -86,15 +88,14 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
+      "d6936ce262c4c18cb75c6e44",
+      "4ae6a940305d15da61333450",
+      "6f6462b75cdb929e0acbcde7",
+      "6d8df9af51b8078e703b2748",
+      "9f77464e401ac59ad1adb812",
+      "6e40f6714e6881469b9ab1d3",
       "2482c3e0241c7c7679a18cd1",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
+      "43ba47db9b71dc20b9cfcfb0",
       "df4f424ec8c6a57259e36b0d",
       "a324bf01b60380907aef2e89",
       "a6047accfb9754d2159cff7c",
@@ -145,21 +146,20 @@
       "68f53a70b23a825c118b2669",
       "6adc57650914627e5def4b85",
       "6b0384af35379937b0fec860",
-      "70fd5286b3e7a5b655394ff4",
-      "72e8bc0dfa52f7aeb8f93f17"
+      "70fd5286b3e7a5b655394ff4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 86,
+      "primarySourceCount": 78,
       "disputedClaimCount": 56,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 50,
+      "relationshipCount": 51,
       "moneyRecordCount": 33
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 86 A/B-grade public-record items are materially relevant to Empty Public Controls.",
+        "conclusion": "The indexed record establishes that 78 A/B-grade public-record items are materially relevant to Empty Public Controls.",
         "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Agency Information Collection Activities; Notice and Request for Comment; 49 CFR Part 575-Consumer Information Regulations (Sections 103 and 105) (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Recharter for the Advisory Commission on Childhood Vaccines (data/investigation-ledger-archive.json); Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Basic Requirements for Special Exception Permits and Authorizations To Take, Import, and Export Marine Mammals, Threaten (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Privacy Act of 1974; System of Records; Request for Nominations for Members To Serve on National Institute of Standards and Technology Federal Advisory Committees; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Privacy Act of 1974; System of Records",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:14:36.993Z",
-  "pageCount": 136,
+  "generatedAt": "2026-07-28T06:49:09.589Z",
+  "pageCount": 133,
   "output": "downloads/evidence-task-engine.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Evidence Task Engine",
-    "contentHash": "81e9860a572352331d3e0271e86477c2edbdb37b2465d7d7ce49f396c4c92546",
+    "contentHash": "5d6894999bca597cc49e0776b9471c1a5130ee518674e678e5ec9bfbe55c9e99",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -15,21 +15,24 @@
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "71e0563ca7b139c37c302956",
+      "d0b647e325275daa6d824a49",
+      "594100b62a47db521fe2a128",
       "3a425f0d5d683952bc0ad7ac",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "b2832d1240dab63cee199e13",
       "eecf3b08118f808caa1aeff2",
       "4ea32d0f43e7509849e25947",
       "a6a8845fcd8980df6fe58516",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
+      "43ba47db9b71dc20b9cfcfb0",
       "c0853ec69475b3c8f3ee1900",
       "3f8bcacb0d33e21fab751828",
       "8858c90093a92f549bb57c7f",
       "b51529ec66f7fb45c15bd28d",
       "f8b39c9cbd401c9ccdfd153a",
-      "594100b62a47db521fe2a128",
       "9f3052b5d8cec138a2a37e8c",
-      "34805734b1ad3b73f0ede0d8",
       "4c372edcf20b760ae3305f10",
       "7c212daa6802e36f4fe4f000",
       "d3589cf045e6d530b37381a9",
@@ -42,7 +45,6 @@
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "603b714a5abe917f3094b455",
-      "9b821ddb272b0fb297d39550",
       "aaa41b575f9ad9ad0e28023c",
       "abba0d7e13ad3937f6691d8e",
       "cd2f258c6b3800cfde3b7c65",
@@ -144,22 +146,20 @@
       "703341d46715e8acbefe93c5",
       "e221bc0781e2b857b5e43fb7",
       "2437ea8eb72519ae5be1ce23",
-      "288aa1ab188bc28dca9356a4",
-      "3bd4855bf334d4eb897a45a0",
-      "4ed8207dc748202a2172a144"
+      "288aa1ab188bc28dca9356a4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 81,
-      "disputedClaimCount": 6,
+      "primarySourceCount": 79,
+      "disputedClaimCount": 7,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
+      "relationshipCount": 17,
       "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 81 A/B-grade public-record items are materially relevant to Evidence Task Engine.",
+        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Evidence Task Engine.",
         "evidence": "Small Business Investment Company (“SBIC”) Program: SBA Model Form of Agreement for Limited Partnership SBICs (data/investigation-ledger-archive.json); USCIS Immigration Fees and Related Procedures Required by H.R.1 Reconciliation Bill; Correction (data/investigation-ledger-archive.json); Privacy Act of 1974; System of Records (data/investigation-ledger-archive.json); Endangered and Threatened Wildlife and Plants; Reclassification of the Hawaiian Stilt (Kukuluae'o or Ae'o) From Endangered to Threatened With a Section 4(d) Rule (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json); Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; USCIS Immigration Fees and Related Procedures Required by H.R.1 Reconciliation Bill; Correction; Privacy Act of 1974; System of Records; SIGHTLINE ANALYTICS, INC. — Department of Energy; Public Hearing on Improving America's Maritime Seapower; Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",

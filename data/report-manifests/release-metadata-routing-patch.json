@@ -1,16 +1,15 @@
 {
-  "generatedAt": "2026-07-28T06:19:17.363Z",
+  "generatedAt": "2026-07-28T06:54:19.359Z",
   "pageCount": 136,
   "output": "downloads/release-metadata-routing-patch.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Release Metadata Routing Patch",
-    "contentHash": "80e12d379db8ae0dd72af2fa5360ae94e09f97f2d2cfba34513d85f526f6baae",
+    "contentHash": "8a4b2711f7d9c2420bc07c4d4c5e5e16a7b2c7359c9d3f23758d3204fb228afd",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "EP-AI-004",
-      "source-change-2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-FCEFDBDA93429C4F",
       "ASC-REVIEW-05E559B745692B7C",
@@ -35,14 +34,7 @@
       "1769af26a7bda813406cd8f5",
       "e72d22f4f28eb53e3173d0a6",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-d5adf164b612fd92a1dca692",
-      "9b821ddb272b0fb297d39550",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-598A8E78B2ED4662",
       "ASC-REVIEW-85693397F53B02BA",
@@ -112,6 +104,7 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "41772e5c9af7970ddd7d5aac",
       "a27dd3c9a4cf6bbd952989d3",
@@ -146,21 +139,28 @@
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-1FD01131EB70E85A",
-      "ASC-REVIEW-1D9239F50A285FC0"
+      "ASC-REVIEW-1D9239F50A285FC0",
+      "ASC-REVIEW-DA07BCFBB726AA49",
+      "ASC-REVIEW-CFB2B8804532DFFC",
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274",
+      "ASC-REVIEW-C369A84AD971DD75",
+      "ASC-REVIEW-A6F3D2598C5BA884"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 37,
-      "disputedClaimCount": 93,
+      "primarySourceCount": 29,
+      "disputedClaimCount": 100,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 83,
-      "moneyRecordCount": 38
+      "relationshipCount": 90,
+      "moneyRecordCount": 45
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
-        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 29 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 83 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; ANSYS INC — National Aeronautics and Space Administration; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 83 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "ANSYS INC — National Aeronautics and Space Administration",

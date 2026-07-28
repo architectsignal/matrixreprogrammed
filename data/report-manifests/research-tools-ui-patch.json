@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-28T06:19:20.030Z",
+  "generatedAt": "2026-07-28T06:54:22.314Z",
   "pageCount": 133,
   "output": "downloads/research-tools-ui-patch.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Research Tools Ui Patch",
-    "contentHash": "b179379b0c34306478d16476a67363823b0d9639233fb8b8c75111ec3325706e",
+    "contentHash": "891d8a2d7e3e333cad8e50665e97bf424e4e088c52cd4d3a45ab6954989e8ce9",
     "sourceIds": [
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -21,9 +21,20 @@
       "ASC-REVIEW-21E454816F050A34",
       "14d04c0943d24cbe6a1926db",
       "declassified-files-2026-07-24-c827955e",
+      "declassified-files-2026-07-23-7b43a9b4",
+      "declassified-files-2026-07-23-fa922faa",
+      "declassified-files-2026-07-23-85ec568c",
+      "declassified-files-2026-07-23-90bd79dc",
+      "declassified-files-2026-07-23-7eb1900a",
       "b4cb47ea50dc901364239e9f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "janner-iicsa-2022",
+      "cyril-smith-westminster-2020",
+      "peter-ball-iicsa-support-2019",
+      "cyril-smith-iicsa-2018",
+      "peter-ball-conviction-2015",
+      "janner-charges-2015",
       "ASC-REVIEW-9A9799A9A37BB837",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -75,7 +86,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-8274DB7F7415A742",
@@ -136,33 +146,23 @@
       "ASC-REVIEW-C2C7140B7B6F51FF",
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-3B7DCAEF5ABCE701",
-      "ASC-REVIEW-3C0E3174433D0A74",
-      "ASC-REVIEW-954EF610F9B32B24",
-      "ASC-REVIEW-CA2354BF2081EB62"
+      "ASC-REVIEW-5F9BB287023DE81E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 136,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 124,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 134,
-      "moneyRecordCount": 131
+      "relationshipCount": 130,
+      "moneyRecordCount": 122
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/latest-public-drops.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json)",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 (data/latest-public-drops.json); Charles Keating Part 13 (data/live-intel.json); Frank Capra (data/live-intel.json); Frank Capra (Final) (data/live-intel.json); Jake Guzik (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 134 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 130 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 134 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 130 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:17:39.717Z",
+  "generatedAt": "2026-07-28T06:52:32.769Z",
   "pageCount": 129,
   "output": "downloads/open-source-research-wiring.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Open Source Research Wiring",
-    "contentHash": "446911f43b2f72b9c8590fd0fda07981a8b6904eb73bc57db35bf8d0f588fcbd",
+    "contentHash": "589cd28385fa764318691b1621fd8c3b962bb470ee051d1c9625738a8a863494",
     "sourceIds": [
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
@@ -44,13 +44,14 @@
       "766c7577ad2f2c6146482898",
       "88780e987ae8758d90e927f0",
       "995c14f7f8b33a3a62438171",
-      "source-change-d5adf164b612fd92a1dca692",
       "0b48ddbdf00a62328ef878ff",
       "6dd604f3b6f69be6f232c5ff",
       "9d41d19f82ae59a0312ac75a",
       "d9bff117c0197d71854cdb83",
       "fe111e88710a84d6b32e57e5",
       "40dd9b6b261ef87e0cbe3fa6",
+      "maxwell-appeal-2025",
+      "r-kelly-appellate-finality-2025",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -145,21 +146,20 @@
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18"
+      "ASC-REVIEW-11446D58C9F4E2B6"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 14,
-      "disputedClaimCount": 113,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 114,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 112,
-      "moneyRecordCount": 109
+      "relationshipCount": 111,
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 112 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 112 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

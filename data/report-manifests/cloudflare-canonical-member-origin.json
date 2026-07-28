@@ -1,29 +1,19 @@
 {
-  "generatedAt": "2026-07-28T06:11:04.138Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-28T06:45:04.071Z",
+  "pageCount": 128,
   "output": "downloads/cloudflare-canonical-member-origin.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Cloudflare Canonical Member Origin",
-    "contentHash": "9b337dbc36b42e4483e076eb40f31c2ab826220cd4b4863b2c904ff461b78f8b",
+    "contentHash": "bbcb2c2f1b67099029378a51496fc22a9febca0d57f1c6ea92463251ba9d8d94",
     "sourceIds": [
+      "43ba47db9b71dc20b9cfcfb0",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
-      "ASC-REVIEW-7A271098BC2FC4DF",
-      "2931a84c2c7fe86982d5d6e5",
-      "71e0563ca7b139c37c302956",
-      "1c352ab364fbfca06ab12a57",
-      "d7398c0c72a085a05c90422c",
-      "5ce17839086eddf839270b1a",
-      "157cdab04b61ae6309c0c713",
-      "9848ec4b4c3f6c2693269839",
-      "eb3448928554960651da56f6",
-      "7f5b91c14c671bd24b8bbd81",
-      "b7e4a66335a706ef5097117f",
-      "9b821ddb272b0fb297d39550",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
       "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
@@ -40,18 +30,18 @@
       "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
-      "5594665950812895f468c11d",
-      "d5adf164b612fd92a1dca692",
-      "ad23fb22757e50c30b3d487c",
-      "5b6b5c0285c3c8742768ea5c",
-      "1ee57e70dacfa67f04323529",
-      "58a212e4e1a93007ec5b3d6d",
-      "a42c91c655cd066504ed6515",
-      "7dcf4ef18ea1f86d01068773",
-      "511ed227bb4be58b582ebb8d",
-      "source-change-d5adf164b612fd92a1dca692",
-      "96c24b16f820cebf7d9a03fe",
+      "2931a84c2c7fe86982d5d6e5",
+      "71e0563ca7b139c37c302956",
+      "1c352ab364fbfca06ab12a57",
+      "d7398c0c72a085a05c90422c",
+      "5ce17839086eddf839270b1a",
+      "157cdab04b61ae6309c0c713",
+      "9848ec4b4c3f6c2693269839",
+      "eb3448928554960651da56f6",
+      "7f5b91c14c671bd24b8bbd81",
+      "b7e4a66335a706ef5097117f",
       "d109ec07bc6a6ad42558195d",
+      "janner-iicsa-2022",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -103,7 +93,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -146,20 +135,31 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18"
+      "ASC-REVIEW-0F86A972B08C9E18",
+      "ASC-REVIEW-00A30F616825A65E",
+      "ASC-REVIEW-7640579815B0B893",
+      "ASC-REVIEW-36CFBB8E5F6A4E74",
+      "ASC-REVIEW-B4A3ADF8C6D010A1",
+      "ASC-REVIEW-D177A29CF338E56D",
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD",
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2",
+      "ASC-REVIEW-AD7847E11513D899",
+      "ASC-REVIEW-C2C7140B7B6F51FF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 24,
-      "disputedClaimCount": 114,
+      "primarySourceCount": 14,
+      "disputedClaimCount": 124,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 114,
-      "moneyRecordCount": 106
+      "relationshipCount": 125,
+      "moneyRecordCount": 116
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Cloudflare Canonical Member Origin.",
+        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Cloudflare Canonical Member Origin.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+        "conclusion": "The most defensible current assessment is based on “IICSA found serious institutional-response failures,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "IICSA identified serious flaws including under-resourcing, withheld witness statements and unsound decisions in some police and CPS investigations.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Matrix Reprogrammed Canonical Intelligence Record; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+        "inference": "The indexed set contains 125 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 125 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "Matrix Reprogrammed Canonical Intelligence Record",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+          "Booz Allen Hamilton → Ai Data: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T07:25:32.191Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-28T06:10:10.442Z",
-  "pageCount": 110,
+  "generatedAt": "2026-07-28T06:44:04.491Z",
+  "pageCount": 108,
   "output": "downloads/atlas-lane-populations.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Atlas Lane Populations",
-    "contentHash": "811d949cf11f9c0a7331337fd5b86516149feb890954fefe23c0c1e32759d268",
+    "contentHash": "1c28f5cc39e2d77d2254a822fc400557b5535d662c3fbc34106be70112732957",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "61ae0d83db697eca11852276",
       "1edbb4c1709e8e44ae019cae",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "41597c33aa287b0fe4215a7a",
       "a23501a08486cc681605b64e",
       "61235df4f7efede7ccb9a3bf",
@@ -111,15 +111,13 @@
       "d3a0a03edd57d0488dc194d2",
       "6ba93ed93c5bcf7e9a10fd6b",
       "ae3869ea4ca95a280d853bd1",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
+      "5143def4d109df60d6ae99db",
       "384bb39bdc916ad6752ac63a",
-      "2828a0d0f67977aa4a3e373c",
-      "65debd126cdfa5f7547a3eca",
-      "de58872cc8483198b691c403",
       "7f5b91c14c671bd24b8bbd81",
-      "3c9c23f7f9a1cec81ef90f59",
       "tedros-adhanom-ghebreyesus",
       "mark-rutte",
-      "source-change-d5adf164b612fd92a1dca692",
       "0bf52fe6a03ee6f9ce748cfc",
       "82f4a85fc086f04033fcb6cd",
       "00800d46b964c4c792c6b2fd",
@@ -146,20 +144,22 @@
       "afffaf4b475cb9294d6ff9b3",
       "89ebb81062dafeac8df03dd8",
       "f185dacacccfb1c24e0bcf7d",
-      "46ab3eacdfa38b82d00d646f"
+      "46ab3eacdfa38b82d00d646f",
+      "62caa0f3da90c8a80481734a",
+      "b47fabb5622bfc58944ed022"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 49,
+      "primarySourceCount": 48,
       "disputedClaimCount": 1,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 15,
-      "moneyRecordCount": 37
+      "moneyRecordCount": 35
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 49 A/B-grade public-record items are materially relevant to Atlas Lane Populations.",
+        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Atlas Lane Populations.",
         "evidence": "REGAN TECHNOLOGIES CORP — Federal Mediation and Conciliation Service (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ANSYS INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

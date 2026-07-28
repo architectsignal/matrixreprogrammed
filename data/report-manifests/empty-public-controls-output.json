@@ -1,20 +1,19 @@
 {
-  "generatedAt": "2026-07-28T06:13:24.093Z",
-  "pageCount": 145,
+  "generatedAt": "2026-07-28T06:47:49.749Z",
+  "pageCount": 140,
   "output": "downloads/empty-public-controls-output.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Empty Public Controls Output",
-    "contentHash": "7817852030c0e970b7606cf43ef73b936aad25190e59b2bc1e1209ee527bb34e",
+    "contentHash": "06fe0486ff0562841811851bf9026ff3a9457876ad8de2f5b93cc099e122f622",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "96c24b16f820cebf7d9a03fe",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-5AE5A3805582A7F2",
-      "source-change-d5adf164b612fd92a1dca692",
       "abba0d7e13ad3937f6691d8e",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
       "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
@@ -31,7 +30,6 @@
       "ASC-REVIEW-92D850D29A7117A1",
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-897F71D253591D8F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -55,14 +53,12 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
+      "54197b23c792a122f53a863b",
+      "f44c3c7309a5f0779a57e655",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
+      "43ba47db9b71dc20b9cfcfb0",
       "9da4920d9ef475bdd4c68fb8",
       "bd3ca47dbaff370247b05c4f",
       "c0853ec69475b3c8f3ee1900",
@@ -85,6 +81,7 @@
       "dc2f3889b62662fc764e782f",
       "e50ee77aa62b005d32344370",
       "f8b39c9cbd401c9ccdfd153a",
+      "five-eyes-ai-cyber-warning-2026-06-22",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -146,21 +143,24 @@
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
       "ASC-REVIEW-6809880AE2446DD1",
-      "ASC-REVIEW-D23512B8758FE6BB"
+      "ASC-REVIEW-D23512B8758FE6BB",
+      "ASC-REVIEW-9F5E6DCB06093895",
+      "ASC-REVIEW-CAEF74273342914C",
+      "ASC-REVIEW-747FA1D74D7A92E3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 31,
-      "disputedClaimCount": 107,
-      "newEntityCount": 0,
+      "primarySourceCount": 25,
+      "disputedClaimCount": 109,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 85,
-      "moneyRecordCount": 41
+      "relationshipCount": 88,
+      "moneyRecordCount": 44
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
-        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); Agency Information Collection Activities; Notice and Request for Comment; 49 CFR Part 575-Consumer Information Regulations (Sections 103 and 105) (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
+        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); Agency Information Collection Activities; Notice and Request for Comment; 49 CFR Part 575-Consumer Information Regulations (Sections 103 and 105) (data/investigation-ledger-archive.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Recharter for the Advisory Commission on Childhood Vaccines (data/investigation-ledger-archive.json); Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Basic Requirements for Special Exception Permits and Authorizations To Take, Import, and Export Marine Mammals, Threaten (data/investigation-ledger-archive.json); Commission Information Collection Activities (FERC-725S); Comment Request; Extension (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+        "conclusion": "The most defensible current assessment is based on “Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Administration for Children and Families (ACF) is requesting a 3-year extension of the Guidance for the Tribal Temporary Assistance for Needy Families (TANF) Program, Form 123 (Office of Management and Budget (0970-0157, expiration date: August 31, 2026). While the statutory requirements remain unchanged, ACF is proposing revisions to the instructions for clarification and to ensure they are as clear and streamlined as possible. ACF estimates a 33 percent reduction in response time with the proposed revisions to the instructions. A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 85 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 85 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T17:28:52.106Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

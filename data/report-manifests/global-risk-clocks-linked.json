@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-28T06:15:17.756Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-28T06:49:54.535Z",
+  "pageCount": 127,
   "output": "downloads/global-risk-clocks-linked.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Global Risk Clocks",
-    "contentHash": "69a513ad87be0b3e91516e53cb2d839a706d4435957e9936f55107edf157da30",
+    "contentHash": "f0e81a9d0c491e8c91e88c53cf630ad794eac9e93853a4860ca08b7cde17e0d3",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "26b90533dbf7d2ed42f02de6",
-      "9b821ddb272b0fb297d39550",
-      "1769af26a7bda813406cd8f5",
+      "43ba47db9b71dc20b9cfcfb0",
       "594100b62a47db521fe2a128",
+      "1769af26a7bda813406cd8f5",
       "34805734b1ad3b73f0ede0d8",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
@@ -19,18 +19,29 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
-      "72ef7895f95288946ccb3cff",
       "71e0563ca7b139c37c302956",
+      "72ef7895f95288946ccb3cff",
       "e72d22f4f28eb53e3173d0a6",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
       "603b714a5abe917f3094b455",
+      "d0b647e325275daa6d824a49",
       "9f3052b5d8cec138a2a37e8c",
+      "cee347fbc3752c6e0f890457",
       "4c372edcf20b760ae3305f10",
+      "a354895c18c7e12ab408462d",
+      "19ae23289f4be13ad5f7e317",
+      "665a5072d96b9757a6ee9d2d",
+      "9e8310c49b990aa62d2b0921",
+      "daily-revelation-report",
       "4a8dd46bd8d4335f061e03ac",
       "02a4d3de860d06619024f48c",
       "f3ee44803d1400a96da6d472",
       "1627734cba53ae944ce56fa9",
       "f7663de6f4002d27437baf04",
       "e052537d78ff67ae84cd8d73",
+      "c8eeb5656d86646c1e6dc75c",
+      "7419d29b3a469a40362a11f4",
       "360e80c162081c85d2c680ef",
       "2cd777e4d3f82343f5cd5274",
       "b0026efaffb7bffcb34843c9",
@@ -55,7 +66,8 @@
       "fccfcea7dd11ece6529bd04b",
       "cff0a774e5173721d44e24ac",
       "ASC-REVIEW-57EDEB5DFEAC6956",
-      "daily-revelation-report",
+      "65debd126cdfa5f7547a3eca",
+      "3c9c23f7f9a1cec81ef90f59",
       "e4e58bed8a2ad4ff1aa59afe",
       "d3589cf045e6d530b37381a9",
       "aae51d03dc366bfb0267f3b4",
@@ -73,9 +85,11 @@
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-06A7D981E8AF743C",
+      "8165fb4ec7543f1da0762496",
+      "3a8c1f1e8620cb3f09a2c7ab",
+      "8d2a26495075b1d71abf17c2",
+      "e116361cb7791d4be20113e1",
       "ecadede6696db6c7c3e6b7ec",
-      "fe3f3107cffaf5599a7b09f9",
-      "085baf8dafdf6692a4203706",
       "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
       "73799cb9af4829047998b026",
@@ -132,34 +146,20 @@
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "a27dd3c9a4cf6bbd952989d3",
-      "aa125ed22fe885dd57f96c32",
-      "f73c11ef3163b1800592aabe",
-      "b49c319c09a07b245b24f74a",
-      "1583ed9e90a5874047a33041",
-      "e28738303cb279558b7a88c0",
-      "64655043524cba9e6a679f8d",
-      "fafa3982950de0fd589ad0d0",
-      "d2f7882f509480d63c31702f",
-      "7421c8730d950627b0da1b3d",
-      "0a48cc2ad619880b0b23d743",
-      "d648ce395c11435d30796fee",
-      "2482c3e0241c7c7679a18cd1",
-      "324cbe2d95e1cfa996c79119",
-      "091ac07c58474b2d6c6a999b"
+      "d6936ce262c4c18cb75c6e44"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 69,
-      "disputedClaimCount": 41,
+      "primarySourceCount": 55,
+      "disputedClaimCount": 43,
       "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 58,
-      "moneyRecordCount": 17
+      "relationshipCount": 54,
+      "moneyRecordCount": 15
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
+        "conclusion": "The indexed record establishes that 55 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
         "evidence": "ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts (data/daily-investigation-conclusions.json); SATCOM DIRECT GOVERNMENT, LLC — Department of Defense (data/weekly-investigation-conclusions.json); ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “MINDCUBED LLC — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 54 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; Lamb Meat; Institution of Investigation, Scheduling of Public Hearings, and Determination That the Investigation Is Extraordinarily Complicated; Special Local Regulations; Marine Events Within the Captain of the Port Charleston; SATCOM DIRECT GOVERNMENT, LLC — Department of Defense",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 54 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2028-04-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2027-07-12T00:00:00.000Z"
   }
 }

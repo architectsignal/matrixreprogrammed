@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:21:40.022Z",
-  "pageCount": 121,
+  "generatedAt": "2026-07-28T06:56:57.959Z",
+  "pageCount": 122,
   "output": "downloads/worker-api-contract-hardening.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Worker Api Contract Hardening",
-    "contentHash": "8f39b73167a614e447a03df3c189de00721f151eea1ee6335fd8ff763522bc5f",
+    "contentHash": "7b6fcc154c0a46fde91169ee26a2ba3e1cab6ecb8b4c3a8472d4302a1de955d5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
@@ -15,13 +15,12 @@
       "5ce17839086eddf839270b1a",
       "9848ec4b4c3f6c2693269839",
       "b7e4a66335a706ef5097117f",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-2CE1A691C8D09631",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-60F9D3A21D35583E",
       "1769af26a7bda813406cd8f5",
-      "9b821ddb272b0fb297d39550",
       "96c24b16f820cebf7d9a03fe",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
@@ -37,6 +36,7 @@
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-6A0A0F4FE014BB42",
+      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-46CE2621F44A480F",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -63,7 +63,6 @@
       "ASC-REVIEW-D9DFFA52C027F054",
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
-      "d5adf164b612fd92a1dca692",
       "71e0563ca7b139c37c302956",
       "e72d22f4f28eb53e3173d0a6",
       "1c352ab364fbfca06ab12a57",
@@ -73,7 +72,6 @@
       "7dcf4ef18ea1f86d01068773",
       "7fc07964a27914afe516c45b",
       "b079bec5bc869b0463d0584c",
-      "source-change-d5adf164b612fd92a1dca692",
       "d109ec07bc6a6ad42558195d",
       "873f62785565d1c38dc6c8ff",
       "ASC-REVIEW-9A9799A9A37BB837",
@@ -118,10 +116,12 @@
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "49679b1ed63de244c1cf19f9",
+      "d5adf164b612fd92a1dca692",
       "e853e2cce33f37c0619d2433",
       "145721767ca69c32bb4875e5",
       "46042e30fdcccc9e94aee0af",
       "2931a84c2c7fe86982d5d6e5",
+      "daily-revelation-report",
       "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "ff1a3a77816af400f09ab95e",
@@ -131,6 +131,7 @@
       "ecd4a1111010f13b2d74bf8c",
       "source-change-ea906ec638c352f7dced1c63",
       "source-change-49679b1ed63de244c1cf19f9",
+      "source-change-d5adf164b612fd92a1dca692",
       "source-change-e853e2cce33f37c0619d2433",
       "source-change-145721767ca69c32bb4875e5",
       "source-change-46042e30fdcccc9e94aee0af",
@@ -145,14 +146,13 @@
       "a90a53e0de5d96189d7dff08",
       "a28e769828c1ff417e2d168e",
       "f7663de6f4002d27437baf04",
-      "fb14cb098c01ee873c839ab8",
-      "17b40c813324f7ea690fde03"
+      "fb14cb098c01ee873c839ab8"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 40,
       "disputedClaimCount": 86,
-      "newEntityCount": 2,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
       "relationshipCount": 46,
       "moneyRecordCount": 11
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T17:28:52.106Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

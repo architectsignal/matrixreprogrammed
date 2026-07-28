@@ -1,26 +1,29 @@
 {
-  "generatedAt": "2026-07-28T06:21:22.915Z",
-  "pageCount": 130,
+  "generatedAt": "2026-07-28T06:56:40.211Z",
+  "pageCount": 128,
   "output": "downloads/transparent-maintenance-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Transparent Maintenance Report",
-    "contentHash": "d24e0cd8c867446e73b5385fc862c8520950931b192f17ea0073e43ceee83731",
+    "contentHash": "24e4d07789258c100b860b7309faa1148de49dc7ac04baf7ae885edd064acf03",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "72ef7895f95288946ccb3cff",
-      "594100b62a47db521fe2a128",
+      "d0b647e325275daa6d824a49",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
+      "594100b62a47db521fe2a128",
       "9f77464e401ac59ad1adb812",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-AADA0932ADD32C2D",
       "9f3052b5d8cec138a2a37e8c",
+      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
@@ -32,16 +35,17 @@
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-6DE76C80FA805761",
       "2931a84c2c7fe86982d5d6e5",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "e72d22f4f28eb53e3173d0a6",
-      "9b821ddb272b0fb297d39550",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-C06BEA89A8588561",
       "ASC-REVIEW-F14FA67D281BC1CC",
       "ASC-REVIEW-A587A49D50D6CDC2",
       "ASC-REVIEW-D6AE4E2DB500BB21",
       "ASC-REVIEW-6AD142382DA610CB",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -72,6 +76,10 @@
       "ASC-REVIEW-D9DFFA52C027F054",
       "ASC-REVIEW-F530B7C452E8CBB2",
       "ASC-REVIEW-35C38F1DE24759B3",
+      "54197b23c792a122f53a863b",
+      "45f5269389def99607b5a517",
+      "f44c3c7309a5f0779a57e655",
+      "4961972398d896435d33f3f7",
       "c1520a15d6e62871a66c558e",
       "7f5b91c14c671bd24b8bbd81",
       "c2e8bb37e4365771f0ace74c",
@@ -138,31 +146,23 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "ASC-REVIEW-C53B123A4708B84E",
-      "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "ASC-REVIEW-CE615863A9722AC5",
-      "65debd126cdfa5f7547a3eca",
-      "daee19f2c0d92279cc9a7569",
-      "310372a3fc518b6aabbc5d07",
-      "a5e5d4ec4df4352ea242ea3f"
+      "ASC-REVIEW-A9879DBB68A52307"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 113,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 111,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 72,
-      "moneyRecordCount": 71
+      "relationshipCount": 69,
+      "moneyRecordCount": 67
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Transparent Maintenance Report.",
-        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Press Release Burchett Opens Hearing on Extreme Political Activism at the Smithsonian’s National Museum of American History July 21, 2026 WASHINGTON—Subcommittee on Delivering on Government Efficiency Chairman Tim Burchett (R-Tenn.) delivered opening remarks a (data/investigation-ledger-archive.json); Press Release Hearing Wrap Up: Smithsonian National Museum of American History’s Radical Agenda to Reshape the Past July 21, 2026 WASHINGTON—Today, the Subcommittee on Delivering on Government Efficiency held a hearing titled “Rewriting American History: Exami (data/investigation-ledger-archive.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Transparent Maintenance Report.",
+        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Press Release Burchett Opens Hearing on Extreme Political Activism at the Smithsonian’s National Museum of American History July 21, 2026 WASHINGTON—Subcommittee on Delivering on Government Efficiency Chairman Tim Burchett (R-Tenn.) delivered opening remarks a (data/investigation-ledger-archive.json); Press Release Hearing Wrap Up: Smithsonian National Museum of American History’s Radical Agenda to Reshape the Past July 21, 2026 WASHINGTON—Today, the Subcommittee on Delivering on Government Efficiency held a hearing titled “Rewriting American History: Exami (data/investigation-ledger-archive.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 72 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 69 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; High prices and funding cuts stall HIV prevention revolution; Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 72 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 69 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

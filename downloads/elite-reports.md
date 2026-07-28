@@ -1,6 +1,6 @@
 # Elite Reports
 
-Generated: 2026-07-28T06:23:43.085Z
+Generated: 2026-07-28T06:58:34.892Z
 
 ## Daily Revelation Report
 
@@ -20,49 +20,49 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Homeland Security Department — Entity Report
-
-A source route exists. More records are needed before drawing a stronger conclusion.
-
-Source: entity-daily-briefs.html
-
-## AAPL — Entity Report
+## 2021-00294 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Alphabet Inc. — Entity Report
+## 2025-0045-Appeal. — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMAZON COM INC — Entity Report
+## 23 WAP 2023 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMZN — Entity Report
+## 24-7261 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Apple Inc. — Entity Report
+## 25-113 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AVGO — Entity Report
+## A170747M — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Broadcom Inc. — Entity Report
+## Appellate Division of the Supreme Court of the State of New York — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## California Court of Appeal — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

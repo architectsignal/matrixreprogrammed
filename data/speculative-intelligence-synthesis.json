@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-07-28T06:27:24.574Z",
+  "updated": "2026-07-28T07:02:44.964Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 47151,
+    "recordsInspected": 47184,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -224,9 +224,9 @@
           }
         ],
         "timerUpdateRule": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access. Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available.",
-        "evidenceFingerprint": "6ca121682761bd68c8c47ce3a0cdf180fa5c812a6776233d35d6cefe25a5d9fa",
-        "lastEvidenceChangeAt": "2026-07-28T06:09:11.079Z",
-        "automaticUpdateStatus": "evidence-unchanged-score-held",
+        "evidenceFingerprint": "5b3ec1fa63d70d0df704959de0e59485d9d960d4f28cf49e0f272ccf175820a0",
+        "lastEvidenceChangeAt": "2026-07-28T07:02:24.664Z",
+        "automaticUpdateStatus": "evidence-changed-score-updated",
         "scoreLabel": "Pressure index — not event probability",
         "scoreType": "pressureIndex",
         "scoreBand": "Active",
@@ -475,9 +475,9 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-28T06:27:17.870Z",
+        "generatedAt": "2026-07-28T07:02:40.384Z",
         "previousAutomaticScore": 93,
-        "automaticScoreMovement": 0,
+        "automaticScoreMovement": 2,
         "automaticUpdateReason": "Evidence change: 10 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
         "automaticEvidenceGate": {
           "claimClass": "",
@@ -487,7 +487,7 @@
           "requirement": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access."
         },
         "automaticEvidenceCounts": {
-          "total": 16,
+          "total": 17,
           "fresh": 10,
           "primaryOrOfficial": 9,
           "implementation": 7,
@@ -910,7 +910,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-28T06:27:17.870Z",
+        "generatedAt": "2026-07-28T07:02:40.384Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -930,7 +930,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 14417,
+        "signalCount": 14413,
         "actors": [
           "Consolidated Sanctions List (Non-SDN Lists)",
           "Skip to main content",
@@ -944,7 +944,7 @@
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 13809,
+        "signalCount": 13796,
         "actors": [
           "Information and narrative control",
           "Search Full Library"
@@ -954,14 +954,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 12496,
+        "signalCount": 12516,
         "actors": []
       },
       {
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 6015,
+        "signalCount": 6029,
         "actors": [
           "Global governance convergence",
           "ATT MOBILITY LLC — Department of Defense"
@@ -971,7 +971,7 @@
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 3569,
+        "signalCount": 3572,
         "actors": [
           "Exercise or conversion of derivative security",
           "Identity, surveillance and access",
@@ -982,7 +982,7 @@
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2738,
+        "signalCount": 2753,
         "actors": [
           "Identity, surveillance and access"
         ]
@@ -991,7 +991,7 @@
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 2331,
+        "signalCount": 2338,
         "actors": [
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
         ]
@@ -1000,7 +1000,7 @@
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 587,
+        "signalCount": 574,
         "actors": [
           "Identity, surveillance and access"
         ]

@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-28T06:12:38.874Z",
+  "generatedAt": "2026-07-28T06:47:00.460Z",
   "pageCount": 136,
   "output": "downloads/deploy-health.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Deploy Health",
-    "contentHash": "80a7e17ceb19b0c50199c430abf0744324a04eb8cb670ab700f4ddf21131178d",
+    "contentHash": "79a3e44994e7b16ca2010cc5634332d00b2990e66f7e0529ddbc83c973ea9d51",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
+      "3a425f0d5d683952bc0ad7ac",
+      "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "72ef7895f95288946ccb3cff",
-      "e72d22f4f28eb53e3173d0a6",
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-8FC95E6CC8F8F440",
       "ASC-REVIEW-EAB6011874016286",
@@ -35,7 +35,6 @@
       "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-897F71D253591D8F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -59,6 +58,7 @@
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
+      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -97,7 +97,6 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
@@ -146,16 +145,17 @@
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4"
+      "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-6FEEE1F638ADFCD6"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 134,
-      "newEntityCount": 0,
+      "disputedClaimCount": 133,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 107,
-      "moneyRecordCount": 72
+      "moneyRecordCount": 73
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Global Risk Clocks,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Evidence-fed pressure indexes with plain-language meanings, score methods, movement, control-system relevance, source trails, counter-signals and useful actions.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-28T06:12:38.874Z"
+    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
   }
 }

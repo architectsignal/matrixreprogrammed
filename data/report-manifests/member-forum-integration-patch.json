@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-07-28T06:16:48.020Z",
-  "pageCount": 139,
+  "generatedAt": "2026-07-28T06:51:36.030Z",
+  "pageCount": 138,
   "output": "downloads/member-forum-integration-patch.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Member Forum Integration Patch",
-    "contentHash": "770ded1d3e8556aafb54ae8ec0f817bccee4935b017c15b3d87e5f1fdf1ff4cd",
+    "contentHash": "a0ab5f09dea9a65e112b0eff3e877f9cc5ee38ddfab6c58c0695d7f2d1ce9f5c",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-897F71D253591D8F",
       "EP-AI-004",
-      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-C954C3B615AAFE11",
       "ASC-REVIEW-9E85403F3389F334",
@@ -31,7 +30,6 @@
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-A587A49D50D6CDC2",
@@ -42,6 +40,7 @@
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "26b90533dbf7d2ed42f02de6",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -83,6 +82,7 @@
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-5C5C06E1BEAB6D4A",
       "ASC-REVIEW-86C9D5939E18DD15",
+      "ASC-REVIEW-7A271098BC2FC4DF",
       "ASC-REVIEW-04E1CD15682BDB86",
       "ASC-REVIEW-321848A1083FB3CE",
       "ASC-REVIEW-95DEAFF6FF08FD3D",
@@ -145,13 +145,13 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-46CE2621F44A480F",
-      "ASC-REVIEW-FA5662AF68B13A9F"
+      "ASC-REVIEW-B8E3F97B2B57C256",
+      "ASC-REVIEW-46CE2621F44A480F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 137,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 136,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 114,
@@ -159,19 +159,19 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Member Forum Integration Patch beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Member Forum Integration Patch.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Matrix Reprogrammed Canonical Intelligence Record,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Canonical evidence-led record for cards, briefs, dossiers, daily drops, weekly reports, newsletters and member dashboards. Access level never changes evidential status.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -198,12 +198,12 @@
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer",
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-28T06:16:48.020Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

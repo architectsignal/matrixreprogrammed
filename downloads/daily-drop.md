@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-28T06:09:54.377Z
+Updated: 2026-07-28T06:43:47.337Z
 
 ## Status
 
-- Live Intel items: 66
+- Live Intel items: 44
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12

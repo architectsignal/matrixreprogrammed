@@ -29,7 +29,10 @@ const checks={
   publishAssessment:client.includes("'/api/admin/consequence-assessment'"),
   evidenceLimits:page.includes('What this does not establish'),
   namedReviewer:page.includes('Named reviewer'),
-  dueNotVerdict:page.includes('A due checkpoint is not a verdict')
+  dueNotVerdict:page.includes('A due checkpoint is not a verdict'),
+  publicTwinFallback:page.includes('id="workspace-public" class="btn alt" href="public-consequence-contracts.html"'),
+  originalSourceFallback:page.includes('id="workspace-source" class="btn alt" href="source-document-vault.html"'),
+  evidenceRouteFallback:page.includes('id="workspace-evidence" class="btn alt" href="evidence-vault.html"')
 };
 if(!Object.values(checks).every(Boolean))throw new Error(`Accountability review inbox finalization failed: ${JSON.stringify(checks)}`);
 fs.mkdirSync(path.join(root,'downloads'),{recursive:true});

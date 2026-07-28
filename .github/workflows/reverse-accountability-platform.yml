@@ -26,6 +26,7 @@ on:
       - 'scripts/power-diff-pressure-test.js'
       - 'scripts/install-red-team-mirror.js'
       - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/finalize-accountability-innovation-links.js'
       - 'scripts/red-team-mirror-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
@@ -56,6 +57,7 @@ on:
       - 'scripts/power-diff-pressure-test.js'
       - 'scripts/install-red-team-mirror.js'
       - 'scripts/finalize-red-team-mirror-routes.js'
+      - 'scripts/finalize-accountability-innovation-links.js'
       - 'scripts/red-team-mirror-pressure-test.js'
       - 'scripts/finalize-accountability-mission-intro.js'
       - 'scripts/align-mission-acceptance-copy.js'
@@ -94,6 +96,7 @@ jobs:
           node --check power-diff.js
           node --check scripts/install-red-team-mirror.js
           node --check scripts/finalize-red-team-mirror-routes.js
+          node --check scripts/finalize-accountability-innovation-links.js
           node --check scripts/red-team-mirror-pressure-test.js
           node --check red-team-mirror.js
           node --check scripts/finalize-accountability-mission-intro.js
@@ -130,6 +133,7 @@ jobs:
             downloads/red-team-mirror-report.json
             downloads/red-team-mirror-route-finalization.json
             downloads/red-team-mirror-pressure-test.json
+            downloads/accountability-innovation-link-finalization.json
             reverse-accountability-search.html
             reverse-accountability-search.js
             reverse-accountability-search.css

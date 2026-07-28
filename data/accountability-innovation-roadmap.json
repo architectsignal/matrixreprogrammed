@@ -21,7 +21,7 @@
       "status": "functional-foundation",
       "purpose": "Let a reader begin with a consequence, cost, closure, restriction, contract, policy outcome or lived problem and trace backwards to implementation, decisions, authority, money, beneficiaries, affected groups and unresolved questions.",
       "uniqueBehavior": "The user does not need to know the powerful person or institution before beginning the investigation.",
-      "currentCapability": "Searches current Accountability Twins and public-source leads, renders a six-step backwards evidence path and links each result to its responsibility chain."
+      "currentCapability": "Searches current Accountability Twins and public-source leads, renders a six-step backwards evidence path and links each result to its responsibility chain and freshness review."
     },
     {
       "id": "power-supply-chain",
@@ -29,14 +29,15 @@
       "status": "functional-foundation",
       "purpose": "Map who proposed, drafted, promoted, authorised, funded, implemented and benefited from an exercise of power, while distinguishing authority from access or association.",
       "uniqueBehavior": "Responsibility is represented as an evidence-classified chain of authority and implementation rather than a generic social network.",
-      "currentCapability": "Builds ten-stage chains for every reverse-search record, visibly preserves unresolved stages and blocks authority claims based only on access, association or proximity."
+      "currentCapability": "Builds ten-stage chains for every reverse-search record, visibly preserves unresolved stages, blocks authority claims based only on access, association or proximity and links to the exact evidence-freshness review."
     },
     {
       "id": "evidence-half-life",
       "name": "Evidence Half-Life",
-      "status": "locked-next",
-      "purpose": "Track when supporting records were last verified, whether they remain accessible and whether ownership, office, law or material context has changed.",
-      "uniqueBehavior": "Claims lose prominence or receive a recall notice when their evidence becomes stale, unavailable or contradicted."
+      "status": "functional-foundation",
+      "purpose": "Track when supporting records were last anchored, whether they remain accessible and whether ownership, office, law or material context must be re-verified.",
+      "uniqueBehavior": "Records receive review dates and evidence recall notices when current applicability is overdue or cannot be established, without treating age as falsity.",
+      "currentCapability": "Creates a synchronized review ledger for every reverse-search record with provisional baseline, review class, next review date, source-availability boundary and recall notice."
     },
     {
       "id": "power-diff",
@@ -79,6 +80,7 @@
     "Association, proximity and network membership must never be converted into guilt.",
     "Every material conclusion must state what the evidence establishes, what it does not establish, alternative explanations and what evidence would change the conclusion.",
     "No automated outcome verdict may be published without accepted evidence and named human review.",
+    "Evidence age must never be treated as a truth score; it triggers review of source availability and current applicability.",
     "Corrections, counter-evidence, right of reply and version history remain attached to the public record.",
     "Privacy-protected lived evidence must be redacted, consent-bounded and separately classified from general statistical evidence."
   ]

@@ -7,6 +7,7 @@ require('./power-supply-chain-pressure-test.js');
 require('./evidence-half-life-pressure-test.js');
 require('./power-diff-pressure-test.js');
 require('./red-team-mirror-pressure-test.js');
+require('./finalize-accountability-innovation-links.js');
 
 const root = process.cwd();
 const failures = [];
@@ -51,7 +52,7 @@ const redTeam = json('data/red-team-mirror.json');
 for (const marker of ['START WITH', 'data-reverse-search-form', 'data-reverse-search-results', mission, 'Search the consequence. Trace the power. Follow the outcome.']) {
   if (!page.includes(marker)) fail(`Reverse search page missing ${marker}`);
 }
-for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome', 'Trace responsibility chain', 'See what changed']) {
+for (const marker of ['expandTerms', 'score(record', 'data/reverse-accountability-index.json', 'Relevance is not proof', 'Follow the outcome', 'Trace responsibility chain', 'See what changed', 'Challenge the case']) {
   if (!client.includes(marker)) fail(`Reverse search client missing ${marker}`);
 }
 if (!css.includes('.reverse-path-step') || !css.includes('@media')) fail('Reverse search CSS is incomplete or not responsive');
@@ -102,6 +103,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'reverse-accountability-platform-p
   lockedSystems: requiredSystems,
   missionVoice: true,
   homepageEntry: true,
-  simpleHomepageProtected: true
+  simpleHomepageProtected: true,
+  innovationLinksFinalized: true
 }, null, 2) + '\n');
 console.log(`Reverse Accountability platform pressure test passed with ${index.records.length} synchronized records through Red-Team Mirror and all eight systems locked.`);

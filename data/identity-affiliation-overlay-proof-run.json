@@ -1,6 +1,6 @@
 {
-  "ok": null,
-  "status": "in_progress",
+  "ok": false,
+  "status": "failure",
   "runId": 30347592259,
   "runAttempt": 1,
   "workflow": "Focused Identity Overlay Live Proof",
@@ -8,5 +8,21 @@
   "releaseSha": "28f3423471112b6529640cf1b17f9f7cc227c156",
   "releaseWorkerVersion": "d7f814a8-ae27-4581-bd74-c905d5f42b3c",
   "startedAt": "2026-07-28T09:42:42.642Z",
-  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30347592259"
+  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30347592259",
+  "completedAt": "2026-07-28T10:01:43.425Z",
+  "liveSha": "b136022d6665cdfcf0a90532db8e833d563c5f3f",
+  "proofFile": "data/identity-affiliation-overlay-live-proof.json",
+  "failedChecks": [
+    "publicSiteResponds",
+    "deploymentHealthHealthy",
+    "deploymentShaConsistent",
+    "forumD1Health",
+    "forumD1Read",
+    "anonymousForumWriteRejected",
+    "anonymousForumWriteDidNotMutate",
+    "paypalConfigProtected",
+    "paypalCheckoutProtected",
+    "paypalCreateProtected"
+  ],
+  "error": null
 }

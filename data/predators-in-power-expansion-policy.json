@@ -1,7 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updated": "2026-07-28",
-  "purpose": "Expand Predators in Power into a current-status, child-safeguarding and legal-posture intelligence layer without converting office, association, rumors or unresolved allegations into guilt.",
+  "purpose": "Expand Predators in Power into a current-status, child-safeguarding, legal-posture and rumor-intelligence layer. Every relevant speculation record enters the system, while conviction, charge, official finding, attributed allegation, analytical hypothesis and rumor remain visibly separate states.",
+  "siteWideRumorPrinciple": "The system does not hide a claim merely because it is unverified. It records what is being said, where it came from, why it may matter, what supports or contradicts it, what it does not prove and what evidence could prove or disprove it.",
   "childFocusDomains": [
     "child_sexual_abuse",
     "child_sexual_exploitation",
@@ -36,20 +37,34 @@
     {"id":"former-power","label":"Former / Historical Power"},
     {"id":"convictions","label":"Convictions / Final Judgments"},
     {"id":"charges","label":"Charges / Official Proceedings"},
-    {"id":"claims-review","label":"Claims Under Review"}
+    {"id":"claims-review","label":"Rumour / Speculation Ledger"}
+  ],
+  "rumorStates": [
+    "submitted-unverified",
+    "publicly-circulating",
+    "under-source-check",
+    "unsupported",
+    "contradicted",
+    "partially-corroborated",
+    "corroborated-not-proven",
+    "disproved",
+    "promoted-to-evidence-lane"
   ],
   "currentStatusRule": "A subject is shown as currently in power only when a separately sourced role record identifies a current, acting, suspended or on-leave position and was checked within the configured freshness window. A role held when charged but later resigned is shown as former, with both dates and sources preserved.",
-  "coverageRule": "Every editorially approved child-focused conduct record with a separately sourced qualifying power role must appear in the expanded output or cause the build to fail. Manual eligibility flags cannot silently omit a qualifying subject.",
-  "claimsReviewRule": "Anonymous claims, social-media rumors, guilt by association and unsupported child-offence insinuations about living people are not published as named subjects. A named non-adjudicated claim requires an attributable source, exact claim wording, evidence analysis, documented response or right of reply, counter-evidence, proof needed, editorial approval and legal review. Machine matches remain private.",
+  "coverageRule": "Every editorially approved child-focused conduct record with a separately sourced qualifying power role must appear in the expanded verified output or cause the build to fail. Every relevant rumor or speculation record must appear in the separate rumor ledger, even when it is not eligible for a verified evidence lane.",
+  "claimsReviewRule": "Every relevant rumor, speculation, community submission or machine-generated hypothesis is retained and counted. A publicly attributable rumor may name the subject when the original public source is linked and the card is unmistakably labelled RUMOUR — NOT VERIFIED. Anonymous or untraceable submissions are still shown in the public ledger in redacted form, while the private investigative mapping preserves the target for corroboration. Rumors never count as convictions, findings, verified evidence or guilt.",
+  "publicRumorRule": "A named rumor card records the existence of a publicly attributable claim, not the truth of the claim. It must show the source, date or first-seen date, current verification state, counter-evidence or response, what remains unproven and the evidence needed next. The site must retain corrections, denials, acquittals, dismissals and disproving evidence alongside the rumor.",
+  "anonymousRumorRule": "Anonymous and unattributable submissions are not deleted. Their claim text is published only after automatic removal of the named target and direct identifiers. The public card receives a stable rumor ID and states that the identity is withheld pending attribution; the private investigation queue retains the target mapping.",
   "livingPersonClaimRequirements": [
-    "publicationStatus must be approved",
-    "legalReviewStatus must be approved",
-    "source must be attributable and independently accessible",
-    "the record must quote or accurately summarize the actual public claim without embellishment",
-    "right of reply, denial, dismissal, acquittal and counter-evidence must remain attached",
-    "the record must state what is not proven",
-    "association, friendship, photographs, meetings, donations or shared events cannot establish child offending"
+    "the card must be labelled RUMOUR — NOT VERIFIED or SPECULATION — NOT VERIFIED",
+    "a named card must link to the original attributable public source",
+    "the wording must accurately summarize what the source claims without embellishment",
+    "right of reply, denial, dismissal, acquittal and counter-evidence must remain attached when available",
+    "the card must state what is not proven and what evidence is needed next",
+    "association, friendship, photographs, meetings, donations or shared events cannot establish child offending",
+    "rumor and speculation cannot increase verified-evidence, criminality or guilt scores"
   ],
+  "scoringRule": "Rumor and speculation have zero verified-evidence weight. They may increase research priority only through a separate transparent lead-priority score based on source traceability, specificity, independent repetition, documentary hooks, contrary evidence and testability.",
   "freshnessDays": 120,
-  "boundary": "The expanded page is an evidence-classified accountability index. Conviction, charge, inquiry, civil finding, attributed allegation, analytical hypothesis and rumor are different states. Charges are not convictions. A power role is not wrongdoing. A claim-under-review tab records editorial process, not guilt."
+  "boundary": "The expanded page is an evidence-classified accountability and investigation index. Conviction, charge, inquiry, civil finding, attributed allegation, analytical hypothesis and rumor are different states. Charges are not convictions. A power role is not wrongdoing. A rumor card proves only that a claim exists and is being investigated; it does not prove the claim is true."
 }

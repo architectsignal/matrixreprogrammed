@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "1.0.0",
+  "title": "Identity, Affiliation & Ownership Evidence Overlay",
+  "asOf": "2026-07-28",
+  "editorialPolicy": {
+    "purpose": "Add a consistent evidence layer to every dossier while keeping identity, belief, institutional affiliation, legal ownership, voting control and alleged coordination analytically separate.",
+    "identityRule": "Record religion, cultural background or heritage only from public self-identification, formal records or reliable biographical reporting. Never infer it from a surname, appearance, nationality, social circle or allegation.",
+    "ownershipRule": "Display percentages only for legal or beneficial ownership, economic interest, voting rights or appointment authority supported by a filing or equivalent source with a defined denominator.",
+    "causationRule": "Identity or affiliation alone never proves wrongdoing, shared intent, coordinated control, intelligence activity or responsibility for another person's conduct.",
+    "aggregationRule": "Do not aggregate private owners into a religious or ethnic ownership percentage. A registered religious institution may be shown as an institutional owner when the institution itself legally owns the asset.",
+    "rightOfReply": true,
+    "versionHistory": true
+  },
+  "classifications": [
+    {"id":"official_record","label":"Official Record"},
+    {"id":"documented_fact","label":"Documented Fact"},
+    {"id":"public_self_identification","label":"Public Self-Identification"},
+    {"id":"documented_background","label":"Documented Background"},
+    {"id":"documented_affiliation","label":"Documented Affiliation"},
+    {"id":"credible_reporting","label":"Credible Reporting"},
+    {"id":"analytical_inference","label":"Analytical Inference"},
+    {"id":"disputed","label":"Disputed Claim"},
+    {"id":"unverified","label":"Unverified Claim"},
+    {"id":"deep_speculation","label":"Deep Speculation"}
+  ],
+  "records": [
+    {
+      "id": "jeffrey-epstein",
+      "subject": "Jeffrey Epstein",
+      "subjectType": "person",
+      "aliases": ["Epstein"],
+      "match": {"paths": ["jeffrey-epstein.html", "epstein-dossier.html", "the-epstein-files.html"]},
+      "status": "evidence_profile_active",
+      "verifiedAt": "2026-07-28",
+      "conclusion": "Epstein's Jewish family background and childhood are documented. The available record does not establish the extent of his adult religious observance, and Jewish identity does not explain his crimes or prove that he acted for a Jewish network or Israeli intelligence service.",
+      "identityAffiliation": [
+        {
+          "label": "Jewish family background and upbringing",
+          "classification": "documented_background",
+          "confidence": "high",
+          "scope": "family background and childhood",
+          "assessment": "Biographical reporting identifies Epstein's parents as children of Jewish immigrants, and later reporting documents markers of a Jewish upbringing.",
+          "boundary": "This establishes background, not adult observance, collective responsibility or operational allegiance.",
+          "sourceIds": ["britannica-epstein", "jta-epstein-jewish-world"]
+        },
+        {
+          "label": "Adult religious practice",
+          "classification": "unverified",
+          "confidence": "low",
+          "scope": "adult personal belief and observance",
+          "assessment": "The reviewed sources do not establish a consistent level of adult religious practice or formal communal leadership.",
+          "boundary": "Do not convert childhood background into a claim about adult belief or motive.",
+          "sourceIds": ["jta-epstein-jewish-world"]
+        }
+      ],
+      "ownership": {
+        "summary": "Epstein's personal identity is not an ownership category. Assets, companies, trusts and beneficial owners must be mapped in their own legal records.",
+        "entries": []
+      },
+      "claimTests": [
+        {
+          "claim": "Epstein's Jewish background proves that his trafficking operation was a Jewish operation.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "His Jewish family background is documented, and some people in his network were Jewish.",
+          "against": "Shared identity does not establish a command structure, common purpose or responsibility. His network included people from many backgrounds.",
+          "missing": "Authenticated instructions, funding, operational control or institutional records showing that a Jewish organisation directed the crimes.",
+          "conclusion": "Not established and analytically invalid without evidence of specific coordination.",
+          "sourceIds": ["britannica-epstein", "jta-epstein-jewish-world"]
+        },
+        {
+          "claim": "Epstein worked for Israeli intelligence.",
+          "classification": "unverified",
+          "confidence": "moderate",
+          "support": "The theory is sustained by reported relationships and statements by third parties.",
+          "against": "No authenticated public employment, tasking, payment or command record has established that status.",
+          "missing": "Primary intelligence records, corroborated handler testimony, tasking documents or traceable operational payments.",
+          "conclusion": "A live investigative hypothesis, not a proven fact; it must remain separate from Epstein's Jewish background.",
+          "sourceIds": []
+        }
+      ],
+      "evidenceGaps": [
+        "Reliable evidence of Epstein's adult religious observance",
+        "Complete beneficial-ownership map for every Epstein-controlled company, trust and property",
+        "Authenticated evidence proving or disproving intelligence tasking",
+        "Transaction-level records connecting specific institutions to specific criminal acts"
+      ],
+      "sourceIds": ["britannica-epstein", "jta-epstein-jewish-world"]
+    },
+    {
+      "id": "tom-cruise",
+      "subject": "Tom Cruise",
+      "subjectType": "person",
+      "aliases": ["Thomas Cruise Mapother IV"],
+      "match": {"paths": ["tom-cruise.html", "tom-cruise-dossier.html"]},
+      "status": "evidence_profile_active",
+      "verifiedAt": "2026-07-28",
+      "conclusion": "Cruise's long-public association with Scientology and the U.S. Navy's documented recognition of his Top Gun work are established. A controlling relationship between Cruise and the Orsini family, Vatican or Jesuit order is not established by the reviewed evidence.",
+      "identityAffiliation": [
+        {
+          "label": "Scientology affiliation",
+          "classification": "documented_affiliation",
+          "confidence": "high",
+          "scope": "public religious and institutional affiliation",
+          "assessment": "Cruise has publicly promoted Scientology, and the Church has described him as a Scientology parishioner and prominent Scientologist.",
+          "boundary": "Membership or advocacy does not establish an executive rank, hidden ownership or control by an unrelated family.",
+          "sourceIds": ["scientology-statement-cruise", "abc-cruise-scientology"]
+        },
+        {
+          "label": "U.S. Navy and Top Gun relationship",
+          "classification": "official_record",
+          "confidence": "very high",
+          "scope": "documented military-entertainment cooperation and public influence",
+          "assessment": "The U.S. Navy awarded Cruise its Distinguished Public Service Award and credited the Top Gun films with increasing public interest in naval service.",
+          "boundary": "This demonstrates cooperation and cultural influence, not proof that every film message was ordered by a covert network.",
+          "sourceIds": ["us-navy-cruise-award", "us-navy-honorary-aviator"]
+        }
+      ],
+      "ownership": {
+        "summary": "No reviewed source establishes Orsini beneficial ownership or voting control over Cruise's companies, career or film rights.",
+        "entries": []
+      },
+      "claimTests": [
+        {
+          "claim": "Tom Cruise is an Orsini bloodline puppet or asset.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "Cruise is associated with Scientology, has major Hollywood influence and married Katie Holmes at Castello Orsini-Odescalchi.",
+          "against": "A wedding venue bearing a historic family name is not evidence of ownership, tasking or command. No verified corporate, financial, family or operational control chain has been produced.",
+          "missing": "Beneficial-ownership records, contracts, payments, instructions, family relationship evidence or corroborated testimony showing Orsini control.",
+          "conclusion": "Not established. The venue link is real but does not prove an Orsini command relationship.",
+          "sourceIds": ["us-navy-cruise-award"]
+        },
+        {
+          "claim": "Top Gun functions as military propaganda.",
+          "classification": "analytical_inference",
+          "confidence": "moderate",
+          "support": "Official Navy records acknowledge the franchise's positive effect on awareness and interest in naval careers, and the productions used extensive Navy cooperation.",
+          "against": "The films are commercial fictional works with many creators and themes; influence does not prove covert central control.",
+          "missing": "Production agreements, requested script changes and decision records sufficient to attribute particular messages to military direction.",
+          "conclusion": "The military-entertainment influence is documented; the label 'propaganda' is an interpretation that should be argued from specific production evidence.",
+          "sourceIds": ["us-navy-cruise-award", "us-navy-honorary-aviator"]
+        }
+      ],
+      "evidenceGaps": [
+        "Current corporate ownership and voting-control records for Cruise-linked production entities",
+        "Complete production-assistance agreements for the Top Gun films",
+        "Any authenticated Orsini financial, family or command-chain link",
+        "Evidence distinguishing Scientology advocacy from formal organisational authority"
+      ],
+      "sourceIds": ["scientology-statement-cruise", "us-navy-cruise-award", "us-navy-honorary-aviator"]
+    },
+    {
+      "id": "john-travolta",
+      "subject": "John Travolta",
+      "subjectType": "person",
+      "aliases": ["John Joseph Travolta"],
+      "match": {"paths": ["john-travolta.html", "john-travolta-dossier.html"]},
+      "status": "evidence_profile_active",
+      "verifiedAt": "2026-07-28",
+      "conclusion": "Travolta's decades-long public Scientology affiliation is documented. The reviewed record does not establish that the Orsini family, Jesuits, Vatican or Clinton family owns, directs or tasks him.",
+      "identityAffiliation": [
+        {
+          "label": "Scientology affiliation",
+          "classification": "documented_affiliation",
+          "confidence": "high",
+          "scope": "public religious and institutional affiliation",
+          "assessment": "Travolta has publicly described his decades-long membership and participated in official Church events, including opening a Scientology mission in Ocala.",
+          "boundary": "This documents affiliation, not secret ownership, coercion, criminal participation or authority over other members.",
+          "sourceIds": ["travolta-official-site-scientology", "scientology-travolta-ocala", "cbs-travolta-scientology"]
+        }
+      ],
+      "ownership": {
+        "summary": "No reviewed source establishes Orsini beneficial ownership or voting control over Travolta's companies, career or assets.",
+        "entries": []
+      },
+      "claimTests": [
+        {
+          "claim": "John Travolta is an Orsini-controlled Hollywood asset.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "Travolta is a prominent Scientologist and has substantial cultural visibility.",
+          "against": "No verified family, ownership, payment, contractual or command link to the Orsini family has been shown.",
+          "missing": "Authenticated financial transfers, ownership rights, instructions, family relationship records or corroborated operational testimony.",
+          "conclusion": "Not established by the current public record.",
+          "sourceIds": ["scientology-travolta-ocala"]
+        },
+        {
+          "claim": "Travolta's relationship with the Clinton family proves participation in a coordinated political control network.",
+          "classification": "unverified",
+          "confidence": "moderate",
+          "support": "Public social or political contact may exist and should be mapped where sourced.",
+          "against": "Contact, photographs, attendance or friendship do not establish operational coordination or control.",
+          "missing": "Specific decisions, payments, instructions or reciprocal acts tied to a defined objective.",
+          "conclusion": "Treat individual contacts as relationship evidence only; no control structure is established.",
+          "sourceIds": []
+        }
+      ],
+      "evidenceGaps": [
+        "Current corporate ownership and voting-control records for Travolta-linked entities",
+        "Any authenticated Orsini financial, family or command-chain link",
+        "Specific evidence for claimed Clinton operational coordination",
+        "Current evidence distinguishing membership from formal Church authority"
+      ],
+      "sourceIds": ["travolta-official-site-scientology", "scientology-travolta-ocala", "cbs-travolta-scientology"]
+    },
+    {
+      "id": "orsini-family",
+      "subject": "Orsini family",
+      "subjectType": "historical and living family network",
+      "aliases": ["Orsini", "House of Orsini"],
+      "match": {"paths": ["orsini-family.html", "orsini-bloodline.html", "black-nobility-orsini.html"]},
+      "status": "claim_test_active",
+      "verifiedAt": "2026-07-28",
+      "conclusion": "The Orsini are a historically important Roman noble family. The reviewed material does not establish present beneficial ownership of Hollywood studios, Scientology, the Vatican, the Jesuit order, Tom Cruise or John Travolta. The Cruise wedding venue provides a real name-and-place connection but not a control chain.",
+      "identityAffiliation": [
+        {
+          "label": "Historic Roman Catholic and papal-aristocratic context",
+          "classification": "documented_background",
+          "confidence": "high",
+          "scope": "historical family context",
+          "assessment": "The family belongs to the history of Roman nobility and papal politics. That historical status should be distinguished from claims about present operational control.",
+          "boundary": "Historic proximity to the papacy does not prove current command of the Vatican, Jesuits, intelligence agencies or media industries.",
+          "sourceIds": []
+        }
+      ],
+      "ownership": {
+        "summary": "No verified modern ownership table has yet established Orsini economic or voting control over the Hollywood, media or Scientology entities alleged in the submitted claim.",
+        "entries": []
+      },
+      "claimTests": [
+        {
+          "claim": "The Orsini family controls Hollywood studios, talent agencies and media outlets.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "The claim relies on the family's historic prestige and broad 'Black Nobility' theories.",
+          "against": "No specific studio share register, beneficial-owner filing, voting agreement, board appointment right or acquisition chain was supplied or found in the reviewed material.",
+          "missing": "Named entities, exact ownership percentages, voting rights, nominee structures, trusts, board powers and authenticated source documents.",
+          "conclusion": "Not established. It should remain a research hypothesis until a company-by-company control chain is documented.",
+          "sourceIds": []
+        },
+        {
+          "claim": "Scientology is controlled by the Orsini family or Jesuit order.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "The submitted theory links institutions through symbolism, religion, celebrity membership and alleged intelligence relationships.",
+          "against": "No verified ownership, ecclesiastical appointment, funding or command record connects Orsini or Jesuit authorities to Scientology governance.",
+          "missing": "Corporate records, controlling legal instruments, internal directives, traceable funding and corroborated insider evidence.",
+          "conclusion": "Not established by the current public record.",
+          "sourceIds": ["scientology-official-overview"]
+        },
+        {
+          "claim": "Tom Cruise and John Travolta serve as Orsini-controlled frontmen.",
+          "classification": "deep_speculation",
+          "confidence": "high",
+          "support": "Both actors have documented Scientology affiliations; Cruise married at Castello Orsini-Odescalchi; Cruise's Top Gun work has documented Navy cooperation.",
+          "against": "These facts establish affiliation, venue use and military-entertainment cooperation, not Orsini ownership or tasking.",
+          "missing": "A verified Orsini-to-Scientology-to-actor control chain supported by ownership, payments, instructions, contracts or testimony.",
+          "conclusion": "The component facts belong in separate lanes. The claimed Orsini command chain is not established.",
+          "sourceIds": ["scientology-statement-cruise", "scientology-travolta-ocala", "us-navy-cruise-award"]
+        }
+      ],
+      "evidenceGaps": [
+        "A modern Orsini family tree linked to living asset controllers and verified offices",
+        "Company-by-company beneficial ownership and voting-right records",
+        "Any verified ownership or governance link to Scientology",
+        "Any authenticated instruction, payment or contract connecting Orsini actors to Cruise or Travolta"
+      ],
+      "sourceIds": ["scientology-official-overview", "us-navy-cruise-award"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "britannica-epstein",
+      "publisher": "Encyclopaedia Britannica",
+      "title": "Jeffrey Epstein: Early life",
+      "url": "https://www.britannica.com/biography/Jeffrey-Epstein",
+      "type": "reference biography",
+      "establishes": "Epstein's parents were children of Jewish immigrants and identifies his family background.",
+      "doesNotEstablish": "Adult religious observance, criminal motive or intelligence allegiance."
+    },
+    {
+      "id": "jta-epstein-jewish-world",
+      "publisher": "Jewish Telegraphic Agency",
+      "title": "What the Epstein files show about Jeffrey Epstein's Jewish world",
+      "url": "https://www.jta.org/2026/02/26/united-states/checks-charities-and-conversion-classes-what-the-epstein-files-show-about-jeffrey-epsteins-jewish-world",
+      "type": "specialist reporting",
+      "establishes": "Documented Jewish-cultural contacts, donations and references in released records.",
+      "doesNotEstablish": "That Judaism, Jewish institutions or Jewish people collectively directed Epstein's crimes."
+    },
+    {
+      "id": "scientology-statement-cruise",
+      "publisher": "Church of Scientology International statement carried by ABC News",
+      "title": "Church statement concerning Tom Cruise",
+      "url": "https://abcnews.go.com/images/2020/sci-STATEMENT.pdf",
+      "type": "institutional statement",
+      "establishes": "The Church describes Cruise as a Scientology parishioner and prominent Scientologist without an official or unofficial position in its hierarchy.",
+      "doesNotEstablish": "The truth or falsity of all external allegations concerning the Church or Cruise."
+    },
+    {
+      "id": "abc-cruise-scientology",
+      "publisher": "ABC News",
+      "title": "Tom Cruise Champions Scientology in Video",
+      "url": "https://abcnews.go.com/Entertainment/story?id=4138621&page=1",
+      "type": "news reporting",
+      "establishes": "Cruise's public advocacy for and identification with Scientology.",
+      "doesNotEstablish": "Secret organisational rank, hidden ownership or Orsini control."
+    },
+    {
+      "id": "travolta-official-site-scientology",
+      "publisher": "John Travolta official website",
+      "title": "A Conversation with John Travolta",
+      "url": "https://travolta.com/john-travolta-in-london-a-conversation-with-john-travolta/",
+      "type": "subject-linked publication",
+      "establishes": "Travolta's description of decades-long membership and reliance on his Scientology faith.",
+      "doesNotEstablish": "Formal rank, organisational control or Orsini direction."
+    },
+    {
+      "id": "scientology-travolta-ocala",
+      "publisher": "Church of Scientology International",
+      "title": "John Travolta Opens Church of Scientology Mission in Ocala",
+      "url": "https://www.scientologynews.org/press-releases/grand-opening-scientology-ideal-mission-opens-ocala.html",
+      "type": "institutional publication",
+      "establishes": "Travolta's public role at an official Scientology mission opening.",
+      "doesNotEstablish": "Hidden ownership, criminal coordination or control by the Orsini family."
+    },
+    {
+      "id": "cbs-travolta-scientology",
+      "publisher": "CBS News",
+      "title": "John Travolta defends Scientology against Going Clear",
+      "url": "https://www.cbsnews.com/news/john-travolta-defends-scientology-against-going-clear/",
+      "type": "news reporting",
+      "establishes": "Travolta's public defence of Scientology.",
+      "doesNotEstablish": "That all allegations for or against Scientology are resolved."
+    },
+    {
+      "id": "us-navy-cruise-award",
+      "publisher": "United States Navy",
+      "title": "SECNAV presents Tom Cruise with the Distinguished Public Service Award",
+      "url": "https://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/4007343/secnav-del-toro-presents-tom-cruise-with-the-distinguished-public-service-award/",
+      "type": "official record",
+      "establishes": "Official Navy recognition of Cruise and the Top Gun franchise's public influence.",
+      "doesNotEstablish": "A covert Orsini, Vatican or Jesuit command structure."
+    },
+    {
+      "id": "us-navy-honorary-aviator",
+      "publisher": "United States Navy",
+      "title": "Tom Cruise and Jerry Bruckheimer Named Honorary Naval Aviators",
+      "url": "https://www.navy.mil/DesktopModules/ArticleCS/Print.aspx?Article=2381871&ModuleId=685&PortalId=1",
+      "type": "official record",
+      "establishes": "Documented cooperation and Navy recognition connected to the Top Gun franchise.",
+      "doesNotEstablish": "That Cruise was acting under a private-family command structure."
+    },
+    {
+      "id": "scientology-official-overview",
+      "publisher": "Church of Scientology International",
+      "title": "Official Church of Scientology overview",
+      "url": "https://www.scientology.org/",
+      "type": "institutional source",
+      "establishes": "The organisation's public description of itself and its formal ecclesiastical leadership.",
+      "doesNotEstablish": "Independent verification of all institutional claims or any Orsini/Jesuit control relationship."
+    }
+  ]
+}

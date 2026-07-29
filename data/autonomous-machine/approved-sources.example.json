@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "replace-with-approved-source",
+      "name": "Replace with an approved public source",
+      "baseUrl": "https://example.org/",
+      "enabled": false,
+      "lawfulBasis": "public_web",
+      "termsReviewed": false,
+      "automationAllowed": false,
+      "rateLimitPerHour": 10,
+      "reliability": "unrated",
+      "notes": "Disabled template only. Review terms, robots policy, licensing and rate limits before enabling."
+    }
+  ]
+}

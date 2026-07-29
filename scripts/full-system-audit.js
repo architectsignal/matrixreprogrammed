@@ -42,6 +42,7 @@ function addSystem(name, ok, details = {}, critical = true) {
   if (!item.ok && !critical) report.warnings.push(`${name}: advisory check failed`);
   return item.ok;
 }
+
 function run(label, command, args, options = {}) {
   const critical = options.critical !== false;
   const started = new Date().toISOString();
@@ -52,18 +53,35 @@ function run(label, command, args, options = {}) {
     encoding: 'utf8',
     shell: false,
     maxBuffer: 50 * 1024 * 1024,
-    env: { ...process.env, FULL_SYSTEM_AUDIT: '1', DEPLOY_COMMIT_SHA: deploySha, SOURCE_DOCUMENTS_PER_RUN: process.env.SOURCE_DOCUMENTS_PER_RUN || '0', ...(options.env || {}) }
+    env: {
+      ...process.env,
+      FULL_SYSTEM_AUDIT: '1',
+      DEPLOY_COMMIT_SHA: deploySha,
+      SOURCE_DOCUMENTS_PER_RUN: process.env.SOURCE_DOCUMENTS_PER_RUN || '0',
+      ...(options.env || {})
+    }
   });
   const stdout = result.stdout || '';
   const stderr = result.stderr || '';
   if (stdout) process.stdout.write(stdout);
   if (stderr) process.stderr.write(stderr);
-  const entry = { label, command: [command, ...args].join(' '), status: result.status, ok: result.status === 0, critical, startedAt: started, finishedAt: new Date().toISOString(), stdoutTail: stdout.slice(-6000), stderrTail: stderr.slice(-6000) };
+  const entry = {
+    label,
+    command: [command, ...args].join(' '),
+    status: result.status,
+    ok: result.status === 0,
+    critical,
+    startedAt: started,
+    finishedAt: new Date().toISOString(),
+    stdoutTail: stdout.slice(-6000),
+    stderrTail: stderr.slice(-6000)
+  };
   report.commands.push(entry);
   if (!entry.ok && critical) report.ok = false;
   if (!entry.ok && !critical) report.warnings.push(`${label}: advisory command exited ${result.status}`);
   return entry;
 }
+
 function countFiles(ext) {
   let count = 0;
   const ignored = new Set(['.git', 'node_modules', '_site', '.wrangler']);
@@ -78,6 +96,7 @@ function countFiles(ext) {
   walk(root);
   return count;
 }
+
 function needFile(name, label = name, critical = true) {
   const ok = exists(name);
   report.files.push({ file: name, ok, label, critical });
@@ -85,6 +104,7 @@ function needFile(name, label = name, critical = true) {
   if (!ok && !critical) report.warnings.push(`Optional file missing: ${name}`);
   return ok;
 }
+
 function needText(file, text, label = text, critical = true) {
   const ok = exists(file) && read(file).includes(text);
   report.files.push({ file, ok, label, critical });
@@ -92,6 +112,7 @@ function needText(file, text, label = text, critical = true) {
   if (!ok && !critical) report.warnings.push(`${file} missing advisory marker ${label}`);
   return ok;
 }
+
 function forbidText(file, text, label = text, critical = true) {
   const ok = !exists(file) || !read(file).includes(text);
   report.files.push({ file, ok, label: `forbid ${label}`, critical });
@@ -107,9 +128,10 @@ run('Production freshness guard', 'node', ['scripts/production-freshness-guard.j
 run('Production synchronization contract', 'node', ['scripts/production-sync-test.js']);
 run('Current site-function harmony', 'node', ['scripts/site-function-harmony-test.js']);
 run('Legacy regression and Cloudflare pressure gate', 'node', ['scripts/cloudflare-focused-pressure-wrapper.js']);
-// The legacy pressure wrapper deliberately exercises broad generators that may
-// rewrite index.html. Reapply the canonical homepage owner before any final
-// guard or focused Live Intel test so the audited state matches deployment.
+
+// Broad and focused legacy test chains may rebuild index.html. Reassert the
+// canonical search-first homepage before final guards and again immediately
+// before the Live Intel route contract is tested.
 run('Final homepage reconciliation after legacy pressure', 'node', ['scripts/reconcile-release-homepage-order.js']);
 run('Final production deploy guard', 'node', ['scripts/production-deploy-guard.js']);
 run('Static site QA audit', 'node', ['scripts/audit-site.js']);
@@ -133,15 +155,26 @@ const focused = [
   ['Evidence badges', 'scripts/evidence-badge-pressure-test.js'],
   ['Premier resources', 'scripts/premier-resource-pressure-test.js']
 ];
+
 for (const [label, script] of focused) {
+  if (label === 'Live Intel') {
+    run('Canonical homepage reconciliation before focused Live Intel test', 'node', ['scripts/reconcile-release-homepage-order.js']);
+  }
   if (exists(script)) run(label, 'node', [script]);
   else report.warnings.push(`${label}: ${script} is not present`);
 }
 
+// Leave the audited source and Cloudflare output in the canonical homepage
+// state after all focused legacy tests have finished.
+run('Final canonical homepage state after focused tests', 'node', ['scripts/reconcile-release-homepage-order.js']);
+
 const checks = [
-  ['Homepage', 'index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.'],
+  ['Homepage', 'index.html', 'POWER SHOULD HAVE'],
   ['Homepage security route', 'index.html', 'Security Tools'],
   ['Homepage dark-web route', 'index.html', 'Dark Web Safety'],
+  ['Homepage Live Intel route', 'index.html', 'live-intel-machine-route'],
+  ['Homepage watchlist', 'index.html', 'My Watchlist'],
+  ['Homepage search handoff', 'index.html', 'name="q"'],
   ['Free membership', 'membership.html', 'Free Member'],
   ['Membership €3 tier', 'membership.html', '€3'],
   ['Membership €6 tier', 'membership.html', '€6'],
@@ -149,6 +182,7 @@ const checks = [
   ['Membership PayPal runtime', 'membership.html', 'paypal-membership.js'],
   ['Membership disabled-by-default notice', 'membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'],
   ['Strict Worker entrypoint', 'wrangler.toml', 'main = "src/worker-production.js"'],
+  ['Selective Worker routing', 'wrangler.toml', 'run_worker_first = ['],
   ['Strict forum boundary', 'src/worker-production.js', 'non-authoritative-forum-response-blocked'],
   ['Strict PayPal boundary', 'src/worker-production.js', 'non-authoritative-paypal-response-blocked'],
   ['PayPal Worker route', 'src/worker-paypal-subscriptions.js', '/api/paypal/webhook'],
@@ -165,15 +199,18 @@ const checks = [
   ['Main board', 'forum.html', 'data-board="main"'],
   ['Speculation board', 'dark-speculation-forum.html', 'data-board="speculation"'],
   ['Epstein sighting board', 'epstein-alive-board.html', 'data-board="epstein-alive"'],
-  ['Cloudflare output', '_site/index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.'],
+  ['Cloudflare output', '_site/index.html', 'POWER SHOULD HAVE'],
+  ['Built Live Intel route', '_site/index.html', 'live-intel-machine-route'],
   ['Built PayPal membership', '_site/membership.html', 'paypal-membership.js'],
   ['Built health D1', '_site/deploy-health.json', 'src/worker-production.js']
 ];
 for (const [name, file, marker] of checks) addSystem(name, needText(file, marker, marker), { file, marker });
+
 forbidText('membership.html', 'Coming soon — no payment taken', 'obsolete deferred membership page');
 forbidText('membership.html', '€19/month', 'legacy €19 tier');
 forbidText('membership.html', '€49/month', 'legacy €49 tier');
 forbidText('_site/membership.html', 'Coming soon — no payment taken', 'built obsolete membership page');
+forbidText('wrangler.toml', 'run_worker_first = true', 'obsolete global Worker-first routing');
 
 for (const file of [
   'deploy-manifest.json', 'deploy-health.json', 'deploy-health.html', 'downloads/deploy-health.json',
@@ -199,9 +236,12 @@ report.summary = {
   warningCount: report.warnings.length
 };
 report.finishedAt = new Date().toISOString();
+
 if (report.summary.failedCriticalCommands) report.recommendations.push('Fix the first critical command failure before treating the repository as release-ready.');
 if (report.summary.failedCriticalSystems) report.recommendations.push('A required current-production marker is missing; inspect build order and final reconciliation.');
-if (!report.summary.failedCriticalCommands && !report.summary.failedCriticalSystems) report.recommendations.push('Current production architecture passed: strict Worker, D1 forum, member entitlements, server-gated PayPal, current routes and commit-bound health.');
+if (!report.summary.failedCriticalCommands && !report.summary.failedCriticalSystems) {
+  report.recommendations.push('Current production architecture passed: strict Worker, D1 forum, member entitlements, server-gated PayPal, current routes and commit-bound health.');
+}
 
 fs.writeFileSync(path.join(downloads, 'full-system-audit.json'), JSON.stringify(report, null, 2));
 const lines = [

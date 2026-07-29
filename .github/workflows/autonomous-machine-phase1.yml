@@ -74,3 +74,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.9-self-test.js
+
+      - name: Verify Phase 1.10 creates time-limited authorisation requests only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.10-self-test.js

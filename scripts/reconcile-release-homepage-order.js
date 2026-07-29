@@ -50,6 +50,24 @@ function patchSafetyRoutes(file) {
   if (after !== before) fs.writeFileSync(file, after);
 }
 
+function patchMoneyRoutes(file) {
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return;
+  const before = fs.readFileSync(file, 'utf8');
+  if (!before.includes('class="accountability-home"') || !before.includes('href="follow-the-money.html"')) {
+    throw new Error(`${path.relative(root, file)} is missing the canonical Follow the Money route`);
+  }
+  let after = before;
+  if (!after.includes('href="making-money.html"')) {
+    const target = '<a href="follow-the-money.html">Follow the Money</a>';
+    if (!after.includes(target)) throw new Error(`${path.relative(root, file)} has no stable Follow the Money navigation anchor`);
+    after = after.replace(target, `${target}<a href="making-money.html">Making Money</a>`);
+  }
+  if (!after.includes('href="making-money.html"')) {
+    throw new Error(`${path.relative(root, file)} failed to preserve the Making Money route`);
+  }
+  if (after !== before) fs.writeFileSync(file, after);
+}
+
 function copy(relative) {
   if (!fs.existsSync(outputRoot)) return;
   const source = path.join(root, relative);
@@ -82,6 +100,7 @@ run('scripts/patch-homepage-mask-intro.js');
 run('scripts/homepage-mask-intro-test.js');
 
 patchSafetyRoutes(path.join(root, 'index.html'));
+patchMoneyRoutes(path.join(root, 'index.html'));
 
 for (const relative of [
   'index.html',
@@ -104,7 +123,10 @@ for (const relative of [
   'downloads/homepage-mask-intro-report.json'
 ]) copy(relative);
 
-if (fs.existsSync(outputRoot)) patchSafetyRoutes(path.join(outputRoot, 'index.html'));
+if (fs.existsSync(outputRoot)) {
+  patchSafetyRoutes(path.join(outputRoot, 'index.html'));
+  patchMoneyRoutes(path.join(outputRoot, 'index.html'));
+}
 
 run('scripts/search-first-accountability-home-pressure-test.js');
 
@@ -114,6 +136,8 @@ for (const [relative, marker] of [
   ['index.html', 'action="search.html" method="get"'],
   ['index.html', 'name="q"'],
   ['index.html', 'accountability-home.js'],
+  ['index.html', 'href="follow-the-money.html"'],
+  ['index.html', 'href="making-money.html"'],
   ['index.html', 'href="security-privacy.html"'],
   ['index.html', 'href="dark-web-safety.html"'],
   ['index.html', 'data-homepage-mask-intro'],
@@ -128,6 +152,8 @@ if (fs.existsSync(outputRoot)) {
     ['index.html', 'My Watchlist'],
     ['index.html', 'id="accountability-search"'],
     ['index.html', 'name="q"'],
+    ['index.html', 'href="follow-the-money.html"'],
+    ['index.html', 'href="making-money.html"'],
     ['index.html', 'data-homepage-mask-intro'],
     ['search.html', 'search-query-handoff.js'],
     ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
@@ -138,7 +164,7 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
-  orderingRule: 'Broad generators first; canonical search-first homepage, reverse-accountability entry, construction banner and video intro last.',
+  orderingRule: 'Broad generators first; canonical search-first homepage, money routes, reverse-accountability entry, construction banner and video intro last.',
   commands,
   copied: [...new Set(copied)],
   checks
@@ -149,4 +175,4 @@ if (fs.existsSync(outputRoot)) {
   fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
   fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
 }
-console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, construction banner and intro are canonical across source and Cloudflare output.`);
+console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, Follow the Money, Making Money, construction banner and intro are canonical across source and Cloudflare output.`);

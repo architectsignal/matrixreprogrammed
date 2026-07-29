@@ -13,31 +13,57 @@ if (/^run_worker_first\s*=\s*true\s*$/m.test(wrangler)) {
   throw new Error('wrangler.toml still sends all static traffic through the Worker');
 }
 
-const patches = [
+const targets = [
   {
     file: 'scripts/build-production-health.js',
-    from: "'run_worker_first = true'",
-    to: "'run_worker_first = ['"
+    obsolete: ["'run_worker_first = true'"],
+    verify(source) {
+      return source.includes('const selectiveWorkerRoutingReady')
+        && source.includes('/^run_worker_first\\s*=\\s*\\[/m.test(wranglerToml)')
+        && source.includes('!/^run_worker_first\\s*=\\s*true\\s*$/m.test(wranglerToml)')
+        && source.includes('selectiveWorkerRoutingReady');
+    }
   },
   {
     file: 'scripts/production-deploy-guard.js',
-    from: "'run_worker_first = true','keep_vars = true'",
-    to: "'run_worker_first = [','keep_vars = true'"
+    obsolete: ["'run_worker_first = true','keep_vars = true'", "'run_worker_first = true'"],
+    verify(source) {
+      return source.includes('const selectiveWorkerRoutingReady')
+        && source.includes('/^run_worker_first\\s*=\\s*\\[/m.test(wranglerToml)')
+        && source.includes('!/^run_worker_first\\s*=\\s*true\\s*$/m.test(wranglerToml)')
+        && source.includes("hard.push('wrangler.toml must use selective run_worker_first route protection");
+    }
   }
 ];
 
 const changed = [];
-for (const patch of patches) {
-  const file = path.join(root, patch.file);
-  if (!fs.existsSync(file)) throw new Error(`Selective Worker-first gate target missing: ${patch.file}`);
+for (const target of targets) {
+  const file = path.join(root, target.file);
+  if (!fs.existsSync(file)) throw new Error(`Selective Worker-first gate target missing: ${target.file}`);
   const before = fs.readFileSync(file, 'utf8');
-  const occurrences = before.split(patch.from).length - 1;
-  if (occurrences > 1) throw new Error(`${patch.file} contains ${occurrences} obsolete Worker-first assertions; expected at most one`);
-  const after = before.includes(patch.from) ? before.replace(patch.from, patch.to) : before;
-  if (!after.includes(patch.to)) throw new Error(`${patch.file} does not verify the selective Worker-first array`);
+  let after = before;
+
+  for (const obsolete of target.obsolete) {
+    const occurrences = after.split(obsolete).length - 1;
+    if (occurrences > 1) throw new Error(`${target.file} contains ${occurrences} obsolete Worker-first assertions for ${obsolete}; expected at most one`);
+    if (occurrences === 1) {
+      if (obsolete === "'run_worker_first = true','keep_vars = true'") {
+        after = after.replace(obsolete, "'run_worker_first = [','keep_vars = true'");
+      } else {
+        after = after.replace(obsolete, "'run_worker_first = ['");
+      }
+    }
+  }
+
+  if (!target.verify(after)) {
+    throw new Error(`${target.file} does not semantically verify the selective Worker-first array`);
+  }
+  if (/^run_worker_first\s*=\s*true\s*$/m.test(after)) {
+    throw new Error(`${target.file} still accepts global Worker-first routing`);
+  }
   if (after !== before) {
     fs.writeFileSync(file, after);
-    changed.push(patch.file);
+    changed.push(target.file);
   }
 }
 
@@ -60,12 +86,13 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   routingMode: 'selective-worker-first-array',
+  validationMode: 'semantic-contract',
   staticAssetsBypassWorker: true,
   protectedAndDynamicRoutesUseWorker: true,
   homepageOwnerReconciledBeforeManifest: true,
   changed,
-  checked: patches.map(item => item.file)
+  checked: targets.map(item => item.file)
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'selective-worker-first-gate-alignment.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Selective Worker-first release gates aligned: ${changed.length} file(s) updated; canonical homepage owner reconciled before manifest hashing.`);
+console.log(`Selective Worker-first release gates aligned semantically: ${changed.length} file(s) updated; canonical homepage owner reconciled before manifest hashing.`);

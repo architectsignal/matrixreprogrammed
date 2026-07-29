@@ -107,6 +107,10 @@ run('Production freshness guard', 'node', ['scripts/production-freshness-guard.j
 run('Production synchronization contract', 'node', ['scripts/production-sync-test.js']);
 run('Current site-function harmony', 'node', ['scripts/site-function-harmony-test.js']);
 run('Legacy regression and Cloudflare pressure gate', 'node', ['scripts/cloudflare-focused-pressure-wrapper.js']);
+// The legacy pressure wrapper deliberately exercises broad generators that may
+// rewrite index.html. Reapply the canonical homepage owner before any final
+// guard or focused Live Intel test so the audited state matches deployment.
+run('Final homepage reconciliation after legacy pressure', 'node', ['scripts/reconcile-release-homepage-order.js']);
 run('Final production deploy guard', 'node', ['scripts/production-deploy-guard.js']);
 run('Static site QA audit', 'node', ['scripts/audit-site.js']);
 run('Static local-link audit', 'node', ['tools/link-audit.js']);

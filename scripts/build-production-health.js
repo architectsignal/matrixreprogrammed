@@ -13,6 +13,20 @@ const read = rel => exists(rel) ? fs.readFileSync(full(rel), 'utf8') : '';
 const parse = rel => { try { return JSON.parse(read(rel)); } catch { return null; } };
 const hash = rel => exists(rel) ? crypto.createHash('sha256').update(fs.readFileSync(full(rel))).digest('hex').slice(0, 16) : 'missing';
 const esc = value => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+// build-deploy-manifest.js can rebuild the homepage while regenerating money/search
+// assets. Reapply the canonical search-first homepage owner here, immediately
+// before production health hashes are calculated and before the final deploy copy.
+const homepageReconcile = full('scripts/reconcile-release-homepage-order.js');
+if (!fs.existsSync(homepageReconcile)) {
+  throw new Error('Missing canonical homepage reconciliation script before production health.');
+}
+execFileSync(process.execPath, [homepageReconcile], {
+  cwd: root,
+  stdio: 'inherit',
+  env: process.env
+});
+
 function commitSha() {
   const supplied = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.CF_COMMIT_SHA || '';
   if (/^[a-f0-9]{40}$/i.test(supplied)) return supplied;

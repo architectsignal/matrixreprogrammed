@@ -48,17 +48,29 @@ function duplicateIds(html) {
 function requireMarker(rel, marker) {
   const text = fs.readFileSync(path.join(root, rel), 'utf8');
   const ok = text.includes(marker);
-  report.checks.push({ rel, marker, ok });
+  report.checks.push({ scope: 'source', rel, marker, ok });
   if (!ok) throw new Error(`${rel} missing required marker: ${marker}`);
   if (rel.endsWith('.html')) {
     const duplicates = duplicateIds(text);
     if (duplicates.length) throw new Error(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
   }
 }
+function requireSiteMarker(rel, marker) {
+  const file = path.join(site, rel);
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) throw new Error(`Deployable file missing after final sanitation: _site/${rel}`);
+  const text = fs.readFileSync(file, 'utf8');
+  const ok = text.includes(marker);
+  report.checks.push({ scope: 'deployable', rel, marker, ok });
+  if (!ok) throw new Error(`_site/${rel} missing required final marker: ${marker}`);
+  if (rel.endsWith('.html')) {
+    const duplicates = duplicateIds(text);
+    if (duplicates.length) throw new Error(`_site/${rel} duplicate IDs: ${duplicates.join(', ')}`);
+  }
+}
 function rejectMarker(rel, marker) {
   const text = fs.readFileSync(path.join(root, rel), 'utf8');
   const ok = !text.includes(marker);
-  report.checks.push({ rel, rejectedMarker: marker, ok });
+  report.checks.push({ scope: 'source', rel, rejectedMarker: marker, ok });
   if (!ok) throw new Error(`${rel} contains forbidden legacy marker: ${marker}`);
 }
 
@@ -81,8 +93,9 @@ run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 run('scripts/patch-paypal-server-redirect.js');
 
-// Final owners of member posting, search and conclusion surfaces. These run
-// after every broad generator and immediately before the deployable copy.
+// Final owners of member posting, Search V3, the search-first homepage and
+// conclusion surfaces. These run after every broad generator and immediately
+// before the deployable copy and manifest proof.
 run('scripts/repair-forum-member-posting.js');
 run('scripts/repair-forum-login-canonical.js');
 run('scripts/repair-forum-session-compatibility.js');
@@ -100,7 +113,9 @@ run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/build-production-health.js');
 
 const critical = [
-  'index.html','homepage-mask-intro.css','homepage-mask-intro-data.js','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
+  'index.html','accountability-home.css','accountability-home.js','search-query-handoff.js','welcome-gate.css','welcome-gate.js',
+  'reverse-accountability-search.html','reverse-accountability-search.css','reverse-accountability-search.js',
+  'homepage-mask-intro.css','homepage-mask-intro-data.js','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
   'start-here.html','contact-the-machine.html','contact-the-machine.css','contact-the-machine.js','membership.html','paypal-membership.js','member-login.html','member-dashboard.html','member-dashboard-app.js',
   'forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js',
   'billing-dashboard.html','billing-dashboard.js','admin-payment-dashboard.html','admin-payment-dashboard.js',
@@ -108,18 +123,40 @@ const critical = [
   'daily-investigation-conclusions.html','weekly-investigation-report.html','daily-brain-brief.html','outcome-briefings.html','security-privacy.html',
   'dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','timers.html','ai-speculative-conclusions.html',
   'search.html','search.js','search-index.json','data/search-facets.json','_headers','data/membership-tiers.json',
+  'data/accountability-question-ledger.json','data/reverse-accountability-index.json',
   'data/live-intel.json','data/daily-power-conclusions.json','data/daily-investigation-conclusions.json','data/weekly-investigation-conclusions.json',
   'data/daily-brain-brief.json','data/outcome-briefings.json','data/global-risk-clocks.json','data/clock-wall.json',
-  'data/production-freshness-policy.json','deploy-manifest.json','deploy-health.html','deploy-health.json','downloads/deploy-health.json'
+  'data/production-freshness-policy.json','deploy-manifest.json','deploy-health.html','deploy-health.json','downloads/deploy-health.json',
+  'downloads/release-homepage-order-reconciliation.json'
 ];
 critical.forEach(copy);
 
 // Nothing may mutate the deployable bundle after this sanitation and audit.
 run('scripts/final-release-sanitize.js');
 
+// The exact regression that paused the release is now proved after the last
+// mutator, against both canonical source and the Cloudflare output.
+for (const [rel, marker] of [
+  ['index.html', 'class="accountability-home"'],
+  ['index.html', 'My Watchlist'],
+  ['index.html', 'id="accountability-search"'],
+  ['index.html', 'action="search.html" method="get"'],
+  ['index.html', 'name="q"'],
+  ['index.html', 'accountability-home.js'],
+  ['index.html', 'data-homepage-mask-intro'],
+  ['index.html', 'welcome-gate.js'],
+  ['index.html', 'id="matrix-construction-banner"'],
+  ['search.html', 'search-query-handoff.js'],
+  ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+]) {
+  requireMarker(rel, marker);
+  requireSiteMarker(rel, marker);
+}
+requireSiteMarker('index', 'My Watchlist');
+requireSiteMarker('index', 'name="q"');
+
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
-requireMarker('index.html', 'data-homepage-mask-intro');
 requireMarker('index.html', 'assets/intro-eye.svg');
 requireMarker('index.html', 'assets/intro-mask.svg');
 requireMarker('index.html', 'homepage-intro__burn');
@@ -209,4 +246,4 @@ requireMarker('deploy-health.json', '"paymentStatus": "runtime-gated-dashboard-m
 requireMarker('deploy-health.json', '"checkoutDefault": "runtime-d1-gated"');
 
 persistReport();
-console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, member forum posting repaired, final deploy bundle sanitized and audited.`);
+console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, canonical My Watchlist and q= search handoff proved after sanitation, member forum posting repaired, and the final deploy bundle audited.`);

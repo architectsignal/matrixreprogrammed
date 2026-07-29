@@ -11,6 +11,12 @@ let evidence=fs.readFileSync(evidenceFile,'utf8');
 let tracker=fs.readFileSync(trackerFile,'utf8');
 let wrangler=fs.readFileSync(wranglerFile,'utf8');
 const beforeEvidence=evidence,beforeTracker=tracker,beforeWrangler=wrangler;
+const evidenceNewline=evidence.includes('\r\n')?'\r\n':'\n';
+const trackerNewline=tracker.includes('\r\n')?'\r\n':'\n';
+const wranglerNewline=wrangler.includes('\r\n')?'\r\n':'\n';
+evidence=evidence.replace(/\r\n/g,'\n');
+tracker=tracker.replace(/\r\n/g,'\n');
+wrangler=wrangler.replace(/\r\n/g,'\n');
 
 const oldCurrent=`async function currentContracts(env,limit=100){
   const rows=await all(env.MEMBERS_DB.prepare('SELECT contract_id,title,route,action_date,source_url,evidence_route,accountability_question,evidence_boundary,terms_lock,outcome_verdict,current_version,next_checkpoint_days,next_due_at,review_state,updated_at FROM consequence_contracts WHERE active=1 ORDER BY action_date DESC LIMIT ?').bind(limit));
@@ -53,6 +59,9 @@ if(cronMatch){
   wrangler=wrangler.replace(triggerHeader,`${triggerHeader}\ncrons = ["${dedicatedCron}"]`);
 }
 
+evidence=evidence.replace(/\n/g,evidenceNewline);
+tracker=tracker.replace(/\n/g,trackerNewline);
+wrangler=wrangler.replace(/\n/g,wranglerNewline);
 if(evidence!==beforeEvidence)fs.writeFileSync(evidenceFile,evidence);
 if(tracker!==beforeTracker)fs.writeFileSync(trackerFile,tracker);
 if(wrangler!==beforeWrangler)fs.writeFileSync(wranglerFile,wrangler);

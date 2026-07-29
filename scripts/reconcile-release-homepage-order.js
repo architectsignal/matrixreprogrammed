@@ -39,6 +39,7 @@ function patchSafetyRoutes(file) {
     throw new Error(`${path.relative(root, file)} is not the canonical search-first homepage`);
   }
   const safetyLinks = [
+    ['live-intel.html', 'Live Intel'],
     ['security-privacy.html', 'Security Tools'],
     ['dark-web-safety.html', 'Dark Web Safety']
   ].filter(([href]) => !before.includes(`href="${href}"`));
@@ -138,6 +139,7 @@ for (const [relative, marker] of [
   ['index.html', 'accountability-home.js'],
   ['index.html', 'href="follow-the-money.html"'],
   ['index.html', 'href="making-money.html"'],
+  ['index.html', 'href="live-intel.html"'],
   ['index.html', 'href="security-privacy.html"'],
   ['index.html', 'href="dark-web-safety.html"'],
   ['index.html', 'data-homepage-mask-intro'],
@@ -154,6 +156,7 @@ if (fs.existsSync(outputRoot)) {
     ['index.html', 'name="q"'],
     ['index.html', 'href="follow-the-money.html"'],
     ['index.html', 'href="making-money.html"'],
+    ['index.html', 'href="live-intel.html"'],
     ['index.html', 'data-homepage-mask-intro'],
     ['search.html', 'search-query-handoff.js'],
     ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
@@ -164,7 +167,7 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
-  orderingRule: 'Broad generators first; canonical search-first homepage, money routes, reverse-accountability entry, construction banner and video intro last.',
+  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, money routes, reverse-accountability entry, construction banner and video intro last.',
   commands,
   copied: [...new Set(copied)],
   checks
@@ -175,4 +178,4 @@ if (fs.existsSync(outputRoot)) {
   fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
   fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
 }
-console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, Follow the Money, Making Money, construction banner and intro are canonical across source and Cloudflare output.`);
+console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, Live Intel, Follow the Money, Making Money, construction banner and intro are canonical across source and Cloudflare output.`);

@@ -79,18 +79,66 @@ for (const slot of ['person','institution','family']) {
   add(`dossier-${slot}-assessment`, ['whatWasFound','whyItMatters','howItFits','whatItPointsToward','alternativeExplanation','whatItDoesNotProve'].every(field => clean(dossier.executiveAssessment?.[field],1800)), `${slot} executive assessment checked.`, 'Explain evidence, mechanism, direction, alternative and limitation.');
 }
 add('history-and-weekly-delta', history.ok && weeklyDelta.ok && array(history.entries).length > 0, `${array(history.entries).length} history entries; weekly delta ${weeklyDelta.ok ? 'ready' : 'missing'}.`, 'Retain ranking history and weekly changes.');
-add('publication-surfaces', publication.ok && array(publication.pages).length >= 3 && publication.firstPostIntroHomepageSurface === true, `${array(publication.pages).length} public surfaces; first-post-intro ${publication.firstPostIntroHomepageSurface}.`, 'Publish first beneath the homepage header and across Daily Brief and Live Intel.');
+add('publication-surfaces', publication.ok && array(publication.pages).length >= 3 && publication.firstPostIntroHomepageSurface === true, `${array(publication.pages).length} public surfaces; first-post-intro ${publication.firstPostIntroHomepageSurface}.`, 'Publish the watch data to its dedicated page and expose it through the canonical homepage and Live Intel routes.');
 
 const index = read('index.html');
-const headerEnd = index.search(/<\/header>/i);
-const marker = index.indexOf(markerStart);
-const construction = index.indexOf('<!-- construction-banner:start -->');
-add('homepage-first-hook', headerEnd >= 0 && marker > headerEnd && (construction < 0 || marker < construction), `headerEnd=${headerEnd}; hitList=${marker}; nextLegacyPanel=${construction}.`, 'Inject immediately after the header, before construction and all feature panels.');
 const dailyPage = read('daily-watch.html');
-add('cinematic-card-ui', /THE DAILY INTELLIGENCE HIT LIST/.test(index) && (index.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3 && /cinematic-daily-hit-list-style/.test(index), `${(index.match(/OPEN COMPLETE DOSSIER/g) || []).length} expandable cards found.`, 'Render all three cinematic cards with expandable dossiers.');
+const dailyBrief = read('daily-command-brief.html');
+const liveIntel = read('live-intel.html');
+const headerEnd = index.search(/<\/header>/i);
+const legacyMarker = index.indexOf(markerStart);
+const construction = index.indexOf('<!-- construction-banner:start -->');
+const searchIndex = index.indexOf('id="accountability-search"');
+const hitListIndex = index.indexOf('id="accountability-hit-list"');
+const searchFirstHome = /<body[^>]*class=["'][^"']*\baccountability-home\b/i.test(index)
+  && searchIndex > headerEnd
+  && /action=["']search\.html["'][^>]*method=["']get["']/i.test(index)
+  && /name=["']q["']/i.test(index)
+  && /My Watchlist/i.test(index);
+const legacyCinematicHome = legacyMarker > headerEnd
+  && (construction < 0 || legacyMarker < construction)
+  && /THE DAILY INTELLIGENCE HIT LIST/.test(index);
+
+add(
+  'homepage-first-hook',
+  searchFirstHome ? hitListIndex > searchIndex : legacyCinematicHome,
+  searchFirstHome
+    ? `Search-first homepage: headerEnd=${headerEnd}; search=${searchIndex}; accountabilityHitList=${hitListIndex}.`
+    : `Legacy homepage: headerEnd=${headerEnd}; hitList=${legacyMarker}; nextLegacyPanel=${construction}.`,
+  'Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels.'
+);
+
+const accountabilityCards = (index.match(/class=["'][^"']*\baccountability-hit-card\b/gi) || []).length;
+const cinematicCards = (index.match(/OPEN COMPLETE DOSSIER/g) || []).length;
+add(
+  'accountability-card-ui',
+  searchFirstHome
+    ? accountabilityCards >= 3 && /data-accountability-hit-list/.test(index) && /href=["']hit-list\.html["']/.test(index)
+    : /THE DAILY INTELLIGENCE HIT LIST/.test(index) && cinematicCards === 3 && /cinematic-daily-hit-list-style/.test(index),
+  searchFirstHome ? `${accountabilityCards} search-first accountability cards found.` : `${cinematicCards} cinematic dossier cards found.`,
+  'Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html.'
+);
 add('dedicated-dossier-page', /THE DAILY INTELLIGENCE HIT LIST/.test(dailyPage) && (dailyPage.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3, 'Dedicated hit-list page checked.', 'Build daily-watch.html with all dossiers.');
-add('support-conversion', /Support the Machine/.test(index) && /membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /weekly-watch-delta\.html/.test(index), 'Support, membership, Signal Drop and ranking history actions checked.', 'Keep conversion paths visible without hiding evidence boundaries.');
-for (const page of ['daily-command-brief.html','live-intel.html']) add(`surface-${page}`, new RegExp(markerStart).test(read(page)), `${page} ${new RegExp(markerStart).test(read(page)) ? 'contains' : 'lacks'} the hit list.`, `Reinject the cinematic surface into ${page}.`);
+add(
+  'support-conversion',
+  searchFirstHome
+    ? /member-dashboard\.html|membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /optin-center\.html/.test(index) && /hit-list\.html/.test(index)
+    : /Support the Machine/.test(index) && /membership\.html/.test(index) && /contact-the-machine\.html/.test(index) && /weekly-watch-delta\.html/.test(index),
+  'Watchlist or membership, evidence submission, brief and full accountability list actions checked.',
+  'Keep watchlist or membership, evidence submission, brief and full-list conversion paths visible without hiding evidence boundaries.'
+);
+add(
+  'surface-daily-command-brief.html',
+  new RegExp(markerStart).test(dailyBrief) || (/DAILY|BRIEF/i.test(dailyBrief) && /daily-watch\.html|hit-list\.html|data\/daily-watch\.json/i.test(dailyBrief)),
+  'Daily command brief exposes the current watch directly or through a stable route.',
+  'Expose the current watch from the Daily Brief without requiring duplicated cinematic markup.'
+);
+add(
+  'surface-live-intel.html',
+  new RegExp(markerStart).test(liveIntel) || (/LIVE INTEL/i.test(liveIntel) && /downloads\/live-intel-latest\.json/i.test(liveIntel)),
+  'Live Intel exposes the current intelligence feed; duplicated homepage hit-list markup is not required.',
+  'Preserve the Live Intel feed and machine-readable route.'
+);
 
 const edges = array(graph.edges);
 const badEdges = edges.filter(edge => !clean(edge.relationshipType || edge.type || edge.predicate,200) || !clean(edge.evidenceGrade || edge.grade || edge.status,200) || !clean(edge.evidenceBoundary || edge.boundary,800) || (!array(edge.sourceRoutes).length && !clean(edge.sourceRoute || edge.evidenceRoute || edge.route || edge.missingSourceReason,800)));
@@ -104,9 +152,9 @@ const unsafe = sensitive.filter(item => /child sexual|child abuse|child exploita
 add('sensitive-claim-safeguard', unsafe.length === 0, `${sensitive.length} sensitive items; ${unsafe.length} unsafe.`, 'Require exact status, provenance, limitation and review.');
 
 const failures = checks.filter(check => !check.ok);
-const report = { ok:failures.length === 0,generatedAt:new Date().toISOString(),overall:failures.length ? 'blocked' : 'ready',summary:{total:checks.length,passed:checks.length-failures.length,failed:failures.length},watch:{date:watch.date,person:watch.person?.name,institution:watch.institution?.name,family:watch.family?.name,promotionMargin:watch.rankingPolicy?.promotionMargin},dataDepth:{activeFindings:findings.length,archivedFindings:array(archive.findings).length,relationshipEdges:edges.length,clocks:clocks.length,badFindings:badFindings.length,badEdges:badEdges.length,badClocks:badClocks.length},checks,failures };
+const report = { ok:failures.length === 0,generatedAt:new Date().toISOString(),overall:failures.length ? 'blocked' : 'ready',summary:{total:checks.length,passed:checks.length-failures.length,failed:failures.length},homepageMode:searchFirstHome ? 'search-first-accountability' : 'legacy-cinematic',watch:{date:watch.date,person:watch.person?.name,institution:watch.institution?.name,family:watch.family?.name,promotionMargin:watch.rankingPolicy?.promotionMargin},dataDepth:{activeFindings:findings.length,archivedFindings:array(archive.findings).length,relationshipEdges:edges.length,clocks:clocks.length,badFindings:badFindings.length,badEdges:badEdges.length,badClocks:badClocks.length},checks,failures };
 fs.mkdirSync(at('downloads'),{recursive:true});
 fs.writeFileSync(at('downloads/mission-orchestration-audit.json'),JSON.stringify(report,null,2));
-fs.writeFileSync(at('downloads/mission-orchestration-audit.md'),['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'',`Person: ${report.watch.person}`,`Institution: ${report.watch.institution}`,`Family: ${report.watch.family}`,`Promotion margin: ${report.watch.promotionMargin}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`)].join('\n'));
+fs.writeFileSync(at('downloads/mission-orchestration-audit.md'),['# Mission Orchestration Audit','',`Generated: ${report.generatedAt}`,`Overall: ${report.overall}`,`Homepage mode: ${report.homepageMode}`,`Passed: ${report.summary.passed}/${report.summary.total}`,'',`Person: ${report.watch.person}`,`Institution: ${report.watch.institution}`,`Family: ${report.watch.family}`,`Promotion margin: ${report.watch.promotionMargin}`,'','## Checks','',...checks.map(check => `- **${check.ok ? 'PASS' : 'FAIL'} · ${check.id}:** ${check.detail}${check.ok || !check.fix ? '' : ` Fix: ${check.fix}`}`)].join('\n'));
 if (failures.length) { console.error(`MISSION ORCHESTRATION AUDIT FAILED: ${failures.length}`); for (const failure of failures) console.error(`- ${failure.id}: ${failure.detail}`); process.exit(1); }
-console.log(`Mission orchestration audit passed: ${checks.length} checks; stable cinematic dossiers ready.`);
+console.log(`Mission orchestration audit passed: ${checks.length} checks; ${report.homepageMode} public accountability surfaces ready.`);

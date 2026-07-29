@@ -6,7 +6,7 @@ const path = require('path');
 const root = process.cwd();
 const sourcePath = path.join(root, 'scripts', 'upgrade-current-clock-intelligence.js');
 const tempPath = path.join(root, 'scripts', '.upgrade-current-clock-intelligence.runtime.js');
-const source = fs.readFileSync(sourcePath, 'utf8');
+const source = fs.readFileSync(sourcePath, 'utf8').replace(/\r\n/g, '\n');
 const broken = '    currentEvidenceWindowDays,\n';
 const fixed = '    currentEvidenceWindowDays: currentWindowDays,\n';
 if (!source.includes(broken) && !source.includes(fixed)) {

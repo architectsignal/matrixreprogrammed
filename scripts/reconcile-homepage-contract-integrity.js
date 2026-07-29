@@ -23,21 +23,20 @@ const repaired = [];
 const checked = [];
 const convertedDuplicateAnchors = [];
 const protectedBlockPattern = /<!--[\s\S]*?-->|<(script|style|template|textarea)\b[\s\S]*?<\/\1\s*>/gi;
+const protectedTokenPattern = /\u0000MR_PROTECTED_(\d+)\u0000/g;
 
-function transformDocumentMarkup(html, transform) {
-  let output = '';
-  let cursor = 0;
-  for (const match of html.matchAll(protectedBlockPattern)) {
-    output += transform(html.slice(cursor, match.index));
-    output += match[0];
-    cursor = match.index + match[0].length;
-  }
-  output += transform(html.slice(cursor));
-  return output;
-}
-
-function inspectableDocumentMarkup(html) {
-  return html.replace(protectedBlockPattern, '');
+function maskProtectedBlocks(html) {
+  const blocks = [];
+  const markup = html.replace(protectedBlockPattern, block => {
+    const index = blocks.push(block) - 1;
+    return `\u0000MR_PROTECTED_${index}\u0000`;
+  });
+  return {
+    markup,
+    restore(value) {
+      return value.replace(protectedTokenPattern, (_, index) => blocks[Number(index)] || '');
+    }
+  };
 }
 
 function convertIdToDataAttribute(tag, id) {
@@ -48,47 +47,57 @@ function convertIdToDataAttribute(tag, id) {
   return next;
 }
 
+function openingTags(markup) {
+  return [...markup.matchAll(/<([a-z][\w:-]*)\b[^>]*>/gi)].map(match => match[0]);
+}
+
 function reconcile(file) {
   if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return;
   const before = fs.readFileSync(file, 'utf8');
+  const masked = maskProtectedBlocks(before);
   const seenConsequenceIds = new Set();
 
-  const after = transformDocumentMarkup(before, markup => {
-    const compactNormalized = markup.replace(/<article\b[^>]*>/gi, tag => {
-      const isCompactContract = /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag);
-      if (!isCompactContract) return tag;
-      const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
-      return idMatch ? convertIdToDataAttribute(tag, idMatch[2]) : tag;
-    });
-
-    return compactNormalized.replace(/<([a-z][\w:-]*)\b[^>]*>/gi, tag => {
-      const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
-      if (!idMatch) return tag;
-      const id = idMatch[2];
-      if (!seenConsequenceIds.has(id)) {
-        seenConsequenceIds.add(id);
-        return tag;
-      }
-      convertedDuplicateAnchors.push({ file: path.relative(root, file), id });
-      return convertIdToDataAttribute(tag, id);
-    });
+  let liveMarkup = masked.markup.replace(/<article\b[^>]*>/gi, tag => {
+    const isCompactContract = /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag);
+    if (!isCompactContract) return tag;
+    const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
+    return idMatch ? convertIdToDataAttribute(tag, idMatch[2]) : tag;
   });
 
+  liveMarkup = liveMarkup.replace(/<([a-z][\w:-]*)\b[^>]*>/gi, tag => {
+    const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
+    if (!idMatch) return tag;
+    const id = idMatch[2];
+    if (!seenConsequenceIds.has(id)) {
+      seenConsequenceIds.add(id);
+      return tag;
+    }
+    convertedDuplicateAnchors.push({ file: path.relative(root, file), id });
+    return convertIdToDataAttribute(tag, id);
+  });
+
+  const after = masked.restore(liveMarkup);
   if (after !== before) {
     fs.writeFileSync(file, after);
     repaired.push(path.relative(root, file));
   }
 
-  const markup = inspectableDocumentMarkup(after);
-  const openingTags = [...markup.matchAll(/<([a-z][\w:-]*)\b[^>]*>/gi)].map(match => match[0]);
-  const ids = openingTags
+  const verification = maskProtectedBlocks(after).markup;
+  const tags = openingTags(verification);
+  const ids = tags
     .map(tag => tag.match(/\bid\s*=\s*(["'])([^"']+)\1/i))
     .filter(Boolean)
     .map(match => match[2]);
   const duplicates = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
-  if (duplicates.length) throw new Error(`${path.relative(root, file)} still contains duplicate DOM IDs: ${duplicates.join(', ')}`);
+  if (duplicates.length) {
+    const contexts = duplicates.map(id => ({
+      id,
+      tags: tags.filter(tag => new RegExp(`\\bid\\s*=\\s*["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'i').test(tag)).slice(0, 4)
+    }));
+    throw new Error(`${path.relative(root, file)} still contains duplicate DOM IDs: ${duplicates.join(', ')}; contexts=${JSON.stringify(contexts)}`);
+  }
 
-  const compactAnchors = openingTags
+  const compactAnchors = tags
     .filter(tag => /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag))
     .filter(tag => /\bid\s*=/.test(tag));
   if (compactAnchors.length) throw new Error(`${path.relative(root, file)} still gives compact consequence previews DOM anchor IDs`);
@@ -109,7 +118,7 @@ const report = {
   checked,
   repaired,
   convertedDuplicateAnchors,
-  rule: 'Each consequence anchor ID has one owner across live parsed document markup. Compact previews and every later duplicate DOM occurrence use data-contract-id regardless of element type, CSS class, attribute order or intervening protected blocks. HTML comments and script, style, template and textarea contents are excluded from DOM-ID reconciliation. The canonical Live Intel route is restored after every late release mutator.'
+  rule: 'Each consequence anchor ID has one owner in a single masked pass across live document markup. Compact previews and later duplicate DOM occurrences use data-contract-id. HTML comments and script, style, template and textarea blocks are temporarily masked, then restored byte-for-byte. The canonical Live Intel route remains required.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-contract-integrity.json'), `${JSON.stringify(report, null, 2)}\n`);

@@ -9,6 +9,9 @@ const {
 class PublicationGate {
   constructor(options = {}) {
     this.mode = options.mode || PUBLICATION_MODES.DISABLED;
+    if (!Object.values(PUBLICATION_MODES).includes(this.mode)) {
+      throw new TypeError(`Invalid publication mode: ${this.mode}`);
+    }
   }
 
   evaluate(candidate) {

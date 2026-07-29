@@ -1,0 +1,62 @@
+name: Isolated deploy queue probe
+
+on:
+  push:
+    branches:
+      - agent/deploy-queue-probe-20260730
+    paths:
+      - .github/workflows/deploy-queue-probe.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/deploy-queue-probe-20260730
+          fetch-depth: 0
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const response = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              event: 'workflow_dispatch',
+              branch: 'main',
+              per_page: 20
+            });
+            const runs = (response.data.workflow_runs || []).map(run => ({
+              id: run.id,
+              runNumber: run.run_number,
+              status: run.status,
+              conclusion: run.conclusion,
+              headSha: run.head_sha,
+              createdAt: run.created_at,
+              runStartedAt: run.run_started_at,
+              updatedAt: run.updated_at,
+              url: run.html_url
+            }));
+            const payload = {
+              checkedAt: new Date().toISOString(),
+              latest: runs[0] || null,
+              active: runs.filter(run => run.status !== 'completed'),
+              recent: runs.slice(0, 10)
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/deploy-queue-probe.json', JSON.stringify(payload, null, 2) + '\n');
+            console.log(JSON.stringify(payload, null, 2));
+      - name: Commit isolated probe result
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/deploy-queue-probe.json
+          git commit -m 'Record isolated deployment queue state' || exit 0
+          git push origin HEAD:agent/deploy-queue-probe-20260730

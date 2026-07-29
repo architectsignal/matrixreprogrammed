@@ -32,7 +32,9 @@ const forbidText = (rel, text, fromSite = false) => {
   if (available && (fromSite ? siteRead(rel) : read(rel)).includes(text)) hard.push(`${fromSite ? '_site/' : ''}${rel} contains forbidden ${text}`);
 };
 function duplicateIds(html) {
-  const ids = [...String(html).matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
+  const protectedBlockPattern = /<!--[\s\S]*?-->|<(script|style|template|textarea)\b[\s\S]*?<\/\1\s*>/gi;
+  const liveMarkup = String(html).replace(protectedBlockPattern, '');
+  const ids = [...liveMarkup.matchAll(/\s+id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 }
 
@@ -139,9 +141,12 @@ for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/subscr
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-for (const text of ['main = "src/worker-production.js"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','directory = "./_site"','run_worker_first = true','keep_vars = true']) {
+for (const text of ['main = "src/worker-production.js"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','directory = "./_site"','keep_vars = true']) {
   if (!wranglerToml.includes(text)) hard.push(`wrangler.toml missing ${text}`);
 }
+const selectiveWorkerRoutingReady = /^run_worker_first\s*=\s*\[/m.test(wranglerToml)
+  && !/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml);
+if (!selectiveWorkerRoutingReady) hard.push('wrangler.toml must use selective run_worker_first route protection and must not route all static assets through the Worker');
 for (const text of ['"main": "src/worker-production.js"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"keep_vars": true']) {
   if (!wranglerJsonc.includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
 }

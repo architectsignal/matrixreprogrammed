@@ -133,7 +133,11 @@ const profiles = [
   { name:'tight-final', title:112, description:64, terms:6, termChars:28, scalar:50, sourceUrl:120 },
   { name:'route-safe-final', title:100, description:28, terms:5, termChars:24, scalar:44, sourceUrl:80 },
   { name:'minimum-final', title:88, description:0, terms:4, termChars:20, scalar:36, sourceUrl:0 },
-  { name:'emergency-final', title:76, description:0, terms:3, termChars:18, scalar:30, sourceUrl:0 }
+  { name:'emergency-final', title:76, description:0, terms:3, termChars:18, scalar:30, sourceUrl:0 },
+  // Last-resort profile for unusually large generated indexes. It preserves
+  // every unique route and the fields the Search V3 runtime consumes while
+  // reducing repeated labels and exact-term payloads rather than dropping URLs.
+  { name:'route-preserving-floor', title:64, description:0, terms:2, termChars:14, scalar:24, sourceUrl:0 }
 ];
 let selected = null;
 for (const profile of profiles) {

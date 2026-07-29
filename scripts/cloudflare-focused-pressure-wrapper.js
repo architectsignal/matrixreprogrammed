@@ -104,7 +104,8 @@ needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'payment 
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = true','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','keep_vars = true']) needText('wrangler.toml', marker, `Cloudflare config marker ${marker}`);
+for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = [','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','keep_vars = true']) needText('wrangler.toml', marker, `Cloudflare config marker ${marker}`);
+if (/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml)) hard.push('wrangler.toml must not route all static traffic through the Worker');
 if (!/"keep_vars"\s*:\s*true/.test(wranglerJsonc)) hard.push('wrangler.jsonc must preserve dashboard variables');
 if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml)) hard.push('wrangler.toml contains forbidden active PAYPAL_* override');
 if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc)) hard.push('wrangler.jsonc contains forbidden active PAYPAL_* override');

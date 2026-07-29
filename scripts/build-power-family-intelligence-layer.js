@@ -27,11 +27,24 @@ function write(relativePath, content, base) {
   }
 }
 
+function ensureSectionAnchor(html, sectionId, anchorId) {
+  if (html.includes(`id="${anchorId}"`) || html.includes(`id='${anchorId}'`)) return html;
+  const section = new RegExp(`(<section\\b[^>]*\\bid=["']${sectionId}["'][^>]*>)`, 'i');
+  if (!section.test(html)) {
+    throw new Error(`behind-the-curtain-capstone.html missing section required for ${anchorId}: ${sectionId}`);
+  }
+  return html.replace(section, `$1<span id="${anchorId}" aria-hidden="true"></span>`);
+}
+
 function canonicalizeOutput(relativePath, content) {
   if (relativePath !== 'behind-the-curtain-capstone.html') return content;
-  return String(content)
+  let html = String(content)
     .replace(/\s*<script\s+src=["']search-system\.js["']\s*><\/script>/gi, '')
     .replace(/\n{3,}/g, '\n\n');
+  html = ensureSectionAnchor(html, 'current-map', 'wallenberg-ecosystem');
+  html = ensureSectionAnchor(html, 'institutional', 'investor-board');
+  html = ensureSectionAnchor(html, 'capital', 'investor-ownership');
+  return html;
 }
 
 for (const [relativePath, rawContent] of Object.entries(outputs)) {
@@ -44,6 +57,11 @@ const contracts = [
   ['behind-the-curtain-capstone.html', [
     'POWER-FAMILY INTELLIGENCE LAYER',
     'id="current-map"',
+    'id="wallenberg-ecosystem"',
+    'id="institutional"',
+    'id="investor-board"',
+    'id="capital"',
+    'id="investor-ownership"',
     'id="directory"',
     'id="claims"',
     'id="questions"',

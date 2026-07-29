@@ -71,6 +71,29 @@ function needFile(name, marker = '') {
   if (marker && !read(name).includes(marker)) fail(`${name}: missing marker ${marker}`);
 }
 
+function needMarkers(name, markers) {
+  if (!exists(name)) return fail(`missing required file: ${name}`);
+  checked.generated.push(name);
+  const html = read(name);
+  for (const marker of markers) {
+    if (!html.includes(marker)) fail(`${name}: missing marker ${marker}`);
+  }
+}
+
+function needSearchFirstHomepage(name) {
+  needMarkers(name, [
+    'class="accountability-home"',
+    'id="accountability-search"',
+    'id="accountability-hit-list"',
+    'id="open-question-ledger"',
+    'id="explore-system"',
+    'contact-the-machine.html'
+  ]);
+  if (exists(name) && read(name).includes('MAP THE STRUCTURE. READ THE SIGNALS.')) {
+    fail(`${name}: retired cinematic command surface remains on the search-first homepage`);
+  }
+}
+
 function checkPackage() {
   if (!exists('package.json')) return fail('missing package.json');
   const pkg = JSON.parse(read('package.json'));
@@ -95,8 +118,9 @@ function checkWorkflows() {
 
 function checkPostbuild() {
   if (mode !== 'postbuild') return;
-  needFile('index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.');
-  needFile('_site/index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.');
+  needSearchFirstHomepage('index.html');
+  needSearchFirstHomepage('_site/index.html');
+  needSearchFirstHomepage('_site/index');
   needFile('forum.html', 'data-board="main"');
   needFile('dark-speculation-forum.html', 'data-board="speculation"');
   needFile('epstein-alive-board.html', 'data-board="epstein-alive"');

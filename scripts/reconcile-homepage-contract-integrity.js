@@ -24,6 +24,8 @@ const checked = [];
 const convertedDuplicateAnchors = [];
 const protectedBlockPattern = /<!--[\s\S]*?-->|<(script|style|template|textarea)\b[\s\S]*?<\/\1\s*>/gi;
 const protectedTokenPattern = /\u0000MR_PROTECTED_(\d+)\u0000/g;
+const realIdPattern = /(?:^|\s)id\s*=\s*(["'])([^"']+)\1/i;
+const consequenceIdPattern = /(?:^|\s)id\s*=\s*(["'])(consequence-[^"']+)\1/i;
 
 function maskProtectedBlocks(html) {
   const blocks = [];
@@ -40,7 +42,7 @@ function maskProtectedBlocks(html) {
 }
 
 function convertIdToDataAttribute(tag, id) {
-  let next = tag.replace(/\s*\bid\s*=\s*(["'])(consequence-[^"']+)\1/i, '');
+  let next = tag.replace(/\s+id\s*=\s*(["'])(consequence-[^"']+)\1/i, '');
   if (!/\bdata-contract-id\s*=/.test(next)) {
     next = next.replace(/^<([a-z][\w:-]*)\b/i, `<$1 data-contract-id="${id}"`);
   }
@@ -60,12 +62,12 @@ function reconcile(file) {
   let liveMarkup = masked.markup.replace(/<article\b[^>]*>/gi, tag => {
     const isCompactContract = /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag);
     if (!isCompactContract) return tag;
-    const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
+    const idMatch = tag.match(consequenceIdPattern);
     return idMatch ? convertIdToDataAttribute(tag, idMatch[2]) : tag;
   });
 
   liveMarkup = liveMarkup.replace(/<([a-z][\w:-]*)\b[^>]*>/gi, tag => {
-    const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
+    const idMatch = tag.match(consequenceIdPattern);
     if (!idMatch) return tag;
     const id = idMatch[2];
     if (!seenConsequenceIds.has(id)) {
@@ -85,21 +87,21 @@ function reconcile(file) {
   const verification = maskProtectedBlocks(after).markup;
   const tags = openingTags(verification);
   const ids = tags
-    .map(tag => tag.match(/\bid\s*=\s*(["'])([^"']+)\1/i))
+    .map(tag => tag.match(realIdPattern))
     .filter(Boolean)
     .map(match => match[2]);
   const duplicates = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   if (duplicates.length) {
     const contexts = duplicates.map(id => ({
       id,
-      tags: tags.filter(tag => new RegExp(`\\bid\\s*=\\s*["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'i').test(tag)).slice(0, 4)
+      tags: tags.filter(tag => new RegExp(`(?:^|\\s)id\\s*=\\s*["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'i').test(tag)).slice(0, 4)
     }));
     throw new Error(`${path.relative(root, file)} still contains duplicate DOM IDs: ${duplicates.join(', ')}; contexts=${JSON.stringify(contexts)}`);
   }
 
   const compactAnchors = tags
     .filter(tag => /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag))
-    .filter(tag => /\bid\s*=/.test(tag));
+    .filter(tag => realIdPattern.test(tag));
   if (compactAnchors.length) throw new Error(`${path.relative(root, file)} still gives compact consequence previews DOM anchor IDs`);
 
   if (!after.includes('href="live-intel.html"') || !after.includes('live-intel-machine-route')) {
@@ -118,7 +120,7 @@ const report = {
   checked,
   repaired,
   convertedDuplicateAnchors,
-  rule: 'Each consequence anchor ID has one owner in a single masked pass across live document markup. Compact previews and later duplicate DOM occurrences use data-contract-id. HTML comments and script, style, template and textarea blocks are temporarily masked, then restored byte-for-byte. The canonical Live Intel route remains required.'
+  rule: 'Each consequence anchor ID has one owner in a single masked pass across live document markup. Compact previews and later duplicate DOM occurrences use data-contract-id. Real id attributes are matched only when the attribute name is exactly id, never when it appears inside data-contract-id. HTML comments and script, style, template and textarea blocks are temporarily masked, then restored byte-for-byte. The canonical Live Intel route remains required.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-contract-integrity.json'), `${JSON.stringify(report, null, 2)}\n`);

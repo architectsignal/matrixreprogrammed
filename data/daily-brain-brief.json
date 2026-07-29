@@ -452,6 +452,7 @@
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -590,11 +591,11 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-29T14:30:52.971Z",
-    "eventCount": 12,
+    "updated": "2026-07-29T19:43:02.800Z",
+    "eventCount": 18,
     "feedCount": 7,
-    "reachedFeedCount": 3,
-    "entityObservationCount": 17,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 35,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -770,20 +771,57 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-29T14:31:13.649Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-29T19:43:18.534Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 6,
-    "relationshipCandidateCount": 7,
+    "removedRecordCount": 0,
+    "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "United States v. Anten",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Sawas v. Elzanaty",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "People v. Brim",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-29T14:31:13.778Z",
+    "updated": "2026-07-29T19:43:18.667Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -817,7 +855,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-29T14:31:13.816Z",
+    "updated": "2026-07-29T19:43:18.702Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

@@ -69,3 +69,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.8-self-test.js
+
+      - name: Verify Phase 1.9 creates signed execution plan decisions only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.9-self-test.js

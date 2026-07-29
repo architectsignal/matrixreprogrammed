@@ -1,8 +1,8 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-28T22:26:00+02:00
-Release: accountability-innovation-eight-system-20260728-retry-final
+Requested: 2026-07-29T22:55:00Z
+Release: pr180-f77b38-controlled-production-20260729-2255z
 Authorization: exactly one controlled Cloudflare production deployment
-Target: current main containing the validated eight-system accountability innovation platform and voiced mission intro
-Required proof: complete site build, all eight fail-closed accountability gates, collapsed homepage discovery, D1 rollback bookmark, idempotent migrations, Cloudflare Worker deployment, exact live SHA, live mission intro, live Reverse Accountability Search, Power Supply Chain, Evidence Half-Life, Power Diff, Red-Team Mirror, Public Answer Clock, Missing Record Missions and Lived Consequence Receipts, plus protected forum, membership, email, PayPal and contact-intake boundaries
-Boundary: no partial or duplicate release; raw lived receipts remain private; silence is not guilt; association is not authority; no automated verdicts
-Nonce: accountability-innovation-eight-system-retry-final-2026-07-28T22:26:00+02:00
+Target: current main containing merge commit f77b38ba9298abe7a4df3af210c8bb05433fad39 and its post-merge generated-intelligence descendants
+Required proof: complete site build; all fail-closed release gates; D1 Time Travel rollback bookmark; idempotent migrations; strict selective Worker routing; route-preserving search-index compaction; Cloudflare Worker deployment; exact live SHA; My Watchlist; q= search-query handoff; voiced intro and welcome gate; Follow the Money; Making Money; Live Intel; Reverse Accountability; D1-authoritative forum persistence; membership; email; PayPal; contact intake; receipt-state boundaries
+Boundary: no partial or duplicate release; preserve evidence classification, source provenance, privacy, payment safety and editorial boundaries
+Nonce: pr180-f77b38-controlled-production-20260729T225500Z

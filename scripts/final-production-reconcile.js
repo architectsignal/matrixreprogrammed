@@ -92,6 +92,7 @@ run('scripts/repair-search-system.js');
 run('scripts/build-search-v3-index.js');
 run('scripts/build-search-v3-runtime.js');
 run('scripts/patch-conclusion-integrity-cards.js');
+run('scripts/align-selective-worker-first-gates.js');
 run('scripts/build-deploy-manifest.js');
 // The deploy-manifest money finalizer rebuilds investigation pages while rebuilding search.
 // Reapply the integrity cards after that last page generator and before health hashes/copies.

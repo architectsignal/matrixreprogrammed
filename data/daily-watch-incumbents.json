@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "updated": "2026-07-28T07:58:45.847Z",
+  "updated": "2026-07-29T08:02:22.123Z",
   "promotionMargin": 14,
   "slots": {
     "person": {
@@ -45,17 +45,17 @@
         "rankingStatus": "incumbent-held-position",
         "incumbentSince": "2026-07-27T17:29:36.861Z",
         "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-        "challengerHeld": "Defendant Kidd",
-        "challengerScore": 127,
-        "retentionReason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent."
+        "challengerHeld": "Elon Musk",
+        "challengerScore": 91,
+        "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
       },
       "rankingScore": 135,
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-07-28T07:58:45.847Z",
-      "challengerHeld": "Defendant Kidd",
-      "challengerScore": 127
+      "lastReviewedAt": "2026-07-29T08:02:22.123Z",
+      "challengerHeld": "Elon Musk",
+      "challengerScore": 91
     },
     "institution": {
       "item": {
@@ -68,9 +68,9 @@
           "graphId": "securities-and-exchange-commission",
           "graphType": "missing record",
           "reviewStatus": "machine-extracted-unreviewed",
-          "directFreshRecords": 31
+          "directFreshRecords": 22
         },
-        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 31 fresh records plus 35 retained evidence references.",
+        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 22 fresh records plus 35 retained evidence references.",
         "whatWasFound": "named-in-public-record, refined-from-organization",
         "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
         "investigativeLanes": [
@@ -112,7 +112,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-and-refreshed",
-      "lastReviewedAt": "2026-07-28T07:58:45.847Z"
+      "lastReviewedAt": "2026-07-29T08:02:22.123Z"
     },
     "family": {
       "item": {
@@ -164,7 +164,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-07-28T07:58:45.847Z",
+      "lastReviewedAt": "2026-07-29T08:02:22.123Z",
       "challengerHeld": "Al Thani family",
       "challengerScore": 122
     }

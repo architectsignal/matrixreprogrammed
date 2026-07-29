@@ -210,8 +210,8 @@
     "confidenceIsProbability": false
   },
   "dailyWatch": {
-    "updated": "2026-07-28T07:58:45.847Z",
-    "date": "2026-07-28",
+    "updated": "2026-07-29T08:02:22.123Z",
+    "date": "2026-07-29",
     "route": "daily-watch.html",
     "person": {
       "type": "person",
@@ -254,9 +254,9 @@
       "rankingStatus": "incumbent-held-position",
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "challengerHeld": "Defendant Kidd",
-      "challengerScore": 127,
-      "retentionReason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent."
+      "challengerHeld": "Elon Musk",
+      "challengerScore": 91,
+      "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
     },
     "institution": {
       "type": "institution",
@@ -268,9 +268,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 31
+        "directFreshRecords": 22
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 31 fresh records plus 35 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 22 fresh records plus 35 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [
@@ -365,11 +365,11 @@
       "decisions": {
         "person": {
           "changed": false,
-          "reason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent.",
+          "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
           "incumbent": "Bill Gates",
           "incumbentScore": 135,
-          "challenger": "Defendant Kidd",
-          "challengerScore": 127,
+          "challenger": "Elon Musk",
+          "challengerScore": 91,
           "required": 149,
           "marginRequired": 14
         },

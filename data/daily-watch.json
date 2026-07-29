@@ -1,8 +1,8 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-07-28T07:58:45.847Z",
-  "date": "2026-07-28",
+  "updated": "2026-07-29T08:02:22.123Z",
+  "date": "2026-07-29",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
   "leadingEvidenceConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Children’s Digital Identity and Age-Gating Clock is the highest canonical pressure index at 93%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 14594
+      "signalCount": 14749
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 13815
+      "signalCount": 13889
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 13044
+      "signalCount": 13541
     }
   ],
   "person": {
@@ -64,9 +64,9 @@
     "rankingStatus": "incumbent-held-position",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
     "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-    "challengerHeld": "Defendant Kidd",
-    "challengerScore": 127,
-    "retentionReason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent."
+    "challengerHeld": "Elon Musk",
+    "challengerScore": 91,
+    "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
   },
   "institution": {
     "type": "institution",
@@ -78,9 +78,9 @@
       "graphId": "securities-and-exchange-commission",
       "graphType": "missing record",
       "reviewStatus": "machine-extracted-unreviewed",
-      "directFreshRecords": 31
+      "directFreshRecords": 22
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 31 fresh records plus 35 retained evidence references.",
+    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 22 fresh records plus 35 retained evidence references.",
     "whatWasFound": "named-in-public-record, refined-from-organization",
     "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
@@ -176,11 +176,11 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent.",
+        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
         "incumbent": "Bill Gates",
         "incumbentScore": 135,
-        "challenger": "Defendant Kidd",
-        "challengerScore": 127,
+        "challenger": "Elon Musk",
+        "challengerScore": 91,
         "required": 149,
         "marginRequired": 14
       },
@@ -220,13 +220,13 @@
     "institution": {
       "route": "daily-watch.html#institution-dossier",
       "totals": {
-        "matchedFindings": 722,
+        "matchedFindings": 806,
         "legalRecords": 16,
         "safeguardingOverlaps": 0,
         "moneyRecords": 16,
         "authorityRecords": 16,
         "connections": 0,
-        "contradictionRecords": 9
+        "contradictionRecords": 10
       }
     },
     "family": {

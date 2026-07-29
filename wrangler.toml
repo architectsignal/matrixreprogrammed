@@ -44,8 +44,6 @@ binding = "ASSETS"
 # Static HTML, CSS, JS, images, JSON and public downloads are served directly and do not consume
 # the Workers Free 100,000-request daily quota. Only dynamic, authenticated or protected routes
 # enter the Worker before asset lookup.
-# Legacy release-gate compatibility marker only; the active selective array below is safer:
-# run_worker_first = true
 run_worker_first = [
   "/api/*",
   "/.netlify/functions/*",

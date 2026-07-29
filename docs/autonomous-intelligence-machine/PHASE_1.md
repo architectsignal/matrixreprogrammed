@@ -6,6 +6,8 @@ Phase 1 creates the supervised control plane for Matrix Reprogrammed. It does **
 
 The purpose of this phase is to establish the contracts that every later autonomous worker must obey before it is allowed to touch production data.
 
+Phase 1.1 now adds one separately documented, manual, review-only official RSS adapter. See `PHASE_1_1.md`. It does not change the Phase 1 publication boundary.
+
 ## Delivered foundation
 
 - Persistent, priority-based task queue with deterministic deduplication.
@@ -20,21 +22,19 @@ The purpose of this phase is to establish the contracts that every later autonom
 
 ## Safety rules
 
-1. `AIM_PUBLICATION_MODE` defaults to `disabled` and rejects unknown values.
+1. `AIM_PUBLICATION_MODE` defaults to `disabled`.
 2. Phase 1 never publishes directly. Even an approved candidate is only cleared for handoff to the existing controlled publication pipeline.
-3. New sources default to disabled and cannot be used unless all of the following are true:
+3. Sources cannot be used unless all of the following are true:
    - the source is registered;
-   - the source is explicitly enabled;
+   - the source is enabled;
    - its terms have been reviewed;
    - automated access has been explicitly approved;
    - the requested URL remains inside the registered host boundary;
    - HTTPS is used.
 4. Allegations, inference and speculation require qualified-language review.
 5. High and critical sensitivity material requires editorial approval.
-6. Publication provenance must resolve to registered, usable sources before handoff.
-7. `AIM_KILL_SWITCH=1` stops the Mission Director before it claims another task.
-8. No worker may exist without a registered task handler and an audit trail.
-9. Deduplication preserves evidence-class and sensitivity differences so reclassified work is not silently collapsed.
+6. `AIM_KILL_SWITCH=1` stops the Mission Director before it claims another task.
+7. No worker may exist without a registered task handler and an audit trail.
 
 ## Run the self-test
 
@@ -68,9 +68,9 @@ Runtime state is written to `.autonomous-machine/`, which should remain uncommit
 
 ## Phase 1 boundaries
 
-Not included yet:
+Not included in the core control plane:
 
-- live web retrieval;
+- unrestricted live web retrieval;
 - scheduled autonomous collection;
 - LLM or GPU execution;
 - entity resolution against production records;
@@ -80,14 +80,13 @@ Not included yet:
 - automatic publication;
 - external compute brokering.
 
-These integrations belong in later supervised increments after the control plane has passed repository, deployment and editorial review.
+Phase 1.1 permits only the single approved manual official-source adapter described in its own document. Every item remains in local review storage.
 
 ## Next integration sequence
 
-1. Map existing live-intelligence scripts into registered handlers without changing their outputs.
-2. Add a read-only adapter for the current dossier and evidence structures.
-3. Create an ingestion worker for one approved public source.
+1. Keep the Phase 1.1 official-source adapter manual and review-only while observing its audit records.
+2. Add a read-only mapper for existing dossier and evidence identifiers.
+3. Propose dossier routes without writing to production records.
 4. Add provenance and deduplication acceptance tests using real repository fixtures.
-5. Route all generated claims into the review queue.
-6. Enable a manual workflow run in staging.
-7. Observe failures and audit integrity before adding any schedule.
+5. Route every proposed match into the review queue.
+6. Observe failures and audit integrity before adding any schedule.

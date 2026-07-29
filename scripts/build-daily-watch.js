@@ -26,6 +26,7 @@ const graph = readJson('data/evidence-weighted-relationship-graph.json', { nodes
 const familyLayer = readJson('data/behind-the-curtain-family-access.json', { families: [] });
 const familyLinks = readJson('data/power-family-intelligence-layer.json', { familyPersonLinks: [] });
 const incumbentState = readJson('data/daily-watch-incumbents.json', { slots: {} });
+const familySourceMap = new Map(array(familyLayer.sources).map(source => [source.id, source.url]).filter(([id, url]) => id && url));
 
 const freshRows = [
   ...array(daily.strongestFindings).map(value => ({ source: 'data/daily-investigation-conclusions.json', value })),
@@ -236,7 +237,7 @@ function familySlot(item) {
     whatItDoesNotProve: clean(item.unsupportedClaim, 900) || 'Family membership, wealth or access does not prove wrongdoing, secret coordination or control of unrelated institutions.',
     evidenceStrength: item.directFreshMatch ? 'E3–E5 — current evidence plus established public-record family-access data' : 'E4–E5 — structural public records; no direct new allegation',
     confidence: clean(item.confidence, 100) || 'moderate',
-    sourceRoutes: unique(['behind-the-curtain-capstone.html','behind-the-curtain-access.html',...array(item.sourceIds).map(id => `behind-the-curtain-capstone.html#${id}`)]).slice(0, 12),
+    sourceRoutes: unique(['behind-the-curtain-capstone.html','behind-the-curtain-access.html',...array(item.sourceIds).map(id => familySourceMap.get(id)).filter(Boolean)]).slice(0, 12),
     nextQuestions: [`Which current decision, transaction or appointment directly involves ${item.name}?`, 'Who holds final voting, trustee or appointment authority?', 'Which structures are independently managed or legally constrained?', 'What evidence would lower or replace the family-access assessment?']
   };
 }

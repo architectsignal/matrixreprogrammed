@@ -19,6 +19,7 @@ const dossiers = readJson('data/daily-watch-dossiers.json', {});
 const incumbents = readJson('data/daily-watch-incumbents.json', {});
 const history = readJson('data/daily-watch-history.json', {});
 const weeklyDelta = readJson('data/weekly-watch-delta.json', {});
+const familyLayer = readJson('data/behind-the-curtain-family-access.json', { families: [], sources: [] });
 const graph = readJson('data/evidence-weighted-relationship-graph.json', { edges: [] });
 const wall = readJson('data/clock-wall.json', { clocks: [] });
 const ledger = readJson('data/investigation-ledger.json', { findings: [] });
@@ -70,6 +71,12 @@ add('distinct-watch-entities', watch.person?.name !== watch.institution?.name, `
 add('stable-ranking-policy', watch.rankingPolicy?.mode === 'stable-incumbent-evidence-promotion' && Number(watch.rankingPolicy?.promotionMargin) > 0, `Mode ${watch.rankingPolicy?.mode || 'missing'}; margin ${watch.rankingPolicy?.promotionMargin || 'missing'}.`, 'Use evidence promotion, never daily rotation.');
 add('incumbent-state', ['person','institution','family'].every(slot => incumbents.slots?.[slot]?.item?.name && Number(incumbents.slots?.[slot]?.rankingScore) > 0), 'All three incumbent states checked.', 'Persist incumbent identities, scores and decisions.');
 add('family-selection-boundary', /structural watch|direct|current evidence/i.test(watch.family?.selectionBasis || ''), `Family basis: ${clean(watch.family?.selectionBasis,320) || 'missing'}.`, 'Distinguish direct evidence from structural lane overlap.');
+const selectedFamily = array(familyLayer.families).find(item => item.id === watch.family?.entityResolution?.familyId);
+const familySources = new Map(array(familyLayer.sources).map(source => [source.id, source.url]));
+const expectedFamilySourceUrls = array(selectedFamily?.sourceIds).map(id => familySources.get(id)).filter(Boolean);
+const familyRoutes = array(watch.family?.sourceRoutes);
+const obsoleteFamilyAnchors = familyRoutes.filter(route => /behind-the-curtain-capstone\.html#[^\s]+/i.test(String(route)));
+add('family-source-deep-links', obsoleteFamilyAnchors.length === 0 && expectedFamilySourceUrls.every(url => familyRoutes.includes(url)), `${obsoleteFamilyAnchors.length} obsolete anchor routes; ${expectedFamilySourceUrls.filter(url => familyRoutes.includes(url)).length}/${expectedFamilySourceUrls.length} official family sources resolved.`, 'Resolve family source IDs to the official URLs in the family-access registry.');
 
 const dossierSections = ['legalAndWrongdoingRecord','epsteinAndChildSafeguardingOverlaps','moneyOwnershipAndContracts','authorityAccessAndInstitutions','documentedConnections','timeline','contradictionsAndCounterEvidence','openQuestions','sourceRoutes'];
 for (const slot of ['person','institution','family']) {
@@ -118,6 +125,7 @@ add(
   searchFirstHome ? `${accountabilityCards} search-first accountability cards found.` : `${cinematicCards} cinematic dossier cards found.`,
   'Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html.'
 );
+add('daily-watch-deep-links', !/href=["']behind-the-curtain-capstone\.html#[^"']+/i.test(dailyPage), 'Daily Watch contains no generated links to nonexistent Capstone anchors.', 'Regenerate Daily Watch with official registry source URLs.');
 add('dedicated-dossier-page', /THE DAILY INTELLIGENCE HIT LIST/.test(dailyPage) && (dailyPage.match(/OPEN COMPLETE DOSSIER/g) || []).length === 3, 'Dedicated hit-list page checked.', 'Build daily-watch.html with all dossiers.');
 add(
   'support-conversion',

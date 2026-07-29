@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "checkedAt": "2026-07-29T23:19:17.997Z",
+  "workflow": "deploy.yml",
+  "expectedName": "Matrix Reprogrammed Controlled Production Deploy",
+  "cutoff": "2026-07-29T23:00:00.000Z",
+  "latest": {
+    "id": 30498349592,
+    "runNumber": 1346,
+    "status": "pending",
+    "conclusion": null,
+    "event": "workflow_dispatch",
+    "headBranch": "main",
+    "headSha": "b5fb8ebfcd9bd8a1b3c4f01457c5c1ca9e6186a2",
+    "createdAt": "2026-07-29T23:04:57Z",
+    "updatedAt": "2026-07-29T23:04:59Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30498349592"
+  },
+  "recent": [
+    {
+      "id": 30498349592,
+      "runNumber": 1346,
+      "status": "pending",
+      "conclusion": null,
+      "event": "workflow_dispatch",
+      "headBranch": "main",
+      "headSha": "b5fb8ebfcd9bd8a1b3c4f01457c5c1ca9e6186a2",
+      "createdAt": "2026-07-29T23:04:57Z",
+      "updatedAt": "2026-07-29T23:04:59Z",
+      "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30498349592"
+    }
+  ]
+}

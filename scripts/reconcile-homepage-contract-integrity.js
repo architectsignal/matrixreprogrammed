@@ -24,18 +24,32 @@ const checked = [];
 function reconcile(file) {
   if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return;
   const before = fs.readFileSync(file, 'utf8');
-  const after = before.replace(
-    /<article\s+id=(['"])(consequence-[^'"]+)\1\s+class=(['"])consequence-contract-card compact\3/g,
-    '<article data-contract-id="$2" class="consequence-contract-card compact"'
-  );
+  const after = before.replace(/<article\b[^>]*>/gi, tag => {
+    const isCompactContract = /\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["']/i.test(tag);
+    if (!isCompactContract) return tag;
+
+    const idMatch = tag.match(/\bid\s*=\s*(["'])(consequence-[^"']+)\1/i);
+    if (!idMatch) return tag;
+
+    let next = tag.replace(/\s*\bid\s*=\s*(["'])(consequence-[^"']+)\1/i, '');
+    if (!/\bdata-contract-id\s*=/.test(next)) {
+      next = next.replace(/^<article\b/i, `<article data-contract-id="${idMatch[2]}"`);
+    }
+    return next;
+  });
   if (after !== before) {
     fs.writeFileSync(file, after);
     repaired.push(path.relative(root, file));
   }
   const text = after;
-  const ids = [...text.matchAll(/\bid\s*=\s*(['"])([^'"]+)\1/gi)].map(match => match[2]);
+  const ids = [...text.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   const duplicates = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   if (duplicates.length) throw new Error(`${path.relative(root, file)} still contains duplicate IDs: ${duplicates.join(', ')}`);
+
+  const compactAnchors = [...text.matchAll(/<article\b[^>]*\bclass\s*=\s*["'][^"']*\bconsequence-contract-card\b[^"']*\bcompact\b[^"']*["'][^>]*>/gi)]
+    .filter(match => /\bid\s*=/.test(match[0]));
+  if (compactAnchors.length) throw new Error(`${path.relative(root, file)} still gives compact consequence previews anchor IDs`);
+
   if (!text.includes('href="live-intel.html"') || !text.includes('live-intel-machine-route')) {
     throw new Error(`${path.relative(root, file)} is missing the canonical Live Intel route contract`);
   }
@@ -51,7 +65,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   checked,
   repaired,
-  rule: 'Full consequence-contract pages own anchor IDs. Compact homepage previews use data-contract-id, and the canonical Live Intel route is restored after every late release mutator.'
+  rule: 'Full consequence-contract pages own anchor IDs. Compact homepage previews use data-contract-id regardless of generated attribute order, and the canonical Live Intel route is restored after every late release mutator.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-contract-integrity.json'), `${JSON.stringify(report, null, 2)}\n`);

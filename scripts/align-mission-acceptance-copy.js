@@ -136,6 +136,7 @@ runRequired('scripts/finalize-accountability-review-inbox.js');
 runRequired('scripts/accountability-review-inbox-pressure-test.js');
 runRequired('scripts/install-reverse-accountability-platform.js');
 runRequired('scripts/reverse-accountability-platform-pressure-test.js');
+runRequired('scripts/normalize-runtime-template-links.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');

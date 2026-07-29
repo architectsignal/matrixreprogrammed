@@ -41,6 +41,7 @@ for (const item of imported) {
 }
 
 const serialized = JSON.stringify(imported);
+check(!serialized.includes('[object Object]'), 'object coercion placeholder leaked into the public speculation feed');
 for (const forbidden of ['private key', 'seed phrase', 'private address', 'phone number', 'intimate image', 'doxxing']) {
   check(!serialized.toLowerCase().includes(forbidden), `prohibited sensitive marker published: ${forbidden}`);
 }

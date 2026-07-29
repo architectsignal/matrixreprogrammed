@@ -15,7 +15,21 @@ function array(value) { return Array.isArray(value) ? value.filter(Boolean) : va
 function text(value, fallback = '') { return String(value ?? fallback).replace(/\s+/g, ' ').trim(); }
 function hash(value) { return crypto.createHash('sha256').update(String(value)).digest('hex'); }
 function clamp(value, min, max) { return Math.max(min, Math.min(max, Number(value) || 0)); }
-function unique(values) { return [...new Set(array(values).map(item => text(typeof item === 'string' ? item : item?.text || item?.title || item)).filter(Boolean))]; }
+function listItemText(item) {
+  if (['string', 'number', 'boolean'].includes(typeof item)) return text(item);
+  if (!item || typeof item !== 'object') return '';
+  return text(
+    item.record ||
+    item.text ||
+    item.title ||
+    item.label ||
+    item.name ||
+    item.description ||
+    item.candidateText ||
+    item.whyItMatters,
+  );
+}
+function unique(values) { return [...new Set(array(values).map(listItemText).filter(Boolean))]; }
 
 function buildQueue() {
   const result = spawnSync(process.execPath, ['scripts/build-phase2-conclusion-engine-preview.js'], {

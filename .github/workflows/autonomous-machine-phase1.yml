@@ -54,3 +54,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.5-self-test.js
+
+      - name: Verify Phase 1.6 creates advisory signed change requests only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.6-self-test.js

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const wranglerFile = path.join(root, 'wrangler.toml');
@@ -40,15 +41,31 @@ for (const patch of patches) {
   }
 }
 
+// This script is the last pre-manifest reconciliation point in the production
+// release chain. Reapply the canonical homepage only after broad generators,
+// then let the deploy manifest hash that exact source/output state.
+const homepageOwner = path.join(root, 'scripts', 'reconcile-release-homepage-order.js');
+if (!fs.existsSync(homepageOwner)) throw new Error('Canonical release homepage reconciler is missing');
+const homepageResult = spawnSync(process.execPath, [homepageOwner], {
+  cwd: root,
+  encoding: 'utf8',
+  env: process.env,
+  maxBuffer: 1024 * 1024 * 50
+});
+if (homepageResult.stdout) process.stdout.write(homepageResult.stdout);
+if (homepageResult.stderr) process.stderr.write(homepageResult.stderr);
+if (homepageResult.status !== 0) throw new Error('Canonical release homepage reconciliation failed');
+
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   routingMode: 'selective-worker-first-array',
   staticAssetsBypassWorker: true,
   protectedAndDynamicRoutesUseWorker: true,
+  homepageOwnerReconciledBeforeManifest: true,
   changed,
   checked: patches.map(item => item.file)
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'selective-worker-first-gate-alignment.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Selective Worker-first release gates aligned: ${changed.length} file(s) updated.`);
+console.log(`Selective Worker-first release gates aligned: ${changed.length} file(s) updated; canonical homepage owner reconciled before manifest hashing.`);

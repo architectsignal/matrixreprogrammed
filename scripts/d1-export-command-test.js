@@ -90,8 +90,9 @@ const dryRun = spawnSync(npx, ['--yes', 'wrangler@latest', 'deploy', '--dry-run'
   encoding: 'utf8',
   env: process.env,
   maxBuffer: 20 * 1024 * 1024,
+  shell: process.platform === 'win32',
 });
-const dryRunOutput = `${dryRun.stdout || ''}\n${dryRun.stderr || ''}`.trim();
+const dryRunOutput = `${dryRun.stdout || ''}\n${dryRun.stderr || ''}\n${dryRun.error?.message || ''}`.trim();
 check('Wrangler production Worker and asset bundle dry-run passes', dryRun.status === 0);
 
 const report = {

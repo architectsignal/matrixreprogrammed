@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-28T20:49:27.278Z
-Live Intel source window: 2026-07-28T20:49:22.063Z
-Latest source publication: 2026-07-27T00:13:58.000Z
+Generated: 2026-07-29T03:38:34.240Z
+Live Intel source window: 2026-07-29T03:38:18.842Z
+Latest source publication: 2026-07-28T23:02:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-9 current Epstein-lane record leads remain inside the active source window.
+10 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
+- Published: 2026-07-28T23:02:00.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
+
+Epstein, others named in scathing Interlochen review. See full report Detroit Free Press
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Group in Congress pushing for more Epstein transparency - American Press
 - Published: 2026-07-27T00:13:58.000Z

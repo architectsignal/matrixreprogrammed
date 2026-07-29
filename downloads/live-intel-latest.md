@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-28T20:49:22.063Z
-Latest source publication: 2026-07-28T16:42:00.000Z
+Collection completed: 2026-07-29T03:38:18.842Z
+Latest source publication: 2026-07-28T23:02:00.000Z
 Collection status: fresh-items-added
-New items this collection: 6
+New items this collection: 3
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+3 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 6
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-28 — Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
+  - Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
   - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeDRRb1RyYUw1bnVXUjk2STNJcjhpeV9CUlBjMEFLWXBqWTVvblJaa1BmcUVoWDdGSXhfY2lmMWdKR0lEUmZINWNTUWFxQ0lDQUtWd2NEWXVRVHpiUzJacDg2U2ZQQW5tMVZGSEUyOHJBTkQwdGhXSlBNV1AwVXpfSngxaDF2bUpxb1RtQVdzU0N6eFBEOFcyYk1SUTljY2JQcWR4dG5LeW52Njd2SVg0Q3VzTG9WakZxUlBOWkYwaDBfSlRFcjBZMklXRlhZV0FT0gHWAUFVX3lxTE9DVlYzbVZxdFBEUmZYUXBuaUxkNmZBMHZ2M2VKb2NiLWsyMjBZZmNKOE9Xa3VJRzlNcTVOWk40Ri1NY1RkRHZsM19va1Njb0xZZUQwUzk0TmFNSFRNX0xxd3RWR3UzQWJEdDdCLS1DbmV2c3FUbU1ITG1aOGREWDMycFNjZ3hqcDdWcmljLUMxWFNFbXJkemJ2MzlNdU5saHhBTjVSMnAwVEhnWXhRZVM1cU1haDRvWGlKbzlZV0lqRVExVDkwb2V3NlVwenN6QlAyelVUckE?oc=5
   - Source class: discovery
@@ -38,6 +44,12 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Climate alarm ‘blaring from every direction’
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168042
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Climate alarm ‘blaring from every direction’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — Forced online scams: IOM warns trafficking networks are booming
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168038
   - Source class: primary-or-official
@@ -49,6 +61,12 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: HIV, hepatitis, STI gains at risk as funding falls, WHO warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Mount Olympus and D-Day beaches among new World Heritage Sites
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168043
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Mount Olympus and D-Day beaches among new World Heritage Sites
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168037

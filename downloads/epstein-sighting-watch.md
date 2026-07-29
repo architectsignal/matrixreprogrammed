@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-28T20:49:27.329Z
+Generated: 2026-07-29T03:38:34.289Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: low
+- Internet claim activity: medium
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -48,6 +48,16 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 - Likely explanation: Synthetic image, altered image, old footage, compression artefact, or repost without origin.
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
+
+### Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Epstein, others named in scathing Interlochen review. See full report Detroit Free Press
 
 ### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
 - Type: sighting-claim

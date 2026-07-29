@@ -22,7 +22,7 @@ if (result.status !== 0) throw new Error('Canonical release homepage reconciliat
 const repaired = [];
 const checked = [];
 const convertedDuplicateAnchors = [];
-const protectedBlockPattern = /<(script|style|template)\b[\s\S]*?<\/\1\s*>/gi;
+const protectedBlockPattern = /<!--[\s\S]*?-->|<(script|style|template|textarea)\b[\s\S]*?<\/\1\s*>/gi;
 
 function transformDocumentMarkup(html, transform) {
   let output = '';
@@ -109,7 +109,7 @@ const report = {
   checked,
   repaired,
   convertedDuplicateAnchors,
-  rule: 'Each consequence anchor ID has one owner across the full parsed document. Compact previews and every later duplicate DOM occurrence use data-contract-id regardless of element type, CSS class, attribute order or intervening script/style/template blocks. Script, style and template contents are excluded from DOM-ID reconciliation. The canonical Live Intel route is restored after every late release mutator.'
+  rule: 'Each consequence anchor ID has one owner across live parsed document markup. Compact previews and every later duplicate DOM occurrence use data-contract-id regardless of element type, CSS class, attribute order or intervening protected blocks. HTML comments and script, style, template and textarea contents are excluded from DOM-ID reconciliation. The canonical Live Intel route is restored after every late release mutator.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-contract-integrity.json'), `${JSON.stringify(report, null, 2)}\n`);

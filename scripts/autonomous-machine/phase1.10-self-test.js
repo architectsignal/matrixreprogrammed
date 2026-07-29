@@ -4,7 +4,7 @@ const {sha256,stableStringify}=require('./route-registry'); const {AuditLog}=req
 for (const [name, exports] of Object.entries({
   'production-change-request-store': { assertChangeRequestPayload: () => true },
   'production-change-decision-store': { assertDecisionPayload: () => true },
-  'production-execution-plan-store': { assertExecutionPlanPayload: () => true },
+  'production-execution-plan-store': { assertExecutionPlanPayload: () => true, assertCandidatePath: (value) => value },
   'production-execution-plan-decision-store': { assertExecutionPlanDecisionPayload: () => true },
 })) { const resolved=require.resolve(`./${name}`); require.cache[resolved]={id:resolved,filename:resolved,loaded:true,exports}; }
 const {ProductionExecutionAuthorisationRequestStore,assertExecutionAuthorisationRequestPayload}=require('./production-execution-authorisation-request-store');

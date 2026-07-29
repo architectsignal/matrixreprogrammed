@@ -10,6 +10,7 @@ const reportPath = path.join(root, 'downloads', 'release-homepage-order-reconcil
 const commands = [];
 const copied = [];
 const checks = [];
+const hitListPresent = fs.existsSync(path.join(root, 'data', 'cinematic-hit-list.json'));
 
 function run(script, args = []) {
   const file = path.join(root, script);
@@ -30,6 +31,11 @@ function run(script, args = []) {
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
   if (result.status !== 0) throw new Error(`${script} failed`);
+}
+
+function recordPrebuildSkip(script, reason) {
+  commands.push({ script, args: [], status: 0, skipped: true, reason, stdout: '', stderr: '' });
+  console.log(`${script} skipped: ${reason}`);
 }
 
 function patchSafetyRoutes(file) {
@@ -125,7 +131,14 @@ if (fs.existsSync(outputRoot)) {
   patchMoneyRoutes(path.join(outputRoot, 'index.html'));
 }
 
-run('scripts/search-first-accountability-home-pressure-test.js');
+if (hitListPresent) {
+  run('scripts/search-first-accountability-home-pressure-test.js');
+} else {
+  recordPrebuildSkip(
+    'scripts/search-first-accountability-home-pressure-test.js',
+    'data/cinematic-hit-list.json is not generated in this metadata-only pre-build workflow; exact homepage markers and downstream metadata gates remain enforced.'
+  );
+}
 
 for (const [relative, marker] of [
   ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'action="search.html" method="get"'],
@@ -149,7 +162,8 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
-  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last.',
+  hitListPresent,
+  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.',
   commands,
   copied: [...new Set(copied)],
   checks

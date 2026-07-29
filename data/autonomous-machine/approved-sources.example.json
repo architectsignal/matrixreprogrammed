@@ -2,16 +2,18 @@
   "version": 1,
   "sources": [
     {
-      "id": "replace-with-approved-source",
-      "name": "Replace with an approved public source",
+      "id": "replace-with-stable-id",
+      "name": "Replace with source name",
       "baseUrl": "https://example.org/",
       "enabled": false,
+      "allowSubdomains": false,
+      "allowedPathPrefixes": [],
       "lawfulBasis": "public_web",
       "termsReviewed": false,
       "automationAllowed": false,
       "rateLimitPerHour": 10,
       "reliability": "unrated",
-      "notes": "Disabled template only. Review terms, robots policy, licensing and rate limits before enabling."
+      "notes": "Enable only after terms, robots guidance, authentication, privacy, path scope and rate limits are reviewed."
     }
   ]
 }

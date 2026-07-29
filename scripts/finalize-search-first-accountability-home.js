@@ -106,6 +106,7 @@ const client = `(()=>{const form=document.getElementById('accountability-search-
 const handoff = `(()=>{const q=new URLSearchParams(location.search).get('q');if(!q)return;const apply=()=>{const input=document.getElementById('archive-search');if(!input)return false;input.value=q;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();return true};if(!apply())document.addEventListener('DOMContentLoaded',apply,{once:true})})();`;
 
 writeEverywhere('index.html', html);
+if (fs.existsSync(outputRoot)) fs.writeFileSync(path.join(outputRoot, 'index'), html);
 writeEverywhere('accountability-home.css', `${css}\n`);
 writeEverywhere('accountability-home.js', `${client}\n`);
 writeEverywhere('search-query-handoff.js', `${handoff}\n`);
@@ -130,7 +131,8 @@ const report = {
   hitListEntries: hitEntries.length,
   accountabilityQuestions: questionLedger.count,
   proposition: questionLedger.proposition,
-  outputs: ['index.html','accountability-home.css','accountability-home.js','search-query-handoff.js','data/accountability-question-ledger.json']
+  outputs: ['index.html','accountability-home.css','accountability-home.js','search-query-handoff.js','data/accountability-question-ledger.json'],
+  cloudflareHomepageRoutes: ['/', '/index', '/index.html']
 };
 writeEverywhere('downloads/search-first-accountability-home-report.json', `${JSON.stringify(report, null, 2)}\n`);
 console.log(`Search-first accountability homepage finalized: ${report.searchIndexEntries} search routes, ${report.hitListEntries} Hit List records and ${report.accountabilityQuestions} open accountability questions.`);

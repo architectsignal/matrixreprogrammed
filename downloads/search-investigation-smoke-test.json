@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-29T19:43:20.481Z",
+  "generatedAt": "2026-07-29T22:46:02.118Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1904 entries"
+      "detail": "1908 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1904 unique routes"
+      "detail": "1908 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -120,7 +120,7 @@
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=108886c2624e7ff0fca9f3f9, source-changes.html?change=6852525bfb3f4d4c67a81fcb"
+      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=eaebe283915d5c0d1982b8e6, source-changes.html?change=108886c2624e7ff0fca9f3f9"
     },
     {
       "name": "local query government contracts USAspending procurement",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=d748a52eab15ba888051067b, source-changes.html?change=a812104d556e1c07b8205441"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=14394588e567b7c52bd11cb3, source-changes.html?change=d748a52eab15ba888051067b"
     }
   ],
   "failures": []

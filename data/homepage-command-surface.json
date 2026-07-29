@@ -210,7 +210,7 @@
     "confidenceIsProbability": false
   },
   "dailyWatch": {
-    "updated": "2026-07-29T08:02:22.123Z",
+    "updated": "2026-07-29T22:45:59.562Z",
     "date": "2026-07-29",
     "route": "daily-watch.html",
     "person": {
@@ -268,9 +268,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 22
+        "directFreshRecords": 23
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 22 fresh records plus 35 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 23 fresh records plus 35 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [
@@ -287,6 +287,7 @@
         "entity-briefs/securities-and-exchange-commission.html",
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
         "data/daily-investigation-conclusions.json",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases",
         "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
         "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
         "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
@@ -298,8 +299,7 @@
         "https://www.federalregister.gov/documents/2026/07/23/2026-14936/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
         "https://www.federalregister.gov/documents/2026/07/23/2026-14930/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
         "https://www.federalregister.gov/documents/2026/07/23/2026-14928/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-608",
-        "https://www.federalregister.gov/documents/2026/07/23/2026-14929/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c3-3",
-        "https://www.federalregister.gov/documents/2026/07/22/2026-14742/herzfeld-credit-income-fund-et-al"
+        "https://www.federalregister.gov/documents/2026/07/23/2026-14929/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c3-3"
       ],
       "nextQuestions": [
         "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",

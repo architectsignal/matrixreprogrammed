@@ -1,12 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-29T08:02:22.678Z",
+  "generatedAt": "2026-07-29T22:46:00.116Z",
   "overall": "ready",
   "summary": {
     "total": 50,
     "passed": 50,
     "failed": 0
   },
+  "homepageMode": "legacy-cinematic",
   "watch": {
     "date": "2026-07-29",
     "person": "Bill Gates",
@@ -16,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 1324,
+    "archivedFindings": 1327,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -87,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "1324 archived findings retained.",
+      "detail": "1327 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -268,19 +269,19 @@
       "id": "publication-surfaces",
       "ok": true,
       "detail": "4 public surfaces; first-post-intro true.",
-      "fix": "Publish first beneath the homepage header and across Daily Brief and Live Intel."
+      "fix": "Publish the watch data to its dedicated page and expose it through the canonical homepage and Live Intel routes."
     },
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "headerEnd=5737; hitList=5746; nextLegacyPanel=134074.",
-      "fix": "Inject immediately after the header, before construction and all feature panels."
+      "detail": "Legacy homepage: headerEnd=5737; hitList=5746; nextLegacyPanel=134034.",
+      "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
-      "id": "cinematic-card-ui",
+      "id": "accountability-card-ui",
       "ok": true,
-      "detail": "3 expandable cards found.",
-      "fix": "Render all three cinematic cards with expandable dossiers."
+      "detail": "3 cinematic dossier cards found.",
+      "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {
       "id": "dedicated-dossier-page",
@@ -291,20 +292,20 @@
     {
       "id": "support-conversion",
       "ok": true,
-      "detail": "Support, membership, Signal Drop and ranking history actions checked.",
-      "fix": "Keep conversion paths visible without hiding evidence boundaries."
+      "detail": "Watchlist or membership, evidence submission, brief and full accountability list actions checked.",
+      "fix": "Keep watchlist or membership, evidence submission, brief and full-list conversion paths visible without hiding evidence boundaries."
     },
     {
       "id": "surface-daily-command-brief.html",
       "ok": true,
-      "detail": "daily-command-brief.html contains the hit list.",
-      "fix": "Reinject the cinematic surface into daily-command-brief.html."
+      "detail": "Daily command brief exposes the current watch directly or through a stable route.",
+      "fix": "Expose the current watch from the Daily Brief without requiring duplicated cinematic markup."
     },
     {
       "id": "surface-live-intel.html",
       "ok": true,
-      "detail": "live-intel.html contains the hit list.",
-      "fix": "Reinject the cinematic surface into live-intel.html."
+      "detail": "Live Intel exposes the current intelligence feed; duplicated homepage hit-list markup is not required.",
+      "fix": "Preserve the Live Intel feed and machine-readable route."
     },
     {
       "id": "relationship-contracts",

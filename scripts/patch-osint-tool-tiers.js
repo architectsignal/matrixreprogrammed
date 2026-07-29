@@ -37,9 +37,11 @@ process.on('unhandledRejection', error => {
 function read(file) { return fs.readFileSync(file, 'utf8'); }
 function write(file, text) { fs.writeFileSync(file, text); }
 function replaceRequired(text, oldValue, newValue, label) {
-  if (text.includes(newValue)) return text;
-  if (!text.includes(oldValue)) throw new Error(`${label} patch target not found`);
-  return text.replace(oldValue, newValue);
+  const newline = text.includes('\r\n') ? '\r\n' : '\n';
+  const normalized = text.replace(/\r\n/g, '\n');
+  if (normalized.includes(newValue)) return text;
+  if (!normalized.includes(oldValue)) throw new Error(`${label} patch target not found`);
+  return normalized.replace(oldValue, newValue).replace(/\n/g, newline);
 }
 
 currentStage = 'worker policies';

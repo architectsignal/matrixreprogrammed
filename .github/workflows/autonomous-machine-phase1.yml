@@ -94,3 +94,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.13-self-test.js
+
+      - name: Verify Phase 1.14 creates issuance requests without token material
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.14-self-test.js

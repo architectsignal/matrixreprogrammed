@@ -162,6 +162,14 @@ const { FakeStore, h, makeChain, makeBackups, baseOptions } = require('./phase1.
     backupRoot: path.join(root, '.autonomous-machine', 'inside-backups'),
     authorisationDecisionStore: new ProductionExecutionAuthorisationDecisionStore(path.join(runtime, 'inside-backup.jsonl')),
   }), /outside the repository/);
+  const symlinkBackupRoot = path.join(os.tmpdir(), `phase111-backup-link-${process.pid}`);
+  try { fs.symlinkSync(externalRoot, symlinkBackupRoot, 'dir'); } catch (error) { if (error.code !== 'EEXIST') throw error; }
+  await rejects(() => decideProductionExecutionAuthorisation({
+    ...base,
+    backupRoot: symlinkBackupRoot,
+    authorisationDecisionStore: new ProductionExecutionAuthorisationDecisionStore(path.join(runtime, 'symlink-backup.jsonl')),
+  }), /symlink/);
+  fs.rmSync(symlinkBackupRoot, { force: true });
   const wrongBackupRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'phase111-wrong-backup-'));
   const wrongEntries = makeBackups(chain, wrongBackupRoot);
   fs.writeFileSync(path.join(wrongBackupRoot, wrongEntries[0].backupArtifactPath), 'wrong');

@@ -49,6 +49,17 @@ function patchSafetyRoutes(file) {
     const insertion = safetyLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
     after = after.replace(/(<div class="accountability-nav-drawer">)/, `$1${insertion}`);
   }
+  // The Live Intel pressure contract uses this durable marker to prove the
+  // canonical homepage owner preserved the route after every late generator.
+  if (!after.includes('live-intel-machine-route')) {
+    after = after.replace(
+      '<div class="accountability-nav-drawer">',
+      '<div class="accountability-nav-drawer live-intel-machine-route">'
+    );
+  }
+  if (!after.includes('href="live-intel.html"') || !after.includes('live-intel-machine-route')) {
+    throw new Error(`${path.relative(root, file)} failed to preserve the Live Intel route contract`);
+  }
   if (after !== before) fs.writeFileSync(file, after);
 }
 
@@ -121,18 +132,18 @@ run('scripts/search-first-accountability-home-pressure-test.js');
 for (const [relative, marker] of [
   ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'action="search.html" method="get"'],
   ['index.html', 'name="q"'],['index.html', 'accountability-home.js'],['index.html', 'href="follow-the-money.html"'],
-  ['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],['index.html', 'href="independent-links.html"'],
-  ['index.html', 'href="security-privacy.html"'],['index.html', 'href="dark-web-safety.html"'],['index.html', 'data-homepage-mask-intro'],
-  ['index.html', 'welcome-gate.js'],['index.html', 'id="matrix-construction-banner"'],['search.html', 'search-query-handoff.js'],
-  ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+  ['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],['index.html', 'live-intel-machine-route'],
+  ['index.html', 'href="independent-links.html"'],['index.html', 'href="security-privacy.html"'],['index.html', 'href="dark-web-safety.html"'],
+  ['index.html', 'data-homepage-mask-intro'],['index.html', 'welcome-gate.js'],['index.html', 'id="matrix-construction-banner"'],
+  ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
 ]) requireMarker(relative, marker);
 
 if (fs.existsSync(outputRoot)) {
   for (const [relative, marker] of [
     ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'name="q"'],
     ['index.html', 'href="follow-the-money.html"'],['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],
-    ['index.html', 'href="independent-links.html"'],['index.html', 'data-homepage-mask-intro'],['search.html', 'search-query-handoff.js'],
-    ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+    ['index.html', 'live-intel-machine-route'],['index.html', 'href="independent-links.html"'],['index.html', 'data-homepage-mask-intro'],
+    ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
   ]) requireMarker(relative, marker, outputRoot);
 }
 

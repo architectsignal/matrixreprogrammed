@@ -4,6 +4,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { normaliseUrl } = require('./validation');
 
+function normalisePathPrefix(value) {
+  if (typeof value !== 'string' || !value.trim()) {
+    throw new TypeError('allowed path prefixes must be non-empty strings');
+  }
+  const prefix = value.trim();
+  return prefix.startsWith('/') ? prefix : `/${prefix}`;
+}
+
 class SourceRegistry {
   constructor(filePath) {
     if (!filePath) throw new TypeError('SourceRegistry requires a file path');
@@ -35,11 +43,18 @@ class SourceRegistry {
     if (registry.sources.some((item) => item.id === source.id)) {
       throw new Error(`Source already exists: ${source.id}`);
     }
+    const baseUrl = normaliseUrl(source.baseUrl);
+    if (new URL(baseUrl).protocol !== 'https:') throw new Error('Source baseUrl must use HTTPS');
+    const allowedPathPrefixes = Array.isArray(source.allowedPathPrefixes)
+      ? source.allowedPathPrefixes.map(normalisePathPrefix)
+      : [];
     const normalised = {
       id: source.id,
       name: source.name,
-      baseUrl: normaliseUrl(source.baseUrl),
+      baseUrl,
       enabled: source.enabled === true,
+      allowSubdomains: source.allowSubdomains === true,
+      allowedPathPrefixes,
       lawfulBasis: source.lawfulBasis || 'public_web',
       termsReviewed: source.termsReviewed === true,
       automationAllowed: source.automationAllowed === true,
@@ -64,6 +79,9 @@ class SourceRegistry {
     if (!source.enabled) throw new Error(`Source is disabled: ${sourceId}`);
     if (!source.termsReviewed) throw new Error(`Source terms have not been reviewed: ${sourceId}`);
     if (!source.automationAllowed) throw new Error(`Automated access is not approved: ${sourceId}`);
+    if (!Number.isInteger(source.rateLimitPerHour) || source.rateLimitPerHour < 1) {
+      throw new Error(`Source rate limit is invalid: ${sourceId}`);
+    }
     return source;
   }
 
@@ -72,8 +90,14 @@ class SourceRegistry {
     const base = new URL(source.baseUrl);
     const candidate = new URL(normaliseUrl(candidateUrl));
     if (candidate.protocol !== 'https:') throw new Error('Only HTTPS sources are allowed');
-    if (candidate.hostname !== base.hostname && !candidate.hostname.endsWith(`.${base.hostname}`)) {
+    const sameHost = candidate.hostname === base.hostname;
+    const approvedSubdomain = source.allowSubdomains && candidate.hostname.endsWith(`.${base.hostname}`);
+    if (!sameHost && !approvedSubdomain) {
       throw new Error(`URL host is outside the registered source boundary: ${candidate.hostname}`);
+    }
+    if (source.allowedPathPrefixes.length
+      && !source.allowedPathPrefixes.some((prefix) => candidate.pathname.startsWith(prefix))) {
+      throw new Error(`URL path is outside the registered source boundary: ${candidate.pathname}`);
     }
     return true;
   }

@@ -15,6 +15,7 @@ on:
       - 'data/behind-the-curtain-capstone.json'
       - 'scripts/power-family-intelligence-layer.runtime.js'
       - 'scripts/reconcile-power-family-capstone.js'
+      - 'scripts/compact-cloudflare-search-index.js'
       - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
@@ -38,6 +39,7 @@ jobs:
           node --check behind-the-curtain-capstone.js
           node --check scripts/power-family-intelligence-layer.runtime.js
           node --check scripts/reconcile-power-family-capstone.js
+          node --check scripts/compact-cloudflare-search-index.js
           node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
           node - <<'NODE'
@@ -65,6 +67,8 @@ jobs:
           cp behind-the-curtain-symbolic-capstone.html _site/behind-the-curtain-symbolic-capstone
           for file in data/behind-the-curtain.json data/behind-the-curtain-pyramid.json data/behind-the-curtain-people-registry.json data/behind-the-curtain-family-access.json data/behind-the-curtain-capstone.json data/power-family-intelligence-layer.json data/power-family-curated-people.json; do cp "$file" "_site/$file"; done
           cp search-index.json sitemap.xml llms.txt _site/
+      - name: Compact search fixture before reconciliation
+        run: node scripts/compact-cloudflare-search-index.js
       - name: Canonical reconciliation
         run: node scripts/reconcile-power-family-capstone.js
       - name: Production contract guard and public gateways
@@ -84,4 +88,5 @@ jobs:
             downloads/power-family-capstone-reconcile.json
             downloads/behind-the-curtain-production-guard.json
             downloads/power-family-public-gateways.json
+            downloads/cloudflare-search-index-compaction.json
           if-no-files-found: warn

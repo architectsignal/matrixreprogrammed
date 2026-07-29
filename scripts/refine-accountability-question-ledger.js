@@ -10,7 +10,18 @@ const roots = [root, outputRoot].filter((value, index, all) => all.indexOf(value
 const array = value => Array.isArray(value) ? value : [];
 const clean = (value, max = 1200) => String(value == null ? '' : value).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 const unique = values => [...new Set(array(values).map(value => clean(value)).filter(Boolean))];
-const readJson = relative => JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
+function readJson(relative, fallback) {
+  const file = path.join(root, relative);
+  if (!fs.existsSync(file)) {
+    if (fallback !== undefined) return fallback;
+    throw new Error(`${relative} is required`);
+  }
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch (error) {
+    throw new Error(`${relative} is invalid JSON: ${error.message}`);
+  }
+}
 const stripEnd = value => clean(value).replace(/[\s.;:,!?-]+$/g, '');
 const actionWords = 'maintain|obtain|verify|restore|request|secure|publish|locate|identify|confirm|authenticate|collect|compare|trace|review|document|find|add|attach|preserve|release|check|establish';
 
@@ -48,7 +59,9 @@ function questionFor(entry) {
   return `Can this evidence gap for ${name} be resolved: ${missing}?`;
 }
 
-const hit = readJson('data/cinematic-hit-list.json');
+const hitListPath = path.join(root, 'data', 'cinematic-hit-list.json');
+const hitListPresent = fs.existsSync(hitListPath);
+const hit = readJson('data/cinematic-hit-list.json', { entries: [] });
 const ledger = readJson('data/accountability-question-ledger.json');
 const byId = new Map(array(hit.entries).map(entry => [clean(entry.id), entry]));
 let directRoutes = 0;
@@ -89,11 +102,16 @@ writeEverywhere('downloads/accountability-question-ledger-refinement.json', {
   ok: true,
   generatedAt: ledger.refinedAt,
   questions: ledger.count,
+  hitListPresent,
+  hitListRecords: array(hit.entries).length,
   routeCoverage: ledger.routeCoverage,
   cleanedImportedSubjectNames: cleanedSubjects,
   qualityRule: ledger.questionQualityRule,
-  operatingRule: ledger.operatingRule
+  operatingRule: ledger.operatingRule,
+  boundary: hitListPresent
+    ? 'Question wording and routes were refined from the current cinematic hit list.'
+    : 'The optional cinematic hit list was not present in this pre-build workflow, so the existing required accountability ledger was preserved without imported enrichment.'
 });
-console.log(`Accountability Question Ledger refined: ${ledger.count} questions, ${cleanedSubjects} imported subject names cleaned, ${directRoutes} with dossier/source routes, ${timerOnlyRoutes} with timer routes.`);
+console.log(`Accountability Question Ledger refined: ${ledger.count} questions, ${cleanedSubjects} imported subject names cleaned, ${directRoutes} with dossier/source routes, ${timerOnlyRoutes} with timer routes; hit list ${hitListPresent ? 'present' : 'not yet generated'}.`);
 
 require('./run-public-consequence-contracts.js');

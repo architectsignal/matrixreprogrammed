@@ -11,6 +11,7 @@ on:
       - 'scripts/publish-release-metadata-assets.js'
       - 'scripts/final-release-sanitize.js'
       - 'scripts/verify-live-production.js'
+      - 'scripts/compact-cloudflare-search-index.js'
       - 'data/production-freshness-policy.json'
   workflow_dispatch:
 
@@ -58,6 +59,7 @@ jobs:
           node --check src/worker-release-metadata.js
           node --check src/worker-production.js
           node --check scripts/verify-live-production.js
+          node --check scripts/compact-cloudflare-search-index.js
           node - <<'NODE'
           const fs = require('fs');
           const assert = (ok, message) => { if (!ok) throw new Error(message); };
@@ -78,6 +80,9 @@ jobs:
           }
           NODE
 
+      - name: Compact route-preserving search index for Cloudflare proof
+        run: node scripts/compact-cloudflare-search-index.js
+
       - name: Bundle strict Cloudflare Worker without deploying
         run: npx --yes wrangler@latest deploy --dry-run --outdir .wrangler/release-metadata-proof
 
@@ -94,6 +99,7 @@ jobs:
             downloads/release-metadata-routing-patch.json
             downloads/live-verifier-intelligence-routes-patch.json
             downloads/release-metadata-assets.json
+            downloads/cloudflare-search-index-compaction.json
             .wrangler/release-metadata-proof
           if-no-files-found: error
           retention-days: 21

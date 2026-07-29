@@ -64,10 +64,19 @@ for (const [file, text, label] of [
   ['wrangler.toml', 'main = "src/worker-production.js"', 'strict production entrypoint'],
   ['wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding'],
   ['wrangler.toml', 'directory = "./_site"', 'Cloudflare asset output directory'],
-  ['wrangler.toml', 'run_worker_first = true', 'Worker-first routing'],
   ['wrangler.toml', 'keep_vars = true', 'Cloudflare dashboard variable preservation'],
   ['wrangler.jsonc', '"keep_vars": true', 'JSONC dashboard variable preservation']
 ]) needText(file, text, label);
+
+const wrangler = read('wrangler.toml');
+const workerFirstAll = wrangler.includes('run_worker_first = true');
+const workerFirstSelective = wrangler.includes('run_worker_first = [')
+  && wrangler.includes('"/api/*"')
+  && wrangler.includes('"/.netlify/functions/*"')
+  && wrangler.includes('"/downloads/the-black-file-matrix-reprogrammed.pdf"')
+  && wrangler.includes('"/downloads/member-report*"');
+if (!workerFirstAll && !workerFirstSelective) hard.push('wrangler.toml missing Worker-first routing for dynamic and protected routes');
+
 forbidText('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'silent duplicate-ignoring D1 post insert');
 if (/^\s*PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) hard.push('wrangler.toml contains active PayPal override');
 if (/^\s*"PAYPAL_[A-Z0-9_]+"\s*:/m.test(read('wrangler.jsonc'))) hard.push('wrangler.jsonc contains active PayPal override');

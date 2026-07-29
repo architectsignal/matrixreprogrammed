@@ -34,11 +34,42 @@ const groups = [
 const canonicalNavigation = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primary.map(([href,label])=>`<a href="${href}">${label}</a>`).join('')}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">${groups.map(([title,links])=>`<div class="nav-group"><strong>${title}</strong>${links.map(([href,label])=>`<a href="${href}">${label}</a>`).join('')}</div>`).join('')}</div></details></nav>`;
 const navPattern = /<nav class="nav(?: nav-shell)?"(?: aria-label="Primary navigation")?>[\s\S]*?<\/nav>/i;
 const requiredRoutes = [...new Set([...primary.map(x=>x[0]), ...groups.flatMap(x=>x[1].map(y=>y[0]))])];
+const searchFirstMarkers = [
+  'class="accountability-home"',
+  'id="accountability-search"',
+  'id="accountability-hit-list"',
+  'id="open-question-ledger"',
+  'id="explore-system"',
+  'href="hit-list.html"',
+  'href="evidence-vault.html"',
+  'contact-the-machine.html'
+];
+const searchFirstAlternativeRoutes = [
+  ['member-dashboard.html', 'member-login.html']
+];
+const isSearchFirst = html => html.includes('class="accountability-home"') && html.includes('id="accountability-search"') && html.includes('id="accountability-hit-list"');
+
+function verifySearchFirst(html, label) {
+  for (const marker of searchFirstMarkers) {
+    if (!html.includes(marker)) throw new Error(`Search-first homepage navigation marker missing in ${label}: ${marker}`);
+  }
+  for (const alternatives of searchFirstAlternativeRoutes) {
+    if (!alternatives.some(route => html.includes(route))) {
+      throw new Error(`Search-first homepage has no authenticated watchlist route in ${label}: ${alternatives.join(' or ')}`);
+    }
+  }
+}
 
 const changed = [];
+const preservedSearchFirst = [];
 for (const target of targets) {
   if (!fs.existsSync(target) || fs.statSync(target).isDirectory()) continue;
   const before = fs.readFileSync(target, 'utf8');
+  if (isSearchFirst(before)) {
+    verifySearchFirst(before, path.relative(root, target));
+    preservedSearchFirst.push(path.relative(root, target));
+    continue;
+  }
   if (!navPattern.test(before)) throw new Error(`Homepage navigation anchor missing in ${path.relative(root, target)}`);
   const after = before.replace(navPattern, canonicalNavigation);
   for (const route of requiredRoutes) {
@@ -56,8 +87,12 @@ require('./patch-public-static-route-bridge.js');
 for (const target of targets) {
   if (!fs.existsSync(target) || fs.statSync(target).isDirectory()) continue;
   const finalHtml = fs.readFileSync(target, 'utf8');
-  for (const route of requiredRoutes) {
-    if (!finalHtml.includes(`href="${route}"`)) throw new Error(`${path.relative(root,target)} navigation verification failed: ${route}`);
+  if (isSearchFirst(finalHtml)) {
+    verifySearchFirst(finalHtml, path.relative(root, target));
+  } else {
+    for (const route of requiredRoutes) {
+      if (!finalHtml.includes(`href="${route}"`)) throw new Error(`${path.relative(root,target)} navigation verification failed: ${route}`);
+    }
   }
   if (finalHtml.includes('track-the-families.html')) throw new Error(`${path.relative(root,target)} still contains obsolete Track the Families route`);
 }
@@ -68,11 +103,16 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   changed,
+  preservedSearchFirst,
   primaryRoutes: primary.map(x=>x[0]),
   restoredGroups: groups.map(x=>x[0]),
   requiredRoutes,
+  searchFirstMarkers,
+  searchFirstAlternativeRoutes,
   protectedPublicRoutes: ['death-files.html','independent-links.html','elite-family-tracker.html'],
   currentPrimeMinisterOwner: 'scripts/patch-global-contact-and-current-pm.js',
   publicStaticRouteOwner: 'scripts/patch-public-static-route-bridge.js'
 }, null, 2)}\n`);
-console.log(`Homepage navigation restored with Death Files, Independent Links, the live Family Tracker and ${requiredRoutes.length} verified public routes.`);
+console.log(preservedSearchFirst.length
+  ? `Search-first homepage navigation preserved and validated across ${preservedSearchFirst.length} target(s); classic navigation repaired across ${changed.length} target(s).`
+  : `Homepage navigation restored with Death Files, Independent Links, the live Family Tracker and ${requiredRoutes.length} verified public routes.`);

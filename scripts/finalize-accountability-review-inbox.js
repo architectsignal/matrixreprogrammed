@@ -30,7 +30,7 @@ const checks={
   evidenceLimits:page.includes('What this does not establish'),
   namedReviewer:page.includes('Named reviewer'),
   dueNotVerdict:page.includes('A due checkpoint is not a verdict'),
-  publicTwinFallback:page.includes('id="workspace-public" class="btn alt" href="public-consequence-contracts.html"'),
+  publicTwinFallback:page.includes('id="workspace-public" class="btn alt" href="index.html#accountability-hit-list"'),
   originalSourceFallback:page.includes('id="workspace-source" class="btn alt" href="source-document-vault.html"'),
   evidenceRouteFallback:page.includes('id="workspace-evidence" class="btn alt" href="evidence-vault.html"')
 };

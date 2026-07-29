@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-29T03:38:18.842Z
+Collection completed: 2026-07-29T09:08:05.036Z
 Latest source publication: 2026-07-28T23:02:00.000Z
 Collection status: fresh-items-added
-New items this collection: 3
+New items this collection: 1
 
 ## Freshness truth
-3 new source item(s) entered the seven-day window during this collection.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -128,12 +128,6 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
-  - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
   - Source class: primary-or-official
@@ -236,6 +230,12 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - PBS
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-23 — House Oversight Committee to interview Epstein’s former private banker - Rural Radio Network
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxONm9FVGJyVkJEOGo3YXJhcmRjZWw5S09nQjAzLTU3VWUzMDBCQUdmajdBbDRaTlYxQXJaOHdiQzh3ZWw1X3hyOVptZUZGbkFZZEw4STNPWmR2S1N5ZVdMTE9hbWZFMlBTS3oxOWUtZm5ydGtMRi05Q0xSbkxUemNkQ3VFRVQxOFM0X3Rzby1MVE54UnJQR29VYTJVY2Q1YzUyUWQzRVdqSWxMN2FjSFQtLVlqc1ZEM0F2aXlJUjBR?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: House Oversight Committee to interview Epstein’s former private banker - Rural Radio Network
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Gaza’s food gains could unravel without sustained aid, UN warns
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168006
   - Source class: primary-or-official
@@ -247,24 +247,6 @@ New items this collection: 3
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Iran urged to stop protest-related executions
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Satellites can now spot methane leaks in real time – but most go unfixed
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168007
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Satellites can now spot methane leaks in real time – but most go unfixed
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Security Council LIVE: How to turn preventive diplomacy rhetoric into action
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168005
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Security Council LIVE: How to turn preventive diplomacy rhetoric into action
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Stranded seafarers remain trapped as Hormuz shipping stalls
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168004
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Stranded seafarers remain trapped as Hormuz shipping stalls
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Syria ‘not alone’ in locating missing persons, tackling displacement
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168010
@@ -289,36 +271,6 @@ New items this collection: 3
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
-  - Source: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167996
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Deadly Afghanistan floods kill at least 26 as aid agencies race to reach survivors
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Nicaragua continues to weaken political freedoms, UN warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1167999
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Nicaragua continues to weaken political freedoms, UN warns
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — Thousands prevented from returning home to southern Lebanon
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168003
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Thousands prevented from returning home to southern Lebanon
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-22 — World News in Brief: Aid for Ukraine, drone attacks in Sudan, DR Congo deaths, neurological disorders in the Americas
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168000
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: World News in Brief: Aid for Ukraine, drone attacks in Sudan, DR Congo deaths, neurological disorders in the Americas
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-22 — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
   - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5

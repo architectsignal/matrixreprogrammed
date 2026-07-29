@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-29T03:38:34.350Z
-Live Intel source window: 2026-07-29T03:38:18.842Z
+Generated: 2026-07-29T09:08:09.685Z
+Live Intel source window: 2026-07-29T09:08:05.036Z
 Tracked cards: 961
-Cards with current matched records: 106
-Cards with no new verified record: 855
+Cards with current matched records: 105
+Cards with no new verified record: 856
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -5206,10 +5206,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## THE DEATH FILES.
 - Route: death-files.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-26T19:01:07.000Z
-- 2026-07-26T19:01:07.000Z — Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick — https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## THE EPSTEIN EMAIL NETWORK
 - Route: epstein-email-network.html

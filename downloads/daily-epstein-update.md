@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-29T03:38:34.240Z
-Live Intel source window: 2026-07-29T03:38:18.842Z
+Generated: 2026-07-29T09:08:09.568Z
+Live Intel source window: 2026-07-29T09:08:05.036Z
 Latest source publication: 2026-07-28T23:02:00.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-10 current Epstein-lane record leads remain inside the active source window.
+9 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -45,16 +45,6 @@ Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Euras
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick
-- Published: 2026-07-26T19:01:07.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
-
-Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections Daily Maverick
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
 - Published: 2026-07-23T21:48:41.000Z
 - Source: Google News / Epstein timeline and files
@@ -85,6 +75,16 @@ Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties PBS
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### House Oversight Committee to interview Epstein’s former private banker - Rural Radio Network
+- Published: 2026-07-23T12:46:15.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMivgFBVV95cUxONm9FVGJyVkJEOGo3YXJhcmRjZWw5S09nQjAzLTU3VWUzMDBCQUdmajdBbDRaTlYxQXJaOHdiQzh3ZWw1X3hyOVptZUZGbkFZZEw4STNPWmR2S1N5ZVdMTE9hbWZFMlBTS3oxOWUtZm5ydGtMRi05Q0xSbkxUemNkQ3VFRVQxOFM0X3Rzby1MVE54UnJQR29VYTJVY2Q1YzUyUWQzRVdqSWxMN2FjSFQtLVlqc1ZEM0F2aXlJUjBR?oc=5
+
+House Oversight Committee to interview Epstein’s former private banker Rural Radio Network
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### Examining 2 decades since Jeffrey Epstein's arrest - WPTV
 - Published: 2026-07-23T10:55:34.000Z
 - Source: Google News / Epstein timeline and files
@@ -92,16 +92,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
 
 Examining 2 decades since Jeffrey Epstein's arrest WPTV
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
-- Published: 2026-07-23T10:09:26.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
-
-Former Barclays boss Jes Staley to face US House panel on Epstein Forth.News
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

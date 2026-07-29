@@ -8,10 +8,10 @@ Scanned pages: 3399
 Flagged pages: 2955
 High priority pages: 1268
 Medium priority pages: 1685
-Pages with missing rules: 742
+Pages with missing rules: 740
 Auto-update eligible figures: 2
 Manual-review figures: 102
-Missing-rule figures: 1569
+Missing-rule figures: 1565
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -27,8 +27,8 @@ Missing-rule figures: 1569
 - store.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - timers.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/machine-digest.html: 17 figure/stat markers; 17 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 11 figure/stat markers; 11 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
@@ -59,8 +59,8 @@ Missing-rule figures: 1569
 - store.html: 20 figure(s) need source rules.
 - timers.html: 20 figure(s) need source rules.
 - _site/machine-digest.html: 17 figure(s) need source rules.
-- live-intel.html: 11 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
+- live-intel.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.

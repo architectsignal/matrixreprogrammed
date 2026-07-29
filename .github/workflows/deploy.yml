@@ -71,6 +71,7 @@ jobs:
 
       - name: Verify critical runtime, D1 and autonomous AI contracts
         run: |
+          node scripts/production-release-state-test.js
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
           node scripts/phase4-email-lifecycle-test.mjs
@@ -285,6 +286,7 @@ jobs:
           npx --yes wrangler@latest deploy --config .wrangler-production.toml --dry-run
 
       - name: Deploy exact reconciled assets and autonomous D1 Worker to Cloudflare
+        id: cloudflare_deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -302,6 +304,7 @@ jobs:
         run: node scripts/verify-live-ai-management.mjs
 
       - name: Verify live independent Pyramid
+        id: pyramid_verify
         env:
           SITE_URL: https://matrixreprogrammed.com
           PYRAMID_VERIFY_ATTEMPTS: '36'
@@ -309,6 +312,7 @@ jobs:
         run: node scripts/verify-live-behind-the-curtain.js
 
       - name: Verify live routes, exact SHA and protected boundaries
+        id: live_verify
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
@@ -318,9 +322,21 @@ jobs:
         run: node -r ./scripts/verify-live-production-fetch-fallback.js scripts/verify-live-production.js
 
       - name: Build sanitized production deployment receipt
+        id: receipt
+        continue-on-error: true
         env:
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: node scripts/build-production-deploy-receipt.js
+
+      - name: Classify deployment, live verification and receipt state
+        if: always()
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+          CLOUDFLARE_DEPLOY_OUTCOME: ${{ steps.cloudflare_deploy.outcome }}
+          PYRAMID_VERIFY_OUTCOME: ${{ steps.pyramid_verify.outcome }}
+          LIVE_VERIFY_OUTCOME: ${{ steps.live_verify.outcome }}
+          RECEIPT_OUTCOME: ${{ steps.receipt.outcome }}
+        run: node scripts/classify-production-release-state.js
 
       - name: Remove temporary production configuration
         if: always()
@@ -339,6 +355,7 @@ jobs:
             downloads/live-behind-the-curtain-verification.json
             downloads/live-production-verification.json
             downloads/production-deploy-receipt.json
+            downloads/production-release-state.json
             downloads/d1-time-travel-bookmark.json
             downloads/d1-rollback-proof.json
             downloads/d1-migration.log

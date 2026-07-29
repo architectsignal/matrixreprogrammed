@@ -111,6 +111,10 @@ run('scripts/finalize-search-first-accountability-home.js');
 run('scripts/refine-accountability-question-ledger.js');
 run('scripts/install-reverse-accountability-platform.js');
 run('scripts/reverse-accountability-platform-pressure-test.js');
+// The intro release test also validates the cumulative, server-gated membership
+// surface. Broad legacy generators can replace membership.html, so restore its
+// canonical owner immediately before the combined intro/membership validation.
+run('scripts/patch-membership-tiers.js');
 run('scripts/patch-homepage-construction-banner.js');
 run('scripts/patch-homepage-mask-intro.js');
 run('scripts/homepage-mask-intro-test.js');
@@ -162,8 +166,9 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
+  membershipOwner: 'scripts/patch-membership-tiers.js',
   hitListPresent,
-  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.',
+  orderingRule: 'Broad generators first; canonical cumulative membership, search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.',
   commands,
   copied: [...new Set(copied)],
   checks
@@ -174,4 +179,4 @@ if (fs.existsSync(outputRoot)) {
   fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
   fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
 }
-console.log('Release homepage order reconciled: My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.');
+console.log('Release homepage order reconciled: cumulative membership, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.');

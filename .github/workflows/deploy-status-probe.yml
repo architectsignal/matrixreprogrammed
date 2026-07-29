@@ -1,0 +1,77 @@
+name: Read-only production deploy status probe
+
+on:
+  push:
+    branches:
+      - agent/deploy-status-probe-20260730
+    paths:
+      - .github/workflows/deploy-status-probe.yml
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout probe branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/deploy-status-probe-20260730
+          fetch-depth: 0
+
+      - name: Read controlled production workflow runs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const response = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'deploy.yml',
+              event: 'workflow_dispatch',
+              branch: 'main',
+              per_page: 20
+            });
+            const cutoff = Date.parse('2026-07-29T23:00:00Z');
+            const recent = (response.data.workflow_runs || [])
+              .filter(run => Date.parse(run.created_at) >= cutoff)
+              .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+              .map(run => ({
+                id: run.id,
+                runNumber: run.run_number,
+                status: run.status,
+                conclusion: run.conclusion,
+                event: run.event,
+                headBranch: run.head_branch,
+                headSha: run.head_sha,
+                createdAt: run.created_at,
+                updatedAt: run.updated_at,
+                url: run.html_url
+              }));
+            const payload = {
+              ok: recent.length > 0,
+              checkedAt: new Date().toISOString(),
+              workflow: 'deploy.yml',
+              expectedName: 'Matrix Reprogrammed Controlled Production Deploy',
+              cutoff: new Date(cutoff).toISOString(),
+              latest: recent[0] || null,
+              recent
+            };
+            fs.mkdirSync('data', { recursive: true });
+            fs.writeFileSync('data/deploy-status-probe.json', JSON.stringify(payload, null, 2) + '\n');
+            console.log(JSON.stringify(payload, null, 2));
+
+      - name: Record probe result on isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/deploy-status-probe.json
+          git commit -m 'Record read-only production deploy status' || exit 0
+          git push origin HEAD:agent/deploy-status-probe-20260730

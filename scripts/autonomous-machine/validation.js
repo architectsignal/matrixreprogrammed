@@ -51,6 +51,8 @@ function buildTaskFingerprint(task) {
     type: task.type,
     sourceId: task.sourceId || null,
     subjectKey: task.subjectKey || null,
+    evidenceClass: task.evidenceClass || null,
+    sensitivity: task.sensitivity || null,
     payload: task.payload || {},
   }));
 }

@@ -34,3 +34,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.1-self-test.js
+
+      - name: Verify Phase 1.2 creates route proposals only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.2-self-test.js

@@ -118,6 +118,10 @@ run('scripts/patch-membership-tiers.js');
 run('scripts/patch-homepage-construction-banner.js');
 run('scripts/patch-homepage-mask-intro.js');
 run('scripts/homepage-mask-intro-test.js');
+// Legacy public-surface generators can leave dynamically populated pages without
+// a static visible H1. Reconcile document hierarchy in source and Cloudflare output
+// before the exhaustive public audit and production deploy guard.
+run('scripts/reconcile-public-page-headings.js');
 
 patchSafetyRoutes(path.join(root, 'index.html'));
 patchMoneyRoutes(path.join(root, 'index.html'));
@@ -150,7 +154,8 @@ for (const [relative, marker] of [
   ['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],['index.html', 'live-intel-machine-route'],
   ['index.html', 'href="independent-links.html"'],['index.html', 'href="security-privacy.html"'],['index.html', 'href="dark-web-safety.html"'],
   ['index.html', 'data-homepage-mask-intro'],['index.html', 'welcome-gate.js'],['index.html', 'id="matrix-construction-banner"'],
-  ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+  ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"],
+  ['daily-watch.html', '<h1 id="daily-hit-list-title">'],['heroes-fighting-matrix-card.html', 'id="heroes-card-page-title"']
 ]) requireMarker(relative, marker);
 
 if (fs.existsSync(outputRoot)) {
@@ -158,7 +163,8 @@ if (fs.existsSync(outputRoot)) {
     ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'name="q"'],
     ['index.html', 'href="follow-the-money.html"'],['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],
     ['index.html', 'live-intel-machine-route'],['index.html', 'href="independent-links.html"'],['index.html', 'data-homepage-mask-intro'],
-    ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+    ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"],
+    ['daily-watch.html', '<h1 id="daily-hit-list-title">'],['heroes-fighting-matrix-card.html', 'id="heroes-card-page-title"']
   ]) requireMarker(relative, marker, outputRoot);
 }
 
@@ -167,8 +173,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
   membershipOwner: 'scripts/patch-membership-tiers.js',
+  publicHeadingOwner: 'scripts/reconcile-public-page-headings.js',
   hitListPresent,
-  orderingRule: 'Broad generators first; canonical cumulative membership, search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.',
+  orderingRule: 'Broad generators first; canonical cumulative membership, search-first homepage, public H1 hierarchy, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.',
   commands,
   copied: [...new Set(copied)],
   checks
@@ -179,4 +186,4 @@ if (fs.existsSync(outputRoot)) {
   fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
   fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
 }
-console.log('Release homepage order reconciled: cumulative membership, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.');
+console.log('Release homepage order reconciled: cumulative membership, public H1 hierarchy, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.');

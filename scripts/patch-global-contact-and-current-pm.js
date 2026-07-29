@@ -130,6 +130,21 @@ function patchTree(baseDir, excluded, targetRoot, label) {
   return { label, navTouched, pmTouched };
 }
 
+function homepageHasContact(file) {
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return false;
+  const html = fs.readFileSync(file, 'utf8');
+  const contactRoute = /href=["'][^"']*contact-the-machine\.html(?:\?[^"']*)?["']/i.test(html);
+  if (!contactRoute) return false;
+  const searchFirst = html.includes('class="accountability-home"')
+    && html.includes('id="accountability-search"')
+    && html.includes('id="accountability-hit-list"');
+  if (searchFirst) {
+    return /<nav\b[^>]*aria-label=["']Primary navigation["'][^>]*>[\s\S]*?contact-the-machine\.html/i.test(html)
+      || /class=["'][^"']*accountability-primary-actions[^"']*["'][\s\S]*?contact-the-machine\.html/i.test(html);
+  }
+  return /nav-primary[\s\S]*contact-the-machine\.html/i.test(html);
+}
+
 const sourceResult = patchTree(root, rootExcluded, root, 'source');
 const siteResult = fs.existsSync(site) ? patchTree(site, siteExcluded, site, 'deployable') : { label: 'deployable', navTouched: [], pmTouched: [] };
 
@@ -144,8 +159,8 @@ if (fs.existsSync(site)) {
 
 const indexPath = path.join(root, 'index.html');
 const builtIndexPath = path.join(site, 'index.html');
-const sourceIndexOk = fs.existsSync(indexPath) && /nav-primary[\s\S]*contact-the-machine\.html/i.test(fs.readFileSync(indexPath, 'utf8'));
-const builtIndexOk = !fs.existsSync(site) || (fs.existsSync(builtIndexPath) && /nav-primary[\s\S]*contact-the-machine\.html/i.test(fs.readFileSync(builtIndexPath, 'utf8')));
+const sourceIndexOk = homepageHasContact(indexPath);
+const builtIndexOk = !fs.existsSync(site) || homepageHasContact(builtIndexPath);
 if (!sourceIndexOk || !builtIndexOk) throw new Error('Contact navigation did not survive on the source and deployable homepage');
 
 const reportPath = path.join(root, 'downloads', 'contact-nav-current-pm-report.json');

@@ -93,6 +93,11 @@ copy('index.html');
 copy('start-here.html');
 copy('behind-the-curtain-capstone.html');
 
+// These are the final canonical owners. Nothing broad may run after them.
+run('scripts/reconcile-power-family-capstone.js');
+run('scripts/patch-power-family-public-gateways.js');
+run('scripts/reconcile-release-homepage-order.js');
+
 const deathData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'death-files.json'), 'utf8'));
 if (!Array.isArray(deathData.dossiers) || deathData.dossiers.length !== 100) {
   throw new Error('Canonical Death Files data must contain exactly 100 dossiers');
@@ -104,7 +109,10 @@ requireText('index.html', [
   'https://gofund.me/0a3c74fc9',
   'href="death-files.html"',
   'href="independent-links.html"',
-  'href="elite-family-tracker.html"'
+  'href="elite-family-tracker.html"',
+  'My Watchlist',
+  'name="q"',
+  'href="live-intel.html"'
 ]);
 requireText('independent-links.html', [
   'TOP 100 INDEPENDENT RESEARCH LINKS.',
@@ -114,6 +122,7 @@ requireText('independent-links.html', [
 requireText('death-files.html', ['THE DEATH FILES.', 'id="dossiers"', 'death-files.js']);
 requireText('death-files-pattern-lab.html', ['DEATH PATTERN LAB.', 'A cluster is not a conspiracy']);
 requireText('death-files-methodology.html', ['HOW THE DEATH FILES WORK.', 'Three-Layer Conclusion System']);
+requireText('behind-the-curtain-capstone.html', ['id="wallenberg-ecosystem"', 'id="investor-ownership"', 'id="investor-board"']);
 
 for (const relative of dossierPages) {
   const content = fs.readFileSync(path.join(root, relative), 'utf8');
@@ -127,7 +136,7 @@ for (const relative of ['index.html', 'independent-links.html', 'elite-family-tr
   if (!fs.existsSync(deployed)) throw new Error(`Deployable core route missing: _site/${relative}`);
 }
 const deployedHome = fs.readFileSync(path.join(site, 'index.html'), 'utf8');
-for (const marker of ['matrix-construction-banner', 'death-files.html', 'independent-links.html', 'elite-family-tracker.html']) {
+for (const marker of ['matrix-construction-banner', 'death-files.html', 'independent-links.html', 'elite-family-tracker.html', 'My Watchlist', 'name="q"', 'live-intel.html']) {
   if (!deployedHome.includes(marker)) throw new Error(`Deployable homepage lost protected marker: ${marker}`);
 }
 if (deployedHome.includes('track-the-families.html')) throw new Error('Deployable homepage still references obsolete Track the Families route');
@@ -137,6 +146,8 @@ report.deathDossiers = deathData.dossiers.length;
 report.deathPages = ['death-files.html', ...generatedDeathPages];
 report.protectedRoutes = ['/', '/independent-links.html', '/elite-family-tracker.html', '/death-files.html', '/behind-the-curtain-capstone.html', ...generatedDeathPages.map(name => `/${name}`)];
 report.existingIntroPreserved = true;
+report.canonicalHomepageOwnerAppliedLast = true;
+report.canonicalPowerFamilyOwnerAppliedLast = true;
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Core public surfaces finalized: construction banner, Top 100 Links, live family tracker and exactly ${dossierPages.length} readable Death Files dossiers copied into the Cloudflare bundle; existing intro files were left untouched.`);
+console.log(`Core public surfaces finalized: construction banner, Top 100 Links, live family tracker and exactly ${dossierPages.length} readable Death Files dossiers copied into the Cloudflare bundle; canonical homepage and capstone owners were applied last.`);

@@ -126,7 +126,19 @@ needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records']) needText('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
 needText('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot');
 
-for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = true','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+const wrangler = read('wrangler.toml');
+const workerFirstConfig = wrangler.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
+const workerFirstForAll = workerFirstConfig === 'true';
+const workerFirstForProtectedRoutes = [
+  '"/api/*"',
+  '"/.netlify/functions/*"',
+  '"/downloads/the-black-file-matrix-reprogrammed.pdf"',
+  '"/downloads/supporter*"',
+  '"/downloads/intelligence-*"',
+  '"/downloads/research*"'
+].every(pattern => workerFirstConfig.includes(pattern));
+if (!workerFirstForAll && !workerFirstForProtectedRoutes) fail('wrangler.toml: authenticated APIs and protected downloads must use Worker-first routing');
 for (const marker of ['"main": "src/worker-production.js"','"binding": "ASSETS"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"database_name": "matrix-members"','"pattern": "matrixreprogrammed.com/*"','"pattern": "www.matrixreprogrammed.com/*"','"keep_vars": true']) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
 if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) fail('wrangler.toml must not contain active PAYPAL_* overrides');
 if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(read('wrangler.jsonc'))) fail('wrangler.jsonc must not contain active PAYPAL_* overrides');

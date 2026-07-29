@@ -44,9 +44,25 @@ for (const [file, text, label] of [
   ['forum.html','forum.js','forum frontend script'],
   ['forum.js','/forum-feed-main','frontend main feed'],
   ['forum.js','/submit-main-post','frontend main submit'],
-  ['wrangler.toml','directory = "./_site"','Cloudflare asset directory'],
-  ['wrangler.toml','run_worker_first = true','Worker-first routing']
+  ['wrangler.toml','directory = "./_site"','Cloudflare asset directory']
 ]) requireIncludes(file, text, label);
+
+if (exists('wrangler.toml')) {
+  const wrangler = read('wrangler.toml');
+  const workerFirstConfig = wrangler.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
+  const workerFirstForAll = workerFirstConfig === 'true';
+  const workerFirstForProtectedRoutes = [
+    '"/api/*"',
+    '"/.netlify/functions/*"',
+    '"/downloads/the-black-file-matrix-reprogrammed.pdf"',
+    '"/downloads/supporter*"',
+    '"/downloads/intelligence-*"',
+    '"/downloads/research*"'
+  ].every(pattern => workerFirstConfig.includes(pattern));
+  if (!workerFirstForAll && !workerFirstForProtectedRoutes) {
+    hard.push('wrangler.toml: missing Worker-first routing for authenticated APIs and protected downloads');
+  }
+}
 
 // JSON sanity.
 const booksData = exists('data/books.json') ? parseJson('data/books.json') : null;

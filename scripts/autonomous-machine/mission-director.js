@@ -42,6 +42,12 @@ class MissionDirector {
           const held = this.taskStore.hold(task.id, decision.reason, { decision });
           return { status: TASK_STATUSES.HELD, task: held, decision };
         }
+        for (const provenance of task.payload.provenance) {
+          if (!provenance || typeof provenance.sourceId !== 'string') {
+            throw new Error('Every provenance record requires a registered sourceId');
+          }
+          this.sourceRegistry.assertUsable(provenance.sourceId);
+        }
         const completed = this.taskStore.complete(task.id, { decision, handoffOnly: true });
         return { status: TASK_STATUSES.COMPLETED, task: completed };
       }

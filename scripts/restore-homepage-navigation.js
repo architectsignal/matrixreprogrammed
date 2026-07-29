@@ -39,10 +39,11 @@ const searchFirstMarkers = [
   'id="accountability-search"',
   'id="accountability-hit-list"',
   'id="open-question-ledger"',
-  'class="accountability-nav-drawer"',
+  'id="explore-system"',
   'href="hit-list.html"',
   'href="evidence-vault.html"',
-  'href="member-dashboard.html"'
+  'href="member-dashboard.html"',
+  'contact-the-machine.html'
 ];
 const isSearchFirst = html => html.includes('class="accountability-home"') && html.includes('id="accountability-search"') && html.includes('id="accountability-hit-list"');
 

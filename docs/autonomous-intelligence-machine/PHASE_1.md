@@ -20,19 +20,21 @@ The purpose of this phase is to establish the contracts that every later autonom
 
 ## Safety rules
 
-1. `AIM_PUBLICATION_MODE` defaults to `disabled`.
+1. `AIM_PUBLICATION_MODE` defaults to `disabled` and rejects unknown values.
 2. Phase 1 never publishes directly. Even an approved candidate is only cleared for handoff to the existing controlled publication pipeline.
-3. Sources cannot be used unless all of the following are true:
+3. New sources default to disabled and cannot be used unless all of the following are true:
    - the source is registered;
-   - the source is enabled;
+   - the source is explicitly enabled;
    - its terms have been reviewed;
    - automated access has been explicitly approved;
    - the requested URL remains inside the registered host boundary;
    - HTTPS is used.
 4. Allegations, inference and speculation require qualified-language review.
 5. High and critical sensitivity material requires editorial approval.
-6. `AIM_KILL_SWITCH=1` stops the Mission Director before it claims another task.
-7. No worker may exist without a registered task handler and an audit trail.
+6. Publication provenance must resolve to registered, usable sources before handoff.
+7. `AIM_KILL_SWITCH=1` stops the Mission Director before it claims another task.
+8. No worker may exist without a registered task handler and an audit trail.
+9. Deduplication preserves evidence-class and sensitivity differences so reclassified work is not silently collapsed.
 
 ## Run the self-test
 
@@ -45,7 +47,7 @@ Expected output includes:
 ```json
 {
   "ok": true,
-  "tests": 9
+  "tests": 12
 }
 ```
 

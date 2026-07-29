@@ -75,8 +75,17 @@ function assertExecutionPlanPayload(payload) {
   }
   if (typeof payload.planner.name !== 'string' || payload.planner.name.trim().length < 3) throw new TypeError('execution plan planner name is invalid');
   if (typeof payload.planner.note !== 'string' || payload.planner.note.trim().length < 10) throw new TypeError('execution plan planner note is invalid');
+  if (payload.repositorySnapshot.rootLabel !== 'repository_root') throw new Error('execution plan repository root label is invalid');
   if (payload.repositorySnapshot.accessMode !== 'read_only') throw new Error('execution plan repository snapshot must be read_only');
   if (!Number.isInteger(payload.repositorySnapshot.maxFileBytes) || payload.repositorySnapshot.maxFileBytes < 1) throw new Error('execution plan maxFileBytes is invalid');
+  if (payload.repositorySnapshot.gitCommandsExecuted !== false || payload.repositorySnapshot.writesPerformed !== 0) {
+    throw new Error('execution plan repository snapshot must remain read-only');
+  }
+  for (const field of ['existingCandidateCount', 'missingCandidateCount']) {
+    if (!Number.isInteger(payload.repositorySnapshot[field]) || payload.repositorySnapshot[field] < 0) {
+      throw new Error(`execution plan repository snapshot ${field} is invalid`);
+    }
+  }
 
   if (!Array.isArray(payload.targetMappings) || payload.targetMappings.length === 0) throw new Error('production execution plan requires targetMappings');
   const targetIds = new Set();
@@ -87,6 +96,9 @@ function assertExecutionPlanPayload(payload) {
     }
     if (targetIds.has(mapping.targetId)) throw new Error(`production execution plan has duplicate target: ${mapping.targetId}`);
     targetIds.add(mapping.targetId);
+    assertObject(mapping.sourceRoutes, `target mapping ${index} sourceRoutes`);
+    for (const field of ['primaryRoute', 'evidenceRoute']) assertCandidatePath(mapping.sourceRoutes[field], `target mapping ${index} ${field}`);
+    if (mapping.sourceRoutes.machineRoute !== null) assertCandidatePath(mapping.sourceRoutes.machineRoute, `target mapping ${index} machineRoute`);
     if (mapping.productionDestinationResolved !== false || mapping.mappingConfirmedForExecution !== false) {
       throw new Error('production execution plan cannot confirm a production destination');
     }
@@ -125,15 +137,35 @@ function assertExecutionPlanPayload(payload) {
   if (!Array.isArray(payload.executionPlan.steps) || payload.executionPlan.steps.length !== payload.targetMappings.length) {
     throw new Error('execution plan steps must correspond to target mappings');
   }
+  let existingCandidates = 0;
+  let missingCandidates = 0;
+  payload.targetMappings.forEach((mapping) => mapping.candidates.forEach((candidate) => {
+    if (candidate.exists) existingCandidates += 1; else missingCandidates += 1;
+  }));
+  if (existingCandidates !== payload.repositorySnapshot.existingCandidateCount
+    || missingCandidates !== payload.repositorySnapshot.missingCandidateCount) {
+    throw new Error('execution plan repository candidate counts are inconsistent');
+  }
   payload.executionPlan.steps.forEach((step, index) => {
     assertObject(step, `execution plan step ${index}`);
     if (step.sequence !== index + 1) throw new Error('execution plan step sequence is invalid');
+    if (step.targetId !== payload.targetMappings[index].targetId) throw new Error('execution plan step target is inconsistent');
     if (step.action !== 'manual_review_and_integrate_evidence') throw new Error('execution plan step action is invalid');
     if (step.executionAllowed !== false || step.productionWriteAllowed !== false) throw new Error('execution plan step cannot grant execution');
     if (!Array.isArray(step.candidatePaths) || step.candidatePaths.length === 0) throw new Error('execution plan step requires candidatePaths');
     step.candidatePaths.forEach((item) => assertCandidatePath(item, 'execution plan step candidate path'));
+    const expectedPaths = payload.targetMappings[index].candidates.map((candidate) => candidate.proposedRepositoryPath);
+    if (JSON.stringify(step.candidatePaths) !== JSON.stringify(expectedPaths)) throw new Error('execution plan step candidate paths are inconsistent');
+    if (!Array.isArray(step.preconditions) || step.preconditions.length < 1
+      || !Array.isArray(step.validationChecks) || step.validationChecks.length < 1) {
+      throw new Error('execution plan step requires preconditions and validation checks');
+    }
   });
   if (payload.executionPlan.separateExecutionAuthorisationRequired !== true
+    || payload.executionPlan.finalDestinationConfirmationRequired !== true
+    || payload.executionPlan.currentHashRevalidationRequired !== true
+    || payload.executionPlan.rollbackPlanRequired !== true
+    || payload.executionPlan.humanDiffReviewRequired !== true
     || payload.executionPlan.readyForExecution !== false) {
     throw new Error('execution plan must require separate execution authorisation');
   }

@@ -16,12 +16,16 @@ const paths = {
 };
 
 const report = { ok: false, generatedAt: new Date().toISOString(), changed: [], checked: [] };
+const newlineByFile = new Map();
 function read(file) {
   if (!fs.existsSync(file)) throw new Error(`Missing required file: ${path.relative(root, file)}`);
-  return fs.readFileSync(file, 'utf8');
+  const source = fs.readFileSync(file, 'utf8');
+  newlineByFile.set(file, source.includes('\r\n') ? '\r\n' : '\n');
+  return source.replace(/\r\n/g, '\n');
 }
 function write(file, text, label) {
-  fs.writeFileSync(file, text);
+  const newline = newlineByFile.get(file) || '\n';
+  fs.writeFileSync(file, text.replace(/\n/g, newline));
   report.changed.push(label || path.relative(root, file));
 }
 function replaceRequired(text, oldValue, newValue, label) {

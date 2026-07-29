@@ -51,7 +51,7 @@ const modules = [
   { name: 'Search the Machine', route: '/search', file: 'search.html', markers: ['SEARCH THE MACHINE'] },
   { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1', 'cloudflare-worker-paypal-subscriptions'] },
   { name: 'D1 forum persistence Worker', route: '/forum-health', file: 'src/worker-forum-persistence.js', markers: ['Cloudflare D1 MEMBERS_DB.forum_posts', 'd1Connected: true', 'storedPostCount'] },
-  { name: 'Cloudflare runtime preservation', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = true', 'keep_vars = true', 'Runtime payment credentials and activation switches are managed in the Cloudflare dashboard'] }
+  { name: 'Cloudflare runtime preservation', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = [', 'keep_vars = true', 'Runtime payment credentials and activation switches are managed in the Cloudflare dashboard'] }
 ].map(item => {
   const text = read(item.file);
   const missingMarkers = item.markers.filter(marker => !text.includes(marker));
@@ -62,6 +62,8 @@ const manifestMatches = Boolean(manifest && manifest.commitSha === buildSha);
 const membership = read('membership.html');
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
+const selectiveWorkerRoutingReady = /^run_worker_first\s*=\s*\[/m.test(wranglerToml)
+  && !/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml);
 const paymentRuntimeReady = membership.includes('paypal-membership.js')
   && membership.includes('paypal-membership-status')
   && !membership.includes('Coming soon — no payment taken')
@@ -71,12 +73,14 @@ const paymentRuntimeReady = membership.includes('paypal-membership.js')
   && !/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc);
 
 const health = {
-  ok: modules.every(item => item.ready) && manifestMatches && paymentRuntimeReady,
+  ok: modules.every(item => item.ready) && manifestMatches && paymentRuntimeReady && selectiveWorkerRoutingReady,
   buildSha,
   buildShortSha: buildSha.slice(0, 12),
   generatedAt: new Date().toISOString(),
   target: 'Cloudflare Worker with _site assets',
   workerScript: 'src/worker-production.js',
+  workerRouting: 'Selective run_worker_first route array protects dynamic/member/API routes while static assets bypass unnecessary Worker execution.',
+  selectiveWorkerRoutingReady,
   forumStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; KV is compatibility and recovery only.',
   forumFailureMode: 'Fail closed. Legacy forum responses cannot report success when D1 is missing or unhealthy.',
   paymentStatus: 'runtime-gated-dashboard-managed',
@@ -100,6 +104,7 @@ const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta
 &gt; Commit: ${esc(health.buildShortSha)}
 &gt; Generated: ${esc(health.generatedAt)}
 &gt; Forum: D1 AUTHORITATIVE / FAIL CLOSED
+&gt; Worker routing: SELECTIVE / STATIC BYPASS
 &gt; Payments: RUNTIME GATED / DASHBOARD MANAGED
 &gt; Sandbox checkout: CLOSED OUTSIDE REHEARSAL
 &gt; Live charging: CONTROLLED BY WORKER + D1 GATES
@@ -114,4 +119,4 @@ if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));
   process.exit(1);
 }
-console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed and Cloudflare-managed PayPal runtime gates preserved.`);
+console.log(`Production health built for ${health.buildShortSha}: selective Worker routing, D1 fail-closed and Cloudflare-managed PayPal runtime gates preserved.`);

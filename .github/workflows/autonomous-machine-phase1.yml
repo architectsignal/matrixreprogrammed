@@ -59,3 +59,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.6-self-test.js
+
+      - name: Verify Phase 1.7 creates signed human decisions only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.7-self-test.js

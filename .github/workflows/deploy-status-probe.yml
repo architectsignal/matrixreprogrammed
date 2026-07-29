@@ -37,7 +37,7 @@ jobs:
               branch: 'main',
               per_page: 20
             });
-            const cutoff = Date.parse('2026-07-29T23:00:00Z');
+            const cutoff = Date.parse('2026-07-29T19:00:00Z');
             const recent = (response.data.workflow_runs || [])
               .filter(run => Date.parse(run.created_at) >= cutoff)
               .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
@@ -50,6 +50,7 @@ jobs:
                 headBranch: run.head_branch,
                 headSha: run.head_sha,
                 createdAt: run.created_at,
+                runStartedAt: run.run_started_at,
                 updatedAt: run.updated_at,
                 url: run.html_url
               }));
@@ -60,6 +61,7 @@ jobs:
               expectedName: 'Matrix Reprogrammed Controlled Production Deploy',
               cutoff: new Date(cutoff).toISOString(),
               latest: recent[0] || null,
+              active: recent.filter(run => !['completed'].includes(run.status)),
               recent
             };
             fs.mkdirSync('data', { recursive: true });

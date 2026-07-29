@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-29T09:08:05.036Z
+Updated: 2026-07-29T14:31:32.406Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+- Published: 2026-07-22T11:27:32.000Z
+- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+- Source class: discovery
 
 ### Bill Gates foundation met with Jeffrey Epstein about 30 times, external review finds - The Guardian
 - Published: 2026-07-21T20:37:00.000Z

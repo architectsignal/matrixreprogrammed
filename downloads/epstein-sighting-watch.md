@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-29T09:08:09.620Z
+Generated: 2026-07-29T14:31:38.987Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -68,13 +68,3 @@ Epstein, others named in scathing Interlochen review. See full report Detroit Fr
 - Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
 
 Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
-
-### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-French modelling scout with links to Epstein found dead: prosecutors The Standard (HK)

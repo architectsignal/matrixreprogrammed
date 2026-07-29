@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 3399
-Flagged pages: 2955
+Scanned pages: 3405
+Flagged pages: 2957
 High priority pages: 1268
-Medium priority pages: 1685
+Medium priority pages: 1687
 Pages with missing rules: 740
 Auto-update eligible figures: 2
 Manual-review figures: 102
-Missing-rule figures: 1564
+Missing-rule figures: 1565
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.

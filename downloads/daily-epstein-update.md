@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-29T14:31:38.936Z
-Live Intel source window: 2026-07-29T14:31:32.406Z
+Generated: 2026-07-29T19:48:52.623Z
+Live Intel source window: 2026-07-29T19:48:46.828Z
 Latest source publication: 2026-07-28T23:02:00.000Z
 Status: current-seven-day-record-window
 
@@ -65,13 +65,13 @@ Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a S
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
+### Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com
 - Published: 2026-07-23T21:48:41.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
-Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported NewsNation
+Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported newsnationnow.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-29T14:31:39.045Z
-Live Intel source window: 2026-07-29T14:31:32.406Z
-Tracked cards: 961
-Cards with current matched records: 54
-Cards with no new verified record: 907
+Generated: 2026-07-29T19:48:52.724Z
+Live Intel source window: 2026-07-29T19:48:46.828Z
+Tracked cards: 967
+Cards with current matched records: 109
+Cards with no new verified record: 858
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -299,21 +299,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2021-00294
 - Route: entity-timelines/2021-00294.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2021-00294 — Entity Observation
 
 ## 2021-00294
 - Route: entity-briefs/2021-00294.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2021-00294 — Entity Observation
 
 ## 2021-00294
 - Route: entity-exposure/2021-00294.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2021-00294 — Entity Observation
 
 ## 2022
 - Route: death-files-year-2022.html
@@ -341,57 +344,87 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2025-0045-APPEAL.
 - Route: entity-timelines/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
 
 ## 2025-0045-APPEAL.
 - Route: entity-briefs/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
 
 ## 2025-0045-APPEAL.
 - Route: entity-exposure/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
 
 ## 23 WAP 2023
 - Route: entity-timelines/23-wap-2023.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
 
 ## 23 WAP 2023
 - Route: entity-briefs/23-wap-2023.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
 
 ## 23 WAP 2023
 - Route: entity-exposure/23-wap-2023.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 24-2251
+- Route: entity-timelines/24-2251.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-2251 — Entity Observation
+
+## 24-2251
+- Route: entity-briefs/24-2251.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-2251 — Entity Observation
+
+## 24-2251
+- Route: entity-exposure/24-2251.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-2251 — Entity Observation
 
 ## 24-7261
 - Route: entity-timelines/24-7261.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 24-7261 — Entity Observation
 
 ## 24-7261
 - Route: entity-briefs/24-7261.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 24-7261 — Entity Observation
 
 ## 24-7261
 - Route: entity-exposure/24-7261.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 24-7261 — Entity Observation
 
 ## 25-113
 - Route: entity-timelines/25-113.html
@@ -431,21 +464,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## A170747M
 - Route: entity-timelines/a170747m.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — A170747M — Entity Observation
 
 ## A170747M
 - Route: entity-briefs/a170747m.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — A170747M — Entity Observation
 
 ## A170747M
 - Route: entity-exposure/a170747m.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — A170747M — Entity Observation
 
 ## AAPL
 - Route: entity-timelines/aapl.html
@@ -752,21 +788,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-timelines/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
 
 ## Apple
 - Route: institutions/apple.html
@@ -1017,28 +1056,28 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Status: current-records-matched
 - Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
 ## Bill Gates
 - Route: top-52/bill-gates.html
 - Status: current-records-matched
 - Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
 ## BILL GATES
 - Route: billionaire-briefs/bill-gates.html
 - Status: current-records-matched
 - Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
 ## BILL GATES
 - Route: main-players/bill-gates.html
 - Status: current-records-matched
 - Current matched records: 1
 - Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
 
 ## Bill Melinda Gates Foundation
 - Route: institutions/bill-and-melinda-gates-foundation.html
@@ -1303,21 +1342,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CALIFORNIA COURT OF APPEAL
 - Route: entity-timelines/california-court-of-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — California Court of Appeal — Entity Observation
 
 ## CALIFORNIA COURT OF APPEAL
 - Route: entity-briefs/california-court-of-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — California Court of Appeal — Entity Observation
 
 ## CALIFORNIA COURT OF APPEAL
 - Route: entity-exposure/california-court-of-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — California Court of Appeal — Entity Observation
 
 ## Candace Owens
 - Route: controlled-opposition/candace-owens.html
@@ -1565,6 +1607,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## CIVIL RIGHTS CORPS V. LASALLE
+- Route: entity-timelines/civil-rights-corps-v-lasalle.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
+
+## CIVIL RIGHTS CORPS V. LASALLE
+- Route: entity-briefs/civil-rights-corps-v-lasalle.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
+
+## CIVIL RIGHTS CORPS V. LASALLE
+- Route: entity-exposure/civil-rights-corps-v-lasalle.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
+
 ## Clingendael Institute
 - Route: think-tanks/clingendael-institute.html
 - Status: no-new-verified-record-in-current-window
@@ -1695,39 +1758,45 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## COURT OF APPEALS FOR THE NINTH CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-ninth-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE NINTH CIRCUIT
 - Route: entity-briefs/court-of-appeals-for-the-ninth-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE NINTH CIRCUIT
 - Route: entity-exposure/court-of-appeals-for-the-ninth-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-second-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-briefs/court-of-appeals-for-the-second-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-exposure/court-of-appeals-for-the-second-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-timelines/court-of-appeals-of-north-carolina.html
@@ -1773,9 +1842,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Cyprus
 - Route: jurisdictions-of-power/cyprus.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-29T12:00:00.000Z
+- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
 
 ## CYRIL SMITH
 - Route: dossier-cyril-smith.html
@@ -2385,21 +2455,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
 - Route: entity-timelines/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
 
 ## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
 - Route: entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
 
 ## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
 - Route: entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
 
 ## Gates family
 - Route: power-families/gates-family.html
@@ -4276,21 +4349,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## PEOPLE V. BRIM
 - Route: entity-timelines/people-v-brim.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — People v. Brim — Entity Observation
 
 ## PEOPLE V. BRIM
 - Route: entity-briefs/people-v-brim.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — People v. Brim — Entity Observation
 
 ## PEOPLE V. BRIM
 - Route: entity-exposure/people-v-brim.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — People v. Brim — Entity Observation
 
 ## PEOPLE. MONEY. INSTITUTIONS. FILES. POWER.
 - Route: tracker-dashboard.html
@@ -4492,21 +4568,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## PUNXSUTAWNEY HUNTING CLUB V. PGC
 - Route: entity-timelines/punxsutawney-hunting-club-v-pgc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
 
 ## PUNXSUTAWNEY HUNTING CLUB V. PGC
 - Route: entity-briefs/punxsutawney-hunting-club-v-pgc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
 
 ## PUNXSUTAWNEY HUNTING CLUB V. PGC
 - Route: entity-exposure/punxsutawney-hunting-club-v-pgc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
 
 ## PUPPETS OF INTEREST.
 - Route: top-52-power-deck.html
@@ -4822,21 +4901,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SAWAS V. ELZANATY
 - Route: entity-timelines/sawas-v-elzanaty.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Sawas v. Elzanaty — Entity Observation
 
 ## SAWAS V. ELZANATY
 - Route: entity-briefs/sawas-v-elzanaty.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Sawas v. Elzanaty — Entity Observation
 
 ## SAWAS V. ELZANATY
 - Route: entity-exposure/sawas-v-elzanaty.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Sawas v. Elzanaty — Entity Observation
 
 ## Schwarz family
 - Route: power-families/schwarz-family.html
@@ -5065,39 +5147,45 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SUPREME COURT OF PENNSYLVANIA
 - Route: entity-timelines/supreme-court-of-pennsylvania.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF PENNSYLVANIA
 - Route: entity-briefs/supreme-court-of-pennsylvania.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF PENNSYLVANIA
 - Route: entity-exposure/supreme-court-of-pennsylvania.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-timelines/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-briefs/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-exposure/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
 
 ## Supreme Court of the United States
 - Route: entity-timelines/supreme-court-of-the-united-states.html
@@ -5406,20 +5494,20 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-27T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-29T12:00:00.000Z
+- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
 - 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
 - 2026-07-25T12:00:00.000Z — ‘I am somebody’: Street-smart youth take their declaration to the UN — https://news.un.org/feed/view/en/story/2026/07/1168015
-- 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-27T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-07-29T12:00:00.000Z
+- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
 - 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
 - 2026-07-25T12:00:00.000Z — ‘I am somebody’: Street-smart youth take their declaration to the UN — https://news.un.org/feed/view/en/story/2026/07/1168015
-- 2026-07-24T12:00:00.000Z — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea — https://news.un.org/feed/view/en/story/2026/07/1168016
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html
@@ -5429,21 +5517,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## UNITED STATES V. ANTEN
 - Route: entity-timelines/united-states-v-anten.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
 
 ## UNITED STATES V. ANTEN
 - Route: entity-briefs/united-states-v-anten.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
 
 ## UNITED STATES V. ANTEN
 - Route: entity-exposure/united-states-v-anten.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
 
 ## UPGRADE TARGETS.
 - Route: upgrade-targets.html

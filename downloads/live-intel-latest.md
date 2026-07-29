@@ -1,7 +1,7 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-29T14:31:32.406Z
-Latest source publication: 2026-07-28T23:02:00.000Z
+Collection completed: 2026-07-29T19:48:46.828Z
+Latest source publication: 2026-07-29T12:00:00.000Z
 Collection status: fresh-items-added
 New items this collection: 3
 
@@ -26,6 +26,24 @@ New items this collection: 3
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — Hunger hampers Ebola response as cases top 3,200 in DR Congo
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168047
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Hunger hampers Ebola response as cases top 3,200 in DR Congo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168045
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
   - Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
   - Source class: discovery
@@ -218,11 +236,11 @@ New items this collection: 3
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
+- 2026-07-23 — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com
   - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation
+  - Video hook: New public-record signal: Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - newsnationnow.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
   - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5

@@ -109,3 +109,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.16-self-test.js
+
+      - name: Verify Phase 1.17 creates signed generation decisions without secrets
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.17-self-test.js

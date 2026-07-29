@@ -9,6 +9,8 @@ const actions = [];
 
 if (!fs.existsSync(auditPath)) throw new Error('scripts/mission-acceptance-audit.js is required');
 let audit = fs.readFileSync(auditPath, 'utf8');
+const auditNewline = audit.includes('\r\n') ? '\r\n' : '\n';
+audit = audit.replace(/\r\n/g, '\n');
 const loopAnchor = `for (const file of downloads) {
   const route = rel(file);`;
 const patchedLoop = `for (const file of downloads) {
@@ -17,7 +19,7 @@ const patchedLoop = `for (const file of downloads) {
 if (!audit.includes(patchedLoop)) {
   if (!audit.includes(loopAnchor)) throw new Error('Mission acceptance download loop anchor is missing');
   audit = audit.replace(loopAnchor, patchedLoop);
-  fs.writeFileSync(auditPath, audit);
+  fs.writeFileSync(auditPath, audit.replace(/\n/g, auditNewline));
   actions.push('patched mission acceptance audit to exclude internal report manifests');
 }
 

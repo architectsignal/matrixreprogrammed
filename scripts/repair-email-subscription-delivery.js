@@ -74,9 +74,12 @@ function repairJsonc(source) {
 const emailBefore = fs.readFileSync(emailPath, 'utf8');
 const tomlBefore = fs.readFileSync(tomlPath, 'utf8');
 const jsoncBefore = fs.readFileSync(jsoncPath, 'utf8');
-const emailAfter = repairEmailWorker(emailBefore);
-const tomlAfter = repairToml(tomlBefore);
-const jsoncAfter = repairJsonc(jsoncBefore);
+const emailNewline = emailBefore.includes('\r\n') ? '\r\n' : '\n';
+const tomlNewline = tomlBefore.includes('\r\n') ? '\r\n' : '\n';
+const jsoncNewline = jsoncBefore.includes('\r\n') ? '\r\n' : '\n';
+const emailAfter = repairEmailWorker(emailBefore.replace(/\r\n/g, '\n')).replace(/\n/g, emailNewline);
+const tomlAfter = repairToml(tomlBefore.replace(/\r\n/g, '\n')).replace(/\n/g, tomlNewline);
+const jsoncAfter = repairJsonc(jsoncBefore.replace(/\r\n/g, '\n')).replace(/\n/g, jsoncNewline);
 
 if (emailAfter !== emailBefore) fs.writeFileSync(emailPath, emailAfter);
 if (tomlAfter !== tomlBefore) fs.writeFileSync(tomlPath, tomlAfter);

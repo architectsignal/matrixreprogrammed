@@ -40,6 +40,7 @@ function patchSafetyRoutes(file) {
   }
   const safetyLinks = [
     ['live-intel.html', 'Live Intel'],
+    ['independent-links.html', 'Independent Research'],
     ['security-privacy.html', 'Security Tools'],
     ['dark-web-safety.html', 'Dark Web Safety']
   ].filter(([href]) => !before.includes(`href="${href}"`));
@@ -91,7 +92,6 @@ function requireMarker(relative, marker, base = root) {
   if (!present) throw new Error(`${path.relative(root, file)} missing required marker: ${marker}`);
 }
 
-// Every broad or legacy generator must finish before this canonical owner runs.
 run('scripts/finalize-search-first-accountability-home.js');
 run('scripts/refine-accountability-question-ledger.js');
 run('scripts/install-reverse-accountability-platform.js');
@@ -104,24 +104,11 @@ patchSafetyRoutes(path.join(root, 'index.html'));
 patchMoneyRoutes(path.join(root, 'index.html'));
 
 for (const relative of [
-  'index.html',
-  'accountability-home.css',
-  'accountability-home.js',
-  'search-query-handoff.js',
-  'search.html',
-  'welcome-gate.css',
-  'welcome-gate.js',
-  'homepage-mask-intro.css',
-  'homepage-mask-intro.js',
-  'homepage-mask-intro-data.js',
-  'reverse-accountability-search.html',
-  'reverse-accountability-search.css',
-  'reverse-accountability-search.js',
-  'data/accountability-question-ledger.json',
-  'data/reverse-accountability-index.json',
-  'downloads/search-first-accountability-home-report.json',
-  'downloads/reverse-accountability-platform-report.json',
-  'downloads/homepage-mask-intro-report.json'
+  'index.html','accountability-home.css','accountability-home.js','search-query-handoff.js','search.html',
+  'welcome-gate.css','welcome-gate.js','homepage-mask-intro.css','homepage-mask-intro.js','homepage-mask-intro-data.js',
+  'reverse-accountability-search.html','reverse-accountability-search.css','reverse-accountability-search.js',
+  'data/accountability-question-ledger.json','data/reverse-accountability-index.json',
+  'downloads/search-first-accountability-home-report.json','downloads/reverse-accountability-platform-report.json','downloads/homepage-mask-intro-report.json'
 ]) copy(relative);
 
 if (fs.existsSync(outputRoot)) {
@@ -132,33 +119,19 @@ if (fs.existsSync(outputRoot)) {
 run('scripts/search-first-accountability-home-pressure-test.js');
 
 for (const [relative, marker] of [
-  ['index.html', 'My Watchlist'],
-  ['index.html', 'id="accountability-search"'],
-  ['index.html', 'action="search.html" method="get"'],
-  ['index.html', 'name="q"'],
-  ['index.html', 'accountability-home.js'],
-  ['index.html', 'href="follow-the-money.html"'],
-  ['index.html', 'href="making-money.html"'],
-  ['index.html', 'href="live-intel.html"'],
-  ['index.html', 'href="security-privacy.html"'],
-  ['index.html', 'href="dark-web-safety.html"'],
-  ['index.html', 'data-homepage-mask-intro'],
-  ['index.html', 'welcome-gate.js'],
-  ['index.html', 'id="matrix-construction-banner"'],
-  ['search.html', 'search-query-handoff.js'],
+  ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'action="search.html" method="get"'],
+  ['index.html', 'name="q"'],['index.html', 'accountability-home.js'],['index.html', 'href="follow-the-money.html"'],
+  ['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],['index.html', 'href="independent-links.html"'],
+  ['index.html', 'href="security-privacy.html"'],['index.html', 'href="dark-web-safety.html"'],['index.html', 'data-homepage-mask-intro'],
+  ['index.html', 'welcome-gate.js'],['index.html', 'id="matrix-construction-banner"'],['search.html', 'search-query-handoff.js'],
   ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
 ]) requireMarker(relative, marker);
 
 if (fs.existsSync(outputRoot)) {
   for (const [relative, marker] of [
-    ['index.html', 'My Watchlist'],
-    ['index.html', 'id="accountability-search"'],
-    ['index.html', 'name="q"'],
-    ['index.html', 'href="follow-the-money.html"'],
-    ['index.html', 'href="making-money.html"'],
-    ['index.html', 'href="live-intel.html"'],
-    ['index.html', 'data-homepage-mask-intro'],
-    ['search.html', 'search-query-handoff.js'],
+    ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'name="q"'],
+    ['index.html', 'href="follow-the-money.html"'],['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],
+    ['index.html', 'href="independent-links.html"'],['index.html', 'data-homepage-mask-intro'],['search.html', 'search-query-handoff.js'],
     ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
   ]) requireMarker(relative, marker, outputRoot);
 }
@@ -167,7 +140,7 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
-  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, money routes, reverse-accountability entry, construction banner and video intro last.',
+  orderingRule: 'Broad generators first; canonical search-first homepage, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last.',
   commands,
   copied: [...new Set(copied)],
   checks
@@ -178,4 +151,4 @@ if (fs.existsSync(outputRoot)) {
   fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
   fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
 }
-console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, Live Intel, Follow the Money, Making Money, construction banner and intro are canonical across source and Cloudflare output.`);
+console.log('Release homepage order reconciled: My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.');

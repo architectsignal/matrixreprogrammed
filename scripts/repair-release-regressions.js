@@ -47,10 +47,12 @@ function requireMarkers(relative, content, markers) {
   const relative = 'forum.js';
   let source = read(relative);
   if (!source.includes("const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';")) {
-    source = source.replace(
-      "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';",
-      "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';\n  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';"
-    );
+    const marker = "  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';";
+    const canonicalAnchor = "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';";
+    const formAnchor = "  const form = document.getElementById('signal-board-form');";
+    if (source.includes(canonicalAnchor)) source = source.replace(canonicalAnchor, `${canonicalAnchor}\n${marker}`);
+    else if (source.includes(formAnchor)) source = source.replace(formAnchor, `${formAnchor}\n${marker}`);
+    else throw new Error('forum.js has no stable release-marker insertion anchor');
   }
 
   source = source.replace(/\n\s*function loadFallback\(message\)\{[^\n]*\}/g, '');

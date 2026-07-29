@@ -87,15 +87,24 @@ function transformSearchFirst(html, label) {
 }
 
 const owner = runHomepageOwner();
+const canonicalSearchFirst = owner.mode === 'search-first'
+  ? fs.readFileSync(sourcePath, 'utf8')
+      .replace(/<!-- cinematic-command:start -->[\s\S]*?<!-- cinematic-command:end -->/g, '')
+      .replace(/<!-- homepage-command-surface:start -->[\s\S]*?<!-- homepage-command-surface:end -->/g, '')
+  : '';
 for (const relative of targets) {
   const file = path.join(root, relative);
   if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
   const before = fs.readFileSync(file, 'utf8');
   let after;
   try {
-    after = isSearchFirst(before) || owner.mode === 'search-first'
-      ? transformSearchFirst(before, relative)
-      : transformClassic(before, owner.commandSurface, relative);
+    if (owner.mode === 'search-first') {
+      after = transformSearchFirst(canonicalSearchFirst, relative);
+    } else {
+      after = isSearchFirst(before)
+        ? transformSearchFirst(before, relative)
+        : transformClassic(before, owner.commandSurface, relative);
+    }
   } catch (error) { failures.push(error.message); continue; }
   if (!isSearchFirst(after)) {
     for (const marker of ['MAP THE STRUCTURE. READ THE SIGNALS.', 'What the evidence is pointing toward now', 'Evidence boundary']) {
@@ -126,12 +135,12 @@ const report = {
     ? ['class="accountability-home"','id="accountability-search"','id="accountability-hit-list"','id="open-question-ledger"','id="explore-system"']
     : ['MAP THE STRUCTURE. READ THE SIGNALS.', 'What the evidence is pointing toward now', 'Evidence boundary'],
   boundary: owner.mode === 'search-first'
-    ? 'The search-first homepage is authoritative. Legacy cinematic and command surfaces are removed; the simple search, Hit List, Open Question Ledger and collapsed Explore system remain intact.'
+    ? 'The search-first homepage is authoritative. Source and both deploy variants are synchronized from one canonical page; legacy cinematic and command surfaces are removed.'
     : 'The canonical homepage owner repairs a missing main shell before rebuilding. Source and deploy variants receive one mission hero and one evidence-led command surface; retired FOLLOW THE FILES copy is removed.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'homepage-mission-normalization.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) throw new Error(`Homepage mission normalization failed: ${failures.join('; ')}`);
 console.log(owner.mode === 'search-first'
-  ? `Search-first homepage mission preserved across ${report.synchronizedTargets.length} route(s); ${changed.length} legacy surface repair(s) applied.`
+  ? `Search-first homepage synchronized across ${report.synchronizedTargets.length} route(s); ${changed.length} variant repair(s) applied.`
   : `Homepage mission surface restored across ${report.synchronizedTargets.length} route(s); ${changed.length} file(s) changed; ${report.shellRepairs.length} main shell(s) recovered.`);

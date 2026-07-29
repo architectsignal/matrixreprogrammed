@@ -1,0 +1,152 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+const root = process.cwd();
+const outputRoot = path.join(root, '_site');
+const reportPath = path.join(root, 'downloads', 'release-homepage-order-reconciliation.json');
+const commands = [];
+const copied = [];
+const checks = [];
+
+function run(script, args = []) {
+  const file = path.join(root, script);
+  if (!fs.existsSync(file)) throw new Error(`Required homepage owner script is missing: ${script}`);
+  const result = spawnSync(process.execPath, [file, ...args], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 1024 * 1024 * 50
+  });
+  commands.push({
+    script,
+    args,
+    status: result.status,
+    stdout: String(result.stdout || '').slice(-3000),
+    stderr: String(result.stderr || '').slice(-3000)
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${script} failed`);
+}
+
+function patchSafetyRoutes(file) {
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return;
+  const before = fs.readFileSync(file, 'utf8');
+  if (!before.includes('class="accountability-home"') || !before.includes('accountability-nav-drawer')) {
+    throw new Error(`${path.relative(root, file)} is not the canonical search-first homepage`);
+  }
+  const safetyLinks = [
+    ['security-privacy.html', 'Security Tools'],
+    ['dark-web-safety.html', 'Dark Web Safety']
+  ].filter(([href]) => !before.includes(`href="${href}"`));
+  let after = before;
+  if (safetyLinks.length) {
+    const insertion = safetyLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
+    after = after.replace(/(<div class="accountability-nav-drawer">)/, `$1${insertion}`);
+  }
+  if (after !== before) fs.writeFileSync(file, after);
+}
+
+function copy(relative) {
+  if (!fs.existsSync(outputRoot)) return;
+  const source = path.join(root, relative);
+  if (!fs.existsSync(source) || fs.statSync(source).isDirectory()) throw new Error(`Homepage release output missing: ${relative}`);
+  const destination = path.join(outputRoot, relative);
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  fs.copyFileSync(source, destination);
+  copied.push(relative);
+  if (relative === 'index.html') {
+    const extensionless = path.join(outputRoot, 'index');
+    if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
+  }
+}
+
+function requireMarker(relative, marker, base = root) {
+  const file = path.join(base, relative);
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) throw new Error(`Missing release homepage file: ${path.relative(root, file)}`);
+  const present = fs.readFileSync(file, 'utf8').includes(marker);
+  checks.push({ file: path.relative(root, file), marker, present });
+  if (!present) throw new Error(`${path.relative(root, file)} missing required marker: ${marker}`);
+}
+
+// Every broad or legacy generator must finish before this canonical owner runs.
+run('scripts/finalize-search-first-accountability-home.js');
+run('scripts/refine-accountability-question-ledger.js');
+run('scripts/install-reverse-accountability-platform.js');
+run('scripts/reverse-accountability-platform-pressure-test.js');
+run('scripts/patch-homepage-construction-banner.js');
+run('scripts/patch-homepage-mask-intro.js');
+run('scripts/homepage-mask-intro-test.js');
+
+patchSafetyRoutes(path.join(root, 'index.html'));
+
+for (const relative of [
+  'index.html',
+  'accountability-home.css',
+  'accountability-home.js',
+  'search-query-handoff.js',
+  'search.html',
+  'welcome-gate.css',
+  'welcome-gate.js',
+  'homepage-mask-intro.css',
+  'homepage-mask-intro.js',
+  'homepage-mask-intro-data.js',
+  'reverse-accountability-search.html',
+  'reverse-accountability-search.css',
+  'reverse-accountability-search.js',
+  'data/accountability-question-ledger.json',
+  'data/reverse-accountability-index.json',
+  'downloads/search-first-accountability-home-report.json',
+  'downloads/reverse-accountability-platform-report.json',
+  'downloads/homepage-mask-intro-report.json'
+]) copy(relative);
+
+if (fs.existsSync(outputRoot)) patchSafetyRoutes(path.join(outputRoot, 'index.html'));
+
+run('scripts/search-first-accountability-home-pressure-test.js');
+
+for (const [relative, marker] of [
+  ['index.html', 'My Watchlist'],
+  ['index.html', 'id="accountability-search"'],
+  ['index.html', 'action="search.html" method="get"'],
+  ['index.html', 'name="q"'],
+  ['index.html', 'accountability-home.js'],
+  ['index.html', 'href="security-privacy.html"'],
+  ['index.html', 'href="dark-web-safety.html"'],
+  ['index.html', 'data-homepage-mask-intro'],
+  ['index.html', 'welcome-gate.js'],
+  ['index.html', 'id="matrix-construction-banner"'],
+  ['search.html', 'search-query-handoff.js'],
+  ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+]) requireMarker(relative, marker);
+
+if (fs.existsSync(outputRoot)) {
+  for (const [relative, marker] of [
+    ['index.html', 'My Watchlist'],
+    ['index.html', 'id="accountability-search"'],
+    ['index.html', 'name="q"'],
+    ['index.html', 'data-homepage-mask-intro'],
+    ['search.html', 'search-query-handoff.js'],
+    ['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"]
+  ]) requireMarker(relative, marker, outputRoot);
+}
+
+const report = {
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  canonicalOwner: 'scripts/finalize-search-first-accountability-home.js',
+  orderingRule: 'Broad generators first; canonical search-first homepage, reverse-accountability entry, construction banner and video intro last.',
+  commands,
+  copied: [...new Set(copied)],
+  checks
+};
+fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
+if (fs.existsSync(outputRoot)) {
+  fs.mkdirSync(path.join(outputRoot, 'downloads'), { recursive: true });
+  fs.copyFileSync(reportPath, path.join(outputRoot, 'downloads', path.basename(reportPath)));
+}
+console.log(`Release homepage order reconciled: My Watchlist, q= search handoff, construction banner and intro are canonical across source and Cloudflare output.`);

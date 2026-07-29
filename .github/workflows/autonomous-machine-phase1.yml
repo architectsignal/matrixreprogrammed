@@ -44,3 +44,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.3-self-test.js
+
+      - name: Verify Phase 1.4 creates staging previews only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.4-self-test.js

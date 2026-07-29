@@ -23,6 +23,9 @@ if (!source.includes(routeLine)) {
 
 fs.writeFileSync(file, source);
 require('./patch-live-verifier-intelligence-routes.js');
+// The deploy guard is a late mutation boundary. Reassert the canonical homepage
+// and remove compact-preview anchor collisions before the guard reads any HTML.
+require('./reconcile-homepage-contract-integrity.js');
 
 const report = {
   ok: source.includes(importLine) && source.includes(routeLine),
@@ -31,13 +34,14 @@ const report = {
   worker: 'src/worker-production.js',
   routes: ['/deploy-manifest.json', '/deploy-health.json'],
   owner: 'src/worker-release-metadata.js',
+  homepageIntegrityOwner: 'scripts/reconcile-homepage-contract-integrity.js',
   verifierRoutes: [
     '/daily-epstein-update',
     '/data/daily-epstein-update.json',
     '/data/live-machine-status.json',
     '/controlled-opposition/andrew-tate.html'
   ],
-  boundary: 'Release metadata routes bypass legacy compatibility routing and serve versioned, no-store Cloudflare assets. The live verifier also proves current Epstein, machine and named card outputs.'
+  boundary: 'Release metadata routes bypass legacy compatibility routing and serve versioned, no-store Cloudflare assets. The live verifier proves current intelligence outputs, while the deploy guard reasserts canonical homepage routes and unique DOM IDs at its own mutation boundary.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'release-metadata-routing-patch.json'), `${JSON.stringify(report, null, 2)}\n`);

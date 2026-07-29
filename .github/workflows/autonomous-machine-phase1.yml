@@ -25,7 +25,12 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Verify publication remains disabled
+      - name: Verify Phase 1 publication remains disabled
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1-self-test.js
+
+      - name: Verify Phase 1.1 official RSS remains review only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.1-self-test.js

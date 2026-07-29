@@ -39,11 +39,13 @@ class SourceRegistry {
       id: source.id,
       name: source.name,
       baseUrl: normaliseUrl(source.baseUrl),
-      enabled: source.enabled !== false,
+      enabled: source.enabled === true,
       lawfulBasis: source.lawfulBasis || 'public_web',
       termsReviewed: source.termsReviewed === true,
       automationAllowed: source.automationAllowed === true,
-      rateLimitPerHour: Number.isInteger(source.rateLimitPerHour) ? source.rateLimitPerHour : 60,
+      rateLimitPerHour: Number.isInteger(source.rateLimitPerHour) && source.rateLimitPerHour > 0
+        ? Math.min(source.rateLimitPerHour, 10000)
+        : 60,
       reliability: source.reliability || 'unrated',
       notes: source.notes || '',
     };

@@ -1,7 +1,9 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-07-28T20:42:00+02:00
-Target: latest main containing feature commit a1776eb78655a2d505383fef3fc108eec864bdd5 with the search-first homepage, Accountability Hit List, Open Question Ledger, persistent Accountability Twins, human Accountability Review Inbox and Cloudflare Free bounded tracking
+Requested: 2026-07-29T22:58:00Z
+Release: pr180-f77b38-controlled-production-20260729-2258z
+Target: current main containing merge commit f77b38ba9298abe7a4df3af210c8bb05433fad39 and all subsequent generated-intelligence and dispatcher-restoration commits
 Authorization: exactly one controlled Cloudflare production deployment
-Required proof: complete production build; search-first homepage visible above the preserved intelligence system; live three-lane Accountability Hit List; working grouped search and authenticated follow handoff; Open Question Ledger with evidence boundaries; Public Consequence Contracts with 30, 90 and 365 day checkpoints; compact 12-contract manifest; isolated 05:25 UTC tracker cron; no per-follower scheduler writes; human review inbox with working terms, evidence and assessment controls; classified evidence and named-reviewer publication gates; D1 rollback bookmark; idempotent migrations; static assets bypassing Worker quota; exact live deploy-manifest SHA; working public consequence APIs; and protected membership, forum, PayPal and email boundaries
-Purpose: deploy the completed audience-development platform that turns search into followable public accountability, preserves complexity underneath a simple entrance, and refuses unsupported or premature verdicts
-Nonce: search-first-accountability-platform-2026-07-28T20:42:00+02:00
+Required proof: complete production build; all release gates; D1 Time Travel rollback bookmark; idempotent migrations; strict selective Worker routing; route-preserving search-index compaction; exact Cloudflare deployment SHA; My Watchlist; q= search-query handoff; voiced intro and welcome gate; Follow the Money; Making Money; Live Intel; Reverse Accountability; D1-authoritative forum persistence; membership; email; PayPal; contact intake; and receipt-state boundaries
+Purpose: deploy the fully validated PR #180 release without partial or duplicate publication
+Boundary: preserve evidence classification, source provenance, privacy, payment safety and editorial review; no duplicate deployment
+Nonce: pr180-f77b38-controlled-production-20260729T225800Z

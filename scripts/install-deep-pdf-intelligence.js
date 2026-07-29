@@ -9,15 +9,20 @@ if(!fs.existsSync(helperPath))throw new Error('Deep intelligence analysis helper
 function replaceOnce(source,from,to,label){if(source.includes(to))return source;if(!source.includes(from))throw new Error(`${label} anchor not found`);return source.replace(from,to)}
 let source=fs.readFileSync(workerPath,'utf8');
 const before=source;
+const newline=source.includes('\r\n')?'\r\n':'\n';
+source=source.replace(/\r\n/g,'\n');
 const firstImport="import { memberSessionContext } from './worker-member-experience.js';";
-const deepImport="import { memberSessionContext } from './worker-member-experience.js';\nimport { enrichIntelligenceReport, buildDeepIntelligencePdf } from './worker-intelligence-analysis.js';";
+const analysisImport="import { enrichIntelligenceReport, buildDeepIntelligencePdf } from './worker-intelligence-analysis.js';";
+const deepImport=`${firstImport}\n${analysisImport}`;
 source=replaceOnce(source,firstImport,deepImport,'Deep intelligence import');
+while(source.includes(`${analysisImport}\n${analysisImport}`))source=source.replace(`${analysisImport}\n${analysisImport}`,analysisImport);
 const draftOld="const draft=buildReportDraft({kind,member,profile:p,trackers:t,assets:a.loaded,previous:prior?.content,generatedAt:now(env),failures:a.failures});";
 const draftNew="const draft=enrichIntelligenceReport(buildReportDraft({kind,member,profile:p,trackers:t,assets:a.loaded,previous:prior?.content,generatedAt:now(env),failures:a.failures}));";
 source=replaceOnce(source,draftOld,draftNew,'Deep intelligence report enrichment');
 source=replaceOnce(source,"const report=parse(row.content_json,{}),bytes=buildPdf(report),filename=","const report=parse(row.content_json,{}),bytes=buildDeepIntelligencePdf(report),filename=",'Deep PDF renderer');
 source=replaceOnce(source,"pdfGeneration:'native PDF 1.4'","pdfGeneration:'deep intelligence PDF 1.4'",'Deep PDF health marker');
 for(const marker of ["from './worker-intelligence-analysis.js'",'enrichIntelligenceReport(buildReportDraft','bytes=buildDeepIntelligencePdf(report)',"pdfGeneration:'deep intelligence PDF 1.4'"])if(!source.includes(marker))throw new Error(`Deep intelligence marker missing: ${marker}`);
+source=source.replace(/\n/g,newline);
 if(source!==before)fs.writeFileSync(workerPath,source);
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,`${JSON.stringify({ok:true,generatedAt:new Date().toISOString(),workerChanged:source!==before,helper:'src/worker-intelligence-analysis.js',reportSections:25,evidenceLayers:5,evidenceBasedConclusions:true,analyticalInferences:true,speculativeHypotheses:true,alternativeExplanations:true,sourceRegister:true,pdfRenderer:'deep intelligence PDF 1.4'},null,2)}\n`);

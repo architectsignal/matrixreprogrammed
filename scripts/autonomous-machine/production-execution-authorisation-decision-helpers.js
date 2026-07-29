@@ -77,11 +77,14 @@ function assertNoSymlinkComponents(root, resolved, field) {
 
 function resolveExternalBackupRoot(repositoryRoot, backupRoot) {
   if (typeof backupRoot !== 'string' || !backupRoot.trim()) throw new TypeError('backupRoot is required for approval');
-  const repository = path.resolve(repositoryRoot);
-  const root = path.resolve(backupRoot);
-  if (isInside(repository, root)) throw new Error('backupRoot must be outside the repository');
-  const stat = lstatIfPresent(root);
+  const requestedRoot = path.resolve(backupRoot);
+  const repository = fs.realpathSync(path.resolve(repositoryRoot));
+  if (isInside(repository, requestedRoot)) throw new Error('backupRoot must be outside the repository');
+  const stat = lstatIfPresent(requestedRoot);
   if (!stat || !stat.isDirectory() || stat.isSymbolicLink()) throw new Error('backupRoot must be an existing non-symlink directory');
+  assertNoSymlinkComponents(path.parse(requestedRoot).root, requestedRoot, 'backupRoot');
+  const root = fs.realpathSync(requestedRoot);
+  if (isInside(repository, root)) throw new Error('backupRoot must be outside the repository');
   return root;
 }
 

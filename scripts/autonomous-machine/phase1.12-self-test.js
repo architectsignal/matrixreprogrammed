@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 'use strict';
 const assert=require('node:assert/strict');
+const crypto=require('node:crypto');
 const fs=require('node:fs');
 const os=require('node:os');
 const path=require('node:path');
 const {sha256,stableStringify}=require('./route-registry');
 const {AuditLog}=require('./audit-log');
+function hashBytes(value){return crypto.createHash('sha256').update(value).digest('hex');}
 for (const [name, exports] of Object.entries({
   'production-change-request-store': { assertChangeRequestPayload: () => true },
   'production-change-decision-store': { assertDecisionPayload: () => true },
@@ -20,7 +22,7 @@ for (const [name, exports] of Object.entries({
       const stat = fs.statSync(filePath);
       return {
         exists: stat.isFile(),
-        currentSha256: sha256(fs.readFileSync(filePath)),
+        currentSha256: hashBytes(fs.readFileSync(filePath)),
         currentBytes: stat.size,
       };
     },
@@ -38,11 +40,12 @@ function makeChain(root,{rejected=false,changed=false,missing=false}={}){
   const primary='target-a.html', evidence='evidence-a.html';
   fs.writeFileSync(path.join(root,primary),changed?'alpha-changed':'alpha');
   if(!missing)fs.writeFileSync(path.join(root,evidence),'beta');
-  const evidenceHash=h('beta');
+  const evidenceHash=hashBytes(Buffer.from('beta'));
+  const primaryHash=hashBytes(Buffer.from('alpha'));
   const request={id:'change-request-1',recordHash:h('crr'),payloadHash:h('crp'),payload:{application:{id:'app-1',fingerprint:h('app')}}};
   const changeDecision={id:'change-decision-1',recordHash:h('cdr'),payloadHash:h('cdp'),payload:{decision:'approve',executionAuthorityGranted:false}};
   const targetMappings=[{targetId:'dossier:test',candidates:[
-    {proposedRepositoryPath:primary,currentSha256:h('alpha'),currentBytes:5},
+    {proposedRepositoryPath:primary,currentSha256:primaryHash,currentBytes:5},
     {proposedRepositoryPath:evidence,currentSha256:evidenceHash,currentBytes:4},
   ]}];
   const steps=[{sequence:1,targetId:'dossier:test',action:'manual_review_and_integrate_evidence',candidatePaths:[primary,evidence],executionAllowed:false,productionWriteAllowed:false}];
@@ -50,7 +53,7 @@ function makeChain(root,{rejected=false,changed=false,missing=false}={}){
   const planDecision={id:'plan-decision-1',recordHash:h('pdr'),payloadHash:h('pdp'),payload:{decision:'approve',executionAuthorityGranted:false}};
   const authorisationRequest={id:'auth-request-1',recordHash:h('arr'),payloadHash:h('arp'),payload:{validity:{expiresAt:'2026-07-29T22:10:00.000Z'}}};
   const freshCandidates=[
-    {proposedRepositoryPath:primary,currentSha256:h('alpha'),currentBytes:5,requestSha256:h('alpha'),requestBytes:5,matchRequest:true,writeAllowed:false},
+    {proposedRepositoryPath:primary,currentSha256:primaryHash,currentBytes:5,requestSha256:primaryHash,requestBytes:5,matchRequest:true,writeAllowed:false},
     {proposedRepositoryPath:evidence,currentSha256:evidenceHash,currentBytes:4,requestSha256:evidenceHash,requestBytes:4,matchRequest:true,writeAllowed:false},
   ];
   const authorisationDecision={id:'auth-decision-1',recordHash:h('adr'),payloadHash:h('adp'),payload:{
@@ -67,7 +70,7 @@ function makeChain(root,{rejected=false,changed=false,missing=false}={}){
 function baseOptions(root,chain,tokenStore,audit,clock){const key='k'.repeat(40);return {executionAuthorisationDecisionId:chain.authorisationDecision.id,changeRequestStore:new FakeStore([chain.request]),changeDecisionStore:new FakeStore([chain.changeDecision]),planStore:new FakeStore([chain.plan]),planDecisionStore:new FakeStore([chain.planDecision]),authorisationRequestStore:new FakeStore([chain.authorisationRequest]),authorisationDecisionStore:new FakeStore([chain.authorisationDecision]),tokenRequestStore:tokenStore,auditLog:audit,repositoryRoot:root,changeRequestSigningKey:key,changeDecisionSigningKey:key,planSigningKey:key,planDecisionSigningKey:key,authorisationRequestSigningKey:key,authorisationDecisionSigningKey:key,tokenRequestSigningKey:key,requesterName:'phase112-requester',requesterRole:'production-owner',requesterNote:'Request a single-use token review record only.',durationSeconds:120,clock};}
 (async()=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'phase112-repo-')); const runtime=path.join(root,'.autonomous-machine');fs.mkdirSync(runtime,{recursive:true});
-  const chain=makeChain(root); const storePath=path.join(runtime,'token-requests.jsonl'); const tokenStore=new ProductionExecutionTokenRequestStore(storePath); const audit=new AuditLog(path.join(runtime,'audit.jsonl')); const sentinel=path.join(root,'production-sentinel.json');fs.writeFileSync(sentinel,'{"safe":true}');const sentinelHash=h(fs.readFileSync(sentinel));
+  const chain=makeChain(root); const storePath=path.join(runtime,'token-requests.jsonl'); const tokenStore=new ProductionExecutionTokenRequestStore(storePath); const audit=new AuditLog(path.join(runtime,'audit.jsonl')); const sentinel=path.join(root,'production-sentinel.json');fs.writeFileSync(sentinel,'{"safe":true}');const sentinelHash=hashBytes(fs.readFileSync(sentinel));
   const clock=()=>new Date('2026-07-29T22:02:00.000Z'); const base=baseOptions(root,chain,tokenStore,audit,clock);
   await rejects(()=>requestProductionExecutionToken({...base,tokenRequestSigningKey:'short'}),/at least 32 bytes/);
   await rejects(()=>requestProductionExecutionToken({...base,executionAuthorisationDecisionId:''}),/executionAuthorisationDecisionId/);
@@ -91,6 +94,6 @@ function baseOptions(root,chain,tokenStore,audit,clock){const key='k'.repeat(40)
   const tampered=JSON.parse(fs.readFileSync(storePath,'utf8').trim());tampered.payload.requester.note='tampered';const tamperedPath=path.join(runtime,'tampered.jsonl');fs.writeFileSync(tamperedPath,`${JSON.stringify(tampered)}\n`);check(()=>assert.equal(new ProductionExecutionTokenRequestStore(tamperedPath).verify('k'.repeat(40)).valid,false));
   const mutated=JSON.parse(JSON.stringify(rec.payload));mutated.tokenState.tokenMaterialIssued=true;check(()=>assert.throws(()=>assertExecutionTokenRequestPayload(mutated),/cannot issue/));
   const mutated2=JSON.parse(JSON.stringify(rec.payload));mutated2.scope.operations[0].candidateHashes[0].sha256=h('wrong');check(()=>assert.throws(()=>assertExecutionTokenRequestPayload(mutated2),/does not match final snapshot/));
-  check(()=>assert.equal(audit.verify().valid,true));check(()=>assert.equal(audit.readEntries().every(e=>e.details.tokenIssued===false&&e.details.readyForExecution===false&&e.details.executionAuthorityGranted===false&&e.details.productionWrites===0),true));check(()=>assert.equal(h(fs.readFileSync(sentinel)),sentinelHash));check(()=>assert.equal(fs.existsSync(path.join(root,'.git','index.lock')),false));check(()=>assert.equal(fs.existsSync(path.join(root,'deploy')),false));
+  check(()=>assert.equal(audit.verify().valid,true));check(()=>assert.equal(audit.readEntries().every(e=>e.details.tokenIssued===false&&e.details.readyForExecution===false&&e.details.executionAuthorityGranted===false&&e.details.productionWrites===0),true));check(()=>assert.equal(hashBytes(fs.readFileSync(sentinel)),sentinelHash));check(()=>assert.equal(fs.existsSync(path.join(root,'.git','index.lock')),false));check(()=>assert.equal(fs.existsSync(path.join(root,'deploy')),false));
   console.log(JSON.stringify({ok:true,tests:checks,signedExecutionTokenRequests:tokenStore.readRecords().length,candidates:result.candidateCount,operations:result.operationCount,tokenIssued:false,readyForExecution:false,executionAuthorityGranted:false,productionWrites:0,publicationTasksCreated:0,commitActions:0,deploymentActions:0,auditEntries:audit.verify().entries},null,2));
 })().catch(e=>{console.error(e.stack||e);process.exit(1);});

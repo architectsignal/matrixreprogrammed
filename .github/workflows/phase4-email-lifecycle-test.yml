@@ -86,7 +86,7 @@ jobs:
             'subscriber-and-admin-dashboards',
             'unsubscribe-immediate-suppression',
             'explicit-resubscribe-lifecycle',
-            'daily-weekly-automated-sends',
+            'daily-dedup-weekly-automation',
             'bounce-complaint-suppression-path',
             'provider-failure-no-false-success'
           ];

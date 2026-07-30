@@ -1,18 +1,21 @@
 name: One-shot release integration repair
 
 on:
-  push:
-    branches:
-      - agent/zero-spend-ai-resource-broker
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
     paths:
       - '.github/workflows/one-shot-release-repair.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   repair:
-    if: github.actor != 'github-actions[bot]'
+    if: github.actor != 'github-actions[bot]' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

@@ -129,3 +129,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.20-self-test.js
+
+      - name: Verify Phase 1.21 creates signed source-selection decisions without selecting a source
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.21-self-test.js

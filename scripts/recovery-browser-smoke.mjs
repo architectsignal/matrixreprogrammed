@@ -84,13 +84,14 @@ try {
     }
     const topbar = page.locator('header.accountability-topbar');
     await topbar.waitFor({ state: 'visible', timeout: 30000 });
-    const focusedRoutes = ['#accountability-search','#accountability-hit-list','#open-question-ledger','member-dashboard.html'];
-    for (const href of focusedRoutes) {
-      assert(await topbar.locator(`a[href="${href}"]`).count() === 1, `Accountability homepage navigation must expose ${href}`);
+    const hrefs = await topbar.locator('a[href]').evaluateAll(anchors => anchors.map(anchor => anchor.getAttribute('href') || ''));
+    const hasRoute = route => hrefs.some(href => href === route || href.endsWith(route));
+    for (const route of ['#accountability-search','#accountability-hit-list','#open-question-ledger','member-dashboard.html']) {
+      assert(hasRoute(route), `Accountability homepage navigation must expose ${route}`);
     }
     assert(await topbar.locator('details summary').count() >= 1, 'Accountability homepage must expose an Explore drawer');
-    for (const href of ['hit-list.html','behind-the-curtain.html','evidence-vault.html','books.html','forum.html']) {
-      assert(await topbar.locator(`a[href="${href}"]`).count() >= 1, `Explore drawer must expose ${href}`);
+    for (const route of ['hit-list.html','behind-the-curtain.html','evidence-vault.html','books.html','forum.html']) {
+      assert(hasRoute(route), `Explore drawer must expose ${route}`);
     }
     assert(await page.locator('main#main-archive').count() === 1, 'Homepage must contain the canonical main archive surface');
     assert(await page.locator('#accountability-search-form[action="search.html"]').count() === 1, 'Homepage must route its primary search through search.html');

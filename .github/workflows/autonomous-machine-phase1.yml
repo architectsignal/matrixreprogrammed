@@ -159,3 +159,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.26-self-test.js
+
+      - name: Verify Phase 1.27 creates signed anonymous evaluation decisions without identity or results
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.27-self-test.js

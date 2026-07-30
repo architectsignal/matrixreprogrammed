@@ -1,10 +1,10 @@
 # Cloudflare Workers deployment configuration
 # Production deploy path: GitHub Actions runs npm run build then npx wrangler deploy.
-# The strict production wrapper blocks false-success forum responses and delegates all other traffic.
-# Inner compatibility Worker retained behind the strict boundary: main = "src/worker-forum-persistence.js"
+# The strict production boundary remains in src/worker-production.js.
+# src/worker-production-autonomy.js delegates fetch traffic unchanged and adds the AI-management scheduled lifecycle.
 
 name = "matrixreprogrammed"
-main = "src/worker-production.js"
+main = "src/worker-production-autonomy.js"
 compatibility_date = "2026-06-25"
 
 # Runtime payment credentials and activation switches are managed in the Cloudflare dashboard.
@@ -17,9 +17,10 @@ routes = [
 ]
 
 [triggers]
-# Four of the five Workers Free cron slots are used. The 05:25 UTC trigger is isolated for
-# the bounded consequence tracker so its D1 query budget cannot combine with email/report jobs.
+# Four of the five Workers Free cron slots are used. The AI-management lifecycle shares the
+# existing scheduled events and performs only bounded D1 maintenance when explicitly enabled.
 crons = ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]
+
 [vars]
 EMAIL_AUTOMATION_ENABLED = "true"
 EMAIL_TRANSACTIONAL_ENABLED = "true"
@@ -31,12 +32,18 @@ MEMBERS_FROM_NAME = "Matrix Reprogrammed"
 MEMBERS_REPLY_TO_EMAIL = "njmgroupfrance@gmail.com"
 MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
 ENABLE_KV_COMPATIBILITY_MIRROR = "false"
+
+# AI management remains fail closed until phase 9 and phase 10 migrations and the complete
+# release matrix pass. Activation is a separate reviewed production step.
 AI_RESOURCE_BROKER_ENABLED = "false"
 AI_RESOURCE_EXTERNAL_ENABLED = "false"
 AI_RESOURCE_LOCAL_ONLY = "true"
 AI_RESOURCE_ZERO_SPEND_LOCK = "true"
 AI_RESOURCE_BACKGROUND_ENABLED = "false"
 AI_RESOURCE_SCOUT_ENABLED = "false"
+AI_RESOURCE_AUTO_APPROVAL_ENABLED = "false"
+AI_LOCAL_MODEL_ROUTING_ENABLED = "false"
+AI_SITE_DIRECTOR_ENABLED = "false"
 
 # Non-active compatibility markers retained for the Phase 7 sandbox audit only.
 # PAYPAL_ENVIRONMENT = "sandbox"
@@ -88,7 +95,7 @@ run_worker_first = [
 binding = "FORUM_POSTS"
 id = "99996d87016d4285a833707cbda5232f"
 
-# Authoritative membership, forum, consent, session and payment database.
+# Authoritative membership, forum, consent and payment database.
 [[d1_databases]]
 binding = "MEMBERS_DB"
 database_name = "matrix-members"

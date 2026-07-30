@@ -39,6 +39,10 @@ const legacyInlineRefresh = canonicalDeploy.includes('run-investigation-machine.
 const approvedTomlEntry = wranglerToml.includes('main = "src/worker-production-autonomy.js"') || wranglerToml.includes('main = "src/worker-production.js"');
 const approvedJsonEntry = wranglerJsonc.includes('"main": "src/worker-production-autonomy.js"') || wranglerJsonc.includes('"main": "src/worker-production.js"');
 const wrapperConfigured = wranglerToml.includes('main = "src/worker-production-autonomy.js"');
+const promptRejectionProof = aiLiveVerifier.includes("body: { prompt: 'This content must never enter Cloudflare routing.' }")
+  && aiLiveVerifier.includes('promptRejection.status === 400')
+  && aiLiveVerifier.includes('/prompt material is forbidden/i')
+  && aiLiveVerifier.includes('promptAccepted: false');
 
 if (hardFreeze) {
   check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(canonicalDeploy));
@@ -69,7 +73,7 @@ if (hardFreeze) {
   check('canonical deploy preserves live payment state and closes sandbox', canonicalDeploy.includes('preserve payment switches') && canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && (canonicalDeploy.includes('live checkout state preserved') || canonicalDeploy.includes('live PayPal checkout state preserved')));
   check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
   check('canonical deploy retains zero-spend lock and activates approved AI gates', canonicalDeploy.includes('AI_RESOURCE_ZERO_SPEND_LOCK = "true"') && canonicalDeploy.includes('AI_RESOURCE_AUTO_APPROVAL_ENABLED = "true"') && canonicalDeploy.includes('AI_LOCAL_MODEL_ROUTING_ENABLED = "true"') && canonicalDeploy.includes('AI_SITE_DIRECTOR_ENABLED = "true"'));
-  check('canonical deploy verifies prompt rejection', canonicalDeploy.includes('verify-live-ai-management.mjs') && aiLiveVerifier.includes('Prompt material is forbidden') && aiLiveVerifier.includes('promptAccepted: false'));
+  check('canonical deploy verifies prompt rejection', canonicalDeploy.includes('verify-live-ai-management.mjs') && promptRejectionProof);
 
   check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy));
   check('fallback deploy remains explicitly hard frozen', explicitFreeze(fallbackDeploy));
@@ -90,7 +94,7 @@ check('regression wrapper tests strict Worker behind verified wrapper', regressi
 check('live verifier proves forum D1 write/read', liveVerifier.includes('verifyForumPersistence') && liveVerifier.includes('/submit-main-post') && liveVerifier.includes('storedPostCount'));
 check('live verifier proves health SHA', liveVerifier.includes('/deploy-health.json') && liveVerifier.includes('healthMatches'));
 check('live verifier proves anonymous PayPal fail-closed boundary', liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('subscriptionCreate') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
-check('AI live verifier proves owner-only, zero-spend and prompt-local boundaries', aiLiveVerifier.includes('unauthorized.status === 403') && aiLiveVerifier.includes('paidFallbackPossible === false') && aiLiveVerifier.includes('promptAccepted: false'));
+check('AI live verifier proves owner-only, zero-spend and prompt-local boundaries', aiLiveVerifier.includes('unauthorized.status === 403') && aiLiveVerifier.includes('paidFallbackPossible === false') && promptRejectionProof);
 check('production health uses runtime-gated model and approved Worker entry', productionHealth.includes("paymentStatus: 'runtime-gated-dashboard-managed'") && productionHealth.includes("checkoutDefault: 'runtime-d1-gated'") && productionHealth.includes('delegates every fetch unchanged'));
 check('Wrangler preserves dashboard variables', /^keep_vars\s*=\s*true\s*$/m.test(wranglerToml) && /"keep_vars"\s*:\s*true/.test(wranglerJsonc));
 check('Wrangler does not contain active PayPal overrides', !/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml) && !/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc));

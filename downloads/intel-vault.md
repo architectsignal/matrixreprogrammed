@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-30T14:31:29.031Z
+Updated: 2026-07-30T19:51:43.040Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Epstein's former private banker appears before House Oversight Committee - abcnews.com
+- Published: 2026-07-23T18:38:38.000Z
+- Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
+- Source class: primary-or-official
 
 ### Syria ‘not alone’ in locating missing persons, tackling displacement
 - Published: 2026-07-23T12:00:00.000Z

@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-30T14:31:29.031Z
-Latest source publication: 2026-07-30T11:19:00.000Z
+Collection completed: 2026-07-30T19:51:43.040Z
+Latest source publication: 2026-07-30T18:21:00.000Z
 Collection status: fresh-items-added
-New items this collection: 4
+New items this collection: 1
 
 ## Freshness truth
-4 new source item(s) entered the seven-day window during this collection.
+1 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,17 +26,53 @@ New items this collection: 4
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Epstein files: How victims remain exposed to identification - DW.com
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Epstein files: How victims remain exposed to identification - DW.com
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Returning Afghans face growing risk of trafficking as crises deepen
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168051
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Returning Afghans face growing risk of trafficking as crises deepen
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Wildfires: Prevention is the best defence, UN says
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168054
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Wildfires: Prevention is the best defence, UN says
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
   - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
@@ -67,18 +103,6 @@ New items this collection: 4
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-  - Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
-  - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeDRRb1RyYUw1bnVXUjk2STNJcjhpeV9CUlBjMEFLWXBqWTVvblJaa1BmcUVoWDdGSXhfY2lmMWdKR0lEUmZINWNTUWFxQ0lDQUtWd2NEWXVRVHpiUzJacDg2U2ZQQW5tMVZGSEUyOHJBTkQwdGhXSlBNV1AwVXpfSngxaDF2bUpxb1RtQVdzU0N6eFBEOFcyYk1SUTljY2JQcWR4dG5LeW52Njd2SVg0Q3VzTG9WakZxUlBOWkYwaDBfSlRFcjBZMklXRlhZV0FT0gHWAUFVX3lxTE9DVlYzbVZxdFBEUmZYUXBuaUxkNmZBMHZ2M2VKb2NiLWsyMjBZZmNKOE9Xa3VJRzlNcTVOWk40Ri1NY1RkRHZsM19va1Njb0xZZUQwUzk0TmFNSFRNX0xxd3RWR3UzQWJEdDdCLS1DbmV2c3FUbU1ITG1aOGREWDMycFNjZ3hqcDdWcmljLUMxWFNFbXJkemJ2MzlNdU5saHhBTjVSMnAwVEhnWXhRZVM1cU1haDRvWGlKbzlZV0lqRVExVDkwb2V3NlVwenN6QlAyelVUckE?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
@@ -170,12 +194,6 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Group in Congress pushing for more Epstein transparency - The Black Chronicle
-  - Source: https://news.google.com/rss/articles/CBMiswFBVV95cUxNdGI2cy1zYUdsMUxhLXZyN1c5S0l4Z0Qyc0o4UjFTbGk2Sm44cnNYQnppVEpldHZMNzN2eldKV1ZGd1RQYk4tRHJKaW9QVXIyVDYxY1ozdkxydERpdUk1TXQxWUpldVJ0cm96cGhCY0FJd0pFaVFRZ3hXc2hlUTR3eXlZR0VKX19lNExuR20za29RZ0xtNG1DQzFHR3M4aWx3U3JQWXd6UUdJTVNYQWVVZ3ZIbw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Group in Congress pushing for more Epstein transparency - The Black Chronicle
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
   - Source class: primary-or-official
@@ -224,23 +242,11 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: After an Ebola centre was attacked, peacekeepers moved in next door
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — In El Obeid, Sudanese women face drones by day, rape by night, to reach water
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168012
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: In El Obeid, Sudanese women face drones by day, rape by night, to reach water
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — International Criminal Court Prosecutor Karim Khan dismissed
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168025
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: International Criminal Court Prosecutor Karim Khan dismissed
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168016
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168024
@@ -248,39 +254,9 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — Wildfires surge across Europe as Spain and France battle major blazes
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168013
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Wildfires surge across Europe as Spain and France battle major blazes
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
-  - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
   - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Epstein's former private banker appears before House Oversight Committee - abcnews.com
-  - Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein's former private banker appears before House Oversight Committee - abcnews.com
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - pbs.org
-  - Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - pbs.org
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

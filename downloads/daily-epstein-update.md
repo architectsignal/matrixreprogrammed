@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-30T14:31:34.466Z
-Live Intel source window: 2026-07-30T14:31:29.031Z
-Latest source publication: 2026-07-30T11:19:00.000Z
+Generated: 2026-07-30T19:51:49.920Z
+Live Intel source window: 2026-07-30T19:51:43.040Z
+Latest source publication: 2026-07-30T18:21:00.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,29 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-11 current Epstein-lane record leads remain inside the active source window.
+8 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+- Published: 2026-07-30T18:21:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+
+Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ The Guardian
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein files: How victims remain exposed to identification - DW.com
+- Published: 2026-07-30T16:07:32.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
+
+Epstein files: How victims remain exposed to identification DW.com
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
 - Published: 2026-07-30T11:19:00.000Z
@@ -25,13 +45,23 @@ US Senate unanimously opposes Presidential pardon for Epstein associate Ghislain
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+- Published: 2026-07-30T00:48:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
 - Published: 2026-07-30T00:26:21.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
 
-Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ KQ2
+Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ kq2.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -42,16 +72,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
 Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-- Published: 2026-07-28T22:01:52.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
-
-Epstein, others named in scathing Interlochen review. See full report Detroit Free Press
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -72,56 +92,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
 
 Bipartisan Group In Congress Demands Greater Transparency On Epstein Files Eurasia Review
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Group in Congress pushing for more Epstein transparency - The Black Chronicle
-- Published: 2026-07-26T16:43:26.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMiswFBVV95cUxNdGI2cy1zYUdsMUxhLXZyN1c5S0l4Z0Qyc0o4UjFTbGk2Sm44cnNYQnppVEpldHZMNzN2eldKV1ZGd1RQYk4tRHJKaW9QVXIyVDYxY1ozdkxydERpdUk1TXQxWUpldVJ0cm96cGhCY0FJd0pFaVFRZ3hXc2hlUTR3eXlZR0VKX19lNExuR20za29RZ0xtNG1DQzFHR3M4aWx3U3JQWXd6UUdJTVNYQWVVZ3ZIbw?oc=5
-
-Group in Congress pushing for more Epstein transparency The Black Chronicle
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post
-- Published: 2026-07-23T22:12:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
-
-Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source New York Post
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-- Published: 2026-07-23T18:38:38.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-
-Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Epstein's former private banker appears before House Oversight Committee - abcnews.com
-- Published: 2026-07-23T18:38:38.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-
-Epstein's former private banker appears before House Oversight Committee abcnews.com
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties - pbs.org
-- Published: 2026-07-23T16:11:24.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxQM1BvN2xZUHVLZlBKMGNVNVZ0UWJQaXN4dnM2LUJzS0VYc1k0ZWNnUEJDQkVKMlNBb194eWtTRWlEbnBURFYxQjZEUk5DZDMweXlYN21jZEZWcUdGcnJfVWxLT3hhbUpRbEI0WnlYRFFaYld1Sk15YkFyMHNjSElQVEJZLTNLS09XWWFYNW9LS1dTSjFMdm90c0ttOXVyV0N3UHBndEl6SnFXMlVRSllITTZ30gG3AUFVX3lxTE9nNU84TUZPX0NLUVZEaUhQMm1QUUNFbFUtQWxKMGREcnBjbkYtR2xwTjN5ZmdFc1Y1bktKWld2SFc2RlU5N01TdEJiNl9NMkp1TG84TkNZUkpVUmlfX0hWUEtNY3l3bVRXbnZxWk9FV1V2M245RWQzWW5ISFdOMTRHVDQ1VlNQWFVteHdyUkFDdU5TdFFMSmxlQWlRYUhoam45MGZwQ3llOEI5dXUxeDFNamNkeVVFVQ?oc=5
-
-Who is Jes Staley? Former JPMorgan executive interviewed about Epstein ties pbs.org
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -101,7 +101,14 @@ if (hardFreeze) {
   check('canonical deployment applies Phase 7 migration', deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql'));
   check('canonical deployment syntax-checks rehearsal Worker', deploy.includes('node --check src/worker-paypal-sandbox-rehearsal.js'));
   check('canonical deployment runs Phase 7 test', deploy.includes('node scripts/phase7-paypal-sandbox-rehearsal-test.mjs'));
-  check('canonical deployment closes sandbox while preserving live state', deploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && deploy.includes('live checkout state preserved'));
+  check(
+    'canonical deployment closes sandbox while preserving live state',
+    deploy.includes("const sandbox=switches.find(x=>x.environment==='sandbox')")
+      && deploy.includes('if(Number(sandbox.checkout_enabled)!==0)')
+      && deploy.includes("const live=switches.find(x=>x.environment==='live')")
+      && deploy.includes('live PayPal checkout state preserved at')
+      && !deploy.includes("UPDATE paypal_runtime_settings SET checkout_enabled=0 WHERE environment='live'")
+  );
 }
 
 try {

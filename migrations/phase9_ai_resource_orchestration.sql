@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS ai_resources (
   enabled INTEGER NOT NULL DEFAULT 0 CHECK (enabled IN (0,1)),
   manual_approval_required INTEGER NOT NULL DEFAULT 1 CHECK (manual_approval_required IN (0,1)),
   allowed_hosts_json TEXT NOT NULL DEFAULT '[]',
+  metadata_json TEXT NOT NULL DEFAULT '{}',
   notes TEXT,
   created_at TEXT NOT NULL,
   updated_at TEXT NOT NULL

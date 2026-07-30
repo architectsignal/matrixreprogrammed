@@ -114,3 +114,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.17-self-test.js
+
+      - name: Verify Phase 1.18 requests entropy generation without entropy output
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.18-self-test.js

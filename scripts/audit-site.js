@@ -165,7 +165,9 @@ for (const file of publicHtmlFiles) {
     const target = stripHashAndQuery(targetPart);
     if (!target) continue;
     if (isDynamicWorkerTarget(target)) continue;
-    const resolved = path.normalize(path.join(path.dirname(file), target)).replace(/\\/g, '/');
+    const resolved = target.startsWith('/')
+      ? path.normalize(target.replace(/^\/+/, '')).replace(/\\/g, '/')
+      : path.normalize(path.join(path.dirname(file), target)).replace(/\\/g, '/');
     if (resolved.startsWith('..')) { problems.push(`${file}: link escapes site root: ${raw}`); continue; }
     if (!allFiles.has(resolved) && !generatedAllowList.has(resolved)) { problems.push(`${file}: missing internal link/asset target: ${raw} -> ${resolved}`); continue; }
     if (anchor && resolved.endsWith('.html')) {

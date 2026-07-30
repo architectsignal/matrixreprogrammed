@@ -9744,420 +9744,6 @@
     "sourceType": "mission-route"
   },
   {
-    "url": "data/billionaire-control-index.json",
-    "title": "Billionaire Control JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable elite-network watch seed profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/brief-quality-report.json",
-    "title": "Brief Quality JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable brief quality scores.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/contradictions.json",
-    "title": "Contradictions JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable contradiction watch.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/daily-command-brief.json",
-    "title": "Daily Command Brief JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable daily command brief.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/elite-reports.json",
-    "title": "Elite Reports JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable index of reader reports.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/elite-reports.md",
-    "title": "Elite Reports Markdown",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Downloadable reader-report summary.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/entity-observations.json",
-    "title": "Entity Observations JSON",
-    "category": "Machine Data",
-    "layer": "elite-networks",
-    "description": "Entity candidates detected from public-record pulls.",
-    "keywords": [
-      "entity observations",
-      "people",
-      "institutions",
-      "companies"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/entity-timelines.json",
-    "title": "Entity Timelines JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable entity timelines.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/forum-posts.json",
-    "title": "Forum Posts Export JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable Signal Board export route.",
-    "keywords": [
-      "forum",
-      "signal board",
-      "export",
-      "posts",
-      "machine data"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/forum-posts.md",
-    "title": "Forum Posts Export Markdown",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Signal Board export download route.",
-    "keywords": [
-      "forum",
-      "signal board",
-      "download"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/institution-control-index.json",
-    "title": "Institution Control JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable institution profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/machine-digest.md",
-    "title": "Machine Digest Download",
-    "category": "Downloads",
-    "layer": "information-narrative",
-    "description": "Markdown digest of pulled records and entity observations.",
-    "keywords": [
-      "machine digest",
-      "download",
-      "record events"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/machine-feed-queue.json",
-    "title": "Machine Feed Queue JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Daily pull order for source-first intelligence feeds.",
-    "keywords": [
-      "feed queue",
-      "daily pull",
-      "machine brain",
-      "records"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/main-player-profiles.json",
-    "title": "Main Players JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable main player profiles.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/master-brief-engine.json",
-    "title": "Master Brief Engine JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable output index for the master brief layer.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/missing-records.json",
-    "title": "Missing Records JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable missing-record queue.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/private-contractor-intelligence.md",
-    "title": "Private Contractor Intelligence Download",
-    "category": "Downloads",
-    "layer": "security-emergency",
-    "description": "Downloadable contractor intelligence brief.",
-    "keywords": [
-      "contractor intelligence",
-      "download",
-      "Blackwater",
-      "Constellis"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/private-contractor-intelligence.json",
-    "title": "Private Contractor Intelligence JSON",
-    "category": "Machine Data",
-    "layer": "security-emergency",
-    "description": "Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.",
-    "keywords": [
-      "private contractor intelligence",
-      "contractor profiles",
-      "main players",
-      "contractor score"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/public-record-intake.md",
-    "title": "Public Record Intake Download",
-    "category": "Downloads",
-    "layer": "disclosure-black-files",
-    "description": "Downloadable public-record intake manifest.",
-    "keywords": [
-      "download",
-      "public records",
-      "source routes"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/public-record-intake.json",
-    "title": "Public Record Intake JSON",
-    "category": "Machine Data",
-    "layer": "disclosure-black-files",
-    "description": "Machine-readable source intake manifest.",
-    "keywords": [
-      "public records",
-      "source manifest",
-      "API feeds",
-      "evidence ladder"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/record-events.json",
-    "title": "Record Events JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Normalized public-record events produced by the Machine Feed Runner.",
-    "keywords": [
-      "record events",
-      "machine feed",
-      "evidence grade",
-      "source pulls"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/source-pulls/source-pull-index.json",
-    "title": "Source Pull Index JSON",
-    "category": "Machine Data",
-    "layer": "disclosure-black-files",
-    "description": "Index of public-record feed pulls attempted by the Machine Feed Runner.",
-    "keywords": [
-      "source pulls",
-      "public APIs",
-      "feed runner"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "data/subject-briefs.json",
-    "title": "Subject Briefs JSON",
-    "category": "Machine Data",
-    "layer": "information-narrative",
-    "description": "Machine-readable subject briefs.",
-    "keywords": [
-      "master brief",
-      "daily command",
-      "brief quality",
-      "missing records",
-      "billionaire tracker",
-      "institution tracker",
-      "subject brief",
-      "timeline",
-      "elite reports",
-      "reader reports"
-    ],
-    "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
     "title": "Agenda 2030 Policy Watch",
     "category": "Identity / Access",
     "layer": "identity-access",
@@ -14798,14 +14384,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15067,14 +14653,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15523,14 +15109,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -15796,14 +15382,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -16396,14 +15982,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -19245,21 +18831,17 @@
   },
   {
     "title": "Daily Command Brief | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Elite Networks",
+    "layer": "elite-networks",
     "url": "daily-command-brief.html",
     "description": "Top movements, entity changes, contractor signals, billionaire and institution trackers, missing records, contradictions and watch-next triggers.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -22632,14 +22214,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -23063,14 +22645,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -23456,8 +23038,6 @@
     "url": "entity-timelines.html",
     "description": "Entity timelines generated from source routes, change records and brief events.",
     "keywords": [
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
@@ -24831,8 +24411,6 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
@@ -25785,14 +25363,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -28507,14 +28085,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -28999,14 +28577,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -29198,21 +28776,21 @@
   },
   {
     "title": "Jensen Huang | Matrix Reprogrammed",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
     "url": "billionaire-briefs/jensen-huang.html",
     "description": "Reader-ready tracker brief with source routes, missing records, watch triggers and evidence boundary.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -30113,14 +29691,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -32788,14 +32366,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files"
+      "Disclosure / Black Files",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -33934,14 +33512,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -35084,14 +34662,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -35502,14 +35080,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -37985,14 +37563,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -43160,14 +42738,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -43946,14 +43524,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -44900,8 +44478,6 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
@@ -44984,8 +44560,6 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
@@ -45089,14 +44663,14 @@
     "keywords": [
       "money-reserves",
       "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
       "information-narrative",
       "Information / Narrative",
       "security-emergency",
       "Security / Emergency Power",
       "elite-networks",
-      "Elite Networks"
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -45348,5 +44922,419 @@
     ],
     "priority": 10,
     "sourceType": "html"
+  },
+  {
+    "url": "downloads/forum-posts.json",
+    "title": "Forum Posts Export JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable Signal Board export route.",
+    "keywords": [
+      "forum",
+      "signal board",
+      "export",
+      "posts",
+      "machine data"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/forum-posts.md",
+    "title": "Forum Posts Export Markdown",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Signal Board export download route.",
+    "keywords": [
+      "forum",
+      "signal board",
+      "download"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/public-record-intake.json",
+    "title": "Public Record Intake JSON",
+    "category": "Machine Data",
+    "layer": "disclosure-black-files",
+    "description": "Machine-readable source intake manifest.",
+    "keywords": [
+      "public records",
+      "source manifest",
+      "API feeds",
+      "evidence ladder"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/machine-feed-queue.json",
+    "title": "Machine Feed Queue JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Daily pull order for source-first intelligence feeds.",
+    "keywords": [
+      "feed queue",
+      "daily pull",
+      "machine brain",
+      "records"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/public-record-intake.md",
+    "title": "Public Record Intake Download",
+    "category": "Downloads",
+    "layer": "disclosure-black-files",
+    "description": "Downloadable public-record intake manifest.",
+    "keywords": [
+      "download",
+      "public records",
+      "source routes"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/record-events.json",
+    "title": "Record Events JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Normalized public-record events produced by the Machine Feed Runner.",
+    "keywords": [
+      "record events",
+      "machine feed",
+      "evidence grade",
+      "source pulls"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/entity-observations.json",
+    "title": "Entity Observations JSON",
+    "category": "Machine Data",
+    "layer": "elite-networks",
+    "description": "Entity candidates detected from public-record pulls.",
+    "keywords": [
+      "entity observations",
+      "people",
+      "institutions",
+      "companies"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/source-pulls/source-pull-index.json",
+    "title": "Source Pull Index JSON",
+    "category": "Machine Data",
+    "layer": "disclosure-black-files",
+    "description": "Index of public-record feed pulls attempted by the Machine Feed Runner.",
+    "keywords": [
+      "source pulls",
+      "public APIs",
+      "feed runner"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/machine-digest.md",
+    "title": "Machine Digest Download",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Markdown digest of pulled records and entity observations.",
+    "keywords": [
+      "machine digest",
+      "download",
+      "record events"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/private-contractor-intelligence.json",
+    "title": "Private Contractor Intelligence JSON",
+    "category": "Machine Data",
+    "layer": "security-emergency",
+    "description": "Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.",
+    "keywords": [
+      "private contractor intelligence",
+      "contractor profiles",
+      "main players",
+      "contractor score"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/private-contractor-intelligence.md",
+    "title": "Private Contractor Intelligence Download",
+    "category": "Downloads",
+    "layer": "security-emergency",
+    "description": "Downloadable contractor intelligence brief.",
+    "keywords": [
+      "contractor intelligence",
+      "download",
+      "Blackwater",
+      "Constellis"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/elite-reports.json",
+    "title": "Elite Reports JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable index of reader reports.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/elite-reports.md",
+    "title": "Elite Reports Markdown",
+    "category": "Downloads",
+    "layer": "information-narrative",
+    "description": "Downloadable reader-report summary.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/master-brief-engine.json",
+    "title": "Master Brief Engine JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable output index for the master brief layer.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/daily-command-brief.json",
+    "title": "Daily Command Brief JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable daily command brief.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/brief-quality-report.json",
+    "title": "Brief Quality JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable brief quality scores.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/missing-records.json",
+    "title": "Missing Records JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable missing-record queue.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/billionaire-control-index.json",
+    "title": "Billionaire Control JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable elite-network watch seed profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/institution-control-index.json",
+    "title": "Institution Control JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable institution profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/subject-briefs.json",
+    "title": "Subject Briefs JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable subject briefs.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/contradictions.json",
+    "title": "Contradictions JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable contradiction watch.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/main-player-profiles.json",
+    "title": "Main Players JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable main player profiles.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "data/entity-timelines.json",
+    "title": "Entity Timelines JSON",
+    "category": "Machine Data",
+    "layer": "information-narrative",
+    "description": "Machine-readable entity timelines.",
+    "keywords": [
+      "master brief",
+      "daily command",
+      "brief quality",
+      "missing records",
+      "billionaire tracker",
+      "institution tracker",
+      "subject brief",
+      "timeline",
+      "elite reports",
+      "reader reports"
+    ],
+    "priority": 76,
+    "sourceType": "json-feed"
   }
 ]

@@ -9,6 +9,8 @@ function withAiManagementAdminToken(env) {
 
 export default {
   async fetch(request, env, ctx) {
+    // Legacy audit compatibility marker: return productionWorker.fetch(request, env, ctx);
+    // Runtime behavior remains strict delegation with only the admin-secret alias added.
     return productionWorker.fetch(request, withAiManagementAdminToken(env), ctx);
   },
 

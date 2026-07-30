@@ -74,6 +74,14 @@ async function runTest(browser, name, route, test, prepare = null) {
 const browser = await chromium.launch({ headless: true });
 try {
   await runTest(browser, 'Homepage navigation', '/index.html', async page => {
+    const gate = page.locator('[data-signal-gate]');
+    if (await gate.count()) {
+      const skip = gate.locator('button[data-enter-archive]');
+      if (await skip.isVisible()) {
+        await skip.click();
+        await gate.waitFor({ state: 'hidden', timeout: 10000 });
+      }
+    }
     await page.locator('header.topbar').waitFor({ state: 'visible' });
     const primaryLinks = page.locator('header.topbar .nav-primary a');
     const primaryCount = await primaryLinks.count();
@@ -83,6 +91,8 @@ try {
     }
     assert(await page.locator('header.topbar a[href="data-lab.html"]').count() >= 1, 'Homepage navigation must expose Public Data Lab');
     assert(await page.locator('main').count() === 1, 'Homepage must contain one main element');
+  }, async page => {
+    await page.route('**/api/public/consequence-contracts', route => jsonResponse(route, { ok: true, contracts: [] }));
   });
 
   await runTest(browser, 'Start Here safety routes', '/start-here.html', async page => {

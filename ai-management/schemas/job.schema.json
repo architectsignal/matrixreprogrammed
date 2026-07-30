@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matrixreprogrammed.com/schemas/ai-management/job.schema.json",
+  "title": "Matrix Reprogrammed resource job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job_id",
+    "job_type",
+    "capability_type",
+    "priority",
+    "data_class",
+    "payload",
+    "requirements",
+    "idempotency_key",
+    "deduplication_key",
+    "created_at"
+  ],
+  "properties": {
+    "job_id": { "type": "string", "minLength": 8, "maxLength": 180 },
+    "parent_job_id": { "type": ["string", "null"], "maxLength": 180 },
+    "objective_id": { "type": ["string", "null"], "maxLength": 180 },
+    "job_type": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{1,119}$" },
+    "capability_type": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{1,79}$" },
+    "priority": { "enum": ["P0", "P1", "P2", "P3", "P4", "P5"] },
+    "data_class": { "enum": ["public", "internal", "confidential", "restricted"] },
+    "payload": { "type": "object" },
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cost_ceiling_eur", "requires_provenance", "cacheable"],
+      "properties": {
+        "cost_ceiling_eur": { "const": 0 },
+        "minimum_quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "minimum_provenance_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "maximum_latency_ms": { "type": "integer", "minimum": 1, "maximum": 300000 },
+        "maximum_attempts": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "requires_provenance": { "type": "boolean" },
+        "cacheable": { "type": "boolean" },
+        "cache_ttl_seconds": { "type": "integer", "minimum": 0, "maximum": 2592000 }
+      }
+    },
+    "idempotency_key": { "type": "string", "minLength": 8, "maxLength": 180 },
+    "deduplication_key": { "type": "string", "minLength": 8, "maxLength": 180 },
+    "status": { "enum": ["queued", "running", "completed", "failed", "dead_letter", "cancelled"] },
+    "metadata": { "type": "object" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "deadline_at": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

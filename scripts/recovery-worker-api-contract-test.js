@@ -133,6 +133,10 @@ fs.mkdirSync(tempSrc, { recursive: true });
 for (const entry of fs.readdirSync(at('src'), { withFileTypes: true })) {
   if (entry.isFile() && entry.name.endsWith('.js')) fs.copyFileSync(at(`src/${entry.name}`), path.join(tempSrc, entry.name));
 }
+// The production Worker imports the zero-spend AI management boundary from
+// outside src/. Keep the executable isolation faithful by copying that module
+// tree into the same relative location used in production.
+fs.cpSync(at('ai-management'), path.join(tempRoot, 'ai-management'), { recursive: true });
 fs.writeFileSync(path.join(tempRoot, 'package.json'), JSON.stringify({ type: 'module' }));
 const runtimeScript = `
 import production from ${JSON.stringify(pathToFileURL(path.join(tempSrc, 'worker-production.js')).href)};

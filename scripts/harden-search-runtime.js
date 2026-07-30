@@ -72,4 +72,14 @@ if (!report.ok) {
   process.exit(1);
 }
 
-console.log('Search runtime hardened with a real fallback index and HTML-response guard.');
+const qualityInstaller = path.join(root, 'scripts', 'install-search-quality-engine.js');
+if (!fs.existsSync(qualityInstaller)) {
+  console.error('Search runtime hardening failed: search quality installer missing');
+  process.exit(1);
+}
+const quality = spawnSync(process.execPath, [qualityInstaller], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+if (quality.stdout) process.stdout.write(quality.stdout);
+if (quality.stderr) process.stderr.write(quality.stderr);
+if (quality.status !== 0) process.exit(quality.status || 1);
+
+console.log('Search runtime hardened with a real fallback index, HTML-response guard and Search Quality V1.');

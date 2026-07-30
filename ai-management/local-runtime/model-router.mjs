@@ -11,6 +11,12 @@ export function estimateTokens(value) {
   return Math.max(1, Math.ceil(text.length / 4));
 }
 
+function estimatedInputTokens(job = {}) {
+  const declared = Number(job.payload?.prompt_tokens_estimate ?? job.metadata?.prompt_tokens_estimate);
+  if (Number.isFinite(declared) && declared > 0) return Math.max(1, Math.ceil(declared));
+  return estimateTokens(job.payload?.messages || job.payload?.prompt || job.payload || '');
+}
+
 function freshnessPenalty(lastSeen, now = new Date()) {
   const time = Date.parse(lastSeen || '');
   if (!Number.isFinite(time)) return -50;
@@ -24,12 +30,17 @@ function freshnessPenalty(lastSeen, now = new Date()) {
 
 function taskProfile(job = {}) {
   const requested = String(job.payload?.task_profile || job.metadata?.task_profile || '').toLowerCase();
-  const prompt = `${job.payload?.prompt || ''} ${JSON.stringify(job.payload?.messages || [])}`.toLowerCase();
+  const tags = new Set([
+    ...String(job.payload?.task_tags || '').toLowerCase().split(/[,\s]+/),
+    ...(Array.isArray(job.payload?.task_tags) ? job.payload.task_tags.map(value => String(value).toLowerCase()) : [])
+  ].filter(Boolean));
+  const metadataOnly = job.payload?.metadata_only_routing === true;
+  const prompt = metadataOnly ? '' : `${job.payload?.prompt || ''} ${JSON.stringify(job.payload?.messages || [])}`.toLowerCase();
   return {
-    reasoning: requested === 'reasoning' || /reason|investigat|analyse|analyze|compare|conclusion|evidence/.test(prompt),
-    speed: requested === 'speed' || /summari[sz]e|classify|extract|tag|short/.test(prompt),
-    longContext: requested === 'long-context' || /dossier|full document|archive|long context|many pages/.test(prompt),
-    coding: requested === 'coding' || /code|javascript|python|sql|bug|test/.test(prompt)
+    reasoning: requested === 'reasoning' || tags.has('reasoning') || /reason|investigat|analyse|analyze|compare|conclusion|evidence/.test(prompt),
+    speed: requested === 'speed' || tags.has('speed') || /summari[sz]e|classify|extract|tag|short/.test(prompt),
+    longContext: requested === 'long-context' || tags.has('long-context') || /dossier|full document|archive|long context|many pages/.test(prompt),
+    coding: requested === 'coding' || tags.has('coding') || /code|javascript|python|sql|bug|test/.test(prompt)
   };
 }
 
@@ -40,7 +51,7 @@ export function modelCompatibility(resource, job, { now = new Date() } = {}) {
   if (metadata.local !== true) reasons.push('not-owner-local');
   if (!metadata.endpoint || !metadata.model_id) reasons.push('local-model-metadata-missing');
 
-  const promptTokens = estimateTokens(job.payload?.messages || job.payload?.prompt || job.payload || '');
+  const promptTokens = estimatedInputTokens(job);
   const outputTokens = Math.max(1, Number(job.payload?.max_tokens || job.payload?.max_completion_tokens || 1024));
   const requiredContext = promptTokens + outputTokens + 512;
   const contextLength = Number(metadata.context_length || 0);
@@ -100,4 +111,4 @@ export function localModelScoreAdjuster(resource, job, context = {}) {
   return result.eligible ? result.adjustment : -100;
 }
 
-export const modelRouterInternals = { clamp, freshnessPenalty, taskProfile };
+export const modelRouterInternals = { clamp, freshnessPenalty, taskProfile, estimatedInputTokens };

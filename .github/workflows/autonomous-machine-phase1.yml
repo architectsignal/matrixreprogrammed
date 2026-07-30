@@ -119,3 +119,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.18-self-test.js
+
+      - name: Verify Phase 1.19 creates signed entropy decisions without entropy output
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.19-self-test.js

@@ -144,3 +144,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.23-self-test.js
+
+      - name: Verify Phase 1.24 defines provider policy without selecting a provider
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.24-self-test.js

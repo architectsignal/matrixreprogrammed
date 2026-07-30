@@ -1,11 +1,31 @@
 # Intel Vault
 
-Updated: 2026-07-30T08:49:37.859Z
+Updated: 2026-07-30T14:31:29.031Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Syria ‘not alone’ in locating missing persons, tackling displacement
+- Published: 2026-07-23T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168010
+- Source class: primary-or-official
+
+### Examining 2 decades since Jeffrey Epstein's arrest - WPTV
+- Published: 2026-07-23T10:55:34.000Z
+- Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
+- Source class: primary-or-official
+
+### Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
+- Published: 2026-07-23T10:16:08.000Z
+- Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Source class: discovery
+
+### Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
+- Published: 2026-07-23T10:09:26.000Z
+- Source: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
+- Source class: primary-or-official
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Published: 2026-07-22T11:27:32.000Z

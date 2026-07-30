@@ -1,0 +1,71 @@
+name: Record controlled production result
+
+on:
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Controlled Production Deploy
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: controlled-production-result-recorder
+  cancel-in-progress: false
+
+jobs:
+  record:
+    if: github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Write sanitized workflow receipt
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_NUMBER: ${{ github.event.workflow_run.run_number }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_STATUS: ${{ github.event.workflow_run.status }}
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_CREATED_AT: ${{ github.event.workflow_run.created_at }}
+          RUN_UPDATED_AT: ${{ github.event.workflow_run.updated_at }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          node - <<'NODE'
+          const fs = require('fs');
+          const receipt = {
+            workflow: 'Matrix Reprogrammed Controlled Production Deploy',
+            runId: Number(process.env.RUN_ID),
+            runNumber: Number(process.env.RUN_NUMBER),
+            runAttempt: Number(process.env.RUN_ATTEMPT),
+            status: process.env.RUN_STATUS,
+            conclusion: process.env.RUN_CONCLUSION,
+            headSha: process.env.RUN_HEAD_SHA,
+            createdAt: process.env.RUN_CREATED_AT,
+            updatedAt: process.env.RUN_UPDATED_AT,
+            runUrl: process.env.RUN_URL,
+            recordedAt: new Date().toISOString()
+          };
+          fs.writeFileSync('downloads/last-controlled-production-run.json', `${JSON.stringify(receipt, null, 2)}\n`);
+          NODE
+
+      - name: Commit receipt without retriggering workflows
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/last-controlled-production-run.json
+          if git diff --cached --quiet; then
+            echo 'Controlled production receipt is already current.'
+            exit 0
+          fi
+          git commit -m "Record controlled production run ${{ github.event.workflow_run.id }}"
+          git push origin HEAD:main

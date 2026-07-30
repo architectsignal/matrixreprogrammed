@@ -27,6 +27,8 @@ for (const relative of [
   'src/worker-forum-persistence.js',
   'src/worker-paypal-subscriptions.js',
   'src/worker-email-lifecycle.js',
+  'src/worker-gemini-public-ai.js',
+  'src/gemini-public-ai-core.mjs',
   'src/worker-access-gate.js',
   'scripts/templates/membership-auth/membership.template',
   'membership.html',
@@ -131,7 +133,9 @@ const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-worker-contract-'
 const tempSrc = path.join(tempRoot, 'src');
 fs.mkdirSync(tempSrc, { recursive: true });
 for (const entry of fs.readdirSync(at('src'), { withFileTypes: true })) {
-  if (entry.isFile() && entry.name.endsWith('.js')) fs.copyFileSync(at(`src/${entry.name}`), path.join(tempSrc, entry.name));
+  if (entry.isFile() && /\.(?:m?js)$/.test(entry.name)) {
+    fs.copyFileSync(at(`src/${entry.name}`), path.join(tempSrc, entry.name));
+  }
 }
 fs.writeFileSync(path.join(tempRoot, 'package.json'), JSON.stringify({ type: 'module' }));
 const runtimeScript = `

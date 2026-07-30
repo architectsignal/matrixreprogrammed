@@ -127,5 +127,5 @@ jobs:
         run: |
           grep -F 'migrations/phase9_ai_resource_orchestration.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase10_ai_autonomy.sql' .github/workflows/deploy.yml
-          grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK:true' .github/workflows/deploy.yml
-          grep -F '/api/ai-management/admin/health' .github/workflows/deploy.yml
+          grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml
+          grep -F 'node scripts/verify-live-ai-management.mjs' .github/workflows/deploy.yml

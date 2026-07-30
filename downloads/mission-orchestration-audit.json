@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T07:45:44.362Z",
+  "generatedAt": "2026-07-30T17:53:48.266Z",
   "overall": "ready",
   "summary": {
     "total": 50,
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 1727,
+    "archivedFindings": 1867,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "1727 archived findings retained.",
+      "detail": "1867 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -274,7 +274,7 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Search-first homepage: headerEnd=3711; search=133527; accountabilityHitList=134791.",
+      "detail": "Search-first homepage: headerEnd=3711; search=136171; accountabilityHitList=137435.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {

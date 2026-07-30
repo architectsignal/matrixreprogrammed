@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-30T07:45:44.362Z
+Generated: 2026-07-30T17:53:48.266Z
 Overall: ready
 Homepage mode: search-first-accountability
 Passed: 50/50
@@ -22,7 +22,7 @@ Promotion margin: 14
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
-- **PASS · ledger-archive-preserved:** 1727 archived findings retained.
+- **PASS · ledger-archive-preserved:** 1867 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
 - **PASS · watch-person-rank:** person score 135; status incumbent-held-position.
@@ -53,7 +53,7 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 4 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3711; search=133527; accountabilityHitList=134791.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3711; search=136171; accountabilityHitList=137435.
 - **PASS · accountability-card-ui:** 3 search-first accountability cards found.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.

@@ -10,6 +10,7 @@ function check(name, condition, detail) {
 }
 
 const wrangler = read('wrangler.toml');
+const autonomy = read('src/worker-production-autonomy.js');
 const production = read('src/worker-production.js');
 const auth = read('src/worker.js');
 const member = read('src/worker-member-experience.js');
@@ -36,7 +37,17 @@ const workerFirstForProtectedRoutes = [
   '"/downloads/research*"'
 ].every(pattern => workerFirstConfig.includes(pattern));
 
-check('Cloudflare production worker is authoritative', wrangler.includes('main = "src/worker-production.js"'), 'wrangler.toml must deploy src/worker-production.js');
+const autonomyIsEntrypoint = wrangler.includes('main = "src/worker-production-autonomy.js"');
+const autonomyDelegatesFetchUnchanged =
+  autonomy.includes("import productionWorker from './worker-production.js';") &&
+  autonomy.includes('async fetch(request, env, ctx)') &&
+  autonomy.includes('return productionWorker.fetch(request, env, ctx);');
+const autonomySchedulesStrictAndAiWorkers =
+  autonomy.includes('productionWorker.scheduled') &&
+  autonomy.includes('aiManagementWorker.scheduled') &&
+  autonomy.includes('Promise.all([productionTask, autonomyTask])');
+
+check('Cloudflare production worker remains authoritative behind the autonomy wrapper', autonomyIsEntrypoint && autonomyDelegatesFetchUnchanged && autonomySchedulesStrictAndAiWorkers, 'wrangler.toml must deploy src/worker-production-autonomy.js, which must delegate every fetch unchanged to src/worker-production.js and add only bounded scheduled AI maintenance');
 check('Cloudflare Assets are authoritative', wrangler.includes('[assets]') && wrangler.includes('directory = "./_site"') && wrangler.includes('binding = "ASSETS"'), 'Cloudflare Assets must serve _site');
 check('Cloudflare D1 membership database is bound', wrangler.includes('binding = "MEMBERS_DB"') && wrangler.includes('database_name = "matrix-members"'), 'MEMBERS_DB must remain the membership authority');
 check('Worker runs before protected assets', workerFirstForAll || workerFirstForProtectedRoutes, 'Authenticated API and protected download patterns must reach the Worker before static assets, while ordinary public assets may remain direct');

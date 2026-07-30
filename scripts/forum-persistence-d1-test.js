@@ -11,6 +11,7 @@ for (const rel of [
   'src/worker.js',
   'src/worker-forum-persistence.js',
   'src/worker-production.js',
+  'src/worker-production-autonomy.js',
   'wrangler.toml',
   'wrangler.jsonc',
   'migrations/0004_forum_persistence.sql'
@@ -18,6 +19,7 @@ for (const rel of [
 
 if (!failures.length) {
   const strict = read('src/worker-production.js');
+  const autonomy = read('src/worker-production-autonomy.js');
   const wrapper = read('src/worker-forum-persistence.js');
   const legacy = read('src/worker.js');
   const toml = read('wrangler.toml');
@@ -48,8 +50,21 @@ if (!failures.length) {
   check('wrapper missing board-specific routes', ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive','/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'].every(route => wrapper.includes(route)));
   check('legacy Worker lost non-forum asset delegation', legacy.includes('env.ASSETS.fetch'));
   check('legacy analytics endpoint still writes to KV', !legacy.includes('FORUM_POSTS.put(`analytics:'));
-  check('wrangler.toml not using strict production Worker', toml.includes('main = "src/worker-production.js"'));
-  check('wrangler.jsonc not using strict production Worker', jsonc.includes('"main": "src/worker-production.js"'));
+
+  const tomlAutonomy = toml.includes('main = "src/worker-production-autonomy.js"');
+  const jsonAutonomy = jsonc.includes('"main": "src/worker-production-autonomy.js"');
+  const tomlDirect = toml.includes('main = "src/worker-production.js"');
+  const jsonDirect = jsonc.includes('"main": "src/worker-production.js"');
+  check('wrangler.toml not using an approved production Worker', tomlAutonomy || tomlDirect);
+  check('wrangler.jsonc not using an approved production Worker', jsonAutonomy || jsonDirect);
+  check('Wrangler production entries disagree', (tomlAutonomy && jsonAutonomy) || (tomlDirect && jsonDirect));
+  if (tomlAutonomy || jsonAutonomy) {
+    check('autonomy wrapper missing strict Worker import', autonomy.includes("import productionWorker from './worker-production.js';"));
+    check('autonomy wrapper does not delegate every fetch unchanged', autonomy.includes('return productionWorker.fetch(request, env, ctx);'));
+    check('autonomy wrapper missing strict scheduled lifecycle', autonomy.includes('productionWorker.scheduled'));
+    check('autonomy wrapper missing bounded AI scheduled lifecycle', autonomy.includes('aiManagementWorker.scheduled') && autonomy.includes('await Promise.all([productionTask, autonomyTask]);'));
+  }
+
   check('MEMBERS_DB binding missing', toml.includes('binding = "MEMBERS_DB"') && jsonc.includes('"binding": "MEMBERS_DB"'));
   check('KV compatibility binding missing', toml.includes('FORUM_POSTS') && jsonc.includes('FORUM_POSTS'));
   check('KV compatibility switch is not disabled', toml.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"'));
@@ -63,8 +78,8 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; every accepted post requires one confirmed insert and a read-after-write match. KV compatibility is disabled by default and normal traffic cannot create KV operations.',
-  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, ignored or duplicate inserts, missing read-after-write confirmation, analytics KV writes and unnecessary KV exposure to normal traffic.'
+  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary. The configured autonomy wrapper may add only scheduled AI maintenance and must delegate every fetch unchanged to that strict Worker. Every accepted post requires one confirmed insert and a read-after-write match.',
+  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, ignored or duplicate inserts, missing read-after-write confirmation, analytics KV writes, unnecessary KV exposure to normal traffic, mismatched Wrangler entries, or an autonomy wrapper that intercepts fetch traffic.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-persistence-d1-test.json'), JSON.stringify(report, null, 2));
@@ -74,4 +89,4 @@ if (failures.length) {
   process.exit(1);
 }
 console.log('FORUM D1 PERSISTENCE TEST PASSED');
-console.log('Verified strict D1 insert confirmation, read-after-write persistence, fail-closed forum routing, KV-safe normal traffic and optional recovery compatibility only.');
+console.log('Verified strict D1 insert confirmation, read-after-write persistence, fail-closed forum routing, verified autonomy-wrapper delegation, KV-safe normal traffic and optional recovery compatibility only.');

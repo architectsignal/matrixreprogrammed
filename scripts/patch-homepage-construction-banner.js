@@ -34,9 +34,27 @@ const banner = `${startMarker}<section id="matrix-construction-banner" class="ma
 @media(prefers-reduced-motion:reduce){.matrix-construction-banner:after,.matrix-construction-status:before{animation:none}}
 </style><div class="matrix-construction-inner"><span class="matrix-construction-status">Build Active</span><div class="matrix-construction-copy"><strong>UNDER CONSTRUCTION — HELP US BUILD THE MACHINE.</strong><span>Matrix Reprogrammed is expanding its independent public-record intelligence system. Support helps fund high-memory GPUs, secure computing infrastructure, storage and the processing capacity required to analyse and connect large evidence archives. Every contribution helps us build faster and keep the core research accessible.</span></div><div class="matrix-construction-actions"><a class="matrix-construction-action primary" href="${supportUrl}" target="_blank" rel="noopener noreferrer" aria-label="Support Matrix Reprogrammed on GoFundMe">Support the Build</a><a class="matrix-construction-action" href="live-intel.html">Open Live Intel</a></div></div></section>${endMarker}`;
 
+function normalizedLabel(value) {
+  return String(value || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function repairHomepageControlSystemRoute(html) {
+  return String(html).replace(/<header\b[\s\S]*?<\/header>/i, header => {
+    let repaired = false;
+    return header.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi, (full, attrs, label) => {
+      if (repaired || normalizedLabel(label) !== 'control system') return full;
+      const nextAttrs = /\bhref\s*=/i.test(attrs)
+        ? attrs.replace(/\bhref\s*=\s*["'][^"']*["']/i, 'href="control-structure.html"')
+        : `${attrs} href="control-structure.html"`;
+      repaired = true;
+      return `<a${nextAttrs}>${label}</a>`;
+    });
+  });
+}
+
 function patchHtml(html) {
   let cleaned = String(html).replace(blockPattern, '').replace(navRepairPattern, '');
-  cleaned = cleaned.replace(/<a href=["']power-atlas\.html["']>Control System<\/a>/i, '<a href="control-structure.html">Control System</a>');
+  cleaned = repairHomepageControlSystemRoute(cleaned);
   if (/<\/head>/i.test(cleaned)) cleaned = cleaned.replace(/<\/head>/i, `${navRepair}</head>`);
   else throw new Error('Homepage construction banner could not find a head insertion point for navigation recovery');
   if (/<\/header>/i.test(cleaned)) return cleaned.replace(/<\/header>/i, `</header>${banner}`);
@@ -52,10 +70,12 @@ function ensureOne(file) {
   const bannerBlocks = html.match(blockPattern) || [];
   const bannerSupportLinks = bannerBlocks.length === 1 ? (bannerBlocks[0].match(/https:\/\/gofund\.me\/0a3c74fc9/g) || []).length : 0;
   const navRepairs = (html.match(/id=["']homepage-primary-nav-recovery["']/g) || []).length;
+  const header = (html.match(/<header\b[\s\S]*?<\/header>/i) || [''])[0];
+  const controlAnchor = [...header.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].find(match => normalizedLabel(match[2]) === 'control system');
   if (banners !== 1 || starts !== 1 || ends !== 1 || bannerBlocks.length !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
   if (bannerSupportLinks !== 1) throw new Error(`${path.relative(root, file)} construction banner does not contain exactly one GoFundMe support link`);
   if (navRepairs !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one desktop primary-navigation recovery rule`);
-  if (!/<a href=["']control-structure\.html["']>Control System<\/a>/i.test(html)) throw new Error(`${path.relative(root, file)} does not expose the canonical Control System route`);
+  if (!controlAnchor || !/\bhref\s*=\s*["']control-structure\.html["']/i.test(controlAnchor[1])) throw new Error(`${path.relative(root, file)} header does not expose the canonical Control System route`);
 }
 
 function safeId(value) {
@@ -133,11 +153,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   supportRoute: supportUrl,
   supportPurpose: 'High-memory GPUs, secure computing infrastructure, storage and evidence-processing capacity',
   supportLinkPolicy: 'Exactly one GoFundMe CTA inside the construction banner; other clearly labelled support routes elsewhere on the homepage are permitted.',
-  navigationRecovery: 'Desktop primary navigation and its links are explicitly visible and measurable after the welcome gate closes, including the canonical control-structure.html route.',
+  navigationRecovery: 'Desktop primary navigation and its links are explicitly visible and measurable after the welcome gate closes, including the canonical control-structure.html route in the header.',
   consequenceControlRecovery: consequenceRepairs,
   moneyDepthBuild: 'scripts/finalize-money-intelligence-depth.js',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; desktop navigation visibility and canonical Control System route repaired; consequence follow controls repaired; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);
+console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; desktop navigation visibility and canonical header Control System route repaired; consequence follow controls repaired; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);

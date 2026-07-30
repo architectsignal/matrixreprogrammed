@@ -158,10 +158,16 @@ await worker.scheduled({cron:'15 7 * * 1'},env,{waitUntil(promise){scheduledProm
 await Promise.all(scheduledPromises.splice(0));
 assert(scalar(db,"SELECT COUNT(*) FROM email_campaigns WHERE campaign_key='automation:daily:2026-07-13'")===1,'Daily automated campaign was not created');
 assert(scalar(db,"SELECT COUNT(*) FROM email_campaigns WHERE campaign_key='automation:weekly:2026-07-13'")===1,'Weekly automated campaign was not created');
-assert(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id IN (SELECT id FROM email_campaigns WHERE campaign_key LIKE 'automation:%') AND status='sent'")>=2,'Automated campaign sends were not completed');
-pass('daily-weekly-automated-sends');
+const automatedDailyOutbox=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id=(SELECT id FROM email_campaigns WHERE campaign_key='automation:daily:2026-07-13')"));
+const automatedWeeklySent=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id=(SELECT id FROM email_campaigns WHERE campaign_key='automation:weekly:2026-07-13') AND status='sent'"));
+const sameDayDailyBriefs=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND idempotency_key='daily-control-brief:subscriber-test-0001:2026-07-13' AND status='sent'"));
+assert(automatedDailyOutbox===0,'Scheduled daily automation duplicated the same-day verification brief');
+assert(automatedWeeklySent===1,'Weekly automated campaign was not sent exactly once');
+assert(sameDayDailyBriefs===1,'The subscriber must receive exactly one Daily Control Brief for the date');
+pass('daily-dedup-weekly-automation');
 
-const latestCampaignDelivery=db.prepare("SELECT d.provider_message_id FROM email_deliveries d JOIN email_campaigns c ON c.id=d.campaign_id WHERE c.campaign_key='automation:daily:2026-07-13' LIMIT 1").get();
+const latestCampaignDelivery=db.prepare("SELECT d.provider_message_id FROM email_deliveries d JOIN email_campaigns c ON c.id=d.campaign_id WHERE c.campaign_key='automation:weekly:2026-07-13' LIMIT 1").get();
+assert(latestCampaignDelivery?.provider_message_id,'Weekly automated delivery message ID missing');
 const bounce=await call('/api/email/provider-webhook',{method:'POST',headers:{'x-email-webhook-secret':env.EMAIL_WEBHOOK_SECRET,'x-brevo-request-id':'fixture-webhook-bounce'},body:{event:'hard_bounce',email:'clean.account@example.com','message-id':latestCampaignDelivery.provider_message_id,event_id:'fixture-event-bounce',date:'2026-07-13T12:02:00.000Z'}});
 assert(bounce.data.ok&&bounce.data.suppressions===1,'Hard-bounce webhook did not suppress the subscriber');
 assert(scalar(db,"SELECT COUNT(*) FROM members WHERE email='clean.account@example.com' AND marketing_status='bounced'")===1,'Bounce state was not recorded');

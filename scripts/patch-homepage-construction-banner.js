@@ -36,6 +36,7 @@ const banner = `${startMarker}<section id="matrix-construction-banner" class="ma
 
 function patchHtml(html) {
   let cleaned = String(html).replace(blockPattern, '').replace(navRepairPattern, '');
+  cleaned = cleaned.replace(/<a href=["']power-atlas\.html["']>Control System<\/a>/i, '<a href="control-structure.html">Control System</a>');
   if (/<\/head>/i.test(cleaned)) cleaned = cleaned.replace(/<\/head>/i, `${navRepair}</head>`);
   else throw new Error('Homepage construction banner could not find a head insertion point for navigation recovery');
   if (/<\/header>/i.test(cleaned)) return cleaned.replace(/<\/header>/i, `</header>${banner}`);
@@ -54,6 +55,7 @@ function ensureOne(file) {
   if (banners !== 1 || starts !== 1 || ends !== 1 || bannerBlocks.length !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
   if (bannerSupportLinks !== 1) throw new Error(`${path.relative(root, file)} construction banner does not contain exactly one GoFundMe support link`);
   if (navRepairs !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one desktop primary-navigation recovery rule`);
+  if (!/<a href=["']control-structure\.html["']>Control System<\/a>/i.test(html)) throw new Error(`${path.relative(root, file)} does not expose the canonical Control System route`);
 }
 
 function safeId(value) {
@@ -131,11 +133,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   supportRoute: supportUrl,
   supportPurpose: 'High-memory GPUs, secure computing infrastructure, storage and evidence-processing capacity',
   supportLinkPolicy: 'Exactly one GoFundMe CTA inside the construction banner; other clearly labelled support routes elsewhere on the homepage are permitted.',
-  navigationRecovery: 'Desktop primary navigation and its links are explicitly visible and measurable after the welcome gate closes.',
+  navigationRecovery: 'Desktop primary navigation and its links are explicitly visible and measurable after the welcome gate closes, including the canonical control-structure.html route.',
   consequenceControlRecovery: consequenceRepairs,
   moneyDepthBuild: 'scripts/finalize-money-intelligence-depth.js',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; desktop navigation visibility and consequence follow controls repaired; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);
+console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; desktop navigation visibility and canonical Control System route repaired; consequence follow controls repaired; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);

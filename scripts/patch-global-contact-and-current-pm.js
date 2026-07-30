@@ -33,7 +33,8 @@ function relativeHref(file, targetRoot, target) {
 function patchNavigation(file, html, targetRoot) {
   if (!/\.html$/i.test(file) || /contact-the-machine\.html$/i.test(file)) return html;
   const href = relativeHref(file, targetRoot, 'contact-the-machine.html');
-  const contact = `<a href="${href}">Contact</a>`;
+  const label = path.basename(file).toLowerCase() === 'index.html' ? 'Contact the Machine' : 'Contact';
+  const contact = `<a href="${href}">${label}</a>`;
   let changed = false;
   html = html.replace(/(<div\s+class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i, (match, open, body, close) => {
     if (/href=["'][^"']*contact-the-machine\.html["']/i.test(body)) return match;

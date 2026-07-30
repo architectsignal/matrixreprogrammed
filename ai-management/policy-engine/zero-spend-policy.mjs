@@ -26,9 +26,13 @@ function hostAllowed(resource, job) {
   return !allowed.length || allowed.some(host => hostname === String(host).toLowerCase());
 }
 
+function clamp(value, minimum = 0, maximum = 100) {
+  return Math.max(minimum, Math.min(maximum, Number(value || 0)));
+}
+
 export function utilityScore(resource, weights = DEFAULT_UTILITY_WEIGHTS) {
   return Number(Object.entries(weights).reduce((total, [field, weight]) => {
-    return total + Math.max(0, Math.min(100, Number(resource[field] || 0))) * weight;
+    return total + clamp(resource[field]) * weight;
   }, 0).toFixed(4));
 }
 
@@ -73,11 +77,28 @@ export function evaluateResource(resource, job, context = {}) {
     if (usable < Number(job.payload?.quota_units || 1)) reasons.push('quota-safety-margin-reached');
   }
 
-  return {
-    eligible: reasons.length === 0,
-    reasons,
-    utility_score: reasons.length ? null : utilityScore(resource, context.weights || DEFAULT_UTILITY_WEIGHTS)
-  };
+  let compatibility = null;
+  if (typeof context.resourceEligibilityEvaluator === 'function') {
+    try {
+      compatibility = context.resourceEligibilityEvaluator(resource, job, { ...context, now });
+      if (compatibility?.eligible === false) reasons.push(...(compatibility.reasons || ['resource-incompatible-with-job']));
+    } catch {
+      reasons.push('resource-compatibility-evaluation-failed');
+    }
+  }
+
+  let score = null;
+  let scoreAdjustment = 0;
+  if (!reasons.length) {
+    score = utilityScore(resource, context.weights || DEFAULT_UTILITY_WEIGHTS);
+    if (typeof context.resourceScoreAdjuster === 'function') {
+      try { scoreAdjustment = Number(context.resourceScoreAdjuster(resource, job, { ...context, now }) || 0); }
+      catch { scoreAdjustment = -100; }
+    }
+    score = Number(clamp(score + scoreAdjustment).toFixed(4));
+  }
+
+  return { eligible: reasons.length === 0, reasons, utility_score: score, score_adjustment: scoreAdjustment, compatibility };
 }
 
 export function rankResources(resources, job, context = {}) {
@@ -86,7 +107,7 @@ export function rankResources(resources, job, context = {}) {
   for (const resource of resources) {
     const decision = evaluateResource(resource, job, context);
     if (decision.eligible) eligible.push({ resource, ...decision });
-    else excluded.push({ resource_id: resource.resource_id, reasons: decision.reasons });
+    else excluded.push({ resource_id: resource.resource_id, reasons: decision.reasons, compatibility: decision.compatibility || null });
   }
   eligible.sort((left, right) =>
     right.utility_score - left.utility_score ||
@@ -96,4 +117,4 @@ export function rankResources(resources, job, context = {}) {
   return { eligible, excluded };
 }
 
-export const policyInternals = { dateExpired, dateStale, hostAllowed };
+export const policyInternals = { dateExpired, dateStale, hostAllowed, clamp };

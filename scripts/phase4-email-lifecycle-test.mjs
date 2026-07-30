@@ -50,8 +50,9 @@ db.exec(fs.readFileSync(path.join(root,'migrations/phase4_email_lifecycle.sql'),
 db.exec(fs.readFileSync(path.join(root,'migrations/phase4_email_lifecycle_portability.sql'),'utf8'));
 const d1=new D1Database(db);
 
-const workerSource=fs.readFileSync(path.join(root,'src/worker-email-lifecycle.js'),'utf8');
-const workerModule=await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
+const workerUrl=pathToFileURL(path.join(root,'src/worker-email-lifecycle.js'));
+workerUrl.searchParams.set('phase4-email-lifecycle-test','1');
+const workerModule=await import(workerUrl.href);
 const worker=workerModule.default;
 
 const providerCalls=[];

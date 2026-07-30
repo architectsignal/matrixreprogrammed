@@ -84,9 +84,9 @@ try {
     }
     const header = page.locator('header').first();
     await header.waitFor({ state: 'visible', timeout: 30000 });
-    const links = header.locator('a[href]');
+    const links = header.locator('a[href]:visible');
     const linkCount = await links.count();
-    assert(linkCount >= 8 && linkCount <= 16, `Homepage global navigation must remain focused; found ${linkCount} links`);
+    assert(linkCount >= 8 && linkCount <= 16, `Homepage global navigation must remain focused; found ${linkCount} visible links`);
     const hrefs = await links.evaluateAll(anchors => anchors.map(anchor => anchor.getAttribute('href') || ''));
     const labels = (await links.allInnerTexts()).map(label => label.replace(/\s+/g, ' ').trim().toLowerCase());
     const hasRoute = route => hrefs.some(href => href === route || href.endsWith(route));

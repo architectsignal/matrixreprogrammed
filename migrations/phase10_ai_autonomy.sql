@@ -1,7 +1,5 @@
 PRAGMA foreign_keys = ON;
 
-ALTER TABLE ai_resources ADD COLUMN metadata_json TEXT NOT NULL DEFAULT '{}';
-
 CREATE TABLE IF NOT EXISTS ai_resource_candidates (
   candidate_id TEXT PRIMARY KEY,
   source_url TEXT NOT NULL UNIQUE,

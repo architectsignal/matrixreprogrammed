@@ -164,3 +164,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.27-self-test.js
+
+      - name: Verify Phase 1.28 requests anonymous criteria review without identity, evidence or results
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.28-self-test.js

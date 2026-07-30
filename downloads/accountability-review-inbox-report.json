@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:27:30.455Z",
+  "patchedDashboards": 0,
+  "assets": [
+    "accountability-review-inbox.html",
+    "accountability-review-inbox.js"
+  ],
+  "checks": {
+    "linkedFromReviewDashboard": true,
+    "noIndex": true,
+    "tokenMemoryOnly": true,
+    "dueQueue": true,
+    "contractDetail": true,
+    "lockTerms": true,
+    "addEvidence": true,
+    "publishAssessment": true,
+    "evidenceLimits": true,
+    "namedReviewer": true,
+    "dueNotVerdict": true,
+    "publicTwinFallback": true,
+    "originalSourceFallback": true,
+    "evidenceRouteFallback": true
+  }
+}

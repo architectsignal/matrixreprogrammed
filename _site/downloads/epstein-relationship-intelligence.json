@@ -1,17 +1,19 @@
 {
   "schema_version": "2.0.0",
-  "generated_at_utc": "2026-07-21T23:43:40+00:00",
+  "generated_at_utc": "2026-07-30T06:27:28.145Z",
   "title": "THE EPSTEIN EMAIL NETWORK",
   "subtitle": "Follow the correspondence. Map the introductions. Trace the institutions, properties, investments and intermediaries.",
   "evidence_notice": "Appearance in an email, photograph, contact record, flight record or released document does not by itself establish misconduct. Matrix Reprogrammed separates documented contact, supported inference and unresolved speculation.",
   "publication_policy": {
-    "mode": "classified_public_record_publication",
+    "mode": "approved_public_record_only",
     "editorial_review_lane": "speculation",
     "public_record_unredacted": true,
     "principle": "Review changes the label and confidence, not whether a public record is visible.",
     "public_record_field_namespace": "public_record_*",
     "public_record_values_preserved": true,
-    "public_record_value_count": 0
+    "public_record_value_count": 0,
+    "automated_name_matches_publish": false,
+    "association_is_not_guilt": true
   },
   "source": {
     "name": "Jmail Data API",
@@ -7255,6 +7257,54 @@
         "Steve Bannon"
       ],
       "public_record_identifiers": []
+    },
+    {
+      "entity_id": "bill-gates",
+      "name": "Bill Gates",
+      "aliases": [
+        "William Henry Gates III",
+        "William Gates",
+        "Gates"
+      ],
+      "entity_type": "person",
+      "identity_confidence": "verified",
+      "dossier_routes": [
+        "top-52/bill-gates.html",
+        "billionaire-briefs/bill-gates.html"
+      ]
+    },
+    {
+      "entity_id": "jeffrey-epstein",
+      "name": "Jeffrey Epstein",
+      "aliases": [
+        "Jeffrey Edward Epstein",
+        "Jeff Epstein"
+      ],
+      "entity_type": "person",
+      "identity_confidence": "verified",
+      "dossier_routes": []
+    },
+    {
+      "entity_id": "ghislaine-maxwell",
+      "name": "Ghislaine Maxwell",
+      "aliases": [
+        "Ghislaine Noelle Marion Maxwell",
+        "Maxwell"
+      ],
+      "entity_type": "person",
+      "identity_confidence": "verified",
+      "dossier_routes": []
+    },
+    {
+      "entity_id": "deutsche-bank",
+      "name": "Deutsche Bank",
+      "aliases": [
+        "Deutsche Bank AG",
+        "Deutsche Bank Trust Company Americas"
+      ],
+      "entity_type": "institution",
+      "identity_confidence": "verified",
+      "dossier_routes": []
     }
   ],
   "relationships": [
@@ -55745,6 +55795,95 @@
         "reviewed_by": "",
         "summary": ""
       }
+    },
+    {
+      "relationship_id": "gates-epstein-meetings-2011-2014",
+      "source_entity_id": "bill-gates",
+      "target_entity_id": "jeffrey-epstein",
+      "relationship_type": "documented meetings and proposed philanthropic fundraising discussions",
+      "first_seen": "2011",
+      "last_seen": "2014",
+      "direct_or_inferred": "documented",
+      "public_safe_summary": "In prepared remarks for a June 10, 2026 House Oversight interview, Gates stated that he had three preliminary meetings with Epstein in 2011, two in 2012, and more extensive discussions in 2013 and 2014 about possible structures for major charitable giving. Gates stated that no vehicle was created, no funds were raised, Epstein received no role or compensation, and Gates stopped communicating or meeting with him in 2014.",
+      "established": "Gates acknowledges repeated meetings and discussions with Epstein between 2011 and 2014 after Epstein's 2008 conviction.",
+      "not_established": "The cited records do not establish that Gates participated in Epstein's crimes, visited Epstein's island, ranch or Florida home, created a joint charitable vehicle, paid Epstein, or knew of ongoing criminal conduct.",
+      "strength": {
+        "tier": 1,
+        "label": "A"
+      },
+      "evidence": [
+        {
+          "source_url": "https://oversight.house.gov/release/oversight-committee-releases-gates-and-groff-transcripts/",
+          "source_label": "House Oversight Committee release of Gates interview transcript",
+          "evidence_level": "primary_public_record",
+          "confidence": "A",
+          "public_safe_paraphrase": "In prepared remarks for a June 10, 2026 House Oversight interview, Gates stated that he had three preliminary meetings with Epstein in 2011, two in 2012, and more extensive discussions in 2013 and 2014 about possible structures for major charitable giving. Gates stated that no vehicle was created, no funds were raised, Epstein received no role or compensation, and Gates stopped communicating or meeting with him in 2014."
+        },
+        {
+          "source_url": "https://www.gatesnotes.com/home/home-page-topic/reader/house-oversight-committee-statement",
+          "source_label": "Bill Gates prepared statement to the House Oversight Committee",
+          "evidence_level": "supporting_public_record",
+          "confidence": "A",
+          "public_safe_paraphrase": "Gates described accepting the introduction as a grave error in judgment, denied witnessing or knowing of ongoing criminal conduct, and stated that he ended contact in 2014."
+        }
+      ]
+    },
+    {
+      "relationship_id": "maxwell-conviction-2021",
+      "source_entity_id": "ghislaine-maxwell",
+      "target_entity_id": "jeffrey-epstein",
+      "relationship_type": "adjudicated co-conspirator and long-term partner",
+      "first_seen": "1994",
+      "last_seen": "2022",
+      "direct_or_inferred": "adjudicated",
+      "public_safe_summary": "A federal jury convicted Maxwell in December 2021. The U.S. Attorney described the verdict as establishing that Maxwell facilitated and participated in the sexual abuse of children with her long-time partner and co-conspirator Jeffrey Epstein. She was sentenced to 20 years in 2022.",
+      "established": "Maxwell's federal conviction establishes her own adjudicated role in facilitating and participating in abuse with Epstein.",
+      "not_established": "Her conviction does not establish criminal responsibility for every employee, acquaintance, visitor, donor, passenger, correspondent or person appearing in an Epstein-related record.",
+      "strength": {
+        "tier": 1,
+        "label": "A"
+      },
+      "evidence": [
+        {
+          "source_url": "https://www.justice.gov/usao-sdny/pr/statement-us-attorney-damian-williams-verdict-us-v-ghislaine-maxwell",
+          "source_label": "SDNY statement on the verdict in United States v. Ghislaine Maxwell",
+          "evidence_level": "primary_public_record",
+          "confidence": "A",
+          "public_safe_paraphrase": "A federal jury convicted Maxwell in December 2021. The U.S. Attorney described the verdict as establishing that Maxwell facilitated and participated in the sexual abuse of children with her long-time partner and co-conspirator Jeffrey Epstein. She was sentenced to 20 years in 2022."
+        },
+        {
+          "source_url": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+          "source_label": "SDNY human trafficking and sexual exploitation case summary",
+          "evidence_level": "supporting_public_record",
+          "confidence": "A",
+          "public_safe_paraphrase": "Maxwell denied wrongdoing and exercised trial and appellate rights."
+        }
+      ]
+    },
+    {
+      "relationship_id": "deutsche-bank-epstein-dfs-2020",
+      "source_entity_id": "deutsche-bank",
+      "target_entity_id": "jeffrey-epstein",
+      "relationship_type": "banking relationship and regulatory compliance failure",
+      "first_seen": "2020",
+      "last_seen": "2020",
+      "direct_or_inferred": "documented",
+      "public_safe_summary": "The New York Department of Financial Services announced a $150 million penalty and consent order against Deutsche Bank for significant compliance failures connected with its relationship with Jeffrey Epstein and separate correspondent-banking relationships.",
+      "established": "The regulator documented a banking relationship with Epstein and compliance failures within the exact scope of the consent order.",
+      "not_established": "The order does not establish criminal liability for every employee, executive, shareholder or customer of Deutsche Bank and must not be transferred to individuals without separate evidence.",
+      "strength": {
+        "tier": 1,
+        "label": "A"
+      },
+      "evidence": [
+        {
+          "source_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr202007071",
+          "source_label": "New York DFS enforcement announcement",
+          "evidence_level": "primary_public_record",
+          "confidence": "A",
+          "public_safe_paraphrase": "The New York Department of Financial Services announced a $150 million penalty and consent order against Deutsche Bank for significant compliance failures connected with its relationship with Jeffrey Epstein and separate correspondent-banking relationships."
+        }
+      ]
     }
   ],
   "events": [
@@ -56533,8 +56672,8 @@
   "mentions": [],
   "editorial_review": [],
   "counts": {
-    "entities": 703,
-    "relationships": 850,
+    "entities": 707,
+    "relationships": 853,
     "events": 20,
     "financial_records": 1,
     "mentions": 0,

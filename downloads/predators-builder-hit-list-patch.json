@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:27:29.115Z",
+  "changed": true,
+  "builder": "scripts/build-predators-in-power.js",
+  "checks": {
+    "marker": true,
+    "hitListRoute": true,
+    "timerRoute": true,
+    "sourceRoute": true,
+    "correctionRoute": true,
+    "failClosed": true
+  },
+  "boundary": "The canonical Predators in Power generator must emit the Exposure Integrity navigation block itself so late reconciliation cannot remove the link."
+}

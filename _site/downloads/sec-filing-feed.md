@@ -1,6 +1,6 @@
 # SEC Filing Feed
 
-Updated: 2026-07-28T06:24:35.321Z
+Updated: 2026-07-30T06:23:34.009Z
 
 This feed captures official SEC filing metadata only. It does not verify narrative content until the selected annual filing is reviewed and classified.
 
@@ -47,12 +47,12 @@ This feed captures official SEC filing metadata only. It does not verify narrati
 - Ticker: MSFT
 - SEC submissions: https://data.sec.gov/submissions/CIK0000789019.json
 - Latest annual: 10-K
-- Filing date: 2025-07-30
-- Report date: 2025-06-30
-- Accession: 0000950170-25-100235
-- Primary document: msft-20250630.htm
-- Archive: https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/
-- Next action: Review msft-20250630.htm
+- Filing date: 2026-07-29
+- Report date: 2026-06-30
+- Accession: 0001193125-26-323660
+- Primary document: msft-20260630.htm
+- Archive: https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/
+- Next action: Review msft-20260630.htm
 
 ### SEC-004 — Alphabet Inc.
 

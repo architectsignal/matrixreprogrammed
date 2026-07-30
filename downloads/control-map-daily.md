@@ -1,6 +1,6 @@
 # Daily / Weekly Visual Control Map
 
-Generated: 2026-07-28T06:58:45.801Z
+Generated: 2026-07-30T06:22:55.673Z
 
 Boundary: The visual map is generated from site data. Nodes are evidence routes, not verdicts.
 
@@ -47,5 +47,5 @@ Boundary: The visual map is generated from site data. Nodes are evidence routes,
 - 80 — Top contractor lane — contractor-briefs/blackwater-constellis-lineage.html
 - 80 — Top institution lane — institution-briefs/united-nations.html
 - 80 — Top billionaire lane — billionaire-briefs/elon-musk.html
-- 80 — Most important missing record — entity-briefs/centers-for-medicare-and-medicaid-services.html
+- 80 — Most important missing record — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 80 — One-world governance convergence — power-structure-map.html

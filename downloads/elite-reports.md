@@ -1,12 +1,18 @@
 # Elite Reports
 
-Generated: 2026-07-28T06:58:34.892Z
+Generated: 2026-07-30T06:22:39.109Z
 
 ## Daily Revelation Report
 
-Conflict and crisis put six World Heritage sites at risk
+Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
 
 Source: daily-command-brief.html
+
+## Appellate Division of the Supreme Court of the State of New York — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
 
 ## Centers for Medicare & Medicaid Services — Entity Report
 
@@ -20,7 +26,13 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 2021-00294 — Entity Report
+## 2021-08825 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## 2024-13374 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
@@ -38,31 +50,19 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
+## 24-2251 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
 ## 24-7261 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 25-113 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## A170747M — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Appellate Division of the Supreme Court of the State of New York — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## California Court of Appeal — Entity Report
+## Civil Rights Corps v. LaSalle — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

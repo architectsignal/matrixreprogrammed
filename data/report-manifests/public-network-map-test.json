@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:53:49.947Z",
+  "generatedAt": "2026-07-30T06:17:36.724Z",
   "pageCount": 134,
   "output": "downloads/public-network-map-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Public Network Map Test",
-    "contentHash": "9c70499bdc9b79ac4f2a43eadc6bbcc449835ecce3055acffcc7dc0e5c22c868",
+    "contentHash": "0c75ca6de08edbf28ec1bf7ded7f27c26d781617996c16c09bbb626b1bb91dd3",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
       "45f5269389def99607b5a517",
@@ -34,6 +34,7 @@
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
       "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-06CC87AEAF289EB7",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
@@ -54,7 +55,6 @@
       "ASC-REVIEW-20316213EFD183CC",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
-      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -80,16 +80,18 @@
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-17CC1B265DD7385B",
+      "ASC-REVIEW-288CD8D5C42C050E",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-13C647485101902F",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-132F1165BCAFF798",
       "ASC-REVIEW-676D0168C06458FA",
-      "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -99,6 +101,7 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-8060982E06C7C2CC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -135,7 +138,6 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-A587A49D50D6CDC2",
       "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-11446D58C9F4E2B6",
       "ASC-REVIEW-0F86A972B08C9E18",
       "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1"
+      "ASC-REVIEW-7640579815B0B893"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 133,
-      "newEntityCount": 2,
+      "disputedClaimCount": 134,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 118,
-      "moneyRecordCount": 118
+      "relationshipCount": 117,
+      "moneyRecordCount": 115
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
+        "conclusion": "The most defensible current assessment is based on “Matrix Reprogrammed Structured Investigation Schema,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 117 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Structured Investigation Schema; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Breakspear → Name Lineage: layer hint; Influence should be mapped through infrastructure, filings and contracts.; SAIC / Leidos lineage → Intelligence: execution layer; BlackRock → Private Markets Infrastructure Expansion: capital layer; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 117 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Structured Investigation Schema",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T06:17:36.724Z"
   }
 }

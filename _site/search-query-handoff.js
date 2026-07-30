@@ -1,0 +1,1 @@
+(()=>{const q=new URLSearchParams(location.search).get('q');if(!q)return;const apply=()=>{const input=document.getElementById('archive-search');if(!input)return false;input.value=q;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();return true};if(!apply())document.addEventListener('DOMContentLoaded',apply,{once:true})})();

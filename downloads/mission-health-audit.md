@@ -1,14 +1,14 @@
 # Mission Health Audit
 
-Updated: 2026-07-28T06:58:54.177Z
+Updated: 2026-07-30T06:23:08.187Z
 
 Mission health: OK
 
 Cards: 468
 
-Search documents: 4351
+Search documents: 4435
 
-Cross-reference nodes: 3698
+Cross-reference nodes: 3781
 
 Search missing routes: 0
 

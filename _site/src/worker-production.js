@@ -3,6 +3,8 @@ import emailWorker, { emailRoutes, processOutbox } from './worker-email-lifecycl
 import intelligenceReportWorker, { isIntelligenceReportRoute } from './worker-intelligence-reports.js';
 import contactWorker, { contactRoutes } from './worker-contact-intake.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
+import consequenceTrackerWorker, { isConsequenceTrackerRoute } from './worker-consequence-tracker.js';
+import consequenceEvidenceWorker, { isConsequenceEvidenceRoute } from './worker-consequence-evidence.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
 import rehearsalWorker, {
@@ -18,6 +20,8 @@ import {
   enforceProtectedAssetAccess,
   protectedAssetTier
 } from './worker-access-gate.js';
+
+const CONSEQUENCE_TRACKER_CRON = '25 5 * * *';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -245,6 +249,22 @@ async function validateMemberResponse(response) {
   return response;
 }
 
+async function validateConsequenceEvidenceResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-consequence-evidence') {
+    return unavailable('non-authoritative-consequence-evidence-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
+async function validateConsequenceTrackerResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-consequence-tracker') {
+    return unavailable('non-authoritative-consequence-tracker-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
 async function validateAuthResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-api') {
@@ -303,6 +323,24 @@ export default {
         if (denied) return denied;
       } catch (error) {
         return unavailable('protected-asset-gate-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
+    if (isConsequenceEvidenceRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateConsequenceEvidenceResponse(await consequenceEvidenceWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('consequence-evidence-worker-exception', error?.message || error, 'member');
+      }
+    }
+
+    if (isConsequenceTrackerRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateConsequenceTrackerResponse(await consequenceTrackerWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('consequence-tracker-worker-exception', error?.message || error, 'member');
       }
     }
 
@@ -404,6 +442,10 @@ export default {
 
   async scheduled(event, env, ctx) {
     if (!hasD1(env)) return;
+    if (event?.cron === CONSEQUENCE_TRACKER_CRON) {
+      await consequenceTrackerWorker.scheduled(event, env, ctx);
+      return;
+    }
     await queuePendingVerifiedSelfReports(env, { limit: 100 });
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),

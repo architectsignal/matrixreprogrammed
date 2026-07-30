@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-07-28T06:54:31.166Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-30T06:18:16.724Z",
+  "pageCount": 128,
   "output": "downloads/search-runtime-hardening-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Search Runtime Hardening Report",
-    "contentHash": "563dd6ecdd711f2333139977bc6498488b3e8b0bb796edff9d81977ecd8445e0",
+    "contentHash": "096cae3978dc1060e2a59f77dfbc789f0939ad72cb0bf799b45ae42d9c9abd45",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "71e0563ca7b139c37c302956",
       "360e80c162081c85d2c680ef",
-      "43ba47db9b71dc20b9cfcfb0",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
@@ -36,11 +35,13 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-E76F1740FFF4E811",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-CE615863A9722AC5",
+      "04178dd78ae55a022df89f05",
+      "7ee9141a42ad539f58a57e50",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
@@ -51,9 +52,6 @@
       "7dcf4ef18ea1f86d01068773",
       "7f5b91c14c671bd24b8bbd81",
       "511ed227bb4be58b582ebb8d",
-      "2482c3e0241c7c7679a18cd1",
-      "96c24b16f820cebf7d9a03fe",
-      "40dd9b6b261ef87e0cbe3fa6",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,21 +144,23 @@
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
       "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E"
+      "ASC-REVIEW-00A30F616825A65E",
+      "ASC-REVIEW-7640579815B0B893",
+      "ASC-REVIEW-36CFBB8E5F6A4E74"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 14,
-      "disputedClaimCount": 124,
-      "newEntityCount": 2,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 126,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 114,
+      "relationshipCount": 115,
       "moneyRecordCount": 111
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Search Runtime Hardening Report.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Search Runtime Hardening Report.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Top contractor lane; Matrix Reprogrammed Canonical Intelligence Record; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer; Blackwater / Xe / Academi / Constellis lineage → security: execution layer; Blackwater / Xe / Academi / Constellis lineage → war: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Top contractor lane",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T06:18:16.724Z"
   }
 }

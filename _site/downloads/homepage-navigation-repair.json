@@ -1,11 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:23:03.612Z",
+  "generatedAt": "2026-07-30T06:21:59.331Z",
   "changed": [
     "index.html",
     "_site/index.html",
     "_site/index"
   ],
+  "preservedSearchFirst": [],
   "primaryRoutes": [
     "start-here.html",
     "books.html",
@@ -71,6 +72,22 @@
     "download-center.html",
     "trust-center.html",
     "contact-the-machine.html"
+  ],
+  "searchFirstMarkers": [
+    "class=\"accountability-home\"",
+    "id=\"accountability-search\"",
+    "id=\"accountability-hit-list\"",
+    "id=\"open-question-ledger\"",
+    "id=\"explore-system\"",
+    "href=\"hit-list.html\"",
+    "href=\"evidence-vault.html\"",
+    "contact-the-machine.html"
+  ],
+  "searchFirstAlternativeRoutes": [
+    [
+      "member-dashboard.html",
+      "member-login.html"
+    ]
   ],
   "protectedPublicRoutes": [
     "death-files.html",

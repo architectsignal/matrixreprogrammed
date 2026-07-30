@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:25:10.052Z",
+  "generatedAt": "2026-07-30T06:24:08.573Z",
   "promotionMargin": 14,
   "decisions": {
     "person": {
       "changed": false,
-      "reason": "Defendant Kidd reached 127, below the 149 points required to replace the incumbent.",
+      "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
       "incumbent": "Bill Gates",
       "incumbentScore": 135,
-      "challenger": "Defendant Kidd",
-      "challengerScore": 127,
+      "challenger": "Elon Musk",
+      "challengerScore": 91,
       "required": 149,
       "marginRequired": 14
     },
@@ -22,9 +22,12 @@
     },
     "family": {
       "changed": false,
-      "reason": "The same entity remains the current evidence leader.",
+      "reason": "Al Thani family did not carry enough direct fresh evidence to replace the incumbent.",
+      "incumbent": "Wallenberg family and foundations",
       "incumbentScore": 122,
+      "challenger": "Al Thani family",
       "challengerScore": 122,
+      "required": 136,
       "marginRequired": 14
     }
   }

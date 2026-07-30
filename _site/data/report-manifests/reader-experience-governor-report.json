@@ -1,17 +1,14 @@
 {
-  "generatedAt": "2026-07-28T06:19:11.456Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-30T06:17:58.796Z",
+  "pageCount": 131,
   "output": "downloads/reader-experience-governor-report.pdf",
   "report": {
-    "version": 5,
+    "version": 7,
     "title": "Reader Experience Governor",
-    "contentHash": "fc09cfd56293ec4b7ecedd6d2cbbaf16fd14ef5975d4255a243cd1d99bec58dc",
+    "contentHash": "7fec7e12dd7bddb6a5d25ad3e1758ef3171817236455538c94df1dcf1da733af",
     "sourceIds": [
-      "96c24b16f820cebf7d9a03fe",
       "f3676fb7b03d3ee0516f2a19",
       "4fc2f377f4969f7074a7e989",
-      "ASC-REVIEW-7A271098BC2FC4DF",
-      "ASC-REVIEW-E88A7B581690918F",
       "e72d22f4f28eb53e3173d0a6",
       "57c45b5418e8e6b512f06603",
       "b4cb47ea50dc901364239e9f",
@@ -35,11 +32,16 @@
       "cf467db509437fdae7aae4f2",
       "b0bc5bb08386785c28b2bbff",
       "83ef6f58803306735c007289",
-      "ASC-REVIEW-5C5C06E1BEAB6D4A",
-      "ASC-REVIEW-86C9D5939E18DD15",
-      "ASC-REVIEW-04E1CD15682BDB86",
-      "ASC-REVIEW-321848A1083FB3CE",
-      "ASC-REVIEW-95DEAFF6FF08FD3D",
+      "maxwell-appeal-2025",
+      "r-kelly-appellate-finality-2025",
+      "epstein-opr-review-2020",
+      "cyril-smith-westminster-2020",
+      "cyril-smith-iicsa-2018",
+      "peter-ball-conviction-2015",
+      "janner-charges-2015",
+      "savile-health-investigations-2014",
+      "savile-broadmoor-2014",
+      "epstein-florida-plea-2008",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -71,6 +73,7 @@
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
+      "ASC-REVIEW-E88A7B581690918F",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
@@ -78,7 +81,9 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-4977B61988022C21",
+      "ASC-REVIEW-0807002D2DF4DE89",
+      "ASC-REVIEW-1317EEF720A36A76",
+      "ASC-REVIEW-1B2E5D07E27D9811",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -88,12 +93,13 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-13C647485101902F",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-132F1165BCAFF798",
       "ASC-REVIEW-676D0168C06458FA",
-      "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -103,12 +109,10 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -142,25 +146,21 @@
       "ASC-REVIEW-FE9A5B02284E30E4",
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
-      "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-4C256A755BDBA2D3",
-      "ASC-REVIEW-90FA3F8805F271FF",
-      "ASC-REVIEW-D33599099BE12C6C",
-      "ASC-REVIEW-8FE8E072E8149C71"
+      "ASC-REVIEW-B1D0DFCBB6CF0079"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 25,
-      "disputedClaimCount": 114,
+      "primarySourceCount": 34,
+      "disputedClaimCount": 107,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 107,
-      "moneyRecordCount": 106
+      "relationshipCount": 103,
+      "moneyRecordCount": 100
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Reader Experience Governor.",
-        "evidence": "Submission for Office of Management and Budget Review; Temporary Assistance for Needy Families (TANF) Financial Report, ACF-196T (data/investigation-ledger-archive.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); U.S. Department of Justice (data/search-index.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); 2026 Rule of Law Report says media-market concentration and editorial independence concerns persist (data/clock-wall.json)",
+        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Reader Experience Governor.",
+        "evidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); U.S. Department of Justice (data/search-index.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); 2026 Rule of Law Report says media-market concentration and editorial independence concerns persist (data/clock-wall.json); Euro area inflation was 2.8% in June 2026 while energy prices were 8.7% higher than a year earlier (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Booz Allen Hamilton → Public Money: execution layer; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "inference": "The indexed set contains 103 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 103 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "Booz Allen Hamilton → Public Money: execution layer",
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings"
+          "Westminster inquiry examined political and policing responses",
+          "IICSA documented predatory activities and institutional failures",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "Bernard Arnault → Luxury Networks: ecosystem hint",
+          "Bernard Arnault → Lvmh: ecosystem hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-21T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
   }
 }

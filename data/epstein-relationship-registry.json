@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-07-28",
+  "purpose": "Authoritative, evidence-bounded Epstein relationship records for Matrix Reprogrammed dossiers. The registry distinguishes documented contact, adjudicated participation, official civil or regulatory findings, public-record mentions and unsupported claims.",
+  "publicationRule": "Only records with publicationStatus=approved and a traceable source URL are rendered. Appearance in a released file, address book, photograph, flight record, email or meeting record does not by itself establish criminal knowledge, participation or wrongdoing.",
+  "rules": [
+    "Documented contact is not evidence of participation in Epstein's crimes.",
+    "A released-file mention is classified by the exact record type and context, not by name appearance alone.",
+    "Criminal responsibility requires an adjudicated outcome or an accurately labelled official allegation tied to the named subject.",
+    "Every record must preserve source authority, date range, what is established, what is not established, right of reply or counter-evidence, and the next records needed.",
+    "Automated or fuzzy name matches never publish without an approved registry record.",
+    "Every dossier receives an Epstein-overlap status panel; a no-match panel is not clearance or exoneration."
+  ],
+  "categories": {
+    "principal_subject": {
+      "label": "Principal Epstein Case Subject",
+      "classification": "adjudicated_or_official_case_record"
+    },
+    "adjudicated_co_conspirator": {
+      "label": "Adjudicated Epstein Co-conspirator",
+      "classification": "final_criminal_judgment"
+    },
+    "documented_contact": {
+      "label": "Documented Contact / Meetings",
+      "classification": "documented_public_record"
+    },
+    "institutional_financial_relationship": {
+      "label": "Documented Institutional / Financial Relationship",
+      "classification": "official_regulatory_or_court_record"
+    },
+    "released_file_mention": {
+      "label": "Released-file Mention",
+      "classification": "context_limited_public_record"
+    }
+  },
+  "subjects": {
+    "bill-gates": {
+      "name": "Bill Gates",
+      "aliases": [
+        "William Henry Gates III",
+        "William Gates",
+        "Gates"
+      ],
+      "subjectType": "person",
+      "dossierRoutes": [
+        "top-52/bill-gates.html",
+        "billionaire-briefs/bill-gates.html"
+      ],
+      "overlapStatusSummary": "Documented meetings and philanthropic-fundraising discussions with Jeffrey Epstein from 2011 through 2014, after Epstein's 2008 conviction. Gates states that the discussions produced no charitable vehicle or funds and that contact ended in 2014.",
+      "records": [
+        {
+          "id": "gates-epstein-meetings-2011-2014",
+          "category": "documented_contact",
+          "title": "Meetings and philanthropic-fundraising discussions, 2011–2014",
+          "relationshipType": "documented meetings and proposed philanthropic fundraising discussions",
+          "dateRange": "2011–2014",
+          "summary": "In prepared remarks for a June 10, 2026 House Oversight interview, Gates stated that he had three preliminary meetings with Epstein in 2011, two in 2012, and more extensive discussions in 2013 and 2014 about possible structures for major charitable giving. Gates stated that no vehicle was created, no funds were raised, Epstein received no role or compensation, and Gates stopped communicating or meeting with him in 2014.",
+          "sourceLabel": "House Oversight Committee release of Gates interview transcript",
+          "sourceUrl": "https://oversight.house.gov/release/oversight-committee-releases-gates-and-groff-transcripts/",
+          "sourceAuthority": "primary_official",
+          "supportingSourceLabel": "Bill Gates prepared statement to the House Oversight Committee",
+          "supportingSourceUrl": "https://www.gatesnotes.com/home/home-page-topic/reader/house-oversight-committee-statement",
+          "evidenceGrade": "A",
+          "publicationStatus": "approved",
+          "established": "Gates acknowledges repeated meetings and discussions with Epstein between 2011 and 2014 after Epstein's 2008 conviction.",
+          "notEstablished": "The cited records do not establish that Gates participated in Epstein's crimes, visited Epstein's island, ranch or Florida home, created a joint charitable vehicle, paid Epstein, or knew of ongoing criminal conduct.",
+          "rightOfReply": "Gates described accepting the introduction as a grave error in judgment, denied witnessing or knowing of ongoing criminal conduct, and stated that he ended contact in 2014.",
+          "investigativeSignificance": "The record is relevant to how Epstein obtained post-conviction access to globally influential philanthropic networks. It supports an elite-access and reputation-rehabilitation research lane, not a criminal-participation conclusion.",
+          "nextRecords": [
+            "Complete House interview transcript and exhibits",
+            "Contemporaneous calendars and meeting records",
+            "Foundation due-diligence and internal correspondence",
+            "Any documented proposed donor vehicle or participant list"
+          ],
+          "lastChecked": "2026-07-28"
+        }
+      ]
+    },
+    "jeffrey-epstein": {
+      "name": "Jeffrey Epstein",
+      "aliases": [
+        "Jeffrey Edward Epstein",
+        "Jeff Epstein"
+      ],
+      "subjectType": "person",
+      "dossierRoutes": [],
+      "overlapStatusSummary": "Principal subject of the Epstein criminal cases and public-record archive.",
+      "records": [
+        {
+          "id": "epstein-federal-indictment-2019",
+          "category": "principal_subject",
+          "title": "2019 federal sex-trafficking indictment",
+          "relationshipType": "principal criminal case subject",
+          "dateRange": "2002–2005 alleged conduct; indictment filed 2019",
+          "summary": "The U.S. Attorney's Office for the Southern District of New York charged Epstein in 2019 with sex trafficking of minors and conspiracy, alleging the sexual exploitation and abuse of dozens of underage girls. Epstein died before trial, so the federal allegations were not adjudicated.",
+          "sourceLabel": "SDNY: Jeffrey Epstein charged with sex trafficking of minors",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/jeffrey-epstein-charged-manhattan-federal-court-sex-trafficking-minors",
+          "sourceAuthority": "primary_official",
+          "evidenceGrade": "A",
+          "publicationStatus": "approved",
+          "established": "Epstein was arrested and federally indicted in 2019 on the stated charges; the public DOJ Epstein Library also preserves Florida, federal and related court records.",
+          "notEstablished": "The 2019 indictment itself was an allegation and did not result in a trial verdict because Epstein died before trial.",
+          "rightOfReply": "The DOJ charging release states that the charges were accusations and that the presumption of innocence applied.",
+          "investigativeSignificance": "This is the central case record against which all claimed relationships must be classified and bounded.",
+          "nextRecords": [
+            "Florida judgments and plea records",
+            "Federal indictment and docket",
+            "Victim-safe released records",
+            "Maxwell trial and appellate records"
+          ],
+          "lastChecked": "2026-07-28"
+        }
+      ]
+    },
+    "ghislaine-maxwell": {
+      "name": "Ghislaine Maxwell",
+      "aliases": [
+        "Ghislaine Noelle Marion Maxwell",
+        "Maxwell"
+      ],
+      "subjectType": "person",
+      "dossierRoutes": [],
+      "overlapStatusSummary": "Convicted in federal court for facilitating and participating in the sexual abuse of children with Jeffrey Epstein and later sentenced to 20 years.",
+      "records": [
+        {
+          "id": "maxwell-conviction-2021",
+          "category": "adjudicated_co_conspirator",
+          "title": "Federal jury conviction for conspiring with Epstein to sexually abuse minors",
+          "relationshipType": "adjudicated co-conspirator and long-term partner",
+          "dateRange": "1994–2004 offense period; conviction 2021; sentence 2022",
+          "summary": "A federal jury convicted Maxwell in December 2021. The U.S. Attorney described the verdict as establishing that Maxwell facilitated and participated in the sexual abuse of children with her long-time partner and co-conspirator Jeffrey Epstein. She was sentenced to 20 years in 2022.",
+          "sourceLabel": "SDNY statement on the verdict in United States v. Ghislaine Maxwell",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/statement-us-attorney-damian-williams-verdict-us-v-ghislaine-maxwell",
+          "sourceAuthority": "primary_official",
+          "supportingSourceLabel": "SDNY human trafficking and sexual exploitation case summary",
+          "supportingSourceUrl": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+          "evidenceGrade": "A",
+          "publicationStatus": "approved",
+          "established": "Maxwell's federal conviction establishes her own adjudicated role in facilitating and participating in abuse with Epstein.",
+          "notEstablished": "Her conviction does not establish criminal responsibility for every employee, acquaintance, visitor, donor, passenger, correspondent or person appearing in an Epstein-related record.",
+          "rightOfReply": "Maxwell denied wrongdoing and exercised trial and appellate rights.",
+          "investigativeSignificance": "The conviction supplies an adjudicated relationship edge and a legal benchmark for separating proven participation from mere contact or mention.",
+          "nextRecords": [
+            "Judgment and sentence",
+            "Appellate dispositions",
+            "Trial exhibits released under victim-protection rules"
+          ],
+          "lastChecked": "2026-07-28"
+        }
+      ]
+    },
+    "deutsche-bank": {
+      "name": "Deutsche Bank",
+      "aliases": [
+        "Deutsche Bank AG",
+        "Deutsche Bank Trust Company Americas"
+      ],
+      "subjectType": "institution",
+      "dossierRoutes": [],
+      "overlapStatusSummary": "New York's financial regulator imposed a $150 million penalty in 2020 for significant compliance failures connected in part to Deutsche Bank's relationship with Jeffrey Epstein.",
+      "records": [
+        {
+          "id": "deutsche-bank-epstein-dfs-2020",
+          "category": "institutional_financial_relationship",
+          "title": "New York DFS enforcement action concerning the bank's Epstein relationship",
+          "relationshipType": "banking relationship and regulatory compliance failure",
+          "dateRange": "relationship reviewed through 2020 enforcement action",
+          "summary": "The New York Department of Financial Services announced a $150 million penalty and consent order against Deutsche Bank for significant compliance failures connected with its relationship with Jeffrey Epstein and separate correspondent-banking relationships.",
+          "sourceLabel": "New York DFS enforcement announcement",
+          "sourceUrl": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr202007071",
+          "sourceAuthority": "primary_regulator",
+          "evidenceGrade": "A",
+          "publicationStatus": "approved",
+          "established": "The regulator documented a banking relationship with Epstein and compliance failures within the exact scope of the consent order.",
+          "notEstablished": "The order does not establish criminal liability for every employee, executive, shareholder or customer of Deutsche Bank and must not be transferred to individuals without separate evidence.",
+          "rightOfReply": "The bank entered the consent order and agreed to the stated penalty and remedial obligations.",
+          "investigativeSignificance": "The record supports investigation of financial-institution gatekeeping, monitoring failures and post-conviction service access.",
+          "nextRecords": [
+            "DFS consent order",
+            "Account-opening and enhanced-due-diligence records",
+            "Escalation and transaction-monitoring records",
+            "Remediation reports"
+          ],
+          "lastChecked": "2026-07-28"
+        }
+      ]
+    }
+  }
+}

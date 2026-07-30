@@ -8,14 +8,14 @@
   const replayButton = document.querySelector('[data-replay-gate]');
   const typeTarget = gate.querySelector('[data-gate-type]');
   const actions = gate.querySelector('.gate-actions');
-  const storageKey = 'matrix-reprogrammed-signal-gate-entered';
+  const storageKey = 'matrix-reprogrammed-signal-gate-entered-accountability-v1';
   const voicePreferenceKey = 'matrix-reprogrammed-signal-gate-voice';
   const introLines = [
     '> WELCOME TO MATRIX REPROGRAMMED',
-    '> Power leaves a paper trail.',
-    '> Follow the money. Check the record.',
-    '> The machine watches what changes.',
-    '> The truth is not hidden. It is encoded.'
+    '> Matrix Reprogrammed is a public accountability system where anyone can search a consequence, trace it backwards through decisions, authority and money, follow the unanswered questions, and return to see what actually happened.',
+    '> SEARCH THE CONSEQUENCE.',
+    '> TRACE THE POWER.',
+    '> FOLLOW THE OUTCOME.'
   ];
   const introSpeechText = introLines
     .map(line => line.replace(/^>\s*/, ''))
@@ -33,7 +33,7 @@
     if (window.speechSynthesis) window.speechSynthesis.cancel();
     if (voiceButton) {
       voiceButton.classList.remove('is-speaking');
-      voiceButton.textContent = 'Voice Intro';
+      voiceButton.textContent = 'Play Voice Mission';
       voiceButton.setAttribute('aria-pressed', 'false');
     }
   }
@@ -65,8 +65,8 @@
     utterance.rate = 0.86;
     utterance.pitch = 0.72;
     utterance.volume = 0.9;
-    utterance.onend = () => setVoiceStatus('Voice Intro', false);
-    utterance.onerror = () => setVoiceStatus('Voice Intro', false);
+    utterance.onend = () => setVoiceStatus('Play Voice Mission', false);
+    utterance.onerror = () => setVoiceStatus('Play Voice Mission', false);
     window.speechSynthesis.speak(utterance);
     setVoiceStatus('Browser Voice', true);
     return true;
@@ -89,17 +89,17 @@
       currentAudio = new Audio(url);
       currentAudio.addEventListener('ended', () => {
         URL.revokeObjectURL(url);
-        setVoiceStatus('Voice Intro', false);
+        setVoiceStatus('Play Voice Mission', false);
       });
       currentAudio.addEventListener('error', () => {
         URL.revokeObjectURL(url);
-        if (!browserSpeechFallback()) setVoiceStatus('Voice Intro', false);
+        if (!browserSpeechFallback()) setVoiceStatus('Play Voice Mission', false);
       });
       await currentAudio.play();
       setVoiceStatus('ElevenLabs Voice', true);
       return true;
     } catch (error) {
-      if (!browserSpeechFallback()) setVoiceStatus('Voice Intro', false);
+      if (!browserSpeechFallback()) setVoiceStatus('Play Voice Mission', false);
       return false;
     }
   }
@@ -142,7 +142,7 @@
     voiceButton.className = 'gate-voice';
     voiceButton.type = 'button';
     voiceButton.dataset.gateVoice = 'true';
-    voiceButton.textContent = 'Voice Intro';
+    voiceButton.textContent = 'Play Voice Mission';
     voiceButton.setAttribute('aria-pressed', 'false');
     voiceButton.addEventListener('click', () => {
       if (voiceButton.classList.contains('is-speaking')) {
@@ -182,7 +182,7 @@
   }
 
   addVoiceButton();
-  mountHomepageCommandRail();
+  if (!document.body.classList.contains('accountability-home')) mountHomepageCommandRail();
 
   if (localStorage.getItem(storageKey) === 'true') {
     hideGate(false);

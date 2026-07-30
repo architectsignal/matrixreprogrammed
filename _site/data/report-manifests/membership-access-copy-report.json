@@ -1,28 +1,30 @@
 {
-  "generatedAt": "2026-07-28T06:16:51.855Z",
-  "pageCount": 130,
+  "generatedAt": "2026-07-30T06:15:35.679Z",
+  "pageCount": 128,
   "output": "downloads/membership-access-copy-report.pdf",
   "report": {
-    "version": 5,
+    "version": 7,
     "title": "Membership Access Copy Report",
-    "contentHash": "25ebb589b2cd4a58a7b48c68d397cf5ddd02053ef972e5ee92badba6e6901bce",
+    "contentHash": "6d28c2d36da96b1a4ba69596bf4ef7cb58daa1c4dedccae54f65f4f88bdc7ca4",
     "sourceIds": [
+      "04178dd78ae55a022df89f05",
+      "d10a3c874af4d2b467263ee1",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "source-change-d5adf164b612fd92a1dca692",
-      "source-change-ea906ec638c352f7dced1c63",
-      "source-change-5594665950812895f468c11d",
-      "source-change-49679b1ed63de244c1cf19f9",
-      "source-change-e853e2cce33f37c0619d2433",
-      "source-change-145721767ca69c32bb4875e5",
-      "source-change-46042e30fdcccc9e94aee0af",
-      "source-change-2931a84c2c7fe86982d5d6e5",
+      "source-change-205bd2407ea96080fdae5fe8",
+      "source-change-9549433fcfc93118c8a9d2e7",
+      "eb79eba926106673fc0305cc",
+      "source-change-14394588e567b7c52bd11cb3",
+      "source-change-88269481cf5b04b7b0f83b58",
+      "source-change-eaebe283915d5c0d1982b8e6",
+      "source-change-04178dd78ae55a022df89f05",
+      "source-change-7ee9141a42ad539f58a57e50",
+      "source-change-d748a52eab15ba888051067b",
       "ASC-REVIEW-E6C400911BD1A158",
-      "96c24b16f820cebf7d9a03fe",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -42,12 +44,9 @@
       "ASC-REVIEW-5F9BB287023DE81E",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-52C3694FF95479F1",
-      "d5adf164b612fd92a1dca692",
-      "9e8903fd8dfa9b54a1d6db30",
+      "6d665d935673091233751767",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
-      "88ef9baf356c096816236956",
-      "2482c3e0241c7c7679a18cd1",
       "aae51d03dc366bfb0267f3b4",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,21 +145,22 @@
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
       "ASC-REVIEW-CD1B68F215696D25",
       "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899"
+      "ASC-REVIEW-AD7847E11513D899",
+      "ASC-REVIEW-2750F333FF6B37B3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 20,
-      "disputedClaimCount": 118,
+      "primarySourceCount": 21,
+      "disputedClaimCount": 119,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 122,
-      "moneyRecordCount": 121
+      "relationshipCount": 120,
+      "moneyRecordCount": 120
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "THE NATIONAL CENTER FOR EDUCATION EVALUATION AND REGIONAL ASSISTANCE OF THE US DEPARTMENT OF EDUCATIONS INSTITUTE OF EDUCATION SCIENCES REQUIRES A CONTRACT TO CONDUCT A NATIONAL STUDY OF SPECIAL EDUCATION SPENDING INFORMED BY THE PILOT STUDY. · Amount: 8830886.25 · Sub-agency: Department of Education A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 122 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 120 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 122 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 120 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

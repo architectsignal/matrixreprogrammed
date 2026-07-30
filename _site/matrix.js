@@ -1,6 +1,8 @@
 (() => {
   'use strict';
 
+  const MATRIX_RUNTIME_BASE = new URL('.', document.currentScript?.src || document.baseURI);
+
   function installIndependentLinksNavigation() {
     const href = 'independent-links.html';
     const navs = Array.from(document.querySelectorAll('.nav-primary'));
@@ -30,6 +32,25 @@
   }
 
   installIndependentLinksNavigation();
+
+  function installIdentityAffiliationOverlay() {
+    if (!document.querySelector('link[data-matrix-identity-overlay]')) {
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = new URL('identity-affiliation-overlay.css?v=1.0.1', MATRIX_RUNTIME_BASE).href;
+      stylesheet.dataset.matrixIdentityOverlay = 'true';
+      document.head.appendChild(stylesheet);
+    }
+    if (!document.querySelector('script[data-matrix-identity-overlay]') && !window.MatrixIdentityOverlay) {
+      const script = document.createElement('script');
+      script.src = new URL('identity-affiliation-overlay.js?v=1.0.1', MATRIX_RUNTIME_BASE).href;
+      script.defer = true;
+      script.dataset.matrixIdentityOverlay = 'true';
+      document.head.appendChild(script);
+    }
+  }
+
+  installIdentityAffiliationOverlay();
 
   const canvas = document.getElementById('matrix');
   const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:27:30.023Z",
+  "failures": [],
+  "warnings": [],
+  "freeTierModel": {
+    "scheduledRunsPerDay": 1,
+    "maximumManifestContracts": 12,
+    "maximumDuePerRun": 4,
+    "estimatedMaximumD1QueriesPerRun": 44,
+    "isolatedCron": "25 5 * * *",
+    "configuredCronSlots": 4,
+    "availableCronSlots": 1,
+    "perFollowerWrites": 0,
+    "staticAssetsInvokeWorker": false
+  }
+}

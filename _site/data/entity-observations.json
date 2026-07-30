@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T06:09:29.687Z",
+  "updated": "2026-07-30T06:07:54.422Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -62,6 +62,25 @@
       "last_seen": "2026-07-06"
     },
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936338-1",
+        "courtlistener-court-records-10936292-2"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
       "id": "securities-and-exchange-commission",
       "name": "Securities and Exchange Commission",
       "count": 1,
@@ -113,7 +132,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "nvda",
@@ -131,7 +150,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "apple-inc",
@@ -149,7 +168,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "aapl",
@@ -167,7 +186,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "alphabet-inc",
@@ -185,7 +204,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "googl",
@@ -203,7 +222,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "microsoft-corp",
@@ -221,7 +240,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "msft",
@@ -239,7 +258,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "amazon-com-inc",
@@ -257,7 +276,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "amzn",
@@ -275,7 +294,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "broadcom-inc",
@@ -293,7 +312,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
     },
     {
       "id": "avgo",
@@ -311,7 +330,295 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-28"
+      "last_seen": "2026-07-30"
+    },
+    {
+      "id": "d-and-a-grandview-llc-v-60-davidson-llc",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936338-1"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "2024-13374",
+      "name": "2024-13374",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936338-1"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "williams-v-biggs",
+      "name": "Williams v. Biggs",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936292-2"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "2021-08825",
+      "name": "2021-08825",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936292-2"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "civil-rights-corps-v-lasalle",
+      "name": "Civil Rights Corps v. LaSalle",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936118-3"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "court-of-appeals-for-the-second-circuit",
+      "name": "Court of Appeals for the Second Circuit",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936118-3"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "24-2251",
+      "name": "24-2251",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936118-3"
+      ],
+      "last_seen": "2026-07-29"
+    },
+    {
+      "id": "united-states-v-anten",
+      "name": "United States v. Anten",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-4"
+      ],
+      "last_seen": "2026-07-27"
+    },
+    {
+      "id": "court-of-appeals-for-the-ninth-circuit",
+      "name": "Court of Appeals for the Ninth Circuit",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-4"
+      ],
+      "last_seen": "2026-07-27"
+    },
+    {
+      "id": "24-7261",
+      "name": "24-7261",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10935302-4"
+      ],
+      "last_seen": "2026-07-27"
+    },
+    {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-5"
+      ],
+      "last_seen": "2026-07-21"
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-5"
+      ],
+      "last_seen": "2026-07-21"
+    },
+    {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10933234-5"
+      ],
+      "last_seen": "2026-07-21"
+    },
+    {
+      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
+      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-6"
+      ],
+      "last_seen": "2026-07-15"
+    },
+    {
+      "id": "supreme-court-of-rhode-island",
+      "name": "Supreme Court of Rhode Island",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-6"
+      ],
+      "last_seen": "2026-07-15"
+    },
+    {
+      "id": "2025-0045-appeal",
+      "name": "2025-0045-Appeal.",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-6"
+      ],
+      "last_seen": "2026-07-15"
     }
   ]
 }

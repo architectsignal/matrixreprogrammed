@@ -1,21 +1,23 @@
 {
-  "generatedAt": "2026-07-28T06:47:00.460Z",
+  "generatedAt": "2026-07-30T06:11:18.927Z",
   "pageCount": 136,
   "output": "downloads/deploy-health.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Deploy Health",
-    "contentHash": "79a3e44994e7b16ca2010cc5634332d00b2990e66f7e0529ddbc83c973ea9d51",
+    "contentHash": "36b097c6b9bf556510ed495883280d0728d38bf897c18bb71baa28a0f32a6752",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
       "e72d22f4f28eb53e3173d0a6",
+      "ASC-REVIEW-13C647485101902F",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "72ef7895f95288946ccb3cff",
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-8FC95E6CC8F8F440",
+      "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-C954C3B615AAFE11",
@@ -31,19 +33,20 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-2CE1A691C8D09631",
+      "ASC-REVIEW-132F1165BCAFF798",
       "ASC-REVIEW-676D0168C06458FA",
-      "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-CBBDD69F69C1121D",
-      "ASC-REVIEW-897F71D253591D8F",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-14DA4C1F787B63ED",
+      "ASC-REVIEW-81EECB8AC7F0B57B",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-6DE76C80FA805761",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-09AE97E87425D94A",
+      "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-C7A00AFA602DD2A9",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-6C02F7DFCB3CC39B",
@@ -56,16 +59,13 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
-      "43ba47db9b71dc20b9cfcfb0",
+      "ASC-REVIEW-F61AF8A572F62AED",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
-      "ASC-REVIEW-85693397F53B02BA",
-      "ASC-REVIEW-EBBE73CDD84B2AEA",
-      "ASC-REVIEW-B9FD397866D6C7AB",
       "ASC-REVIEW-9F2B17896B642F03",
+      "ASC-REVIEW-EBBE73CDD84B2AEA",
       "ASC-REVIEW-626CF01E8A9774D7",
       "ASC-REVIEW-87F3003854489813",
       "ASC-REVIEW-6B9A792BD16666C3",
@@ -86,6 +86,7 @@
       "ASC-REVIEW-06A7D981E8AF743C",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-4DC96EE1DF7B7C16",
+      "ASC-REVIEW-D73E83F12FF8D417",
       "ASC-REVIEW-ED6591FF0C00507A",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-1777BDC4116A3527",
@@ -100,6 +101,7 @@
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-E5620B33A6660FA5",
       "ASC-REVIEW-1AA25E76779717ED",
+      "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -128,9 +130,9 @@
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-C06BEA89A8588561",
+      "ASC-REVIEW-288CD8D5C42C050E",
       "ASC-REVIEW-6A0CBB4AE4D6A280",
-      "ASC-REVIEW-99F8A859BC016D7E",
+      "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-6FEEE1F638ADFCD6"
+      "ASC-REVIEW-D921C72A4BA2FDF3"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 133,
-      "newEntityCount": 2,
+      "disputedClaimCount": 134,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 107,
-      "moneyRecordCount": 73
+      "relationshipCount": 106,
+      "moneyRecordCount": 72
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
+        "conclusion": "The most defensible current assessment is based on “The key outcome is the disclosure logic, not just another file drop.,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The scenario “The key outcome is the disclosure logic, not just another file drop. — outcome-briefings.json” could indicate a future convergence route only if later records document the stated authority, implementation and cross-institutional links. The current output is a modelled research hypothesis, not a factual forecast.",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; PANAMERICA COMPUTERS, INC. — Department of Energy; Bill Gates → Health And Development Philanthropy: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "PANAMERICA COMPUTERS, INC. — Department of Energy",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-28T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T06:11:18.927Z"
   }
 }

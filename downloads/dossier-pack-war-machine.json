@@ -7,9 +7,9 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-28T06:43:25.874Z",
-  "latestDropsUpdated": "2026-07-28T06:27:17.205Z",
-  "intelVaultUpdated": "2026-07-28T06:43:25.874Z",
+  "liveIntelUpdated": "2026-07-30T06:07:53.427Z",
+  "latestDropsUpdated": "2026-07-28T07:02:40.124Z",
+  "intelVaultUpdated": "2026-07-30T06:07:53.427Z",
   "title": "War Machine Pack",
   "label": "War / contractors pack",
   "summary": "A briefing pack for contractors, war budgets, cyber conflict, procurement, sanctions, intelligence claims, and human cost.",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=war-machine",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=war-machine",
   "liveIntelWindow": {
-    "updated": "2026-07-28T06:43:25.874Z",
+    "updated": "2026-07-30T06:07:53.427Z",
     "itemCount": 12,
     "items": [
       {
@@ -94,7 +94,7 @@
         "title": "Five Eyes warns frontier AI cyber-attack capability could arrive within months",
         "url": "https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security",
         "published": "2026-06-22T12:00:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
         "summary": "Five Eyes cyber authorities reportedly warned that advanced AI models capable of major cyberattacks against governments and businesses may be only months away.",
         "evidenceLevel": "Intelligence-alliance warning / cyber-risk lane",
         "evidenceBoundary": "A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.",
@@ -120,6 +120,40 @@
         "freshness": "archived historical lead"
       },
       {
+        "id": "war-machine-2026-07-28-1b2902bf",
+        "lane": "war-machine",
+        "laneTitle": "War Machine And Intelligence State",
+        "sourceLabel": "UN News",
+        "sourceTier": "primary-or-official",
+        "sourceWeight": 5,
+        "title": "Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+        "url": "https://news.un.org/feed/view/en/story/2026/07/1168037",
+        "published": "2026-07-28T12:00:00.000Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
+        "summary": "Regional tensions are mounting as the US-Iran war continues and a rising number of Israeli attacks are threatening Gaza’s fragile October ceasefire that ended two years of war with Hamas. Security Council members heard briefings followed by an open debate on Tuesday. UN News app users click here for live coverage.",
+        "evidenceLevel": "Primary or official public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+        "videoHook": "New public-record signal: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+        "rumbleShortTitle": "Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+        "rumbleLongTitle": "War Machine And Intelligence State — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+        "socialThread": [
+          "1/ Fresh war-machine lead: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
         "id": "war-machine-2026-07-27-252b5114",
         "lane": "war-machine",
         "laneTitle": "War Machine And Intelligence State",
@@ -141,40 +175,6 @@
         "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source.",
         "sourceType": "latest-public-drop",
         "freshness": "active weekly drop"
-      },
-      {
-        "id": "war-machine-2026-07-23-ad2616fe",
-        "lane": "war-machine",
-        "laneTitle": "War Machine And Intelligence State",
-        "sourceLabel": "UN News",
-        "sourceTier": "primary-or-official",
-        "sourceWeight": 5,
-        "title": "Security Council LIVE: How to turn preventive diplomacy rhetoric into action",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1168005",
-        "published": "2026-07-23T12:00:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
-        "summary": "In the Security Council debate on Thursday on how best to settle disputes between States peacefully, ambassadors provided examples of success and challenges ahead under such themes as effective early warning and how to move from rhetorical support for preventive diplomacy to ensuring more consistent use of its Chapter VI powers under the UN Charter.",
-        "evidenceLevel": "Primary or official public-record lead",
-        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
-        "videoHook": "New public-record signal: Security Council LIVE: How to turn preventive diplomacy rhetoric into action",
-        "rumbleShortTitle": "Security Council LIVE: How to turn preventive diplomacy rhetoric into ac",
-        "rumbleLongTitle": "War Machine And Intelligence State — Security Council LIVE: How to turn preventive diplomacy rhetoric into action",
-        "socialThread": [
-          "1/ Fresh war-machine lead: Security Council LIVE: How to turn preventive diplomacy rhetoric into action",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-fetched",
-        "sourceType": "live-intel",
-        "freshness": "active live intel"
       },
       {
         "id": "war-machine-2026-07-24-aa23d3ae",
@@ -223,40 +223,6 @@
         "freshness": "active weekly drop"
       },
       {
-        "id": "war-machine-2026-07-23-a92610b2",
-        "lane": "war-machine",
-        "laneTitle": "War Machine And Intelligence State",
-        "sourceLabel": "UN News",
-        "sourceTier": "primary-or-official",
-        "sourceWeight": 5,
-        "title": "Iran urged to stop protest-related executions",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-        "published": "2026-07-23T12:00:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
-        "summary": "Independent UN human rights investigators on Thursday called for Iran to immediately halt the execution of 10 men who took part in a protest in the central city of Isfahan earlier this year, warning that some of their relatives have already been called for final visits.",
-        "evidenceLevel": "Primary or official public-record lead",
-        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
-        "videoHook": "New public-record signal: Iran urged to stop protest-related executions",
-        "rumbleShortTitle": "Iran urged to stop protest-related executions",
-        "rumbleLongTitle": "War Machine And Intelligence State — Iran urged to stop protest-related executions",
-        "socialThread": [
-          "1/ Fresh war-machine lead: Iran urged to stop protest-related executions",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-fetched",
-        "sourceType": "live-intel",
-        "freshness": "active live intel"
-      },
-      {
         "id": "declassified-files-2026-06-16-pentagon-releases-72-ufo-files-military-reports-reveal-new-sightings-r",
         "lane": "declassified-files",
         "laneTitle": "Google News / declassified files",
@@ -266,7 +232,7 @@
         "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
         "published": "2026-06-16T07:00:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
         "summary": "Pentagon releases 72 UFO files: Military reports reveal new sightings RBC-Ukraine",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -289,6 +255,74 @@
         "status": "archived-intel-vault",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
+      },
+      {
+        "id": "war-machine-2026-07-29-1b1c36cc",
+        "lane": "war-machine",
+        "laneTitle": "War Machine And Intelligence State",
+        "sourceLabel": "UN News",
+        "sourceTier": "primary-or-official",
+        "sourceWeight": 5,
+        "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+        "url": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+        "published": "2026-07-29T12:00:00.000Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
+        "summary": "The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people.",
+        "evidenceLevel": "Primary or official public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+        "videoHook": "New public-record signal: Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+        "rumbleShortTitle": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+        "rumbleLongTitle": "War Machine And Intelligence State — Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+        "socialThread": [
+          "1/ Fresh war-machine lead: Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "war-machine-2026-07-28-171c3080",
+        "lane": "war-machine",
+        "laneTitle": "War Machine And Intelligence State",
+        "sourceLabel": "UN News",
+        "sourceTier": "primary-or-official",
+        "sourceWeight": 5,
+        "title": "Mount Olympus and D-Day beaches among new World Heritage Sites",
+        "url": "https://news.un.org/feed/view/en/story/2026/07/1168043",
+        "published": "2026-07-28T12:00:00.000Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
+        "summary": "From the peaks of Mount Olympus in Greece to the shores of the “D-Day” beaches in France, 25 cultural or natural landmarks from across the globe have been newly inscribed on the World Heritage List, updated annually by the UN Educational, Scientific and Cultural Organization (UNESCO).",
+        "evidenceLevel": "Primary or official public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "nextAction": "Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.",
+        "videoHook": "New public-record signal: Mount Olympus and D-Day beaches among new World Heritage Sites",
+        "rumbleShortTitle": "Mount Olympus and D-Day beaches among new World Heritage Sites",
+        "rumbleLongTitle": "War Machine And Intelligence State — Mount Olympus and D-Day beaches among new World Heritage Sites",
+        "socialThread": [
+          "1/ Fresh war-machine lead: Mount Olympus and D-Day beaches among new World Heritage Sites",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "war-machine-2026-07-27-1828fe06",
@@ -369,7 +403,7 @@
         "title": "Major UK banks back reusable digital ID network for financial services - Biometric Update",
         "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5",
         "published": "2026-06-26T20:27:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
+        "fetchedAt": "2026-07-30T06:07:53.427Z",
         "summary": "Major UK banks back reusable digital ID network for financial services Biometric Update",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
@@ -388,40 +422,6 @@
         "bookRoute": "books.html",
         "offerRoute": "offer-center.html",
         "optinRoute": "optin-full-archive-map.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "archived-intel-vault",
-        "sourceType": "intel-vault",
-        "freshness": "archived historical lead"
-      },
-      {
-        "id": "epstein-files-2026-06-25-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "sourceTier": "discovery",
-        "sourceWeight": 1,
-        "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
-        "published": "2026-06-25T23:09:00.000Z",
-        "fetchedAt": "2026-07-28T06:43:25.874Z",
-        "summary": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out CBS News",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Judge orders DOJ to either unredact more Epstein files or explain why th",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
         "status": "archived-intel-vault",
         "sourceType": "intel-vault",
@@ -511,13 +511,13 @@
       "kind": "Guardian / Five Eyes warning report"
     },
     {
-      "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
-      "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
+      "title": "Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1168037",
       "kind": "UN News"
     },
     {
-      "title": "Security Council LIVE: How to turn preventive diplomacy rhetoric into action",
-      "route": "https://news.un.org/feed/view/en/story/2026/07/1168005",
+      "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
       "kind": "UN News"
     },
     {
@@ -531,14 +531,19 @@
       "kind": "UN News"
     },
     {
-      "title": "Iran urged to stop protest-related executions",
-      "route": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-      "kind": "UN News"
-    },
-    {
       "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
       "route": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
       "kind": "Google News / declassified files"
+    },
+    {
+      "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+      "kind": "UN News"
+    },
+    {
+      "title": "Mount Olympus and D-Day beaches among new World Heritage Sites",
+      "route": "https://news.un.org/feed/view/en/story/2026/07/1168043",
+      "kind": "UN News"
     },
     {
       "title": "Cyberattacks and the digital divide are creating new barriers to HIV services",
@@ -559,11 +564,6 @@
       "title": "Major UK banks back reusable digital ID network for financial services - Biometric Update",
       "route": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5",
       "kind": "Google News / control structure"
-    },
-    {
-      "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
-      "route": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
-      "kind": "Google News / Epstein timeline and files"
     }
   ],
   "routes": [

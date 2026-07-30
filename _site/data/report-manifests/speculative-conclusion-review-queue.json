@@ -1,30 +1,32 @@
 {
-  "generatedAt": "2026-07-28T06:20:41.783Z",
-  "pageCount": 117,
+  "generatedAt": "2026-07-30T06:19:33.063Z",
+  "pageCount": 114,
   "output": "downloads/speculative-conclusion-review-queue.pdf",
   "report": {
-    "version": 5,
+    "version": 7,
     "title": "Speculative Conclusion Review Queue",
-    "contentHash": "83dbc8e6ff2adc613322baf6aee266747c1964421bd476fc7387125a8076f90a",
+    "contentHash": "1021fe696e18cd430bf4bcd9eb1777324c69eeae85f9af1be7c1567d0c5bc94f",
     "sourceIds": [
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
+      "594100b62a47db521fe2a128",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
-      "3a425f0d5d683952bc0ad7ac",
-      "594100b62a47db521fe2a128",
-      "65debd126cdfa5f7547a3eca",
-      "3c9c23f7f9a1cec81ef90f59",
       "34805734b1ad3b73f0ede0d8",
+      "3a425f0d5d683952bc0ad7ac",
+      "d0b647e325275daa6d824a49",
       "26b90533dbf7d2ed42f02de6",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-2F809A60275611A5",
+      "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
+      "3c9c23f7f9a1cec81ef90f59",
       "larry-fink",
       "erik-prince",
-      "9b821ddb272b0fb297d39550",
+      "4712eed42978b8a5e911c47a",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-5F69F7CCEE3F7274",
@@ -55,14 +57,10 @@
       "ASC-REVIEW-C2A19D091C2D1254",
       "ASC-REVIEW-FF5E6B71C62F4EBB",
       "ASC-REVIEW-BC9A7DE25FDF5F78",
-      "ASC-REVIEW-F530B7C452E8CBB2",
-      "ASC-REVIEW-35C38F1DE24759B3",
-      "d0b647e325275daa6d824a49",
       "bf773d3ec83b9b3768dfce6b",
       "bb5dfe90c29929d84ce60e6d",
       "8a10f165e16d0f8648cb8ec4",
       "f17e0de0ef7b66aa842ac3a1",
-      "cee347fbc3752c6e0f890457",
       "klaus-schwab",
       "emmanuel-macron",
       "tony-blair",
@@ -100,7 +98,6 @@
       "laurene-powell-jobs",
       "mackenzie-scott",
       "priscilla-chan",
-      "d109ec07bc6a6ad42558195d",
       "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -136,42 +133,45 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-13C647485101902F",
       "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-132F1165BCAFF798",
       "ASC-REVIEW-676D0168C06458FA",
-      "ASC-REVIEW-B3E7B22DBE204184",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-01CB18B6F1446992",
       "ASC-REVIEW-CBBDD69F69C1121D",
-      "ASC-REVIEW-6FEEE1F638ADFCD6"
+      "ASC-REVIEW-6FEEE1F638ADFCD6",
+      "ASC-REVIEW-6D7642B46743C895"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 81,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 82,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 80
+      "relationshipCount": 75,
+      "moneyRecordCount": 81
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Speculative Conclusion Review Queue.",
-        "evidence": "Agency Information Collection Extension (data/investigation-ledger-archive.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Speculative Conclusion Review Queue beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Agency Information Collection Extension,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "EIA submitted an information collection request for extension as required by the Paperwork Reduction Act of 1995. The information collection requests a three-year extension with changes of its EIA- 860S: State Level Generator Air Permit Inventory Report, OMB Control Number 1905-0215. The voluntary collection will ensure the EIA-860 sampling frame comprehensively covers the power generator population. This request is critically important for enhancing the completeness and accuracy of the EIA-860 sampling frame, particularly in relation to backup generators. The original collection was approved by the Office of Management and Budget on February 12, 2026, under the emergency approval provision… A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; World Economic Forum → Media Narrative: institution layer; Matrix Reprogrammed Canonical Intelligence Record; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Media: overlap hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
   }
 }

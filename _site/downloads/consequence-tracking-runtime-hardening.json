@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:24:11.880Z",
+  "changedEvidence": false,
+  "changedTracker": false,
+  "changedWrangler": true,
+  "estimatedMaximumD1QueriesPerDailyRun": 44,
+  "checks": {
+    "singleQueryPublicList": true,
+    "correlatedLatestAssessment": true,
+    "retiresOldManifest": true,
+    "boundedManifest": true,
+    "dedicatedCron": true,
+    "cronSlotsAtMostFive": true
+  }
+}

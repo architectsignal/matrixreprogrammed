@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-28T06:21:49.377Z
+Updated: 2026-07-30T06:20:41.720Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -77,6 +77,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf
 - Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf
 - Conclusion Integrity Report: downloads/conclusion-integrity-report.pdf
+- Consequence Tracking Runtime Hardening: downloads/consequence-tracking-runtime-hardening.pdf
 - Contact Nav Current Pm Report: downloads/contact-nav-current-pm-report.pdf
 - Contact The Machine Build: downloads/contact-the-machine-build.pdf
 - Control Brain V2: downloads/control-brain-v2.pdf
@@ -86,7 +87,12 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Criminal Conduct Engine Pressure Test: downloads/criminal-conduct-engine-pressure-test.pdf
 - Criminal Conduct Engine Report: downloads/criminal-conduct-engine-report.pdf
 - Criminal Conduct Extensionless Sync: downloads/criminal-conduct-extensionless-sync.pdf
+- Criminal Conduct Registry Build Report: downloads/criminal-conduct-registry-build-report.pdf
 - Criminal Conduct Review Queue: downloads/criminal-conduct-review-queue.pdf
+- Criminal Conduct Wave Build Report: downloads/criminal-conduct-wave-build-report.pdf
+- Criminal Investigations Build Report: downloads/criminal-investigations-build-report.pdf
+- Criminal Investigations: downloads/criminal-investigations.pdf
+- Criminal Status Dossier Coverage: downloads/criminal-status-dossier-coverage.pdf
 - Current Clock Intelligence Test: downloads/current-clock-intelligence-test.pdf
 - Current Clock Intelligence: downloads/current-clock-intelligence.pdf
 - Current Controlled Deploy Runs: downloads/current-controlled-deploy-runs.pdf
@@ -103,6 +109,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf
 - Daily Epstein Update: downloads/daily-epstein-update.pdf
 - Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf
+- Daily Watch Entity Resolution Report: downloads/daily-watch-entity-resolution-report.pdf
 - Daily Watch History Report: downloads/daily-watch-history-report.pdf
 - Daily Watch Publication Report: downloads/daily-watch-publication-report.pdf
 - Daily Watch Ranking Decision: downloads/daily-watch-ranking-decision.pdf
@@ -332,6 +339,8 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf
 - Review Queue Speculation Page Patch: downloads/review-queue-speculation-page-patch.pdf
 - Review Queue Speculation Publication: downloads/review-queue-speculation-publication.pdf
+- Runtime Performance Budget Test: downloads/runtime-performance-budget-test.pdf
+- Runtime Performance Optimizations: downloads/runtime-performance-optimizations.pdf
 - Search Investigation Smoke Test: downloads/search-investigation-smoke-test.pdf
 - Search Runtime Hardening Report: downloads/search-runtime-hardening-report.pdf
 - Search System Repair Report: downloads/search-system-repair-report.pdf

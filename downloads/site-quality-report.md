@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 741
+Scanned pages: 742
 Weak pages: 14
 
 ## Weakest Pages
@@ -38,7 +38,7 @@ Weak pages: 14
 - 84/100 — big-three-asset-managers.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 8 conviction
+- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 10 conviction
 - 84/100 — data-lab.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — death-files-methodology.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — deck-expansion-hub.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i

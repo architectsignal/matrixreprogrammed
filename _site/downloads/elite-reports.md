@@ -1,12 +1,18 @@
 # Elite Reports
 
-Generated: 2026-07-28T06:23:43.085Z
+Generated: 2026-07-30T06:22:39.109Z
 
 ## Daily Revelation Report
 
-Conflict and crisis put six World Heritage sites at risk
+Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
 
 Source: daily-command-brief.html
+
+## Appellate Division of the Supreme Court of the State of New York — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
 
 ## Centers for Medicare & Medicaid Services — Entity Report
 
@@ -20,49 +26,43 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Homeland Security Department — Entity Report
-
-A source route exists. More records are needed before drawing a stronger conclusion.
-
-Source: entity-daily-briefs.html
-
-## AAPL — Entity Report
+## 2021-08825 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Alphabet Inc. — Entity Report
+## 2024-13374 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMAZON COM INC — Entity Report
+## 2025-0045-Appeal. — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMZN — Entity Report
+## 23 WAP 2023 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Apple Inc. — Entity Report
+## 24-2251 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AVGO — Entity Report
+## 24-7261 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Broadcom Inc. — Entity Report
+## Civil Rights Corps v. LaSalle — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

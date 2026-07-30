@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-28T06:23:58.878Z",
+  "updated": "2026-07-30T06:22:55.673Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -181,12 +181,6 @@
           "type": "profile route"
         },
         {
-          "name": "Warren Buffett",
-          "score": 100,
-          "route": "billionaire-briefs/warren-buffett.html",
-          "type": "profile route"
-        },
-        {
           "name": "Blackwater / Xe / Academi / Constellis lineage",
           "score": 100,
           "route": "contractor-briefs/blackwater-constellis-lineage.html",
@@ -202,6 +196,12 @@
           "name": "CACI International",
           "score": 100,
           "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "Booz Allen Hamilton",
+          "score": 100,
+          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
           "type": "contractor route"
         }
       ]
@@ -249,7 +249,7 @@
         {
           "name": "Most important missing record",
           "score": 80,
-          "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+          "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
           "type": "daily conclusion"
         },
         {

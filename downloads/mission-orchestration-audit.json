@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-29T22:46:00.116Z",
+  "generatedAt": "2026-07-30T06:24:09.372Z",
   "overall": "ready",
   "summary": {
     "total": 50,
@@ -9,7 +9,7 @@
   },
   "homepageMode": "legacy-cinematic",
   "watch": {
-    "date": "2026-07-29",
+    "date": "2026-07-30",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -262,7 +262,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "3 history entries; weekly delta ready.",
+      "detail": "4 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -274,7 +274,7 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Legacy homepage: headerEnd=5737; hitList=5746; nextLegacyPanel=134034.",
+      "detail": "Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {

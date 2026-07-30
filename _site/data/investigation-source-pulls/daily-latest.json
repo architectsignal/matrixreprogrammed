@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-27T17:28:43.661Z",
+  "checkedAt": "2026-07-29T22:45:04.735Z",
   "selectedSources": 12,
   "fetchedSources": 11,
   "skippedSources": 0,
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2194,
-      "bodyHash": "8345fd6af4c9faf3ec184bed94e224431efbed71de0b8ff51d08b3dcd118b5ce",
+      "bytes": 2187,
+      "bodyHash": "979dc3b0424a9ef3394259107dd7c3f94ab98e7d67f80a130d0d9676c40e244e",
       "itemCount": 1,
       "error": ""
     },
@@ -44,8 +44,8 @@
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 62897,
-      "bodyHash": "df54b504a69e7e90d801f10e9c9022532df236381176ecd0c49824769d41c1b7",
+      "bytes": 62531,
+      "bodyHash": "2aa7ec2ea4d86e827320789e95c9406fa7aa469a5be04dcb46b1b07472e7a516",
       "itemCount": 14,
       "error": ""
     },
@@ -57,8 +57,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 23813,
-      "bodyHash": "8a74f9d01056e8e4a1559a0c4fb69201dbac1151e481bcd0a70db440c33116c2",
+      "bytes": 22843,
+      "bodyHash": "af283e397195720b1fce296a59d5491179dbad3e0c2ad3812810ab391ddacb21",
       "itemCount": 1,
       "error": ""
     },
@@ -70,9 +70,9 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 232981,
-      "bodyHash": "5447af3e9730c8c8d060afa595d2420bc24bdf563192f25d5b35d5e4fd5428ea",
-      "itemCount": 77,
+      "bytes": 232343,
+      "bodyHash": "f6d86459270f4a14bd90e3152e84bd7063d6ff81cad17419b6ff24ced5642961",
+      "itemCount": 76,
       "error": ""
     },
     {
@@ -83,8 +83,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "contentType": "application/json; charset=utf-8",
-      "bytes": 164368,
-      "bodyHash": "fa28127f749088097d99611aad675d3c05005c03416ccb339b3c81c686037cec",
+      "bytes": 154318,
+      "bodyHash": "acfd852f8e8fccd9caf88a3531fb5f98dafcb5e6120d794d9e156322f7d60e31",
       "itemCount": 100,
       "error": ""
     },
@@ -104,8 +104,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43508,
-      "bodyHash": "3dfb2d037a900dee5c2ae8e0f399c73b3206cdac8143e7021d91cf5c60619d4a",
+      "bytes": 43304,
+      "bodyHash": "ee1edce6b14bf9070b2809dbab8eea11e943bd88a03389cab535660bf4c93c41",
       "itemCount": 19,
       "error": ""
     },
@@ -117,9 +117,9 @@
       "statusCode": 200,
       "finalUrl": "https://oversight.house.gov/release/",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 69602,
-      "bodyHash": "81aa505ae0118d94e7d3ab8f01d24b61891261cd81d1f5bda7c32809d5c6b43d",
-      "itemCount": 10,
+      "bytes": 69282,
+      "bodyHash": "f49fd691e9bae34ec2856ac4e5f8d7044c3bfbd338c2bc3c57ee0c348d0e02f1",
+      "itemCount": 11,
       "error": ""
     },
     {
@@ -143,8 +143,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 101945,
-      "bodyHash": "0b56f47874275aea36162c598094d5139368a38f936a67bda87682259ad59a8d",
+      "bytes": 101979,
+      "bodyHash": "dd48c7c1e4ab1dcc17e8b2e39d78ddbd9192862b6c221d2f770e6cf540512b4a",
       "itemCount": 15,
       "error": ""
     },

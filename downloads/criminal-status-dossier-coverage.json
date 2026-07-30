@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:59:22.487Z",
+  "generatedAt": "2026-07-30T06:23:44.908Z",
   "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
   "minimumPredatorsInPowerTarget": 100,
   "approvedPredatorsInPowerDossiers": 20,
@@ -1867,8 +1867,17 @@
       "statusPanelPresent": true
     },
     {
-      "route": "reports/entity-2021-00294.html",
-      "title": "2021-00294 — ENTITY REPORT",
+      "route": "reports/entity-2021-08825.html",
+      "title": "2021-08825 — ENTITY REPORT",
+      "matchedSubject": "",
+      "matchStatus": "no-approved-match",
+      "approvedRecords": 0,
+      "criminalDossierRoute": "",
+      "statusPanelPresent": true
+    },
+    {
+      "route": "reports/entity-2024-13374.html",
+      "title": "2024-13374 — ENTITY REPORT",
       "matchedSubject": "",
       "matchStatus": "no-approved-match",
       "approvedRecords": 0,
@@ -1894,26 +1903,17 @@
       "statusPanelPresent": true
     },
     {
+      "route": "reports/entity-24-2251.html",
+      "title": "24-2251 — ENTITY REPORT",
+      "matchedSubject": "",
+      "matchStatus": "no-approved-match",
+      "approvedRecords": 0,
+      "criminalDossierRoute": "",
+      "statusPanelPresent": true
+    },
+    {
       "route": "reports/entity-24-7261.html",
       "title": "24-7261 — ENTITY REPORT",
-      "matchedSubject": "",
-      "matchStatus": "no-approved-match",
-      "approvedRecords": 0,
-      "criminalDossierRoute": "",
-      "statusPanelPresent": true
-    },
-    {
-      "route": "reports/entity-25-113.html",
-      "title": "25-113 — ENTITY REPORT",
-      "matchedSubject": "",
-      "matchStatus": "no-approved-match",
-      "approvedRecords": 0,
-      "criminalDossierRoute": "",
-      "statusPanelPresent": true
-    },
-    {
-      "route": "reports/entity-a170747m.html",
-      "title": "A170747M — ENTITY REPORT",
       "matchedSubject": "",
       "matchStatus": "no-approved-match",
       "approvedRecords": 0,
@@ -1930,8 +1930,8 @@
       "statusPanelPresent": true
     },
     {
-      "route": "reports/entity-california-court-of-appeal.html",
-      "title": "CALIFORNIA COURT OF APPEAL — ENTITY REPORT",
+      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
+      "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
       "matchedSubject": "",
       "matchStatus": "no-approved-match",
       "approvedRecords": 0,
@@ -1939,8 +1939,8 @@
       "statusPanelPresent": true
     },
     {
-      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
-      "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
+      "route": "reports/entity-civil-rights-corps-v-lasalle.html",
+      "title": "CIVIL RIGHTS CORPS V. LASALLE — ENTITY REPORT",
       "matchedSubject": "",
       "matchStatus": "no-approved-match",
       "approvedRecords": 0,

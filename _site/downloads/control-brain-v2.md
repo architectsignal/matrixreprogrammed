@@ -1,11 +1,19 @@
 # Control Brain V2
 
-Generated: 2026-07-28T06:23:43.105Z
+Generated: 2026-07-30T06:22:39.130Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 101
-Edges: 117
+Nodes: 118
+Edges: 134
+
+## Disclosure gaps and missing files
+
+Score: 100
+
+Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
 
 ## BlackRock
 
@@ -97,9 +105,9 @@ Source routes: institution-control-tracker.html
 
 ## Elon Musk
 
-Score: 74
+Score: 75
 
-Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html
 
@@ -196,13 +204,5 @@ Source routes: subject-briefs.html
 Score: 61
 
 Mark Zuckerberg is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: billionaire-control-tracker.html
-
-## Warren Buffett
-
-Score: 61
-
-Warren Buffett is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html

@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-28T06:23:48.574Z
+Generated: 2026-07-30T06:22:44.816Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,33 +15,33 @@ Generated: 2026-07-28T06:23:48.574Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
+- 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
+- 85 — 2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-08825.html
+- 85 — 2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-13374.html
+- 85 — 2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2025-0045-appeal.html
+- 85 — 23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/23-wap-2023.html
+- 85 — 24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-2251.html
+- 85 — 24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-7261.html
+- 85 — Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/civil-rights-corps-v-lasalle.html
+- 85 — Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-ninth-circuit.html
+- 85 — Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-second-circuit.html
+- 85 — D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html
+- 85 — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
 - 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
+- 85 — Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- 85 — Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-pennsylvania.html
+- 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
+- 85 — United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/united-states-v-anten.html
+- 85 — Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/williams-v-biggs.html
 - 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
 - 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 85 — AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/avgo.html
-- 85 — Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/broadcom-inc.html
-- 85 — GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/googl.html
-- 85 — MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/microsoft-corp.html
-- 85 — MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/msft.html
-- 85 — NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvda.html
-- 85 — NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvidia-corp.html
-- 85 — Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nuclear-regulatory-commission.html
-- 85 — Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/securities-and-exchange-commission.html
-- 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/homeland-security-department.html
-- 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/centers-for-medicare-and-medicaid-services.html
-- 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/health-and-human-services-department.html
-- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/aapl.html
-- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/alphabet-inc.html
-- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amazon-com-inc.html
-- 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amzn.html
-- 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/apple-inc.html
-- 72 — Conflict and crisis put six World Heritage sites at risk — live-intel.html
-- 72 — Cyberattacks and the digital divide are creating new barriers to HIV services — live-intel.html
-- 72 — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — live-intel.html
-- 72 — High prices and funding cuts stall HIV prevention revolution — live-intel.html
-- 72 — Lebanon: Israeli strikes ‘could amount to international crimes,’ warns Türk — live-intel.html
+- 72 — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post — live-intel.html
+- 72 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — live-intel.html
+- 72 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — live-intel.html
+- 72 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — live-intel.html
+- 72 — Hunger hampers Ebola response as cases top 3,200 in DR Congo — live-intel.html

@@ -1,12 +1,12 @@
 # Machine Intelligence
 
-Updated: 2026-07-28T06:09:48.911Z
+Updated: 2026-07-30T06:08:12.315Z
 
-Current records: 12
+Current records: 18
 Previous records: 18
 New records: 0
 Changed records: 0
-Relationship candidates: 7
+Relationship candidates: 25
 
 ## New Records
 
@@ -14,6 +14,24 @@ Relationship candidates: 7
 ## Relationship Candidates
 
 - Score 18: Health and Human Services Department ↔ Centers for Medicare & Medicaid Services — public-record co-occurrence
+- Score 10: D & A Grandview, LLC v. 60 Davidson, LLC ↔ Appellate Division of the Supreme Court of the State of New York — public-record co-occurrence
+- Score 10: D & A Grandview, LLC v. 60 Davidson, LLC ↔ 2024-13374 — public-record co-occurrence
+- Score 10: Appellate Division of the Supreme Court of the State of New York ↔ 2024-13374 — public-record co-occurrence
+- Score 10: Williams v. Biggs ↔ Appellate Division of the Supreme Court of the State of New York — public-record co-occurrence
+- Score 10: Williams v. Biggs ↔ 2021-08825 — public-record co-occurrence
+- Score 10: Appellate Division of the Supreme Court of the State of New York ↔ 2021-08825 — public-record co-occurrence
+- Score 10: Civil Rights Corps v. LaSalle ↔ Court of Appeals for the Second Circuit — public-record co-occurrence
+- Score 10: Civil Rights Corps v. LaSalle ↔ 24-2251 — public-record co-occurrence
+- Score 10: Court of Appeals for the Second Circuit ↔ 24-2251 — public-record co-occurrence
+- Score 10: United States v. Anten ↔ Court of Appeals for the Ninth Circuit — public-record co-occurrence
+- Score 10: United States v. Anten ↔ 24-7261 — public-record co-occurrence
+- Score 10: Court of Appeals for the Ninth Circuit ↔ 24-7261 — public-record co-occurrence
+- Score 10: Punxsutawney Hunting Club v. PGC ↔ Supreme Court of Pennsylvania — public-record co-occurrence
+- Score 10: Punxsutawney Hunting Club v. PGC ↔ 23 WAP 2023 — public-record co-occurrence
+- Score 10: Supreme Court of Pennsylvania ↔ 23 WAP 2023 — public-record co-occurrence
+- Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ Supreme Court of Rhode Island — public-record co-occurrence
+- Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ 2025-0045-Appeal. — public-record co-occurrence
+- Score 10: Supreme Court of Rhode Island ↔ 2025-0045-Appeal. — public-record co-occurrence
 - Score 9: NVIDIA CORP ↔ NVDA — weak co-occurrence signal
 - Score 9: Apple Inc. ↔ AAPL — weak co-occurrence signal
 - Score 9: Alphabet Inc. ↔ GOOGL — weak co-occurrence signal

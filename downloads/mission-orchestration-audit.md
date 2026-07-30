@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-29T22:46:00.116Z
+Generated: 2026-07-30T06:24:09.372Z
 Overall: ready
 Homepage mode: legacy-cinematic
 Passed: 50/50
@@ -51,9 +51,9 @@ Promotion margin: 14
 - **PASS · dossier-institution-assessment:** institution executive assessment checked.
 - **PASS · dossier-family-structure:** family dossier Wallenberg family and foundations; missing arrays none.
 - **PASS · dossier-family-assessment:** family executive assessment checked.
-- **PASS · history-and-weekly-delta:** 3 history entries; weekly delta ready.
+- **PASS · history-and-weekly-delta:** 4 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5737; hitList=5746; nextLegacyPanel=134034.
+- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.
 - **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.

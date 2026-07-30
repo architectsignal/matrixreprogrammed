@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:27:30.599Z",
+  "mission": "Matrix Reprogrammed is a public accountability system where anyone can search a consequence, trace it backwards through decisions, authority and money, follow the unanswered questions, and return to see what actually happened.",
+  "publicPromise": "Search the consequence. Trace the power. Follow the outcome.",
+  "recordCount": 7,
+  "source": "public-consequence-contracts",
+  "outputs": [
+    "reverse-accountability-search.html",
+    "reverse-accountability-search.js",
+    "reverse-accountability-search.css",
+    "data/reverse-accountability-index.json"
+  ],
+  "intro": {
+    "visible": true,
+    "voiceSource": "existing ElevenLabs endpoint with browser speech fallback",
+    "storageVersion": "accountability-v1"
+  },
+  "lockedSystems": [
+    "Reverse Accountability Search",
+    "Power Supply Chain",
+    "Evidence Half-Life",
+    "Power Diff",
+    "Red-Team Mirror",
+    "Public Answer Clock",
+    "Missing Record Missions",
+    "Lived Consequence Receipts"
+  ]
+}

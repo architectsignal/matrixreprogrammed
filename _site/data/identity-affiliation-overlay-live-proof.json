@@ -1,0 +1,60 @@
+{
+  "ok": false,
+  "checkedAt": "2026-07-28T10:01:19.337Z",
+  "site": "https://matrixreprogrammed.com",
+  "releaseSha": "28f3423471112b6529640cf1b17f9f7cc227c156",
+  "releaseWorkerVersion": "d7f814a8-ae27-4581-bd74-c905d5f42b3c",
+  "liveSha": "b136022d6665cdfcf0a90532db8e833d563c5f3f",
+  "liveShaAdvancedBeyondRelease": true,
+  "checks": {
+    "publicSiteResponds": false,
+    "runtimeLoadsOverlay": true,
+    "runtimeUsesStableBase": true,
+    "overlayJavascriptLive": true,
+    "overlayStylesLive": true,
+    "overlayDataLive": true,
+    "starterRecordsPresent": true,
+    "nestedDossierLoadsSharedRuntime": true,
+    "deploymentManifestHealthy": true,
+    "deploymentHealthHealthy": false,
+    "deploymentShaConsistent": false,
+    "forumD1Health": false,
+    "forumD1Read": false,
+    "anonymousForumWriteRejected": false,
+    "anonymousForumWriteDidNotMutate": false,
+    "paypalConfigProtected": false,
+    "paypalCheckoutProtected": false,
+    "paypalCreateProtected": false,
+    "emailAdminBoundaryProtected": true
+  },
+  "recordIds": [
+    "jeffrey-epstein",
+    "tom-cruise",
+    "john-travolta",
+    "orsini-family"
+  ],
+  "forum": {
+    "beforeCount": null,
+    "afterCount": null,
+    "feedCount": null,
+    "anonymousWriteStatus": 403
+  },
+  "statuses": {
+    "home": 403,
+    "matrixRuntime": 200,
+    "overlayJavascript": 200,
+    "overlayStyles": 200,
+    "overlayData": 200,
+    "nestedDossier": 200,
+    "deployHealth": 403,
+    "deployManifest": 200,
+    "forumHealth": 403,
+    "forumFeed": 403,
+    "anonymousForumWrite": 403,
+    "paypalConfig": 403,
+    "paypalCheckout": 403,
+    "paypalCreate": 403,
+    "emailAdminHealth": 403
+  },
+  "attempt": 3
+}

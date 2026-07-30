@@ -4,6 +4,7 @@ import intelligenceReportWorker, { isIntelligenceReportRoute } from './worker-in
 import contactWorker, { contactRoutes } from './worker-contact-intake.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import consequenceTrackerWorker, { isConsequenceTrackerRoute } from './worker-consequence-tracker.js';
+import consequenceEvidenceWorker, { isConsequenceEvidenceRoute } from './worker-consequence-evidence.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
 import rehearsalWorker, {
@@ -239,10 +240,19 @@ async function validateContactResponse(response) {
   return response;
 }
 
+
 async function validateMemberResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-member-experience') {
     return unavailable('non-authoritative-member-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
+async function validateConsequenceEvidenceResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-consequence-evidence') {
+    return unavailable('non-authoritative-consequence-evidence-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
   }
   return response;
 }
@@ -313,6 +323,15 @@ export default {
         if (denied) return denied;
       } catch (error) {
         return unavailable('protected-asset-gate-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
+    if (isConsequenceEvidenceRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateConsequenceEvidenceResponse(await consequenceEvidenceWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('consequence-evidence-worker-exception', error?.message || error, 'member');
       }
     }
 

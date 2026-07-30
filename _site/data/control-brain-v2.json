@@ -1,13 +1,53 @@
 {
   "ok": true,
-  "updated": "2026-07-28T06:23:43.105Z",
+  "updated": "2026-07-30T06:22:39.130Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 101,
-    "edges": 117,
+    "nodes": 118,
+    "edges": 134,
     "topNodes": 25
   },
   "top": [
+    {
+      "id": "disclosure-gaps-and-missing-files",
+      "name": "Disclosure gaps and missing files",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "disclosure-gaps",
+        "courts-law"
+      ],
+      "score": 100,
+      "centrality": 17,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Williams v. Biggs",
+        "Civil Rights Corps v. LaSalle",
+        "United States v. Anten",
+        "Punxsutawney Hunting Club v. PGC",
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
     {
       "id": "blackrock",
       "name": "BlackRock",
@@ -558,15 +598,16 @@
         "energy",
         "public-private-contracts"
       ],
-      "score": 74,
+      "score": 75,
       "centrality": 5,
-      "evidenceConfidence": 9,
+      "evidenceConfidence": 10,
       "missingPressure": 20,
       "contradictionPressure": 0,
       "records": [
         "Electronic Delivery of Information Under the Federal Securities Laws",
         "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies"
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Punxsutawney Hunting Club v. PGC"
       ],
       "missing": [
         "Current beneficial ownership and voting-control record where relevant",
@@ -584,7 +625,7 @@
       "links": [
         "billionaire-control-tracker.html"
       ],
-      "summary": "Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "world-economic-forum",
@@ -1048,41 +1089,6 @@
         "billionaire-control-tracker.html"
       ],
       "summary": "Mark Zuckerberg is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "warren-buffett",
-      "name": "Warren Buffett",
-      "types": [
-        "elite network profile"
-      ],
-      "layers": [
-        "money",
-        "energy",
-        "food"
-      ],
-      "score": 61,
-      "centrality": 4,
-      "evidenceConfidence": 6,
-      "missingPressure": 20,
-      "contradictionPressure": 0,
-      "records": [],
-      "missing": [
-        "Current beneficial ownership and voting-control record where relevant",
-        "Public contracts touching the ecosystem",
-        "Foundation grant routes where relevant",
-        "Lobbying or political funding routes where relevant",
-        "Legal/regulatory records and counter-sources"
-      ],
-      "watch": [
-        "New filings",
-        "New contracts",
-        "New court or regulatory records",
-        "New foundation or policy-route records"
-      ],
-      "links": [
-        "billionaire-control-tracker.html"
-      ],
-      "summary": "Warren Buffett is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     }
   ],
   "edges": [
@@ -1682,6 +1688,125 @@
       "source": "subject brief"
     },
     {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "d-a-grandview-llc-v-60-davidson-llc",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2024-13374",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "williams-v-biggs",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2021-08825",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "civil-rights-corps-v-lasalle",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-for-the-second-circuit",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "24-2251",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "united-states-v-anten",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-for-the-ninth-circuit",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "24-7261",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "punxsutawney-hunting-club-v-pgc",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-pennsylvania",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "23-wap-2023",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-rhode-island",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2025-0045-appeal",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
       "from": "foundation-and-ngo-policy-influence",
       "to": "securities-and-exchange-commission",
       "type": "subject entity route",
@@ -1908,6 +2033,17 @@
   ],
   "watchCascades": [
     {
+      "entity": "Disclosure gaps and missing files",
+      "priority": "red",
+      "why": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "subject-briefs.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
       "entity": "BlackRock",
       "priority": "red",
       "why": "BlackRock is ranked 100/100 because of 9 relationship route(s), 6 control layer(s), 8 record signal(s), 7 missing-record prompt(s), and 0 review prompt(s).",
@@ -2030,17 +2166,6 @@
       "why": "United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
         "institution-control-tracker.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Elon Musk",
-      "priority": "amber",
-      "why": "Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "billionaire-control-tracker.html",
         "evidence-vault.html",
         "daily-missing-records.html",
         "search.html"

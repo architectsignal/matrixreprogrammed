@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "action": "cancelled-pending-duplicate",
+  "activeRun": {
+    "id": 30372085433,
+    "runNumber": 1327,
+    "status": "in_progress",
+    "conclusion": null,
+    "headSha": "4aa3645b73177ac90ee90210c939da6c0d214ddd",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30372085433"
+  },
+  "duplicateRun": {
+    "id": 30372275747,
+    "runNumber": 1328,
+    "statusBefore": "pending",
+    "conclusionBefore": null,
+    "headSha": "5b3912f50a54067a06689a8682e04a039890f0a5",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30372275747"
+  },
+  "recordedAt": "2026-07-28T15:20:30.818Z",
+  "boundary": "Preserve corrected production run 30372085433. Cancel only the later pending duplicate 30372275747; never cancel an in-progress deployment automatically."
+}

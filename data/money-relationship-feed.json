@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-28T07:01:31.247Z",
+  "generatedAt": "2026-07-30T06:26:36.209Z",
   "boundary": "Relationship records are research routes and do not establish coordinated control or wrongdoing.",
   "relationships": [
     {
@@ -1842,9 +1842,9 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "structured-market-rel-d3ae8f54f8368fe8",
+      "id": "structured-market-rel-fe99f35d4dc89d12",
       "from": "State Street Corporation",
-      "to": "RTX Corporation",
+      "to": "RTX CORPORATION",
       "type": "reportedPositionChange",
       "evidenceClass": "Structured registry grade A",
       "sourceTitle": "SEC Form 13F comparison 2026-03-31",
@@ -8874,9 +8874,9 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "structured-market-rel-d6b6da401b09801d",
+      "id": "structured-market-rel-415b30306dbcab85",
       "from": "State Street Corporation",
-      "to": "Roivant Sciences Ltd",
+      "to": "ROIVANT SCIENCES LTD",
       "type": "reportedPositionChange",
       "evidenceClass": "Structured registry grade A",
       "sourceTitle": "SEC Form 13F comparison 2026-03-31",
@@ -12678,6 +12678,18 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "structured-market-rel-ea90ca331daa6bf9",
+      "from": "JPMorgan Chase & Co.",
+      "to": "ABBOTT LABORATORIES",
+      "type": "reportedPositionChange",
+      "evidenceClass": "Structured registry grade A",
+      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "sourceDate": "2026-05-13T00:00:00.000Z",
+      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "structured-market-rel-1e5f0517d8b8a6a5",
       "from": "State Street Corporation",
       "to": "VOYA FINANCIAL INC",
@@ -13698,9 +13710,9 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "structured-market-rel-8cf004b3b3a7014a",
+      "id": "structured-market-rel-ef88026eedd0669d",
       "from": "The Goldman Sachs Group, Inc.",
-      "to": "RTX Corporation",
+      "to": "RTX CORPORATION",
       "type": "reportedPositionChange",
       "evidenceClass": "Structured registry grade A",
       "sourceTitle": "SEC Form 13F comparison 2026-03-31",
@@ -20286,18 +20298,6 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "structured-market-rel-9d0278785e8b1d15",
-      "from": "The Goldman Sachs Group, Inc.",
-      "to": "COHERENT CORP",
-      "type": "reportedPositionChange",
-      "evidenceClass": "Structured registry grade A",
-      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "sourceDate": "2026-05-15T00:00:00.000Z",
-      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
-      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
       "id": "structured-market-rel-bbcec32fef37483c",
       "from": "The Goldman Sachs Group, Inc.",
       "to": "BOEING CO",
@@ -23238,6 +23238,18 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
+      "id": "structured-market-rel-6e567167663df613",
+      "from": "The Goldman Sachs Group, Inc.",
+      "to": "ABBOTT LABORATORIES",
+      "type": "reportedPositionChange",
+      "evidenceClass": "Structured registry grade A",
+      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "sourceDate": "2026-05-15T00:00:00.000Z",
+      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
       "id": "structured-market-rel-ad32d7ffe20e6e6d",
       "from": "State Street Corporation",
       "to": "CARTERS INC",
@@ -23283,18 +23295,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "sourceDate": "2026-05-15T00:00:00.000Z",
       "established": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "structured-market-rel-5eb764a77b7d7130",
-      "from": "JPMorgan Chase & Co.",
-      "to": "ASTERA LABS INC",
-      "type": "reportedPositionChange",
-      "evidenceClass": "Structured registry grade A",
-      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
-      "sourceDate": "2026-05-13T00:00:00.000Z",
-      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -25911,18 +25911,6 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "sourceDate": "2026-05-15T00:00:00.000Z",
       "established": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
-      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
-    },
-    {
-      "id": "structured-market-rel-f192cca461cdb3ba",
-      "from": "The Goldman Sachs Group, Inc.",
-      "to": "ASTERA LABS INC",
-      "type": "reportedPositionChange",
-      "evidenceClass": "Structured registry grade A",
-      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
-      "sourceDate": "2026-05-15T00:00:00.000Z",
-      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -29646,9 +29634,9 @@
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
-      "id": "structured-market-rel-14b7e13b9d7524e4",
+      "id": "structured-market-rel-80cfa868e61ef1ce",
       "from": "JPMorgan Chase & Co.",
-      "to": "RTX Corporation",
+      "to": "RTX CORPORATION",
       "type": "reportedPositionChange",
       "evidenceClass": "Structured registry grade A",
       "sourceTitle": "SEC Form 13F comparison 2026-03-31",
@@ -29763,6 +29751,18 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "sourceDate": "2026-05-15T00:00:00.000Z",
       "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "structured-market-rel-05ac1721864b2d82",
+      "from": "The Goldman Sachs Group, Inc.",
+      "to": "AUTODESK INC",
+      "type": "reportedPositionChange",
+      "evidenceClass": "Structured registry grade A",
+      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000274/InfoTable_20260513_FinalV.xml",
+      "sourceDate": "2026-05-15T00:00:00.000Z",
+      "established": "The manager's reported quarter-end position reduced position between 2025-12-31 and 2026-03-31.",
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },
     {
@@ -30650,6 +30650,18 @@
       "sourceTitle": "SEC Form 13F comparison 2026-03-31",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/93751/000009375126000315/XML_Infotable.xml",
       "sourceDate": "2026-05-15T00:00:00.000Z",
+      "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
+      "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
+    },
+    {
+      "id": "structured-market-rel-55987e81e52cd370",
+      "from": "JPMorgan Chase & Co.",
+      "to": "GARMIN LTD",
+      "type": "reportedPositionChange",
+      "evidenceClass": "Structured registry grade A",
+      "sourceTitle": "SEC Form 13F comparison 2026-03-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/19617/000001961726000225/Information_Table_03.31.2026.xml",
+      "sourceDate": "2026-05-13T00:00:00.000Z",
       "established": "The manager's reported quarter-end position increased position between 2025-12-31 and 2026-03-31.",
       "notEstablished": "The comparison does not reveal the exact trade date, execution price, whether offsetting derivatives or short positions existed, whether the position remains held today, who made the decision or why it changed."
     },

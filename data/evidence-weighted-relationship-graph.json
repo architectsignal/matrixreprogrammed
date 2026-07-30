@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-29T22:45:54.195Z",
+  "updated": "2026-07-30T06:22:44.829Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
-  "nodeCount": 132,
+  "nodeCount": 131,
   "edgeCount": 172,
   "nodes": [
     {
@@ -630,6 +630,17 @@
       "score": 55
     },
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "layer": "evidence-and-records",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "type": "missing record",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "centers-for-medicare-medicaid-services",
       "layer": "evidence-and-records",
       "name": "Centers for Medicare & Medicaid Services",
@@ -652,11 +663,22 @@
       "score": 54
     },
     {
-      "id": "2021-00294",
+      "id": "2021-08825",
       "layer": "evidence-and-records",
-      "name": "2021-00294",
+      "name": "2021-08825",
       "type": "missing record",
-      "route": "entity-briefs/2021-00294.html",
+      "route": "entity-briefs/2021-08825.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "2024-13374",
+      "layer": "evidence-and-records",
+      "name": "2024-13374",
+      "type": "missing record",
+      "route": "entity-briefs/2024-13374.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -685,6 +707,17 @@
       "score": 54
     },
     {
+      "id": "24-2251",
+      "layer": "evidence-and-records",
+      "name": "24-2251",
+      "type": "missing record",
+      "route": "entity-briefs/24-2251.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "24-7261",
       "layer": "evidence-and-records",
       "name": "24-7261",
@@ -696,44 +729,11 @@
       "score": 54
     },
     {
-      "id": "25-113",
+      "id": "civil-rights-corps-v-lasalle",
       "layer": "evidence-and-records",
-      "name": "25-113",
+      "name": "Civil Rights Corps v. LaSalle",
       "type": "missing record",
-      "route": "entity-briefs/25-113.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "a170747m",
-      "layer": "evidence-and-records",
-      "name": "A170747M",
-      "type": "missing record",
-      "route": "entity-briefs/a170747m.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "layer": "evidence-and-records",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "type": "missing record",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "california-court-of-appeal",
-      "layer": "evidence-and-records",
-      "name": "California Court of Appeal",
-      "type": "missing record",
-      "route": "entity-briefs/california-court-of-appeal.html",
+      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -762,6 +762,17 @@
       "score": 54
     },
     {
+      "id": "d-a-grandview-llc-v-60-davidson-llc",
+      "layer": "evidence-and-records",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "type": "missing record",
+      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
       "layer": "evidence-and-records",
       "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
@@ -784,33 +795,11 @@
       "score": 54
     },
     {
-      "id": "people-v-brim",
-      "layer": "evidence-and-records",
-      "name": "People v. Brim",
-      "type": "missing record",
-      "route": "entity-briefs/people-v-brim.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "punxsutawney-hunting-club-v-pgc",
       "layer": "evidence-and-records",
       "name": "Punxsutawney Hunting Club v. PGC",
       "type": "missing record",
       "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "sawas-v-elzanaty",
-      "layer": "evidence-and-records",
-      "name": "Sawas v. Elzanaty",
-      "type": "missing record",
-      "route": "entity-briefs/sawas-v-elzanaty.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -839,22 +828,22 @@
       "score": 54
     },
     {
-      "id": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "id": "united-states-v-anten",
       "layer": "evidence-and-records",
-      "name": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "name": "United States v. Anten",
       "type": "missing record",
-      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "route": "entity-briefs/united-states-v-anten.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "united-states-v-anten",
+      "id": "williams-v-biggs",
       "layer": "evidence-and-records",
-      "name": "United States v. Anten",
+      "name": "Williams v. Biggs",
       "type": "missing record",
-      "route": "entity-briefs/united-states-v-anten.html",
+      "route": "entity-briefs/williams-v-biggs.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1149,6 +1138,18 @@
       "score": 43
     },
     {
+      "id": "feed-appellate-division-of-the-supreme-court-of-the-state-of-new-",
+      "layer": "evidence-and-records",
+      "name": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
       "layer": "evidence-and-records",
       "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1173,11 +1174,23 @@
       "score": 43
     },
     {
-      "id": "feed-2021-00294-confirm-the-primary-record-page-pdf-docket-filing",
+      "id": "feed-2021-08825-confirm-the-primary-record-page-pdf-docket-filing",
       "layer": "evidence-and-records",
-      "name": "2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/2021-00294.html",
+      "route": "entity-briefs/2021-08825.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-2024-13374-confirm-the-primary-record-page-pdf-docket-filing",
+      "layer": "evidence-and-records",
+      "name": "2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/2024-13374.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1209,6 +1222,18 @@
       "score": 43
     },
     {
+      "id": "feed-24-2251-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "layer": "evidence-and-records",
+      "name": "24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/24-2251.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "feed-24-7261-confirm-the-primary-record-page-pdf-docket-filing-aw",
       "layer": "evidence-and-records",
       "name": "24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1221,47 +1246,11 @@
       "score": 43
     },
     {
-      "id": "feed-25-113-confirm-the-primary-record-page-pdf-docket-filing-awa",
+      "id": "feed-civil-rights-corps-v-lasalle-confirm-the-primary-record-page",
       "layer": "evidence-and-records",
-      "name": "25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/25-113.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-a170747m-confirm-the-primary-record-page-pdf-docket-filing-a",
-      "layer": "evidence-and-records",
-      "name": "A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/a170747m.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-appellate-division-of-the-supreme-court-of-the-state-of-new-",
-      "layer": "evidence-and-records",
-      "name": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-california-court-of-appeal-confirm-the-primary-record-page-p",
-      "layer": "evidence-and-records",
-      "name": "California Court of Appeal — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/california-court-of-appeal.html",
+      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1293,6 +1282,18 @@
       "score": 43
     },
     {
+      "id": "feed-d-a-grandview-llc-v-60-davidson-llc-confirm-the-primary-reco",
+      "layer": "evidence-and-records",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "feed-galbin-fernandez-in-his-capacity-as-the-administrator-of-the",
       "layer": "evidence-and-records",
       "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1317,35 +1318,11 @@
       "score": 43
     },
     {
-      "id": "feed-people-v-brim-confirm-the-primary-record-page-pdf-docket-fil",
-      "layer": "evidence-and-records",
-      "name": "People v. Brim — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/people-v-brim.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-punxsutawney-hunting-club-v-pgc-confirm-the-primary-record-p",
       "layer": "evidence-and-records",
       "name": "Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-sawas-v-elzanaty-confirm-the-primary-record-page-pdf-docket-",
-      "layer": "evidence-and-records",
-      "name": "Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/sawas-v-elzanaty.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1377,11 +1354,23 @@
       "score": 43
     },
     {
-      "id": "feed-the-new-york-and-presbyterian-hospital-v-new-york-state-nurs",
+      "id": "feed-united-states-v-anten-confirm-the-primary-record-page-pdf-do",
       "layer": "evidence-and-records",
-      "name": "The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "route": "entity-briefs/united-states-v-anten.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-williams-v-biggs-confirm-the-primary-record-page-pdf-docket-",
+      "layer": "evidence-and-records",
+      "name": "Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/williams-v-biggs.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1513,6 +1502,17 @@
       "id": "policy-forums",
       "layer": "policy-and-institutions",
       "name": "policy forums",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "research-institutes",
+      "layer": "policy-and-institutions",
+      "name": "research institutes",
       "type": "public route",
       "route": "search.html",
       "notes": [
@@ -3244,6 +3244,6 @@
     }
   ],
   "contractVersion": "2.0.0",
-  "contractUpdated": "2026-07-29T22:45:54.699Z",
+  "contractUpdated": "2026-07-30T06:23:44.591Z",
   "relationshipBoundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism."
 }

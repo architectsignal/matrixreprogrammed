@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-30T06:27:28.418Z",
+  "title": "Exposure Integrity Engine",
+  "boundary": "The Hit List is an investigative-priority and navigation surface, not a threat list, guilt ranking or call for harassment. Inclusion means the entity has documented power relevance, an evidence-backed accountability record, a significant unresolved evidence gap or a clearly labelled public claim requiring investigation.",
+  "summary": {
+    "evidenceLedgerEntries": 84,
+    "hitListEntries": 275,
+    "graphNodes": 120,
+    "graphEdges": 172,
+    "unresolvedGraphEdges": 172,
+    "sensitiveRecordFailures": 0,
+    "orphanDossierRoutes": 0,
+    "entriesWithoutAction": 0,
+    "clocksAvailable": 81,
+    "genericDarkClaimsDowngraded": 3,
+    "duplicateLedgerRecordsMerged": 1
+  },
+  "criticalFailures": [],
+  "improvements": [
+    "172 graph edges remain in the provenance-restoration queue and cannot be used as facts or timer triggers.",
+    "3 generic Dark Files lane(s) were kept as analytical inference until case-specific sources are attached.",
+    "1 duplicate cross-registry evidence record(s) were merged while preserving all source routes and registry origins."
+  ],
+  "orphanDossierRoutes": [],
+  "unresolvedEdgeSample": [
+    {
+      "from": "orsini",
+      "to": "historic-aristocracy",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "orsini",
+      "to": "church-state-power",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "orsini",
+      "to": "land-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "orsini",
+      "to": "institutional-access",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "breakspear",
+      "to": "historic-church-office",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "breakspear",
+      "to": "medieval-records",
+      "type": "layer hint",
+      "weight": 80,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "breakspear",
+      "to": "name-lineage",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rothschild",
+      "to": "banking-history",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rothschild",
+      "to": "philanthropy",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rothschild",
+      "to": "capital-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rothschild",
+      "to": "public-records",
+      "type": "layer hint",
+      "weight": 80,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rockefeller",
+      "to": "energy-history",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rockefeller",
+      "to": "foundations",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rockefeller",
+      "to": "education-and-policy",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "rockefeller",
+      "to": "public-private-routes",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "medici",
+      "to": "historic-banking",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "medici",
+      "to": "political-rule",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "medici",
+      "to": "patronage",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "medici",
+      "to": "church-links",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "habsburg",
+      "to": "dynastic-power",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "habsburg",
+      "to": "statecraft",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "habsburg",
+      "to": "marriage-alliances",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "habsburg",
+      "to": "orders-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "windsor",
+      "to": "monarchy",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "windsor",
+      "to": "charity-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "windsor",
+      "to": "land-and-estate-records",
+      "type": "layer hint",
+      "weight": 80,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "windsor",
+      "to": "state-ceremony",
+      "type": "layer hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "freemasonry",
+      "to": "politics-where-membership-is-publicly-documented",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "freemasonry",
+      "to": "monuments-and-architecture",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "freemasonry",
+      "to": "charities",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "freemasonry",
+      "to": "military-and-civic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "freemasonry",
+      "to": "publishing-and-symbolism",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "vatican-and-catholic-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "humanitarian-ngos",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "state-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "aristocratic-and-diplomatic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "health-and-relief-operations",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "crusades",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "church-state-power",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "banking-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "freemasonry-ritual-echoes",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "modern-groups-claiming-lineage",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "education-systems",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "diplomacy-and-theology",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "catholic-institutions",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "mission-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "publishing-and-universities",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "opus-dei",
+      "to": "vatican-structures",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "opus-dei",
+      "to": "education",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    },
+    {
+      "from": "opus-dei",
+      "to": "professional-associations",
+      "type": "overlap hint",
+      "weight": 55,
+      "evidenceGrade": "ungraded-source-linked-record",
+      "boundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism.",
+      "sourceRoutes": [],
+      "provenanceStatus": "provenance-missing"
+    }
+  ],
+  "operatingRule": "Facts require evidence. Allegations remain allegations. Rumours remain rumours. Speculation remains speculation. Proximity is mapped but never converted into guilt.",
+  "ok": true
+}

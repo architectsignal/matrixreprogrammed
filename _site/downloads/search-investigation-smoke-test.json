@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:26:43.141Z",
+  "generatedAt": "2026-07-30T06:25:47.396Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "30677 entries"
+      "detail": "31251 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "30677 unique routes"
+      "detail": "31251 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -120,22 +120,22 @@
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=9decc10dd5d614d48e1439ab, source-changes.html?change=92adb9d59689b41e578a7a5e, source-changes.html?change=c0a5a2caaede97acebdb74f9"
+      "detail": "source-changes.html?change=eaebe283915d5c0d1982b8e6, source-changes.html?change=108886c2624e7ff0fca9f3f9, source-changes.html?change=6852525bfb3f4d4c67a81fcb"
     },
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-4e0950628d25b3504921, relationship-registry.html?relationship=relationship-ca4802a554bf203124f7, daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796"
+      "detail": "relationship-registry.html?relationship=relationship-4e0950628d25b3504921, daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796, daily-investigation-conclusions.html?finding=4c372edcf20b760ae3305f10"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-bd42be0b09f7a8bc8513, relationship-registry.html?relationship=relationship-39f8cef6d2bb873f9a42, relationship-registry.html?relationship=relationship-d8b032e2fe5ffbd99713"
+      "detail": "relationship-registry.html?relationship=relationship-d8b032e2fe5ffbd99713, relationship-registry.html?relationship=relationship-e83542f9df880f1a7ccf, relationship-registry.html?relationship=relationship-2df0d2cf49caa1772e44"
     },
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "source-changes.html?change=ea906ec638c352f7dced1c63, source-changes.html?change=49679b1ed63de244c1cf19f9, source-changes.html?change=d5adf164b612fd92a1dca692"
+      "detail": "source-changes.html?change=14394588e567b7c52bd11cb3, source-changes.html?change=d748a52eab15ba888051067b, source-changes.html?change=a812104d556e1c07b8205441"
     }
   ],
   "failures": []

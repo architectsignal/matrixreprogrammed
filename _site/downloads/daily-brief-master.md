@@ -1,6 +1,6 @@
 # Deep Daily Control Brief
 
-Generated: 2026-07-28T06:23:58.878Z
+Generated: 2026-07-30T06:22:55.673Z
 
 Boundary: This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.
 
@@ -28,7 +28,7 @@ Strongest route today: World Economic Forum is the strongest current map node be
 - 100 — Elon Musk — billionaire-briefs/elon-musk.html
 - 100 — Jeff Bezos — billionaire-briefs/jeff-bezos.html
 - 100 — Mark Zuckerberg — billionaire-briefs/mark-zuckerberg.html
-- 100 — Warren Buffett — billionaire-briefs/warren-buffett.html
 - 100 — Blackwater / Xe / Academi / Constellis lineage — contractor-briefs/blackwater-constellis-lineage.html
 - 100 — DynCorp / Amentum lineage — contractor-briefs/dyncorp-amentum-lineage.html
 - 100 — CACI International — contractor-briefs/caci-intelligence-contractor.html
+- 100 — Booz Allen Hamilton — contractor-briefs/booz-allen-intelligence-contractor.html

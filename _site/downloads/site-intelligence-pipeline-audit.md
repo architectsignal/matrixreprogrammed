@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-28T06:25:10.570Z
+Updated: 2026-07-30T06:24:09.163Z
 Overall: fully-working
 Green: 43 · Amber: 0 · Red: 0
 
@@ -19,7 +19,7 @@ Green: 43 · Amber: 0 · Red: 0
 - **GREEN · Classify · pipeline-completeness:** 8 collection-to-review pipeline step(s) are declared. Fix: Require collect, classify, grade, cross-check, connect, conclude, publish and review stages.
 - **GREEN · Grade · evidence-levels:** 6 evidence/implementation level(s) are declared. Fix: Ensure implementation, convergence and lock-in cannot be inferred from source volume alone.
 - **GREEN · Connect · relationship-graph:** Evidence-weighted relationship graph exists.
-- **GREEN · Connect · graph-population:** Relationship graph contains 111 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
+- **GREEN · Connect · graph-population:** Relationship graph contains 120 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
 - **GREEN · Connect · graph-boundaries:** 0 relationship edge(s) lack an explicit grade or boundary field. Fix: Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge.
 - **GREEN · Conclude · daily-conclusions:** Daily power conclusions exists.
 - **GREEN · Conclude · conclusion-engine:** Conclusion engine exists.
@@ -30,7 +30,7 @@ Green: 43 · Amber: 0 · Red: 0
 - **GREEN · Conclude · daily-counterpoint:** Daily Command Brief contains its counterpoint. Fix: Generate counterpoint from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-practicalMeaning:** Daily Command Brief contains its practical meaning. Fix: Generate practical meaning from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-conclusionBoundary:** Daily Command Brief contains its claim boundary. Fix: Generate claim boundary from current evidence and canonical timers on every build.
-- **GREEN · Publish · brief-coverage:** 56 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
+- **GREEN · Publish · brief-coverage:** 73 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
 - **GREEN · Conclude · conclusion-engine-population:** 5 conclusion-engine item(s) exist. Fix: Do not publish an empty conclusion engine.
 - **GREEN · Clocks · clock-source:** Canonical risk-clock source exists.
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.
@@ -47,7 +47,7 @@ Green: 43 · Amber: 0 · Red: 0
 - **GREEN · Automate · build-order-build-homepage-command-surface.js:** build-homepage-command-surface.js is included in the authoritative build path. Fix: Add build-homepage-command-surface.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-site-intelligence-pipeline-audit.js:** site-intelligence-pipeline-audit.js is included in the authoritative build path. Fix: Add site-intelligence-pipeline-audit.js after legacy generators and before Cloudflare output.
 - **GREEN · Automate · build-order-patch-login-email-delivery.js:** patch-login-email-delivery.js is included in the authoritative build path. Fix: Add patch-login-email-delivery.js after legacy generators and before Cloudflare output.
-- **GREEN · Automate · daily-automation:** 157 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
+- **GREEN · Automate · daily-automation:** 176 workflow file(s) scanned for daily scheduling. Fix: Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.
 - **GREEN · Automate · weekly-automation:** Workflow files were scanned for weekly synthesis scheduling. Fix: Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.
 
 ## New Clock Ideas

@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-27T07:50:58.886Z",
+  "checkedAt": "2026-07-29T22:45:19.930Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30247591693,
+  "workflowRunId": 30497190745,
   "runAttempt": 1,
-  "headSha": "4c7e514262081090977f1cecf5edc5accd88b404",
+  "headSha": "f77b38ba9298abe7a4df3af210c8bb05433fad39",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-07-27T07:50:53.780Z",
+    "generatedAt": "2026-07-29T22:45:14.511Z",
     "actions": [
       {
         "type": "run",
@@ -30,7 +30,7 @@
         "target": "search-index.json",
         "routes": 6,
         "format": "compact",
-        "sizeMiB": 1.02
+        "sizeMiB": 1.06
       },
       {
         "type": "patch",
@@ -92,7 +92,7 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 10 HTML file(s) patched across 3378 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public marker scrub complete: 12 HTML file(s) patched across 3363 HTML surfaces; valid public routes preserved.\n",
         "stderr": ""
       },
       {
@@ -108,7 +108,7 @@
       {
         "name": "compact search index remains under 22 MiB",
         "ok": true,
-        "detail": "1.02 MiB"
+        "detail": "1.06 MiB"
       },
       {
         "name": "nine documented family structures",
@@ -315,7 +315,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-07-27T07:50:56.235Z",
+    "checkedAt": "2026-07-29T22:45:17.150Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -330,7 +330,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-07-27T07:50:53.539Z",
+    "generatedAt": "2026-07-29T22:45:14.390Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -351,7 +351,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-07-27T07:50:53.416Z",
+    "generatedAt": "2026-07-29T22:45:14.362Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",

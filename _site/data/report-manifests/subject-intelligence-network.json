@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:21:44.165Z",
-  "pageCount": 109,
+  "generatedAt": "2026-07-30T06:20:36.135Z",
+  "pageCount": 108,
   "output": "downloads/subject-intelligence-network.pdf",
   "report": {
-    "version": 5,
+    "version": 7,
     "title": "Intelligence Network Starter File",
-    "contentHash": "6883a4fd05523f5794d81b4205dd27ae2cea9d30f04c863abd1c45fdac4fde9f",
+    "contentHash": "f1c31f1d3d847299eaab12ebc8bf8fbf3527970cda707d448aa4cdb9329d8622",
     "sourceIds": [
       "beb907a8490963e80b4d0a90",
       "c773a9b56feb9b238da1ce66",
@@ -17,6 +17,8 @@
       "1e4f15d09e1414670233d7f7",
       "1769af26a7bda813406cd8f5",
       "481c4eb8b2fd03a36ca7037c",
+      "4ae6a940305d15da61333450",
+      "6f6462b75cdb929e0acbcde7",
       "e84fd0d8dc566190676f4f87",
       "9b5810e2943ffdc912a78854",
       "35733d144352d0255d4b0f95",
@@ -50,7 +52,7 @@
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "356f10eff5c6f147fc33ebeb",
-      "9b821ddb272b0fb297d39550",
+      "4712eed42978b8a5e911c47a",
       "declassified-files-2026-07-24-c827955e",
       "declassified-files-2026-07-23-55829d5e",
       "declassified-files-2026-07-23-670b739b",
@@ -60,9 +62,6 @@
       "declassified-files-2026-07-23-534fbf8f",
       "declassified-files-2026-07-23-55e56994",
       "declassified-files-2026-07-23-9e3d6831",
-      "declassified-files-2026-07-23-b2a9e7b6",
-      "declassified-files-2026-07-23-a8b27523",
-      "declassified-files-2026-07-23-72e6ea02",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "ec8ef1adbaaebb9fde883cae",
@@ -101,21 +100,23 @@
       "601665a2ceed8bc8f9046103",
       "0adf8574234774f191690701",
       "f59da50ababa3ddae79a8f1c",
-      "88780e987ae8758d90e927f0",
+      "war-machine-2026-07-29-1b1c36cc",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "war-machine-2026-07-28-20290a9e",
+      "war-machine-2026-07-28-1b2902bf",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "war-machine-2026-07-27-252b5114",
-      "d9bff117c0197d71854cdb83",
       "war-machine-2026-07-24-192b3e30",
       "war-machine-2026-07-24-aa23d3ae",
-      "war-machine-2026-07-23-ad2616fe",
       "declassified-files-2026-07-23-7b43a9b4",
-      "declassified-files-2026-07-23-fa922faa",
-      "declassified-files-2026-07-23-85ec568c",
-      "declassified-files-2026-07-23-90bd79dc",
-      "declassified-files-2026-07-23-7eb1900a",
-      "declassified-files-2026-07-23-493c0cbf",
-      "declassified-files-2026-07-23-f62b87a1",
-      "declassified-files-2026-07-23-71203b01",
-      "war-machine-2026-07-22-a6c25a9b",
       "6188547d91106e0f9d3bce50",
       "war-machine-2026-05-22-dod-wants-nearly-30-billion-to-modernize-its-ai-supercomputing-arsenal",
       "declassified-files-2026-05-19-cuba-declassified-records-on-the-brothers-to-the-rescue-shootdown-nati",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
-      "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-2CE1A691C8D09631"
+      "ASC-REVIEW-78EAB66242E0B95B"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 29,
-      "disputedClaimCount": 5,
+      "disputedClaimCount": 4,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 57,
-      "moneyRecordCount": 17
+      "relationshipCount": 58,
+      "moneyRecordCount": 16
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Starter File; Central Intelligence Agency; Intelligence Network Pack; Follow The Money Watch; Intelligence Network Share Kit; Intelligence Network Map; Five Eyes Intelligence Network; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Starter File",
           "Central Intelligence Agency",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-27T17:28:43.661Z"
+    "intelligenceFreshnessDate": "2026-07-29T12:00:00.000Z"
   }
 }

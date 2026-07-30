@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-28T06:15:41.677Z",
-  "pageCount": 88,
+  "generatedAt": "2026-07-30T06:14:24.719Z",
+  "pageCount": 93,
   "output": "downloads/july-2026-clock-coverage.pdf",
   "report": {
-    "version": 2,
+    "version": 4,
     "title": "July 2026 Clock Coverage",
-    "contentHash": "e3122822e189ebb0066ba5a00d6216ffe6e4d1f1921e037b68100886abed92c0",
+    "contentHash": "f09d0a4698fffde67edeb8a40a0b63d4cbcd16232d44ec0b79fe0c33de01ff7a",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "06baa45bea3e2e15eb80eff9",
@@ -48,8 +48,17 @@
       "62231a08b90f027815e7bc01",
       "5b02847b05c9c34963d8a042",
       "16397649363c800fecf2bfd0",
-      "5594665950812895f468c11d",
-      "ad23fb22757e50c30b3d487c",
+      "janner-iicsa-2022",
+      "nassar-fbi-oig-2021",
+      "epstein-opr-review-2020",
+      "cyril-smith-westminster-2020",
+      "peter-ball-iicsa-support-2019",
+      "cyril-smith-iicsa-2018",
+      "peter-ball-conviction-2015",
+      "janner-charges-2015",
+      "savile-health-investigations-2014",
+      "savile-broadmoor-2014",
+      "04178dd78ae55a022df89f05",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -137,16 +146,7 @@
       "trusts-silicon-valley-community-foundation-donor-trusts",
       "trusts-fidelity-charitable-donor-advised-funds",
       "trusts-schwab-charitable-donor-advised-funds",
-      "trusts-national-philanthropic-trust",
-      "trusts-charities-aid-foundation",
-      "trusts-community-foundation-trust-networks",
-      "private-equity-blackstone",
-      "private-equity-kkr",
-      "private-equity-apollo-global-management",
-      "private-equity-carlyle-group",
-      "private-equity-tpg",
-      "private-equity-cvc-capital-partners",
-      "private-equity-eqt"
+      "trusts-national-philanthropic-trust"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 0,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 9,
-      "moneyRecordCount": 103
+      "relationshipCount": 12,
+      "moneyRecordCount": 94
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 9 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Duquesne Family Office; L Catterton family capital routes; Walton Family Foundation; Sainsbury Family Charitable Funds; Crown Estate ownership trust routes; Employee Ownership Trust register watch; Rockefeller Family Fund",
+        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Duquesne Family Office; L Catterton family capital routes; Walton Family Foundation",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 9 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
+          "Westminster inquiry examined political and policing responses",
+          "IICSA documented predatory activities and institutional failures",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
           "Duquesne Family Office",
           "L Catterton family capital routes",
-          "Walton Family Foundation",
-          "Sainsbury Family Charitable Funds",
-          "Crown Estate ownership trust routes",
-          "Employee Ownership Trust register watch",
-          "Rockefeller Family Fund"
+          "Walton Family Foundation"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

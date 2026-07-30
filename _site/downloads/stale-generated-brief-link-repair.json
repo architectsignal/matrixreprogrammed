@@ -1,89 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-28T06:09:49.581Z",
+  "generatedAt": "2026-07-30T06:08:13.104Z",
   "roots": [
     ".",
     "_site"
   ],
-  "filesChanged": 19,
-  "fixes": 279,
-  "changes": [
-    {
-      "file": "control-map-daily.html",
-      "fixes": 1
-    },
-    {
-      "file": "deep-intel-feed.html",
-      "fixes": 17
-    },
-    {
-      "file": "power-structure-map.html",
-      "fixes": 17
-    },
-    {
-      "file": "_site/brief-quality-report",
-      "fixes": 17
-    },
-    {
-      "file": "_site/brief-quality-report.html",
-      "fixes": 17
-    },
-    {
-      "file": "_site/control-map-daily",
-      "fixes": 1
-    },
-    {
-      "file": "_site/control-map-daily.html",
-      "fixes": 1
-    },
-    {
-      "file": "_site/daily-missing-records",
-      "fixes": 34
-    },
-    {
-      "file": "_site/daily-missing-records.html",
-      "fixes": 34
-    },
-    {
-      "file": "_site/daily-power-conclusions",
-      "fixes": 2
-    },
-    {
-      "file": "_site/daily-power-conclusions.html",
-      "fixes": 2
-    },
-    {
-      "file": "_site/deep-intel-feed",
-      "fixes": 17
-    },
-    {
-      "file": "_site/deep-intel-feed.html",
-      "fixes": 17
-    },
-    {
-      "file": "_site/entity-daily-briefs",
-      "fixes": 17
-    },
-    {
-      "file": "_site/entity-daily-briefs.html",
-      "fixes": 17
-    },
-    {
-      "file": "_site/entity-exposure-index",
-      "fixes": 17
-    },
-    {
-      "file": "_site/entity-exposure-index.html",
-      "fixes": 17
-    },
-    {
-      "file": "_site/power-structure-map",
-      "fixes": 17
-    },
-    {
-      "file": "_site/power-structure-map.html",
-      "fixes": 17
-    }
-  ],
+  "filesChanged": 0,
+  "fixes": 0,
+  "changes": [],
   "boundary": "Only links to generated entity briefs, exposure pages and elite reports are changed, and only when the current generated target does not exist. Missing entity routes fall back to the public search; missing report routes fall back to the reports hub. Both source pages and the exact Cloudflare output are repaired."
 }

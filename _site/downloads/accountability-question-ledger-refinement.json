@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-30T06:27:29.366Z",
+  "questions": 275,
+  "hitListPresent": true,
+  "hitListRecords": 275,
+  "routeCoverage": {
+    "directDossierOrSource": 190,
+    "timerOnly": 85,
+    "noMappedRoute": 0
+  },
+  "cleanedImportedSubjectNames": 24,
+  "qualityRule": "Questions and subject names must be grammatical, avoid imported instruction fragments, end with a question mark, and retain at least one dossier, source or timer route where available.",
+  "operatingRule": "Every question retains what is known, what is not proven, which records are needed, whether a response has been received, and what evidence would change the conclusion.",
+  "boundary": "Question wording and routes were refined from the current cinematic hit list."
+}

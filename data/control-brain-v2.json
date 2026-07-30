@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "updated": "2026-07-28T06:58:34.908Z",
+  "updated": "2026-07-30T06:22:39.130Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 119,
-    "edges": 135,
+    "nodes": 118,
+    "edges": 134,
     "topNodes": 25
   },
   "top": [
@@ -19,17 +19,17 @@
         "courts-law"
       ],
       "score": 100,
-      "centrality": 18,
+      "centrality": 17,
       "evidenceConfidence": 9,
       "missingPressure": 16,
       "contradictionPressure": 0,
       "records": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Williams v. Biggs",
+        "Civil Rights Corps v. LaSalle",
         "United States v. Anten",
         "Punxsutawney Hunting Club v. PGC",
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-        "Sawas v. Elzanaty",
-        "People v. Brim",
-        "The New York and Presbyterian Hospital v. New York State Nurses Association"
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
       ],
       "missing": [
         "Primary record route",
@@ -46,7 +46,7 @@
       "links": [
         "subject-briefs.html"
       ],
-      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 18 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "blackrock",
@@ -1689,6 +1689,62 @@
     },
     {
       "from": "disclosure-gaps-and-missing-files",
+      "to": "d-a-grandview-llc-v-60-davidson-llc",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2024-13374",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "williams-v-biggs",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2021-08825",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "civil-rights-corps-v-lasalle",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-for-the-second-circuit",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "24-2251",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
       "to": "united-states-v-anten",
       "type": "subject entity route",
       "weight": 2,
@@ -1746,69 +1802,6 @@
     {
       "from": "disclosure-gaps-and-missing-files",
       "to": "2025-0045-appeal",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "sawas-v-elzanaty",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "2021-00294",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "people-v-brim",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "california-court-of-appeal",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "a170747m",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "court-of-appeals-for-the-second-circuit",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "25-113",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2042,7 +2035,7 @@
     {
       "entity": "Disclosure gaps and missing files",
       "priority": "red",
-      "why": "Disclosure gaps and missing files is ranked 100/100 because of 18 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "why": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
         "subject-briefs.html",
         "evidence-vault.html",

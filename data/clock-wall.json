@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
-  "updated": "2026-07-28T07:02:43.843Z",
+  "updated": "2026-07-30T06:26:28.146Z",
   "title": "Matrix Reprogrammed Mission Timers",
   "purpose": "Visual synthesis of the site’s evidence, conclusions, policy convergence, source changes and missing records.",
   "sitePurpose": "Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.",
   "scoreType": "pressureIndex",
   "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
   "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-  "sourceFileCount": 126,
-  "candidateSignalCount": 3782,
+  "sourceFileCount": 139,
+  "candidateSignalCount": 4094,
   "clocks": [
     {
       "slug": "wwiii-escalation",
@@ -39,7 +39,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 0 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
       "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
       "missionThemes": [
@@ -90,23 +90,7 @@
           "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
           "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168029",
           "published": "2026-07-27T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
-          "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
-          "route": "",
-          "sourceRoute": "",
-          "published": "",
-          "evidenceLevel": "3",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
-          "title": "Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict",
-          "route": "",
-          "sourceRoute": "",
-          "published": "",
-          "evidenceLevel": "3",
+          "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -126,9 +110,17 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict",
+          "route": "",
+          "sourceRoute": "",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
-          "route": "live-intel.html",
-          "sourceRoute": "live-intel.html",
+          "route": "",
+          "sourceRoute": "",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
@@ -155,6 +147,38 @@
           "sourceRoute": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5",
           "published": "2025-08-22T07:00:00.000Z",
           "evidenceLevel": "Seven-day public-record lead",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Middle East: UN warns against wider escalation after Houthi attacks in the Red Sea",
+          "route": "",
+          "sourceRoute": "",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "CBDC Rollout Clock",
+          "route": "surveillance-hub.html",
+          "sourceRoute": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "War Machine And Intelligence State",
+          "route": "dashboard-conflict.html",
+          "sourceRoute": "dashboard-conflict.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "AI Breakout Clock",
+          "route": "answer-engine.html",
+          "sourceRoute": "answer-engine.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -225,6 +249,18 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "dashboard-conflict.html",
+          "sourceRoute": "dashboard-conflict.html",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
+          "route": "answer-engine.html",
+          "sourceRoute": "answer-engine.html",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "evidence-vault.html",
           "sourceRoute": "evidence-vault.html",
           "evidenceLevel": "source-linked record"
@@ -248,6 +284,8 @@
         "https://news.un.org/feed/view/en/story/2026/07/1168016",
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5",
         "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5",
+        "dashboard-conflict.html",
+        "answer-engine.html",
         "evidence-vault.html",
         "search.html"
       ],
@@ -261,7 +299,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "wwiii-escalation",
       "name": "WWIII Escalation Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -418,6 +456,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "INDUSTRIAL BANK — District of Columbia Courts",
+          "route": "",
+          "sourceRoute": "",
+          "published": "2026-09-30T00:00:00.000Z",
+          "evidenceLevel": "B",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "Linked evidence record",
           "route": "answer-engine.html",
           "sourceRoute": "answer-engine.html",
@@ -499,7 +545,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "ai-breakout",
       "name": "AI Breakout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -597,7 +643,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -740,6 +786,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
+          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+          "sourceRoute": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+          "published": "2026-06-26T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation page · statutory rollout",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
           "route": "control-system-tracker.html#health-and-biosecurity",
           "sourceRoute": "control-system-tracker.html#health-and-biosecurity",
@@ -835,14 +889,8 @@
         },
         {
           "title": "Linked evidence record",
-          "route": "evidence-vault.html",
-          "sourceRoute": "evidence-vault.html",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "search.html",
-          "sourceRoute": "search.html",
+          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+          "sourceRoute": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
           "evidenceLevel": "source-linked record"
         }
       ],
@@ -860,6 +908,7 @@
         "black-file.html",
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
         "https://www.who.int/health-topics/who-pandemic-agreement",
+        "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "evidence-vault.html",
         "search.html"
       ],
@@ -878,7 +927,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "surveillance-state",
       "name": "Surveillance State Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1080,6 +1129,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "Money systems lane added for payment, wallet and compliance records",
+          "route": "",
+          "sourceRoute": "",
+          "published": "",
+          "evidenceLevel": "review lane",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "Linked evidence record",
           "route": "power-atlas.html",
           "sourceRoute": "power-atlas.html",
@@ -1199,7 +1256,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "financial-reset",
       "name": "Financial Reset Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1259,7 +1316,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 9 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -1385,6 +1442,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "Digital Identity and Permissioned Access Clock",
+          "route": "control-system-tracker.html#digital-id",
+          "sourceRoute": "control-system-tracker.html#digital-id",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "Linked evidence record",
           "route": "surveillance-hub.html",
           "sourceRoute": "surveillance-hub.html",
@@ -1483,7 +1548,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "cbdc-rollout",
       "name": "CBDC Rollout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1527,7 +1592,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Cyber risk remains elevated through AI-enabled misuse, infrastructure dependency, banking/payment concentration, state cyber operations and EU AI/cyber resilience planning. July refresh links cyber risk more strongly to AI governance rather than a specific blackout event. Policy convergence tracker lanes: War / Security / Emergency Powers.",
       "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
       "missionThemes": [
@@ -1638,14 +1703,6 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "published": "2026-07-27T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
           "title": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather",
           "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
           "sourceRoute": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
@@ -1659,6 +1716,14 @@
           "sourceRoute": "",
           "published": "",
           "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "2026 Rule of Law Report says media-market concentration and editorial independence concerns persist",
+          "route": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
+          "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official EU multi-country monitoring",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -1711,14 +1776,14 @@
         },
         {
           "title": "Linked evidence record",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168029",
+          "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
+          "sourceRoute": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
           "evidenceLevel": "source-linked record"
         },
         {
           "title": "Linked evidence record",
-          "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
-          "sourceRoute": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
+          "route": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
+          "sourceRoute": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
           "evidenceLevel": "source-linked record"
         },
         {
@@ -1743,8 +1808,8 @@
         "black-file.html",
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
         "https://www.enisa.europa.eu/news/nis360-the-bigger-picture-on-maturity-and-criticality-of-nis-critical-sectors",
-        "https://news.un.org/feed/view/en/story/2026/07/1168029",
         "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
+        "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1758,7 +1823,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "cyber-blackout",
       "name": "Cyber Blackout Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1830,7 +1895,7 @@
           "title": "Major disclosure releases produce institution-level fallout before person-level clarity",
           "route": "",
           "sourceRoute": "",
-          "published": "2026-07-28T06:59:14.303Z",
+          "published": "2026-07-30T06:23:34.267Z",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
@@ -1910,7 +1975,7 @@
           "title": "Alien Registration Form and Evidence of Registration",
           "route": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
           "sourceRoute": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
-          "published": "2026-07-28T06:43:42.928Z",
+          "published": "2026-07-30T06:08:12.364Z",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
@@ -1928,6 +1993,14 @@
           "sourceRoute": "trust-association-boundary.html",
           "published": "2026-06-25",
           "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Presidential Unsealing and Reporting System for UAP Encounters (PURSUE) - U.S. Department of War (.gov)",
+          "route": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5",
+          "sourceRoute": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5",
+          "published": "2026-05-08T14:30:11.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -1998,6 +2071,12 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5",
+          "sourceRoute": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "search.html",
           "sourceRoute": "search.html",
           "evidenceLevel": "source-linked record"
@@ -2015,6 +2094,7 @@
         "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
         "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report.html",
         "trust-association-boundary.html",
+        "https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5",
         "search.html"
       ],
       "missingEvidence": [
@@ -2026,7 +2106,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "alien-disclosure",
       "name": "Alien Disclosure Clock",
       "bandMeaning": "Some relevant signals exist, but the mechanism is weak, early or contested.",
@@ -2178,6 +2258,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "HIV, hepatitis, STI gains at risk as funding falls, WHO warns",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168040",
+          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168040",
+          "published": "2026-07-28T12:00:00.000Z",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather",
           "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
           "sourceRoute": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
@@ -2275,6 +2363,12 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168040",
+          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168040",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
           "sourceRoute": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
           "evidenceLevel": "source-linked record"
@@ -2307,6 +2401,7 @@
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "answer-engine.html",
         "power-structure-map.html",
+        "https://news.un.org/feed/view/en/story/2026/07/1168040",
         "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
         "https://pace.coe.int/en/files/36013/html",
         "evidence-vault.html",
@@ -2322,7 +2417,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "pandemic-biosecurity",
       "name": "Pandemic / Biosecurity Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -2374,7 +2469,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 3 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 3 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Civil-stability pressure remains elevated through elections, migration, economic strain, war protest cycles, platform/speech rules and emergency politics. July refresh adds no single acute civil-unrest trigger, so the score is held lower than homepage threshold. Policy convergence tracker lanes: War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Migration / Borders / Biometric Travel.",
       "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
       "missionThemes": [
@@ -2484,22 +2579,6 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "published": "2026-07-27T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
-          "title": "Iran urged to stop protest-related executions",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-          "published": "2026-07-23T12:00:00.000Z",
-          "evidenceLevel": "source-linked record",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
           "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
           "route": "https://www.who.int/health-topics/who-pandemic-agreement",
           "sourceRoute": "https://www.who.int/health-topics/who-pandemic-agreement",
@@ -2529,6 +2608,30 @@
           "sourceRoute": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5",
           "published": "2026-03-04T08:00:00.000Z",
           "evidenceLevel": "Seven-day public-record lead",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Surveillance shadows No Kings protests - Biometric Update",
+          "route": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
+          "sourceRoute": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
+          "published": "2025-10-20T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "US immigration crackdown spurs wave of digital resistance - Biometric Update",
+          "route": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQS0tSVlVTTDQxa191RVRhOFFsM2JNREg0X1dfcE5uR2lzYkd0S2NVNUNpTmQ5bm0yd0RGY0pqWm9RenFzZXFXMVd1VzQtTk9LQXVyVTNCYmhEMVBMNEtna2NEbHY3d1AwTTgzSW1PRFFKQy15UHh6by1yS3VDbzd0NTZ5U25uLXJoZTBON200ZVdQVFBzejdjRm9QNkw?oc=5",
+          "sourceRoute": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQS0tSVlVTTDQxa191RVRhOFFsM2JNREg0X1dfcE5uR2lzYkd0S2NVNUNpTmQ5bm0yd0RGY0pqWm9RenFzZXFXMVd1VzQtTk9LQXVyVTNCYmhEMVBMNEtna2NEbHY3d1AwTTgzSW1PRFFKQy15UHh6by1yS3VDbzd0NTZ5U25uLXJoZTBON200ZVdQVFBzejdjRm9QNkw?oc=5",
+          "published": "2025-09-01T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Conditional-access systems may become increasingly interconnected",
+          "route": "",
+          "sourceRoute": "",
+          "published": "",
+          "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -2587,18 +2690,6 @@
         },
         {
           "title": "Linked evidence record",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168029",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168009",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
           "route": "https://www.who.int/health-topics/who-pandemic-agreement",
           "sourceRoute": "https://www.who.int/health-topics/who-pandemic-agreement",
           "evidenceLevel": "source-linked record"
@@ -2620,6 +2711,12 @@
           "route": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5",
           "sourceRoute": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5",
           "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
+          "route": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
+          "sourceRoute": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
+          "evidenceLevel": "source-linked record"
         }
       ],
       "sourceRoutes": [
@@ -2632,12 +2729,12 @@
         "black-file.html",
         "https://pace.coe.int/en/files/36013/html",
         "answer-engine.html",
-        "https://news.un.org/feed/view/en/story/2026/07/1168029",
-        "https://news.un.org/feed/view/en/story/2026/07/1168009",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights_en",
         "https://news.google.com/rss/articles/CBMigAFBVV95cUxNalhVZlYtbFZ1a1Q2MDJKU0E3UUhzSHAzTUNXQW5VbW9jVUdtQjNDZWZjLTlSbWU2NGRXalNjRHNtQnJIRDI0Z0wzM1RfT3dYXzhWVHducXliZ0FPVVB1Q2ZEMWhkc2dWcGNndGluYkpWXzFpWlFvUHljZjMzTFRWbg?oc=5",
         "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQS0tSVlVTTDQxa191RVRhOFFsM2JNREg0X1dfcE5uR2lzYkd0S2NVNUNpTmQ5bm0yd0RGY0pqWm9RenFzZXFXMVd1VzQtTk9LQXVyVTNCYmhEMVBMNEtna2NEbHY3d1AwTTgzSW1PRFFKQy15UHh6by1yS3VDbzd0NTZ5U25uLXJoZTBON200ZVdQVFBzejdjRm9QNkw?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -2653,7 +2750,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "civil-unrest",
       "name": "Civil Unrest Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -2697,7 +2794,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.",
       "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
       "missionThemes": [
@@ -2782,6 +2879,14 @@
           "sourceRoute": "entity-timelines/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
           "published": "",
           "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "published": "2026-07-29T12:00:00.000Z",
+          "evidenceLevel": "Primary or official public-record lead",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -2902,6 +3007,12 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "sourceRoute": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5",
           "sourceRoute": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5",
           "evidenceLevel": "source-linked record"
@@ -2923,18 +3034,6 @@
           "route": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5",
           "sourceRoute": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5",
           "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5",
-          "sourceRoute": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5",
-          "sourceRoute": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5",
-          "evidenceLevel": "source-linked record"
         }
       ],
       "sourceRoutes": [
@@ -2948,6 +3047,7 @@
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260527~92140c5054.en.html",
         "institutions/food-and-agriculture-organization.html",
         "entity-timelines/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+        "https://news.un.org/feed/view/en/story/2026/07/1168047",
         "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5",
         "https://www.eea.europa.eu/en/newsroom/news/renewables-lower-energy-prices-and-play-key-role-to-reduce-vulnerability-to-fossil-fuel-supply-shocks",
         "https://news.google.com/rss/articles/CBMiugFBVV95cUxPczJpTmZyYjRQdlpzdVRBd2VYSmtYM0huMlpVNkFnS0VRc1JMTVQ1OFNvUWNlLVNPSkpuZzBHU1hwSUR5dG40Z2RSS3I2TXhadlBON3dqR1JSSnlZaE1UVXNWT1ZyMFpVWUlCejdCdmpkREJPMU5SWVIxQTd5OXZaU21yUlpuaHZwZ0xmRVNZeTdOWldJT3FyWDNyeWxFcXliaTV4NWhZOGhSX2JKZm9XalI2Rk9XV0ZHMkE?oc=5",
@@ -2968,7 +3068,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "food-system-stress",
       "name": "Food System Stress Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -3100,6 +3200,14 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
+          "title": "Top 100 Energy & Resource Companies",
+          "route": "follow-the-money/energy-resources.html",
+          "sourceRoute": "follow-the-money/energy-resources.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
           "title": "ENTSO-E's Summer Outlook finds no systemic European electricity adequacy risk but identifies specific weak regions",
           "route": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
           "sourceRoute": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
@@ -3148,11 +3256,11 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Policy dossier and clock",
+          "title": "PANAMERICA COMPUTERS, INC. — Department of Energy",
           "route": "",
           "sourceRoute": "",
-          "published": "",
-          "evidenceLevel": "2",
+          "published": "2026-09-28T00:00:00.000Z",
+          "evidenceLevel": "B",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
@@ -3217,6 +3325,12 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "follow-the-money/energy-resources.html",
+          "sourceRoute": "follow-the-money/energy-resources.html",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
           "sourceRoute": "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
           "evidenceLevel": "source-linked record"
@@ -3238,18 +3352,6 @@
           "route": "timers.html",
           "sourceRoute": "timers.html",
           "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "evidence-vault.html",
-          "sourceRoute": "evidence-vault.html",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "search.html",
-          "sourceRoute": "search.html",
-          "evidenceLevel": "source-linked record"
         }
       ],
       "sourceRoutes": [
@@ -3263,6 +3365,7 @@
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260527~92140c5054.en.html",
         "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
         "answer-engine.html",
+        "follow-the-money/energy-resources.html",
         "https://www.entsoe.eu/news/2026/05/29/entso-e-releases-2026-summer-outlook-report/",
         "daily-command-brief.html",
         "https://www.usaspending.gov/award/89243326FFE400787",
@@ -3281,7 +3384,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "energy-shock",
       "name": "Energy Shock Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -3683,7 +3786,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "id": "machine-convergence",
       "name": "Machine Convergence",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -4064,7 +4167,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 6 fresh records, 6 primary/official, 5 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4350,8 +4453,8 @@
         }
       ],
       "timerUpdateRule": "Raise when identity becomes mandatory for a major service or integrates with payments, travel, health, work, benefits, age verification or speech. Lower when anonymous, offline or non-digital alternatives are legally protected and practically usable.",
-      "evidenceFingerprint": "357fc8d43838128527f97d05d7c0572a1c5dc086565b35cf0502262f4cfcb0e4",
-      "lastEvidenceChangeAt": "2026-07-28T07:02:24.660Z",
+      "evidenceFingerprint": "b7206edd6254046f7ce7fa64107091584237832dbf76a0ce6c7763f3cf1fc08f",
+      "lastEvidenceChangeAt": "2026-07-30T06:22:07.099Z",
       "automaticUpdateStatus": "evidence-changed-score-updated",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -4469,7 +4572,15 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "route": "",
           "sourceRoute": "",
-          "published": "2026-07-28T06:57:36.074Z",
+          "published": "2026-07-30T06:23:34.267Z",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Digital identity and payment rails become more linked to access control",
+          "route": "",
+          "sourceRoute": "",
+          "published": "2026-07-30T06:21:21.119Z",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
@@ -4478,14 +4589,6 @@
           "route": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNkNVZGppbUdIOVBCUHNFY3ZsTGhuTVJzNWZzcWp5eTdBRkl4clB0azJSdTBuNnFueVg2eFA2WURkZE8wbzlXNTJBelE0UjE3SGhVdVhRRVZRZThiUXgyQmNVZWxINVpTUzhVMVV2T01acFFwU0Q1dG05RWxnWVR5VllJaWRtN1NLbjFYcHBhZlc0ZVR3ZDJ0TWltMkRGREJVb3A1dUgyVFd6RkZYRlZqU0t3bGxhazJPM1FYZmhHX00?oc=5",
           "sourceRoute": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNkNVZGppbUdIOVBCUHNFY3ZsTGhuTVJzNWZzcWp5eTdBRkl4clB0azJSdTBuNnFueVg2eFA2WURkZE8wbzlXNTJBelE0UjE3SGhVdVhRRVZRZThiUXgyQmNVZWxINVpTUzhVMVV2T01acFFwU0Q1dG05RWxnWVR5VllJaWRtN1NLbjFYcHBhZlc0ZVR3ZDJ0TWltMkRGREJVb3A1dUgyVFd6RkZYRlZqU0t3bGxhazJPM1FYZmhHX00?oc=5",
           "published": "2026-02-26T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
-        },
-        {
-          "title": "How agencies can ensure trust and transparency in digital identity - Federal News Network",
-          "route": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWkdZTjJ0aVlQVTlRc1pHNWFlVW4zNFJmcGVDdnlXaktyVU8wYkJBRlluX2lyZWpMYXpRMGhvLTMyaTNuMjllZExyWkRCUlBpcWphdDNuSFVMUl9pa19NTjJkVTBtZzRkQkFJNjJhT09HZmhmbnVJREpQVXBHMTdUWWxPbHRtX0E1LWc3U2lMZ0JlSXpGcUlXWkpyR3NoUEN0LXBVMjJTX09wUnVBZDh3dTZCbVFwLWlt?oc=5",
-          "sourceRoute": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWkdZTjJ0aVlQVTlRc1pHNWFlVW4zNFJmcGVDdnlXaktyVU8wYkJBRlluX2lyZWpMYXpRMGhvLTMyaTNuMjllZExyWkRCUlBpcWphdDNuSFVMUl9pa19NTjJkVTBtZzRkQkFJNjJhT09HZmhmbnVJREpQVXBHMTdUWWxPbHRtX0E1LWc3U2lMZ0JlSXpGcUlXWkpyR3NoUEN0LXBVMjJTX09wUnVBZDh3dTZCbVFwLWlt?oc=5",
-          "published": "2025-12-29T08:00:00.000Z",
           "evidenceLevel": "Seven-day public-record lead",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
@@ -4595,12 +4698,6 @@
         },
         {
           "title": "Linked evidence record",
-          "route": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWkdZTjJ0aVlQVTlRc1pHNWFlVW4zNFJmcGVDdnlXaktyVU8wYkJBRlluX2lyZWpMYXpRMGhvLTMyaTNuMjllZExyWkRCUlBpcWphdDNuSFVMUl9pa19NTjJkVTBtZzRkQkFJNjJhT09HZmhmbnVJREpQVXBHMTdUWWxPbHRtX0E1LWc3U2lMZ0JlSXpGcUlXWkpyR3NoUEN0LXBVMjJTX09wUnVBZDh3dTZCbVFwLWlt?oc=5",
-          "sourceRoute": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWkdZTjJ0aVlQVTlRc1pHNWFlVW4zNFJmcGVDdnlXaktyVU8wYkJBRlluX2lyZWpMYXpRMGhvLTMyaTNuMjllZExyWkRCUlBpcWphdDNuSFVMUl9pa19NTjJkVTBtZzRkQkFJNjJhT09HZmhmbnVJREpQVXBHMTdUWWxPbHRtX0E1LWc3U2lMZ0JlSXpGcUlXWkpyR3NoUEN0LXBVMjJTX09wUnVBZDh3dTZCbVFwLWlt?oc=5",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
           "route": "evidence-vault.html",
           "sourceRoute": "evidence-vault.html",
           "evidenceLevel": "source-linked record"
@@ -4621,7 +4718,6 @@
         "policy/eidas-2-european-digital-identity-wallet.html",
         "black-file.html",
         "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNkNVZGppbUdIOVBCUHNFY3ZsTGhuTVJzNWZzcWp5eTdBRkl4clB0azJSdTBuNnFueVg2eFA2WURkZE8wbzlXNTJBelE0UjE3SGhVdVhRRVZRZThiUXgyQmNVZWxINVpTUzhVMVV2T01acFFwU0Q1dG05RWxnWVR5VllJaWRtN1NLbjFYcHBhZlc0ZVR3ZDJ0TWltMkRGREJVb3A1dUgyVFd6RkZYRlZqU0t3bGxhazJPM1FYZmhHX00?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWkdZTjJ0aVlQVTlRc1pHNWFlVW4zNFJmcGVDdnlXaktyVU8wYkJBRlluX2lyZWpMYXpRMGhvLTMyaTNuMjllZExyWkRCUlBpcWphdDNuSFVMUl9pa19NTjJkVTBtZzRkQkFJNjJhT09HZmhmbnVJREpQVXBHMTdUWWxPbHRtX0E1LWc3U2lMZ0JlSXpGcUlXWkpyR3NoUEN0LXBVMjJTX09wUnVBZDh3dTZCbVFwLWlt?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -4635,7 +4731,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 84,
       "automaticScoreMovement": 2,
       "automaticUpdateReason": "Evidence change: 15 fresh records, 12 primary/official, 8 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4647,7 +4743,7 @@
         "requirement": "Raise when identity becomes mandatory for a major service or integrates with payments, travel, health, work, benefits, age verification or speech."
       },
       "automaticEvidenceCounts": {
-        "total": 22,
+        "total": 21,
         "fresh": 15,
         "primaryOrOfficial": 12,
         "implementation": 8,
@@ -4896,7 +4992,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5166,7 +5262,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5414,7 +5510,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 72,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5672,7 +5768,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5805,8 +5901,8 @@
       "automaticUpdate": true,
       "policyConvergenceLinks": [],
       "timerUpdateRule": "Raise when legally required records are delayed, removed, sealed, redacted without adequate explanation or contradicted by later disclosures. Lower when records are released, restored, independently audited and made searchable with clear provenance.",
-      "evidenceFingerprint": "f880056ada8d65cea01d3fe92180ab726aa98818842e5ec97cc0569e5bf8b4eb",
-      "lastEvidenceChangeAt": "2026-07-28T07:02:24.661Z",
+      "evidenceFingerprint": "e62f984f442ce4f26d82b5b2d6c85726cba2ab273ea2e4a53a0f11bd735b22cb",
+      "lastEvidenceChangeAt": "2026-07-30T06:22:07.100Z",
       "automaticUpdateStatus": "evidence-changed-score-updated",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -5814,7 +5910,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "13 distinct matching evidence/feed records, including 1 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
+      "calculationBasis": "16 distinct matching evidence/feed records, including 1 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
       "plainEnglishConclusion": "Tracks disclosure delays, unexplained redactions, sealed records, deleted pages, missing procurement documents, overdue audits, ignored information requests and official corrections.",
       "missionThemes": [
         {
@@ -5854,7 +5950,15 @@
           "title": "Missing records become the main investigation map",
           "route": "",
           "sourceRoute": "",
-          "published": "2026-07-28T06:24:35.782Z",
+          "published": "2026-07-30T06:23:34.267Z",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Missing records become the main investigation map",
+          "route": "",
+          "sourceRoute": "",
+          "published": "2026-07-28T06:59:14.303Z",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
@@ -6028,7 +6132,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 63,
       "automaticScoreMovement": 1,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 3 primary/official, 1 implementation signals, 0 counter-signals, 2 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6215,16 +6319,16 @@
       "automaticUpdate": true,
       "policyConvergenceLinks": [],
       "timerUpdateRule": "Raise when final judgments are ignored, enforcement is delayed, penalties are immaterial, repeat violations continue or oversight is obstructed. Lower when judgments are enforced, sanctions are proportionate and independent review produces corrective action.",
-      "evidenceFingerprint": "ddf306f29ddc45d07c012e99ca47f18f59f057de6e30d5e866cb75cd218ce722",
-      "lastEvidenceChangeAt": "2026-07-28T07:02:24.662Z",
-      "automaticUpdateStatus": "evidence-changed-score-updated",
+      "evidenceFingerprint": "93a031b55ea25ec3a26fd0f455a9f1d6da814b627c3bd3a4d3d26e5809aa860f",
+      "lastEvidenceChangeAt": "2026-07-30T06:07:33.031Z",
+      "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
       "scoreBand": "Developing",
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "15 distinct matching evidence/feed records, including 0 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
+      "calculationBasis": "16 distinct matching evidence/feed records, including 0 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
       "plainEnglishConclusion": "Tracks whether powerful institutions and office-holders are investigated, judged, sanctioned and compelled to comply with courts, regulators, audits and disclosure duties.",
       "missionThemes": [
         {
@@ -6309,57 +6413,73 @@
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Court dockets, exhibits and enforcement records",
-          "route": "evidence-vault.html",
-          "sourceRoute": "evidence-vault.html",
+          "title": "Consent Motion for Entry of Final Judgment",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Bank regulator enforcement releases",
-          "route": "https://www.federalreserve.gov/supervisionreg/enforcementactions.htm",
-          "sourceRoute": "https://www.federalreserve.gov/supervisionreg/enforcementactions.htm",
+          "title": "Consent of and Final Judgment as to Gautam Adani",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Court Records",
-          "route": "",
-          "sourceRoute": "",
+          "title": "Consent of and Final Judgment as to Sagar Adani",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Financial Records",
-          "route": "",
-          "sourceRoute": "",
+          "title": "Final Judgment - Andrew Kaufman",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Intelligence Oversight",
-          "route": "",
-          "sourceRoute": "",
+          "title": "Final Judgment - Arthur",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "Oversight, Audit And Missing Records",
-          "route": "daily-missing-records.html",
-          "sourceRoute": "daily-missing-records.html",
+          "title": "Final Judgment - Bin Hao",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
         },
         {
-          "title": "War Machine And Intelligence State",
-          "route": "dashboard-conflict.html",
-          "sourceRoute": "dashboard-conflict.html",
+          "title": "Final Judgment - Brent Cranmer",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Final Judgment - Daniel McCormick",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Final Judgment - DaveGlo Investment Group, Inc.",
+          "route": "daily-command-brief.html",
+          "sourceRoute": "daily-command-brief.html",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
@@ -6436,24 +6556,6 @@
         },
         {
           "title": "Linked evidence record",
-          "route": "https://www.federalreserve.gov/supervisionreg/enforcementactions.htm",
-          "sourceRoute": "https://www.federalreserve.gov/supervisionreg/enforcementactions.htm",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "daily-missing-records.html",
-          "sourceRoute": "daily-missing-records.html",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
-          "route": "dashboard-conflict.html",
-          "sourceRoute": "dashboard-conflict.html",
-          "evidenceLevel": "source-linked record"
-        },
-        {
-          "title": "Linked evidence record",
           "route": "search.html",
           "sourceRoute": "search.html",
           "evidenceLevel": "source-linked record"
@@ -6465,9 +6567,6 @@
         "epstein-files.html",
         "investigation-machine.html",
         "daily-command-brief.html",
-        "https://www.federalreserve.gov/supervisionreg/enforcementactions.htm",
-        "daily-missing-records.html",
-        "dashboard-conflict.html",
         "search.html"
       ],
       "missingEvidence": [
@@ -6479,9 +6578,9 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 56,
-      "automaticScoreMovement": 2,
+      "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 5 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
@@ -6491,7 +6590,7 @@
         "requirement": "Raise when final judgments are ignored, enforcement is delayed, penalties are immaterial, repeat violations continue or oversight is obstructed."
       },
       "automaticEvidenceCounts": {
-        "total": 19,
+        "total": 20,
         "fresh": 5,
         "primaryOrOfficial": 5,
         "implementation": 1,
@@ -6685,7 +6784,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "7 distinct matching evidence/feed records, including 0 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
+      "calculationBasis": "11 distinct matching evidence/feed records, including 0 primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and the published trigger rule; repetition alone cannot raise it.",
       "plainEnglishConclusion": "Tracks where private companies acquire public functions through contracts, identity systems, surveillance, moderation, defence, healthcare, standards, data infrastructure, lobbying and revolving-door appointments.",
       "missionThemes": [
         {
@@ -6723,6 +6822,14 @@
           "title": "Top 100 Government Contractors",
           "route": "follow-the-money/government-contractors.html",
           "sourceRoute": "follow-the-money/government-contractors.html",
+          "published": "",
+          "evidenceLevel": "source-linked record",
+          "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+        },
+        {
+          "title": "Top 100 Government Contractors",
+          "route": "https://www.usaspending.gov/",
+          "sourceRoute": "https://www.usaspending.gov/",
           "published": "",
           "evidenceLevel": "source-linked record",
           "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
@@ -6825,6 +6932,12 @@
         },
         {
           "title": "Linked evidence record",
+          "route": "https://www.usaspending.gov/",
+          "sourceRoute": "https://www.usaspending.gov/",
+          "evidenceLevel": "source-linked record"
+        },
+        {
+          "title": "Linked evidence record",
           "route": "private-contractor-tracker.html",
           "sourceRoute": "private-contractor-tracker.html",
           "evidenceLevel": "source-linked record"
@@ -6853,6 +6966,7 @@
         "institution-tracker.html",
         "control-system-tracker.html#agenda-2030-and-global-standards",
         "follow-the-money/government-contractors.html",
+        "https://www.usaspending.gov/",
         "private-contractor-tracker.html",
         "evidence-vault.html",
         "downloads/wealth-guides/government-contracts.pdf",
@@ -6868,7 +6982,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 76,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 5 primary/official, 2 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7179,7 +7293,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 4 primary/official, 1 implementation signals, 1 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7403,7 +7517,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 61,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7724,7 +7838,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 62,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 5 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7974,7 +8088,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 65,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -8154,8 +8268,8 @@
       ],
       "timerUpdateRule": "Raise on official shortage, concentration, port, logistics, sanctions or strategic-dependence records showing reduced resilience. Lower when sourcing, inventories, domestic capacity and transport redundancy improve.",
       "evidenceFingerprint": "27ce3e58a0cd7e8a397ecda55e9e3973e8e40ee14b7c30d326784664d365eaf4",
-      "lastEvidenceChangeAt": "2026-07-28T06:43:08.851Z",
-      "automaticUpdateStatus": "evidence-unchanged-score-held",
+      "lastEvidenceChangeAt": "2026-07-30T06:22:07.104Z",
+      "automaticUpdateStatus": "evidence-changed-score-updated",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
       "scoreBand": "Elevated",
@@ -8367,9 +8481,9 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 64,
-      "automaticScoreMovement": 0,
+      "automaticScoreMovement": 2,
       "automaticUpdateReason": "Evidence change: 10 fresh records, 5 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 1 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
@@ -8622,7 +8736,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -8861,7 +8975,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 63,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -9130,7 +9244,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 68,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -9386,9 +9500,9 @@
         }
       ],
       "timerUpdateRule": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access. Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available.",
-      "evidenceFingerprint": "5b3ec1fa63d70d0df704959de0e59485d9d960d4f28cf49e0f272ccf175820a0",
-      "lastEvidenceChangeAt": "2026-07-28T07:02:24.664Z",
-      "automaticUpdateStatus": "evidence-changed-score-updated",
+      "evidenceFingerprint": "6ca121682761bd68c8c47ce3a0cdf180fa5c812a6776233d35d6cefe25a5d9fa",
+      "lastEvidenceChangeAt": "2026-07-30T06:07:33.035Z",
+      "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
       "scoreBand": "Active",
@@ -9637,9 +9751,9 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 93,
-      "automaticScoreMovement": 2,
+      "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 10 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
@@ -9649,7 +9763,7 @@
         "requirement": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access."
       },
       "automaticEvidenceCounts": {
-        "total": 17,
+        "total": 16,
         "fresh": 10,
         "primaryOrOfficial": 9,
         "implementation": 7,
@@ -9954,7 +10068,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 4 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -10223,7 +10337,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -10536,7 +10650,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 42,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -10883,7 +10997,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 3 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -11296,7 +11410,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 3 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -11739,7 +11853,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 8 fresh records, 7 primary/official, 6 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -12106,7 +12220,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 36,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 4 primary/official, 4 implementation signals, 0 counter-signals, 0 case records and 4 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -12504,7 +12618,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 25,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 3 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -12857,7 +12971,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -13184,7 +13298,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 54,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -13512,7 +13626,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 46,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -13815,7 +13929,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -14097,7 +14211,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -14354,7 +14468,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 3,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -14611,7 +14725,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -14869,7 +14983,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 60,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -15146,7 +15260,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 15,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: case-record-gate-passed. Repetition alone does not move the score.",
@@ -15428,7 +15542,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 8,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -15685,7 +15799,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -15942,7 +16056,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -16178,7 +16292,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 3,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -16387,7 +16501,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -16595,7 +16709,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -16824,7 +16938,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -17101,7 +17215,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 0 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -17403,7 +17517,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -17705,7 +17819,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 34,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-held. Repetition alone does not move the score.",
@@ -17987,7 +18101,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18249,7 +18363,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 28,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18511,7 +18625,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18753,7 +18867,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 8,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18967,7 +19081,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 0 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -19222,7 +19336,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 68,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -19530,7 +19644,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 6,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -19832,7 +19946,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -20114,7 +20228,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -20411,7 +20525,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 52,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 3 implementation signals, 0 counter-signals, 3 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -20738,7 +20852,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 78,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-record-gate-passed. Repetition alone does not move the score.",
@@ -21040,7 +21154,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 58,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -21322,7 +21436,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 72,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -21599,7 +21713,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 76,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-record-gate-passed. Repetition alone does not move the score.",
@@ -21901,7 +22015,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: case-record-gate-held. Repetition alone does not move the score.",
@@ -22189,7 +22303,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 24,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -22452,7 +22566,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 42,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -22735,7 +22849,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 18,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: case-record-gate-held. Repetition alone does not move the score.",
@@ -23043,7 +23157,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 10,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: authenticated-mechanism-gate-held. Repetition alone does not move the score.",
@@ -23351,7 +23465,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 40,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -23633,7 +23747,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -23890,7 +24004,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -24147,7 +24261,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 44,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -24404,7 +24518,7 @@
         "Use the Claim Classifier before sharing or attaching the claim to any person or institution.",
         "Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation."
       ],
-      "generatedAt": "2026-07-28T07:02:40.384Z",
+      "generatedAt": "2026-07-30T06:26:22.763Z",
       "previousAutomaticScore": 12,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 0 implementation signals, 1 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -24506,7 +24620,7 @@
     "Other Classified Claims",
     "Hidden History and Cataclysm Claims"
   ],
-  "contractVersion": "2.0.0",
-  "contractUpdated": "2026-07-29T22:45:54.710Z",
-  "clockBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda or guilt. The score may move only when dated evidence changes the exact variable measured."
+  "contractVersion": "2.1.0",
+  "contractUpdated": "2026-07-30T06:26:28.186Z",
+  "clockBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
 }

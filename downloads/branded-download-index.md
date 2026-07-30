@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-28T06:57:08.153Z
+Updated: 2026-07-30T06:20:41.720Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -77,6 +77,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf
 - Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf
 - Conclusion Integrity Report: downloads/conclusion-integrity-report.pdf
+- Consequence Tracking Runtime Hardening: downloads/consequence-tracking-runtime-hardening.pdf
 - Contact Nav Current Pm Report: downloads/contact-nav-current-pm-report.pdf
 - Contact The Machine Build: downloads/contact-the-machine-build.pdf
 - Control Brain V2: downloads/control-brain-v2.pdf

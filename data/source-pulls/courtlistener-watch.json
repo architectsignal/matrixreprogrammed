@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T19:43:02.800Z",
+  "updated": "2026-07-30T03:27:07.204Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -11,9 +11,202 @@
   "itemCount": 6,
   "raw": {
     "count": 23270,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxNjU0NDAwMDAwJnM9MTA4NzY1MDUmdD1vJmQ9MjAyNi0wNy0yOSZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMTcyODAwMDAwJnM9MTA4Nzk2NzUmdD1vJmQ9MjAyNi0wNy0yOSZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+        "attorney": "",
+        "caseName": "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "caseNameFull": "",
+        "citation": [
+          "2026 NY Slip Op 04743"
+        ],
+        "citeCount": 0,
+        "cluster_id": 10936338,
+        "court": "Appellate Division of the Supreme Court of the State of New York",
+        "court_citation_string": "N.Y. App. Div.",
+        "court_id": "nyappdiv",
+        "court_jurisdiction": "SA",
+        "dateArgued": null,
+        "dateFiled": "2026-07-29",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "2024-13374",
+        "docket_id": 73689862,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-29T20:17:07.071394Z",
+          "date_created": "2026-07-29T20:17:06.843304Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              2811352,
+              5811129,
+              5829608,
+              5957646,
+              9297529,
+              9374353,
+              9554776
+            ],
+            "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04743.shtml",
+            "id": 11403912,
+            "joined_by_ids": [],
+            "local_path": "html/2026/07/29/d__a_grandview_llc_v._60_davidson_llc.html",
+            "meta": {
+              "timestamp": "2026-07-29T20:18:16.342189Z",
+              "date_created": "2026-07-29T20:17:06.857302Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "13a29da231020d9594aba8111e76222675c88355",
+            "snippet": "D & A Grandview, LLC v 60 Davidson, LLC - 2026 NY Slip Op 04743\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n   ",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11403912
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
+      {
+        "absolute_url": "/opinion/10936292/williams-v-biggs/",
+        "attorney": "",
+        "caseName": "Williams v. Biggs",
+        "caseNameFull": "",
+        "citation": [
+          "2026 NY Slip Op 04791"
+        ],
+        "citeCount": 0,
+        "cluster_id": 10936292,
+        "court": "Appellate Division of the Supreme Court of the State of New York",
+        "court_citation_string": "N.Y. App. Div.",
+        "court_id": "nyappdiv",
+        "court_jurisdiction": "SA",
+        "dateArgued": null,
+        "dateFiled": "2026-07-29",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "2021-08825",
+        "docket_id": 73689802,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-29T20:15:53.425466Z",
+          "date_created": "2026-07-29T20:15:53.316323Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              2038313,
+              2042981,
+              2058932,
+              2721729,
+              2748382,
+              2785796,
+              2951170,
+              3171227,
+              3172631,
+              3190018,
+              4107671,
+              4172505,
+              4639026,
+              4673352,
+              4692312,
+              4696564,
+              5132944,
+              5485643,
+              5486558,
+              5531408,
+              5537780,
+              5680321,
+              5682121,
+              5710274,
+              5714669,
+              5721093,
+              5761614,
+              5778050,
+              5792381,
+              5795150,
+              5800249,
+              5802148,
+              5812988,
+              5815763,
+              5815885,
+              5830213,
+              5830832,
+              5839160,
+              5860830,
+              5937913,
+              5952446,
+              5963641,
+              5973805,
+              5977247,
+              5979528,
+              6070194,
+              6090818,
+              6092912,
+              6096429,
+              6097549,
+              6112985,
+              8212370,
+              8405609,
+              9377831,
+              9824478,
+              9894464,
+              9899097,
+              9907738
+            ],
+            "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04791.shtml",
+            "id": 11403866,
+            "joined_by_ids": [],
+            "local_path": "html/2026/07/29/williams_v._biggs_1.html",
+            "meta": {
+              "timestamp": "2026-07-29T20:18:22.513944Z",
+              "date_created": "2026-07-29T20:15:53.329276Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "502573258aeb3dde890623336f1032fefdfe0035",
+            "snippet": "Williams v Biggs - 2026 NY Slip Op 04791\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n             ",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11403866
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
       {
         "absolute_url": "/opinion/10936118/civil-rights-corps-v-lasalle/",
         "attorney": "",
@@ -1761,194 +1954,6 @@
         "scdb_id": "",
         "sibling_ids": [
           11347194
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10879072/in-the-matter-of-robert-james-hardy/",
-        "attorney": "",
-        "caseName": "In the Matter of Robert James Hardy",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10879072,
-        "court": "Indiana Supreme Court",
-        "court_citation_string": "Ind.",
-        "court_id": "ind",
-        "court_jurisdiction": "S",
-        "dateArgued": null,
-        "dateFiled": "2026-06-23",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "24S-DI-00438",
-        "docket_id": 73520626,
-        "judge": "Goff, Slaughter, Massa, Rush, Molter",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-23T19:06:18.512083Z",
-          "date_created": "2026-06-23T19:06:12.431497Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": 4347,
-            "cites": [
-              852742,
-              852823,
-              868783,
-              2060384,
-              2241908,
-              2482347,
-              4248625,
-              5142126,
-              7077394,
-              7077519,
-              7080289,
-              9432405,
-              9726123,
-              9779769,
-              10487578
-            ],
-            "download_url": "https://public.courts.in.gov/Decisions/api/Document/Opinion?Id=McFWkjyaUGbgF44pAoLp5y8-ArNtSLll9I1dAxFVg1BJNbepNDNdsMvX5lnCiUEY0",
-            "id": 11346590,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/23/in_the_matter_of_robert_james_hardy.pdf",
-            "meta": {
-              "timestamp": "2026-06-23T19:11:16.448523Z",
-              "date_created": "2026-06-23T19:06:12.507670Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "c44c1eadfe689260d8f4eb46e206a93ac74a1b77",
-            "snippet": "                    IN THE\n\nIndiana Supreme Court\n                                                            FILED\n       Supreme Court Case No. 24S-DI-438                Jun 23 2026, 1:33 pm\n\n                                                            CLERK\n                                                        Indiana Supreme Court\nIn the Matter of Robert James Hardy Jr.,                   Court of Appeals\n                                                             and Tax Court\n\n          ",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [
-          4321,
-          4347
-        ],
-        "panel_names": [
-          "Mark S. Massa",
-          "Loretta H. Rush"
-        ],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11346590
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10876505/people-v-brim/",
-        "attorney": "",
-        "caseName": "People v. Brim",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10876505,
-        "court": "California Court of Appeal",
-        "court_citation_string": "Cal. Ct. App.",
-        "court_id": "calctapp",
-        "court_jurisdiction": "SA",
-        "dateArgued": null,
-        "dateFiled": "2026-06-17",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "A170747",
-        "docket_id": 73497177,
-        "judge": "",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-17T19:08:43.915094Z",
-          "date_created": "2026-06-17T19:08:43.674761Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              854599,
-              1037096,
-              1249738,
-              1316339,
-              2117789,
-              2126066,
-              2151873,
-              2248629,
-              2255969,
-              2271968,
-              2288434,
-              2290705,
-              2300240,
-              2625630,
-              2628290,
-              2632333,
-              2648493,
-              2718512,
-              4092960,
-              4118630,
-              4160521,
-              4178713,
-              4417994,
-              5435968,
-              5452334,
-              5664098,
-              5664147,
-              5666643,
-              5667117,
-              6105748,
-              6106868,
-              7802476,
-              9504101,
-              9529887,
-              9539025,
-              9599865,
-              9610046,
-              9628315,
-              9631606,
-              9781298,
-              9792473,
-              9796829,
-              9799767
-            ],
-            "download_url": "https://www.courts.ca.gov/opinions/documents/A170747.PDF",
-            "id": 11344002,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/17/people_v._brim.pdf",
-            "meta": {
-              "timestamp": "2026-06-17T19:09:33.300168Z",
-              "date_created": "2026-06-17T19:08:43.744220Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "9d88e6aed6071e866420a202c4201a5c7d0bd48a",
-            "snippet": "Filed 6/17/26\n                      CERTIFIED FOR PUBLICATION\n\n       IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                        FIRST APPELLATE DISTRICT\n\n                                DIVISION TWO\n\n\n THE PEOPLE,\n         Plaintiff and Respondent,\n                                             A170747\n v.\n JERMAINE JEREMIAH BRIM,                     (Alameda County\n                                             Super. Ct. No. 19CR017660)\n         Defendant and Appellant.\n\n       De",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [],
-        "panel_names": [],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11344002
         ],
         "source": "C",
         "status": "Published",

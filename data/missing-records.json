@@ -1,9 +1,15 @@
 {
-  "updated": "2026-07-29T19:43:18.702Z",
+  "updated": "2026-07-30T03:27:24.022Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
+    {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "type": "entity brief"
+    },
     {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -17,9 +23,15 @@
       "type": "entity brief"
     },
     {
-      "entity": "2021-00294",
+      "entity": "2021-08825",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2021-00294.html",
+      "route": "entity-briefs/2021-08825.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2024-13374",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2024-13374.html",
       "type": "entity brief"
     },
     {
@@ -47,24 +59,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "A170747M",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/a170747m.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "California Court of Appeal",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/california-court-of-appeal.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Civil Rights Corps v. LaSalle",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
@@ -83,6 +77,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
@@ -95,21 +95,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "People v. Brim",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/people-v-brim.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Punxsutawney Hunting Club v. PGC",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Sawas v. Elzanaty",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/sawas-v-elzanaty.html",
       "type": "entity brief"
     },
     {
@@ -128,6 +116,12 @@
       "entity": "United States v. Anten",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/united-states-v-anten.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Williams v. Biggs",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/williams-v-biggs.html",
       "type": "entity brief"
     },
     {
@@ -221,12 +215,6 @@
       "type": "record review"
     },
     {
-      "entity": "California Court of Appeal",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/california-court-of-appeal.html",
-      "type": "record review"
-    },
-    {
       "entity": "Court of Appeals for the Ninth Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
@@ -251,9 +239,15 @@
       "type": "record review"
     },
     {
-      "entity": "2021-00294",
+      "entity": "2021-08825",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/2021-00294.html",
+      "route": "entity-exposure/2021-08825.html",
+      "type": "record review"
+    },
+    {
+      "entity": "2024-13374",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/2024-13374.html",
       "type": "record review"
     },
     {
@@ -281,15 +275,15 @@
       "type": "record review"
     },
     {
-      "entity": "A170747M",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/a170747m.html",
-      "type": "record review"
-    },
-    {
       "entity": "Civil Rights Corps v. LaSalle",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/civil-rights-corps-v-lasalle.html",
+      "type": "record review"
+    },
+    {
+      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
       "type": "record review"
     },
     {
@@ -299,27 +293,21 @@
       "type": "record review"
     },
     {
-      "entity": "People v. Brim",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/people-v-brim.html",
-      "type": "record review"
-    },
-    {
       "entity": "Punxsutawney Hunting Club v. PGC",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
       "type": "record review"
     },
     {
-      "entity": "Sawas v. Elzanaty",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/sawas-v-elzanaty.html",
-      "type": "record review"
-    },
-    {
       "entity": "United States v. Anten",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/united-states-v-anten.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Williams v. Biggs",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/williams-v-biggs.html",
       "type": "record review"
     },
     {

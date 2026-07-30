@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T19:43:18.616Z",
+  "updated": "2026-07-30T03:27:23.934Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -7,7 +7,7 @@
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
-      "exposure_score": 184,
+      "exposure_score": 368,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
         "Charged, sued or named in legal action",
@@ -15,8 +15,8 @@
       ],
       "records": [
         {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -26,8 +26,32 @@
           ]
         },
         {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -41,13 +65,25 @@
       ],
       "relationships": [
         {
-          "with": "Sawas v. Elzanaty",
+          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2021-00294",
+          "with": "2024-13374",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Williams v. Biggs",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2021-08825",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -63,67 +99,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "california-court-of-appeal",
-      "name": "California Court of Appeal",
-      "exposure_score": 184,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "People v. Brim",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "A170747M",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch California Court of Appeal across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving California Court of Appeal."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -371,8 +346,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "2021-00294",
-      "name": "2021-00294",
+      "id": "2021-08825",
+      "name": "2021-08825",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -381,8 +356,8 @@
       ],
       "records": [
         {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -391,8 +366,8 @@
           ]
         },
         {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -406,7 +381,7 @@
       ],
       "relationships": [
         {
-          "with": "Sawas v. Elzanaty",
+          "with": "Williams v. Biggs",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -422,12 +397,72 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 2021-00294 across courtlistener-court-records.",
+        "Watch 2021-08825 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 2021-00294."
+        "Watch courtlistener-court-records for follow-up records involving 2021-08825."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "2021-08825 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "2024-13374",
+      "name": "2024-13374",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 2024-13374 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 2024-13374."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -671,66 +706,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "a170747m",
-      "name": "A170747M",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "People v. Brim",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "California Court of Appeal",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch A170747M across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving A170747M."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "civil-rights-corps-v-lasalle",
       "name": "Civil Rights Corps v. LaSalle",
       "exposure_score": 179,
@@ -788,6 +763,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Civil Rights Corps v. LaSalle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "d-and-a-grandview-llc-v-60-davidson-llc",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2024-13374",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving D & A Grandview, LLC v. 60 Davidson, LLC."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "D & A Grandview, LLC v. 60 Davidson, LLC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -851,66 +886,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "people-v-brim",
-      "name": "People v. Brim",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "California Court of Appeal",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "A170747M",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch People v. Brim across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving People v. Brim."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "punxsutawney-hunting-club-v-pgc",
       "name": "Punxsutawney Hunting Club v. PGC",
       "exposure_score": 179,
@@ -971,66 +946,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "sawas-v-elzanaty",
-      "name": "Sawas v. Elzanaty",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Appellate Division of the Supreme Court of the State of New York",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "2021-00294",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Sawas v. Elzanaty across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Sawas v. Elzanaty."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Sawas v. Elzanaty deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "united-states-v-anten",
       "name": "United States v. Anten",
       "exposure_score": 179,
@@ -1088,6 +1003,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "United States v. Anten deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "williams-v-biggs",
+      "name": "Williams v. Biggs",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2021-08825",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Williams v. Biggs across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Williams v. Biggs."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Williams v. Biggs deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T19:43:18.702Z",
+  "updated": "2026-07-30T03:27:24.022Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -335,6 +335,18 @@
       ],
       "latest_records": [
         {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936292/williams-v-biggs/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
           "title": "Civil Rights Corps v. LaSalle",
           "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
           "grade": "charged / sued",
@@ -357,21 +369,14 @@
           "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
           "grade": "charged / sued",
           "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Sawas v. Elzanaty",
-          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "People v. Brim",
-          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
         }
       ],
       "top_entities": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-13374",
+        "Williams v. Biggs",
+        "2021-08825",
         "Civil Rights Corps v. LaSalle",
         "Court of Appeals for the Second Circuit",
         "24-2251",
@@ -383,13 +388,7 @@
         "23 WAP 2023",
         "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
         "Supreme Court of Rhode Island",
-        "2025-0045-Appeal.",
-        "Sawas v. Elzanaty",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2021-00294",
-        "People v. Brim",
-        "California Court of Appeal",
-        "A170747M"
+        "2025-0045-Appeal."
       ],
       "relationship_candidates": [],
       "missing_records": [

@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-29T19:43:18.702Z
+Updated: 2026-07-30T03:27:24.022Z
 
 ## Top Contractor Signals
 
@@ -14,27 +14,26 @@ Updated: 2026-07-29T19:43:18.702Z
 
 ## Missing Records
 
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 2021-00294: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2025-0045-Appeal.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 23 WAP 2023: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 24-7261: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- A170747M: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Civil Rights Corps v. LaSalle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- D & A Grandview, LLC v. 60 Davidson, LLC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- People v. Brim: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Punxsutawney Hunting Club v. PGC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Sawas v. Elzanaty: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Supreme Court of Pennsylvania: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Supreme Court of Rhode Island: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - United States v. Anten: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Williams v. Biggs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Alphabet Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AMAZON COM INC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -50,7 +49,8 @@ Updated: 2026-07-29T19:43:18.702Z
 - Nuclear Regulatory Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Supreme Court of Pennsylvania: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Supreme Court of Rhode Island: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

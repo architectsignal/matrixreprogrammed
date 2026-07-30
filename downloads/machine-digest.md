@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-29T19:43:02.800Z
+Updated: 2026-07-30T03:27:07.204Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
 Feeds reached: 4
 Normalized events: 18
-Entity observations: 35
+Entity observations: 34
 
 ## Latest Events
 
@@ -22,18 +22,19 @@ Entity observations: 35
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/
+- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936292/williams-v-biggs/
 - charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
 - charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
 - charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
 - charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
-- charged / sued: Sawas v. Elzanaty — courtlistener-court-records — https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/
-- charged / sued: People v. Brim — courtlistener-court-records — https://www.courtlistener.com/opinion/10919846/people-v-brim/
 
 ## Entity Observations
 
 - Homeland Security Department: 2 mention(s), lanes: federal-register-policy
 - Health and Human Services Department: 2 mention(s), lanes: federal-register-policy
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
+- Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
 - Securities and Exchange Commission: 1 mention(s), lanes: federal-register-policy
 - Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
 - NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
@@ -48,6 +49,10 @@ Entity observations: 35
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
+- D & A Grandview, LLC v. 60 Davidson, LLC: 1 mention(s), lanes: courtlistener-court-records
+- 2024-13374: 1 mention(s), lanes: courtlistener-court-records
+- Williams v. Biggs: 1 mention(s), lanes: courtlistener-court-records
+- 2021-08825: 1 mention(s), lanes: courtlistener-court-records
 - Civil Rights Corps v. LaSalle: 1 mention(s), lanes: courtlistener-court-records
 - Court of Appeals for the Second Circuit: 1 mention(s), lanes: courtlistener-court-records
 - 24-2251: 1 mention(s), lanes: courtlistener-court-records
@@ -56,8 +61,3 @@ Entity observations: 35
 - 24-7261: 1 mention(s), lanes: courtlistener-court-records
 - Punxsutawney Hunting Club v. PGC: 1 mention(s), lanes: courtlistener-court-records
 - Supreme Court of Pennsylvania: 1 mention(s), lanes: courtlistener-court-records
-- 23 WAP 2023: 1 mention(s), lanes: courtlistener-court-records
-- Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority: 1 mention(s), lanes: courtlistener-court-records
-- Supreme Court of Rhode Island: 1 mention(s), lanes: courtlistener-court-records
-- 2025-0045-Appeal.: 1 mention(s), lanes: courtlistener-court-records
-- Sawas v. Elzanaty: 1 mention(s), lanes: courtlistener-court-records

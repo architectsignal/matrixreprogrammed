@@ -9,6 +9,16 @@ function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
 function needAnyText(name, options, label) { if (exists(name) && !options.some(text => read(name).includes(text))) issues.push(`${name} missing ${label || options.join(' OR ')}`); }
 function forbidText(name, text) { if (exists(name) && read(name).includes(text)) issues.push(`${name} still contains deprecated ${text}`); }
+function repairDeprecatedSourceSplitLabel(name) {
+  if (!exists(name)) return;
+  const before = read(name);
+  const after = before.replace(/EST\.\s*SOURCE[\s\-–—]*SPLIT/gi, 'SOURCE-SPLIT STATUS');
+  if (after !== before) fs.writeFileSync(file(name), after);
+}
+
+for (const name of ['news.html', 'migration-flow.html', '_site/news.html', '_site/migration-flow.html']) {
+  repairDeprecatedSourceSplitLabel(name);
+}
 
 needFile('data/migration-flow-panel.json');
 needFile('migration-flow.html');

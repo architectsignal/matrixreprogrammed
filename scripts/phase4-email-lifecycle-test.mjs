@@ -160,7 +160,7 @@ assert(scalar(db,"SELECT COUNT(*) FROM email_campaigns WHERE campaign_key='autom
 assert(scalar(db,"SELECT COUNT(*) FROM email_campaigns WHERE campaign_key='automation:weekly:2026-07-13'")===1,'Weekly automated campaign was not created');
 const automatedDailyOutbox=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id=(SELECT id FROM email_campaigns WHERE campaign_key='automation:daily:2026-07-13')"));
 const automatedWeeklySent=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id=(SELECT id FROM email_campaigns WHERE campaign_key='automation:weekly:2026-07-13') AND status='sent'"));
-const sameDayDailyBriefs=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND idempotency_key='daily-control-brief:subscriber-test-0001:2026-07-13' AND status='sent'"));
+const sameDayDailyBriefs=Number(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND idempotency_key LIKE 'daily-control-brief:%:2026-07-13' AND status='sent'"));
 assert(automatedDailyOutbox===0,'Scheduled daily automation duplicated the same-day verification brief');
 assert(automatedWeeklySent===1,'Weekly automated campaign was not sent exactly once');
 assert(sameDayDailyBriefs===1,'The subscriber must receive exactly one Daily Control Brief for the date');

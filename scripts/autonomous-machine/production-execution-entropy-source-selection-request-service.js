@@ -38,6 +38,43 @@ function verifyLedger(label, store, signingKey) {
   const result = store.verify(signingKey);
   if (!result.valid) throw new Error(`${label} ledger verification failed: ${result.reason}`);
 }
+function assertRawOperationScope(operations, targetIds) {
+  if (!Array.isArray(operations) || operations.length < 1
+    || !Array.isArray(targetIds) || targetIds.length < 1
+    || new Set(targetIds).size !== targetIds.length) {
+    throw new Error('Entropy source selection scope does not exactly match the signed decision and request');
+  }
+  const operationTargets = new Set();
+  operations.forEach((operation, index) => {
+    if (!operation || typeof operation !== 'object' || Array.isArray(operation)
+      || operation.sequence !== index + 1
+      || typeof operation.targetId !== 'string' || !operation.targetId
+      || operation.operation !== 'manual_review_and_integrate_evidence'
+      || !Array.isArray(operation.candidatePaths) || operation.candidatePaths.length < 1
+      || new Set(operation.candidatePaths).size !== operation.candidatePaths.length
+      || !Array.isArray(operation.candidateHashes)
+      || operation.candidateHashes.length !== operation.candidatePaths.length
+      || operation.executionAllowed !== false
+      || operation.productionWriteAllowed !== false) {
+      throw new Error('Entropy source selection scope does not exactly match the signed decision and request');
+    }
+    operationTargets.add(operation.targetId);
+    operation.candidatePaths.forEach((candidatePath, candidateIndex) => {
+      const candidateHash = operation.candidateHashes[candidateIndex];
+      if (typeof candidatePath !== 'string' || !candidatePath
+        || !candidateHash || candidateHash.proposedRepositoryPath !== candidatePath
+        || typeof candidateHash.sha256 !== 'string'
+        || !/^[0-9a-f]{64}$/i.test(candidateHash.sha256)
+        || !Number.isInteger(candidateHash.bytes) || candidateHash.bytes < 0) {
+        throw new Error('Entropy source selection scope does not exactly match the signed decision and request');
+      }
+    });
+  });
+  if (operationTargets.size !== targetIds.length
+    || targetIds.some((targetId) => !operationTargets.has(targetId))) {
+    throw new Error('Entropy source selection scope does not exactly match the signed decision and request');
+  }
+}
 
 function requestProductionExecutionEntropySourceSelection(options = {}) {
   const {
@@ -64,15 +101,14 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
   if (typeof entropyGenerationDecisionId !== 'string' || !entropyGenerationDecisionId.trim()) {
     throw new TypeError('entropy source selection request requires entropyGenerationDecisionId');
   }
-  const stores = [
+  const requiredStores = [
     changeRequestStore, changeDecisionStore, planStore, planDecisionStore,
     authorisationRequestStore, authorisationDecisionStore, tokenRequestStore, tokenDecisionStore,
     tokenIssuanceRequestStore, tokenIssuanceDecisionStore,
     tokenMaterialGenerationRequestStore, tokenMaterialGenerationDecisionStore,
-    entropyGenerationRequestStore, entropyGenerationDecisionStore,
-    entropySourceSelectionRequestStore,
+    entropyGenerationRequestStore, entropyGenerationDecisionStore, entropySourceSelectionRequestStore,
   ];
-  if (stores.some((store) => !store) || !auditLog) {
+  if (requiredStores.some((store) => !store) || !auditLog) {
     throw new TypeError('entropy source selection request requires all stores and auditLog');
   }
   if (typeof repositoryRoot !== 'string' || !repositoryRoot.trim()) throw new TypeError('repositoryRoot is required');
@@ -86,7 +122,7 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
     'entropyGenerationRequestSigningKey', 'entropyGenerationDecisionSigningKey',
     'entropySourceSelectionRequestSigningKey',
   ];
-  for (const key of keyFields) assertSigningKey(options[key]);
+  keyFields.forEach((field) => assertSigningKey(options[field]));
 
   const requesterName = assertText(options.requesterName, 'requesterName', 3, 120);
   const requesterRole = assertText(options.requesterRole, 'requesterRole', 3, 120);
@@ -101,7 +137,7 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
   const now = asDate(clock());
   const nowMs = now.getTime();
 
-  const ledgers = [
+  [
     ['Production change request', changeRequestStore, options.changeRequestSigningKey],
     ['Production change decision', changeDecisionStore, options.changeDecisionSigningKey],
     ['Production execution plan', planStore, options.planSigningKey],
@@ -117,8 +153,7 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
     ['Entropy generation request', entropyGenerationRequestStore, options.entropyGenerationRequestSigningKey],
     ['Entropy generation decision', entropyGenerationDecisionStore, options.entropyGenerationDecisionSigningKey],
     ['Entropy source selection request', entropySourceSelectionRequestStore, options.entropySourceSelectionRequestSigningKey],
-  ];
-  ledgers.forEach(([label, store, key]) => verifyLedger(label, store, key));
+  ].forEach(([label, store, key]) => verifyLedger(label, store, key));
 
   const entropyDecision = findRecord(
     entropyGenerationDecisionStore,
@@ -191,13 +226,15 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
   if (durationSeconds > remainingSeconds) {
     throw new Error('Entropy source selection request duration exceeds remaining signed window');
   }
-
   if (!entropyDecision.payload.finalPreflight.required
     || !entropyDecision.payload.finalPreflight.allMatchEntropyRequest
     || !entropyDecision.payload.scopeReview.required
     || !entropyDecision.payload.scopeReview.exactScopeMatch) {
     throw new Error('Entropy source selection request requires complete Phase 1.19 preflight and scope review');
   }
+
+  const targetIds = [...entropyDecision.payload.targetIds];
+  assertRawOperationScope(entropyDecision.payload.scopeReview.operations, targetIds);
 
   const candidates = entropyDecision.payload.finalPreflight.candidates.map((candidate) => {
     const current = inspectCandidate(repositoryRoot, candidate.proposedRepositoryPath);
@@ -224,7 +261,7 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
     candidatePaths: [...operation.candidatePaths],
     candidateHashes: operation.candidatePaths.map((candidatePath) => {
       const candidate = candidateMap.get(candidatePath);
-      if (!candidate) throw new Error('Entropy source selection scope references an unknown candidate');
+      if (!candidate) throw new Error('Entropy source selection scope does not exactly match the signed decision and request');
       return {
         proposedRepositoryPath: candidatePath,
         sha256: candidate.currentSha256,
@@ -234,7 +271,6 @@ function requestProductionExecutionEntropySourceSelection(options = {}) {
     executionAllowed: false,
     productionWriteAllowed: false,
   }));
-  const targetIds = [...entropyDecision.payload.targetIds];
   const recomputedScopeHash = sha256(stableStringify({ targetIds, operations }));
   if (recomputedScopeHash !== entropyDecision.payload.scopeReview.recomputedScopeHash
     || recomputedScopeHash !== entropyDecision.payload.scopeReview.entropyRequestScopeHash

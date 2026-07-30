@@ -139,3 +139,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.22-self-test.js
+
+      - name: Verify Phase 1.23 creates signed source-binding decisions without selecting a provider
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.23-self-test.js

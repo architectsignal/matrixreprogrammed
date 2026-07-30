@@ -20,7 +20,7 @@ env:
 
 jobs:
   refresh-build-guard-deploy-verify:
-    name: Refresh, build, deploy and prove independent Pyramid
+    name: Refresh, migrate, deploy and prove autonomous AI production
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -70,19 +70,26 @@ jobs:
           mkdir -p downloads
           npm run build 2>&1 | tee downloads/production-build.log
 
-      - name: Verify critical runtime and D1 contracts
+      - name: Verify critical runtime, D1 and autonomous AI contracts
         run: |
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
+          node scripts/phase4-email-lifecycle-test.mjs
           node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
           node scripts/phase8-autonomous-sandbox-readiness-test.mjs
           node scripts/recovery-worker-api-contract-test.js
           python3 scripts/recovery-d1-rehearsal.py
+          node scripts/ai-management-foundation-test.mjs
+          node scripts/ai-management-autonomy-test.mjs
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
+          node --check src/worker-production-autonomy.js
+          node --check src/worker-ai-management.js
+          node --check scripts/run-autonomous-ai-manager.mjs
+          node --check scripts/verify-live-ai-management.mjs
           node --check scripts/behind-the-curtain-production-guard.js
           node --check scripts/verify-live-behind-the-curtain.js
           node scripts/d1-export-command-test.js
@@ -105,13 +112,15 @@ jobs:
           node scripts/production-deploy-guard.js
           node scripts/behind-the-curtain-production-guard.js
 
-      - name: Confirm Cloudflare credentials
+      - name: Confirm Cloudflare and owner-verification credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN || secrets.ADMIN_API_TOKEN }}
         run: |
           test -n "$CLOUDFLARE_API_TOKEN" || (echo 'CLOUDFLARE_API_TOKEN is missing' && exit 1)
           test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo 'CLOUDFLARE_ACCOUNT_ID is missing' && exit 1)
+          test -n "$AI_MANAGEMENT_ADMIN_TOKEN" || (echo 'AI_MANAGEMENT_ADMIN_TOKEN or ADMIN_API_TOKEN is missing from GitHub Actions secrets' && exit 1)
           npx --yes wrangler@latest whoami
           npx --yes wrangler@latest d1 info matrix-members
 
@@ -144,7 +153,7 @@ jobs:
           console.log(`Validated D1 rollback point ${rollback.bookmark} for ${rollback.commit}.`);
           NODE
 
-      - name: Apply idempotent D1 migration chain
+      - name: Apply repeat-safe D1 migration chain
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -162,6 +171,8 @@ jobs:
             migrations/phase6_paypal_failure_counter_fix.sql
             migrations/phase7_paypal_sandbox_rehearsal.sql
             migrations/phase8_paypal_sandbox_bootstrap.sql
+            migrations/phase9_ai_resource_orchestration.sql
+            migrations/phase10_ai_autonomy.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -177,33 +188,110 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility','ai_resources','ai_jobs','ai_quota_reservations','ai_result_cache','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="PRAGMA table_info(ai_resources);" --json > downloads/d1-ai-resource-columns.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT resource_id,billing_enabled,payment_method_present,monetary_cost_per_unit_eur,billing_risk FROM ai_resources ORDER BY resource_id;" --json > downloads/d1-ai-zero-spend-resources.json
           node - <<'NODE'
           const fs=require('fs');
           const rows=p=>p.flatMap(x=>x.results||x.result?.results||[]);
           const schema=JSON.parse(fs.readFileSync('downloads/d1-schema-verification.json','utf8'));
+          const columns=JSON.parse(fs.readFileSync('downloads/d1-ai-resource-columns.json','utf8'));
           const settings=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
-          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility'];
+          const resources=JSON.parse(fs.readFileSync('downloads/d1-ai-zero-spend-resources.json','utf8'));
+          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility','ai_resources','ai_jobs','ai_quota_reservations','ai_result_cache','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions'];
           const names=new Set(rows(schema).map(x=>x.name));
           const missing=required.filter(x=>!names.has(x));
           if(missing.length) throw new Error(`Missing D1 objects: ${missing.join(', ')}`);
+          const resourceColumns=new Set(rows(columns).map(x=>x.name));
+          if(!resourceColumns.has('metadata_json')) throw new Error('ai_resources.metadata_json is missing');
           const switches=rows(settings);
           const sandbox=switches.find(x=>x.environment==='sandbox');
           const live=switches.find(x=>x.environment==='live');
           if(!sandbox||!live) throw new Error('Missing PayPal runtime settings');
           if(Number(sandbox.checkout_enabled)!==0) throw new Error('Sandbox checkout must remain closed outside an explicit rehearsal');
-          console.log(`D1 schema verified; live checkout state preserved at ${Number(live.checkout_enabled)}.`);
+          const zeroSpendRows=rows(resources);
+          if(zeroSpendRows.length<2) throw new Error('AI resource seeds are missing');
+          for(const resource of zeroSpendRows){
+            if(Number(resource.billing_enabled)!==0) throw new Error(`${resource.resource_id} has billing enabled`);
+            if(Number(resource.payment_method_present)!==0) throw new Error(`${resource.resource_id} has a payment method`);
+            if(Number(resource.monetary_cost_per_unit_eur)!==0) throw new Error(`${resource.resource_id} has non-zero cost`);
+            if(resource.billing_risk!=='none') throw new Error(`${resource.resource_id} has billing risk ${resource.billing_risk}`);
+          }
+          console.log(`D1 schema verified for ${required.length} required objects; AI resources are zero-spend; live PayPal checkout state preserved at ${Number(live.checkout_enabled)}.`);
           NODE
 
-      - name: Deploy exact reconciled assets and strict D1 forum and PayPal Worker to Cloudflare
+      - name: Activate approved AI autonomy flags under the zero-spend lock
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="UPDATE ai_feature_flags SET enabled=CASE WHEN flag_name='AI_RESOURCE_LOCAL_ONLY' THEN 0 ELSE 1 END, reason='Owner-authorized controlled production activation with zero-spend and prompt-local boundaries', updated_by='controlled-production-deploy', updated_at=CURRENT_TIMESTAMP WHERE flag_name IN ('AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_LOCAL_ONLY','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED');" --yes
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT flag_name,enabled,value_json,reason,updated_by,updated_at FROM ai_feature_flags WHERE flag_name LIKE 'AI_%' ORDER BY flag_name;" --json > downloads/d1-ai-feature-flags.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const payload=JSON.parse(fs.readFileSync('downloads/d1-ai-feature-flags.json','utf8'));
+          const rows=payload.flatMap(x=>x.results||x.result?.results||[]);
+          const flags=new Map(rows.map(row=>[row.flag_name,Number(row.enabled)]));
+          const active=['AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED'];
+          for(const flag of active) if(flags.get(flag)!==1) throw new Error(`${flag} was not activated`);
+          if(flags.get('AI_RESOURCE_LOCAL_ONLY')!==0) throw new Error('AI_RESOURCE_LOCAL_ONLY must be disabled to allow approved public-source retrieval');
+          console.log('AI autonomy feature ledger activated with zero-spend lock retained.');
+          NODE
+
+      - name: Build reviewed production Worker configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp wrangler.toml .wrangler-production.toml
+          python3 - <<'PY'
+          from pathlib import Path
+          config = Path('.wrangler-production.toml')
+          text = config.read_text(encoding='utf-8')
+          replacements = {
+              'AI_RESOURCE_BROKER_ENABLED = "false"': 'AI_RESOURCE_BROKER_ENABLED = "true"',
+              'AI_RESOURCE_EXTERNAL_ENABLED = "false"': 'AI_RESOURCE_EXTERNAL_ENABLED = "true"',
+              'AI_RESOURCE_LOCAL_ONLY = "true"': 'AI_RESOURCE_LOCAL_ONLY = "false"',
+              'AI_RESOURCE_BACKGROUND_ENABLED = "false"': 'AI_RESOURCE_BACKGROUND_ENABLED = "true"',
+              'AI_RESOURCE_SCOUT_ENABLED = "false"': 'AI_RESOURCE_SCOUT_ENABLED = "true"',
+              'AI_RESOURCE_AUTO_APPROVAL_ENABLED = "false"': 'AI_RESOURCE_AUTO_APPROVAL_ENABLED = "true"',
+              'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"': 'AI_LOCAL_MODEL_ROUTING_ENABLED = "true"',
+              'AI_SITE_DIRECTOR_ENABLED = "false"': 'AI_SITE_DIRECTOR_ENABLED = "true"',
+          }
+          for old, new in replacements.items():
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'Expected exactly one production activation target for {old}, found {count}')
+              text = text.replace(old, new)
+          if text.count('AI_RESOURCE_ZERO_SPEND_LOCK = "true"') != 1:
+              raise SystemExit('Zero-spend lock is missing or ambiguous')
+          config.write_text(text, encoding='utf-8')
+          PY
+          grep -F 'main = "src/worker-production-autonomy.js"' .wrangler-production.toml
+          grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .wrangler-production.toml
+          grep -F 'AI_RESOURCE_AUTO_APPROVAL_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'AI_SITE_DIRECTOR_ENABLED = "true"' .wrangler-production.toml
+          npx --yes wrangler@latest deploy --config .wrangler-production.toml --dry-run
+
+      - name: Deploy exact reconciled assets and autonomous D1 Worker to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest deploy --config .wrangler-production.toml 2>&1 | tee downloads/wrangler-deploy.log
+
+      - name: Verify live autonomous AI control plane
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN || secrets.ADMIN_API_TOKEN }}
+          AI_VERIFY_ATTEMPTS: '36'
+          AI_VERIFY_DELAY_MS: '10000'
+        run: node scripts/verify-live-ai-management.mjs
 
       - name: Verify live independent Pyramid
         env:
@@ -226,6 +314,10 @@ jobs:
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: node scripts/build-production-deploy-receipt.js
 
+      - name: Remove temporary production configuration
+        if: always()
+        run: rm -f .wrangler-production.toml
+
       - name: Upload production proof
         if: always()
         uses: actions/upload-artifact@v4
@@ -242,13 +334,23 @@ jobs:
             downloads/behind-the-curtain-production-guard.json
             downloads/live-behind-the-curtain-verification.json
             downloads/live-production-verification.json
+            downloads/live-ai-management-verification.json
             downloads/forum-persistence-d1-test.json
+            downloads/phase4-email-lifecycle-test/lifecycle-test.json
+            downloads/phase4-email-lifecycle-test/manifest.json
+            downloads/phase7-paypal-sandbox-rehearsal-test.json
+            downloads/phase8-autonomous-sandbox-readiness-test.json
+            downloads/recovery-worker-api-contract-test.json
+            downloads/recovery-d1-rehearsal.json
             downloads/final-production-reconcile.json
             downloads/production-deploy-receipt.json
             downloads/d1-time-travel-bookmark.json
             downloads/d1-rollback-proof.json
             downloads/d1-migration.log
             downloads/d1-schema-verification.json
+            downloads/d1-ai-resource-columns.json
+            downloads/d1-ai-zero-spend-resources.json
+            downloads/d1-ai-feature-flags.json
             downloads/paypal-runtime-settings.json
             downloads/wrangler-deploy.log
           if-no-files-found: ignore

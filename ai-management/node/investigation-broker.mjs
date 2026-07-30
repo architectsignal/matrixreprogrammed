@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { ResourceRegistry, createLocalResource } from '../resource-registry/resource-registry.mjs';
 import { InMemoryQuotaManager } from '../quota-manager/quota-manager.mjs';
 import { StructuredAuditLogger } from '../observability/structured-logger.mjs';
@@ -12,6 +14,16 @@ function safeHostname(value) {
 function recentSuccessfulHealth(prior, now, maximumAgeMs = 14 * 86400000) {
   const checked = Date.parse(prior?.checkedAt || '');
   return prior?.status === 'fetched' && Number.isFinite(checked) && now.getTime() - checked >= 0 && now.getTime() - checked <= maximumAgeMs;
+}
+
+function loadAutonomousResources(root = process.cwd()) {
+  const file = path.join(root, 'ai-management', 'config', 'resources.autonomous.json');
+  try {
+    const payload = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return Array.isArray(payload.resources) ? payload.resources : [];
+  } catch {
+    return [];
+  }
 }
 
 export function investigationSourceResource(source, { priorState = {}, now = new Date(), dailyLimit = 100 } = {}) {
@@ -100,11 +112,15 @@ export function createInvestigationBroker({
   environment = {},
   now = new Date(),
   sleep,
-  random
+  random,
+  additionalResources = null,
+  root = process.cwd()
 } = {}) {
-  const resources = [createLocalResource(now.toISOString()), ...sources.map(source => investigationSourceResource(source, {
+  const discovered = Array.isArray(additionalResources) ? additionalResources : loadAutonomousResources(root);
+  const combined = [createLocalResource(now.toISOString()), ...sources.map(source => investigationSourceResource(source, {
     priorState, now, dailyLimit: Number(environment.INVESTIGATION_RESOURCE_DAILY_LIMIT || 100)
-  }))];
+  })), ...discovered];
+  const resources = [...new Map(combined.map(resource => [resource.resource_id, resource])).values()];
   const registry = new ResourceRegistry(resources);
   const logger = new StructuredAuditLogger({ actor: 'investigation-runner', agent: 'ai-investigator-resource-broker' });
   const broker = new ResourceBroker({
@@ -123,7 +139,7 @@ export function createInvestigationBroker({
     sleep,
     random
   });
-  return { broker, registry, logger };
+  return { broker, registry, logger, autonomousResourcesLoaded: discovered.length };
 }
 
-export const investigationBrokerInternals = { safeHostname, recentSuccessfulHealth, enabled };
+export const investigationBrokerInternals = { safeHostname, recentSuccessfulHealth, enabled, loadAutonomousResources };

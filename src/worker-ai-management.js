@@ -59,7 +59,7 @@ async function tableExists(database, name) {
 async function schemaReady(env) { return Boolean(env?.MEMBERS_DB?.prepare && await tableExists(env.MEMBERS_DB, 'ai_resources')); }
 async function autonomySchemaReady(env) {
   if (!await schemaReady(env)) return false;
-  const required = ['ai_resource_candidates', 'ai_local_runtime_nodes', 'ai_local_models', 'ai_site_improvement_runs'];
+  const required = ['ai_resource_candidates', 'ai_local_runtime_nodes', 'ai_local_models', 'ai_model_routing_decisions', 'ai_site_improvement_runs'];
   const checks = await Promise.all(required.map(name => tableExists(env.MEMBERS_DB, name)));
   return checks.every(Boolean);
 }
@@ -88,7 +88,7 @@ function zeroSpendResource(resource) {
 async function health(env) {
   const ready = await schemaReady(env);
   const autonomyReady = await autonomySchemaReady(env);
-  let counts = { resources: 0, jobs: 0, auditRecords: 0, candidates: 0, localNodes: 0, localModels: 0, siteDirectorRuns: 0 };
+  let counts = { resources: 0, jobs: 0, auditRecords: 0, candidates: 0, localNodes: 0, localModels: 0, routingDecisions: 0, siteDirectorRuns: 0 };
   if (ready) {
     const queries = [
       ['resources', 'SELECT COUNT(*) count FROM ai_resources'],
@@ -99,6 +99,7 @@ async function health(env) {
       ['candidates', 'SELECT COUNT(*) count FROM ai_resource_candidates'],
       ['localNodes', 'SELECT COUNT(*) count FROM ai_local_runtime_nodes'],
       ['localModels', 'SELECT COUNT(*) count FROM ai_local_models'],
+      ['routingDecisions', 'SELECT COUNT(*) count FROM ai_model_routing_decisions'],
       ['siteDirectorRuns', 'SELECT COUNT(*) count FROM ai_site_improvement_runs']
     );
     for (const [key, sql] of queries) {
@@ -113,7 +114,7 @@ async function health(env) {
     counts,
     monetaryCeilingEur: 0,
     paidFallbackPossible: false,
-    localInferenceBoundary: 'Cloudflare stores inventory and routing decisions only. Model prompts and inference remain on the owner-controlled local machine.',
+    localInferenceBoundary: 'Cloudflare stores inventory and metadata-only routing decisions. Model prompts and inference remain on the owner-controlled local machine.',
     migrationRequired: !ready,
     autonomyMigrationRequired: !autonomyReady,
     generatedAt: new Date().toISOString()
@@ -197,27 +198,50 @@ async function recordLocalRuntime(env, runtime) {
   return json({ ok: true, nodeId, modelsRegistered: resources.length, costStatus: 'EUR 0', externalNetworkUsed: false, expiresAt: expires });
 }
 
+function containsPromptMaterial(body = {}) {
+  return ['prompt', 'messages', 'content', 'text', 'input', 'document', 'documents'].some(key => key in body);
+}
+
 async function routeModel(env, request) {
   const state = flags(env);
-  if (!state.localModelRoutingEnabled) return json({ ok: false, error: 'Local model routing is disabled' }, 409);
+  if (!state.localModelRoutingEnabled || !state.zeroSpendLock) return json({ ok: false, error: 'Local model routing is disabled' }, 409);
   if (!await autonomySchemaReady(env)) return json({ ok: false, error: 'AI autonomy migration is not applied' }, 503);
-  const body = await readBody(request, 512 * 1024);
+  const body = await readBody(request, 64 * 1024);
+  if (containsPromptMaterial(body)) {
+    return json({ ok: false, error: 'Prompt material is forbidden on the Cloudflare routing endpoint. Send only task metadata and token estimates.' }, 400);
+  }
+  const promptTokens = Math.max(1, Math.min(2_000_000, Number(body.prompt_tokens_estimate || 1)));
+  const maxTokens = Math.max(1, Math.min(131072, Number(body.max_tokens || 1200)));
+  const taskProfile = String(body.task_profile || 'reasoning').slice(0, 40);
+  const taskTags = Array.isArray(body.task_tags) ? body.task_tags.slice(0, 20).map(value => String(value).slice(0, 40)) : [];
   const resources = (await new D1ResourceRegistry(env.MEMBERS_DB).list()).filter(resource => Number(resource.resource_tier) === 1 && resource.metadata?.local === true && resource.enabled);
   const job = {
     job_type: 'llm.generate', capability_type: 'llm', priority: body.priority || 'P2', data_class: body.data_class || 'internal',
-    payload: { prompt: body.prompt || '', messages: body.messages || [], task_profile: body.task_profile || 'reasoning', max_tokens: body.max_tokens || 1200 },
+    payload: { metadata_only_routing: true, prompt_tokens_estimate: promptTokens, task_profile: taskProfile, task_tags: taskTags, max_tokens: maxTokens },
     requirements: { allow_cpu_fallback: body.allow_cpu_fallback !== false }
   };
   const route = routeLocalModel(resources, job, { now: new Date() });
   if (!route.selected) return json({ ok: false, error: 'No online compatible local model', excluded: route.excluded }, 503);
-  await env.MEMBERS_DB.prepare('UPDATE ai_local_models SET route_score=?,updated_at=? WHERE resource_id=?').bind(route.selected.route_score, new Date().toISOString(), route.selected.resource.resource_id).run();
+  const now = new Date().toISOString();
+  await env.MEMBERS_DB.prepare('UPDATE ai_local_models SET route_score=?,updated_at=? WHERE resource_id=?').bind(route.selected.route_score, now, route.selected.resource.resource_id).run();
+  const decisionId = `route-${(await digest(`${now}|${taskProfile}|${promptTokens}|${route.selected.resource.resource_id}`)).slice(0, 24)}`;
+  await env.MEMBERS_DB.prepare(`INSERT INTO ai_model_routing_decisions(
+    decision_id,task_profile,data_class,prompt_tokens_estimate,requested_output_tokens,selected_resource_id,candidates_json,excluded_json,cost_confirmed_zero,prompt_received,created_at
+  ) VALUES(?,?,?,?,?,?,?,?,1,0,?)`).bind(
+    decisionId, taskProfile, job.data_class, promptTokens, maxTokens, route.selected.resource.resource_id,
+    JSON.stringify(route.eligible.map(item => ({ resource_id: item.resource.resource_id, route_score: item.route_score }))),
+    JSON.stringify(route.excluded), now
+  ).run();
   return json({
     ok: true,
+    decisionId,
     selected: { resource_id: route.selected.resource.resource_id, model_id: route.selected.resource.metadata?.model_id, node: route.selected.resource.metadata?.hardware_hostname, route_score: route.selected.route_score },
     candidates: route.eligible.map(item => ({ resource_id: item.resource.resource_id, model_id: item.resource.metadata?.model_id, route_score: item.route_score, compatibility: item.compatibility })),
     excluded: route.excluded,
     inferenceLocation: 'owner-controlled-local-node',
+    promptReceived: false,
     promptStored: false,
+    promptTransferred: false,
     costStatus: 'EUR 0'
   });
 }
@@ -250,11 +274,12 @@ async function listScout(env) {
 }
 async function listLocalRuntime(env) {
   if (!await autonomySchemaReady(env)) return json({ ok: false, error: 'AI autonomy migration is not applied' }, 503);
-  const [nodes, models] = await Promise.all([
+  const [nodes, models, routes] = await Promise.all([
     env.MEMBERS_DB.prepare('SELECT node_id,node_name,platform,architecture,model_count,gpu_count,total_gpu_memory_mb,status,last_seen,expires_at FROM ai_local_runtime_nodes ORDER BY last_seen DESC LIMIT 50').all(),
-    env.MEMBERS_DB.prepare('SELECT resource_id,node_id,model_id,protocol,endpoint_scope,route_score,status,last_seen FROM ai_local_models ORDER BY status,route_score DESC,last_seen DESC LIMIT 200').all()
+    env.MEMBERS_DB.prepare('SELECT resource_id,node_id,model_id,protocol,endpoint_scope,route_score,status,last_seen FROM ai_local_models ORDER BY status,route_score DESC,last_seen DESC LIMIT 200').all(),
+    env.MEMBERS_DB.prepare('SELECT decision_id,task_profile,data_class,prompt_tokens_estimate,requested_output_tokens,selected_resource_id,cost_confirmed_zero,prompt_received,created_at FROM ai_model_routing_decisions ORDER BY created_at DESC LIMIT 100').all()
   ]);
-  return json({ ok: true, nodes: nodes?.results || [], models: models?.results || [], inferenceBoundary: 'Inventory and routes only; inference stays local.' });
+  return json({ ok: true, nodes: nodes?.results || [], models: models?.results || [], routingDecisions: routes?.results || [], inferenceBoundary: 'Inventory and metadata-only routes are stored; prompts and inference stay local.' });
 }
 async function listSiteDirector(env) {
   if (!await autonomySchemaReady(env)) return json({ ok: false, error: 'AI autonomy migration is not applied' }, 503);
@@ -294,6 +319,7 @@ async function scheduled(_event, env) {
   await env.MEMBERS_DB.prepare("UPDATE ai_local_models SET status='stale',updated_at=? WHERE node_id IN (SELECT node_id FROM ai_local_runtime_nodes WHERE status IN ('stale','offline'))").bind(now).run();
   await env.MEMBERS_DB.prepare("UPDATE ai_resources SET enabled=0,health_status='unknown',updated_at=? WHERE resource_tier=1 AND resource_id IN (SELECT resource_id FROM ai_local_models WHERE status='stale')").bind(now).run();
   await env.MEMBERS_DB.prepare("DELETE FROM ai_resource_candidates WHERE status='quarantined' AND updated_at<datetime('now','-90 days')").run();
+  await env.MEMBERS_DB.prepare("DELETE FROM ai_model_routing_decisions WHERE created_at<datetime('now','-30 days')").run();
 }
 
 export function isAiManagementRoute(path = '') { return ROUTES.has(path); }

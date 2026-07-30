@@ -55,14 +55,14 @@ if (exists('_site')) {
 }
 
 [
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js',
   'wrangler.toml','wrangler.jsonc','_headers','membership.html','paypal-membership.js','billing-dashboard.html','billing-dashboard.js',
   'admin-payment-dashboard.html','admin-payment-dashboard.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html',
   'templates/phase6-membership.template','data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql',
-  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql',
+  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
   'scripts/build-cloudflare-output.js','scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/forum-persistence-d1-test.js',
-  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js',
+  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js','scripts/verify-live-ai-management.mjs',
   '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum',
   '_site/forum.js','_site/dark-speculation-forum.html','_site/epstein-alive-board.html'
 ].forEach(need);
@@ -75,6 +75,16 @@ for (const marker of [
   'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',
   "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','status: 503'
 ]) needText('src/worker-production.js', marker, `strict production marker ${marker}`);
+
+for (const marker of [
+  "import productionWorker from './worker-production.js';",
+  "import aiManagementWorker from './worker-ai-management.js';",
+  'return productionWorker.fetch(request, env, ctx);',
+  'productionWorker.scheduled',
+  'aiManagementWorker.scheduled',
+  'await Promise.all([productionTask, autonomyTask]);'
+]) needText('src/worker-production-autonomy.js', marker, `verified autonomy wrapper marker ${marker}`);
+for (const marker of ['Prompt material is forbidden','promptReceived: false','promptStored: false','promptTransferred: false','paidFallbackPossible: false']) needText('src/worker-ai-management.js', marker, `AI privacy marker ${marker}`);
 
 for (const marker of [
   'Cloudflare D1 MEMBERS_DB.forum_posts',
@@ -125,10 +135,17 @@ needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 
 for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records']) needText('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
 needText('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot');
+for (const marker of ['CREATE TABLE IF NOT EXISTS ai_resources','AI_RESOURCE_ZERO_SPEND_LOCK']) needText('migrations/phase9_ai_resource_orchestration.sql', marker, `Phase 9 AI migration marker ${marker}`);
+for (const marker of ['CREATE TABLE IF NOT EXISTS ai_model_routing_decisions','prompt_received INTEGER NOT NULL DEFAULT 0 CHECK (prompt_received = 0)','CREATE TABLE IF NOT EXISTS ai_site_improvement_runs']) needText('migrations/phase10_ai_autonomy.sql', marker, `Phase 10 AI migration marker ${marker}`);
 
-for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
-const wrangler = read('wrangler.toml');
-const workerFirstConfig = wrangler.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
+const wranglerToml = read('wrangler.toml');
+const wranglerJsonc = read('wrangler.jsonc');
+const approvedTomlEntry = wranglerToml.includes('main = "src/worker-production-autonomy.js"') || wranglerToml.includes('main = "src/worker-production.js"');
+if (!approvedTomlEntry) fail('wrangler.toml: missing approved production Worker entry');
+const approvedJsonEntry = wranglerJsonc.includes('"main": "src/worker-production-autonomy.js"') || wranglerJsonc.includes('"main": "src/worker-production.js"');
+if (!approvedJsonEntry) fail('wrangler.jsonc: missing approved production Worker entry');
+for (const marker of ['directory = "./_site"','binding = "ASSETS"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true','AI_RESOURCE_ZERO_SPEND_LOCK = "true"']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+const workerFirstConfig = wranglerToml.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
 const workerFirstForAll = workerFirstConfig === 'true';
 const workerFirstForProtectedRoutes = [
   '"/api/*"',
@@ -139,16 +156,17 @@ const workerFirstForProtectedRoutes = [
   '"/downloads/research*"'
 ].every(pattern => workerFirstConfig.includes(pattern));
 if (!workerFirstForAll && !workerFirstForProtectedRoutes) fail('wrangler.toml: authenticated APIs and protected downloads must use Worker-first routing');
-for (const marker of ['"main": "src/worker-production.js"','"binding": "ASSETS"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"database_name": "matrix-members"','"pattern": "matrixreprogrammed.com/*"','"pattern": "www.matrixreprogrammed.com/*"','"keep_vars": true']) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
-if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) fail('wrangler.toml must not contain active PAYPAL_* overrides');
-if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(read('wrangler.jsonc'))) fail('wrangler.jsonc must not contain active PAYPAL_* overrides');
+for (const marker of ['"binding": "ASSETS"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"database_name": "matrix-members"','"pattern": "matrixreprogrammed.com/*"','"pattern": "www.matrixreprogrammed.com/*"','"keep_vars": true','"AI_RESOURCE_ZERO_SPEND_LOCK": "true"']) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
+if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml)) fail('wrangler.toml must not contain active PAYPAL_* overrides');
+if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc)) fail('wrangler.jsonc must not contain active PAYPAL_* overrides');
 
 needText('_headers', 'Strict-Transport-Security', 'HSTS header');
 needText('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
 needText('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
 needText('scripts/final-production-reconcile.js', 'Payments: RUNTIME GATED / DASHBOARD MANAGED', 'final runtime-gated payment guard');
 needText('scripts/final-production-reconcile.js', 'repair-forum-page-consistency.js', 'final forum page consistency owner');
-needText('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
+needText('scripts/build-production-health.js', 'workerScript: configuredWorkerScript', 'configured Worker health identity');
+needText('scripts/build-production-health.js', 'delegates every fetch unchanged', 'verified wrapper health policy');
 needText('scripts/build-production-health.js', "paymentStatus: 'runtime-gated-dashboard-managed'", 'runtime-gated dashboard-managed health status');
 needText('scripts/build-production-health.js', "checkoutDefault: 'runtime-d1-gated'", 'D1-gated checkout health status');
 needText('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
@@ -172,11 +190,13 @@ const report = {
     stdout: String(item.result.stdout || '').slice(-1000),
     stderr: String(item.result.stderr || '').slice(-1000)
   })),
-  workerEntrypoint: 'src/worker-production.js',
+  workerEntrypoint: wranglerToml.includes('main = "src/worker-production-autonomy.js"') ? 'src/worker-production-autonomy.js' : 'src/worker-production.js',
+  workerEntryPolicy: 'The verified autonomy wrapper delegates every fetch unchanged to the strict fail-closed production Worker and adds only bounded AI scheduled maintenance.',
   forumStorage: 'Cloudflare D1 authoritative with strict insert and exact read-after-write confirmation; KV compatibility/recovery only',
   forumAccess: 'verified free member session across main, speculation and Epstein boards',
+  aiManagement: 'zero-spend resource orchestration and metadata-only routing; prompts and inference remain local',
   paymentStatus: 'runtime-gated-dashboard-managed',
-  boundary: 'Late generators are repaired before this audit. PayPal remains runtime-gated and forum success is impossible without authenticated D1 write/read proof.'
+  boundary: 'Late generators are repaired before this audit. The verified wrapper cannot bypass the strict Worker; AI remains prompt-local and zero-spend; PayPal remains runtime-gated; forum success is impossible without authenticated D1 write/read proof.'
 };
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
@@ -188,4 +208,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Repaired late generators, then checked strict routing, authenticated D1 forum write/read, all three forum pages, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');
+console.log('Repaired late generators, then checked verified autonomy-wrapper delegation, strict routing, prompt-local zero-spend AI, authenticated D1 forum write/read, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');

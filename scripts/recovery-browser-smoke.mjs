@@ -82,16 +82,19 @@ try {
         await gate.waitFor({ state: 'hidden', timeout: 10000 });
       }
     }
-    const topbar = page.locator('header.accountability-topbar');
-    await topbar.waitFor({ state: 'visible', timeout: 30000 });
-    const hrefs = await topbar.locator('a[href]').evaluateAll(anchors => anchors.map(anchor => anchor.getAttribute('href') || ''));
+    const header = page.locator('header').first();
+    await header.waitFor({ state: 'visible', timeout: 30000 });
+    const links = header.locator('a[href]');
+    const linkCount = await links.count();
+    assert(linkCount >= 8 && linkCount <= 16, `Homepage global navigation must remain focused; found ${linkCount} links`);
+    const hrefs = await links.evaluateAll(anchors => anchors.map(anchor => anchor.getAttribute('href') || ''));
+    const labels = (await links.allInnerTexts()).map(label => label.replace(/\s+/g, ' ').trim().toLowerCase());
     const hasRoute = route => hrefs.some(href => href === route || href.endsWith(route));
-    for (const route of ['#accountability-search','#accountability-hit-list','#open-question-ledger','member-dashboard.html']) {
-      assert(hasRoute(route), `Accountability homepage navigation must expose ${route}`);
+    for (const route of ['start-here.html','books.html','control-structure.html','live-intel.html','search.html']) {
+      assert(hasRoute(route), `Homepage global navigation must expose ${route}`);
     }
-    assert(await topbar.locator('details summary').count() >= 1, 'Accountability homepage must expose an Explore drawer');
-    for (const route of ['hit-list.html','behind-the-curtain.html','evidence-vault.html','books.html','forum.html']) {
-      assert(hasRoute(route), `Explore drawer must expose ${route}`);
+    for (const label of ['start here','books','control system','live intel','security tools','dark web safety','independent links','search']) {
+      assert(labels.some(value => value.includes(label)), `Homepage global navigation must expose ${label}`);
     }
     assert(await page.locator('main#main-archive').count() === 1, 'Homepage must contain the canonical main archive surface');
     assert(await page.locator('#accountability-search-form[action="search.html"]').count() === 1, 'Homepage must route its primary search through search.html');

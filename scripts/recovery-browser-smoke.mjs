@@ -82,7 +82,7 @@ try {
         await gate.waitFor({ state: 'hidden', timeout: 10000 });
       }
     }
-    await page.locator('header.topbar').waitFor({ state: 'visible' });
+    await page.locator('header.topbar .nav-primary a').first().waitFor({ state: 'visible', timeout: 30000 });
     const primaryLinks = page.locator('header.topbar .nav-primary a');
     const primaryCount = await primaryLinks.count();
     assert(primaryCount >= 8 && primaryCount <= 10, `Homepage primary navigation must remain focused; found ${primaryCount} links`);
@@ -92,7 +92,7 @@ try {
     assert(await page.locator('header.topbar a[href="data-lab.html"]').count() >= 1, 'Homepage navigation must expose Public Data Lab');
     assert(await page.locator('main').count() === 1, 'Homepage must contain one main element');
   }, async page => {
-    await page.route('**/api/public/consequence-contracts', route => jsonResponse(route, { ok: true, contracts: [] }));
+    await page.route('**/api/public/consequence-contracts**', route => jsonResponse(route, { ok: true, contracts: [] }));
   });
 
   await runTest(browser, 'Start Here safety routes', '/start-here.html', async page => {

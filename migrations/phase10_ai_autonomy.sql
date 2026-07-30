@@ -61,6 +61,24 @@ CREATE TABLE IF NOT EXISTS ai_local_models (
 CREATE INDEX IF NOT EXISTS idx_ai_local_models_route
   ON ai_local_models(status, route_score DESC, last_seen DESC);
 
+CREATE TABLE IF NOT EXISTS ai_model_routing_decisions (
+  decision_id TEXT PRIMARY KEY,
+  task_profile TEXT NOT NULL,
+  data_class TEXT NOT NULL CHECK (data_class IN ('public','internal','confidential','restricted')),
+  prompt_tokens_estimate INTEGER NOT NULL CHECK (prompt_tokens_estimate > 0),
+  requested_output_tokens INTEGER NOT NULL CHECK (requested_output_tokens > 0),
+  selected_resource_id TEXT NOT NULL,
+  candidates_json TEXT NOT NULL DEFAULT '[]',
+  excluded_json TEXT NOT NULL DEFAULT '[]',
+  cost_confirmed_zero INTEGER NOT NULL DEFAULT 1 CHECK (cost_confirmed_zero = 1),
+  prompt_received INTEGER NOT NULL DEFAULT 0 CHECK (prompt_received = 0),
+  created_at TEXT NOT NULL,
+  FOREIGN KEY(selected_resource_id) REFERENCES ai_resources(resource_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_ai_model_routing_decisions_recent
+  ON ai_model_routing_decisions(created_at DESC, selected_resource_id);
+
 CREATE TABLE IF NOT EXISTS ai_site_improvement_runs (
   run_id TEXT PRIMARY KEY,
   node_id TEXT,
@@ -96,6 +114,6 @@ CREATE INDEX IF NOT EXISTS idx_ai_site_improvement_actions_run
   ON ai_site_improvement_actions(run_id, status);
 
 INSERT OR IGNORE INTO ai_feature_flags(flag_name, enabled, value_json, reason, updated_by, updated_at) VALUES
-  ('AI_LOCAL_MODEL_ROUTING_ENABLED', 0, '{"endpoint_scope":"loopback-only"}', 'Local node inventory and routing require an owner-controlled local agent.', 'migration', CURRENT_TIMESTAMP),
+  ('AI_LOCAL_MODEL_ROUTING_ENABLED', 0, '{"endpoint_scope":"loopback-only","prompt_transfer":false}', 'Local node inventory and metadata-only routing require an owner-controlled local agent.', 'migration', CURRENT_TIMESTAMP),
   ('AI_SITE_DIRECTOR_ENABLED', 0, '{"safe_fix_limit":25}', 'Autonomous site changes are restricted to the safe allowlist and protected paths remain immutable.', 'migration', CURRENT_TIMESTAMP),
   ('AI_RESOURCE_AUTO_APPROVAL_ENABLED', 0, '{"minimum_confidence":95}', 'Automatic approval remains fail-closed and requires every zero-spend, quota, terms, privacy, HTTPS, health and provenance gate.', 'migration', CURRENT_TIMESTAMP);

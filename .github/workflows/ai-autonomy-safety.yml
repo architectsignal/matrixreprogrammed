@@ -1,0 +1,107 @@
+name: AI Autonomy Safety Gate
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/**'
+      - 'scripts/ai-management-*.mjs'
+      - 'scripts/run-autonomous-ai-manager.mjs'
+      - 'scripts/run-investigation-machine.js'
+      - 'src/worker-ai-management.js'
+      - 'src/worker-production-autonomy.js'
+      - 'src/worker-production.js'
+      - 'migrations/phase9_ai_resource_orchestration.sql'
+      - 'migrations/phase10_ai_autonomy.sql'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - '.github/workflows/ai-autonomy-safety.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-autonomy-safety-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  autonomy-safety:
+    name: Verify zero-spend autonomy boundaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout candidate commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check autonomy JavaScript syntax
+        run: |
+          node --check ai-management/local-runtime/hardware-detector.mjs
+          node --check ai-management/local-runtime/model-router.mjs
+          node --check ai-management/node/local-ai-broker.mjs
+          node --check ai-management/provider-adapters/local/openai-compatible-local.mjs
+          node --check ai-management/resource-scout/resource-scout.mjs
+          node --check ai-management/site-director/site-improvement-director.mjs
+          node --check scripts/run-autonomous-ai-manager.mjs
+          node --check scripts/ai-management-autonomy-test.mjs
+          node --check src/worker-ai-management.js
+          node --check src/worker-production-autonomy.js
+
+      - name: Run zero-spend broker foundation tests
+        run: node scripts/ai-management-foundation-test.mjs
+
+      - name: Run autonomy safety and routing tests
+        run: node scripts/ai-management-autonomy-test.mjs
+
+      - name: Execute D1 migrations in SQLite
+        shell: python
+        run: |
+          import sqlite3
+          from pathlib import Path
+
+          database = sqlite3.connect(':memory:')
+          for migration in [
+              'migrations/phase9_ai_resource_orchestration.sql',
+              'migrations/phase10_ai_autonomy.sql',
+          ]:
+              database.executescript(Path(migration).read_text(encoding='utf-8'))
+
+          required = {
+              'ai_resources',
+              'ai_jobs',
+              'ai_resource_candidates',
+              'ai_local_runtime_nodes',
+              'ai_local_models',
+              'ai_model_routing_decisions',
+              'ai_site_improvement_runs',
+              'ai_site_improvement_actions',
+          }
+          present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+          missing = required - present
+          if missing:
+              raise SystemExit(f'Missing migration tables: {sorted(missing)}')
+
+          schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_model_routing_decisions'").fetchone()[0]
+          if 'prompt_received = 0' not in schema:
+              raise SystemExit('Routing ledger does not structurally prohibit prompt receipt')
+
+          flags = {row[0]: row[1] for row in database.execute('SELECT flag_name, enabled FROM ai_feature_flags')}
+          for flag in ['AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED', 'AI_RESOURCE_AUTO_APPROVAL_ENABLED']:
+              if flags.get(flag) != 0:
+                  raise SystemExit(f'{flag} must start disabled before reviewed activation')
+
+          print('D1 phase 9 and phase 10 migrations executed successfully with prompt-free routing constraints.')
+
+      - name: Verify fail-closed production configuration
+        run: |
+          grep -F 'main = "src/worker-production-autonomy.js"' wrangler.toml
+          grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' wrangler.toml
+          grep -F 'AI_RESOURCE_AUTO_APPROVAL_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_SITE_DIRECTOR_ENABLED = "false"' wrangler.toml
+          ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js

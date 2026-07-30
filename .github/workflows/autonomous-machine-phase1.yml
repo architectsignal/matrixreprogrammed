@@ -154,3 +154,8 @@ jobs:
         env:
           AIM_PUBLICATION_MODE: disabled
         run: node scripts/autonomous-machine/phase1.25-self-test.js
+
+      - name: Verify Phase 1.26 requests anonymous provider evaluation without identity or selection
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.26-self-test.js

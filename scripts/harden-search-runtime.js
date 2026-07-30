@@ -72,24 +72,22 @@ if (!report.ok) {
   process.exit(1);
 }
 
-const qualityInstaller = path.join(root, 'scripts', 'install-search-quality-engine.js');
-if (!fs.existsSync(qualityInstaller)) {
-  console.error('Search runtime hardening failed: search quality installer missing');
-  process.exit(1);
+function runInstaller(label, relativePath) {
+  const script = path.join(root, relativePath);
+  if (!fs.existsSync(script)) {
+    console.error(`Search runtime hardening failed: ${relativePath} missing`);
+    process.exit(1);
+  }
+  const result = spawnSync(process.execPath, [script], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) process.exit(result.status || 1);
+  console.log(`${label} complete.`);
 }
-const quality = spawnSync(process.execPath, [qualityInstaller], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
-if (quality.stdout) process.stdout.write(quality.stdout);
-if (quality.stderr) process.stderr.write(quality.stderr);
-if (quality.status !== 0) process.exit(quality.status || 1);
 
-const sourceEvidenceExtension = path.join(root, 'scripts', 'extend-search-with-source-evidence.js');
-if (!fs.existsSync(sourceEvidenceExtension)) {
-  console.error('Search runtime hardening failed: source evidence search extension missing');
-  process.exit(1);
-}
-const sourceEvidence = spawnSync(process.execPath, [sourceEvidenceExtension], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
-if (sourceEvidence.stdout) process.stdout.write(sourceEvidence.stdout);
-if (sourceEvidence.stderr) process.stderr.write(sourceEvidence.stderr);
-if (sourceEvidence.status !== 0) process.exit(sourceEvidence.status || 1);
+runInstaller('Search quality installation', 'scripts/install-search-quality-engine.js');
+runInstaller('Source evidence search extension', 'scripts/extend-search-with-source-evidence.js');
+runInstaller('Local hybrid semantic retrieval installation', 'scripts/install-search-hybrid-retrieval.js');
+runInstaller('Optional Gemini public-data adapter installation', 'scripts/install-gemini-public-ai.js');
 
-console.log('Search runtime hardened with a real fallback index, HTML-response guard, Search Quality V1 and source evidence routes.');
+console.log('Search runtime hardened with fallback protection, source evidence, exact/entity/BM25 retrieval, compact local semantic vectors, domain reranking, confidence gating and an optional fail-closed Gemini adapter.');

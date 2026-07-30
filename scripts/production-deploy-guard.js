@@ -171,6 +171,11 @@ const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
+const aiLiveVerifier = read('scripts/verify-live-ai-management.mjs');
+const promptRejectionProof = aiLiveVerifier.includes("body: { prompt: 'This content must never enter Cloudflare routing.' }")
+  && aiLiveVerifier.includes('promptRejection.status === 400')
+  && aiLiveVerifier.includes('/prompt material is forbidden/i')
+  && aiLiveVerifier.includes('promptAccepted: false');
 const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
 const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
 const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
@@ -194,9 +199,10 @@ if (hardFreeze) {
   const preservesSandbox = canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal');
   const preservesLive = canonicalDeploy.includes('live checkout state preserved') || canonicalDeploy.includes('live PayPal checkout state preserved');
   if (!preservesSandbox || !preservesLive) hard.push('canonical deploy does not preserve live PayPal state while closing sandbox');
-  for (const text of ['migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','node scripts/verify-live-ai-management.mjs','Prompt material is forbidden']) {
+  for (const text of ['migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','node scripts/verify-live-ai-management.mjs']) {
     if (!canonicalDeploy.includes(text)) hard.push(`canonical deploy missing AI release gate ${text}`);
   }
+  if (!promptRejectionProof) hard.push('canonical deploy live verifier does not prove prompt-shaped payload rejection with HTTP 400');
 
   if (!fallbackDeploy.includes('workflow_dispatch:') || /^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy)) hard.push('manual fallback must remain manual only');
   if (!explicitFreeze(fallbackDeploy)) hard.push('manual fallback must remain explicitly hard frozen');

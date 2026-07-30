@@ -1,0 +1,21 @@
+const fs=require('fs');
+const path=require('path');
+const crypto=require('crypto');
+const semantic=require('./search-semantic-vector.js');
+const root=process.cwd();
+const indexPath=path.join(root,'search-index.json');
+const outputPath=path.join(root,'search-semantic-index.json');
+const reportPath=path.join(root,'downloads','search-semantic-index-report.json');
+if(!fs.existsSync(indexPath))throw new Error('search-index.json is missing');
+const index=JSON.parse(fs.readFileSync(indexPath,'utf8'));
+if(!Array.isArray(index))throw new Error('search-index.json must be an array');
+const records=[];const seen=new Set();
+for(const item of index){if(!item?.url||seen.has(item.url))continue;seen.add(item.url);const vector=semantic.embed(semantic.documentText(item));records.push([String(item.url),semantic.encode(vector)]);}
+const payload={version:semantic.VERSION,dimensions:semantic.DIMENSIONS,generatedAt:new Date().toISOString(),sourceHash:crypto.createHash('sha256').update(JSON.stringify(index)).digest('hex'),count:records.length,records};
+fs.writeFileSync(outputPath,JSON.stringify(payload));
+fs.mkdirSync(path.dirname(reportPath),{recursive:true});
+const bytes=fs.statSync(outputPath).size;
+const report={ok:records.length===seen.size&&records.length>0,generatedAt:payload.generatedAt,version:payload.version,dimensions:payload.dimensions,records:records.length,bytes,mib:Number((bytes/1024/1024).toFixed(3)),boundary:'The semantic index contains compact local vectors and route IDs only. It contains no API key, member data or external AI output.'};
+fs.writeFileSync(reportPath,JSON.stringify(report,null,2)+'\n');
+if(!report.ok)throw new Error('Semantic index build failed');
+console.log(`Semantic index built: ${records.length} routes, ${report.mib} MiB, ${semantic.DIMENSIONS} dimensions.`);

@@ -56,6 +56,8 @@ for (const [label, file] of [
 ]) run(label, file);
 run('D1 forum persistence', 'scripts/forum-persistence-d1-test.js', true);
 run('strict Worker routes', 'scripts/cloudflare-worker-routes-test.js', true);
+run('AI management foundation', 'scripts/ai-management-foundation-test.mjs', true);
+run('AI autonomy safety', 'scripts/ai-management-autonomy-test.mjs', true);
 run('final production reconciliation', 'scripts/final-production-reconcile.js', true, { DEPLOY_COMMIT_SHA: deploySha });
 run('production freshness', 'scripts/production-freshness-guard.js', true);
 run('production synchronization', 'scripts/production-sync-test.js', true);
@@ -65,9 +67,9 @@ for (const value of [
   'index.html','search.html','search.js','search-index.json','books.html','live-intel.html','forum.html','forum.js',
   'membership.html','paypal-membership.js','member-dashboard.html','member-dashboard-app.js','billing-dashboard.html','billing-dashboard.js',
   'admin-payment-dashboard.html','admin-payment-dashboard.js','deploy-health.html','deploy-health.json','deploy-manifest.json',
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js',
-  'wrangler.toml','wrangler.jsonc','_headers','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql',
-  'scripts/build-production-health.js','scripts/final-production-reconcile.js'
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js',
+  'wrangler.toml','wrangler.jsonc','_headers','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
+  'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/verify-live-ai-management.mjs'
 ]) needFile(value);
 for (const value of [
   'index.html','index','search.html','search','search.js','search-index.json','books.html','books','live-intel.html','live-intel','forum.html','forum',
@@ -82,6 +84,15 @@ for (const marker of [
   'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',
   "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'"
 ]) needText('src/worker-production.js', marker, `strict Worker marker ${marker}`);
+for (const marker of [
+  "import productionWorker from './worker-production.js';",
+  "import aiManagementWorker from './worker-ai-management.js';",
+  'return productionWorker.fetch(request, env, ctx);',
+  'productionWorker.scheduled',
+  'aiManagementWorker.scheduled',
+  'await Promise.all([productionTask, autonomyTask]);'
+]) needText('src/worker-production-autonomy.js', marker, `autonomy wrapper marker ${marker}`);
+for (const marker of ['Prompt material is forbidden','promptReceived: false','promptStored: false','promptTransferred: false','paidFallbackPossible: false']) needText('src/worker-ai-management.js', marker, `AI privacy marker ${marker}`);
 for (const marker of ['Cloudflare D1 MEMBERS_DB.forum_posts','INSERT INTO forum_posts','D1 forum read-after-write confirmation failed','kv_forum_migration_v1','D1 authoritative; KV compatibility mirror']) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 forbidText('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'silent duplicate-suppressing forum insert');
 for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/checkout-intent','/api/paypal/subscription/create','/api/paypal/subscription/return','/api/paypal/subscription/confirm','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
@@ -104,9 +115,13 @@ needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'payment 
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = [','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','keep_vars = true']) needText('wrangler.toml', marker, `Cloudflare config marker ${marker}`);
+const approvedTomlEntry = wranglerToml.includes('main = "src/worker-production-autonomy.js"') || wranglerToml.includes('main = "src/worker-production.js"');
+if (!approvedTomlEntry) hard.push('wrangler.toml missing approved production Worker entry');
+const approvedJsonEntry = wranglerJsonc.includes('"main": "src/worker-production-autonomy.js"') || wranglerJsonc.includes('"main": "src/worker-production.js"');
+if (!approvedJsonEntry) hard.push('wrangler.jsonc missing approved production Worker entry');
+for (const marker of ['directory = "./_site"','binding = "ASSETS"','run_worker_first = [','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','keep_vars = true','AI_RESOURCE_ZERO_SPEND_LOCK = "true"']) needText('wrangler.toml', marker, `Cloudflare config marker ${marker}`);
 if (/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml)) hard.push('wrangler.toml must not route all static traffic through the Worker');
-if (!/"keep_vars"\s*:\s*true/.test(wranglerJsonc)) hard.push('wrangler.jsonc must preserve dashboard variables');
+for (const marker of ['"keep_vars": true','"AI_RESOURCE_ZERO_SPEND_LOCK": "true"']) if (!wranglerJsonc.includes(marker)) hard.push(`wrangler.jsonc missing ${marker}`);
 if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml)) hard.push('wrangler.toml contains forbidden active PAYPAL_* override');
 if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc)) hard.push('wrangler.jsonc contains forbidden active PAYPAL_* override');
 needText('_headers', 'Strict-Transport-Security', 'HSTS header');
@@ -118,7 +133,8 @@ const manifest = exists('deploy-manifest.json') ? parseJson('deploy-manifest.jso
 for (const [label, item] of [['source', health], ['built', builtHealth]]) {
   if (!item) continue;
   if (!item.ok) hard.push(`${label} deploy-health.json should be ready`);
-  if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} deploy health must identify strict Worker`);
+  if (!['src/worker-production.js','src/worker-production-autonomy.js'].includes(item.workerScript)) hard.push(`${label} deploy health must identify an approved production Worker entry`);
+  if (item.workerScript === 'src/worker-production-autonomy.js' && !String(item.workerEntryPolicy || '').includes('delegates every fetch unchanged')) hard.push(`${label} deploy health must prove autonomy-wrapper fetch delegation`);
   if (item.paymentStatus !== 'runtime-gated-dashboard-managed') hard.push(`${label} deploy health must identify dashboard-managed runtime PayPal`);
   if (item.checkoutDefault !== 'runtime-d1-gated') hard.push(`${label} deploy health must identify D1-gated checkout`);
   if (!String(item.paymentMessage || '').includes('credentials') || !String(item.paymentMessage || '').includes('three active plans')) hard.push(`${label} deploy health must describe the complete activation boundary`);
@@ -141,16 +157,17 @@ const report = {
   softIssues: soft,
   steps,
   forumStorage: 'Cloudflare D1 is authoritative behind the strict production Worker; KV is migration and compatibility only.',
+  aiManagement: 'The verified autonomy wrapper delegates fetch unchanged; Cloudflare stores metadata-only routes under the zero-spend lock while prompts and inference remain local.',
   paymentStatus: 'runtime-gated-dashboard-managed: the Worker creates server-side PayPal subscriptions, redirects to the official approval page, verifies returns, and preserves dashboard-managed credentials and switches plus D1 activation.',
-  boundary: 'This pressure gate blocks stale Worker entrypoints, false-success forum fallbacks, health/manifest drift, repository payment overrides, unguarded payment activation, obsolete browser SDK checkout and legacy generator regression.'
+  boundary: 'This pressure gate blocks stale or unverified Worker entrypoints, prompt transfer, paid AI fallback, false-success forum fallbacks, health/manifest drift, repository payment overrides, unguarded payment activation, obsolete browser SDK checkout and legacy generator regression.'
 };
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-wrapper.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-report.md'), `# Cloudflare Focused Pressure Report\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nDeploy SHA: ${deploySha}\nForum: ${report.forumStorage}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(item => `- ${item}`).join('\n') || '- None'}\n\n## Soft Issues\n${soft.map(item => `- ${item}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-report.md'), `# Cloudflare Focused Pressure Report\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nDeploy SHA: ${deploySha}\nForum: ${report.forumStorage}\nAI: ${report.aiManagement}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(item => `- ${item}`).join('\n') || '- None'}\n\n## Soft Issues\n${soft.map(item => `- ${item}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('\nCLOUDFLARE FOCUSED PRESSURE FAILED\n');
   for (const item of hard) console.error(`- ${item}`);
   process.exit(1);
 }
 console.log('CLOUDFLARE FOCUSED PRESSURE PASSED');
-console.log('Strict D1 forum, consent-bound report automation and runtime-gated server-created PayPal subscriptions are reconciled and commit-bound.');
+console.log('Strict D1 forum, prompt-local zero-spend AI, consent-bound report automation and runtime-gated server-created PayPal subscriptions are reconciled and commit-bound.');

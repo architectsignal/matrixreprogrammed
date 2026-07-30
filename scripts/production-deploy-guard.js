@@ -46,10 +46,10 @@ const requiredSource = [
   'security-privacy.html','dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','search.html',
   'deploy-manifest.json','deploy-health.html','deploy-health.json','data/production-freshness-policy.json',
   'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json',
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-release-metadata.js',
-  'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js',
+  'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
   'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/repair-generated-site-artifacts.js','scripts/cloudflare-focused-pressure-wrapper.js',
-  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js',
+  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/ai-management-autonomy-test.mjs',
   '.github/workflows/deploy.yml','.github/workflows/deploy-production.yml','.github/workflows/one-shot-dispatch-controlled-production.yml','wrangler.toml','wrangler.jsonc'
 ];
 const requiredBuilt = [
@@ -119,7 +119,8 @@ for (const [label, item] of [['source', health], ['built', builtHealth], ['runti
   if (!item.ok) hard.push(`${label} production health reports not ready`);
   if (expectedSha && item.buildSha !== expectedSha) hard.push(`${label} production health SHA ${item.buildSha} does not match expected ${expectedSha}`);
   if (expectedSha && item.manifestSha !== expectedSha) hard.push(`${label} production health manifest SHA ${item.manifestSha} does not match expected ${expectedSha}`);
-  if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} production health does not name strict Worker`);
+  if (!['src/worker-production.js','src/worker-production-autonomy.js'].includes(item.workerScript)) hard.push(`${label} production health does not name an approved strict Worker entry`);
+  if (item.workerScript === 'src/worker-production-autonomy.js' && !String(item.workerEntryPolicy || '').includes('delegates every fetch unchanged')) hard.push(`${label} production health does not prove autonomy-wrapper fetch delegation`);
   if (item.paymentStatus !== 'runtime-gated-dashboard-managed') hard.push(`${label} production health does not report dashboard-managed runtime PayPal`);
   if (item.checkoutDefault !== 'runtime-d1-gated') hard.push(`${label} production health does not report D1-gated checkout`);
   if (!String(item.paymentMessage || '').includes('credentials') || !String(item.paymentMessage || '').includes('three active plans')) hard.push(`${label} production health does not describe all PayPal activation gates`);
@@ -132,22 +133,34 @@ else if (!freshnessReport.ok) hard.push(`production freshness guard reports ${fr
 for (const text of ["import forumWorker from './worker-forum-persistence.js'","import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'","import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';",'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',"origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);']) {
   if (!read('src/worker-production.js').includes(text)) hard.push(`strict production Worker missing ${text}`);
 }
+for (const text of ["import productionWorker from './worker-production.js';","import aiManagementWorker from './worker-ai-management.js';",'return productionWorker.fetch(request, env, ctx);','productionWorker.scheduled','aiManagementWorker.scheduled','await Promise.all([productionTask, autonomyTask]);']) {
+  if (!read('src/worker-production-autonomy.js').includes(text)) hard.push(`production autonomy wrapper missing ${text}`);
+}
 for (const text of ["['/deploy-manifest.json', '/runtime/deploy-manifest-current.json']","['/deploy-health.json', '/runtime/deploy-health-current.json']",'cloudflare-worker-release-metadata','no-store, max-age=0']) {
   if (!read('src/worker-release-metadata.js').includes(text)) hard.push(`release metadata Worker missing ${text}`);
 }
 for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/subscription/create','/api/paypal/subscription/return','/v1/billing/subscriptions','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) {
   if (!read('src/worker-paypal-subscriptions.js').includes(text)) hard.push(`PayPal Worker missing ${text}`);
 }
+for (const text of ['Prompt material is forbidden','promptReceived: false','promptStored: false','promptTransferred: false','paidFallbackPossible: false']) {
+  if (!read('src/worker-ai-management.js').includes(text)) hard.push(`AI management Worker missing ${text}`);
+}
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
-for (const text of ['main = "src/worker-production.js"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','directory = "./_site"','keep_vars = true']) {
+const autonomyTomlEntry = wranglerToml.includes('main = "src/worker-production-autonomy.js"');
+const directTomlEntry = wranglerToml.includes('main = "src/worker-production.js"');
+if (!autonomyTomlEntry && !directTomlEntry) hard.push('wrangler.toml missing an approved production Worker entry');
+const autonomyJsonEntry = wranglerJsonc.includes('"main": "src/worker-production-autonomy.js"');
+const directJsonEntry = wranglerJsonc.includes('"main": "src/worker-production.js"');
+if (!autonomyJsonEntry && !directJsonEntry) hard.push('wrangler.jsonc missing an approved production Worker entry');
+for (const text of ['binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','directory = "./_site"','keep_vars = true','AI_RESOURCE_ZERO_SPEND_LOCK = "true"']) {
   if (!wranglerToml.includes(text)) hard.push(`wrangler.toml missing ${text}`);
 }
 const selectiveWorkerRoutingReady = /^run_worker_first\s*=\s*\[/m.test(wranglerToml)
   && !/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml);
 if (!selectiveWorkerRoutingReady) hard.push('wrangler.toml must use selective run_worker_first route protection and must not route all static assets through the Worker');
-for (const text of ['"main": "src/worker-production.js"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"keep_vars": true']) {
+for (const text of ['"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"keep_vars": true','"AI_RESOURCE_ZERO_SPEND_LOCK": "true"']) {
   if (!wranglerJsonc.includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
 }
 if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml)) hard.push('wrangler.toml contains active PAYPAL_* overrides');
@@ -158,6 +171,11 @@ const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
+const aiLiveVerifier = read('scripts/verify-live-ai-management.mjs');
+const promptRejectionProof = aiLiveVerifier.includes("body: { prompt: 'This content must never enter Cloudflare routing.' }")
+  && aiLiveVerifier.includes('promptRejection.status === 400')
+  && aiLiveVerifier.includes('/prompt material is forbidden/i')
+  && aiLiveVerifier.includes('promptAccepted: false');
 const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
 const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
 const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
@@ -170,7 +188,7 @@ if (hardFreeze) {
     if (d1MutationCommand.test(workflow)) hard.push(`${label} frozen workflow contains D1 or checkout mutation`);
     if (workflow.includes('PAYPAL_PRODUCTION_ENABLED=true') || workflow.includes('ACTIVATE MATRIX PAYPAL LIVE')) hard.push(`${label} frozen workflow can activate live PayPal`);
   }
-  for (const rel of ['scripts/final-production-reconcile.js','scripts/verify-live-production.js','src/worker-production.js','migrations/phase4_email_lifecycle.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase7_paypal_sandbox_rehearsal.sql']) {
+  for (const rel of ['scripts/final-production-reconcile.js','scripts/verify-live-production.js','src/worker-production.js','migrations/phase4_email_lifecycle.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase7_paypal_sandbox_rehearsal.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql']) {
     if (!exists(rel)) hard.push(`frozen release readiness missing ${rel}`);
   }
 } else {
@@ -178,7 +196,13 @@ if (hardFreeze) {
   if (!canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') || !canonicalDeploy.includes('Production release refused: confirmation text did not match.')) hard.push('canonical deploy missing exact owner confirmation gate');
   if (!canonicalDeploy.includes('group: matrixreprogrammed-production') || !/cancel-in-progress:\s*false/.test(canonicalDeploy)) hard.push('canonical deploy must queue and never interrupt D1 migrations');
   if (!canonicalDeploy.includes('d1 time-travel info matrix-members --json') || !canonicalDeploy.includes('d1-rollback-proof.json') || !canonicalDeploy.includes('restoreCommand') || canonicalDeploy.includes('d1 export matrix-members --remote')) hard.push('canonical deploy missing validated D1 Time Travel rollback');
-  if (!canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') || !canonicalDeploy.includes('live checkout state preserved')) hard.push('canonical deploy does not preserve live PayPal state while closing sandbox');
+  const preservesSandbox = canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal');
+  const preservesLive = canonicalDeploy.includes('live checkout state preserved') || canonicalDeploy.includes('live PayPal checkout state preserved');
+  if (!preservesSandbox || !preservesLive) hard.push('canonical deploy does not preserve live PayPal state while closing sandbox');
+  for (const text of ['migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','node scripts/verify-live-ai-management.mjs']) {
+    if (!canonicalDeploy.includes(text)) hard.push(`canonical deploy missing AI release gate ${text}`);
+  }
+  if (!promptRejectionProof) hard.push('canonical deploy live verifier does not prove prompt-shaped payload rejection with HTTP 400');
 
   if (!fallbackDeploy.includes('workflow_dispatch:') || /^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy)) hard.push('manual fallback must remain manual only');
   if (!explicitFreeze(fallbackDeploy)) hard.push('manual fallback must remain explicitly hard frozen');
@@ -221,14 +245,32 @@ const report = {
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   releaseMetadataOwner: 'src/worker-release-metadata.js with exact runtime aliases republished at the final pre-Wrangler guard.',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
+  aiManagement: 'Cloudflare stores only zero-spend resource state and metadata-only routing decisions. Prompts and inference remain on the owner-controlled local machine.',
   paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; the Worker creates subscriptions and redirects to the official approval URL while checkout still requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
   boundary: hardFreeze
     ? 'Production is blocked unless all three workflow locks are deliberately replaced. Any executable Wrangler deploy, D1 mutation, automatic trigger or PayPal activation inside a frozen workflow fails this guard.'
-    : 'Deployment is blocked on automatic canonical triggers, missing owner confirmation, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction or unguarded payment activation.'
+    : 'Deployment is blocked on automatic canonical triggers, missing owner confirmation, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction, prompt transfer, paid AI fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment mode: ${report.deploymentMode}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nRelease metadata: ${report.releaseMetadataOwner}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard
+
+Generated: ${report.generatedAt}
+Result: ${report.ok ? 'PASS' : 'FAIL'}
+Expected SHA: ${expectedSha}
+Manifest SHA: ${report.manifestSha}
+Health SHA: ${report.healthSha}
+Deployment mode: ${report.deploymentMode}
+Deployment model: ${report.deploymentModel}
+Rollback: ${report.rollbackModel}
+Release metadata: ${report.releaseMetadataOwner}
+Forum storage: ${report.forumPersistence}
+AI management: ${report.aiManagement}
+Payments: ${report.paymentStatus}
+
+## Hard Issues
+${hard.map(issue => `- ${issue}`).join('\n') || '- None'}
+`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
@@ -236,4 +278,4 @@ if (hard.length) {
 }
 console.log(hardFreeze
   ? `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)}: production workflows are hard frozen, mutation-free and release readiness remains preserved.`
-  : `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with final release metadata aliases, manual confirmation, a non-interrupting canonical migration queue, Time Travel rollback, frozen fallback, strict D1 forums and SDK-free runtime-gated PayPal.`);
+  : `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with final release metadata aliases, manual confirmation, a non-interrupting canonical migration queue, Time Travel rollback, frozen fallback, strict D1 forums, prompt-local zero-spend AI and SDK-free runtime-gated PayPal.`);

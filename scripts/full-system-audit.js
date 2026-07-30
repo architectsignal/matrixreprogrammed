@@ -18,10 +18,10 @@ const report = {
   warnings: [],
   recommendations: [],
   architecture: {
-    workerStack: 'src/worker-production.js -> strict email/member/PayPal boundaries -> D1 forum persistence -> legacy static application',
+    workerStack: 'src/worker-production-autonomy.js -> unchanged fetch delegation -> src/worker-production.js -> strict email/member/PayPal boundaries -> D1 forum persistence -> legacy static application',
     forumStorage: 'Cloudflare D1 authoritative; KV excluded from public forum runtime',
     paymentStatus: 'runtime-gated and Cloudflare-dashboard-managed; checkout requires credentials, environment agreement, D1 activation, live confirmation and three active plans',
-    deploymentModel: 'one automatic canonical Cloudflare deploy plus one manual fallback'
+    deploymentModel: 'one manually confirmed canonical Cloudflare deploy, a non-mutating one-shot dispatcher and a hard-frozen fallback'
   }
 };
 
@@ -181,7 +181,13 @@ const checks = [
   ['Membership €9 tier', 'membership.html', '€9'],
   ['Membership PayPal runtime', 'membership.html', 'paypal-membership.js'],
   ['Membership disabled-by-default notice', 'membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'],
-  ['Strict Worker entrypoint', 'wrangler.toml', 'main = "src/worker-production.js"'],
+  ['Autonomy Worker entrypoint', 'wrangler.toml', 'main = "src/worker-production-autonomy.js"'],
+  ['Autonomy Worker JSON entrypoint', 'wrangler.jsonc', '"main": "src/worker-production-autonomy.js"'],
+  ['Autonomy wrapper strict Worker import', 'src/worker-production-autonomy.js', "import productionWorker from './worker-production.js';"],
+  ['Autonomy wrapper AI Worker import', 'src/worker-production-autonomy.js', "import aiManagementWorker from './worker-ai-management.js';"],
+  ['Autonomy wrapper unchanged fetch delegation', 'src/worker-production-autonomy.js', 'return productionWorker.fetch(request, env, ctx);'],
+  ['Autonomy wrapper preserves strict scheduled lifecycle', 'src/worker-production-autonomy.js', 'productionWorker.scheduled'],
+  ['Autonomy wrapper adds bounded AI scheduled lifecycle', 'src/worker-production-autonomy.js', 'aiManagementWorker.scheduled'],
   ['Selective Worker routing', 'wrangler.toml', 'run_worker_first = ['],
   ['Strict forum boundary', 'src/worker-production.js', 'non-authoritative-forum-response-blocked'],
   ['Strict PayPal boundary', 'src/worker-production.js', 'non-authoritative-paypal-response-blocked'],
@@ -240,7 +246,7 @@ report.finishedAt = new Date().toISOString();
 if (report.summary.failedCriticalCommands) report.recommendations.push('Fix the first critical command failure before treating the repository as release-ready.');
 if (report.summary.failedCriticalSystems) report.recommendations.push('A required current-production marker is missing; inspect build order and final reconciliation.');
 if (!report.summary.failedCriticalCommands && !report.summary.failedCriticalSystems) {
-  report.recommendations.push('Current production architecture passed: strict Worker, D1 forum, member entitlements, server-gated PayPal, current routes and commit-bound health.');
+  report.recommendations.push('Current production architecture passed: verified autonomy wrapper, strict Worker, D1 forum, member entitlements, server-gated PayPal, current routes and commit-bound health.');
 }
 
 fs.writeFileSync(path.join(downloads, 'full-system-audit.json'), JSON.stringify(report, null, 2));

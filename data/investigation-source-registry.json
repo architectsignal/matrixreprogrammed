@@ -204,6 +204,21 @@
       "type": "json",
       "parser": "federal-register",
       "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "resourcePolicy": {
+        "approvedForAutomation": true,
+        "zeroSpendVerified": true,
+        "quotaVerified": true,
+        "billingRisk": "none",
+        "hardDailyRequestCeiling": 100,
+        "concurrencyLimit": 1,
+        "officialDocumentationUrl": "https://www.federalregister.gov/developers/documentation/api/v1",
+        "termsUrl": "https://www.federalregister.gov/reader-aids/government-policy-and-ofr-procedures/about-this-site",
+        "privacyUrl": "https://www.federalregister.gov/reader-aids/government-policy-and-ofr-procedures/privacy",
+        "licence": "Federal Register material may be reproduced under 1 CFR 2.6; official editions remain authoritative for legal reliance.",
+        "lastTermsCheck": "2026-07-30T00:00:00.000Z",
+        "lastQuotaCheck": "2026-07-30T00:00:00.000Z",
+        "termsRevalidationDue": "2026-08-29T00:00:00.000Z"
+      },
       "keywords": [
         "ethics",
         "procurement",

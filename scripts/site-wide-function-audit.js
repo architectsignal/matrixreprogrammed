@@ -105,12 +105,27 @@ function checkPackage() {
   }
 }
 
+function hasDeterministicAuditBootstrap(text) {
+  if (text.includes('npm run build')) return true;
+  if (text.includes('node scripts/build-cloudflare-output.js')) return true;
+  const generatedRepairChain = text.includes('node scripts/repair-generated-site-artifacts.js')
+    && text.includes('node scripts/repair-search-system.js')
+    && text.includes('node scripts/ensure-shared-assets.js');
+  if (generatedRepairChain) return true;
+  const investigationChain = text.includes('node scripts/run-investigation-machine.js')
+    && text.includes('node scripts/repair-search-system.js')
+    && text.includes('node scripts/final-investigation-hardening.js');
+  return investigationChain;
+}
+
 function checkWorkflows() {
   const auditSite = exists('scripts/audit-site.js') ? read('scripts/audit-site.js') : '';
   const auditBootstraps = auditSite.includes('SITE QA BOOTSTRAP') && auditSite.includes('npm') && auditSite.includes('build');
   for (const wf of checked.workflows) {
     const txt = read(wf);
-    if (txt.includes('node scripts/audit-site.js') && !txt.includes('npm run build') && !auditBootstraps) fail(`${wf}: runs audit-site.js without build/bootstrap`);
+    if (txt.includes('node scripts/audit-site.js') && !hasDeterministicAuditBootstrap(txt) && !auditBootstraps) {
+      fail(`${wf}: runs audit-site.js without build/bootstrap`);
+    }
     if (txt.includes('[deploy]') && !/contents:\s*write/.test(txt)) fail(`${wf}: uses deploy marker without contents write permission`);
     if (txt.includes('schedule:') && !txt.includes('workflow_dispatch:')) warn(`${wf}: scheduled workflow has no manual trigger`);
   }

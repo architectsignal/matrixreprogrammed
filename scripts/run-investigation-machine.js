@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { spawnSync } = require('child_process');
+const { pathToFileURL } = require('url');
 
 const root = process.cwd();
 const dataDir = path.join(root, 'data');
@@ -35,7 +36,9 @@ const endDate = checkedAt.slice(0, 10);
 const start = new Date(now.getTime() - (mode === 'weekly' ? 8 : 3) * 86400000);
 const startDate = start.toISOString().slice(0, 10);
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
-const USER_AGENT = process.env.INVESTIGATION_USER_AGENT || 'MatrixReprogrammedInvestigation/1.0 njmgroupfrance@gmail.com';
+const USER_AGENT = process.env.INVESTIGATION_USER_AGENT || 'MatrixReprogrammedInvestigation/1.0';
+let resourceBroker;
+let resourceAuditLogger;
 
 function readJson(file, fallback) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
@@ -306,35 +309,73 @@ async function fetchSource(source) {
   const url = template(source.url);
   const request = source.request || {};
   const timeout = Number(source.timeoutMs || process.env.INVESTIGATION_TIMEOUT_MS || 25000);
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeout);
   try {
-    const options = {
-      method: request.method || 'GET',
-      signal: controller.signal,
-      redirect: 'follow',
-      headers: { 'user-agent': USER_AGENT, accept: request.accept || '*/*', ...(templateObject(request.headers || {})) }
-    };
-    if (request.body) {
-      options.body = JSON.stringify(templateObject(request.body));
-      options.headers['content-type'] = options.headers['content-type'] || 'application/json';
-    }
-    const response = await fetch(url, options);
-    const contentLength = Number(response.headers.get('content-length') || 0);
-    if (contentLength > MAX_BODY_BYTES) throw new Error(`Body too large: ${contentLength}`);
-    const body = await response.text();
-    if (Buffer.byteLength(body) > MAX_BODY_BYTES) throw new Error(`Body too large after download: ${Buffer.byteLength(body)}`);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const contentType = response.headers.get('content-type') || '';
+    const method = String(request.method || (source.type === 'json-post' ? 'POST' : 'GET')).toUpperCase();
+    const headers = { accept: request.accept || '*/*', ...(templateObject(request.headers || {})) };
+    const requestBody = request.body || (source.type === 'json-post' ? source.payload : null);
+    const brokerResult = await resourceBroker.execute({
+      job_type: 'public-data.fetch',
+      capability_type: 'public_data',
+      priority: mode === 'daily' ? 'P2' : 'P3',
+      data_class: 'public',
+      payload: {
+        url,
+        method,
+        headers,
+        body: requestBody ? templateObject(requestBody) : undefined,
+        maximum_bytes: MAX_BODY_BYTES,
+        quota_units: 1,
+        source_id: source.id
+      },
+      requirements: {
+        cost_ceiling_eur: 0,
+        minimum_quality_score: source.authority === 'primary-official' ? 80 : 60,
+        minimum_provenance_score: 70,
+        maximum_latency_ms: timeout,
+        maximum_attempts: 2,
+        requires_provenance: true,
+        cacheable: true,
+        cache_ttl_seconds: mode === 'daily' ? 900 : 3600
+      },
+      metadata: {
+        investigator_mode: mode,
+        source_id: source.id,
+        lane: source.lane,
+        authority: source.authority
+      }
+    });
+    const fetched = brokerResult.output;
+    const body = fetched.body;
+    const contentType = fetched.content_type || '';
     let items = [];
-    if (/json/i.test(contentType) || source.format === 'json') items = parseJson(source, JSON.parse(body));
-    else if (/xml|rss|atom/i.test(contentType) || source.format === 'rss') items = parseRss(source, body);
+    if (/json/i.test(contentType) || source.format === 'json' || source.type === 'json' || source.type === 'json-post') items = parseJson(source, JSON.parse(body));
+    else if (/xml|rss|atom/i.test(contentType) || source.format === 'rss' || source.type === 'rss') items = parseRss(source, body);
     else items = parseHtml(source, body);
-    return { source, status: 'fetched', statusCode: response.status, finalUrl: response.url, contentType, bytes: Buffer.byteLength(body), bodyHash: hash(body), items };
+    return {
+      source,
+      status: 'fetched',
+      statusCode: fetched.status,
+      finalUrl: fetched.final_url,
+      contentType,
+      bytes: fetched.bytes,
+      bodyHash: fetched.body_hash || hash(body),
+      items,
+      resourceId: brokerResult.selected_resource,
+      utilityScore: brokerResult.utility_score,
+      costConfirmedZero: brokerResult.cost_confirmed_zero,
+      brokerAttempts: brokerResult.attempts,
+      provenance: brokerResult.provenance
+    };
   } catch (error) {
-    return { source, status: `failed-${error.name === 'AbortError' ? 'timeout' : 'request'}`, error: error.message, items: [] };
-  } finally {
-    clearTimeout(timer);
+    const policyFailure = error?.code === 'NO_ELIGIBLE_ZERO_COST_RESOURCE';
+    return {
+      source,
+      status: policyFailure ? 'failed-policy' : 'failed-request',
+      error: `${error?.code || 'RESOURCE_BROKER_ERROR'}: ${error.message}`,
+      items: [],
+      costConfirmedZero: true,
+      brokerExcludedResources: error?.details?.excluded_resources || []
+    };
   }
 }
 async function mapLimit(values, limit, mapper) {
@@ -372,7 +413,11 @@ function sourceState(results) {
       bodyHash: result.bodyHash || prior.bodyHash || '',
       changed,
       itemCount: (result.items || []).length,
-      error: result.error || ''
+      error: result.error || '',
+      resourceId: result.resourceId || null,
+      utilityScore: result.utilityScore ?? null,
+      costConfirmedZero: result.costConfirmedZero === true,
+      brokerAttempts: result.brokerAttempts || 0
     }];
   }));
 }
@@ -450,6 +495,19 @@ function canUsePriorLedgerForProduction() {
 
 (async () => {
   if (typeof fetch !== 'function') throw new Error('Node 18+ fetch is required');
+  const brokerModuleUrl = pathToFileURL(path.join(root, 'ai-management', 'node', 'investigation-broker.mjs')).href;
+  const { createInvestigationBroker } = await import(brokerModuleUrl);
+  const brokerRuntime = createInvestigationBroker({
+    sources: registry.sources || [],
+    priorState,
+    fetchImpl: fetch,
+    userAgent: USER_AGENT,
+    maximumBytes: MAX_BODY_BYTES,
+    environment: process.env,
+    now
+  });
+  resourceBroker = brokerRuntime.broker;
+  resourceAuditLogger = brokerRuntime.logger;
   const selected = (registry.sources || []).filter(source => (source.frequency || []).includes(mode));
   const results = await mapLimit(selected, Number(process.env.INVESTIGATION_CONCURRENCY || 4), fetchSource);
   const fetchedItems = results.flatMap(result => result.items || []);
@@ -479,6 +537,7 @@ function canUsePriorLedgerForProduction() {
     fetchedSources: results.filter(result => result.status === 'fetched').length,
     skippedSources: results.filter(result => result.status.startsWith('skipped')).length,
     failedSources: results.filter(result => result.status.startsWith('failed')).length,
+    policyFilteredSources: results.filter(result => result.status === 'failed-policy').length,
     parsedItems: fetchedItems.length,
     newOrSeenFindings: currentFindings.length,
     ledgerFindings: mergedFindings.length,
@@ -493,7 +552,36 @@ function canUsePriorLedgerForProduction() {
       bytes: result.bytes,
       bodyHash: result.bodyHash,
       itemCount: (result.items || []).length,
-      error: result.error || ''
+      error: result.error || '',
+      resourceId: result.resourceId || null,
+      utilityScore: result.utilityScore ?? null,
+      costConfirmedZero: result.costConfirmedZero === true,
+      brokerAttempts: result.brokerAttempts || 0
+    })),
+    resourceBroker: {
+      zeroSpendLock: true,
+      monetaryCeilingEur: 0,
+      paidFallbackPossible: false,
+      decisionsRecorded: resourceAuditLogger.records.length,
+      successfulSelections: results.filter(result => result.resourceId).length,
+      policyFilteredSources: results.filter(result => result.status === 'failed-policy').length,
+      localOnly: String(process.env.AI_RESOURCE_LOCAL_ONLY || 'false').toLowerCase() === 'true'
+    },
+    resourceDecisions: resourceAuditLogger.records.map(record => ({
+      actionId: record.action_id,
+      jobId: record.job_id,
+      selectedResource: record.selected_resource,
+      utilityScore: record.utility_score,
+      candidateResources: record.candidate_resources,
+      excludedResources: record.excluded_resources,
+      decisionReason: record.decision_reason,
+      quotaBefore: record.quota_before,
+      quotaAfter: record.quota_after,
+      latency: record.latency,
+      costConfirmedZero: record.cost_confirmed_zero,
+      validationResult: record.validation_result,
+      error: record.error,
+      createdAt: record.created_at
     })),
     boundary: daily.boundary
   };

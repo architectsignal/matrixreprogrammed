@@ -77,8 +77,37 @@ for (const required of [
   }
 }
 
+const wranglerSource = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
+const directProductionEntry = wranglerSource.includes('main = "src/worker-production.js"');
+const autonomyProductionEntry = wranglerSource.includes('main = "src/worker-production-autonomy.js"');
+if (!directProductionEntry && !autonomyProductionEntry) {
+  console.error('Cloudflare membership integration verification failed: wrangler.toml has no approved strict production Worker entry');
+  process.exit(1);
+}
+if (autonomyProductionEntry) {
+  const wrapperPath = path.join(root, 'src', 'worker-production-autonomy.js');
+  if (!fs.existsSync(wrapperPath)) {
+    console.error('Cloudflare membership integration verification failed: production autonomy wrapper is missing');
+    process.exit(1);
+  }
+  const wrapper = fs.readFileSync(wrapperPath, 'utf8');
+  const wrapperChecks = [
+    "import productionWorker from './worker-production.js';",
+    "import aiManagementWorker from './worker-ai-management.js';",
+    'return productionWorker.fetch(request, env, ctx);',
+    'productionWorker.scheduled',
+    'aiManagementWorker.scheduled',
+    'await Promise.all([productionTask, autonomyTask]);'
+  ];
+  for (const marker of wrapperChecks) {
+    if (!wrapper.includes(marker)) {
+      console.error(`Cloudflare membership integration verification failed: production autonomy wrapper missing ${marker}`);
+      process.exit(1);
+    }
+  }
+}
+
 for (const required of [
-  ['wrangler.toml', 'main = "src/worker-production.js"'],
   ['wrangler.toml', 'binding = "MEMBERS_DB"'],
   ['wrangler.toml', 'binding = "ASSETS"'],
   ['src/worker-production.js', 'isMemberExperienceRoute'],
@@ -131,6 +160,9 @@ const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
   platform: 'Cloudflare Worker + D1 + Cloudflare Assets',
+  workerEntryPolicy: autonomyProductionEntry
+    ? 'The verified autonomy wrapper delegates every fetch unchanged to the strict production Worker and adds only the bounded AI scheduled lifecycle.'
+    : 'Wrangler points directly to the strict production Worker.',
   changed,
   pages: pages.map(page => page.name),
   paypalCheckout: true,

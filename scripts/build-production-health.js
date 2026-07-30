@@ -36,7 +36,14 @@ function commitSha() {
 
 const buildSha = commitSha();
 const manifest = parse('deploy-manifest.json');
-const modules = [
+const wranglerToml = read('wrangler.toml');
+const wranglerJsonc = read('wrangler.jsonc');
+const autonomyWrapperConfigured = wranglerToml.includes('main = "src/worker-production-autonomy.js"');
+const directProductionConfigured = wranglerToml.includes('main = "src/worker-production.js"');
+const configuredWorkerScript = autonomyWrapperConfigured ? 'src/worker-production-autonomy.js' : 'src/worker-production.js';
+const configuredWorkerMarker = `main = "${configuredWorkerScript}"`;
+
+const moduleDefinitions = [
   { name: 'Homepage eye-to-mask sequence', route: '/', file: 'index.html', markers: ['data-homepage-mask-intro', 'assets/intro-eye.svg', 'assets/intro-mask.svg'] },
   { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status'] },
   { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js'] },
@@ -50,9 +57,24 @@ const modules = [
   { name: 'Evidence Archive', route: '/evidence-archive', file: 'evidence-archive.html', markers: ['EVIDENCE ARCHIVE'] },
   { name: 'Search the Machine', route: '/search', file: 'search.html', markers: ['SEARCH THE MACHINE'] },
   { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1', 'cloudflare-worker-paypal-subscriptions'] },
+  ...(autonomyWrapperConfigured ? [{
+    name: 'Verified production autonomy wrapper',
+    route: '/api/ai-management/admin/health',
+    file: 'src/worker-production-autonomy.js',
+    markers: [
+      "import productionWorker from './worker-production.js';",
+      "import aiManagementWorker from './worker-ai-management.js';",
+      'return productionWorker.fetch(request, env, ctx);',
+      'productionWorker.scheduled',
+      'aiManagementWorker.scheduled',
+      'await Promise.all([productionTask, autonomyTask]);'
+    ]
+  }] : []),
   { name: 'D1 forum persistence Worker', route: '/forum-health', file: 'src/worker-forum-persistence.js', markers: ['Cloudflare D1 MEMBERS_DB.forum_posts', 'd1Connected: true', 'storedPostCount'] },
-  { name: 'Cloudflare runtime preservation', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = [', 'keep_vars = true', 'Runtime payment credentials and activation switches are managed in the Cloudflare dashboard'] }
-].map(item => {
+  { name: 'Cloudflare runtime preservation', route: '/forum-health', file: 'wrangler.toml', markers: [configuredWorkerMarker, 'binding = "MEMBERS_DB"', 'run_worker_first = [', 'keep_vars = true', 'Runtime payment credentials and activation switches are managed in the Cloudflare dashboard'] }
+];
+
+const modules = moduleDefinitions.map(item => {
   const text = read(item.file);
   const missingMarkers = item.markers.filter(marker => !text.includes(marker));
   return { ...item, exists: exists(item.file), ready: exists(item.file) && missingMarkers.length === 0, missingMarkers, hash: hash(item.file) };
@@ -60,8 +82,7 @@ const modules = [
 
 const manifestMatches = Boolean(manifest && manifest.commitSha === buildSha);
 const membership = read('membership.html');
-const wranglerToml = read('wrangler.toml');
-const wranglerJsonc = read('wrangler.jsonc');
+const approvedWorkerEntryReady = autonomyWrapperConfigured || directProductionConfigured;
 const selectiveWorkerRoutingReady = /^run_worker_first\s*=\s*\[/m.test(wranglerToml)
   && !/^run_worker_first\s*=\s*true\s*$/m.test(wranglerToml);
 const paymentRuntimeReady = membership.includes('paypal-membership.js')
@@ -73,12 +94,15 @@ const paymentRuntimeReady = membership.includes('paypal-membership.js')
   && !/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc);
 
 const health = {
-  ok: modules.every(item => item.ready) && manifestMatches && paymentRuntimeReady && selectiveWorkerRoutingReady,
+  ok: modules.every(item => item.ready) && manifestMatches && paymentRuntimeReady && selectiveWorkerRoutingReady && approvedWorkerEntryReady,
   buildSha,
   buildShortSha: buildSha.slice(0, 12),
   generatedAt: new Date().toISOString(),
   target: 'Cloudflare Worker with _site assets',
-  workerScript: 'src/worker-production.js',
+  workerScript: configuredWorkerScript,
+  workerEntryPolicy: autonomyWrapperConfigured
+    ? 'The verified autonomy wrapper delegates every fetch unchanged to the strict production Worker and adds only the bounded AI scheduled lifecycle.'
+    : 'Wrangler points directly to the strict production Worker.',
   workerRouting: 'Selective run_worker_first route array protects dynamic/member/API routes while static assets bypass unnecessary Worker execution.',
   selectiveWorkerRoutingReady,
   forumStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; KV is compatibility and recovery only.',
@@ -103,6 +127,7 @@ const cards = modules.map(item => `<article class="card ${item.ready ? 'redline'
 const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Production Health | Matrix Reprogrammed</title><meta name="description" content="Commit-bound Cloudflare production health, D1 persistence and runtime-gated PayPal readiness." /><meta name="robots" content="noindex,nofollow,noarchive" /><link rel="stylesheet" href="styles.css" /></head><body><div class="page"><header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="live-intel.html">Live Intel</a><a href="research-tools.html">Research Tools</a><a href="membership.html">Membership</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Commit-bound production proof</div><h1>PRODUCTION HEALTH.</h1><p class="lead">This page is regenerated after every legacy builder and tied to the exact GitHub commit deployed to Cloudflare.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="/forum-health">Open D1 Forum Health</a></div></section><section class="section wrap split"><div class="terminal">PRODUCTION HEALTH
 &gt; Commit: ${esc(health.buildShortSha)}
 &gt; Generated: ${esc(health.generatedAt)}
+&gt; Worker: ${esc(health.workerScript)}
 &gt; Forum: D1 AUTHORITATIVE / FAIL CLOSED
 &gt; Worker routing: SELECTIVE / STATIC BYPASS
 &gt; Payments: RUNTIME GATED / DASHBOARD MANAGED
@@ -119,4 +144,4 @@ if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));
   process.exit(1);
 }
-console.log(`Production health built for ${health.buildShortSha}: selective Worker routing, D1 fail-closed and Cloudflare-managed PayPal runtime gates preserved.`);
+console.log(`Production health built for ${health.buildShortSha}: verified Worker entry, selective routing, D1 fail-closed and Cloudflare-managed PayPal runtime gates preserved.`);

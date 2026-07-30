@@ -5,6 +5,7 @@ import contactWorker, { contactRoutes } from './worker-contact-intake.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import consequenceTrackerWorker, { isConsequenceTrackerRoute } from './worker-consequence-tracker.js';
 import consequenceEvidenceWorker, { isConsequenceEvidenceRoute } from './worker-consequence-evidence.js';
+import aiManagementWorker, { isAiManagementRoute } from './worker-ai-management.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
 import rehearsalWorker, {
@@ -93,11 +94,15 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
             ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
             : subsystem === 'asset-gate'
               ? 'Cloudflare D1 MEMBERS_DB effective entitlements'
+              : subsystem === 'ai-management'
+                ? 'Cloudflare D1 MEMBERS_DB AI resource registry and audit tables'
               : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
       ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
+      : subsystem === 'ai-management'
+        ? 'AI resource management is unavailable. No external provider fallback was attempted.'
       : subsystem === 'paypal'
         ? 'PayPal billing storage is unavailable. No legacy or unverified payment response was accepted.'
         : subsystem === 'paypal-bootstrap'
@@ -257,6 +262,14 @@ async function validateConsequenceEvidenceResponse(response) {
   return response;
 }
 
+async function validateAiManagementResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-ai-management') {
+    return unavailable('non-authoritative-ai-management-response-blocked', `Origin was ${origin || 'missing'}`, 'ai-management');
+  }
+  return response;
+}
+
 async function validateConsequenceTrackerResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-consequence-tracker') {
@@ -313,6 +326,14 @@ export default {
         return await servePublicStaticAsset(request, env, publicStaticAssetRoutes.get(path));
       } catch (error) {
         return unavailable('public-static-asset-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
+    if (isAiManagementRoute(path)) {
+      try {
+        return validateAiManagementResponse(await aiManagementWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('ai-management-worker-exception', error?.message || error, 'ai-management');
       }
     }
 

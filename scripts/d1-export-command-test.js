@@ -25,7 +25,7 @@ for (const relative of workflows) {
   const bookmarkLines = lines.filter((line) => /wrangler@latest\s+d1\s+time-travel\s+info\s+matrix-members/.test(line));
   const exportLines = lines.filter((line) => /wrangler@latest\s+d1\s+export\s+matrix-members/.test(line));
   const executableDeploy = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im.test(text);
-  const d1Mutation = /wrangler@latest\s+d1\s+execute\s+matrix-members\s+--remote|Apply idempotent D1 migration chain/i.test(text);
+  const d1Mutation = /wrangler@latest\s+d1\s+execute\s+matrix-members\s+--remote|Apply (?:idempotent|repeat-safe) D1 migration chain/i.test(text);
   const hardFreeze = /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED/i.test(text);
 
   check(`${relative} exists`, Boolean(text));
@@ -48,8 +48,18 @@ for (const relative of workflows) {
   check(`${relative} requests machine-readable bookmark JSON`, /\s--json(?:\s|$)/.test(command));
   check(`${relative} validates a bookmark before migrations`, /bookmark/.test(text) && /d1-rollback-proof\.json/.test(text));
   const bookmarkIndex = text.indexOf('d1 time-travel info matrix-members');
-  const migrationIndex = text.indexOf('Apply idempotent D1 migration chain');
-  check(`${relative} keeps migrations after rollback capture`, bookmarkIndex >= 0 && migrationIndex > bookmarkIndex);
+  const migrationHeaderIndex = text.search(/Apply (?:idempotent|repeat-safe) D1 migration chain/i);
+  const migrationCommandIndexes = [...text.matchAll(/wrangler@latest\s+d1\s+execute\s+matrix-members\s+--remote\s+--file=/g)]
+    .map((match) => Number(match.index));
+  check(
+    `${relative} keeps migrations after rollback capture`,
+    bookmarkIndex >= 0 &&
+      migrationHeaderIndex > bookmarkIndex &&
+      migrationCommandIndexes.length >= 1 &&
+      migrationCommandIndexes.every((index) => index > bookmarkIndex),
+  );
+  check(`${relative} includes phase 9 AI orchestration migration`, /migrations\/phase9_ai_resource_orchestration\.sql/.test(text));
+  check(`${relative} includes phase 10 AI autonomy migration`, /migrations\/phase10_ai_autonomy\.sql/.test(text));
   check(`${relative} has an executable guarded deployment command`, executableDeploy);
 }
 

@@ -1,10 +1,11 @@
 {
-  // Inner compatibility Worker retained behind the strict boundary: "main": "src/worker-forum-persistence.js"
+  // The strict production boundary remains in worker-production.js.
+  // The autonomy wrapper delegates fetch traffic unchanged and adds bounded scheduled AI maintenance.
   "name": "matrixreprogrammed",
-  "main": "src/worker-production.js",
+  "main": "src/worker-production-autonomy.js",
   "compatibility_date": "2026-06-28",
 
-  // Runtime PayPal credentials and activation switches are managed in Cloudflare.
+  // Runtime credentials and activation switches are managed in Cloudflare.
   // Preserve dashboard values across every Wrangler deployment.
   "keep_vars": true,
 
@@ -19,7 +20,7 @@
     }
   ],
   "triggers": {
-    "crons": ["5 6 * * *", "15 7 * * 1", "35 * * * *"]
+    "crons": ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]
   },
   "vars": {
     "EMAIL_AUTOMATION_ENABLED": "true",
@@ -31,7 +32,17 @@
     "MEMBERS_FROM_NAME": "Matrix Reprogrammed",
     "MEMBERS_REPLY_TO_EMAIL": "njmgroupfrance@gmail.com",
     "MEMBERS_REPLY_TO_NAME": "Matrix Reprogrammed Support",
-    "ENABLE_KV_COMPATIBILITY_MIRROR": "false"
+    "ENABLE_KV_COMPATIBILITY_MIRROR": "false",
+
+    "AI_RESOURCE_BROKER_ENABLED": "false",
+    "AI_RESOURCE_EXTERNAL_ENABLED": "false",
+    "AI_RESOURCE_LOCAL_ONLY": "true",
+    "AI_RESOURCE_ZERO_SPEND_LOCK": "true",
+    "AI_RESOURCE_BACKGROUND_ENABLED": "false",
+    "AI_RESOURCE_SCOUT_ENABLED": "false",
+    "AI_RESOURCE_AUTO_APPROVAL_ENABLED": "false",
+    "AI_LOCAL_MODEL_ROUTING_ENABLED": "false",
+    "AI_SITE_DIRECTOR_ENABLED": "false"
   },
   "assets": {
     "binding": "ASSETS",

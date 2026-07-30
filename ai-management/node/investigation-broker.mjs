@@ -26,13 +26,35 @@ function loadAutonomousResources(root = process.cwd()) {
   }
 }
 
-export function investigationSourceResource(source, { priorState = {}, now = new Date(), dailyLimit = 100 } = {}) {
-  const policy = source.resourcePolicy || {};
+function loadInvestigationSourcePolicies(root = process.cwd()) {
+  const file = path.join(root, 'ai-management', 'config', 'investigation-source-policies.json');
+  try {
+    const payload = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return {
+      defaults: payload.defaults && typeof payload.defaults === 'object' ? payload.defaults : {},
+      policies: payload.policies && typeof payload.policies === 'object' ? payload.policies : {},
+      quarantine: payload.quarantine && typeof payload.quarantine === 'object' ? payload.quarantine : {}
+    };
+  } catch {
+    return { defaults: {}, policies: {}, quarantine: {} };
+  }
+}
+
+function policyForSource(source, policyLedger = {}) {
+  const configured = policyLedger.policies?.[source.id];
+  const exactUrlMatch = configured && configured.sourceUrl === source.url;
+  const verified = exactUrlMatch ? { ...(policyLedger.defaults || {}), ...configured } : {};
+  return { ...verified, ...(source.resourcePolicy || {}) };
+}
+
+export function investigationSourceResource(source, { priorState = {}, now = new Date(), dailyLimit = 100, policyLedger = {} } = {}) {
+  const policy = policyForSource(source, policyLedger);
   const approved = policy.approvedForAutomation === true && policy.zeroSpendVerified === true;
   const prior = priorState.sources?.[source.id] || {};
   const healthy = recentSuccessfulHealth(prior, now) || policy.bootstrapHealthVerifiedAt === now.toISOString().slice(0, 10);
   const authorityScore = source.authority === 'primary-official' ? 94 : source.authority === 'credible-investigative-archive' ? 82 : 72;
   const limit = Math.max(1, Number(policy.hardDailyRequestCeiling || dailyLimit));
+  const quarantinedReason = policyLedger.quarantine?.[source.id] || null;
   return {
     resource_id: `investigation-source-${source.id}`,
     provider_name: source.label,
@@ -92,7 +114,9 @@ export function investigationSourceResource(source, { priorState = {}, now = new
     enabled: approved,
     manual_approval_required: !approved,
     allowed_hosts: [safeHostname(source.url)].filter(Boolean),
-    notes: approved ? `Approved source registry entry ${source.id}.` : `Source ${source.id} awaits terms, quota, and automation approval.`,
+    notes: approved
+      ? `Exact-URL verified source policy for ${source.id}; zero-spend and operator quota boundaries enforced.`
+      : quarantinedReason || `Source ${source.id} awaits terms, quota, health and automation approval.`,
     created_at: now.toISOString(),
     updated_at: now.toISOString()
   };
@@ -117,8 +141,12 @@ export function createInvestigationBroker({
   root = process.cwd()
 } = {}) {
   const discovered = Array.isArray(additionalResources) ? additionalResources : loadAutonomousResources(root);
+  const policyLedger = loadInvestigationSourcePolicies(root);
   const combined = [createLocalResource(now.toISOString()), ...sources.map(source => investigationSourceResource(source, {
-    priorState, now, dailyLimit: Number(environment.INVESTIGATION_RESOURCE_DAILY_LIMIT || 100)
+    priorState,
+    now,
+    dailyLimit: Number(environment.INVESTIGATION_RESOURCE_DAILY_LIMIT || 100),
+    policyLedger
   })), ...discovered];
   const resources = [...new Map(combined.map(resource => [resource.resource_id, resource])).values()];
   const registry = new ResourceRegistry(resources);
@@ -139,7 +167,21 @@ export function createInvestigationBroker({
     sleep,
     random
   });
-  return { broker, registry, logger, autonomousResourcesLoaded: discovered.length };
+  return {
+    broker,
+    registry,
+    logger,
+    autonomousResourcesLoaded: discovered.length,
+    verifiedSourcePoliciesLoaded: Object.keys(policyLedger.policies || {}).length,
+    quarantinedSourcePoliciesLoaded: Object.keys(policyLedger.quarantine || {}).length
+  };
 }
 
-export const investigationBrokerInternals = { safeHostname, recentSuccessfulHealth, enabled, loadAutonomousResources };
+export const investigationBrokerInternals = {
+  safeHostname,
+  recentSuccessfulHealth,
+  enabled,
+  loadAutonomousResources,
+  loadInvestigationSourcePolicies,
+  policyForSource
+};

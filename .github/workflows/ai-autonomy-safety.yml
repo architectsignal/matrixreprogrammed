@@ -15,6 +15,7 @@ on:
       - 'wrangler.toml'
       - 'wrangler.jsonc'
       - '.github/workflows/ai-autonomy-safety.yml'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
@@ -58,18 +59,22 @@ jobs:
       - name: Run autonomy safety and routing tests
         run: node scripts/ai-management-autonomy-test.mjs
 
-      - name: Execute D1 migrations in SQLite
+      - name: Execute repeat-safe D1 migrations twice in SQLite
         shell: python
         run: |
           import sqlite3
           from pathlib import Path
 
           database = sqlite3.connect(':memory:')
-          for migration in [
+          migrations = [
               'migrations/phase9_ai_resource_orchestration.sql',
               'migrations/phase10_ai_autonomy.sql',
-          ]:
-              database.executescript(Path(migration).read_text(encoding='utf-8'))
+          ]
+          for pass_number in (1, 2):
+              for migration in migrations:
+                  database.executescript(Path(migration).read_text(encoding='utf-8'))
+              database.commit()
+              print(f'Completed migration pass {pass_number}')
 
           required = {
               'ai_resources',
@@ -86,6 +91,10 @@ jobs:
           if missing:
               raise SystemExit(f'Missing migration tables: {sorted(missing)}')
 
+          resource_columns = {row[1] for row in database.execute('PRAGMA table_info(ai_resources)')}
+          if 'metadata_json' not in resource_columns:
+              raise SystemExit('ai_resources.metadata_json is missing from the repeat-safe phase 9 schema')
+
           schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_model_routing_decisions'").fetchone()[0]
           if 'prompt_received = 0' not in schema:
               raise SystemExit('Routing ledger does not structurally prohibit prompt receipt')
@@ -95,7 +104,15 @@ jobs:
               if flags.get(flag) != 0:
                   raise SystemExit(f'{flag} must start disabled before reviewed activation')
 
-          print('D1 phase 9 and phase 10 migrations executed successfully with prompt-free routing constraints.')
+          duplicate_flags = database.execute('SELECT flag_name,COUNT(*) FROM ai_feature_flags GROUP BY flag_name HAVING COUNT(*)>1').fetchall()
+          if duplicate_flags:
+              raise SystemExit(f'Duplicate feature flags after rerun: {duplicate_flags}')
+
+          duplicate_resources = database.execute('SELECT resource_id,COUNT(*) FROM ai_resources GROUP BY resource_id HAVING COUNT(*)>1').fetchall()
+          if duplicate_resources:
+              raise SystemExit(f'Duplicate resources after rerun: {duplicate_resources}')
+
+          print('D1 phase 9 and phase 10 migrations passed two complete executions with prompt-free routing constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -105,3 +122,10 @@ jobs:
           grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"' wrangler.toml
           grep -F 'AI_SITE_DIRECTOR_ENABLED = "false"' wrangler.toml
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
+
+      - name: Verify controlled production workflow includes AI release gates
+        run: |
+          grep -F 'migrations/phase9_ai_resource_orchestration.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase10_ai_autonomy.sql' .github/workflows/deploy.yml
+          grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK:true' .github/workflows/deploy.yml
+          grep -F '/api/ai-management/admin/health' .github/workflows/deploy.yml

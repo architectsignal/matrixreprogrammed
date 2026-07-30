@@ -25,7 +25,8 @@
   }
   function search(index,query,options={}){
     const interpretation=quality.interpretQuery(query);const concepts=semantic.conceptHits(query+' '+interpretation.corrected);if(concepts.some(c=>['electricity','energy_bill','price_increase','tariff','standing_charge','supplier','regulator','wholesale'].includes(c))){interpretation.domain='household-energy';interpretation.domainLabel='Household energy';interpretation.consequence='household-energy-price-increase';interpretation.missingContext=['country','supplier','billing period','tariff type'];}else if(concepts.some(c=>['company_filing','contract','ownership','money'].includes(c))){interpretation.domain='money-contracts';interpretation.domainLabel='Money and contracts';}else if(concepts.includes('court')){interpretation.domain='courts-enforcement';interpretation.domainLabel='Courts and enforcement';}else if(concepts.some(c=>['legislation','parliament','government'].includes(c))){interpretation.domain='government-policy';interpretation.domainLabel='Government and policy';}const items=Array.isArray(index)?index.filter(item=>item&&item.url):[];
-    const relaxed=quality.search(items,query,{limit:items.length||1,minScore:-999,minConfidence:0,minCoverage:0});
+    const lexicalQuery=[interpretation.corrected,(interpretation.expansions||[]).join(' '),concepts.join(' ')].filter(Boolean).join(' ');
+    const relaxed=quality.search(items,lexicalQuery,{limit:items.length||1,minScore:-999,minConfidence:0,minCoverage:0});
     const lexicalMap=new Map((relaxed.results||[]).map(item=>[String(item.url),item]));
     const semanticMap=semantic.buildIndexMap(options.semanticIndex);const semanticAvailable=semanticMap.size>0;
     const queryVector=semantic.embed([interpretation.corrected,interpretation.domainLabel,interpretation.consequence,(interpretation.expansions||[]).join(' ')].join(' '));

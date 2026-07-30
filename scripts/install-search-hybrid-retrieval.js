@@ -9,7 +9,7 @@ const qualityTag='<script src="search-quality-engine.js"></script>';if(!html.inc
 html=html.replace(qualityTag,`<script src="search-semantic-vector.js"></script>${qualityTag}<script src="search-hybrid-engine.js"></script>`);
 html=html.replace(/Search Quality V1 · Consequence-Aware/g,'Search Hybrid V1 · Consequence-Aware');
 fs.writeFileSync(htmlPath,html);
-const runtime=`(function(){
+const runtime=String.raw`(function(){
 'use strict';
 // SEARCH V2 compatibility marker. Hybrid V1 keeps exact/entity/BM25 retrieval authoritative and adds compact local semantic vectors.
 const input=document.getElementById("archive-search"),results=document.getElementById("search-results"),count=document.getElementById("search-count"),answer=document.getElementById("ask-answer"),shortcuts=document.getElementById("ask-shortcuts");

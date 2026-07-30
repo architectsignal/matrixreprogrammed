@@ -21,7 +21,7 @@ const replacement = [
   "    assert(uniqueRoutes.length >= 8, `Homepage must expose a useful route set; found ${uniqueRoutes.length} unique links`);",
   "    assert(await page.locator('main').count() === 1, 'Homepage must contain one main element');",
   "  }, async page => {",
-  "    await page.route('**/api/public/consequence-contracts', route => jsonResponse(route, { ok: true, contracts: [], generatedAt: '2026-07-30T00:00:00.000Z' }));",
+  "    await page.route('**/api/public/consequence-contracts**', route => jsonResponse(route, { ok: true, contracts: [], generatedAt: '2026-07-30T00:00:00.000Z' }));",
   "  });"
 ].join('\n');
 source = `${source.slice(0, start)}${replacement}${source.slice(end)}`;

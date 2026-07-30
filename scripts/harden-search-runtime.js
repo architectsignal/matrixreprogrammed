@@ -82,4 +82,14 @@ if (quality.stdout) process.stdout.write(quality.stdout);
 if (quality.stderr) process.stderr.write(quality.stderr);
 if (quality.status !== 0) process.exit(quality.status || 1);
 
-console.log('Search runtime hardened with a real fallback index, HTML-response guard and Search Quality V1.');
+const sourceEvidenceExtension = path.join(root, 'scripts', 'extend-search-with-source-evidence.js');
+if (!fs.existsSync(sourceEvidenceExtension)) {
+  console.error('Search runtime hardening failed: source evidence search extension missing');
+  process.exit(1);
+}
+const sourceEvidence = spawnSync(process.execPath, [sourceEvidenceExtension], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+if (sourceEvidence.stdout) process.stdout.write(sourceEvidence.stdout);
+if (sourceEvidence.stderr) process.stderr.write(sourceEvidence.stderr);
+if (sourceEvidence.status !== 0) process.exit(sourceEvidence.status || 1);
+
+console.log('Search runtime hardened with a real fallback index, HTML-response guard, Search Quality V1 and source evidence routes.');

@@ -8,7 +8,10 @@ const reportPath = path.join(root, 'downloads', 'homepage-construction-banner.js
 const startMarker = '<!-- construction-banner:start -->';
 const endMarker = '<!-- construction-banner:end -->';
 const blockPattern = /<!-- construction-banner:start -->[\s\S]*?<!-- construction-banner:end -->/g;
+const navRepairPattern = /<style id=["']homepage-primary-nav-recovery["']>[\s\S]*?<\/style>/g;
 const supportUrl = 'https://gofund.me/0a3c74fc9';
+
+const navRepair = `<style id="homepage-primary-nav-recovery">@media(min-width:901px){header.topbar{display:flex!important;visibility:visible!important;opacity:1!important;min-height:52px}header.topbar .nav-shell{display:flex!important;visibility:visible!important;opacity:1!important}header.topbar .nav-primary{display:flex!important;visibility:visible!important;opacity:1!important;min-height:32px}header.topbar .nav-primary a{display:inline-flex!important;visibility:visible!important;opacity:1!important;min-height:28px;align-items:center}}</style>`;
 
 const banner = `${startMarker}<section id="matrix-construction-banner" class="matrix-construction-banner" role="status" aria-label="Matrix Reprogrammed is under construction and accepting project support"><style>
 .matrix-construction-banner{position:relative;z-index:20;margin:.75rem auto 1.25rem;width:min(1180px,calc(100% - 1.5rem));overflow:hidden;border:1px solid rgba(224,183,92,.68);border-radius:18px;background:linear-gradient(110deg,rgba(10,7,2,.98),rgba(45,7,7,.96) 48%,rgba(6,6,6,.98));box-shadow:0 0 30px rgba(190,55,55,.18),inset 0 0 28px rgba(224,183,92,.06)}
@@ -32,7 +35,9 @@ const banner = `${startMarker}<section id="matrix-construction-banner" class="ma
 </style><div class="matrix-construction-inner"><span class="matrix-construction-status">Build Active</span><div class="matrix-construction-copy"><strong>UNDER CONSTRUCTION — HELP US BUILD THE MACHINE.</strong><span>Matrix Reprogrammed is expanding its independent public-record intelligence system. Support helps fund high-memory GPUs, secure computing infrastructure, storage and the processing capacity required to analyse and connect large evidence archives. Every contribution helps us build faster and keep the core research accessible.</span></div><div class="matrix-construction-actions"><a class="matrix-construction-action primary" href="${supportUrl}" target="_blank" rel="noopener noreferrer" aria-label="Support Matrix Reprogrammed on GoFundMe">Support the Build</a><a class="matrix-construction-action" href="live-intel.html">Open Live Intel</a></div></div></section>${endMarker}`;
 
 function patchHtml(html) {
-  const cleaned = String(html).replace(blockPattern, '');
+  let cleaned = String(html).replace(blockPattern, '').replace(navRepairPattern, '');
+  if (/<\/head>/i.test(cleaned)) cleaned = cleaned.replace(/<\/head>/i, `${navRepair}</head>`);
+  else throw new Error('Homepage construction banner could not find a head insertion point for navigation recovery');
   if (/<\/header>/i.test(cleaned)) return cleaned.replace(/<\/header>/i, `</header>${banner}`);
   if (/<body[^>]*>/i.test(cleaned)) return cleaned.replace(/(<body[^>]*>)/i, `$1${banner}`);
   throw new Error('Homepage construction banner could not find a header or body insertion point');
@@ -45,8 +50,40 @@ function ensureOne(file) {
   const ends = (html.match(/<!-- construction-banner:end -->/g) || []).length;
   const bannerBlocks = html.match(blockPattern) || [];
   const bannerSupportLinks = bannerBlocks.length === 1 ? (bannerBlocks[0].match(/https:\/\/gofund\.me\/0a3c74fc9/g) || []).length : 0;
+  const navRepairs = (html.match(/id=["']homepage-primary-nav-recovery["']/g) || []).length;
   if (banners !== 1 || starts !== 1 || ends !== 1 || bannerBlocks.length !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one construction banner`);
   if (bannerSupportLinks !== 1) throw new Error(`${path.relative(root, file)} construction banner does not contain exactly one GoFundMe support link`);
+  if (navRepairs !== 1) throw new Error(`${path.relative(root, file)} does not contain exactly one desktop primary-navigation recovery rule`);
+}
+
+function safeId(value) {
+  return String(value || 'contract').toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 150) || 'contract';
+}
+
+function repairConsequenceControls(file) {
+  if (!fs.existsSync(file)) return { file:path.relative(root, file), skipped:true, repaired:0 };
+  const before = fs.readFileSync(file, 'utf8');
+  const used = new Map();
+  let repaired = 0;
+  const after = before.replace(/<button\b([^>]*)>/gi, (tag, rawAttrs) => {
+    const followMatch = rawAttrs.match(/\bdata-follow-id\s*=\s*["']([^"']+)["']/i);
+    if (!followMatch) return tag;
+    const followId = safeId(followMatch[1]);
+    const occurrence = (used.get(followId) || 0) + 1;
+    used.set(followId, occurrence);
+    const buttonId = `follow-${followId}${occurrence > 1 ? `-${occurrence}` : ''}`;
+    let attrs = rawAttrs.replace(/\s+id\s*=\s*["'][^"']*["']/i, '');
+    if (!/\bdata-action\s*=/i.test(attrs)) attrs += ' data-action="follow-checkpoints"';
+    attrs += ` id="${buttonId}"`;
+    repaired += 1;
+    return `<button${attrs}>`;
+  });
+  if (after !== before) fs.writeFileSync(file, after);
+  const followButtons = [...after.matchAll(/<button\b([^>]*)>/gi)].map(match => match[1]).filter(attrs => /\bdata-follow-id\s*=/i.test(attrs));
+  const ids = followButtons.map(attrs => (attrs.match(/\bid\s*=\s*["']([^"']+)["']/i) || [])[1]).filter(Boolean);
+  if (followButtons.some(attrs => !/\bdata-action\s*=\s*["']follow-checkpoints["']/i.test(attrs))) throw new Error(`${path.relative(root, file)} contains a follow control without an explicit data-action binding`);
+  if (ids.length !== followButtons.length || new Set(ids).size !== ids.length) throw new Error(`${path.relative(root, file)} contains missing or duplicate follow-control IDs`);
+  return { file:path.relative(root, file), skipped:false, repaired:followButtons.length };
 }
 
 const moneyDepthBuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'finalize-money-intelligence-depth.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
@@ -77,6 +114,13 @@ if (fs.existsSync(output)) {
   }
 }
 
+const consequenceRepairs = [repairConsequenceControls(path.join(root, 'public-consequence-contracts.html'))];
+if (fs.existsSync(output)) {
+  for (const relative of ['public-consequence-contracts.html', 'public-consequence-contracts']) {
+    consequenceRepairs.push(repairConsequenceControls(path.join(output, relative)));
+  }
+}
+
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
@@ -87,9 +131,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   supportRoute: supportUrl,
   supportPurpose: 'High-memory GPUs, secure computing infrastructure, storage and evidence-processing capacity',
   supportLinkPolicy: 'Exactly one GoFundMe CTA inside the construction banner; other clearly labelled support routes elsewhere on the homepage are permitted.',
+  navigationRecovery: 'Desktop primary navigation and its links are explicitly visible and measurable after the welcome gate closes.',
+  consequenceControlRecovery: consequenceRepairs,
   moneyDepthBuild: 'scripts/finalize-money-intelligence-depth.js',
   structuralPowerBuild: 'scripts/build-behind-the-curtain.js',
   patched
 }, null, 2)}\n`);
 
-console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);
+console.log(`Homepage construction and support banner secured across ${patched.join(', ')}; desktop navigation visibility and consequence follow controls repaired; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.`);

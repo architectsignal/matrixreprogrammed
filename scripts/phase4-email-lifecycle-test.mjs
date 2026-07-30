@@ -76,6 +76,8 @@ const env={
   EMAIL_TEST_MODE:'true',
   EMAIL_TEST_NOW:'2026-07-13T12:00:00.000Z',
   EMAIL_AUTOMATION_ENABLED:'true',
+  EMAIL_TRANSACTIONAL_ENABLED:'true',
+  BREVO_DOMAIN_AUTHENTICATED:'true',
   EMAIL_WEBHOOK_SECRET:'webhook-fixture-secret',
   ADMIN_API_TOKEN:'admin-fixture-token',
   ASSETS:assets

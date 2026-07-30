@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-07-29T22:45:04.735Z
+Generated: 2026-07-30T07:44:49.559Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -11,8 +11,8 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - sourcesScheduled: 12
 - sourcesFetched: 11
 - sourceFailures: 1
-- changedSources: 8
-- findingsInWindow: 697
+- changedSources: 6
+- findingsInWindow: 967
 - establishedWrongdoingFindings: 0
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
@@ -348,6 +348,42 @@ Next records: Open and preserve the primary document or official case page.; Ide
 
 Source URL: https://www.usaspending.gov/award/95332A26P00013
 
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+
+### content changed: Federal Register — Latest Documents
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: Federal Register — Latest Documents
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest
+
 ### content changed: U.S. Department of Justice Office of Inspector General — Reports
 
 Grade: B · Status: source-change · Severity: 2
@@ -455,39 +491,3 @@ Boundary: The change alone does not establish wrongdoing, deliberate concealment
 Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
 Source URL: https://oversight.house.gov/release/
-
-### content changed: U.S. Department of Justice Office of Inspector General — Reports
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: U.S. Department of Justice Office of Inspector General — Reports
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://oig.justice.gov/reports
-
-### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom

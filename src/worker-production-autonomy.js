@@ -71,6 +71,7 @@ export default {
     const opportunityTask = runtimeEnv?.MEMBERS_DB?.prepare
       ? runScheduledOpportunityHunter(runtimeEnv).catch(() => ({ skipped: true, reason: 'scheduled-run-failed' }))
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
     await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask]);
   }
 };

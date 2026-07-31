@@ -352,7 +352,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -368,12 +368,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -382,7 +376,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -646,7 +640,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -662,12 +656,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -676,7 +664,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -724,7 +712,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -740,12 +728,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -754,7 +736,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -1108,7 +1090,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -1124,12 +1106,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -1138,7 +1114,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -1330,7 +1306,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -1342,84 +1318,6 @@
         "The conclusion engine linked this hypothesis to canonical source record usaspending-recent-contracts; this link does not establish the hypothesis as fact.",
         "A dated source update exists and should be compared with prior records.",
         "No external power mechanism is established for “INDUSTRIAL BANK — District of Columbia Courts — 95C67826P0279.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
-        "Original review state: needs_editorial_review; failed gates: mechanism_specificity, repetition_and_generic_language, confidence_cap."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Canonical source weekly-investigation",
-          "url": "source-document-vault.html",
-          "locator": "weekly-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “INDUSTRIAL BANK — District of Columbia Courts — 95C67826P0279,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the mechanism specificity gate",
-        "Evidence sufficient to pass the repetition and generic language gate",
-        "Evidence sufficient to pass the confidence cap gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
-        "No repeatable authority, money or implementation route is found beyond the cited record.",
-        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-07-26T09:15:52.661Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
-      "id": "ASC-REVIEW-603BC290D10E2D53",
-      "title": "INTEGRATED MANAGEMENT STRATEGIES LLC — Department of Education",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "d9e22936bbbe2b9382150fbe",
-        "originalState": "needs_editorial_review",
-        "failedGates": [
-          "mechanism_specificity",
-          "repetition_and_generic_language",
-          "confidence_cap"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "weekly_report"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A broader control interpretation of “INTEGRATED MANAGEMENT STRATEGIES LLC — Department of Education — 91990026F0050” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record usaspending-recent-contracts; this link does not establish the hypothesis as fact.",
-        "A dated source update exists and should be compared with prior records.",
-        "No external power mechanism is established for “INTEGRATED MANAGEMENT STRATEGIES LLC — Department of Education — 91990026F0050.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
         "Original review state: needs_editorial_review; failed gates: mechanism_specificity, repetition_and_generic_language, confidence_cap."
       ],
       "sources": [
@@ -1437,7 +1335,7 @@
         }
       ],
       "contraryEvidence": [
-        "For “INTEGRATED MANAGEMENT STRATEGIES LLC — Department of Education — 91990026F0050,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “INDUSTRIAL BANK — District of Columbia Courts — 95C67826P0279,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -1630,7 +1528,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -1646,12 +1544,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -1660,7 +1552,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -1786,7 +1678,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -1802,12 +1694,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -1816,7 +1702,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -1936,7 +1822,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -1952,12 +1838,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -1966,7 +1846,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -2458,7 +2338,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -2474,12 +2354,6 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -2488,7 +2362,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -2736,6 +2610,82 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
+      "id": "ASC-REVIEW-0E868AF7B9CFC533",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "source-change-c452df757991611cb06ec88a",
+        "originalState": "needs_editorial_review",
+        "failedGates": [
+          "repetition_and_generic_language",
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "finding"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record sec-current-filings; this link does not establish the hypothesis as fact.",
+        "The preserved source associated with “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
+        "The documented mechanism in “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by U.S. Securities and Exchange Commission — Current EDGAR Filings, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
+        "Original review state: needs_editorial_review; failed gates: repetition_and_generic_language, confidence_cap."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source daily-investigation",
+          "url": "source-document-vault.html",
+          "locator": "daily-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Canonical source weekly-investigation",
+          "url": "source-document-vault.html",
+          "locator": "weekly-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/daily-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the repetition and generic language gate",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
       "id": "ASC-REVIEW-5745DAEE3A7221DC",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
       "classification": "ai_speculative_conclusion",
@@ -2884,82 +2834,6 @@
       "autoPublished": true,
       "generatedAt": "2026-10-02T00:00:00.000Z",
       "autoPublishedAt": "2026-07-30T07:45:38.434Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
-      "id": "ASC-REVIEW-0807002D2DF4DE89",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "source-change-14394588e567b7c52bd11cb3",
-        "originalState": "needs_editorial_review",
-        "failedGates": [
-          "repetition_and_generic_language",
-          "confidence_cap"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "finding"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A broader control interpretation of “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record sec-current-filings; this link does not establish the hypothesis as fact.",
-        "The preserved source associated with “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
-        "The documented mechanism in “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by U.S. Securities and Exchange Commission — Current EDGAR Filings, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
-        "Original review state: needs_editorial_review; failed gates: repetition_and_generic_language, confidence_cap."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Canonical source weekly-investigation",
-          "url": "source-document-vault.html",
-          "locator": "weekly-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings — browse-edgar,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the repetition and generic language gate",
-        "Evidence sufficient to pass the confidence cap gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
-        "No repeatable authority, money or implementation route is found beyond the cited record.",
-        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-07-29T22:45:54.195Z",
       "lastReviewedAt": null,
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
@@ -3117,7 +2991,7 @@
           "confidence_cap"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "finding"
+        "recordType": "weekly_report"
       },
       "confidence": {
         "score": 5,
@@ -3133,11 +3007,75 @@
       ],
       "sources": [
         {
-          "label": "Canonical source daily-investigation",
+          "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
-          "locator": "daily-investigation",
+          "locator": "weekly-investigation",
           "evidenceClass": "public-record source route; underlying claim not independently established"
         },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/weekly-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency — 9594CS26F0051,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the repetition and generic language gate",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
+      "id": "ASC-REVIEW-D55167851C6E78DE",
+      "title": "STERLING COMPUTERS CORPORATION — National Transportation Safety Board",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "bac0408c84e4d5d7dc1d7bbb",
+        "originalState": "needs_editorial_review",
+        "failedGates": [
+          "repetition_and_generic_language",
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "weekly_report"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “STERLING COMPUTERS CORPORATION — National Transportation Safety Board — 9531BM26F0029” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record usaspending-recent-contracts; this link does not establish the hypothesis as fact.",
+        "MATLAB SOFTWARE LICENSES · Amount: 51226.54 · Sub-agency: National Transportation Safety Board",
+        "The current record identifies a possible mechanism through legal_authority, financial_control, identity_and_access, institutional_implementation. The route remains limited to the authority and implementation evidence cited in “STERLING COMPUTERS CORPORATION — National Transportation Safety Board — 9531BM26F0029.”",
+        "Original review state: needs_editorial_review; failed gates: repetition_and_generic_language, confidence_cap."
+      ],
+      "sources": [
         {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
@@ -3147,12 +3085,152 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
+          "locator": "data/weekly-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
       "contraryEvidence": [
-        "For “SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency — 9594CS26F0051,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “STERLING COMPUTERS CORPORATION — National Transportation Safety Board — 9531BM26F0029,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the repetition and generic language gate",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
+      "id": "ASC-REVIEW-22655628248FD0CD",
+      "title": "SYLGER CORPORATION — Court Services and Offender Supervision Agency",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "ea7eb603ea38266cd3fb06c7",
+        "originalState": "needs_editorial_review",
+        "failedGates": [
+          "repetition_and_generic_language",
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "weekly_report"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “SYLGER CORPORATION — Court Services and Offender Supervision Agency — 9594CS26F0052” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record usaspending-recent-contracts; this link does not establish the hypothesis as fact.",
+        "LABOR IN ACCORDANCE WITH SECTION C HUMAN RESOURCE SPECIALIST · Amount: 148819.2 · Sub-agency: Court Services and Offender Supervision Agency",
+        "The current record identifies a possible mechanism through legal_authority, financial_control, identity_and_access, institutional_implementation. The route remains limited to the authority and implementation evidence cited in “SYLGER CORPORATION — Court Services and Offender Supervision Agency — 9594CS26F0052.”",
+        "Original review state: needs_editorial_review; failed gates: repetition_and_generic_language, confidence_cap."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source weekly-investigation",
+          "url": "source-document-vault.html",
+          "locator": "weekly-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/weekly-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “SYLGER CORPORATION — Court Services and Offender Supervision Agency — 9594CS26F0052,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the repetition and generic language gate",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
+      "id": "ASC-REVIEW-1CE8C25DF0CA4C18",
+      "title": "TRACE SYSTEMS INC. — Department of Defense",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "8f31f55bedf76191133380d8",
+        "originalState": "needs_editorial_review",
+        "failedGates": [
+          "repetition_and_generic_language",
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "weekly_report"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “TRACE SYSTEMS INC. — Department of Defense — HC101326FB766” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record usaspending-recent-contracts; this link does not establish the hypothesis as fact.",
+        "EMCC002782EBM ENHANCED MOBILE SATELLITE SERVICES (EMSS) EQUIPMENT/ACTIVATION/REPAIR · Amount: 562.68 · Sub-agency: Defense Information Systems Agency",
+        "The current record identifies a possible mechanism through legal_authority, financial_control, identity_and_access, institutional_implementation. The route remains limited to the authority and implementation evidence cited in “TRACE SYSTEMS INC. — Department of Defense — HC101326FB766.”",
+        "Original review state: needs_editorial_review; failed gates: repetition_and_generic_language, confidence_cap."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source weekly-investigation",
+          "url": "source-document-vault.html",
+          "locator": "weekly-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/weekly-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “TRACE SYSTEMS INC. — Department of Defense — HC101326FB766,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -7356,8 +7434,8 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-B6BCA7554CFEEE44",
-      "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com",
+      "id": "ASC-REVIEW-B59332D029E64DD4",
+      "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
@@ -7376,11 +7454,11 @@
         "band": "unverified speculation",
         "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
       },
-      "conclusion": "A wider mission interpretation of “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+      "conclusion": "A wider mission interpretation of “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
       "documentedSupport": [
         "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-30-6e33a773-source; this link does not establish the hypothesis as fact.",
-        "“Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
+        "“Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
+        "No external power mechanism is established for “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
         "Original review state: stale; failed gates: mechanism_specificity, freshness."
       ],
       "sources": [
@@ -7398,77 +7476,7 @@
         }
       ],
       "contraryEvidence": [
-        "For “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the mechanism specificity gate",
-        "Evidence sufficient to pass the freshness gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The report may be incomplete, mistaken, ordinary reporting or unrelated to any wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "The source is corrected, withdrawn or contradicted.",
-        "No primary record or concrete power mechanism can be established.",
-        "The report is corrected, withdrawn, contradicted or cannot be linked to a primary record.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
-      "id": "ASC-REVIEW-DAB5BBAD900386F9",
-      "title": "Epstein files: How victims remain exposed to identification - DW.com",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "epstein-files-2026-07-30-2a83e994",
-        "originalState": "stale",
-        "failedGates": [
-          "mechanism_specificity",
-          "freshness"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "signal"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A wider mission interpretation of “Epstein files: How victims remain exposed to identification - DW.com — CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRC” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-30-2a83e994-source; this link does not establish the hypothesis as fact.",
-        "“Epstein files: How victims remain exposed to identification - DW.com — CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRC” is a lead from Google News / Epstein sighting and alive claims. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “Epstein files: How victims remain exposed to identification - DW.com — CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRC.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
-        "Original review state: stale; failed gates: mechanism_specificity, freshness."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source live-intel",
-          "url": "source-document-vault.html",
-          "locator": "live-intel",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/live-intel.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “Epstein files: How victims remain exposed to identification - DW.com — CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRC,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5y,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -14441,8 +14449,8 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-2930E153A701A5BD",
-      "title": "Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com",
+      "id": "ASC-REVIEW-9455E984D4DBC196",
+      "title": "Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
@@ -14461,11 +14469,11 @@
         "band": "unverified speculation",
         "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
       },
-      "conclusion": "A wider mission interpretation of “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+      "conclusion": "A wider mission interpretation of “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
       "documentedSupport": [
         "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-29-7bea5037-source; this link does not establish the hypothesis as fact.",
-        "“Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
+        "“Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
+        "No external power mechanism is established for “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
         "Original review state: stale; failed gates: mechanism_specificity, freshness."
       ],
       "sources": [
@@ -14483,7 +14491,7 @@
         }
       ],
       "contraryEvidence": [
-        "For “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25Y,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -16430,8 +16438,8 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-21808557DF4C165F",
-      "title": "U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv",
+      "id": "ASC-REVIEW-09A1231B842DD08D",
+      "title": "U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
@@ -16450,11 +16458,11 @@
         "band": "unverified speculation",
         "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
       },
-      "conclusion": "A wider mission interpretation of “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+      "conclusion": "A wider mission interpretation of “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
       "documentedSupport": [
         "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-30-820e6bd5-source; this link does not establish the hypothesis as fact.",
-        "“U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
+        "“U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
+        "No external power mechanism is established for “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
         "Original review state: stale; failed gates: mechanism_specificity, freshness."
       ],
       "sources": [
@@ -16472,7 +16480,7 @@
         }
       ],
       "contraryEvidence": [
-        "For “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFv,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -16924,78 +16932,8 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-F2686CE1FBB876BA",
-      "title": "US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "epstein-files-2026-07-31-b0ba52f7",
-        "originalState": "stale",
-        "failedGates": [
-          "mechanism_specificity",
-          "freshness"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "signal"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A wider mission interpretation of “US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-31-b0ba52f7-source; this link does not establish the hypothesis as fact.",
-        "“US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
-        "Original review state: stale; failed gates: mechanism_specificity, freshness."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source live-intel",
-          "url": "source-document-vault.html",
-          "locator": "live-intel",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/live-intel.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the mechanism specificity gate",
-        "Evidence sufficient to pass the freshness gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The report may be incomplete, mistaken, ordinary reporting or unrelated to any wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "The source is corrected, withdrawn or contradicted.",
-        "No primary record or concrete power mechanism can be established.",
-        "The report is corrected, withdrawn, contradicted or cannot be linked to a primary record.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
-      "id": "ASC-REVIEW-CEAFD28B55D0DA69",
-      "title": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com",
+      "id": "ASC-REVIEW-73A254AF094E8599",
+      "title": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
@@ -17014,11 +16952,11 @@
         "band": "unverified speculation",
         "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
       },
-      "conclusion": "A wider mission interpretation of “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+      "conclusion": "A wider mission interpretation of “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
       "documentedSupport": [
         "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-30-af48853e-source; this link does not establish the hypothesis as fact.",
-        "“US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
-        "No external power mechanism is established for “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
+        "“US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
+        "No external power mechanism is established for “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
         "Original review state: stale; failed gates: mechanism_specificity, freshness."
       ],
       "sources": [
@@ -17036,7 +16974,7 @@
         }
       ],
       "contraryEvidence": [
-        "For “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "For “US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -18128,6 +18066,76 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
+      "id": "ASC-REVIEW-5A774507A02DF22B",
+      "title": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "epstein-files-2026-07-31-b0ba52f7",
+        "originalState": "stale",
+        "failedGates": [
+          "mechanism_specificity",
+          "freshness"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "signal"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A wider mission interpretation of “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record epstein-files-2026-07-31-b0ba52f7-source; this link does not establish the hypothesis as fact.",
+        "“With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1” is a lead from Google News / Epstein timeline and files. Until the underlying primary record is reviewed, it supports no conclusion about wrongdoing, causation, coordination or a wider control system.",
+        "No external power mechanism is established for “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1.” A stronger conclusion requires primary records showing authority, ownership, payment, contract, mandate, access, data control or implementation.",
+        "Original review state: stale; failed gates: mechanism_specificity, freshness."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source live-intel",
+          "url": "source-document-vault.html",
+          "locator": "live-intel",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/live-intel.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the mechanism specificity gate",
+        "Evidence sufficient to pass the freshness gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The report may be incomplete, mistaken, ordinary reporting or unrelated to any wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "The source is corrected, withdrawn or contradicted.",
+        "No primary record or concrete power mechanism can be established.",
+        "The report is corrected, withdrawn, contradicted or cannot be linked to a primary record.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
       "id": "ASC-REVIEW-35409BA5B302BB83",
       "title": "World Bank → Foundations Ngos: institution layer",
       "classification": "ai_speculative_conclusion",
@@ -18911,6 +18919,80 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
+      "id": "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "title": "content changed: Federal Register — Latest Documents",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "source-change-8299a278d70b1f879d6d522f",
+        "originalState": "needs_evidence",
+        "failedGates": [
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "finding"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “content changed: Federal Register — Latest Documents — documents.json” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record federal-register-latest; this link does not establish the hypothesis as fact.",
+        "The preserved source associated with “content changed: Federal Register — Latest Documents — documents.json” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
+        "The documented mechanism in “content changed: Federal Register — Latest Documents — documents.json” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by Federal Register — Latest Documents, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
+        "Original review state: needs_evidence; failed gates: confidence_cap."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source daily-investigation",
+          "url": "source-document-vault.html",
+          "locator": "daily-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Canonical source weekly-investigation",
+          "url": "source-document-vault.html",
+          "locator": "weekly-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/daily-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “content changed: Federal Register — Latest Documents — documents.json,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
       "id": "ASC-REVIEW-C4877182445C2050",
       "title": "content changed: Federal Register — Latest Documents",
       "classification": "ai_speculative_conclusion",
@@ -18985,154 +19067,6 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-7E1807C0C6B7E2C1",
-      "title": "content changed: U.S. Department of Justice Office of Inspector General — Reports",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "source-change-205bd2407ea96080fdae5fe8",
-        "originalState": "needs_evidence",
-        "failedGates": [
-          "confidence_cap"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "finding"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A broader control interpretation of “content changed: U.S. Department of Justice Office of Inspector General — Reports — reports” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record doj-oig-reports; this link does not establish the hypothesis as fact.",
-        "The preserved source associated with “content changed: U.S. Department of Justice Office of Inspector General — Reports — reports” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
-        "The documented mechanism in “content changed: U.S. Department of Justice Office of Inspector General — Reports — reports” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by U.S. Department of Justice Office of Inspector General — Reports, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
-        "Original review state: needs_evidence; failed gates: confidence_cap."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Canonical source weekly-investigation",
-          "url": "source-document-vault.html",
-          "locator": "weekly-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “content changed: U.S. Department of Justice Office of Inspector General — Reports — reports,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the confidence cap gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
-        "No repeatable authority, money or implementation route is found beyond the cited record.",
-        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-07-29T22:45:54.195Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
-      "id": "ASC-REVIEW-1B2E5D07E27D9811",
-      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-      "classification": "ai_speculative_conclusion",
-      "status": "unverified",
-      "publicationState": "auto-published-from-review-queue",
-      "reviewOrigin": {
-        "recordId": "source-change-88269481cf5b04b7b0f83b58",
-        "originalState": "needs_evidence",
-        "failedGates": [
-          "confidence_cap"
-        ],
-        "sourceRecordStatus": "published",
-        "recordType": "finding"
-      },
-      "confidence": {
-        "score": 5,
-        "band": "unverified speculation",
-        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
-      },
-      "conclusion": "A broader control interpretation of “content changed: U.S. Securities and Exchange Commission — Litigation Releases — litigation-releases” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
-      "documentedSupport": [
-        "The conclusion engine linked this hypothesis to canonical source record sec-litigation-releases; this link does not establish the hypothesis as fact.",
-        "The preserved source associated with “content changed: U.S. Securities and Exchange Commission — Litigation Releases — litigation-releases” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
-        "The documented mechanism in “content changed: U.S. Securities and Exchange Commission — Litigation Releases — litigation-releases” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by U.S. Securities and Exchange Commission — Litigation Releases, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
-        "Original review state: needs_evidence; failed gates: confidence_cap."
-      ],
-      "sources": [
-        {
-          "label": "Canonical source daily-investigation",
-          "url": "source-document-vault.html",
-          "locator": "daily-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Canonical source weekly-investigation",
-          "url": "source-document-vault.html",
-          "locator": "weekly-investigation",
-          "evidenceClass": "public-record source route; underlying claim not independently established"
-        },
-        {
-          "label": "Originating public record family",
-          "url": "evidence-vault.html",
-          "locator": "data/daily-investigation-conclusions.json",
-          "evidenceClass": "source-index route"
-        }
-      ],
-      "contraryEvidence": [
-        "For “content changed: U.S. Securities and Exchange Commission — Litigation Releases — litigation-releases,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
-        "The original publication gates did not support promotion to a verified factual surface."
-      ],
-      "missingRecords": [
-        "[object Object]",
-        "Evidence sufficient to pass the confidence cap gate",
-        "Independent primary-source corroboration sufficient to move this item out of speculation."
-      ],
-      "alternativeExplanations": [
-        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
-        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
-      ],
-      "falsificationTests": [
-        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
-        "No repeatable authority, money or implementation route is found beyond the cited record.",
-        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
-        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
-      ],
-      "criminalConductEstablished": false,
-      "humanReviewed": false,
-      "autoPublished": true,
-      "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-07-29T22:45:54.195Z",
-      "lastReviewedAt": null,
-      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
-    },
-    {
       "id": "ASC-REVIEW-BA5FF644D411D868",
       "title": "content changed: U.S. Treasury OFAC — Recent Actions",
       "classification": "ai_speculative_conclusion",
@@ -19181,6 +19115,80 @@
       ],
       "contraryEvidence": [
         "For “content changed: U.S. Treasury OFAC — Recent Actions — recent-actions,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
+        "The original publication gates did not support promotion to a verified factual surface."
+      ],
+      "missingRecords": [
+        "[object Object]",
+        "Evidence sufficient to pass the confidence cap gate",
+        "Independent primary-source corroboration sufficient to move this item out of speculation."
+      ],
+      "alternativeExplanations": [
+        "The record may concern isolated conduct or ordinary enforcement rather than a wider control structure.",
+        "The observed pattern may result from unrelated actors, ordinary institutional practice, incomplete records or coincidental timing."
+      ],
+      "falsificationTests": [
+        "Later judgments, appeals, dismissals or corrected records materially narrow the finding.",
+        "No repeatable authority, money or implementation route is found beyond the cited record.",
+        "A correction, dismissal, appeal or contradictory primary record materially narrows the route.",
+        "Primary records disprove the proposed mechanism or show that the inferred relationship does not exist."
+      ],
+      "criminalConductEstablished": false,
+      "humanReviewed": false,
+      "autoPublished": true,
+      "generatedAt": "2026-10-02T00:00:00.000Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
+      "lastReviewedAt": null,
+      "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
+    },
+    {
+      "id": "ASC-REVIEW-AB5A700449B10AEC",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "classification": "ai_speculative_conclusion",
+      "status": "unverified",
+      "publicationState": "auto-published-from-review-queue",
+      "reviewOrigin": {
+        "recordId": "source-change-0c5f51804baf8e9e2c1fdd0b",
+        "originalState": "needs_evidence",
+        "failedGates": [
+          "confidence_cap"
+        ],
+        "sourceRecordStatus": "published",
+        "recordType": "finding"
+      },
+      "confidence": {
+        "score": 5,
+        "band": "unverified speculation",
+        "meaning": "This score reflects limited machine support only. It is not a probability, factual finding, accusation or measure of guilt."
+      },
+      "conclusion": "A broader control interpretation of “content changed: UK Serious Fraud Office — News And Communications — serious-fraud-office” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+      "documentedSupport": [
+        "The conclusion engine linked this hypothesis to canonical source record uk-sfo-news; this link does not establish the hypothesis as fact.",
+        "The preserved source associated with “content changed: UK Serious Fraud Office — News And Communications — serious-fraud-office” changed between captures. The change is documented at the source level, but its cause, intent and wider significance are not established.",
+        "The documented mechanism in “content changed: UK Serious Fraud Office — News And Communications — serious-fraud-office” is the formal authority, regulatory, judicial or source-control route reflected in the cited primary record and exercised by UK Serious Fraud Office — News And Communications, Source Change And Evidence Preservation. This establishes that accountability route only, not a wider control structure.",
+        "Original review state: needs_evidence; failed gates: confidence_cap."
+      ],
+      "sources": [
+        {
+          "label": "Canonical source daily-investigation",
+          "url": "source-document-vault.html",
+          "locator": "daily-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Canonical source weekly-investigation",
+          "url": "source-document-vault.html",
+          "locator": "weekly-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
+          "label": "Originating public record family",
+          "url": "evidence-vault.html",
+          "locator": "data/daily-investigation-conclusions.json",
+          "evidenceClass": "source-index route"
+        }
+      ],
+      "contraryEvidence": [
+        "For “content changed: UK Serious Fraud Office — News And Communications — serious-fraud-office,” the strongest competing explanation is ordinary administration, isolated conduct, standard enforcement, commercial incentives, incomplete reporting or model artefact rather than a coordinated wider control structure.",
         "The original publication gates did not support promotion to a verified factual surface."
       ],
       "missingRecords": [
@@ -19275,19 +19283,19 @@
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-AD4A5A51C1AD5BFD",
+      "id": "ASC-REVIEW-B9D6F588FF54AD31",
       "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
       "reviewOrigin": {
-        "recordId": "aa119272f233de638bb1e02d",
+        "recordId": "5460c0408472ce834da2b82f",
         "originalState": "needs_evidence",
         "failedGates": [
           "source_and_claim_compatibility"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "weekly_report"
+        "recordType": "finding"
       },
       "confidence": {
         "score": 5,
@@ -19303,6 +19311,12 @@
       ],
       "sources": [
         {
+          "label": "Canonical source daily-investigation",
+          "url": "source-document-vault.html",
+          "locator": "daily-investigation",
+          "evidenceClass": "public-record source route; underlying claim not independently established"
+        },
+        {
           "label": "Canonical source weekly-investigation",
           "url": "source-document-vault.html",
           "locator": "weekly-investigation",
@@ -19311,7 +19325,7 @@
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/weekly-investigation-conclusions.json",
+          "locator": "data/daily-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -19338,24 +19352,24 @@
       "humanReviewed": false,
       "autoPublished": true,
       "generatedAt": "2026-10-02T00:00:00.000Z",
-      "autoPublishedAt": "2026-07-30T07:45:38.434Z",
+      "autoPublishedAt": "2026-10-02T00:00:00.000Z",
       "lastReviewedAt": null,
       "boundary": "AUTO-PUBLISHED UNVERIFIED SPECULATION. This item failed one or more factual-publication gates. It is not an established fact, accusation, finding of wrongdoing or proof of coordination. Association, mention, proximity and model output do not establish guilt."
     },
     {
-      "id": "ASC-REVIEW-B7720C9C5A09A4B4",
+      "id": "ASC-REVIEW-AD4A5A51C1AD5BFD",
       "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
       "classification": "ai_speculative_conclusion",
       "status": "unverified",
       "publicationState": "auto-published-from-review-queue",
       "reviewOrigin": {
-        "recordId": "0286171e0bf7415859b35948",
+        "recordId": "aa119272f233de638bb1e02d",
         "originalState": "needs_evidence",
         "failedGates": [
           "source_and_claim_compatibility"
         ],
         "sourceRecordStatus": "published",
-        "recordType": "weekly_report"
+        "recordType": "daily_drop"
       },
       "confidence": {
         "score": 5,
@@ -19371,15 +19385,15 @@
       ],
       "sources": [
         {
-          "label": "Canonical source weekly-investigation",
+          "label": "Canonical source daily-investigation",
           "url": "source-document-vault.html",
-          "locator": "weekly-investigation",
+          "locator": "daily-investigation",
           "evidenceClass": "public-record source route; underlying claim not independently established"
         },
         {
           "label": "Originating public record family",
           "url": "evidence-vault.html",
-          "locator": "data/weekly-investigation-conclusions.json",
+          "locator": "data/daily-investigation-conclusions.json",
           "evidenceClass": "source-index route"
         }
       ],
@@ -19824,7 +19838,7 @@
     "source": "downloads/phase2-conclusion-engine-preview/review-queue.json",
     "rule": "Every review-queue record is published to the quarantined speculation page as unverified speculation unless it contains prohibited private or sensitive material.",
     "factualPromotionAllowed": false,
-    "imported": 274,
+    "imported": 275,
     "rejected": 0
   }
 }

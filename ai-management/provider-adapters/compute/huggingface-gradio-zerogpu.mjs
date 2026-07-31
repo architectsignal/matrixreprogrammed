@@ -2,6 +2,7 @@ import { AdapterError } from '../adapter-contract.mjs';
 import {
   assertHttpsEndpoint,
   assertRemoteComputeJob,
+  collectPublicInputUrls,
   computeProvenance,
   readResponseBounded,
   resolveCredential
@@ -144,7 +145,7 @@ export class HuggingFaceGradioZeroGpuAdapter {
           adapterId: this.adapter_id,
           adapterVersion: this.adapter_version,
           operation: 'execute',
-          sourceUrls: [endpoint.toString(), resource.official_documentation_url],
+          sourceUrls: [endpoint.toString(), resource.official_documentation_url, ...collectPublicInputUrls(job.payload)],
           retrievedAt,
           contentHash: completedBody.hash
         })

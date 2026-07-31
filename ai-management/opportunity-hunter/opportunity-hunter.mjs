@@ -3,7 +3,7 @@ const AUTO_ACTIVATABLE_KINDS = new Set(['dataset', 'search_api', 'model', 'infer
 const OWNER_ACTION_KINDS = new Set(['compute', 'grant', 'credit_program']);
 const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted)\b/i;
 const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required)\b/i;
-const BILLING_RISK = /\b(credit card required|payment method required|auto[- ]?upgrade|overage|metered billing|usage charges|paid after trial)\b/i;
+const BILLING_RISK = /\b(credit card required|payment method required|auto[- ]?upgrade|overage|metered billing|usage charges|paid after trial|paid fallback)\b/i;
 
 function safeId(value) {
   return String(value || 'opportunity').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 120) || 'opportunity';
@@ -21,6 +21,14 @@ function sameHostFamily(left, right) {
   const a = hostname(left).split('.').slice(-2).join('.');
   const b = hostname(right).split('.').slice(-2).join('.');
   return Boolean(a && b && a === b);
+}
+
+function hasBillingRisk(value) {
+  const normalized = String(value || '')
+    .replace(/\b(?:no|not)\s+(?:credit card|payment method)\s+(?:is\s+)?required\b/gi, '')
+    .replace(/\b(?:no|without)\s+(?:overage|overages|metered billing|usage charges|paid fallback)\b/gi, '')
+    .replace(/\brequests?\s+(?:stop|are blocked)\s+when\s+the\s+free\s+quota\s+is\s+exhausted\b/gi, '');
+  return BILLING_RISK.test(normalized);
 }
 
 export function normalizeOpportunity(input = {}, now = new Date()) {
@@ -114,7 +122,7 @@ export async function evaluateOpportunity(input, { fetchImpl = globalThis.fetch,
   }
 
   const combined = `${docs.text || ''}\n${terms.text || ''}`.slice(0, 1000000);
-  if (BILLING_RISK.test(combined)) blockers.push('billing-risk-language-detected');
+  if (hasBillingRisk(combined)) blockers.push('billing-risk-language-detected');
   if (ZERO_COST.test(combined)) evidence.push('official-material-confirms-zero-cost-access');
   if (AUTOMATION_ALLOWED.test(combined)) evidence.push('official-material-confirms-automation-permission');
   if (liveProbe && !evidence.includes('official-material-confirms-zero-cost-access')) blockers.push('zero-cost-language-not-found');
@@ -169,4 +177,4 @@ export class OpportunityHunter {
   }
 }
 
-export const opportunityHunterInternals = { ALLOWED_KINDS, AUTO_ACTIVATABLE_KINDS, OWNER_ACTION_KINDS, AUTOMATION_ALLOWED, ZERO_COST, BILLING_RISK, safeId, isHttps, hostname, sameHostFamily, fetchText };
+export const opportunityHunterInternals = { ALLOWED_KINDS, AUTO_ACTIVATABLE_KINDS, OWNER_ACTION_KINDS, AUTOMATION_ALLOWED, ZERO_COST, BILLING_RISK, hasBillingRisk, safeId, isHttps, hostname, sameHostFamily, fetchText };

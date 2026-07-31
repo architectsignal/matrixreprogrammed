@@ -39,7 +39,7 @@ export function utilityScore(resource, weights = DEFAULT_UTILITY_WEIGHTS) {
 export function evaluateResource(resource, job, context = {}) {
   const reasons = [];
   const now = context.now instanceof Date ? context.now : new Date(context.now || Date.now());
-  const external = Number(resource.resource_tier) >= 3;
+  const external = resource?.metadata?.remote_compute === true || Number(resource.resource_tier) >= 3;
   const approvedData = resource.approved_data_classes || [];
   const prohibitedData = resource.prohibited_data_classes || [];
   const supportedJobs = resource.supported_job_types || [];

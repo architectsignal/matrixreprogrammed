@@ -1,0 +1,87 @@
+name: Opportunity Hunter Safety Gate
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/opportunity-hunter/**'
+      - 'ai-management/provider-adapters/opportunities/**'
+      - 'scripts/opportunity-hunter-*.mjs'
+      - 'scripts/opportunity-adapter-test.mjs'
+      - 'src/worker-opportunity-hunter.js'
+      - 'src/worker-production-autonomy.js'
+      - 'migrations/phase12_opportunity_hunter.sql'
+      - '.github/workflows/opportunity-hunter.yml'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opportunity-hunter-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  opportunity-hunter:
+    name: Verify lawful zero-spend opportunity discovery
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout candidate commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify syntax
+        run: |
+          node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
+          node --check ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
+          node --check src/worker-opportunity-hunter.js
+          node --check src/worker-production-autonomy.js
+          node --check scripts/opportunity-hunter-test.mjs
+          node --check scripts/opportunity-hunter-worker-test.mjs
+          node --check scripts/opportunity-adapter-test.mjs
+
+      - name: Verify approval, quarantine, persistence and execution policy
+        run: |
+          node scripts/opportunity-hunter-test.mjs
+          node scripts/opportunity-hunter-worker-test.mjs
+          node scripts/opportunity-adapter-test.mjs
+
+      - name: Verify Phase 12 is repeat-safe
+        shell: python
+        run: |
+          import sqlite3
+          from pathlib import Path
+          db = sqlite3.connect(':memory:')
+          db.executescript('CREATE TABLE ai_resources(resource_id TEXT PRIMARY KEY); CREATE TABLE ai_feature_flags(flag_name TEXT PRIMARY KEY, enabled INTEGER, value_json TEXT, reason TEXT, updated_by TEXT, updated_at TEXT);')
+          sql = Path('migrations/phase12_opportunity_hunter.sql').read_text(encoding='utf-8')
+          db.executescript(sql)
+          db.executescript(sql)
+          tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+          required = {'ai_opportunities', 'ai_opportunity_hunter_runs'}
+          missing = required - tables
+          if missing:
+              raise SystemExit(f'Missing Phase 12 tables: {sorted(missing)}')
+          opportunity_sql = db.execute("SELECT sql FROM sqlite_master WHERE name='ai_opportunities'").fetchone()[0]
+          run_sql = db.execute("SELECT sql FROM sqlite_master WHERE name='ai_opportunity_hunter_runs'").fetchone()[0]
+          if 'approved-auto' not in opportunity_sql or 'awaiting-owner' not in opportunity_sql or 'quarantined' not in opportunity_sql:
+              raise SystemExit('Opportunity approval-state constraints are missing')
+          if 'zero_spend_lock = 1' not in run_sql:
+              raise SystemExit('Opportunity runs do not structurally enforce the zero-spend lock')
+          print('Phase 12 opportunity persistence passed two executions.')
+
+      - name: Verify prohibited capacity recruitment remains blocked
+        run: |
+          grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "owner-approval-required-for-capacity-program" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "credential-onboarding-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "OPPORTUNITY_RESOURCE_NOT_ADMISSIBLE" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
+          grep -F "billing_possible: false" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
+          grep -F "activation_blocked_until_adapter_ready: true" src/worker-opportunity-hunter.js
+          grep -F "enabled: false" src/worker-opportunity-hunter.js
+          grep -F "runScheduledOpportunityHunter" src/worker-production-autonomy.js
+          ! grep -E "bypass|evade|unauthori[sz]ed|steal compute" ai-management/opportunity-hunter/opportunity-hunter.mjs src/worker-opportunity-hunter.js ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs

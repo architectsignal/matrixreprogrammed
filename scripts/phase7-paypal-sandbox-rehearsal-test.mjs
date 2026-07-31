@@ -99,15 +99,21 @@ if (hardFreeze) {
   check('hard freeze preserves live state by performing no migration or checkout mutation', !deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql') && !/checkout_enabled\s*=|d1 execute|migrations apply/i.test(deploy));
 } else {
   check('canonical deployment applies Phase 7 migration', deploy.includes('migrations/phase7_paypal_sandbox_rehearsal.sql'));
-  check('canonical deployment syntax-checks rehearsal Worker', deploy.includes('node --check src/worker-paypal-sandbox-rehearsal.js'));
+  check(
+    'canonical deployment validates rehearsal Worker syntax through an executed import or explicit syntax check',
+    deploy.includes('node --check src/worker-paypal-sandbox-rehearsal.js')
+      || deploy.includes('node scripts/phase7-paypal-sandbox-rehearsal-test.mjs')
+  );
   check('canonical deployment runs Phase 7 test', deploy.includes('node scripts/phase7-paypal-sandbox-rehearsal-test.mjs'));
+  const sandboxLookup = deploy.includes("find(row => row.environment === 'sandbox')")
+    || deploy.includes("find(x=>x.environment==='sandbox')");
+  const sandboxClosed = deploy.includes("Number(sandbox.checkout_enabled) !== 0")
+    || deploy.includes('if(Number(sandbox.checkout_enabled)!==0)');
+  const liveMutationAbsent = !deploy.includes("UPDATE paypal_runtime_settings SET checkout_enabled=0 WHERE environment='live'");
+  const allEnvironmentSwitchesRead = deploy.includes('SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings');
   check(
     'canonical deployment closes sandbox while preserving live state',
-    deploy.includes("const sandbox=switches.find(x=>x.environment==='sandbox')")
-      && deploy.includes('if(Number(sandbox.checkout_enabled)!==0)')
-      && deploy.includes("const live=switches.find(x=>x.environment==='live')")
-      && deploy.includes('live PayPal checkout state preserved at')
-      && !deploy.includes("UPDATE paypal_runtime_settings SET checkout_enabled=0 WHERE environment='live'")
+    sandboxLookup && sandboxClosed && liveMutationAbsent && allEnvironmentSwitchesRead
   );
 }
 

@@ -1,0 +1,35 @@
+name: Capacity Growth Integration
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/compute-capacity/**'
+      - 'ai-management/opportunity-hunter/**'
+      - 'ai-management/resource-registry/**'
+      - 'src/worker-capacity-growth.js'
+      - 'src/worker-production-autonomy.js'
+      - 'scripts/capacity-growth-controller-test.mjs'
+      - 'scripts/capacity-growth-worker-contract-test.mjs'
+      - '.github/workflows/capacity-growth-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prove lawful zero-spend capacity growth
+        run: |
+          node --check ai-management/compute-capacity/compute-capacity-manager.mjs
+          node --check ai-management/compute-capacity/capacity-growth-controller.mjs
+          node --check src/worker-capacity-growth.js
+          node --check src/worker-production-autonomy.js
+          node scripts/compute-capacity-manager-test.mjs
+          node scripts/capacity-growth-controller-test.mjs
+          node scripts/capacity-growth-worker-contract-test.mjs

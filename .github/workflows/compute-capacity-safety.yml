@@ -1,0 +1,44 @@
+name: Compute Capacity Safety Gate
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/compute-capacity/**'
+      - 'ai-management/policy-engine/**'
+      - 'scripts/compute-capacity-manager-test.mjs'
+      - '.github/workflows/compute-capacity-safety.yml'
+  push:
+    branches:
+      - build/local-execution-daemon-v1
+    paths:
+      - 'ai-management/compute-capacity/**'
+      - 'ai-management/policy-engine/**'
+      - 'scripts/compute-capacity-manager-test.mjs'
+      - '.github/workflows/compute-capacity-safety.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  lawful-zero-spend-capacity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Syntax check capacity manager
+        run: node --check ai-management/compute-capacity/compute-capacity-manager.mjs
+      - name: Prove lawful zero-spend admission and allocation
+        run: node scripts/compute-capacity-manager-test.mjs
+      - name: Reject prohibited capacity acquisition patterns
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F "account-rotation-forbidden" ai-management/compute-capacity/compute-capacity-manager.mjs
+          grep -F "quota-evasion-forbidden" ai-management/compute-capacity/compute-capacity-manager.mjs
+          grep -F "credential-harvesting-forbidden" ai-management/compute-capacity/compute-capacity-manager.mjs
+          grep -F "access-control-bypass-forbidden" ai-management/compute-capacity/compute-capacity-manager.mjs
+          grep -F "payment_methods_forbidden: true" ai-management/compute-capacity/compute-capacity-manager.mjs
+          grep -F "external_compute_requires_owner_approval: true" ai-management/compute-capacity/compute-capacity-manager.mjs

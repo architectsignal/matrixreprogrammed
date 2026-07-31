@@ -1,0 +1,48 @@
+name: Capability Improvement Safety Gate
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/self-improvement/**'
+      - 'ai-management/adapter-factory/**'
+      - 'ai-management/policy-engine/zero-spend-invariant.mjs'
+      - 'scripts/capability-improvement-controller-test.mjs'
+      - '.github/workflows/capability-improvement-safety.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: capability-improvement-safety-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capability-improvement-safety:
+    name: Verify bounded autonomous capability improvement
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout candidate commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify syntax
+        run: |
+          node --check ai-management/self-improvement/capability-improvement-controller.mjs
+          node --check scripts/capability-improvement-controller-test.mjs
+
+      - name: Run capability improvement tests
+        run: node scripts/capability-improvement-controller-test.mjs
+
+      - name: Verify autonomy boundaries
+        run: |
+          grep -F 'zero_spend_lock: true' ai-management/self-improvement/capability-improvement-controller.mjs
+          grep -F "data_classes: ['public']" ai-management/self-improvement/capability-improvement-controller.mjs
+          grep -F "'suspend-and-quarantine'" ai-management/self-improvement/capability-improvement-controller.mjs
+          grep -F "candidate.authentication_type !== 'none'" ai-management/self-improvement/capability-improvement-controller.mjs
+          ! grep -E 'child_process|execSync|spawnSync|process\.env|shell\.exec|eval\s*\(|new\s+Function' ai-management/self-improvement/capability-improvement-controller.mjs

@@ -38,7 +38,7 @@ assert.equal(calls[1].body.completion.cost_confirmed_zero, true);
 assert.equal(calls[1].body.completion.external_network_used, false);
 assert.equal(calls[1].body.completion.result.digest, 'done-matrix');
 
-const idle = await leaseNextJob(config, { fetchImpl: async () => new Response('', { status: 204 }) });
+const idle = await leaseNextJob(config, { fetchImpl: async () => new Response(null, { status: 204 }) });
 assert.equal(idle, null);
 
 console.log('Control-plane client tests passed.');

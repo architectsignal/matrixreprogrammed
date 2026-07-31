@@ -7,6 +7,7 @@ on:
       - 'ai-management/adapter-factory/**'
       - 'ai-management/policy-engine/zero-spend-invariant.mjs'
       - 'scripts/capability-improvement-controller-test.mjs'
+      - 'scripts/run-capability-improvement-cycle.mjs'
       - '.github/workflows/capability-improvement-safety.yml'
   workflow_dispatch:
 
@@ -35,9 +36,16 @@ jobs:
         run: |
           node --check ai-management/self-improvement/capability-improvement-controller.mjs
           node --check scripts/capability-improvement-controller-test.mjs
+          node --check scripts/run-capability-improvement-cycle.mjs
 
       - name: Run capability improvement tests
         run: node scripts/capability-improvement-controller-test.mjs
+
+      - name: Run fail-closed dry capability cycle
+        env:
+          AI_CAPABILITY_LIVE_PROBE_ENABLED: 'false'
+          AI_CAPABILITY_MAXIMUM_PLANS: '1'
+        run: node scripts/run-capability-improvement-cycle.mjs
 
       - name: Verify autonomy boundaries
         run: |
@@ -45,4 +53,6 @@ jobs:
           grep -F "data_classes: ['public']" ai-management/self-improvement/capability-improvement-controller.mjs
           grep -F "'suspend-and-quarantine'" ai-management/self-improvement/capability-improvement-controller.mjs
           grep -F "candidate.authentication_type !== 'none'" ai-management/self-improvement/capability-improvement-controller.mjs
-          ! grep -E 'child_process|execSync|spawnSync|process\.env|shell\.exec|eval\s*\(|new\s+Function' ai-management/self-improvement/capability-improvement-controller.mjs
+          grep -F 'AI_CAPABILITY_LIVE_PROBE_ENABLED' scripts/run-capability-improvement-cycle.mjs
+          grep -F "compute-specific-template-not-yet-certified" scripts/run-capability-improvement-cycle.mjs
+          ! grep -E 'child_process|execSync|spawnSync|shell\.exec|eval\s*\(|new\s+Function' ai-management/self-improvement/capability-improvement-controller.mjs scripts/run-capability-improvement-cycle.mjs

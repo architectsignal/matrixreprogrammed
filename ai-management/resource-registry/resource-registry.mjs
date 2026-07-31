@@ -135,7 +135,7 @@ export class D1ResourceRegistry {
       fallback_resource_ids_json=excluded.fallback_resource_ids_json,implementation_status=excluded.implementation_status,adapter_id=excluded.adapter_id,
       adapter_version=excluded.adapter_version,enabled=excluded.enabled,manual_approval_required=excluded.manual_approval_required,allowed_hosts_json=excluded.allowed_hosts_json,
       metadata_json=excluded.metadata_json,notes=excluded.notes,updated_at=excluded.updated_at`).bind(
-      resource.resource_id,resource.provider_name,resource.service_name,arrays.capability_types,resource.resource_tier,resource.official_documentation_url || null,resource.terms_url || null,
+      resource.resource_id,resource.provider_name || null,resource.service_name || null,arrays.capability_types,Number(resource.resource_tier || 0),resource.official_documentation_url || null,resource.terms_url || null,
       resource.privacy_url || null,resource.status_url || null,resource.licence || null,resource.account_owner || null,resource.authentication_type || 'none',resource.credential_reference || null,
       resource.approved_for_automation ? 1 : 0,arrays.approved_data_classes,arrays.prohibited_data_classes,resource.free_quota_amount ?? null,resource.free_quota_unit || null,
       resource.quota_reset_period || null,resource.quota_reset_time || null,resource.quota_remaining ?? null,resource.quota_reserved || 0,resource.hard_stop_threshold || 0,
@@ -144,7 +144,7 @@ export class D1ResourceRegistry {
       resource.health_status || 'unknown',resource.last_terms_check || null,resource.terms_revalidation_due || null,resource.last_quota_check || null,resource.last_success || null,
       resource.last_failure || null,resource.consecutive_failures || 0,resource.cooldown_until || null,resource.average_latency || 0,resource.success_rate ?? 1,resource.error_rate || 0,
       arrays.supported_job_types,resource.maximum_payload || 0,resource.rate_limit || null,resource.concurrency_limit || 1,arrays.fallback_resource_ids,resource.implementation_status || 'disabled',
-      resource.adapter_id,resource.adapter_version || '1.0.0',resource.enabled ? 1 : 0,resource.manual_approval_required ? 1 : 0,arrays.allowed_hosts,arrays.metadata,
+      resource.adapter_id || null,resource.adapter_version || '1.0.0',resource.enabled ? 1 : 0,resource.manual_approval_required ? 1 : 0,arrays.allowed_hosts,arrays.metadata,
       resource.notes || null,resource.created_at || new Date().toISOString(),resource.updated_at || new Date().toISOString()
     ).run();
     return this.get(resource.resource_id);

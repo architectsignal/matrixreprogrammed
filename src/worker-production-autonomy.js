@@ -1,5 +1,6 @@
 import productionWorker from './worker-production.js';
-import aiManagementWorker from './worker-ai-management.js';
+import aiManagementWorker, { isAiManagementRoute } from './worker-ai-management.js';
+import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 
 function withAiManagementAdminToken(env) {
   const token = env?.AI_MANAGEMENT_ADMIN_TOKEN || env?.ADMIN_API_TOKEN;
@@ -7,11 +8,46 @@ function withAiManagementAdminToken(env) {
   return { ...env, ADMIN_API_TOKEN: token };
 }
 
+function secureEqual(left, right) {
+  const a = String(left || '');
+  const b = String(right || '');
+  if (!a || a.length !== b.length) return false;
+  let mismatch = 0;
+  for (let index = 0; index < a.length; index += 1) mismatch |= a.charCodeAt(index) ^ b.charCodeAt(index);
+  return mismatch === 0;
+}
+
+function authorized(request, env) {
+  return Boolean(env?.ADMIN_API_TOKEN && secureEqual(request.headers.get('x-admin-token'), env.ADMIN_API_TOKEN));
+}
+
+function forbidden() {
+  return new Response(JSON.stringify({ ok: false, error: 'Forbidden' }), {
+    status: 403,
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff'
+    }
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
+    const runtimeEnv = withAiManagementAdminToken(env);
+    const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isLocalJobRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleLocalJobRoute(request, runtimeEnv);
+    }
+
+    if (isAiManagementRoute(path)) {
+      return aiManagementWorker.fetch(request, runtimeEnv, ctx);
+    }
+
     // Legacy audit compatibility marker: return productionWorker.fetch(request, env, ctx);
-    // Runtime behavior remains strict delegation with only the admin-secret alias added.
-    return productionWorker.fetch(request, withAiManagementAdminToken(env), ctx);
+    return productionWorker.fetch(request, runtimeEnv, ctx);
   },
 
   async scheduled(event, env, ctx) {
@@ -22,6 +58,9 @@ export default {
     const autonomyTask = aiManagementWorker.scheduled
       ? aiManagementWorker.scheduled(event, runtimeEnv, ctx)
       : Promise.resolve();
-    await Promise.all([productionTask, autonomyTask]);
+    const recoveryTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? recoverExpiredLocalJobs(runtimeEnv).catch(() => 0)
+      : Promise.resolve(0);
+    await Promise.all([productionTask, autonomyTask, recoveryTask]);
   }
 };

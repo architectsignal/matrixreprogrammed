@@ -1,0 +1,43 @@
+name: Local Job Production Integration
+
+on:
+  pull_request:
+    paths:
+      - src/worker-production-autonomy.js
+      - src/worker-local-job-api.js
+      - migrations/phase11_local_job_queue.sql
+      - scripts/local-job-production-integration-test.mjs
+      - .github/workflows/deploy.yml
+      - .github/workflows/local-job-production-integration.yml
+  push:
+    branches:
+      - build/local-execution-daemon-v1
+    paths:
+      - src/worker-production-autonomy.js
+      - src/worker-local-job-api.js
+      - migrations/phase11_local_job_queue.sql
+      - scripts/local-job-production-integration-test.mjs
+      - .github/workflows/deploy.yml
+      - .github/workflows/local-job-production-integration.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify local queue production wiring
+        run: node scripts/local-job-production-integration-test.mjs
+      - name: Upload integration proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: local-job-production-integration-${{ github.run_id }}
+          path: downloads/local-job-production-integration-test.json
+          if-no-files-found: error
+          retention-days: 30

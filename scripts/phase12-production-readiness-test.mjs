@@ -24,15 +24,15 @@ assert.match(adapter, /quota_verified/);
 assert.match(adapter, /approved_data_classes/);
 assert.match(adapter, /public-data\.fetch/);
 
-const missing = [];
-for (const required of [
+const required = [
   'migrations/phase12_opportunity_hunter.sql',
   "'ai_opportunities','ai_opportunity_hunter_runs'",
-  'AI_OPPORTUNITY_HUNTER_ENABLED',
-  'node scripts/opportunity-hunter-adapter-test.mjs'
-]) {
-  if (!deploy.includes(required)) missing.push(required);
-}
+  'AI_OPPORTUNITY_HUNTER_ENABLED'
+];
+const missing = required.filter(item => !deploy.includes(item));
+const adapterTestPresent = deploy.includes('node scripts/opportunity-hunter-adapter-test.mjs') ||
+  deploy.includes('node scripts/opportunity-provider-adapter-test.mjs');
+if (!adapterTestPresent) missing.push('Opportunity Hunter adapter execution test');
 if (missing.length) {
   throw new Error(`Controlled production workflow is not yet Phase 12 complete: ${missing.join(', ')}`);
 }

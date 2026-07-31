@@ -31,6 +31,22 @@ function normalizeJobForResources(input, resources) {
   return input;
 }
 
+function normalizeRemoteComputeInput(input = {}) {
+  return {
+    ...input,
+    priority: input.priority || 'P3',
+    data_class: input.data_class || 'public',
+    capability_type: 'remote_compute',
+    requirements: {
+      ...(input.requirements || {}),
+      cost_ceiling_eur: 0,
+      maximum_attempts: 1,
+      cacheable: false,
+      requires_provenance: true
+    }
+  };
+}
+
 export function createRemoteComputeBroker({
   resources = [],
   adapters,
@@ -64,19 +80,7 @@ export function createRemoteComputeBroker({
 export async function executeRemoteComputeJob(input, options = {}) {
   const resources = remoteResources(options.resources || []);
   const broker = options.broker || createRemoteComputeBroker({ ...options, resources });
-  const normalized = normalizeJobForResources({
-    priority: 'P3',
-    data_class: 'public',
-    capability_type: 'remote_compute',
-    requirements: {
-      cost_ceiling_eur: 0,
-      maximum_attempts: 1,
-      cacheable: false,
-      requires_provenance: true,
-      ...(input.requirements || {})
-    },
-    ...input
-  }, resources);
+  const normalized = normalizeJobForResources(normalizeRemoteComputeInput(input), resources);
   return broker.execute(normalized);
 }
 
@@ -117,4 +121,10 @@ export async function executeRemoteComputeQueue({
   };
 }
 
-export const remoteComputeBrokerInternals = { SUBMIT_TYPES, RELEASE_TYPES, remoteResources, normalizeJobForResources };
+export const remoteComputeBrokerInternals = {
+  SUBMIT_TYPES,
+  RELEASE_TYPES,
+  remoteResources,
+  normalizeJobForResources,
+  normalizeRemoteComputeInput
+};

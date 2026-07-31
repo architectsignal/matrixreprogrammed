@@ -2,6 +2,7 @@ import { AdapterError } from '../adapter-contract.mjs';
 import {
   assertHttpsEndpoint,
   assertRemoteComputeJob,
+  collectPublicInputUrls,
   computeProvenance,
   readResponseBounded,
   resolveCredential
@@ -119,7 +120,7 @@ export class OwnerHttpComputeAdapter {
           adapterId: this.adapter_id,
           adapterVersion: this.adapter_version,
           operation,
-          sourceUrls: [requestUrl.toString(), resource.official_documentation_url],
+          sourceUrls: [requestUrl.toString(), resource.official_documentation_url, ...collectPublicInputUrls(job.payload)],
           retrievedAt,
           contentHash: read.hash
         })

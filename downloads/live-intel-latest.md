@@ -1,7 +1,7 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-30T19:51:43.040Z
-Latest source publication: 2026-07-30T18:21:00.000Z
+Collection completed: 2026-07-31T03:49:12.385Z
+Latest source publication: 2026-07-31T02:05:57.000Z
 Collection status: fresh-items-added
 New items this collection: 1
 
@@ -26,6 +26,12 @@ New items this collection: 1
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-07-31 — US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
   - Source class: primary-or-official
@@ -56,11 +62,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfires: Prevention is the best defence, UN says
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+- 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
   - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+  - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
@@ -74,11 +80,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+  - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
@@ -253,10 +259,4 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-23 — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
-  - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

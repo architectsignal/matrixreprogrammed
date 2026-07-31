@@ -1,8 +1,8 @@
 # Daily Epstein Update
 
-Generated: 2026-07-30T19:51:49.920Z
-Live Intel source window: 2026-07-30T19:51:43.040Z
-Latest source publication: 2026-07-30T18:21:00.000Z
+Generated: 2026-07-31T03:49:26.919Z
+Live Intel source window: 2026-07-31T03:49:12.385Z
+Latest source publication: 2026-07-31T02:05:57.000Z
 Status: current-seven-day-record-window
 
 ## Evidence Boundary
@@ -11,9 +11,19 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-8 current Epstein-lane record leads remain inside the active source window.
+9 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
+
+### US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+- Published: 2026-07-31T02:05:57.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+
+US Senate unanimously opposes pardoning Maxwell in Trump rebuke ABC News & Headlines – Australian Broadcasting Corporation
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
 - Published: 2026-07-30T18:21:00.000Z
@@ -35,13 +45,13 @@ Epstein files: How victims remain exposed to identification DW.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
 - Published: 2026-07-30T11:19:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
 
-US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell The Times of India
+US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -65,13 +75,13 @@ Epstein accuser’s family blasts former Obama White House lawyer who said her a
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
 - Published: 2026-07-29T21:23:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
-Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
+Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell theguardian.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-07-30T19:51:43.040Z
+Updated: 2026-07-31T03:49:12.385Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
+- Published: 2026-07-23T20:14:15.000Z
+- Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
+- Source class: discovery
 
 ### Epstein's former private banker appears before House Oversight Committee - abcnews.com
 - Published: 2026-07-23T18:38:38.000Z

@@ -78,6 +78,25 @@ The signature is `HMAC-SHA256(canonical, MATRIX_LOCAL_AGENT_SHARED_SECRET)` and 
 
 Version 0.1 permits only `deterministic.hash` and, when explicitly enabled, `llm.generate`. Unknown job types fail closed.
 
-## Next construction step
+## Compute capacity growth
 
-The next PR will add the control-plane queue and signed job-dispatch bridge. It will select a registered node, issue a short-lived job lease, receive a signed completion receipt, and recover safely if the machine disappears.
+The capacity manager in `ai-management/compute-capacity/compute-capacity-manager.mjs` evaluates potential execution capacity from four lawful sources:
+
+1. owner-local machines;
+2. owner-authorized LAN machines;
+3. official free compute programmes;
+4. official community compute pools.
+
+Owner-controlled nodes may be admitted automatically only after they prove project authorization, zero cost, acceptable terms, privacy controls, supported workloads, and valid concurrency. External compute is never auto-enrolled: it enters an owner-approval queue even when it appears free and automation-permitted.
+
+The manager explicitly rejects account rotation, quota evasion, credential harvesting, access-control bypass, payment-method requirements, paid fallback, and unverified terms. Capacity is scored, shortlisted, and allocated only through reversible zero-spend assignments.
+
+Run the capacity proof with:
+
+```powershell
+node scripts/compute-capacity-manager-test.mjs
+```
+
+## Current construction state
+
+The control-plane queue and signed job-dispatch bridge now exist on the autonomy branch. They select registered nodes, issue short-lived leases, receive bounded completion receipts, and recover safely when a machine disappears. The next release stage is an owner-approved deterministic live job through enqueue, lease, local execution, completion, and immutable receipt verification.

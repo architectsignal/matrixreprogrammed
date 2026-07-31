@@ -12,7 +12,7 @@ const resource = {
   supported_job_types: ['remote-compute.reserve'],
   enabled: true,
   manual_approval_required: false,
-  implementation_status: 'batch',
+  implementation_status: 'experimental',
   monetary_cost_per_unit_eur: 0,
   billing_enabled: false,
   payment_method_present: false,
@@ -33,7 +33,14 @@ const resource = {
   last_quota_check: now.toISOString(),
   cooldown_until: null,
   allowed_hosts: [],
-  metadata: { remote_compute: true }
+  metadata: {
+    remote_compute: true,
+    owner_onboarding_completed: true,
+    automation_permission_verified: true,
+    billing_hard_stop_confirmed: true,
+    public_workloads_only: true,
+    prompt_transfer_allowed: false
+  }
 };
 const job = {
   job_type: 'remote-compute.reserve',
@@ -45,6 +52,13 @@ const job = {
 
 const allowed = evaluateResource(resource, job, { now, externalEnabled: true, localOnly: false, zeroSpendLock: true });
 assert.equal(allowed.eligible, true);
+
+const missingExperimentalGate = evaluateResource({
+  ...resource,
+  metadata: { ...resource.metadata, prompt_transfer_allowed: true }
+}, job, { now, externalEnabled: true, localOnly: false, zeroSpendLock: true });
+assert.equal(missingExperimentalGate.eligible, false);
+assert.ok(missingExperimentalGate.reasons.includes('implementation-not-approved'));
 
 const staleHealth = evaluateResource({ ...resource, last_health_check: '2026-07-01T00:00:00.000Z' }, job, {
   now, externalEnabled: true, localOnly: false, zeroSpendLock: true
@@ -62,4 +76,4 @@ const externalDisabled = evaluateResource(resource, job, { now, externalEnabled:
 assert.equal(externalDisabled.eligible, false);
 assert.ok(externalDisabled.reasons.includes('external-resources-disabled'));
 
-console.log('Remote compute policy tests passed: temporary tier-2 compute is still treated as external for health, terms, quota and enablement gates.');
+console.log('Remote compute policy tests passed: gated experimental compute is executable, while missing safety metadata, stale health, stale quota and disabled external routing fail closed.');

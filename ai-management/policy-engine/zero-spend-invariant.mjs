@@ -16,12 +16,25 @@ function evidenceIsCurrent(value, now, maximumAgeMs) {
   return age >= 0 && age <= maximumAgeMs;
 }
 
+function legacyZeroSpendCertified(subject) {
+  return finiteZero(subject.monetary_cost_per_unit_eur ?? subject.cost_per_unit ?? subject.cost_eur ?? 0) &&
+    subject.billing_enabled === false &&
+    subject.payment_method_present === false &&
+    String(subject.billing_risk || '') === 'none' &&
+    (subject.zero_cost_verified === true || subject.cost_confirmed_zero === true);
+}
+
+function explicitFalseOrCertified(value, certified) {
+  return value === false || (value == null && certified);
+}
+
 export function evaluateZeroSpendInvariant(subject = {}, {
   now = new Date(),
   requireCurrentEvidence = Number(subject.resource_tier || 0) >= 3 || subject.external === true,
   maximumEvidenceAgeMs = ZERO_SPEND_MAX_EVIDENCE_AGE_MS
 } = {}) {
   const violations = [];
+  const certifiedLegacyRecord = legacyZeroSpendCertified(subject);
 
   if (!finiteZero(subject.monetary_cost_per_unit_eur ?? subject.cost_per_unit ?? subject.cost_eur ?? 0)) {
     violations.push('non-zero-or-unknown-cost');
@@ -30,10 +43,10 @@ export function evaluateZeroSpendInvariant(subject = {}, {
   if (!booleanIs(subject.payment_method_present, false) && !booleanIs(subject.payment_method_required, false)) {
     violations.push('payment-method-present-required-or-unknown');
   }
-  if (!booleanIs(subject.paid_fallback, false)) violations.push('paid-fallback-enabled-or-unknown');
-  if (!booleanIs(subject.overage_possible, false)) violations.push('overage-possible-or-unknown');
-  if (!booleanIs(subject.auto_upgrade_enabled, false)) violations.push('auto-upgrade-enabled-or-unknown');
-  if (!booleanIs(subject.external_charge_possible, false)) violations.push('external-charge-possible-or-unknown');
+  if (!explicitFalseOrCertified(subject.paid_fallback, certifiedLegacyRecord)) violations.push('paid-fallback-enabled-or-unknown');
+  if (!explicitFalseOrCertified(subject.overage_possible, certifiedLegacyRecord)) violations.push('overage-possible-or-unknown');
+  if (!explicitFalseOrCertified(subject.auto_upgrade_enabled, certifiedLegacyRecord)) violations.push('auto-upgrade-enabled-or-unknown');
+  if (!explicitFalseOrCertified(subject.external_charge_possible, certifiedLegacyRecord)) violations.push('external-charge-possible-or-unknown');
   if (String(subject.billing_risk || 'unknown') !== 'none') violations.push('billing-risk-not-none');
   if (subject.zero_cost_verified !== true && subject.cost_confirmed_zero !== true) violations.push('zero-cost-not-verified');
   if (subject.quota_verified !== true) violations.push('quota-not-verified');
@@ -80,4 +93,4 @@ export function zeroSpendReceipt(subject = {}, options = {}) {
   });
 }
 
-export const zeroSpendInvariantInternals = { booleanIs, finiteZero, evidenceIsCurrent };
+export const zeroSpendInvariantInternals = { booleanIs, finiteZero, evidenceIsCurrent, legacyZeroSpendCertified, explicitFalseOrCertified };

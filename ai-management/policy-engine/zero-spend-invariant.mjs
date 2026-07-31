@@ -40,7 +40,7 @@ export function evaluateZeroSpendInvariant(subject = {}, {
     violations.push('non-zero-or-unknown-cost');
   }
   if (!booleanIs(subject.billing_enabled, false)) violations.push('billing-enabled-or-unknown');
-  if (!booleanIs(subject.payment_method_present, false) && !booleanIs(subject.payment_method_required, false)) {
+  if (!booleanIs(subject.payment_method_present, false) || subject.payment_method_required === true) {
     violations.push('payment-method-present-required-or-unknown');
   }
   if (!explicitFalseOrCertified(subject.paid_fallback, certifiedLegacyRecord)) violations.push('paid-fallback-enabled-or-unknown');

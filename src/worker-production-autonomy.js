@@ -1,6 +1,7 @@
 import productionWorker from './worker-production.js';
 import aiManagementWorker, { isAiManagementRoute } from './worker-ai-management.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
+import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 
 function withAiManagementAdminToken(env) {
   const token = env?.AI_MANAGEMENT_ADMIN_TOKEN || env?.ADMIN_API_TOKEN;
@@ -42,6 +43,11 @@ export default {
       return handleLocalJobRoute(request, runtimeEnv);
     }
 
+    if (isOpportunityHunterRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleOpportunityHunterRoute(request, runtimeEnv);
+    }
+
     if (isAiManagementRoute(path)) {
       return aiManagementWorker.fetch(request, runtimeEnv, ctx);
     }
@@ -61,6 +67,9 @@ export default {
     const recoveryTask = runtimeEnv?.MEMBERS_DB?.prepare
       ? recoverExpiredLocalJobs(runtimeEnv).catch(() => 0)
       : Promise.resolve(0);
-    await Promise.all([productionTask, autonomyTask, recoveryTask]);
+    const opportunityTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? runScheduledOpportunityHunter(runtimeEnv).catch(() => ({ skipped: true, reason: 'scheduled-run-failed' }))
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask]);
   }
 };

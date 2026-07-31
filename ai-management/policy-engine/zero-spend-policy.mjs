@@ -69,7 +69,14 @@ export function evaluateResource(resource, job, context = {}) {
     now,
     requireCurrentEvidence: external
   });
-  if (!invariant.ok) reasons.push(...invariant.violations.map(reason => `zero-spend-invariant:${reason}`));
+  if (!invariant.ok) {
+    reasons.push(...invariant.violations.map(reason => `zero-spend-invariant:${reason}`));
+    if (invariant.violations.includes('non-zero-or-unknown-cost')) reasons.push('non-zero-monetary-cost');
+    if (invariant.violations.includes('billing-risk-not-none')) reasons.push('billing-risk-not-zero');
+    if (invariant.violations.includes('billing-enabled-or-unknown')) reasons.push('billing-enabled-or-unknown');
+    if (invariant.violations.includes('payment-method-present-required-or-unknown')) reasons.push('payment-method-present-or-unknown');
+    if (invariant.violations.includes('quota-not-verified')) reasons.push('quota-unverified');
+  }
 
   if (!['none', 'environment_secret', 'managed_identity', 'manual'].includes(resource.authentication_type)) reasons.push('authentication-type-unknown');
   if (resource.authentication_type === 'environment_secret' && !resource.credential_reference) reasons.push('credential-binding-missing');
@@ -114,7 +121,7 @@ export function evaluateResource(resource, job, context = {}) {
     score = Number(clamp(score + scoreAdjustment).toFixed(4));
   }
 
-  return { eligible: reasons.length === 0, reasons, utility_score: score, score_adjustment: scoreAdjustment, compatibility, zero_spend_invariant: invariant };
+  return { eligible: reasons.length === 0, reasons: [...new Set(reasons)], utility_score: score, score_adjustment: scoreAdjustment, compatibility, zero_spend_invariant: invariant };
 }
 
 export function rankResources(resources, job, context = {}) {

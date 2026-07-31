@@ -4,7 +4,9 @@ on:
   pull_request:
     paths:
       - 'ai-management/opportunity-hunter/**'
+      - 'ai-management/provider-adapters/opportunities/**'
       - 'scripts/opportunity-hunter-*.mjs'
+      - 'scripts/opportunity-adapter-test.mjs'
       - 'src/worker-opportunity-hunter.js'
       - 'src/worker-production-autonomy.js'
       - 'migrations/phase12_opportunity_hunter.sql'
@@ -36,15 +38,18 @@ jobs:
       - name: Verify syntax
         run: |
           node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
+          node --check ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
           node --check src/worker-opportunity-hunter.js
           node --check src/worker-production-autonomy.js
           node --check scripts/opportunity-hunter-test.mjs
           node --check scripts/opportunity-hunter-worker-test.mjs
+          node --check scripts/opportunity-adapter-test.mjs
 
-      - name: Verify approval, quarantine and persistence policy
+      - name: Verify approval, quarantine, persistence and execution policy
         run: |
           node scripts/opportunity-hunter-test.mjs
           node scripts/opportunity-hunter-worker-test.mjs
+          node scripts/opportunity-adapter-test.mjs
 
       - name: Verify Phase 12 is repeat-safe
         shell: python
@@ -74,7 +79,9 @@ jobs:
           grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
           grep -F "owner-approval-required-for-capacity-program" ai-management/opportunity-hunter/opportunity-hunter.mjs
           grep -F "credential-onboarding-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "OPPORTUNITY_RESOURCE_NOT_ADMISSIBLE" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
+          grep -F "billing_possible: false" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
           grep -F "activation_blocked_until_adapter_ready: true" src/worker-opportunity-hunter.js
           grep -F "enabled: false" src/worker-opportunity-hunter.js
           grep -F "runScheduledOpportunityHunter" src/worker-production-autonomy.js
-          ! grep -E "bypass|evade|unauthori[sz]ed|steal compute" ai-management/opportunity-hunter/opportunity-hunter.mjs src/worker-opportunity-hunter.js
+          ! grep -E "bypass|evade|unauthori[sz]ed|steal compute" ai-management/opportunity-hunter/opportunity-hunter.mjs src/worker-opportunity-hunter.js ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs

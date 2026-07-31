@@ -40,4 +40,4 @@ jobs:
         run: |
           grep -F 'migrations/phase11_local_job_queue.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
-          grep -F 'downloads/d1-local-job-schema.json' .github/workflows/deploy.yml
+          grep -F 'downloads/d1-autonomy-schema.json' .github/workflows/deploy.yml

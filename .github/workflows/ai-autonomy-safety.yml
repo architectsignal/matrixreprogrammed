@@ -8,6 +8,7 @@ on:
       - 'scripts/ai-management-*.mjs'
       - 'scripts/opportunity-hunter-test.mjs'
       - 'scripts/phase12-production-readiness-test.mjs'
+      - 'scripts/zero-spend-invariant-test.mjs'
       - 'scripts/run-autonomous-ai-manager.mjs'
       - 'scripts/run-investigation-machine.js'
       - 'src/worker-ai-management.js'
@@ -52,6 +53,8 @@ jobs:
           node --check ai-management/local-runtime/model-router.mjs
           node --check ai-management/local-runtime/job-queue.mjs
           node --check ai-management/node/local-ai-broker.mjs
+          node --check ai-management/policy-engine/zero-spend-invariant.mjs
+          node --check ai-management/policy-engine/zero-spend-policy.mjs
           node --check ai-management/provider-adapters/local/openai-compatible-local.mjs
           node --check ai-management/resource-scout/resource-scout.mjs
           node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
@@ -62,12 +65,15 @@ jobs:
           node --check scripts/ai-management-autonomy-test.mjs
           node --check scripts/opportunity-hunter-test.mjs
           node --check scripts/phase12-production-readiness-test.mjs
+          node --check scripts/zero-spend-invariant-test.mjs
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-production-autonomy.js
 
       - name: Run zero-spend broker foundation tests
-        run: node scripts/ai-management-foundation-test.mjs
+        run: |
+          node scripts/ai-management-foundation-test.mjs
+          node scripts/zero-spend-invariant-test.mjs
 
       - name: Run autonomy safety and routing tests
         run: |
@@ -165,6 +171,7 @@ jobs:
           grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"' wrangler.toml
           grep -F 'AI_SITE_DIRECTOR_ENABLED = "false"' wrangler.toml
           grep -F 'AI_OPPORTUNITY_HUNTER_ENABLED = "false"' wrangler.toml
+          grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
           grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs

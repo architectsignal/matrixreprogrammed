@@ -1,9 +1,163 @@
 {
-  "updated": "2026-07-30T17:52:43.936Z",
+  "updated": "2026-07-31T08:12:11.783Z",
   "mode": "daily",
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
-  "changeCount": 85,
+  "changeCount": 88,
   "changes": [
+    {
+      "id": "c452df757991611cb06ec88a",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-31T08:12:11.783Z",
+      "changeType": "content-changed",
+      "previousHash": "46e8baa96bde807e1e63949dfb8a92ce17d50efcae3306979fa04ccaf69944ed",
+      "currentHash": "145cd0916b73f3b93b682a3ca150b50ce63e3ea3d853c6b00cb9fb2f86e3a4db",
+      "rawHash": "c52990b5601185f7be5d2613ff1760d7bedfc48bb0459a253e8770f75bba717f",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Fri, 31 Jul 2026 04:12:11 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-31T04:12:11-04:00 SCHEDULE 13D/A - Martin Ryan Todd (0002148029) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002148029-26-000002 <b>Size:</b> 5 KB 2026-07-30T21:51:53-04:00 urn:tag:sec.gov,2008:accession-number=0002148029-26-000002 SCHEDULE 13D/A - KUSTOM ENTERTAINMENT, INC.",
+        "(0001342958) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002148029-26-000002 <b>Size:</b> 5 KB 2026-07-30T21:51:53-04:00 urn:tag:sec.gov,2008:accession-number=0002148029-26-000002 4 - GUJRATHI SHEILA (0001575202) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000011 <b>Size:</b> 10 KB 2026-07-30T21:49:56-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000011 4 - Processa Pharmaceuticals, Inc.",
+        "(0001533743) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000011 <b>Size:</b> 10 KB 2026-07-30T21:49:56-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000011 3 - GUJRATHI SHEILA (0001575202) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000009 <b>Size:</b> 3 KB 2026-07-30T21:46:01-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000009 3 - Processa Pharmaceuticals, Inc.",
+        "(0001533743) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000009 <b>Size:</b> 3 KB 2026-07-30T21:46:01-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000009 144/A - Zhuge Yue (0002038003) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000005 <b>Size:</b> 4 KB 2026-07-30T21:45:13-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000005 144/A - New Oriental Education & Technology Group Inc.",
+        "(0001372920) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000005 <b>Size:</b> 4 KB 2026-07-30T21:45:13-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000005 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083554 <b>Size:</b> 3 KB 2026-07-30T21:43:24-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083554 3 - Taragin Lee Jay (0001802944) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083554 <b>Size:</b> 3 KB 2026-07-30T21:43:24-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083554 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083553 <b>Size:</b> 3 KB 2026-07-30T21:43:11-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083553 3 - Sherman William M (0002032879) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083553 <b>Size:</b> 3 KB 2026-07-30T21:43:11-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083553 3 - CHURCHILL SPONSOR XIII LLC (0002124749) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - M.",
+        "(0001751504) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - Klein Michael Stuart (0001327392) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 4 - Tempus AI, Inc.",
+        "(0001717115) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001114357-26-000027 <b>Size:</b> 28 KB 2026-07-30T21:42:39-04:00 urn:tag:sec.gov,2008:accession-number=0001114357-26-000027 4 - LEFKOFSKY ERIC P (0001114357) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001114357-26-000027 <b>Size:</b> 28 KB 2026-07-30T21:42:39-04:00 urn:tag:sec.gov,2008:accession-number=0001114357-26-000027 4 - Controladora Vuela Compania de Aviacion, S.A.B.",
+        "(0001520504) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000005 <b>Size:</b> 14 KB 2026-07-30T21:37:55-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000005 4 - Maldonado Yanez Ricardo (0001361096) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000005 <b>Size:</b> 14 KB 2026-07-30T21:37:55-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000005 4 - Allan David Robert Malcolm (0002105210) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083547 <b>Size:</b> 4 KB 2026-07-30T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083547 4 - Virtuix Holdings Inc.",
+        "(0001606242) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083547 <b>Size:</b> 4 KB 2026-07-30T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083547 SCHEDULE 13D - Scribe Therapeutics, Inc.",
+        "(0001853921) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000902664-26-003281 <b>Size:</b> 30 KB 2026-07-30T21:30:13-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003281 SCHEDULE 13D - Avoro Capital Advisors LLC (0001633313) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000902664-26-003281 <b>Size:</b> 30 KB 2026-07-30T21:30:13-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003281 3 - Miao Guili (0002141880) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083544 <b>Size:</b> 4 KB 2026-07-30T21:29:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083544 3 - SuperX AI Technology Ltd (0001897087) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083544 <b>Size:</b> 4 KB 2026-07-30T21:29:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083544 4 - Fundomo SN-002 GP, LLC (0002146934) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-001 GP, LLC (0002146930) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Nobile Corey L.",
+        "(0002146927) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-002, LP (0002124229) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Standard Nuclear, Inc.",
+        "(0002086716) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-001, LP (0002084264) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 S-1MEF - Churchill Capital Corp XIII (0002114229) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083541 <b>Size:</b> 394 KB 2026-07-30T21:23:13-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083541 144 - Zhuge Yue (0002038003) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000004 <b>Size:</b> 4 KB 2026-07-30T21:19:35-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000004 144 - New Oriental Education & Technology Group Inc.",
+        "(0001372920) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000004 <b>Size:</b> 4 KB 2026-07-30T21:19:35-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000004 4 - Kettnich John Paul (0002096724) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326537 <b>Size:</b> 5 KB 2026-07-30T21:15:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326537 4 - StepStone Private Equity Strategies Fund (0002066799) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326537 <b>Size:</b> 5 KB 2026-07-30T21:15:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326537 4 - Navios Maritime Partners L.P.",
+        "(0001415921) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326536 <b>Size:</b> 12 KB 2026-07-30T21:15:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326536 4 - Frangou Angeliki (0001310495) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326536 <b>Size:</b> 12 KB 2026-07-30T21:15:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326536 3 - Controladora Vuela Compania de Aviacion, S.A.B.",
+        "(0001520504) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000004 <b>Size:</b> 12 KB 2026-07-30T21:14:35-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000004"
+      ],
+      "removals": [
+        "Latest Filings - Thu, 30 Jul 2026 13:41:20 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-30T13:41:20-04:00 425 - Sanara MedTech Inc.",
+        "(0000714256) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001493152-26-035407 <b>Size:</b> 23 KB 2026-07-30T13:40:51-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035407 D - G3 Interlochen, LLC (0002145686) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002145686-26-000001 <b>Size:</b> 7 KB 2026-07-30T13:40:49-04:00 urn:tag:sec.gov,2008:accession-number=0002145686-26-000001 ABS-EE - BANK 2022-BNK41 (0001920442) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014259 <b>Size:</b> 729 KB 2026-07-30T13:40:41-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014259 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037224 <b>Size:</b> 406 KB 2026-07-30T13:40:40-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037224 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037224 <b>Size:</b> 406 KB 2026-07-30T13:40:40-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037224 ABS-EE - Benchmark 2018-B7 Mortgage Trust (0001757018) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014257 <b>Size:</b> 527 KB 2026-07-30T13:40:25-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014257 D/A - Blue Owl Real Estate Exchange VI DST (0002135424) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002135424-26-000005 <b>Size:</b> 14 KB 2026-07-30T13:39:49-04:00 urn:tag:sec.gov,2008:accession-number=0002135424-26-000005 ABS-EE - Benchmark 2020-B22 Mortgage Trust (0001833563) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014253 <b>Size:</b> 271 KB 2026-07-30T13:39:30-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014253 424B2 - JPMorgan Chase Financial Co.",
+        "LLC (0001665650) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021771 <b>Size:</b> 590 KB 2026-07-30T13:39:21-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021771 424B2 - JPMORGAN CHASE & CO (0000019617) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021771 <b>Size:</b> 590 KB 2026-07-30T13:39:21-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021771 40-6B - Jefferies Partners PE Fund 2026 (Dedicated) LP (0002146461) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Partners PE Fund 2026 (Cayman) LP (0002145873) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Partners PE Fund 2026 LP (0002140136) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Financial Group Inc.",
+        "(0000096223) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 SCHEDULE 13G - New ERA Energy & Digital, Inc.",
+        "(0002028336) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002012383-26-003194 <b>Size:</b> 11 KB 2026-07-30T13:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-003194 SCHEDULE 13G - BlackRock, Inc.",
+        "(0002012383) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002012383-26-003194 <b>Size:</b> 11 KB 2026-07-30T13:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-003194 D - Industry Ventures Secondary XI (Feeder), L.P.",
+        "(0002126009) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002126009-26-000001 <b>Size:</b> 9 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-30T13:38:59-04:00 urn:tag:sec.gov,2008:accession-number=0002126009-26-000001 425 - Sanara MedTech Inc.",
+        "(0000714256) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001493152-26-035405 <b>Size:</b> 24 KB 2026-07-30T13:38:45-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035405 6-K - BARCLAYS PLC (0000312069) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001654954-26-007018 <b>Size:</b> 252 KB 2026-07-30T13:38:41-04:00 urn:tag:sec.gov,2008:accession-number=0001654954-26-007018 424B2 - BofA Finance LLC (0001682472) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021770 <b>Size:</b> 1 MB 2026-07-30T13:38:01-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021770 424B2 - BANK OF AMERICA CORP /DE/ (0000070858) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021770 <b>Size:</b> 1 MB 2026-07-30T13:38:01-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021770 F-4/A - Aiways Automobile Europe GmbH (0002049203) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083235 <b>Size:</b> 31 MB 2026-07-30T13:37:10-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083235 F-4/A - EUROEV Holdings Ltd (0002048740) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083235 <b>Size:</b> 31 MB 2026-07-30T13:37:10-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083235 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037222 <b>Size:</b> 736 KB 2026-07-30T13:37:07-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037222 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037222 <b>Size:</b> 736 KB 2026-07-30T13:37:07-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037222 10-D - BANK 2021-BNK38 (0001895567) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014246 <b>Size:</b> 2 MB 2026-07-30T13:36:57-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014246 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037221 <b>Size:</b> 458 KB 2026-07-30T13:36:25-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037221 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037221 <b>Size:</b> 458 KB 2026-07-30T13:36:25-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037221 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037220 <b>Size:</b> 1 MB 2026-07-30T13:35:50-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037220 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037220 <b>Size:</b> 1 MB 2026-07-30T13:35:50-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037220 ABS-EE - BANK 2021-BNK38 (0001895567) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014247 <b>Size:</b> 403 KB 2026-07-30T13:34:57-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014247 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037219 <b>Size:</b> 395 KB 2026-07-30T13:34:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037219 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037219 <b>Size:</b> 395 KB 2026-07-30T13:34:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037219 424B2 - WELLS FARGO & COMPANY/MN (0000072971) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037218 <b>Size:</b> 216 KB 2026-07-30T13:34:34-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037218 485BPOS - Kurv ETF Trust (0001782952) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001999371-26-016447 <b>Size:</b> 2 MB 2026-07-30T13:34:28-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-016447 485BPOS - Kurv ETF Trust (0001782952) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001999371-26-016447 <b>Size:</b> 2 MB 2026-07-30T13:34:28-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-016447 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037216 <b>Size:</b> 460 KB 2026-07-30T13:33:39-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037216 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037216 <b>Size:</b> 460 KB 2026-07-30T13:33:39-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037216 10-Q - CROWN HOLDINGS, INC.",
+        "(0001219601) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001628280-26-050949 <b>Size:</b> 8 MB 2026-07-30T13:33:34-04:00 urn:tag:sec.gov,2008:accession-number=0001628280-26-050949 D - TWE2024 Fund LLC - Series TWE Canvas300 (0002147532) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002134718-26-000064 <b>Size:</b> 6 KB 2026-07-30T13:33:32-04:00 urn:tag:sec.gov,2008:accession-number=0002134718-26-000064"
+      ],
+      "additionCount": 15,
+      "removalCount": 9,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-31T08:12:11.783Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
+    {
+      "id": "8299a278d70b1f879d6d522f",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-31T08:12:11.783Z",
+      "changeType": "content-changed",
+      "previousHash": "ce90b7428b76726a567b92dd03bb380681d6f6100d9ac084af2c4efd0ef34073",
+      "currentHash": "2607e550bf40d4c2e72133b23e40f661686ea6a8bf7ee10e1ca9507164b51f8d",
+      "rawHash": "514ed18a22fc48051a79c4c5b4e877da71f4e61baafbb101bf7e3e8916dbd13e",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU0NTYwMDAwMDAsIjIwMjYtMTU1MDAiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODUzNjk2MDAwMDAsIjIwMjYtMTUzNDciXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: Federal Register — Latest Documents",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-31T08:12:11.783Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
+    {
+      "id": "0c5f51804baf8e9e2c1fdd0b",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-31T08:12:11.783Z",
+      "changeType": "content-changed",
+      "previousHash": "d45600ac8907a2ac7ead82482c084aeb387476c3470d698ef941855fd5e782bb",
+      "currentHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
+      "rawHash": "12c037ef5b1ffc18974a82207a368bf4084f9eef5f9cba9b2ee481135528c648",
+      "httpStatus": 200,
+      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "additions": [
+        "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance Is the message I’ve had from the SFO genuine?",
+        "12 November 2024 Notice See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "removals": [
+        "Latest from the Serious Fraud Office FOI Log - June 2026 28 July 2026 FOI release Director and senior management team expenses 28 July 2026 Collection 2026-27 Director and senior management team expenses 28 July 2026 Corporate report See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases FOI Log - June 2026 28 July 2026 FOI release 2026-27 Director and senior management team expenses 28 July 2026 Corporate report See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "additionCount": 3,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-31T08:12:11.783Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
     {
       "id": "96b50a0ea1ae9a6b5767f2c2",
       "sourceId": "sec-current-filings",

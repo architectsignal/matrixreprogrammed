@@ -1,8 +1,8 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-31T06:43:41.045Z
+Generated: 2026-07-31T08:12:58.361Z
 Overall: ready
-Homepage mode: legacy-cinematic
+Homepage mode: search-first-accountability
 Passed: 50/50
 
 Person: Bill Gates
@@ -22,7 +22,7 @@ Promotion margin: 14
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
-- **PASS · ledger-archive-preserved:** 1867 archived findings retained.
+- **PASS · ledger-archive-preserved:** 2276 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
 - **PASS · watch-person-rank:** person score 135; status incumbent-held-position.
@@ -53,12 +53,12 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 5 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.
-- **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3711; search=133784; accountabilityHitList=135048.
+- **PASS · accountability-card-ui:** 3 search-first accountability cards found.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.
 - **PASS · surface-daily-command-brief.html:** Daily command brief exposes the current watch directly or through a stable route.
 - **PASS · surface-live-intel.html:** Live Intel exposes the current intelligence feed; duplicated homepage hit-list markup is not required.
 - **PASS · relationship-contracts:** 172 edges; 0 contract failures.
 - **PASS · clock-meaning-contracts:** 81 clocks; 0 contract failures.
-- **PASS · sensitive-claim-safeguard:** 17 sensitive items; 0 unsafe.
+- **PASS · sensitive-claim-safeguard:** 9 sensitive items; 0 unsafe.

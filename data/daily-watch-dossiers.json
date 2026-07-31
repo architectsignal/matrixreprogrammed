@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "1.0.0",
-  "updated": "2026-07-31T06:43:40.400Z",
+  "updated": "2026-07-31T08:12:57.788Z",
   "rankingPolicy": {
     "mode": "stable-incumbent-evidence-promotion",
     "promotionMargin": 14,
@@ -39,7 +39,7 @@
   "person": {
     "slot": "person",
     "name": "Bill Gates",
-    "generatedAt": "2026-07-31T06:43:40.400Z",
+    "generatedAt": "2026-07-31T08:12:57.788Z",
     "ranking": {
       "score": 135,
       "status": "incumbent-held-position",
@@ -141,7 +141,7 @@
   "institution": {
     "slot": "institution",
     "name": "Securities and Exchange Commission",
-    "generatedAt": "2026-07-31T06:43:40.400Z",
+    "generatedAt": "2026-07-31T08:12:57.788Z",
     "ranking": {
       "score": 143,
       "status": "retained-current-leader",
@@ -179,77 +179,9 @@
     "familyAccess": null,
     "legalAndWrongdoingRecord": [
       {
-        "id": "04f53206e08c626d10b11c81",
-        "title": "Final Judgment - Eliseo Jojo Prisno",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "06fbb573169059db2ae73d8a",
-        "title": "Final Judgment - Semisub, Inc.",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/judg26592-semisub.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "0891f24ccf41478cc4b76d10",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "138636d6277f73ba24b32160",
-        "title": "Final Judgment - P/E Capital Investment Management Partners",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "164a7a1254086bf709ac5cfc",
+        "id": "0130db1de656f3af728e9b21",
         "title": "Final Judgment - Titanium Capital LLC",
-        "date": "2026-07-30T17:52:41.636Z",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -264,26 +196,9 @@
         ]
       },
       {
-        "id": "19d24f3b21b42813bde4dce3",
-        "title": "Order and Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26543.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "22fd77f5b36dc0be7a8d7dd9",
+        "id": "0bfb19d649f93588243990f5",
         "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -293,14 +208,14 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26527.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       },
       {
-        "id": "2605abda5875052805700270",
-        "title": "Final Judgment - Sal N. Ortiz",
-        "date": "2026-07-30T17:52:41.636Z",
+        "id": "0c4143791598d0ac2e7925f6",
+        "title": "Consent of and Final Judgment as to Sagar Adani",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -310,48 +225,14 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       },
       {
-        "id": "266ab75ebdb0aaf60f483d8b",
-        "title": "Final Judgment - Lloyd",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2742ce464e0a9f2f5b8b45fb",
-        "title": "Final Judgment - Robert Yedid",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2e5a76bf10b05d7c9b28953e",
+        "id": "1257c3ee2bf54442161b9029",
         "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -361,14 +242,31 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       },
       {
-        "id": "33c721131329baffc8684833",
+        "id": "13b5975fb04b58ae9ee73464",
+        "title": "Final Judgment - Treusch",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13e1c8644ad6812bee1af1e8",
         "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -378,991 +276,14 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       },
       {
-        "id": "354f73cf275164c149563169",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3b2c774553888fa671bd663c",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3e770d7c9a4c78f75eea9c59",
-        "title": "Final Judgment - Jeffrey Puzzullo",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3f424cc717ba645940bc7a3f",
-        "title": "Final Judgment - Jamey Denise Jackson",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      }
-    ],
-    "epsteinAndChildSafeguardingOverlaps": [],
-    "moneyOwnershipAndContracts": [
-      {
-        "id": "04f53206e08c626d10b11c81",
-        "title": "Final Judgment - Eliseo Jojo Prisno",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "06fbb573169059db2ae73d8a",
-        "title": "Final Judgment - Semisub, Inc.",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/judg26592-semisub.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "0891f24ccf41478cc4b76d10",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "138636d6277f73ba24b32160",
-        "title": "Final Judgment - P/E Capital Investment Management Partners",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "164a7a1254086bf709ac5cfc",
-        "title": "Final Judgment - Titanium Capital LLC",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "19d24f3b21b42813bde4dce3",
-        "title": "Order and Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26543.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "22fd77f5b36dc0be7a8d7dd9",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2605abda5875052805700270",
-        "title": "Final Judgment - Sal N. Ortiz",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "266ab75ebdb0aaf60f483d8b",
-        "title": "Final Judgment - Lloyd",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2742ce464e0a9f2f5b8b45fb",
-        "title": "Final Judgment - Robert Yedid",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2e5a76bf10b05d7c9b28953e",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "33c721131329baffc8684833",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "354f73cf275164c149563169",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3b2c774553888fa671bd663c",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3e770d7c9a4c78f75eea9c59",
-        "title": "Final Judgment - Jeffrey Puzzullo",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3f424cc717ba645940bc7a3f",
-        "title": "Final Judgment - Jamey Denise Jackson",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      }
-    ],
-    "authorityAccessAndInstitutions": [
-      {
-        "id": "04f53206e08c626d10b11c81",
-        "title": "Final Judgment - Eliseo Jojo Prisno",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "06fbb573169059db2ae73d8a",
-        "title": "Final Judgment - Semisub, Inc.",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/judg26592-semisub.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "0891f24ccf41478cc4b76d10",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "138636d6277f73ba24b32160",
-        "title": "Final Judgment - P/E Capital Investment Management Partners",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "164a7a1254086bf709ac5cfc",
-        "title": "Final Judgment - Titanium Capital LLC",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "19d24f3b21b42813bde4dce3",
-        "title": "Order and Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26543.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "22fd77f5b36dc0be7a8d7dd9",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2605abda5875052805700270",
-        "title": "Final Judgment - Sal N. Ortiz",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "266ab75ebdb0aaf60f483d8b",
-        "title": "Final Judgment - Lloyd",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2742ce464e0a9f2f5b8b45fb",
-        "title": "Final Judgment - Robert Yedid",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2e5a76bf10b05d7c9b28953e",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "33c721131329baffc8684833",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "354f73cf275164c149563169",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3b2c774553888fa671bd663c",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3e770d7c9a4c78f75eea9c59",
-        "title": "Final Judgment - Jeffrey Puzzullo",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3f424cc717ba645940bc7a3f",
-        "title": "Final Judgment - Jamey Denise Jackson",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      }
-    ],
-    "documentedConnections": [],
-    "timeline": [
-      {
-        "id": "04f53206e08c626d10b11c81",
-        "title": "Final Judgment - Eliseo Jojo Prisno",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "06fbb573169059db2ae73d8a",
-        "title": "Final Judgment - Semisub, Inc.",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/judg26592-semisub.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "0891f24ccf41478cc4b76d10",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "138636d6277f73ba24b32160",
-        "title": "Final Judgment - P/E Capital Investment Management Partners",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "164a7a1254086bf709ac5cfc",
-        "title": "Final Judgment - Titanium Capital LLC",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "19d24f3b21b42813bde4dce3",
-        "title": "Order and Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26543.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "22fd77f5b36dc0be7a8d7dd9",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2605abda5875052805700270",
-        "title": "Final Judgment - Sal N. Ortiz",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "266ab75ebdb0aaf60f483d8b",
-        "title": "Final Judgment - Lloyd",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2742ce464e0a9f2f5b8b45fb",
-        "title": "Final Judgment - Robert Yedid",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "2e5a76bf10b05d7c9b28953e",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "33c721131329baffc8684833",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "354f73cf275164c149563169",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3b2c774553888fa671bd663c",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3e770d7c9a4c78f75eea9c59",
-        "title": "Final Judgment - Jeffrey Puzzullo",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "3f424cc717ba645940bc7a3f",
-        "title": "Final Judgment - Jamey Denise Jackson",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "404858567399fa3b737f20b3",
-        "title": "Final Judgment - Suzee Han",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "42d75988a71f86e5df607689",
-        "title": "Final Judgment - Robert Newell",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26553.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "49e908faa25f21deab0c2d33",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "4f2d92bb20923999c551009c",
-        "title": "Proposed Final Judgment - Shaukat Shamim",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "531bf80777c30201e33dbfd9",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
-        "lane": "government-enforcement",
-        "status": "established-wrongdoing",
-        "legalCategory": "conviction-or-final-judgment",
-        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-        "confidence": "high",
-        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
-          "https://www.sec.gov/enforcement-litigation/litigation-releases"
-        ]
-      },
-      {
-        "id": "5334be13ffd145d7aeafa6a7",
+        "id": "1a25500de3f4003b58b315f2",
         "title": "Revised Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -1377,9 +298,9 @@
         ]
       },
       {
-        "id": "597520c51922b2f24ef9cc37",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "id": "1debee8dcff73e6412ac8dd7",
+        "title": "Consent Motion for Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -1389,14 +310,14 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26537.pdf",
+          "https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       },
       {
-        "id": "5ac57e2a1b96ec863e52995f",
-        "title": "Final Judgment",
-        "date": "2026-07-30T17:52:41.636Z",
+        "id": "26e99ed2753c44a0eb433f43",
+        "title": "Final Judgment - Randall J. Miller",
+        "date": "2026-07-31T08:12:09.685Z",
         "lane": "government-enforcement",
         "status": "established-wrongdoing",
         "legalCategory": "conviction-or-final-judgment",
@@ -1406,12 +327,1108 @@
         "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
         "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sourceRoutes": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26503.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "279c781eec7b4886b26d8896",
+        "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2944aa7289741b95caa0e35f",
+        "title": "Final Judgment - Michael Bowen",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2c1fbcfdb21bab6b5fb31241",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2f26cb0f75da735e29d4d525",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "3541f6ddd98c84d900bce2b0",
+        "title": "Proposed Final Judgment - YouPlus, Inc.",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "40917b83e1821aa58602be3d",
+        "title": "Final Judgment - David P. Ortiz",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4367c645b35d4c4fd9454f8e",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      }
+    ],
+    "epsteinAndChildSafeguardingOverlaps": [],
+    "moneyOwnershipAndContracts": [
+      {
+        "id": "0130db1de656f3af728e9b21",
+        "title": "Final Judgment - Titanium Capital LLC",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0bfb19d649f93588243990f5",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26527.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0c4143791598d0ac2e7925f6",
+        "title": "Consent of and Final Judgment as to Sagar Adani",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1257c3ee2bf54442161b9029",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13b5975fb04b58ae9ee73464",
+        "title": "Final Judgment - Treusch",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13e1c8644ad6812bee1af1e8",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1a25500de3f4003b58b315f2",
+        "title": "Revised Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1debee8dcff73e6412ac8dd7",
+        "title": "Consent Motion for Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "26e99ed2753c44a0eb433f43",
+        "title": "Final Judgment - Randall J. Miller",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "279c781eec7b4886b26d8896",
+        "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2944aa7289741b95caa0e35f",
+        "title": "Final Judgment - Michael Bowen",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2c1fbcfdb21bab6b5fb31241",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2f26cb0f75da735e29d4d525",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "3541f6ddd98c84d900bce2b0",
+        "title": "Proposed Final Judgment - YouPlus, Inc.",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "40917b83e1821aa58602be3d",
+        "title": "Final Judgment - David P. Ortiz",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4367c645b35d4c4fd9454f8e",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      }
+    ],
+    "authorityAccessAndInstitutions": [
+      {
+        "id": "0130db1de656f3af728e9b21",
+        "title": "Final Judgment - Titanium Capital LLC",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0bfb19d649f93588243990f5",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26527.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0c4143791598d0ac2e7925f6",
+        "title": "Consent of and Final Judgment as to Sagar Adani",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1257c3ee2bf54442161b9029",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13b5975fb04b58ae9ee73464",
+        "title": "Final Judgment - Treusch",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13e1c8644ad6812bee1af1e8",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1a25500de3f4003b58b315f2",
+        "title": "Revised Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1debee8dcff73e6412ac8dd7",
+        "title": "Consent Motion for Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "26e99ed2753c44a0eb433f43",
+        "title": "Final Judgment - Randall J. Miller",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "279c781eec7b4886b26d8896",
+        "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2944aa7289741b95caa0e35f",
+        "title": "Final Judgment - Michael Bowen",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2c1fbcfdb21bab6b5fb31241",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2f26cb0f75da735e29d4d525",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "3541f6ddd98c84d900bce2b0",
+        "title": "Proposed Final Judgment - YouPlus, Inc.",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "40917b83e1821aa58602be3d",
+        "title": "Final Judgment - David P. Ortiz",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4367c645b35d4c4fd9454f8e",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      }
+    ],
+    "documentedConnections": [],
+    "timeline": [
+      {
+        "id": "0130db1de656f3af728e9b21",
+        "title": "Final Judgment - Titanium Capital LLC",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0bfb19d649f93588243990f5",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26527.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "0c4143791598d0ac2e7925f6",
+        "title": "Consent of and Final Judgment as to Sagar Adani",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1257c3ee2bf54442161b9029",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13b5975fb04b58ae9ee73464",
+        "title": "Final Judgment - Treusch",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "13e1c8644ad6812bee1af1e8",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1a25500de3f4003b58b315f2",
+        "title": "Revised Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "1debee8dcff73e6412ac8dd7",
+        "title": "Consent Motion for Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "26e99ed2753c44a0eb433f43",
+        "title": "Final Judgment - Randall J. Miller",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "279c781eec7b4886b26d8896",
+        "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2944aa7289741b95caa0e35f",
+        "title": "Final Judgment - Michael Bowen",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2c1fbcfdb21bab6b5fb31241",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "2f26cb0f75da735e29d4d525",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "3541f6ddd98c84d900bce2b0",
+        "title": "Proposed Final Judgment - YouPlus, Inc.",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "40917b83e1821aa58602be3d",
+        "title": "Final Judgment - David P. Ortiz",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4367c645b35d4c4fd9454f8e",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4388399b936f58fda7c7c693",
+        "title": "Final Judgment by Default",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "45f7a033ddf8bcaee9aee5c3",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4b6edc47961e1b295c996898",
+        "title": "Final Judgment - Eliseo Jojo Prisno",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "4d769d35877ed22304174426",
+        "title": "Final Judgment - Bin Hao",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26500-hao.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "52c8178e1f529bfee32e4171",
+        "title": "Final Judgment - Ross Gregory Erskine",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26559.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "546bfa3345e6920715f40c97",
+        "title": "Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "563e57592d7acb905e568a18",
+        "title": "Consent of and Final Judgment as to Gautam Adani",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-gadani.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
+      {
+        "id": "5a0dade77a054a262b50428c",
+        "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf",
           "https://www.sec.gov/enforcement-litigation/litigation-releases"
         ]
       }
     ],
     "contradictionsAndCounterEvidence": [
+      {
+        "id": "5a0dade77a054a262b50428c",
+        "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment",
+        "date": "2026-07-31T08:12:09.685Z",
+        "lane": "government-enforcement",
+        "status": "established-wrongdoing",
+        "legalCategory": "conviction-or-final-judgment",
+        "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+        "confidence": "high",
+        "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+        "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sourceRoutes": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf",
+          "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        ]
+      },
       {
         "id": "e80041bb89353657e31b566d",
         "title": "Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment",
@@ -1608,54 +1625,54 @@
     ],
     "sourceRoutes": [
       "entity-briefs/securities-and-exchange-commission.html",
-      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
       "data/daily-investigation-conclusions.json",
-      "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+      "https://www.sec.gov/files/judg26592-semisub.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "https://www.federalregister.gov/documents/2026/07/29/2026-15242/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
       "https://www.federalregister.gov/documents/2026/07/29/2026-15248/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10b-17",
       "https://www.federalregister.gov/documents/2026/07/29/2026-15281/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c2-1",
       "https://www.federalregister.gov/documents/2026/07/29/2026-15251/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
-      "https://www.federalregister.gov/documents/2026/07/29/2026-15245/cohen-and-steers-realty-shares-inc-et-al",
-      "https://www.federalregister.gov/documents/2026/07/28/2026-15178/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-5",
-      "https://www.federalregister.gov/documents/2026/07/28/2026-15175/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-of-amendment-no-1-and-order",
-      "https://www.federalregister.gov/documents/2026/07/28/2026-15169/self-regulatory-organizations-ice-clear-credit-llc-order-approving-proposed-rule-change-relating-to",
-      "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
-      "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
-      "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
-      "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
-      "https://www.sec.gov/files/judg26592-semisub.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26543.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf",
+      "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26527.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf",
+      "https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26553.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26500-hao.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26559.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/consents26554-gadani.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-jeffrey-de-laveaga.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26537.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26503.pdf"
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf"
     ],
     "totals": {
-      "matchedFindings": 878,
+      "matchedFindings": 926,
       "legalRecords": 16,
       "safeguardingOverlaps": 0,
       "moneyRecords": 16,
       "authorityRecords": 16,
       "connections": 0,
-      "contradictionRecords": 11
+      "contradictionRecords": 12
     },
     "safeguardingBoundary": "A documented overlap, contact, payment, friendship, event, flight, business relationship or shared institution does not by itself prove knowledge of or participation in another person’s crimes. Exact legal status and the conduct established by the cited record must remain visible.",
     "dossierBoundary": "This dossier combines source-linked records and structured relationships for investigation. It is not a verdict. Association is not guilt, access is not control, technical capability is not actual use, and allegations remain allegations unless a court or official finding establishes otherwise."
@@ -1663,7 +1680,7 @@
   "family": {
     "slot": "family",
     "name": "Wallenberg family and foundations",
-    "generatedAt": "2026-07-31T06:43:40.400Z",
+    "generatedAt": "2026-07-31T08:12:57.788Z",
     "ranking": {
       "score": 122,
       "status": "incumbent-held-position",

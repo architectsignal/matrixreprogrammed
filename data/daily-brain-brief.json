@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T06:30:04.049Z",
+  "updated": "2026-07-31T08:12:35.412Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -215,7 +215,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-30T06:23:34.267Z",
+    "lastComputed": "2026-07-31T06:43:07.388Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "highestProbabilityScenario": {
@@ -329,7 +329,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-30T06:23:34.267Z",
+    "lastComputed": "2026-07-31T06:43:07.388Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "missingRecords": [
@@ -588,7 +588,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-31T06:30:04.107Z",
+    "updated": "2026-07-31T08:12:35.482Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -768,10 +768,10 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-31T06:30:22.956Z",
-    "newRecordCount": 2,
+    "updated": "2026-07-31T08:12:51.115Z",
+    "newRecordCount": 0,
     "changedRecordCount": 0,
-    "removedRecordCount": 2,
+    "removedRecordCount": 0,
     "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
@@ -779,22 +779,9 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    }
-  ],
+  "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-31T06:30:23.077Z",
+    "updated": "2026-07-31T08:12:51.261Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -828,7 +815,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-31T06:30:23.109Z",
+    "updated": "2026-07-31T08:12:51.297Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",
@@ -840,8 +827,106 @@
     "entityTimelinesRoute": "entity-timelines.html",
     "boundary": "Master brief engine adds readable command intelligence without replacing source review."
   },
+  "integrityVersion": 1,
+  "integrity": [
+    {
+      "id": "brain-1",
+      "title": "Daily brain conclusion 1",
+      "conclusion": "Disclosure pressure is a top exposure lane because withheld records reveal the structure of protection and omission.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium-high",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-07-31T08:12:35.412Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-2",
+      "title": "Daily brain conclusion 2",
+      "conclusion": "Policy-system convergence remains the strongest system-level pattern; the key test is whether access becomes mandatory, centralized or vendor-controlled.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-07-31T08:12:35.412Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-3",
+      "title": "Daily brain conclusion 3",
+      "conclusion": "Gold reserves must be tracked through ownership and custody separately because reported tonnes do not prove physical location or encumbrance status.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-07-31T08:12:35.412Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-4",
+      "title": "Daily brain conclusion 4",
+      "conclusion": "Wealth and institutional influence should be mapped through infrastructure dependency, filings, contracts and grant routes, not slogans.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-07-31T08:12:35.412Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-5",
+      "title": "Daily brain conclusion 5",
+      "conclusion": "Speculation should become a record engine: exact claim, source chain, counter-source, probability trigger and downgrade condition.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-07-31T08:12:35.412Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    }
+  ],
   "dailyWatch": {
-    "updated": "2026-07-31T06:43:40.400Z",
+    "updated": "2026-07-31T08:12:57.788Z",
     "date": "2026-07-31",
     "route": "daily-watch.html",
     "person": {
@@ -899,9 +984,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 23
+        "directFreshRecords": 30
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 23 fresh records plus 31 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 30 fresh records plus 29 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [
@@ -916,21 +1001,21 @@
       "confidence": "moderate-to-high",
       "sourceRoutes": [
         "entity-briefs/securities-and-exchange-commission.html",
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
         "data/daily-investigation-conclusions.json",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+        "https://www.sec.gov/files/judg26592-semisub.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
         "https://www.federalregister.gov/documents/2026/07/29/2026-15242/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
         "https://www.federalregister.gov/documents/2026/07/29/2026-15248/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10b-17",
         "https://www.federalregister.gov/documents/2026/07/29/2026-15281/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c2-1",
-        "https://www.federalregister.gov/documents/2026/07/29/2026-15251/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
-        "https://www.federalregister.gov/documents/2026/07/29/2026-15245/cohen-and-steers-realty-shares-inc-et-al",
-        "https://www.federalregister.gov/documents/2026/07/28/2026-15178/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-5",
-        "https://www.federalregister.gov/documents/2026/07/28/2026-15175/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-of-amendment-no-1-and-order",
-        "https://www.federalregister.gov/documents/2026/07/28/2026-15169/self-regulatory-organizations-ice-clear-credit-llc-order-approving-proposed-rule-change-relating-to",
-        "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
-        "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
-        "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
-        "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6"
+        "https://www.federalregister.gov/documents/2026/07/29/2026-15251/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed"
       ],
       "nextQuestions": [
         "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",

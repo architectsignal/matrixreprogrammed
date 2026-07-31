@@ -3,6 +3,7 @@ import crypto from 'node:crypto';
 import http from 'node:http';
 import os from 'node:os';
 import { execFile } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
 import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
@@ -307,7 +308,8 @@ async function main() {
   process.on('SIGTERM', () => shutdown('SIGTERM'));
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+const isDirectRun = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isDirectRun) {
   main().catch(error => {
     console.error(error.stack || error.message || error);
     process.exit(1);

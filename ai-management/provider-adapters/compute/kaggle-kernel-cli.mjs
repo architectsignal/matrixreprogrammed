@@ -3,6 +3,7 @@ import path from 'node:path';
 import { AdapterError } from '../adapter-contract.mjs';
 import {
   assertRemoteComputeJob,
+  collectPublicInputUrls,
   computeProvenance,
   resolveCredential,
   resolveWithinRoot,
@@ -129,7 +130,7 @@ export class KaggleKernelCliAdapter {
         adapterId: this.adapter_id,
         adapterVersion: this.adapter_version,
         operation,
-        sourceUrls: [sourceUrl, resource.official_documentation_url],
+        sourceUrls: [sourceUrl, resource.official_documentation_url, ...collectPublicInputUrls(job.payload)],
         retrievedAt,
         contentHash: commandResult.output_hash
       })

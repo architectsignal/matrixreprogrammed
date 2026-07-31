@@ -3,6 +3,7 @@ import aiManagementWorker from './worker-ai-management.js';
 import { isAiManagementRoute } from './worker-ai-management.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
+import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
 
 function withAiManagementAdminToken(env) {
   const token = env?.AI_MANAGEMENT_ADMIN_TOKEN || env?.ADMIN_API_TOKEN;
@@ -38,6 +39,11 @@ export default {
   async fetch(request, env, ctx) {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isCapacityGrowthRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleCapacityGrowthRoute(request, runtimeEnv);
+    }
 
     if (isLocalJobRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();

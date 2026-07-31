@@ -19,6 +19,22 @@ export function adapterKeyForResource(resource = {}) {
   return '';
 }
 
+function assertRemoteProvenance(result, adapter) {
+  const provenance = result?.provenance;
+  if (!result || result.ok === false || !provenance || !Array.isArray(provenance.source_urls) || !provenance.source_urls.length || !provenance.retrieved_at || !provenance.content_hash) {
+    throw new AdapterError('Remote compute adapter returned incomplete provenance', {
+      code: 'REMOTE_COMPUTE_PROVENANCE_MISSING',
+      details: { adapter_id: adapter?.adapter_id || null }
+    });
+  }
+  if (provenance.cost_confirmed_zero !== true || provenance.data_class !== 'public') {
+    throw new AdapterError('Remote compute adapter failed the returned zero-spend or public-data proof', {
+      code: 'REMOTE_COMPUTE_RESULT_BOUNDARY_FAILED',
+      details: { adapter_id: adapter?.adapter_id || null }
+    });
+  }
+}
+
 export class RemoteComputeSessionAdapter {
   constructor(options = {}) {
     const adapters = options.adapters || [
@@ -41,6 +57,7 @@ export class RemoteComputeSessionAdapter {
       });
     }
     const result = await adapter.execute(job, resource, context);
+    assertRemoteProvenance(result, adapter);
     return {
       ...result,
       output: {
@@ -60,4 +77,4 @@ export function createComputeAdapters(options = {}) {
   return [session, kaggle, huggingFace, ownerHttp];
 }
 
-export const remoteSessionInternals = { providerId };
+export const remoteSessionInternals = { providerId, assertRemoteProvenance };

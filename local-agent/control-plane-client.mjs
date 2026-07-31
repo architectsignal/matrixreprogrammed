@@ -6,8 +6,8 @@ function assertConfig(config = {}) {
   if (!config.nodeId) throw new Error('nodeId is required');
 }
 
-async function requestJson(url, options = {}) {
-  const response = await fetch(url, options);
+async function requestJson(url, options = {}, fetchImpl = fetch) {
+  const response = await fetchImpl(url, options);
   const text = await response.text();
   let data;
   try { data = text ? JSON.parse(text) : {}; } catch { data = { raw: text.slice(0, 1000) }; }
@@ -59,9 +59,8 @@ export async function completeJob(config, lease, completion, { fetchImpl = fetch
       'user-agent': 'matrix-local-agent/0.2.0'
     },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(15000),
-    fetch: fetchImpl
-  });
+    signal: AbortSignal.timeout(15000)
+  }, fetchImpl);
 }
 
 export function completionReceipt(job, result, startedAt) {

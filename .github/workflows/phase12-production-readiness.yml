@@ -1,0 +1,44 @@
+name: Phase 12 Production Readiness
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/opportunity-hunter/**'
+      - 'ai-management/provider-adapters/opportunities/**'
+      - 'migrations/phase12_opportunity_hunter.sql'
+      - 'scripts/opportunity-hunter-*.mjs'
+      - 'scripts/phase12-production-readiness-test.mjs'
+      - 'src/worker-opportunity-hunter.js'
+      - 'src/worker-production-autonomy.js'
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/ai-autonomy-safety.yml'
+      - '.github/workflows/phase12-production-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase12-production-readiness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  readiness:
+    name: Verify Phase 12 controlled release contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify syntax and zero-spend adapter
+        run: |
+          node --check src/worker-opportunity-hunter.js
+          node --check src/worker-production-autonomy.js
+          node --check ai-management/provider-adapters/opportunities/zero-spend-public-http.mjs
+          node scripts/opportunity-hunter-test.mjs
+          node scripts/opportunity-hunter-worker-test.mjs
+          node scripts/opportunity-hunter-adapter-test.mjs
+      - name: Verify controlled production integration
+        run: node scripts/phase12-production-readiness-test.mjs

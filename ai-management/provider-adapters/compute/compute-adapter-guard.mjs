@@ -8,6 +8,7 @@ import { sha256 } from '../../core/jobs.mjs';
 const execFileDefault = promisify(execFileCallback);
 const SENSITIVE_KEY = /^(?:prompt|prompts|messages?|system|assistant|content|document|documents|private|secret|password|token|api[_-]?key|authorization|cookie|session|email|phone|address|payment|paypal|member|auth)$/i;
 const PUBLIC_URL_PROTOCOLS = new Set(['https:']);
+const URL_LIKE = /^[a-z][a-z0-9+.-]*:\/\//i;
 
 function isObject(value) {
   return Boolean(value && typeof value === 'object' && !Array.isArray(value));
@@ -15,6 +16,21 @@ function isObject(value) {
 
 function encodedBytes(value) {
   return new TextEncoder().encode(typeof value === 'string' ? value : JSON.stringify(value ?? null)).byteLength;
+}
+
+function privateNetworkHost(value) {
+  const hostname = String(value || '').toLowerCase().replace(/^\[|\]$/g, '');
+  if (!hostname) return true;
+  if (hostname === 'localhost' || hostname.endsWith('.localhost') || hostname.endsWith('.local') || hostname.endsWith('.internal') || hostname.endsWith('.lan')) return true;
+  if (hostname === '::1' || hostname === '0:0:0:0:0:0:0:1' || hostname.startsWith('fc') || hostname.startsWith('fd') || hostname.startsWith('fe80:')) return true;
+  const octets = hostname.split('.').map(Number);
+  if (octets.length !== 4 || octets.some(octet => !Number.isInteger(octet) || octet < 0 || octet > 255)) return false;
+  return octets[0] === 0 ||
+    octets[0] === 10 ||
+    octets[0] === 127 ||
+    octets[0] === 169 && octets[1] === 254 ||
+    octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31 ||
+    octets[0] === 192 && octets[1] === 168;
 }
 
 export function assertNoSensitivePayload(value, location = 'payload', depth = 0) {
@@ -33,6 +49,34 @@ export function assertNoSensitivePayload(value, location = 'payload', depth = 0)
     }
     assertNoSensitivePayload(child, `${location}.${key}`, depth + 1);
   }
+}
+
+export function collectPublicInputUrls(value, location = 'payload', depth = 0, found = new Set()) {
+  if (depth > 12) throw new AdapterError('Remote compute payload is nested too deeply', { code: 'PAYLOAD_DEPTH_EXCEEDED' });
+  if (typeof value === 'string' && URL_LIKE.test(value.trim())) {
+    let url;
+    try { url = new URL(value.trim()); }
+    catch { throw new AdapterError(`Remote compute input URL is invalid: ${location}`, { code: 'PUBLIC_INPUT_URL_INVALID' }); }
+    if (!PUBLIC_URL_PROTOCOLS.has(url.protocol)) {
+      throw new AdapterError(`Remote compute public input must use HTTPS: ${location}`, { code: 'PUBLIC_INPUT_HTTPS_REQUIRED' });
+    }
+    if (url.username || url.password) {
+      throw new AdapterError(`Credentials are forbidden in remote compute public input URLs: ${location}`, { code: 'PUBLIC_INPUT_CREDENTIAL_BLOCKED' });
+    }
+    if (privateNetworkHost(url.hostname)) {
+      throw new AdapterError(`Remote compute public input cannot target a local or private network: ${location}`, { code: 'PUBLIC_INPUT_NETWORK_BLOCKED' });
+    }
+    found.add(url.toString());
+    return [...found];
+  }
+  if (Array.isArray(value)) {
+    for (let index = 0; index < value.length; index += 1) collectPublicInputUrls(value[index], `${location}[${index}]`, depth + 1, found);
+    return [...found];
+  }
+  if (isObject(value)) {
+    for (const [key, child] of Object.entries(value)) collectPublicInputUrls(child, `${location}.${key}`, depth + 1, found);
+  }
+  return [...found];
 }
 
 export function assertZeroSpendRemoteResource(resource, now = new Date()) {
@@ -82,6 +126,7 @@ export function assertRemoteComputeJob(job, resource, allowedJobTypes = []) {
     throw new AdapterError('Remote compute payload exceeds the bounded manifest limit', { code: 'REMOTE_PAYLOAD_TOO_LARGE' });
   }
   assertNoSensitivePayload(job.payload);
+  collectPublicInputUrls(job.payload);
   assertZeroSpendRemoteResource(resource);
 }
 
@@ -169,7 +214,7 @@ export async function readResponseBounded(response, maximumBytes = 2 * 1024 * 10
 
 export function computeProvenance({ resource, adapterId, adapterVersion, operation, sourceUrls = [], retrievedAt = new Date().toISOString(), contentHash = null }) {
   return {
-    source_urls: sourceUrls.filter(Boolean),
+    source_urls: [...new Set(sourceUrls.filter(Boolean).map(value => new URL(value).toString()))],
     retrieved_at: retrievedAt,
     adapter_id: adapterId,
     adapter_version: adapterVersion,
@@ -182,4 +227,12 @@ export function computeProvenance({ resource, adapterId, adapterVersion, operati
   };
 }
 
-export const computeGuardInternals = { SENSITIVE_KEY, isObject, encodedBytes, execFileDefault };
+export const computeGuardInternals = {
+  SENSITIVE_KEY,
+  PUBLIC_URL_PROTOCOLS,
+  URL_LIKE,
+  isObject,
+  encodedBytes,
+  privateNetworkHost,
+  execFileDefault
+};

@@ -16,6 +16,7 @@ on:
       - 'migrations/phase9_ai_resource_orchestration.sql'
       - 'migrations/phase10_ai_autonomy.sql'
       - 'migrations/phase11_local_job_queue.sql'
+      - 'migrations/phase12_opportunity_hunter.sql'
       - 'wrangler.toml'
       - 'wrangler.jsonc'
       - '.github/workflows/ai-autonomy-safety.yml'
@@ -88,6 +89,7 @@ jobs:
               'migrations/phase9_ai_resource_orchestration.sql',
               'migrations/phase10_ai_autonomy.sql',
               'migrations/phase11_local_job_queue.sql',
+              'migrations/phase12_opportunity_hunter.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -106,6 +108,8 @@ jobs:
               'ai_site_improvement_actions',
               'ai_local_jobs',
               'ai_local_job_receipts',
+              'ai_opportunities',
+              'ai_opportunity_hunter_runs',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -122,15 +126,21 @@ jobs:
 
           jobs_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_local_jobs'").fetchone()[0]
           receipts_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_local_job_receipts'").fetchone()[0]
+          opportunities_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_opportunities'").fetchone()[0]
+          hunter_runs_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_opportunity_hunter_runs'").fetchone()[0]
           if "job_type IN ('deterministic.hash','llm.generate')" not in jobs_schema:
               raise SystemExit('Local job schema does not enforce the execution allowlist')
           if 'cost_confirmed_zero = 1' not in receipts_schema:
               raise SystemExit('Local job receipts do not structurally enforce zero cost')
           if 'external_network_used = 0' not in receipts_schema:
               raise SystemExit('Local job receipts do not structurally enforce the network boundary')
+          if "approval_state IN ('approved-auto','awaiting-owner','quarantined','disabled')" not in opportunities_schema:
+              raise SystemExit('Opportunity schema does not enforce approval states')
+          if 'zero_spend_lock = 1' not in hunter_runs_schema:
+              raise SystemExit('Opportunity Hunter runs do not structurally enforce zero spend')
 
           flags = {row[0]: row[1] for row in database.execute('SELECT flag_name, enabled FROM ai_feature_flags')}
-          for flag in ['AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED', 'AI_RESOURCE_AUTO_APPROVAL_ENABLED']:
+          for flag in ['AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED', 'AI_RESOURCE_AUTO_APPROVAL_ENABLED', 'AI_OPPORTUNITY_HUNTER_ENABLED']:
               if flags.get(flag) != 0:
                   raise SystemExit(f'{flag} must start disabled before reviewed activation')
 
@@ -142,7 +152,7 @@ jobs:
           if duplicate_resources:
               raise SystemExit(f'Duplicate resources after rerun: {duplicate_resources}')
 
-          print('D1 phases 9, 10 and 11 passed two complete executions with prompt-local, allowlist and zero-spend constraints.')
+          print('D1 phases 9, 10, 11 and 12 passed two complete executions with prompt-local, allowlist and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -151,6 +161,7 @@ jobs:
           grep -F 'AI_RESOURCE_AUTO_APPROVAL_ENABLED = "false"' wrangler.toml
           grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"' wrangler.toml
           grep -F 'AI_SITE_DIRECTOR_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_OPPORTUNITY_HUNTER_ENABLED = "false"' wrangler.toml
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
           grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
@@ -161,6 +172,8 @@ jobs:
           grep -F 'migrations/phase9_ai_resource_orchestration.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase10_ai_autonomy.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase11_local_job_queue.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase12_opportunity_hunter.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
+          grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml
           grep -F 'node scripts/verify-live-ai-management.mjs' .github/workflows/deploy.yml

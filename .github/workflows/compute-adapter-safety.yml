@@ -12,7 +12,9 @@ on:
       - 'scripts/compute-adapter-test.mjs'
       - 'scripts/remote-compute-policy-test.mjs'
       - 'scripts/capability-director-test.mjs'
+      - 'scripts/configure-compute-provider.mjs'
       - 'scripts/run-autonomous-capability-director.mjs'
+      - 'scripts/run-autonomous-ai-manager.mjs'
       - '.github/workflows/compute-adapter-safety.yml'
   workflow_dispatch:
 
@@ -47,7 +49,9 @@ jobs:
           node --check ai-management/node/remote-compute-broker.mjs
           node --check ai-management/policy-engine/zero-spend-policy.mjs
           node --check ai-management/autonomy/capability-director.mjs
+          node --check scripts/configure-compute-provider.mjs
           node --check scripts/run-autonomous-capability-director.mjs
+          node --check scripts/run-autonomous-ai-manager.mjs
           node --check scripts/compute-adapter-test.mjs
           node --check scripts/remote-compute-policy-test.mjs
           node --check scripts/capability-director-test.mjs
@@ -72,5 +76,8 @@ jobs:
           grep -F "remote_compute === true" ai-management/policy-engine/zero-spend-policy.mjs
           grep -F "Remote compute adapter returned incomplete provenance" ai-management/provider-adapters/compute/remote-compute-session.mjs
           grep -F "The local computer remains the controller" ai-management/autonomy/capability-director.mjs
-          grep -F "AI_REMOTE_COMPUTE_EXECUTION_ENABLED" scripts/run-autonomous-capability-director.mjs
-          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute ai-management/autonomy scripts/compute-adapter-test.mjs scripts/remote-compute-policy-test.mjs scripts/capability-director-test.mjs
+          grep -F "AI_REMOTE_COMPUTE_EXECUTION_ENABLED" scripts/run-autonomous-ai-manager.mjs
+          grep -F "Store only the credential binding name" scripts/configure-compute-provider.mjs
+          grep -F "Google Colab free tier cannot be onboarded" scripts/configure-compute-provider.mjs
+          grep -F "Lightning AI remains blocked" scripts/configure-compute-provider.mjs
+          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute ai-management/autonomy scripts/compute-adapter-test.mjs scripts/remote-compute-policy-test.mjs scripts/capability-director-test.mjs scripts/configure-compute-provider.mjs

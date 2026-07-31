@@ -1,0 +1,46 @@
+name: External Compute Activation Gate
+
+on:
+  pull_request:
+    paths:
+      - 'docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md'
+      - 'ai-management/provider-adapters/opportunities/**'
+      - 'scripts/huggingface-publicai-zero-spend-test.mjs'
+      - '.github/workflows/external-compute-activation.yml'
+  push:
+    branches:
+      - build/local-execution-daemon-v1
+    paths:
+      - 'docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md'
+      - 'ai-management/provider-adapters/opportunities/**'
+      - 'scripts/huggingface-publicai-zero-spend-test.mjs'
+      - '.github/workflows/external-compute-activation.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  zero-spend-external-compute:
+    name: Prove lawful zero-spend external compute activation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: node scripts/huggingface-publicai-zero-spend-test.mjs
+      - run: node --check ai-management/provider-adapters/opportunities/huggingface-publicai-zero-spend.mjs
+      - name: Enforce permanent doctrine markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'No account or IP rotation.' docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md
+          grep -F 'No quota evasion or free-tier farming.' docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md
+          grep -F 'No payment methods.' docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md
+          grep -F 'No silent fallback to a paid provider.' docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md
+          grep -F 'official discovery -> terms verification -> owner approval -> credential reference -> harmless probe -> EUR 0 receipt -> broker registration -> bounded real job -> completion receipt' docs/EXTERNAL_COMPUTE_ACTIVATION_REQUIREMENT.md

@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-07-30T06:18:27.044Z",
-  "pageCount": 133,
+  "generatedAt": "2026-07-31T06:38:57.739Z",
+  "pageCount": 132,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Search V3 Runtime Report",
-    "contentHash": "619e5f78be18f637b5bedfeaa6bc69414ebf942657967ec643c626b2cd16a1c3",
+    "contentHash": "e583acfd941bf92ea4b7292609887eb0e8c6ef5cdf181edbab52901915d14eed",
     "sourceIds": [
       "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-9549433fcfc93118c8a9d2e7",
+      "a21f3d8e98268d5e01e1eb7c",
+      "44505b4afb60938c8117ad31",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
@@ -37,6 +38,7 @@
       "fafa3982950de0fd589ad0d0",
       "4a8dd46bd8d4335f061e03ac",
       "d2f7882f509480d63c31702f",
+      "8c8118614f58e40c87e2c2f7",
       "7421c8730d950627b0da1b3d",
       "d3589cf045e6d530b37381a9",
       "3238162301d466634ccd3040",
@@ -52,19 +54,13 @@
       "aae51d03dc366bfb0267f3b4",
       "d14e4429f1aed4184833d607",
       "d9e22936bbbe2b9382150fbe",
-      "ce7d01ec7360da30cb531416",
-      "02a4d3de860d06619024f48c",
-      "1627734cba53ae944ce56fa9",
-      "2034ec0836c52fb55f23c7f5",
-      "56dae7e069b386889d749cf6",
-      "59c1e257d8d46186344d6ed7",
-      "603b714a5abe917f3094b455",
+      "source-change-96b50a0ea1ae9a6b5767f2c2",
+      "source-change-a21f3d8e98268d5e01e1eb7c",
+      "source-change-44505b4afb60938c8117ad31",
+      "source-change-701229696b57f88191742d4f",
+      "source-change-edba4782143dd855b818b53a",
       "source-change-14394588e567b7c52bd11cb3",
       "source-change-88269481cf5b04b7b0f83b58",
-      "source-change-eaebe283915d5c0d1982b8e6",
-      "source-change-04178dd78ae55a022df89f05",
-      "source-change-7ee9141a42ad539f58a57e50",
-      "source-change-d748a52eab15ba888051067b",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -81,6 +77,7 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
       "594100b62a47db521fe2a128",
       "9f3052b5d8cec138a2a37e8c",
       "9e8903fd8dfa9b54a1d6db30",
@@ -95,6 +92,10 @@
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
+      "427a4b3a840619411d8d1c33",
+      "a33968b32fce32bd9d6523f6",
+      "fe51591d2f98b1e8140add7f",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-0649A6CC727CB73D",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F"
+      "ASC-REVIEW-B5FCD410F732DBED"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 63,
-      "disputedClaimCount": 69,
+      "primarySourceCount": 62,
+      "disputedClaimCount": 70,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 75,
-      "moneyRecordCount": 76
+      "relationshipCount": 78,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 63 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
+        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; SIGHTLINE ANALYTICS, INC. — Department of Energy; AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; OCLC, INC — Department of Education; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; SIGHTLINE ANALYTICS, INC. — Department of Energy",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
           "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
           "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+          "OCLC, INC — Department of Education",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
-          "SIGHTLINE ANALYTICS, INC. — Department of Energy",
-          "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education"
+          "SIGHTLINE ANALYTICS, INC. — Department of Energy"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

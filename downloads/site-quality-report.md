@@ -2,17 +2,17 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 742
+Scanned pages: 753
 Weak pages: 14
 
 ## Weakest Pages
 - 45/100 — newsletter.html: Thin copy: 67 visible words; Missing evidence route; Missing book/store route; Missing Rumble/video route
 - 60/100 — market-activity.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i; Visible scaffold/internal copy: /builder/i; Dynamic figures need visible source panel: $1,246,437, $490,779, $226,588, $48,251, $147,600
-- 60/100 — site-population-audit.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — claim-classifier.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — dark-speculation-lab.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i; Visible scaffold/internal copy: /builder/i
 - 68/100 — institution-profile.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
+- 68/100 — public-consequence-contracts.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — source-document-vault.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — subject-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i; Missing Rumble/video route; Intel/evidence page missing Live Intel route
 - 68/100 — subject-epstein-black-file.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
@@ -38,7 +38,7 @@ Weak pages: 14
 - 84/100 — big-three-asset-managers.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 10 conviction
+- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 11 conviction
 - 84/100 — data-lab.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — death-files-methodology.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — deck-expansion-hub.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i

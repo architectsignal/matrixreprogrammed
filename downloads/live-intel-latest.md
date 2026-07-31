@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-31T03:49:12.385Z
+Collection completed: 2026-07-31T06:45:39.705Z
 Latest source publication: 2026-07-31T02:05:57.000Z
-Collection status: fresh-items-added
-New items this collection: 1
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,11 +26,11 @@ New items this collection: 1
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
-- 2026-07-31 — US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+  - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
@@ -67,6 +67,12 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
+  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post. Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
@@ -110,6 +116,36 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment Part 01
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment Part 02 (Final)
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment Part 02 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
+  - Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press. Source first, claim second.
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
+  - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeDRRb1RyYUw1bnVXUjk2STNJcjhpeV9CUlBjMEFLWXBqWTVvblJaa1BmcUVoWDdGSXhfY2lmMWdKR0lEUmZINWNTUWFxQ0lDQUtWd2NEWXVRVHpiUzJacDg2U2ZQQW5tMVZGSEUyOHJBTkQwdGhXSlBNV1AwVXpfSngxaDF2bUpxb1RtQVdzU0N6eFBEOFcyYk1SUTljY2JQcWR4dG5LeW52Njd2SVg0Q3VzTG9WakZxUlBOWkYwaDBfSlRFcjBZMklXRlhZV0FT0gHWAUFVX3lxTE9DVlYzbVZxdFBEUmZYUXBuaUxkNmZBMHZ2M2VKb2NiLWsyMjBZZmNKOE9Xa3VJRzlNcTVOWk40Ri1NY1RkRHZsM19va1Njb0xZZUQwUzk0TmFNSFRNX0xxd3RWR3UzQWJEdDdCLS1DbmV2c3FUbU1ITG1aOGREWDMycFNjZ3hqcDdWcmljLUMxWFNFbXJkemJ2MzlNdU5saHhBTjVSMnAwVEhnWXhRZVM1cU1haDRvWGlKbzlZV0lqRVExVDkwb2V3NlVwenN6QlAyelVUckE?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Crime State Overlap lane: Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com. Source first, claim second.
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
   - Source class: primary-or-official
@@ -145,6 +181,48 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells
+  - Source: https://vault.fbi.gov/brian-wells
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells Part 01
+  - Source: https://vault.fbi.gov/brian-wells/brian-wells-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells Part 02 (Final)
+  - Source: https://vault.fbi.gov/brian-wells/brian-wells-part-02-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells Part 02 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist
+  - Source: https://vault.fbi.gov/lufthansa-heist
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 01
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 02
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-02/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 02
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 03 (Final)
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-03-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 03 (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-27 — 75 years later, the promise to protect refugees faces its greatest test
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168036

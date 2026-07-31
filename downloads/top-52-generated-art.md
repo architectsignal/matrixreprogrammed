@@ -1,6 +1,6 @@
 # Top 52 Generated Card Artwork
 
-Generated: 2026-07-30T06:22:44.898Z
+Generated: 2026-07-31T06:42:29.384Z
 
 Boundary: These are site-ready vector card-art assets for the generated/approved Power Deck cards. They mark the card art as live on-site while binary PNG/WebP portraits can be swapped into the same slots later.
 

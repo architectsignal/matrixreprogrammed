@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T06:26:47.941Z",
+  "generatedAt": "2026-07-31T06:46:05.957Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
@@ -39,9 +39,11 @@
       "stderr": ""
     }
   ],
-  "workerEntrypoint": "src/worker-production.js",
+  "workerEntrypoint": "src/worker-production-autonomy.js",
+  "workerEntryPolicy": "The verified autonomy wrapper delegates every fetch unchanged to the strict fail-closed production Worker and adds only bounded AI scheduled maintenance.",
   "forumStorage": "Cloudflare D1 authoritative with strict insert and exact read-after-write confirmation; KV compatibility/recovery only",
   "forumAccess": "verified free member session across main, speculation and Epstein boards",
+  "aiManagement": "zero-spend resource orchestration and metadata-only routing; prompts and inference remain local",
   "paymentStatus": "runtime-gated-dashboard-managed",
-  "boundary": "Late generators are repaired before this audit. PayPal remains runtime-gated and forum success is impossible without authenticated D1 write/read proof."
+  "boundary": "Late generators are repaired before this audit. The verified wrapper cannot bypass the strict Worker; AI remains prompt-local and zero-spend; PayPal remains runtime-gated; forum success is impossible without authenticated D1 write/read proof."
 }

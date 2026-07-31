@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:09:07.491Z",
+  "generatedAt": "2026-07-31T06:31:12.535Z",
   "pageCount": 74,
   "output": "downloads/card-art-registry.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Card Art Registry",
-    "contentHash": "dc1489f386cda304ea673ede3f41ee3d8b9294ce962380cf34b8dfd61dd5a843",
+    "contentHash": "6dcb84c2709b4c622f4bd25be2b3ec3b6000a8d77ae3454036aca0dbf87a1733",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -64,6 +64,7 @@
       "alex-karp",
       "miriam-adelson",
       "rupert-murdoch",
+      "48315ec59cadd154d31bf1cf",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "king-charles-iii",
@@ -73,16 +74,18 @@
       "ray-dalio",
       "ant-nio-guterres",
       "priscilla-chan",
-      "4712eed42978b8a5e911c47a",
       "mackenzie-scott",
       "controlled-opposition",
       "26b90533dbf7d2ed42f02de6",
       "7dcf4ef18ea1f86d01068773",
       "360e80c162081c85d2c680ef",
+      "d0b647e325275daa6d824a49",
       "eb3448928554960651da56f6",
+      "cee347fbc3752c6e0f890457",
       "jensen-huang",
       "5143def4d109df60d6ae99db",
       "384bb39bdc916ad6752ac63a",
+      "daily-revelation-report",
       "2828a0d0f67977aa4a3e373c",
       "de58872cc8483198b691c403",
       "b5a32a76f19d554c484e917f",
@@ -91,12 +94,11 @@
       "brookings-institution",
       "zuckerberg-chan-family",
       "world-economic-forum-policy-platform",
-      "daily-revelation-report",
       "billionaire-elon-musk",
       "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
-      "d0b647e325275daa6d824a49",
+      "640d4c4d982f3097aa47ff81",
       "larry-ellison",
       "alex-jones",
       "mark-sargent",
@@ -107,34 +109,32 @@
       "council-on-foreign-relations",
       "trilateral-commission",
       "chatham-house",
-      "atlantic-council",
-      "bill-and-melinda-gates-foundation",
-      "international-organization-for-standardization"
+      "atlantic-council"
     ],
     "metrics": {
       "evidenceCount": 103,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 1,
+      "primarySourceCount": 6,
+      "disputedClaimCount": 2,
       "newEntityCount": 26,
       "updatedAssessmentCount": 1,
       "relationshipCount": 13,
-      "moneyRecordCount": 72
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Card Art Registry.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Card Art Registry.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Counter Narcotics Sanctions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “Counter Narcotics Sanctions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Recent Actions | Office of Foreign Assets Control This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -181,6 +181,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T17:52:41.636Z"
   }
 }

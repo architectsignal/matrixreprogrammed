@@ -1,6 +1,6 @@
 # Card Download Manifest
 
-Updated: 2026-07-30T06:23:07.415Z
+Updated: 2026-07-31T06:42:44.290Z
 
 Decks: 9
 

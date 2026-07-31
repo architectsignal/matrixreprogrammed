@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T06:27:29.884Z",
+  "generatedAt": "2026-07-31T06:46:46.188Z",
   "title": "Public Consequence Due Index",
   "purpose": "A compact bounded manifest for the Cloudflare Free tracking runtime. Historical contracts persist in D1 after they leave this current manifest.",
   "freeTierBudget": {
@@ -10,7 +10,7 @@
     "perFollowerWrites": 0,
     "aiInferenceInsideWorker": false
   },
-  "count": 7,
+  "count": 8,
   "contracts": [
     {
       "id": "consequence-war-machine-2026-07-28-21290c31",
@@ -41,66 +41,6 @@
         }
       ],
       "contentHash": "eb53e2cdeb2661cc09e238c35dd15f59f27155cdd11dccf59d713a246a11e064"
-    },
-    {
-      "id": "consequence-war-machine-2026-07-28-20290a9e",
-      "title": "Forced online scams: IOM warns trafficking networks are booming",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-28-20290a9e",
-      "actionDate": "2026-07-28T12:00:00.000Z",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168038",
-      "evidenceRoute": "evidence-vault.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Forced online scams: IOM warns trafficking networks are booming”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-27T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-26T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-28T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "a05133cdfe7a7efe66bc99f65c3d659e83a1c6aa2ad964df741b825fc9bf2d5a"
-    },
-    {
-      "id": "consequence-war-machine-2026-07-28-1a1c3539",
-      "title": "HIV, hepatitis, STI gains at risk as funding falls, WHO warns",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-28-1a1c3539",
-      "actionDate": "2026-07-28T12:00:00.000Z",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168040",
-      "evidenceRoute": "evidence-vault.html",
-      "accountabilityQuestion": "What measurable public consequence followed “HIV, hepatitis, STI gains at risk as funding falls, WHO warns”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-27T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-26T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-28T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "b73ec1145663f14d5a3f0763e85675ccc15dcd3d266ff55e003740f579d7f368"
     },
     {
       "id": "consequence-war-machine-2026-07-29-221c41d1",
@@ -221,6 +161,96 @@
         }
       ],
       "contentHash": "c5dc8cc4b53212732c769878e311938f39ecf34944b0d634972e515b04813cdb"
+    },
+    {
+      "id": "consequence-war-machine-2026-07-30-1619f056",
+      "title": "Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-30-1619f056",
+      "actionDate": "2026-07-30T12:00:00.000Z",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168052",
+      "evidenceRoute": "evidence-vault.html",
+      "accountabilityQuestion": "What measurable public consequence followed “Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-29T12:00:00.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-28T12:00:00.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-30T12:00:00.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "90654f1d58db445391ba7e4317dcebf6dc007d59c3a561f10e5266b5fe1b1a29"
+    },
+    {
+      "id": "consequence-epstein-files-2026-07-30-2a83e994",
+      "title": "Epstein files: How victims remain exposed to identification - DW.com",
+      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-2a83e994",
+      "actionDate": "2026-07-30T16:07:32.000Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+      "accountabilityQuestion": "What measurable public consequence followed “Epstein files: How victims remain exposed to identification - DW.com”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-29T16:07:32.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-28T16:07:32.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-30T16:07:32.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "9e9a51364410a932b1b77835b3eae8e0617c3601c4922f9f1fcd795ee14c4c78"
+    },
+    {
+      "id": "consequence-epstein-files-2026-07-31-b0ba52f7",
+      "title": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation",
+      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-31-b0ba52f7",
+      "actionDate": "2026-07-31T02:05:57.000Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+      "accountabilityQuestion": "What measurable public consequence followed “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-30T02:05:57.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-29T02:05:57.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-31T02:05:57.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "988402782a2ac285d0260192306585a747b80f0e17ad723c632ad109ebd98c3f"
     }
   ]
 }

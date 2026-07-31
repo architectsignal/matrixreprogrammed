@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-07-30T06:20:19.918Z",
-  "pageCount": 104,
+  "generatedAt": "2026-07-31T06:40:26.540Z",
+  "pageCount": 106,
   "output": "downloads/wealth-pdf-layout-wiring.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Wealth Pdf Layout Wiring",
-    "contentHash": "30f5f89d5561cd2a2294cf726e195af6e89076be63e7e552b9ee92afc47e22a2",
+    "contentHash": "a2d57aaf453f689c1e8f2e2b7b6498b5f1734364f5f8b196f2b0a45834da9db8",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "360e80c162081c85d2c680ef",
       "2482c3e0241c7c7679a18cd1",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
+      "aa119272f233de638bb1e02d",
+      "0286171e0bf7415859b35948",
       "b4cb47ea50dc901364239e9f",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -35,6 +37,8 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-6C02F7DFCB3CC39B",
+      "a21f3d8e98268d5e01e1eb7c",
+      "44505b4afb60938c8117ad31",
       "88269481cf5b04b7b0f83b58",
       "04178dd78ae55a022df89f05",
       "government-contractors-lockheed-martin",
@@ -93,10 +97,11 @@
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
       "511ed227bb4be58b582ebb8d",
+      "source-change-96b50a0ea1ae9a6b5767f2c2",
+      "640d4c4d982f3097aa47ff81",
+      "source-change-701229696b57f88191742d4f",
       "source-change-205bd2407ea96080fdae5fe8",
       "source-change-14394588e567b7c52bd11cb3",
-      "source-change-9549433fcfc93118c8a9d2e7",
-      "source-change-d748a52eab15ba888051067b",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -113,16 +118,6 @@
       "f8282c39e73330693c2bbcc9",
       "03dda408992605c06806fade",
       "21bdd50b031237ab748528a1",
-      "declassified-files-2026-07-24-c827955e",
-      "declassified-files-2026-07-23-7b43a9b4",
-      "declassified-files-2026-07-23-55829d5e",
-      "declassified-files-2026-07-23-670b739b",
-      "declassified-files-2026-07-23-b397fa50",
-      "declassified-files-2026-07-23-4ca5fddd",
-      "declassified-files-2026-07-23-f3f4de32",
-      "declassified-files-2026-07-23-534fbf8f",
-      "declassified-files-2026-07-23-55e56994",
-      "declassified-files-2026-07-23-9e3d6831",
       "0a26aac7a545fdec972456f1",
       "6f24413e4cc0832e80e3ca03",
       "cbe0915cb2d88f076ed7b91e",
@@ -146,7 +141,12 @@
       "a14c474ff4f291b0a260ee46",
       "06baa45bea3e2e15eb80eff9",
       "a8d2d3bf834ea59c6a49b8ea",
-      "2d4be12850f5299709adc82a"
+      "2d4be12850f5299709adc82a",
+      "8212c1ebe163e30add33aeaf",
+      "b866e2c7eb4ced9098559c86",
+      "eb5d60860a79b38aeefa3633",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "4230305352f457f0cfcd2c1c"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 10,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 45,
-      "moneyRecordCount": 54
+      "relationshipCount": 35,
+      "moneyRecordCount": 57
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Wealth Pdf Layout Wiring.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 45 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 45 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "Westminster inquiry examined political and policing responses",

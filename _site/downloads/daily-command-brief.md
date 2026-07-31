@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-30T06:08:12.515Z
+Updated: 2026-07-31T06:30:23.109Z
 
 ## Top Contractor Signals
 

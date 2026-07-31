@@ -46,7 +46,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-30T06:07:53.427Z
+Updated: 2026-07-31T06:30:03.292Z
 Items: 12
 
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post

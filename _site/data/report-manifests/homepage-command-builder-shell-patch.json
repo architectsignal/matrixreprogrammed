@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:14:04.450Z",
-  "pageCount": 135,
+  "generatedAt": "2026-07-31T06:35:15.659Z",
+  "pageCount": 132,
   "output": "downloads/homepage-command-builder-shell-patch.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Homepage Command Builder Shell Patch",
-    "contentHash": "2e436de46197a03e9ce7dc778b9d896f734243a62b324bd9838bd2fcfd6b8edd",
+    "contentHash": "e22f7a2b2181b7e23b0dd905e2b3f3e4ce6287fb82e97d694734b3905ea359c8",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
@@ -25,6 +25,11 @@
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "72ef7895f95288946ccb3cff",
+      "ASC-REVIEW-8E57602B48B9C301",
+      "ASC-REVIEW-5745DAEE3A7221DC",
+      "ASC-REVIEW-9EBC0B258FA9E647",
+      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -54,9 +59,6 @@
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
       "ASC-REVIEW-288CD8D5C42C050E",
-      "ASC-REVIEW-0807002D2DF4DE89",
-      "ASC-REVIEW-1317EEF720A36A76",
-      "ASC-REVIEW-1B2E5D07E27D9811",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-2527E3DEA85AE958",
       "ASC-REVIEW-AF658BEE2D866332",
       "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-3B7DCAEF5ABCE701"
+      "ASC-REVIEW-A04C87BD046475D3"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 138,
+      "disputedClaimCount": 137,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 133,
-      "moneyRecordCount": 129
+      "relationshipCount": 132,
+      "moneyRecordCount": 127
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 133 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 133 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T06:14:04.450Z"
+    "intelligenceFreshnessDate": "2026-07-31T06:35:15.659Z"
   }
 }

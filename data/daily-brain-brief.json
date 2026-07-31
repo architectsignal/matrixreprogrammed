@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T17:53:27.638Z",
+  "updated": "2026-07-31T06:30:04.049Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -450,8 +450,6 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -523,28 +521,6 @@
       ]
     },
     {
-      "id": "nvidia-corp",
-      "name": "NVIDIA CORP",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ]
-    },
-    {
-      "id": "nvda",
-      "name": "NVDA",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ]
-    },
-    {
       "id": "apple-inc",
       "name": "Apple Inc.",
       "count": 1,
@@ -558,6 +534,28 @@
     {
       "id": "aapl",
       "name": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "nvidia-corp",
+      "name": "NVIDIA CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "nvda",
+      "name": "NVDA",
       "count": 1,
       "lanes": [
         "sec-edgar-filings"
@@ -590,7 +588,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-31T03:48:54.090Z",
+    "updated": "2026-07-31T06:30:04.107Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -685,11 +683,11 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0001045810-1",
+      "id": "sec-edgar-filings-cik0000320193-1",
       "date": "2026-07-31",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
+      "summary": "Apple Inc. (AAPL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -699,11 +697,11 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0000320193-2",
+      "id": "sec-edgar-filings-cik0001045810-2",
       "date": "2026-07-31",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
+      "summary": "NVIDIA CORP (NVDA)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -770,9 +768,9 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-31T03:49:11.427Z",
+    "updated": "2026-07-31T06:30:22.956Z",
     "newRecordCount": 2,
-    "changedRecordCount": 6,
+    "changedRecordCount": 0,
     "removedRecordCount": 2,
     "relationshipCandidateCount": 25,
     "evidenceUpgradeCount": 0,
@@ -783,20 +781,20 @@
   },
   "topChangeSignals": [
     {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/"
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     },
     {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Williams v. Biggs",
-      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/"
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     }
   ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-31T03:49:11.563Z",
+    "updated": "2026-07-31T06:30:23.077Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -830,7 +828,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-31T03:49:11.599Z",
+    "updated": "2026-07-31T06:30:23.109Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",
@@ -842,107 +840,9 @@
     "entityTimelinesRoute": "entity-timelines.html",
     "boundary": "Master brief engine adds readable command intelligence without replacing source review."
   },
-  "integrityVersion": 1,
-  "integrity": [
-    {
-      "id": "brain-1",
-      "title": "Daily brain conclusion 1",
-      "conclusion": "Disclosure pressure is a top exposure lane because withheld records reveal the structure of protection and omission.",
-      "route": "daily-brain-brief.html",
-      "classification": "evidence-graded synthesis",
-      "confidence": "medium-high",
-      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
-      "supportingCount": 5,
-      "freshness": "2026-07-30T17:53:27.638Z",
-      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
-      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
-      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
-      "sources": [
-        "data/daily-brain-brief.json",
-        "data/outcome-briefings.json",
-        "data/probability-lab-core.json"
-      ]
-    },
-    {
-      "id": "brain-2",
-      "title": "Daily brain conclusion 2",
-      "conclusion": "Policy-system convergence remains the strongest system-level pattern; the key test is whether access becomes mandatory, centralized or vendor-controlled.",
-      "route": "daily-brain-brief.html",
-      "classification": "evidence-graded synthesis",
-      "confidence": "medium",
-      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
-      "supportingCount": 5,
-      "freshness": "2026-07-30T17:53:27.638Z",
-      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
-      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
-      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
-      "sources": [
-        "data/daily-brain-brief.json",
-        "data/outcome-briefings.json",
-        "data/probability-lab-core.json"
-      ]
-    },
-    {
-      "id": "brain-3",
-      "title": "Daily brain conclusion 3",
-      "conclusion": "Gold reserves must be tracked through ownership and custody separately because reported tonnes do not prove physical location or encumbrance status.",
-      "route": "daily-brain-brief.html",
-      "classification": "evidence-graded synthesis",
-      "confidence": "medium",
-      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
-      "supportingCount": 5,
-      "freshness": "2026-07-30T17:53:27.638Z",
-      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
-      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
-      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
-      "sources": [
-        "data/daily-brain-brief.json",
-        "data/outcome-briefings.json",
-        "data/probability-lab-core.json"
-      ]
-    },
-    {
-      "id": "brain-4",
-      "title": "Daily brain conclusion 4",
-      "conclusion": "Wealth and institutional influence should be mapped through infrastructure dependency, filings, contracts and grant routes, not slogans.",
-      "route": "daily-brain-brief.html",
-      "classification": "evidence-graded synthesis",
-      "confidence": "medium",
-      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
-      "supportingCount": 5,
-      "freshness": "2026-07-30T17:53:27.638Z",
-      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
-      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
-      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
-      "sources": [
-        "data/daily-brain-brief.json",
-        "data/outcome-briefings.json",
-        "data/probability-lab-core.json"
-      ]
-    },
-    {
-      "id": "brain-5",
-      "title": "Daily brain conclusion 5",
-      "conclusion": "Speculation should become a record engine: exact claim, source chain, counter-source, probability trigger and downgrade condition.",
-      "route": "daily-brain-brief.html",
-      "classification": "evidence-graded synthesis",
-      "confidence": "medium",
-      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
-      "supportingCount": 5,
-      "freshness": "2026-07-30T17:53:27.638Z",
-      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
-      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
-      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
-      "sources": [
-        "data/daily-brain-brief.json",
-        "data/outcome-briefings.json",
-        "data/probability-lab-core.json"
-      ]
-    }
-  ],
   "dailyWatch": {
-    "updated": "2026-07-30T17:53:47.679Z",
-    "date": "2026-07-30",
+    "updated": "2026-07-31T06:43:40.400Z",
+    "date": "2026-07-31",
     "route": "daily-watch.html",
     "person": {
       "type": "person",
@@ -999,9 +899,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 24
+        "directFreshRecords": 23
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 24 fresh records plus 31 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 23 fresh records plus 31 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [

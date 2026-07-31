@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-30T06:22:44.816Z
+Generated: 2026-07-31T06:42:29.197Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-30T06:22:44.816Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post — live-intel.html
-- 72 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — live-intel.html
-- 72 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — live-intel.html
-- 72 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — live-intel.html
-- 72 — Hunger hampers Ebola response as cases top 3,200 in DR Congo — live-intel.html
+- 72 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — live-intel.html
+- 72 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian — live-intel.html
+- 72 — Epstein files: How victims remain exposed to identification - DW.com — live-intel.html
+- 72 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities — live-intel.html
+- 72 — Returning Afghans face growing risk of trafficking as crises deepen — live-intel.html

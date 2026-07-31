@@ -1,20 +1,22 @@
 {
-  "generatedAt": "2026-07-30T06:08:38.709Z",
+  "generatedAt": "2026-07-31T06:30:49.674Z",
   "pageCount": 117,
   "output": "downloads/automatic-orchestrator-final-audit.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Automatic Orchestrator Final Audit",
-    "contentHash": "8c44976037d49714ad29cdb039f9f5028b6a72f9fe2e0d07f086d1f1569176ba",
+    "contentHash": "d98c3a26599b2ab6e8b7d1ecc75c72750aeaecec15c3ca23f54165d4bd453f00",
     "sourceIds": [
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
+      "3a425f0d5d683952bc0ad7ac",
       "157cdab04b61ae6309c0c713",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "26b90533dbf7d2ed42f02de6",
+      "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "71e0563ca7b139c37c302956",
       "5594665950812895f468c11d",
@@ -25,7 +27,6 @@
       "ASC-REVIEW-9E85403F3389F334",
       "88269481cf5b04b7b0f83b58",
       "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
       "41af4eba97b7eb1c0afb301f",
       "f6d3c17beb9371b8f2b165aa",
       "ff1a3a77816af400f09ab95e",
@@ -88,11 +89,12 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
+      "44505b4afb60938c8117ad31",
       "7ee9141a42ad539f58a57e50",
-      "eb79eba926106673fc0305cc",
       "72ef7895f95288946ccb3cff",
       "e72d22f4f28eb53e3173d0a6",
       "008875ef7bf45eb14dccb254",
+      "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
       "2931a84c2c7fe86982d5d6e5",
       "1c352ab364fbfca06ab12a57",
@@ -111,12 +113,12 @@
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
+      "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-C954C3B615AAFE11",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
@@ -142,24 +144,22 @@
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-13C647485101902F",
-      "ASC-REVIEW-2CE1A691C8D09631",
-      "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-06F8715410848053"
+      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-52F3C5EC8401656D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 32,
-      "disputedClaimCount": 98,
+      "primarySourceCount": 34,
+      "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 84,
-      "moneyRecordCount": 86
+      "relationshipCount": 83,
+      "moneyRecordCount": 83
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
+        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 83 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Bill Gates → Microsoft Legacy: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Gates Foundation: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 83 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Bill Gates → Microsoft Legacy: ecosystem hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
   }
 }

@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-30T06:08:18.482Z
+Updated: 2026-07-31T06:30:28.398Z
 
 ## Status
 
-- Live Intel items: 67
+- Live Intel items: 49
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -12,15 +12,43 @@ Updated: 2026-07-30T06:08:18.482Z
 
 ## Latest Items
 
-- 2026-07-30 — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
+- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-30 — Epstein files: How victims remain exposed to identification - DW.com
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+- 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-30 — Returning Afghans face growing risk of trafficking as crises deepen
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168051
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-30 — Wildfires: Prevention is the best defence, UN says
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168054
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
+  - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
@@ -36,35 +64,7 @@ Updated: 2026-07-30T06:08:18.482Z
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168045
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-29 — World Wrestling Entertainment
-  - Source: https://vault.fbi.gov/world-wrestling-entertainment
-  - Evidence: Primary or official public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-29 — World Wrestling Entertainment Part 01
-  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
-  - Evidence: Primary or official public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-29 — World Wrestling Entertainment Part 02 (Final)
-  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
-  - Evidence: Primary or official public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-28 — Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-  - Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-28 — Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
-  - Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeDRRb1RyYUw1bnVXUjk2STNJcjhpeV9CUlBjMEFLWXBqWTVvblJaa1BmcUVoWDdGSXhfY2lmMWdKR0lEUmZINWNTUWFxQ0lDQUtWd2NEWXVRVHpiUzJacDg2U2ZQQW5tMVZGSEUyOHJBTkQwdGhXSlBNV1AwVXpfSngxaDF2bUpxb1RtQVdzU0N6eFBEOFcyYk1SUTljY2JQcWR4dG5LeW52Njd2SVg0Q3VzTG9WakZxUlBOWkYwaDBfSlRFcjBZMklXRlhZV0FT0gHWAUFVX3lxTE9DVlYzbVZxdFBEUmZYUXBuaUxkNmZBMHZ2M2VKb2NiLWsyMjBZZmNKOE9Xa3VJRzlNcTVOWk40Ri1NY1RkRHZsM19va1Njb0xZZUQwUzk0TmFNSFRNX0xxd3RWR3UzQWJEdDdCLS1DbmV2c3FUbU1ITG1aOGREWDMycFNjZ3hqcDdWcmljLUMxWFNFbXJkemJ2MzlNdU5saHhBTjVSMnAwVEhnWXhRZVM1cU1haDRvWGlKbzlZV0lqRVExVDkwb2V3NlVwenN6QlAyelVUckE?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-- 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-28 — Climate alarm ‘blaring from every direction’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168042
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-28 — Forced online scams: IOM warns trafficking networks are booming
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168038
+- 2026-07-29 — World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168049
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

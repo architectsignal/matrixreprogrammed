@@ -1,0 +1,100 @@
+{
+  "updated": "2026-07-30",
+  "purpose": "Owner-reviewed zero-spend automation approvals for exact public investigation source URLs. Entries do not approve linked domains, changed URLs, authenticated services, paid tiers or non-public data.",
+  "defaults": {
+    "approvedForAutomation": true,
+    "zeroSpendVerified": true,
+    "quotaVerified": true,
+    "billingRisk": "none",
+    "concurrencyLimit": 1,
+    "bootstrapHealthVerifiedAt": "2026-07-30",
+    "lastTermsCheck": "2026-07-30T00:00:00.000Z",
+    "lastQuotaCheck": "2026-07-30T00:00:00.000Z",
+    "termsRevalidationDue": "2026-08-29T00:00:00.000Z"
+  },
+  "policies": {
+    "doj-epstein-disclosures": {
+      "sourceUrl": "https://www.justice.gov/epstein/doj-disclosures",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.justice.gov/epstein/doj-disclosures",
+      "termsUrl": "https://www.justice.gov/legalpolicies",
+      "privacyUrl": "https://www.justice.gov/doj/privacy-policy",
+      "licence": "Public DOJ material; seals, logos and third-party material remain subject to DOJ legal policies. One bounded page request per scheduled collection."
+    },
+    "doj-justice-news": {
+      "sourceUrl": "https://www.justice.gov/news",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.justice.gov/news",
+      "termsUrl": "https://www.justice.gov/legalpolicies",
+      "privacyUrl": "https://www.justice.gov/doj/privacy-policy",
+      "licence": "Public DOJ news material; seals, logos and third-party material remain subject to DOJ legal policies. One bounded page request per scheduled collection."
+    },
+    "doj-oig-reports": {
+      "sourceUrl": "https://oig.justice.gov/reports",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://oig.justice.gov/reports",
+      "termsUrl": "https://www.justice.gov/legalpolicies",
+      "privacyUrl": "https://www.justice.gov/doj/privacy-policy",
+      "licence": "Public DOJ OIG report index; underlying reports retain their stated legal and attribution notices. One bounded page request per scheduled collection."
+    },
+    "sec-current-filings": {
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+      "termsUrl": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "privacyUrl": "https://www.sec.gov/about/privacy-information",
+      "licence": "Free public EDGAR access under SEC fair-access rules. Requests identify the Matrix Reprogrammed user agent and remain far below the SEC request-rate ceiling."
+    },
+    "sec-litigation-releases": {
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "termsUrl": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "privacyUrl": "https://www.sec.gov/about/privacy-information",
+      "licence": "Free public SEC enforcement index under SEC fair-access rules. One bounded page request per scheduled collection."
+    },
+    "usaspending-recent-contracts": {
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "hardDailyRequestCeiling": 50,
+      "officialDocumentationUrl": "https://api.usaspending.gov/docs/endpoints",
+      "termsUrl": "https://www.usaspending.gov/about",
+      "privacyUrl": "https://www.usaspending.gov/about/privacy",
+      "licence": "Free public federal spending API. Requests are operator-capped, unauthenticated and limited to public award fields."
+    },
+    "treasury-ofac-recent-actions": {
+      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://ofac.treasury.gov/recent-actions",
+      "termsUrl": "https://home.treasury.gov/subfooter/site-policies-and-notices",
+      "privacyUrl": "https://home.treasury.gov/footer/privacy-act/privacy-policy",
+      "licence": "Public Treasury/OFAC recent-actions index; no authenticated or licensing-system access. One bounded page request per scheduled collection."
+    },
+    "house-oversight-releases": {
+      "sourceUrl": "https://oversight.house.gov/release/",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://oversight.house.gov/release/",
+      "termsUrl": "https://clerk.house.gov/privacypolicy",
+      "privacyUrl": "https://clerk.house.gov/privacypolicy",
+      "licence": "Public House committee release index. House seals, recordings and third-party material retain applicable restrictions. One bounded page request per scheduled collection."
+    },
+    "uk-sfo-news": {
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "termsUrl": "https://www.gov.uk/help/terms-conditions",
+      "privacyUrl": "https://www.gov.uk/help/privacy-notice",
+      "licence": "GOV.UK public content is used lawfully under its terms; Crown copyright and Open Government Licence conditions apply where stated. One bounded page request per scheduled collection."
+    },
+    "eppo-news": {
+      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
+      "hardDailyRequestCeiling": 24,
+      "officialDocumentationUrl": "https://www.eppo.europa.eu/media/news_en",
+      "termsUrl": "https://www.eppo.europa.eu/en/disclaimer",
+      "privacyUrl": "https://www.eppo.europa.eu/data-protection-notice-news-articles_en",
+      "licence": "Public EPPO news index; EPPO copyright, disclaimer and data-protection notices remain applicable. One bounded page request per scheduled collection."
+    }
+  },
+  "quarantine": {
+    "wikileaks-publications": "Not auto-approved: current terms, privacy, operational reliability and automation permissions are not sufficiently verified for fail-closed production use."
+  }
+}

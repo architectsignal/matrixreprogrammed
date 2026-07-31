@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-30T06:23:07.885Z
+Updated: 2026-07-31T06:42:44.725Z
 
-Inputs: 3209
+Inputs: 3214
 
-Routed sources: 3209
+Routed sources: 3214
 
 Conclusions: 14
 
-Missing-record queue: 3209
+Missing-record queue: 3214
 
 ## Conclusions
 ### Institution dossier
@@ -33,10 +33,32 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### War/security route
+Conclusion: 5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Missing-record queue
 Conclusion: 5 source route(s) currently point to Missing-record queue. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Missing-record queue is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### People dossier
+Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -59,17 +81,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Health/biosecurity route. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Health/biosecurity route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### War/security route
-Conclusion: 5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -103,17 +114,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Think Tanks dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Think Tanks dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### People dossier
-Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

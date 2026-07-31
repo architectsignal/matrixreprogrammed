@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "checkedAt": "2026-07-30T06:27:30.732Z",
+  "recordCount": 7,
+  "powerChainCount": 7,
+  "evidenceHalfLifeCount": 7,
+  "evidenceRecallCount": 0,
+  "powerDiffCount": 7,
+  "powerDiffBaselineAvailable": false,
+  "redTeamMirrorCount": 7,
+  "noAutomatedVerdicts": true,
+  "publicAnswerClockCount": 7,
+  "runningAnswerClocks": 0,
+  "missingRecordMissionCount": 63,
+  "publicLivedReceiptCount": 0,
+  "rawLivedReceiptsAutoPublished": false,
+  "lockedSystems": [
+    "reverse-accountability-search",
+    "power-supply-chain",
+    "evidence-half-life",
+    "power-diff",
+    "red-team-mirror",
+    "public-answer-clock",
+    "missing-record-missions",
+    "lived-consequence-receipts"
+  ],
+  "missionVoice": true,
+  "homepageEntry": true,
+  "simpleHomepageProtected": true,
+  "innovationLinksFinalized": true,
+  "allEightSystemsConnected": true
+}

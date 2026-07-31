@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T03:48:54.090Z",
+  "updated": "2026-07-31T06:30:04.107Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -73,7 +73,7 @@
     {
       "id": "federal-register-policy-2026-14679-1",
       "date": "2026-07-21",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -107,7 +107,7 @@
     {
       "id": "federal-register-policy-2026-14439-2",
       "date": "2026-07-17",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -141,7 +141,7 @@
     {
       "id": "federal-register-policy-2026-13656-3",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -176,7 +176,7 @@
     {
       "id": "federal-register-policy-2026-13602-4",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -211,7 +211,7 @@
     {
       "id": "federal-register-policy-2026-13057-5",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -245,7 +245,7 @@
     {
       "id": "federal-register-policy-2026-12989-6",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -277,44 +277,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "sec-edgar-filings-cik0001045810-1",
+      "id": "sec-edgar-filings-cik0000320193-1",
       "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "sec-edgar-filings",
-      "source_name": "SEC EDGAR company tickers snapshot",
-      "entity_names": [
-        "NVIDIA CORP",
-        "NVDA"
-      ],
-      "institution_names": [
-        "NVIDIA CORP"
-      ],
-      "control_layers": [
-        "money",
-        "companies",
-        "ownership"
-      ],
-      "record_type": "company_registry_snapshot",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "source_record_id": "CIK0001045810",
-      "summary": "NVIDIA CORP (NVDA)",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "power-entities",
-        "evidence-vault",
-        "outcome-briefings",
-        "search-index"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -347,9 +312,44 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
+      "id": "sec-edgar-filings-cik0001045810-2",
+      "date": "2026-07-31",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "NVIDIA CORP",
+        "NVDA"
+      ],
+      "institution_names": [
+        "NVIDIA CORP"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0001045810",
+      "summary": "NVIDIA CORP (NVDA)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
       "id": "sec-edgar-filings-cik0001652044-3",
       "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -384,7 +384,7 @@
     {
       "id": "sec-edgar-filings-cik0000789019-4",
       "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -419,7 +419,7 @@
     {
       "id": "sec-edgar-filings-cik0001018724-5",
       "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -454,7 +454,7 @@
     {
       "id": "sec-edgar-filings-cik0001730168-6",
       "date": "2026-07-31",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -489,7 +489,7 @@
     {
       "id": "courtlistener-court-records-10936935-1",
       "date": "2026-07-29",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -526,7 +526,7 @@
     {
       "id": "courtlistener-court-records-10936889-2",
       "date": "2026-07-29",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -562,7 +562,7 @@
     {
       "id": "courtlistener-court-records-10936118-3",
       "date": "2026-07-29",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -599,7 +599,7 @@
     {
       "id": "courtlistener-court-records-10935302-4",
       "date": "2026-07-27",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -635,7 +635,7 @@
     {
       "id": "courtlistener-court-records-10933234-5",
       "date": "2026-07-21",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -671,7 +671,7 @@
     {
       "id": "courtlistener-court-records-10928510-6",
       "date": "2026-07-15",
-      "pulled_at": "2026-07-31T03:48:54.090Z",
+      "pulled_at": "2026-07-31T06:30:04.107Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",

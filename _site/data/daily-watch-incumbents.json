@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "updated": "2026-07-30T06:24:08.573Z",
+  "updated": "2026-07-31T06:43:40.400Z",
   "promotionMargin": 14,
   "slots": {
     "person": {
@@ -53,7 +53,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-07-30T06:24:08.573Z",
+      "lastReviewedAt": "2026-07-31T06:43:40.400Z",
       "challengerHeld": "Elon Musk",
       "challengerScore": 91
     },
@@ -68,9 +68,9 @@
           "graphId": "securities-and-exchange-commission",
           "graphType": "missing record",
           "reviewStatus": "machine-extracted-unreviewed",
-          "directFreshRecords": 20
+          "directFreshRecords": 23
         },
-        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 20 fresh records plus 35 retained evidence references.",
+        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 23 fresh records plus 31 retained evidence references.",
         "whatWasFound": "named-in-public-record, refined-from-organization",
         "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
         "investigativeLanes": [
@@ -88,18 +88,18 @@
           "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
           "data/daily-investigation-conclusions.json",
           "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "https://www.federalregister.gov/documents/2026/07/29/2026-15242/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
+          "https://www.federalregister.gov/documents/2026/07/29/2026-15248/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10b-17",
+          "https://www.federalregister.gov/documents/2026/07/29/2026-15281/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c2-1",
+          "https://www.federalregister.gov/documents/2026/07/29/2026-15251/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
+          "https://www.federalregister.gov/documents/2026/07/29/2026-15245/cohen-and-steers-realty-shares-inc-et-al",
+          "https://www.federalregister.gov/documents/2026/07/28/2026-15178/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-5",
+          "https://www.federalregister.gov/documents/2026/07/28/2026-15175/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-of-amendment-no-1-and-order",
+          "https://www.federalregister.gov/documents/2026/07/28/2026-15169/self-regulatory-organizations-ice-clear-credit-llc-order-approving-proposed-rule-change-relating-to",
           "https://www.federalregister.gov/documents/2026/07/27/2026-15057/self-regulatory-organizations-investors-exchange-llc-notice-of-filing-and-immediate-effectiveness-of",
           "https://www.federalregister.gov/documents/2026/07/27/2026-15055/self-regulatory-organizations-nasdaq-ise-llc-notice-of-filing-and-immediate-effectiveness-of",
           "https://www.federalregister.gov/documents/2026/07/27/2026-15053/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10c-1a",
-          "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6",
-          "https://www.federalregister.gov/documents/2026/07/27/2026-15052/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-17a-11",
-          "https://www.federalregister.gov/documents/2026/07/24/2026-14979/cboe-clear-us-llc-notice-of-filing-of-an-application-as-amended-for-temporary-registration-as-a",
-          "https://www.federalregister.gov/documents/2026/07/23/2026-14956/apogem-capital-llc-et-al",
-          "https://www.federalregister.gov/documents/2026/07/24/2026-14977/self-regulatory-organizations-memx-llc-notice-of-filing-of-partial-amendment-no-1-and-order-granting",
-          "https://www.federalregister.gov/documents/2026/07/23/2026-14936/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
-          "https://www.federalregister.gov/documents/2026/07/23/2026-14930/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
-          "https://www.federalregister.gov/documents/2026/07/23/2026-14928/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-608",
-          "https://www.federalregister.gov/documents/2026/07/23/2026-14929/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c3-3"
+          "https://www.federalregister.gov/documents/2026/07/27/2026-15144/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c1-6"
         ],
         "nextQuestions": [
           "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
@@ -112,7 +112,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-and-refreshed",
-      "lastReviewedAt": "2026-07-30T06:24:08.573Z"
+      "lastReviewedAt": "2026-07-31T06:43:40.400Z"
     },
     "family": {
       "item": {
@@ -156,16 +156,16 @@
         "rankingStatus": "incumbent-held-position",
         "incumbentSince": "2026-07-27T17:29:36.861Z",
         "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-        "challengerHeld": "Al Thani family",
+        "challengerHeld": "Al Maktoum family",
         "challengerScore": 122,
-        "retentionReason": "Al Thani family did not carry enough direct fresh evidence to replace the incumbent."
+        "retentionReason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent."
       },
       "rankingScore": 122,
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-07-30T06:24:08.573Z",
-      "challengerHeld": "Al Thani family",
+      "lastReviewedAt": "2026-07-31T06:43:40.400Z",
+      "challengerHeld": "Al Maktoum family",
       "challengerScore": 122
     }
   }

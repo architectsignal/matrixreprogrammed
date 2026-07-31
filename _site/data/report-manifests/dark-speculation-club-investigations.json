@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:10:56.054Z",
-  "pageCount": 123,
+  "generatedAt": "2026-07-31T06:32:38.354Z",
+  "pageCount": 124,
   "output": "downloads/dark-speculation-club-investigations.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Dark Speculation Club Investigations",
-    "contentHash": "d6eb0bf8b975ce458a4ebe0f72518d3572fd855240e2d061b050acf784a14e13",
+    "contentHash": "f4743745e7df68ec2a490860e887695d978d6c41863e48dfc57b34148cb0f988",
     "sourceIds": [
       "73aaa2d62c4c512db208b33b",
       "fd6e0efd2484af99cee3e2d3",
@@ -19,15 +19,19 @@
       "4961972398d896435d33f3f7",
       "9c90c17913e69c549ab192bb",
       "ecd4a1111010f13b2d74bf8c",
-      "4712eed42978b8a5e911c47a",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
+      "48315ec59cadd154d31bf1cf",
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
+      "594100b62a47db521fe2a128",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-8A2ACAFD47272636",
       "521237db5cd68c67b2ecb2b3",
+      "a33968b32fce32bd9d6523f6",
+      "fe51591d2f98b1e8140add7f",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
@@ -52,13 +56,14 @@
       "71e0563ca7b139c37c302956",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
+      "427a4b3a840619411d8d1c33",
+      "8c8118614f58e40c87e2c2f7",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-0C3383FAE797FF46",
@@ -105,7 +110,7 @@
       "8d0375496d59f1d012deaead",
       "deb382cdbfe57b57793d739e",
       "26b90533dbf7d2ed42f02de6",
-      "ASC-REVIEW-F61AF8A572F62AED",
+      "640d4c4d982f3097aa47ff81",
       "ASC-REVIEW-FCEFDBDA93429C4F",
       "ASC-REVIEW-05E559B745692B7C",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -114,7 +119,6 @@
       "ASC-REVIEW-4DC96EE1DF7B7C16",
       "ASC-REVIEW-ED6591FF0C00507A",
       "ASC-REVIEW-1777BDC4116A3527",
-      "ASC-REVIEW-57EDEB5DFEAC6956",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-70AD36F3F75D37F7",
       "ASC-REVIEW-71771BB07AA72BD1",
@@ -138,40 +142,36 @@
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-13C647485101902F",
-      "ASC-REVIEW-2CE1A691C8D09631",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-06CC87AEAF289EB7"
+      "ASC-REVIEW-E3E367656A99DD33",
+      "ASC-REVIEW-26C98CAD8AA9CE0A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 113,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 106,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 111,
-      "moneyRecordCount": 99
+      "relationshipCount": 110,
+      "moneyRecordCount": 102
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Dark Speculation Club Investigations beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Dark Speculation Club Investigations.",
+        "evidence": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); OCLC, INC — Department of Education (data/weekly-investigation-conclusions.json); Counter Narcotics Sanctions (data/daily-investigation-conclusions.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 86,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “Counter Narcotics Sanctions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Recent Actions | Office of Foreign Assets Control This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,31 +179,31 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "BlackRock → Private Markets Infrastructure Expansion: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Mark Zuckerberg → Whatsapp: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer; BlackRock → Ishares: capital layer; BlackRock → Proxy Voting Stewardship: capital layer",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "BlackRock → Private Markets Infrastructure Expansion: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Mark Zuckerberg → Whatsapp: ecosystem hint; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; ARGUS MEDIA INC — Department of Energy; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "BlackRock → Private Markets Infrastructure Expansion: capital layer",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Mark Zuckerberg → Whatsapp: ecosystem hint",
+          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+          "ARGUS MEDIA INC — Department of Energy",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "BlackRock → Aladdin Risk And Portfolio Platform: capital layer",
-          "BlackRock → Index Funds And Etfs: capital layer",
-          "BlackRock → Ishares: capital layer",
-          "BlackRock → Proxy Voting Stewardship: capital layer"
+          "BlackRock → Index Funds And Etfs: capital layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-02T00:00:00.000Z"
   }
 }

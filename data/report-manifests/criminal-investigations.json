@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:10:06.008Z",
-  "pageCount": 98,
+  "generatedAt": "2026-07-31T06:31:58.531Z",
+  "pageCount": 97,
   "output": "downloads/criminal-investigations.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Criminal Investigations",
-    "contentHash": "eb9c140c2d6fb4f435cd4586736525254ed14b9c5fc252130faaca48f6266d45",
+    "contentHash": "f02265250d9ae7221fb36d219ac6627eed61203f9eab399543c0ef79fc62288d",
     "sourceIds": [
       "3a8c1f1e8620cb3f09a2c7ab",
       "8d2a26495075b1d71abf17c2",
@@ -92,14 +92,21 @@
       "cyril-smith-iicsa-2018",
       "nassar-federal-conviction-2017",
       "greenberg-sentence-2022",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "savile-broadmoor-2014",
+      "640d4c4d982f3097aa47ff81",
       "janner-charges-2015",
       "ecd4a1111010f13b2d74bf8c",
       "r-kelly-appellate-finality-2025",
+      "427a4b3a840619411d8d1c33",
+      "a33968b32fce32bd9d6523f6",
       "maxwell-appeal-2025",
       "epstein-opr-review-2020",
       "cyril-smith-westminster-2020",
+      "8c8118614f58e40c87e2c2f7",
+      "fe51591d2f98b1e8140add7f",
+      "aa119272f233de638bb1e02d",
+      "0286171e0bf7415859b35948",
       "72ef7895f95288946ccb3cff",
       "bdd7e454126ebfa6319a594c",
       "epstein-sdny-charges-2019",
@@ -108,8 +115,6 @@
       "4c372edcf20b760ae3305f10",
       "e86287f396e1ee800a7ee796",
       "d2f7882f509480d63c31702f",
-      "02a4d3de860d06619024f48c",
-      "EP-AI-003",
       "1769af26a7bda813406cd8f5",
       "daee19f2c0d92279cc9a7569",
       "157cdab04b61ae6309c0c713",
@@ -124,10 +129,6 @@
       "324cbe2d95e1cfa996c79119",
       "5151c3a9f6b60883b360a522",
       "aae51d03dc366bfb0267f3b4",
-      "1627734cba53ae944ce56fa9",
-      "2034ec0836c52fb55f23c7f5",
-      "59c1e257d8d46186344d6ed7",
-      "603b714a5abe917f3094b455",
       "3a425f0d5d683952bc0ad7ac",
       "9848ec4b4c3f6c2693269839",
       "7f5b91c14c671bd24b8bbd81",
@@ -138,28 +139,21 @@
       "f73c11ef3163b1800592aabe",
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
-      "e28738303cb279558b7a88c0",
-      "e4e58bed8a2ad4ff1aa59afe",
-      "baa43ec6d7327777ba931c2c",
-      "64655043524cba9e6a679f8d",
-      "4a8dd46bd8d4335f061e03ac",
-      "3238162301d466634ccd3040",
-      "d648ce395c11435d30796fee",
-      "911d6aa330f80279bdb3c4d5"
+      "e28738303cb279558b7a88c0"
     ],
     "metrics": {
-      "evidenceCount": 139,
-      "primarySourceCount": 71,
+      "evidenceCount": 133,
+      "primarySourceCount": 66,
       "disputedClaimCount": 3,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 16,
-      "moneyRecordCount": 11
+      "relationshipCount": 17,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 71 A/B-grade public-record items are materially relevant to Criminal Investigations.",
-        "evidence": "Twenty-one convictions for rape, sexual assault and child sexual offenses (data/criminal-conduct-registry.json); Forty-five child sexual abuse convictions and 26-year sentence (data/criminal-conduct-registry.json); Federal conviction and 60-year sentence for sex trafficking, extortion and forced labor (data/criminal-conduct-registry.json); Federal conviction and 20-year sentence for sexually abusing patients (data/criminal-conduct-registry.json); Federal jury conviction for conspiring with Epstein to sexually abuse minors (data/epstein-dossier-overlap-registry.json); Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses (data/criminal-conduct-registry.json)",
+        "conclusion": "The indexed record establishes that 66 A/B-grade public-record items are materially relevant to Criminal Investigations.",
+        "evidence": "Twenty-one convictions for rape, sexual assault and child sexual offenses (data/exposure-evidence-ledger.json); Forty-five child sexual abuse convictions and 26-year sentence (data/exposure-evidence-ledger.json); Federal conviction and 60-year sentence for sex trafficking, extortion and forced labor (data/exposure-evidence-ledger.json); Federal conviction and 20-year sentence for sexually abusing patients (data/exposure-evidence-ledger.json); Federal jury convicted Maxwell of conspiring to sexually abuse minors (data/exposure-evidence-ledger.json); Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses (data/exposure-evidence-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,8 +161,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Forty-five child sexual abuse convictions and 26-year sentence,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Clarke was convicted of 45 offenses involving 14 children. The CPS stated that he used a photography club and darkroom to isolate boys and escalate abuse, while also using threats and bribes.",
+        "conclusion": "The most defensible current assessment is based on “Counter Narcotics Sanctions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Recent Actions | Office of Foreign Assets Control This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,8 +172,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Official health investigations documented abuse and enabling access; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Westminster inquiry examined political and policing responses; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; Professional and institutional intermediaries may be more informative than raw contact lists",
+        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Official health investigations documented abuse and enabling access; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; Westminster inquiry examined political and policing responses",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,16 +187,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Conviction for indecent images and misconduct in public office",
           "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
           "Official health investigations documented abuse and enabling access",
           "IICSA documented predatory activities and institutional failures",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Westminster inquiry examined political and policing responses",
-          "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
-          "Professional and institutional intermediaries may be more informative than raw contact lists"
+          "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+          "Westminster inquiry examined political and policing responses"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

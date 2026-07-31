@@ -1,16 +1,19 @@
 {
-  "generatedAt": "2026-07-30T06:09:29.446Z",
-  "pageCount": 129,
+  "generatedAt": "2026-07-31T06:31:29.805Z",
+  "pageCount": 127,
   "output": "downloads/cloudflare-canonical-member-origin.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Cloudflare Canonical Member Origin",
-    "contentHash": "2c24d7270e7fc9355cb703c11bd77b290e150aa81dad4251b6514255d9ce2a53",
+    "contentHash": "6631bfcd307f6ad045a1a77ac6d548c5d7f5f9f8927de81c21d765f3512014d8",
     "sourceIds": [
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
+      "ASC-REVIEW-5745DAEE3A7221DC",
+      "ASC-REVIEW-9EBC0B258FA9E647",
+      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -20,16 +23,14 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-FDB9A891CA376E3B",
-      "ASC-REVIEW-7E1807C0C6B7E2C1",
-      "ASC-REVIEW-164414527DEBB0DC",
-      "ASC-REVIEW-F3CBF44B3FA648D7",
-      "ASC-REVIEW-0807002D2DF4DE89",
-      "ASC-REVIEW-1317EEF720A36A76",
-      "ASC-REVIEW-1B2E5D07E27D9811",
-      "ASC-REVIEW-E2E8EF7C3F520CCF",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-C4877182445C2050",
+      "ASC-REVIEW-7E1807C0C6B7E2C1",
+      "ASC-REVIEW-1B2E5D07E27D9811",
+      "ASC-REVIEW-BA5FF644D411D868",
+      "44505b4afb60938c8117ad31",
       "7ee9141a42ad539f58a57e50",
       "71e0563ca7b139c37c302956",
       "2931a84c2c7fe86982d5d6e5",
@@ -42,10 +43,7 @@
       "7f5b91c14c671bd24b8bbd81",
       "b7e4a66335a706ef5097117f",
       "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-9549433fcfc93118c8a9d2e7",
       "janner-iicsa-2022",
-      "ASC-REVIEW-F61AF8A572F62AED",
-      "ASC-REVIEW-D73E83F12FF8D417",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -97,7 +95,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-8060982E06C7C2CC",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -146,7 +143,10 @@
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F"
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD",
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 122,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 122,
-      "moneyRecordCount": 112
+      "relationshipCount": 123,
+      "moneyRecordCount": 114
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Cloudflare Canonical Member Origin.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 122 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 123 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 122 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 123 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T22:45:15.473Z"
+    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
   }
 }

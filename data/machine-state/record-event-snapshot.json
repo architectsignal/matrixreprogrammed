@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T03:49:11.427Z",
+  "updated": "2026-07-31T06:30:22.956Z",
   "records": [
     {
       "key": "federal-register-policy-2026-14679-1",
@@ -76,20 +76,7 @@
       ]
     },
     {
-      "key": "sec-edgar-filings-cik0001045810-1",
-      "hash": "e6f0bb7740cec0d6",
-      "summary": "NVIDIA CORP (NVDA)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-31",
-      "names": [
-        "NVIDIA CORP",
-        "NVDA"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0000320193-2",
+      "key": "sec-edgar-filings-cik0000320193-1",
       "hash": "9675dd4a3305e8b0",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
@@ -99,6 +86,19 @@
       "names": [
         "Apple Inc.",
         "AAPL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0001045810-2",
+      "hash": "e6f0bb7740cec0d6",
+      "summary": "NVIDIA CORP (NVDA)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-31",
+      "names": [
+        "NVIDIA CORP",
+        "NVDA"
       ]
     },
     {

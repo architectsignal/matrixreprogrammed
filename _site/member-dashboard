@@ -46,10 +46,10 @@
       </section>
 
       <nav class="member-tabs" aria-label="Dashboard sections">
-        <a href="#sessions">Sessions</a><a href="#saved">Saved</a><a href="#follows">Follows</a><a href="#watchlists">Watchlists</a><a href="#archive">Archive</a><a href="#downloads">Downloads</a>
+        <a href="#sessions">Sessions</a><a href="#accountability-alerts">Accountability Alerts</a><a href="#saved">Saved</a><a href="#follows">Follows</a><a href="#watchlists">Watchlists</a><a href="#archive">Archive</a><a href="#downloads">Downloads</a>
       </nav>
 
-      <section id="sessions" class="panel section-anchor">
+      <section id="accountability-alerts" class="panel section-anchor"><div class="member-head"><div><h2>Accountability alerts</h2><p class="muted">Due 30-, 90- and 365-day consequence checks and reviewed outcomes from records you follow. A due alert is not a verdict.</p></div><a class="btn alt" href="/public-consequence-contracts.html">Open Accountability Twins</a></div><div id="accountability-alert-list" class="member-list"></div></section><section id="sessions" class="panel section-anchor">
         <div class="member-head"><div><h2>Session controls</h2><p class="muted">Review active sessions and revoke any device you no longer trust.</p></div><button id="revoke-others" class="btn danger" type="button">Revoke other sessions</button></div>
         <div id="session-list" class="member-list"></div>
       </section>
@@ -92,7 +92,7 @@
   <h2>Detailed reports and living PDF dossiers</h2>
   <p>Review daily and weekly reports built from your followed subjects and watchlists. Every report preserves evidence labels, source dates, contradictions, limitations and version history.</p>
   <p><a class="button" href="/intelligence-reports.html">Open intelligence reports</a></p>
-</section><section class="section wrap" data-money-system-callout><article class="card redline"><span class="label">Wealth Creation</span><h2>Your Wealth Creation Engine</h2><p>Continue your saved wealth roadmap, guides and research.</p><a class="btn" href="making-money.html">Open Making Money</a></article></section><script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">{"status":"compatibility-routes-preserved-with-clean-public-copy","checked":"2026-07-30","routes":["downloads/forum-posts.json","downloads/forum-posts.md","feed-center.html","share-center.html","launch-room.html","offer-center.html","source-document-vault.html","evidence-vault.html","black-file.html"]}</script></main>
+</section><section class="section wrap" data-money-system-callout><article class="card redline"><span class="label">Wealth Creation</span><h2>Your Wealth Creation Engine</h2><p>Continue your saved wealth roadmap, guides and research.</p><a class="btn" href="making-money.html">Open Making Money</a></article></section><script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">{"status":"compatibility-routes-preserved-with-clean-public-copy","checked":"2026-07-31","routes":["downloads/forum-posts.json","downloads/forum-posts.md","feed-center.html","share-center.html","launch-room.html","offer-center.html","source-document-vault.html","evidence-vault.html","black-file.html"]}</script></main>
   <!-- Guarded-build compatibility contracts only; active account and billing actions remain server-side and fail closed: /api/member/me /api/auth/logout /api/paypal/subscription/cancel paidAccessEnabled -->
   <script src="member-dashboard-app.js"></script>
 <script src="analytics.js"></script>  <script src="matrix.js"></script>

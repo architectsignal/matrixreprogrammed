@@ -1,9 +1,93 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-30T06:22:24.220Z
+Updated: 2026-07-31T06:42:11.582Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
+
+- Date: 2026-07-31
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+- Timers: none
+
+With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+- Timers: none
+
+Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ The Guardian
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Epstein files: How victims remain exposed to identification - DW.com
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
+- Timers: none
+
+Epstein files: How victims remain exposed to identification DW.com
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+- Timers: none
+
+Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Returning Afghans face growing risk of trafficking as crises deepen
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168051
+- Timers: none
+
+Afghans returning from neighbouring countries are facing growing risks of human trafficking and exploitation as overlapping humanitarian and economic crises leave many struggling to survive, the UN warned on Thursday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Wildfires: Prevention is the best defence, UN says
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168054
+- Timers: none
+
+The wildfires burning across Europe and North America highlight the urgent need for action now – as climate change, land-use pressures and human activity make severe fires more likely in the future.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
+- Timers: none
+
+US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
 ## Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
 
@@ -14,6 +98,18 @@ These are dated public-source leads, not proof of wrongdoing. Every item must pr
 - Timers: none
 
 Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell New York Post
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+- Timers: none
+
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -29,6 +125,18 @@ Epstein accuser’s family blasts former Obama White House lawyer who said her a
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
+## Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
+- Timers: none
+
+Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ kq2.com
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
 ## Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
 
 - Date: 2026-07-29
@@ -38,6 +146,18 @@ Boundary: A fresh news or archive item is a lead, not a verdict. Open the source
 - Timers: none
 
 Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+
+- Date: 2026-07-29
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Timers: none
+
+Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell theguardian.com
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -74,6 +194,18 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 - Timers: none
 
 Violence in the occupied West Bank is worsening as the Israeli Government continues to approve new settlements while settlers and Israeli security forces have “often” acted together to attack local Palestinian communities, the UN’s human rights office (OHCHR) warned on Wednesday.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+
+- Date: 2026-07-29
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
+- Timers: none
+
+Independent UN experts on Wednesday called for urgent action to support Rohingya refugees in Bangladesh after reports indicated two boats carrying more than 500 passengers may have capsized off the coast of Myanmar in mid-July.
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
@@ -160,135 +292,3 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 Climate-driven disasters are reaching “nightmare proportions” due to humanity’s “addiction” to fossil fuels, a top UN official warned on Tuesday.
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Forced online scams: IOM warns trafficking networks are booming
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168038
-- Timers: none
-
-A job advert can hide a criminal network, and a single click can lead to a nightmare. Hundreds of thousands of people are trafficked every year on the promise of legitimate work abroad, only to be held captive and forced into online scam operations.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## HIV, hepatitis, STI gains at risk as funding falls, WHO warns
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168040
-- Timers: none
-
-Years of progress in tackling HIV, viral hepatitis and sexually transmitted infections (STIs) are at risk of stalling, leaving millions of people without access to life-saving prevention, testing and treatment, the World Health Organization (WHO) has warned.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Mount Olympus and D-Day beaches among new World Heritage Sites
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168043
-- Timers: none
-
-From the peaks of Mount Olympus in Greece to the shores of the “D-Day” beaches in France, 25 cultural or natural landmarks from across the globe have been newly inscribed on the World Heritage List, updated annually by the UN Educational, Scientific and Cultural Organization (UNESCO).
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168037
-- Timers: none
-
-Regional tensions are mounting as the US-Iran war continues and a rising number of Israeli attacks are threatening Gaza’s fragile October ceasefire that ended two years of war with Hamas. Security Council members heard briefings followed by an open debate on Tuesday. UN News app users click here for live coverage.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Brian Wells
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells
-- Timers: none
-
-Brian Wells
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Brian Wells Part 01
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells/brian-wells-part-01/view
-- Timers: none
-
-Brian Wells Part 01
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Brian Wells Part 02 (Final)
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells/brian-wells-part-02-final/view
-- Timers: none
-
-Brian Wells Part 02 (Final)
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Lufthansa Heist
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/lufthansa-heist
-- Timers: none
-
-Lufthansa Heist
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Lufthansa Heist Part 01
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-01/view
-- Timers: none
-
-Lufthansa Heist Part 01
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Lufthansa Heist Part 02
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-02/view
-- Timers: none
-
-Lufthansa Heist Part 02
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Lufthansa Heist Part 03 (Final)
-
-- Date: 2026-07-28
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-03-final/view
-- Timers: none
-
-Lufthansa Heist Part 03 (Final)
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.

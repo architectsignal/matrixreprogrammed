@@ -1,6 +1,6 @@
 # Daily Brain Brief
 
-Updated: 2026-07-30T06:07:54.344Z
+Updated: 2026-07-31T06:30:04.049Z
 
 This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.
 
@@ -55,8 +55,8 @@ Entity observations: 12
 - documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
 - documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
 - documented association: Modernizing Security Requirements — federal-register-policy — https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements
-- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces

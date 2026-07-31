@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-31T03:49:27.027Z
-Live Intel source window: 2026-07-31T03:49:12.385Z
-Tracked cards: 966
+Generated: 2026-07-31T06:42:22.735Z
+Live Intel source window: 2026-07-31T06:42:11.507Z
+Tracked cards: 965
 Cards with current matched records: 95
-Cards with no new verified record: 871
+Cards with no new verified record: 870
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -2661,7 +2661,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Status: current-records-matched
 - Current matched records: 8
 - Latest record: 2026-07-31T02:05:57.000Z
-- 2026-07-31T02:05:57.000Z — US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+- 2026-07-31T02:05:57.000Z — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
 - 2026-07-30T18:21:00.000Z — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian — https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
 - 2026-07-30T16:07:32.000Z — Epstein files: How victims remain exposed to identification - DW.com — https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
 
@@ -5676,12 +5676,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## Welcome To Matrix Reprogrammed
-- Route: index.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

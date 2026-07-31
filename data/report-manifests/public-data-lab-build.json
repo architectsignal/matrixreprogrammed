@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-30T06:17:28.935Z",
-  "pageCount": 134,
+  "generatedAt": "2026-07-31T06:38:07.129Z",
+  "pageCount": 133,
   "output": "downloads/public-data-lab-build.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Public Data Lab Build",
-    "contentHash": "f32dde9cb31ea89bd2140fe3e4124a1bdce381c3d426d8c8cd94da9f43ec3211",
+    "contentHash": "ffa765d5b251f0450bdbaf1a098242fcaaa9adc40688b7af486f59d7b6859232",
     "sourceIds": [
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -58,13 +58,12 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-2CE1A691C8D09631",
+      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-01CB18B6F1446992",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -74,7 +73,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-8060982E06C7C2CC",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -146,7 +144,9 @@
       "ASC-REVIEW-7527D6692621D585",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-52C3694FF95479F1",
-      "ASC-REVIEW-3EB368ED00ADD23E"
+      "ASC-REVIEW-3EB368ED00ADD23E",
+      "ASC-REVIEW-C47A1B7DA11B68C4",
+      "ASC-REVIEW-C7A00AFA602DD2A9"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,7 +154,7 @@
       "disputedClaimCount": 139,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 136,
+      "relationshipCount": 137,
       "moneyRecordCount": 137
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
   }
 }

@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-30T06:22:39.109Z
+Generated: 2026-07-31T06:42:24.505Z
 
 ## Daily Revelation Report
 
-Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
+With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
 
 Source: daily-command-brief.html
 

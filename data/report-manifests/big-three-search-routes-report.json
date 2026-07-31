@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-07-30T06:08:41.715Z",
-  "pageCount": 122,
+  "generatedAt": "2026-07-31T06:30:52.046Z",
+  "pageCount": 120,
   "output": "downloads/big-three-search-routes-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Big Three Search Routes Report",
-    "contentHash": "8b4e0c552a21be1c4846582de9c5db359bf7bb10fad579daf820f3c635cbb8e2",
+    "contentHash": "e60d5fde2346b33fc92ea8c5a1a33e9a5999129a343d35c7d2cb1911a915bec6",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
       "05e609f8ccfd225cfc787019",
-      "4712eed42978b8a5e911c47a",
-      "26b90533dbf7d2ed42f02de6",
+      "48315ec59cadd154d31bf1cf",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
+      "26b90533dbf7d2ed42f02de6",
+      "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "sec-edgar-core",
       "contractor-blackwater-xe-academi-constellis-lineage",
@@ -37,8 +38,8 @@
       "larry-fink",
       "e4a0df7a70409789454722e7",
       "41772e5c9af7970ddd7d5aac",
+      "640d4c4d982f3097aa47ff81",
       "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-9549433fcfc93118c8a9d2e7",
       "f3676fb7b03d3ee0516f2a19",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -76,6 +77,7 @@
       "ASC-REVIEW-D86EBD209FFF875A",
       "ASC-REVIEW-A5C911DFEE587573",
       "ASC-REVIEW-C53B123A4708B84E",
+      "d0b647e325275daa6d824a49",
       "people-of-interest",
       "9cb9631a2f2749b86bc69e0a",
       "4ae6a940305d15da61333450",
@@ -97,16 +99,20 @@
       "c1520a15d6e62871a66c558e",
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
+      "cee347fbc3752c6e0f890457",
       "sundar-pichai",
       "alex-karp",
-      "1627734cba53ae944ce56fa9",
-      "603b714a5abe917f3094b455",
+      "427a4b3a840619411d8d1c33",
+      "8c8118614f58e40c87e2c2f7",
+      "a33968b32fce32bd9d6523f6",
+      "fe51591d2f98b1e8140add7f",
+      "source-change-96b50a0ea1ae9a6b5767f2c2",
+      "source-change-a21f3d8e98268d5e01e1eb7c",
+      "source-change-44505b4afb60938c8117ad31",
+      "source-change-701229696b57f88191742d4f",
+      "source-change-edba4782143dd855b818b53a",
       "source-change-14394588e567b7c52bd11cb3",
       "source-change-88269481cf5b04b7b0f83b58",
-      "source-change-eaebe283915d5c0d1982b8e6",
-      "source-change-04178dd78ae55a022df89f05",
-      "source-change-7ee9141a42ad539f58a57e50",
-      "source-change-d748a52eab15ba888051067b",
       "b4cb47ea50dc901364239e9f",
       "a71a8be091652489b843ecf6",
       "f669b33c49b63e787cde3008",
@@ -139,28 +145,21 @@
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-E0C2B02D28255CC3",
       "ASC-REVIEW-4E0C4B2A65FF8D42",
-      "ASC-REVIEW-995324D0659C1960",
-      "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-927E79836853DFAE",
-      "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E"
+      "ASC-REVIEW-995324D0659C1960"
     ],
     "metrics": {
-      "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 65,
+      "evidenceCount": 139,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 61,
       "newEntityCount": 30,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 71,
-      "moneyRecordCount": 76
+      "relationshipCount": 68,
+      "moneyRecordCount": 74
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC EDGAR / ownership / proxy-vote records (data/deep-intel-feed-matrix.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC EDGAR / ownership / proxy-vote records (data/deep-intel-feed-matrix.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+        "conclusion": "The most defensible current assessment is based on “Counter Narcotics Sanctions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Recent Actions | Office of Foreign Assets Control This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 71 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 68 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; SEC EDGAR / ownership / proxy-vote records; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 71 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 68 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "SEC EDGAR / ownership / proxy-vote records",
@@ -218,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-02T00:00:00.000Z"
   }
 }

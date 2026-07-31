@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-07-30T06:26:29.719Z
+Updated: 2026-07-31T06:45:46.310Z
 
 ## Evidence-led conclusion
 
@@ -15,13 +15,11 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **SEC Complaint** — Documented in the linked public record; law, filing or instrument: Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas. Why it matters: This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Exercise or conversion of derivative security** — reportedTransaction. Why it matters: This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Corporate-state convergence** — Documented in the linked public record. Why it matters: This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consolidated Sanctions List (Non-SDN Lists)** — Contract. Why it matters: This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Identity, surveillance and access** — Documented in the linked public record. Why it matters: This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Grant, award or other acquisition** — reportedTransaction. Why it matters: This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Global governance convergence** — Documented in the linked public record. Why it matters: This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Attorney Review Protocol for Epstein Files** — Contract. Why it matters: This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **First Phase of Declassified Epstein Files** — Contract. Why it matters: This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Default Judgment** — Contract. Why it matters: This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Bongiorno** — Contract. Why it matters: This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Chad J. Miller** — Contract. Why it matters: This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
@@ -29,9 +27,11 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Final Judgment - Suzee Han** — Contract. Why it matters: This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Titanium Capital LLC** — Contract. Why it matters: This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Judgment - Gerard Ryan** — Contract. Why it matters: This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Skip to main content** — Contract. Why it matters: This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Amended Judgment - Spartan Trading Company, LLC** — Contract. Why it matters: This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners** — Contract. Why it matters: This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Consent Motion for Entry of Final Judgment** — Contract. Why it matters: This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Consent of and Final Judgment as to Gautam Adani** — Contract. Why it matters: This record places Consent of and Final Judgment as to Gautam Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Consent of and Final Judgment as to Sagar Adani** — Contract. Why it matters: This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

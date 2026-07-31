@@ -1,17 +1,17 @@
 # Machine Intelligence
 
-Updated: 2026-07-31T03:49:11.427Z
+Updated: 2026-07-31T06:30:22.956Z
 
 Current records: 18
 Previous records: 18
 New records: 2
-Changed records: 6
+Changed records: 0
 Relationship candidates: 25
 
 ## New Records
 
-- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
-- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
+- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 
 ## Relationship Candidates
 
@@ -34,8 +34,8 @@ Relationship candidates: 25
 - Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ Supreme Court of Rhode Island — public-record co-occurrence
 - Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ 2025-0045-Appeal. — public-record co-occurrence
 - Score 10: Supreme Court of Rhode Island ↔ 2025-0045-Appeal. — public-record co-occurrence
-- Score 9: NVIDIA CORP ↔ NVDA — weak co-occurrence signal
 - Score 9: Apple Inc. ↔ AAPL — weak co-occurrence signal
+- Score 9: NVIDIA CORP ↔ NVDA — weak co-occurrence signal
 - Score 9: Alphabet Inc. ↔ GOOGL — weak co-occurrence signal
 - Score 9: MICROSOFT CORP ↔ MSFT — weak co-occurrence signal
 - Score 9: AMAZON COM INC ↔ AMZN — weak co-occurrence signal

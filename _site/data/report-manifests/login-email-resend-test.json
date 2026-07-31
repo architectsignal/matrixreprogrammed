@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:15:07.148Z",
+  "generatedAt": "2026-07-31T06:36:06.382Z",
   "pageCount": 127,
   "output": "downloads/login-email-resend-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Login Email Resend Test",
-    "contentHash": "41692287c553b4ed1d5c8908343ac6b259a40ebe8ef1d6856d5c1cf5e0a0febe",
+    "contentHash": "363cc71a958f61818a623a6249d76e3bc03c503f0bba12df48a689352690b616",
     "sourceIds": [
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -13,11 +13,15 @@
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
       "74fb2863cc9a8120f3c68b67",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "ASC-REVIEW-9F5E6DCB06093895",
       "ASC-REVIEW-45FC68BFE6057AEE",
       "7f0eb9ddb996aecbeeda522d",
       "deb382cdbfe57b57793d739e",
+      "ASC-REVIEW-8E57602B48B9C301",
+      "ASC-REVIEW-B87070F04E239F1B",
+      "ASC-REVIEW-8F8980CBAE670AE9",
+      "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -142,11 +146,7 @@
       "ASC-REVIEW-68286C2A2CB861AF",
       "ASC-REVIEW-2527E3DEA85AE958",
       "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-3B7DCAEF5ABCE701"
+      "ASC-REVIEW-1C806B2577C4D44C"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -155,7 +155,7 @@
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 129,
-      "moneyRecordCount": 129
+      "moneyRecordCount": 125
     },
     "evidenceBasedConclusions": [
       {
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 129 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "BlackRock → Public Company Ownership Concentration: capital layer; Vanguard → Ownership Concentration Across Public Companies: capital layer; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Defense And Diplomacy: overlap hint; Bilderberg Meeting → Media: overlap hint",
+        "supportingEvidence": "BlackRock → Public Company Ownership Concentration: capital layer; Vanguard → Ownership Concentration Across Public Companies: capital layer; ARGUS MEDIA INC — Department of Energy; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; OCLC, INC — Department of Education; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -198,12 +198,12 @@
         "supportingIndicators": [
           "BlackRock → Public Company Ownership Concentration: capital layer",
           "Vanguard → Ownership Concentration Across Public Companies: capital layer",
+          "ARGUS MEDIA INC — Department of Energy",
+          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+          "OCLC, INC — Department of Education",
+          "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "Bernard Arnault → Luxury Networks: ecosystem hint",
-          "Bernard Arnault → Lvmh: ecosystem hint",
-          "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
-          "Bilderberg Meeting → Banks And Finance: overlap hint",
-          "Bilderberg Meeting → Defense And Diplomacy: overlap hint",
-          "Bilderberg Meeting → Media: overlap hint"
+          "Bernard Arnault → Lvmh: ecosystem hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
   }
 }

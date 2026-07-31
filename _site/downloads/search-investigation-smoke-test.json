@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T06:25:47.396Z",
+  "generatedAt": "2026-07-31T06:45:06.134Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "31251 entries"
+      "detail": "31356 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "31251 unique routes"
+      "detail": "31356 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -120,7 +120,7 @@
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "source-changes.html?change=eaebe283915d5c0d1982b8e6, source-changes.html?change=108886c2624e7ff0fca9f3f9, source-changes.html?change=6852525bfb3f4d4c67a81fcb"
+      "detail": "source-changes.html?change=edba4782143dd855b818b53a, source-changes.html?change=eaebe283915d5c0d1982b8e6, source-changes.html?change=108886c2624e7ff0fca9f3f9"
     },
     {
       "name": "local query government contracts USAspending procurement",
@@ -130,12 +130,12 @@
     {
       "name": "local query Epstein DOJ disclosures redactions",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-d8b032e2fe5ffbd99713, relationship-registry.html?relationship=relationship-e83542f9df880f1a7ccf, relationship-registry.html?relationship=relationship-2df0d2cf49caa1772e44"
+      "detail": "relationship-registry.html?relationship=relationship-144dc1ba32dda0c19858, relationship-registry.html?relationship=relationship-d8b032e2fe5ffbd99713, relationship-registry.html?relationship=relationship-c7bfde8d6af358e9b33b"
     },
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "source-changes.html?change=14394588e567b7c52bd11cb3, source-changes.html?change=d748a52eab15ba888051067b, source-changes.html?change=a812104d556e1c07b8205441"
+      "detail": "source-changes.html?change=96b50a0ea1ae9a6b5767f2c2, source-changes.html?change=701229696b57f88191742d4f, source-changes.html?change=14394588e567b7c52bd11cb3"
     }
   ],
   "failures": []

@@ -1,23 +1,19 @@
 {
-  "generatedAt": "2026-07-30T06:14:07.856Z",
-  "pageCount": 134,
+  "generatedAt": "2026-07-31T06:35:18.317Z",
+  "pageCount": 133,
   "output": "downloads/homepage-mission-normalization.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Homepage Mission Normalization",
-    "contentHash": "9ae2b3f601a5ce6e316e1f2a9f76ec67c2dc57f07d5c5224c1f6a08122c2cf01",
+    "contentHash": "e3b00ae0432c6aad179baf2242fd15d1989fb9b3feabe0b43655e1888ee1de05",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
-      "c1520a15d6e62871a66c558e",
-      "a5e5d4ec4df4352ea242ea3f",
+      "source-change-96b50a0ea1ae9a6b5767f2c2",
+      "source-change-701229696b57f88191742d4f",
+      "48315ec59cadd154d31bf1cf",
       "source-change-205bd2407ea96080fdae5fe8",
       "source-change-14394588e567b7c52bd11cb3",
       "source-change-88269481cf5b04b7b0f83b58",
-      "source-change-9549433fcfc93118c8a9d2e7",
-      "source-change-d748a52eab15ba888051067b",
-      "4712eed42978b8a5e911c47a",
-      "ASC-REVIEW-B27EAD89E5D764C1",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -27,12 +23,14 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-2CE1A691C8D09631",
+      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-21E454816F050A34",
-      "source-change-eaebe283915d5c0d1982b8e6",
-      "source-change-04178dd78ae55a022df89f05",
-      "source-change-7ee9141a42ad539f58a57e50",
+      "c1520a15d6e62871a66c558e",
+      "a5e5d4ec4df4352ea242ea3f",
+      "source-change-a21f3d8e98268d5e01e1eb7c",
+      "source-change-44505b4afb60938c8117ad31",
+      "source-change-edba4782143dd855b818b53a",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -72,16 +70,14 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-13C647485101902F",
+      "ASC-REVIEW-B6BCA7554CFEEE44",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-132F1165BCAFF798",
-      "ASC-REVIEW-676D0168C06458FA",
+      "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-CBBDD69F69C1121D",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -93,7 +89,6 @@
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-8060982E06C7C2CC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -146,21 +141,26 @@
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD"
+      "ASC-REVIEW-4FDBCEA6F4D74FFD",
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2",
+      "ASC-REVIEW-AD7847E11513D899",
+      "ASC-REVIEW-C2C7140B7B6F51FF",
+      "ASC-REVIEW-2750F333FF6B37B3"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 10,
-      "disputedClaimCount": 127,
+      "disputedClaimCount": 128,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 114,
-      "moneyRecordCount": 115
+      "relationshipCount": 120,
+      "moneyRecordCount": 119
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,7 +168,7 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Department of Justice Office of Inspector General — Reports,” the strongest indexed record by source grade and evidence status.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
         "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 120 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 120 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T22:45:15.473Z"
+    "intelligenceFreshnessDate": "2026-07-30T17:52:43.936Z"
   }
 }

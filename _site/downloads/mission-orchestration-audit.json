@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T06:24:09.372Z",
+  "generatedAt": "2026-07-31T06:43:41.045Z",
   "overall": "ready",
   "summary": {
     "total": 50,
@@ -9,7 +9,7 @@
   },
   "homepageMode": "legacy-cinematic",
   "watch": {
-    "date": "2026-07-30",
+    "date": "2026-07-31",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 1327,
+    "archivedFindings": 1867,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -64,7 +64,7 @@
     {
       "id": "authoritative-entity-resolution",
       "ok": true,
-      "detail": "Resolved person=Elon Musk; institution=Securities and Exchange Commission; family=Al Thani family.",
+      "detail": "Resolved person=Elon Musk; institution=Securities and Exchange Commission; family=Al Maktoum family.",
       "fix": "Run build-daily-watch.js and reject document, report, archive, case or finding titles."
     },
     {
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "1327 archived findings retained.",
+      "detail": "1867 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -262,7 +262,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "4 history entries; weekly delta ready.",
+      "detail": "5 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -322,7 +322,7 @@
     {
       "id": "sensitive-claim-safeguard",
       "ok": true,
-      "detail": "13 sensitive items; 0 unsafe.",
+      "detail": "17 sensitive items; 0 unsafe.",
       "fix": "Require exact status, provenance, limitation and review."
     }
   ],

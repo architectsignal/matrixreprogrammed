@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-30T06:11:25.266Z",
-  "pageCount": 95,
+  "generatedAt": "2026-07-31T06:33:01.884Z",
+  "pageCount": 92,
   "output": "downloads/detailed-wealth-guides-test.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Detailed Wealth Guides Test",
-    "contentHash": "51ea88d2bb79263ed260561d7b8b04a50d45e2f910a05367b406ce0df01eb394",
+    "contentHash": "0a9ad7aec812d4a56254355f2cb78db423956143afa2d5f34bcda4fd57f10678",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -17,9 +17,11 @@
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
+      "aa119272f233de638bb1e02d",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
+      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -27,16 +29,6 @@
       "declassified-files-2026-07-28-d82c8cb5",
       "declassified-files-2026-07-28-47e74d46",
       "declassified-files-2026-07-28-d6d67d44",
-      "declassified-files-2026-07-24-c827955e",
-      "declassified-files-2026-07-23-7b43a9b4",
-      "declassified-files-2026-07-23-55829d5e",
-      "declassified-files-2026-07-23-670b739b",
-      "declassified-files-2026-07-23-b397fa50",
-      "declassified-files-2026-07-23-4ca5fddd",
-      "declassified-files-2026-07-23-f3f4de32",
-      "declassified-files-2026-07-23-534fbf8f",
-      "declassified-files-2026-07-23-55e56994",
-      "declassified-files-2026-07-23-9e3d6831",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
@@ -65,6 +57,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
+      "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "us-doj",
       "gao-hq",
@@ -142,25 +135,21 @@
       "trusts-rhodes-trust",
       "trusts-national-trust",
       "trusts-crown-estate-ownership-trust-routes",
-      "trusts-john-lewis-partnership-trust",
-      "trusts-employee-ownership-trust-register-watch",
-      "trusts-royal-collection-trust",
-      "trusts-prince-of-wales-charitable-fund",
-      "trusts-duchy-related-trust-disclosures"
+      "trusts-john-lewis-partnership-trust"
     ],
     "metrics": {
-      "evidenceCount": 140,
-      "primarySourceCount": 127,
-      "disputedClaimCount": 12,
+      "evidenceCount": 129,
+      "primarySourceCount": 116,
+      "disputedClaimCount": 21,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 94
+      "relationshipCount": 31,
+      "moneyRecordCount": 90
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Detailed Wealth Guides Test.",
-        "evidence": "IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json); IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json); Congressional hearings and records (data/atlas-layers.json)",
+        "conclusion": "The indexed record establishes that 116 A/B-grade public-record items are materially relevant to Detailed Wealth Guides Test.",
+        "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); DOJ OIG documented FBI handling failures (data/exposure-evidence-ledger.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/exposure-evidence-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Congressional hearings and records (data/atlas-layers.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +157,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +168,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; New York DFS enforcement action concerning the bank's Epstein relationship; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +183,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "New York DFS enforcement action concerning the bank's Epstein relationship",
@@ -218,6 +207,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-29T22:45:04.735Z"
   }
 }

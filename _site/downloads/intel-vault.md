@@ -1,11 +1,41 @@
 # Intel Vault
 
-Updated: 2026-07-30T06:26:21.941Z
+Updated: 2026-07-31T06:45:39.705Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
+- Published: 2026-07-23T20:14:15.000Z
+- Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
+- Source class: discovery
+
+### Epstein's former private banker appears before House Oversight Committee - abcnews.com
+- Published: 2026-07-23T18:38:38.000Z
+- Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
+- Source class: primary-or-official
+
+### Syria ‘not alone’ in locating missing persons, tackling displacement
+- Published: 2026-07-23T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168010
+- Source class: primary-or-official
+
+### Examining 2 decades since Jeffrey Epstein's arrest - WPTV
+- Published: 2026-07-23T10:55:34.000Z
+- Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
+- Source class: primary-or-official
+
+### Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations
+- Published: 2026-07-23T10:16:08.000Z
+- Source: https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Source class: discovery
+
+### Former Barclays boss Jes Staley to face US House panel on Epstein - Forth.News
+- Published: 2026-07-23T10:09:26.000Z
+- Source: https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNVB2bnFPSHFGdmYwcEVfazRNLW5SSHJTRng4VUNYQ0ZxTnR2QmxZZk5IOEl2LWZEeTJENU52bkxINnZBOTItUXVuc0N4NzgtZXJHRnFBaDBKUnVCaVozWUlaZw?oc=5
+- Source class: primary-or-official
 
 ### French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
 - Published: 2026-07-22T11:27:32.000Z

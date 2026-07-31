@@ -1,26 +1,28 @@
 {
-  "generatedAt": "2026-07-30T06:09:16.826Z",
-  "pageCount": 126,
+  "generatedAt": "2026-07-31T06:31:19.814Z",
+  "pageCount": 129,
   "output": "downloads/card-intelligence-feed.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Card Intelligence Feed",
-    "contentHash": "e8ac77f9f6fb92e7060db30e3ebd2893135a58bb2ba32579acd9a8a7c6a24af5",
+    "contentHash": "5537e30f044e4d7eabeed29170fdbc7adef36dcd70c2691fb8675aa2cad7e18c",
     "sourceIds": [
       "594100b62a47db521fe2a128",
-      "34805734b1ad3b73f0ede0d8",
       "310372a3fc518b6aabbc5d07",
+      "34805734b1ad3b73f0ede0d8",
       "f59da50ababa3ddae79a8f1c",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
       "f17e0de0ef7b66aa842ac3a1",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "d0b647e325275daa6d824a49",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
+      "cee347fbc3752c6e0f890457",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
       "26b90533dbf7d2ed42f02de6",
@@ -32,13 +34,15 @@
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
       "ASC-REVIEW-E88A7B581690918F",
-      "d0b647e325275daa6d824a49",
       "3a425f0d5d683952bc0ad7ac",
-      "cee347fbc3752c6e0f890457",
+      "fe51591d2f98b1e8140add7f",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "427a4b3a840619411d8d1c33",
+      "8c8118614f58e40c87e2c2f7",
+      "a33968b32fce32bd9d6523f6",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
@@ -75,6 +79,8 @@
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-2F809A60275611A5",
       "aae51d03dc366bfb0267f3b4",
+      "aa119272f233de638bb1e02d",
+      "0286171e0bf7415859b35948",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-7729CF4536080393",
@@ -140,38 +146,32 @@
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-5F9BB287023DE81E",
       "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585"
+      "ASC-REVIEW-2527E3DEA85AE958"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 113,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 107,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 119,
-      "moneyRecordCount": 125
+      "relationshipCount": 117,
+      "moneyRecordCount": 123
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Card Intelligence Feed.",
-        "evidence": "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Card Intelligence Feed.",
+        "evidence": "ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); OCLC, INC — Department of Education (data/weekly-investigation-conclusions.json); GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "THE NATIONAL CENTER FOR EDUCATION EVALUATION AND REGIONAL ASSISTANCE OF THE US DEPARTMENT OF EDUCATIONS INSTITUTE OF EDUCATION SCIENCES REQUIRES A CONTRACT TO CONDUCT A NATIONAL STUDY OF SPECIAL EDUCATION SPENDING INFORMED BY THE PILOT STUDY. · Amount: 8830886.25 · Sub-agency: Department of Education A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 117 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Follow The Money Watch; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 117 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-02T00:00:00.000Z"
   }
 }

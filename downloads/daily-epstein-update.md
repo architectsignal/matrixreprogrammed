@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-31T03:49:26.919Z
-Live Intel source window: 2026-07-31T03:49:12.385Z
+Generated: 2026-07-31T06:42:22.716Z
+Live Intel source window: 2026-07-31T06:42:11.507Z
 Latest source publication: 2026-07-31T02:05:57.000Z
 Status: current-seven-day-record-window
 
@@ -15,13 +15,13 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## Current Record Leads
 
-### US Senate unanimously opposes pardoning Maxwell in Trump rebuke - ABC News & Headlines – Australian Broadcasting Corporation
+### With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
 - Published: 2026-07-31T02:05:57.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
 
-US Senate unanimously opposes pardoning Maxwell in Trump rebuke ABC News & Headlines – Australian Broadcasting Corporation
+With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

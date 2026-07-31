@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
   "rules": [
     "Primary government, court, regulator, inspector-general and official archive records receive the highest evidence weight.",
@@ -204,6 +204,21 @@
       "type": "json",
       "parser": "federal-register",
       "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "resourcePolicy": {
+        "approvedForAutomation": true,
+        "zeroSpendVerified": true,
+        "quotaVerified": true,
+        "billingRisk": "none",
+        "hardDailyRequestCeiling": 100,
+        "concurrencyLimit": 1,
+        "officialDocumentationUrl": "https://www.federalregister.gov/developers/documentation/api/v1",
+        "termsUrl": "https://www.federalregister.gov/reader-aids/government-policy-and-ofr-procedures/about-this-site",
+        "privacyUrl": "https://www.federalregister.gov/reader-aids/government-policy-and-ofr-procedures/privacy",
+        "licence": "Federal Register material may be reproduced under 1 CFR 2.6; official editions remain authoritative for legal reliance.",
+        "lastTermsCheck": "2026-07-30T00:00:00.000Z",
+        "lastQuotaCheck": "2026-07-30T00:00:00.000Z",
+        "termsRevalidationDue": "2026-08-29T00:00:00.000Z"
+      },
       "keywords": [
         "ethics",
         "procurement",

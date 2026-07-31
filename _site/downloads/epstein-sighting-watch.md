@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-30T06:20:44.371Z
+Generated: 2026-07-31T06:40:45.214Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -49,32 +49,12 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
+### Epstein files: How victims remain exposed to identification - DW.com
 - Type: debunk/fake-media-risk
 - Status: unverified-claim
 - Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
+- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
-Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell New York Post
-
-### Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Epstein, others named in scathing Interlochen review. See full report Detroit Free Press
-
-### Epstein's former private banker appears before House Oversight Committee - ABC News - Breaking News, Latest News and Videos
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 3
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMirAFBVV95cUxNWXdaUVBGbzBVOWthS3ZwaE5rYWtvN0tIblZIRjFfaExENUZWV3lnSW5nZ2VIckdsWUdCbklzNjlraHBDR08wLVdXMEljcTZZcC1VODY2eDNjQldWUlFaU1A4eE9yRlVwdGExUDZMak1HbEo2MEk3RGV1allfZXMtOUpZTERDSWZvMm1ScEhmQXJGSXZUbmZqUXl0LU9ZY1R4WWE0a0lqMklWZl9n0gGyAUFVX3lxTE9EbDVsc1FwYU8xNzVJSjJDT19MMlIzMzVqTlpyRGRHSHBDVUczd3RNaVZDNEF3TkozUE9lTnVMak5ZbVJFNjliOEVDZ09Dd0RTRWJ4dFZZem5wUEZhczAtYkxhNDFHb0FsLWFVOExkX3p5VXNKTDVGREhUNTg5TGxZbHhoUGJIcnMwNC1icUZmTzk4TjJSODQydWVKRElyVUtXeFdXVl9zVEpjVHNnMjdEY3c?oc=5
-- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
-
-Epstein's former private banker appears before House Oversight Committee ABC News - Breaking News, Latest News and Videos
+Epstein files: How victims remain exposed to identification DW.com

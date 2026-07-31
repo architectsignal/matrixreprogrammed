@@ -1,12 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-30T06:21:59.331Z",
+  "generatedAt": "2026-07-31T06:41:49.799Z",
   "changed": [
     "index.html",
-    "_site/index.html",
     "_site/index"
   ],
-  "preservedSearchFirst": [],
+  "preservedSearchFirst": [
+    "_site/index.html"
+  ],
   "primaryRoutes": [
     "start-here.html",
     "books.html",

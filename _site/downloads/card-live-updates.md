@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-07-30T06:22:37.006Z
-Live Intel source window: 2026-07-30T06:22:24.106Z
+Generated: 2026-07-31T06:42:22.735Z
+Live Intel source window: 2026-07-31T06:42:11.507Z
 Tracked cards: 965
-Cards with current matched records: 104
-Cards with no new verified record: 861
+Cards with current matched records: 95
+Cards with no new verified record: 870
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -781,10 +781,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## António Guterres
 - Route: top-52/ant-nio-guterres.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-25T12:00:00.000Z
 - 2026-07-25T12:00:00.000Z — UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime — https://news.un.org/feed/view/en/story/2026/07/1168027
-- 2026-07-23T12:00:00.000Z — Syria ‘not alone’ in locating missing persons, tackling displacement — https://news.un.org/feed/view/en/story/2026/07/1168010
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-timelines/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
@@ -1053,31 +1052,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Bill Gates
 - Route: follow-the-money/people/bill-gates.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Bill Gates
 - Route: top-52/bill-gates.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## BILL GATES
 - Route: billionaire-briefs/bill-gates.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## BILL GATES
 - Route: main-players/bill-gates.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T21:48:41.000Z
-- 2026-07-23T21:48:41.000Z — Bill Gates’ Epstein review left out his personal emails — here’s what we know | Unreported - NewsNation — https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Bill Melinda Gates Foundation
 - Route: institutions/bill-and-melinda-gates-foundation.html
@@ -1729,17 +1724,15 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Council on Foreign Relations
 - Route: institutions/council-on-foreign-relations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T10:16:08.000Z
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Council on Foreign Relations
 - Route: think-tanks/council-on-foreign-relations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-23T10:16:08.000Z
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## COURT OF APPEALS FOR THE NINTH CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-ninth-circuit.html
@@ -2570,10 +2563,11 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## GHISLAINE MAXWELL
 - Route: dossier-ghislaine-maxwell-criminal.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-30T03:43:00.000Z
-- 2026-07-30T03:43:00.000Z — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
-- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Current matched records: 3
+- Latest record: 2026-07-30T11:19:00.000Z
+- 2026-07-30T11:19:00.000Z — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
+- 2026-07-30T00:48:00.000Z — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
 ## Giancarlo Devasini
 - Route: follow-the-money/people/giancarlo-devasini.html
@@ -2666,10 +2660,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-07-30T03:43:00.000Z
-- 2026-07-30T03:43:00.000Z — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
-- 2026-07-30T00:26:21.000Z — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2 — https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
-- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Latest record: 2026-07-31T02:05:57.000Z
+- 2026-07-31T02:05:57.000Z — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+- 2026-07-30T18:21:00.000Z — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian — https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+- 2026-07-30T16:07:32.000Z — Epstein files: How victims remain exposed to identification - DW.com — https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -3106,12 +3100,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## JEFFREY EPSTEIN
 - Route: dossier-jeffrey-epstein-criminal.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-24T04:00:00.000Z
-- 2026-07-24T04:00:00.000Z — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 06 — https://vault.fbi.gov/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein/records-regarding-the-review-of-the-investigative-holdings-related-to-jeffrey-epstein-part-06/view
-- 2026-07-23T22:12:00.000Z — Ex-Barclays chief Jes Staley tells House he’s ‘unsure’ he met woman in a Snow White costume through Jeffrey Epstein: source - New York Post — https://news.google.com/rss/articles/CBMi9wFBVV95cUxNQXBzUWxmSnhFa25EZ25iWXBRR0pad1Nralk2UGpVZm9rbzhRRE43ajNQMFc5NDNRNVhVVHpGYlVVY1FFblFKekQwMFJYcXliaFYtV0h5MzRkMlRMam1sLTYyak5CbzBkeWx1V0R0ZmFpZjhBRVoyc3RpbHlrenJ4dlhOQVZ6aFVnUkxya1Z2QWNMVDdsZFBlZk9jWDVEaEVnclpTMnk3VHVhMHlMeHhKYkpwMWktVUJmemYtbHdITEx2eWZYZV9EVE9oSjZqZWxBaUo3bTdwRFU0QlNyTXpHNFZKcFhwTFpaVWx1WmpuQ1ZNbnQ5WWNz?oc=5
-- 2026-07-23T10:55:34.000Z — Examining 2 decades since Jeffrey Epstein's arrest - wptv.com — https://news.google.com/rss/articles/CBMikwFBVV95cUxNOEN1RThqZWp3OFdBbXFuZ05ER2stSTlJQUZnak1US3hYa2NQZkgxcGJxclFmR1FfbXhyZVJVNENkSlhvRnFRTDhLN1Q5dW5nT0Nac1RQUHB1MDlPUGFIeEhXN0Q4aGI5NXZZQVk3NDNHLTZHM0c5ZzRJaFZnX1FEX1YwcEtHMmhsVDJ2eC1BWkU1RDg?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
@@ -5225,10 +5216,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## THE DEATH FILES.
 - Route: death-files.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-26T19:11:39.000Z
-- 2026-07-26T19:11:39.000Z — Death of Epstein’s ‘Girl Scout’ Daniel Siad in Paris revives South African connections - Daily Maverick — https://news.google.com/rss/articles/CBMi0AFBVV95cUxONlNBbDlLa0tOOXloTDB0ZHVjRVZqYnlyREJtRE1UaU1fZlROeG9jQ0tFaUNKT0VkeUZqeUh5MWViMlBZcDZWQjJpamJoa2l1LWpWQ0ZQTWZsOUQ3V3hhMkVfVUs0NE85aXZ1YkYwaXgzeW45cm16ZWJHYUVCdkFneUtidW1XWEE5aUhDZ1R2VHVaSGVaaVBGSS1wNzQ1N1BYQWhRNGtjUDNqRThwenB6MHNRR1RHdlhsNmIwTjhSTmJidVRnamtZN1FrVVJ4S2pO?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## THE EPSTEIN EMAIL NETWORK
 - Route: epstein-email-network.html
@@ -5281,11 +5271,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## The War Machine
 - Route: atlas-war-machine.html
-- Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-07-23T20:14:15.000Z
-- 2026-07-23T20:14:15.000Z — Trump authorizes use of AI for defense supply chain mapping - DefenseScoop — https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5
-- 2026-07-23T10:16:08.000Z — Gray Zone Attacks Against U.S. Allies and Partners - Council on Foreign Relations — https://news.google.com/rss/articles/CBMigwFBVV95cUxORkNqSE1mZWlfcTlxQkdjUjFFQ2FBU2dUTmYwYUtXTzlGYzhyMTZSMmoxdVI2bGVZRXRoWG5ZYjRxWlJzbEJJNUNSdl9ZUGtsUXRzSDVfdkdHRDl3WmwyTEhSQzMzWi1Gd05sSEt5NEpCTVJFTWQ3VG9SZzZaajFWQnpaNA?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Theosophical Society
 - Route: secret-societies/theosophical-society.html
@@ -5458,7 +5446,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## United Nations
 - Route: institutions/united-nations.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-29T12:00:00.000Z
 - 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
 - 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
@@ -5467,7 +5455,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
 - Status: current-records-matched
-- Current matched records: 4
+- Current matched records: 3
 - Latest record: 2026-07-29T12:00:00.000Z
 - 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
 - 2026-07-27T12:00:00.000Z — Guterres: Fast-tracking West Bank outposts is a ‘flagrant violation’ of international law — https://news.un.org/feed/view/en/story/2026/07/1168035
@@ -5836,26 +5824,23 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-28T12:00:00.000Z
 - 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
-- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-28T12:00:00.000Z
 - 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
-- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-28T12:00:00.000Z
 - 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
-- 2026-07-24T12:00:00.000Z — Wildfires surge across Europe as Spain and France battle major blazes — https://news.un.org/feed/view/en/story/2026/07/1168013
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

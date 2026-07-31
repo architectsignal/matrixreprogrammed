@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-30T06:17:13.936Z",
-  "pageCount": 131,
+  "generatedAt": "2026-07-31T06:37:50.496Z",
+  "pageCount": 132,
   "output": "downloads/pressure-test-site-report.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Site Pressure Test Report",
-    "contentHash": "5fddcd37111afd7cacd8858c77af32cb1d69f60148c4d560a186289d70d4f6a5",
+    "contentHash": "a6064cc827a612972c229fb563537964e48bf9a9a096f5351960d2272990a1de",
     "sourceIds": [
       "ASC-REVIEW-A9879DBB68A52307",
       "1769af26a7bda813406cd8f5",
-      "ASC-REVIEW-70AD36F3F75D37F7",
+      "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
@@ -23,7 +23,6 @@
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
-      "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -33,7 +32,12 @@
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-5A694C702AD437BB",
       "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-70AD36F3F75D37F7",
       "ASC-REVIEW-71771BB07AA72BD1",
+      "ASC-REVIEW-5745DAEE3A7221DC",
+      "ASC-REVIEW-9EBC0B258FA9E647",
+      "ASC-REVIEW-0807002D2DF4DE89",
+      "ASC-REVIEW-B87070F04E239F1B",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -67,14 +71,6 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-FDB9A891CA376E3B",
-      "ASC-REVIEW-7E1807C0C6B7E2C1",
-      "ASC-REVIEW-164414527DEBB0DC",
-      "ASC-REVIEW-F3CBF44B3FA648D7",
-      "ASC-REVIEW-0807002D2DF4DE89",
-      "ASC-REVIEW-1317EEF720A36A76",
-      "ASC-REVIEW-1B2E5D07E27D9811",
-      "ASC-REVIEW-E2E8EF7C3F520CCF",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -146,7 +142,11 @@
       "ASC-REVIEW-0F86A972B08C9E18",
       "ASC-REVIEW-00A30F616825A65E",
       "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74"
+      "ASC-REVIEW-36CFBB8E5F6A4E74",
+      "ASC-REVIEW-B4A3ADF8C6D010A1",
+      "ASC-REVIEW-D177A29CF338E56D",
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -155,7 +155,7 @@
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 137,
-      "moneyRecordCount": 111
+      "moneyRecordCount": 115
     },
     "evidenceBasedConclusions": [
       {
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; Bill Gates → Microsoft Legacy: ecosystem hint; Breakspear → Historic Church Office: layer hint; Breakspear → Medieval Records: layer hint; Breakspear → Name Lineage: layer hint; ANSYS INC — National Aeronautics and Space Administration; CARAHSOFT TECHNOLOGY CORP — Department of Energy",
+        "supportingEvidence": "Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Bill Gates → Microsoft Legacy: ecosystem hint; Breakspear → Historic Church Office: layer hint; Breakspear → Medieval Records: layer hint; Breakspear → Name Lineage: layer hint; ANSYS INC — National Aeronautics and Space Administration; CARAHSOFT TECHNOLOGY CORP — Department of Energy",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -197,7 +197,7 @@
         "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
-          "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+          "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "Bill Gates → Microsoft Legacy: ecosystem hint",
           "Breakspear → Historic Church Office: layer hint",
           "Breakspear → Medieval Records: layer hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T06:17:13.936Z"
+    "intelligenceFreshnessDate": "2026-07-31T06:37:50.496Z"
   }
 }

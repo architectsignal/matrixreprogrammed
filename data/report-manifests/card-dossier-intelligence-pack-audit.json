@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-07-30T06:09:12.648Z",
-  "pageCount": 88,
+  "generatedAt": "2026-07-31T06:31:16.500Z",
+  "pageCount": 87,
   "output": "downloads/card-dossier-intelligence-pack-audit.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Card Dossier Intelligence Pack Audit",
-    "contentHash": "296e82566706da41ae3d15cd7f9e4c595acd21f6b8b20bc782c5cf43c040c253",
+    "contentHash": "d87f5a2bcdb3c179041e92bbf669d822268446ffda782f3d7b9f8f3a417a9f8a",
     "sourceIds": [
+      "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "26b90533dbf7d2ed42f02de6",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
@@ -24,7 +26,7 @@
       "839e45b161cc432c76667149",
       "a1521652e7c73e5479654be7",
       "24a844c3ddb5aecaad25e9bc",
-      "455b5d0505eb8798c7fe74a3",
+      "1bdcdfbc3d000af1eca95507",
       "57c45b5418e8e6b512f06603",
       "f20773e13fecc4ed152a19d8",
       "2fc40b0213572d5c08dae02c",
@@ -36,7 +38,6 @@
       "af76313a12a8a5c118fff483",
       "07d8034669799aad27a25029",
       "7b119327320ea81d940de97f",
-      "d0b647e325275daa6d824a49",
       "1a3d0bc39e83bbf31b348aca",
       "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
@@ -58,8 +59,11 @@
       "14d04c0943d24cbe6a1926db",
       "9dbf027fbe3a7b1e4c9a25bf",
       "3c9c23f7f9a1cec81ef90f59",
-      "cee347fbc3752c6e0f890457",
       "41772e5c9af7970ddd7d5aac",
+      "greenberg-sentence-2022",
+      "maxwell-conviction-2021",
+      "peter-ball-iicsa-support-2019",
+      "savile-health-investigations-2014",
       "36552e5cb400363cc3f311f8",
       "9c9ec778fc211076aacbfc9e",
       "30b4ccd6bdb28397e374fc9e",
@@ -68,8 +72,9 @@
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
       "885909bcf6db99d2ac2b0d64",
+      "edba4782143dd855b818b53a",
       "eaebe283915d5c0d1982b8e6",
-      "108886c2624e7ff0fca9f3f9",
+      "epstein-federal-indictment-2019",
       "1769af26a7bda813406cd8f5",
       "310372a3fc518b6aabbc5d07",
       "72ef7895f95288946ccb3cff",
@@ -128,6 +133,7 @@
       "5e73176024bd8ae690056c0a",
       "40b43866af121091bf043260",
       "a4c15f7c3d808369b294115e",
+      "108886c2624e7ff0fca9f3f9",
       "6852525bfb3f4d4c67a81fcb",
       "92adb9d59689b41e578a7a5e",
       "c0a5a2caaede97acebdb74f9",
@@ -139,27 +145,21 @@
       "b20bf5953df956897ee110a3",
       "f59da50ababa3ddae79a8f1c",
       "e4a0df7a70409789454722e7",
-      "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-eaebe283915d5c0d1982b8e6",
-      "source-change-7ee9141a42ad539f58a57e50",
-      "source-change-9549433fcfc93118c8a9d2e7",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "war-machine-2026-07-28-171c3080"
+      "source-change-edba4782143dd855b818b53a",
+      "source-change-205bd2407ea96080fdae5fe8"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 43,
-      "disputedClaimCount": 2,
+      "primarySourceCount": 44,
+      "disputedClaimCount": 4,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 17,
+      "relationshipCount": 14,
       "moneyRecordCount": 24
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Card Dossier Intelligence Pack Audit.",
+        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Card Dossier Intelligence Pack Audit.",
         "evidence": "Digital euro legislative package (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); Site Population Audit (data/search-index.json); U.S. Department of Justice (data/search-index.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/clock-wall.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission says its age-verification solution became feature-ready in April 2026. Proof of age can be issued from national eIDs, passports, identity cards, banking apps or offline activation, while the design aims to disclose only the required age threshold.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; ENTITY RELATIONSHIP MAP.; REVIEW DASHBOARD.; Site Population Audit; Matrix Reprogrammed Canonical Intelligence Record; Bettencourt Meyers family; Intelligence Network Pack",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-29T22:45:15.473Z"
+    "intelligenceFreshnessDate": "2026-07-30T07:44:58.630Z"
   }
 }

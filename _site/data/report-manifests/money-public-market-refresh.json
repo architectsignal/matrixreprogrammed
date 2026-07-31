@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-07-30T06:16:06.733Z",
+  "generatedAt": "2026-07-31T06:36:54.389Z",
   "pageCount": 74,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Money Public Market Refresh",
-    "contentHash": "6918db31bf054813d98a4774f25ff44de8158a6dd88bc6af53ee705e3ad8cc12",
+    "contentHash": "5b05537680b6c6aefba68610fafae749acf4d1effbb721d52ace7e29ed290700",
     "sourceIds": [
+      "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "26b90533dbf7d2ed42f02de6",
+      "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "investment-vehicles-ivv",
       "5594665950812895f468c11d",
@@ -20,25 +21,27 @@
       "5b6b5c0285c3c8742768ea5c",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
+      "aa119272f233de638bb1e02d",
+      "0286171e0bf7415859b35948",
       "a71a8be091652489b843ecf6",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "7ee9141a42ad539f58a57e50",
-      "3a425f0d5d683952bc0ad7ac",
       "energy-resources",
       "defence-security-bksy",
       "companies-nvda",
       "companies-msft",
       "companies-amzn",
       "companies-meta",
-      "d10a3c874af4d2b467263ee1",
       "6d665d935673091233751767",
       "157cdab04b61ae6309c0c713",
       "9848ec4b4c3f6c2693269839",
       "7dcf4ef18ea1f86d01068773",
       "b7e4a66335a706ef5097117f",
+      "gautam-adani",
+      "fe51591d2f98b1e8140add7f",
       "2482c3e0241c7c7679a18cd1",
-      "4712eed42978b8a5e911c47a",
+      "48315ec59cadd154d31bf1cf",
       "56d03242af4d235549963dd3",
       "technology-control-pltr:sec-form4",
       "technology-control-nvda:sec-form4",
@@ -51,12 +54,15 @@
       "lawrence-ray-conviction-sentence-2023",
       "epstein-opr-review-2020",
       "ASC-REVIEW-6B9A792BD16666C3",
-      "ASC-REVIEW-D73E83F12FF8D417",
+      "ASC-REVIEW-8E57602B48B9C301",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-B8034056CD461A0D",
       "5295a33003172878f9880122",
+      "44505b4afb60938c8117ad31",
       "14394588e567b7c52bd11cb3",
-      "eb79eba926106673fc0305cc",
+      "contractor-caci-international",
+      "contractor-saic-leidos-lineage",
+      "3a425f0d5d683952bc0ad7ac",
       "media",
       "technology-control",
       "defence-security",
@@ -104,27 +110,21 @@
       "property-1109-hk",
       "property-0688-hk",
       "property-agnc",
-      "property-frt",
-      "property-9ci-si",
-      "media-tri",
-      "media-nyt",
-      "media-djt",
-      "media-4210-sr",
-      "media-pnc-a-to"
+      "property-frt"
     ],
     "metrics": {
       "evidenceCount": 104,
-      "primarySourceCount": 66,
+      "primarySourceCount": 69,
       "disputedClaimCount": 4,
-      "newEntityCount": 2,
+      "newEntityCount": 4,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 12,
-      "moneyRecordCount": 72
+      "relationshipCount": 14,
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 66 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -143,8 +143,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; CARAHSOFT TECHNOLOGY CORP — Department of Energy; REDHAWK IT SOLUTIONS, LLC — Department of Energy; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; ARGUS MEDIA INC — Department of Energy; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; CARAHSOFT TECHNOLOGY CORP — Department of Energy; ARGUS MEDIA INC — Department of Energy; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; CACI International — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -158,16 +158,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
+          "ARGUS MEDIA INC — Department of Energy",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "CARAHSOFT TECHNOLOGY CORP — Department of Energy",
-          "REDHAWK IT SOLUTIONS, LLC — Department of Energy",
+          "ARGUS MEDIA INC — Department of Energy",
           "CACI International → Defense Technology: execution layer",
           "State Street / State Street Investment Management → Market Services: capital layer",
-          "Top 100 Technology-Control Companies",
-          "Top 100 Defence & Security Companies"
+          "CACI International — Contractor Power Report"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -182,6 +182,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-20T00:00:00.000Z"
   }
 }

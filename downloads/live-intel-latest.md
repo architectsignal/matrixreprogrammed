@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-07-31T09:17:30.624Z
+Collection completed: 2026-07-31T14:34:37.967Z
 Latest source publication: 2026-07-31T02:05:57.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection status: fresh-items-added
+New items this collection: 3
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+3 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -44,11 +44,29 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Fear grows as freedoms shrink in Uganda
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168057
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Fear grows as freedoms shrink in Uganda
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Middle East crisis: Humanitarian fallout ‘worsening by the day’
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168055
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Middle East crisis: Humanitarian fallout ‘worsening by the day’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Returning Afghans face growing risk of trafficking as crises deepen
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168051
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Returning Afghans face growing risk of trafficking as crises deepen
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — The climate pattern putting millions at risk: El Niño explained
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168056
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: The climate pattern putting millions at risk: El Niño explained
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Wildfires: Prevention is the best defence, UN says
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168054
@@ -182,11 +200,11 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-27 — Group in Congress pushing for more Epstein transparency - American Press
+- 2026-07-27 — Group in Congress pushing for more Epstein transparency - americanpress.com
   - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Group in Congress pushing for more Epstein transparency - American Press
+  - Video hook: New public-record signal: Group in Congress pushing for more Epstein transparency - americanpress.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-26 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - Eurasia Review
   - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
@@ -223,34 +241,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: ‘Judges should be superhuman’: The invisible burden behind the bench
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168021
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — After an Ebola centre was attacked, peacekeepers moved in next door
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168018
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: After an Ebola centre was attacked, peacekeepers moved in next door
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — International Criminal Court Prosecutor Karim Khan dismissed
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168025
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: International Criminal Court Prosecutor Karim Khan dismissed
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168024
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

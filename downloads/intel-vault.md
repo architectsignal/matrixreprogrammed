@@ -1,11 +1,36 @@
 # Intel Vault
 
-Updated: 2026-07-31T09:17:30.624Z
+Updated: 2026-07-31T14:34:37.967Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### ‘Judges should be superhuman’: The invisible burden behind the bench
+- Published: 2026-07-24T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168023
+- Source class: primary-or-official
+
+### ‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes
+- Published: 2026-07-24T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168021
+- Source class: primary-or-official
+
+### After an Ebola centre was attacked, peacekeepers moved in next door
+- Published: 2026-07-24T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168018
+- Source class: primary-or-official
+
+### International Criminal Court Prosecutor Karim Khan dismissed
+- Published: 2026-07-24T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168025
+- Source class: primary-or-official
+
+### Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
+- Published: 2026-07-24T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168024
+- Source class: primary-or-official
 
 ### Trump authorizes use of AI for defense supply chain mapping - DefenseScoop
 - Published: 2026-07-23T20:14:15.000Z

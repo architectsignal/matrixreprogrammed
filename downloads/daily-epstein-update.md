@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-07-31T09:17:37.110Z
-Live Intel source window: 2026-07-31T09:17:30.624Z
+Generated: 2026-07-31T14:34:44.432Z
+Live Intel source window: 2026-07-31T14:34:37.967Z
 Latest source publication: 2026-07-31T02:05:57.000Z
 Status: current-seven-day-record-window
 
@@ -75,13 +75,13 @@ Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The G
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Group in Congress pushing for more Epstein transparency - American Press
+### Group in Congress pushing for more Epstein transparency - americanpress.com
 - Published: 2026-07-27T00:13:58.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
 
-Group in Congress pushing for more Epstein transparency American Press
+Group in Congress pushing for more Epstein transparency americanpress.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

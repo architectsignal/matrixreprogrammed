@@ -1,5 +1,9 @@
 import assert from 'node:assert/strict';
 import { AutonomousCapabilityDirector } from '../ai-management/autonomy/capability-director.mjs';
+import {
+  brokerResourceFromComputeEvaluation,
+  candidateFromComputeProvider
+} from '../ai-management/compute-resource-scout/compute-resource-scout.mjs';
 
 const clock = () => new Date('2026-07-31T08:00:00.000Z');
 const director = new AutonomousCapabilityDirector({ clock, maximumRemoteJobs: 2 });
@@ -74,4 +78,55 @@ assert.equal(lowPressure.local_pressure.level, 'low');
 assert.equal(lowPressure.remote_preferred, false);
 assert.equal(lowPressure.queued_jobs.length, 0);
 
-console.log('Capability Director tests passed: limited local hardware triggers public remote offload, unavailable capacity defers safely, expiry blocks routing and low-pressure work stays local.');
+const providerCandidate = candidateFromComputeProvider({
+  provider_id: 'owner-donated-gpu',
+  provider_name: 'Owner Donated GPU',
+  service_name: 'Owner HTTPS compute',
+  access_method: 'automatic_api',
+  endpoint_url: 'https://compute.example.org',
+  official_documentation_url: 'https://compute.example.org/docs',
+  terms_url: 'https://compute.example.org/terms',
+  privacy_url: 'https://compute.example.org/privacy',
+  owner_onboarding_completed: true,
+  automation_permission_verified: true,
+  billing_hard_stop_confirmed: true,
+  payment_method_present: false,
+  zero_spend_verified: true,
+  quota_verified: true,
+  free_quota_amount: 10,
+  free_quota_unit: 'jobs per day',
+  session_max_minutes: 30,
+  credential_reference: 'OWNER_COMPUTE_TOKEN',
+  terms_last_verified: clock().toISOString(),
+  terms_revalidation_due: '2026-08-07T00:00:00.000Z',
+  quota_last_verified: clock().toISOString(),
+  metadata: {
+    execution_adapter: 'owner-http-compute',
+    execution_transport: 'https_api',
+    supported_job_types: ['remote-compute.execute'],
+    allowed_task_types: ['public-site-analysis'],
+    routes: { execute: '/jobs', status: '/status', cancel: '/cancel', forbidden: '/admin' },
+    maximum_runtime_seconds: 900,
+    token: 'must-not-survive'
+  }
+}, clock());
+assert.equal(providerCandidate.metadata.execution_adapter, 'owner-http-compute');
+assert.deepEqual(providerCandidate.metadata.allowed_task_types, ['public-site-analysis']);
+assert.equal('token' in providerCandidate.metadata, false);
+assert.equal('forbidden' in providerCandidate.metadata.routes, false);
+
+const routedResource = brokerResourceFromComputeEvaluation({
+  approved: true,
+  classification: 'automatic',
+  confidence: 100,
+  candidate: providerCandidate,
+  evaluated_at: clock().toISOString()
+}, clock());
+assert.equal(routedResource.metadata.execution_adapter, 'owner-http-compute');
+assert.deepEqual(routedResource.metadata.allowed_task_types, ['public-site-analysis']);
+assert.equal(routedResource.metadata.remote_compute, true);
+assert.equal(routedResource.metadata.public_workloads_only, true);
+assert.equal(routedResource.metadata.prompt_transfer_allowed, false);
+assert.equal('token' in routedResource.metadata, false);
+
+console.log('Capability Director tests passed: limited local hardware triggers bounded public offload, unavailable capacity defers safely, expiry blocks routing, low-pressure work stays local and allowlisted provider execution metadata reaches the broker without secrets.');

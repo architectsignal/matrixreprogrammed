@@ -5,7 +5,8 @@ import path from 'node:path';
 import {
   assertNoSensitivePayload,
   assertRemoteComputeJob,
-  assertZeroSpendRemoteResource
+  assertZeroSpendRemoteResource,
+  collectPublicInputUrls
 } from '../ai-management/provider-adapters/compute/compute-adapter-guard.mjs';
 import { KaggleKernelCliAdapter } from '../ai-management/provider-adapters/compute/kaggle-kernel-cli.mjs';
 import { HuggingFaceGradioZeroGpuAdapter } from '../ai-management/provider-adapters/compute/huggingface-gradio-zerogpu.mjs';
@@ -106,6 +107,30 @@ assert.throws(() => assertZeroSpendRemoteResource(resource({ quota_remaining: 1 
 assert.throws(() => assertNoSensitivePayload({ prompt: 'do not send' }), /forbidden for remote compute/);
 assert.throws(() => assertRemoteComputeJob({ job_type: 'remote-compute.reserve', data_class: 'internal', payload: {} }, baseResource, ['remote-compute.reserve']), /public workloads only/);
 assert.equal(adapterKeyForResource(baseResource), 'owner-http-compute');
+assert.deepEqual(
+  collectPublicInputUrls({ public_inputs: ['https://matrixreprogrammed.com/public-data.json'] }),
+  ['https://matrixreprogrammed.com/public-data.json']
+);
+assert.throws(() => collectPublicInputUrls({ public_inputs: ['http://matrixreprogrammed.com/data.json'] }), /must use HTTPS/);
+assert.throws(() => collectPublicInputUrls({ public_inputs: ['https://127.0.0.1/private'] }), /local or private network/);
+
+const locked = remoteComputeBrokerInternals.normalizeRemoteComputeInput({
+  capability_type: 'other',
+  data_class: 'public',
+  requirements: {
+    cost_ceiling_eur: 999,
+    maximum_attempts: 9,
+    cacheable: true,
+    requires_provenance: false,
+    maximum_latency_ms: 60_000
+  }
+});
+assert.equal(locked.capability_type, 'remote_compute');
+assert.equal(locked.requirements.cost_ceiling_eur, 0);
+assert.equal(locked.requirements.maximum_attempts, 1);
+assert.equal(locked.requirements.cacheable, false);
+assert.equal(locked.requirements.requires_provenance, true);
+assert.equal(locked.requirements.maximum_latency_ms, 60_000);
 
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-compute-adapter-'));
 try {
@@ -163,13 +188,15 @@ try {
       allowed_api_names: ['/predict']
     }
   });
+  const hfPublicSource = 'https://matrixreprogrammed.com/public-data.json';
   const hf = new HuggingFaceGradioZeroGpuAdapter({ fetchImpl: hfFetch, environment: { HF_TOKEN: 'hf-test' } });
   const hfResult = await hf.execute({
-    job_type: 'remote-compute.reserve', data_class: 'public', payload: { public_inputs: ['https://matrixreprogrammed.com/public-data.json'] },
+    job_type: 'remote-compute.reserve', data_class: 'public', payload: { public_inputs: [hfPublicSource] },
     requirements: { maximum_latency_ms: 60_000 }, idempotency_key: 'idem-hf-test'
   }, hfResource);
   assert.equal(hfResult.ok, true);
   assert.deepEqual(hfResult.output.result, ['PUBLIC_OK']);
+  assert.ok(hfResult.provenance.source_urls.includes(hfPublicSource));
   await assert.rejects(() => hf.execute({
     job_type: 'remote-compute.reserve', data_class: 'public', payload: { prompt: 'blocked', public_inputs: [] },
     requirements: {}, idempotency_key: 'idem-hf-block'
@@ -182,20 +209,45 @@ try {
     });
   };
   const owner = new OwnerHttpComputeAdapter({ fetchImpl: ownerFetch, environment: { OWNER_COMPUTE_TOKEN: 'owner-test' } });
+  const ownerPublicSource = 'https://matrixreprogrammed.com/sitemap.xml';
   const ownerResult = await owner.execute({
     job_type: 'remote-compute.reserve', data_class: 'public',
-    payload: { operation: 'execute', task_type: 'public-site-analysis', public_manifest: { source_urls: ['https://matrixreprogrammed.com/sitemap.xml'] } },
+    payload: { operation: 'execute', task_type: 'public-site-analysis', public_manifest: { source_urls: [ownerPublicSource] } },
     requirements: { maximum_latency_ms: 60_000 }, idempotency_key: 'idem-owner-test'
   }, baseResource);
   assert.equal(ownerResult.output.result.job_handle, 'job-123');
+  assert.ok(ownerResult.provenance.source_urls.includes(ownerPublicSource));
 
   const session = new RemoteComputeSessionAdapter({ adapters: [owner] });
   const sessionResult = await session.execute({
     job_type: 'remote-compute.reserve', data_class: 'public',
-    payload: { operation: 'execute', task_type: 'public-site-analysis', public_manifest: { source_urls: ['https://matrixreprogrammed.com/sitemap.xml'] } },
+    payload: { operation: 'execute', task_type: 'public-site-analysis', public_manifest: { source_urls: [ownerPublicSource] } },
     requirements: {}, idempotency_key: 'idem-session-test'
   }, baseResource);
   assert.equal(sessionResult.output.execution_adapter, 'owner-http-compute');
+
+  const incompleteProvenanceAdapter = {
+    adapter_id: 'owner-http-compute',
+    async execute() {
+      return {
+        ok: true,
+        output: { provider: 'test' },
+        provenance: {
+          source_urls: ['https://compute.example.org/docs'],
+          retrieved_at: new Date().toISOString(),
+          content_hash: 'abc123',
+          cost_confirmed_zero: true,
+          data_class: 'public'
+        }
+      };
+    }
+  };
+  const incompleteSession = new RemoteComputeSessionAdapter({ adapters: [incompleteProvenanceAdapter] });
+  await assert.rejects(() => incompleteSession.execute({
+    job_type: 'remote-compute.reserve', data_class: 'public',
+    payload: { operation: 'execute', task_type: 'public-site-analysis', public_manifest: { source_urls: [ownerPublicSource] } },
+    requirements: {}, idempotency_key: 'idem-session-incomplete'
+  }, baseResource), /does not cover every public input/);
 
   const normalized = remoteComputeBrokerInternals.normalizeJobForResources({
     job_type: 'remote-compute.execute', payload: { task_type: 'public-site-analysis' }
@@ -205,8 +257,8 @@ try {
 
   const brokerResult = await executeRemoteComputeJob({
     job_type: 'remote-compute.execute', capability_type: 'remote_compute', data_class: 'public',
-    payload: { task_type: 'public-site-analysis', public_manifest: { source_urls: ['https://matrixreprogrammed.com/sitemap.xml'] }, quota_units: 1 },
-    requirements: { maximum_attempts: 1, maximum_latency_ms: 60_000, cacheable: false }
+    payload: { task_type: 'public-site-analysis', public_manifest: { source_urls: [ownerPublicSource] }, quota_units: 1 },
+    requirements: { maximum_attempts: 7, maximum_latency_ms: 60_000, cacheable: true, cost_ceiling_eur: 10, requires_provenance: false }
   }, {
     resources: [baseResource],
     adapters: [session],
@@ -219,4 +271,4 @@ try {
   fs.rmSync(temporary, { recursive: true, force: true });
 }
 
-console.log('Compute adapter tests passed: fail-closed public-only manifests, zero-spend and expiry gates, Kaggle kernel submission, Hugging Face ZeroGPU queue execution, owner endpoint execution, provider dispatch and broker compatibility routing.');
+console.log('Compute adapter tests passed: public-only URL and payload gates, locked zero-spend requirements, input-bound provenance, quota and expiry stops, provider execution and broker compatibility routing.');

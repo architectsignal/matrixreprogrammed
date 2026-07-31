@@ -7,6 +7,7 @@ on:
       - 'local-agent/**'
       - 'scripts/ai-management-*.mjs'
       - 'scripts/opportunity-hunter-test.mjs'
+      - 'scripts/phase12-production-readiness-test.mjs'
       - 'scripts/run-autonomous-ai-manager.mjs'
       - 'scripts/run-investigation-machine.js'
       - 'src/worker-ai-management.js'
@@ -60,6 +61,7 @@ jobs:
           node --check scripts/run-autonomous-ai-manager.mjs
           node --check scripts/ai-management-autonomy-test.mjs
           node --check scripts/opportunity-hunter-test.mjs
+          node --check scripts/phase12-production-readiness-test.mjs
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-production-autonomy.js
@@ -71,6 +73,7 @@ jobs:
         run: |
           node scripts/ai-management-autonomy-test.mjs
           node scripts/opportunity-hunter-test.mjs
+          node scripts/phase12-production-readiness-test.mjs
 
       - name: Run owner-local execution tests
         run: |

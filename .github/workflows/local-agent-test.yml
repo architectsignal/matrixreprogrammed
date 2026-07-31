@@ -5,6 +5,7 @@ on:
     paths:
       - 'local-agent/**'
       - 'ai-management/local-runtime/**'
+      - 'src/worker-local-job-api.js'
       - 'migrations/phase11_local_job_queue.sql'
       - '.github/workflows/local-agent-test.yml'
   workflow_dispatch:
@@ -25,5 +26,9 @@ jobs:
           node-version: '20'
       - name: Run local agent tests
         run: node local-agent/matrix-local-agent.test.mjs
+      - name: Run control-plane client tests
+        run: node local-agent/control-plane-client.test.mjs
       - name: Run local queue tests
         run: node ai-management/local-runtime/job-queue.test.mjs
+      - name: Check Worker queue API syntax
+        run: node --check src/worker-local-job-api.js

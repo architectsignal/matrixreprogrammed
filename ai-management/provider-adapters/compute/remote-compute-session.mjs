@@ -1,4 +1,5 @@
 import { AdapterError } from '../adapter-contract.mjs';
+import { collectPublicInputUrls } from './compute-adapter-guard.mjs';
 import { KaggleKernelCliAdapter } from './kaggle-kernel-cli.mjs';
 import { HuggingFaceGradioZeroGpuAdapter } from './huggingface-gradio-zerogpu.mjs';
 import { OwnerHttpComputeAdapter } from './owner-http-compute.mjs';
@@ -19,7 +20,7 @@ export function adapterKeyForResource(resource = {}) {
   return '';
 }
 
-function assertRemoteProvenance(result, adapter) {
+function assertRemoteProvenance(result, adapter, job) {
   const provenance = result?.provenance;
   if (!result || result.ok === false || !provenance || !Array.isArray(provenance.source_urls) || !provenance.source_urls.length || !provenance.retrieved_at || !provenance.content_hash) {
     throw new AdapterError('Remote compute adapter returned incomplete provenance', {
@@ -31,6 +32,16 @@ function assertRemoteProvenance(result, adapter) {
     throw new AdapterError('Remote compute adapter failed the returned zero-spend or public-data proof', {
       code: 'REMOTE_COMPUTE_RESULT_BOUNDARY_FAILED',
       details: { adapter_id: adapter?.adapter_id || null }
+    });
+  }
+  const returnedSources = new Set(provenance.source_urls.map(value => {
+    try { return new URL(value).toString(); } catch { return ''; }
+  }).filter(Boolean));
+  const missingSources = collectPublicInputUrls(job?.payload || {}).filter(value => !returnedSources.has(value));
+  if (missingSources.length) {
+    throw new AdapterError('Remote compute result provenance does not cover every public input', {
+      code: 'REMOTE_COMPUTE_INPUT_PROVENANCE_MISSING',
+      details: { adapter_id: adapter?.adapter_id || null, missing_source_urls: missingSources }
     });
   }
 }
@@ -57,7 +68,7 @@ export class RemoteComputeSessionAdapter {
       });
     }
     const result = await adapter.execute(job, resource, context);
-    assertRemoteProvenance(result, adapter);
+    assertRemoteProvenance(result, adapter, job);
     return {
       ...result,
       output: {

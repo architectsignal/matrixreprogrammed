@@ -1,5 +1,6 @@
 import productionWorker from './worker-production.js';
-import aiManagementWorker, { isAiManagementRoute } from './worker-ai-management.js';
+import aiManagementWorker from './worker-ai-management.js';
+import { isAiManagementRoute } from './worker-ai-management.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 

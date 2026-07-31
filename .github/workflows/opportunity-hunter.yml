@@ -1,0 +1,45 @@
+name: Opportunity Hunter Safety Gate
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/opportunity-hunter/**'
+      - 'scripts/opportunity-hunter-test.mjs'
+      - '.github/workflows/opportunity-hunter.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: opportunity-hunter-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  opportunity-hunter:
+    name: Verify lawful zero-spend opportunity discovery
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout candidate commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify syntax
+        run: |
+          node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
+          node --check scripts/opportunity-hunter-test.mjs
+
+      - name: Verify approval and quarantine policy
+        run: node scripts/opportunity-hunter-test.mjs
+
+      - name: Verify prohibited capacity recruitment remains blocked
+        run: |
+          grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "owner-approval-required-for-capacity-program" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F "credential-onboarding-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          ! grep -E "bypass|evade|unauthori[sz]ed|steal compute" ai-management/opportunity-hunter/opportunity-hunter.mjs

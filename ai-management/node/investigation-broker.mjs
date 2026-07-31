@@ -55,6 +55,7 @@ export function investigationSourceResource(source, { priorState = {}, now = new
   const authorityScore = source.authority === 'primary-official' ? 94 : source.authority === 'credible-investigative-archive' ? 82 : 72;
   const limit = Math.max(1, Number(policy.hardDailyRequestCeiling || dailyLimit));
   const quarantinedReason = policyLedger.quarantine?.[source.id] || null;
+  const zeroCostEvidenceAt = policy.zeroCostEvidenceAt || policy.lastPricingCheck || policy.lastTermsCheck || null;
   return {
     resource_id: `investigation-source-${source.id}`,
     provider_name: source.label,
@@ -84,7 +85,15 @@ export function investigationSourceResource(source, { priorState = {}, now = new
     billing_enabled: false,
     billing_risk: policy.billingRisk || 'unknown',
     payment_method_present: false,
+    payment_method_required: false,
     monetary_cost_per_unit_eur: 0,
+    zero_cost_verified: policy.zeroSpendVerified === true,
+    zero_cost_evidence_at: zeroCostEvidenceAt,
+    last_pricing_check: policy.lastPricingCheck || zeroCostEvidenceAt,
+    paid_fallback: false,
+    overage_possible: false,
+    auto_upgrade_enabled: false,
+    external_charge_possible: false,
     quality_score: authorityScore,
     reliability_score: Number(policy.reliabilityScore || 85),
     latency_score: Number(policy.latencyScore || 75),

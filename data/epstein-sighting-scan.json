@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-31T06:40:45.214Z",
+  "updated": "2026-07-31T09:17:37.159Z",
   "title": "Epstein Sighting Watch",
   "subtitle": "Official status: deceased. Internet sighting claims: unverified.",
   "officialStatus": "deceased",
   "officialBoundary": "The official record treats Jeffrey Epstein as deceased as of August 10, 2019. This watch does not claim he is alive. It tracks internet sightings, lookalike claims, fake-media claims, memes, and public speculation as claims only.",
   "verifiedSurvivalEvidence": 0,
-  "internetClaimActivity": "low",
+  "internetClaimActivity": "none found in current seven-day feed window",
   "hoaxRisk": "high",
   "scanQueries": [
     "Jeffrey Epstein alive",
@@ -109,41 +109,8 @@
       "likelyExplanation": "Synthetic image, altered image, old footage, compression artefact, or repost without origin.",
       "sourceType": "fake-media risk class",
       "risk": "high"
-    },
-    {
-      "id": "epstein-files-2026-07-30-2a83e994",
-      "title": "Epstein files: How victims remain exposed to identification - DW.com",
-      "type": "debunk/fake-media-risk",
-      "foundAt": "2026-07-30T16:07:32.000Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5",
-      "sourceLabel": "Google News / Epstein sighting and alive claims",
-      "sourceType": "seven-day internet/news scan",
-      "locationClaim": "Unverified / source dependent",
-      "evidenceLevel": 5,
-      "status": "unverified-claim",
-      "summary": "Epstein files: How victims remain exposed to identification DW.com",
-      "likelyExplanation": "Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.",
-      "risk": "medium",
-      "boundary": "This is a claim lead, not evidence that Epstein is alive."
     }
   ],
-  "liveMatches": [
-    {
-      "id": "epstein-files-2026-07-30-2a83e994",
-      "title": "Epstein files: How victims remain exposed to identification - DW.com",
-      "type": "debunk/fake-media-risk",
-      "foundAt": "2026-07-30T16:07:32.000Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5",
-      "sourceLabel": "Google News / Epstein sighting and alive claims",
-      "sourceType": "seven-day internet/news scan",
-      "locationClaim": "Unverified / source dependent",
-      "evidenceLevel": 5,
-      "status": "unverified-claim",
-      "summary": "Epstein files: How victims remain exposed to identification DW.com",
-      "likelyExplanation": "Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.",
-      "risk": "medium",
-      "boundary": "This is a claim lead, not evidence that Epstein is alive."
-    }
-  ],
+  "liveMatches": [],
   "sourceNote": "Weekly scan is built from the current Matrix Reprogrammed seven-day intel window plus standing sighting claim classes. It does not crawl private platforms and does not verify survival."
 }

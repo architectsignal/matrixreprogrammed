@@ -6,6 +6,7 @@ on:
       - 'local-agent/**'
       - 'ai-management/local-runtime/**'
       - 'src/worker-local-job-api.js'
+      - 'src/worker-production-autonomy.js'
       - 'migrations/phase11_local_job_queue.sql'
       - '.github/workflows/local-agent-test.yml'
   workflow_dispatch:
@@ -32,3 +33,5 @@ jobs:
         run: node ai-management/local-runtime/job-queue.test.mjs
       - name: Check Worker queue API syntax
         run: node --check src/worker-local-job-api.js
+      - name: Check autonomy wrapper syntax
+        run: node --check src/worker-production-autonomy.js

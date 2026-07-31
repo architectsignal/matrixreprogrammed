@@ -1,15 +1,17 @@
 # Machine Intelligence
 
-Updated: 2026-07-30T19:51:14.912Z
+Updated: 2026-07-31T03:49:11.427Z
 
 Current records: 18
 Previous records: 18
-New records: 0
-Changed records: 0
+New records: 2
+Changed records: 6
 Relationship candidates: 25
 
 ## New Records
 
+- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
+- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
 
 ## Relationship Candidates
 

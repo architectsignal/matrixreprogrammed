@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T19:50:58.166Z",
+  "updated": "2026-07-31T03:48:54.090Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -10,12 +10,12 @@
   "evidence_grade": "charged / sued",
   "itemCount": 6,
   "raw": {
-    "count": 23270,
+    "count": 23276,
     "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMTcyODAwMDAwJnM9MTA4Nzk2NzUmdD1vJmQ9MjAyNi0wNy0zMCZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
       {
-        "absolute_url": "/opinion/10936338/d-a-grandview-llc-v-60-davidson-llc/",
+        "absolute_url": "/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
         "attorney": "",
         "caseName": "D & A Grandview, LLC v. 60 Davidson, LLC",
         "caseNameFull": "",
@@ -23,7 +23,7 @@
           "2026 NY Slip Op 04743"
         ],
         "citeCount": 0,
-        "cluster_id": 10936338,
+        "cluster_id": 10936935,
         "court": "Appellate Division of the Supreme Court of the State of New York",
         "court_citation_string": "N.Y. App. Div.",
         "court_id": "nyappdiv",
@@ -37,8 +37,8 @@
         "judge": "",
         "lexisCite": "",
         "meta": {
-          "timestamp": "2026-07-29T20:17:07.071394Z",
-          "date_created": "2026-07-29T20:17:06.843304Z",
+          "timestamp": "2026-07-30T21:13:37.805443Z",
+          "date_created": "2026-07-30T21:13:20.047377Z",
           "score": {
             "bm25": null
           }
@@ -58,17 +58,17 @@
               9554776
             ],
             "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04743.shtml",
-            "id": 11403912,
+            "id": 11404511,
             "joined_by_ids": [],
-            "local_path": "html/2026/07/29/d__a_grandview_llc_v._60_davidson_llc.html",
+            "local_path": "html/2026/07/29/d__a_grandview_llc_v._60_davidson_llc_1.html",
             "meta": {
-              "timestamp": "2026-07-29T20:18:16.342189Z",
-              "date_created": "2026-07-29T20:17:06.857302Z"
+              "timestamp": "2026-07-30T21:13:53.559752Z",
+              "date_created": "2026-07-30T21:13:20.069221Z"
             },
             "ordering_key": null,
             "per_curiam": false,
-            "sha1": "13a29da231020d9594aba8111e76222675c88355",
-            "snippet": "D & A Grandview, LLC v 60 Davidson, LLC - 2026 NY Slip Op 04743\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n   ",
+            "sha1": "7e009eac23c75fc629a658d76efa91b4797771d9",
+            "snippet": "\n\nD & A Grandview, LLC v 60 Davidson, LLC\n2026 NY Slip Op 04743\nJuly 29, 2026\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis decision is uncorrected and subject to revision before publication in the Official Reports.\n\n\nD & A Grandview, LLC, et al., respondents,\nv\n60 Davidson, LLC, et al., appellants, et al., defendants.\n<",
             "type": "combined-opinion"
           }
         ],
@@ -78,7 +78,8 @@
         "procedural_history": "",
         "scdb_id": "",
         "sibling_ids": [
-          11403912
+          11403912,
+          11404511
         ],
         "source": "C",
         "status": "Published",
@@ -86,7 +87,7 @@
         "syllabus": ""
       },
       {
-        "absolute_url": "/opinion/10936292/williams-v-biggs/",
+        "absolute_url": "/opinion/10936889/williams-v-biggs/",
         "attorney": "",
         "caseName": "Williams v. Biggs",
         "caseNameFull": "",
@@ -94,7 +95,7 @@
           "2026 NY Slip Op 04791"
         ],
         "citeCount": 0,
-        "cluster_id": 10936292,
+        "cluster_id": 10936889,
         "court": "Appellate Division of the Supreme Court of the State of New York",
         "court_citation_string": "N.Y. App. Div.",
         "court_id": "nyappdiv",
@@ -108,8 +109,8 @@
         "judge": "",
         "lexisCite": "",
         "meta": {
-          "timestamp": "2026-07-29T20:15:53.425466Z",
-          "date_created": "2026-07-29T20:15:53.316323Z",
+          "timestamp": "2026-07-30T21:11:40.718680Z",
+          "date_created": "2026-07-30T21:11:38.360719Z",
           "score": {
             "bm25": null
           }
@@ -177,20 +178,21 @@
               9824478,
               9894464,
               9899097,
-              9907738
+              9907738,
+              11403866
             ],
             "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04791.shtml",
-            "id": 11403866,
+            "id": 11404465,
             "joined_by_ids": [],
-            "local_path": "html/2026/07/29/williams_v._biggs_1.html",
+            "local_path": "html/2026/07/29/williams_v._biggs_4.html",
             "meta": {
-              "timestamp": "2026-07-29T20:18:22.513944Z",
-              "date_created": "2026-07-29T20:15:53.329276Z"
+              "timestamp": "2026-07-30T21:11:40.725835Z",
+              "date_created": "2026-07-30T21:11:38.385744Z"
             },
             "ordering_key": null,
             "per_curiam": false,
-            "sha1": "502573258aeb3dde890623336f1032fefdfe0035",
-            "snippet": "Williams v Biggs - 2026 NY Slip Op 04791\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n             ",
+            "sha1": "e81fb56a0962e8727a54d09793988f03d1c1f87e",
+            "snippet": "\n\nWilliams v Biggs\n2026 NY Slip Op 04791\nJuly 29, 2026\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis decision is uncorrected and subject to revision before publication in the Official Reports.\n\n\nAlphaus Williams, appellant,\nv\nCarina Biggs, etc., et al., respondents, Sara Kim, etc., et al., defendants.\n\nSupreme Court of ",
             "type": "combined-opinion"
           }
         ],
@@ -200,6 +202,7 @@
         "procedural_history": "",
         "scdb_id": "",
         "sibling_ids": [
+          11404465,
           11403866
         ],
         "source": "C",
@@ -629,7 +632,7 @@
         "syllabus": "The plaintiff, Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena, appealed from a Superior Court order denying his motion for a new trial, which he filed after a jury returned a verdict in favor of the defendant, Rhode Island Public Transit Authority (defendant or RIPTA). On appeal, the plaintiff argued that the trial justice erred in admitting into evidence the alleged statements of Pena to a RIPTA supervisor, statements which were procured through an unidentified Spanish interpreter. The Supreme Court held that the trial justice abused her discretion in admitting the challenged statements into evidence, reversed the Superior Court order denying the plaintiff's motion, and remanded the case for a new trial."
       },
       {
-        "absolute_url": "/opinion/10919908/sawas-v-elzanaty/",
+        "absolute_url": "/opinion/10937068/sawas-v-elzanaty/",
         "attorney": "",
         "caseName": "Sawas v. Elzanaty",
         "caseNameFull": "",
@@ -637,7 +640,7 @@
           "2026 NY Slip Op 04336"
         ],
         "citeCount": 0,
-        "cluster_id": 10919908,
+        "cluster_id": 10937068,
         "court": "Appellate Division of the Supreme Court of the State of New York",
         "court_citation_string": "N.Y. App. Div.",
         "court_id": "nyappdiv",
@@ -651,8 +654,8 @@
         "judge": "",
         "lexisCite": "",
         "meta": {
-          "timestamp": "2026-07-08T20:28:36.266012Z",
-          "date_created": "2026-07-08T20:28:36.146337Z",
+          "timestamp": "2026-07-30T21:18:03.820707Z",
+          "date_created": "2026-07-30T21:18:02.733218Z",
           "score": {
             "bm25": null
           }
@@ -662,35 +665,19 @@
         "opinions": [
           {
             "author_id": null,
-            "cites": [
-              4679737,
-              4686284,
-              4911287,
-              5485637,
-              5677285,
-              5724493,
-              5747212,
-              5783163,
-              5800235,
-              5811044,
-              5825538,
-              5894020,
-              5944129,
-              6080715,
-              9391989
-            ],
+            "cites": [],
             "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04336.shtml",
-            "id": 11387444,
+            "id": 11404644,
             "joined_by_ids": [],
-            "local_path": "html/2026/07/08/sawas_v._elzanaty.html",
+            "local_path": "html/2026/07/08/sawas_v._elzanaty_1.html",
             "meta": {
-              "timestamp": "2026-07-09T03:18:06.358386Z",
-              "date_created": "2026-07-08T20:28:36.170258Z"
+              "timestamp": "2026-07-30T21:18:03.283790Z",
+              "date_created": "2026-07-30T21:18:02.767381Z"
             },
             "ordering_key": null,
             "per_curiam": false,
-            "sha1": "5756d9a724a3f943f106f6484b87626a9b529366",
-            "snippet": "Sawas v Elzanaty - 2026 NY Slip Op 04336\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n             ",
+            "sha1": "dc5672c49fcfbac2b32d8e44f99b872e914495a3",
+            "snippet": "\n\nSawas v Elzanaty\n2026 NY Slip Op 04336\nJuly 8, 2026\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis decision is uncorrected and subject to revision before publication in the Official Reports.\n\n\nAnas Sawas, appellant,\nv\nSherene H. Elzanaty, respondent.\n\nSupreme Court of the State of New York, Appellate Division, Second J",
             "type": "combined-opinion"
           }
         ],
@@ -700,6 +687,7 @@
         "procedural_history": "",
         "scdb_id": "",
         "sibling_ids": [
+          11404644,
           11387444
         ],
         "source": "C",
@@ -885,7 +873,7 @@
         "syllabus": ""
       },
       {
-        "absolute_url": "/opinion/10883674/matter-of-pagliughi/",
+        "absolute_url": "/opinion/10937169/matter-of-pagliughi/",
         "attorney": "",
         "caseName": "Matter of Pagliughi",
         "caseNameFull": "",
@@ -893,7 +881,7 @@
           "2026 NY Slip Op 04199"
         ],
         "citeCount": 0,
-        "cluster_id": 10883674,
+        "cluster_id": 10937169,
         "court": "Appellate Division of the Supreme Court of the State of New York",
         "court_citation_string": "N.Y. App. Div.",
         "court_id": "nyappdiv",
@@ -907,8 +895,8 @@
         "judge": "",
         "lexisCite": "",
         "meta": {
-          "timestamp": "2026-07-01T19:19:40.645831Z",
-          "date_created": "2026-07-01T19:19:09.282983Z",
+          "timestamp": "2026-07-30T21:21:52.656804Z",
+          "date_created": "2026-07-30T21:21:44.740752Z",
           "score": {
             "bm25": null
           }
@@ -918,26 +906,19 @@
         "opinions": [
           {
             "author_id": null,
-            "cites": [
-              2045001,
-              2683038,
-              3206823,
-              4204886,
-              5537567,
-              6216956
-            ],
+            "cites": [],
             "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04199.shtml",
-            "id": 11351202,
+            "id": 11404745,
             "joined_by_ids": [],
-            "local_path": "html/2026/07/01/matter_of_pagliughi.html",
+            "local_path": "html/2026/07/01/matter_of_pagliughi_1.html",
             "meta": {
-              "timestamp": "2026-07-01T22:41:07.971598Z",
-              "date_created": "2026-07-01T19:19:09.306563Z"
+              "timestamp": "2026-07-30T21:21:52.691397Z",
+              "date_created": "2026-07-30T21:21:44.764454Z"
             },
             "ordering_key": null,
             "per_curiam": false,
-            "sha1": "496e30558a026f3afe66f257afdf3333d14611cd",
-            "snippet": "Matter of Pagliughi - 2026 NY Slip Op 04199\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n          ",
+            "sha1": "16bd1b27132154dbe8fe2b9105f7e7726f31405d",
+            "snippet": "\n\nMatter of Pagliughi\n2026 NY Slip Op 04199\nJuly 1, 2026\nAppellate Division, Second Department\nPublished by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.\nThis decision is uncorrected and subject to revision before publication in the Official Reports.\n\n\nIn the Matter of Americo Pagliughi, etc., deceased. Jean M. Pagliughi, appellant; Jacqueline Brown, et al., respondents. (File No. 2031/14)\n\n",
             "type": "combined-opinion"
           }
         ],
@@ -947,6 +928,7 @@
         "procedural_history": "",
         "scdb_id": "",
         "sibling_ids": [
+          11404745,
           11351202
         ],
         "source": "C",

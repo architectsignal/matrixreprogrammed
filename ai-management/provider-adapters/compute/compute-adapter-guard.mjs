@@ -6,7 +6,7 @@ import { AdapterError } from '../adapter-contract.mjs';
 import { sha256 } from '../../core/jobs.mjs';
 
 const execFileDefault = promisify(execFileCallback);
-const SENSITIVE_KEY = /^(?:prompt|prompts|messages?|system|assistant|content|document|documents|private|secret|password|token|api[_-]?key|authorization|cookie|session|email|phone|address|payment|paypal|member|auth)$/i;
+const SENSITIVE_KEY = /(?:^|_)(?:prompt|prompts|message|messages|system|assistant|private|secret|password|token|api_key|authorization|cookie|session|email|phone|address|payment|paypal|member|auth)(?:$|_(?:data|value|text|body|record|records|list|items|payload|header|id|ids))|(?:^|_)(?:content|document|documents)(?:$|_(?:data|value|text|body|record|records|list|items|payload))/i;
 const PUBLIC_URL_PROTOCOLS = new Set(['https:']);
 const URL_LIKE = /^[a-z][a-z0-9+.-]*:\/\//i;
 
@@ -16,6 +16,14 @@ function isObject(value) {
 
 function encodedBytes(value) {
   return new TextEncoder().encode(typeof value === 'string' ? value : JSON.stringify(value ?? null)).byteLength;
+}
+
+function normalizedKey(value) {
+  return String(value || '')
+    .replace(/([a-z0-9])([A-Z])/g, '$1_$2')
+    .replace(/[^a-zA-Z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .toLowerCase();
 }
 
 function privateNetworkHost(value) {
@@ -41,7 +49,7 @@ export function assertNoSensitivePayload(value, location = 'payload', depth = 0)
   }
   if (!isObject(value)) return;
   for (const [key, child] of Object.entries(value)) {
-    if (SENSITIVE_KEY.test(key)) {
+    if (SENSITIVE_KEY.test(normalizedKey(key))) {
       throw new AdapterError(`Sensitive or prompt-shaped field is forbidden for remote compute: ${location}.${key}`, {
         code: 'REMOTE_PAYLOAD_FIELD_BLOCKED',
         details: { field: `${location}.${key}` }
@@ -233,6 +241,7 @@ export const computeGuardInternals = {
   URL_LIKE,
   isObject,
   encodedBytes,
+  normalizedKey,
   privateNetworkHost,
   execFileDefault
 };

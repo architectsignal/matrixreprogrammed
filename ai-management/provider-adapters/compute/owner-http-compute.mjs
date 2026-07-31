@@ -102,7 +102,9 @@ export class OwnerHttpComputeAdapter {
           details: { status: response.status, error: String(result?.error || '').slice(0, 500) }
         });
       }
-      if (Number(result?.cost_eur || 0) !== 0 || result?.billing_enabled === true) {
+      const hasCostProof = Object.prototype.hasOwnProperty.call(result, 'cost_eur');
+      const runtimeCost = Number(result?.cost_eur);
+      if (!hasCostProof || !Number.isFinite(runtimeCost) || runtimeCost !== 0 || result?.billing_enabled !== false) {
         throw new AdapterError('Owner compute endpoint failed the returned zero-spend proof', { code: 'REMOTE_ZERO_SPEND_PROOF_FAILED' });
       }
       const retrievedAt = this.clock().toISOString();

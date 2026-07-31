@@ -56,23 +56,33 @@ export function createRemoteComputeBroker({
 } = {}) {
   const computeResources = remoteResources(resources);
   const resourceRegistry = registry || new ResourceRegistry(computeResources);
+  const callerEligibilityEvaluator = typeof policyContext.resourceEligibilityEvaluator === 'function'
+    ? policyContext.resourceEligibilityEvaluator
+    : null;
   return new ResourceBroker({
     registry: resourceRegistry,
     adapters: adapters || createComputeAdapters(adapterOptions),
     policyContext: {
+      ...policyContext,
       zeroSpendLock: true,
-      externalEnabled: true,
-      localOnly: false,
-      resourceEligibilityEvaluator(resource, job) {
+      externalEnabled: policyContext.externalEnabled !== false,
+      localOnly: policyContext.localOnly === true,
+      resourceEligibilityEvaluator(resource, job, context) {
         const reasons = [];
+        const now = context?.now instanceof Date ? context.now.getTime() : Date.now();
         if (resource?.metadata?.remote_compute !== true) reasons.push('not-remote-compute');
         if (resource?.metadata?.public_workloads_only !== true) reasons.push('public-only-boundary-missing');
         if (resource?.metadata?.prompt_transfer_allowed !== false) reasons.push('prompt-transfer-boundary-missing');
-        if (resource?.metadata?.expires_at && Date.parse(resource.metadata.expires_at) <= Date.now()) reasons.push('compute-session-expired');
+        if (resource?.metadata?.expires_at && Date.parse(resource.metadata.expires_at) <= now) reasons.push('compute-session-expired');
         if (job.data_class !== 'public') reasons.push('remote-compute-public-data-only');
+        if (callerEligibilityEvaluator) {
+          const callerDecision = callerEligibilityEvaluator(resource, job, context);
+          if (callerDecision?.eligible === false) {
+            reasons.push(...(callerDecision.reasons || ['resource-incompatible-with-job']));
+          }
+        }
         return { eligible: reasons.length === 0, reasons };
-      },
-      ...policyContext
+      }
     }
   });
 }

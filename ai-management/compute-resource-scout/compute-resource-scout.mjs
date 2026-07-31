@@ -10,8 +10,33 @@ function safeId(value, fallback = 'compute-provider') {
   return clean || fallback;
 }
 
+function privateNetworkHost(value) {
+  const host = String(value || '').toLowerCase().replace(/^\[|\]$/g, '');
+  if (!host) return true;
+  if (host === 'localhost' || host.endsWith('.localhost') || host.endsWith('.local') || host.endsWith('.internal') || host.endsWith('.lan')) return true;
+  if (host === '::1' || host === '0:0:0:0:0:0:0:1' || host.startsWith('fc') || host.startsWith('fd') || host.startsWith('fe80:')) return true;
+  const octets = host.split('.').map(Number);
+  if (octets.length !== 4 || octets.some(octet => !Number.isInteger(octet) || octet < 0 || octet > 255)) return false;
+  return octets[0] === 0 ||
+    octets[0] === 10 ||
+    octets[0] === 127 ||
+    octets[0] === 169 && octets[1] === 254 ||
+    octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31 ||
+    octets[0] === 192 && octets[1] === 168;
+}
+
+function publicHttpsUrl(value, base = null) {
+  try {
+    const url = base ? new URL(String(value || ''), base) : new URL(String(value || ''));
+    if (url.protocol !== 'https:' || url.username || url.password || privateNetworkHost(url.hostname)) return null;
+    return url;
+  } catch {
+    return null;
+  }
+}
+
 function httpsUrl(value) {
-  try { return new URL(String(value || '')).protocol === 'https:'; } catch { return false; }
+  return Boolean(publicHttpsUrl(value));
 }
 
 function hostname(value) {
@@ -50,31 +75,47 @@ function executionMetadata(value = {}) {
   return metadata;
 }
 
-async function fetchEvidence(fetchImpl, url, { maximumBytes = 512 * 1024, timeoutMs = 12000 } = {}) {
-  if (!httpsUrl(url)) return { ok: false, status: 0, text: '', error: 'invalid-or-missing-https-url' };
+async function fetchEvidence(fetchImpl, url, {
+  maximumBytes = 512 * 1024,
+  timeoutMs = 12000,
+  maximumRedirects = 3
+} = {}) {
+  let current = publicHttpsUrl(url);
+  if (!current) return { ok: false, status: 0, text: '', error: 'invalid-or-blocked-https-url' };
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    const response = await fetchImpl(url, {
-      method: 'GET',
-      redirect: 'follow',
-      headers: {
-        accept: 'text/html, text/plain, application/json;q=0.9, */*;q=0.2',
-        'user-agent': 'MatrixReprogrammedComputeResourceScout/1.0'
-      },
-      signal: controller.signal
-    });
-    const declared = asNumber(response.headers.get('content-length'), 0);
-    if (declared > maximumBytes) return { ok: false, status: response.status, text: '', error: 'response-too-large' };
-    const bytes = new Uint8Array(await response.arrayBuffer());
-    if (bytes.byteLength > maximumBytes) return { ok: false, status: response.status, text: '', error: 'response-too-large' };
-    return {
-      ok: response.ok,
-      status: response.status,
-      text: new TextDecoder().decode(bytes),
-      content_type: response.headers.get('content-type') || '',
-      final_url: response.url || url
-    };
+    for (let redirectCount = 0; redirectCount <= maximumRedirects; redirectCount += 1) {
+      const response = await fetchImpl(current.toString(), {
+        method: 'GET',
+        redirect: 'manual',
+        headers: {
+          accept: 'text/html, text/plain, application/json;q=0.9, */*;q=0.2',
+          'user-agent': 'MatrixReprogrammedComputeResourceScout/1.0'
+        },
+        signal: controller.signal
+      });
+      if (response.status >= 300 && response.status < 400) {
+        const location = response.headers.get('location');
+        const next = location ? publicHttpsUrl(location, current) : null;
+        if (!next) return { ok: false, status: response.status, text: '', error: 'redirect-target-blocked' };
+        if (redirectCount >= maximumRedirects) return { ok: false, status: response.status, text: '', error: 'too-many-redirects' };
+        current = next;
+        continue;
+      }
+      const declared = asNumber(response.headers.get('content-length'), 0);
+      if (declared > maximumBytes) return { ok: false, status: response.status, text: '', error: 'response-too-large' };
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      if (bytes.byteLength > maximumBytes) return { ok: false, status: response.status, text: '', error: 'response-too-large' };
+      return {
+        ok: response.ok,
+        status: response.status,
+        text: new TextDecoder().decode(bytes),
+        content_type: response.headers.get('content-type') || '',
+        final_url: current.toString()
+      };
+    }
+    return { ok: false, status: 0, text: '', error: 'too-many-redirects' };
   } catch (error) {
     return { ok: false, status: 0, text: '', error: String(error?.message || error).slice(0, 300) };
   } finally {
@@ -383,6 +424,8 @@ export const computeScoutInternals = {
   AUTOMATION_ALLOWED_LANGUAGE,
   AUTOMATION_RESTRICTED_LANGUAGE,
   safeId,
+  privateNetworkHost,
+  publicHttpsUrl,
   httpsUrl,
   hostname,
   sameOrganisation,

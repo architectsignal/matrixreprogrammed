@@ -11,6 +11,7 @@ on:
       - 'ai-management/config/compute-providers.json'
       - 'scripts/compute-adapter-test.mjs'
       - 'scripts/remote-compute-policy-test.mjs'
+      - 'scripts/remote-compute-hardening-test.mjs'
       - 'scripts/capability-director-test.mjs'
       - 'scripts/configure-compute-provider.mjs'
       - 'scripts/run-autonomous-capability-director.mjs'
@@ -54,12 +55,14 @@ jobs:
           node --check scripts/run-autonomous-ai-manager.mjs
           node --check scripts/compute-adapter-test.mjs
           node --check scripts/remote-compute-policy-test.mjs
+          node --check scripts/remote-compute-hardening-test.mjs
           node --check scripts/capability-director-test.mjs
 
       - name: Run deterministic adapter tests
         run: |
           node scripts/compute-adapter-test.mjs
           node scripts/remote-compute-policy-test.mjs
+          node scripts/remote-compute-hardening-test.mjs
           node scripts/capability-director-test.mjs
 
       - name: Prove protected boundaries remain structural
@@ -80,4 +83,6 @@ jobs:
           grep -F "Store only the credential binding name" scripts/configure-compute-provider.mjs
           grep -F "Google Colab free tier cannot be onboarded" scripts/configure-compute-provider.mjs
           grep -F "Lightning AI remains blocked" scripts/configure-compute-provider.mjs
-          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute ai-management/autonomy scripts/compute-adapter-test.mjs scripts/remote-compute-policy-test.mjs scripts/capability-director-test.mjs scripts/configure-compute-provider.mjs
+          grep -F "redirect-target-blocked" ai-management/compute-resource-scout/compute-resource-scout.mjs
+          grep -F "REMOTE_ZERO_SPEND_PROOF_FAILED" ai-management/provider-adapters/compute/owner-http-compute.mjs
+          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute ai-management/autonomy scripts/compute-adapter-test.mjs scripts/remote-compute-policy-test.mjs scripts/remote-compute-hardening-test.mjs scripts/capability-director-test.mjs scripts/configure-compute-provider.mjs

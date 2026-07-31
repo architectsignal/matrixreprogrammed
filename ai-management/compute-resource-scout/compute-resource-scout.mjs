@@ -30,6 +30,26 @@ function asNumber(value, fallback = 0) {
   return Number.isFinite(number) ? number : fallback;
 }
 
+function executionMetadata(value = {}) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  const metadata = {};
+  for (const key of ['execution_adapter', 'execution_transport', 'workspace_path', 'kernel_ref', 'accelerator_id', 'default_api_name']) {
+    if (typeof value[key] === 'string' && value[key].trim()) metadata[key] = value[key].trim().slice(0, 500);
+  }
+  for (const key of ['supported_job_types', 'allowed_task_types', 'allowed_api_names']) {
+    if (Array.isArray(value[key])) metadata[key] = value[key].map(item => String(item).trim()).filter(Boolean).slice(0, 50);
+  }
+  if (value.routes && typeof value.routes === 'object' && !Array.isArray(value.routes)) {
+    metadata.routes = {};
+    for (const operation of ['execute', 'status', 'cancel']) {
+      if (typeof value.routes[operation] === 'string' && value.routes[operation].trim()) metadata.routes[operation] = value.routes[operation].trim().slice(0, 200);
+    }
+  }
+  const maximumRuntime = asNumber(value.maximum_runtime_seconds, 0);
+  if (maximumRuntime > 0) metadata.maximum_runtime_seconds = Math.max(30, Math.min(maximumRuntime, 3600));
+  return metadata;
+}
+
 async function fetchEvidence(fetchImpl, url, { maximumBytes = 512 * 1024, timeoutMs = 12000 } = {}) {
   if (!httpsUrl(url)) return { ok: false, status: 0, text: '', error: 'invalid-or-missing-https-url' };
   const controller = new AbortController();
@@ -97,7 +117,7 @@ export function candidateFromComputeProvider(provider = {}, now = new Date()) {
     quota_last_verified: provider.quota_last_verified || null,
     manual_onboarding_steps: Array.isArray(provider.manual_onboarding_steps) ? provider.manual_onboarding_steps.slice(0, 20) : [],
     prohibited_uses: Array.isArray(provider.prohibited_uses) ? provider.prohibited_uses.slice(0, 30) : [],
-    metadata: provider.metadata && typeof provider.metadata === 'object' ? provider.metadata : {}
+    metadata: executionMetadata(provider.metadata)
   };
 }
 
@@ -286,6 +306,8 @@ export function brokerResourceFromComputeEvaluation(evaluation, now = new Date()
     manual_approval_required: false,
     allowed_hosts: [hostname(candidate.endpoint_url)].filter(Boolean),
     metadata: {
+      ...candidate.metadata,
+      provider_id: candidate.provider_id,
       remote_compute: true,
       access_method: candidate.access_method,
       endpoint_url: candidate.endpoint_url,
@@ -364,5 +386,6 @@ export const computeScoutInternals = {
   httpsUrl,
   hostname,
   sameOrganisation,
+  executionMetadata,
   fetchEvidence
 };

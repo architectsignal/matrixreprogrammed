@@ -2,6 +2,12 @@ import { ResourceRegistry, createLocalResource, D1ResourceRegistry } from '../ai
 import { ResourceBroker } from '../ai-management/resource-broker/resource-broker.mjs';
 import { DeterministicLocalAdapter } from '../ai-management/provider-adapters/local/deterministic-local.mjs';
 import { routeLocalModel } from '../ai-management/local-runtime/model-router.mjs';
+import {
+  computeSchemaReady,
+  listComputeRegistry,
+  maintainComputeRegistry,
+  recordComputeScoutReport
+} from '../ai-management/compute-resource-scout/compute-resource-store.mjs';
 
 const ORIGIN = 'cloudflare-worker-ai-management';
 const ROUTES = new Set([
@@ -9,6 +15,8 @@ const ROUTES = new Set([
   '/api/ai-management/admin/resources',
   '/api/ai-management/admin/test-local',
   '/api/ai-management/admin/scout',
+  '/api/ai-management/admin/compute-scout',
+  '/api/ai-management/admin/compute-resources',
   '/api/ai-management/admin/local-runtime',
   '/api/ai-management/admin/route-model',
   '/api/ai-management/admin/site-director'
@@ -88,7 +96,21 @@ function zeroSpendResource(resource) {
 async function health(env) {
   const ready = await schemaReady(env);
   const autonomyReady = await autonomySchemaReady(env);
-  let counts = { resources: 0, jobs: 0, auditRecords: 0, candidates: 0, localNodes: 0, localModels: 0, routingDecisions: 0, siteDirectorRuns: 0 };
+  const computeReady = await computeSchemaReady(env?.MEMBERS_DB);
+  let counts = {
+    resources: 0,
+    jobs: 0,
+    auditRecords: 0,
+    candidates: 0,
+    localNodes: 0,
+    localModels: 0,
+    routingDecisions: 0,
+    siteDirectorRuns: 0,
+    computeProviders: 0,
+    computeOnboardingTasks: 0,
+    computeResources: 0,
+    computeLeases: 0
+  };
   if (ready) {
     const queries = [
       ['resources', 'SELECT COUNT(*) count FROM ai_resources'],
@@ -102,6 +124,12 @@ async function health(env) {
       ['routingDecisions', 'SELECT COUNT(*) count FROM ai_model_routing_decisions'],
       ['siteDirectorRuns', 'SELECT COUNT(*) count FROM ai_site_improvement_runs']
     );
+    if (computeReady) queries.push(
+      ['computeProviders', 'SELECT COUNT(*) count FROM ai_compute_provider_candidates'],
+      ['computeOnboardingTasks', "SELECT COUNT(*) count FROM ai_compute_onboarding_tasks WHERE status!='completed'"],
+      ['computeResources', "SELECT COUNT(*) count FROM ai_compute_resources WHERE availability_status='available'"],
+      ['computeLeases', "SELECT COUNT(*) count FROM ai_compute_leases WHERE status IN ('reserved','active')"]
+    );
     for (const [key, sql] of queries) {
       try { counts[key] = Number((await env.MEMBERS_DB.prepare(sql).first())?.count || 0); } catch {}
     }
@@ -110,13 +138,16 @@ async function health(env) {
     ok: true,
     schemaReady: ready,
     autonomySchemaReady: autonomyReady,
+    computeSchemaReady: computeReady,
     flags: flags(env),
     counts,
     monetaryCeilingEur: 0,
     paidFallbackPossible: false,
     localInferenceBoundary: 'Cloudflare stores inventory and metadata-only routing decisions. Model prompts and inference remain on the owner-controlled local machine.',
+    remoteComputeBoundary: 'Remote compute candidates are public-data-only temporary capacity. Interactive services require owner onboarding; prompts and credentials are never exposed by the control plane.',
     migrationRequired: !ready,
     autonomyMigrationRequired: !autonomyReady,
+    computeMigrationRequired: !computeReady,
     generatedAt: new Date().toISOString()
   };
 }
@@ -169,6 +200,15 @@ async function recordScout(env, report) {
       .bind(resource.resource_id, new Date().toISOString(), `source-${safeId(resource.metadata?.source_id || resource.allowed_hosts?.[0] || resource.resource_id)}`).run().catch(() => null);
   }
   return json({ ok: true, costStatus: 'EUR 0', discovered: Number(report?.discovered || evaluations.length), approved, quarantined, receivedAt: new Date().toISOString() });
+}
+
+async function recordComputeScout(env, report) {
+  const state = flags(env);
+  if (!state.scoutEnabled || !state.externalEnabled || !state.autoApprovalEnabled || !state.zeroSpendLock) {
+    return json({ ok: false, error: 'Compute Resource Scout requires external discovery, automatic approval and the zero-spend lock' }, 409);
+  }
+  if (!await computeSchemaReady(env?.MEMBERS_DB)) return json({ ok: false, error: 'Compute Resource Scout migration is not applied' }, 503);
+  return json(await recordComputeScoutReport(env.MEMBERS_DB, report));
 }
 
 async function recordLocalRuntime(env, runtime) {
@@ -272,6 +312,10 @@ async function listScout(env) {
   const rows = await env.MEMBERS_DB.prepare('SELECT candidate_id,source_url,provider_name,service_name,confidence,status,approved_resource_id,discovered_at,evaluated_at,updated_at FROM ai_resource_candidates ORDER BY updated_at DESC LIMIT 200').all();
   return json({ ok: true, count: rows?.results?.length || 0, candidates: rows?.results || [] });
 }
+async function listCompute(env) {
+  if (!await computeSchemaReady(env?.MEMBERS_DB)) return json({ ok: false, error: 'Compute Resource Scout migration is not applied' }, 503);
+  return json(await listComputeRegistry(env.MEMBERS_DB));
+}
 async function listLocalRuntime(env) {
   if (!await autonomySchemaReady(env)) return json({ ok: false, error: 'AI autonomy migration is not applied' }, 503);
   const [nodes, models, routes] = await Promise.all([
@@ -300,6 +344,9 @@ async function fetchHandler(request, env) {
     if (path === '/api/ai-management/admin/test-local' && request.method === 'POST') return localTest(request);
     if (path === '/api/ai-management/admin/scout' && request.method === 'GET') return listScout(env);
     if (path === '/api/ai-management/admin/scout' && request.method === 'POST') return recordScout(env, await readBody(request, 8 * 1024 * 1024));
+    if (path === '/api/ai-management/admin/compute-scout' && request.method === 'GET') return listCompute(env);
+    if (path === '/api/ai-management/admin/compute-scout' && request.method === 'POST') return recordComputeScout(env, await readBody(request, 8 * 1024 * 1024));
+    if (path === '/api/ai-management/admin/compute-resources' && request.method === 'GET') return listCompute(env);
     if (path === '/api/ai-management/admin/local-runtime' && request.method === 'GET') return listLocalRuntime(env);
     if (path === '/api/ai-management/admin/local-runtime' && request.method === 'POST') return recordLocalRuntime(env, await readBody(request, 8 * 1024 * 1024));
     if (path === '/api/ai-management/admin/route-model' && request.method === 'POST') return routeModel(env, request);
@@ -320,6 +367,7 @@ async function scheduled(_event, env) {
   await env.MEMBERS_DB.prepare("UPDATE ai_resources SET enabled=0,health_status='unknown',updated_at=? WHERE resource_tier=1 AND resource_id IN (SELECT resource_id FROM ai_local_models WHERE status='stale')").bind(now).run();
   await env.MEMBERS_DB.prepare("DELETE FROM ai_resource_candidates WHERE status='quarantined' AND updated_at<datetime('now','-90 days')").run();
   await env.MEMBERS_DB.prepare("DELETE FROM ai_model_routing_decisions WHERE created_at<datetime('now','-30 days')").run();
+  await maintainComputeRegistry(env.MEMBERS_DB, new Date()).catch(() => null);
 }
 
 export function isAiManagementRoute(path = '') { return ROUTES.has(path); }

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ResourceScout } from '../ai-management/resource-scout/resource-scout.mjs';
+import { ComputeResourceScout } from '../ai-management/compute-resource-scout/compute-resource-scout.mjs';
 import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-detector.mjs';
 import { SiteImprovementDirector } from '../ai-management/site-director/site-improvement-director.mjs';
 import { routeLocalInference } from '../ai-management/node/local-ai-broker.mjs';
@@ -169,6 +170,8 @@ async function runOnce() {
   const sourceRegistry = readJson(path.join(root, 'data', 'investigation-source-registry.json'), { sources: [] });
   const curated = readJson(path.join(configDir, 'resources.json'), { resources: [] });
   const previous = readJson(path.join(configDir, 'resources.autonomous.json'), { resources: [] });
+  const computeProviderRegistry = readJson(path.join(configDir, 'compute-providers.json'), { providers: [] });
+  const previousCompute = readJson(path.join(configDir, 'compute-resources.autonomous.json'), { resources: [] });
 
   const linkedDiscovery = await discoverFromVerifiedDocumentation(sourceRegistry.sources || []);
   const scoutSources = [...(sourceRegistry.sources || []), ...linkedDiscovery.sources];
@@ -189,6 +192,35 @@ async function runOnce() {
   };
   writeJson(path.join(configDir, 'resources.autonomous.json'), autonomousResources);
   writeJson(path.join(downloads, 'ai-resource-scout-report.json'), scoutReport);
+
+  const computeScout = new ComputeResourceScout({
+    concurrency: Number(process.env.AI_COMPUTE_SCOUT_CONCURRENCY || 3)
+  });
+  const computeScoutReport = await computeScout.run({
+    providers: computeProviderRegistry.providers || [],
+    existingResources: previousCompute.resources || []
+  });
+  const computeMerged = new Map((previousCompute.resources || []).map(resource => [resource.resource_id, resource]));
+  for (const resource of computeScoutReport.approved_resources) computeMerged.set(resource.resource_id, resource);
+  for (const revocation of computeScoutReport.revocations) {
+    const current = computeMerged.get(revocation.resource_id);
+    if (current) computeMerged.set(revocation.resource_id, {
+      ...current,
+      enabled: false,
+      health_status: 'cooldown',
+      metadata: { ...(current.metadata || {}), revocation_reasons: revocation.reasons, revoked_at: new Date().toISOString() },
+      updated_at: new Date().toISOString()
+    });
+  }
+  const autonomousCompute = {
+    schema_version: 1,
+    updated_at: new Date().toISOString(),
+    resources: [...computeMerged.values()].sort((left, right) => String(left.resource_id).localeCompare(String(right.resource_id))),
+    manual_onboarding: computeScoutReport.manual_onboarding,
+    boundary: 'Remote compute remains disabled unless API access, explicit automation permission, owner onboarding, verified free quota, hard billing stop, current terms and public-data-only routing all pass.'
+  };
+  writeJson(path.join(configDir, 'compute-resources.autonomous.json'), autonomousCompute);
+  writeJson(path.join(downloads, 'ai-compute-resource-scout-report.json'), computeScoutReport);
 
   const runtime = await detectLocalRuntime();
   writeJson(path.join(downloads, 'local-ai-runtime.json'), runtime);
@@ -212,6 +244,7 @@ async function runOnce() {
 
   const sync = {
     scout: await syncReport('/api/ai-management/admin/scout', scoutReport).catch(error => ({ attempted: true, ok: false, error: String(error?.message || error) })),
+    computeScout: await syncReport('/api/ai-management/admin/compute-scout', computeScoutReport).catch(error => ({ attempted: true, ok: false, error: String(error?.message || error) })),
     localRuntime: await syncReport('/api/ai-management/admin/local-runtime', runtime).catch(error => ({ attempted: true, ok: false, error: String(error?.message || error) })),
     siteDirector: await syncReport('/api/ai-management/admin/site-director', directorReport).catch(error => ({ attempted: true, ok: false, error: String(error?.message || error) }))
   };
@@ -229,6 +262,15 @@ async function runOnce() {
       approved_new: scoutReport.approved.length,
       quarantined: scoutReport.quarantined.length,
       total_autonomous_resources: autonomousResources.resources.length
+    },
+    compute_resource_scout: {
+      providers_checked: computeScoutReport.discovered,
+      automatic_approved: computeScoutReport.automatic_approved,
+      manual_onboarding: computeScoutReport.manual_onboarding.length,
+      quarantined: computeScoutReport.quarantined.length,
+      prohibited: computeScoutReport.prohibited.length,
+      revoked: computeScoutReport.revocations.length,
+      total_temporary_compute_resources: autonomousCompute.resources.filter(resource => resource.enabled).length
     },
     local_runtime: { models: runtime.resources.length, servers_healthy: runtime.servers.filter(server => server.healthy).length, gpus: runtime.hardware.gpus.length, total_gpu_memory_mb: runtime.hardware.total_gpu_memory_mb },
     site_director: { scanned_pages: directorReport.scanned_pages, total_issues: directorReport.total_issues, safe_changes_applied: directorReport.safe_changes_applied, prohibited_changes_attempted: directorReport.prohibited_changes_attempted },

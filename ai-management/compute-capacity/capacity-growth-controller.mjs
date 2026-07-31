@@ -172,6 +172,49 @@ export function computeCandidateToRegistryResource(candidate = {}, assessment = 
   };
 }
 
+function registryResourceToAllocationCandidate(resource = {}, candidate = null) {
+  if (candidate) return { ...candidate, ...resource, supported_workloads: candidate.supported_workloads, maximum_concurrency: candidate.maximum_concurrency };
+  const metadata = resource.metadata || {};
+  const local = Number(resource.resource_tier || 0) <= 1 || metadata.local === true || String(metadata.source_type || '').startsWith('owner-');
+  const supportedWorkloads = resource.supported_workloads || metadata.supported_workloads || resource.capability_types || workloadMap(resource.supported_job_types || []);
+  return {
+    ...resource,
+    source_type: metadata.source_type || (local ? 'owner-local' : 'official-free-program'),
+    external: !local,
+    owner_authorized: metadata.owner_authorized !== false,
+    allowed_for_project: resource.enabled !== false,
+    access_controls_bypassed: false,
+    account_rotation: false,
+    quota_evasion: false,
+    credential_harvesting: false,
+    terms_verified: local || Boolean(resource.last_terms_check),
+    privacy_verified: local || Boolean(resource.privacy_url),
+    automation_permission: resource.approved_for_automation === true ? 'allowed' : 'unknown',
+    payment_method_required: false,
+    billing_enabled: resource.billing_enabled === true,
+    payment_method_present: resource.payment_method_present === true,
+    paid_fallback: false,
+    overage_possible: false,
+    auto_upgrade_enabled: false,
+    external_charge_possible: false,
+    billing_risk: resource.billing_risk || 'none',
+    zero_cost_verified: Number(resource.monetary_cost_per_unit_eur || 0) === 0,
+    cost_confirmed_zero: Number(resource.monetary_cost_per_unit_eur || 0) === 0,
+    quota_verified: resource.quota_verified === true,
+    quota_unlimited: resource.quota_unlimited === true,
+    quota_remaining: resource.quota_remaining,
+    monetary_cost_per_unit_eur: Number(resource.monetary_cost_per_unit_eur || 0),
+    supported_workloads: supportedWorkloads,
+    maximum_concurrency: Math.max(1, Number(resource.maximum_concurrency || resource.concurrency_limit || 1)),
+    gpu_memory_mb: Number(metadata.gpu_memory_mb || metadata.hardware?.total_gpu_memory_mb || 0),
+    cpu_threads: Number(metadata.cpu_threads || metadata.hardware?.cpu_threads || 1),
+    ram_mb: Number(metadata.ram_mb || metadata.hardware?.total_memory_mb || 0),
+    availability_score: resource.enabled === false ? 0 : 100,
+    reliability_score: Number(resource.reliability_score || 0),
+    privacy_score: Number(resource.privacy_score || (local ? 100 : 0))
+  };
+}
+
 export async function runCapacityGrowthCycle({
   localRuntimes = [], opportunityEvaluations = [], activeResources = [], queuedJobs = [], registerResource, now = new Date(), maximumExternalResources = 3
 } = {}) {
@@ -189,7 +232,7 @@ export async function runCapacityGrowthCycle({
     const registered = await registerResource(resource);
     admitted.push(registered || resource);
   }
-  const resources = [...activeResources, ...admitted];
+  const resources = [...activeResources, ...admitted].map(resource => registryResourceToAllocationCandidate(resource, candidateById.get(resource.resource_id)));
   const allocation = allocateCapacity({ portfolio, jobs: queuedJobs, resources });
   return {
     ok: true,
@@ -205,4 +248,4 @@ export async function runCapacityGrowthCycle({
   };
 }
 
-export const capacityGrowthInternals = { safeId, workloadMap };
+export const capacityGrowthInternals = { safeId, workloadMap, registryResourceToAllocationCandidate };

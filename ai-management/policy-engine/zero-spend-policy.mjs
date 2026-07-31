@@ -1,3 +1,5 @@
+import { evaluateZeroSpendInvariant } from './zero-spend-invariant.mjs';
+
 export const DEFAULT_UTILITY_WEIGHTS = Object.freeze({
   quality_score: 0.30,
   reliability_score: 0.20,
@@ -30,6 +32,19 @@ function clamp(value, minimum = 0, maximum = 100) {
   return Math.max(minimum, Math.min(maximum, Number(value || 0)));
 }
 
+function invariantSubject(resource, external) {
+  const localDefaults = external ? {} : {
+    paid_fallback: false,
+    overage_possible: false,
+    auto_upgrade_enabled: false,
+    external_charge_possible: false,
+    zero_cost_verified: true,
+    quota_verified: true,
+    quota_unlimited: true
+  };
+  return { ...localDefaults, ...resource, external };
+}
+
 export function utilityScore(resource, weights = DEFAULT_UTILITY_WEIGHTS) {
   return Number(Object.entries(weights).reduce((total, [field, weight]) => {
     return total + clamp(resource[field]) * weight;
@@ -49,14 +64,15 @@ export function evaluateResource(resource, job, context = {}) {
   if (resource.manual_approval_required) reasons.push('manual-approval-required');
   if (!resource.approved_for_automation) reasons.push('automation-not-approved');
   if (!['production', 'batch'].includes(resource.implementation_status)) reasons.push('implementation-not-approved');
-  if (Number(resource.monetary_cost_per_unit_eur ?? 0) !== 0) reasons.push('non-zero-monetary-cost');
-  if (resource.billing_enabled !== false) reasons.push('billing-enabled-or-unknown');
-  if (resource.payment_method_present !== false) reasons.push('payment-method-present-or-unknown');
-  if (resource.billing_risk !== 'none') reasons.push('billing-risk-not-zero');
+
+  const invariant = evaluateZeroSpendInvariant(invariantSubject(resource, external), {
+    now,
+    requireCurrentEvidence: external
+  });
+  if (!invariant.ok) reasons.push(...invariant.violations.map(reason => `zero-spend-invariant:${reason}`));
+
   if (!['none', 'environment_secret', 'managed_identity', 'manual'].includes(resource.authentication_type)) reasons.push('authentication-type-unknown');
   if (resource.authentication_type === 'environment_secret' && !resource.credential_reference) reasons.push('credential-binding-missing');
-  if (!resource.quota_verified) reasons.push('quota-unverified');
-  if (!resource.quota_unlimited && resource.quota_remaining == null) reasons.push('quota-remaining-unknown');
   if (!approvedData.includes(job.data_class)) reasons.push('data-class-not-approved');
   if (prohibitedData.includes(job.data_class)) reasons.push('data-class-prohibited');
   if (!supportedJobs.includes(job.job_type)) reasons.push('job-type-unsupported');
@@ -98,7 +114,7 @@ export function evaluateResource(resource, job, context = {}) {
     score = Number(clamp(score + scoreAdjustment).toFixed(4));
   }
 
-  return { eligible: reasons.length === 0, reasons, utility_score: score, score_adjustment: scoreAdjustment, compatibility };
+  return { eligible: reasons.length === 0, reasons, utility_score: score, score_adjustment: scoreAdjustment, compatibility, zero_spend_invariant: invariant };
 }
 
 export function rankResources(resources, job, context = {}) {
@@ -117,4 +133,4 @@ export function rankResources(resources, job, context = {}) {
   return { eligible, excluded };
 }
 
-export const policyInternals = { dateExpired, dateStale, hostAllowed, clamp };
+export const policyInternals = { dateExpired, dateStale, hostAllowed, clamp, invariantSubject };

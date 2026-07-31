@@ -5,9 +5,11 @@ on:
     paths:
       - 'ai-management/provider-adapters/compute/**'
       - 'ai-management/node/remote-compute-broker.mjs'
+      - 'ai-management/policy-engine/zero-spend-policy.mjs'
       - 'ai-management/compute-resource-scout/**'
       - 'ai-management/config/compute-providers.json'
       - 'scripts/compute-adapter-test.mjs'
+      - 'scripts/remote-compute-policy-test.mjs'
       - '.github/workflows/compute-adapter-safety.yml'
   workflow_dispatch:
 
@@ -40,10 +42,14 @@ jobs:
           node --check ai-management/provider-adapters/compute/owner-http-compute.mjs
           node --check ai-management/provider-adapters/compute/remote-compute-session.mjs
           node --check ai-management/node/remote-compute-broker.mjs
+          node --check ai-management/policy-engine/zero-spend-policy.mjs
           node --check scripts/compute-adapter-test.mjs
+          node --check scripts/remote-compute-policy-test.mjs
 
       - name: Run deterministic adapter tests
-        run: node scripts/compute-adapter-test.mjs
+        run: |
+          node scripts/compute-adapter-test.mjs
+          node scripts/remote-compute-policy-test.mjs
 
       - name: Prove protected boundaries remain structural
         shell: bash
@@ -56,4 +62,6 @@ jobs:
           grep -F "Kaggle workspace is missing kernel-metadata.json" ai-management/provider-adapters/compute/kaggle-kernel-cli.mjs
           grep -F "Gradio API name is not allowlisted" ai-management/provider-adapters/compute/huggingface-gradio-zerogpu.mjs
           grep -F "Owner compute task type is not allowlisted" ai-management/provider-adapters/compute/owner-http-compute.mjs
-          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute scripts/compute-adapter-test.mjs
+          grep -F "remote_compute === true" ai-management/policy-engine/zero-spend-policy.mjs
+          grep -F "Remote compute adapter returned incomplete provenance" ai-management/provider-adapters/compute/remote-compute-session.mjs
+          ! grep -R -E "multiple accounts|rotate identities|bypass quota|simulate activity" ai-management/provider-adapters/compute scripts/compute-adapter-test.mjs scripts/remote-compute-policy-test.mjs

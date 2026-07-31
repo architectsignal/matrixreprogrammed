@@ -6,6 +6,7 @@ on:
       - 'ai-management/adapter-factory/**'
       - 'ai-management/policy-engine/zero-spend-invariant.mjs'
       - 'scripts/adapter-factory-test.mjs'
+      - 'scripts/adapter-live-probe-test.mjs'
       - '.github/workflows/adapter-factory-safety.yml'
   workflow_dispatch:
 
@@ -33,14 +34,22 @@ jobs:
       - name: Verify syntax
         run: |
           node --check ai-management/adapter-factory/adapter-factory.mjs
+          node --check ai-management/adapter-factory/live-probe-certifier.mjs
           node --check scripts/adapter-factory-test.mjs
+          node --check scripts/adapter-live-probe-test.mjs
 
       - name: Run Adapter Factory certification tests
-        run: node scripts/adapter-factory-test.mjs
+        run: |
+          node scripts/adapter-factory-test.mjs
+          node scripts/adapter-live-probe-test.mjs
 
       - name: Verify forbidden capabilities remain absent
         run: |
-          ! grep -E 'child_process|execSync|spawnSync|process\.env|shell\.exec' ai-management/adapter-factory/adapter-factory.mjs
+          ! grep -E 'child_process|execSync|spawnSync|process\.env|shell\.exec|eval\s*\(|new Function' ai-management/adapter-factory/*.mjs
           grep -F 'activation_allowed: false' ai-management/adapter-factory/adapter-factory.mjs
+          grep -F 'activation_allowed: true' ai-management/adapter-factory/live-probe-certifier.mjs
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/adapter-factory/adapter-factory.mjs
           grep -F "job.data_class !== 'public'" ai-management/adapter-factory/adapter-factory.mjs
+          grep -F 'single-certified-host-required' ai-management/adapter-factory/live-probe-certifier.mjs
+          grep -F 'insufficient-probe-quota-reserve' ai-management/adapter-factory/live-probe-certifier.mjs
+          grep -F "authentication_type: 'none'" ai-management/adapter-factory/live-probe-certifier.mjs

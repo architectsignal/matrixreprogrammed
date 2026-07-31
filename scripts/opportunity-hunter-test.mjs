@@ -9,7 +9,7 @@ const fetchImpl = async url => {
     return new Response('Free tier. No payment method required. Programmatic access permitted. Automation allowed.', { status: 200, headers: { 'content-type': 'text/plain' } });
   }
   if (value.endsWith('/terms')) {
-    return new Response('This service is free of charge. API access permitted. No usage charges or paid fallback.', { status: 200, headers: { 'content-type': 'text/plain' } });
+    return new Response('This service is free of charge. API access permitted. Billing is disabled and no payment method is accepted.', { status: 200, headers: { 'content-type': 'text/plain' } });
   }
   if (value.endsWith('/privacy')) {
     return new Response('Public privacy notice.', { status: 200, headers: { 'content-type': 'text/plain' } });

@@ -2,9 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ResourceScout } from '../ai-management/resource-scout/resource-scout.mjs';
 import { ComputeResourceScout } from '../ai-management/compute-resource-scout/compute-resource-scout.mjs';
+import { AutonomousCapabilityDirector } from '../ai-management/autonomy/capability-director.mjs';
 import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-detector.mjs';
 import { SiteImprovementDirector } from '../ai-management/site-director/site-improvement-director.mjs';
 import { routeLocalInference } from '../ai-management/node/local-ai-broker.mjs';
+import { executeRemoteComputeQueue } from '../ai-management/node/remote-compute-broker.mjs';
 
 const root = process.cwd();
 const downloads = path.join(root, 'downloads');
@@ -232,6 +234,48 @@ async function runOnce() {
     writeReport: true
   });
 
+  const capabilityDirector = new AutonomousCapabilityDirector({
+    maximumRemoteJobs: Math.max(0, Math.min(Number(process.env.AI_REMOTE_COMPUTE_JOBS_PER_CYCLE || 1), 5))
+  });
+  const capabilityPlan = capabilityDirector.plan({
+    siteReport: directorReport,
+    localRuntime: runtime,
+    computeResources: autonomousCompute.resources,
+    siteOrigin: process.env.MATRIX_PUBLIC_ORIGIN || 'https://matrixreprogrammed.com'
+  });
+  writeJson(path.join(downloads, 'autonomous-capability-plan.json'), capabilityPlan);
+
+  const remoteExecutionEnabled = enabled(process.env.AI_REMOTE_COMPUTE_EXECUTION_ENABLED, false);
+  let capabilityExecution = {
+    ok: true,
+    skipped: true,
+    reason: remoteExecutionEnabled ? 'no-approved-remote-jobs' : 'AI_REMOTE_COMPUTE_EXECUTION_ENABLED is false',
+    cost_confirmed_zero: true
+  };
+  if (remoteExecutionEnabled && capabilityPlan.queued_jobs.length) {
+    capabilityExecution = await executeRemoteComputeQueue({
+      jobs: capabilityPlan.queued_jobs,
+      resources: autonomousCompute.resources,
+      maximumJobs: Math.max(0, Math.min(Number(process.env.AI_REMOTE_COMPUTE_JOBS_PER_CYCLE || 1), 5)),
+      environment: process.env,
+      kaggle: {
+        environment: process.env,
+        workspaceRoot: process.env.AI_KAGGLE_WORKSPACE_ROOT || path.join(root, 'ai-management', 'remote-jobs', 'kaggle'),
+        outputRoot: process.env.AI_REMOTE_COMPUTE_OUTPUT_ROOT || path.join(downloads, 'remote-compute', 'kaggle')
+      },
+      huggingFace: { environment: process.env },
+      ownerHttp: { environment: process.env }
+    });
+  }
+  writeJson(path.join(downloads, 'autonomous-capability-execution.json'), {
+    ok: capabilityExecution.ok !== false,
+    generated_at: new Date().toISOString(),
+    plan: capabilityPlan,
+    execution: capabilityExecution,
+    local_controller_only: true,
+    cost_confirmed_zero: true
+  });
+
   let inference = null;
   const testPrompt = String(process.env.AI_LOCAL_ROUTING_TEST_PROMPT || '').trim();
   if (testPrompt && runtime.resources.length) {
@@ -271,6 +315,16 @@ async function runOnce() {
       prohibited: computeScoutReport.prohibited.length,
       revoked: computeScoutReport.revocations.length,
       total_temporary_compute_resources: autonomousCompute.resources.filter(resource => resource.enabled).length
+    },
+    capability_director: {
+      local_pressure: capabilityPlan.local_pressure,
+      remote_preferred: capabilityPlan.remote_preferred,
+      eligible_remote_resources: capabilityPlan.eligible_remote_resources.length,
+      jobs_queued: capabilityPlan.queued_jobs.length,
+      jobs_attempted: capabilityExecution.attempted || 0,
+      jobs_completed: capabilityExecution.completed || 0,
+      deferred_tasks: capabilityPlan.deferred_tasks.length,
+      execution_enabled: remoteExecutionEnabled
     },
     local_runtime: { models: runtime.resources.length, servers_healthy: runtime.servers.filter(server => server.healthy).length, gpus: runtime.hardware.gpus.length, total_gpu_memory_mb: runtime.hardware.total_gpu_memory_mb },
     site_director: { scanned_pages: directorReport.scanned_pages, total_issues: directorReport.total_issues, safe_changes_applied: directorReport.safe_changes_applied, prohibited_changes_attempted: directorReport.prohibited_changes_attempted },

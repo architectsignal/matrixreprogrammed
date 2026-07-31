@@ -86,3 +86,5 @@ jobs:
           git diff --cached --check
           git commit -m 'Restore production safety proofs for local AI release'
           git push origin HEAD:build/local-execution-daemon-v1
+
+# one-shot reconciliation trigger 2

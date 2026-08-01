@@ -11,7 +11,7 @@ const stylesheet = path.join(projectRoot, 'cinematic-pathways.css');
 if (!fs.existsSync(stylesheet)) throw new Error(`Missing cinematic pathway stylesheet: ${stylesheet}`);
 fs.copyFileSync(stylesheet, path.join(outputRoot, 'cinematic-pathways.css'));
 process.chdir(outputRoot);
-require(path.join(projectRoot, 'scripts', 'build-cinematic-link-structure.js'));
+require(path.join(projectRoot, 'scripts', 'run-cinematic-link-structure.js'));
 
 function walk(directory, output = []) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {

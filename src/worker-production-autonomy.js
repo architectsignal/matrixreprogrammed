@@ -32,6 +32,12 @@ function authorized(request, env) {
   return presentedTokens(request).some(token => expected.some(secret => secureEqual(token, secret)));
 }
 
+function normalizedAdminRequest(request, env) {
+  const headers = new Headers(request.headers);
+  headers.set('x-admin-token', String(env.ADMIN_API_TOKEN || env.AI_MANAGEMENT_ADMIN_TOKEN || ''));
+  return new Request(request, { headers });
+}
+
 function forbidden() {
   return new Response(JSON.stringify({ ok: false, error: 'Forbidden' }), {
     status: 403,
@@ -51,21 +57,22 @@ export default {
 
     if (isCapacityGrowthRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
-      return handleCapacityGrowthRoute(request, runtimeEnv);
+      return handleCapacityGrowthRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isLocalJobRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
-      return handleLocalJobRoute(request, runtimeEnv);
+      return handleLocalJobRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isOpportunityHunterRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
-      return handleOpportunityHunterRoute(request, runtimeEnv);
+      return handleOpportunityHunterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isAiManagementRoute(path)) {
-      return aiManagementWorker.fetch(request, runtimeEnv, ctx);
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return aiManagementWorker.fetch(normalizedAdminRequest(request, runtimeEnv), runtimeEnv, ctx);
     }
 
     // Legacy audit compatibility marker: return productionWorker.fetch(request, env, ctx);

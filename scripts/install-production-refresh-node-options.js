@@ -33,7 +33,7 @@ const targets = [
   'build-behind-the-curtain.js'
 ];
 const casePattern = targets.join('|');
-const script = `#!/usr/bin/env bash\nset -u\nREAL_NODE=${JSON.stringify(realNode)}\nPRELOAD=${JSON.stringify(preload)}\nfirst=\${1:-}\nbase=\$(basename \"\$first\")\nif [[ \"\${GITHUB_WORKFLOW:-}\" == \"Matrix Reprogrammed Controlled Production Deploy\" && \"\${INVESTIGATION_MODE:-}\" == \"daily\" ]]; then\n  case \"\$base\" in\n    ${casePattern}) exec \"\$REAL_NODE\" --require \"\$PRELOAD\" \"\$@\" ;;\n  esac\nfi\nexec \"\$REAL_NODE\" \"\$@\"\n`;
+const script = `#!/usr/bin/env bash\nset -u\nREAL_NODE=${JSON.stringify(realNode)}\nPRELOAD=${JSON.stringify(preload)}\nfirst=\${1:-}\n# Node flags such as --check are not script paths. Passing them to basename emitted\n# noisy errors during every production syntax-check while still returning success.\ncase \"\$first\" in\n  \"\"|-*) exec \"\$REAL_NODE\" \"\$@\" ;;\nesac\nbase=\$(basename -- \"\$first\")\nif [[ \"\${GITHUB_WORKFLOW:-}\" == \"Matrix Reprogrammed Controlled Production Deploy\" && \"\${INVESTIGATION_MODE:-}\" == \"daily\" ]]; then\n  case \"\$base\" in\n    ${casePattern}) exec \"\$REAL_NODE\" --require \"\$PRELOAD\" \"\$@\" ;;\n  esac\nfi\nexec \"\$REAL_NODE\" \"\$@\"\n`;
 fs.writeFileSync(launcher, script, { mode: 0o755 });
 fs.chmodSync(launcher, 0o755);
 fs.appendFileSync(githubPath, `${binDir}\n`);

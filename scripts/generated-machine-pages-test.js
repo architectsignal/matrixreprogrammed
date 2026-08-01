@@ -23,6 +23,7 @@ function runRequired(relative) {
 // First make the protected command dashboard evidence-honest, then connect every
 // public page by mission in both source and Cloudflare output.
 runRequired('scripts/repair-review-dashboard-truth.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-review-dashboard-truth-output.js');
 runRequired('scripts/build-cinematic-link-structure.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/build-cinematic-link-structure-output.js');
 

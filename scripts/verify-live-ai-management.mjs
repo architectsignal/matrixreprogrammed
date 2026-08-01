@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/+$/, '');
-const adminToken = String(process.env.AI_MANAGEMENT_ADMIN_TOKEN || process.env.ADMIN_API_TOKEN || '');
+const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '');
 const attempts = Math.max(1, Math.min(60, Number(process.env.AI_VERIFY_ATTEMPTS || 24)));
 const delayMs = Math.max(250, Math.min(30000, Number(process.env.AI_VERIFY_DELAY_MS || 5000)));
 const outputPath = path.join(process.cwd(), 'downloads', 'live-ai-management-verification.json');
@@ -39,7 +39,7 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
 }
 
 if (!adminToken) {
-  throw new Error('AI_MANAGEMENT_ADMIN_TOKEN or ADMIN_API_TOKEN is required for owner-authorized live verification');
+  throw new Error('ADMIN_API_TOKEN or AI_MANAGEMENT_ADMIN_TOKEN is required for owner-authorized live verification');
 }
 
 let health;

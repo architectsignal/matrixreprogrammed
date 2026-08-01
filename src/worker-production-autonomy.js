@@ -20,8 +20,16 @@ function secureEqual(left, right) {
   return mismatch === 0;
 }
 
+function presentedTokens(request) {
+  const direct = request.headers.get('x-admin-token');
+  const authorization = String(request.headers.get('authorization') || '');
+  const bearer = /^Bearer\s+(.+)$/i.exec(authorization)?.[1] || '';
+  return [direct, bearer].filter(Boolean);
+}
+
 function authorized(request, env) {
-  return Boolean(env?.ADMIN_API_TOKEN && secureEqual(request.headers.get('x-admin-token'), env.ADMIN_API_TOKEN));
+  const expected = [env?.AI_MANAGEMENT_ADMIN_TOKEN, env?.ADMIN_API_TOKEN].filter(Boolean);
+  return presentedTokens(request).some(token => expected.some(secret => secureEqual(token, secret)));
 }
 
 function forbidden() {
@@ -30,7 +38,8 @@ function forbidden() {
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': 'no-store',
-      'x-content-type-options': 'nosniff'
+      'x-content-type-options': 'nosniff',
+      'x-matrix-origin': 'cloudflare-worker-ai-management'
     }
   });
 }

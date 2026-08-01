@@ -17,7 +17,7 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-  AI_AUTH_REPAIR_TRIGGER: '2026-08-01T16:26:00+01:00'
+  AI_AUTH_REPAIR_TRIGGER: '2026-08-01T17:07:00+01:00'
 
 jobs:
   repair-deploy-verify:
@@ -95,15 +95,28 @@ jobs:
               text = text.replace(old, new)
           if text.count('AI_RESOURCE_ZERO_SPEND_LOCK = "true"') != 1:
               raise SystemExit('Zero-spend lock missing or ambiguous')
+          if '\nworkers_dev = ' not in text:
+              text = text.replace('keep_vars = true\n', 'keep_vars = true\nworkers_dev = true\n', 1)
           path.write_text(text, encoding='utf-8')
           PY
           npx --yes wrangler@latest deploy --config .wrangler-ai-auth-repair.toml --dry-run
 
-      - name: Deploy repaired autonomous Worker
+      - name: Deploy repaired autonomous Worker and capture direct endpoint
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@latest deploy --config .wrangler-ai-auth-repair.toml
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest deploy --config .wrangler-ai-auth-repair.toml 2>&1 | tee /tmp/wrangler-ai-deploy.log
+          DIRECT_WORKER_URL="$(sed -r 's/\x1B\[[0-9;]*[mK]//g' /tmp/wrangler-ai-deploy.log | grep -Eo 'https://[^[:space:]]+\.workers\.dev' | tail -n 1 | sed 's/[),.;]*$//')"
+          if [ -z "$DIRECT_WORKER_URL" ]; then
+            echo 'Wrangler did not expose a direct workers.dev URL; refusing an unverifiable deployment.' >&2
+            cat /tmp/wrangler-ai-deploy.log >&2
+            exit 1
+          fi
+          echo "AI_DIRECT_WORKER_URL=$DIRECT_WORKER_URL" >> "$GITHUB_ENV"
+          echo "Direct Worker verification endpoint captured."
 
       - name: Bind normalized canonical Worker admin secrets after deployment
         env:
@@ -118,9 +131,9 @@ jobs:
           printf '%s' "$NORMALIZED_TOKEN" | npx --yes wrangler@latest secret put ADMIN_API_TOKEN --config .wrangler-ai-auth-repair.toml
           printf '%s' "$NORMALIZED_TOKEN" | npx --yes wrangler@latest secret put AI_MANAGEMENT_ADMIN_TOKEN --config .wrangler-ai-auth-repair.toml
 
-      - name: Verify live autonomous AI control plane
+      - name: Verify live autonomous AI control plane directly
         env:
-          SITE_URL: https://matrixreprogrammed.com
+          SITE_URL: ${{ env.AI_DIRECT_WORKER_URL }}
           ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
           AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
           AI_VERIFY_ATTEMPTS: '36'

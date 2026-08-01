@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T06:15:50.615Z",
+  "updated": "2026-08-01T07:40:44.912Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -215,7 +215,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-31T06:43:07.388Z",
+    "lastComputed": "2026-08-01T06:29:32.993Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "highestProbabilityScenario": {
@@ -329,7 +329,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-31T06:43:07.388Z",
+    "lastComputed": "2026-08-01T06:29:32.993Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "missingRecords": [
@@ -382,30 +382,6 @@
       "record": "access terms"
     },
     {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
-      "section": "federal-register-policy",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-    },
-    {
       "section": "sec-edgar-filings",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
     },
@@ -427,6 +403,30 @@
     },
     {
       "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "courtlistener-court-records",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
     }
   ],
@@ -455,39 +455,6 @@
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "entityObservationSignals": [
     {
-      "id": "homeland-security-department",
-      "name": "Homeland Security Department",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "centers-for-medicare-and-medicaid-services",
-      "name": "Centers for Medicare & Medicaid Services",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
       "count": 2,
@@ -496,50 +463,6 @@
       ],
       "record_types": [
         "court_record_signal"
-      ]
-    },
-    {
-      "id": "securities-and-exchange-commission",
-      "name": "Securities and Exchange Commission",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "apple-inc",
-      "name": "Apple Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ]
-    },
-    {
-      "id": "aapl",
-      "name": "AAPL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
       ]
     },
     {
@@ -556,6 +479,28 @@
     {
       "id": "nvda",
       "name": "NVDA",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
       "count": 1,
       "lanes": [
         "sec-edgar-filings"
@@ -585,109 +530,80 @@
       "record_types": [
         "company_registry_snapshot"
       ]
+    },
+    {
+      "id": "microsoft-corp",
+      "name": "MICROSOFT CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "msft",
+      "name": "MSFT",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "amazon-com-inc",
+      "name": "AMAZON COM INC",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "amzn",
+      "name": "AMZN",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
+    },
+    {
+      "id": "broadcom-inc",
+      "name": "Broadcom Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-08-01T06:15:50.674Z",
-    "eventCount": 18,
+    "updated": "2026-08-01T07:40:44.986Z",
+    "eventCount": 12,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 34,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 29,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
   },
   "topRecordEvents": [
     {
-      "id": "federal-register-policy-2026-14679-1",
-      "date": "2026-07-21",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Electronic Delivery of Information Under the Federal Securities Laws",
-      "source_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-14439-2",
-      "date": "2026-07-17",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-13656-3",
-      "date": "2026-07-07",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-13602-4",
-      "date": "2026-07-06",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-13057-5",
-      "date": "2026-06-29",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Alien Registration Form and Evidence of Registration",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-12989-6",
-      "date": "2026-06-26",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Modernizing Security Requirements",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "sec-edgar-filings-cik0000320193-1",
+      "id": "sec-edgar-filings-cik0001045810-1",
       "date": "2026-08-01",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
+      "summary": "NVIDIA CORP (NVDA)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -697,11 +613,11 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0001045810-2",
+      "id": "sec-edgar-filings-cik0000320193-2",
       "date": "2026-08-01",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
+      "summary": "Apple Inc. (AAPL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -765,30 +681,127 @@
         "outcome-briefings",
         "search-index"
       ]
+    },
+    {
+      "id": "courtlistener-court-records-10936935-1",
+      "date": "2026-07-29",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
+    },
+    {
+      "id": "courtlistener-court-records-10936889-2",
+      "date": "2026-07-29",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Williams v. Biggs",
+      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
+    },
+    {
+      "id": "courtlistener-court-records-10936118-3",
+      "date": "2026-07-29",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
+    },
+    {
+      "id": "courtlistener-court-records-10935302-4",
+      "date": "2026-07-27",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "United States v. Anten",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
+    },
+    {
+      "id": "courtlistener-court-records-10933234-5",
+      "date": "2026-07-21",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
+    },
+    {
+      "id": "courtlistener-court-records-10928510-6",
+      "date": "2026-07-15",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-08-01T06:16:07.245Z",
-    "newRecordCount": 0,
+    "updated": "2026-08-01T07:41:00.716Z",
+    "newRecordCount": 2,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 25,
+    "removedRecordCount": 8,
+    "relationshipCandidateCount": 24,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-08-01T06:16:07.373Z",
+    "updated": "2026-08-01T07:41:00.875Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
     "topProfiles": [
       {
         "name": "Blackwater / Xe / Academi / Constellis lineage",
-        "score": 50,
+        "score": 42,
         "level": "active contractor watch"
       },
       {
@@ -815,7 +828,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-08-01T06:16:07.404Z",
+    "updated": "2026-08-01T07:41:00.914Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",
@@ -827,8 +840,106 @@
     "entityTimelinesRoute": "entity-timelines.html",
     "boundary": "Master brief engine adds readable command intelligence without replacing source review."
   },
+  "integrityVersion": 1,
+  "integrity": [
+    {
+      "id": "brain-1",
+      "title": "Daily brain conclusion 1",
+      "conclusion": "Disclosure pressure is a top exposure lane because withheld records reveal the structure of protection and omission.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium-high",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-08-01T07:40:44.912Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-2",
+      "title": "Daily brain conclusion 2",
+      "conclusion": "Policy-system convergence remains the strongest system-level pattern; the key test is whether access becomes mandatory, centralized or vendor-controlled.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-08-01T07:40:44.912Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-3",
+      "title": "Daily brain conclusion 3",
+      "conclusion": "Gold reserves must be tracked through ownership and custody separately because reported tonnes do not prove physical location or encumbrance status.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-08-01T07:40:44.912Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-4",
+      "title": "Daily brain conclusion 4",
+      "conclusion": "Wealth and institutional influence should be mapped through infrastructure dependency, filings, contracts and grant routes, not slogans.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-08-01T07:40:44.912Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    },
+    {
+      "id": "brain-5",
+      "title": "Daily brain conclusion 5",
+      "conclusion": "Speculation should become a record engine: exact claim, source chain, counter-source, probability trigger and downgrade condition.",
+      "route": "daily-brain-brief.html",
+      "classification": "evidence-graded synthesis",
+      "confidence": "medium",
+      "evidenceBasis": "5 signals, 14 scenarios and 5 outcome briefs.",
+      "supportingCount": 5,
+      "freshness": "2026-08-01T07:40:44.912Z",
+      "formula": "Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.",
+      "counterEvidence": "Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.",
+      "limitation": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
+      "sources": [
+        "data/daily-brain-brief.json",
+        "data/outcome-briefings.json",
+        "data/probability-lab-core.json"
+      ]
+    }
+  ],
   "dailyWatch": {
-    "updated": "2026-08-01T06:30:03.896Z",
+    "updated": "2026-08-01T07:41:07.835Z",
     "date": "2026-08-01",
     "route": "daily-watch.html",
     "person": {
@@ -886,9 +997,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 30
+        "directFreshRecords": 20
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 30 fresh records plus 29 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 20 fresh records plus 18 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [

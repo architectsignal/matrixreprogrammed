@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-01T06:31:01.345Z",
+  "updated": "2026-08-01T07:39:47.989Z",
   "sources": {
     "doj-epstein-disclosures": {
       "sourceId": "doj-epstein-disclosures",
@@ -9,9 +9,9 @@
       "lane": "epstein-disclosure",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "0e2d908f194830fb4f99a4e230529e9dd40f92df018dbf7cef6bd8b800007ef3",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "6b4527f2d959a26f56a4e3762e3312eac60bcdae24dd1394ef652fc16ecee657",
       "normalizedHash": "46edd604e1e907688f5538565a605620512f3b5bc647834057e361426984dfa4",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -23,9 +23,9 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "222ba23bc53e4f3df6312bbbd4942c79cdfb974b7dc154db388bde483eba9ddf",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "f777f208469b0f7ae8cfbc5efcacefd7fb4d3b6bc2336b4935c0a9bf39f0febb",
       "normalizedHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -37,9 +37,9 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "38f3eab4750ae3656af9662c8ba69805ecfc6d3461eface89ebac1358da80cd6",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "9ec2b7d7fb840d17348cf8a980cfa0dc8c7861872c146d872dd9e7c422a1270e",
       "normalizedHash": "fc52f95b478bc5c2be236204dd7a6c555eaa11bd0c7665c8b1bcb2303a53998e",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -51,10 +51,10 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "c52990b5601185f7be5d2613ff1760d7bedfc48bb0459a253e8770f75bba717f",
-      "normalizedHash": "145cd0916b73f3b93b682a3ca150b50ce63e3ea3d853c6b00cb9fb2f86e3a4db",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "7c35c9251a0176b35d171ec17c41ea981195c69afcbe11adae1bc1f5268f6744",
+      "normalizedHash": "c8032606526d8077df895a251af0ca41256a87fd6afa346cacd73c176ac4e77b",
       "consecutiveFailures": 0,
       "failureHistory": []
     },
@@ -65,8 +65,8 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
       "rawHash": "f6d86459270f4a14bd90e3152e84bd7063d6ff81cad17419b6ff24ced5642961",
       "normalizedHash": "943d702a6247b2edd26aedea885c8a0c6e390941de835605b87e8282e725cedb",
       "consecutiveFailures": 0,
@@ -79,11 +79,11 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
       "lastSuccess": "2026-07-31T08:12:11.783Z",
       "rawHash": "514ed18a22fc48051a79c4c5b4e877da71f4e61baafbb101bf7e3e8916dbd13e",
       "normalizedHash": "2607e550bf40d4c2e72133b23e40f661686ea6a8bf7ee10e1ca9507164b51f8d",
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "failureHistory": []
     },
     "usaspending-recent-contracts": {
@@ -93,9 +93,9 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "593798295568c19118e7e4577ace2f58fc9ddef9c8778c7bc4f53ff98a5e7a83",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "38c7a485097f3d870e1451aec59396e66355b2e6e0302492b2d408aaed03ddf6",
       "normalizedHash": "f809258b500247dfea12ce229f0f321223a565e34ef714a20bbb70782e1c6ea7",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -107,9 +107,9 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "c451e73307a46f05b3fa7b55e9beed83fd9b494602d4232a1a85ffc47317ece6",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "26871e76a22897a6f54328cbd0291f88056d5c6677c9e61a0de68eacf487d279",
       "normalizedHash": "9b2f33a522dd169785b1b7ee1df18c45877c4d2c41a0eda663fbd0f85646386f",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -121,8 +121,8 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
       "rawHash": "f49fd691e9bae34ec2856ac4e5f8d7044c3bfbd338c2bc3c57ee0c348d0e02f1",
       "normalizedHash": "b48fd5c722b233055f43b81a26e00d59765edbc7bb6938b09ed6deacbe504e6e",
       "consecutiveFailures": 0,
@@ -135,8 +135,8 @@
       "lane": "declassified-leaks",
       "authority": "document-archive",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
       "rawHash": "7eb265af4230a3d4d680a4794daaf3a2e150ef98c9146dc00821d489eabd6528",
       "normalizedHash": "9bcd7c0cb93dd0ed3fe60f2f8dd39234c8e45c774cc28e8ea19e7d2fb20be289",
       "consecutiveFailures": 0,
@@ -149,9 +149,9 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
-      "lastSuccess": "2026-07-31T08:12:11.783Z",
-      "rawHash": "12c037ef5b1ffc18974a82207a368bf4084f9eef5f9cba9b2ee481135528c648",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
+      "lastSuccess": "2026-08-01T07:39:38.763Z",
+      "rawHash": "43a152d85a6867c07b4a1cba67d57690153c80638847e1d883bbc9a46c114958",
       "normalizedHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
       "consecutiveFailures": 0,
       "failureHistory": []
@@ -163,11 +163,11 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "availability": "available",
-      "lastAttempt": "2026-07-31T08:12:11.783Z",
+      "lastAttempt": "2026-08-01T07:39:38.763Z",
       "lastSuccess": "2026-07-31T08:12:11.783Z",
       "rawHash": "f7b51b455155b44014fe7deb39f36c736d931f68b203585114b2d62df4a28b97",
       "normalizedHash": "c81d1e98ae3df4a04eb4d8b1e22aa13a152032841a9f5f0be017990cd0ec3230",
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "failureHistory": []
     },
     "fbi-vault-recent": {
@@ -965,6 +965,15 @@
       "bytes": 24800,
       "file": "data/source-snapshots/sec-current-filings/c2fd6bf01c0e95acdce75437a4767684ab7486fbfecc0c84093e996badf2a270.json",
       "fileHash": "351994e0ba37c54d0548dff92355117414e80a69de131e8ba4ca0a5d65338fc2"
+    },
+    {
+      "sourceId": "sec-current-filings",
+      "retrievedAt": "2026-08-01T07:39:38.763Z",
+      "rawHash": "7c35c9251a0176b35d171ec17c41ea981195c69afcbe11adae1bc1f5268f6744",
+      "normalizedHash": "c8032606526d8077df895a251af0ca41256a87fd6afa346cacd73c176ac4e77b",
+      "bytes": 22609,
+      "file": "data/source-snapshots/sec-current-filings/c8032606526d8077df895a251af0ca41256a87fd6afa346cacd73c176ac4e77b.json",
+      "fileHash": "7ae38f0c7c1064265f06be779863e2ebd41c27205ddf100def0d37a152b70c1c"
     },
     {
       "sourceId": "sec-current-filings",
@@ -2107,6 +2116,18 @@
     }
   ],
   "documentFailures": [
+    {
+      "sourceId": "sec-litigation-releases",
+      "url": "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
+      "retrievedAt": "2026-08-01T07:39:47.989Z",
+      "error": "Response exceeds 12582912 bytes"
+    },
+    {
+      "sourceId": "sec-litigation-releases",
+      "url": "https://www.sec.gov/system/files/filefield_paths/order26587.pdf",
+      "retrievedAt": "2026-08-01T07:39:47.989Z",
+      "error": "Source returned HTTP 404."
+    },
     {
       "sourceId": "sec-litigation-releases",
       "url": "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",

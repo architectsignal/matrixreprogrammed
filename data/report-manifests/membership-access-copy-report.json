@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:36:29.080Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-01T06:22:36.075Z",
+  "pageCount": 128,
   "output": "downloads/membership-access-copy-report.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Membership Access Copy Report",
-    "contentHash": "6716f9c4168bf70de88508505ba84e120185acfa65072c3be57386582a5a7354",
+    "contentHash": "49b8ac1adf636c4c2bf273da0b320127a57346faa62abac5123bc7cee1389c1b",
     "sourceIds": [
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -15,16 +15,16 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "source-change-205bd2407ea96080fdae5fe8",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-a21f3d8e98268d5e01e1eb7c",
       "source-change-44505b4afb60938c8117ad31",
       "source-change-701229696b57f88191742d4f",
       "source-change-edba4782143dd855b818b53a",
-      "source-change-14394588e567b7c52bd11cb3",
-      "source-change-88269481cf5b04b7b0f83b58",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -51,6 +51,7 @@
       "a5e5d4ec4df4352ea242ea3f",
       "88ef9baf356c096816236956",
       "aae51d03dc366bfb0267f3b4",
+      "5460c0408472ce834da2b82f",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25"
+      "ASC-REVIEW-4FDBCEA6F4D74FFD"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 22,
-      "disputedClaimCount": 116,
+      "primarySourceCount": 23,
+      "disputedClaimCount": 115,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 119,
-      "moneyRecordCount": 117
+      "relationshipCount": 118,
+      "moneyRecordCount": 116
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 23 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES — Department of Education,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "THE NATIONAL CENTER FOR EDUCATION EVALUATION AND REGIONAL ASSISTANCE OF THE US DEPARTMENT OF EDUCATIONS INSTITUTE OF EDUCATION SCIENCES REQUIRES A CONTRACT TO CONDUCT A NATIONAL STUDY OF SPECIAL EDUCATION SPENDING INFORMED BY THE PILOT STUDY. · Amount: 8830886.25 · Sub-agency: Department of Education A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

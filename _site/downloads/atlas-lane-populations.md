@@ -1,6 +1,6 @@
 # Atlas Lane Populations
 
-Generated: 2026-07-31T06:42:36.646Z
+Generated: 2026-08-01T06:28:59.533Z
 
 Boundary: Items are public-record relevance leads for Agenda 2030, SDG, global-governance, institutional power, money, legal, symbolic or human-cost lanes. Inclusion is not an allegation of wrongdoing.
 

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-31T06:32:58.073Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-01T06:18:51.943Z",
+  "pageCount": 125,
   "output": "downloads/deploy-status-current-mission-patch.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Deploy Status Current Mission Patch",
-    "contentHash": "88b28222f7a541c7cf21123a6182cf85ff759759b7a056a3288a2e9f83ffad77",
+    "contentHash": "e423d91feff32f82288178acc2224c57a87f2e573f48965f4e999a8b5de3d501",
     "sourceIds": [
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
-      "ASC-REVIEW-1B2E5D07E27D9811",
       "26b90533dbf7d2ed42f02de6",
       "44505b4afb60938c8117ad31",
+      "3a425f0d5d683952bc0ad7ac",
       "d7398c0c72a085a05c90422c",
       "5ce17839086eddf839270b1a",
       "9848ec4b4c3f6c2693269839",
@@ -35,12 +35,12 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C4877182445C2050",
-      "ASC-REVIEW-7E1807C0C6B7E2C1",
       "ASC-REVIEW-BA5FF644D411D868",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
-      "3a425f0d5d683952bc0ad7ac",
       "5594665950812895f468c11d",
       "2931a84c2c7fe86982d5d6e5",
       "6d665d935673091233751767",
@@ -51,12 +51,19 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
+      "source-change-c452df757991611cb06ec88a",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "d358fc1eedcb8f9eae6e4ab7",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-701229696b57f88191742d4f",
-      "48315ec59cadd154d31bf1cf",
-      "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-14394588e567b7c52bd11cb3",
-      "source-change-88269481cf5b04b7b0f83b58",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
@@ -76,7 +83,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -94,12 +100,12 @@
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-8F8980CBAE670AE9",
       "ASC-REVIEW-32D4420F5F198DA2",
+      "ASC-REVIEW-D55167851C6E78DE",
+      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -140,26 +146,20 @@
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
       "ASC-REVIEW-0C3383FAE797FF46",
-      "ASC-REVIEW-7FBB26E1B0ECA17A",
-      "ASC-REVIEW-ECBF89F9DB572E57",
-      "ASC-REVIEW-9CC26AD16796DAE5",
-      "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
-      "ASC-REVIEW-DAB5BBAD900386F9",
-      "ASC-REVIEW-52F3C5EC8401656D"
+      "ASC-REVIEW-7FBB26E1B0ECA17A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 30,
-      "disputedClaimCount": 107,
+      "primarySourceCount": 37,
+      "disputedClaimCount": 100,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 95,
-      "moneyRecordCount": 53
+      "relationshipCount": 101,
+      "moneyRecordCount": 49
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
+        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Litigation Releases; AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ARGUS MEDIA INC — Department of Energy; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+        "inference": "The indexed set contains 101 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ARGUS MEDIA INC — Department of Energy; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 101 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission",
           "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
           "ARGUS MEDIA INC — Department of Energy",
-          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board"
+          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T17:52:43.936Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:11.783Z"
   }
 }

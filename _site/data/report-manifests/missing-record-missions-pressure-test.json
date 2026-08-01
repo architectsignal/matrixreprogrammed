@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-31T06:36:38.046Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-01T06:22:45.947Z",
+  "pageCount": 97,
   "output": "downloads/missing-record-missions-pressure-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Missing Record Missions Pressure Test",
-    "contentHash": "516a6eef7079755bebc9ae3df9b502669951cd88849b7873312c7cb3e8c06cc8",
+    "contentHash": "1eab5c18774fbda79b39df702b9c302e4a09f887ad795195f4555acabc886fbd",
     "sourceIds": [
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
       "peter-ball-conviction-2015",
-      "48315ec59cadd154d31bf1cf",
+      "d358fc1eedcb8f9eae6e4ab7",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -23,11 +23,13 @@
       "26b90533dbf7d2ed42f02de6",
       "deutsche-bank-epstein-dfs-2020",
       "14d04c0943d24cbe6a1926db",
+      "5460c0408472ce834da2b82f",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
       "aa119272f233de638bb1e02d",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
-      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -62,12 +64,10 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A9879DBB68A52307",
       "bf041695a279c3dc5412cdf4",
-      "d0b647e325275daa6d824a49",
       "495efbb6e1ee304347ae3bdf",
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
       "a21f3d8e98268d5e01e1eb7c",
-      "04178dd78ae55a022df89f05",
       "epstein-federal-indictment-2019",
       "us-doj",
       "gao-hq",
@@ -138,16 +138,16 @@
     ],
     "metrics": {
       "evidenceCount": 128,
-      "primarySourceCount": 114,
-      "disputedClaimCount": 16,
+      "primarySourceCount": 115,
+      "disputedClaimCount": 15,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 29,
+      "relationshipCount": 31,
       "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 114 A/B-grade public-record items are materially relevant to Missing Record Missions Pressure Test.",
+        "conclusion": "The indexed record establishes that 115 A/B-grade public-record items are materially relevant to Missing Record Missions Pressure Test.",
         "evidence": "IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json); Guilty pleas to indecent assaults and misconduct in public office (data/criminal-conduct-registry.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -167,8 +167,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 29 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final)",
+        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -182,16 +182,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 29 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Westminster inquiry examined political and policing responses",
           "Official health investigations documented abuse and enabling access",
           "Broadmoor investigation examined Savile's access and abuse",
           "New York DFS enforcement action concerning the bank's Epstein relationship",
-          "World Wrestling Entertainment",
-          "World Wrestling Entertainment Part 01",
-          "World Wrestling Entertainment Part 02 (Final)"
+          "Christopher Wray's Gift to Attorney General Garland",
+          "Christopher Wray's Gift to Attorney General Garland (Final)",
+          "World Wrestling Entertainment"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -206,6 +206,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
   }
 }

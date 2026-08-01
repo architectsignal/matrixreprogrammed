@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:36:52.953Z",
+  "generatedAt": "2026-08-01T06:23:01.842Z",
   "pageCount": 133,
   "output": "downloads/money-depth-integration-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Money Depth Integration Test",
-    "contentHash": "2e25c06d860202543a5a8ac91fc3965aa741cc11eda64108f9b45763dce911e5",
+    "contentHash": "91059611e528a9a85b30177a25923be9962c190507b16b74203fa008e969dcd4",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -18,9 +18,9 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
       "26b90533dbf7d2ed42f02de6",
-      "48315ec59cadd154d31bf1cf",
+      "5460c0408472ce834da2b82f",
+      "d358fc1eedcb8f9eae6e4ab7",
       "aa119272f233de638bb1e02d",
-      "0286171e0bf7415859b35948",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
       "peter-ball-conviction-2015",
@@ -40,7 +40,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -58,12 +57,15 @@
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-8E57602B48B9C301",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-B87070F04E239F1B",
       "ASC-REVIEW-8F8980CBAE670AE9",
       "ASC-REVIEW-32D4420F5F198DA2",
+      "ASC-REVIEW-D55167851C6E78DE",
+      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-53BD0E17B018491C",
-      "ASC-REVIEW-0177F61D444ED739",
-      "ASC-REVIEW-FE9A5B02284E30E4",
-      "ASC-REVIEW-9B9644A27C9A796C"
+      "ASC-REVIEW-0177F61D444ED739"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -155,12 +155,12 @@
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 132,
-      "moneyRecordCount": 97
+      "moneyRecordCount": 95
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Money Depth Integration Test.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); 2015 criminal charges relating to nine complainants (data/exposure-evidence-ledger.json)",
+        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); 2015 criminal charges relating to nine complainants (data/exposure-evidence-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
   }
 }

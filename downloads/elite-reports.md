@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-31T06:42:24.505Z
+Generated: 2026-08-01T06:28:46.658Z
 
 ## Daily Revelation Report
 
-With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
+Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
 
 Source: daily-command-brief.html
 

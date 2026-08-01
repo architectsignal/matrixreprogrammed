@@ -1,9 +1,81 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-31T06:42:11.582Z
+Updated: 2026-08-01T06:28:34.553Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+
+- Date: 2026-07-31
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
+- Timers: none
+
+Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails PBS
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
+
+- Date: 2026-07-31
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168062
+- Timers: none
+
+Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Strong El Niño ahead, UN weather agency warns
+
+- Date: 2026-07-31
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168059
+- Timers: none
+
+As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Wildfire smoke poses hidden health threat
+
+- Date: 2026-07-31
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168060
+- Timers: none
+
+Wildfires are often associated with the destruction they leave behind, but the smoke they produce can pose a serious health threat far beyond the fire zone, the World Health Organization (WHO) has warned.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Christopher Wray's Gift to Attorney General Garland
+
+- Date: 2026-07-31
+- Lane: Declassified Files And Public Archives
+- Evidence: Primary or official public-record lead
+- Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland
+- Timers: none
+
+Christopher Wray's Gift to Attorney General Garland
+
+Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+
+## Christopher Wray's Gift to Attorney General Garland (Final)
+
+- Date: 2026-07-31
+- Lane: Declassified Files And Public Archives
+- Evidence: Primary or official public-record lead
+- Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view
+- Timers: none
+
+Christopher Wray's Gift to Attorney General Garland (Final)
+
+Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
 
 ## With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
 
@@ -77,6 +149,42 @@ The wildfires burning across Europe and North America highlight the urgent need 
 
 Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
+## Fear grows as freedoms shrink in Uganda
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168057
+- Timers: none
+
+Uganda is experiencing a growing climate of fear as increasing restrictions on fundamental freedoms leave opposition supporters, journalists, human rights defenders and civil society groups at heightened risk of abuse, according to the UN Human Rights Office (OHCHR).
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## Middle East crisis: Humanitarian fallout ‘worsening by the day’
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168055
+- Timers: none
+
+The humanitarian toll is mounting as fighting continues in the Middle East beyond strikes and counterstrikes between the US and Iran, the UN aid coordination office OCHA warned on Thursday, with civilians increasingly at risk and essential infrastructure disrupted in several countries across the region.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
+## The climate pattern putting millions at risk: El Niño explained
+
+- Date: 2026-07-30
+- Lane: War Machine And Intelligence State
+- Evidence: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168056
+- Timers: none
+
+El Niño is putting millions of lives at risk in eastern and southern Africa but the UN is ensuring that communities are better prepared to deal with its impact.
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+
 ## US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
 
 - Date: 2026-07-30
@@ -86,6 +194,18 @@ Boundary: Treat this as a public-record lead. Open the source, preserve the evid
 - Timers: none
 
 US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+- Timers: none
+
+Epstein survivors’ lawsuits against Les Wexner combined into one case NBC4 WCMH-TV
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -110,6 +230,18 @@ Boundary: A fresh news or archive item is a lead, not a verdict. Open the source
 - Timers: none
 
 U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+
+- Date: 2026-07-30
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Primary or official public-record lead
+- Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+- Timers: none
+
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -160,135 +292,3 @@ Boundary: A fresh news or archive item is a lead, not a verdict. Open the source
 Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell theguardian.com
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
-
-- Date: 2026-07-29
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168048
-- Timers: none
-
-The United Nations Secretary-General said on Wednesday that he plans to convene fresh talks on Cyprus to resolve the decades-long division on the Mediterranean island, stressing that the moment calls for rebuilding trust between its two communities.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Hunger hampers Ebola response as cases top 3,200 in DR Congo
-
-- Date: 2026-07-29
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168047
-- Timers: none
-
-The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
-
-- Date: 2026-07-29
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168045
-- Timers: none
-
-Violence in the occupied West Bank is worsening as the Israeli Government continues to approve new settlements while settlers and Israeli security forces have “often” acted together to attack local Palestinian communities, the UN’s human rights office (OHCHR) warned on Wednesday.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-
-- Date: 2026-07-29
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
-- Timers: none
-
-Independent UN experts on Wednesday called for urgent action to support Rohingya refugees in Bangladesh after reports indicated two boats carrying more than 500 passengers may have capsized off the coast of Myanmar in mid-July.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## World Wrestling Entertainment
-
-- Date: 2026-07-29
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment
-- Timers: none
-
-World Wrestling Entertainment
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## World Wrestling Entertainment Part 01
-
-- Date: 2026-07-29
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
-- Timers: none
-
-World Wrestling Entertainment Part 01
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## World Wrestling Entertainment Part 02 (Final)
-
-- Date: 2026-07-29
-- Lane: Declassified Files And Public Archives
-- Evidence: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
-- Timers: none
-
-World Wrestling Entertainment Part 02 (Final)
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## Epstein, others named in scathing Interlochen review. See full report - Detroit Free Press
-
-- Date: 2026-07-28
-- Lane: Epstein Files, Timeline And Court Records
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiywFBVV95cUxOd2RXcGs0dHlOQXRfUnlMSVVJOVpvUmtUWEpIdmpsYVpLd0trNUZWeU15YUUwWVVyeHhZaXpBdUtyWm80cThaUmprUDRmZS1zUnVTS0VfZFFadHoxRFZQVTZEengzM1lFVWE4RU13NDJjVzhoLWxnZVR6eG1ldVBOMm1USUppOWdIUV9BVEtXLUNRVXJTRDNpWnVZc1pxc0FKdkVWdlF0YkJoQnMyR2RQQl8wZTVpSHN5YVdwMmpMZHpCOTdHTm9PQUd1SQ?oc=5
-- Timers: none
-
-Epstein, others named in scathing Interlochen review. See full report Detroit Free Press
-
-Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-
-## Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine - ukranews.com
-
-- Date: 2026-07-28
-- Lane: Crime State Overlap
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeDRRb1RyYUw1bnVXUjk2STNJcjhpeV9CUlBjMEFLWXBqWTVvblJaa1BmcUVoWDdGSXhfY2lmMWdKR0lEUmZINWNTUWFxQ0lDQUtWd2NEWXVRVHpiUzJacDg2U2ZQQW5tMVZGSEUyOHJBTkQwdGhXSlBNV1AwVXpfSngxaDF2bUpxb1RtQVdzU0N6eFBEOFcyYk1SUTljY2JQcWR4dG5LeW52Njd2SVg0Q3VzTG9WakZxUlBOWkYwaDBfSlRFcjBZMklXRlhZV0FT0gHWAUFVX3lxTE9DVlYzbVZxdFBEUmZYUXBuaUxkNmZBMHZ2M2VKb2NiLWsyMjBZZmNKOE9Xa3VJRzlNcTVOWk40Ri1NY1RkRHZsM19va1Njb0xZZUQwUzk0TmFNSFRNX0xxd3RWR3UzQWJEdDdCLS1DbmV2c3FUbU1ITG1aOGREWDMycFNjZ3hqcDdWcmljLUMxWFNFbXJkemJ2MzlNdU5saHhBTjVSMnAwVEhnWXhRZVM1cU1haDRvWGlKbzlZV0lqRVExVDkwb2V3NlVwenN6QlAyelVUckE?oc=5
-- Timers: none
-
-Foreign Ministry ex-State Secretary suspected of embezzling UAH 37 million in donations for Ukraine ukranews.com
-
-Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-
-## A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168039
-- Timers: none
-
-A woman is stopped for buying groceries alone. The shopkeeper who served her is slapped and hauled in for questioning. A teacher is turned away from her own classroom for wearing the wrong cloak.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-
-## Climate alarm ‘blaring from every direction’
-
-- Date: 2026-07-28
-- Lane: War Machine And Intelligence State
-- Evidence: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168042
-- Timers: none
-
-Climate-driven disasters are reaching “nightmare proportions” due to humanity’s “addiction” to fossil fuels, a top UN official warned on Tuesday.
-
-Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.

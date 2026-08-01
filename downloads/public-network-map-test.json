@@ -1,20 +1,20 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T06:44:49.573Z",
+  "generatedAt": "2026-08-01T06:31:07.287Z",
   "totals": {
-    "entities": 9200,
-    "relationships": 13455,
-    "coreRelationships": 9841,
-    "officialRelationships": 13453,
-    "reviewedRelationships": 2605,
-    "weakMentions": 3614,
+    "entities": 9313,
+    "relationships": 13368,
+    "coreRelationships": 10003,
+    "officialRelationships": 13366,
+    "reviewedRelationships": 2608,
+    "weakMentions": 3365,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
       "malformed": 0
     }
   },
-  "graphBytes": 23067458,
+  "graphBytes": 23000666,
   "cloudflareSafetyTarget": 25165824,
   "checks": [
     {
@@ -30,27 +30,27 @@
     {
       "name": "substantial entity graph",
       "ok": true,
-      "detail": "9200 nodes"
+      "detail": "9313 nodes"
     },
     {
       "name": "substantial relationship graph",
       "ok": true,
-      "detail": "13455 edges"
+      "detail": "13368 edges"
     },
     {
       "name": "relationship totals agree",
       "ok": true,
-      "detail": "13455 / 13455"
+      "detail": "13368 / 13368"
     },
     {
       "name": "entity totals agree",
       "ok": true,
-      "detail": "9200 / 9200"
+      "detail": "9313 / 9313"
     },
     {
       "name": "browser graph remains below Cloudflare safety target",
       "ok": true,
-      "detail": "22.00 MiB / 24 MiB"
+      "detail": "21.94 MiB / 24 MiB"
     },
     {
       "name": "browser graph uses compact serialization",
@@ -80,17 +80,17 @@
     {
       "name": "core view exists",
       "ok": true,
-      "detail": "9841 core edges"
+      "detail": "10003 core edges"
     },
     {
       "name": "official view exists",
       "ok": true,
-      "detail": "13453 official edges"
+      "detail": "13366 official edges"
     },
     {
       "name": "weak mentions are separated",
       "ok": true,
-      "detail": "3614 weak mentions"
+      "detail": "3365 weak mentions"
     },
     {
       "name": "relationship filter metadata",
@@ -130,7 +130,7 @@
     {
       "name": "build report confirms deployable size",
       "ok": true,
-      "detail": "23067458 / 23067458"
+      "detail": "23000666 / 23000666"
     },
     {
       "name": "runtime syntax",

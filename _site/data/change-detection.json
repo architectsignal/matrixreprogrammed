@@ -1,87 +1,16 @@
 {
-  "updated": "2026-07-31T06:30:22.956Z",
+  "updated": "2026-08-01T06:16:07.245Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-31T03:49:11.427Z",
+  "previousUpdated": "2026-08-01T03:48:55.415Z",
   "currentRecordCount": 18,
   "previousRecordCount": 18,
-  "newRecords": [
-    {
-      "key": "sec-edgar-filings-cik0000320193-1",
-      "hash": "9675dd4a3305e8b0",
-      "summary": "Apple Inc. (AAPL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-31",
-      "names": [
-        "Apple Inc.",
-        "AAPL"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0001045810-2",
-      "hash": "e6f0bb7740cec0d6",
-      "summary": "NVIDIA CORP (NVDA)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-31",
-      "names": [
-        "NVIDIA CORP",
-        "NVDA"
-      ]
-    }
-  ],
-  "removedRecords": [
-    {
-      "key": "sec-edgar-filings-cik0001045810-1",
-      "hash": "e6f0bb7740cec0d6",
-      "summary": "NVIDIA CORP (NVDA)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-31",
-      "names": [
-        "NVIDIA CORP",
-        "NVDA"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0000320193-2",
-      "hash": "9675dd4a3305e8b0",
-      "summary": "Apple Inc. (AAPL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-31",
-      "names": [
-        "Apple Inc.",
-        "AAPL"
-      ]
-    }
-  ],
+  "newRecords": [],
+  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [
-    {
-      "id": "sec-edgar-filings-cik0000320193-1",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "id": "sec-edgar-filings-cik0001045810-2",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    }
-  ],
+  "clockTriggers": [],
   "repeatedEntities": [
     {
       "id": "homeland-security-department",

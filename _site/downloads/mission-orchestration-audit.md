@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-31T06:43:41.045Z
+Generated: 2026-08-01T06:30:04.515Z
 Overall: ready
 Homepage mode: legacy-cinematic
 Passed: 50/50
@@ -22,7 +22,7 @@ Promotion margin: 14
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
-- **PASS · ledger-archive-preserved:** 1867 archived findings retained.
+- **PASS · ledger-archive-preserved:** 2276 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
 - **PASS · watch-person-rank:** person score 135; status incumbent-held-position.
@@ -51,7 +51,7 @@ Promotion margin: 14
 - **PASS · dossier-institution-assessment:** institution executive assessment checked.
 - **PASS · dossier-family-structure:** family dossier Wallenberg family and foundations; missing arrays none.
 - **PASS · dossier-family-assessment:** family executive assessment checked.
-- **PASS · history-and-weekly-delta:** 5 history entries; weekly delta ready.
+- **PASS · history-and-weekly-delta:** 6 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
 - **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.
 - **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
@@ -61,4 +61,4 @@ Promotion margin: 14
 - **PASS · surface-live-intel.html:** Live Intel exposes the current intelligence feed; duplicated homepage hit-list markup is not required.
 - **PASS · relationship-contracts:** 172 edges; 0 contract failures.
 - **PASS · clock-meaning-contracts:** 81 clocks; 0 contract failures.
-- **PASS · sensitive-claim-safeguard:** 17 sensitive items; 0 unsafe.
+- **PASS · sensitive-claim-safeguard:** 9 sensitive items; 0 unsafe.

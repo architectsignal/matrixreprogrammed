@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:38:44.306Z",
+  "generatedAt": "2026-08-01T06:25:01.240Z",
   "pageCount": 138,
   "output": "downloads/review-queue-speculation-publication.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Review Queue Speculation Publication",
-    "contentHash": "db40850958830cbe681ee906752176d55df0409a24d1eb708fa5093a6894c8ae",
+    "contentHash": "20aff5b4b6bdd0cc22ab71425a8a6990d04f27d0c4086eea64931ae9cd296efd",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -33,7 +33,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -51,18 +50,18 @@
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-8E57602B48B9C301",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-B87070F04E239F1B",
       "ASC-REVIEW-8F8980CBAE670AE9",
       "ASC-REVIEW-32D4420F5F198DA2",
+      "ASC-REVIEW-D55167851C6E78DE",
+      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -106,12 +105,12 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
-      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-E3E367656A99DD33",
+      "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -128,7 +127,7 @@
       "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-22BBAF16578AD07C",
+      "ASC-REVIEW-EE7AFF662C9B718F",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -139,14 +138,15 @@
       "ASC-REVIEW-774FD6AB4E46BCE8",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-F14FA67D281BC1CC",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E"
+      "ASC-REVIEW-1CDBDA84057D802E",
+      "ASC-REVIEW-5F2C7C064DEAB967",
+      "ASC-REVIEW-008D94FCB408C868"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 140,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 119,
-      "moneyRecordCount": 79
+      "relationshipCount": 123,
+      "moneyRecordCount": 81
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 123 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 123 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T06:38:44.306Z"
+    "intelligenceFreshnessDate": "2026-08-01T06:25:01.240Z"
   }
 }

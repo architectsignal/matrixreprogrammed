@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-31T06:36:39.161Z",
+  "generatedAt": "2026-08-01T06:22:47.167Z",
   "pageCount": 118,
   "output": "downloads/mission-acceptance-copy-alignment.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Mission Acceptance Copy Alignment",
-    "contentHash": "7e2b5a91206705a3e1ff1a02c8fb169bf6ad0ddc5c43dd5e23e5ee3da83b70d5",
+    "contentHash": "4380d23026990f1c154b4822d5c84f92b9fd9eb252be213c08da8a34dd1f29c1",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "peter-ball-conviction-2015",
       "a21f3d8e98268d5e01e1eb7c",
       "88269481cf5b04b7b0f83b58",
-      "04178dd78ae55a022df89f05",
       "14d04c0943d24cbe6a1926db",
+      "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "41af4eba97b7eb1c0afb301f",
@@ -65,12 +65,12 @@
       "9848ec4b4c3f6c2693269839",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
+      "source-change-c452df757991611cb06ec88a",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "d358fc1eedcb8f9eae6e4ab7",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-701229696b57f88191742d4f",
-      "48315ec59cadd154d31bf1cf",
-      "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-14394588e567b7c52bd11cb3",
-      "source-change-88269481cf5b04b7b0f83b58",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -106,15 +106,12 @@
       "ASC-REVIEW-87F3003854489813",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-8E57602B48B9C301",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -140,7 +137,10 @@
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-E0C2B02D28255CC3",
-      "ASC-REVIEW-4E0C4B2A65FF8D42"
+      "ASC-REVIEW-4E0C4B2A65FF8D42",
+      "ASC-REVIEW-995324D0659C1960",
+      "ASC-REVIEW-BD5CE46383C9383C",
+      "ASC-REVIEW-927E79836853DFAE"
     ],
     "metrics": {
       "evidenceCount": 134,
@@ -148,13 +148,13 @@
       "disputedClaimCount": 57,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 56,
-      "moneyRecordCount": 39
+      "relationshipCount": 61,
+      "moneyRecordCount": 42
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 81 A/B-grade public-record items are materially relevant to Mission Acceptance Copy Alignment.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json)",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -162,8 +162,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -173,7 +173,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 56 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -188,7 +188,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 56 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
           "IICSA documented predatory activities and institutional failures",
@@ -212,6 +212,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T17:52:43.936Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:11.783Z"
   }
 }

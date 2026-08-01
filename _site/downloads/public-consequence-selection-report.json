@@ -1,14 +1,26 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T06:46:46.063Z",
+  "generatedAt": "2026-08-01T06:32:54.904Z",
   "sourceCount": 24,
-  "eligibleCount": 9,
-  "selectedCount": 8,
-  "rejectedGenericTopics": 15,
+  "eligibleCount": 8,
+  "selectedCount": 7,
+  "rejectedGenericTopics": 16,
   "duplicateSourcesRemoved": 1,
   "idCollisionsResolved": 0,
   "standard": "A title must contain a detectable exercise of authority or action, or pair a named authority in the title with an action in the summary. Exact source duplicates are removed and colliding IDs are resolved deterministically.",
   "selected": [
+    {
+      "id": "war-machine-2026-07-31-a82191f1",
+      "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
+      "published": "2026-07-31T12:00:00.000Z",
+      "sourceLabel": "UN News"
+    },
+    {
+      "id": "war-machine-2026-07-31-1d19fb5b",
+      "title": "Strong El Niño ahead, UN weather agency warns",
+      "published": "2026-07-31T12:00:00.000Z",
+      "sourceLabel": "UN News"
+    },
     {
       "id": "epstein-files-2026-07-31-b0ba52f7",
       "title": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation",
@@ -38,24 +50,6 @@
       "title": "Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian",
       "published": "2026-07-29T21:23:00.000Z",
       "sourceLabel": "Google News / Epstein timeline and files"
-    },
-    {
-      "id": "war-machine-2026-07-29-221c41d1",
-      "title": "Cyprus: Guterres calls for renewed trust and a new meeting on the way forward",
-      "published": "2026-07-29T12:00:00.000Z",
-      "sourceLabel": "UN News"
-    },
-    {
-      "id": "war-machine-2026-07-29-1d1c39f2",
-      "title": "UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation",
-      "published": "2026-07-29T12:00:00.000Z",
-      "sourceLabel": "UN News"
-    },
-    {
-      "id": "war-machine-2026-07-28-21290c31",
-      "title": "A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule",
-      "published": "2026-07-28T12:00:00.000Z",
-      "sourceLabel": "UN News"
     }
   ]
 }

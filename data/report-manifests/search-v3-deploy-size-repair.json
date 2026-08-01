@@ -1,22 +1,24 @@
 {
-  "generatedAt": "2026-07-31T06:38:54.744Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-01T06:25:12.441Z",
+  "pageCount": 134,
   "output": "downloads/search-v3-deploy-size-repair.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Search V3 Deploy Size Repair",
-    "contentHash": "c2b6166acb3f640f4844ec3937741a8987f8f4292ac7ccd5a27742caae083f80",
+    "contentHash": "8330e05870711ea9167327d6427377463e117d11b2f5d3c0abc0de16d79a0d88",
     "sourceIds": [
-      "source-change-205bd2407ea96080fdae5fe8",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-a21f3d8e98268d5e01e1eb7c",
       "source-change-44505b4afb60938c8117ad31",
       "source-change-701229696b57f88191742d4f",
       "source-change-edba4782143dd855b818b53a",
-      "source-change-14394588e567b7c52bd11cb3",
-      "source-change-88269481cf5b04b7b0f83b58",
       "8c8118614f58e40c87e2c2f7",
-      "640d4c4d982f3097aa47ff81",
+      "8f31f55bedf76191133380d8",
+      "5460c0408472ce834da2b82f",
+      "d358fc1eedcb8f9eae6e4ab7",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -42,6 +44,17 @@
       "e86287f396e1ee800a7ee796",
       "a33968b32fce32bd9d6523f6",
       "fe51591d2f98b1e8140add7f",
+      "ea7eb603ea38266cd3fb06c7",
+      "bac0408c84e4d5d7dc1d7bbb",
+      "1257c3ee2bf54442161b9029",
+      "279c781eec7b4886b26d8896",
+      "8a8b1224cb4b359547bb61dc",
+      "7e87eea32e1f079ca5bf48bf",
+      "63e87834ac6d1a1f1bb8a85f",
+      "f946aaaa75aea2fb11902414",
+      "45f7a033ddf8bcaee9aee5c3",
+      "1a25500de3f4003b58b315f2",
+      "546bfa3345e6920715f40c97",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -133,34 +146,21 @@
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3"
+      "ASC-REVIEW-11446D58C9F4E2B6"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 15,
-      "disputedClaimCount": 124,
-      "newEntityCount": 0,
+      "primarySourceCount": 27,
+      "disputedClaimCount": 111,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 130,
-      "moneyRecordCount": 130
+      "relationshipCount": 120,
+      "moneyRecordCount": 119
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Search V3 Deploy Size Repair.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 27 A/B-grade public-record items are materially relevant to Search V3 Deploy Size Repair.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Counter Narcotics Sanctions,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Recent Actions | Office of Foreign Assets Control This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 130 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "OCLC, INC — Department of Education; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
+        "inference": "The indexed set contains 120 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "OCLC, INC — Department of Education; TRACE SYSTEMS INC. — Department of Defense; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 130 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 120 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "OCLC, INC — Department of Education",
+          "TRACE SYSTEMS INC. — Department of Defense",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-31T06:37:58.610Z",
-  "pageCount": 88,
+  "generatedAt": "2026-08-01T06:24:12.066Z",
+  "pageCount": 90,
   "output": "downloads/public-answer-clock-pressure-test.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Public Answer Clock Pressure Test",
-    "contentHash": "8fc80c472d831acb3b74b61d3734dc4ca0cafd70c685caddcf3a80ce1354f304",
+    "contentHash": "2064d4092d69d8abfb988fe404d3bc097eb9504a95ff7f1c977be22531ac6879",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
-      "48315ec59cadd154d31bf1cf",
+      "d358fc1eedcb8f9eae6e4ab7",
       "b4cb47ea50dc901364239e9f",
       "e457b31e704efd10ec987a59",
       "e349935405c0c31e3807b5af",
@@ -19,11 +19,13 @@
       "cyril-smith-iicsa-2018",
       "26b90533dbf7d2ed42f02de6",
       "360e80c162081c85d2c680ef",
+      "5460c0408472ce834da2b82f",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
       "aa119272f233de638bb1e02d",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
-      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -57,16 +59,14 @@
       "savile-broadmoor-2014",
       "ASC-REVIEW-A9879DBB68A52307",
       "bf041695a279c3dc5412cdf4",
-      "d0b647e325275daa6d824a49",
       "495efbb6e1ee304347ae3bdf",
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
       "a21f3d8e98268d5e01e1eb7c",
-      "04178dd78ae55a022df89f05",
-      "7ee9141a42ad539f58a57e50",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
+      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -142,10 +142,10 @@
     "metrics": {
       "evidenceCount": 131,
       "primarySourceCount": 127,
-      "disputedClaimCount": 10,
+      "disputedClaimCount": 9,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 20,
+      "relationshipCount": 22,
       "moneyRecordCount": 76
     },
     "evidenceBasedConclusions": [
@@ -170,8 +170,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final); Lufthansa Heist",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -185,16 +185,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
+          "Christopher Wray's Gift to Attorney General Garland",
+          "Christopher Wray's Gift to Attorney General Garland (Final)",
           "World Wrestling Entertainment",
           "World Wrestling Entertainment Part 01",
           "World Wrestling Entertainment Part 02 (Final)",
           "Brian Wells",
-          "Brian Wells Part 01",
-          "Brian Wells Part 02 (Final)",
-          "Lufthansa Heist"
+          "Brian Wells Part 01"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
   }
 }

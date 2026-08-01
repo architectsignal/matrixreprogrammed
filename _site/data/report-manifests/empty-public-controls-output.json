@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-07-31T06:33:35.117Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-01T06:19:30.206Z",
+  "pageCount": 133,
   "output": "downloads/empty-public-controls-output.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Empty Public Controls Output",
-    "contentHash": "e700a5c7058a6ed24b47acd6d46a23b37621adb7a464a637abedce6250c482af",
+    "contentHash": "268b598084f7ed4d0708c74ec7412e3f9251ef43830c288801c2563dbe53018f",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-5AE5A3805582A7F2",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-B87070F04E239F1B",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -40,10 +40,10 @@
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C4877182445C2050",
-      "ASC-REVIEW-7E1807C0C6B7E2C1",
-      "ASC-REVIEW-1B2E5D07E27D9811",
       "ASC-REVIEW-BA5FF644D411D868",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-E76F1740FFF4E811",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
@@ -56,10 +56,10 @@
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
       "a33968b32fce32bd9d6523f6",
+      "source-change-c452df757991611cb06ec88a",
+      "d358fc1eedcb8f9eae6e4ab7",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-701229696b57f88191742d4f",
-      "source-change-205bd2407ea96080fdae5fe8",
-      "source-change-14394588e567b7c52bd11cb3",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -75,7 +75,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -95,12 +94,12 @@
       "ASC-REVIEW-8E57602B48B9C301",
       "ASC-REVIEW-8F8980CBAE670AE9",
       "ASC-REVIEW-32D4420F5F198DA2",
+      "ASC-REVIEW-D55167851C6E78DE",
+      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -145,24 +144,25 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
-      "ASC-REVIEW-DAB5BBAD900386F9"
+      "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-D13048D78F8EA6E3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
+      "primarySourceCount": 5,
       "disputedClaimCount": 129,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 104,
-      "moneyRecordCount": 60
+      "relationshipCount": 108,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 104 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 104 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

@@ -46,7 +46,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-31T06:30:03.292Z
+Updated: 2026-08-01T06:15:49.904Z
 Items: 12
 
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
@@ -104,11 +104,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Bill Gates tells lawmakers he was not aware of Epstein's crimes - NPR
-  - Source: https://news.google.com/rss/articles/CBMinAFBVV95cUxON0d0Yk5zZGJqRDB5WGFuSTlIamVMbFdocVRLZU82WmMtYTlQQktmTVJ6ZWFfeC1WcDNMZzFTdXBQWTNxQnZkdk14SWZNanA5eUF6R2xxek5rYm5TSUdIVHJWaDFjcUw1OWRUUjhUalphLXNqMHNyaGlNQk1IQXJaUHJsS0FjS2RqTFdDTUtwYzlBaGxoNU14MlVidUQ?oc=5
-  - Evidence: Seven-day public-record/news lead
+- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+  - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
 ## Source Pathways / Relevant Source Files
 
@@ -139,7 +139,7 @@ Items: 12
 - Google News / Epstein timeline and files: Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW — https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells Congress he didn’t know of Epstein’s crimes, renounces ties - The Washington Post — https://news.google.com/rss/articles/CBMiswFBVV95cUxOVnp5SkNYZEtZYVBDZVhhZ29sem5WWkQyQVFuQVQxZ1VsOFUtZDRvdHBRZ0NlS1dHTndvaDM3bWJpc1hoR280VXMwdnpheFZydk0xTzVBMUtIb2YyRVFlbVlTTUsxT0hMS1p6bEZSQ0FtRXB3OG5UOF85WGhjakpabXdpd3YzSkhBZGJGMDNGZ2NHY1JMZ2g1NWhMb19iR3ZUOFFKY0pyVXQ1Z0Z3UnlSV21wQQ?oc=5
 - Google News / Epstein timeline and files: Gates sought donations from Epstein despite knowledge of crimes - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaVdIMHFJeXRycE0xRkpwSW1wNW5EVy1DdzhTX29HR01kNFJyNEQwM0VhNDRKbV9waVBRUGxXZThkQjdYaUlDVHZGZ2dfTG8wRldBUWFwZDN5ZVFkRFBxdjhfbElpWGpuSHZrcko1ejV2RS1LTERGcnBMdEVHSmpXM3Jab3RsenFPdEI1YnFZMmlhUzk20gGaAUFVX3lxTE1aTlFIZUV6Tk1PRFZYRGtieFF4UzJKeFhwRnNab01WcjNlakUzb3JoeS0ybkdpRTNQek5LTUdYeU5JR0VhUkhqdzU4UWlSVzc3ZTdJUndxZW5aRjluN2dWSGRTZzlPNXZTbVN0aTNnWFdzMUtrakNBZUM2TjI5NXFaMEItSnowVmR6YWRwQW9FcDFSQkdEdGo2Tnc?oc=5
-- Google News / Epstein sighting and alive claims: Bill Gates tells lawmakers he was not aware of Epstein's crimes - NPR — https://news.google.com/rss/articles/CBMinAFBVV95cUxON0d0Yk5zZGJqRDB5WGFuSTlIamVMbFdocVRLZU82WmMtYTlQQktmTVJ6ZWFfeC1WcDNMZzFTdXBQWTNxQnZkdk14SWZNanA5eUF6R2xxek5rYm5TSUdIVHJWaDFjcUw1OWRUUjhUalphLXNqMHNyaGlNQk1IQXJaUHJsS0FjS2RqTFdDTUtwYzlBaGxoNU14MlVidUQ?oc=5
+- Google News / Epstein timeline and files: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
 
 ## Book Routes
 

@@ -45,7 +45,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-31T06:30:03.292Z
+Updated: 2026-08-01T06:15:49.904Z
 Items: 12
 
 - 2026-06-19 — What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News
@@ -83,11 +83,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
   - Evidence: News/source-watch item
@@ -105,6 +100,11 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
   - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-25 — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -132,11 +132,11 @@ Items: 12
 - Google News / Epstein timeline and files: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS — https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
 - Google News / Epstein timeline and files: Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW — https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
 - Google News / Epstein timeline and files: Oversight Committee chair says he's working to have Blanche testify in Epstein investigation - CBS News — https://news.google.com/rss/articles/CBMinAFBVV95cUxOREJSR3gwRkpuRS1ZeUJKRGZuRktYTzZVUS1ZZmJ1bE5nRnFzTnR0TWNkRnFtaGlWdGJXQ0luS2owV1g0TXA5R1dOckUyTmxtbzlYUWxXQVhpY0RZVU5pSjJ5a0ZENFRuZGlLNTNnQXNDeFg2SnpIQ3BucXBJbDJ2NndCWjZ0M2xNdncyYXJqSHg4cmZ5d09hMEE2YzM?oc=5
-- Google News / Epstein sighting and alive claims: Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
 - Google News / Epstein timeline and files: Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 - Google News / Epstein timeline and files: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider — https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
 - Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
 - Google News / Epstein timeline and files: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
+- Google News / Epstein timeline and files: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News — https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
 
 ## Book Routes
 

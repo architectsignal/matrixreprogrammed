@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-31T06:40:42.748Z
+Updated: 2026-08-01T06:27:09.025Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -231,6 +231,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - July 2026 All Clock Sweep Test: downloads/july-2026-all-clock-sweep-test.pdf
 - July 2026 Clock Coverage: downloads/july-2026-clock-coverage.pdf
 - July 2026 Full Clock Sweep Report: downloads/july-2026-full-clock-sweep-report.pdf
+- Last Controlled Production Run: downloads/last-controlled-production-run.pdf
 - Late Generated Shared Runtime Patch: downloads/late-generated-shared-runtime-patch.pdf
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf
 - The Black File Starter Brief: downloads/lead-magnet-black-file-brief.pdf

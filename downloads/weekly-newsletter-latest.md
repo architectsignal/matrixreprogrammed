@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-31T06:40:46.778Z
+Generated: 2026-08-01T06:27:12.989Z
 
 ## Open Routes
 
@@ -11,6 +11,36 @@ Generated: 2026-07-31T06:40:46.778Z
 
 ## Latest Drops
 
+### Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-31T19:07:23.000Z
+- Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
+Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails PBS
+### Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-31T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168062
+Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”.
+### Strong El Niño ahead, UN weather agency warns
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-31T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168059
+As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month.
+### Wildfire smoke poses hidden health threat
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-31T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168060
+Wildfires are often associated with the destruction they leave behind, but the smoke they produce can pose a serious health threat far beyond the fire zone, the World Health Organization (WHO) has warned.
+### Christopher Wray's Gift to Attorney General Garland
+- Lane: Declassified Files And Public Archives
+- Date: 2026-07-31T04:00:00.000Z
+- Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland
+Christopher Wray's Gift to Attorney General Garland
+### Christopher Wray's Gift to Attorney General Garland (Final)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-07-31T04:00:00.000Z
+- Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view
+Christopher Wray's Gift to Attorney General Garland (Final)
 ### With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-31T02:05:57.000Z
@@ -18,24 +48,34 @@ Generated: 2026-07-31T06:40:46.778Z
 With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation
 ### Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-30T18:21:00.000Z
+- Date: 2026-07-30T18:14:00.000Z
 - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
 Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ The Guardian
-### Epstein files: How victims remain exposed to identification - DW.com
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-30T16:07:32.000Z
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-Epstein files: How victims remain exposed to identification DW.com
 ### Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-30T12:00:00.000Z
 - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
 Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday.
+### Fear grows as freedoms shrink in Uganda
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-30T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168057
+Uganda is experiencing a growing climate of fear as increasing restrictions on fundamental freedoms leave opposition supporters, journalists, human rights defenders and civil society groups at heightened risk of abuse, according to the UN Human Rights Office (OHCHR).
+### Middle East crisis: Humanitarian fallout ‘worsening by the day’
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-30T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168055
+The humanitarian toll is mounting as fighting continues in the Middle East beyond strikes and counterstrikes between the US and Iran, the UN aid coordination office OCHA warned on Thursday, with civilians increasingly at risk and essential infrastructure disrupted in several countries across the region.
 ### Returning Afghans face growing risk of trafficking as crises deepen
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-30T12:00:00.000Z
 - Source: https://news.un.org/feed/view/en/story/2026/07/1168051
 Afghans returning from neighbouring countries are facing growing risks of human trafficking and exploitation as overlapping humanitarian and economic crises leave many struggling to survive, the UN warned on Thursday.
+### The climate pattern putting millions at risk: El Niño explained
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-30T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168056
+El Niño is putting millions of lives at risk in eastern and southern Africa but the UN is ensuring that communities are better prepared to deal with its impact.
 ### Wildfires: Prevention is the best defence, UN says
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-30T12:00:00.000Z
@@ -46,68 +86,28 @@ The wildfires burning across Europe and North America highlight the urgent need 
 - Date: 2026-07-30T11:19:00.000Z
 - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
 US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
-### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
+### Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-30T05:30:00.000Z
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+Epstein survivors’ lawsuits against Les Wexner combined into one case NBC4 WCMH-TV
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-30T00:48:00.000Z
 - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
-U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
-### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
+### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-30T00:26:21.000Z
 - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
-Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ kq2.com
-### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ KQ2
+### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-29T21:23:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
-Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell theguardian.com
+Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
 ### Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
 - Lane: War Machine And Intelligence State
 - Date: 2026-07-29T12:00:00.000Z
 - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
 The United Nations Secretary-General said on Wednesday that he plans to convene fresh talks on Cyprus to resolve the decades-long division on the Mediterranean island, stressing that the moment calls for rebuilding trust between its two communities.
-### Hunger hampers Ebola response as cases top 3,200 in DR Congo
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-29T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168047
-The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people.
-### UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-29T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168045
-Violence in the occupied West Bank is worsening as the Israeli Government continues to approve new settlements while settlers and Israeli security forces have “often” acted together to attack local Palestinian communities, the UN’s human rights office (OHCHR) warned on Wednesday.
-### World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-29T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
-Independent UN experts on Wednesday called for urgent action to support Rohingya refugees in Bangladesh after reports indicated two boats carrying more than 500 passengers may have capsized off the coast of Myanmar in mid-July.
-### World Wrestling Entertainment
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-29T04:00:00.000Z
-- Source: https://vault.fbi.gov/world-wrestling-entertainment
-World Wrestling Entertainment
-### World Wrestling Entertainment Part 01
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-29T04:00:00.000Z
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
-World Wrestling Entertainment Part 01
-### World Wrestling Entertainment Part 02 (Final)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-29T04:00:00.000Z
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
-World Wrestling Entertainment Part 02 (Final)
-### A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-28T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168039
-A woman is stopped for buying groceries alone. The shopkeeper who served her is slapped and hauled in for questioning. A teacher is turned away from her own classroom for wearing the wrong cloak.
-### Climate alarm ‘blaring from every direction’
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-28T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168042
-Climate-driven disasters are reaching “nightmare proportions” due to humanity’s “addiction” to fossil fuels, a top UN official warned on Tuesday.
-### Forced online scams: IOM warns trafficking networks are booming
-- Lane: War Machine And Intelligence State
-- Date: 2026-07-28T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168038
-A job advert can hide a criminal network, and a single click can lead to a nightmare. Hundreds of thousands of people are trafficked every year on the promise of legitimate work abroad, only to be held captive and forced into online scam operations.

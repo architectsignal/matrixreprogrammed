@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-31T06:44:48.987Z",
+  "generatedAt": "2026-08-01T06:31:06.824Z",
   "schemaVersion": "2.0.0",
   "totals": {
-    "entities": 9200,
-    "relationships": 13455,
-    "coreRelationships": 9841,
-    "officialRelationships": 13453,
-    "reviewedRelationships": 2605,
-    "weakMentions": 3614,
+    "entities": 9313,
+    "relationships": 13368,
+    "coreRelationships": 10003,
+    "officialRelationships": 13366,
+    "reviewedRelationships": 2608,
+    "weakMentions": 3365,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
@@ -25,8 +25,8 @@
   "software": "Cytoscape.js",
   "serialization": "compact-json",
   "projection": "UI-used node and edge fields only; complete registries and CSV retained separately.",
-  "graphBytes": 23067458,
-  "graphMiB": 22,
+  "graphBytes": 23000666,
+  "graphMiB": 21.94,
   "cloudflareTargetBytes": 25165824,
   "withinCloudflareTarget": true,
   "boundary": "Every line represents a relationship stated by a cited source or observed by a disclosed extraction method. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt."

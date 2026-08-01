@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-01T03:49:09.922Z
-Live Intel source window: 2026-08-01T03:49:03.900Z
+Generated: 2026-08-01T06:28:45.120Z
+Live Intel source window: 2026-08-01T06:28:34.466Z
 Latest source publication: 2026-07-31T19:07:23.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-9 current Epstein-lane record leads remain inside the active source window.
+10 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -52,6 +52,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
 
 US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+- Published: 2026-07-30T05:30:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+
+Epstein survivors’ lawsuits against Les Wexner combined into one case NBC4 WCMH-TV
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

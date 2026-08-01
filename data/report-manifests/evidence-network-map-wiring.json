@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:34:28.069Z",
+  "generatedAt": "2026-08-01T06:20:26.458Z",
   "pageCount": 130,
   "output": "downloads/evidence-network-map-wiring.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Evidence Network Map Wiring",
-    "contentHash": "ae7e705c7fe1dc59bdcadbfe15e565d13e64bb8ed833dcdedc0e1fdaa58fc755",
+    "contentHash": "e02c915ac45c8318059559e69823cd7cb39352144db0c6ae3f5a0d7533b039bd",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -17,7 +17,9 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
-      "48315ec59cadd154d31bf1cf",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "d358fc1eedcb8f9eae6e4ab7",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -29,9 +31,9 @@
       "declassified-files-2026-07-28-47e74d46",
       "declassified-files-2026-07-28-d6d67d44",
       "crime-state-overlap-2025-11-18-organised-crime-index-2025-south-africa-a-continental-hotspot-for-crim",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,23 +146,21 @@
       "ASC-REVIEW-5F9BB287023DE81E",
       "ASC-REVIEW-68286C2A2CB861AF",
       "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3"
+      "ASC-REVIEW-AF658BEE2D866332"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 10,
-      "disputedClaimCount": 128,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 126,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 139,
-      "moneyRecordCount": 124
+      "moneyRecordCount": 122
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
-        "evidence": "World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/latest-public-drops.json); Brian Wells Part 01 (data/latest-public-drops.json); Brian Wells Part 02 (Final) (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
   }
 }

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-07-31T06:33:28.069Z",
-  "pageCount": 104,
+  "generatedAt": "2026-08-01T06:19:22.703Z",
+  "pageCount": 102,
   "output": "downloads/elite-family-tracker.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Elite Family Tracker",
-    "contentHash": "b9e95979c25094a510c0d010b176887a02e572aac7ca3b031f3eec1d48d2cc70",
+    "contentHash": "52917fa77cc8f0bc04716e6ed5e4182e3b624d6759f122aca67d0060b353aa35",
     "sourceIds": [
       "9086b5de8aac89f84189be72",
+      "d358fc1eedcb8f9eae6e4ab7",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
-      "48315ec59cadd154d31bf1cf",
       "9e8903fd8dfa9b54a1d6db30",
       "72ef7895f95288946ccb3cff",
       "88ef9baf356c096816236956",
@@ -30,7 +30,6 @@
       "594100b62a47db521fe2a128",
       "8a10f165e16d0f8648cb8ec4",
       "34805734b1ad3b73f0ede0d8",
-      "d0b647e325275daa6d824a49",
       "cf94b367bfb0237448d49649",
       "45f5269389def99607b5a517",
       "138e9d694e41f192556d34a2",
@@ -38,7 +37,6 @@
       "4961972398d896435d33f3f7",
       "71e0563ca7b139c37c302956",
       "e72d22f4f28eb53e3173d0a6",
-      "cee347fbc3752c6e0f890457",
       "erik-prince",
       "gautam-adani",
       "laurene-powell-jobs",
@@ -59,8 +57,8 @@
       "jane-fraser",
       "miriam-adelson",
       "mackenzie-scott",
+      "a7459175ece536e72f8f5506",
       "31ec748f39cd0c1070d32c9a",
-      "a096995280df4621b36205b3",
       "3a8c1f1e8620cb3f09a2c7ab",
       "19ae23289f4be13ad5f7e317",
       "5295a33003172878f9880122",
@@ -127,7 +125,11 @@
       "7f0eb9ddb996aecbeeda522d",
       "0defb9debab95a663872bf25",
       "deb382cdbfe57b57793d739e",
+      "9d0cf694c0c2e7c8947c7596",
+      "ecadede6696db6c7c3e6b7ec",
       "billionaire-warren-buffett",
+      "fe3f3107cffaf5599a7b09f9",
+      "085baf8dafdf6692a4203706",
       "310372a3fc518b6aabbc5d07",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
@@ -136,30 +138,28 @@
       "2eee904d1404ef0a6d9b6c54",
       "5151c3a9f6b60883b360a522",
       "aae51d03dc366bfb0267f3b4",
-      "d9e22936bbbe2b9382150fbe",
+      "5460c0408472ce834da2b82f",
+      "279c781eec7b4886b26d8896",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-6809880AE2446DD1",
-      "ASC-REVIEW-9E85403F3389F334",
-      "ASC-REVIEW-747FA1D74D7A92E3",
-      "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-17CC1B265DD7385B"
+      "ASC-REVIEW-9E85403F3389F334"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 11,
-      "disputedClaimCount": 33,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 28,
       "newEntityCount": 26,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 49,
-      "moneyRecordCount": 52
+      "relationshipCount": 50,
+      "moneyRecordCount": 53
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “LOTUSUSA, INC. — Department of Homeland Security,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "PORTABLE RESTROOM TRAILER AND PORT-A-JOHN RENTAL SERVICES · Amount: 131636.31 · Sub-agency: U.S. Secret Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Orsini family",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",

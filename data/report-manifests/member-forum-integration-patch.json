@@ -1,14 +1,13 @@
 {
-  "generatedAt": "2026-07-31T06:36:25.977Z",
-  "pageCount": 138,
+  "generatedAt": "2026-08-01T06:22:32.766Z",
+  "pageCount": 137,
   "output": "downloads/member-forum-integration-patch.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Member Forum Integration Patch",
-    "contentHash": "b6e2f434c7045092bd950a555a3e00f83461e0836c968afd2fd7478ef4c0530f",
+    "contentHash": "77da6a74e4b9713fd7b0fd91ff5655e94f8282c1e533641a27970b4bf6b2711f",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
-      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-E6C400911BD1A158",
       "EP-AI-004",
       "ASC-REVIEW-C954C3B615AAFE11",
@@ -21,19 +20,21 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-E3E367656A99DD33",
+      "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-22BBAF16578AD07C",
+      "ASC-REVIEW-EE7AFF662C9B718F",
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-2930E153A701A5BD",
-      "ASC-REVIEW-21808557DF4C165F",
-      "ASC-REVIEW-F2686CE1FBB876BA",
+      "ASC-REVIEW-9455E984D4DBC196",
+      "ASC-REVIEW-09A1231B842DD08D",
       "ASC-REVIEW-CEAFD28B55D0DA69",
+      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-5A774507A02DF22B",
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
@@ -53,7 +54,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -70,16 +70,14 @@
       "ASC-REVIEW-71771BB07AA72BD1",
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-B87070F04E239F1B",
+      "ASC-REVIEW-D55167851C6E78DE",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -143,10 +141,12 @@
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-7CAC9318F83A7E8B",
       "ASC-REVIEW-774FD6AB4E46BCE8",
-      "ASC-REVIEW-F14FA67D281BC1CC",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227"
+      "ASC-REVIEW-8F441C443ED90227",
+      "ASC-REVIEW-DEA5865B50E63221",
+      "ASC-REVIEW-EEC0192F2AF2FCFB",
+      "ASC-REVIEW-6B883D09C63ED673"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 137,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 115,
-      "moneyRecordCount": 77
+      "relationshipCount": 118,
+      "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T06:36:25.977Z"
+    "intelligenceFreshnessDate": "2026-08-01T06:22:32.766Z"
   }
 }

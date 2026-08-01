@@ -1,17 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-07-31T06:30:22.956Z
+Updated: 2026-08-01T06:16:07.245Z
 
 Current records: 18
 Previous records: 18
-New records: 2
+New records: 0
 Changed records: 0
 Relationship candidates: 25
 
 ## New Records
 
-- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 
 ## Relationship Candidates
 

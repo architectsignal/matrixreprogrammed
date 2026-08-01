@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:32:51.345Z",
-  "pageCount": 83,
+  "generatedAt": "2026-08-01T06:18:44.631Z",
+  "pageCount": 85,
   "output": "downloads/death-files-pressure-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Death Files Pressure Test",
-    "contentHash": "6c868c33c7570e1b635feeb2898090765dd92256d92039c7fcec96533449d6f5",
+    "contentHash": "8c01d76f9b907a73917f87a4f06bf6dd5bfe90fd53d26b97f1aeb6abebe9970a",
     "sourceIds": [
       "88269481cf5b04b7b0f83b58",
       "6d665d935673091233751767",
@@ -92,11 +92,11 @@
       "epstein-federal-indictment-2019",
       "deutsche-bank-epstein-dfs-2020",
       "0a84f04558f5013c0790203c",
+      "d358fc1eedcb8f9eae6e4ab7",
       "conor-mcgrath-iico-conviction-2026",
       "maxwell-appeal-2025",
       "adam-taylor-nca-conviction-2024",
       "r-kelly-illinois-acquittals-2022",
-      "d0b647e325275daa6d824a49",
       "c8eeb5656d86646c1e6dc75c",
       "eda53ad65d382819ea249e14",
       "4ae6a940305d15da61333450",
@@ -118,31 +118,31 @@
       "5a6e7289054e52bb115d24a8",
       "b7e4a66335a706ef5097117f",
       "f4b44414c2c9ee4fd9b0ea74",
-      "cee347fbc3752c6e0f890457",
       "ecd4a1111010f13b2d74bf8c",
-      "48315ec59cadd154d31bf1cf",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46"
+      "war-machine-2026-07-31-a82191f1",
+      "5460c0408472ce834da2b82f",
+      "1257c3ee2bf54442161b9029",
+      "279c781eec7b4886b26d8896",
+      "8a8b1224cb4b359547bb61dc",
+      "7e87eea32e1f079ca5bf48bf",
+      "63e87834ac6d1a1f1bb8a85f",
+      "f946aaaa75aea2fb11902414",
+      "45f7a033ddf8bcaee9aee5c3",
+      "1a25500de3f4003b58b315f2",
+      "546bfa3345e6920715f40c97"
     ],
     "metrics": {
       "evidenceCount": 123,
-      "primarySourceCount": 73,
-      "disputedClaimCount": 12,
+      "primarySourceCount": 74,
+      "disputedClaimCount": 10,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
-      "moneyRecordCount": 3
+      "relationshipCount": 10,
+      "moneyRecordCount": 4
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 73 A/B-grade public-record items are materially relevant to Death Files Pressure Test.",
+        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Death Files Pressure Test.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -151,8 +151,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -162,7 +162,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 10 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Meetings and philanthropic-fundraising discussions, 2011–2014; New York DFS enforcement action concerning the bank's Epstein relationship; Conviction for indecent images and misconduct in public office",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -177,7 +177,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 10 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
@@ -201,6 +201,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T12:00:00.000Z"
   }
 }

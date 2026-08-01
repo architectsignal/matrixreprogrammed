@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-31T06:30:03.292Z
+Updated: 2026-08-01T06:15:49.904Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -86,11 +86,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-07-31 — Strong El Niño ahead, UN weather agency warns
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168059
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Hunger hampers Ebola response as cases top 3,200 in DR Congo
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168047
   - Evidence: Primary or official public-record lead
@@ -136,7 +136,7 @@ Items: 12
 - UN News: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions — https://news.un.org/feed/view/en/story/2026/07/1168037
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-- Google News / Epstein sighting and alive claims: Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
+- UN News: Strong El Niño ahead, UN weather agency warns — https://news.un.org/feed/view/en/story/2026/07/1168059
 - UN News: Hunger hampers Ebola response as cases top 3,200 in DR Congo — https://news.un.org/feed/view/en/story/2026/07/1168047
 - UN News: UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation — https://news.un.org/feed/view/en/story/2026/07/1168045
 - UN News: Forced online scams: IOM warns trafficking networks are booming — https://news.un.org/feed/view/en/story/2026/07/1168038

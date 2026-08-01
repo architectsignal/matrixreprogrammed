@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-07-31T06:45:46.310Z
+Updated: 2026-08-01T06:32:01.800Z
 
 ## Evidence-led conclusion
 
@@ -19,7 +19,6 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Identity, surveillance and access** — Documented in the linked public record. Why it matters: This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Grant, award or other acquisition** — reportedTransaction. Why it matters: This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Global governance convergence** — Documented in the linked public record. Why it matters: This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Default Judgment** — Contract. Why it matters: This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Bongiorno** — Contract. Why it matters: This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Chad J. Miller** — Contract. Why it matters: This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
@@ -32,6 +31,7 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Consent Motion for Entry of Final Judgment** — Contract. Why it matters: This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consent of and Final Judgment as to Gautam Adani** — Contract. Why it matters: This record places Consent of and Final Judgment as to Gautam Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consent of and Final Judgment as to Sagar Adani** — Contract. Why it matters: This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Final Judgment - Andrew Kaufman** — Contract. Why it matters: This record places Final Judgment - Andrew Kaufman inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

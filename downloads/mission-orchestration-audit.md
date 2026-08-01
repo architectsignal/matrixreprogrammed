@@ -1,8 +1,8 @@
 # Mission Orchestration Audit
 
-Generated: 2026-07-31T08:12:58.361Z
+Generated: 2026-08-01T06:30:04.515Z
 Overall: ready
-Homepage mode: search-first-accountability
+Homepage mode: legacy-cinematic
 Passed: 50/50
 
 Person: Bill Gates
@@ -51,10 +51,10 @@ Promotion margin: 14
 - **PASS · dossier-institution-assessment:** institution executive assessment checked.
 - **PASS · dossier-family-structure:** family dossier Wallenberg family and foundations; missing arrays none.
 - **PASS · dossier-family-assessment:** family executive assessment checked.
-- **PASS · history-and-weekly-delta:** 5 history entries; weekly delta ready.
+- **PASS · history-and-weekly-delta:** 6 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3711; search=133784; accountabilityHitList=135048.
-- **PASS · accountability-card-ui:** 3 search-first accountability cards found.
+- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.
+- **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.
 - **PASS · surface-daily-command-brief.html:** Daily command brief exposes the current watch directly or through a stable route.

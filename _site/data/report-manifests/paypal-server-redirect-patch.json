@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-07-31T06:37:18.435Z",
+  "generatedAt": "2026-08-01T06:23:29.151Z",
   "pageCount": 94,
   "output": "downloads/paypal-server-redirect-patch.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Paypal Server Redirect Patch",
-    "contentHash": "7c812d72b9c5cb6d301f4eaa2589d6ce79420ab931b67c79e0dcfbaeef2a3b7b",
+    "contentHash": "50743344e3f5c582dbf8719c7180213da50e75e862349ca129eed2767e537c79",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
+      "0c5f51804baf8e9e2c1fdd0b",
       "ef50253c90923f8fe305c4cf",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
@@ -25,16 +26,16 @@
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
       "270841af2bd81407a26bed0b",
+      "source-change-8299a278d70b1f879d6d522f",
       "source-change-edba4782143dd855b818b53a",
-      "source-change-205bd2407ea96080fdae5fe8",
       "ASC-003",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "26b90533dbf7d2ed42f02de6",
       "44505b4afb60938c8117ad31",
       "88269481cf5b04b7b0f83b58",
-      "7ee9141a42ad539f58a57e50",
       "gates-epstein-meetings-2011-2014",
+      "7ee9141a42ad539f58a57e50",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
       "2931a84c2c7fe86982d5d6e5",
@@ -47,12 +48,12 @@
       "def94e0a086f2eac4c5ad91a",
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-a21f3d8e98268d5e01e1eb7c",
       "source-change-44505b4afb60938c8117ad31",
       "source-change-701229696b57f88191742d4f",
-      "source-change-14394588e567b7c52bd11cb3",
-      "source-change-88269481cf5b04b7b0f83b58",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "r-kelly-appellate-finality-2025",
       "nassar-fbi-oig-2021",
@@ -62,6 +63,7 @@
       "d23398b8ca4c7124399c9504",
       "6f6462b75cdb929e0acbcde7",
       "2529322b7b5345fd6f575174",
+      "3a425f0d5d683952bc0ad7ac",
       "6510364e9b1a1504b9f99521",
       "72ef7895f95288946ccb3cff",
       "49679b1ed63de244c1cf19f9",
@@ -73,9 +75,17 @@
       "1ee57e70dacfa67f04323529",
       "ecd4a1111010f13b2d74bf8c",
       "2482c3e0241c7c7679a18cd1",
-      "640d4c4d982f3097aa47ff81",
+      "5460c0408472ce834da2b82f",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
       "aa119272f233de638bb1e02d",
-      "0286171e0bf7415859b35948",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "david-james-clarke-conviction-2026",
       "abdul-halim-khan-conviction-2026",
       "maxwell-appeal-2025",
@@ -114,6 +124,7 @@
       "6d8df9af51b8078e703b2748",
       "7419d29b3a469a40362a11f4",
       "9e8310c49b990aa62d2b0921",
+      "8299a278d70b1f879d6d522f",
       "edba4782143dd855b818b53a",
       "eaebe283915d5c0d1982b8e6",
       "deutsche-bank-epstein-dfs-2020",
@@ -132,32 +143,21 @@
       "4f6142409f6345aa4038244f",
       "12211ad7f5ffc796baa3c75a",
       "553ca36157c97552aafe2abb",
-      "023dcc20a52e1c6c4aa643eb",
-      "cac4acf03dae66ffc38d1dab",
-      "3a612824bd2383e3b7554062",
-      "41238c8b70e678402d643e26",
-      "b20bf5953df956897ee110a3",
-      "bdd7e454126ebfa6319a594c",
-      "3074e1c1bea52f04ac59408f",
-      "ec24f811962be678d371bfc7",
-      "EFS-001-R006",
-      "73799cb9af4829047998b026",
-      "64655043524cba9e6a679f8d",
-      "fe51591d2f98b1e8140add7f"
+      "023dcc20a52e1c6c4aa643eb"
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 101,
+      "primarySourceCount": 100,
       "disputedClaimCount": 12,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
-      "moneyRecordCount": 15
+      "relationshipCount": 24,
+      "moneyRecordCount": 11
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 101 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 100 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -176,8 +176,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Meetings and philanthropic-fundraising discussions, 2011–2014; Official health investigations documented abuse and enabling access; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Conditional-access systems may become increasingly interconnected; Influence should be mapped through infrastructure, filings and contracts.",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Meetings and philanthropic-fundraising discussions, 2011–2014; Official health investigations documented abuse and enabling access; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -191,16 +191,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Meetings and philanthropic-fundraising discussions, 2011–2014",
           "Official health investigations documented abuse and enabling access",
           "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
-          "Westminster inquiry examined political and policing responses",
-          "IICSA documented predatory activities and institutional failures",
-          "Broadmoor investigation examined Savile's access and abuse",
-          "Conditional-access systems may become increasingly interconnected",
-          "Influence should be mapped through infrastructure, filings and contracts."
+          "Christopher Wray's Gift to Attorney General Garland",
+          "Christopher Wray's Gift to Attorney General Garland (Final)",
+          "Brian Wells",
+          "Brian Wells Part 01",
+          "Brian Wells Part 02 (Final)"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -215,6 +215,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2027-07-12T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

@@ -1,8 +1,8 @@
 # Site Function Harmony Report
 
-Generated: 2026-07-30T06:26:49.795Z
+Generated: 2026-07-31T06:46:07.574Z
 Result: PASS
-Worker stack: strict production boundary -> email/member/PayPal workers -> D1 forum -> static application
+Worker stack: verified autonomy wrapper -> strict production boundary -> email/member/PayPal workers -> D1 forum -> static application
 Forum: Cloudflare D1 authoritative; strict insert plus exact read-after-write; KV compatibility and recovery only.
 Payments: PayPal runtime-gated and Cloudflare-dashboard-managed; checkout requires credentials, matching environment switch, D1 activation, live confirmation and three active plans.
 

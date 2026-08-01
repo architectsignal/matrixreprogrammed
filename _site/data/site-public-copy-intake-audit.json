@@ -3,9 +3,9 @@
   "summary": {
     "ok": false,
     "intakeOk": false,
-    "updated": "2026-07-31T06:43:06.866Z",
-    "filesScanned": 6485,
-    "highIssues": 3991,
+    "updated": "2026-08-01T06:29:32.149Z",
+    "filesScanned": 6553,
+    "highIssues": 3977,
     "reviewIssues": 15,
     "intakeAreas": 3219,
     "weakIntakeAreas": 1
@@ -91,6 +91,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/AGENTS.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/SITE_BUILD_STATUS.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -116,6 +122,36 @@
     {
       "severity": "high",
       "file": "_site/agenda-2030.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-management/TASK_LEDGER.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-management/config/resources.autonomous.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-management/config/resources.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-management/schemas/job.schema.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-management/schemas/resource.schema.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2743,12 +2779,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/epstein-sighting-scan.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/epstein-watch.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2965,6 +2995,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-07-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/homepage-command-surface.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2972,42 +3008,6 @@
     {
       "severity": "high",
       "file": "_site/data/human-cost.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/identity-affiliation-overlay.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/illuminati-secret-society-theory.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/independent-links-1.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/independent-links-2.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/independent-links-3.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/independent-links-4.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     }

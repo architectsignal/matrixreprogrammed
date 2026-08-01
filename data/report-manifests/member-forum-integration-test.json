@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:36:26.516Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-01T06:22:33.349Z",
+  "pageCount": 128,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Member Forum Integration Test",
-    "contentHash": "c3e5f5facc1fd6fd0f4f47a14b09b27a555bfa6398ce7aaa1f0607c1db0591d6",
+    "contentHash": "4fce7c137235bb7f365e596dba01b2e24989fa4319f252f4397c04e14871dfe5",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
@@ -32,7 +32,9 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
-      "48315ec59cadd154d31bf1cf",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "d358fc1eedcb8f9eae6e4ab7",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -90,6 +92,7 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -141,24 +144,21 @@
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893"
+      "ASC-REVIEW-11446D58C9F4E2B6"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 19,
-      "disputedClaimCount": 117,
+      "primarySourceCount": 21,
+      "disputedClaimCount": 115,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 126,
-      "moneyRecordCount": 112
+      "relationshipCount": 125,
+      "moneyRecordCount": 109
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -166,8 +166,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -177,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 126 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 125 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 126 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 125 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
   }
 }

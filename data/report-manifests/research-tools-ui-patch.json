@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-31T06:38:39.417Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-01T06:24:55.929Z",
+  "pageCount": 132,
   "output": "downloads/research-tools-ui-patch.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Research Tools Ui Patch",
-    "contentHash": "3e07f55eddf0188d05359abc45167ae3177a019e4006821372a946b82db4524b",
+    "contentHash": "3e3ab5c595aed0c9ea607ec0546d29cf6ff13fa70ecbec703f2bf1d762a1b5c4",
     "sourceIds": [
-      "48315ec59cadd154d31bf1cf",
+      "d358fc1eedcb8f9eae6e4ab7",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -23,13 +23,6 @@
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "janner-iicsa-2022",
       "cyril-smith-westminster-2020",
@@ -146,21 +139,28 @@
       "ASC-REVIEW-CD1B68F215696D25",
       "ASC-REVIEW-B3BA7D663A9BE4B2",
       "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF"
+      "ASC-REVIEW-C2C7140B7B6F51FF",
+      "ASC-REVIEW-2750F333FF6B37B3",
+      "ASC-REVIEW-B6BEE1135257F502",
+      "ASC-REVIEW-5F9BB287023DE81E",
+      "ASC-REVIEW-68286C2A2CB861AF",
+      "ASC-REVIEW-2527E3DEA85AE958",
+      "ASC-REVIEW-AF658BEE2D866332",
+      "ASC-REVIEW-1C806B2577C4D44C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
-      "disputedClaimCount": 121,
+      "primarySourceCount": 11,
+      "disputedClaimCount": 128,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 131,
-      "moneyRecordCount": 118
+      "moneyRecordCount": 125
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/latest-public-drops.json); Brian Wells Part 01 (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T00:00:00.000Z"
   }
 }

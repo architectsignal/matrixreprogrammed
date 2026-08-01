@@ -1,10 +1,10 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-31T06:43:06.866Z
+Updated: 2026-08-01T06:29:32.149Z
 
-Files scanned: 6485
+Files scanned: 6553
 
-High issues: 3991
+High issues: 3977
 
 Review issues: 15
 
@@ -23,11 +23,17 @@ Weak intake areas: 1
 - _site/.cloudflare/pages-output/data/heroes-fighting-matrix/keys.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/.cloudflare/pages-output/data/heroes-fighting-matrix/shields.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/.cloudflare/pages-output/data/heroes-fighting-matrix/torches.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/AGENTS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/SITE_BUILD_STATUS.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/SITE_RECOVERY_MASTER.md: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - _site/SITE_RECOVERY_MASTER.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/about.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/agenda-2030.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/ai-management/TASK_LEDGER.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/ai-management/config/resources.autonomous.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/ai-management/config/resources.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/ai-management/schemas/job.schema.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/ai-management/schemas/resource.schema.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/ai-speculative-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/amazon-store-books.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-bilderberg-group.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -465,7 +471,6 @@ Weak intake areas: 1
 - _site/data/epstein-relationship-registry.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-relationship-sync-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-research-targets.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/epstein-sighting-scan.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-half-life.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-network-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -500,14 +505,9 @@ Weak intake areas: 1
 - _site/data/history/money-intelligence/2026-07-27.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-07-28.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-07-30.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/history/money-intelligence/2026-07-31.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/homepage-command-surface.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/human-cost.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/identity-affiliation-overlay.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/illuminati-secret-society-theory.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-1.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-2.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-3.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-4.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 - _site/site-population-audit.html: boundary=false, action=false, fallback=false

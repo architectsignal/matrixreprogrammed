@@ -1,15 +1,18 @@
 {
-  "generatedAt": "2026-07-31T06:34:25.124Z",
-  "pageCount": 114,
+  "generatedAt": "2026-08-01T06:20:23.259Z",
+  "pageCount": 113,
   "output": "downloads/evidence-badge-route-restore.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Evidence Badge Route Restore",
-    "contentHash": "b0d874e5795ec684c36ee12fd9d0f1d66ea28af626bec58e7dc96d168c2e5577",
+    "contentHash": "8a013d47f135592f3b1f60f6e208421bc0820cd3d8b6caa31298606e56b1d636",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "e72d22f4f28eb53e3173d0a6",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "d358fc1eedcb8f9eae6e4ab7",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -23,10 +26,10 @@
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "535d2f595c3ec1621e13dd0f",
       "daily-revelation-report",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "6d483efe520406971380625e",
       "70fd4ebaeecfacabc2bf9c09",
-      "48315ec59cadd154d31bf1cf",
       "epstein-files-2026-03-25-unanswered-questions-about-epstein-s-final-hours-a-flash-of-orange-a-g",
       "epstein-files-2026-03-22-sky-news-australia-daily-dose-of-dana-host-dana-bowling-has-reacted-to",
       "epstein-files-2026-03-21-prison-guard-reported-suspicious-document-shredding-after-jeffrey-epst",
@@ -36,23 +39,20 @@
       "epstein-files-2026-02-02-text-messages-show-steve-bannon-bragged-to-jeffrey-epstein-about-secre",
       "epstein-files-2026-01-09-jeffrey-epstein-s-brother-claims-a-new-autopsy-report-in-february-will",
       "ASC-REVIEW-C954C3B615AAFE11",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
-      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-E3E367656A99DD33",
-      "ASC-REVIEW-22BBAF16578AD07C",
-      "ASC-REVIEW-2930E153A701A5BD",
-      "ASC-REVIEW-21808557DF4C165F",
-      "ASC-REVIEW-F2686CE1FBB876BA",
+      "ASC-REVIEW-EE7AFF662C9B718F",
+      "ASC-REVIEW-9455E984D4DBC196",
+      "ASC-REVIEW-09A1231B842DD08D",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "d0b647e325275daa6d824a49",
-      "3a425f0d5d683952bc0ad7ac",
+      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-5A774507A02DF22B",
       "72ef7895f95288946ccb3cff",
       "3e1535c44d5e0449c3f59d73",
       "ce5e1adeb64b743a59fc5d2d",
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
       "360e80c162081c85d2c680ef",
-      "cee347fbc3752c6e0f890457",
       "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
       "epstein-files-2026-06-26-5-questions-keeping-the-epstein-files-alive-newsweek",
       "epstein-files-2026-06-25-epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-convi",
@@ -150,17 +150,17 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 16,
-      "disputedClaimCount": 13,
+      "primarySourceCount": 18,
+      "disputedClaimCount": 11,
       "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 17,
+      "relationshipCount": 19,
       "moneyRecordCount": 7
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Evidence Badge Route Restore.",
-        "evidence": "World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/latest-public-drops.json); Brian Wells Part 01 (data/latest-public-drops.json); Brian Wells Part 02 (Final) (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Evidence Badge Route Restore.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final); Lufthansa Heist",
+        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
+          "Christopher Wray's Gift to Attorney General Garland",
+          "Christopher Wray's Gift to Attorney General Garland (Final)",
           "World Wrestling Entertainment",
           "World Wrestling Entertainment Part 01",
           "World Wrestling Entertainment Part 02 (Final)",
           "Brian Wells",
-          "Brian Wells Part 01",
-          "Brian Wells Part 02 (Final)",
-          "Lufthansa Heist"
+          "Brian Wells Part 01"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
   }
 }

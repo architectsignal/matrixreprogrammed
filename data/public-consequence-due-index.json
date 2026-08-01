@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T06:46:46.188Z",
+  "generatedAt": "2026-08-01T06:32:55.025Z",
   "title": "Public Consequence Due Index",
   "purpose": "A compact bounded manifest for the Cloudflare Free tracking runtime. Historical contracts persist in D1 after they leave this current manifest.",
   "freeTierBudget": {
@@ -10,98 +10,8 @@
     "perFollowerWrites": 0,
     "aiInferenceInsideWorker": false
   },
-  "count": 8,
+  "count": 7,
   "contracts": [
-    {
-      "id": "consequence-war-machine-2026-07-28-21290c31",
-      "title": "A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-28-21290c31",
-      "actionDate": "2026-07-28T12:00:00.000Z",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168039",
-      "evidenceRoute": "evidence-vault.html",
-      "accountabilityQuestion": "What measurable public consequence followed “A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-27T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-26T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-28T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "eb53e2cdeb2661cc09e238c35dd15f59f27155cdd11dccf59d713a246a11e064"
-    },
-    {
-      "id": "consequence-war-machine-2026-07-29-221c41d1",
-      "title": "Cyprus: Guterres calls for renewed trust and a new meeting on the way forward",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-29-221c41d1",
-      "actionDate": "2026-07-29T12:00:00.000Z",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168048",
-      "evidenceRoute": "evidence-vault.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Cyprus: Guterres calls for renewed trust and a new meeting on the way forward”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-28T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-27T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-29T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "53379f3ba1321937322305490d0b8880bc32a76930aa85cdc47fe41554e7a0b7"
-    },
-    {
-      "id": "consequence-war-machine-2026-07-29-1d1c39f2",
-      "title": "UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-29-1d1c39f2",
-      "actionDate": "2026-07-29T12:00:00.000Z",
-      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168045",
-      "evidenceRoute": "evidence-vault.html",
-      "accountabilityQuestion": "What measurable public consequence followed “UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-28T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-27T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-29T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "2d2ebb0320c4e5a423a545e1175888fc2765c3bb5687f80db28b7985fd9d2368"
-    },
     {
       "id": "consequence-epstein-files-2026-07-29-7bea5037",
       "title": "Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian",
@@ -251,6 +161,66 @@
         }
       ],
       "contentHash": "988402782a2ac285d0260192306585a747b80f0e17ad723c632ad109ebd98c3f"
+    },
+    {
+      "id": "consequence-war-machine-2026-07-31-a82191f1",
+      "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-31-a82191f1",
+      "actionDate": "2026-07-31T12:00:00.000Z",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168062",
+      "evidenceRoute": "evidence-vault.html",
+      "accountabilityQuestion": "What measurable public consequence followed “Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-30T12:00:00.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-29T12:00:00.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-31T12:00:00.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "5cda7afc8ead79f7507d5f0ff0014ad38fe4cd53aa7350a0490c53010fe8ada9"
+    },
+    {
+      "id": "consequence-war-machine-2026-07-31-1d19fb5b",
+      "title": "Strong El Niño ahead, UN weather agency warns",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-31-1d19fb5b",
+      "actionDate": "2026-07-31T12:00:00.000Z",
+      "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168059",
+      "evidenceRoute": "evidence-vault.html",
+      "accountabilityQuestion": "What measurable public consequence followed “Strong El Niño ahead, UN weather agency warns”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-30T12:00:00.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-29T12:00:00.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-31T12:00:00.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "2ed47cf2ed71d1b53a14b5cc51372b328f7a8310c50da8041f5156eaf4e81ee0"
     }
   ]
 }

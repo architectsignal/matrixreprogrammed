@@ -8,10 +8,10 @@ Scanned pages: 3398
 Flagged pages: 3076
 High priority pages: 1633
 Medium priority pages: 1441
-Pages with missing rules: 751
+Pages with missing rules: 752
 Auto-update eligible figures: 2
-Manual-review figures: 114
-Missing-rule figures: 1548
+Manual-review figures: 112
+Missing-rule figures: 1536
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -28,7 +28,6 @@ Missing-rule figures: 1548
 - _site/machine-digest.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
 - machine-digest.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
 - review-dashboard.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
-- _site/live-intel.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-george-nader.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
@@ -42,6 +41,7 @@ Missing-rule figures: 1548
 - custom-research.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
+- _site/live-intel.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
 - media-narrative-theory.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
 - one-world-currency-theory.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
 
@@ -60,7 +60,6 @@ Missing-rule figures: 1548
 - _site/machine-digest.html: 18 figure(s) need source rules.
 - machine-digest.html: 18 figure(s) need source rules.
 - review-dashboard.html: 12 figure(s) need source rules.
-- _site/live-intel.html: 10 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
 - _site/dossier-george-nader.html: 8 figure(s) need source rules.
@@ -74,18 +73,19 @@ Missing-rule figures: 1548
 - custom-research.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
 - hit-list.html: 6 figure(s) need source rules.
+- _site/live-intel.html: 5 figure(s) need source rules.
 - media-narrative-theory.html: 5 figure(s) need source rules.
 - one-world-currency-theory.html: 5 figure(s) need source rules.
 - _site/intel-archive.html: 4 figure(s) need source rules.
 - _site/making-money.html: 4 figure(s) need source rules.
 - _site/power-structure-map.html: 4 figure(s) need source rules.
 - big-three-asset-managers.html: 4 figure(s) need source rules.
+- daily-investigation-conclusions.html: 4 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
 - making-money.html: 4 figure(s) need source rules.
 - one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
 - _site/admin-paypal-rehearsal.html: 3 figure(s) need source rules.
-- _site/daily-drop.html: 3 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

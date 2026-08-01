@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-31T06:42:29.197Z
+Generated: 2026-08-01T06:28:51.153Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-07-31T06:42:29.197Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — live-intel.html
-- 72 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian — live-intel.html
-- 72 — Epstein files: How victims remain exposed to identification - DW.com — live-intel.html
-- 72 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities — live-intel.html
-- 72 — Returning Afghans face growing risk of trafficking as crises deepen — live-intel.html
+- 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS — live-intel.html
+- 72 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’ — live-intel.html
+- 72 — Strong El Niño ahead, UN weather agency warns — live-intel.html
+- 72 — Wildfire smoke poses hidden health threat — live-intel.html
+- 72 — Christopher Wray's Gift to Attorney General Garland — live-intel.html

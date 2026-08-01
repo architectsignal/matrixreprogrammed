@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-07-31T06:33:33.652Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-01T06:19:28.648Z",
+  "pageCount": 132,
   "output": "downloads/email-launch-console-patch.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Email Launch Console Patch",
-    "contentHash": "1d4a9401eef0fbf21b60f8818d7078a06a9dd053c4b8e0942c9553df697a0d3d",
+    "contentHash": "e04668c4c6f9ef9118243d2fa443566b51748a2b8a43c4ae25c1518530aec6db",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "157cdab04b61ae6309c0c713",
       "7f5b91c14c671bd24b8bbd81",
-      "640d4c4d982f3097aa47ff81",
+      "5460c0408472ce834da2b82f",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
-      "ASC-REVIEW-0807002D2DF4DE89",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-9E85403F3389F334",
@@ -39,11 +39,12 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "ASC-REVIEW-25B371012CBA1315",
       "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C4877182445C2050",
-      "ASC-REVIEW-7E1807C0C6B7E2C1",
-      "ASC-REVIEW-1B2E5D07E27D9811",
       "ASC-REVIEW-BA5FF644D411D868",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-E76F1740FFF4E811",
       "ASC-REVIEW-5AE5A3805582A7F2",
@@ -51,17 +52,25 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "7ee9141a42ad539f58a57e50",
+      "EP-AI-004",
       "71e0563ca7b139c37c302956",
       "daee19f2c0d92279cc9a7569",
+      "7ee9141a42ad539f58a57e50",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
-      "427a4b3a840619411d8d1c33",
       "2482c3e0241c7c7679a18cd1",
-      "48315ec59cadd154d31bf1cf",
+      "1257c3ee2bf54442161b9029",
+      "279c781eec7b4886b26d8896",
+      "8a8b1224cb4b359547bb61dc",
+      "7e87eea32e1f079ca5bf48bf",
+      "63e87834ac6d1a1f1bb8a85f",
+      "f946aaaa75aea2fb11902414",
+      "45f7a033ddf8bcaee9aee5c3",
+      "1a25500de3f4003b58b315f2",
+      "546bfa3345e6920715f40c97",
+      "d358fc1eedcb8f9eae6e4ab7",
       "aa119272f233de638bb1e02d",
-      "0286171e0bf7415859b35948",
       "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DE01B541C1E6F51C",
       "ASC-REVIEW-598A8E78B2ED4662",
@@ -77,7 +86,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -97,11 +105,11 @@
       "ASC-REVIEW-8E57602B48B9C301",
       "ASC-REVIEW-B87070F04E239F1B",
       "ASC-REVIEW-8F8980CBAE670AE9",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
+      "ASC-REVIEW-D55167851C6E78DE",
+      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -138,29 +146,21 @@
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-0C3383FAE797FF46",
-      "ASC-REVIEW-7FBB26E1B0ECA17A",
-      "ASC-REVIEW-ECBF89F9DB572E57",
-      "ASC-REVIEW-9CC26AD16796DAE5",
-      "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44"
+      "ASC-REVIEW-0914587401D9BDE0"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 123,
+      "primarySourceCount": 19,
+      "disputedClaimCount": 115,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 103,
-      "moneyRecordCount": 58
+      "relationshipCount": 96,
+      "moneyRecordCount": 49
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Email Launch Console Patch.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Counter Narcotics Sanctions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Email Launch Console Patch.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 103 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 103 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-10-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

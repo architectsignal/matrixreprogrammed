@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:37:39.264Z",
+  "generatedAt": "2026-08-01T06:23:51.583Z",
   "pageCount": 128,
   "output": "downloads/power-dossier-runtime-report.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Power Dossier Runtime Report",
-    "contentHash": "96d56f89d7b9f0b7eee55818a5d70f97ef167c72636e06241265b570d1e85d92",
+    "contentHash": "69906e8fd9431900960e4f2a1c151538da75fa54d8e58ab2e507944abfeb000a",
     "sourceIds": [
       "008875ef7bf45eb14dccb254",
       "9f3052b5d8cec138a2a37e8c",
@@ -65,19 +65,19 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-EA0D28B414E271DB",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
-      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-E3E367656A99DD33",
-      "ASC-REVIEW-22BBAF16578AD07C",
+      "ASC-REVIEW-EE7AFF662C9B718F",
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-81EECB8AC7F0B57B",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-2930E153A701A5BD",
+      "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-B8034056CD461A0D",
       "ASC-REVIEW-6C02F7DFCB3CC39B",
-      "ASC-REVIEW-21808557DF4C165F",
-      "ASC-REVIEW-F2686CE1FBB876BA",
+      "ASC-REVIEW-09A1231B842DD08D",
       "ASC-REVIEW-CEAFD28B55D0DA69",
+      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-5A774507A02DF22B",
       "people-of-interest",
       "16cde9bd4c87e916ff1e4fb7",
       "d23398b8ca4c7124399c9504",
@@ -101,7 +101,6 @@
       "ASC-REVIEW-47F2C521B4EF726E",
       "ASC-REVIEW-8B36B00ED92DCB72",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-603BC290D10E2D53",
       "ASC-REVIEW-E9C1CB1EA7466DB2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-06A7D981E8AF743C",
@@ -119,11 +118,8 @@
       "ASC-REVIEW-FD0A239668DFAAD5",
       "ASC-REVIEW-5C0C7ABF6CDDC543",
       "ASC-REVIEW-4F6745BE22E24FA0",
-      "ASC-REVIEW-E5620B33A6660FA5",
-      "ASC-REVIEW-1AA25E76779717ED",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1FD01131EB70E85A",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -146,7 +142,11 @@
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
-      "ASC-REVIEW-E0C2B02D28255CC3"
+      "ASC-REVIEW-E0C2B02D28255CC3",
+      "ASC-REVIEW-4E0C4B2A65FF8D42",
+      "ASC-REVIEW-995324D0659C1960",
+      "ASC-REVIEW-BD5CE46383C9383C",
+      "ASC-REVIEW-927E79836853DFAE"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 122,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
-      "moneyRecordCount": 61
+      "relationshipCount": 94,
+      "moneyRecordCount": 65
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Elon Musk → Spacex: ecosystem hint; Elon Musk → Starlink: ecosystem hint; Elon Musk → Tesla: ecosystem hint; Elon Musk → X: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T06:37:39.264Z"
+    "intelligenceFreshnessDate": "2026-08-01T06:23:51.583Z"
   }
 }

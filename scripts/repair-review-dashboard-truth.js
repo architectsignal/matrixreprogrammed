@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./remove-visible-maintenance-markers.js');
 const jsonPath = path.join(root, 'data', 'review-dashboard.json');
 const htmlPath = path.join(root, 'review-dashboard.html');
 const reportPath = path.join(root, 'downloads', 'review-dashboard-truth-repair.json');

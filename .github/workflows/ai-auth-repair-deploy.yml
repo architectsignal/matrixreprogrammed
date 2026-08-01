@@ -17,6 +17,7 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  AI_AUTH_REPAIR_TRIGGER: '2026-08-01T16:26:00+01:00'
 
 jobs:
   repair-deploy-verify:

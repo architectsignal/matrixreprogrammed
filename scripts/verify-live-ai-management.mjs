@@ -5,6 +5,7 @@ const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com')
 const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '').trim();
 const attempts = Math.max(1, Math.min(60, Number(process.env.AI_VERIFY_ATTEMPTS || 24)));
 const delayMs = Math.max(250, Math.min(30000, Number(process.env.AI_VERIFY_DELAY_MS || 5000)));
+const sendAuthorization = String(process.env.AI_VERIFY_SEND_AUTHORIZATION || '').toLowerCase() === 'true';
 const outputPath = path.join(process.cwd(), 'downloads', 'live-ai-management-verification.json');
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 
@@ -16,13 +17,25 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function diagnosticPreview(text = '') {
+  return String(text).replace(/\s+/g, ' ').trim().slice(0, 300);
+}
+
 async function request(pathname, { method = 'GET', body, authorized = true } = {}) {
-  const headers = { accept: 'application/json' };
+  const headers = {
+    accept: 'application/json',
+    'cache-control': 'no-cache',
+    'user-agent': 'MatrixProductionVerifier/2.0'
+  };
   if (authorized) {
+    // The Worker authenticates with x-admin-token. Do not also send a Bearer header by
+    // default: upstream Access/WAF policies may intercept Authorization before the
+    // request reaches the Worker and return an opaque HTML 403.
     headers['x-admin-token'] = adminToken;
-    headers.authorization = `Bearer ${adminToken}`;
+    if (sendAuthorization) headers.authorization = `Bearer ${adminToken}`;
   }
   if (body !== undefined) headers['content-type'] = 'application/json';
+
   const response = await fetch(`${siteUrl}${pathname}`, {
     method,
     headers,
@@ -31,14 +44,36 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
   });
   const text = await response.text();
   let data;
-  try { data = JSON.parse(text); } catch { data = { raw: text.slice(0, 1000) }; }
+  try {
+    data = JSON.parse(text);
+  } catch {
+    data = { raw: diagnosticPreview(text) };
+  }
   return {
     status: response.status,
     ok: response.ok,
     origin: response.headers.get('x-matrix-origin'),
     authLayer: response.headers.get('x-matrix-auth-layer') || data?.authLayer || null,
     contentType: response.headers.get('content-type'),
+    server: response.headers.get('server'),
+    cfRay: response.headers.get('cf-ray'),
+    location: response.headers.get('location'),
     data
+  };
+}
+
+function diagnostic(result) {
+  if (!result) return null;
+  return {
+    status: result.status,
+    origin: result.origin,
+    authLayer: result.authLayer,
+    contentType: result.contentType,
+    server: result.server,
+    cfRay: result.cfRay,
+    location: result.location,
+    error: result.data?.error || null,
+    preview: result.data?.raw || null
   };
 }
 
@@ -53,13 +88,9 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
     health = await request('/api/ai-management/admin/health');
     attemptsLog.push({
       attempt,
-      status: health.status,
-      origin: health.origin,
-      authLayer: health.authLayer,
-      contentType: health.contentType,
+      ...diagnostic(health),
       schemaReady: health.data?.schemaReady,
-      autonomySchemaReady: health.data?.autonomySchemaReady,
-      error: health.data?.error || null
+      autonomySchemaReady: health.data?.autonomySchemaReady
     });
     if (health.ok && health.data?.schemaReady === true && health.data?.autonomySchemaReady === true) break;
   } catch (error) {
@@ -69,19 +100,25 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
 }
 
 if (health?.status !== 200) {
-  fs.writeFileSync(outputPath, `${JSON.stringify({
+  const edgeBlocked = health?.status === 403
+    && !health?.origin
+    && /text\/html/i.test(String(health?.contentType || ''));
+  const failure = {
     ok: false,
     siteUrl,
     verifiedAt: new Date().toISOString(),
+    edgeBlocked,
+    authorizationHeaderSent: sendAuthorization,
     attempts: attemptsLog,
-    final: health ? {
-      status: health.status,
-      origin: health.origin,
-      authLayer: health.authLayer,
-      contentType: health.contentType,
-      error: health.data?.error || null
-    } : null
-  }, null, 2)}\n`);
+    final: diagnostic(health),
+    remediation: edgeBlocked
+      ? 'Cloudflare returned HTML before the AI-management Worker. Check Access/WAF/custom security rules for /api/ai-management/* and allow the GitHub deployment verifier. The verifier now uses only x-admin-token by default.'
+      : null
+  };
+  fs.writeFileSync(outputPath, `${JSON.stringify(failure, null, 2)}\n`);
+  if (edgeBlocked) {
+    throw new Error(`AI-management request was blocked before the Worker; status=403; server=${health.server || 'missing'}; cfRay=${health.cfRay || 'missing'}; contentType=${health.contentType || 'missing'}`);
+  }
 }
 
 assert(
@@ -156,6 +193,7 @@ const proof = {
   ok: true,
   siteUrl,
   verifiedAt: new Date().toISOString(),
+  authorizationHeaderSent: sendAuthorization,
   attempts: attemptsLog,
   health: {
     schemaReady: health.data.schemaReady,

@@ -2,9 +2,14 @@ name: Matrix Reprogrammed Deep Site Audit
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
+    inputs:
+      run_live_audit:
+        description: 'Run live Cloudflare and Chromium proof'
+        required: false
+        default: true
+        type: boolean
   schedule:
     - cron: '20 3 * * 0'
 
@@ -21,7 +26,7 @@ env:
 
 jobs:
   deep-audit:
-    name: Rebuild and audit every page, function, link and live route
+    name: Rebuild and audit every page, function, link and eligible live route
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
@@ -33,6 +38,17 @@ jobs:
 
       - name: Record exact audit commit
         run: echo "AUDIT_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Resolve audit mode
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "RUN_LIVE_AUDIT=false" >> "$GITHUB_ENV"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.run_live_audit }}" = "false" ]; then
+            echo "RUN_LIVE_AUDIT=false" >> "$GITHUB_ENV"
+          else
+            echo "RUN_LIVE_AUDIT=true" >> "$GITHUB_ENV"
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -60,6 +76,9 @@ jobs:
           DEPLOY_COMMIT_SHA: ${{ env.AUDIT_COMMIT_SHA }}
         run: node scripts/final-production-reconcile.js
 
+      - name: Repair deterministic deep-audit blockers after all mutators
+        run: node scripts/repair-deep-audit-v2-blockers.js
+
       - name: Exhaustive static audit
         id: static_audit
         continue-on-error: true
@@ -75,8 +94,7 @@ jobs:
           : > downloads/deep-audit-existing-suite.log
           failed=0
           run_audit() {
-            name="$1"
-            shift
+            name="$1"; shift
             echo "===== $name =====" | tee -a downloads/deep-audit-existing-suite.log
             "$@" 2>&1 | tee -a downloads/deep-audit-existing-suite.log
             code=${PIPESTATUS[0]}
@@ -92,27 +110,33 @@ jobs:
           exit "$failed"
 
       - name: Wait for exact commit to reach Cloudflare
+        if: env.RUN_LIVE_AUDIT == 'true'
         id: deploy_wait
         continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
           EXPECTED_COMMIT_SHA: ${{ env.AUDIT_COMMIT_SHA }}
+          ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
           DEPLOY_WAIT_ATTEMPTS: '72'
           DEPLOY_WAIT_DELAY_MS: '10000'
         run: node scripts/wait-for-live-deploy-commit.js
 
       - name: Exhaustive live audit V3
+        if: env.RUN_LIVE_AUDIT == 'true'
         id: live_audit
         continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
+          ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
         run: node scripts/deep-production-live-audit-v3.js
 
       - name: Chromium browser interaction smoke
+        if: env.RUN_LIVE_AUDIT == 'true'
         id: browser_smoke
         continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
+          ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
         shell: bash
         run: |
           set -o pipefail
@@ -135,46 +159,29 @@ jobs:
             const liveReport = load('deep-production-site-audit-live.json');
             const browserReport = load('live-browser-interaction-smoke.json');
             const deployWait = load('deep-audit-live-deploy-wait.json');
-            const reports = [staticReport, liveReport, browserReport].filter(Boolean);
-            const hard = reports.flatMap(report => report.hardIssues || []);
-            const warnings = reports.flatMap(report => report.warnings || []);
-            const coverage = [
-              staticReport ? `- static v${staticReport.version || 1}: ${JSON.stringify(staticReport.stats || {})}` : '- static: no report',
-              liveReport ? `- live v${liveReport.version || 1}: ${JSON.stringify(liveReport.stats || {})}` : '- live: no report',
-              browserReport ? `- browser: ${browserReport.tests?.length || 0} interaction tests` : '- browser: no report'
-            ].join('\n');
-            const stageStatus = {
-              static: '${{ steps.static_audit.outcome }}',
-              existing: '${{ steps.existing_audits.outcome }}',
-              deployWait: '${{ steps.deploy_wait.outcome }}',
-              live: '${{ steps.live_audit.outcome }}',
-              browser: '${{ steps.browser_smoke.outcome }}'
-            };
-            const status = staticReport?.ok === true && liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && Object.values(stageStatus).every(value => value === 'success') ? 'PASS' : 'FAIL';
-            const hardLines = hard.length ? hard.slice(0, 180).map(item => `- ${item}`).join('\n') : '- None';
-            const warningLines = warnings.length ? warnings.slice(0, 80).map(item => `- ${item}`).join('\n') : '- None';
+            const liveRequired = process.env.RUN_LIVE_AUDIT === 'true';
+            const hard = [staticReport, ...(liveRequired ? [liveReport, browserReport] : [])].filter(Boolean).flatMap(report => report.hardIssues || []);
+            const staticPassed = staticReport?.ok === true && '${{ steps.static_audit.outcome }}' === 'success' && '${{ steps.existing_audits.outcome }}' === 'success';
+            const livePassed = !liveRequired || (liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && '${{ steps.deploy_wait.outcome }}' === 'success' && '${{ steps.live_audit.outcome }}' === 'success' && '${{ steps.browser_smoke.outcome }}' === 'success');
+            const status = staticPassed && livePassed ? 'PASS' : 'FAIL';
             const body = [
               `## Deep Site Audit ${status}`,
               '',
               `Run: https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               `Commit: \`${process.env.AUDIT_COMMIT_SHA || context.sha}\``,
-              `Generated: ${new Date().toISOString()}`,
-              `Stages: ${JSON.stringify(stageStatus)}`,
-              `Live commit synchronized: ${deployWait?.ok === true}`,
+              `Mode: ${liveRequired ? 'build + static + live + browser' : 'build + static push gate'}`,
+              `Static passed: ${staticPassed}`,
+              `Live proof required: ${liveRequired}`,
+              `Live passed: ${livePassed}`,
               '',
-              '### Coverage', coverage,
+              `### Hard issues (${hard.length})`,
+              hard.length ? hard.slice(0, 180).map(item => `- ${item}`).join('\n') : '- None',
               '',
-              `### Hard issues (${hard.length})`, hardLines,
-              hard.length > 180 ? `\n- … ${hard.length - 180} additional hard issues are retained in the workflow artifact.` : '',
-              '',
-              `### Warnings (${warnings.length})`, warningLines,
-              warnings.length > 80 ? `\n- … ${warnings.length - 80} additional warnings are retained in the workflow artifact.` : '',
-              '',
-              'No credentials, secret values, payments, forum posts, login emails or customer data are created by the audit.'
+              'No credentials, payment actions, forum posts, login emails or customer data are created by this audit.'
             ].join('\n').slice(0, 60000);
             await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: 94, body });
 
-      - name: Enforce combined audit result
+      - name: Enforce eligible audit result
         if: always()
         env:
           STATIC_OUTCOME: ${{ steps.static_audit.outcome }}
@@ -190,13 +197,12 @@ jobs:
           const liveReport = load('downloads/deep-production-site-audit-live.json');
           const browserReport = load('downloads/live-browser-interaction-smoke.json');
           const deployWait = load('downloads/deep-audit-live-deploy-wait.json');
-          const outcomes = [process.env.STATIC_OUTCOME, process.env.EXISTING_OUTCOME, process.env.DEPLOY_WAIT_OUTCOME, process.env.LIVE_OUTCOME, process.env.BROWSER_OUTCOME];
-          const ok = staticReport?.ok === true && liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && outcomes.every(value => value === 'success');
-          if (!ok) {
-            console.error(JSON.stringify({ ok, outcomes, staticOk: staticReport?.ok ?? null, liveOk: liveReport?.ok ?? null, browserOk: browserReport?.ok ?? null, deploySynchronized: deployWait?.ok ?? null }, null, 2));
-            process.exit(1);
-          }
-          console.log('Combined build-twice, static, legacy-suite, exact-deploy, live and Chromium interaction audit passed.');
+          const liveRequired = process.env.RUN_LIVE_AUDIT === 'true';
+          const staticOk = staticReport?.ok === true && process.env.STATIC_OUTCOME === 'success' && process.env.EXISTING_OUTCOME === 'success';
+          const liveOk = !liveRequired || (liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && process.env.DEPLOY_WAIT_OUTCOME === 'success' && process.env.LIVE_OUTCOME === 'success' && process.env.BROWSER_OUTCOME === 'success');
+          const ok = staticOk && liveOk;
+          console.log(JSON.stringify({ ok, mode: liveRequired ? 'full-live' : 'push-static', staticOk, liveOk }, null, 2));
+          if (!ok) process.exit(1);
           NODE
 
       - name: Upload complete audit evidence
@@ -214,7 +220,7 @@ jobs:
             downloads/deep-production-site-audit-live.md
             downloads/live-browser-interaction-smoke.json
             downloads/live-browser-interaction-smoke.md
-            downloads/canonical-external-source-repair.json
+            downloads/deep-audit-v2-blocker-repair.json
             downloads/full-site-function-tool-audit.json
             downloads/full-site-function-tool-audit.md
             downloads/site-function-harmony-report.json
@@ -224,8 +230,5 @@ jobs:
             downloads/site-pressure-report.json
             downloads/site-wide-function-audit.json
             downloads/final-production-reconcile.json
-            downloads/deep-audit-accessibility-metadata-repair.json
-            downloads/deep-audit-public-defect-repair.json
-            downloads/voluntary-support-store-patch.json
           if-no-files-found: ignore
           retention-days: 60

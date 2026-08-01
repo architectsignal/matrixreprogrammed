@@ -21,10 +21,10 @@ function runRequired(relative) {
 
 // This is the last mutation pass before the final public-control and function audits.
 // First make the protected command dashboard evidence-honest, then connect every
-// public page by mission in both source and Cloudflare output.
+// deployable public page by mission in both source and Cloudflare output.
 runRequired('scripts/repair-review-dashboard-truth.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-review-dashboard-truth-output.js');
-runRequired('scripts/build-cinematic-link-structure.js');
+runRequired('scripts/run-cinematic-link-structure.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/build-cinematic-link-structure-output.js');
 
 function readJson(relative, fallback) {

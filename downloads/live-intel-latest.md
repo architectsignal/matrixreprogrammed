@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-01T13:54:37.646Z
+Collection completed: 2026-08-01T19:33:33.614Z
 Latest source publication: 2026-07-31T19:07:23.000Z
-Collection status: fresh-items-added
-New items this collection: 1
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -50,11 +50,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfire smoke poses hidden health threat
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - abc.net.au
+- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - abc.net.au
+  - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5

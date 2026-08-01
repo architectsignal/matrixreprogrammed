@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-01T13:54:43.406Z
-Live Intel source window: 2026-08-01T13:54:37.646Z
+Generated: 2026-08-01T19:33:38.672Z
+Live Intel source window: 2026-08-01T19:33:33.614Z
 Latest source publication: 2026-07-31T19:07:23.000Z
 Status: current-seven-day-record-window
 
@@ -25,13 +25,13 @@ Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Eps
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### With a unanimous Maxwell vote, the US Senate issues a warning to Trump - abc.net.au
+### With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
 - Published: 2026-07-31T02:02:25.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
 
-With a unanimous Maxwell vote, the US Senate issues a warning to Trump abc.net.au
+With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

@@ -1,6 +1,6 @@
 # Intel Vault
 
-Updated: 2026-08-01T13:54:37.646Z
+Updated: 2026-08-01T19:33:33.614Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.

@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-01T06:31:21.404Z",
+  "generatedAt": "2026-08-01T09:18:21.264Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 31385,
-    "primarySources": 29503,
-    "relationships": 13368
+    "results": 31275,
+    "primarySources": 29388,
+    "relationships": 13285
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "31385 results"
+      "detail": "31275 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "31385/31385"
+      "detail": "31275/31275"
     },
     {
       "name": "normalised field sourceType",
@@ -97,17 +97,17 @@
     {
       "name": "query corruption bribery fraud",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-89586f1631cf4232b9a8, entity-registry.html#entity-contract-296fd4277c86dc1c8b30, entity-registry.html#entity-contract-fa4b51c74ad07c437365, entity-registry.html#entity-contract-7ee815d7ec4000ce377b, entity-registry.html#entity-contract-bc48cc3494e60001a217"
+      "detail": "entity-registry.html#entity-contract-e4f0192d3e832ae19d8b, entity-registry.html#entity-contract-89586f1631cf4232b9a8, entity-registry.html#entity-contract-296fd4277c86dc1c8b30, entity-registry.html#entity-contract-fa4b51c74ad07c437365, entity-registry.html#entity-contract-7ee815d7ec4000ce377b"
     },
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-f35d2bd2e5fbd01f0a70, entity-registry.html#entity-contract-6f6c1ec1a5421e837602, entity-registry.html#entity-contract-b5937d15887c29aa3cc4, entity-registry.html#entity-contract-e9390df70a2dd850a7da, relationship-registry.html?relationship=relationship-0e79faf23ca42b3ae0d4"
+      "detail": "entity-registry.html#entity-contract-bc5d5a7b6218af137717, entity-registry.html#entity-contract-f35d2bd2e5fbd01f0a70, entity-registry.html#entity-contract-6f6c1ec1a5421e837602, relationship-registry.html?relationship=relationship-0e79faf23ca42b3ae0d4, relationship-registry.html?relationship=relationship-51826663a7589064d2f9"
     },
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=8023e1905e75d729748a7a69"
+      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=42ffe4ee3cc3cbdbd5541e73"
     },
     {
       "name": "query government contracts",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "31385 vs 31385"
+      "detail": "31275 vs 31275"
     },
     {
       "name": "facet evidenceGrade",

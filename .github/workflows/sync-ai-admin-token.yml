@@ -1,0 +1,61 @@
+name: Synchronize AI Management Admin Token
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'Type SYNC AI ADMIN TOKEN'
+        required: true
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-ai-admin-token.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Synchronize protected AI admin token to Cloudflare Worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Confirm authorization and required credentials
+        env:
+          CONFIRMATION: ${{ inputs.confirmation || 'SYNC AI ADMIN TOKEN' }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$CONFIRMATION" = 'SYNC AI ADMIN TOKEN'
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$AI_MANAGEMENT_ADMIN_TOKEN"
+
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Synchronize canonical Worker admin secret
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s' "$AI_MANAGEMENT_ADMIN_TOKEN" | npx --yes wrangler@latest secret put ADMIN_API_TOKEN
+          printf '%s' "$AI_MANAGEMENT_ADMIN_TOKEN" | npx --yes wrangler@latest secret put AI_MANAGEMENT_ADMIN_TOKEN
+
+      - name: Verify live authenticated AI health
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+          AI_VERIFY_ATTEMPTS: '18'
+          AI_VERIFY_DELAY_MS: '5000'
+        run: node scripts/verify-live-ai-management.mjs

@@ -20,8 +20,9 @@ function runRequired(relative) {
 }
 
 // This is the last mutation pass before the final public-control and function audits.
-// It connects every public page by mission, then repeats the same deterministic pass
-// against the Cloudflare output so source and deployed navigation cannot drift apart.
+// First make the protected command dashboard evidence-honest, then connect every
+// public page by mission in both source and Cloudflare output.
+runRequired('scripts/repair-review-dashboard-truth.js');
 runRequired('scripts/build-cinematic-link-structure.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/build-cinematic-link-structure-output.js');
 

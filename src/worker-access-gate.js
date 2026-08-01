@@ -29,6 +29,7 @@ const adminOnlyPaths = [
   '/card-artwork-automation.html',
   '/card-artwork-queue.html',
   '/card-artwork-batches.html',
+  '/card-art-studio.html',
   '/conclusion-engine.html',
   '/information-gathering-system.html',
   '/update-monitor.html',
@@ -39,7 +40,6 @@ const adminOnlyPaths = [
   '/schema-index.html',
   '/machine-index.html',
   '/campaign-calendar.html',
-  '/card-art-studio.html',
   '/accountability-review-inbox.html',
   '/speculation-needs-review.html',
   '/data/review-dashboard.json',
@@ -92,6 +92,7 @@ function json(data, status) {
 export function protectedAssetTier(pathname = '') {
   const path = cleanPath(pathname);
   if (exactRules.has(path)) return exactRules.get(path);
+  if (!path.includes('.') && exactRules.has(`${path}.html`)) return exactRules.get(`${path}.html`);
   const match = patternRules.find(rule => rule.pattern.test(path));
   return match?.tier || '';
 }

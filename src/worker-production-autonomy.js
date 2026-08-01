@@ -5,15 +5,20 @@ import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from '.
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
 
+function cleanToken(value) {
+  return String(value || '').trim();
+}
+
 function withAiManagementAdminToken(env) {
-  const token = env?.AI_MANAGEMENT_ADMIN_TOKEN || env?.ADMIN_API_TOKEN;
-  if (!token || env?.ADMIN_API_TOKEN === token) return env;
-  return { ...env, ADMIN_API_TOKEN: token };
+  const token = cleanToken(env?.AI_MANAGEMENT_ADMIN_TOKEN || env?.ADMIN_API_TOKEN);
+  if (!token) return env;
+  if (cleanToken(env?.ADMIN_API_TOKEN) === token && cleanToken(env?.AI_MANAGEMENT_ADMIN_TOKEN) === token) return env;
+  return { ...env, ADMIN_API_TOKEN: token, AI_MANAGEMENT_ADMIN_TOKEN: token };
 }
 
 function secureEqual(left, right) {
-  const a = String(left || '');
-  const b = String(right || '');
+  const a = cleanToken(left);
+  const b = cleanToken(right);
   if (!a || a.length !== b.length) return false;
   let mismatch = 0;
   for (let index = 0; index < a.length; index += 1) mismatch |= a.charCodeAt(index) ^ b.charCodeAt(index);
@@ -21,31 +26,34 @@ function secureEqual(left, right) {
 }
 
 function presentedTokens(request) {
-  const direct = request.headers.get('x-admin-token');
+  const direct = cleanToken(request.headers.get('x-admin-token'));
   const authorization = String(request.headers.get('authorization') || '');
-  const bearer = /^Bearer\s+(.+)$/i.exec(authorization)?.[1] || '';
+  const bearer = cleanToken(/^Bearer\s+(.+)$/i.exec(authorization)?.[1] || '');
   return [direct, bearer].filter(Boolean);
 }
 
 function authorized(request, env) {
-  const expected = [env?.AI_MANAGEMENT_ADMIN_TOKEN, env?.ADMIN_API_TOKEN].filter(Boolean);
+  const expected = [env?.AI_MANAGEMENT_ADMIN_TOKEN, env?.ADMIN_API_TOKEN].map(cleanToken).filter(Boolean);
   return presentedTokens(request).some(token => expected.some(secret => secureEqual(token, secret)));
 }
 
 function normalizedAdminRequest(request, env) {
   const headers = new Headers(request.headers);
-  headers.set('x-admin-token', String(env.ADMIN_API_TOKEN || env.AI_MANAGEMENT_ADMIN_TOKEN || ''));
+  const token = cleanToken(env.ADMIN_API_TOKEN || env.AI_MANAGEMENT_ADMIN_TOKEN);
+  headers.set('x-admin-token', token);
+  headers.set('authorization', `Bearer ${token}`);
   return new Request(request, { headers });
 }
 
 function forbidden() {
-  return new Response(JSON.stringify({ ok: false, error: 'Forbidden' }), {
+  return new Response(JSON.stringify({ ok: false, error: 'Forbidden', authLayer: 'autonomy-wrapper' }), {
     status: 403,
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': 'no-store',
       'x-content-type-options': 'nosniff',
-      'x-matrix-origin': 'cloudflare-worker-ai-management'
+      'x-matrix-origin': 'cloudflare-worker-ai-management',
+      'x-matrix-auth-layer': 'autonomy-wrapper'
     }
   });
 }

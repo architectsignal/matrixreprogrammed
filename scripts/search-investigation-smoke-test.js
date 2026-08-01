@@ -44,7 +44,7 @@ function testIndex(index, label) {
   const required = ['investigation-machine.html', 'daily-investigation-conclusions.html', 'weekly-investigation-report.html', 'investigation-source-ledger.html', 'epstein-files.html', 'evidence-vault.html'];
   for (const url of required) index.some(item => item.url === url) ? pass(`${label} route ${url}`) : fail(`${label} route ${url}`, 'missing');
   const queries = [
-    { query: 'corruption bribery fraud official enforcement', expected: /investigation-machine|daily-investigation-conclusions|government-enforcement|structured-relationship/ },
+    { query: 'corruption bribery fraud official enforcement', expected: /investigation-machine|daily-investigation-conclusions|government-enforcement|structured-relationship|entity-registry/ },
     { query: 'WikiLeaks documents cables archive', expected: /wikileaks|investigation-source-ledger|investigation-machine|evidence-vault|daily-investigation-conclusions|structured-relationship/ },
     { query: 'government contracts USAspending procurement', expected: /investigation-source-ledger|investigation-machine|private-contractor|entity-registry|relationship-registry/ },
     { query: 'Epstein DOJ disclosures redactions', expected: /epstein|investigation-source-ledger|daily-investigation|relationship-registry/ },

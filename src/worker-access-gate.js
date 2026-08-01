@@ -5,7 +5,8 @@ const tierRank = {
   registered: 1,
   supporter_3: 2,
   intelligence_6: 3,
-  research_pro_9: 4
+  research_pro_9: 4,
+  admin: 100
 };
 
 const exactRules = new Map([
@@ -16,6 +17,41 @@ const exactRules = new Map([
   ['/downloads/timer-synthesis.md', 'supporter_3'],
   ['/downloads/probability-snapshot.md', 'intelligence_6']
 ]);
+
+const adminOnlyPaths = [
+  '/admin-control-center.html',
+  '/review-dashboard.html',
+  '/source-intake.html',
+  '/deploy-status.html',
+  '/deploy-health.html',
+  '/card-system-health.html',
+  '/site-brain-router.html',
+  '/card-artwork-automation.html',
+  '/card-artwork-queue.html',
+  '/card-artwork-batches.html',
+  '/conclusion-engine.html',
+  '/information-gathering-system.html',
+  '/update-monitor.html',
+  '/distribution-center.html',
+  '/launch-room.html',
+  '/offer-center.html',
+  '/sales-ladder.html',
+  '/schema-index.html',
+  '/machine-index.html',
+  '/campaign-calendar.html',
+  '/card-art-studio.html',
+  '/accountability-review-inbox.html',
+  '/speculation-needs-review.html',
+  '/data/review-dashboard.json',
+  '/data/site-brain-router.json',
+  '/data/missing-record-queue.json',
+  '/data/site-public-copy-intake-audit.json',
+  '/data/card-deck-system-audit.json',
+  '/downloads/review-dashboard.md',
+  '/downloads/generated-site-repair-report.json',
+  '/downloads/live-ai-management-verification.json'
+];
+for (const pathname of adminOnlyPaths) exactRules.set(pathname, 'admin');
 
 const patternRules = [
   { pattern: /^\/downloads\/(?:supporter|weekly-(?:brief|archive)|signal-drop|source-drop-bundle)[^/]*\.(?:pdf|md|json|csv)$/i, tier: 'supporter_3' },
@@ -82,7 +118,7 @@ export async function enforceProtectedAssetAccess(request, env, minimumTier = ''
     return json({
       ok: false,
       authenticated: false,
-      error: 'Member login required for this resource.',
+      error: requiredTier === 'admin' ? 'Administrator login required for this control surface.' : 'Member login required for this resource.',
       requiredTier,
       loginUrl: `/member-login.html?next=${encodeURIComponent(new URL(request.url).pathname)}`,
       upgradeUrl: '/membership.html'
@@ -123,6 +159,16 @@ export async function enforceProtectedAssetAccess(request, env, minimumTier = ''
     }, 401);
   }
 
+  if (requiredTier === 'admin' && !Boolean(row.is_admin)) {
+    return json({
+      ok: false,
+      authenticated: true,
+      error: 'Administrator access required for this control surface.',
+      currentTier: row.effective_tier || 'registered',
+      requiredTier
+    }, 403);
+  }
+
   const currentRank = Number(row.tier_rank || 0);
   const requiredRank = tierRank[requiredTier] ?? 99;
   if (!Boolean(row.is_admin) && currentRank < requiredRank) {
@@ -141,5 +187,6 @@ export async function enforceProtectedAssetAccess(request, env, minimumTier = ''
 export const accessRules = {
   exact: Object.fromEntries(exactRules),
   patterns: patternRules.map(rule => ({ pattern: String(rule.pattern), tier: rule.tier })),
+  adminOnlyPaths,
   tierRank
 };

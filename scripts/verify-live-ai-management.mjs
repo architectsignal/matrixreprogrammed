@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/+$/, '');
-const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '');
+const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '').trim();
 const attempts = Math.max(1, Math.min(60, Number(process.env.AI_VERIFY_ATTEMPTS || 24)));
 const delayMs = Math.max(250, Math.min(30000, Number(process.env.AI_VERIFY_DELAY_MS || 5000)));
 const outputPath = path.join(process.cwd(), 'downloads', 'live-ai-management-verification.json');
@@ -18,7 +18,10 @@ function assert(condition, message) {
 
 async function request(pathname, { method = 'GET', body, authorized = true } = {}) {
   const headers = { accept: 'application/json' };
-  if (authorized) headers['x-admin-token'] = adminToken;
+  if (authorized) {
+    headers['x-admin-token'] = adminToken;
+    headers.authorization = `Bearer ${adminToken}`;
+  }
   if (body !== undefined) headers['content-type'] = 'application/json';
   const response = await fetch(`${siteUrl}${pathname}`, {
     method,
@@ -33,6 +36,7 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
     status: response.status,
     ok: response.ok,
     origin: response.headers.get('x-matrix-origin'),
+    authLayer: response.headers.get('x-matrix-auth-layer') || data?.authLayer || null,
     contentType: response.headers.get('content-type'),
     data
   };
@@ -47,7 +51,16 @@ const attemptsLog = [];
 for (let attempt = 1; attempt <= attempts; attempt += 1) {
   try {
     health = await request('/api/ai-management/admin/health');
-    attemptsLog.push({ attempt, status: health.status, schemaReady: health.data?.schemaReady, autonomySchemaReady: health.data?.autonomySchemaReady });
+    attemptsLog.push({
+      attempt,
+      status: health.status,
+      origin: health.origin,
+      authLayer: health.authLayer,
+      contentType: health.contentType,
+      schemaReady: health.data?.schemaReady,
+      autonomySchemaReady: health.data?.autonomySchemaReady,
+      error: health.data?.error || null
+    });
     if (health.ok && health.data?.schemaReady === true && health.data?.autonomySchemaReady === true) break;
   } catch (error) {
     attemptsLog.push({ attempt, error: String(error?.message || error).slice(0, 300) });
@@ -55,7 +68,26 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
   if (attempt < attempts) await sleep(delayMs);
 }
 
-assert(health?.status === 200, `AI-management health did not return 200; got ${health?.status}`);
+if (health?.status !== 200) {
+  fs.writeFileSync(outputPath, `${JSON.stringify({
+    ok: false,
+    siteUrl,
+    verifiedAt: new Date().toISOString(),
+    attempts: attemptsLog,
+    final: health ? {
+      status: health.status,
+      origin: health.origin,
+      authLayer: health.authLayer,
+      contentType: health.contentType,
+      error: health.data?.error || null
+    } : null
+  }, null, 2)}\n`);
+}
+
+assert(
+  health?.status === 200,
+  `AI-management health did not return 200; got ${health?.status}; origin=${health?.origin || 'missing'}; authLayer=${health?.authLayer || 'missing'}; contentType=${health?.contentType || 'missing'}`
+);
 assert(health.origin === 'cloudflare-worker-ai-management', `Unexpected AI-management origin: ${health.origin || 'missing'}`);
 assert(health.data?.ok === true, 'AI-management health did not report ok');
 assert(health.data?.schemaReady === true, 'Phase 9 AI resource schema is not ready');

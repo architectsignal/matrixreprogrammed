@@ -103,6 +103,7 @@ function verifySearchFirstHomepage(document) {
 function reconcileSearchFirstHomepageRoutes(document) {
   const requiredRoutes = [
     ...primaryLinks,
+    ...moreGroups.flatMap(([, links]) => links),
     ['elite-family-tracker.html', 'Track the Families'],
     ['security-privacy.html', 'Security Tools'],
     ['dark-web-safety.html', 'Dark Web Safety'],

@@ -101,6 +101,12 @@ function verifySearchFirstHomepage(document) {
 }
 
 function reconcileSearchFirstHomepageRoutes(document) {
+  const drawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i;
+  const drawerMatch = document.match(drawer);
+  if (!drawerMatch) {
+    throw new Error('Search-first homepage Explore drawer not found for route reconciliation.');
+  }
+  const drawerHtml = drawerMatch[0];
   const requiredRoutes = [
     ...primaryLinks,
     ...moreGroups.flatMap(([, links]) => links),
@@ -110,15 +116,11 @@ function reconcileSearchFirstHomepageRoutes(document) {
     ['contact-the-machine.html', 'Contact the Machine']
   ];
   const missing = requiredRoutes.filter(([route]) => {
-    return !document.includes(`href="${route}"`)
+    return !drawerHtml.includes(`href="${route}"`)
       && !(route === 'search.html' && document.includes('action="search.html"'));
   });
   if (!missing.length) return document;
 
-  const drawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i;
-  if (!drawer.test(document)) {
-    throw new Error('Search-first homepage Explore drawer not found for route reconciliation.');
-  }
   const additions = missing.map(([route, label]) => `<a href="${route}">${label}</a>`).join('');
   return document.replace(drawer, `$1$2${additions}$3`);
 }

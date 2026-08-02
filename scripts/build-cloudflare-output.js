@@ -155,6 +155,7 @@ runRequired('Phase 8 evidence archive build', 'scripts/build-evidence-archive.js
 runRequired('Phase 8 evidence archive wiring', 'scripts/patch-phase8-evidence-archive.js');
 runRequired('Phase 8 evidence archive verification', 'scripts/evidence-archive-verification-test.js');
 runRequired('Phase 9 public data laboratory build', 'scripts/build-public-data-lab.js');
+runRequired('Final public navigation route reconciliation', 'scripts/patch-main-navigation-safety-links.js');
 runRequired('Phase 9 public data laboratory safety test', 'scripts/public-data-lab-test.js');
 runRequired('Entity registry page build', 'scripts/build-entity-registry-page.js');
 runRequired('Relationship registry page build', 'scripts/build-relationship-registry-page.js');

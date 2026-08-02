@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:36:19.838Z",
+  "generatedAt": "2026-08-02T09:20:42.738Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 31275,
-    "primarySources": 29388,
-    "relationships": 13285
+    "results": 31406,
+    "primarySources": 29517,
+    "relationships": 13379
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "31275 results"
+      "detail": "31406 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "31275/31275"
+      "detail": "31406/31406"
     },
     {
       "name": "normalised field sourceType",
@@ -97,17 +97,17 @@
     {
       "name": "query corruption bribery fraud",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-e4f0192d3e832ae19d8b, entity-registry.html#entity-contract-89586f1631cf4232b9a8, entity-registry.html#entity-contract-296fd4277c86dc1c8b30, entity-registry.html#entity-contract-fa4b51c74ad07c437365, entity-registry.html#entity-contract-7ee815d7ec4000ce377b"
+      "detail": "entity-registry.html#entity-contract-606cd7ee94dce4ee1caa, entity-registry.html#entity-contract-e4f0192d3e832ae19d8b, entity-registry.html#entity-contract-89586f1631cf4232b9a8, entity-registry.html#entity-contract-296fd4277c86dc1c8b30, entity-registry.html#entity-contract-fa4b51c74ad07c437365"
     },
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-bc5d5a7b6218af137717, entity-registry.html#entity-contract-f35d2bd2e5fbd01f0a70, entity-registry.html#entity-contract-6f6c1ec1a5421e837602, relationship-registry.html?relationship=relationship-0e79faf23ca42b3ae0d4, relationship-registry.html?relationship=relationship-51826663a7589064d2f9"
+      "detail": "entity-registry.html#entity-contract-4ecee6be45f5e9ec4cec, entity-registry.html#entity-contract-bc5d5a7b6218af137717, entity-registry.html#entity-contract-f35d2bd2e5fbd01f0a70, entity-registry.html#entity-contract-6f6c1ec1a5421e837602, relationship-registry.html?relationship=relationship-280a09b1b6e6479ad9ea"
     },
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=42ffe4ee3cc3cbdbd5541e73"
+      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=ef7c7315c9715e82ba052f67"
     },
     {
       "name": "query government contracts",
@@ -122,7 +122,7 @@
     {
       "name": "query public corruption conviction",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=source-change-44505b4afb60938c8117ad31, daily-investigation-conclusions.html?finding=b3e6eda074b2856f301567b5, daily-investigation-conclusions.html?finding=af846974d1c737e62eb13ed9, daily-investigation-conclusions.html?finding=5985b2e902288e91d86d2111, daily-investigation-conclusions.html?finding=05df9e4883cc0b2b81b9fcfb"
+      "detail": "daily-investigation-conclusions.html?finding=b3e6eda074b2856f301567b5, daily-investigation-conclusions.html?finding=af846974d1c737e62eb13ed9, daily-investigation-conclusions.html?finding=46951923144fe1686590f0ff, daily-investigation-conclusions.html?finding=b6faffb03b27c5093975150f, entity-registry.html#entity-market-company-public-storage-oper-co-226afa7235227c21"
     },
     {
       "name": "query inspector-general misconduct",
@@ -132,7 +132,7 @@
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-45a91131402a990020f8, relationship-registry.html?relationship=relationship-9146ae9771eaff1c8d98, relationship-registry.html?relationship=relationship-1e95fa2f288e13f32fce, relationship-registry.html?relationship=relationship-13e3ee280002ee0cccbc, relationship-registry.html?relationship=relationship-a64f88cd539b04e6ed88"
+      "detail": "relationship-registry.html?relationship=relationship-45a91131402a990020f8, relationship-registry.html?relationship=relationship-ef831c6fa23d6c13e8d1, relationship-registry.html?relationship=relationship-2961101708dc51830314, relationship-registry.html?relationship=relationship-ace94fd99602766f1dbd, entity-registry.html#entity-contract-39d48c42c159c3567e81"
     },
     {
       "name": "query missing record redaction log",
@@ -147,7 +147,7 @@
     {
       "name": "dedicated source-change result ranks for missing-record intent",
       "ok": true,
-      "detail": "source-change:source-changes.html?change=44505b4afb60938c8117ad31, source-change:source-changes.html?change=1c352ab364fbfca06ab12a57, source-change:source-changes.html?change=d7398c0c72a085a05c90422c, source-change:source-changes.html?change=5ce17839086eddf839270b1a, source-change:source-changes.html?change=9848ec4b4c3f6c2693269839, source-change:source-changes.html?change=c1520a15d6e62871a66c558e, source-change:source-changes.html?change=a5e5d4ec4df4352ea242ea3f, source-change:source-changes.html?change=b7e4a66335a706ef5097117f, source-change:source-changes.html?change=bdd7e454126ebfa6319a594c, source-change:source-changes.html?change=8299a278d70b1f879d6d522f"
+      "detail": "source-change:source-changes.html?change=44505b4afb60938c8117ad31, source-change:source-changes.html?change=1c352ab364fbfca06ab12a57, source-change:source-changes.html?change=d7398c0c72a085a05c90422c, source-change:source-changes.html?change=5ce17839086eddf839270b1a, source-change:source-changes.html?change=9848ec4b4c3f6c2693269839, source-change:source-changes.html?change=c1520a15d6e62871a66c558e, source-change:source-changes.html?change=a5e5d4ec4df4352ea242ea3f, source-change:source-changes.html?change=b7e4a66335a706ef5097117f, source-change:source-changes.html?change=bdd7e454126ebfa6319a594c, source-change:source-changes.html?change=81d1ec66d255ebaf3f7d61de"
     },
     {
       "name": "Grade B filter returns results",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "31275 vs 31275"
+      "detail": "31406 vs 31406"
     },
     {
       "name": "facet evidenceGrade",

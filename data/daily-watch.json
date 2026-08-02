@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-02T06:34:42.164Z",
+  "updated": "2026-08-02T07:43:30.167Z",
   "date": "2026-08-02",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 23393
+      "signalCount": 23607
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 16833
+      "signalCount": 16826
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 13464
+      "signalCount": 12706
     }
   ],
   "person": {
@@ -78,9 +78,9 @@
       "graphId": "securities-and-exchange-commission",
       "graphType": "missing record",
       "reviewStatus": "machine-extracted-unreviewed",
-      "directFreshRecords": 20
+      "directFreshRecords": 14
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 20 fresh records plus 18 retained evidence references.",
+    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 14 fresh records plus 11 retained evidence references.",
     "whatWasFound": "named-in-public-record, refined-from-organization",
     "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
@@ -105,11 +105,11 @@
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
-      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "https://www.federalregister.gov/documents/2026/07/29/2026-15242/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
-      "https://www.federalregister.gov/documents/2026/07/29/2026-15248/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-10b-17",
-      "https://www.federalregister.gov/documents/2026/07/29/2026-15281/agency-information-collection-activities-proposed-collection-comment-request-extension-rule-15c2-1",
-      "https://www.federalregister.gov/documents/2026/07/29/2026-15251/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed"
+      "https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf"
     ],
     "nextQuestions": [
       "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
@@ -220,13 +220,13 @@
     "institution": {
       "route": "daily-watch.html#institution-dossier",
       "totals": {
-        "matchedFindings": 984,
+        "matchedFindings": 1059,
         "legalRecords": 16,
         "safeguardingOverlaps": 0,
         "moneyRecords": 16,
         "authorityRecords": 16,
         "connections": 0,
-        "contradictionRecords": 13
+        "contradictionRecords": 14
       }
     },
     "family": {

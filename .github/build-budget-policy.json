@@ -1,18 +1,51 @@
 {
-  "policy": "Matrix Reprogrammed monthly build budget",
-  "status": "enforced",
+  "schemaVersion": 2,
+  "policy": "Matrix Reprogrammed Cloudflare zero-overage budget",
+  "status": "enforced-current-period-lock",
+  "hardRequirement": "Use included Cloudflare capacity without creating any additional usage-based charge.",
+  "ownerUsageSnapshot": {
+    "observedOn": "2026-08-02",
+    "source": "Cloudflare Billing > Billable Usage; values supplied by the account owner",
+    "approximateValues": true,
+    "metrics": {
+      "workersBuildMinutes": { "included": 6000, "total": 11470, "billable": 5470, "costUsd": 27.34 },
+      "workersCpuMs": { "included": 30000000, "total": 584250, "billable": 0, "costUsd": 0 },
+      "workersStandardRequests": { "included": 10000000, "total": 555740, "billable": 0, "costUsd": 0 },
+      "d1RowsRead": { "included": 25000000000, "total": 3300000, "billable": 0, "costUsd": 0 },
+      "d1RowsWritten": { "included": 50000000, "total": 23770, "billable": 0, "costUsd": 0 },
+      "d1StorageGbMonths": { "included": 5, "total": 0, "billable": 0, "costUsd": 0 },
+      "kvReadOperations": { "included": 10000000, "total": 29480, "billable": 0, "costUsd": 0 },
+      "kvWriteOperations": { "included": 1000000, "total": 1210, "billable": 0, "costUsd": 0 },
+      "kvListOperations": { "included": 1000000, "total": 6, "billable": 0, "costUsd": 0 },
+      "kvStorageGbMonths": { "included": 1, "total": 0, "billable": 0, "costUsd": 0 }
+    }
+  },
   "cloudflareWorkersBuildMinutes": {
     "includedPerMonth": 6000,
-    "internalTargetMaximum": 4000,
     "warningThreshold": 3000,
-    "emergencyReserve": 2000
+    "ordinaryConsumptionCeiling": 4000,
+    "emergencyAndReportingDelayReserve": 2000,
+    "currentBillingPeriodLocked": true,
+    "lockReason": "The owner-supplied 2026-08-02 snapshot already contains 5,470 billable build minutes. No further Cloudflare Workers Build may be triggered in this billing period."
   },
   "releaseRules": {
+    "cloudflareGitConnectedBuilds": "must-be-disconnected",
+    "nonProductionBranchBuilds": "must-be-disabled",
+    "productionAuthority": "manual GitHub Actions controlled production workflow using Wrangler",
+    "requireFreshUsageSnapshotHours": 24,
+    "requireZeroBillableUsageConfirmation": true,
     "automaticProductionChecksPerDay": 1,
     "automaticProductionCooldownHours": 20,
-    "manualEmergencyDeploymentsAllowed": true,
+    "manualEmergencyDeploymentsAllowedBelowCeiling": true,
     "deployOnlyWhenLiveProofDiffers": true,
     "neverInterruptD1MigrationOrActiveProductionDeploy": true
+  },
+  "utilizationStrategy": {
+    "developmentBuilds": "Run locally or in GitHub Actions so routine commits do not consume Cloudflare Workers Build minutes.",
+    "productionBuilds": "Batch proven changes into a manual canonical release; do not rebuild unchanged output.",
+    "workersRuntime": "Use normally with static caching and abuse controls; current CPU and request usage are well below included allowances.",
+    "d1": "Use indexed, bounded queries and idempotent writes; current read, write and storage usage are well below included allowances.",
+    "kv": "Use cache-friendly reads and avoid write-on-read counters; current operation and storage usage are well below included allowances."
   },
   "automationRules": {
     "moneyIntelligenceRefresh": "weekly",
@@ -21,10 +54,12 @@
     "lightweightHealthChecks": "preferred-between-production-releases",
     "generatedOutputCommits": "must-be-idempotent"
   },
-  "cloudflareConfigurationRequired": {
-    "disconnectGitTriggeredWorkersBuilds": true,
-    "deploymentAuthority": "GitHub Actions controlled production workflow using Wrangler",
-    "reason": "Cloudflare Git integration builds on every push to the production branch, including automated data and status commits."
-  },
-  "operatingPrinciple": "Keep the site useful, current and fail-closed while remaining below the included monthly build-minute allowance."
+  "unlockConditions": [
+    "A new Cloudflare billing period is visible in the account dashboard.",
+    "Workers Builds total and billable usage have been checked within the previous 24 hours.",
+    "Billable usage for every metered Cloudflare product is zero.",
+    "The Worker is disconnected from Cloudflare Git builds and non-production branch builds are disabled.",
+    "The snapshot in this policy and the protected GitHub usage variables are updated by the owner."
+  ],
+  "operatingPrinciple": "Improve the site aggressively off-cloud, release deliberately, and fail closed before any uncertain or billable Cloudflare operation."
 }

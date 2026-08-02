@@ -11,7 +11,7 @@ const ids=new Set();
 add('seed has deep location registry',Array.isArray(seed.locations)&&seed.locations.length>=30,`${seed.locations?.length||0} locations`);
 add('evidence boundary is explicit',/does not prove control|does not prove.*coordination/i.test(seed.evidenceBoundary||''));
 add('automatic geocoding prohibited',/never geocodes|never geocode/i.test(seed.generatedPolicy||''));
-add('MapLibre pinned',seed.engines?.maplibre?.version==='6.0.0-20');
+add('MapLibre pinned',seed.engines?.maplibre?.version==='5.24.0'&&manifest.engines?.maplibre?.version==='5.24.0');
 add('PMTiles pinned',seed.engines?.pmtiles?.version==='4.4.1');
 for(const item of seed.locations||[]){
   add(`unique id ${item.id}`,Boolean(item.id)&&!ids.has(item.id)); ids.add(item.id);
@@ -26,7 +26,8 @@ add('all generated features are points',(geo.features||[]).every(feature=>featur
 add('all features have limitations',(geo.features||[]).every(feature=>/does not prove/i.test(feature.properties?.doesNotEstablish||'')));
 add('precision labels generated',(geo.features||[]).every(feature=>feature.properties?.precisionLabel&&feature.properties?.maximumUncertaintyMetres));
 add('manifest reports all locations',manifest.counts?.locations===seed.locations.length);
-add('runtime imports pinned MapLibre',runtime.includes('maplibre-gl@6.0.0-20'));
+add('builder loads pinned MapLibre browser bundle',builder.includes('maplibre-gl@5.24.0/dist/maplibre-gl.css')&&builder.includes('maplibre-gl@5.24.0/dist/maplibre-gl.js'));
+add('runtime uses browser MapLibre global',runtime.includes('globalThis.maplibregl')&&!runtime.includes('MAPLIBRE_MODULE_URL'));
 add('runtime imports pinned PMTiles',runtime.includes('pmtiles@4.4.1'));
 add('PMTiles restricted to same origin',runtime.includes('url.origin === location.origin')&&runtime.includes('/\\.pmtiles'));
 add('accessible location list present',runtime.includes('power-atlas-list')&&runtime.includes("card.tabIndex=0"));

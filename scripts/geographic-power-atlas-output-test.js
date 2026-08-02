@@ -7,7 +7,7 @@ for(const rel of ['geographic-power-atlas.html','geographic-power-atlas','geogra
 const page=read('geographic-power-atlas.html'); const runtime=read('geographic-power-atlas.js'); const home=read('index.html'); const startHere=read('start-here.html'); const tools=read('research-tools.html');
 add('page title marker',page.includes('GEOGRAPHIC POWER ATLAS.'));
 add('page is publicly visible',!/<div class="page[^"]*(commercial-internal|internal-only)/i.test(page));
-add('MapLibre pinned in page',page.includes('maplibre-gl@6.0.0-20'));
+add('MapLibre pinned in page',page.includes('maplibre-gl@5.24.0/dist/maplibre-gl.css')&&page.includes('maplibre-gl@5.24.0/dist/maplibre-gl.js'));
 add('PMTiles pinned in runtime',runtime.includes('pmtiles@4.4.1'));
 add('same-origin PMTiles gate',runtime.includes('url.origin === location.origin'));
 add('runtime uses deployable atlas JSON',runtime.includes('data/geographic-power-atlas-data.json'));
@@ -15,10 +15,12 @@ add('precision boundary visible',/PRECISION IS PART OF THE EVIDENCE/i.test(page)
 add('proximity warning visible',/Nearby points are not evidence/i.test(page));
 add('homepage atlas route',home.includes('Open Geographic Power Atlas'));
 add('research tools atlas route',tools.includes('geographic-power-atlas.html'));
-const primaryNav=(home.match(/<div class="nav-primary">([\s\S]*?)<\/div>/i)||[])[1]||'';
-add('Security Tools promoted to primary tab bar',primaryNav.includes('href="security-privacy.html"')&&primaryNav.includes('>Security Tools</a>'));
-add('Dark Web Safety promoted to primary tab bar',primaryNav.includes('href="dark-web-safety.html"')&&primaryNav.includes('>Dark Web Safety</a>'));
-add('primary safety tabs are not hidden',!/(security-privacy\.html|dark-web-safety\.html)[^>]*(internal-only|commercial-internal)/i.test(primaryNav));
+const primaryNav=(home.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)||[])[1]
+  ||(home.match(/<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)||[])[1]
+  ||'';
+add('Security Tools present in public navigation',primaryNav.includes('href="security-privacy.html"')&&primaryNav.includes('>Security Tools</a>'));
+add('Dark Web Safety present in public navigation',primaryNav.includes('href="dark-web-safety.html"')&&primaryNav.includes('>Dark Web Safety</a>'));
+add('public safety navigation is not hidden',!/(security-privacy\.html|dark-web-safety\.html)[^>]*(internal-only|commercial-internal)/i.test(primaryNav));
 const startNavMatch=startHere.match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i);
 const startNav=startNavMatch?.[1]||'';
 add('Start Here navigation includes Security Tools',startNav.includes('href="security-privacy.html"')&&startNav.includes('>Security Tools</a>'));

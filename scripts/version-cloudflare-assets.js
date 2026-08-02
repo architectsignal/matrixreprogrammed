@@ -43,6 +43,20 @@ function ensureRiskTimersInDrawer(html) {
   return `${html.slice(0, detailsStart)}${nextBlock}${html.slice(detailsEnd + 10)}`;
 }
 
+function ensureSearchFirstNavigation(html) {
+  const drawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i;
+  const match = html.match(drawer);
+  if (!match) throw new Error('Search-first Explore drawer is missing');
+  const required = [...canonicalPrimaryLinks, ['timers.html', 'Risk Timers']];
+  const additions = required
+    .filter(([route]) => !match[0].includes(`href="${route}"`)
+      && !(route === 'search.html' && html.includes('action="search.html"')))
+    .map(([route, label]) => `<a href="${route}">${label}</a>`)
+    .join('');
+  if (!additions) return html;
+  return html.replace(drawer, `$1$2${additions}$3`);
+}
+
 function canonicalizePrimaryNavigation() {
   const candidates = [
     path.join(root, 'index.html'),
@@ -57,6 +71,20 @@ function canonicalizePrimaryNavigation() {
   for (const file of candidates) {
     if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
     const before = fs.readFileSync(file, 'utf8');
+    if (before.includes('class="accountability-home"') && before.includes('id="accountability-search"')) {
+      const after = ensureSearchFirstNavigation(before);
+      for (const [route] of canonicalPrimaryLinks) {
+        const present = after.includes(`href="${route}"`)
+          || (route === 'search.html' && after.includes('action="search.html"'));
+        if (!present) throw new Error(`Search-first navigation route ${route} missing from ${path.relative(root, file)}`);
+      }
+      if (after !== before) {
+        fs.writeFileSync(file, after);
+        changed++;
+      }
+      verified++;
+      continue;
+    }
     if (!/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i.test(before)) {
       throw new Error(`Primary navigation container missing from ${path.relative(root, file)}`);
     }

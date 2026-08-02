@@ -100,6 +100,28 @@ function verifySearchFirstHomepage(document) {
   }
 }
 
+function reconcileSearchFirstHomepageRoutes(document) {
+  const requiredRoutes = [
+    ...primaryLinks,
+    ['elite-family-tracker.html', 'Track the Families'],
+    ['security-privacy.html', 'Security Tools'],
+    ['dark-web-safety.html', 'Dark Web Safety'],
+    ['contact-the-machine.html', 'Contact the Machine']
+  ];
+  const missing = requiredRoutes.filter(([route]) => {
+    return !document.includes(`href="${route}"`)
+      && !(route === 'search.html' && document.includes('action="search.html"'));
+  });
+  if (!missing.length) return document;
+
+  const drawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i;
+  if (!drawer.test(document)) {
+    throw new Error('Search-first homepage Explore drawer not found for route reconciliation.');
+  }
+  const additions = missing.map(([route, label]) => `<a href="${route}">${label}</a>`).join('');
+  return document.replace(drawer, `$1$2${additions}$3`);
+}
+
 function replaceNavigation(document) {
   const topbar = /<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i;
   const headerMatch = document.match(topbar);
@@ -115,6 +137,8 @@ const indexBefore = fs.readFileSync(indexPath, 'utf8');
 const searchFirstHomepage = isSearchFirstHomepage(indexBefore);
 let html = indexBefore;
 if (searchFirstHomepage) {
+  html = reconcileSearchFirstHomepageRoutes(html);
+  if (html !== indexBefore) fs.writeFileSync(indexPath, html);
   verifySearchFirstHomepage(html);
 } else {
   html = replaceNavigation(html);

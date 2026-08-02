@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:20:03.533Z",
-  "pageCount": 104,
+  "generatedAt": "2026-08-02T06:23:29.855Z",
+  "pageCount": 103,
   "output": "downloads/epstein-network-deep-dive.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Epstein Network Deep Dive Matrix",
-    "contentHash": "690755a116c32f6b1c30f73740c019bcd3f34865cb9e98b7fd16577474625a34",
+    "contentHash": "691e9b715bdd0880888263ea08106a13bcc2a096a92fbfa7ee2c4c6a3faa00c9",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -16,10 +16,9 @@
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
       "ecd4a1111010f13b2d74bf8c",
-      "3a425f0d5d683952bc0ad7ac",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "cf94b367bfb0237448d49649",
       "d23398b8ca4c7124399c9504",
       "a01fc28e9fb6ce85637a3248",
@@ -31,6 +30,7 @@
       "665a5072d96b9757a6ee9d2d",
       "4e5cc6449bcc7ddf1c878ee0",
       "7419d29b3a469a40362a11f4",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "8165fb4ec7543f1da0762496",
       "19ae23289f4be13ad5f7e317",
@@ -40,8 +40,6 @@
       "275d6c3caca158f7a3e15780",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
-      "594100b62a47db521fe2a128",
-      "34805734b1ad3b73f0ede0d8",
       "a76edf5945d2f4910bd413ef",
       "54197b23c792a122f53a863b",
       "e6dd95e595093e11aa17005a",
@@ -68,7 +66,9 @@
       "96d8ea15e49544e3f1cafd06",
       "7a0ce047ee750826a59e7474",
       "6d8df9af51b8078e703b2748",
+      "65debd126cdfa5f7547a3eca",
       "a5e5d4ec4df4352ea242ea3f",
+      "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-9E85403F3389F334",
@@ -76,15 +76,20 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-3266CA18BAEC4ACB",
       "ASC-REVIEW-25B371012CBA1315",
+      "d0b647e325275daa6d824a49",
       "d06308ce08cd7bbee96607ab",
       "75fcb0966ee4802cca054261",
+      "594100b62a47db521fe2a128",
       "EP-AI-004",
       "9f3052b5d8cec138a2a37e8c",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-C369A84AD971DD75",
@@ -141,37 +146,32 @@
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "c414ea6b5bea3390d2a8ce5c",
-      "9dad49e7d690ef5780b5a6bf",
-      "5429921210b1c4273444a686",
-      "c1520a15d6e62871a66c558e",
-      "5460c0408472ce834da2b82f",
-      "1257c3ee2bf54442161b9029"
+      "c414ea6b5bea3390d2a8ce5c"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 66,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 69,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 68,
-      "moneyRecordCount": 70
+      "relationshipCount": 67,
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Epstein Network Deep Dive Matrix.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Epstein Network Deep Dive Matrix.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “content changed: European Public Prosecutor's Office — News,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: European Public Prosecutor's Office — News",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 68 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 67 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Media: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 68 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 67 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

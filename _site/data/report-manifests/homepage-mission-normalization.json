@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-08-01T06:21:20.199Z",
+  "generatedAt": "2026-08-02T06:24:52.117Z",
   "pageCount": 133,
   "output": "downloads/homepage-mission-normalization.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Homepage Mission Normalization",
-    "contentHash": "729b9ff131877cefc76ca7839fbedfd0eb4726d88b06fb07b144b2f30252d588",
+    "contentHash": "d63fe30fd2a16ea88a8710270880459fecf6b2d13825c999594cd09b1eea63d4",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
+      "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
       "source-change-701229696b57f88191742d4f",
@@ -23,14 +24,12 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-21E454816F050A34",
-      "3a425f0d5d683952bc0ad7ac",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "source-change-8299a278d70b1f879d6d522f",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
       "source-change-a21f3d8e98268d5e01e1eb7c",
       "source-change-44505b4afb60938c8117ad31",
-      "source-change-edba4782143dd855b818b53a",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -42,7 +41,7 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-C954C3B615AAFE11",
+      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -70,7 +69,8 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -89,7 +89,7 @@
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-EE7AFF662C9B718F",
+      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -151,7 +151,7 @@
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 10,
-      "disputedClaimCount": 127,
+      "disputedClaimCount": 128,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 120,
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:11.783Z"
+    "intelligenceFreshnessDate": "2026-08-01T07:39:38.763Z"
   }
 }

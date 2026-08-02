@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-08-01T06:16:34.466Z",
-  "pageCount": 116,
+  "generatedAt": "2026-08-02T06:19:44.920Z",
+  "pageCount": 117,
   "output": "downloads/automatic-orchestrator-final-audit.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Automatic Orchestrator Final Audit",
-    "contentHash": "a39d689245d78ccd1de4ba3eca6d00ea76627971e49c20259a8f9466a87da08b",
+    "contentHash": "5c66b9387f7857231685a728c6e38973b4982ee0cc1a18f5c7a007e01a9b4006",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "157cdab04b61ae6309c0c713",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "26b90533dbf7d2ed42f02de6",
       "a21f3d8e98268d5e01e1eb7c",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -25,8 +25,8 @@
       "1ee57e70dacfa67f04323529",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-9E85403F3389F334",
-      "88269481cf5b04b7b0f83b58",
       "1769af26a7bda813406cd8f5",
+      "88269481cf5b04b7b0f83b58",
       "41af4eba97b7eb1c0afb301f",
       "f6d3c17beb9371b8f2b165aa",
       "ff1a3a77816af400f09ab95e",
@@ -55,6 +55,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
@@ -104,9 +105,7 @@
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
       "bdd7e454126ebfa6319a594c",
-      "8f31f55bedf76191133380d8",
       "ASC-002",
-      "ASC-REVIEW-4F6745BE22E24FA0",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-1D9239F50A285FC0",
@@ -116,7 +115,7 @@
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-C954C3B615AAFE11",
+      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -141,17 +140,18 @@
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-B6BCA7554CFEEE44",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-E3E367656A99DD33",
-      "ASC-REVIEW-75C693C304757153"
+      "ASC-REVIEW-75C693C304757153",
+      "ASC-REVIEW-26C98CAD8AA9CE0A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 35,
-      "disputedClaimCount": 95,
+      "primarySourceCount": 34,
+      "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 86,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
+        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -187,7 +187,7 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-12T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

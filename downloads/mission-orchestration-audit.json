@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-01T07:41:08.505Z",
+  "generatedAt": "2026-08-02T06:34:42.944Z",
   "overall": "ready",
   "summary": {
     "total": 50,
     "passed": 50,
     "failed": 0
   },
-  "homepageMode": "search-first-accountability",
+  "homepageMode": "legacy-cinematic",
   "watch": {
-    "date": "2026-08-01",
+    "date": "2026-08-02",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -262,7 +262,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "6 history entries; weekly delta ready.",
+      "detail": "7 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -274,13 +274,13 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Search-first homepage: headerEnd=3711; search=134924; accountabilityHitList=136188.",
+      "detail": "Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
       "id": "accountability-card-ui",
       "ok": true,
-      "detail": "3 search-first accountability cards found.",
+      "detail": "3 cinematic dossier cards found.",
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {

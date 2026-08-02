@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:23:29.151Z",
+  "generatedAt": "2026-08-02T06:27:15.568Z",
   "pageCount": 94,
   "output": "downloads/paypal-server-redirect-patch.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Paypal Server Redirect Patch",
-    "contentHash": "50743344e3f5c582dbf8719c7180213da50e75e862349ca129eed2767e537c79",
+    "contentHash": "c9e9af4fc2f24bd30eb222a62beb8fcc41d08a5744f6a4f34b04597a4d38fa5a",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "0c5f51804baf8e9e2c1fdd0b",
@@ -27,14 +27,13 @@
       "511ed227bb4be58b582ebb8d",
       "270841af2bd81407a26bed0b",
       "source-change-8299a278d70b1f879d6d522f",
-      "source-change-edba4782143dd855b818b53a",
       "ASC-003",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "26b90533dbf7d2ed42f02de6",
       "44505b4afb60938c8117ad31",
-      "88269481cf5b04b7b0f83b58",
       "gates-epstein-meetings-2011-2014",
+      "88269481cf5b04b7b0f83b58",
       "7ee9141a42ad539f58a57e50",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
@@ -48,6 +47,7 @@
       "def94e0a086f2eac4c5ad91a",
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
+      "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
       "source-change-96b50a0ea1ae9a6b5767f2c2",
@@ -63,7 +63,6 @@
       "d23398b8ca4c7124399c9504",
       "6f6462b75cdb929e0acbcde7",
       "2529322b7b5345fd6f575174",
-      "3a425f0d5d683952bc0ad7ac",
       "6510364e9b1a1504b9f99521",
       "72ef7895f95288946ccb3cff",
       "49679b1ed63de244c1cf19f9",
@@ -74,11 +73,12 @@
       "6d665d935673091233751767",
       "1ee57e70dacfa67f04323529",
       "ecd4a1111010f13b2d74bf8c",
-      "2482c3e0241c7c7679a18cd1",
       "5460c0408472ce834da2b82f",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -126,10 +126,10 @@
       "9e8310c49b990aa62d2b0921",
       "8299a278d70b1f879d6d522f",
       "edba4782143dd855b818b53a",
-      "eaebe283915d5c0d1982b8e6",
       "deutsche-bank-epstein-dfs-2020",
       "EP-AI-002",
       "71e0563ca7b139c37c302956",
+      "eaebe283915d5c0d1982b8e6",
       "108886c2624e7ff0fca9f3f9",
       "6852525bfb3f4d4c67a81fcb",
       "92adb9d59689b41e578a7a5e",
@@ -147,16 +147,16 @@
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 100,
+      "primarySourceCount": 101,
       "disputedClaimCount": 12,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 24,
-      "moneyRecordCount": 11
+      "moneyRecordCount": 10
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 100 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
+        "conclusion": "The indexed record establishes that 101 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -165,8 +165,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -177,7 +177,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Meetings and philanthropic-fundraising discussions, 2011–2014; Official health investigations documented abuse and enabling access; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
+        "supportingEvidence": "Meetings and philanthropic-fundraising discussions, 2011–2014; Official health investigations documented abuse and enabling access; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -195,9 +195,9 @@
         "supportingIndicators": [
           "Meetings and philanthropic-fundraising discussions, 2011–2014",
           "Official health investigations documented abuse and enabling access",
-          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
-          "Christopher Wray's Gift to Attorney General Garland",
-          "Christopher Wray's Gift to Attorney General Garland (Final)",
+          "World Wrestling Entertainment",
+          "World Wrestling Entertainment Part 01",
+          "World Wrestling Entertainment Part 02 (Final)",
           "Brian Wells",
           "Brian Wells Part 01",
           "Brian Wells Part 02 (Final)"
@@ -215,6 +215,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T07:39:38.763Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:16:55.530Z",
+  "generatedAt": "2026-08-02T06:20:07.648Z",
   "pageCount": 120,
   "output": "downloads/campaign-trust-evidence-push.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Trust And Evidence Campaign",
-    "contentHash": "53cf65b302fe6965315e7738cbd9efa92dccd05962ec6116206eab53f6f4fabf",
+    "contentHash": "1aaf47328ffe3239106731730b27758b4706eded1f77188d25ffa2d358b4430c",
     "sourceIds": [
       "16b845aacad691a1299d5faa",
       "232955cb3e08720ec29ae560",
@@ -38,13 +38,11 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "594100b62a47db521fe2a128",
       "72ef7895f95288946ccb3cff",
       "ad283f9945fc2a5c7c0facc5",
-      "34805734b1ad3b73f0ede0d8",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
-      "war-machine-2026-07-30-1a19f6a2",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -66,10 +64,11 @@
       "cab66e2bb53cf082d241d7e1",
       "430b96f7d9c0b8b34fe8c029",
       "a48e62c41a98c1650efe9d98",
-      "war-machine-2026-07-31-a6218ecb",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
+      "war-machine-2026-08-01-62857078",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "war-machine-2026-07-30-1a19f6a2",
+      "war-machine-2026-07-29-221c41d1",
       "war-machine-2026-07-28-171c3080",
       "war-machine-2026-07-28-1b2902bf",
       "war-machine-2026-07-27-1a29012c",
@@ -146,7 +145,8 @@
       "control-system-2025-08-08-security-researchers-find-biometrics-vulnerability-in-windows-hello-fo",
       "control-system-2025-07-17-myanmar-s-digital-crackdown-is-worsening-the-world-is-stepping-back-te",
       "control-system-2025-07-10-opinion-a-band-of-innovators-reimagines-the-spy-game-for-a-world-with-",
-      "1e4f15d09e1414670233d7f7"
+      "1e4f15d09e1414670233d7f7",
+      "594100b62a47db521fe2a128"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 7,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 39,
+      "relationshipCount": 40,
       "moneyRecordCount": 35
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Trust And Evidence Campaign.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json); Brian Wells (data/live-intel.json); Brian Wells Part 01 (data/live-intel.json); Brian Wells Part 02 (Final) (data/live-intel.json); Lufthansa Heist (data/live-intel.json)",
+        "evidence": "World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json); Brian Wells Part 01 (data/live-intel.json); Brian Wells Part 02 (Final) (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "War Machine Campaign; Intelligence Network Share Kit; War Machine Share Kit; Crime Network Starter Brief; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Intelligence Dossiers Offer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "War Machine Campaign",
           "Intelligence Network Share Kit",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T12:00:00.000Z"
   }
 }

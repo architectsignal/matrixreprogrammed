@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-01T06:19:22.703Z",
-  "pageCount": 102,
+  "generatedAt": "2026-08-02T06:22:46.492Z",
+  "pageCount": 100,
   "output": "downloads/elite-family-tracker.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Elite Family Tracker",
-    "contentHash": "52917fa77cc8f0bc04716e6ed5e4182e3b624d6759f122aca67d0060b353aa35",
+    "contentHash": "59f37e91a36a7b6104d888c4fbed349a83e6cf2c2a0b9f13467dcd86d10c130a",
     "sourceIds": [
       "9086b5de8aac89f84189be72",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
@@ -20,23 +20,23 @@
       "9f27e4d750de830ccb16df4b",
       "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
-      "3a425f0d5d683952bc0ad7ac",
       "orsini-family",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
+      "3a425f0d5d683952bc0ad7ac",
       "a354895c18c7e12ab408462d",
       "665a5072d96b9757a6ee9d2d",
       "bf773d3ec83b9b3768dfce6b",
-      "594100b62a47db521fe2a128",
       "8a10f165e16d0f8648cb8ec4",
-      "34805734b1ad3b73f0ede0d8",
       "cf94b367bfb0237448d49649",
       "45f5269389def99607b5a517",
       "138e9d694e41f192556d34a2",
       "9bc66da5c53d37d8c3d59e13",
       "4961972398d896435d33f3f7",
+      "594100b62a47db521fe2a128",
       "71e0563ca7b139c37c302956",
       "e72d22f4f28eb53e3173d0a6",
+      "34805734b1ad3b73f0ede0d8",
       "erik-prince",
       "gautam-adani",
       "laurene-powell-jobs",
@@ -57,8 +57,8 @@
       "jane-fraser",
       "miriam-adelson",
       "mackenzie-scott",
+      "178ddce9da2a47a4b67a0394",
       "a7459175ece536e72f8f5506",
-      "31ec748f39cd0c1070d32c9a",
       "3a8c1f1e8620cb3f09a2c7ab",
       "19ae23289f4be13ad5f7e317",
       "5295a33003172878f9880122",
@@ -134,42 +134,42 @@
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
       "f59da50ababa3ddae79a8f1c",
-      "2cd777e4d3f82343f5cd5274",
-      "2eee904d1404ef0a6d9b6c54",
-      "5151c3a9f6b60883b360a522",
-      "aae51d03dc366bfb0267f3b4",
-      "5460c0408472ce834da2b82f",
-      "279c781eec7b4886b26d8896",
+      "f337071143994ca225e59e5b",
+      "60afa15e1c847568c578ed10",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-6809880AE2446DD1",
-      "ASC-REVIEW-9E85403F3389F334"
+      "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-747FA1D74D7A92E3",
+      "ASC-REVIEW-BD5CE46383C9383C",
+      "ASC-REVIEW-17CC1B265DD7385B",
+      "ASC-REVIEW-52F3C5EC8401656D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 28,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 32,
       "newEntityCount": 26,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 50,
-      "moneyRecordCount": 53
+      "relationshipCount": 52,
+      "moneyRecordCount": 56
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 52 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Orsini family",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 52 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T07:39:36.959Z"
   }
 }

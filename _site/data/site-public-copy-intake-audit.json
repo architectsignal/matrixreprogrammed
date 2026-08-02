@@ -3,9 +3,9 @@
   "summary": {
     "ok": false,
     "intakeOk": false,
-    "updated": "2026-08-01T06:29:32.149Z",
-    "filesScanned": 6553,
-    "highIssues": 3977,
+    "updated": "2026-08-02T06:34:05.287Z",
+    "filesScanned": 6561,
+    "highIssues": 3811,
     "reviewIssues": 15,
     "intakeAreas": 3219,
     "weakIntakeAreas": 1
@@ -1507,12 +1507,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/conclusion-engine.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/conclusions-engine.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2996,6 +2990,12 @@
     {
       "severity": "high",
       "file": "_site/data/history/money-intelligence/2026-07-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/history/money-intelligence/2026-08-01.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },

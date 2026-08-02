@@ -6,12 +6,12 @@ Report version: site-freshness-v2
 Source rules: 8
 Scanned pages: 3398
 Flagged pages: 3076
-High priority pages: 1633
-Medium priority pages: 1441
-Pages with missing rules: 752
+High priority pages: 1634
+Medium priority pages: 1440
+Pages with missing rules: 751
 Auto-update eligible figures: 2
-Manual-review figures: 112
-Missing-rule figures: 1536
+Manual-review figures: 109
+Missing-rule figures: 1541
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -41,7 +41,7 @@ Missing-rule figures: 1536
 - custom-research.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
-- _site/live-intel.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
+- weekly-investigation-report.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - media-narrative-theory.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
 - one-world-currency-theory.html: 5 figure/stat markers; 5 missing rules. Add figure-source rules before automatic replacement.
 
@@ -73,9 +73,10 @@ Missing-rule figures: 1536
 - custom-research.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
 - hit-list.html: 6 figure(s) need source rules.
-- _site/live-intel.html: 5 figure(s) need source rules.
+- weekly-investigation-report.html: 6 figure(s) need source rules.
 - media-narrative-theory.html: 5 figure(s) need source rules.
 - one-world-currency-theory.html: 5 figure(s) need source rules.
+- _site/daily-investigation-conclusions.html: 4 figure(s) need source rules.
 - _site/intel-archive.html: 4 figure(s) need source rules.
 - _site/making-money.html: 4 figure(s) need source rules.
 - _site/power-structure-map.html: 4 figure(s) need source rules.
@@ -85,7 +86,6 @@ Missing-rule figures: 1536
 - making-money.html: 4 figure(s) need source rules.
 - one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
-- _site/admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

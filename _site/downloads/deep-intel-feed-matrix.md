@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-01T06:28:51.153Z
+Generated: 2026-08-02T06:33:18.533Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-08-01T06:28:51.153Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
+- 72 — Recovery in Ukraine, one life at a time — live-intel.html
 - 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS — live-intel.html
 - 72 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’ — live-intel.html
 - 72 — Strong El Niño ahead, UN weather agency warns — live-intel.html
 - 72 — Wildfire smoke poses hidden health threat — live-intel.html
-- 72 — Christopher Wray's Gift to Attorney General Garland — live-intel.html

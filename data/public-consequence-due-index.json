@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-01T06:32:55.025Z",
+  "generatedAt": "2026-08-02T06:38:07.734Z",
   "title": "Public Consequence Due Index",
   "purpose": "A compact bounded manifest for the Cloudflare Free tracking runtime. Historical contracts persist in D1 after they leave this current manifest.",
   "freeTierBudget": {
@@ -12,36 +12,6 @@
   },
   "count": 7,
   "contracts": [
-    {
-      "id": "consequence-epstein-files-2026-07-29-7bea5037",
-      "title": "Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian",
-      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-29-7bea5037",
-      "actionDate": "2026-07-29T21:23:00.000Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "accountabilityQuestion": "What measurable public consequence followed “Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-28T21:23:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-27T21:23:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-29T21:23:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "9cc9e5207dd8483efa8b22a41653a51626143a37f960eca4fe6fe2c1d4dc7bf0"
-    },
     {
       "id": "consequence-epstein-files-2026-07-30-8d6ae028",
       "title": "Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post",
@@ -71,6 +41,36 @@
         }
       ],
       "contentHash": "c5dc8cc4b53212732c769878e311938f39ecf34944b0d634972e515b04813cdb"
+    },
+    {
+      "id": "consequence-epstein-files-2026-07-30-1f471233",
+      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
+      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-1f471233",
+      "actionDate": "2026-07-30T05:00:00.000Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+      "accountabilityQuestion": "What measurable public consequence followed “Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "checkpoints": [
+        {
+          "daysAfterAction": 30,
+          "dueAt": "2026-08-29T05:00:00.000Z",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "daysAfterAction": 90,
+          "dueAt": "2026-10-28T05:00:00.000Z",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "daysAfterAction": 365,
+          "dueAt": "2027-07-30T05:00:00.000Z",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "contentHash": "77a0dc589c5f2ad455a8a7e54c38be5740b69caed55c71a45b4da2a951f8ea5f"
     },
     {
       "id": "consequence-war-machine-2026-07-30-1619f056",

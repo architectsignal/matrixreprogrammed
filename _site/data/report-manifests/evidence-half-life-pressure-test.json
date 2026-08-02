@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:20:23.759Z",
+  "generatedAt": "2026-08-02T06:23:51.553Z",
   "pageCount": 87,
   "output": "downloads/evidence-half-life-pressure-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Evidence Half Life Pressure Test",
-    "contentHash": "65445ab565a03f4d309607b34c08c5d3dbd9553923d34364d15bb531043d6b2c",
+    "contentHash": "6ebd884d9078b4ab450924f176e05a997f2e2a6327b9956f701763228798d425",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
       "abdul-halim-khan-conviction-2026",
@@ -19,14 +19,15 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "a54df8218ca146eb70f725e3",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "d358fc1eedcb8f9eae6e4ab7",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
+      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -61,7 +62,6 @@
       "1769af26a7bda813406cd8f5",
       "us-doj",
       "gao-hq",
-      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -141,7 +141,7 @@
     ],
     "metrics": {
       "evidenceCount": 131,
-      "primarySourceCount": 127,
+      "primarySourceCount": 128,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
@@ -150,7 +150,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Evidence Half Life Pressure Test.",
+        "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Evidence Half Life Pressure Test.",
         "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); Twenty-one convictions for rape, sexual assault and child sexual offenses (data/criminal-conduct-registry.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

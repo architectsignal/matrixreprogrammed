@@ -1,10 +1,10 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-01T06:29:32.149Z
+Updated: 2026-08-02T06:34:05.287Z
 
-Files scanned: 6553
+Files scanned: 6561
 
-High issues: 3977
+High issues: 3811
 
 Review issues: 15
 
@@ -259,7 +259,6 @@ Weak intake areas: 1
 - _site/cinematic-hit-list.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/claim-classifier.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/codex.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/conclusion-engine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/conclusions-engine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/contractor-briefs/blackwater-constellis-lineage.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/contractor-briefs/booz-allen-intelligence-contractor.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -506,6 +505,7 @@ Weak intake areas: 1
 - _site/data/history/money-intelligence/2026-07-28.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-07-30.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-07-31.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/history/money-intelligence/2026-08-01.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/homepage-command-surface.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/human-cost.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 

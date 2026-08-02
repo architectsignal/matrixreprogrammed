@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-01T06:15:49.904Z
+Updated: 2026-08-02T06:18:58.092Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -106,8 +106,8 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-25 — UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168027
+- 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -140,7 +140,7 @@ Items: 12
 - UN News: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic — https://news.un.org/feed/view/en/story/2026/07/1168049
 - UN News: Mount Olympus and D-Day beaches among new World Heritage Sites — https://news.un.org/feed/view/en/story/2026/07/1168043
 - UN News: Cyberattacks and the digital divide are creating new barriers to HIV services — https://news.un.org/feed/view/en/story/2026/07/1168030
-- UN News: UN chief hails Syria’s ‘moment of possibility’ on first visit since fall of Assad regime — https://news.un.org/feed/view/en/story/2026/07/1168027
+- UN News: ‘Judges should be superhuman’: The invisible burden behind the bench — https://news.un.org/feed/view/en/story/2026/07/1168023
 
 ## Book Routes
 

@@ -1,80 +1,21 @@
 {
-  "deploymentVerified": true,
-  "productionFeature": "The Death Files",
-  "recordedAt": "2026-07-25T14:21:00.000Z",
-  "cloudflare": {
-    "deploymentSucceeded": true,
-    "worker": "matrixreprogrammed",
-    "workerVersionId": "e2d726d6-8e15-4982-9e25-f9d92e189eda",
-    "deploymentRunId": 30156818046,
-    "deployedCommitSha": "9c6b0bc37654ccdb7e8886d85174d21c0d88fea2",
-    "assetsDirectory": "_site",
-    "assetsRead": 5601,
-    "assetsUploaded": 1249,
-    "assetsReused": 4246,
-    "customRoutes": [
-      "matrixreprogrammed.com/*",
-      "www.matrixreprogrammed.com/*"
-    ]
+  "observedAt": "2026-08-01T09:36:30.890Z",
+  "workflowRunId": 30694046055,
+  "workflowRunNumber": 1380,
+  "workflowConclusion": "failure",
+  "deployedHeadSha": "32c3a55c97b972e4d6c1d074abee9a9ac3d83c78",
+  "event": "workflow_dispatch",
+  "live": {
+    "landing": {
+      "url": "https://matrixreprogrammed.com/death-files.html",
+      "status": 403,
+      "marker": false
+    },
+    "epsteinDossier": {
+      "url": "https://matrixreprogrammed.com/death-file-jeffrey-epstein.html",
+      "status": 403,
+      "marker": false
+    }
   },
-  "deathFilesBuild": {
-    "passed": true,
-    "launchDossiers": 3,
-    "yearPages": 3,
-    "automaticCrossSiteMatches": 21,
-    "connectedPagesPatched": 16,
-    "pressureTestPassed": true,
-    "launchCases": [
-      {
-        "name": "John F. Kennedy",
-        "year": 1963,
-        "route": "/death-file-john-f-kennedy.html",
-        "signalDrop": "/death-file-john-f-kennedy.html#signal-drop"
-      },
-      {
-        "name": "Diana, Princess of Wales",
-        "year": 1997,
-        "route": "/death-file-diana-princess-of-wales.html",
-        "signalDrop": "/death-file-diana-princess-of-wales.html#signal-drop"
-      },
-      {
-        "name": "Jeffrey Epstein",
-        "year": 2019,
-        "route": "/death-file-jeffrey-epstein.html",
-        "signalDrop": "/death-file-jeffrey-epstein.html#signal-drop"
-      }
-    ]
-  },
-  "productionGuards": {
-    "completeSiteBuild": true,
-    "runtimeAndD1Contracts": true,
-    "finalReconciliation": true,
-    "freshnessGuard": true,
-    "synchronizationGuard": true,
-    "productionDeployGuard": true,
-    "behindTheCurtainGuard": true,
-    "cloudflareCredentials": true,
-    "d1RollbackBookmarkCaptured": true,
-    "d1MigrationChainApplied": true,
-    "d1SchemaVerified": true,
-    "livePyramidVerification": true
-  },
-  "liveEvidence": {
-    "deathFilesClientRoute": "/death-files.js",
-    "deathFilesClientStatus": 200,
-    "clientMarkersVerified": [
-      "/api/member/me",
-      "/submit-main-post",
-      "/forum-feed-main"
-    ],
-    "signalDropPersistence": "Existing verified-member D1-backed Signal Board routes",
-    "autoUpdate": "Build-time cross-site dataset matching plus live-intelligence matching when a dossier loads."
-  },
-  "automatedBrowserVerification": {
-    "status": "blocked-by-cloudflare-anti-bot-for-github-actions-runner",
-    "meaning": "GitHub-hosted verification requests to HTML, JSON and API routes received HTTP 403 after the successful deployment. The static Death Files JavaScript asset returned HTTP 200. This is recorded as a verifier-origin/WAF limitation, not a failed Cloudflare deployment.",
-    "wafWasNotWeakened": true,
-    "partialOrFailedAssetsWereNotPublished": false
-  },
-  "conclusion": "The Death Files production bundle was built, pressure-tested, passed the guarded release chain and was deployed successfully to the Matrix Reprogrammed Cloudflare Worker. Automated browser-route certification from GitHub Actions remains limited by the site's anti-bot policy."
+  "productionVerified": false
 }

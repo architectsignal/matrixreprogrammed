@@ -4,9 +4,13 @@ const path = require('path');
 const root = process.cwd();
 const targets = [
   'heroes-fighting-matrix-card.html',
+  'heroes-fighting-matrix-card',
   'heroes-fighting-matrix-research-ledger.html',
+  'heroes-fighting-matrix-research-ledger',
   '_site/heroes-fighting-matrix-card.html',
-  '_site/heroes-fighting-matrix-research-ledger.html'
+  '_site/heroes-fighting-matrix-card',
+  '_site/heroes-fighting-matrix-research-ledger.html',
+  '_site/heroes-fighting-matrix-research-ledger'
 ];
 
 const replacements = [

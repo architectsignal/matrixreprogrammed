@@ -133,6 +133,27 @@ critical.forEach(copy);
 
 // Nothing may mutate the deployable bundle after this sanitation and audit.
 run('scripts/final-release-sanitize.js');
+run('scripts/search-first-accountability-home-pressure-test.js');
+run('scripts/mission-orchestration-audit.js');
+
+// These files are the authoritative automatic-update surfaces. Re-copy them
+// after every final sanitizer and audit so the deployable bundle is byte-for-
+// byte identical to the canonical source checked by the deep update gate.
+const authoritativeUpdateMirrors = [
+  'data/live-intel.json',
+  'data/daily-investigation-conclusions.json',
+  'data/daily-power-conclusions.json',
+  'data/daily-brain-brief.json',
+  'data/outcome-briefings.json',
+  'data/global-risk-clocks.json',
+  'data/clock-wall.json',
+  'timers.html',
+  'ai-speculative-conclusions.html',
+  'search.html',
+  'search.js'
+];
+authoritativeUpdateMirrors.forEach(copy);
+report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 
 // The exact regression that paused the release is now proved after the last
 // mutator, against both canonical source and the Cloudflare output.

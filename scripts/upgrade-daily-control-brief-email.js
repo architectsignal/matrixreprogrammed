@@ -11,7 +11,9 @@ if (!fs.existsSync(fragmentPath)) throw new Error('Daily Control Brief worker fr
 
 let source = fs.readFileSync(workerPath, 'utf8');
 const before = source;
-const fragment = fs.readFileSync(fragmentPath, 'utf8').trim();
+const newline = source.includes('\r\n') ? '\r\n' : '\n';
+let normalizedSource = source.replace(/\r\n/g, '\n');
+const fragment = fs.readFileSync(fragmentPath, 'utf8').replace(/\r\n/g, '\n').trim();
 const marker = "const DAILY_CONTROL_BRIEF_VERSION='daily-control-brief-v3';";
 const contractMarkers = [
   marker,
@@ -26,14 +28,16 @@ const contractMarkers = [
   "'/data/speculative-intelligence-synthesis.json'"
 ];
 
-const contractComplete = contractMarkers.every(required => source.includes(required));
+const contractComplete = contractMarkers.every(required => normalizedSource.includes(required));
 if (!contractComplete) {
-  const pattern = source.includes(marker)
+  const pattern = normalizedSource.includes(marker)
     ? /const DAILY_CONTROL_BRIEF_VERSION='daily-control-brief-v3';[\s\S]*?\n\nasync function adminHealth/
     : /async function loadCampaignSource[\s\S]*?\n\nasync function adminHealth/;
-  if (!pattern.test(source)) throw new Error('Could not locate the automated campaign content block for Daily Control Brief v3 repair');
-  source = source.replace(pattern, `${fragment}\n\nasync function adminHealth`);
+  if (!pattern.test(normalizedSource)) throw new Error('Could not locate the automated campaign content block for Daily Control Brief v3 repair');
+  normalizedSource = normalizedSource.replace(pattern, `${fragment}\n\nasync function adminHealth`);
 }
+
+source = normalizedSource.replace(/\n/g, newline);
 
 for (const required of contractMarkers) {
   if (!source.includes(required)) throw new Error(`Daily Control Brief upgrade marker missing: ${required}`);

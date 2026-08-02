@@ -67,7 +67,7 @@ ${routeAnchor}`;
   return source;
 }
 
-const helperCode = fs.readFileSync(helperPath, 'utf8').trim();
+const helperCode = fs.readFileSync(helperPath, 'utf8').replace(/\r\n/g, '\n').trim();
 
 function patchEmail(source) {
   const importLine = "import { buildMemberIntelligenceReport, buildWelcomeIntelligenceEmail, intelligenceReportSystemHealth } from './worker-intelligence-reports.js';\n";
@@ -146,15 +146,18 @@ function runStage(script) {
 
 const productionBefore = fs.readFileSync(productionPath, 'utf8');
 const emailBefore = fs.readFileSync(emailPath, 'utf8');
-const productionAfter = patchProduction(productionBefore);
-const emailAfter = patchEmail(emailBefore);
+const productionNewline = productionBefore.includes('\r\n') ? '\r\n' : '\n';
+const emailNewline = emailBefore.includes('\r\n') ? '\r\n' : '\n';
+const productionAfter = patchProduction(productionBefore.replace(/\r\n/g, '\n')).replace(/\n/g, productionNewline);
+const emailAfter = patchEmail(emailBefore.replace(/\r\n/g, '\n')).replace(/\n/g, emailNewline);
 if (productionAfter !== productionBefore) fs.writeFileSync(productionPath, productionAfter);
 if (emailAfter !== emailBefore) fs.writeFileSync(emailPath, emailAfter);
 
 let dashboardChanged = false;
 if (fs.existsSync(dashboardPath)) {
   const before = fs.readFileSync(dashboardPath, 'utf8');
-  const after = patchDashboard(before);
+  const dashboardNewline = before.includes('\r\n') ? '\r\n' : '\n';
+  const after = patchDashboard(before.replace(/\r\n/g, '\n')).replace(/\n/g, dashboardNewline);
   if (after !== before) { fs.writeFileSync(dashboardPath, after); dashboardChanged = true; }
 }
 

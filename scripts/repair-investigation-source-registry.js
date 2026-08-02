@@ -53,6 +53,8 @@ const machineFile = path.join(root, 'scripts', 'run-investigation-machine.js');
 let machineChanged = 0;
 if (fs.existsSync(machineFile)) {
   let machine = fs.readFileSync(machineFile, 'utf8');
+  const machineNewline = machine.includes('\r\n') ? '\r\n' : '\n';
+  machine = machine.replace(/\r\n/g, '\n');
   const replacements = [
     [
       '  const mergedFindings = mergeLedger(currentFindings);',
@@ -76,7 +78,7 @@ if (fs.existsSync(machineFile)) {
     machine = machine.replace(before, after);
     machineChanged += 1;
   }
-  fs.writeFileSync(machineFile, machine);
+  fs.writeFileSync(machineFile, machine.replace(/\n/g, machineNewline));
 }
 
 console.log(`Investigation source registry repaired: ${changed} field change(s); outage preservation patch: ${machineChanged} change(s).`);

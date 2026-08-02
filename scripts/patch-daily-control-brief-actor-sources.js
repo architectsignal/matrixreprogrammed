@@ -7,6 +7,8 @@ if (!fs.existsSync(workerPath)) throw new Error('Email lifecycle Worker is missi
 
 let source = fs.readFileSync(workerPath, 'utf8');
 const before = source;
+const newline = source.includes('\r\n') ? '\r\n' : '\n';
+source = source.replace(/\r\n/g, '\n');
 
 if (!source.includes('...arrayValue(command.topBillionaires)')) {
   const pattern = /function actorRows\(bundle\)\{[\s\S]*?\}\nfunction developmentRows/;
@@ -19,5 +21,6 @@ for (const marker of ['command.topBillionaires', 'command.topContractors', 'comm
   if (!source.includes(marker)) throw new Error(`Named actor source marker missing: ${marker}`);
 }
 
+source = source.replace(/\n/g, newline);
 if (source !== before) fs.writeFileSync(workerPath, source);
 console.log(`Daily Control Brief named actor sources ${source !== before ? 'expanded' : 'already current'}.`);

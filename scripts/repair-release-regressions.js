@@ -4,18 +4,23 @@ const path = require('path');
 const root = process.cwd();
 const reportPath = path.join(root, 'downloads', 'release-regression-repair.json');
 const changed = [];
+const newlineByRelative = new Map();
 
 function read(relative) {
   const file = path.join(root, relative);
   if (!fs.existsSync(file)) throw new Error(`Required release file is missing: ${relative}`);
-  return fs.readFileSync(file, 'utf8');
+  const source = fs.readFileSync(file, 'utf8');
+  newlineByRelative.set(relative, source.includes('\r\n') ? '\r\n' : '\n');
+  return source.replace(/\r\n/g, '\n');
 }
 
 function write(relative, content) {
   const file = path.join(root, relative);
   const before = fs.readFileSync(file, 'utf8');
-  if (before === content) return false;
-  fs.writeFileSync(file, content);
+  const newline = newlineByRelative.get(relative) || (before.includes('\r\n') ? '\r\n' : '\n');
+  const rendered = content.replace(/\n/g, newline);
+  if (before === rendered) return false;
+  fs.writeFileSync(file, rendered);
   changed.push(relative);
   return true;
 }
@@ -42,10 +47,12 @@ function requireMarkers(relative, content, markers) {
   const relative = 'forum.js';
   let source = read(relative);
   if (!source.includes("const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';")) {
-    source = source.replace(
-      "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';",
-      "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';\n  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';"
-    );
+    const marker = "  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';";
+    const canonicalAnchor = "const CANONICAL_ORIGIN = 'https://matrixreprogrammed.com';";
+    const formAnchor = "  const form = document.getElementById('signal-board-form');";
+    if (source.includes(canonicalAnchor)) source = source.replace(canonicalAnchor, `${canonicalAnchor}\n${marker}`);
+    else if (source.includes(formAnchor)) source = source.replace(formAnchor, `${formAnchor}\n${marker}`);
+    else throw new Error('forum.js has no stable release-marker insertion anchor');
   }
 
   source = source.replace(/\n\s*function loadFallback\(message\)\{[^\n]*\}/g, '');

@@ -75,7 +75,9 @@ for (const relative of [
   'behind-the-curtain-capstone.js'
 ]) copyToSite(relative);
 
-let worker = fs.readFileSync(workerPath, 'utf8');
+const workerBefore = fs.readFileSync(workerPath, 'utf8');
+const workerNewline = workerBefore.includes('\r\n') ? '\r\n' : '\n';
+let worker = workerBefore.replace(/\r\n/g, '\n');
 const routeBlock = `const publicStaticAssetRoutes = new Map([
   ['/behind-the-curtain-access', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-access.html', '/behind-the-curtain-access.html'],
@@ -96,12 +98,10 @@ const routeBlock = `const publicStaticAssetRoutes = new Map([
 
 `;
 const existingMap = /const publicStaticAssetRoutes = new Map\(\[[\s\S]*?\]\);\n\n/;
-if (existingMap.test(worker)) worker = worker.replace(existingMap, routeBlock);
-else {
-  const anchor = 'const jsonHeaders = {';
-  if (!worker.includes(anchor)) throw new Error('Public static route map anchor missing');
-  worker = worker.replace(anchor, routeBlock + anchor);
-}
+while (existingMap.test(worker)) worker = worker.replace(existingMap, '');
+const routeMapAnchor = 'const jsonHeaders = {';
+if (!worker.includes(routeMapAnchor)) throw new Error('Public static route map anchor missing');
+worker = worker.replace(routeMapAnchor, routeBlock + routeMapAnchor);
 
 const helperBlock = `async function servePublicStaticAsset(request, env, assetPath) {
   if (!env?.ASSETS || typeof env.ASSETS.fetch !== 'function') {
@@ -160,7 +160,7 @@ if (!worker.includes('publicStaticAssetRoutes.has(path)')) {
   if (!worker.includes(anchor)) throw new Error('Public static route dispatch anchor missing');
   worker = worker.replace(anchor, dispatch + anchor);
 }
-fs.writeFileSync(workerPath, worker);
+fs.writeFileSync(workerPath, worker.replace(/\n/g, workerNewline));
 
 const checks = {
   safeHtmlAliases: fs.existsSync(accessAlias) && fs.existsSync(capstoneAlias),

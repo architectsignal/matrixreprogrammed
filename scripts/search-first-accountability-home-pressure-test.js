@@ -33,7 +33,8 @@ const required = [
   'downloads/search-first-accountability-home-report.json',
   'downloads/accountability-question-ledger-refinement.json',
   'scripts/finalize-search-first-accountability-home.js',
-  'scripts/refine-accountability-question-ledger.js'
+  'scripts/refine-accountability-question-ledger.js',
+  'scripts/sync-cloudflare-homepage-routes.js'
 ];
 for (const relative of required) if (!exists(relative)) fail(`Missing required output ${relative}`);
 
@@ -108,8 +109,9 @@ if (!failures.length) {
 }
 
 if (exists('_site')) {
-  for (const relative of ['index.html','accountability-home.css','accountability-home.js','search-query-handoff.js','data/accountability-question-ledger.json']) if (!exists(relative, outputRoot)) fail(`Cloudflare output missing ${relative}`);
+  for (const relative of ['index.html','index','accountability-home.css','accountability-home.js','search-query-handoff.js','data/accountability-question-ledger.json']) if (!exists(relative, outputRoot)) fail(`Cloudflare output missing ${relative}`);
   if (exists('index.html', outputRoot)) checkHomepage(outputRoot);
+  if (exists('index.html', outputRoot) && exists('index', outputRoot) && read('index.html', outputRoot) !== read('index', outputRoot)) fail('Cloudflare /, /index and /index.html homepage entry points diverge');
   if (exists('search.html', outputRoot) && !read('search.html', outputRoot).includes('search-query-handoff.js')) fail('Cloudflare search.html lacks query handoff');
 }
 

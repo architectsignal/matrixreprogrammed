@@ -125,7 +125,6 @@ for (const route of ['independent-links.html', 'independent-links']) patch(route
 for (const route of ['index.html', 'index']) patch(route, patchObsoleteFamilyRoute);
 runRequired('scripts/finalize-search-first-accountability-home.js');
 runRequired('scripts/refine-accountability-question-ledger.js');
-runRequired('scripts/search-first-accountability-home-pressure-test.js');
 runRequired('scripts/run-public-consequence-contracts.js');
 runRequired('scripts/build-public-consequence-due-index.js');
 runRequired('scripts/public-consequence-tracker-pressure-test.js');
@@ -136,6 +135,9 @@ runRequired('scripts/finalize-accountability-review-inbox.js');
 runRequired('scripts/accountability-review-inbox-pressure-test.js');
 runRequired('scripts/install-reverse-accountability-platform.js');
 runRequired('scripts/reverse-accountability-platform-pressure-test.js');
+runRequired('scripts/sync-cloudflare-homepage-routes.js');
+runRequired('scripts/search-first-accountability-home-pressure-test.js');
+runRequired('scripts/normalize-runtime-template-links.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');

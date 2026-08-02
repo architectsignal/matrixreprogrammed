@@ -8,6 +8,7 @@ PayPal, does not use secrets and does not deploy anything.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sqlite3
 import sys
@@ -16,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "downloads" / "recovery-d1-rehearsal.json"
+REPORT = Path(os.environ.get("MATRIX_RECOVERY_REPORT_PATH", ROOT / "downloads" / "recovery-d1-rehearsal.json"))
 MIGRATIONS = [
     "migrations/0001_membership_foundation.sql",
     "migrations/0004_forum_persistence.sql",

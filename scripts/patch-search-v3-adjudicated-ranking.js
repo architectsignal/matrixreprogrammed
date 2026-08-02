@@ -10,6 +10,10 @@ for (const file of [runtimePath, qualityPath]) if (!fs.existsSync(file)) throw n
 
 let runtime = fs.readFileSync(runtimePath, 'utf8');
 let quality = fs.readFileSync(qualityPath, 'utf8');
+const runtimeNewline = runtime.includes('\r\n') ? '\r\n' : '\n';
+const qualityNewline = quality.includes('\r\n') ? '\r\n' : '\n';
+runtime = runtime.replace(/\r\n/g, '\n');
+quality = quality.replace(/\r\n/g, '\n');
 let runtimeChanged = false;
 let qualityChanged = false;
 
@@ -39,8 +43,8 @@ for (const [label, text] of [['runtime', runtime], ['quality', quality]]) {
   }
 }
 
-if (runtimeChanged) fs.writeFileSync(runtimePath, runtime);
-if (qualityChanged) fs.writeFileSync(qualityPath, quality);
+if (runtimeChanged) fs.writeFileSync(runtimePath, runtime.replace(/\n/g, runtimeNewline));
+if (qualityChanged) fs.writeFileSync(qualityPath, quality.replace(/\n/g, qualityNewline));
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,

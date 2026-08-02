@@ -18,6 +18,7 @@ on:
       - 'scripts/compact-cloudflare-search-index.js'
       - 'scripts/patch-power-family-public-gateways.js'
       - 'scripts/behind-the-curtain-production-guard.js'
+      - 'scripts/ensure-search-query-handoff.js'
       - 'scripts/behind-the-curtain-production-guard-v2.js'
       - '.github/workflows/power-family-pr-integrity.yml'
 
@@ -42,6 +43,7 @@ jobs:
           node --check scripts/compact-cloudflare-search-index.js
           node --check scripts/patch-power-family-public-gateways.js
           node --check scripts/behind-the-curtain-production-guard-v2.js
+          node --check scripts/ensure-search-query-handoff.js
           node - <<'NODE'
           const fs=require('fs');
           for(const file of [

@@ -27,6 +27,30 @@ function ensureSearchPageMarker(){
   write('search.html', html);
   repairs.push('patched:search.html:archive-search');
 }
+function ensureQueryHandoff(){
+  if (!exists('search.html')) return;
+  const handoffFile = 'search-query-handoff.js';
+  const handoff = `(()=>{const q=new URLSearchParams(location.search).get('q');if(!q)return;const apply=()=>{const input=document.getElementById('archive-search');if(!input)return false;input.value=q;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();return true};if(!apply())document.addEventListener('DOMContentLoaded',apply,{once:true})})();\n`;
+  if (!exists(handoffFile) || read(handoffFile) !== handoff) {
+    write(handoffFile, handoff);
+    repairs.push('repaired:' + handoffFile);
+  }
+  let html = read('search.html');
+  if (!html.includes(handoffFile)) {
+    const searchRuntime = /<script\b([^>]*)src=["']search\.js(?:\?[^"']*)?["']([^>]*)><\/script>/i;
+    if (!searchRuntime.test(html)) {
+      console.error('SEARCH V2 REPAIR FAILED: search.html has no search.js insertion anchor for query handoff');
+      process.exit(1);
+    }
+    html = html.replace(searchRuntime, `<script src="${handoffFile}"></script>$&`);
+    write('search.html', html);
+    repairs.push('patched:search.html:query-handoff');
+  }
+  if ((html.match(/search-query-handoff\.js/g) || []).length !== 1) {
+    console.error('SEARCH V2 REPAIR FAILED: search.html must contain exactly one query handoff');
+    process.exit(1);
+  }
+}
 function ensureSearchRoute(url, title, category, description, keywords, layer){
   if (!exists('search-index.json')) return;
   let index;
@@ -57,6 +81,7 @@ runRequired('hardened-search-runtime', 'scripts/harden-search-runtime.js');
 runRequired('extended-investigation-search', 'scripts/extend-search-with-investigations.js');
 
 ensureSearchPageMarker();
+ensureQueryHandoff();
 ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
 ensureSearchRoute('downloads/forum-posts.md', 'Forum Posts Export Markdown', 'Downloads', 'Signal Board export download route.', ['forum','signal board','download'], 'information-narrative');
 ensureSearchRoute('public-record-intake.html', 'Public Record Intake', 'Machine Feeds', 'Source-first public-record intake layer for policy, filings, courts, contracts, lobbying, sanctions, procurement and registries.', ['public records','intake','official APIs','filings','contracts','courts','policy','machine feed'], 'disclosure-black-files');
@@ -121,6 +146,12 @@ if (syntax.status !== 0) {
   console.error('SEARCH V2 REPAIR FAILED: search.js syntax invalid after runtime hardening');
   console.error(syntax.stderr || syntax.stdout || 'node --check failed');
   process.exit(syntax.status || 1);
+}
+const handoffSyntax = spawnSync(process.execPath, ['--check', fp('search-query-handoff.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+if (handoffSyntax.status !== 0) {
+  console.error('SEARCH V2 REPAIR FAILED: search-query-handoff.js syntax invalid');
+  console.error(handoffSyntax.stderr || handoffSyntax.stdout || 'node --check failed');
+  process.exit(handoffSyntax.status || 1);
 }
 runRequired('verified-investigation-search', 'scripts/search-investigation-smoke-test.js');
 runRequired('prepared-search-v3-deploy-size', 'scripts/repair-search-v3-deploy-size.js');

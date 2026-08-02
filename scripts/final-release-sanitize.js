@@ -137,6 +137,19 @@ run('scripts/patch-homepage-construction-banner.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 
+// The search-first homepage is the canonical postbuild owner, while Daily Watch
+// and its evidence graph are the canonical daily-value owners. Reassert the
+// evidence contracts and inject the cinematic watch only after every legacy
+// builder/audit has finished, then prove both systems coexist in the exact
+// source and Cloudflare release routes.
+run('scripts/enforce-mission-data-contracts.js');
+run('scripts/build-daily-watch.js');
+run('scripts/inject-daily-watch-surfaces.js');
+run('scripts/sync-cloudflare-homepage-routes.js');
+run('scripts/mission-orchestration-audit.js');
+run('scripts/search-first-accountability-home-pressure-test.js');
+run('scripts/public-control-target-audit.js');
+
 // Several legacy search generators run during the complete build and may expand
 // the source index after the first Cloudflare compaction. This final owner runs
 // after all content and route audits, consolidates duplicate records by URL,

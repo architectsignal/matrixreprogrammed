@@ -4,18 +4,23 @@ const path = require('path');
 const root = process.cwd();
 const changed = [];
 const at = relative => path.join(root, relative);
+const newlineByRelative = new Map();
 
 function read(relative) {
   const file = at(relative);
   if (!fs.existsSync(file)) throw new Error(`API contract hardening missing ${relative}`);
-  return fs.readFileSync(file, 'utf8');
+  const source = fs.readFileSync(file, 'utf8');
+  newlineByRelative.set(relative, source.includes('\r\n') ? '\r\n' : '\n');
+  return source.replace(/\r\n/g, '\n');
 }
 
 function write(relative, content) {
   const file = at(relative);
   const before = fs.readFileSync(file, 'utf8');
-  if (before === content) return false;
-  fs.writeFileSync(file, content);
+  const newline = newlineByRelative.get(relative) || (before.includes('\r\n') ? '\r\n' : '\n');
+  const rendered = content.replace(/\n/g, newline);
+  if (before === rendered) return false;
+  fs.writeFileSync(file, rendered);
   changed.push(relative);
   return true;
 }

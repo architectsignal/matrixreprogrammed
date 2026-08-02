@@ -74,6 +74,56 @@ const moreGroups = [
 ];
 const moreHtml = `<details class="nav-more"><summary>More</summary><div class="nav-drawer">${moreGroups.map(([title, links]) => `<div class="nav-group"><strong>${title}</strong>${links.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</div>`).join('')}</div></details>`;
 const homepageNavHtml = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryHtml}</div>${moreHtml}</nav>`;
+const searchFirstMarkers = [
+  'class="accountability-home"',
+  'id="accountability-search"',
+  'id="accountability-hit-list"',
+  'id="open-question-ledger"',
+  'href="member-dashboard.html">My Watchlist</a>'
+];
+
+function isSearchFirstHomepage(document) {
+  return searchFirstMarkers.slice(0, 4).every(marker => document.includes(marker));
+}
+
+function verifySearchFirstHomepage(document) {
+  for (const marker of searchFirstMarkers) {
+    if (!document.includes(marker)) throw new Error(`Search-first homepage navigation marker missing: ${marker}`);
+  }
+  for (const [route] of primaryLinks) {
+    const routePresent = document.includes(`href="${route}"`)
+      || (route === 'search.html' && document.includes('action="search.html"'));
+    if (!routePresent) throw new Error(`Search-first homepage is missing the public route ${route}`);
+  }
+  for (const route of ['elite-family-tracker.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html']) {
+    if (!document.includes(`href="${route}"`)) throw new Error(`Search-first homepage safety route is missing ${route}`);
+  }
+}
+
+function reconcileSearchFirstHomepageRoutes(document) {
+  const drawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)([\s\S]*?)(<\/div>)/i;
+  const drawerMatch = document.match(drawer);
+  if (!drawerMatch) {
+    throw new Error('Search-first homepage Explore drawer not found for route reconciliation.');
+  }
+  const drawerHtml = drawerMatch[0];
+  const requiredRoutes = [
+    ...primaryLinks,
+    ...moreGroups.flatMap(([, links]) => links),
+    ['elite-family-tracker.html', 'Track the Families'],
+    ['security-privacy.html', 'Security Tools'],
+    ['dark-web-safety.html', 'Dark Web Safety'],
+    ['contact-the-machine.html', 'Contact the Machine']
+  ];
+  const missing = requiredRoutes.filter(([route]) => {
+    return !drawerHtml.includes(`href="${route}"`)
+      && !(route === 'search.html' && document.includes('action="search.html"'));
+  });
+  if (!missing.length) return document;
+
+  const additions = missing.map(([route, label]) => `<a href="${route}">${label}</a>`).join('');
+  return document.replace(drawer, `$1$2${additions}$3`);
+}
 
 function replaceNavigation(document) {
   const topbar = /<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i;
@@ -86,8 +136,17 @@ function replaceNavigation(document) {
   return document.replace(headerMatch[0], nextHeader);
 }
 
-let html = replaceNavigation(fs.readFileSync(indexPath, 'utf8'));
-fs.writeFileSync(indexPath, html);
+const indexBefore = fs.readFileSync(indexPath, 'utf8');
+const searchFirstHomepage = isSearchFirstHomepage(indexBefore);
+let html = indexBefore;
+if (searchFirstHomepage) {
+  html = reconcileSearchFirstHomepageRoutes(html);
+  if (html !== indexBefore) fs.writeFileSync(indexPath, html);
+  verifySearchFirstHomepage(html);
+} else {
+  html = replaceNavigation(html);
+  fs.writeFileSync(indexPath, html);
+}
 
 let startHere = fs.readFileSync(startHerePath, 'utf8');
 startHere = startHere.replace(/<!-- start-here-safety:start -->[\s\S]*?<!-- start-here-safety:end -->/gi, '');
@@ -108,7 +167,7 @@ if (fs.existsSync(capstonePath)) {
 }
 
 for (const [route, label] of primaryLinks) {
-  if (!html.includes(`href="${route}">${label}</a>`)) throw new Error(`Homepage primary route missing: ${label}`);
+  if (!searchFirstHomepage && !html.includes(`href="${route}">${label}</a>`)) throw new Error(`Homepage primary route missing: ${label}`);
   if (!startHere.includes(`href="${route}">${label}</a>`)) throw new Error(`Start Here primary route missing: ${label}`);
 }
 for (const route of ['death-files.html','independent-links.html','elite-family-tracker.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html']) {
@@ -117,6 +176,9 @@ for (const route of ['death-files.html','independent-links.html','elite-family-t
 }
 const primaryMarkup = (html.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i) || [])[1] || '';
 const anchorCount = (primaryMarkup.match(/<a\b[^>]*href=/gi) || []).length;
-if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
+if (!searchFirstHomepage && anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
+if (searchFirstHomepage) verifySearchFirstHomepage(html);
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Final navigation preserved: Death Files, Independent Links, Declassified Files, family tracking, safety routes and the corrected Capstone runtime are all present.');
+console.log(searchFirstHomepage
+  ? 'Search-first homepage navigation preserved; My Watchlist, full-system Explore routes, safety routes and the corrected Capstone runtime are all present.'
+  : 'Final navigation preserved: Death Files, Independent Links, Declassified Files, family tracking, safety routes and the corrected Capstone runtime are all present.');

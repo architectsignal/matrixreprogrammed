@@ -159,7 +159,17 @@ const homeBlock = `<!-- public-data-lab-home:start --><section id="public-data-l
 const indexPath = path.join(root, 'index.html');
 let index = read(indexPath);
 index = replaceBlock(index, '<!-- public-data-lab-home:start -->', '<!-- public-data-lab-home:end -->', homeBlock, '<!-- osint-tools-home:start -->');
-if (!index.includes('href="data-lab.html">Public Data Lab</a>')) index = index.replace('<div class="nav-group"><strong>Evidence & Trust</strong>', '<div class="nav-group"><strong>Evidence & Trust</strong><a href="data-lab.html">Public Data Lab</a>');
+if (!index.includes('href="data-lab.html">Public Data Lab</a>')) {
+  const legacyNavigation = '<div class="nav-group"><strong>Evidence & Trust</strong>';
+  const searchFirstDrawer = /(<div\b[^>]*class=["'][^"']*\baccountability-nav-drawer\b[^"']*["'][^>]*>)/i;
+  if (index.includes(legacyNavigation)) {
+    index = index.replace(legacyNavigation, `${legacyNavigation}<a href="data-lab.html">Public Data Lab</a>`);
+  } else if (searchFirstDrawer.test(index)) {
+    index = index.replace(searchFirstDrawer, '$1<a href="data-lab.html">Public Data Lab</a>');
+  } else {
+    throw new Error('Public Data Laboratory could not find a supported primary navigation container.');
+  }
+}
 write(indexPath, index);
 
 const researchPath = path.join(root, 'research-tools.html');

@@ -25,6 +25,7 @@ const entityRegistry = readJson('data/entity-registry.json', {});
 const familyLayer = readJson('data/behind-the-curtain-family-access.json', { families: [] });
 const familyLinks = readJson('data/power-family-intelligence-layer.json', { familyPersonLinks: [] });
 const PROMOTION_MARGIN = Number(process.env.DAILY_WATCH_PROMOTION_MARGIN || 14);
+const familySourceMap = new Map(array(familyLayer.sources).map(source => [source.id, source.url]).filter(([id, url]) => id && url));
 
 function effectScore(value) {
   return ({
@@ -129,6 +130,12 @@ for (const slot of ['person','institution','family']) {
   nextState.slots[slot] = result.state;
   decisions[slot] = result.decision;
 }
+const selectedFamily = array(familyLayer.families).find(family => family.id === watch.family?.entityResolution?.familyId || normalise(family.name) === normalise(watch.family?.name));
+watch.family.sourceRoutes = unique([
+  ...array(watch.family.sourceRoutes).filter(route => !/behind-the-curtain-capstone\.html#[^\s]+/i.test(String(route))),
+  ...array(selectedFamily?.sourceIds).map(id => familySourceMap.get(id)).filter(Boolean),
+]);
+nextState.slots.family.item = { ...nextState.slots.family.item, sourceRoutes: watch.family.sourceRoutes };
 watch.rankingPolicy = {
   mode: 'stable-incumbent-evidence-promotion',
   promotionMargin: PROMOTION_MARGIN,

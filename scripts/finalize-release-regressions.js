@@ -7,7 +7,8 @@ const reportPath = path.join(root, 'downloads', 'release-regression-finalize.jso
 if (!fs.existsSync(forumPath)) throw new Error('forum.js is required for release finalization');
 
 const before = fs.readFileSync(forumPath, 'utf8');
-let source = before;
+const forumNewline = before.includes('\r\n') ? '\r\n' : '\n';
+let source = before.replace(/\r\n/g, '\n');
 
 source = source.replace(/\n\s*function loadFallback\(message\)\{[^\n]*\}/g, '');
 source = source.replace(/\n\s*function loadFallback\(message\)\{[\s\S]*?\n\s*\}/g, '');
@@ -42,6 +43,7 @@ for (const marker of [
 if ((source.match(/function loadFallback\(message\)/g) || []).length !== 1) throw new Error('forum.js must contain exactly one loadFallback function');
 if ((source.match(/function offlineNotice\(message\)/g) || []).length !== 1) throw new Error('forum.js must contain exactly one offlineNotice function');
 
+source = source.replace(/\n/g, forumNewline);
 if (source !== before) fs.writeFileSync(forumPath, source);
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({

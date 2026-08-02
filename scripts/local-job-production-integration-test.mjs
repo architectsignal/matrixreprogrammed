@@ -13,7 +13,7 @@ const deploy = read('.github/workflows/deploy.yml');
 
 check('production wrapper imports local job router', wrapper.includes("import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';"));
 check('local job routes are checked before generic AI-management routing', wrapper.indexOf('if (isLocalJobRoute(path))') > -1 && wrapper.indexOf('if (isLocalJobRoute(path))') < wrapper.indexOf('if (isAiManagementRoute(path))'));
-check('local job routes require owner admin authorization', wrapper.includes('if (!authorized(request, runtimeEnv)) return forbidden();') && wrapper.includes('return handleLocalJobRoute(request, runtimeEnv);'));
+check('local job routes require owner admin authorization', wrapper.includes('if (!authorized(request, runtimeEnv)) return forbidden();') && wrapper.includes('return handleLocalJobRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);'));
 check('scheduled handler recovers expired leases', wrapper.includes('recoverExpiredLocalJobs(runtimeEnv)') && wrapper.includes('recoveryTask'));
 check('scheduled recovery participates in awaited task group', wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask])'));
 

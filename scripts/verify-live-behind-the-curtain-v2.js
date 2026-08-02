@@ -1,6 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+if (process.argv.includes('--help') || process.argv.includes('-h')) {
+  console.log('Usage: node scripts/verify-live-behind-the-curtain-v2.js');
+  console.log('Read-only live verification. Configure SITE_URL, PYRAMID_VERIFY_ATTEMPTS and PYRAMID_VERIFY_DELAY_MS with environment variables.');
+  process.exit(0);
+}
+
 const root = process.cwd();
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
 const directWorkerUrl = String(process.env.AI_DIRECT_WORKER_URL || '').replace(/\/$/, '');

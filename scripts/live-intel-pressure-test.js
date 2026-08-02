@@ -88,7 +88,7 @@ for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Collection completed:
 for (const phrase of ['The collection timestamp is not an evidence date', 'No current source item is available']) requireIncludes('scripts/build-live-intel-machine.js', phrase, phrase);
 
 for (const file of ['live-intel.html', 'downloads/live-intel-latest.md']) {
-  for (const forbidden of ['&lt;a href=', '&lt;font ', '&lt;/a&gt;', '&lt;/font&gt;', '&nbsp;', 'offer-intelligence-entry.html', 'offer-crime-dossier-entry.html']) forbidIncludes(file, forbidden, forbidden);
+  for (const forbidden of ['href="#"', '&lt;a href=', '&lt;font ', '&lt;/a&gt;', '&lt;/font&gt;', '&nbsp;', 'offer-intelligence-entry.html', 'offer-crime-dossier-entry.html']) forbidIncludes(file, forbidden, forbidden);
 }
 for (const file of ['downloads/live-intel-latest.json']) {
   for (const forbidden of ['<a href=', '<font ', '&lt;a href=', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;', 'offer-intelligence-entry.html', 'offer-crime-dossier-entry.html']) forbidIncludes(file, forbidden, forbidden);

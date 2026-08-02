@@ -122,6 +122,7 @@ run('scripts/homepage-mask-intro-test.js');
 // a static visible H1. Reconcile document hierarchy in source and Cloudflare output
 // before the exhaustive public audit and production deploy guard.
 run('scripts/reconcile-public-page-headings.js');
+run('scripts/reconcile-public-audit-boundaries.js');
 
 patchSafetyRoutes(path.join(root, 'index.html'));
 patchMoneyRoutes(path.join(root, 'index.html'));

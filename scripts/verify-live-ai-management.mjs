@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { classifyAiManagementResponse } from './lib/live-ai-verification-classifier.mjs';
 
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/+$/, '');
 const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '').trim();
@@ -49,6 +50,8 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
     server: response.headers.get('server'),
     cfRay: response.headers.get('cf-ray'),
     cfMitigated: response.headers.get('cf-mitigated'),
+    cfAccessApp: response.headers.get('cf-access-app'),
+    cfAccessTeam: response.headers.get('cf-access-team'),
     location: response.headers.get('location'),
     data
   };
@@ -64,6 +67,8 @@ function responseDiagnostic(result) {
     server: result.server,
     cfRay: result.cfRay,
     cfMitigated: result.cfMitigated,
+    cfAccessApp: result.cfAccessApp,
+    cfAccessTeam: result.cfAccessTeam,
     responseUrl: result.responseUrl,
     location: result.location,
     error: result.data?.error || null,
@@ -93,6 +98,7 @@ const attemptsLog = [];
 for (let attempt = 1; attempt <= attempts; attempt += 1) {
   try {
     health = await request('/api/ai-management/admin/health');
+    const classification = classifyAiManagementResponse(health, { siteUrl });
     attemptsLog.push({
       attempt,
       status: health.status,
@@ -101,6 +107,7 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
       contentType: health.contentType,
       schemaReady: health.data?.schemaReady,
       autonomySchemaReady: health.data?.autonomySchemaReady,
+      classification: classification.code,
       error: health.data?.error || null
     });
     if (health.ok && health.data?.schemaReady === true && health.data?.autonomySchemaReady === true) break;
@@ -111,18 +118,17 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
 }
 
 if (health?.status !== 200) {
+  const classification = classifyAiManagementResponse(health, { siteUrl });
   fs.writeFileSync(outputPath, `${JSON.stringify({
     ok: false,
     siteUrl,
     verifiedAt: new Date().toISOString(),
+    classification,
+    remediation: classification.remediation,
+    edgeBlocked: ['cloudflare-access-rejection', 'waf-or-bot-rejection'].includes(classification.code),
+    authorizationHeaderSent: sendAuthorization,
     attempts: attemptsLog,
-    final: health ? {
-      status: health.status,
-      origin: health.origin,
-      authLayer: health.authLayer,
-      contentType: health.contentType,
-      error: health.data?.error || null
-    } : null
+    final: responseDiagnostic(health)
   }, null, 2)}\n`);
 }
 

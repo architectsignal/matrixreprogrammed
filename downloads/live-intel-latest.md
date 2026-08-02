@@ -19,7 +19,7 @@ The collector completed successfully, but no newly published source item entered
 - Offer routes must resolve to existing generated pages before Live Intel is rendered.
 
 ## Lanes
-- Epstein Files, Timeline And Court Records: #
+- Epstein Files, Timeline And Court Records: epstein-files.html#epstein-timeline-map
 - Declassified Files And Public Archives: evidence-vault.html
 - Elite Control Structure: power-atlas.html
 - War Machine And Intelligence State: dashboard-conflict.html

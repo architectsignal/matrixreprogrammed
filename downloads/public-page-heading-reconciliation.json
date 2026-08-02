@@ -1,0 +1,459 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T10:18:04.247Z",
+  "owner": "scripts/reconcile-public-page-headings.js",
+  "changes": [
+    "daily-watch.html",
+    "heroes-fighting-matrix-card.html",
+    "entity-briefs\\2021-08825.html",
+    "entity-briefs\\2024-13374.html",
+    "entity-briefs\\2025-0045-appeal.html",
+    "entity-briefs\\23-wap-2023.html",
+    "entity-briefs\\24-2251.html",
+    "entity-briefs\\24-7261.html",
+    "entity-briefs\\aapl.html",
+    "entity-briefs\\alphabet-inc.html",
+    "entity-briefs\\amazon-com-inc.html",
+    "entity-briefs\\amzn.html",
+    "entity-briefs\\appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+    "entity-briefs\\apple-inc.html",
+    "entity-briefs\\avgo.html",
+    "entity-briefs\\broadcom-inc.html",
+    "entity-briefs\\centers-for-medicare-and-medicaid-services.html",
+    "entity-briefs\\civil-rights-corps-v-lasalle.html",
+    "entity-briefs\\court-of-appeals-for-the-ninth-circuit.html",
+    "entity-briefs\\court-of-appeals-for-the-second-circuit.html",
+    "entity-briefs\\d-and-a-grandview-llc-v-60-davidson-llc.html",
+    "entity-briefs\\galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+    "entity-briefs\\googl.html",
+    "entity-briefs\\health-and-human-services-department.html",
+    "entity-briefs\\homeland-security-department.html",
+    "entity-briefs\\microsoft-corp.html",
+    "entity-briefs\\msft.html",
+    "entity-briefs\\nuclear-regulatory-commission.html",
+    "entity-briefs\\nvda.html",
+    "entity-briefs\\nvidia-corp.html",
+    "entity-briefs\\punxsutawney-hunting-club-v-pgc.html",
+    "entity-briefs\\securities-and-exchange-commission.html",
+    "entity-briefs\\supreme-court-of-pennsylvania.html",
+    "entity-briefs\\supreme-court-of-rhode-island.html",
+    "entity-briefs\\united-states-v-anten.html",
+    "entity-briefs\\williams-v-biggs.html",
+    "_site\\daily-watch.html",
+    "_site\\daily-watch",
+    "_site\\heroes-fighting-matrix-card.html",
+    "_site\\heroes-fighting-matrix-card",
+    "_site\\entity-briefs\\2021-08825.html",
+    "_site\\entity-briefs\\2024-13374.html",
+    "_site\\entity-briefs\\2025-0045-appeal.html",
+    "_site\\entity-briefs\\23-wap-2023.html",
+    "_site\\entity-briefs\\24-2251.html",
+    "_site\\entity-briefs\\24-7261.html",
+    "_site\\entity-briefs\\aapl.html",
+    "_site\\entity-briefs\\alphabet-inc.html",
+    "_site\\entity-briefs\\amazon-com-inc.html",
+    "_site\\entity-briefs\\amzn.html",
+    "_site\\entity-briefs\\appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+    "_site\\entity-briefs\\apple-inc.html",
+    "_site\\entity-briefs\\avgo.html",
+    "_site\\entity-briefs\\broadcom-inc.html",
+    "_site\\entity-briefs\\centers-for-medicare-and-medicaid-services.html",
+    "_site\\entity-briefs\\civil-rights-corps-v-lasalle.html",
+    "_site\\entity-briefs\\court-of-appeals-for-the-ninth-circuit.html",
+    "_site\\entity-briefs\\court-of-appeals-for-the-second-circuit.html",
+    "_site\\entity-briefs\\d-and-a-grandview-llc-v-60-davidson-llc.html",
+    "_site\\entity-briefs\\galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+    "_site\\entity-briefs\\googl.html",
+    "_site\\entity-briefs\\health-and-human-services-department.html",
+    "_site\\entity-briefs\\homeland-security-department.html",
+    "_site\\entity-briefs\\microsoft-corp.html",
+    "_site\\entity-briefs\\msft.html",
+    "_site\\entity-briefs\\nuclear-regulatory-commission.html",
+    "_site\\entity-briefs\\nvda.html",
+    "_site\\entity-briefs\\nvidia-corp.html",
+    "_site\\entity-briefs\\punxsutawney-hunting-club-v-pgc.html",
+    "_site\\entity-briefs\\securities-and-exchange-commission.html",
+    "_site\\entity-briefs\\supreme-court-of-pennsylvania.html",
+    "_site\\entity-briefs\\supreme-court-of-rhode-island.html",
+    "_site\\entity-briefs\\united-states-v-anten.html",
+    "_site\\entity-briefs\\williams-v-biggs.html"
+  ],
+  "checks": [
+    {
+      "file": "daily-watch.html",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "heroes-fighting-matrix-card.html",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\2021-08825.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\2024-13374.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\2025-0045-appeal.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\23-wap-2023.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\24-2251.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\24-7261.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\aapl.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\alphabet-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\amazon-com-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\amzn.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\apple-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\avgo.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\broadcom-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\centers-for-medicare-and-medicaid-services.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\civil-rights-corps-v-lasalle.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\court-of-appeals-for-the-ninth-circuit.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\court-of-appeals-for-the-second-circuit.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\googl.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\health-and-human-services-department.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\homeland-security-department.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\microsoft-corp.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\msft.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\nuclear-regulatory-commission.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\nvda.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\nvidia-corp.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\punxsutawney-hunting-club-v-pgc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\securities-and-exchange-commission.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\supreme-court-of-pennsylvania.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\supreme-court-of-rhode-island.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\united-states-v-anten.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\williams-v-biggs.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\daily-watch.html",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\daily-watch",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\heroes-fighting-matrix-card.html",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\heroes-fighting-matrix-card",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\2021-08825.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\2024-13374.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\2025-0045-appeal.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\23-wap-2023.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\24-2251.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\24-7261.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\aapl.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\alphabet-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\amazon-com-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\amzn.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\apple-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\avgo.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\broadcom-inc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\centers-for-medicare-and-medicaid-services.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\civil-rights-corps-v-lasalle.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\court-of-appeals-for-the-ninth-circuit.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\court-of-appeals-for-the-second-circuit.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\googl.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\health-and-human-services-department.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\homeland-security-department.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\microsoft-corp.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\msft.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\nuclear-regulatory-commission.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\nvda.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\nvidia-corp.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\punxsutawney-hunting-club-v-pgc.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\securities-and-exchange-commission.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\supreme-court-of-pennsylvania.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\supreme-court-of-rhode-island.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\united-states-v-anten.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\williams-v-biggs.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    }
+  ],
+  "summary": {
+    "headingChecks": 6,
+    "entityBoundaryChecks": 68,
+    "changedFiles": 74
+  },
+  "boundary": "This reconciliation changes document hierarchy and makes existing evidence limitations statically visible. It does not alter evidence, rankings, claims, membership, payment, forum or Worker behaviour."
+}

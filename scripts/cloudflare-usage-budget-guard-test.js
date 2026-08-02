@@ -56,5 +56,10 @@ assert.notStrictEqual(stale.status, 0, 'A stale billing snapshot must fail close
 const connected = run(nextPeriod, 'release', { CLOUDFLARE_GIT_BUILDS_DISCONNECTED: 'false' });
 assert.notStrictEqual(connected.status, 0, 'Connected Cloudflare Git builds must fail closed.');
 
+const pagesRuleMissing = structuredClone(nextPeriod);
+delete pagesRuleMissing.releaseRules.cloudflarePagesGitConnectedBuilds;
+const pagesConnected = run(pagesRuleMissing, 'check');
+assert.notStrictEqual(pagesConnected.status, 0, 'Missing Cloudflare Pages disconnect policy must fail closed.');
+
 fs.rmSync(tempDir, { recursive: true, force: true });
-console.log('Cloudflare zero-overage budget guard PASS: locked, allowed, ceiling, stale-snapshot and Git-build states verified.');
+console.log('Cloudflare zero-overage budget guard PASS: locked, allowed, ceiling, stale-snapshot, Workers Git and Pages Git states verified.');

@@ -20,6 +20,13 @@
       "kvStorageGbMonths": { "included": 1, "total": 0, "billable": 0, "costUsd": 0 }
     }
   },
+  "verifiedCloudflareConnectionState": {
+    "observedOn": "2026-08-02",
+    "workersGitBuilds": "disconnected",
+    "pagesGitDeployments": "disconnected",
+    "canceledPagesPreviewDeploymentId": "b1e10ebf-6985-453d-ae7c-faf03b56fd5d",
+    "verification": "Worker settings offered Connect Git repository; Pages settings offered Connect after the queued preview was canceled."
+  },
   "cloudflareWorkersBuildMinutes": {
     "includedPerMonth": 6000,
     "warningThreshold": 3000,
@@ -29,7 +36,8 @@
     "lockReason": "The owner-supplied 2026-08-02 snapshot already contains 5,470 billable build minutes. No further Cloudflare Workers Build may be triggered in this billing period."
   },
   "releaseRules": {
-    "cloudflareGitConnectedBuilds": "must-be-disconnected",
+    "cloudflareWorkersGitConnectedBuilds": "must-be-disconnected",
+    "cloudflarePagesGitConnectedBuilds": "must-be-disconnected",
     "nonProductionBranchBuilds": "must-be-disabled",
     "productionAuthority": "manual GitHub Actions controlled production workflow using Wrangler",
     "requireFreshUsageSnapshotHours": 24,
@@ -58,7 +66,7 @@
     "A new Cloudflare billing period is visible in the account dashboard.",
     "Workers Builds total and billable usage have been checked within the previous 24 hours.",
     "Billable usage for every metered Cloudflare product is zero.",
-    "The Worker is disconnected from Cloudflare Git builds and non-production branch builds are disabled.",
+    "The Worker and legacy Pages project are both disconnected from Cloudflare Git builds; non-production branch builds and automatic Pages deployments are disabled.",
     "The snapshot in this policy and the protected GitHub usage variables are updated by the owner."
   ],
   "operatingPrinciple": "Improve the site aggressively off-cloud, release deliberately, and fail closed before any uncertain or billable Cloudflare operation."

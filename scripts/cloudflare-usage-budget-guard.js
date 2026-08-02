@@ -50,8 +50,11 @@ try {
   if (ceiling + reserve !== included) {
     throw new Error('The ordinary ceiling and reserve must exactly partition the included minutes.');
   }
-  if (rules.cloudflareGitConnectedBuilds !== 'must-be-disconnected') {
-    throw new Error('Cloudflare Git-connected builds are not fail-closed.');
+  if (rules.cloudflareWorkersGitConnectedBuilds !== 'must-be-disconnected') {
+    throw new Error('Cloudflare Workers Git-connected builds are not fail-closed.');
+  }
+  if (rules.cloudflarePagesGitConnectedBuilds !== 'must-be-disconnected') {
+    throw new Error('Cloudflare Pages Git-connected builds are not fail-closed.');
   }
   if (rules.nonProductionBranchBuilds !== 'must-be-disabled') {
     throw new Error('Non-production branch builds are not fail-closed.');
@@ -77,7 +80,7 @@ try {
     process.exit();
   }
   if (!isTrue(process.env.CLOUDFLARE_GIT_BUILDS_DISCONNECTED)) {
-    fail('CLOUDFLARE_GIT_BUILDS_DISCONNECTED must be true after dashboard verification.');
+    fail('CLOUDFLARE_GIT_BUILDS_DISCONNECTED must be true only after both Workers and Pages Git builds are verified disconnected.');
     process.exit();
   }
   if (!isTrue(process.env.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED)) {

@@ -1,10 +1,10 @@
 {
-  "ok": true,
+  "ok": false,
   "workflow": "Review Queue Speculation Publisher",
-  "conclusion": "success",
-  "runId": "30740142462",
-  "runUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30740142462",
-  "sourceSha": "e375e3d83a84ce26690f57579e8d082aa88002ff",
-  "completedAt": "2026-08-02T08:38:55Z",
+  "conclusion": "skipped",
+  "runId": "30740864958",
+  "runUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30740864958",
+  "sourceSha": "a573c88f662a6fb551f0e28ed94d7e942b0977cd",
+  "completedAt": "2026-08-02T08:59:57Z",
   "rule": "Review-queue records publish only as labelled unverified speculation; factual promotion is prohibited."
 }

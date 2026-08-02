@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T07:43:30.750Z",
+  "generatedAt": "2026-08-02T08:23:05.918Z",
   "overall": "ready",
   "summary": {
-    "total": 50,
-    "passed": 50,
+    "total": 52,
+    "passed": 52,
     "failed": 0
   },
   "homepageMode": "search-first-accountability",
@@ -224,6 +224,12 @@
       "fix": "Distinguish direct evidence from structural lane overlap."
     },
     {
+      "id": "family-source-deep-links",
+      "ok": true,
+      "detail": "0 obsolete anchor routes; 3/3 official family sources resolved.",
+      "fix": "Resolve family source IDs to the official URLs in the family-access registry."
+    },
+    {
       "id": "dossier-person-structure",
       "ok": true,
       "detail": "person dossier Bill Gates; missing arrays none.",
@@ -274,7 +280,7 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Search-first homepage: headerEnd=3769; search=137026; accountabilityHitList=138290.",
+      "detail": "Search-first homepage: headerEnd=3769; search=137338; accountabilityHitList=138602.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
@@ -282,6 +288,12 @@
       "ok": true,
       "detail": "3 search-first accountability cards found.",
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
+    },
+    {
+      "id": "daily-watch-deep-links",
+      "ok": true,
+      "detail": "Daily Watch contains no generated links to nonexistent Capstone anchors.",
+      "fix": "Regenerate Daily Watch with official registry source URLs."
     },
     {
       "id": "dedicated-dossier-page",

@@ -1,9 +1,9 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-02T07:43:30.750Z
+Generated: 2026-08-02T08:23:05.918Z
 Overall: ready
 Homepage mode: search-first-accountability
-Passed: 50/50
+Passed: 52/52
 
 Person: Bill Gates
 Institution: Securities and Exchange Commission
@@ -45,6 +45,7 @@ Promotion margin: 14
 - **PASS · stable-ranking-policy:** Mode stable-incumbent-evidence-promotion; margin 14.
 - **PASS · incumbent-state:** All three incumbent states checked.
 - **PASS · family-selection-boundary:** Family basis: Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation..
+- **PASS · family-source-deep-links:** 0 obsolete anchor routes; 3/3 official family sources resolved.
 - **PASS · dossier-person-structure:** person dossier Bill Gates; missing arrays none.
 - **PASS · dossier-person-assessment:** person executive assessment checked.
 - **PASS · dossier-institution-structure:** institution dossier Securities and Exchange Commission; missing arrays none.
@@ -53,8 +54,9 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 7 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3769; search=137026; accountabilityHitList=138290.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3769; search=137338; accountabilityHitList=138602.
 - **PASS · accountability-card-ui:** 3 search-first accountability cards found.
+- **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.
 - **PASS · surface-daily-command-brief.html:** Daily command brief exposes the current watch directly or through a stable route.

@@ -1,11 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T07:43:32.380Z",
+  "generatedAt": "2026-08-02T08:23:07.698Z",
   "repairs": [
     "built-investigation-pages",
     "rebuilt-search-v2",
     "hardened-search-runtime",
     "extended-investigation-search",
+    "patched:search.html:query-handoff",
     "search-route:downloads/forum-posts.json",
     "search-route:downloads/forum-posts.md",
     "search-route:data/public-record-intake.json",
